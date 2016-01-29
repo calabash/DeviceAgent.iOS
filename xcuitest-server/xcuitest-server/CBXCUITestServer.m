@@ -6,6 +6,7 @@
 #import "RoutingConnection.h"
 #import "CBXCUITestServer.h"
 #import "UIDevice+Wifi_IP.h"
+#import "UndefinedRoutes.h"
 #import <objc/runtime.h>
 #import "CBProtocols.h"
 #import "CBConstants.h"
@@ -82,11 +83,16 @@ static CBXCUITestServer *sharedServer;
         if (class_conformsToProtocol(c, @protocol(CBRouteProvider))) {
             NSArray <CBRoute *> *routes = [c performSelector:@selector(getRoutes)];
             for (CBRoute *route in routes) {
-                [self.server addRoute:route forMethod:route.HTTPVerb];
+                if ([route shouldAutoregister]) {
+                    [self.server addRoute:route];
+                }
             }
         }
     }
     free(classes);
+    for (CBRoute *route in [UndefinedRoutes getRoutes]) {
+        [self.server addRoute:route];
+    }
 }
 
 

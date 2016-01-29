@@ -113,6 +113,7 @@
 		894ECE7B1C5BC876004B2555 /* CBRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBRoute.m; sourceTree = "<group>"; };
 		894ECE831C5BCD90004B2555 /* UndefinedRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UndefinedRoutes.h; sourceTree = "<group>"; };
 		894ECE841C5BCD90004B2555 /* UndefinedRoutes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UndefinedRoutes.m; sourceTree = "<group>"; };
+		894ECE871C5BD53E004B2555 /* CBMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMacros.h; sourceTree = "<group>"; };
 		898743BC1C5847B30084FD93 /* xcuitest-server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xcuitest-server.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		898743C01C5847B30084FD93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		898743C21C5847B30084FD93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -292,6 +293,7 @@
 				898744501C584D400084FD93 /* Categories */,
 				898744831C5851910084FD93 /* Routes */,
 				894ECE691C5BAD51004B2555 /* Server */,
+				894ECE871C5BD53E004B2555 /* CBMacros.h */,
 			);
 			name = XCUITestServer;
 			sourceTree = "<group>";

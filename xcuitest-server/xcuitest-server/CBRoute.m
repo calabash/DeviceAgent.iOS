@@ -11,6 +11,7 @@
 @implementation CBRoute
 + (instancetype)http:(NSString *)verb path:(NSString *)path withBlock:(RequestHandler)block {
     CBRoute *r = [self routeWithPath:path block:block];
+    r.shouldAutoregister = YES;
     r.HTTPVerb = verb;
     return r;
 }

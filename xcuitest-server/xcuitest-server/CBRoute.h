@@ -9,7 +9,8 @@
 #import "Route.h"
 
 @interface CBRoute : Route
-@property (nonatomic, strong) NSString *HTTPVerb;
+@property (nonatomic, strong)   NSString *HTTPVerb;
+@property (nonatomic)       BOOL shouldAutoregister;
 + (instancetype)get:(NSString *)path withBlock:(RequestHandler)block;
 + (instancetype)post:(NSString *)path withBlock:(RequestHandler)block;
 + (instancetype)put:(NSString *)path withBlock:(RequestHandler)block;

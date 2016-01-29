@@ -1,6 +1,6 @@
 #import "RoutingHTTPServer.h"
 #import "RoutingConnection.h"
-#import "Route.h"
+#import "CBRoute.h"
 
 @implementation RoutingHTTPServer {
 	NSMutableDictionary *routes;
@@ -110,8 +110,12 @@
 	[self addRoute:route forMethod:method];
 }
 
+- (void)addRoute:(CBRoute *)route {
+    NSLog(@"Adding route: %@", route);
+    [self addRoute:route forMethod:route.HTTPVerb];
+}
+
 - (void)addRoute:(Route *)route forMethod:(NSString *)method {
-    NSLog(@"Adding route: %@ %@", method, route.regex);
     
 	method = [method uppercaseString];
 	NSMutableArray *methodRoutes = [routes objectForKey:method];
