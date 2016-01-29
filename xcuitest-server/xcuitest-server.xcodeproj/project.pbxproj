@@ -99,6 +99,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		894ECE6A1C5BAD69004B2555 /* CBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBConstants.h; sourceTree = "<group>"; };
 		898743BC1C5847B30084FD93 /* xcuitest-server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xcuitest-server.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		898743C01C5847B30084FD93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		898743C21C5847B30084FD93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -203,6 +204,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		894ECE691C5BAD51004B2555 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				898743E51C5848890084FD93 /* CBXCUITestServer.h */,
+				898743E61C5848890084FD93 /* CBXCUITestServer.m */,
+			);
+			name = Server;
+			sourceTree = "<group>";
+		};
 		898743B31C5847B30084FD93 = {
 			isa = PBXGroup;
 			children = (
@@ -225,7 +235,6 @@
 			isa = PBXGroup;
 			children = (
 				898743E41C58486E0084FD93 /* XCUITestServer */,
-				898744831C5851910084FD93 /* Routes */,
 				898744821C58516E0084FD93 /* AppStub */,
 				898744501C584D400084FD93 /* Categories */,
 				898744811C5850CA0084FD93 /* Vendors */,
@@ -255,8 +264,9 @@
 		898743E41C58486E0084FD93 /* XCUITestServer */ = {
 			isa = PBXGroup;
 			children = (
-				898743E51C5848890084FD93 /* CBXCUITestServer.h */,
-				898743E61C5848890084FD93 /* CBXCUITestServer.m */,
+				894ECE6A1C5BAD69004B2555 /* CBConstants.h */,
+				898744831C5851910084FD93 /* Routes */,
+				894ECE691C5BAD51004B2555 /* Server */,
 			);
 			name = XCUITestServer;
 			sourceTree = "<group>";
@@ -797,6 +807,7 @@
 				898743E01C5847B30084FD93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		898743E11C5847B30084FD93 /* Build configuration list for PBXNativeTarget "xcuitest-serverUITests" */ = {
 			isa = XCConfigurationList;
@@ -805,6 +816,7 @@
 				898743E31C5847B30084FD93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -6,6 +6,7 @@
 #import "RoutingConnection.h"
 #import "CBXCUITestServer.h"
 #import "UIDevice+Wifi_IP.h"
+#import "CBConstants.h"
 
 @interface CBXCUITestServer ()
 @property (atomic, strong) RoutingHTTPServer *server;
@@ -13,9 +14,6 @@
 
 @implementation CBXCUITestServer
 
-static NSUInteger const DefaultStartingPort = 8100;
-static NSUInteger const DefaultPortRange = 100;
-static NSString *const CBWebServerErrorDomain = @"sh.calaba.xcuitest-server";
 static CBXCUITestServer *sharedServer;
 
 + (void)load {
@@ -24,7 +22,7 @@ static CBXCUITestServer *sharedServer;
         sharedServer = [self new];
         sharedServer.server = [[RoutingHTTPServer alloc] init];
         [sharedServer.server setRouteQueue:dispatch_get_main_queue()];
-        [sharedServer.server setDefaultHeader:@"Server" value:@"WebDriverAgent/1.0"];
+        [sharedServer.server setDefaultHeader:@"Server" value:@"CalabashXCUITestServer/1.0"];
         [sharedServer.server setConnectionClass:[RoutingConnection self]];
         [sharedServer registerServerKeyRouteHandlers];
     });
@@ -37,32 +35,18 @@ static CBXCUITestServer *sharedServer;
 }
 
 - (void)start {
-    NSRange serverPortRange = [self bindingPortRange];
     NSError *error;
     BOOL serverStarted = NO;
-    
-    /*
-     * TODO: This approach will avoid us needing to crash the server when
-     * there's a port conflict. However, we need to consider how we will
-     * get the port over to calabash client / embedded server in the first place...
-     */
-    for (NSInteger index = 0; index < serverPortRange.length; index++) {
         
-        [self.server setPort:serverPortRange.location + index];
-        serverStarted = [self attemptToStartWithError:&error];
-        if (serverStarted) {
-            break;
-        }
-        
-        NSLog(@"Failed to start web server on port %ld with error %@", (long)self.server.port, [error description]);
-    }
+    [self.server setPort:DEFAULT_SERVER_PORT];
+    serverStarted = [self attemptToStartWithError:&error];
     
     if (!serverStarted) {
-        NSLog(@"Last attempt to start web server failed with error %@", [error description]);
+        NSLog(@"Attempt to start web server failed with error %@", [error description]);
         abort();
     }
     
-    NSLog(@"WebDriverAgent started on http://%@:%hu", [UIDevice currentDevice].wifiIPAddress, [self.server port]);
+    NSLog(@"CalabashXCUITestServer started on http://%@:%hu", [UIDevice currentDevice].wifiIPAddress, [self.server port]);
 }
 
 - (BOOL)attemptToStartWithError:(NSError **)error {
@@ -93,8 +77,5 @@ static CBXCUITestServer *sharedServer;
     }];
 }
 
-- (NSRange)bindingPortRange {
-    return NSMakeRange(DefaultStartingPort, DefaultPortRange);
-}
 
 @end
