@@ -13,7 +13,7 @@
 @implementation SessionRoutes
 + (NSArray <CBRoute *> *)getRoutes {
     return @[
-             [CBRoute get:@"/session" withBlock:^(RouteRequest *request, RouteResponse *response) {
+             [CBRoute post:@"/session" withBlock:^(RouteRequest *request, RouteResponse *response) {
                  NSDictionary *json = DATA_TO_JSON(request.body);
                  [[CBApplication withBundlePath:json[@"bundlePath"]
                                        bundleID:json[@"bundleID"]
