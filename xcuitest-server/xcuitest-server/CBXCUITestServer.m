@@ -6,6 +6,8 @@
 #import "RoutingConnection.h"
 #import "CBXCUITestServer.h"
 #import "UIDevice+Wifi_IP.h"
+#import <objc/runtime.h>
+#import "CBProtocols.h"
 #import "CBConstants.h"
 
 @interface CBXCUITestServer ()
@@ -24,7 +26,7 @@ static CBXCUITestServer *sharedServer;
         [sharedServer.server setRouteQueue:dispatch_get_main_queue()];
         [sharedServer.server setDefaultHeader:@"Server" value:@"CalabashXCUITestServer/1.0"];
         [sharedServer.server setConnectionClass:[RoutingConnection self]];
-        [sharedServer registerServerKeyRouteHandlers];
+        [sharedServer registerRoutes];
     });
 }
 
@@ -68,13 +70,21 @@ static CBXCUITestServer *sharedServer;
     return YES;
 }
 
-- (void)registerServerKeyRouteHandlers {
-    /*
-     * TODO: If there are few enough routes, we could just add them all here.
-    */
-    [self.server get:@"/health" withBlock:^(RouteRequest *request, RouteResponse *response) {
-        [response respondWithString:@"Calabash is ready and waiting."];
-    }];
+/*
+ *  Use objc runtime to get all classes inheriting implementing CBRoute.
+ *  call [Class addRoutesToServer:self.server] on all resulting classes.
+ */
+- (void)registerRoutes {
+    unsigned int outCount;
+    Class *classes = objc_copyClassList(&outCount);
+    for (int i = 0; i < outCount; i++) {
+        Class c = classes[i];
+        if (class_conformsToProtocol(c, @protocol(CBRoute))) {
+            SEL addRoutesSel = @selector(addRoutesToServer:);
+            [c performSelector:addRoutesSel withObject:(self.server)];
+        }
+    }
+    free(classes);
 }
 
 

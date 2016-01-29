@@ -15,4 +15,10 @@
 @property (nonatomic, assign) SEL selector;
 @property (nonatomic) NSArray *keys;
 
+/*
+ Static route constructors
+ */
++ (instancetype)routeWithPath:(NSString *)path target:(id)target selector:(SEL)selector;
++ (instancetype)routeWithPath:(NSString *)path block:(RequestHandler)block;
+
 @end

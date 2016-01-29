@@ -40,4 +40,5 @@ typedef void (^RequestHandler)(RouteRequest *request, RouteResponse *response);
 - (BOOL)supportsMethod:(NSString *)method;
 - (RouteResponse *)routeMethod:(NSString *)method withPath:(NSString *)path parameters:(NSDictionary *)params request:(HTTPMessage *)request connection:(HTTPConnection *)connection;
 
+
 @end
