@@ -79,9 +79,11 @@ static CBXCUITestServer *sharedServer;
     Class *classes = objc_copyClassList(&outCount);
     for (int i = 0; i < outCount; i++) {
         Class c = classes[i];
-        if (class_conformsToProtocol(c, @protocol(CBRoute))) {
-            SEL addRoutesSel = @selector(addRoutesToServer:);
-            [c performSelector:addRoutesSel withObject:(self.server)];
+        if (class_conformsToProtocol(c, @protocol(CBRouteProvider))) {
+            NSArray <CBRoute *> *routes = [c performSelector:@selector(getRoutes)];
+            for (CBRoute *route in routes) {
+                [self.server addRoute:route forMethod:route.HTTPVerb];
+            }
         }
     }
     free(classes);

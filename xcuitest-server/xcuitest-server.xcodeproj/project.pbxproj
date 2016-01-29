@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		894ECE701C5BB5D9004B2555 /* HealthRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 894ECE6F1C5BB5D9004B2555 /* HealthRoutes.m */; };
 		894ECE711C5BB5D9004B2555 /* HealthRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 894ECE6F1C5BB5D9004B2555 /* HealthRoutes.m */; };
+		894ECE7C1C5BC876004B2555 /* CBRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 894ECE7B1C5BC876004B2555 /* CBRoute.m */; };
+		894ECE7D1C5BC876004B2555 /* CBRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 894ECE7B1C5BC876004B2555 /* CBRoute.m */; };
+		894ECE851C5BCD90004B2555 /* UndefinedRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 894ECE841C5BCD90004B2555 /* UndefinedRoutes.m */; };
+		894ECE861C5BCD90004B2555 /* UndefinedRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 894ECE841C5BCD90004B2555 /* UndefinedRoutes.m */; };
 		898743C11C5847B30084FD93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 898743C01C5847B30084FD93 /* main.m */; };
 		898743C41C5847B30084FD93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 898743C31C5847B30084FD93 /* AppDelegate.m */; };
 		898743C71C5847B30084FD93 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 898743C61C5847B30084FD93 /* ViewController.m */; };
@@ -105,6 +109,10 @@
 		894ECE6E1C5BB5D9004B2555 /* HealthRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthRoutes.h; sourceTree = "<group>"; };
 		894ECE6F1C5BB5D9004B2555 /* HealthRoutes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthRoutes.m; sourceTree = "<group>"; };
 		894ECE761C5BBF6E004B2555 /* CBProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBProtocols.h; sourceTree = "<group>"; };
+		894ECE7A1C5BC876004B2555 /* CBRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBRoute.h; sourceTree = "<group>"; };
+		894ECE7B1C5BC876004B2555 /* CBRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBRoute.m; sourceTree = "<group>"; };
+		894ECE831C5BCD90004B2555 /* UndefinedRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UndefinedRoutes.h; sourceTree = "<group>"; };
+		894ECE841C5BCD90004B2555 /* UndefinedRoutes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UndefinedRoutes.m; sourceTree = "<group>"; };
 		898743BC1C5847B30084FD93 /* xcuitest-server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xcuitest-server.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		898743C01C5847B30084FD93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		898743C21C5847B30084FD93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -216,6 +224,17 @@
 				898743E61C5848890084FD93 /* CBXCUITestServer.m */,
 			);
 			name = Server;
+			sourceTree = "<group>";
+		};
+		894ECE821C5BCB27004B2555 /* RouteProviders */ = {
+			isa = PBXGroup;
+			children = (
+				894ECE6E1C5BB5D9004B2555 /* HealthRoutes.h */,
+				894ECE6F1C5BB5D9004B2555 /* HealthRoutes.m */,
+				894ECE831C5BCD90004B2555 /* UndefinedRoutes.h */,
+				894ECE841C5BCD90004B2555 /* UndefinedRoutes.m */,
+			);
+			name = RouteProviders;
 			sourceTree = "<group>";
 		};
 		898743B31C5847B30084FD93 = {
@@ -446,8 +465,9 @@
 		898744831C5851910084FD93 /* Routes */ = {
 			isa = PBXGroup;
 			children = (
-				894ECE6E1C5BB5D9004B2555 /* HealthRoutes.h */,
-				894ECE6F1C5BB5D9004B2555 /* HealthRoutes.m */,
+				894ECE7A1C5BC876004B2555 /* CBRoute.h */,
+				894ECE7B1C5BC876004B2555 /* CBRoute.m */,
+				894ECE821C5BCB27004B2555 /* RouteProviders */,
 			);
 			name = Routes;
 			sourceTree = "<group>";
@@ -562,6 +582,7 @@
 				898744531C584D610084FD93 /* UIDevice+Wifi_IP.m in Sources */,
 				898743C71C5847B30084FD93 /* ViewController.m in Sources */,
 				8987444C1C584BBF0084FD93 /* RoutingConnection.m in Sources */,
+				894ECE851C5BCD90004B2555 /* UndefinedRoutes.m in Sources */,
 				898744191C584B960084FD93 /* DDRange.m in Sources */,
 				898743C41C5847B30084FD93 /* AppDelegate.m in Sources */,
 				8987441B1C584B960084FD93 /* HTTPAuthenticationRequest.m in Sources */,
@@ -572,6 +593,7 @@
 				8987446B1C5850AC0084FD93 /* DDASLLogger.m in Sources */,
 				898744171C584B960084FD93 /* DDNumber.m in Sources */,
 				8987444A1C584BBF0084FD93 /* RouteResponse.m in Sources */,
+				894ECE7C1C5BC876004B2555 /* CBRoute.m in Sources */,
 				898744751C5850AC0084FD93 /* DispatchQueueLogFormatter.m in Sources */,
 				898744211C584B960084FD93 /* HTTPServer.m in Sources */,
 				898744151C584B960084FD93 /* DDData.m in Sources */,
@@ -614,6 +636,7 @@
 				898744321C584B960084FD93 /* HTTPFileResponse.m in Sources */,
 				898744451C584BBF0084FD93 /* HTTPResponseProxy.m in Sources */,
 				898744241C584B960084FD93 /* MultipartFormDataParser.m in Sources */,
+				894ECE7D1C5BC876004B2555 /* CBRoute.m in Sources */,
 				898744261C584B960084FD93 /* MultipartMessageHeader.m in Sources */,
 				898744161C584B960084FD93 /* DDData.m in Sources */,
 				898744301C584B960084FD93 /* HTTPErrorResponse.m in Sources */,
@@ -636,6 +659,7 @@
 				8987441A1C584B960084FD93 /* DDRange.m in Sources */,
 				8987444F1C584BBF0084FD93 /* RoutingHTTPServer.m in Sources */,
 				898744181C584B960084FD93 /* DDNumber.m in Sources */,
+				894ECE861C5BCD90004B2555 /* UndefinedRoutes.m in Sources */,
 				898743DA1C5847B30084FD93 /* xcuitest_serverUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

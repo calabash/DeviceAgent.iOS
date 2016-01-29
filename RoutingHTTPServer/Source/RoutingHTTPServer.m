@@ -101,7 +101,6 @@
 
 - (void)handleMethod:(NSString *)method withPath:(NSString *)path block:(RequestHandler)block {
 	Route *route = [Route routeWithPath:path block:block];
-    NSLog(@"Adding route: %@ %@", method, path);
 	[self addRoute:route forMethod:method];
 }
 
@@ -112,6 +111,8 @@
 }
 
 - (void)addRoute:(Route *)route forMethod:(NSString *)method {
+    NSLog(@"Adding route: %@ %@", method, route.regex);
+    
 	method = [method uppercaseString];
 	NSMutableArray *methodRoutes = [routes objectForKey:method];
 	if (methodRoutes == nil) {

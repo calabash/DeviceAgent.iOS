@@ -23,7 +23,7 @@
 }
 
 + (instancetype)routeWithPath:(NSString *)path {
-    Route *route = [[Route alloc] init];
+    Route *route = [self new];
     NSMutableArray *keys = [NSMutableArray array];
     
     if ([path length] > 2 && [path characterAtIndex:0] == '{') {

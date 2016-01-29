@@ -4,8 +4,7 @@
 //
 
 
-#import "RoutingHTTPServer.h"
-
-@protocol CBRoute <NSObject>
-+ (void)addRoutesToServer:(RoutingHTTPServer *)server;
+#import "CBRoute.h"
+@protocol CBRouteProvider <NSObject>
++ (NSArray<CBRoute *>*)getRoutes;
 @end
