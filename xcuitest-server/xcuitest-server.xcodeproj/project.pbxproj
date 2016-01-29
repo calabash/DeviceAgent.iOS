@@ -599,11 +599,11 @@
 			children = (
 				894ECE6A1C5BAD69004B2555 /* CBConstants.h */,
 				894ECE761C5BBF6E004B2555 /* CBProtocols.h */,
+				894ECE871C5BD53E004B2555 /* CBMacros.h */,
 				894ECE8C1C5BDA33004B2555 /* Models */,
 				898744501C584D400084FD93 /* Categories */,
 				898744831C5851910084FD93 /* Routes */,
 				894ECE691C5BAD51004B2555 /* Server */,
-				894ECE871C5BD53E004B2555 /* CBMacros.h */,
 			);
 			name = XCUITestServer;
 			sourceTree = "<group>";
