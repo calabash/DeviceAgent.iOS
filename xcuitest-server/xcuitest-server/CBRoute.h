@@ -10,6 +10,7 @@
 
 @interface CBRoute : Route
 @property (nonatomic, strong)   NSString *HTTPVerb;
+@property (nonatomic, strong)   NSString *path; //raw path
 @property (nonatomic)       BOOL shouldAutoregister;
 + (instancetype)get:(NSString *)path withBlock:(RequestHandler)block;
 + (instancetype)post:(NSString *)path withBlock:(RequestHandler)block;

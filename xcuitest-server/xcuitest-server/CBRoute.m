@@ -13,6 +13,7 @@
     CBRoute *r = [self routeWithPath:path block:block];
     r.shouldAutoregister = YES;
     r.HTTPVerb = verb;
+    r.path = path;
     return r;
 }
 
@@ -30,6 +31,6 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"%@ %@", self.HTTPVerb, self.regex];
+    return [NSString stringWithFormat:@"%@ %@", self.HTTPVerb, self.path];
 }
 @end
