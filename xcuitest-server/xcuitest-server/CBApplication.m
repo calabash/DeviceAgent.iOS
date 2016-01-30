@@ -26,6 +26,6 @@
 }
 
 - (void)launch {
-    [self.app _launchUsingXcode:NO];
+    [self.app launch];
 }
 @end
