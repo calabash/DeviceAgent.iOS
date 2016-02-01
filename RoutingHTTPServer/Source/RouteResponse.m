@@ -62,6 +62,16 @@
 	self.response = [[HTTPDataResponse alloc] initWithData:data];
 }
 
+- (void)respondWithJSON:(NSDictionary *)json {
+    headers[@"Content-Type"] = @"application/json";
+    NSError *e;
+    NSData *data = [NSJSONSerialization dataWithJSONObject:json options:0 error:&e];
+    if (e) {
+        NSLog(@"Error serializing: %@\n %@", e, json);
+    }
+    [self respondWithData:data];
+}
+
 - (void)respondWithFile:(NSString *)path {
 	[self respondWithFile:path async:NO];
 }

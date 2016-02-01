@@ -6,6 +6,10 @@
 #import "RoutingConnection.h"
 #import "CBXCUITestServer.h"
 #import "UIDevice+Wifi_IP.h"
+#import "UndefinedRoutes.h"
+#import <objc/runtime.h>
+#import "CBProtocols.h"
+#import "CBConstants.h"
 
 @interface CBXCUITestServer ()
 @property (atomic, strong) RoutingHTTPServer *server;
@@ -13,9 +17,6 @@
 
 @implementation CBXCUITestServer
 
-static NSUInteger const DefaultStartingPort = 8100;
-static NSUInteger const DefaultPortRange = 100;
-static NSString *const CBWebServerErrorDomain = @"sh.calaba.xcuitest-server";
 static CBXCUITestServer *sharedServer;
 
 + (void)load {
@@ -24,9 +25,9 @@ static CBXCUITestServer *sharedServer;
         sharedServer = [self new];
         sharedServer.server = [[RoutingHTTPServer alloc] init];
         [sharedServer.server setRouteQueue:dispatch_get_main_queue()];
-        [sharedServer.server setDefaultHeader:@"Server" value:@"WebDriverAgent/1.0"];
+        [sharedServer.server setDefaultHeader:@"Server" value:@"CalabashXCUITestServer/1.0"];
         [sharedServer.server setConnectionClass:[RoutingConnection self]];
-        [sharedServer registerServerKeyRouteHandlers];
+        [sharedServer registerRoutes];
     });
 }
 
@@ -37,35 +38,23 @@ static CBXCUITestServer *sharedServer;
 }
 
 - (void)start {
-    NSRange serverPortRange = [self bindingPortRange];
     NSError *error;
     BOOL serverStarted = NO;
-    
-    for (NSInteger index = 0; index < serverPortRange.length; index++) {
-        NSInteger port = serverPortRange.location + index;
-        [self.server setPort:port];
         
-        serverStarted = [self attemptToStartServer:self.server onPort:port withError:&error];
-        if (serverStarted) {
-            break;
-        }
-        
-        NSLog(@"Failed to start web server on port %ld with error %@", (long)port, [error description]);
-    }
+    [self.server setPort:DEFAULT_SERVER_PORT];
+    serverStarted = [self attemptToStartWithError:&error];
     
     if (!serverStarted) {
-        NSLog(@"Last attempt to start web server failed with error %@", [error description]);
+        NSLog(@"Attempt to start web server failed with error %@", [error description]);
         abort();
     }
     
-    NSLog(@"WebDriverAgent started on http://%@:%hu", [UIDevice currentDevice].wifiIPAddress, [self.server port]);
+    NSLog(@"CalabashXCUITestServer started on http://%@:%hu", [UIDevice currentDevice].wifiIPAddress, [self.server port]);
 }
 
-- (BOOL)attemptToStartServer:(RoutingHTTPServer *)server onPort:(NSInteger)port withError:(NSError **)error
-{
-    server.port = port;
+- (BOOL)attemptToStartWithError:(NSError **)error {
     NSError *innerError = nil;
-    BOOL started = [server start:&innerError];
+    BOOL started = [self.server start:&innerError];
     if (!started) {
         if (!error) {
             return NO;
@@ -73,7 +62,7 @@ static CBXCUITestServer *sharedServer;
         
         NSString *description = @"Unknown Error when Starting server";
         if ([innerError.domain isEqualToString:NSPOSIXErrorDomain] && innerError.code == EADDRINUSE) {
-            description = [NSString stringWithFormat:@"Unable to start web server on port %ld", (long)port];
+            description = [NSString stringWithFormat:@"Unable to start web server on port %ld", (long)self.server.port];
         }
         
         *error = [NSError errorWithDomain:CBWebServerErrorDomain code:0 userInfo:@{NSLocalizedDescriptionKey : description, NSUnderlyingErrorKey : innerError}];
@@ -82,21 +71,29 @@ static CBXCUITestServer *sharedServer;
     return YES;
 }
 
-- (void)registerServerKeyRouteHandlers
-{
-    [self.server get:@"/health" withBlock:^(RouteRequest *request, RouteResponse *response) {
-        [response respondWithString:@"Calabash is ready and waiting."];
-    }];
+/*
+ *  Use objc runtime to get all classes inheriting implementing CBRoute.
+ *  call [Class addRoutesToServer:self.server] on all resulting classes.
+ */
+- (void)registerRoutes {
+    unsigned int outCount;
+    Class *classes = objc_copyClassList(&outCount);
+    for (int i = 0; i < outCount; i++) {
+        Class c = classes[i];
+        if (class_conformsToProtocol(c, @protocol(CBRouteProvider))) {
+            NSArray <CBRoute *> *routes = [c performSelector:@selector(getRoutes)];
+            for (CBRoute *route in routes) {
+                if ([route shouldAutoregister]) {
+                    [self.server addRoute:route];
+                }
+            }
+        }
+    }
+    free(classes);
+    for (CBRoute *route in [UndefinedRoutes getRoutes]) {
+        [self.server addRoute:route];
+    }
 }
 
-- (NSRange)bindingPortRange
-{
-    // Existence of PORT_OFFSET in the environment implies the port range is managed by the launching process.
-    if (NSProcessInfo.processInfo.environment[@"PORT_OFFSET"]) {
-        return NSMakeRange(DefaultStartingPort + [NSProcessInfo.processInfo.environment[@"PORT_OFFSET"] integerValue] , 1);
-    }
-    
-    return NSMakeRange(DefaultStartingPort, DefaultPortRange);
-}
 
 @end
