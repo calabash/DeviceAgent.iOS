@@ -162,8 +162,6 @@
 		8987444F1C584BBF0084FD93 /* RoutingHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 898744431C584BBF0084FD93 /* RoutingHTTPServer.m */; };
 		898744531C584D610084FD93 /* UIDevice+Wifi_IP.m in Sources */ = {isa = PBXBuildFile; fileRef = 898744521C584D610084FD93 /* UIDevice+Wifi_IP.m */; };
 		898744541C584D610084FD93 /* UIDevice+Wifi_IP.m in Sources */ = {isa = PBXBuildFile; fileRef = 898744521C584D610084FD93 /* UIDevice+Wifi_IP.m */; };
-		898744671C5850AC0084FD93 /* About.txt in Resources */ = {isa = PBXBuildFile; fileRef = 898744561C5850AC0084FD93 /* About.txt */; };
-		898744681C5850AC0084FD93 /* About.txt in Resources */ = {isa = PBXBuildFile; fileRef = 898744561C5850AC0084FD93 /* About.txt */; };
 		898744691C5850AC0084FD93 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 898744581C5850AC0084FD93 /* DDAbstractDatabaseLogger.m */; };
 		8987446A1C5850AC0084FD93 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 898744581C5850AC0084FD93 /* DDAbstractDatabaseLogger.m */; };
 		8987446B1C5850AC0084FD93 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 8987445A1C5850AC0084FD93 /* DDASLLogger.m */; };
@@ -178,10 +176,6 @@
 		898744741C5850AC0084FD93 /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 898744631C5850AC0084FD93 /* ContextFilterLogFormatter.m */; };
 		898744751C5850AC0084FD93 /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 898744651C5850AC0084FD93 /* DispatchQueueLogFormatter.m */; };
 		898744761C5850AC0084FD93 /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 898744651C5850AC0084FD93 /* DispatchQueueLogFormatter.m */; };
-		898744771C5850AC0084FD93 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 898744661C5850AC0084FD93 /* README.txt */; };
-		898744781C5850AC0084FD93 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 898744661C5850AC0084FD93 /* README.txt */; };
-		8987447D1C5850C50084FD93 /* About.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8987447A1C5850C50084FD93 /* About.txt */; };
-		8987447E1C5850C50084FD93 /* About.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8987447A1C5850C50084FD93 /* About.txt */; };
 		8987447F1C5850C50084FD93 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8987447C1C5850C50084FD93 /* GCDAsyncSocket.m */; };
 		898744801C5850C50084FD93 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8987447C1C5850C50084FD93 /* GCDAsyncSocket.m */; };
 /* End PBXBuildFile section */
@@ -966,12 +960,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8987447D1C5850C50084FD93 /* About.txt in Resources */,
 				898743CF1C5847B30084FD93 /* LaunchScreen.storyboard in Resources */,
 				898743CC1C5847B30084FD93 /* Assets.xcassets in Resources */,
-				898744671C5850AC0084FD93 /* About.txt in Resources */,
 				898743CA1C5847B30084FD93 /* Main.storyboard in Resources */,
-				898744771C5850AC0084FD93 /* README.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -979,9 +970,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8987447E1C5850C50084FD93 /* About.txt in Resources */,
-				898744781C5850AC0084FD93 /* README.txt in Resources */,
-				898744681C5850AC0084FD93 /* About.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
