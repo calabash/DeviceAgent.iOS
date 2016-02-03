@@ -2,9 +2,6 @@
 //  GestureRotues.m
 //  xcuitest-server
 //
-//  Created by Chris Fuentes on 2/1/16.
-//  Copyright © 2016 calabash. All rights reserved.
-//
 
 #import "CBApplication+Gestures.h"
 #import "GestureRotues.h"
