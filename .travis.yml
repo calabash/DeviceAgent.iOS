@@ -1,0 +1,15 @@
+
+language: objective-c
+
+osx_image: xcode7.2
+
+script:
+        bin/test.sh
+
+notifications:
+  email:
+    recipients:
+      - chris.fuentes@xamarin.com
+      - joshua.moody@xamarin.com
+    on_success: change
+    on_failure: always
