@@ -413,13 +413,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		894ECE691C5BAD51004B2555 /* Server */ = {
+		894ECE691C5BAD51004B2555 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				898744831C5851910084FD93 /* Routing */,
 				898743E51C5848890084FD93 /* CBXCUITestServer.h */,
 				898743E61C5848890084FD93 /* CBXCUITestServer.m */,
 			);
-			name = Server;
+			name = Core;
 			sourceTree = "<group>";
 		};
 		894ECE821C5BCB27004B2555 /* RouteProviders */ = {
@@ -609,13 +610,9 @@
 		898743E41C58486E0084FD93 /* XCUITestServer */ = {
 			isa = PBXGroup;
 			children = (
-				894ECE6A1C5BAD69004B2555 /* CBConstants.h */,
-				894ECE761C5BBF6E004B2555 /* CBProtocols.h */,
-				894ECE871C5BD53E004B2555 /* CBMacros.h */,
+				894ECE691C5BAD51004B2555 /* Core */,
 				894ECE8C1C5BDA33004B2555 /* Application */,
-				898744501C584D400084FD93 /* Categories */,
-				898744831C5851910084FD93 /* Routing */,
-				894ECE691C5BAD51004B2555 /* Server */,
+				898744501C584D400084FD93 /* Utilities */,
 			);
 			name = XCUITestServer;
 			sourceTree = "<group>";
@@ -709,13 +706,14 @@
 			name = RoutingHTTPServer;
 			sourceTree = "<group>";
 		};
-		898744501C584D400084FD93 /* Categories */ = {
+		898744501C584D400084FD93 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				89C710E51C62A5ED007AE1FC /* UtilityHeaders */,
 				898744511C584D610084FD93 /* UIDevice+Wifi_IP.h */,
 				898744521C584D610084FD93 /* UIDevice+Wifi_IP.m */,
 			);
-			name = Categories;
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		898744551C5850AC0084FD93 /* CocoaLumberjack */ = {
@@ -794,6 +792,16 @@
 				894ECE821C5BCB27004B2555 /* RouteProviders */,
 			);
 			name = Routing;
+			sourceTree = "<group>";
+		};
+		89C710E51C62A5ED007AE1FC /* UtilityHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				894ECE6A1C5BAD69004B2555 /* CBConstants.h */,
+				894ECE761C5BBF6E004B2555 /* CBProtocols.h */,
+				894ECE871C5BD53E004B2555 /* CBMacros.h */,
+			);
+			name = UtilityHeaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
