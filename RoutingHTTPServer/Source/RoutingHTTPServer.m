@@ -1,5 +1,6 @@
 #import "RoutingHTTPServer.h"
 #import "RoutingConnection.h"
+#import "CBMacros.h"
 #import "CBRoute.h"
 
 @implementation RoutingHTTPServer {
@@ -204,6 +205,11 @@
 			// Process the route on the specified queue
 			dispatch_sync(routeQueue, ^{
 				@autoreleasepool {
+                    NSString *path = [route.regex description];
+                    if ([route isKindOfClass:[CBRoute class]]) {
+                        path = ((CBRoute *)route).path;
+                    }
+                    NSLog(@"%@ %@ %@", request.method, path, DATA_TO_JSON(request.body));
 					[self handleRoute:route withRequest:request response:response];
 				}
 			});

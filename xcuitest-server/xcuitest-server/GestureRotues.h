@@ -1,11 +1,11 @@
 //
-//  UndefinedRoutes.h
+//  GestureRotues.h
 //  xcuitest-server
 //
 
 #import <Foundation/Foundation.h>
 #import "CBProtocols.h"
 
-@interface UndefinedRoutes : NSObject<CBRouteProvider>
+@interface GestureRotues : NSObject<CBRouteProvider>
 
 @end
