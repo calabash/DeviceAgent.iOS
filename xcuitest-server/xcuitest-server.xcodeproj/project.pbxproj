@@ -433,7 +433,7 @@
 			name = RouteProviders;
 			sourceTree = "<group>";
 		};
-		894ECE8C1C5BDA33004B2555 /* Models */ = {
+		894ECE8C1C5BDA33004B2555 /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				89D3213C1C6183C2005B9884 /* CBApplication+Gestures.h */,
@@ -441,7 +441,7 @@
 				894ECE8D1C5BDA44004B2555 /* CBApplication.h */,
 				894ECE8E1C5BDA44004B2555 /* CBApplication.m */,
 			);
-			name = Models;
+			name = Application;
 			sourceTree = "<group>";
 		};
 		894ECEF21C5BDBAD004B2555 /* XCUITestServerLib */ = {
@@ -606,7 +606,7 @@
 				894ECE6A1C5BAD69004B2555 /* CBConstants.h */,
 				894ECE761C5BBF6E004B2555 /* CBProtocols.h */,
 				894ECE871C5BD53E004B2555 /* CBMacros.h */,
-				894ECE8C1C5BDA33004B2555 /* Models */,
+				894ECE8C1C5BDA33004B2555 /* Application */,
 				898744501C584D400084FD93 /* Categories */,
 				898744831C5851910084FD93 /* Routes */,
 				894ECE691C5BAD51004B2555 /* Server */,

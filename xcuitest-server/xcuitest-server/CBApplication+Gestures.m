@@ -9,6 +9,8 @@
 @implementation CBApplication(Gestures)
 
 + (void)tap:(float)x :(float)y {
+    //Using current application as the element has the effect of
+    //using the main window as your coordinate space
     XCUICoordinate *appCoordinate = [[XCUICoordinate alloc] initWithElement:[self currentApplication]
                                                            normalizedOffset:CGVectorMake(0, 0)];
     

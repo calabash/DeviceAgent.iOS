@@ -4,6 +4,7 @@
 //
 
 #import "UndefinedRoutes.h"
+#import "CBMacros.h"
 
 @interface CBRoute (DontAutoregister)
 - (instancetype)dontAutoregister;
@@ -21,7 +22,9 @@
 + (NSArray <CBRoute *> *)getRoutes {
     
     RequestHandler unhandledBlock = ^(RouteRequest *request, RouteResponse *response) {
-        [response respondWithString:[NSString stringWithFormat:@"Unhandled endpoint: %@\nParams: %@", request.url, request.params]];
+        //TODO is 404 correct? "Not Found"
+        [response setStatusCode:404];
+        [response respondWithString:[NSString stringWithFormat:@"Unhandled endpoint: %@\nParams: %@\nBody: %@", request.url, request.params, DATA_TO_JSON(request.body)]];
     };
     return @[
              [CBRoute get:@"/*" withBlock:unhandledBlock].dontAutoregister,
