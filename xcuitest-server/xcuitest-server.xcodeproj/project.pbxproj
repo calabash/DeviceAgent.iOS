@@ -106,6 +106,8 @@
 		894ED00E1C5BDDE0004B2555 /* XCUIRecorderTimingMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 894ECFB31C5BDDDA004B2555 /* XCUIRecorderTimingMessage.h */; };
 		894ED00F1C5BDDE0004B2555 /* XCUIRecorderUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 894ECFB41C5BDDDA004B2555 /* XCUIRecorderUtilities.h */; };
 		894ED0101C5BDDE0004B2555 /* XCUIRemote.h in Headers */ = {isa = PBXBuildFile; fileRef = 894ECFB51C5BDDDA004B2555 /* XCUIRemote.h */; };
+		894ED1191C5FE948004B2555 /* GestureRotues.h in Headers */ = {isa = PBXBuildFile; fileRef = 894ED1171C5FE948004B2555 /* GestureRotues.h */; };
+		894ED11A1C5FE948004B2555 /* GestureRotues.m in Sources */ = {isa = PBXBuildFile; fileRef = 894ED1181C5FE948004B2555 /* GestureRotues.m */; };
 		898743C11C5847B30084FD93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 898743C01C5847B30084FD93 /* main.m */; };
 		898743C41C5847B30084FD93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 898743C31C5847B30084FD93 /* AppDelegate.m */; };
 		898743C71C5847B30084FD93 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 898743C61C5847B30084FD93 /* ViewController.m */; };
@@ -178,6 +180,8 @@
 		898744761C5850AC0084FD93 /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 898744651C5850AC0084FD93 /* DispatchQueueLogFormatter.m */; };
 		8987447F1C5850C50084FD93 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8987447C1C5850C50084FD93 /* GCDAsyncSocket.m */; };
 		898744801C5850C50084FD93 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8987447C1C5850C50084FD93 /* GCDAsyncSocket.m */; };
+		89D3213E1C6183C2005B9884 /* CBApplication+Gestures.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D3213C1C6183C2005B9884 /* CBApplication+Gestures.h */; };
+		89D3213F1C6183C2005B9884 /* CBApplication+Gestures.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D3213D1C6183C2005B9884 /* CBApplication+Gestures.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -297,6 +301,8 @@
 		894ECFB31C5BDDDA004B2555 /* XCUIRecorderTimingMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUIRecorderTimingMessage.h; sourceTree = "<group>"; };
 		894ECFB41C5BDDDA004B2555 /* XCUIRecorderUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUIRecorderUtilities.h; sourceTree = "<group>"; };
 		894ECFB51C5BDDDA004B2555 /* XCUIRemote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUIRemote.h; sourceTree = "<group>"; };
+		894ED1171C5FE948004B2555 /* GestureRotues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureRotues.h; sourceTree = "<group>"; };
+		894ED1181C5FE948004B2555 /* GestureRotues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureRotues.m; sourceTree = "<group>"; };
 		898743BC1C5847B30084FD93 /* xcuitest-server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xcuitest-server.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		898743C01C5847B30084FD93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		898743C21C5847B30084FD93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -381,6 +387,8 @@
 		8987447A1C5850C50084FD93 /* About.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = About.txt; sourceTree = "<group>"; };
 		8987447B1C5850C50084FD93 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		8987447C1C5850C50084FD93 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		89D3213C1C6183C2005B9884 /* CBApplication+Gestures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBApplication+Gestures.h"; sourceTree = "<group>"; };
+		89D3213D1C6183C2005B9884 /* CBApplication+Gestures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBApplication+Gestures.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -419,6 +427,8 @@
 				894ECE841C5BCD90004B2555 /* UndefinedRoutes.m */,
 				894ECE881C5BD902004B2555 /* SessionRoutes.h */,
 				894ECE891C5BD902004B2555 /* SessionRoutes.m */,
+				894ED1171C5FE948004B2555 /* GestureRotues.h */,
+				894ED1181C5FE948004B2555 /* GestureRotues.m */,
 			);
 			name = RouteProviders;
 			sourceTree = "<group>";
@@ -426,6 +436,8 @@
 		894ECE8C1C5BDA33004B2555 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				89D3213C1C6183C2005B9884 /* CBApplication+Gestures.h */,
+				89D3213D1C6183C2005B9884 /* CBApplication+Gestures.m */,
 				894ECE8D1C5BDA44004B2555 /* CBApplication.h */,
 				894ECE8E1C5BDA44004B2555 /* CBApplication.m */,
 			);
@@ -785,6 +797,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89D3213E1C6183C2005B9884 /* CBApplication+Gestures.h in Headers */,
 				894ECFF31C5BDDDC004B2555 /* XCTestManager_IDEInterface-Protocol.h in Headers */,
 				894ECFB71C5BDDDA004B2555 /* _XCInternalTestRun.h in Headers */,
 				894ED00F1C5BDDE0004B2555 /* XCUIRecorderUtilities.h in Headers */,
@@ -799,6 +812,7 @@
 				894ECFCF1C5BDDDA004B2555 /* XCAXManager_OSX.h in Headers */,
 				894ECFFB1C5BDDDD004B2555 /* XCTestSuite-XCTestProbeExtensions.h in Headers */,
 				894ECFCE1C5BDDDA004B2555 /* XCAXClient_iOS.h in Headers */,
+				894ED1191C5FE948004B2555 /* GestureRotues.h in Headers */,
 				894ECFC51C5BDDDA004B2555 /* UIPinchGestureRecognizer-RecordingAdditions.h in Headers */,
 				894ECFE21C5BDDDB004B2555 /* XCTest-XCTestProbeExtensions.h in Headers */,
 				894ED0041C5BDDDE004B2555 /* XCUIElement-PrivateEvents.h in Headers */,
@@ -1037,6 +1051,7 @@
 				8987442A1C584B960084FD93 /* HTTPAsyncFileResponse.m in Sources */,
 				898744321C584B960084FD93 /* HTTPFileResponse.m in Sources */,
 				898744451C584BBF0084FD93 /* HTTPResponseProxy.m in Sources */,
+				89D3213F1C6183C2005B9884 /* CBApplication+Gestures.m in Sources */,
 				898744241C584B960084FD93 /* MultipartFormDataParser.m in Sources */,
 				894ECE7D1C5BC876004B2555 /* CBRoute.m in Sources */,
 				898744261C584B960084FD93 /* MultipartMessageHeader.m in Sources */,
@@ -1044,6 +1059,7 @@
 				898744301C584B960084FD93 /* HTTPErrorResponse.m in Sources */,
 				898744761C5850AC0084FD93 /* DispatchQueueLogFormatter.m in Sources */,
 				8987442E1C584B960084FD93 /* HTTPDynamicFileResponse.m in Sources */,
+				894ED11A1C5FE948004B2555 /* GestureRotues.m in Sources */,
 				8987442C1C584B960084FD93 /* HTTPDataResponse.m in Sources */,
 				898744741C5850AC0084FD93 /* ContextFilterLogFormatter.m in Sources */,
 				898744721C5850AC0084FD93 /* DDTTYLogger.m in Sources */,
@@ -1184,6 +1200,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "xcuitest-server/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sh.calaba.xcuitest-server";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1195,6 +1212,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "xcuitest-server/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sh.calaba.xcuitest-server";
 				PRODUCT_NAME = "$(TARGET_NAME)";

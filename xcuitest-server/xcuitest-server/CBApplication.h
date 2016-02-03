@@ -7,11 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "XCUIApplication.h"
 
 @interface CBApplication : NSObject
-+ (instancetype)withBundlePath:(NSString *)bundlePath
-                      bundleID:(NSString *)bundleID
-                    launchArgs:(NSArray *)launchArgs
-                           env:(NSDictionary *)environment;
-- (void)launch;
++ (void)launchBundlePath:(NSString *)bundlePath
+                bundleID:(NSString *)bundleID
+              launchArgs:(NSArray *)launchArgs
+                     env:(NSDictionary *)environment;
+
++ (void)launchBundleID:(NSString *)bundleID
+            launchArgs:(NSArray *)launchArgs
+                   env:(NSDictionary *)environment;
+
++ (XCUIApplication *)currentApplication; //TODO: I want to hide this somehow. -CF
++ (BOOL)hasSession;
+
 @end
