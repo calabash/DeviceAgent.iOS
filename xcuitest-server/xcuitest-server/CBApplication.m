@@ -5,6 +5,7 @@
 
 #import "XCUICoordinate.h"
 #import "CBApplication.h"
+#import "XCUIElement.h"
 
 @interface CBApplication ()
 @property (nonatomic, strong) XCUIApplication *app;
@@ -25,6 +26,14 @@ static CBApplication *currentApplication;
 }
 
 + (XCUIApplication *)currentApplication {
+    /*
+     * The application is apparently somewhat lazily instantiated.
+     * Calling `resolve` grabs a current snapshot of the app. 
+     *
+     * TODO: ensure that the app is always resolved before a query
+     */
+    [currentApplication.app resolve];
+    
     return currentApplication.app;
 }
 
@@ -34,7 +43,7 @@ static CBApplication *currentApplication;
 
 - (void)kill {
     NSLog(@"Killing application '%@'", self.app.bundleID);
-    [self.app.application terminate];
+    [self.app terminate];
     [self.app _waitForQuiescence];
     self.app = nil;
 }
