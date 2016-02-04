@@ -106,8 +106,8 @@
 		894ED00E1C5BDDE0004B2555 /* XCUIRecorderTimingMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 894ECFB31C5BDDDA004B2555 /* XCUIRecorderTimingMessage.h */; };
 		894ED00F1C5BDDE0004B2555 /* XCUIRecorderUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 894ECFB41C5BDDDA004B2555 /* XCUIRecorderUtilities.h */; };
 		894ED0101C5BDDE0004B2555 /* XCUIRemote.h in Headers */ = {isa = PBXBuildFile; fileRef = 894ECFB51C5BDDDA004B2555 /* XCUIRemote.h */; };
-		894ED1191C5FE948004B2555 /* GestureRotues.h in Headers */ = {isa = PBXBuildFile; fileRef = 894ED1171C5FE948004B2555 /* GestureRotues.h */; };
-		894ED11A1C5FE948004B2555 /* GestureRotues.m in Sources */ = {isa = PBXBuildFile; fileRef = 894ED1181C5FE948004B2555 /* GestureRotues.m */; };
+		894ED1191C5FE948004B2555 /* GestureRoutes.h in Headers */ = {isa = PBXBuildFile; fileRef = 894ED1171C5FE948004B2555 /* GestureRoutes.h */; };
+		894ED11A1C5FE948004B2555 /* GestureRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 894ED1181C5FE948004B2555 /* GestureRoutes.m */; };
 		898743C11C5847B30084FD93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 898743C01C5847B30084FD93 /* main.m */; };
 		898743C41C5847B30084FD93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 898743C31C5847B30084FD93 /* AppDelegate.m */; };
 		898743C71C5847B30084FD93 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 898743C61C5847B30084FD93 /* ViewController.m */; };
@@ -307,8 +307,8 @@
 		894ECFB31C5BDDDA004B2555 /* XCUIRecorderTimingMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUIRecorderTimingMessage.h; sourceTree = "<group>"; };
 		894ECFB41C5BDDDA004B2555 /* XCUIRecorderUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUIRecorderUtilities.h; sourceTree = "<group>"; };
 		894ECFB51C5BDDDA004B2555 /* XCUIRemote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUIRemote.h; sourceTree = "<group>"; };
-		894ED1171C5FE948004B2555 /* GestureRotues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureRotues.h; sourceTree = "<group>"; };
-		894ED1181C5FE948004B2555 /* GestureRotues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureRotues.m; sourceTree = "<group>"; };
+		894ED1171C5FE948004B2555 /* GestureRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureRoutes.h; sourceTree = "<group>"; };
+		894ED1181C5FE948004B2555 /* GestureRoutes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureRoutes.m; sourceTree = "<group>"; };
 		898743BC1C5847B30084FD93 /* xcuitest-server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xcuitest-server.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		898743C01C5847B30084FD93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		898743C21C5847B30084FD93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -440,8 +440,8 @@
 				894ECE841C5BCD90004B2555 /* UndefinedRoutes.m */,
 				894ECE881C5BD902004B2555 /* SessionRoutes.h */,
 				894ECE891C5BD902004B2555 /* SessionRoutes.m */,
-				894ED1171C5FE948004B2555 /* GestureRotues.h */,
-				894ED1181C5FE948004B2555 /* GestureRotues.m */,
+				894ED1171C5FE948004B2555 /* GestureRoutes.h */,
+				894ED1181C5FE948004B2555 /* GestureRoutes.m */,
 				89C710E61C62A636007AE1FC /* QueryRoutes.h */,
 				89C710E71C62A636007AE1FC /* QueryRoutes.m */,
 			);
@@ -839,7 +839,7 @@
 				894ECFCF1C5BDDDA004B2555 /* XCAXManager_OSX.h in Headers */,
 				894ECFFB1C5BDDDD004B2555 /* XCTestSuite-XCTestProbeExtensions.h in Headers */,
 				894ECFCE1C5BDDDA004B2555 /* XCAXClient_iOS.h in Headers */,
-				894ED1191C5FE948004B2555 /* GestureRotues.h in Headers */,
+				894ED1191C5FE948004B2555 /* GestureRoutes.h in Headers */,
 				894ECFC51C5BDDDA004B2555 /* UIPinchGestureRecognizer-RecordingAdditions.h in Headers */,
 				894ECFE21C5BDDDB004B2555 /* XCTest-XCTestProbeExtensions.h in Headers */,
 				894ED0041C5BDDDE004B2555 /* XCUIElement-PrivateEvents.h in Headers */,
@@ -1090,7 +1090,7 @@
 				898744301C584B960084FD93 /* HTTPErrorResponse.m in Sources */,
 				898744761C5850AC0084FD93 /* DispatchQueueLogFormatter.m in Sources */,
 				8987442E1C584B960084FD93 /* HTTPDynamicFileResponse.m in Sources */,
-				894ED11A1C5FE948004B2555 /* GestureRotues.m in Sources */,
+				894ED11A1C5FE948004B2555 /* GestureRoutes.m in Sources */,
 				8987442C1C584B960084FD93 /* HTTPDataResponse.m in Sources */,
 				898744741C5850AC0084FD93 /* ContextFilterLogFormatter.m in Sources */,
 				898744721C5850AC0084FD93 /* DDTTYLogger.m in Sources */,

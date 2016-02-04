@@ -6,6 +6,6 @@
 #import <Foundation/Foundation.h>
 #import "CBProtocols.h"
 
-@interface GestureRotues : NSObject<CBRouteProvider>
+@interface GestureRoutes : NSObject<CBRouteProvider>
 
 @end

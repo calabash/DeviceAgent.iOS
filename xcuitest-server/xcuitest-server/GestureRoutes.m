@@ -4,11 +4,11 @@
 //
 
 #import "CBApplication+Gestures.h"
-#import "GestureRotues.h"
+#import "GestureRoutes.h"
 #import "CBConstants.h"
 #import "CBMacros.h"
 
-@implementation GestureRotues
+@implementation GestureRoutes
 + (NSArray<CBRoute *> *)getRoutes {
     return @[
              [CBRoute post:@"/tap/coordinates" withBlock:^(RouteRequest *request, RouteResponse *response) {
