@@ -2,9 +2,6 @@
 //  CBApplication+Queries.m
 //  xcuitest-server
 //
-//  Created by Chris Fuentes on 2/3/16.
-//  Copyright © 2016 calabash. All rights reserved.
-//
 
 #import "CBApplication+Queries.h"
 #import "XCElementSnapshot.h"
@@ -17,7 +14,7 @@
     return [self snapshotTree:[[self currentApplication] lastSnapshot]];
 }
 
-+ (NSArray *)elementsWithProperties:(NSArray *)properties equalToValue:(NSString *)value {
++ (NSArray *)elementsWithAnyOfTheseProperties:(NSArray *)properties equalToValue:(NSString *)value {
     NSMutableString *predString = [NSMutableString string];
     for (NSString *prop in properties) {
         [predString appendFormat:@"%@ == '%@'", prop, value];
@@ -39,19 +36,14 @@
     return ret;
 }
 
-+ (NSArray *)elementsWithProperty:(NSString *)property equalToValue:(NSString *)value {
-    return [self elementsWithProperties:@[property]
-                           equalToValue:value];
-}
-
 + (NSArray *)elementsMarked:(NSString *)text {
-    return [self elementsWithProperties:@[@"label", @"title", @"value"]
-                           equalToValue:text];
+    return [self elementsWithAnyOfTheseProperties:@[@"label", @"title", @"value"]
+                                     equalToValue:text];
 }
 
 + (NSArray *)elementsWithID:(NSString *)identifier {
-    return [self elementsWithProperties:@[@"identifier", @"accessibilityIdentifier"]
-                           equalToValue:identifier];
+    return [self elementsWithAnyOfTheseProperties:@[@"identifier", @"accessibilityIdentifier"]
+                                     equalToValue:identifier];
 }
 
 + (NSDictionary *)snapshotTree:(XCElementSnapshot *)snapshot {
