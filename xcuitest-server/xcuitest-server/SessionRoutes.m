@@ -6,13 +6,13 @@
 #import "CBApplication.h"
 #import "SessionRoutes.h"
 #import "CBConstants.h"
-#import "JSONUtils.h"
+#import "CBMacros.h"
 
 @implementation SessionRoutes
 + (NSArray <CBRoute *> *)getRoutes {
     return @[
              [CBRoute post:@"/session" withBlock:^(RouteRequest *request, RouteResponse *response) {
-                 NSDictionary *json = [JSONUtils dataToJSON:request.body];
+                 NSDictionary *json = DATA_TO_JSON(request.body);
                  NSString *bundlePath = json[CB_BUNDLE_PATH_KEY];
                  NSString *bundleID = json[CB_BUNDLE_ID_KEY];
                  NSArray *launchArgs = json[CB_LAUNCH_ARGS_KEY] ?: @[];

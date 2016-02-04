@@ -36,12 +36,12 @@
     return ret;
 }
 
-+ (NSArray *)jsonForElementsMarked:(NSString *)text {
-    return [self elementsWithAnyOfTheseProperties:@[@"label", @"title", @"value", @"accessibilityLabel"]
++ (NSArray *)elementsMarked:(NSString *)text {
+    return [self elementsWithAnyOfTheseProperties:@[@"label", @"title", @"value"]
                                      equalToValue:text];
 }
 
-+ (NSArray *)jsonForElementsWithID:(NSString *)identifier {
++ (NSArray *)elementsWithID:(NSString *)identifier {
     return [self elementsWithAnyOfTheseProperties:@[@"identifier", @"accessibilityIdentifier"]
                                      equalToValue:identifier];
 }

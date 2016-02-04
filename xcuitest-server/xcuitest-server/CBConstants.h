@@ -14,14 +14,8 @@ static NSString *const CB_ENVIRONMENT_KEY = @"environment";
 
 static NSString *const CB_X_KEY = @"x";
 static NSString *const CB_Y_KEY = @"y";
-static NSString *const CB_X1_KEY = @"x1";
-static NSString *const CB_Y1_KEY = @"y1";
-static NSString *const CB_X2_KEY = @"x2";
-static NSString *const CB_Y2_KEY = @"y2";
-
 static NSString *const CB_HEIGHT_KEY = @"height";
 static NSString *const CB_WIDTH_KEY = @"width";
-static NSString *const CB_DURATION_KEY = @"duration";
 static NSString *const CB_TYPE_KEY = @"type";
 static NSString *const CB_TITLE_KEY = @"title";
 static NSString *const CB_LABEL_KEY = @"label";

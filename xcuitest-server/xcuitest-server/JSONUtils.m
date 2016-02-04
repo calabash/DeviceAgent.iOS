@@ -36,8 +36,4 @@
              CB_WIDTH_KEY : @(rect.size.width)
              };
 }
-
-+ (id)dataToJSON:(NSData *)data {
-    return [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
-}
 @end

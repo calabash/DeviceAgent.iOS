@@ -7,6 +7,6 @@
 
 @interface CBApplication (Queries)
 + (NSDictionary *)tree;
-+ (NSArray *)jsonForElementsMarked:(NSString *)text;
-+ (NSArray *)jsonForElementsWithID:(NSString *)identifier;
++ (NSArray *)elementsMarked:(NSString *)text;
++ (NSArray *)elementsWithID:(NSString *)identifier;
 @end
