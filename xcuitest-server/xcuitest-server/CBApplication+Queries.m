@@ -17,6 +17,22 @@
     return [self snapshotTree:[[self currentApplication] lastSnapshot]];
 }
 
++ (NSArray *)viewsMarked:(NSString *)text {
+    NSString *predString = [NSString stringWithFormat:@"label == '%@' OR title == '%@'",text, text];
+    NSPredicate *pred = [NSPredicate predicateWithFormat:predString];
+    XCUIElementQuery *query = [[[self currentApplication] descendantsMatchingType:XCUIElementTypeAny]
+                               matchingPredicate:pred];
+    
+    NSArray *childElements = [query allElementsBoundByIndex];
+    NSMutableArray *ret = [NSMutableArray array];
+    
+    //TODO: Should we check the application itself?
+    for (XCUIElement *element in childElements) {
+        [ret addObject:[JSONUtils elementToJSON:element]];
+    }
+    return ret;
+}
+
 + (NSDictionary *)snapshotTree:(XCElementSnapshot *)snapshot {
     NSMutableDictionary *json = [JSONUtils snapshotToJSON:snapshot];
     

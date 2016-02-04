@@ -10,4 +10,5 @@
 
 @interface CBApplication (Queries)
 + (NSDictionary *)tree;
++ (NSArray *)viewsMarked:(NSString *)text;
 @end

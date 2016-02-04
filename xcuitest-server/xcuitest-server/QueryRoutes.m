@@ -14,7 +14,16 @@
     return @[
              [CBRoute get:@"/tree" withBlock:^(RouteRequest *request, RouteResponse *response) {
                  [response respondWithJSON:[CBApplication tree]];
-             }]
+             }],
+             
+             [CBRoute get:@"/query/marked/:text" withBlock:^(RouteRequest *request, RouteResponse *response) {
+                 NSString *text = request.params[@"text"];
+                 [response respondWithJSON:[CBApplication viewsMarked:text]];
+             }],
+             
+             [CBRoute get:@"/query/id/:id" withBlock:^(RouteRequest *request, RouteResponse *response) {
+                 
+             }],
              ];
 }
 @end
