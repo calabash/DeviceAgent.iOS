@@ -20,4 +20,20 @@
              }]
              ];
 }
+
+/* TODO
+- (void)tap;
+- (void)doubleTap;
+- (void)twoFingerTap;
+- (void)tapWithNumberOfTaps:(NSUInteger)numberOfTaps numberOfTouches:(NSUInteger)numberOfTouches;
+- (void)pressForDuration:(NSTimeInterval)duration;
+- (void)pressForDuration:(NSTimeInterval)duration thenDragToElement:(XCUIElement *)otherElement;
+- (void)swipeUp;
+- (void)swipeDown;
+- (void)swipeLeft;
+- (void)swipeRight;
+- (void)pinchWithScale:(CGFloat)scale velocity:(CGFloat)velocity;
+- (void)rotate:(CGFloat)rotation withVelocity:(CGFloat)velocity;
+- (void)typeText:(NSString *)text;
+ */
 @end
