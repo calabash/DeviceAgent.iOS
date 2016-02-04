@@ -13,3 +13,6 @@ notifications:
       - joshua.moody@xamarin.com
     on_success: change
     on_failure: always
+  slack:
+    rooms:
+      secure: nIRPWi5LJun3yHMIkKpMkBoV8dIKakcZyfzJF6HBdGpkQhkaLSKkMEL+2lXsVeeTJKZ46WSLSpimcNoaBsw4QGVVFHig8Gegsg4X3zZZKI4h9CPIsC4Wssc/TAuzwn3hhfcux6MafNR76D/Nr/lQVchHXGmbqhP1fQbWcgi588cOHCjW/CYJY4Akll0XYtqBqNoy5dFLS5L11/xsZtnwkMhYfgEfLvLFgPk4npTFrWkPOKTF+SQgmE/ZvkPhQWGV6HV2yApjtxCdiOWjSb2vuHT77BWVC2svCPttN3oIZSuFV2kpge4dEO1Nd/YiYnVpuMgLFrme6cjhnbG828WA48YjfqrjjB1+lnmj86BSjUmj8OEchWDdJv7uJn8vT1FT26Zg9ZLTIxlNdOGEEY0fKl8Ow85dmireaUPJLjR7Udbz9RuL0QVQLQNXyYCOcc1x/fDsxwqvx5eJGei/UpXvYMSl2qJte+ADONbo4t1G2/RqvW3qU37f84su332TCbkWkp7wkcDNo1dx0t7OIwXMQYJEqbS5S3qYTkKCF3XsO1QWiLoRNXlsV6dVTrxVFaGg2WZ6FYZBzW5DgBl6RH9SfRDi+cCC+4+hs9m2eANKIMIpUqJCjVY5w5VPALsMEIJoGfHmJKErjGeMzpLwydwYHNKyoOgmcTgaN1vSgRlj//I=
