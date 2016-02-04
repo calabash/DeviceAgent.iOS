@@ -15,7 +15,7 @@
 - (void)setHeader:(NSString *)field value:(NSString *)value;
 - (void)respondWithString:(NSString *)string;
 - (void)respondWithString:(NSString *)string encoding:(NSStringEncoding)encoding;
-- (void)respondWithJSON:(NSDictionary *)json;
+- (void)respondWithJSON:(id)json; //NSArray or NSDictionary!
 - (void)respondWithData:(NSData *)data;
 - (void)respondWithFile:(NSString *)path;
 - (void)respondWithFile:(NSString *)path async:(BOOL)async;

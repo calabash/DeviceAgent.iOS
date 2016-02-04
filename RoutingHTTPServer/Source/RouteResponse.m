@@ -62,7 +62,7 @@
 	self.response = [[HTTPDataResponse alloc] initWithData:data];
 }
 
-- (void)respondWithJSON:(NSDictionary *)json {
+- (void)respondWithJSON:(id)json {
     headers[@"Content-Type"] = @"application/json";
     NSError *e;
     NSData *data = [NSJSONSerialization dataWithJSONObject:json options:0 error:&e];

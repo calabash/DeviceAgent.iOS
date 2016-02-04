@@ -4,7 +4,7 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2013 by Steve Nygard.
 //
 
-#import <XCTWebDriverAgentLib/CDStructures.h>
+//#import <XCTWebDriverAgentLib/CDStructures.h>
 #import <CoreGraphics/CoreGraphics.h>
 
 @class NSMutableDictionary;
@@ -24,13 +24,13 @@
 - (id)snapshotForApplication:(id)arg1 attributeList:(id)arg2 parameters:(id)arg3;
 - (id)defaultParameters;
 - (id)defaultAttributes;
-- (void)notifyWhenViewControllerViewDidDisappearReply:(CDUnknownBlockType)arg1;
-- (void)notifyWhenViewControllerViewDidAppearReply:(CDUnknownBlockType)arg1;
-- (void)notifyWhenNoAnimationsAreActiveForApplication:(id)arg1 reply:(CDUnknownBlockType)arg2;
-- (void)notifyWhenEventLoopIsIdleForApplication:(id)arg1 reply:(CDUnknownBlockType)arg2;
+//- (void)notifyWhenViewControllerViewDidDisappearReply:(CDUnknownBlockType)arg1;
+//- (void)notifyWhenViewControllerViewDidAppearReply:(CDUnknownBlockType)arg1;
+//- (void)notifyWhenNoAnimationsAreActiveForApplication:(id)arg1 reply:(CDUnknownBlockType)arg2;
+//- (void)notifyWhenEventLoopIsIdleForApplication:(id)arg1 reply:(CDUnknownBlockType)arg2;
+//- (void)notifyOnNextOccurrenceOfUserTestingEvent:(id)arg1 handler:(CDUnknownBlockType)arg2;
 - (id)interruptingUIElementAffectingSnapshot:(id)arg1;
 - (void)handleAccessibilityNotification:(int)arg1 withPayload:(id)arg2;
-- (void)notifyOnNextOccurrenceOfUserTestingEvent:(id)arg1 handler:(CDUnknownBlockType)arg2;
 - (void)handleUserTestingNotification:(id)arg1;
 - (id)elementAtPoint:(CGPoint)arg1 error:(id *)arg2;
 - (id)activeApplications;

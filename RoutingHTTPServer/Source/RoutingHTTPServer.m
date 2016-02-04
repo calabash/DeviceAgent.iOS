@@ -209,7 +209,7 @@
                     if ([route isKindOfClass:[CBRoute class]]) {
                         path = ((CBRoute *)route).path;
                     }
-                    NSLog(@"%@ %@ %@", request.method, path, DATA_TO_JSON(request.body));
+                    NSLog(@"%@ %@ %@", request.method, path, DATA_TO_JSON(request.body) ?: @"");
 					[self handleRoute:route withRequest:request response:response];
 				}
 			});
