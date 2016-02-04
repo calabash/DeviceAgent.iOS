@@ -1,6 +1,6 @@
 #import "RoutingHTTPServer.h"
 #import "RoutingConnection.h"
-#import "CBMacros.h"
+#import "JSONUtils.h"
 #import "CBRoute.h"
 
 @implementation RoutingHTTPServer {
@@ -209,7 +209,7 @@
                     if ([route isKindOfClass:[CBRoute class]]) {
                         path = ((CBRoute *)route).path;
                     }
-                    NSLog(@"%@ %@ %@", request.method, path, DATA_TO_JSON(request.body) ?: @"");
+                    NSLog(@"%@ %@ %@", request.method, path, [JSONUtils dataToJSON:request.body] ?: @"");
 					[self handleRoute:route withRequest:request response:response];
 				}
 			});

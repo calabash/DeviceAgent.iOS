@@ -9,4 +9,5 @@
 @interface JSONUtils : NSObject
 + (NSMutableDictionary *)snapshotToJSON:(XCElementSnapshot *)snapshot;
 + (NSMutableDictionary *)elementToJSON:(XCUIElement *)element;
++ (id)dataToJSON:(NSData *)data;
 @end
