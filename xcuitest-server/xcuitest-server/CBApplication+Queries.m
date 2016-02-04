@@ -17,11 +17,17 @@
     return [self snapshotTree:[[self currentApplication] lastSnapshot]];
 }
 
-+ (NSArray *)viewsMarked:(NSString *)text {
-    NSString *predString = [NSString stringWithFormat:@"label == '%@' OR title == '%@'",text, text];
-    NSPredicate *pred = [NSPredicate predicateWithFormat:predString];
++ (NSArray *)elementsWithProperties:(NSArray *)properties equalToValue:(NSString *)value {
+    NSMutableString *predString = [NSMutableString string];
+    for (NSString *prop in properties) {
+        [predString appendFormat:@"%@ == '%@'", prop, value];
+        if (prop != [properties lastObject]) {
+            [predString appendString:@" OR "];
+        }
+    }
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:predString];
     XCUIElementQuery *query = [[[self currentApplication] descendantsMatchingType:XCUIElementTypeAny]
-                               matchingPredicate:pred];
+                               matchingPredicate:predicate];
     
     NSArray *childElements = [query allElementsBoundByIndex];
     NSMutableArray *ret = [NSMutableArray array];
@@ -31,6 +37,21 @@
         [ret addObject:[JSONUtils elementToJSON:element]];
     }
     return ret;
+}
+
++ (NSArray *)elementsWithProperty:(NSString *)property equalToValue:(NSString *)value {
+    return [self elementsWithProperties:@[property]
+                           equalToValue:value];
+}
+
++ (NSArray *)elementsMarked:(NSString *)text {
+    return [self elementsWithProperties:@[@"label", @"title", @"value"]
+                           equalToValue:text];
+}
+
++ (NSArray *)elementsWithID:(NSString *)identifier {
+    return [self elementsWithProperties:@[@"identifier", @"accessibilityIdentifier"]
+                           equalToValue:identifier];
 }
 
 + (NSDictionary *)snapshotTree:(XCElementSnapshot *)snapshot {

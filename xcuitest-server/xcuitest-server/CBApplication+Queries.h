@@ -10,5 +10,6 @@
 
 @interface CBApplication (Queries)
 + (NSDictionary *)tree;
-+ (NSArray *)viewsMarked:(NSString *)text;
++ (NSArray *)elementsMarked:(NSString *)text;
++ (NSArray *)elementsWithID:(NSString *)identifier;
 @end
