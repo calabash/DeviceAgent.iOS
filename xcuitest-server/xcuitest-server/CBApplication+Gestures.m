@@ -252,22 +252,22 @@
 }
 
 + (BOOL)gesture:(_Nonnull SEL)gesture matchingSelector:(_Nonnull SEL)match valueToMatch:(NSString *)value {
-    NSArray <XCUIElement *> *elements = [self performSelector:match withObject:value];
+    XCUIElement *element = [self performSelector:match withObject:value];
     
-    if (elements.count == 0) {
+    if (element == nil) {
         //TODO: error message?
         return NO;
     } else {
-        [self performGesture:gesture onElement:[elements firstObject]];
+        [self performGesture:gesture onElement:element];
         return YES;
     }
 }
 
 + (BOOL)gesture:(_Nonnull SEL)gesture onMarked:(NSString *)text {
-    return [self gesture:gesture matchingSelector:@selector(elementsMarked:) valueToMatch:text];
+    return [self gesture:gesture matchingSelector:@selector(elementMarked:) valueToMatch:text];
 }
 
 + (BOOL)gesture:(_Nonnull SEL)gesture onIdentifier:(NSString *)identifier {
-    return [self gesture:gesture matchingSelector:@selector(elementsWithIdentifier:) valueToMatch:identifier];
+    return [self gesture:gesture matchingSelector:@selector(elementWithIdentifier:) valueToMatch:identifier];
 }
 @end
