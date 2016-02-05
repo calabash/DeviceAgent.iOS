@@ -36,7 +36,7 @@
              }],
              
              [CBRoute delete:@"/session" withBlock:^(RouteRequest *request, RouteResponse *response) {
-                 [[CBApplication currentApplication] terminate];
+                 [CBApplication killCurrentApplication];
                  [response respondWithJSON:@{@"status" : @"dead"}];
              }],
              

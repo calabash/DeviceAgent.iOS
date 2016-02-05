@@ -44,13 +44,18 @@ static CBApplication *currentApplication;
 - (void)kill {
     NSLog(@"Killing application '%@'", self.app.bundleID);
     [self.app terminate];
-    [self.app _waitForQuiescence];
     self.app = nil;
 }
 
 - (void)startSession {
     NSLog(@"Launching application '%@'", self.app.bundleID);
     [self.app launch];
+}
+
++ (void)killCurrentApplication {
+    //TODO: This always throws an exception that ends the test. 
+    //https://forums.developer.apple.com/message/59121
+    [currentApplication kill];
 }
 
 + (void)launchBundlePath:(NSString *)bundlePath

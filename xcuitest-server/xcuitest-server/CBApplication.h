@@ -17,6 +17,7 @@
                    env:(NSDictionary *)environment;
 
 + (XCUIApplication *)currentApplication; //TODO: I want to hide this somehow. -CF
++ (void)killCurrentApplication;
 + (BOOL)hasSession;
 
 @end
