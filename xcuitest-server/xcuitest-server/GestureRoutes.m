@@ -58,24 +58,69 @@
               *     Marked API
               */
              
-             //TODO
+             [CBRoute post:@"/tap/marked/:text"
+                 withBlock:^(RouteRequest *request, RouteResponse *response) {
+                 NSString *text = request.params[CB_TEXT_KEY];
+                     
+                 response.statusCode = [CBApplication tapMarked:text] ?
+                    HTTP_STATUS_CODE_EVERYTHING_OK :
+                    HTTP_STATUS_CODE_INVALID_REQUEST;
+                 [response respondWithString:CB_EMPTY_STRING];
+             }],
              
+             [CBRoute post:@"/doubleTap/marked/:text"
+                 withBlock:^(RouteRequest *request, RouteResponse *response) {
+                 NSString *text = request.params[CB_TEXT_KEY];
+                 
+                 response.statusCode = [CBApplication doubleTapMarked:text] ?
+                 HTTP_STATUS_CODE_EVERYTHING_OK :
+                 HTTP_STATUS_CODE_INVALID_REQUEST;
+                 [response respondWithString:CB_EMPTY_STRING];
+             }],
+             
+             [CBRoute post:@"/twoFingerTap/marked/:text"
+                 withBlock:^(RouteRequest *request, RouteResponse *response) {
+                     NSString *text = request.params[CB_TEXT_KEY];
+                     
+                     response.statusCode = [CBApplication twoFingerTapMarked:text] ?
+                     HTTP_STATUS_CODE_EVERYTHING_OK :
+                     HTTP_STATUS_CODE_INVALID_REQUEST;
+                     [response respondWithString:CB_EMPTY_STRING];
+                 }],
+             
+             [CBRoute post:@"/swipe/:direction/marked/:text"
+                 withBlock:^(RouteRequest *request, RouteResponse *response) {
+                     NSString *direction = [request.params[CB_DIRECTION_KEY] lowercaseString];
+                     NSString *text = request.params[CB_TEXT_KEY];
+                     
+                     //TODO: What should the default message be?
+                     BOOL success = NO;
+                     NSString *message = CB_EMPTY_STRING;
+                     if ([direction isEqualToString:CB_UP_KEY]) {
+                         success = [CBApplication swipeUpOnMarked:text];
+                     } else if ([direction isEqualToString:CB_DOWN_KEY]) {
+                         success = [CBApplication swipeDownOnMarked:text];
+                     } else if ([direction isEqualToString:CB_LEFT_KEY]) {
+                         success = [CBApplication swipeLeftOnMarked:text];
+                     } else if ([direction isEqualToString:CB_RIGHT_KEY]) {
+                         success = [CBApplication swipeRightOnMarked:text];
+                     } else {
+                         message = [NSString stringWithFormat:@"'%@' is not a valid direction", direction];
+                     }
+                     response.statusCode = success ?
+                        HTTP_STATUS_CODE_EVERYTHING_OK :
+                        HTTP_STATUS_CODE_INVALID_REQUEST;
+                     [response respondWithString:message];
+                 }],
              ];
 }
 
 /* TODO
-- (void)tap;
-- (void)doubleTap;
-- (void)twoFingerTap;
-- (void)tapWithNumberOfTaps:(NSUInteger)numberOfTaps numberOfTouches:(NSUInteger)numberOfTouches;
-- (void)pressForDuration:(NSTimeInterval)duration;
-- (void)pressForDuration:(NSTimeInterval)duration thenDragToElement:(XCUIElement *)otherElement;
-- (void)swipeUp;
-- (void)swipeDown;
-- (void)swipeLeft;
-- (void)swipeRight;
 - (void)pinchWithScale:(CGFloat)scale velocity:(CGFloat)velocity;
 - (void)rotate:(CGFloat)rotation withVelocity:(CGFloat)velocity;
 - (void)typeText:(NSString *)text;
+ - (void)tapWithNumberOfTaps:(NSUInteger)numberOfTaps numberOfTouches:(NSUInteger)numberOfTouches;
+ - (void)pressForDuration:(NSTimeInterval)duration;
+ - (void)pressForDuration:(NSTimeInterval)duration thenDragToElement:(XCUIElement *)otherElement;
  */
 @end

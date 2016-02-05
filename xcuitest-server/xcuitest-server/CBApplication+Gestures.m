@@ -4,7 +4,9 @@
 //
 
 #import "CBApplication+Gestures.h"
+#import "CBApplication+Queries.h"
 #import "XCUICoordinate.h"
+#import "JSONUtils.h"
 
 @implementation CBApplication(Gestures)
 
@@ -40,4 +42,48 @@
        thenDragToCoordinate:end];
 }
 
++ (void)performGesture:(_Nonnull SEL)gesture onElement:(XCUIElement *)el {
+    NSLog(@"Peforming %@ on %@", NSStringFromSelector(gesture), [JSONUtils elementToJSON:el]);
+    [el performSelector:gesture withObject:nil];
+}
+
++ (BOOL)gesture:(_Nonnull SEL)gesture onMarked:(NSString *)text {
+    NSArray <XCUIElement *> *elements = [self elementsMarked:text];
+    
+    if (elements.count == 0) {
+        //TODO: error message?
+        return NO;
+    } else {
+        [self performGesture:gesture onElement:[elements firstObject]];
+        return YES;
+    }
+}
+
++ (BOOL)tapMarked:(NSString *)text {
+    return [self gesture:@selector(tap) onMarked:text];
+}
+
++ (BOOL)doubleTapMarked:(NSString *)text {
+    return [self gesture:@selector(doubleTap) onMarked:text];
+}
+
++ (BOOL)twoFingerTapMarked:(NSString *)text {
+    return [self gesture:@selector(twoFingerTap) onMarked:text];
+}
+
++ (BOOL)swipeUpOnMarked:(NSString *)text {
+    return [self gesture:@selector(swipeUp) onMarked:text];
+}
+
++ (BOOL)swipeDownOnMarked:(NSString *)text {
+    return [self gesture:@selector(swipeDown) onMarked:text];
+}
+
++ (BOOL)swipeLeftOnMarked:(NSString *)text {
+    return [self gesture:@selector(swipeLeft) onMarked:text];
+}
+
++ (BOOL)swipeRightOnMarked:(NSString *)text {
+    return [self gesture:@selector(swipeRight) onMarked:text];
+}
 @end
