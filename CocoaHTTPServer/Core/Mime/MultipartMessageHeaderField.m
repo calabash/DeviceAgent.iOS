@@ -163,6 +163,9 @@ NSString* extractParamValue(const char* bytes, NSUInteger length, NSStringEncodi
 			HTTPLogWarn(@"MultipartFormDataParser: param %@ mentioned more then once in one header",currentParam);
 		}
 #endif
+    if (!paramValue) {
+      paramValue = @"";
+    }
 		[params setObject:paramValue forKey:currentParam];
 		HTTPLogVerbose(@"MultipartFormDataParser: header param: %@ = %@",currentParam,paramValue);
 		currentParam = nil;
