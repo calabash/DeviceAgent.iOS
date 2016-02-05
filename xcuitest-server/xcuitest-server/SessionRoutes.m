@@ -35,6 +35,11 @@
                  [response respondWithJSON:@{@"status" : @"launching!"}];
              }],
              
+             [CBRoute delete:@"/session" withBlock:^(RouteRequest *request, RouteResponse *response) {
+                 [[CBApplication currentApplication] terminate];
+                 [response respondWithJSON:@{@"status" : @"dead"}];
+             }],
+             
              [CBRoute post:@"/shutdown" withBlock:^(RouteRequest *request, RouteResponse *response) {
                  //Want to make sure this route actually returns a response to the client before shutting down
                  [response respondWithString:@"Goodbye."];
