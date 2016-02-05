@@ -5,6 +5,7 @@
 
 #import "CBApplication+Queries.h"
 #import "XCElementSnapshot.h"
+#import "XCUIElementQuery.h"
 #import "XCAXClient_iOS.h"
 #import "XCUIElement.h"
 #import "JSONUtils.h"
@@ -51,7 +52,8 @@ static NSArray <NSString *> *identifierProperties;
 }
 
 + (NSArray <XCUIElement *> *)elementsWithIdentifier:(NSString *)identifier {
-    return [self elementsWithAnyOfTheseProperties:identifierProperties equalToValue:identifier];
+    return [[[[self currentApplication] descendantsMatchingType:XCUIElementTypeAny]
+            matchingIdentifier:identifier] allElementsBoundByIndex];
 }
 
 + (NSArray <XCUIElement *> *)elementsWithAnyOfTheseProperties:(NSArray *)properties
@@ -89,7 +91,13 @@ static NSArray <NSString *> *identifierProperties;
 }
 
 + (NSArray <NSDictionary *> *)jsonForElementsWithID:(NSString *)identifier {
-    return [self jsonForElementsWithAnyOfTheseProperties:identifierProperties
-                                            equalToValue:identifier];
+    NSArray *elements = [self elementsWithIdentifier:identifier];
+    NSMutableArray *ret = [NSMutableArray array];
+    
+    //TODO: Should we check the application itself?
+    for (XCUIElement *element in elements) {
+        [ret addObject:[JSONUtils elementToJSON:element]];
+    }
+    return ret;
 }
 @end

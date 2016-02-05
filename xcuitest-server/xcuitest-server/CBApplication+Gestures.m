@@ -124,8 +124,8 @@
 #pragma mark - Helper Methods
 
 + (void)performGesture:(_Nonnull SEL)gesture onElement:(XCUIElement *)el {
-    NSLog(@"Peforming %@ on %@", NSStringFromSelector(gesture), [JSONUtils elementToJSON:el]);
     [el performSelector:gesture withObject:nil];
+    NSLog(@"Peforming %@ on %@", NSStringFromSelector(gesture), [JSONUtils elementToJSON:el]);
 }
 
 + (BOOL)gesture:(_Nonnull SEL)gesture matchingSelector:(_Nonnull SEL)match valueToMatch:(NSString *)value {
