@@ -36,10 +36,13 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
 #define WS_OP_PING                 9
 #define WS_OP_PONG                 10
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-function"
 static inline BOOL WS_OP_IS_FINAL_FRAGMENT(UInt8 frame)
 {
 	return (frame & 0x80) ? YES : NO;
 }
+#pragma clang diagnostic pop
 
 static inline BOOL WS_PAYLOAD_IS_MASKED(UInt8 frame)
 {
@@ -168,10 +171,14 @@ static inline NSUInteger WS_PAYLOAD_LENGTH(UInt8 frame)
 	{
 		if (HTTP_LOG_VERBOSE)
 		{
+// HTTP_LOG_VERBOSE is always false
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunreachable-code"
 			NSData *requestHeaders = [aRequest messageData];
-			
+
 			NSString *temp = [[NSString alloc] initWithData:requestHeaders encoding:NSUTF8StringEncoding];
 			HTTPLogVerbose(@"%@[%p] Request Headers:\n%@", THIS_FILE, self, temp);
+#pragma clang diagnostic pop
 		}
 		
 		websocketQueue = dispatch_queue_create("WebSocket", NULL);
@@ -411,8 +418,12 @@ static inline NSUInteger WS_PAYLOAD_LENGTH(UInt8 frame)
 	
 	if (HTTP_LOG_VERBOSE)
 	{
+// HTTP_LOG_VERBOSE is always false
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunreachable-code"
 		NSString *temp = [[NSString alloc] initWithData:responseHeaders encoding:NSUTF8StringEncoding];
 		HTTPLogVerbose(@"%@[%p] Response Headers:\n%@", THIS_FILE, self, temp);
+#pragma clang diagnostic pop
 	}
 	
 	[asyncSocket writeData:responseHeaders withTimeout:TIMEOUT_NONE tag:TAG_HTTP_RESPONSE_HEADERS];
@@ -493,6 +504,9 @@ static inline NSUInteger WS_PAYLOAD_LENGTH(UInt8 frame)
 	
 	if (HTTP_LOG_VERBOSE)
 	{
+// HTTP_LOG_VERBOSE is always false
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunreachable-code"
 		NSString *s1 = [[NSString alloc] initWithData:d1 encoding:NSASCIIStringEncoding];
 		NSString *s2 = [[NSString alloc] initWithData:d2 encoding:NSASCIIStringEncoding];
 		NSString *s3 = [[NSString alloc] initWithData:d3 encoding:NSASCIIStringEncoding];
@@ -506,7 +520,7 @@ static inline NSUInteger WS_PAYLOAD_LENGTH(UInt8 frame)
 		HTTPLogVerbose(@"key3 passed : raw(%@) str(%@)", d3, s3);
 		HTTPLogVerbose(@"key0 concat : raw(%@) str(%@)", d0, s0);
 		HTTPLogVerbose(@"responseBody: raw(%@) str(%@)", responseBody, sH);
-		
+#pragma clang diagnostic pop
 	}
 }
 
