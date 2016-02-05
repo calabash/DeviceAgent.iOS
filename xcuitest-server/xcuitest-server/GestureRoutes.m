@@ -14,6 +14,7 @@
              /*
               *     Coordinates API
               */
+#pragma mark - Coordinate Routes
              [CBRoute post:@"/tap/coordinates" withBlock:^(RouteRequest *request, RouteResponse *response) {
                  NSDictionary *arguments = DATA_TO_JSON(request.body);
                  float x = [arguments[CB_X_KEY] floatValue],
@@ -57,62 +58,133 @@
              /*
               *     Marked API
               */
+#pragma mark - Marked Routes
              
              [CBRoute post:@"/tap/marked/:text"
                  withBlock:^(RouteRequest *request, RouteResponse *response) {
-                 NSString *text = request.params[CB_TEXT_KEY];
-                     
-                 response.statusCode = [CBApplication tapMarked:text] ?
-                    HTTP_STATUS_CODE_EVERYTHING_OK :
-                    HTTP_STATUS_CODE_INVALID_REQUEST;
-                 [response respondWithString:CB_EMPTY_STRING];
+                     [self handleRequest:request
+                                response:response
+                        forMarkedGesture:@selector(tapMarked:)];
              }],
              
              [CBRoute post:@"/doubleTap/marked/:text"
                  withBlock:^(RouteRequest *request, RouteResponse *response) {
-                 NSString *text = request.params[CB_TEXT_KEY];
-                 
-                 response.statusCode = [CBApplication doubleTapMarked:text] ?
-                 HTTP_STATUS_CODE_EVERYTHING_OK :
-                 HTTP_STATUS_CODE_INVALID_REQUEST;
-                 [response respondWithString:CB_EMPTY_STRING];
+                     [self handleRequest:request
+                                response:response
+                        forMarkedGesture:@selector(doubleTapMarked:)];
              }],
              
              [CBRoute post:@"/twoFingerTap/marked/:text"
                  withBlock:^(RouteRequest *request, RouteResponse *response) {
-                     NSString *text = request.params[CB_TEXT_KEY];
-                     
-                     response.statusCode = [CBApplication twoFingerTapMarked:text] ?
-                     HTTP_STATUS_CODE_EVERYTHING_OK :
-                     HTTP_STATUS_CODE_INVALID_REQUEST;
-                     [response respondWithString:CB_EMPTY_STRING];
+                     [self handleRequest:request
+                                response:response
+                        forMarkedGesture:@selector(twoFingerTapMarked:)];
                  }],
              
              [CBRoute post:@"/swipe/:direction/marked/:text"
                  withBlock:^(RouteRequest *request, RouteResponse *response) {
                      NSString *direction = [request.params[CB_DIRECTION_KEY] lowercaseString];
-                     NSString *text = request.params[CB_TEXT_KEY];
-                     
-                     //TODO: What should the default message be?
-                     BOOL success = NO;
-                     NSString *message = CB_EMPTY_STRING;
+                    
+                     SEL gesture = nil;
                      if ([direction isEqualToString:CB_UP_KEY]) {
-                         success = [CBApplication swipeUpOnMarked:text];
+                         gesture = @selector(swipeUpOnMarked:);
                      } else if ([direction isEqualToString:CB_DOWN_KEY]) {
-                         success = [CBApplication swipeDownOnMarked:text];
+                         gesture = @selector(swipeDownOnMarked:);
                      } else if ([direction isEqualToString:CB_LEFT_KEY]) {
-                         success = [CBApplication swipeLeftOnMarked:text];
+                         gesture = @selector(swipeLeftOnMarked:);
                      } else if ([direction isEqualToString:CB_RIGHT_KEY]) {
-                         success = [CBApplication swipeRightOnMarked:text];
+                         gesture = @selector(swipeRightOnMarked:);
                      } else {
-                         message = [NSString stringWithFormat:@"'%@' is not a valid direction", direction];
+                         response.statusCode = HTTP_STATUS_CODE_INVALID_REQUEST;
+                         [response respondWithString:[NSString stringWithFormat:@"'%@' is not a valid direction", direction]];
+                         return;
                      }
-                     response.statusCode = success ?
-                        HTTP_STATUS_CODE_EVERYTHING_OK :
-                        HTTP_STATUS_CODE_INVALID_REQUEST;
-                     [response respondWithString:message];
+                     
+                     [self handleRequest:request
+                                response:response
+                        forMarkedGesture:gesture];
+                 }],
+             
+             /*
+              *     Identifier API
+              */
+#pragma mark - Identifier Routes
+             
+             [CBRoute post:@"/tap/id/:id"
+                 withBlock:^(RouteRequest *request, RouteResponse *response) {
+                     [self handleRequest:request
+                                response:response
+                    forIdentifierGesture:@selector(tapIdentifier:)];
+                 }],
+             
+             [CBRoute post:@"/doubleTap/id/:id"
+                 withBlock:^(RouteRequest *request, RouteResponse *response) {
+                     [self handleRequest:request
+                                response:response
+                    forIdentifierGesture:@selector(doubleTapIdentifier:)];
+                 }],
+             
+             [CBRoute post:@"/twoFingerTap/id/:id"
+                 withBlock:^(RouteRequest *request, RouteResponse *response) {
+                     [self handleRequest:request
+                                response:response
+                    forIdentifierGesture:@selector(twoFingerTapIdentifier:)];
+                 }],
+             
+             [CBRoute post:@"/swipe/:direction/id/:id"
+                 withBlock:^(RouteRequest *request, RouteResponse *response) {
+                     NSString *direction = [request.params[CB_DIRECTION_KEY] lowercaseString];
+                     
+                     SEL gesture = nil;
+                     if ([direction isEqualToString:CB_UP_KEY]) {
+                         gesture = @selector(swipeUpOnIdentifier:);
+                     } else if ([direction isEqualToString:CB_DOWN_KEY]) {
+                         gesture = @selector(swipeDownOnIdentifier:);
+                     } else if ([direction isEqualToString:CB_LEFT_KEY]) {
+                         gesture = @selector(swipeLeftOnIdentifier:);
+                     } else if ([direction isEqualToString:CB_RIGHT_KEY]) {
+                         gesture = @selector(swipeRightOnIdentifier:);
+                     } else {
+                         response.statusCode = HTTP_STATUS_CODE_INVALID_REQUEST;
+                         [response respondWithString:[NSString stringWithFormat:@"'%@' is not a valid direction", direction]];
+                         return;
+                     }
+                     
+                     [self handleRequest:request
+                                response:response
+                    forIdentifierGesture:gesture];
                  }],
              ];
+}
+
++ (void)handleRequest:(RouteRequest *)request
+             response:(RouteResponse *)response
+     forMarkedGesture:(SEL)gesture {
+    [self handleRequest:request
+               response:response
+             forGesture:gesture
+            propertyKey:CB_TEXT_KEY];
+}
+
++ (void)handleRequest:(RouteRequest *)request
+             response:(RouteResponse *)response
+ forIdentifierGesture:(SEL)gesture {
+    [self handleRequest:request
+               response:response
+             forGesture:gesture
+            propertyKey:CB_IDENTIFIER_KEY];
+}
+
++ (void)handleRequest:(RouteRequest *)request
+             response:(RouteResponse *)response
+           forGesture:(SEL)gesture
+          propertyKey:(NSString *)propertyKey {
+    NSString *toMatch = request.params[propertyKey];
+    BOOL success = [[CBApplication performSelector:gesture withObject:toMatch] boolValue];
+    response.statusCode = success ?
+    HTTP_STATUS_CODE_EVERYTHING_OK :
+    HTTP_STATUS_CODE_INVALID_REQUEST;
+    [response respondWithString:CB_EMPTY_STRING];
 }
 
 /* TODO

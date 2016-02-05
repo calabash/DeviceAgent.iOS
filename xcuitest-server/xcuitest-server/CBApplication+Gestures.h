@@ -11,6 +11,8 @@
 /*
     Coordinates
  */
+#pragma mark - Coordinates API
+
 + (void)tap:(float)x :(float)y;
 + (void)doubleTap:(float)x :(float)y;
 + (void)press:(float)x :(float)y forDuration:(NSTimeInterval)duration;
@@ -19,6 +21,7 @@
 /*
     Marked
  */
+#pragma mark - Marked API
 
 + (BOOL)tapMarked:(NSString *)text;
 + (BOOL)doubleTapMarked:(NSString *)text;
@@ -28,5 +31,17 @@
 + (BOOL)swipeLeftOnMarked:(NSString *)text;
 + (BOOL)swipeRightOnMarked:(NSString *)text;
 
+/*
+    Identifier
+ */
+#pragma mark - Identifier API
+
++ (BOOL)tapIdentifier:(NSString *)identifier;
++ (BOOL)doubleTapIdentifier:(NSString *)identifier;
++ (BOOL)twoFingerTapIdentifier:(NSString *)identifier;
++ (BOOL)swipeUpOnIdentifier:(NSString *)identifier;
++ (BOOL)swipeDownOnIdentifier:(NSString *)identifier;
++ (BOOL)swipeLeftOnIdentifier:(NSString *)identifier;
++ (BOOL)swipeRightOnIdentifier:(NSString *)identifier;
 
 @end
