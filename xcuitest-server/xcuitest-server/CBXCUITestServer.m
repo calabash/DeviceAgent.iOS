@@ -34,7 +34,6 @@ static CBXCUITestServer *sharedServer;
 + (void)start {
     NSLog(@"CalabashXCUITestServer built at %s %s", __DATE__, __TIME__);
     [sharedServer start];
-    [[NSRunLoop mainRunLoop] run];
 }
 
 - (void)start {
@@ -50,6 +49,14 @@ static CBXCUITestServer *sharedServer;
     }
     
     NSLog(@"CalabashXCUITestServer started on http://%@:%hu", [UIDevice currentDevice].wifiIPAddress, [self.server port]);
+}
+
++ (void)stop {
+    [sharedServer stop];
+}
+
+- (void)stop {
+    [self.server stop:YES];
 }
 
 - (BOOL)attemptToStartWithError:(NSError **)error {

@@ -7,4 +7,5 @@
 
 @interface CBXCUITestServer : NSObject
 + (void)start;
++ (void)stop;
 @end
