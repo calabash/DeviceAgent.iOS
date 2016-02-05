@@ -8,6 +8,12 @@
 
 @interface CBApplication (Gestures)
 
+#pragma mark - Non specific API
++ (void)swipeUp;
++ (void)swipeDown;
++ (void)swipeLeft;
++ (void)swipeRight;
+
 /*
     Coordinates
  */

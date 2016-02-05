@@ -11,6 +11,31 @@
 @implementation GestureRoutes
 + (NSArray<CBRoute *> *)getRoutes {
     return @[
+             
+#pragma mark - Non-specific Routes
+             [CBRoute post:@"/swipe/:direction"
+                 withBlock:^(RouteRequest *request, RouteResponse *response) {
+                     NSString *direction = [request.params[CB_DIRECTION_KEY] lowercaseString];
+                     
+                     SEL gesture = nil;
+                     if ([direction isEqualToString:CB_UP_KEY]) {
+                         gesture = @selector(swipeUp);
+                     } else if ([direction isEqualToString:CB_DOWN_KEY]) {
+                         gesture = @selector(swipeDown);
+                     } else if ([direction isEqualToString:CB_LEFT_KEY]) {
+                         gesture = @selector(swipeLeft);
+                     } else if ([direction isEqualToString:CB_RIGHT_KEY]) {
+                         gesture = @selector(swipeRight);
+                     } else {
+                         response.statusCode = HTTP_STATUS_CODE_INVALID_REQUEST;
+                         [response respondWithString:[NSString stringWithFormat:@"'%@' is not a valid direction", direction]];
+                         return;
+                     }
+                    
+                     [CBApplication performSelector:gesture withObject:nil];
+                     [response respondWithString:@"Success"];
+                 }],
+             
              /*
               *     Coordinates API
               */
@@ -180,7 +205,7 @@
            forGesture:(SEL)gesture
           propertyKey:(NSString *)propertyKey {
     NSString *toMatch = request.params[propertyKey];
-    BOOL success = [[CBApplication performSelector:gesture withObject:toMatch] boolValue];
+    BOOL success = [CBApplication performSelector:gesture withObject:toMatch];
     response.statusCode = success ?
     HTTP_STATUS_CODE_EVERYTHING_OK :
     HTTP_STATUS_CODE_INVALID_REQUEST;

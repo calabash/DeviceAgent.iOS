@@ -10,6 +10,23 @@
 
 @implementation CBApplication(Gestures)
 
+#pragma mark - Non specific API
++ (void)swipeUp {
+    [[self currentApplication] swipeUp];
+}
+
++ (void)swipeDown {
+    [[self currentApplication] swipeDown];
+}
+
++ (void)swipeLeft {
+    [[self currentApplication] swipeLeft];
+}
+
++ (void)swipeRight {
+    [[self currentApplication] swipeRight];
+}
+
 #pragma mark - Identifier Methods
 
 + (XCUICoordinate *)coordinateFor:(float)x :(float)y {
