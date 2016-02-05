@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		894ECE701C5BB5D9004B2555 /* HealthRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 894ECE6F1C5BB5D9004B2555 /* HealthRoutes.m */; };
 		894ECE711C5BB5D9004B2555 /* HealthRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 894ECE6F1C5BB5D9004B2555 /* HealthRoutes.m */; };
-		894ECE7C1C5BC876004B2555 /* CBRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 894ECE7B1C5BC876004B2555 /* CBRoute.m */; };
 		894ECE7D1C5BC876004B2555 /* CBRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 894ECE7B1C5BC876004B2555 /* CBRoute.m */; };
-		894ECE851C5BCD90004B2555 /* UndefinedRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 894ECE841C5BCD90004B2555 /* UndefinedRoutes.m */; };
 		894ECE861C5BCD90004B2555 /* UndefinedRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 894ECE841C5BCD90004B2555 /* UndefinedRoutes.m */; };
 		894ECE8B1C5BD902004B2555 /* SessionRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 894ECE891C5BD902004B2555 /* SessionRoutes.m */; };
 		894ECE901C5BDA44004B2555 /* CBApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 894ECE8E1C5BDA44004B2555 /* CBApplication.m */; };
@@ -106,8 +103,8 @@
 		894ED00E1C5BDDE0004B2555 /* XCUIRecorderTimingMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 894ECFB31C5BDDDA004B2555 /* XCUIRecorderTimingMessage.h */; };
 		894ED00F1C5BDDE0004B2555 /* XCUIRecorderUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 894ECFB41C5BDDDA004B2555 /* XCUIRecorderUtilities.h */; };
 		894ED0101C5BDDE0004B2555 /* XCUIRemote.h in Headers */ = {isa = PBXBuildFile; fileRef = 894ECFB51C5BDDDA004B2555 /* XCUIRemote.h */; };
-		894ED1191C5FE948004B2555 /* GestureRotues.h in Headers */ = {isa = PBXBuildFile; fileRef = 894ED1171C5FE948004B2555 /* GestureRotues.h */; };
-		894ED11A1C5FE948004B2555 /* GestureRotues.m in Sources */ = {isa = PBXBuildFile; fileRef = 894ED1181C5FE948004B2555 /* GestureRotues.m */; };
+		894ED1191C5FE948004B2555 /* GestureRoutes.h in Headers */ = {isa = PBXBuildFile; fileRef = 894ED1171C5FE948004B2555 /* GestureRoutes.h */; };
+		894ED11A1C5FE948004B2555 /* GestureRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 894ED1181C5FE948004B2555 /* GestureRoutes.m */; };
 		898743C11C5847B30084FD93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 898743C01C5847B30084FD93 /* main.m */; };
 		898743C41C5847B30084FD93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 898743C31C5847B30084FD93 /* AppDelegate.m */; };
 		898743C71C5847B30084FD93 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 898743C61C5847B30084FD93 /* ViewController.m */; };
@@ -150,17 +147,11 @@
 		898744341C584B960084FD93 /* HTTPRedirectResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 898744121C584B960084FD93 /* HTTPRedirectResponse.m */; };
 		898744351C584B960084FD93 /* WebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 898744141C584B960084FD93 /* WebSocket.m */; };
 		898744361C584B960084FD93 /* WebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 898744141C584B960084FD93 /* WebSocket.m */; };
-		898744441C584BBF0084FD93 /* HTTPResponseProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 898744391C584BBF0084FD93 /* HTTPResponseProxy.m */; };
 		898744451C584BBF0084FD93 /* HTTPResponseProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 898744391C584BBF0084FD93 /* HTTPResponseProxy.m */; };
-		898744461C584BBF0084FD93 /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 8987443B1C584BBF0084FD93 /* Route.m */; };
 		898744471C584BBF0084FD93 /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 8987443B1C584BBF0084FD93 /* Route.m */; };
-		898744481C584BBF0084FD93 /* RouteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8987443D1C584BBF0084FD93 /* RouteRequest.m */; };
 		898744491C584BBF0084FD93 /* RouteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8987443D1C584BBF0084FD93 /* RouteRequest.m */; };
-		8987444A1C584BBF0084FD93 /* RouteResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8987443F1C584BBF0084FD93 /* RouteResponse.m */; };
 		8987444B1C584BBF0084FD93 /* RouteResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8987443F1C584BBF0084FD93 /* RouteResponse.m */; };
-		8987444C1C584BBF0084FD93 /* RoutingConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 898744411C584BBF0084FD93 /* RoutingConnection.m */; };
 		8987444D1C584BBF0084FD93 /* RoutingConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 898744411C584BBF0084FD93 /* RoutingConnection.m */; };
-		8987444E1C584BBF0084FD93 /* RoutingHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 898744431C584BBF0084FD93 /* RoutingHTTPServer.m */; };
 		8987444F1C584BBF0084FD93 /* RoutingHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 898744431C584BBF0084FD93 /* RoutingHTTPServer.m */; };
 		898744531C584D610084FD93 /* UIDevice+Wifi_IP.m in Sources */ = {isa = PBXBuildFile; fileRef = 898744521C584D610084FD93 /* UIDevice+Wifi_IP.m */; };
 		898744541C584D610084FD93 /* UIDevice+Wifi_IP.m in Sources */ = {isa = PBXBuildFile; fileRef = 898744521C584D610084FD93 /* UIDevice+Wifi_IP.m */; };
@@ -188,6 +179,17 @@
 		89C710ED1C62ABA9007AE1FC /* JSONUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C710EB1C62ABA9007AE1FC /* JSONUtils.m */; };
 		89D3213E1C6183C2005B9884 /* CBApplication+Gestures.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D3213C1C6183C2005B9884 /* CBApplication+Gestures.h */; };
 		89D3213F1C6183C2005B9884 /* CBApplication+Gestures.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D3213D1C6183C2005B9884 /* CBApplication+Gestures.m */; };
+		89F5DE3B1C65368A0062540C /* CBShutdownServerException.h in Headers */ = {isa = PBXBuildFile; fileRef = 89F5DE391C65368A0062540C /* CBShutdownServerException.h */; };
+		89F5DE3C1C65368A0062540C /* CBShutdownServerException.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F5DE3A1C65368A0062540C /* CBShutdownServerException.m */; };
+		89F5DE3D1C6538100062540C /* CBRoute.h in Headers */ = {isa = PBXBuildFile; fileRef = 894ECE7A1C5BC876004B2555 /* CBRoute.h */; };
+		89F5DE3E1C6538210062540C /* UndefinedRoutes.h in Headers */ = {isa = PBXBuildFile; fileRef = 894ECE831C5BCD90004B2555 /* UndefinedRoutes.h */; };
+		89F5DE3F1C6538350062540C /* HealthRoutes.h in Headers */ = {isa = PBXBuildFile; fileRef = 894ECE6E1C5BB5D9004B2555 /* HealthRoutes.h */; };
+		89F5DE411C65385D0062540C /* HTTPResponseProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 898744381C584BBF0084FD93 /* HTTPResponseProxy.h */; };
+		89F5DE421C65385D0062540C /* Route.h in Headers */ = {isa = PBXBuildFile; fileRef = 8987443A1C584BBF0084FD93 /* Route.h */; };
+		89F5DE431C65385D0062540C /* RouteRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8987443C1C584BBF0084FD93 /* RouteRequest.h */; };
+		89F5DE441C65385D0062540C /* RouteResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8987443E1C584BBF0084FD93 /* RouteResponse.h */; };
+		89F5DE451C65385D0062540C /* RoutingConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 898744401C584BBF0084FD93 /* RoutingConnection.h */; };
+		89F5DE461C65385D0062540C /* RoutingHTTPServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 898744421C584BBF0084FD93 /* RoutingHTTPServer.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -307,8 +309,8 @@
 		894ECFB31C5BDDDA004B2555 /* XCUIRecorderTimingMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUIRecorderTimingMessage.h; sourceTree = "<group>"; };
 		894ECFB41C5BDDDA004B2555 /* XCUIRecorderUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUIRecorderUtilities.h; sourceTree = "<group>"; };
 		894ECFB51C5BDDDA004B2555 /* XCUIRemote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUIRemote.h; sourceTree = "<group>"; };
-		894ED1171C5FE948004B2555 /* GestureRotues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureRotues.h; sourceTree = "<group>"; };
-		894ED1181C5FE948004B2555 /* GestureRotues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureRotues.m; sourceTree = "<group>"; };
+		894ED1171C5FE948004B2555 /* GestureRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureRoutes.h; sourceTree = "<group>"; };
+		894ED1181C5FE948004B2555 /* GestureRoutes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureRoutes.m; sourceTree = "<group>"; };
 		898743BC1C5847B30084FD93 /* xcuitest-server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xcuitest-server.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		898743C01C5847B30084FD93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		898743C21C5847B30084FD93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -401,6 +403,8 @@
 		89C710EB1C62ABA9007AE1FC /* JSONUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONUtils.m; sourceTree = "<group>"; };
 		89D3213C1C6183C2005B9884 /* CBApplication+Gestures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBApplication+Gestures.h"; sourceTree = "<group>"; };
 		89D3213D1C6183C2005B9884 /* CBApplication+Gestures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBApplication+Gestures.m"; sourceTree = "<group>"; };
+		89F5DE391C65368A0062540C /* CBShutdownServerException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBShutdownServerException.h; sourceTree = "<group>"; };
+		89F5DE3A1C65368A0062540C /* CBShutdownServerException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBShutdownServerException.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -424,6 +428,8 @@
 		894ECE691C5BAD51004B2555 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				89F5DE391C65368A0062540C /* CBShutdownServerException.h */,
+				89F5DE3A1C65368A0062540C /* CBShutdownServerException.m */,
 				898744831C5851910084FD93 /* Routing */,
 				898743E51C5848890084FD93 /* CBXCUITestServer.h */,
 				898743E61C5848890084FD93 /* CBXCUITestServer.m */,
@@ -440,8 +446,8 @@
 				894ECE841C5BCD90004B2555 /* UndefinedRoutes.m */,
 				894ECE881C5BD902004B2555 /* SessionRoutes.h */,
 				894ECE891C5BD902004B2555 /* SessionRoutes.m */,
-				894ED1171C5FE948004B2555 /* GestureRotues.h */,
-				894ED1181C5FE948004B2555 /* GestureRotues.m */,
+				894ED1171C5FE948004B2555 /* GestureRoutes.h */,
+				894ED1181C5FE948004B2555 /* GestureRoutes.m */,
 				89C710E61C62A636007AE1FC /* QueryRoutes.h */,
 				89C710E71C62A636007AE1FC /* QueryRoutes.m */,
 			);
@@ -839,7 +845,7 @@
 				894ECFCF1C5BDDDA004B2555 /* XCAXManager_OSX.h in Headers */,
 				894ECFFB1C5BDDDD004B2555 /* XCTestSuite-XCTestProbeExtensions.h in Headers */,
 				894ECFCE1C5BDDDA004B2555 /* XCAXClient_iOS.h in Headers */,
-				894ED1191C5FE948004B2555 /* GestureRotues.h in Headers */,
+				894ED1191C5FE948004B2555 /* GestureRoutes.h in Headers */,
 				894ECFC51C5BDDDA004B2555 /* UIPinchGestureRecognizer-RecordingAdditions.h in Headers */,
 				894ECFE21C5BDDDB004B2555 /* XCTest-XCTestProbeExtensions.h in Headers */,
 				894ED0041C5BDDDE004B2555 /* XCUIElement-PrivateEvents.h in Headers */,
@@ -860,22 +866,27 @@
 				894ED0071C5BDDDF004B2555 /* XCUIElement-XCUIElementTypeSlider.h in Headers */,
 				894ED00C1C5BDDDF004B2555 /* XCUIRecorderNodeFinder.h in Headers */,
 				894ECFEC1C5BDDDC004B2555 /* XCTestConfiguration.h in Headers */,
+				89F5DE3E1C6538210062540C /* UndefinedRoutes.h in Headers */,
 				894ECFF71C5BDDDD004B2555 /* XCTestObservationCenter.h in Headers */,
 				894ECFEA1C5BDDDC004B2555 /* XCTestCaseRun.h in Headers */,
+				89F5DE461C65385D0062540C /* RoutingHTTPServer.h in Headers */,
 				894ECFC91C5BDDDA004B2555 /* XCActivityRecord.h in Headers */,
 				894ECFDF1C5BDDDB004B2555 /* XCSymbolicatorHolder.h in Headers */,
 				894ECFB81C5BDDDA004B2555 /* _XCKVOExpectation.h in Headers */,
 				894ED0101C5BDDE0004B2555 /* XCUIRemote.h in Headers */,
+				89F5DE411C65385D0062540C /* HTTPResponseProxy.h in Headers */,
 				894ED0061C5BDDDE004B2555 /* XCUIElement-XCUIElementTypePickerWheel.h in Headers */,
 				894ECFC11C5BDDDA004B2555 /* CDStructures.h in Headers */,
 				894ECFC21C5BDDDA004B2555 /* UIGestureRecognizer-RecordingAdditions.h in Headers */,
 				894ECFED1C5BDDDC004B2555 /* XCTestContext.h in Headers */,
+				89F5DE3D1C6538100062540C /* CBRoute.h in Headers */,
 				894ECFF21C5BDDDC004B2555 /* XCTestLog.h in Headers */,
 				894ED00A1C5BDDDF004B2555 /* XCUIElementHitPointCoordinate.h in Headers */,
 				894ECFD91C5BDDDB004B2555 /* XCPointerEvent.h in Headers */,
 				894ECFE31C5BDDDB004B2555 /* XCTest.h in Headers */,
 				894ECFFE1C5BDDDD004B2555 /* XCTouchEvent.h in Headers */,
 				894ECFF11C5BDDDC004B2555 /* XCTestExpectation.h in Headers */,
+				89F5DE451C65385D0062540C /* RoutingConnection.h in Headers */,
 				894ECFD81C5BDDDA004B2555 /* XCKeyMappingPath.h in Headers */,
 				894ECFF81C5BDDDD004B2555 /* XCTestObserver.h in Headers */,
 				894ECFC61C5BDDDA004B2555 /* UISwipeGestureRecognizer-RecordingAdditions.h in Headers */,
@@ -887,20 +898,24 @@
 				894ECFCD1C5BDDDA004B2555 /* XCApplicationQuery.h in Headers */,
 				894ECFB91C5BDDDA004B2555 /* _XCNotificationExpectation.h in Headers */,
 				894ECFEF1C5BDDDC004B2555 /* XCTestDriver.h in Headers */,
+				89F5DE441C65385D0062540C /* RouteResponse.h in Headers */,
 				894ED00B1C5BDDDF004B2555 /* XCUIElementQuery.h in Headers */,
 				894ED00E1C5BDDE0004B2555 /* XCUIRecorderTimingMessage.h in Headers */,
 				894ECFD61C5BDDDA004B2555 /* XCKeyboardKeyMap.h in Headers */,
 				894ED0091C5BDDDF004B2555 /* XCUIElementAsynchronousHandlerWrapper.h in Headers */,
 				894ECFDC1C5BDDDB004B2555 /* XCSourceCodeTreeNode.h in Headers */,
 				894ECFBD1C5BDDDA004B2555 /* _XCTestDriverTestObserver.h in Headers */,
+				89F5DE431C65385D0062540C /* RouteRequest.h in Headers */,
 				894ECFE01C5BDDDB004B2555 /* XCSynthesizedEventRecord.h in Headers */,
 				894ECFFF1C5BDDDE004B2555 /* XCTouchGesture.h in Headers */,
 				894ECFDB1C5BDDDB004B2555 /* XCSourceCodeRecording.h in Headers */,
 				894ECFC71C5BDDDA004B2555 /* UITapGestureRecognizer-RecordingAdditions.h in Headers */,
 				894ECFDE1C5BDDDB004B2555 /* XCSymbolicationRecord.h in Headers */,
+				89F5DE421C65385D0062540C /* Route.h in Headers */,
 				894ECFF41C5BDDDD004B2555 /* XCTestManager_ManagerInterface-Protocol.h in Headers */,
 				894ECFFC1C5BDDDD004B2555 /* XCTestSuite.h in Headers */,
 				894ECFC81C5BDDDA004B2555 /* XCAccessibilityElement.h in Headers */,
+				89F5DE3F1C6538350062540C /* HealthRoutes.h in Headers */,
 				894ED0031C5BDDDE004B2555 /* XCUIDevice.h in Headers */,
 				894ECFE51C5BDDDB004B2555 /* XCTestCase-AsynchronousTesting_Internal.h in Headers */,
 				894ECFF51C5BDDDD004B2555 /* XCTestManager_TestsInterface-Protocol.h in Headers */,
@@ -918,6 +933,7 @@
 				894ED0081C5BDDDF004B2555 /* XCUIElement.h in Headers */,
 				894ECFEE1C5BDDDC004B2555 /* XCTestContextScope.h in Headers */,
 				894ECFCA1C5BDDDA004B2555 /* XCApplicationMonitor.h in Headers */,
+				89F5DE3B1C65368A0062540C /* CBShutdownServerException.h in Headers */,
 				894ED0021C5BDDDE004B2555 /* XCUICoordinate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1023,11 +1039,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				898744481C584BBF0084FD93 /* RouteRequest.m in Sources */,
 				898744531C584D610084FD93 /* UIDevice+Wifi_IP.m in Sources */,
 				898743C71C5847B30084FD93 /* ViewController.m in Sources */,
-				8987444C1C584BBF0084FD93 /* RoutingConnection.m in Sources */,
-				894ECE851C5BCD90004B2555 /* UndefinedRoutes.m in Sources */,
 				898744191C584B960084FD93 /* DDRange.m in Sources */,
 				898743C41C5847B30084FD93 /* AppDelegate.m in Sources */,
 				8987441B1C584B960084FD93 /* HTTPAuthenticationRequest.m in Sources */,
@@ -1036,13 +1049,9 @@
 				898744331C584B960084FD93 /* HTTPRedirectResponse.m in Sources */,
 				8987446B1C5850AC0084FD93 /* DDASLLogger.m in Sources */,
 				898744171C584B960084FD93 /* DDNumber.m in Sources */,
-				8987444A1C584BBF0084FD93 /* RouteResponse.m in Sources */,
-				894ECE7C1C5BC876004B2555 /* CBRoute.m in Sources */,
 				898744751C5850AC0084FD93 /* DispatchQueueLogFormatter.m in Sources */,
 				898744211C584B960084FD93 /* HTTPServer.m in Sources */,
 				898744151C584B960084FD93 /* DDData.m in Sources */,
-				898744461C584BBF0084FD93 /* Route.m in Sources */,
-				894ECE701C5BB5D9004B2555 /* HealthRoutes.m in Sources */,
 				898744691C5850AC0084FD93 /* DDAbstractDatabaseLogger.m in Sources */,
 				898744311C584B960084FD93 /* HTTPFileResponse.m in Sources */,
 				8987446D1C5850AC0084FD93 /* DDFileLogger.m in Sources */,
@@ -1052,13 +1061,11 @@
 				8987441F1C584B960084FD93 /* HTTPMessage.m in Sources */,
 				8987441D1C584B960084FD93 /* HTTPConnection.m in Sources */,
 				8987442F1C584B960084FD93 /* HTTPErrorResponse.m in Sources */,
-				898744441C584BBF0084FD93 /* HTTPResponseProxy.m in Sources */,
 				898744231C584B960084FD93 /* MultipartFormDataParser.m in Sources */,
 				898744351C584B960084FD93 /* WebSocket.m in Sources */,
 				8987446F1C5850AC0084FD93 /* DDLog.m in Sources */,
 				898744271C584B960084FD93 /* MultipartMessageHeaderField.m in Sources */,
 				8987442B1C584B960084FD93 /* HTTPDataResponse.m in Sources */,
-				8987444E1C584BBF0084FD93 /* RoutingHTTPServer.m in Sources */,
 				898744251C584B960084FD93 /* MultipartMessageHeader.m in Sources */,
 				898744291C584B960084FD93 /* HTTPAsyncFileResponse.m in Sources */,
 			);
@@ -1090,7 +1097,7 @@
 				898744301C584B960084FD93 /* HTTPErrorResponse.m in Sources */,
 				898744761C5850AC0084FD93 /* DispatchQueueLogFormatter.m in Sources */,
 				8987442E1C584B960084FD93 /* HTTPDynamicFileResponse.m in Sources */,
-				894ED11A1C5FE948004B2555 /* GestureRotues.m in Sources */,
+				894ED11A1C5FE948004B2555 /* GestureRoutes.m in Sources */,
 				8987442C1C584B960084FD93 /* HTTPDataResponse.m in Sources */,
 				898744741C5850AC0084FD93 /* ContextFilterLogFormatter.m in Sources */,
 				898744721C5850AC0084FD93 /* DDTTYLogger.m in Sources */,
@@ -1098,6 +1105,7 @@
 				898744701C5850AC0084FD93 /* DDLog.m in Sources */,
 				8987446A1C5850AC0084FD93 /* DDAbstractDatabaseLogger.m in Sources */,
 				894ECE901C5BDA44004B2555 /* CBApplication.m in Sources */,
+				89F5DE3C1C65368A0062540C /* CBShutdownServerException.m in Sources */,
 				8987446E1C5850AC0084FD93 /* DDFileLogger.m in Sources */,
 				8987444B1C584BBF0084FD93 /* RouteResponse.m in Sources */,
 				89C710E41C62A4C2007AE1FC /* CBApplication+Queries.m in Sources */,

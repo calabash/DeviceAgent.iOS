@@ -5,45 +5,29 @@
 
 #import "CBApplication+Queries.h"
 #import "XCElementSnapshot.h"
+#import "XCUIElementQuery.h"
 #import "XCAXClient_iOS.h"
 #import "XCUIElement.h"
 #import "JSONUtils.h"
 
 @implementation CBApplication (Queries)
+static NSArray <NSString *> *markedProperties;
+static NSArray <NSString *> *identifierProperties;
+
++ (void)load {
+    static dispatch_once_t oncet;
+    dispatch_once(&oncet, ^{
+        markedProperties = @[@"label", @"title", @"value", @"accessibilityLabel"];
+        identifierProperties = @[@"identifier", @"accessibilityIdentifier"];
+    });
+}
+
+/*
+ * Tree
+ */
+
 + (NSDictionary *)tree {
     return [self snapshotTree:[[self currentApplication] lastSnapshot]];
-}
-
-+ (NSArray *)elementsWithAnyOfTheseProperties:(NSArray *)properties equalToValue:(NSString *)value {
-    NSMutableString *predString = [NSMutableString string];
-    for (NSString *prop in properties) {
-        [predString appendFormat:@"%@ == '%@'", prop, value];
-        if (prop != [properties lastObject]) {
-            [predString appendString:@" OR "];
-        }
-    }
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:predString];
-    XCUIElementQuery *query = [[[self currentApplication] descendantsMatchingType:XCUIElementTypeAny]
-                               matchingPredicate:predicate];
-    
-    NSArray *childElements = [query allElementsBoundByIndex];
-    NSMutableArray *ret = [NSMutableArray array];
-    
-    //TODO: Should we check the application itself?
-    for (XCUIElement *element in childElements) {
-        [ret addObject:[JSONUtils elementToJSON:element]];
-    }
-    return ret;
-}
-
-+ (NSArray *)elementsMarked:(NSString *)text {
-    return [self elementsWithAnyOfTheseProperties:@[@"label", @"title", @"value"]
-                                     equalToValue:text];
-}
-
-+ (NSArray *)elementsWithID:(NSString *)identifier {
-    return [self elementsWithAnyOfTheseProperties:@[@"identifier", @"accessibilityIdentifier"]
-                                     equalToValue:identifier];
 }
 
 + (NSDictionary *)snapshotTree:(XCElementSnapshot *)snapshot {
@@ -57,5 +41,73 @@
         json[@"children"] = children;
     }
     return json;
+}
+
+/*
+    General Querying
+ */
+
++ (XCUIElement *)elementMarked:(NSString *)mark {
+    NSArray *elements = [self elementsMarked:mark];
+    return elements.count > 0 ? [elements firstObject] : nil;
+}
+
++ (NSArray <XCUIElement *> *)elementsMarked:(NSString *)text {
+    return [self elementsWithAnyOfTheseProperties:markedProperties equalToValue:text];
+}
+
++ (XCUIElement *)elementWithIdentifier:(NSString *)identifier {
+    NSArray *elements = [self elementsWithIdentifier:identifier];
+    return elements.count > 0 ? [elements firstObject] : nil;
+}
+
++ (NSArray <XCUIElement *> *)elementsWithIdentifier:(NSString *)identifier {
+    return [[[[self currentApplication] descendantsMatchingType:XCUIElementTypeAny]
+            matchingIdentifier:identifier] allElementsBoundByIndex];
+}
+
++ (NSArray <XCUIElement *> *)elementsWithAnyOfTheseProperties:(NSArray *)properties
+                                                 equalToValue:(NSString *)value {
+    NSMutableString *predString = [NSMutableString string];
+    for (NSString *prop in properties) {
+        [predString appendFormat:@"%@ == '%@'", prop, value];
+        if (prop != [properties lastObject]) {
+            [predString appendString:@" OR "];
+        }
+    }
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:predString];
+    XCUIElementQuery *query = [[[self currentApplication] descendantsMatchingType:XCUIElementTypeAny]
+                               matchingPredicate:predicate];
+    
+    return [query allElementsBoundByIndex];
+}
+
++ (NSArray <NSDictionary *> *)jsonForElementsWithAnyOfTheseProperties:(NSArray *)properties
+                                                         equalToValue:(NSString *)value {
+    NSArray *childElements = [self elementsWithAnyOfTheseProperties:properties
+                                                       equalToValue:value];
+    NSMutableArray *ret = [NSMutableArray array];
+    
+    //TODO: Should we check the application itself?
+    for (XCUIElement *element in childElements) {
+        [ret addObject:[JSONUtils elementToJSON:element]];
+    }
+    return ret;
+}
+
++ (NSArray <NSDictionary *> *)jsonForElementsMarked:(NSString *)text {
+    return [self jsonForElementsWithAnyOfTheseProperties:markedProperties
+                                            equalToValue:text];
+}
+
++ (NSArray <NSDictionary *> *)jsonForElementsWithID:(NSString *)identifier {
+    NSArray *elements = [self elementsWithIdentifier:identifier];
+    NSMutableArray *ret = [NSMutableArray array];
+    
+    //TODO: Should we check the application itself?
+    for (XCUIElement *element in elements) {
+        [ret addObject:[JSONUtils elementToJSON:element]];
+    }
+    return ret;
 }
 @end

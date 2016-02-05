@@ -7,10 +7,13 @@
 #import "JSONUtils.h"
 
 @implementation JSONUtils
+
+//TODO: apparenty this causes some lag... how to optimize?
 + (NSMutableDictionary *)snapshotToJSON:(XCElementSnapshot *)snapshot {
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
     
     //TODO: stringify
+    json[@"desc"] = [snapshot description];
     json[CB_TYPE_KEY] = @(snapshot.elementType);
     
     json[CB_TITLE_KEY] = snapshot.title ?: CB_EMPTY_STRING;

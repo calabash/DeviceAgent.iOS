@@ -3,6 +3,7 @@
 //  xcuitest-serverUITests
 //
 
+#import "CBShutdownServerException.h"
 #import "CBXCUITestServer.h"
 #import <XCTest/XCTest.h>
 
@@ -15,6 +16,12 @@
 - (void)setUp {
     [super setUp];
     self.continueAfterFailure = YES;
+    
+    /*
+     *  Route exceptions should be caught inside of the server.
+     *  Any exception that makes it this far should therefore kill the test. 
+     */
+    NSSetUncaughtExceptionHandler(&HandleException);
 }
 
 - (void)tearDown {
@@ -23,6 +30,14 @@
 
 - (void)testRunner {
     [CBXCUITestServer start];
+    [[NSRunLoop mainRunLoop] run];
 }
+
+void HandleException(NSException *e) {
+    int code = [e isKindOfClass:[CBShutdownServerException class]] ? EXIT_SUCCESS : EXIT_FAILURE;
+    exit(code);
+}
+
+
 
 @end
