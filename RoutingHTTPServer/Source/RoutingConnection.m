@@ -64,12 +64,19 @@
 
 	// Set a MIME type for static files if possible
 	NSObject<HTTPResponse> *staticResponse = [super httpResponseForMethod:method URI:path];
-	if (staticResponse && [staticResponse respondsToSelector:@selector(filePath)]) {
-		NSString *mimeType = [http mimeTypeForPath:[staticResponse performSelector:@selector(filePath)]];
-		if (mimeType) {
-			headers = [NSDictionary dictionaryWithObject:mimeType forKey:@"Content-Type"];
-		}
-	}
+
+  SEL selector = NSSelectorFromString(@"filePath");
+	if (staticResponse && [staticResponse respondsToSelector:selector]) {
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+	NSString *mimeType = [http mimeTypeForPath:[staticResponse performSelector:selector]];
+#pragma clang diagnostic pop
+
+  if (mimeType) {
+      headers = [NSDictionary dictionaryWithObject:mimeType forKey:@"Content-Type"];
+    }
+  }
 	return staticResponse;
 }
 
