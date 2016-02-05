@@ -47,8 +47,18 @@ static NSArray <NSString *> *identifierProperties;
     General Querying
  */
 
++ (XCUIElement *)elementMarked:(NSString *)mark {
+    NSArray *elements = [self elementsMarked:mark];
+    return elements.count > 0 ? [elements firstObject] : nil;
+}
+
 + (NSArray <XCUIElement *> *)elementsMarked:(NSString *)text {
     return [self elementsWithAnyOfTheseProperties:markedProperties equalToValue:text];
+}
+
++ (XCUIElement *)elementWithIdentifier:(NSString *)identifier {
+    NSArray *elements = [self elementsWithIdentifier:identifier];
+    return elements.count > 0 ? [elements firstObject] : nil;
 }
 
 + (NSArray <XCUIElement *> *)elementsWithIdentifier:(NSString *)identifier {

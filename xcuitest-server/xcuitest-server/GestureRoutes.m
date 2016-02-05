@@ -179,6 +179,16 @@
                                 response:response
                     forIdentifierGesture:gesture];
                  }],
+             
+             [CBRoute post:@"/typeText/id/:id"
+                 withBlock:^(RouteRequest *request, RouteResponse *response) {
+                     NSDictionary *args = DATA_TO_JSON(request.body);
+                     NSString *identifier = request.params[CB_IDENTIFIER_KEY];
+                     NSString *text = args[CB_TEXT_KEY];
+                     
+                     BOOL success = [CBApplication typeText:text identifier:identifier];
+                     [self handleResponse:response success:success];
+                 }],
              ];
 }
 
@@ -206,6 +216,10 @@
           propertyKey:(NSString *)propertyKey {
     NSString *toMatch = request.params[propertyKey];
     BOOL success = [CBApplication performSelector:gesture withObject:toMatch];
+    [self handleResponse:response success:success];
+}
+
++ (void)handleResponse:(RouteResponse *)response success:(BOOL)success {
     response.statusCode = success ?
     HTTP_STATUS_CODE_EVERYTHING_OK :
     HTTP_STATUS_CODE_INVALID_REQUEST;

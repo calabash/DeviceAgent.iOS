@@ -34,7 +34,7 @@
 }
 
 void HandleException(NSException *e) {
-    int code = [e isKindOfClass:[CBShutdownServerException class]] ? 0 : 1;
+    int code = [e isKindOfClass:[CBShutdownServerException class]] ? EXIT_SUCCESS : EXIT_FAILURE;
     exit(code);
 }
 

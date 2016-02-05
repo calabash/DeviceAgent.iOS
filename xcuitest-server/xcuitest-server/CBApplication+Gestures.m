@@ -7,6 +7,7 @@
 #import "CBApplication+Queries.h"
 #import "XCUICoordinate.h"
 #import "JSONUtils.h"
+#import "CBMacros.h"
 
 @implementation CBApplication(Gestures)
 
@@ -63,32 +64,92 @@
 
 #pragma mark - Marked Methods
 
-+ (BOOL)tapMarked:(NSString *)text {
-    return [self gesture:@selector(tap) onMarked:text];
++ (BOOL)tapMarked:(NSString *)mark {
+    return [self gesture:@selector(tap) onMarked:mark];
 }
 
-+ (BOOL)doubleTapMarked:(NSString *)text {
-    return [self gesture:@selector(doubleTap) onMarked:text];
++ (BOOL)doubleTapMarked:(NSString *)mark {
+    return [self gesture:@selector(doubleTap) onMarked:mark];
 }
 
-+ (BOOL)twoFingerTapMarked:(NSString *)text {
-    return [self gesture:@selector(twoFingerTap) onMarked:text];
++ (BOOL)twoFingerTapMarked:(NSString *)mark {
+    return [self gesture:@selector(twoFingerTap) onMarked:mark];
 }
 
-+ (BOOL)swipeUpOnMarked:(NSString *)text {
-    return [self gesture:@selector(swipeUp) onMarked:text];
++ (BOOL)swipeUpOnMarked:(NSString *)mark {
+    return [self gesture:@selector(swipeUp) onMarked:mark];
 }
 
-+ (BOOL)swipeDownOnMarked:(NSString *)text {
-    return [self gesture:@selector(swipeDown) onMarked:text];
++ (BOOL)swipeDownOnMarked:(NSString *)mark {
+    return [self gesture:@selector(swipeDown) onMarked:mark];
 }
 
-+ (BOOL)swipeLeftOnMarked:(NSString *)text {
-    return [self gesture:@selector(swipeLeft) onMarked:text];
++ (BOOL)swipeLeftOnMarked:(NSString *)mark {
+    return [self gesture:@selector(swipeLeft) onMarked:mark];
 }
 
-+ (BOOL)swipeRightOnMarked:(NSString *)text {
-    return [self gesture:@selector(swipeRight) onMarked:text];
++ (BOOL)swipeRightOnMarked:(NSString *)mark {
+    return [self gesture:@selector(swipeRight) onMarked:mark];
+}
+
++ (BOOL)typeText:(NSString *)text marked:(NSString *)mark {
+    XCUIElement *el = [self elementMarked:mark];
+    if (el) {
+        [el typeText:text];
+        return YES;
+    }
+    return NO;
+}
+
++ (BOOL)rotateDegrees:(CGFloat)degrees velocity:(CGFloat)degreesPerSecond marked:(NSString *)mark {
+    XCUIElement *el = [self elementMarked:mark];
+    if (el) {
+        [el rotate:degreesToRadians(degrees) withVelocity:degreesToRadians(degreesPerSecond)];
+        return YES;
+    }
+    return NO;
+}
+
++ (BOOL)pinchWithScale:(CGFloat)scaleMultiplier
+              velocity:(CGFloat)scaleFactorPerSecond
+                marked:(NSString *)mark {
+    XCUIElement *el = [self elementMarked:mark];
+    if (el) {
+        [el pinchWithScale:scaleMultiplier velocity:scaleFactorPerSecond];
+        return YES;
+    }
+    return NO;
+}
+
++ (BOOL)tapWithNumberOfTaps:(NSUInteger)numTaps
+            numberOfTouches:(NSUInteger)numTouches
+                     marked:(NSString *)mark {
+    XCUIElement *el = [self elementMarked:mark];
+    if (el) {
+        [el tapWithNumberOfTaps:numTaps numberOfTouches:numTouches];
+        return YES;
+    }
+    return NO;
+}
+
++ (BOOL)pressForDuration:(NSTimeInterval)duration marked:(NSString *)mark {
+    XCUIElement *el = [self elementMarked:mark];
+    if (el) {
+        [el pressForDuration:duration];
+        return YES;
+    }
+    return NO;
+}
+
++ (BOOL)pressMarked:(NSString *)mark1
+        forDuration:(NSTimeInterval)duration thenDragToElementMarked:(NSString *)mark2  {
+    XCUIElement *el1 = [self elementMarked:mark1];
+    XCUIElement *el2 = [self elementMarked:mark2];
+    if (el1 && el2) {
+        [el1 pressForDuration:duration thenDragToElement:el2];
+        return YES;
+    }
+    return NO;
 }
 
 #pragma mark - Identifier Methods
@@ -119,6 +180,68 @@
 
 + (BOOL)swipeRightOnIdentifier:(NSString *)identifier {
     return [self gesture:@selector(swipeRight) onIdentifier:identifier];
+}
+
++ (BOOL)typeText:(NSString *)text identifier:(NSString *)identifier {
+    XCUIElement *el = [self elementWithIdentifier:identifier];
+    if (el) {
+        [el typeText:text];
+        return YES;
+    }
+    return NO;
+}
+
++ (BOOL)rotateDegrees:(CGFloat)degrees velocity:(CGFloat)degreesPerSecond identifier:(NSString *)identifier {
+    XCUIElement *el = [self elementWithIdentifier:identifier];
+    if (el) {
+        [el rotate:degreesToRadians(degrees) withVelocity:degreesToRadians(degreesPerSecond)];
+        return YES;
+    }
+    return NO;
+}
+
++ (BOOL)pinchWithScale:(CGFloat)scaleMultiplier
+              velocity:(CGFloat)scaleFactorPerSecond
+            identifier:(NSString *)identifier {
+    XCUIElement *el = [self elementWithIdentifier:identifier];
+    if (el) {
+        [el pinchWithScale:scaleMultiplier velocity:scaleFactorPerSecond];
+        return YES;
+    }
+    return NO;
+}
+
+//TODO:
+//I have no idea what the use case is for this.
++ (BOOL)tapWithNumberOfTaps:(NSUInteger)numTaps
+            numberOfTouches:(NSUInteger)numTouches
+                 identifier:(NSString *)identifier {
+    XCUIElement *el = [self elementWithIdentifier:identifier];
+    if (el) {
+        [el tapWithNumberOfTaps:numTaps numberOfTouches:numTouches];
+        return YES;
+    }
+    return NO;
+}
+
++ (BOOL)pressForDuration:(NSTimeInterval)duration identifier:(NSString *)identifier {
+    XCUIElement *el = [self elementWithIdentifier:identifier];
+    if (el) {
+        [el pressForDuration:duration];
+        return YES;
+    }
+    return NO;
+}
+
++ (BOOL)pressIdentifier:(NSString *)id1
+            forDuration:(NSTimeInterval)duration thenDragToElementWithIdentifier:(NSString *)id2  {
+    XCUIElement *el1 = [self elementWithIdentifier:id1];
+    XCUIElement *el2 = [self elementWithIdentifier:id2];
+    if (el1 && el2) {
+        [el1 pressForDuration:duration thenDragToElement:el2];
+        return YES;
+    }
+    return NO;
 }
 
 #pragma mark - Helper Methods
