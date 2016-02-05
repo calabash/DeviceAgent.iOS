@@ -28,8 +28,17 @@ static NSString *const CB_LABEL_KEY = @"label";
 static NSString *const CB_VALUE_KEY = @"value";
 static NSString *const CB_RECT_KEY = @"rect";
 static NSString *const CB_IDENTIFIER_KEY = @"id";
+static NSString *const CB_IDENTIFIER1_KEY = @"id1";
+static NSString *const CB_IDENTIFIER2_KEY = @"id2";
 static NSString *const CB_ENABLED_KEY = @"enabled";
 static NSString *const CB_TEXT_KEY = @"text";
+static NSString *const CB_TEXT1_KEY = @"text1";
+static NSString *const CB_TEXT2_KEY = @"text2";
+static NSString *const CB_SCALE_KEY = @"scale";
+static NSString *const CB_VELOCITY_KEY = @"velocity";
+static NSString *const CB_ROTATION_KEY = @"rotation";
+static NSString *const CB_NUM_TAPS_KEY = @"taps";
+static NSString *const CB_NUM_TOUCHES_KEY = @"touches";
 
 static NSString *const CB_DIRECTION_KEY = @"direction";
 static NSString *const CB_UP_KEY = @"up";

@@ -130,6 +130,73 @@
                         forMarkedGesture:gesture];
                  }],
              
+             [CBRoute post:@"/pinchWithScaleAndVelocity/marked/:text"
+                 withBlock:^(RouteRequest *request, RouteResponse *response) {
+                     NSDictionary *args = DATA_TO_JSON(request.body);
+                     CGFloat scale = [args[CB_SCALE_KEY] floatValue];
+                     CGFloat velocity = [args[CB_VELOCITY_KEY] floatValue];
+                     NSString *mark = request.params[CB_TEXT_KEY];
+                     BOOL success = [CBApplication pinchWithScale:scale velocity:velocity marked:mark];
+                     [self handleResponse:response success:success];
+                 }],
+             
+             [CBRoute post:@"/rotateWithVelocity/marked/:text"
+                 withBlock:^(RouteRequest *request, RouteResponse *response) {
+                     NSDictionary *args = DATA_TO_JSON(request.body);
+                     CGFloat degrees = [args[CB_ROTATION_KEY] floatValue];
+                     CGFloat velocity = [args[CB_VELOCITY_KEY] floatValue];
+                     NSString *mark = request.params[CB_TEXT_KEY];
+                     BOOL success = [CBApplication rotateDegrees:degrees velocity:velocity marked:mark];
+                     [self handleResponse:response success:success];
+                 }],
+             
+             [CBRoute post:@"/typeText/marked/:text"
+                 withBlock:^(RouteRequest *request, RouteResponse *response) {
+                     NSDictionary *args = DATA_TO_JSON(request.body);
+                     NSString *mark = request.params[CB_TEXT_KEY];
+                     NSString *text = args[CB_TEXT_KEY];
+                     
+                     BOOL success = [CBApplication typeText:text marked:mark];
+                     [self handleResponse:response success:success];
+                 }],
+             
+             [CBRoute post:@"/tapWithNumberOfTapsAndTouches/marked/:text"
+                 withBlock:^(RouteRequest *request, RouteResponse *response) {
+                     NSDictionary *args = DATA_TO_JSON(request.body);
+                     NSString *mark = request.params[CB_TEXT_KEY];
+                     NSUInteger numTaps = [args[CB_NUM_TAPS_KEY] unsignedIntegerValue];
+                     NSUInteger numTouches = [args[CB_NUM_TOUCHES_KEY] unsignedIntegerValue];
+                     
+                     BOOL success = [CBApplication tapWithNumberOfTaps:numTaps
+                                                       numberOfTouches:numTouches
+                                                                marked:mark];
+                     [self handleResponse:response success:success];
+                 }],
+             
+             [CBRoute post:@"/pressForDuration/marked/:text"
+                 withBlock:^(RouteRequest *request, RouteResponse *response) {
+                     NSDictionary *args = DATA_TO_JSON(request.body);
+                     NSString *mark = request.params[CB_TEXT_KEY];
+                     CGFloat duration = [args[CB_DURATION_KEY] floatValue];
+                     
+                     BOOL success = [CBApplication pressForDuration:duration
+                                                             marked:mark];
+                     [self handleResponse:response success:success];
+                 }],
+             
+             [CBRoute post:@"/pressForDuration/marked/:text1/thenDragToElement/marked/:text2"
+                 withBlock:^(RouteRequest *request, RouteResponse *response) {
+                     NSDictionary *args = DATA_TO_JSON(request.body);
+                     NSString *mark1 = request.params[CB_TEXT1_KEY];
+                     NSString *mark2 = request.params[CB_TEXT2_KEY];
+                     CGFloat duration = [args[CB_DURATION_KEY] floatValue];
+                     
+                     BOOL success = [CBApplication pressMarked:mark1
+                                                   forDuration:duration
+                                       thenDragToElementMarked:mark2];
+                     [self handleResponse:response success:success];
+                 }],
+             
              /*
               *     Identifier API
               */
@@ -180,6 +247,26 @@
                     forIdentifierGesture:gesture];
                  }],
              
+             [CBRoute post:@"/pinchWithScaleAndVelocity/id/:id"
+                 withBlock:^(RouteRequest *request, RouteResponse *response) {
+                     NSDictionary *args = DATA_TO_JSON(request.body);
+                     CGFloat scale = [args[CB_SCALE_KEY] floatValue];
+                     CGFloat velocity = [args[CB_VELOCITY_KEY] floatValue];
+                     NSString *identifier = request.params[CB_IDENTIFIER_KEY];
+                     BOOL success = [CBApplication pinchWithScale:scale velocity:velocity identifier:identifier];
+                     [self handleResponse:response success:success];
+             }],
+             
+             [CBRoute post:@"/rotateWithVelocity/id/:id"
+                 withBlock:^(RouteRequest *request, RouteResponse *response) {
+                     NSDictionary *args = DATA_TO_JSON(request.body);
+                     CGFloat degrees = [args[CB_ROTATION_KEY] floatValue];
+                     CGFloat velocity = [args[CB_VELOCITY_KEY] floatValue];
+                     NSString *identifier = request.params[CB_IDENTIFIER_KEY];
+                     BOOL success = [CBApplication rotateDegrees:degrees velocity:velocity identifier:identifier];
+                     [self handleResponse:response success:success];
+                 }],
+             
              [CBRoute post:@"/typeText/id/:id"
                  withBlock:^(RouteRequest *request, RouteResponse *response) {
                      NSDictionary *args = DATA_TO_JSON(request.body);
@@ -189,6 +276,43 @@
                      BOOL success = [CBApplication typeText:text identifier:identifier];
                      [self handleResponse:response success:success];
                  }],
+             
+             [CBRoute post:@"/tapWithNumberOfTapsAndTouches/id/:id"
+                 withBlock:^(RouteRequest *request, RouteResponse *response) {
+                     NSDictionary *args = DATA_TO_JSON(request.body);
+                     NSString *identifier = request.params[CB_IDENTIFIER_KEY];
+                     NSUInteger numTaps = [args[CB_NUM_TAPS_KEY] unsignedIntegerValue];
+                     NSUInteger numTouches = [args[CB_NUM_TOUCHES_KEY] unsignedIntegerValue];
+                     
+                     BOOL success = [CBApplication tapWithNumberOfTaps:numTaps
+                                                       numberOfTouches:numTouches
+                                                            identifier:identifier];
+                     [self handleResponse:response success:success];
+                 }],
+             
+             [CBRoute post:@"/pressForDuration/id/:id"
+                 withBlock:^(RouteRequest *request, RouteResponse *response) {
+                     NSDictionary *args = DATA_TO_JSON(request.body);
+                     NSString *identifier = request.params[CB_IDENTIFIER_KEY];
+                     CGFloat duration = [args[CB_DURATION_KEY] floatValue];
+                     
+                     BOOL success = [CBApplication pressForDuration:duration
+                                                         identifier:identifier];
+                     [self handleResponse:response success:success];
+                 }],
+             
+             [CBRoute post:@"/pressForDuration/id/:id1/thenDragToElement/id/:id2"
+                 withBlock:^(RouteRequest *request, RouteResponse *response) {
+                     NSDictionary *args = DATA_TO_JSON(request.body);
+                     NSString *id1 = request.params[CB_IDENTIFIER1_KEY];
+                     NSString *id2 = request.params[CB_IDENTIFIER2_KEY];
+                     CGFloat duration = [args[CB_DURATION_KEY] floatValue];
+                     
+                     BOOL success = [CBApplication pressIdentifier:id1
+                                                       forDuration:duration
+                                   thenDragToElementWithIdentifier:id2];
+                     [self handleResponse:response success:success];
+                 }]
              ];
 }
 
@@ -226,12 +350,4 @@
     [response respondWithString:CB_EMPTY_STRING];
 }
 
-/* TODO
-- (void)pinchWithScale:(CGFloat)scale velocity:(CGFloat)velocity;
-- (void)rotate:(CGFloat)rotation withVelocity:(CGFloat)velocity;
-- (void)typeText:(NSString *)text;
- - (void)tapWithNumberOfTaps:(NSUInteger)numberOfTaps numberOfTouches:(NSUInteger)numberOfTouches;
- - (void)pressForDuration:(NSTimeInterval)duration;
- - (void)pressForDuration:(NSTimeInterval)duration thenDragToElement:(XCUIElement *)otherElement;
- */
 @end
