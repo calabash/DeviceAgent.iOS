@@ -29,7 +29,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN;
 - (int) findHeaderEnd:(NSData*) workingData fromOffset:(int) offset;
 - (int) findContentEnd:(NSData*) data fromOffset:(int) offset;
 
-- (int) numberOfBytesToLeavePendingWithData:(NSData*) data length:(NSUInteger) length encoding:(int) encoding;
+- (int) numberOfBytesToLeavePendingWithData:(NSData*) data length:(NSInteger) length encoding:(int) encoding;
 - (int) offsetTillNewlineSinceOffset:(int) offset inData:(NSData*) data;
 
 - (int) processPreamble:(NSData*) workingData;
@@ -417,7 +417,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN;
 }
 
 
-- (int) numberOfBytesToLeavePendingWithData:(NSData*) data length:(NSUInteger) length encoding:(int) encoding {
+- (int) numberOfBytesToLeavePendingWithData:(NSData*) data length:(NSInteger) length encoding:(int) encoding {
 	// If we have BASE64 or Quoted-Printable encoded data, we have to be sure
 	// we don't break the format.
 	NSInteger sizeToLeavePending = 0;
