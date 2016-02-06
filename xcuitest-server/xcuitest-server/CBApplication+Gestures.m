@@ -246,6 +246,9 @@
 
 #pragma mark - Helper Methods
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+
 + (void)performGesture:(_Nonnull SEL)gesture onElement:(XCUIElement *)el {
     [el performSelector:gesture withObject:nil];
     NSLog(@"Peforming %@ on %@", NSStringFromSelector(gesture), [JSONUtils elementToJSON:el]);
@@ -262,6 +265,7 @@
         return YES;
     }
 }
+#pragma clang diagnostic pop
 
 + (BOOL)gesture:(_Nonnull SEL)gesture onMarked:(NSString *)text {
     return [self gesture:gesture matchingSelector:@selector(elementMarked:) valueToMatch:text];
