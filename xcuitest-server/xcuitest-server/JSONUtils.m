@@ -3,6 +3,7 @@
 //  xcuitest-server
 //
 
+#import "CBApplication.h"
 #import "CBConstants.h"
 #import "JSONUtils.h"
 
@@ -22,6 +23,7 @@ static NSDictionary *typeStringToElementType;
     json[CB_RECT_KEY] = [self rectToJSON:snapshot.frame];
     json[CB_IDENTIFIER_KEY] = snapshot.identifier ?: CB_EMPTY_STRING;
     json[CB_ENABLED_KEY] = @(snapshot.isEnabled);
+    json[CB_TEST_ID] = [CBApplication cacheElement:(XCUIElement *)snapshot];
     
     //TODO: visibility?
     return json;

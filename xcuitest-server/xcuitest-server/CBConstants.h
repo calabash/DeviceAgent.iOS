@@ -31,6 +31,7 @@ static NSString *const CB_IDENTIFIER_KEY = @"id";
 static NSString *const CB_IDENTIFIER1_KEY = @"id1";
 static NSString *const CB_IDENTIFIER2_KEY = @"id2";
 static NSString *const CB_ENABLED_KEY = @"enabled";
+static NSString *const CB_TEST_ID = @"test_id";
 static NSString *const CB_TEXT_KEY = @"text";
 static NSString *const CB_TEXT1_KEY = @"text1";
 static NSString *const CB_TEXT2_KEY = @"text2";

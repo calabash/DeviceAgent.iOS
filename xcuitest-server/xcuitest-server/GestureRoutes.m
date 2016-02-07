@@ -313,7 +313,26 @@
                                                           forDuration:duration
                                       thenDragToElementWithIdentifier:id2];
                      [response respondWithJSON:[JSONUtils elementToJSON:el]];
-                 }]
+                 }],
+             
+#pragma mark - TestID Routes
+             [CBRoute post:@"/tap/test_id/:test_id"
+                 withBlock:^(RouteRequest *request, RouteResponse *response) {
+                     NSNumber *test_id = @([request.params[CB_TEST_ID] integerValue]);
+                     XCUIElement *el = [CBApplication cachedElementOrThrow:test_id];
+                     [el tap];
+                     [response respondWithJSON:[JSONUtils elementToJSON:el]];
+                 }],
+             
+             [CBRoute post:@"/typeText/test_id/:test_id"
+                 withBlock:^(RouteRequest *request, RouteResponse *response) {
+                     NSDictionary *args = DATA_TO_JSON(request.body);
+                     NSString *text = args[CB_TEXT_KEY];
+                     NSNumber *test_id = @([request.params[CB_TEST_ID] integerValue]);
+                     XCUIElement *el = [CBApplication cachedElementOrThrow:test_id];
+                     [el typeText:text];
+                     [response respondWithJSON:[JSONUtils elementToJSON:el]];
+                 }],
              ];
 }
 

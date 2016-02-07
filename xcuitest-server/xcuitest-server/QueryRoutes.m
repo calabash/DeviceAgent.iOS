@@ -28,6 +28,7 @@
                  NSString *type = request.params[CB_TYPE_KEY];
                  [response respondWithJSON:[CBApplication jsonForElementsWithType:type]];
              }],
+             
              ];
 }
 @end
