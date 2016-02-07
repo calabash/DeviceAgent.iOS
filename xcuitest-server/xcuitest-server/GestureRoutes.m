@@ -6,6 +6,7 @@
 #import "CBApplication+Gestures.h"
 #import "GestureRoutes.h"
 #import "CBConstants.h"
+#import "JSONUtils.h"
 #import "CBMacros.h"
 
 @implementation GestureRoutes
@@ -136,8 +137,8 @@
                      CGFloat scale = [args[CB_SCALE_KEY] floatValue];
                      CGFloat velocity = [args[CB_VELOCITY_KEY] floatValue];
                      NSString *mark = request.params[CB_TEXT_KEY];
-                     BOOL success = [CBApplication pinchWithScale:scale velocity:velocity marked:mark];
-                     [self handleResponse:response success:success];
+                     XCUIElement *el = [CBApplication pinchWithScale:scale velocity:velocity marked:mark];
+                     [response respondWithJSON:[JSONUtils elementToJSON:el]];
                  }],
              
              [CBRoute post:@"/rotateWithVelocity/marked/:text"
@@ -146,8 +147,8 @@
                      CGFloat degrees = [args[CB_ROTATION_KEY] floatValue];
                      CGFloat velocity = [args[CB_VELOCITY_KEY] floatValue];
                      NSString *mark = request.params[CB_TEXT_KEY];
-                     BOOL success = [CBApplication rotateDegrees:degrees velocity:velocity marked:mark];
-                     [self handleResponse:response success:success];
+                     XCUIElement *el = [CBApplication rotateDegrees:degrees velocity:velocity marked:mark];
+                     [response respondWithJSON:[JSONUtils elementToJSON:el]];
                  }],
              
              [CBRoute post:@"/typeText/marked/:text"
@@ -156,8 +157,8 @@
                      NSString *mark = request.params[CB_TEXT_KEY];
                      NSString *text = args[CB_TEXT_KEY];
                      
-                     BOOL success = [CBApplication typeText:text marked:mark];
-                     [self handleResponse:response success:success];
+                     XCUIElement *el = [CBApplication typeText:text marked:mark];
+                     [response respondWithJSON:[JSONUtils elementToJSON:el]];
                  }],
              
              [CBRoute post:@"/tapWithNumberOfTapsAndTouches/marked/:text"
@@ -167,10 +168,10 @@
                      NSUInteger numTaps = [args[CB_NUM_TAPS_KEY] unsignedIntegerValue];
                      NSUInteger numTouches = [args[CB_NUM_TOUCHES_KEY] unsignedIntegerValue];
                      
-                     BOOL success = [CBApplication tapWithNumberOfTaps:numTaps
+                     XCUIElement *el = [CBApplication tapWithNumberOfTaps:numTaps
                                                        numberOfTouches:numTouches
                                                                 marked:mark];
-                     [self handleResponse:response success:success];
+                     [response respondWithJSON:[JSONUtils elementToJSON:el]];
                  }],
              
              [CBRoute post:@"/pressForDuration/marked/:text"
@@ -179,9 +180,9 @@
                      NSString *mark = request.params[CB_TEXT_KEY];
                      CGFloat duration = [args[CB_DURATION_KEY] floatValue];
                      
-                     BOOL success = [CBApplication pressForDuration:duration
+                     XCUIElement *el = [CBApplication pressForDuration:duration
                                                              marked:mark];
-                     [self handleResponse:response success:success];
+                     [response respondWithJSON:[JSONUtils elementToJSON:el]];
                  }],
              
              [CBRoute post:@"/pressForDuration/marked/:text1/thenDragToElement/marked/:text2"
@@ -191,10 +192,10 @@
                      NSString *mark2 = request.params[CB_TEXT2_KEY];
                      CGFloat duration = [args[CB_DURATION_KEY] floatValue];
                      
-                     BOOL success = [CBApplication pressMarked:mark1
+                     XCUIElement *el = [CBApplication pressMarked:mark1
                                                    forDuration:duration
                                        thenDragToElementMarked:mark2];
-                     [self handleResponse:response success:success];
+                     [response respondWithJSON:[JSONUtils elementToJSON:el]];
                  }],
              
              /*
@@ -253,8 +254,8 @@
                      CGFloat scale = [args[CB_SCALE_KEY] floatValue];
                      CGFloat velocity = [args[CB_VELOCITY_KEY] floatValue];
                      NSString *identifier = request.params[CB_IDENTIFIER_KEY];
-                     BOOL success = [CBApplication pinchWithScale:scale velocity:velocity identifier:identifier];
-                     [self handleResponse:response success:success];
+                     XCUIElement *el = [CBApplication pinchWithScale:scale velocity:velocity identifier:identifier];
+                     [response respondWithJSON:[JSONUtils elementToJSON:el]];
              }],
              
              [CBRoute post:@"/rotateWithVelocity/id/:id"
@@ -263,8 +264,8 @@
                      CGFloat degrees = [args[CB_ROTATION_KEY] floatValue];
                      CGFloat velocity = [args[CB_VELOCITY_KEY] floatValue];
                      NSString *identifier = request.params[CB_IDENTIFIER_KEY];
-                     BOOL success = [CBApplication rotateDegrees:degrees velocity:velocity identifier:identifier];
-                     [self handleResponse:response success:success];
+                     XCUIElement *el = [CBApplication rotateDegrees:degrees velocity:velocity identifier:identifier];
+                     [response respondWithJSON:[JSONUtils elementToJSON:el]];
                  }],
              
              [CBRoute post:@"/typeText/id/:id"
@@ -273,8 +274,8 @@
                      NSString *identifier = request.params[CB_IDENTIFIER_KEY];
                      NSString *text = args[CB_TEXT_KEY];
                      
-                     BOOL success = [CBApplication typeText:text identifier:identifier];
-                     [self handleResponse:response success:success];
+                     XCUIElement *el = [CBApplication typeText:text identifier:identifier];
+                     [response respondWithJSON:[JSONUtils elementToJSON:el]];
                  }],
              
              [CBRoute post:@"/tapWithNumberOfTapsAndTouches/id/:id"
@@ -284,10 +285,10 @@
                      NSUInteger numTaps = [args[CB_NUM_TAPS_KEY] unsignedIntegerValue];
                      NSUInteger numTouches = [args[CB_NUM_TOUCHES_KEY] unsignedIntegerValue];
                      
-                     BOOL success = [CBApplication tapWithNumberOfTaps:numTaps
+                     XCUIElement *el = [CBApplication tapWithNumberOfTaps:numTaps
                                                        numberOfTouches:numTouches
                                                             identifier:identifier];
-                     [self handleResponse:response success:success];
+                     [response respondWithJSON:[JSONUtils elementToJSON:el]];
                  }],
              
              [CBRoute post:@"/pressForDuration/id/:id"
@@ -296,9 +297,9 @@
                      NSString *identifier = request.params[CB_IDENTIFIER_KEY];
                      CGFloat duration = [args[CB_DURATION_KEY] floatValue];
                      
-                     BOOL success = [CBApplication pressForDuration:duration
+                     XCUIElement *el = [CBApplication pressForDuration:duration
                                                          identifier:identifier];
-                     [self handleResponse:response success:success];
+                     [response respondWithJSON:[JSONUtils elementToJSON:el]];
                  }],
              
              [CBRoute post:@"/pressForDuration/id/:id1/thenDragToElement/id/:id2"
@@ -308,10 +309,10 @@
                      NSString *id2 = request.params[CB_IDENTIFIER2_KEY];
                      CGFloat duration = [args[CB_DURATION_KEY] floatValue];
                      
-                     BOOL success = [CBApplication pressIdentifier:id1
-                                                       forDuration:duration
-                                   thenDragToElementWithIdentifier:id2];
-                     [self handleResponse:response success:success];
+                     XCUIElement *el = [CBApplication pressIdentifier:id1
+                                                          forDuration:duration
+                                      thenDragToElementWithIdentifier:id2];
+                     [response respondWithJSON:[JSONUtils elementToJSON:el]];
                  }]
              ];
 }
@@ -339,15 +340,9 @@
            forGesture:(SEL)gesture
           propertyKey:(NSString *)propertyKey {
     NSString *toMatch = request.params[propertyKey];
-    BOOL success = [CBApplication performSelector:gesture withObject:toMatch];
-    [self handleResponse:response success:success];
+    XCUIElement *el = [CBApplication performSelector:gesture withObject:toMatch];
+    [response respondWithJSON:[JSONUtils elementToJSON:el]];
 }
 
-+ (void)handleResponse:(RouteResponse *)response success:(BOOL)success {
-    response.statusCode = success ?
-    HTTP_STATUS_CODE_EVERYTHING_OK :
-    HTTP_STATUS_CODE_INVALID_REQUEST;
-    [response respondWithString:CB_EMPTY_STRING];
-}
 
 @end
