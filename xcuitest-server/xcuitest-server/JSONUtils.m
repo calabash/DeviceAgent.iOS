@@ -40,6 +40,11 @@ static NSDictionary *typeStringToElementType;
              };
 }
 
++ (XCUIElementType)elementTypeForString:(NSString *)typeString {
+    NSNumber *typeNumber = typeStringToElementType[[typeString lowercaseString]];
+    return typeNumber ? [typeNumber intValue] : -1;
+}
+
 + (void)load {
     static dispatch_once_t oncet;
     dispatch_once(&oncet, ^{
@@ -128,7 +133,7 @@ static NSDictionary *typeStringToElementType;
                                 };
         NSMutableDictionary *_typeStringToElementType = [NSMutableDictionary dictionaryWithCapacity:elementTypeToString.count];
         for (NSNumber *type in elementTypeToString) {
-            _typeStringToElementType[elementTypeToString[type]] = type;
+            _typeStringToElementType[[elementTypeToString[type] lowercaseString]] = type;
         }
         typeStringToElementType = _typeStringToElementType;
         

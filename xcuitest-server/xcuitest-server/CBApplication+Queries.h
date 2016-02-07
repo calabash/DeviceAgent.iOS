@@ -10,10 +10,12 @@
 
 + (NSArray <NSDictionary *> *)jsonForElementsMarked:(NSString *)text;
 + (NSArray <NSDictionary *> *)jsonForElementsWithID:(NSString *)identifier;
++ (NSArray <NSDictionary *> *)jsonForElementsWithType:(NSString *)type;
 
 + (XCUIElement *)elementMarked:(NSString *)mark;
 + (NSArray <XCUIElement *> *)elementsMarked:(NSString *)text;
 
 + (XCUIElement *)elementWithIdentifier:(NSString *)identifier;
 + (NSArray <XCUIElement *> *)elementsWithIdentifier:(NSString *)identifier;
+
 @end
