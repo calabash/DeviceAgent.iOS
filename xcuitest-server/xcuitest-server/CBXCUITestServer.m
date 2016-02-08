@@ -27,6 +27,15 @@ static CBXCUITestServer *sharedServer;
         [sharedServer.server setRouteQueue:dispatch_get_main_queue()];
         [sharedServer.server setDefaultHeader:@"Server" value:@"CalabashXCUITestServer/1.0"];
         [sharedServer.server setConnectionClass:[RoutingConnection self]];
+        [sharedServer.server setName:@"Calabus Driver"];
+        [sharedServer.server setType:@"_http._tcp."];
+
+        NSDictionary *capabilities =
+        @{
+          @"name" : [[UIDevice currentDevice] name]
+          };
+
+        [sharedServer.server setTXTRecordDictionary:capabilities];
         [sharedServer registerRoutes];
     });
 }
@@ -47,7 +56,7 @@ static CBXCUITestServer *sharedServer;
         NSLog(@"Attempt to start web server failed with error %@", [error description]);
         abort();
     }
-    
+
     NSLog(@"CalabashXCUITestServer started on http://%@:%hu", [UIDevice currentDevice].wifiIPAddress, [self.server port]);
 }
 
