@@ -1,3 +1,11 @@
+# emacs and vim
+*~
+(.*/)?\#[^/]*\#$
+*.swp
+
+# MacOS
+.DS_Store
+
 ## Build generated
 build/
 DerivedData
