@@ -25,10 +25,11 @@ static CBXCUITestServer *sharedServer;
         sharedServer = [self new];
         sharedServer.server = [[RoutingHTTPServer alloc] init];
         [sharedServer.server setRouteQueue:dispatch_get_main_queue()];
-        [sharedServer.server setDefaultHeader:@"Server" value:@"CalabashXCUITestServer/1.0"];
+        [sharedServer.server setDefaultHeader:@"CalabusDriver"
+                                        value:@"CalabashXCUITestServer/1.0"];
         [sharedServer.server setConnectionClass:[RoutingConnection self]];
-        [sharedServer.server setName:@"Calabus Driver"];
-        [sharedServer.server setType:@"_http._tcp."];
+        [sharedServer.server setName:@"CalabusDriver"];
+        [sharedServer.server setType:@"_calabus._tcp."];
 
         NSDictionary *capabilities =
         @{
