@@ -17,7 +17,7 @@ static NSArray <NSString *> *identifierProperties;
 + (void)load {
     static dispatch_once_t oncet;
     dispatch_once(&oncet, ^{
-        markedProperties = @[@"label", @"title", @"value", @"accessibilityLabel"];
+        markedProperties = @[@"label", @"title", @"value", @"accessibilityLabel", @"placeholderValue"];
         identifierProperties = @[@"identifier", @"accessibilityIdentifier"];
     });
 }

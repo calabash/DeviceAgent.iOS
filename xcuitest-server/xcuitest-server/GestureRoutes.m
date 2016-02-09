@@ -331,7 +331,7 @@
                      NSNumber *test_id = @([request.params[CB_TEST_ID] integerValue]);
                      XCUIElement *el = [CBApplication cachedElementOrThrow:test_id];
                      [el typeText:text];
-                     [response respondWithJSON:[JSONUtils elementToJSON:el]];
+                     [response respondWithString:@"OK"];
                  }],
              ];
 }

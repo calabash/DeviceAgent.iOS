@@ -66,7 +66,7 @@ static CBXCUITestServer *sharedServer;
 }
 
 - (void)stop {
-    [self.server stop:YES];
+    [self.server stop:NO];
 }
 
 - (BOOL)attemptToStartWithError:(NSError **)error {

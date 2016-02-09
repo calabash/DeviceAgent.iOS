@@ -35,6 +35,7 @@
 
 void HandleException(NSException *e) {
     int code = [e isKindOfClass:[CBShutdownServerException class]] ? EXIT_SUCCESS : EXIT_FAILURE;
+    [CBXCUITestServer stop];
     exit(code);
 }
 
