@@ -171,6 +171,8 @@
 		898744761C5850AC0084FD93 /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 898744651C5850AC0084FD93 /* DispatchQueueLogFormatter.m */; };
 		8987447F1C5850C50084FD93 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8987447C1C5850C50084FD93 /* GCDAsyncSocket.m */; };
 		898744801C5850C50084FD93 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8987447C1C5850C50084FD93 /* GCDAsyncSocket.m */; };
+		89BFEFA41C6A4D6B00C26452 /* MetaRoutes.h in Headers */ = {isa = PBXBuildFile; fileRef = 89BFEFA21C6A4D6B00C26452 /* MetaRoutes.h */; };
+		89BFEFA51C6A4D6B00C26452 /* MetaRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BFEFA31C6A4D6B00C26452 /* MetaRoutes.m */; };
 		89C710E31C62A4C2007AE1FC /* CBApplication+Queries.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C710E11C62A4C2007AE1FC /* CBApplication+Queries.h */; };
 		89C710E41C62A4C2007AE1FC /* CBApplication+Queries.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C710E21C62A4C2007AE1FC /* CBApplication+Queries.m */; };
 		89C710E81C62A636007AE1FC /* QueryRoutes.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C710E61C62A636007AE1FC /* QueryRoutes.h */; };
@@ -395,6 +397,8 @@
 		8987447A1C5850C50084FD93 /* About.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = About.txt; sourceTree = "<group>"; };
 		8987447B1C5850C50084FD93 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		8987447C1C5850C50084FD93 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		89BFEFA21C6A4D6B00C26452 /* MetaRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetaRoutes.h; sourceTree = "<group>"; };
+		89BFEFA31C6A4D6B00C26452 /* MetaRoutes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetaRoutes.m; sourceTree = "<group>"; };
 		89C710E11C62A4C2007AE1FC /* CBApplication+Queries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBApplication+Queries.h"; sourceTree = "<group>"; };
 		89C710E21C62A4C2007AE1FC /* CBApplication+Queries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBApplication+Queries.m"; sourceTree = "<group>"; };
 		89C710E61C62A636007AE1FC /* QueryRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryRoutes.h; sourceTree = "<group>"; };
@@ -450,6 +454,8 @@
 				894ED1181C5FE948004B2555 /* GestureRoutes.m */,
 				89C710E61C62A636007AE1FC /* QueryRoutes.h */,
 				89C710E71C62A636007AE1FC /* QueryRoutes.m */,
+				89BFEFA21C6A4D6B00C26452 /* MetaRoutes.h */,
+				89BFEFA31C6A4D6B00C26452 /* MetaRoutes.m */,
 			);
 			name = RouteProviders;
 			sourceTree = "<group>";
@@ -918,6 +924,7 @@
 				89F5DE3F1C6538350062540C /* HealthRoutes.h in Headers */,
 				894ED0031C5BDDDE004B2555 /* XCUIDevice.h in Headers */,
 				894ECFE51C5BDDDB004B2555 /* XCTestCase-AsynchronousTesting_Internal.h in Headers */,
+				89BFEFA41C6A4D6B00C26452 /* MetaRoutes.h in Headers */,
 				894ECFF51C5BDDDD004B2555 /* XCTestManager_TestsInterface-Protocol.h in Headers */,
 				894ECFEB1C5BDDDC004B2555 /* XCTestCaseSuite.h in Headers */,
 				894ECFFA1C5BDDDD004B2555 /* XCTestRun.h in Headers */,
@@ -1107,6 +1114,7 @@
 				894ECE901C5BDA44004B2555 /* CBApplication.m in Sources */,
 				89F5DE3C1C65368A0062540C /* CBShutdownServerException.m in Sources */,
 				8987446E1C5850AC0084FD93 /* DDFileLogger.m in Sources */,
+				89BFEFA51C6A4D6B00C26452 /* MetaRoutes.m in Sources */,
 				8987444B1C584BBF0084FD93 /* RouteResponse.m in Sources */,
 				89C710E41C62A4C2007AE1FC /* CBApplication+Queries.m in Sources */,
 				898744471C584BBF0084FD93 /* Route.m in Sources */,

@@ -4,6 +4,7 @@
 //
 
 #import "CBApplication.h"
+#import "XCElementSnapshot.h"
 
 @interface CBApplication (Queries)
 + (NSDictionary *)tree;
@@ -17,5 +18,7 @@
 
 + (XCUIElement *)elementWithIdentifier:(NSString *)identifier;
 + (NSArray <XCUIElement *> *)elementsWithIdentifier:(NSString *)identifier;
+
++ (XCElementSnapshot *)elementAtCoordinates:(float)x :(float)y;
 
 @end
