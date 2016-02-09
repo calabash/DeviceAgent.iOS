@@ -15,11 +15,12 @@ static NSDictionary *typeStringToElementType;
 //TODO: apparenty this causes some lag... how to optimize?
 + (NSMutableDictionary *)snapshotToJSON:(XCElementSnapshot *)snapshot {
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
-    
+
     json[CB_TYPE_KEY] = elementTypeToString[@(snapshot.elementType)];
     json[CB_TITLE_KEY] = snapshot.title ?: CB_EMPTY_STRING;
     json[CB_LABEL_KEY] = snapshot.label ?: CB_EMPTY_STRING;
     json[CB_VALUE_KEY] = snapshot.value ?: CB_EMPTY_STRING;
+    json[CB_PLACEHOLDER_KEY] = snapshot.placeholderValue ?: CB_EMPTY_STRING;
     json[CB_RECT_KEY] = [self rectToJSON:snapshot.frame];
     json[CB_IDENTIFIER_KEY] = snapshot.identifier ?: CB_EMPTY_STRING;
     json[CB_ENABLED_KEY] = @(snapshot.isEnabled);
