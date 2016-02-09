@@ -64,187 +64,171 @@
 
 #pragma mark - Marked Methods
 
-+ (BOOL)tapMarked:(NSString *)mark {
++ (XCUIElement *)tapMarked:(NSString *)mark {
     return [self gesture:@selector(tap) onMarked:mark];
 }
 
-+ (BOOL)doubleTapMarked:(NSString *)mark {
++ (XCUIElement *)doubleTapMarked:(NSString *)mark {
     return [self gesture:@selector(doubleTap) onMarked:mark];
 }
 
-+ (BOOL)twoFingerTapMarked:(NSString *)mark {
++ (XCUIElement *)twoFingerTapMarked:(NSString *)mark {
     return [self gesture:@selector(twoFingerTap) onMarked:mark];
 }
 
-+ (BOOL)swipeUpOnMarked:(NSString *)mark {
++ (XCUIElement *)swipeUpOnMarked:(NSString *)mark {
     return [self gesture:@selector(swipeUp) onMarked:mark];
 }
 
-+ (BOOL)swipeDownOnMarked:(NSString *)mark {
++ (XCUIElement *)swipeDownOnMarked:(NSString *)mark {
     return [self gesture:@selector(swipeDown) onMarked:mark];
 }
 
-+ (BOOL)swipeLeftOnMarked:(NSString *)mark {
++ (XCUIElement *)swipeLeftOnMarked:(NSString *)mark {
     return [self gesture:@selector(swipeLeft) onMarked:mark];
 }
 
-+ (BOOL)swipeRightOnMarked:(NSString *)mark {
++ (XCUIElement *)swipeRightOnMarked:(NSString *)mark {
     return [self gesture:@selector(swipeRight) onMarked:mark];
 }
 
-+ (BOOL)typeText:(NSString *)text marked:(NSString *)mark {
-    XCUIElement *el = [self elementMarked:mark];
-    if (el) {
-        [el typeText:text];
-        return YES;
-    }
-    return NO;
++ (XCUIElement *)typeText:(NSString *)text marked:(NSString *)mark {
+    XCUIElement *el = [self elementMarkedOrThrow:mark];
+    [el typeText:text];
+    return el;
 }
 
-+ (BOOL)rotateDegrees:(CGFloat)degrees velocity:(CGFloat)degreesPerSecond marked:(NSString *)mark {
-    XCUIElement *el = [self elementMarked:mark];
-    if (el) {
-        [el rotate:degreesToRadians(degrees) withVelocity:degreesToRadians(degreesPerSecond)];
-        return YES;
-    }
-    return NO;
++ (XCUIElement *)rotateDegrees:(CGFloat)degrees velocity:(CGFloat)degreesPerSecond marked:(NSString *)mark {
+    XCUIElement *el = [self elementMarkedOrThrow:mark];
+    [el rotate:degreesToRadians(degrees) withVelocity:degreesToRadians(degreesPerSecond)];
+    return el;
 }
 
-+ (BOOL)pinchWithScale:(CGFloat)scaleMultiplier
-              velocity:(CGFloat)scaleFactorPerSecond
-                marked:(NSString *)mark {
-    XCUIElement *el = [self elementMarked:mark];
-    if (el) {
-        [el pinchWithScale:scaleMultiplier velocity:scaleFactorPerSecond];
-        return YES;
-    }
-    return NO;
++ (XCUIElement *)pinchWithScale:(CGFloat)scaleMultiplier
+                       velocity:(CGFloat)scaleFactorPerSecond
+                         marked:(NSString *)mark {
+    XCUIElement *el = [self elementMarkedOrThrow:mark];
+    [el pinchWithScale:scaleMultiplier velocity:scaleFactorPerSecond];
+    return el;
 }
 
-+ (BOOL)tapWithNumberOfTaps:(NSUInteger)numTaps
-            numberOfTouches:(NSUInteger)numTouches
-                     marked:(NSString *)mark {
-    XCUIElement *el = [self elementMarked:mark];
-    if (el) {
-        [el tapWithNumberOfTaps:numTaps numberOfTouches:numTouches];
-        return YES;
-    }
-    return NO;
++ (XCUIElement *)tapWithNumberOfTaps:(NSUInteger)numTaps
+                     numberOfTouches:(NSUInteger)numTouches
+                              marked:(NSString *)mark {
+    XCUIElement *el = [self elementMarkedOrThrow:mark];
+    [el tapWithNumberOfTaps:numTaps numberOfTouches:numTouches];
+    return el;
 }
 
-+ (BOOL)pressForDuration:(NSTimeInterval)duration marked:(NSString *)mark {
-    XCUIElement *el = [self elementMarked:mark];
-    if (el) {
-        [el pressForDuration:duration];
-        return YES;
-    }
-    return NO;
++ (XCUIElement *)pressForDuration:(NSTimeInterval)duration marked:(NSString *)mark {
+    XCUIElement *el = [self elementMarkedOrThrow:mark];
+    [el pressForDuration:duration];
+    return el;
 }
 
-+ (BOOL)pressMarked:(NSString *)mark1
-        forDuration:(NSTimeInterval)duration thenDragToElementMarked:(NSString *)mark2  {
-    XCUIElement *el1 = [self elementMarked:mark1];
-    XCUIElement *el2 = [self elementMarked:mark2];
-    if (el1 && el2) {
-        [el1 pressForDuration:duration thenDragToElement:el2];
-        return YES;
-    }
-    return NO;
++ (XCUIElement *)pressMarked:(NSString *)mark1
+                 forDuration:(NSTimeInterval)duration thenDragToElementMarked:(NSString *)mark2  {
+    XCUIElement *el1 = [self elementMarkedOrThrow:mark1];
+    XCUIElement *el2 = [self elementMarkedOrThrow:mark2];
+    [el1 pressForDuration:duration thenDragToElement:el2];
+    return el1;
 }
 
 #pragma mark - Identifier Methods
 
-+ (BOOL)tapIdentifier:(NSString *)identifier {
++ (XCUIElement *)tapIdentifier:(NSString *)identifier {
     return [self gesture:@selector(tap) onIdentifier:identifier];
 }
 
-+ (BOOL)doubleTapIdentifier:(NSString *)identifier {
++ (XCUIElement *)doubleTapIdentifier:(NSString *)identifier {
     return [self gesture:@selector(doubleTap) onIdentifier:identifier];
 }
 
-+ (BOOL)twoFingerTapIdentifier:(NSString *)identifier {
++ (XCUIElement *)twoFingerTapIdentifier:(NSString *)identifier {
     return [self gesture:@selector(twoFingerTap) onIdentifier:identifier];
 }
 
-+ (BOOL)swipeUpOnIdentifier:(NSString *)identifier {
++ (XCUIElement *)swipeUpOnIdentifier:(NSString *)identifier {
     return [self gesture:@selector(swipeUp) onIdentifier:identifier];
 }
 
-+ (BOOL)swipeDownOnIdentifier:(NSString *)identifier {
++ (XCUIElement *)swipeDownOnIdentifier:(NSString *)identifier {
     return [self gesture:@selector(swipeDown) onIdentifier:identifier];
 }
 
-+ (BOOL)swipeLeftOnIdentifier:(NSString *)identifier {
++ (XCUIElement *)swipeLeftOnIdentifier:(NSString *)identifier {
     return [self gesture:@selector(swipeLeft) onIdentifier:identifier];
 }
 
-+ (BOOL)swipeRightOnIdentifier:(NSString *)identifier {
++ (XCUIElement *)swipeRightOnIdentifier:(NSString *)identifier {
     return [self gesture:@selector(swipeRight) onIdentifier:identifier];
 }
 
-+ (BOOL)typeText:(NSString *)text identifier:(NSString *)identifier {
-    XCUIElement *el = [self elementWithIdentifier:identifier];
-    if (el) {
-        [el typeText:text];
-        return YES;
-    }
-    return NO;
++ (XCUIElement *)typeText:(NSString *)text identifier:(NSString *)identifier {
+    XCUIElement *el = [self elementWithIdentifierOrThrow:identifier];
+    [el typeText:text];
+    return el;
 }
 
-+ (BOOL)rotateDegrees:(CGFloat)degrees velocity:(CGFloat)degreesPerSecond identifier:(NSString *)identifier {
-    XCUIElement *el = [self elementWithIdentifier:identifier];
-    if (el) {
-        [el rotate:degreesToRadians(degrees) withVelocity:degreesToRadians(degreesPerSecond)];
-        return YES;
-    }
-    return NO;
++ (XCUIElement *)rotateDegrees:(CGFloat)degrees velocity:(CGFloat)degreesPerSecond identifier:(NSString *)identifier {
+    XCUIElement *el = [self elementWithIdentifierOrThrow:identifier];
+    [el rotate:degreesToRadians(degrees) withVelocity:degreesToRadians(degreesPerSecond)];
+    return el;
 }
 
-+ (BOOL)pinchWithScale:(CGFloat)scaleMultiplier
-              velocity:(CGFloat)scaleFactorPerSecond
-            identifier:(NSString *)identifier {
-    XCUIElement *el = [self elementWithIdentifier:identifier];
-    if (el) {
-        [el pinchWithScale:scaleMultiplier velocity:scaleFactorPerSecond];
-        return YES;
-    }
-    return NO;
++ (XCUIElement *)pinchWithScale:(CGFloat)scaleMultiplier
+                       velocity:(CGFloat)scaleFactorPerSecond
+                     identifier:(NSString *)identifier {
+    XCUIElement *el = [self elementWithIdentifierOrThrow:identifier];
+    [el pinchWithScale:scaleMultiplier velocity:scaleFactorPerSecond];
+    return el;
 }
 
 //TODO:
 //I have no idea what the use case is for this.
-+ (BOOL)tapWithNumberOfTaps:(NSUInteger)numTaps
-            numberOfTouches:(NSUInteger)numTouches
-                 identifier:(NSString *)identifier {
-    XCUIElement *el = [self elementWithIdentifier:identifier];
-    if (el) {
-        [el tapWithNumberOfTaps:numTaps numberOfTouches:numTouches];
-        return YES;
-    }
-    return NO;
++ (XCUIElement *)tapWithNumberOfTaps:(NSUInteger)numTaps
+                     numberOfTouches:(NSUInteger)numTouches
+                          identifier:(NSString *)identifier {
+    XCUIElement *el = [self elementWithIdentifierOrThrow:identifier];
+    [el tapWithNumberOfTaps:numTaps numberOfTouches:numTouches];
+    return el;
 }
 
-+ (BOOL)pressForDuration:(NSTimeInterval)duration identifier:(NSString *)identifier {
-    XCUIElement *el = [self elementWithIdentifier:identifier];
-    if (el) {
-        [el pressForDuration:duration];
-        return YES;
-    }
-    return NO;
++ (XCUIElement *)pressForDuration:(NSTimeInterval)duration identifier:(NSString *)identifier {
+    XCUIElement *el = [self elementWithIdentifierOrThrow:identifier];
+    [el pressForDuration:duration];
+    return el;
 }
 
-+ (BOOL)pressIdentifier:(NSString *)id1
-            forDuration:(NSTimeInterval)duration thenDragToElementWithIdentifier:(NSString *)id2  {
-    XCUIElement *el1 = [self elementWithIdentifier:id1];
-    XCUIElement *el2 = [self elementWithIdentifier:id2];
-    if (el1 && el2) {
-        [el1 pressForDuration:duration thenDragToElement:el2];
-        return YES;
-    }
-    return NO;
++ (XCUIElement *)pressIdentifier:(NSString *)id1
+                     forDuration:(NSTimeInterval)duration thenDragToElementWithIdentifier:(NSString *)id2  {
+    XCUIElement *el1 = [self elementWithIdentifierOrThrow:id1];
+    XCUIElement *el2 = [self elementWithIdentifierOrThrow:id2];
+    [el1 pressForDuration:duration thenDragToElement:el2];
+    return el1;
 }
 
 #pragma mark - Helper Methods
+
++ (XCUIElement *)elementWithIdentifierOrThrow:(NSString *)identifier {
+    XCUIElement *el = [self elementWithIdentifier:identifier];
+    if (!el) {
+        @throw [[NSException alloc] initWithName:@"Element not found"
+                                          reason:[NSString stringWithFormat:@"No element found for id: %@", identifier]
+                                        userInfo:nil];
+    }
+    return el;
+}
+
++ (XCUIElement *)elementMarkedOrThrow:(NSString *)mark {
+    XCUIElement *el = [self elementMarked:mark];
+    if (!el) {
+        @throw [[NSException alloc] initWithName:@"Element not found"
+                                          reason:[NSString stringWithFormat:@"No element found with mark: %@", mark]
+                                        userInfo:nil];
+    }
+    return el;
+}
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
@@ -254,24 +238,23 @@
     NSLog(@"Peforming %@ on %@", NSStringFromSelector(gesture), [JSONUtils elementToJSON:el]);
 }
 
-+ (BOOL)gesture:(_Nonnull SEL)gesture matchingSelector:(_Nonnull SEL)match valueToMatch:(NSString *)value {
++ (XCUIElement *)gesture:(_Nonnull SEL)gesture matchingSelector:(_Nonnull SEL)match valueToMatch:(NSString *)value {
     XCUIElement *element = [self performSelector:match withObject:value];
-    
-    if (element == nil) {
-        //TODO: error message?
-        return NO;
-    } else {
-        [self performGesture:gesture onElement:element];
-        return YES;
+    if (!element) {
+        @throw [[NSException alloc] initWithName:@"Element not found"
+                                          reason:[NSString stringWithFormat:@"No element found with value:%@", value]
+                                        userInfo:nil];
     }
+    [self performGesture:gesture onElement:element];
+    return element;
 }
 #pragma clang diagnostic pop
 
-+ (BOOL)gesture:(_Nonnull SEL)gesture onMarked:(NSString *)text {
++ (XCUIElement *)gesture:(_Nonnull SEL)gesture onMarked:(NSString *)text {
     return [self gesture:gesture matchingSelector:@selector(elementMarked:) valueToMatch:text];
 }
 
-+ (BOOL)gesture:(_Nonnull SEL)gesture onIdentifier:(NSString *)identifier {
++ (XCUIElement *)gesture:(_Nonnull SEL)gesture onIdentifier:(NSString *)identifier {
     return [self gesture:gesture matchingSelector:@selector(elementWithIdentifier:) valueToMatch:identifier];
 }
 @end

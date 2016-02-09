@@ -7,16 +7,18 @@
 #import "XCUIApplication.h"
 
 @interface CBApplication : NSObject
-+ (void)launchBundlePath:(NSString *)bundlePath
-                bundleID:(NSString *)bundleID
-              launchArgs:(NSArray *)launchArgs
-                     env:(NSDictionary *)environment;
++ (void)launchBundlePath:(NSString *_Nullable)bundlePath
+                bundleID:(NSString *_Nonnull)bundleID
+              launchArgs:(NSArray *_Nullable)launchArgs
+                     env:(NSDictionary *_Nullable)environment;
 
-+ (void)launchBundleID:(NSString *)bundleID
-            launchArgs:(NSArray *)launchArgs
-                   env:(NSDictionary *)environment;
++ (void)launchBundleID:(NSString *_Nonnull)bundleID
+            launchArgs:(NSArray *_Nullable)launchArgs
+                   env:(NSDictionary *_Nullable)environment;
 
-+ (XCUIApplication *)currentApplication; //TODO: I want to hide this somehow. -CF
++ (XCUIApplication *_Nonnull)currentApplication; //TODO: I want to hide this somehow. -CF
++ (NSNumber *_Nonnull)cacheElement:(XCUIElement  * _Nonnull)el;
++ (XCUIElement *_Nullable)cachedElementOrThrow:(NSNumber *_Nonnull)index;
 + (void)killCurrentApplication;
 + (BOOL)hasSession;
 
