@@ -432,11 +432,11 @@
 		894ECE691C5BAD51004B2555 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				898743E51C5848890084FD93 /* CBXCUITestServer.h */,
+				898743E61C5848890084FD93 /* CBXCUITestServer.m */,
 				89F5DE391C65368A0062540C /* CBShutdownServerException.h */,
 				89F5DE3A1C65368A0062540C /* CBShutdownServerException.m */,
 				898744831C5851910084FD93 /* Routing */,
-				898743E51C5848890084FD93 /* CBXCUITestServer.h */,
-				898743E61C5848890084FD93 /* CBXCUITestServer.m */,
 			);
 			name = Core;
 			sourceTree = "<group>";

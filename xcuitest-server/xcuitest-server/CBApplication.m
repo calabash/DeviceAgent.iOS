@@ -81,9 +81,9 @@ static NSInteger currentElementIndex = 0;
 }
 
 + (void)launchBundlePath:(NSString *)bundlePath
-                      bundleID:(NSString *)bundleID
-                    launchArgs:(NSArray *)launchArgs
-                           env:(NSDictionary *)environment{
+                bundleID:(NSString *)bundleID
+              launchArgs:(NSArray *)launchArgs
+                     env:(NSDictionary *)environment {
     
     if ([currentApplication hasSession]) {
         [currentApplication kill];
@@ -97,8 +97,8 @@ static NSInteger currentElementIndex = 0;
 }
 
 + (void)launchBundleID:(NSString *)bundleID
-                  launchArgs:(NSArray *)launchArgs
-                         env:(NSDictionary *)environment {
+            launchArgs:(NSArray *)launchArgs
+                   env:(NSDictionary *)environment {
     [self launchBundlePath:nil
                   bundleID:bundleID
                 launchArgs:launchArgs

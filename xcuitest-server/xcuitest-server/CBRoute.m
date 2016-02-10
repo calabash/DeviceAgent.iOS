@@ -18,9 +18,11 @@
                 //Throw the exception back up to the calling XCTestCase
                 @throw e;
             } else {
+                //TODO: create new CBElementNotFoundException
+                //TODO: handle user input error as status_code:400
                 NSLog(@"%@", e.callStackSymbols);
                 [response setStatusCode:500];
-                [response respondWithJSON:@{@"Error" : [e reason]}];
+                [response respondWithJSON:@{@"error" : [e reason]}];
             }
         }
     };

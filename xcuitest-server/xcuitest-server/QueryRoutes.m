@@ -16,6 +16,7 @@
              
              [CBRoute get:@"/query/marked/:text" withBlock:^(RouteRequest *request, RouteResponse *response) {
                  NSString *text = request.params[CB_TEXT_KEY];
+                 //TODO: look for text in request.body
                  [response respondWithJSON:[CBApplication jsonForElementsMarked:text]];
              }],
              
