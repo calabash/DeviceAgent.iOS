@@ -75,7 +75,7 @@ static NSInteger currentElementIndex = 0;
 }
 
 + (void)killCurrentApplication {
-    //TODO: This always throws an exception that ends the test. 
+    //TODO: This may throw an exception that ends the test.
     //https://forums.developer.apple.com/message/59121
     [currentApplication kill];
 }

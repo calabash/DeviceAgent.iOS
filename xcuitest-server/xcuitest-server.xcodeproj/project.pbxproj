@@ -105,6 +105,10 @@
 		894ED0101C5BDDE0004B2555 /* XCUIRemote.h in Headers */ = {isa = PBXBuildFile; fileRef = 894ECFB51C5BDDDA004B2555 /* XCUIRemote.h */; };
 		894ED1191C5FE948004B2555 /* GestureRoutes.h in Headers */ = {isa = PBXBuildFile; fileRef = 894ED1171C5FE948004B2555 /* GestureRoutes.h */; };
 		894ED11A1C5FE948004B2555 /* GestureRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 894ED1181C5FE948004B2555 /* GestureRoutes.m */; };
+		898239BF1C6B76BA00C54B40 /* CBElementNotFoundException.h in Headers */ = {isa = PBXBuildFile; fileRef = 898239BD1C6B76BA00C54B40 /* CBElementNotFoundException.h */; };
+		898239C01C6B76BA00C54B40 /* CBElementNotFoundException.m in Sources */ = {isa = PBXBuildFile; fileRef = 898239BE1C6B76BA00C54B40 /* CBElementNotFoundException.m */; };
+		898239C31C6B76D600C54B40 /* CBException.h in Headers */ = {isa = PBXBuildFile; fileRef = 898239C11C6B76D600C54B40 /* CBException.h */; };
+		898239C41C6B76D600C54B40 /* CBException.m in Sources */ = {isa = PBXBuildFile; fileRef = 898239C21C6B76D600C54B40 /* CBException.m */; };
 		898743C11C5847B30084FD93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 898743C01C5847B30084FD93 /* main.m */; };
 		898743C41C5847B30084FD93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 898743C31C5847B30084FD93 /* AppDelegate.m */; };
 		898743C71C5847B30084FD93 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 898743C61C5847B30084FD93 /* ViewController.m */; };
@@ -313,6 +317,10 @@
 		894ECFB51C5BDDDA004B2555 /* XCUIRemote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUIRemote.h; sourceTree = "<group>"; };
 		894ED1171C5FE948004B2555 /* GestureRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureRoutes.h; sourceTree = "<group>"; };
 		894ED1181C5FE948004B2555 /* GestureRoutes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureRoutes.m; sourceTree = "<group>"; };
+		898239BD1C6B76BA00C54B40 /* CBElementNotFoundException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBElementNotFoundException.h; sourceTree = "<group>"; };
+		898239BE1C6B76BA00C54B40 /* CBElementNotFoundException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBElementNotFoundException.m; sourceTree = "<group>"; };
+		898239C11C6B76D600C54B40 /* CBException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBException.h; sourceTree = "<group>"; };
+		898239C21C6B76D600C54B40 /* CBException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBException.m; sourceTree = "<group>"; };
 		898743BC1C5847B30084FD93 /* xcuitest-server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xcuitest-server.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		898743C01C5847B30084FD93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		898743C21C5847B30084FD93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -434,8 +442,7 @@
 			children = (
 				898743E51C5848890084FD93 /* CBXCUITestServer.h */,
 				898743E61C5848890084FD93 /* CBXCUITestServer.m */,
-				89F5DE391C65368A0062540C /* CBShutdownServerException.h */,
-				89F5DE3A1C65368A0062540C /* CBShutdownServerException.m */,
+				898239BC1C6B768D00C54B40 /* CustomExceptions */,
 				898744831C5851910084FD93 /* Routing */,
 			);
 			name = Core;
@@ -578,6 +585,19 @@
 				894ECFB51C5BDDDA004B2555 /* XCUIRemote.h */,
 			);
 			path = XCTest;
+			sourceTree = "<group>";
+		};
+		898239BC1C6B768D00C54B40 /* CustomExceptions */ = {
+			isa = PBXGroup;
+			children = (
+				89F5DE391C65368A0062540C /* CBShutdownServerException.h */,
+				89F5DE3A1C65368A0062540C /* CBShutdownServerException.m */,
+				898239BD1C6B76BA00C54B40 /* CBElementNotFoundException.h */,
+				898239BE1C6B76BA00C54B40 /* CBElementNotFoundException.m */,
+				898239C11C6B76D600C54B40 /* CBException.h */,
+				898239C21C6B76D600C54B40 /* CBException.m */,
+			);
+			name = CustomExceptions;
 			sourceTree = "<group>";
 		};
 		898743B31C5847B30084FD93 = {
@@ -836,6 +856,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89D3213E1C6183C2005B9884 /* CBApplication+Gestures.h in Headers */,
+				898239BF1C6B76BA00C54B40 /* CBElementNotFoundException.h in Headers */,
 				894ECFF31C5BDDDC004B2555 /* XCTestManager_IDEInterface-Protocol.h in Headers */,
 				894ECFB71C5BDDDA004B2555 /* _XCInternalTestRun.h in Headers */,
 				894ED00F1C5BDDE0004B2555 /* XCUIRecorderUtilities.h in Headers */,
@@ -873,6 +894,7 @@
 				894ED00C1C5BDDDF004B2555 /* XCUIRecorderNodeFinder.h in Headers */,
 				894ECFEC1C5BDDDC004B2555 /* XCTestConfiguration.h in Headers */,
 				89F5DE3E1C6538210062540C /* UndefinedRoutes.h in Headers */,
+				898239C31C6B76D600C54B40 /* CBException.h in Headers */,
 				894ECFF71C5BDDDD004B2555 /* XCTestObservationCenter.h in Headers */,
 				894ECFEA1C5BDDDC004B2555 /* XCTestCaseRun.h in Headers */,
 				89F5DE461C65385D0062540C /* RoutingHTTPServer.h in Headers */,
@@ -1094,6 +1116,7 @@
 				8987442A1C584B960084FD93 /* HTTPAsyncFileResponse.m in Sources */,
 				898744321C584B960084FD93 /* HTTPFileResponse.m in Sources */,
 				89C710E91C62A636007AE1FC /* QueryRoutes.m in Sources */,
+				898239C41C6B76D600C54B40 /* CBException.m in Sources */,
 				898744451C584BBF0084FD93 /* HTTPResponseProxy.m in Sources */,
 				89D3213F1C6183C2005B9884 /* CBApplication+Gestures.m in Sources */,
 				898744241C584B960084FD93 /* MultipartFormDataParser.m in Sources */,
@@ -1127,6 +1150,7 @@
 				8987444F1C584BBF0084FD93 /* RoutingHTTPServer.m in Sources */,
 				898744181C584B960084FD93 /* DDNumber.m in Sources */,
 				894ECE861C5BCD90004B2555 /* UndefinedRoutes.m in Sources */,
+				898239C01C6B76BA00C54B40 /* CBElementNotFoundException.m in Sources */,
 				898743DA1C5847B30084FD93 /* xcuitest_serverUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

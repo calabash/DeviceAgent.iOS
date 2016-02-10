@@ -52,3 +52,4 @@ static NSString *const CB_EMPTY_STRING = @"";
 
 static NSUInteger const HTTP_STATUS_CODE_EVERYTHING_OK = 200;
 static NSUInteger const HTTP_STATUS_CODE_INVALID_REQUEST = 400;
+static NSUInteger const HTTP_STATUS_CODE_SERVER_ERROR = 500;

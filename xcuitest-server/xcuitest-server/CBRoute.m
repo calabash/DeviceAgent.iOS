@@ -13,16 +13,19 @@
         @try {
             block(request, response);
         } @catch (NSException *e) {
-            if ([e isKindOfClass:[CBShutdownServerException class]]) {
-                //User wants to kill the server.
-                //Throw the exception back up to the calling XCTestCase
-                @throw e;
+            if ([e isKindOfClass:[CBException class]]) {
+                if ([e isKindOfClass:[CBShutdownServerException class]]) {
+                    //User wants to kill the server.
+                    //Throw the exception back up to the calling XCTestCase
+                    @throw e;
+                } else {
+                    [response setStatusCode:((CBException *)e).HTTPErrorStatusCode];
+                    [response respondWithJSON:@{ @"error" : [e reason] }];
+                }
             } else {
-                //TODO: create new CBElementNotFoundException
-                //TODO: handle user input error as status_code:400
                 NSLog(@"%@", e.callStackSymbols);
                 [response setStatusCode:500];
-                [response respondWithJSON:@{@"error" : [e reason]}];
+                [response respondWithJSON:@{ @"error" : [e reason] }];
             }
         }
     };
