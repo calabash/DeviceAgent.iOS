@@ -3,6 +3,7 @@
 //  xcuitest-server
 //
 
+#import "CBElementNotFoundException.h"
 #import "XCUICoordinate.h"
 #import "CBApplication.h"
 #import "XCUIElement.h"
@@ -52,9 +53,7 @@ static NSInteger currentElementIndex = 0;
 + (XCUIElement *)cachedElementOrThrow:(NSNumber *)index {
     XCUIElement *el = [self cachedElement:index];
     if (el == nil) {
-        @throw [[NSException alloc] initWithName:@"Element not found"
-                                          reason:[NSString stringWithFormat:@"No element found with test_id %@", index]
-                                        userInfo:nil];
+        @throw [CBElementNotFoundException withMessage:[NSString stringWithFormat:@"No element found with test_id %@", index]];
     }
     return el;
 }
