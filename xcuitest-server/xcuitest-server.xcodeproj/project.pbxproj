@@ -609,7 +609,10 @@
 				894ECEF21C5BDBAD004B2555 /* XCUITestServerLib */,
 				898743BD1C5847B30084FD93 /* Products */,
 			);
+			indentWidth = 4;
 			sourceTree = "<group>";
+			tabWidth = 4;
+			usesTabs = 0;
 		};
 		898743BD1C5847B30084FD93 /* Products */ = {
 			isa = PBXGroup;

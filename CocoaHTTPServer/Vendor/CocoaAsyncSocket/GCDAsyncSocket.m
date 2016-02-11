@@ -5865,7 +5865,11 @@ enum GCDAsyncSocketConfig
 			NSDictionary *tlsSettings = tlsPacket->tlsSettings;
 			
 			NSNumber *value;
-			
+
+// Since iOS 4
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
+
 			value = [tlsSettings objectForKey:(NSString *)kCFStreamSSLAllowsAnyRoot];
 			if (value && [value boolValue] == YES)
 				canUseSecureTransport = NO;
@@ -5882,6 +5886,7 @@ enum GCDAsyncSocketConfig
 			if (value && [value boolValue] == YES)
 				canUseSecureTransport = NO;
 		}
+#pragma clang diagnostic pop
 		#endif
 		
 		if (IS_SECURE_TRANSPORT_AVAILABLE && canUseSecureTransport)
@@ -6229,8 +6234,13 @@ static OSStatus SSLWriteFunction(SSLConnectionRef connection, const void *data, 
 	}
 	
 	// 2. kCFStreamSSLAllowsAnyRoot
-	
+
+// Since iOS 4
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
 	value = [tlsSettings objectForKey:(NSString *)kCFStreamSSLAllowsAnyRoot];
+#pragma clang diagnostic pop
+
 	if (value)
 	{
 		#if TARGET_OS_IPHONE
@@ -6251,7 +6261,12 @@ static OSStatus SSLWriteFunction(SSLConnectionRef connection, const void *data, 
 	
 	// 3. kCFStreamSSLAllowsExpiredRoots
 	
+// Since iOS 4
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
 	value = [tlsSettings objectForKey:(NSString *)kCFStreamSSLAllowsExpiredRoots];
+#pragma clang diagnostic pop
+
 	if (value)
 	{
 		#if TARGET_OS_IPHONE
@@ -6272,7 +6287,12 @@ static OSStatus SSLWriteFunction(SSLConnectionRef connection, const void *data, 
 	
 	// 4. kCFStreamSSLValidatesCertificateChain
 	
+// Since iOS 4
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
 	value = [tlsSettings objectForKey:(NSString *)kCFStreamSSLValidatesCertificateChain];
+#pragma clang diagnostic pop
+
 	if (value)
 	{
 		#if TARGET_OS_IPHONE
@@ -6293,7 +6313,12 @@ static OSStatus SSLWriteFunction(SSLConnectionRef connection, const void *data, 
 	
 	// 5. kCFStreamSSLAllowsExpiredCertificates
 	
+// Since iOS 4
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
 	value = [tlsSettings objectForKey:(NSString *)kCFStreamSSLAllowsExpiredCertificates];
+#pragma clang diagnostic pop
+
 	if (value)
 	{
 		#if TARGET_OS_IPHONE
@@ -6729,12 +6754,13 @@ static OSStatus SSLWriteFunction(SSLConnectionRef connection, const void *data, 
 	[[NSThread currentThread] setName:GCDAsyncSocketThreadName];
 	
 	LogInfo(@"CFStreamThread: Started");
-	
+
+  SEL selector = NSSelectorFromString(@"doNothingAtAll:");
 	// We can't run the run loop unless it has an associated input source or a timer.
 	// So we'll just create a timer that will never fire - unless the server runs for decades.
 	[NSTimer scheduledTimerWithTimeInterval:[[NSDate distantFuture] timeIntervalSinceNow]
 	                                 target:self
-	                               selector:@selector(doNothingAtAll:)
+	                               selector:selector
 	                               userInfo:nil
 	                                repeats:YES];
 	
@@ -7243,9 +7269,13 @@ static void CFWriteStreamCallback (CFWriteStreamRef stream, CFStreamEventType ty
 	
 	LogVerbose(@"Enabling backgrouding on socket");
 	
+// Since iOS 9
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
 	r1 = CFReadStreamSetProperty(readStream, kCFStreamNetworkServiceType, kCFStreamNetworkServiceTypeVoIP);
 	r2 = CFWriteStreamSetProperty(writeStream, kCFStreamNetworkServiceType, kCFStreamNetworkServiceTypeVoIP);
-	
+#pragma clang diagnostic pop
+
 	if (!r1 || !r2)
 	{
 		return NO;
