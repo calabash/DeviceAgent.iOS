@@ -3,6 +3,7 @@
 //  xcuitest-server
 //
 
+#import "CBElementNotFoundException.h"
 #import "CBApplication+Gestures.h"
 #import "CBApplication+Queries.h"
 #import "XCUICoordinate.h"
@@ -213,9 +214,7 @@
 + (XCUIElement *)elementWithIdentifierOrThrow:(NSString *)identifier {
     XCUIElement *el = [self elementWithIdentifier:identifier];
     if (!el) {
-        @throw [[NSException alloc] initWithName:@"Element not found"
-                                          reason:[NSString stringWithFormat:@"No element found for id: %@", identifier]
-                                        userInfo:nil];
+        @throw [CBElementNotFoundException withMessage:[NSString stringWithFormat:@"No element found for id: %@", identifier]];
     }
     return el;
 }
@@ -223,9 +222,7 @@
 + (XCUIElement *)elementMarkedOrThrow:(NSString *)mark {
     XCUIElement *el = [self elementMarked:mark];
     if (!el) {
-        @throw [[NSException alloc] initWithName:@"Element not found"
-                                          reason:[NSString stringWithFormat:@"No element found with mark: %@", mark]
-                                        userInfo:nil];
+        @throw [CBElementNotFoundException withMessage:[NSString stringWithFormat:@"No element found with mark: %@", mark]];
     }
     return el;
 }
@@ -241,9 +238,7 @@
 + (XCUIElement *)gesture:(_Nonnull SEL)gesture matchingSelector:(_Nonnull SEL)match valueToMatch:(NSString *)value {
     XCUIElement *element = [self performSelector:match withObject:value];
     if (!element) {
-        @throw [[NSException alloc] initWithName:@"Element not found"
-                                          reason:[NSString stringWithFormat:@"No element found with value:%@", value]
-                                        userInfo:nil];
+        @throw [CBElementNotFoundException withMessage:[NSString stringWithFormat:@"No element found with value:%@", value]];
     }
     [self performGesture:gesture onElement:element];
     return element;

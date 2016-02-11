@@ -3,6 +3,7 @@
 //  xcuitest-server
 //
 
+#import "XCElementSnapshot-Hitpoint.h"
 #import "CBApplication+Queries.h"
 #import "XCElementSnapshot.h"
 #import "XCUIElementQuery.h"
@@ -28,6 +29,12 @@ static NSArray <NSString *> *identifierProperties;
 
 + (NSDictionary *)tree {
     return [self snapshotTree:[[self currentApplication] lastSnapshot]];
+}
+
+
++ (XCElementSnapshot *)elementAtCoordinates:(float)x :(float)y {
+    XCElementSnapshot *appSnap = (XCElementSnapshot *)[[[self currentApplication] lastSnapshot] hitTest:CGPointMake(x, y)];
+    return appSnap;
 }
 
 + (NSDictionary *)snapshotTree:(XCElementSnapshot *)snapshot {

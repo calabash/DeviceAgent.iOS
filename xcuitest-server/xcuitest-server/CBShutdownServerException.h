@@ -4,7 +4,7 @@
 //
 //
 
-#import <Foundation/Foundation.h>
+#import "CBException.h"
 
-@interface CBShutdownServerException : NSException
+@interface CBShutdownServerException : CBException
 @end

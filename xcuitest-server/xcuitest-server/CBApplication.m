@@ -3,6 +3,7 @@
 //  xcuitest-server
 //
 
+#import "CBElementNotFoundException.h"
 #import "XCUICoordinate.h"
 #import "CBApplication.h"
 #import "XCUIElement.h"
@@ -52,9 +53,7 @@ static NSInteger currentElementIndex = 0;
 + (XCUIElement *)cachedElementOrThrow:(NSNumber *)index {
     XCUIElement *el = [self cachedElement:index];
     if (el == nil) {
-        @throw [[NSException alloc] initWithName:@"Element not found"
-                                          reason:[NSString stringWithFormat:@"No element found with test_id %@", index]
-                                        userInfo:nil];
+        @throw [CBElementNotFoundException withMessage:[NSString stringWithFormat:@"No element found with test_id %@", index]];
     }
     return el;
 }
@@ -75,15 +74,15 @@ static NSInteger currentElementIndex = 0;
 }
 
 + (void)killCurrentApplication {
-    //TODO: This always throws an exception that ends the test. 
+    //TODO: This may throw an exception that ends the test.
     //https://forums.developer.apple.com/message/59121
     [currentApplication kill];
 }
 
 + (void)launchBundlePath:(NSString *)bundlePath
-                      bundleID:(NSString *)bundleID
-                    launchArgs:(NSArray *)launchArgs
-                           env:(NSDictionary *)environment{
+                bundleID:(NSString *)bundleID
+              launchArgs:(NSArray *)launchArgs
+                     env:(NSDictionary *)environment {
     
     if ([currentApplication hasSession]) {
         [currentApplication kill];
@@ -97,8 +96,8 @@ static NSInteger currentElementIndex = 0;
 }
 
 + (void)launchBundleID:(NSString *)bundleID
-                  launchArgs:(NSArray *)launchArgs
-                         env:(NSDictionary *)environment {
+            launchArgs:(NSArray *)launchArgs
+                   env:(NSDictionary *)environment {
     [self launchBundlePath:nil
                   bundleID:bundleID
                 launchArgs:launchArgs
