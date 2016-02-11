@@ -30,7 +30,7 @@
 
 - (void)testRunner {
     [CBXCUITestServer start];
-    [[NSRunLoop mainRunLoop] run];
+    NSLog(@"TEST RUNNER HAS FINISHED.");
 }
 
 void HandleException(NSException *e) {

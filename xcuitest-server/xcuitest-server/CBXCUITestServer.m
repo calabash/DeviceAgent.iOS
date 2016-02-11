@@ -13,6 +13,7 @@
 
 @interface CBXCUITestServer ()
 @property (atomic, strong) RoutingHTTPServer *server;
+@property (atomic, strong) NSRunLoop *runLoop;
 @end
 
 @implementation CBXCUITestServer
@@ -62,7 +63,15 @@ static CBXCUITestServer *sharedServer;
         abort();
     }
 
-    NSLog(@"CalabashXCUITestServer started on http://%@:%hu", [UIDevice currentDevice].wifiIPAddress, [self.server port]);
+    NSLog(@"CalabashXCUITestServer started on http://%@:%hu",
+          [UIDevice currentDevice].wifiIPAddress,
+          [self.server port]);
+
+    self.runLoop = [NSRunLoop mainRunLoop];
+    while ([self.server isRunning] && [self.runLoop runMode:NSDefaultRunLoopMode
+                                                 beforeDate:[NSDate distantFuture]]) {
+        ;
+    }
 }
 
 + (void)stop {
@@ -70,7 +79,10 @@ static CBXCUITestServer *sharedServer;
 }
 
 - (void)stop {
-    [self.server stop:NO];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{ [self.server stop:NO];
+        [self.server stop:NO];
+        NSLog(@"CALABUS DRIVER HAS RETIRED");
+    });
 }
 
 - (BOOL)attemptToStartWithError:(NSError **)error {
@@ -115,6 +127,5 @@ static CBXCUITestServer *sharedServer;
         [self.server addRoute:route];
     }
 }
-
 
 @end
