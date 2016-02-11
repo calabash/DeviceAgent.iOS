@@ -11,6 +11,7 @@
 #import "CBMacros.h"
 
 @implementation SessionRoutes
+
 + (NSArray <CBRoute *> *)getRoutes {
     return @[
              [CBRoute post:@"/session" withBlock:^(RouteRequest *request, RouteResponse *response) {
@@ -43,15 +44,9 @@
              [CBRoute post:@"/shutdown" withBlock:^(RouteRequest *request, RouteResponse *response) {
                  //Want to make sure this route actually returns a response to the client before shutting down
                  [response respondWithString:@"Goodbye."];
-                 
-                 //TODO: can we do this in a response completion callback rather than dispatch_after?
-                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-                     CBShutdownServerException *up = [[CBShutdownServerException alloc] initWithName:@"Shutdown"
-                                                                                              reason:@"User terminated server"
-                                                                                            userInfo:nil];
-                     @throw up;
-                 });
+                 [CBXCUITestServer stop];
              }]
              ];
 }
+
 @end
