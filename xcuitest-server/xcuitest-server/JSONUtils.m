@@ -16,6 +16,12 @@ static NSDictionary *typeStringToElementType;
 + (NSMutableDictionary *)snapshotToJSON:(XCElementSnapshot *)snapshot {
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
 
+    if ([snapshot isKindOfClass:[XCUIElement class]]) {
+        XCUIElement *el = (XCUIElement *)snapshot;
+        if (![el exists]) {
+            return [@{} mutableCopy];
+        }
+    }
     json[CB_TYPE_KEY] = elementTypeToString[@(snapshot.elementType)];
     json[CB_TITLE_KEY] = snapshot.title ?: CB_EMPTY_STRING;
     json[CB_LABEL_KEY] = snapshot.label ?: CB_EMPTY_STRING;

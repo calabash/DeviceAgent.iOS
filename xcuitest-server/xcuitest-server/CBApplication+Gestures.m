@@ -7,6 +7,7 @@
 #import "CBApplication+Gestures.h"
 #import "CBApplication+Queries.h"
 #import "XCUICoordinate.h"
+#import "XCUIElement.h"
 #import "JSONUtils.h"
 #import "CBMacros.h"
 
@@ -216,6 +217,7 @@
     if (!el) {
         @throw [CBElementNotFoundException withMessage:[NSString stringWithFormat:@"No element found for id: %@", identifier]];
     }
+    [el resolve];
     return el;
 }
 
@@ -224,6 +226,7 @@
     if (!el) {
         @throw [CBElementNotFoundException withMessage:[NSString stringWithFormat:@"No element found with mark: %@", mark]];
     }
+    [el resolve];
     return el;
 }
 
