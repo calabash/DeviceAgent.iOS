@@ -28,8 +28,12 @@ static CBXCUITestServer *sharedServer;
         [sharedServer.server setDefaultHeader:@"CalabusDriver"
                                         value:@"CalabashXCUITestServer/1.0"];
         [sharedServer.server setConnectionClass:[RoutingConnection self]];
-        [sharedServer.server setName:@"CalabusDriver"];
         [sharedServer.server setType:@"_calabus._tcp."];
+
+        NSString *uuid = [[NSProcessInfo processInfo] globallyUniqueString];
+        NSString *token = [uuid componentsSeparatedByString:@"-"][0];
+        NSString *serverName = [NSString stringWithFormat:@"CalabusDriver-%@", token];
+        [sharedServer.server setName:serverName];
 
         NSDictionary *capabilities =
         @{
