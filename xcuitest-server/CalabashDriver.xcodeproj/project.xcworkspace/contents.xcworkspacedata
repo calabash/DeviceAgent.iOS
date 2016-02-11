@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:xcuitest-server.xcodeproj">
+      location = "self:/Users/moody/git/calabash/xcuitest/xcuitest-server/CalabashDriver.xcodeproj">
    </FileRef>
 </Workspace>

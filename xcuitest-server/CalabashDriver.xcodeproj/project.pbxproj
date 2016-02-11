@@ -321,7 +321,7 @@
 		898239BE1C6B76BA00C54B40 /* CBElementNotFoundException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBElementNotFoundException.m; sourceTree = "<group>"; };
 		898239C11C6B76D600C54B40 /* CBException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBException.h; sourceTree = "<group>"; };
 		898239C21C6B76D600C54B40 /* CBException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBException.m; sourceTree = "<group>"; };
-		898743BC1C5847B30084FD93 /* xcuitest-server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xcuitest-server.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		898743BC1C5847B30084FD93 /* CalabashDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalabashDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898743C01C5847B30084FD93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		898743C21C5847B30084FD93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		898743C31C5847B30084FD93 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -331,7 +331,7 @@
 		898743CB1C5847B30084FD93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		898743CE1C5847B30084FD93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		898743D01C5847B30084FD93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		898743D51C5847B30084FD93 /* xcuitest-serverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "xcuitest-serverUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		898743D51C5847B30084FD93 /* CalabashDriver.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalabashDriver.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		898743D91C5847B30084FD93 /* xcuitest_serverUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xcuitest_serverUITests.m; sourceTree = "<group>"; };
 		898743DB1C5847B30084FD93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		898743E51C5848890084FD93 /* CBXCUITestServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXCUITestServer.h; sourceTree = "<group>"; };
@@ -617,8 +617,8 @@
 		898743BD1C5847B30084FD93 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				898743BC1C5847B30084FD93 /* xcuitest-server.app */,
-				898743D51C5847B30084FD93 /* xcuitest-serverUITests.xctest */,
+				898743BC1C5847B30084FD93 /* CalabashDriver.app */,
+				898743D51C5847B30084FD93 /* CalabashDriver.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -973,9 +973,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		898743BB1C5847B30084FD93 /* xcuitest-server */ = {
+		898743BB1C5847B30084FD93 /* CalabashDriver */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 898743DE1C5847B30084FD93 /* Build configuration list for PBXNativeTarget "xcuitest-server" */;
+			buildConfigurationList = 898743DE1C5847B30084FD93 /* Build configuration list for PBXNativeTarget "CalabashDriver" */;
 			buildPhases = (
 				898743B81C5847B30084FD93 /* Sources */,
 				898743B91C5847B30084FD93 /* Frameworks */,
@@ -985,14 +985,14 @@
 			);
 			dependencies = (
 			);
-			name = "xcuitest-server";
+			name = CalabashDriver;
 			productName = "xcuitest-server";
-			productReference = 898743BC1C5847B30084FD93 /* xcuitest-server.app */;
+			productReference = 898743BC1C5847B30084FD93 /* CalabashDriver.app */;
 			productType = "com.apple.product-type.application";
 		};
-		898743D41C5847B30084FD93 /* xcuitest-serverUITests */ = {
+		898743D41C5847B30084FD93 /* CalabashDriverUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 898743E11C5847B30084FD93 /* Build configuration list for PBXNativeTarget "xcuitest-serverUITests" */;
+			buildConfigurationList = 898743E11C5847B30084FD93 /* Build configuration list for PBXNativeTarget "CalabashDriverUITests" */;
 			buildPhases = (
 				898743D11C5847B30084FD93 /* Sources */,
 				898743D21C5847B30084FD93 /* Frameworks */,
@@ -1004,9 +1004,9 @@
 			dependencies = (
 				898743D71C5847B30084FD93 /* PBXTargetDependency */,
 			);
-			name = "xcuitest-serverUITests";
+			name = CalabashDriverUITests;
 			productName = "xcuitest-serverUITests";
-			productReference = 898743D51C5847B30084FD93 /* xcuitest-serverUITests.xctest */;
+			productReference = 898743D51C5847B30084FD93 /* CalabashDriver.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -1027,7 +1027,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 898743B71C5847B30084FD93 /* Build configuration list for PBXProject "xcuitest-server" */;
+			buildConfigurationList = 898743B71C5847B30084FD93 /* Build configuration list for PBXProject "CalabashDriver" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1040,8 +1040,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				898743BB1C5847B30084FD93 /* xcuitest-server */,
-				898743D41C5847B30084FD93 /* xcuitest-serverUITests */,
+				898743BB1C5847B30084FD93 /* CalabashDriver */,
+				898743D41C5847B30084FD93 /* CalabashDriverUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1163,7 +1163,7 @@
 /* Begin PBXTargetDependency section */
 		898743D71C5847B30084FD93 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 898743BB1C5847B30084FD93 /* xcuitest-server */;
+			target = 898743BB1C5847B30084FD93 /* CalabashDriver */;
 			targetProxy = 898743D61C5847B30084FD93 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1278,7 +1278,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sh.calaba.xcuitest-server";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CalabashDriver;
 			};
 			name = Debug;
 		};
@@ -1290,7 +1290,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sh.calaba.xcuitest-server";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CalabashDriver;
 			};
 			name = Release;
 		};
@@ -1300,7 +1300,7 @@
 				INFOPLIST_FILE = "xcuitest-serverUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sh.calaba.xcuitest-serverUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CalabashDriver;
 				TEST_TARGET_NAME = "xcuitest-server";
 				USES_XCTRUNNER = YES;
 			};
@@ -1312,7 +1312,7 @@
 				INFOPLIST_FILE = "xcuitest-serverUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sh.calaba.xcuitest-serverUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CalabashDriver;
 				TEST_TARGET_NAME = "xcuitest-server";
 				USES_XCTRUNNER = YES;
 			};
@@ -1321,7 +1321,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		898743B71C5847B30084FD93 /* Build configuration list for PBXProject "xcuitest-server" */ = {
+		898743B71C5847B30084FD93 /* Build configuration list for PBXProject "CalabashDriver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				898743DC1C5847B30084FD93 /* Debug */,
@@ -1330,7 +1330,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		898743DE1C5847B30084FD93 /* Build configuration list for PBXNativeTarget "xcuitest-server" */ = {
+		898743DE1C5847B30084FD93 /* Build configuration list for PBXNativeTarget "CalabashDriver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				898743DF1C5847B30084FD93 /* Debug */,
@@ -1339,7 +1339,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		898743E11C5847B30084FD93 /* Build configuration list for PBXNativeTarget "xcuitest-serverUITests" */ = {
+		898743E11C5847B30084FD93 /* Build configuration list for PBXNativeTarget "CalabashDriverUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				898743E21C5847B30084FD93 /* Debug */,
