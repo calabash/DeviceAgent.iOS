@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-sudo pip install requests
+sudo easy_install requests
