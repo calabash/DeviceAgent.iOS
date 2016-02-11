@@ -34,11 +34,9 @@
 }
 
 void HandleException(NSException *e) {
-    int code = [e isKindOfClass:[CBShutdownServerException class]] ? EXIT_SUCCESS : EXIT_FAILURE;
+    NSLog(@"Caught %@", e);
+    NSLog(@"Stopping server due to an exception");
     [CBXCUITestServer stop];
-    exit(code);
 }
-
-
 
 @end
