@@ -3,6 +3,8 @@
 (.*/)?\#[^/]*\#$
 *.swp
 
+*.pyc
+
 # MacOS
 .DS_Store
 
