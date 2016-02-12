@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "898743BB1C5847B30084FD93"
-               BuildableName = "CalabashDriver.app"
-               BlueprintName = "CalabashDriver"
-               ReferencedContainer = "container:CalabashDriver.xcodeproj">
+               BuildableName = "CBXAppStub.app"
+               BlueprintName = "CBXAppStub"
+               ReferencedContainer = "container:CBXDriver.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "898743D41C5847B30084FD93"
-               BuildableName = "CalabashDriver.xctest"
-               BlueprintName = "CalabashDriverUITests"
-               ReferencedContainer = "container:CalabashDriver.xcodeproj">
+               BuildableName = "CBX.xctest"
+               BlueprintName = "XCUITestDriver"
+               ReferencedContainer = "container:CBXDriver.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "898743BB1C5847B30084FD93"
-            BuildableName = "CalabashDriver.app"
-            BlueprintName = "CalabashDriver"
-            ReferencedContainer = "container:CalabashDriver.xcodeproj">
+            BuildableName = "CBXAppStub.app"
+            BlueprintName = "CBXAppStub"
+            ReferencedContainer = "container:CBXDriver.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "898743BB1C5847B30084FD93"
-            BuildableName = "CalabashDriver.app"
-            BlueprintName = "CalabashDriver"
-            ReferencedContainer = "container:CalabashDriver.xcodeproj">
+            BuildableName = "CBXAppStub.app"
+            BlueprintName = "CBXAppStub"
+            ReferencedContainer = "container:CBXDriver.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "898743BB1C5847B30084FD93"
-            BuildableName = "CalabashDriver.app"
-            BlueprintName = "CalabashDriver"
-            ReferencedContainer = "container:CalabashDriver.xcodeproj">
+            BuildableName = "CBXAppStub.app"
+            BlueprintName = "CBXAppStub"
+            ReferencedContainer = "container:CBXDriver.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
