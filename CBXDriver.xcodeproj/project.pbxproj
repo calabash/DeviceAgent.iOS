@@ -107,8 +107,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		898743BC1C5847B30084FD93 /* CBXDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBXDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		898743D51C5847B30084FD93 /* Calabus.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Calabus.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		898743BC1C5847B30084FD93 /* CBXAppStub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBXAppStub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		898743D51C5847B30084FD93 /* CBX.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CBX.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55F7FED1C6DD07500A945C8 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		F55F7FEE1C6DD07500A945C8 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		F55F7FF51C6DD07500A945C8 /* DDData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDData.h; sourceTree = "<group>"; };
@@ -348,8 +348,8 @@
 		898743BD1C5847B30084FD93 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				898743BC1C5847B30084FD93 /* CBXDriver.app */,
-				898743D51C5847B30084FD93 /* Calabus.xctest */,
+				898743BC1C5847B30084FD93 /* CBXAppStub.app */,
+				898743D51C5847B30084FD93 /* CBX.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -770,7 +770,7 @@
 			);
 			name = CBXAppStub;
 			productName = "xcuitest-server";
-			productReference = 898743BC1C5847B30084FD93 /* CBXDriver.app */;
+			productReference = 898743BC1C5847B30084FD93 /* CBXAppStub.app */;
 			productType = "com.apple.product-type.application";
 		};
 		898743D41C5847B30084FD93 /* XCUITestDriver */ = {
@@ -789,7 +789,7 @@
 			);
 			name = XCUITestDriver;
 			productName = "xcuitest-serverUITests";
-			productReference = 898743D51C5847B30084FD93 /* Calabus.xctest */;
+			productReference = 898743D51C5847B30084FD93 /* CBX.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -982,7 +982,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1020,7 +1020,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1032,11 +1032,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = "$(SRCROOT)/CBXAppStub/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calabash.CBXAppStub;
-				PRODUCT_NAME = CBXDriver;
+				PRODUCT_NAME = CBXAppStub;
 			};
 			name = Debug;
 		};
@@ -1048,13 +1049,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calabash.CBXAppStub;
-				PRODUCT_NAME = CBXDriver;
+				PRODUCT_NAME = CBXAppStub;
 			};
 			name = Release;
 		};
 		898743E21C5847B30084FD93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1062,7 +1064,7 @@
 				INFOPLIST_FILE = XCUITestDriver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.XCUITestDriver;
-				PRODUCT_NAME = Calabus;
+				PRODUCT_NAME = CBX;
 				TEST_TARGET_NAME = "xcuitest-server";
 				USES_XCTRUNNER = YES;
 			};
@@ -1078,7 +1080,7 @@
 				INFOPLIST_FILE = XCUITestDriver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.XCUITestDriver;
-				PRODUCT_NAME = Calabus;
+				PRODUCT_NAME = CBX;
 				TEST_TARGET_NAME = "xcuitest-server";
 				USES_XCTRUNNER = YES;
 			};
@@ -1094,7 +1096,7 @@
 				898743DD1C5847B30084FD93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		898743DE1C5847B30084FD93 /* Build configuration list for PBXNativeTarget "CBXAppStub" */ = {
 			isa = XCConfigurationList;
@@ -1103,7 +1105,7 @@
 				898743E01C5847B30084FD93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		898743E11C5847B30084FD93 /* Build configuration list for PBXNativeTarget "XCUITestDriver" */ = {
 			isa = XCConfigurationList;
@@ -1112,7 +1114,7 @@
 				898743E31C5847B30084FD93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
