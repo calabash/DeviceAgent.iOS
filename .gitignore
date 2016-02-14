@@ -3,14 +3,20 @@
 (.*/)?\#[^/]*\#$
 *.swp
 
+# Python
 *.pyc
+
+# Ruby
+.ruby-version
+Gemfile.lock
 
 # MacOS
 .DS_Store
 
 ## Build generated
 build/
-DerivedData
+tmp
+Products
 
 ## Various settings
 *.pbxuser

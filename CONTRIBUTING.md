@@ -1,34 +1,52 @@
-# calabash-xcuitest-server
+## Contributing
 
-## Adding New Routes
+***All pull requests should be based off the `develop` branch.***
 
-To add a new route, simply create a new object that implements the
-`<CBRouteProvider>` protocol defined in `CBProtocols.h`. Implement the following
-method:
-```Objective-C
-+ (NSArray<CBRoute *> *)getRoutes;
+The Calabash iOS Toolchain uses git-flow.
+
+See these links for information about git-flow and git best practices.
+
+Please see this [post](http://chris.beams.io/posts/git-commit/) for tips
+on how to make a good commit messages.
+
+##### Git Flow Step-by-Step guide
+
+* https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+
+##### Git Best Practices
+
+* http://justinhileman.info/article/changing-history/
+
+##### git-flow command line tool
+
+We don't use the git-flow tools, but this is useful anyway.
+
+* http://danielkummer.github.io/git-flow-cheatsheet/
+
+## Start a Feature
+
+Start your work on a feature branch based off develop.
+
+```
+# If you don't already have the develop branch
+$ git fetch origin
+$ git co -t origin/develop
+
+# If you already have the develop branch
+$ git co develop
+$ git pull origin develop
+$ git co -b feature/my-new-feature
+
+# Publish your branch and make a pull-request on `develop`
+$ git push -u origin feature/my-new-feature
 ```
 
-Generally the method definition should be something like:
-```Objective-C
-+ (NSArray<CBRoute *> *)getRoutes {
-    return @[
-    
-        [CBRoute get:@"/foo/bar/calabash" withBlock:^(RouteRequest *request, RouteResponse *response) {
-            [response respondWithString:@"qux"];
-        }],
-        
-        [CBRoute post:@"/baz/bar/calabash" withBlock:^(RouteRequest *request, RouteResponse *response) {
-            NSDictionary *requestData = DATA_TO_JSON(request.body);
-            NSString *param = requestData[@"key"];
-            [Foo theBarBaz:param];
-            
-            [response respondWithJSON:@{ @"status" : @"success!" }];
-        }],
-        ...
-    ];
-}
-```
+**Contributors should not change the version.**
 
-The route will automatically be picked up via objc runtime reflection. You can confirm
-by reading the console logs.
+## Testing
+
+TBD
+
+## Releasing
+
+TBD
