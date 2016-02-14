@@ -3,7 +3,12 @@
 (.*/)?\#[^/]*\#$
 *.swp
 
+# Python
 *.pyc
+
+# Ruby
+.ruby-version
+Gemfile.lock
 
 # MacOS
 .DS_Store
