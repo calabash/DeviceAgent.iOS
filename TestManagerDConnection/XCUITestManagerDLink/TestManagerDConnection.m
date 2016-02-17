@@ -1,6 +1,11 @@
-#include <stdio.h>
 #include <CoreFoundation/CoreFoundation.h>
+#import "DTXRemoteInvocationReceipt.h"
 #import "TestManagerDConnection.h"
+#import "DTXSocketTransport.h"
+#import "DTXConnection.h"
+#import "DTXProxyChannel.h"
+#import <objc/runtime.h>
+#include <stdio.h>
 
 // gcc tmd_connect.c -o tmd_connect -framework CoreFoundation -F. -framework MobileDevice
 
@@ -13,11 +18,14 @@
 // These are obviously internal to Apple. The void * is likely some AMDDeviceRef * or something like that
 // But since it's opaque anyway, just void * it..
 
+@class AMDServiceConnection;
+
 extern int AMDeviceConnect (void *device);
 extern int AMDeviceValidatePairing (void *device);
 extern int AMDeviceStartSession (void *device);
 extern int AMDeviceStopSession (void *device);
 extern int AMDeviceDisconnect (void *device);
+extern int AMDServiceConnectionGetSocket(AMDServiceConnection *something);
 
 extern int AMDServiceConnectionReceive(void *device, unsigned char *buf,int size, int );
 
@@ -33,8 +41,6 @@ struct AMDeviceNotificationCallbackInformation {
     uint32_t	msgType;
 } ;
 
-
-@class AMDServiceConnection;
 @implementation TestManagerDConnection
 
 void validatePairing(void *deviceHandle) {
@@ -141,17 +147,56 @@ void cleanup(void *deviceHandle) {
 void connectToTestManagerD(void *deviceHandle) {
     setup(deviceHandle);
     
-    AMDServiceConnection *connection = secureStartService(deviceHandle,
+    AMDServiceConnection *serviceConnection = secureStartService(deviceHandle,
                            CFSTR("com.apple.testmanagerd.lockdown"),
                            getConnectionOpts());
     
-    if (connection) {
+    if (serviceConnection) {
         printf("Got AMDServiceConnection!\n");
     }
     
-    //TODO
+    int socket = AMDServiceConnectionGetSocket(serviceConnection);
+    DTXSocketTransport *socketTransport = [[DTXSocketTransport alloc] initWithConnectedSocket:socket
+                                                                             disconnectAction:nil];
+    DTXConnection *connection = [[DTXConnection alloc] initWithTransport:socketTransport];
+
     
-    cleanup(deviceHandle);
+    Protocol *daemonProtocol = @protocol(XCTestManager_DaemonConnectionInterface);
+    Protocol *managerProtocol = @protocol(XCTestManager_IDEInterface);
+    
+    DTXProxyChannel *channel = [connection makeProxyChannelWithRemoteInterface:daemonProtocol
+                                                             exportedInterface:managerProtocol];
+    
+    [connection resume];
+    id<XCTestManager_DaemonConnectionInterface> proxy = [channel remoteObjectProxy];
+    
+    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:@"BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE"];
+    //vu+6vv7tur6+78r+vu/6zg==
+    
+    NSString *client = @"0706320C-D7F3-4329-B9D7-90DC60ED0D60-1649-000002BA5B14AC2F";
+    NSString *path = @"/Applications/Xcode.app";
+    
+    [proxy _IDE_initiateSessionWithIdentifier:uuid
+                                    forClient:client
+                                       atPath:path
+                              protocolVersion:@(16)];
+    
+    
+    NSString *pid = [[NSString alloc] initWithContentsOfFile:@"/Users/chrisf/Desktop/runnerpid.txt" encoding:NSUTF8StringEncoding error:nil];
+    [connection handleProxyRequestForInterface:@protocol(XCTestManager_IDEInterface)
+                                 peerInterface:@protocol(XCTestDriverInterface)
+                                       handler:^(DTXProxyChannel *channel){ /* ??? */
+                                           NSLog(@"handleProxyRequestForInterface");
+                                           id <XCTestDriverInterface> testBundleProxy = [channel remoteObjectProxy];
+                                          
+                                           [proxy _IDE_initiateControlSessionForTestProcessID:@([pid integerValue])];
+                                           [testBundleProxy _IDE_startExecutingTestPlanWithProtocolVersion:@(16)];
+                                           [proxy _IDE_beginSessionWithIdentifier:uuid forClient:client atPath:path];
+                                       }];
+    
+    CFRunLoopRun();
+    
+//    cleanup(deviceHandle);
 }
 
 void callback(struct AMDeviceNotificationCallbackInformation *CallbackInfo) {

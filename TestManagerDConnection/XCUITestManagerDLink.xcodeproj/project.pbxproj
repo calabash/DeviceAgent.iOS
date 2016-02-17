@@ -10,15 +10,18 @@
 		898597711C732CDA0028FEEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 898597701C732CDA0028FEEE /* main.m */; };
 		898597791C732CEF0028FEEE /* TestManagerDConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 898597781C732CEF0028FEEE /* TestManagerDConnection.m */; };
 		899D2D531C73868000A40641 /* MobileDevice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899D2D521C73868000A40641 /* MobileDevice.framework */; };
+		899D2DC21C74714B00A40641 /* DTXConnectionServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899D2DC11C74714B00A40641 /* DTXConnectionServices.framework */; };
+		899D2DC31C7471A700A40641 /* DTXConnectionServices.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 899D2DC11C74714B00A40641 /* DTXConnectionServices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		8985976B1C732CDA0028FEEE /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 8;
-			dstPath = "";
-			dstSubfolderSpec = 10;
+			dstPath = Frameworks;
+			dstSubfolderSpec = 16;
 			files = (
+				899D2DC31C7471A700A40641 /* DTXConnectionServices.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -30,6 +33,47 @@
 		898597771C732CEF0028FEEE /* TestManagerDConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestManagerDConnection.h; sourceTree = "<group>"; };
 		898597781C732CEF0028FEEE /* TestManagerDConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestManagerDConnection.m; sourceTree = "<group>"; };
 		899D2D521C73868000A40641 /* MobileDevice.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileDevice.framework; sourceTree = "<group>"; };
+		899D2D891C7465CA00A40641 /* _DTXProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DTXProxy.h; sourceTree = "<group>"; };
+		899D2D8A1C7465CA00A40641 /* CDStructures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDStructures.h; sourceTree = "<group>"; };
+		899D2D8B1C7465CA00A40641 /* DTXAllowedRPC-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DTXAllowedRPC-Protocol.h"; sourceTree = "<group>"; };
+		899D2D8C1C7465CA00A40641 /* DTXBlockCompressor-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DTXBlockCompressor-Protocol.h"; sourceTree = "<group>"; };
+		899D2D8D1C7465CA00A40641 /* DTXBlockCompressorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXBlockCompressorFactory.h; sourceTree = "<group>"; };
+		899D2D8E1C7465CA00A40641 /* DTXBlockCompressorLibCompression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXBlockCompressorLibCompression.h; sourceTree = "<group>"; };
+		899D2D8F1C7465CA00A40641 /* DTXChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXChannel.h; sourceTree = "<group>"; };
+		899D2D901C7465CA00A40641 /* DTXConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXConnection.h; sourceTree = "<group>"; };
+		899D2D911C7465CA00A40641 /* DTXConnectionRemoteReceiveQueueCalls-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DTXConnectionRemoteReceiveQueueCalls-Protocol.h"; sourceTree = "<group>"; };
+		899D2D921C7465CA00A40641 /* DTXConnectionServices-Structs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DTXConnectionServices-Structs.h"; sourceTree = "<group>"; };
+		899D2D931C7465CA00A40641 /* DTXConnectionServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXConnectionServices.h; sourceTree = "<group>"; };
+		899D2D941C7465CA00A40641 /* DTXDecompressionException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXDecompressionException.h; sourceTree = "<group>"; };
+		899D2D951C7465CA00A40641 /* DTXFileDescriptorTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXFileDescriptorTransport.h; sourceTree = "<group>"; };
+		899D2D961C7465CA00A40641 /* DTXFoundationURLTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXFoundationURLTransport.h; sourceTree = "<group>"; };
+		899D2D971C7465CA00A40641 /* DTXLegacyBufferMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXLegacyBufferMessage.h; sourceTree = "<group>"; };
+		899D2D981C7465CA00A40641 /* DTXLegacyCompactDictionaryAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXLegacyCompactDictionaryAdapter.h; sourceTree = "<group>"; };
+		899D2D991C7465CA00A40641 /* DTXLegacyDictionaryMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXLegacyDictionaryMessage.h; sourceTree = "<group>"; };
+		899D2D9A1C7465CA00A40641 /* DTXLegacyMessageParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXLegacyMessageParser.h; sourceTree = "<group>"; };
+		899D2D9B1C7465CA00A40641 /* DTXLegacyMessageTransmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXLegacyMessageTransmitter.h; sourceTree = "<group>"; };
+		899D2D9C1C7465CA00A40641 /* DTXLegacyServiceQueueAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXLegacyServiceQueueAdapter.h; sourceTree = "<group>"; };
+		899D2D9D1C7465CA00A40641 /* DTXMachTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXMachTransport.h; sourceTree = "<group>"; };
+		899D2D9E1C7465CA00A40641 /* DTXMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXMessage.h; sourceTree = "<group>"; };
+		899D2D9F1C7465CA00A40641 /* DTXMessageParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXMessageParser.h; sourceTree = "<group>"; };
+		899D2DA01C7465CA00A40641 /* DTXMessageParsingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXMessageParsingBuffer.h; sourceTree = "<group>"; };
+		899D2DA11C7465CA00A40641 /* DTXMessageTransmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXMessageTransmitter.h; sourceTree = "<group>"; };
+		899D2DA21C7465CA00A40641 /* DTXMessenger-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DTXMessenger-Protocol.h"; sourceTree = "<group>"; };
+		899D2DA31C7465CA00A40641 /* DTXProxyChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXProxyChannel.h; sourceTree = "<group>"; };
+		899D2DA41C7465CA00A40641 /* DTXRateLimiter-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DTXRateLimiter-Protocol.h"; sourceTree = "<group>"; };
+		899D2DA51C7465CA00A40641 /* DTXRemoteInvocationReceipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXRemoteInvocationReceipt.h; sourceTree = "<group>"; };
+		899D2DA61C7465CA00A40641 /* DTXResourceTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXResourceTracker.h; sourceTree = "<group>"; };
+		899D2DA71C7465CA00A40641 /* DTXSendAndWaitRateLimiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXSendAndWaitRateLimiter.h; sourceTree = "<group>"; };
+		899D2DA81C7465CA00A40641 /* DTXSendAndWaitStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXSendAndWaitStats.h; sourceTree = "<group>"; };
+		899D2DA91C7465CA00A40641 /* DTXService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXService.h; sourceTree = "<group>"; };
+		899D2DAA1C7465CA00A40641 /* DTXSharedMemoryTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXSharedMemoryTransport.h; sourceTree = "<group>"; };
+		899D2DAB1C7465CA00A40641 /* DTXSocketTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXSocketTransport.h; sourceTree = "<group>"; };
+		899D2DAC1C7465CA00A40641 /* DTXTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXTransport.h; sourceTree = "<group>"; };
+		899D2DAD1C7465CA00A40641 /* NSCoding-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCoding-Protocol.h"; sourceTree = "<group>"; };
+		899D2DAE1C7465CA00A40641 /* NSObject-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-Protocol.h"; sourceTree = "<group>"; };
+		899D2DAF1C7465CA00A40641 /* NSSecureCoding-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSecureCoding-Protocol.h"; sourceTree = "<group>"; };
+		899D2DB01C7465CA00A40641 /* NSURLSessionDelegate-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSessionDelegate-Protocol.h"; sourceTree = "<group>"; };
+		899D2DC11C74714B00A40641 /* DTXConnectionServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DTXConnectionServices.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +82,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				899D2D531C73868000A40641 /* MobileDevice.framework in Frameworks */,
+				899D2DC21C74714B00A40641 /* DTXConnectionServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +92,7 @@
 		898597641C732CDA0028FEEE = {
 			isa = PBXGroup;
 			children = (
+				899D2D881C7465CA00A40641 /* DTXConnectionServices */,
 				899D2D461C7360A500A40641 /* Frameworks */,
 				8985976F1C732CDA0028FEEE /* XCUITestManagerDLink */,
 				8985976E1C732CDA0028FEEE /* Products */,
@@ -74,9 +120,57 @@
 		899D2D461C7360A500A40641 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				899D2DC11C74714B00A40641 /* DTXConnectionServices.framework */,
 				899D2D521C73868000A40641 /* MobileDevice.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		899D2D881C7465CA00A40641 /* DTXConnectionServices */ = {
+			isa = PBXGroup;
+			children = (
+				899D2D891C7465CA00A40641 /* _DTXProxy.h */,
+				899D2D8A1C7465CA00A40641 /* CDStructures.h */,
+				899D2D8B1C7465CA00A40641 /* DTXAllowedRPC-Protocol.h */,
+				899D2D8C1C7465CA00A40641 /* DTXBlockCompressor-Protocol.h */,
+				899D2D8D1C7465CA00A40641 /* DTXBlockCompressorFactory.h */,
+				899D2D8E1C7465CA00A40641 /* DTXBlockCompressorLibCompression.h */,
+				899D2D8F1C7465CA00A40641 /* DTXChannel.h */,
+				899D2D901C7465CA00A40641 /* DTXConnection.h */,
+				899D2D911C7465CA00A40641 /* DTXConnectionRemoteReceiveQueueCalls-Protocol.h */,
+				899D2D921C7465CA00A40641 /* DTXConnectionServices-Structs.h */,
+				899D2D931C7465CA00A40641 /* DTXConnectionServices.h */,
+				899D2D941C7465CA00A40641 /* DTXDecompressionException.h */,
+				899D2D951C7465CA00A40641 /* DTXFileDescriptorTransport.h */,
+				899D2D961C7465CA00A40641 /* DTXFoundationURLTransport.h */,
+				899D2D971C7465CA00A40641 /* DTXLegacyBufferMessage.h */,
+				899D2D981C7465CA00A40641 /* DTXLegacyCompactDictionaryAdapter.h */,
+				899D2D991C7465CA00A40641 /* DTXLegacyDictionaryMessage.h */,
+				899D2D9A1C7465CA00A40641 /* DTXLegacyMessageParser.h */,
+				899D2D9B1C7465CA00A40641 /* DTXLegacyMessageTransmitter.h */,
+				899D2D9C1C7465CA00A40641 /* DTXLegacyServiceQueueAdapter.h */,
+				899D2D9D1C7465CA00A40641 /* DTXMachTransport.h */,
+				899D2D9E1C7465CA00A40641 /* DTXMessage.h */,
+				899D2D9F1C7465CA00A40641 /* DTXMessageParser.h */,
+				899D2DA01C7465CA00A40641 /* DTXMessageParsingBuffer.h */,
+				899D2DA11C7465CA00A40641 /* DTXMessageTransmitter.h */,
+				899D2DA21C7465CA00A40641 /* DTXMessenger-Protocol.h */,
+				899D2DA31C7465CA00A40641 /* DTXProxyChannel.h */,
+				899D2DA41C7465CA00A40641 /* DTXRateLimiter-Protocol.h */,
+				899D2DA51C7465CA00A40641 /* DTXRemoteInvocationReceipt.h */,
+				899D2DA61C7465CA00A40641 /* DTXResourceTracker.h */,
+				899D2DA71C7465CA00A40641 /* DTXSendAndWaitRateLimiter.h */,
+				899D2DA81C7465CA00A40641 /* DTXSendAndWaitStats.h */,
+				899D2DA91C7465CA00A40641 /* DTXService.h */,
+				899D2DAA1C7465CA00A40641 /* DTXSharedMemoryTransport.h */,
+				899D2DAB1C7465CA00A40641 /* DTXSocketTransport.h */,
+				899D2DAC1C7465CA00A40641 /* DTXTransport.h */,
+				899D2DAD1C7465CA00A40641 /* NSCoding-Protocol.h */,
+				899D2DAE1C7465CA00A40641 /* NSObject-Protocol.h */,
+				899D2DAF1C7465CA00A40641 /* NSSecureCoding-Protocol.h */,
+				899D2DB01C7465CA00A40641 /* NSURLSessionDelegate-Protocol.h */,
+			);
+			path = DTXConnectionServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +183,7 @@
 				898597691C732CDA0028FEEE /* Sources */,
 				8985976A1C732CDA0028FEEE /* Frameworks */,
 				8985976B1C732CDA0028FEEE /* CopyFiles */,
+				899D2D571C7462BA00A40641 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +224,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		899D2D571C7462BA00A40641 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		898597691C732CDA0028FEEE /* Sources */ = {
@@ -228,10 +333,15 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/XCUITestManagerDLink/Frameworks",
+					"$(PROJECT_DIR)/XCUITestManagerDLink",
 					"$(PROJECT_DIR)",
 				);
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/DTXConnectionServices.framework/Versions/A",
+				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "i386 x86_64";
@@ -244,10 +354,15 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/XCUITestManagerDLink/Frameworks",
+					"$(PROJECT_DIR)/XCUITestManagerDLink",
 					"$(PROJECT_DIR)",
 				);
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/DTXConnectionServices.framework/Versions/A",
+				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "i386 x86_64";
