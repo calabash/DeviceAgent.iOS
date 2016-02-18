@@ -70,7 +70,7 @@ static NSInteger currentElementIndex = 0;
 
 - (void)startSession {
     NSLog(@"Launching application '%@'", self.app.bundleID);
-    [self.app _launchUsingXcode:NO];
+    [self.app launch];
 }
 
 + (void)killCurrentApplication {

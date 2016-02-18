@@ -8,10 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TestManagerDConnection : NSObject
-+ (void)connect;
-@end
-
 @class XCElementSnapshot;
 @class XCActivityRecord;
 @class XCAccessibilityElement;
@@ -68,4 +64,9 @@
 - (id)_IDE_beginSessionWithIdentifier:(NSUUID *)arg1 forClient:(NSString *)arg2 atPath:(NSString *)arg3;
 - (id)_IDE_initiateControlSessionForTestProcessID:(NSNumber *)arg1;
 - (id)_IDE_initiateSessionWithIdentifier:(NSUUID *)arg1 forClient:(NSString *)arg2 atPath:(NSString *)arg3 protocolVersion:(NSNumber *)arg4;
+
+@end
+
+@interface TestManagerDConnection : NSObject<XCTestManager_IDEInterface>
++ (void)connect;
 @end
