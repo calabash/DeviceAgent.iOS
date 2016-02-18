@@ -150,6 +150,74 @@ struct AMDeviceNotificationCallbackInformation {
 }
 - (id)_XCT_testBundleReadyWithProtocolVersion:(NSNumber *)arg1 minimumVersion:(NSNumber *)arg2{
     NSLog(@"%@", NSStringFromSelector(_cmd));
+//    void * -[_IDETestManagerAPIMediator _XCT_testBundleReadyWithProtocolVersion:minimumVersion:](void * self, void * _cmd, void * arg2, void * arg3) {
+//        var_40 = [arg2 retain];
+//        var_30 = [arg3 retain];
+//        rbx = [[self startupTimeoutTimer] retain];
+//        [rbx invalidate];
+//        [rbx release];
+//        rbx = [arg2 integerValue];
+//        [var_40 release];
+//        [self setTestProtocolVersion:rbx];
+//        r14 = [arg3 integerValue];
+//        [var_30 release];
+//        [self testProtocolVersion];
+//        r12 = self;
+//        [self _logAtLevel:0x3 message:@"Test bundle is ready, running protocol %ld, requires at least version %ld. IDE is running %d and requires at least %d"];
+//        if (r14 < 0x11) goto loc_2335a5;
+//        
+//    loc_23357d:
+//        rax = [NSString stringWithFormat:@"Protocol mismatch: test process requires at least version %ld, IDE is running version %d", r14, 0x10];
+//        goto loc_2335f0;
+//        
+//    loc_2335f0:
+//        rbx = [rax retain];
+//        if (rbx != 0x0) {
+//            [r12 _reportStartupFailure:rbx errorCode:0x3];
+//            [rbx release];
+//        }
+//        else {
+//            rbx = [[r12 targetDevice] retain];
+//            r14 = [rbx requiresTestDaemonMediationForTestHostConnection];
+//            [rbx release];
+//            if (r14 != 0x0) {
+//                [r12 _whitelistTestProcessIDForUITesting];
+//            }
+//            else {
+//                r14 = [[r12 operation] retain];
+//                rbx = [[r14 launchSession] retain];
+//                rax = [rbx runnablePID];
+//                [r12 _checkUITestingPermissionsForPID:rax];
+//                [rbx release];
+//                [r14 release];
+//            }
+//        }
+//        return 0x0;
+//        
+//    loc_2335a5:
+//        if ([r12 testProtocolVersion] > 0x7) goto loc_233626;
+//        
+//    loc_2335bb:
+//        rax = [NSString stringWithFormat:@"Protocol mismatch: IDE requires at least version %d, test process is running version %ld", 0x8, [r12 testProtocolVersion]];
+//        goto loc_2335f0;
+//        
+//    loc_233626:
+//        rbx = [[r12 targetDevice] retain];
+//        r14 = [rbx requiresTestDaemonMediationForTestHostConnection];
+//        [rbx release];
+//        if (r14 != 0x0) {
+//            [r12 _whitelistTestProcessIDForUITesting];
+//        }
+//        else {
+//            r14 = [[r12 operation] retain];
+//            rbx = [[r14 launchSession] retain];
+//            rax = [rbx runnablePID];
+//            [r12 _checkUITestingPermissionsForPID:rax];
+//            [rbx release];
+//            [r14 release];
+//        }
+//        return 0x0;
+//    }
     return nil;
 }
 - (id)_XCT_getProgressForLaunch:(id)arg1{
@@ -283,24 +351,24 @@ void cleanup(void *deviceHandle) {
 
 - (void)setupTestBundleConnectionWithTransport:(DTXSocketTransport *)transport {
     NSLog(@"TMDLink: Creating the connection");
-    DTXConnection *connection = [[DTXConnection alloc] initWithTransport:transport];
-
-    [connection registerDisconnectHandler:^{
-        NSLog(@"Disconnected handler...");
+    self.connection = [[DTXConnection alloc] initWithTransport:transport];
+    
+    [self.connection registerDisconnectHandler:^{
+        NSLog(@"TMDLink: Disconnected handler...");
     }];
     
     NSLog(@"TMDLink: Listening for proxy connection request from the test bundle (all platforms)");
-
-    [connection handleProxyRequestForInterface:@protocol(XCTestManager_IDEInterface)
-                                 peerInterface:@protocol(XCTestDriverInterface)
-                                       handler:^(DTXProxyChannel *conn){
+    [self.connection handleProxyRequestForInterface:@protocol(XCTestManager_IDEInterface)
+                                      peerInterface:@protocol(XCTestDriverInterface)
+                                            handler:^(DTXProxyChannel *conn){
                                                 
                                                 NSLog(@"HandleProxyRequestForInterface: XCTestManager_IDEInterface, XCTestDriverInterface");
                                                 [conn setExportedObject:self queue:dispatch_get_main_queue()];
                                                 self.testBundleProxy = [conn remoteObjectProxy];
                                             }];
     NSLog(@"TMDLink: Resuming the connection.");
-    [connection resume];
+    
+    [self.connection resume];
 }
 
 - (void)connectToTestManagerD:(void *)deviceHandle {
@@ -348,18 +416,22 @@ void cleanup(void *deviceHandle) {
     NSLog(@"TDMLink: Checking test manager availability...");
     DTXProxyChannel *channel = [connection makeProxyChannelWithRemoteInterface:@protocol(XCTestManager_DaemonConnectionInterface)
                                                              exportedInterface:@protocol(XCTestManager_IDEInterface)];
-        [channel setExportedObject:self queue:dispatch_get_main_queue()];
-    NSString *bundlePath = [[NSBundle mainBundle] bundlePath];
-    NSString *pathExtension = [bundlePath pathExtension];
-    if ([pathExtension isEqualToString:@"app"]) {
-        bundlePath = [[NSBundle mainBundle] executablePath];
-    }
+    
+    [channel setExportedObject:self
+                         queue:dispatch_get_main_queue()];
+    NSString *bundlePath = @"/Applications/Xcode.app";
+//    [[NSBundle mainBundle] bundlePath];
+//    NSString *pathExtension = [bundlePath pathExtension];
+//    if (![pathExtension isEqualToString:@"app"]) {
+//        bundlePath = [[NSBundle mainBundle] executablePath];
+//    }
     static dispatch_once_t onceToken;
     static NSString *clientProcessUniqueIdentifier;
         dispatch_once(&onceToken, ^{
             clientProcessUniqueIdentifier = [[NSProcessInfo processInfo] globallyUniqueString];
         });
     id <XCTestManager_DaemonConnectionInterface> remoteObjectProxy = [channel remoteObjectProxy];
+    
 //        rax = [_objc_release operation]; ??
 //        rax = [rax launchSession]; ??
 
@@ -367,21 +439,20 @@ void cleanup(void *deviceHandle) {
     __block DTXRemoteInvocationReceipt *receipt = [remoteObjectProxy _IDE_initiateSessionWithIdentifier:self.sessionId
                                                                                               forClient:clientProcessUniqueIdentifier
                                                                                                  atPath:bundlePath
-                                                                                        protocolVersion:@(16)];
+                                                                                        protocolVersion:@(0x10)];
     
-    [receipt handleCompletion:^{
-        receipt = [remoteObjectProxy _IDE_beginSessionWithIdentifier:self.sessionId
-                                                                forClient:clientProcessUniqueIdentifier
-                                                                   atPath:bundlePath];
+    [receipt handleCompletion:^(NSNumber *n /* 14 ?? */, NSError *e){
+        DTXRemoteInvocationReceipt *r2 = [remoteObjectProxy _IDE_beginSessionWithIdentifier:self.sessionId
+                                                           forClient:clientProcessUniqueIdentifier
+                                                              atPath:bundlePath];
         
-        [receipt handleCompletion:^{
+        [r2 handleCompletion:^(NSNumber *n, NSError *e){
             NSLog(@"TMDLink: testmanagerd handled session request.");
             dispatch_async(dispatch_get_main_queue(), ^{
                 //Ready for test bundle to connect
                 //Wait for launch
             });
         }];
-        
     }];
 }
 
@@ -407,7 +478,6 @@ void callback(struct AMDeviceNotificationCallbackInformation *CallbackInfo) {
             
             //CONNECT TO TESTMANAGERD
             NSLog(@"TMDLINK: Test connection requires daemon assistance");
-//            DTXSocketTransport *trans2 = [TestManagerDConnection getTransport:deviceHandle];
             [tmd handleDaemonConnection:tmd.connection];
             
 //            cleanup(deviceHandle); ??
