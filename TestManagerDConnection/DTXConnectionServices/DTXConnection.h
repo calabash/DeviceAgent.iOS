@@ -97,7 +97,7 @@ typedef void(^proxyHandler)(DTXProxyChannel *chan);
 - (void)_handleMessageParseException:(id)arg1 forChannelCode:(unsigned int)arg2 messageID:(unsigned int)arg3 fragmentCount:(unsigned int)arg4 withPayloadBytes:(const void *)arg5 ofLength:(unsigned long long)arg6;
 - (void)setCompressionHint:(int)arg1 forChannel:(id)arg2;
 - (void)publishServicesInImagePath:(id)arg1;
-- (id)makeProxyChannelWithRemoteInterface:(id)arg1 exportedInterface:(id)arg2;
+- (DTXProxyChannel *)makeProxyChannelWithRemoteInterface:(id)arg1 exportedInterface:(id)arg2;
 
 - (void)handleProxyRequestForInterface:(id)arg1 peerInterface:(id)arg2 handler:(proxyHandler)arg3;
 @property(readonly, retain, nonatomic) DTXChannel *defaultChannel;

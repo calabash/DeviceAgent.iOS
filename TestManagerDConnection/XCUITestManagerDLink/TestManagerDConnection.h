@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class XCElementSnapshot;
-@class XCActivityRecord;
-@class XCAccessibilityElement;
+@class XCElementSnapshot, XCActivityRecord, XCAccessibilityElement, DTXRemoteInvocationReceipt;
 
 @protocol XCTestManager_IDEInterface
 - (id)_XCT_nativeFocusItemDidChangeAtTime:(NSNumber *)arg1 parameterSnapshot:(XCElementSnapshot *)arg2 applicationSnapshot:(XCElementSnapshot *)arg3;
@@ -61,9 +59,15 @@
 - (id)_IDE_startRecordingProcessPID:(NSNumber *)arg1 snapshotAttributes:(NSArray *)arg2 snapshotParameters:(NSDictionary *)arg3 simpleTargetGestureNames:(NSArray *)arg4;
 - (id)_IDE_startRecordingProcessPID:(NSNumber *)arg1;
 - (id)_IDE_startRecording;
-- (id)_IDE_beginSessionWithIdentifier:(NSUUID *)arg1 forClient:(NSString *)arg2 atPath:(NSString *)arg3;
-- (id)_IDE_initiateControlSessionForTestProcessID:(NSNumber *)arg1;
-- (id)_IDE_initiateSessionWithIdentifier:(NSUUID *)arg1 forClient:(NSString *)arg2 atPath:(NSString *)arg3 protocolVersion:(NSNumber *)arg4;
+- (DTXRemoteInvocationReceipt *)_IDE_beginSessionWithIdentifier:(NSUUID *)arg1 forClient:(NSString *)arg2 atPath:(NSString *)arg3;
+- (DTXRemoteInvocationReceipt *)_IDE_initiateControlSessionForTestProcessID:(NSNumber *)arg1;
+
+/*
+    Xcode seems to have this method...
+ */
+- (DTXRemoteInvocationReceipt *)_IDE_initiateControlSessionForTestProcessID:(NSNumber *)pid protocolVersion:(NSNumber *)protocolVersion;
+
+- (DTXRemoteInvocationReceipt *)_IDE_initiateSessionWithIdentifier:(NSUUID *)arg1 forClient:(NSString *)arg2 atPath:(NSString *)arg3 protocolVersion:(NSNumber *)arg4;
 
 @end
 
