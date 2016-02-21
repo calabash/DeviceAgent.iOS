@@ -204,7 +204,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 898597741C732CDA0028FEEE /* Build configuration list for PBXNativeTarget "XCUITestManagerDLink" */;
 			buildPhases = (
-				8963096B1C7A0D54008515C9 /* ShellScript */,
 				898597691C732CDA0028FEEE /* Sources */,
 				8985976A1C732CDA0028FEEE /* Frameworks */,
 				8985976B1C732CDA0028FEEE /* CopyFiles */,
@@ -262,22 +261,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		8963096B1C7A0D54008515C9 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "PATH=${PATH}:/usr/local/bin idevicelaunch --stop com.xamarin.XCUITestRunner\necho \"Hej Verden!\"";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		898597691C732CDA0028FEEE /* Sources */ = {

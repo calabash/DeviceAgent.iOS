@@ -17,7 +17,7 @@
     unsigned int _returnType;
 }
 
-typedef void(/*??*/ ^numberErrorBlock)(NSNumber *n, NSError *err);
+typedef id(/*??*/ ^numberErrorBlock)(NSNumber *n, NSError *err);
 - (void)invokeCompletionWithReturnValue:(id)arg1 error:(id)arg2;
 - (void)handleCompletion:(numberErrorBlock)arg1;
 - (void)_checkedAssign:(CDUnknownBlockType)arg1;

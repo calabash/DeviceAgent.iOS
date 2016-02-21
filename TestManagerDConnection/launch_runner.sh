@@ -8,4 +8,5 @@
 
 #Doesn't seem like it gets /usr/local/bin in the PATH
 PATH=${PATH}:/usr/local/bin
-idevicelaunch com.xamarin.XCUITestRunner
+#idevicelaunch com.xamarin.XCUITestRunner
+idevicelaunch com.apple.test.CBX-Runner -e XCTestConfigurationFilePath Banana
