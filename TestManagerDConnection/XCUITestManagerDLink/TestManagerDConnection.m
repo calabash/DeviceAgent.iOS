@@ -167,7 +167,8 @@ struct AMDeviceNotificationCallbackInformation {
     if ([minimumVersion integerValue] < 0x11) {
         if ([[self testProtocolVersion] integerValue] > 0x7)  {
                 if ([self requiresTestDaemonMediationForTestHostConnection]) {
-                    [self _whitelistTestProcessIDForUITesting];
+                    [self.testBundleProxy _IDE_startExecutingTestPlanWithProtocolVersion:@(0x10)];
+//                    [self _whitelistTestProcessIDForUITesting];
                 }
                 else {
                     /*
@@ -242,7 +243,7 @@ void startSession(void *deviceHandle) {
 }
 
 - (void)_whitelistTestProcessIDForUITesting {
-//    dispatch_async(dispatch_get_main_queue(), ^{
+    dispatch_async(dispatch_get_global_queue(0x0, 0x0), ^{
         if ([self isValid]) {
             NSLog(@"TMDLink: Creating secondary transport and connection for whitelisting test process PID.");
             
@@ -288,8 +289,8 @@ void startSession(void *deviceHandle) {
                     
                     NSLog(@"Whitelisting test process ID %d", self.runnerPID);
                     
-                    Receipt *receipt = [self.daemonProxy _IDE_initiateControlSessionForTestProcessID:@(self.runnerPID)];
-//                                                                                     protocolVersion:@(0x10)];
+                    Receipt *receipt = [self.daemonProxy _IDE_initiateControlSessionForTestProcessID:@(self.runnerPID)
+                                                                                     protocolVersion:@(0x10)];
                     
                     [receipt handleCompletion:^id (NSNumber *n, NSError *err) {
                         dispatch_async(dispatch_get_main_queue(), ^{
@@ -322,7 +323,7 @@ void startSession(void *deviceHandle) {
             }
         }
         return;
-//    });
+    });
 }
 
 AMDServiceConnection *secureStartService(void *deviceHandle, CFStringRef serviceName, CFDictionaryRef opts) {
@@ -451,6 +452,10 @@ void cleanup(void *deviceHandle) {
         At this point, Xcode reads the test configuration from the test run launch operation object
      */
 
+    self.runnerPID = [[ScriptRunner runScript:@"launch_runner.sh"] intValue];
+    NSLog(@"Launched runner, PID=%d", self.runnerPID);
+    sleep(1);
+    
     NSLog(@"TDMLink: Starting test session with ID %@", self.sessionId);
     __block Receipt *receipt = [remoteObjectProxy _IDE_initiateSessionWithIdentifier:self.sessionId
                                                                            forClient:clientProcessUniqueIdentifier
@@ -461,9 +466,7 @@ void cleanup(void *deviceHandle) {
         /**
          EXACTLY HERE, launch alex's app, then continue.
          */
-        self.runnerPID = [[ScriptRunner runScript:@"launch_runner.sh"] intValue];
-        NSLog(@"Launched runner, PID=%d", self.runnerPID);
-        sleep(2);
+        
 
 //        [[NSString stringWithContentsOfFile:@"/Users/chrisf/.pid" encoding:NSUTF8StringEncoding error:nil] intValue];
         if (!e) {
