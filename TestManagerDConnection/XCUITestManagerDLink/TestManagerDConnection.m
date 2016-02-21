@@ -42,6 +42,7 @@ extern int AMDeviceStartSession (void *device);
 extern int AMDeviceStopSession (void *device);
 extern int AMDeviceDisconnect (void *device);
 extern int AMDServiceConnectionGetSocket(AMDServiceConnection *something);
+extern int AMDServiceConnectionInvalidate(AMDServiceConnection *something);
 
 extern int AMDServiceConnectionReceive(void *device, unsigned char *buf,int size, int );
 
@@ -167,8 +168,10 @@ struct AMDeviceNotificationCallbackInformation {
     if ([minimumVersion integerValue] < 0x11) {
         if ([[self testProtocolVersion] integerValue] > 0x7)  {
                 if ([self requiresTestDaemonMediationForTestHostConnection]) {
-                    [self.testBundleProxy _IDE_startExecutingTestPlanWithProtocolVersion:@(0x10)];
-//                    [self _whitelistTestProcessIDForUITesting];
+                    //if we call this, it will start th session but without testmanagerd's blessing
+//                    [self.testBundleProxy _IDE_startExecutingTestPlanWithProtocolVersion:@(0x10)];
+                    
+                    [self _whitelistTestProcessIDForUITesting];
                 }
                 else {
                     /*
@@ -234,11 +237,16 @@ void startSession(void *deviceHandle) {
     
     if (serviceConnection) {
         printf("Got AMDServiceConnection!\n");
+        CFRetain((__bridge CFTypeRef)(serviceConnection));
     }
     
     int socket = AMDServiceConnectionGetSocket(serviceConnection);
+    
     DTXSocketTransport *socketTransport = [[DTXSocketTransport alloc] initWithConnectedSocket:socket
-                                                                             disconnectAction:nil];
+                                                                             disconnectAction:^{
+                                                                                 AMDServiceConnectionInvalidate(serviceConnection);
+                                                                                 CFRelease((__bridge CFTypeRef)(serviceConnection));
+                                                                             }];
     return socketTransport;
 }
 
@@ -297,7 +305,7 @@ void startSession(void *deviceHandle) {
                             if (err == nil) {
                                 [self setDaemonProtocolVersion:n];
                                 NSLog(@"TMDLink: Got whitelisting response and daemon protocol version %d", [n intValue]);
-                                [self.testBundleProxy _IDE_startExecutingTestPlanWithProtocolVersion:@(0xE)];
+                                [self.testBundleProxy _IDE_startExecutingTestPlanWithProtocolVersion:n];
                             } else {
                                 NSLog(@"TMDLink: Got whitelisting response after invalidation of test coordinator. Error: %@", err);
                                 Receipt *r2 = [self.daemonProxy _IDE_initiateControlSessionForTestProcessID:@(self.runnerPID)];
@@ -307,6 +315,8 @@ void startSession(void *deviceHandle) {
                                         [self setDaemonProtocolVersion:@(0x0E)];
                                         if (err) {
                                             NSLog(@"Error in whitelisting response from testmanagerd: %@ (%@), ignoring for now.", err.localizedDescription, err.localizedRecoverySuggestion);
+                                        } else {
+                                            [self.testBundleProxy _IDE_startExecutingTestPlanWithProtocolVersion:@(0xE)];
                                         }
                                     } else {
                                         NSLog(@"Got whitelisting response after invalidation of test coordinator. Error: %@", err);

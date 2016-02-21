@@ -17,6 +17,8 @@
     int _port;
 }
 
+typedef void(^block)(void);
+
 + (id)addressForHost:(const char *)arg1 port:(int)arg2;
 + (id)schemes;
 @property(readonly) int port; // @synthesize port=_port;
@@ -27,7 +29,7 @@
 - (id)initWithRemoteAddress:(id)arg1;
 - (void)dealloc;
 - (id)initWithLocalPort:(int)arg1;
-- (id)initWithConnectedSocket:(int)arg1 disconnectAction:(CDUnknownBlockType)arg2;
+- (id)initWithConnectedSocket:(int)arg1 disconnectAction:(block)arg2;
 - (void)_commonSocketTransportInit;
 - (void)_setupChannelWithConnectedSocket:(int)arg1 assumingOwnership:(_Bool)arg2 orDisconnectBlock:(CDUnknownBlockType)arg3;
 - (id)initWithLocalAddress:(id)arg1;

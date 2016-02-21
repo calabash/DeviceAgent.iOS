@@ -46,7 +46,7 @@
 @end
 
 @protocol XCTestDriverInterface
-- (id)_IDE_startExecutingTestPlanWithProtocolVersion:(NSNumber *)arg1;
+- (DTXRemoteInvocationReceipt *)_IDE_startExecutingTestPlanWithProtocolVersion:(NSNumber *)arg1;
 
 @optional
 - (id)_IDE_startExecutingTestPlanWhenReady;
