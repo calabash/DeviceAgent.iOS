@@ -2,9 +2,10 @@
 #import "DTXRemoteInvocationReceipt.h"
 #import "TestManagerDConnection.h"
 #import "DTXSocketTransport.h"
-#import "DTXConnection.h"
 #import "DTXProxyChannel.h"
+#import "DTXConnection.h"
 #import <objc/runtime.h>
+#import "ScriptRunner.h"
 #include <stdio.h>
 
 // gcc tmd_connect.c -o tmd_connect -framework CoreFoundation -F. -framework MobileDevice
@@ -18,6 +19,7 @@
 // These are obviously internal to Apple. The void * is likely some AMDDeviceRef * or something like that
 // But since it's opaque anyway, just void * it..
 
+typedef DTXRemoteInvocationReceipt Receipt;
 
 @interface TestManagerDConnection ()
 @property (nonatomic, strong) id <XCTestDriverInterface> testBundleProxy;
@@ -28,6 +30,7 @@
 @property (nonatomic, strong) NSNumber *testProtocolVersion;
 @property (nonatomic, strong) NSNumber *daemonProtocolVersion;
 @property (nonatomic)   void *targetDevice;
+@property (nonatomic) int runnerPID;
 @property (nonatomic) BOOL isValid;
 @end
 
@@ -54,7 +57,7 @@ struct AMDeviceNotificationCallbackInformation {
     uint32_t	msgType;
 } ;
 
-@implementation TestManagerDConnection 
+@implementation TestManagerDConnection
 
 - (id)_XCT_nativeFocusItemDidChangeAtTime:(NSNumber *)arg1 parameterSnapshot:(XCElementSnapshot *)arg2 applicationSnapshot:(XCElementSnapshot *)arg3 {
     NSLog(@"%@", NSStringFromSelector(_cmd));
@@ -127,11 +130,11 @@ struct AMDeviceNotificationCallbackInformation {
     return nil;
 }
 - (id)_XCT_testCaseDidFinishForTestClass:(NSString *)arg1 method:(NSString *)arg2 withStatus:(NSString *)arg3 duration:(NSNumber *)arg4{
-    NSLog(@"%@", NSStringFromSelector(_cmd));
+    NSLog(@"%@ :: %@ :: %@ :: %@ :: %@", NSStringFromSelector(_cmd), arg1, arg2, arg3, arg4);
     return nil;
 }
 - (id)_XCT_testCaseDidFailForTestClass:(NSString *)arg1 method:(NSString *)arg2 withMessage:(NSString *)arg3 file:(NSString *)arg4 line:(NSNumber *)arg5{
-    NSLog(@"%@", NSStringFromSelector(_cmd));
+    NSLog(@"%@ :: %@ :: %@ :: %@ :: %@ :: %@", NSStringFromSelector(_cmd), arg1, arg2, arg3, arg4, arg5);
     return nil;
 }
 - (id)_XCT_testCaseDidStartForTestClass:(NSString *)arg1 method:(NSString *)arg2{
@@ -139,7 +142,7 @@ struct AMDeviceNotificationCallbackInformation {
     return nil;
 }
 - (id)_XCT_testSuite:(NSString *)arg1 didFinishAt:(NSString *)arg2 runCount:(NSNumber *)arg3 withFailures:(NSNumber *)arg4 unexpected:(NSNumber *)arg5 testDuration:(NSNumber *)arg6 totalDuration:(NSNumber *)arg7{
-    NSLog(@"%@", NSStringFromSelector(_cmd));
+    NSLog(@"%@ :: %@ :: %@ :: %@ :: %@ :: %@ :: %@ :: %@", NSStringFromSelector(_cmd), arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     return nil;
 }
 - (id)_XCT_testSuite:(NSString *)arg1 didStartAt:(NSString *)arg2{
@@ -283,27 +286,17 @@ void startSession(void *deviceHandle) {
                     self.daemonProxy = remoteProxy;
 
                     /*
-                     Right here, we need to get the PID of the process somehows...
+                     Right here, we need to get the PID of the process:
                     r12 = [(r13)(r15, @selector(operation)) retain];
                     rbx = [(r14)(r12, @selector(launchSession)) retain];
+                     
+                     We obtain the runnerPID as a result of using idevicelaunch
                      */
                     
-                    //HACK
-                    int pid = [[NSString stringWithContentsOfFile:@"/Users/chrisf/Desktop/runnerpid.txt"
-                                                         encoding:NSUTF8StringEncoding
-                                                            error:nil] intValue];
-                    //END_HACK
+                    NSLog(@"Whitelisting test process ID %d", self.runnerPID);
                     
-                    NSLog(@"Whitelisting test process ID %d", pid);
-                    
-                    DTXRemoteInvocationReceipt *receipt = [self.daemonProxy _IDE_initiateControlSessionForTestProcessID:@(pid)
-                                                                                                        protocolVersion:self.testProtocolVersion];
-                    
-//                    DTXRemoteInvocationReceipt *r2 = [self.daemonProxy _IDE_initiateControlSessionForTestProcessID:@(pid)];
-                    
-//                    [r2 handleCompletion:^(NSNumber *n, NSError *err) {
-//                        NSLog(@"Handle completion for '_IDE_initiateControlSessionForTestProcessID': %@, %@", n, err);
-//                    }];
+                    Receipt *receipt = [self.daemonProxy _IDE_initiateControlSessionForTestProcessID:@(self.runnerPID)
+                                                                                     protocolVersion:self.daemonProtocolVersion];
                     
                     [receipt handleCompletion:^(NSNumber *n, NSError *err) {
                         self.daemonProtocolVersion = n;
@@ -343,6 +336,8 @@ void stopSession(void *deviceHandle) {
 }
 
 void disconnect(void *deviceHandle) {
+//    NSLog(@"Killing runner... %@", [ScriptRunner runScript:@"kill_runner.sh"]);
+    
     printf("Disconnecting...\n");
     int rc = AMDeviceDisconnect(deviceHandle);
     
@@ -444,24 +439,28 @@ void cleanup(void *deviceHandle) {
         At this point, Xcode reads the test configuration from the test run launch operation object
      */
 
-    NSLog(@"TDMLink Starting test session with ID %@", self.sessionId);
-    __block DTXRemoteInvocationReceipt *receipt = [remoteObjectProxy _IDE_initiateSessionWithIdentifier:self.sessionId
-                                                                                              forClient:clientProcessUniqueIdentifier
-                                                                                                 atPath:bundlePath
-                                                                                        protocolVersion:@(0x10)];
+    NSLog(@"TDMLink: Starting test session with ID %@", self.sessionId);
+    __block Receipt *receipt = [remoteObjectProxy _IDE_initiateSessionWithIdentifier:self.sessionId
+                                                                           forClient:clientProcessUniqueIdentifier
+                                                                              atPath:bundlePath
+                                                                     protocolVersion:@(0x10)];
     
     [receipt handleCompletion:^(NSNumber *n /* 14 ?? */, NSError *e){
         /**
          EXACTLY HERE, launch alex's app, then continue.
          */
-        DTXRemoteInvocationReceipt *r2 = [remoteObjectProxy _IDE_beginSessionWithIdentifier:self.sessionId
-       
-                                                                                  forClient:clientProcessUniqueIdentifier
-                                                                                     atPath:bundlePath];
+        
+        self.runnerPID = [[ScriptRunner runScript:@"launch_runner.sh"] intValue];
+        NSLog(@"Launched runner, PID=%d", self.runnerPID);
+        sleep(5);
+        Receipt *r2 = [remoteObjectProxy _IDE_beginSessionWithIdentifier:self.sessionId
+                                                               forClient:clientProcessUniqueIdentifier
+                                                                  atPath:bundlePath];
 
         [r2 handleCompletion:^(NSNumber *n, NSError *e){
             if (e) {
                 NSLog(@"Error beginning session with ID: %@ %@", self.sessionId, e);
+//                disconnect(self.targetDevice);
             } else {
                 NSLog(@"TMDLink: testmanagerd handled session request.");
                 dispatch_async(dispatch_get_main_queue(), ^{
@@ -473,7 +472,6 @@ void cleanup(void *deviceHandle) {
 }
 
 void callback(struct AMDeviceNotificationCallbackInformation *CallbackInfo) {
-    
     void *deviceHandle = CallbackInfo->deviceHandle;
     static BOOL doIt = YES;
     if (doIt) {
@@ -518,8 +516,9 @@ void callback(struct AMDeviceNotificationCallbackInformation *CallbackInfo) {
 }
 
 + (void)connect {
-    void *subscribe;
+
     
+    void *subscribe;
     int rc = AMDeviceNotificationSubscribe(callback, 0,0,0, &subscribe);
     if (rc <0) {
         fprintf(stderr, "Unable to subscribe: AMDeviceNotificationSubscribe returned %d\n", rc);
