@@ -24,6 +24,8 @@ XCTestConfiguration *sub_bd48() {
     config.testBundleURL = testBundle.bundleURL;
     config.testsMustRunOnMainThread = YES;
     config.reportResultsToIDE = YES;
+    config.reportActivities = YES;
+    config.testsToRun = [NSSet setWithObject:@"XCUITestDriver/testRunner"];
     config.targetApplicationPath = nil;
     config.targetApplicationBundleID = nil;
     config.sessionIdentifier = [[NSUUID alloc] initWithUUIDString:@"BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE"];

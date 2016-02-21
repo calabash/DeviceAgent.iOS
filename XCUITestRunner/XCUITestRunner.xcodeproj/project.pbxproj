@@ -28,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		896309691C7A04DA008515C9 /* CBX.xctest */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CBX.xctest; sourceTree = "<group>"; };
+		8963096C1C7A3BB8008515C9 /* XCUITestRunner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = XCUITestRunner.entitlements; sourceTree = "<group>"; };
 		FA4272161C5966BB0096C8DA /* XCUITestRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCUITestRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA42722A1C5966BB0096C8DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA4272301C59671E0096C8DA /* Runner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Runner.m; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 		FA4272181C5966BB0096C8DA /* XCUITestRunner */ = {
 			isa = PBXGroup;
 			children = (
+				8963096C1C7A3BB8008515C9 /* XCUITestRunner.entitlements */,
 				FA4272321C5969CD0096C8DA /* xctest.h */,
 				FA42722A1C5966BB0096C8DA /* Info.plist */,
 				FA4272301C59671E0096C8DA /* Runner.m */,
@@ -109,6 +111,12 @@
 				TargetAttributes = {
 					FA4272151C5966BB0096C8DA = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 58LM7J37Q8;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -240,22 +248,32 @@
 		FA42722E1C5966BB0096C8DA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = XCUITestRunner/XCUITestRunner.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = XCUITestRunner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xamarin.XCUITestRunner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		FA42722F1C5966BB0096C8DA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = XCUITestRunner/XCUITestRunner.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = XCUITestRunner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xamarin.XCUITestRunner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

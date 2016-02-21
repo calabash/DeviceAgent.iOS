@@ -24,8 +24,9 @@
 	<true/>
 	<key>UIBackgroundModes</key>
 	<array>
-		<string>unboundedTaskCompletion</string>
 		<string>continuous</string>
+		<string>unboundedTaskCompletion</string>
+		<string>voip</string>
 	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>

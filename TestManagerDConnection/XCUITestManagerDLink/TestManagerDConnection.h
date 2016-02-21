@@ -52,24 +52,20 @@
 - (id)_IDE_startExecutingTestPlanWhenReady;
 @end
 
-
 @protocol XCTestManager_DaemonConnectionInterface
-- (id)_IDE_stopRecording;
-- (id)_IDE_startRecordingProcessPID:(NSNumber *)arg1 applicationSnapshotAttributes:(NSArray *)arg2 applicationSnapshotParameters:(NSDictionary *)arg3 elementSnapshotAttributes:(NSArray *)arg4 elementSnapshotParameters:(NSDictionary *)arg5 simpleTargetGestureNames:(NSArray *)arg6;
-- (id)_IDE_startRecordingProcessPID:(NSNumber *)arg1 snapshotAttributes:(NSArray *)arg2 snapshotParameters:(NSDictionary *)arg3 simpleTargetGestureNames:(NSArray *)arg4;
-- (id)_IDE_startRecordingProcessPID:(NSNumber *)arg1;
-- (id)_IDE_startRecording;
+- (DTXRemoteInvocationReceipt *)_IDE_stopRecording;
+- (DTXRemoteInvocationReceipt *)_IDE_startRecordingProcessPID:(NSNumber *)arg1 applicationSnapshotAttributes:(NSArray *)arg2 applicationSnapshotParameters:(NSDictionary *)arg3 elementSnapshotAttributes:(NSArray *)arg4 elementSnapshotParameters:(NSDictionary *)arg5 simpleTargetGestureNames:(NSArray *)arg6;
+- (DTXRemoteInvocationReceipt *)_IDE_startRecordingProcessPID:(NSNumber *)arg1 snapshotAttributes:(NSArray *)arg2 snapshotParameters:(NSDictionary *)arg3 simpleTargetGestureNames:(NSArray *)arg4;
+- (DTXRemoteInvocationReceipt *)_IDE_startRecordingProcessPID:(NSNumber *)arg1;
+- (DTXRemoteInvocationReceipt *)_IDE_startRecording;
+
 - (DTXRemoteInvocationReceipt *)_IDE_beginSessionWithIdentifier:(NSUUID *)arg1 forClient:(NSString *)arg2 atPath:(NSString *)arg3;
 - (DTXRemoteInvocationReceipt *)_IDE_initiateControlSessionForTestProcessID:(NSNumber *)arg1;
-
-/*
-    Xcode seems to have this method...
- */
-- (DTXRemoteInvocationReceipt *)_IDE_initiateControlSessionForTestProcessID:(NSNumber *)pid protocolVersion:(NSNumber *)protocolVersion;
+- (DTXRemoteInvocationReceipt *)_IDE_initiateControlSessionForTestProcessID:(NSNumber *)arg1 protocolVersion:(NSNumber *)arg2;
 
 - (DTXRemoteInvocationReceipt *)_IDE_initiateSessionWithIdentifier:(NSUUID *)arg1 forClient:(NSString *)arg2 atPath:(NSString *)arg3 protocolVersion:(NSNumber *)arg4;
-
 @end
+
 
 @interface TestManagerDConnection : NSObject<XCTestManager_IDEInterface>
 + (void)connect;

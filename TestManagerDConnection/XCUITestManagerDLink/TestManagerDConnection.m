@@ -158,6 +158,7 @@ struct AMDeviceNotificationCallbackInformation {
     return nil;
 }
 - (id)_XCT_testBundleReadyWithProtocolVersion:(NSNumber *)protocolVersion minimumVersion:(NSNumber *)minimumVersion {
+    NSLog(@"%@ :: %@ :: %@", NSStringFromSelector(_cmd), protocolVersion, minimumVersion);
     /*
         TODO: Xcode starts a timoutTimer here
      */
@@ -165,13 +166,8 @@ struct AMDeviceNotificationCallbackInformation {
     NSLog(@"TMDLink: Test bundle is ready, running protocol %@, requires at least version %@. IDE is running %@ and requires at least %@", protocolVersion, minimumVersion, protocolVersion /*?*/, minimumVersion /*?*/);
     if ([minimumVersion integerValue] < 0x11) {
         if ([[self testProtocolVersion] integerValue] > 0x7)  {
-                /*
-                    I don't see this used anywhere...
-                 */
-                void *device = [self targetDevice];
             
-                BOOL requiresAssistance = [self requiresTestDaemonMediationForTestHostConnection];
-                if (requiresAssistance != 0x0) {
+                if ([self requiresTestDaemonMediationForTestHostConnection]) {
                     [self _whitelistTestProcessIDForUITesting];
                 }
                 else {
@@ -185,7 +181,7 @@ struct AMDeviceNotificationCallbackInformation {
                         [r14 release];
                      */
                 }
-                return 0x0;
+                return nil;
         }
     } else {
         NSString *err = [NSString stringWithFormat:@"Protocol mismatch: IDE requires at least version %@, test process is running version %@", minimumVersion, [self testProtocolVersion]];
@@ -248,18 +244,16 @@ void startSession(void *deviceHandle) {
 
 - (void)_whitelistTestProcessIDForUITesting {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT /* 0x0 */, 0x0), ^{
-        TestManagerDConnection *rbx = self;
-        if ([self isValid] != 0x0) {
+        if ([self isValid] != NO) {
             NSLog(@"TMDLink: Creating secondary transport and connection for whitelisting test process PID.");
-            void *r2 = self.targetDevice;
             
-            NSError *err = 0x0;
+            NSError *err = nil;
             DTXSocketTransport *r15 = [self makeTransportForTestManagerService:&err];
-            if ([self isValid] != 0x0) {
-                if (err != 0x0) {
+            if ([self isValid] != NO) {
+                if (err != nil) {
                     NSLog(@"Failure to create transport for test daemon:\n%@", err);
                 }
-                if (r15 != 0x0) {
+                if (r15 != nil) {
                     DTXConnection *conn = [[DTXConnection alloc] initWithTransport:r15];
                     [self setDaemonConnection:conn];
                     [self.daemonConnection registerDisconnectHandler:^{
@@ -296,14 +290,33 @@ void startSession(void *deviceHandle) {
                     NSLog(@"Whitelisting test process ID %d", self.runnerPID);
                     
                     Receipt *receipt = [self.daemonProxy _IDE_initiateControlSessionForTestProcessID:@(self.runnerPID)
-                                                                                     protocolVersion:self.daemonProtocolVersion];
+                                                                                     protocolVersion:@(0x10)];
                     
                     [receipt handleCompletion:^(NSNumber *n, NSError *err) {
-                        self.daemonProtocolVersion = n;
-                        NSLog(@"TMDLink: Got whitelisting response and daemon protocol version %d", [n intValue]);
-                        [self.testBundleProxy _IDE_startExecutingTestPlanWithProtocolVersion:@(0x10)];
-                        
-                        //TODO: there's another block invoke?
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            if (err == nil) {
+                                [self setDaemonProtocolVersion:n];
+                                NSLog(@"TMDLink: Got whitelisting response and daemon protocol version %d", [n intValue]);
+                                [self.testBundleProxy _IDE_startExecutingTestPlanWithProtocolVersion:@(0xE)];
+                            } else {
+                                NSLog(@"TMDLink: Got whitelisting response after invalidation of test coordinator. Error: %@", err);
+                                Receipt *r2 = [self.daemonProxy _IDE_initiateControlSessionForTestProcessID:@(self.runnerPID)];
+                                [r2 handleCompletion:^(NSNumber *n, NSError *err) {
+                                    if ([self isValid]) {
+                                        NSLog(@"Got legacy whitelisting response, daemon protocol version is 14");
+                                        [self setDaemonProtocolVersion:@(0x0E)];
+                                        if (err) {
+                                            NSLog(@"Error in whitelisting response from testmanagerd: %@ (%@), ignoring for now.", err.localizedDescription, err.localizedRecoverySuggestion);
+                                        }
+                                    } else {
+                                        NSLog(@"Got whitelisting response after invalidation of test coordinator. Error: %@", err);
+                                    }
+                                }];
+                            }
+                            
+                            
+                            //TODO: there's another block invoke?
+                        });
                     }];
                 } else {
                     NSLog(@"Failed to create transport service for daemon connection");
@@ -449,10 +462,10 @@ void cleanup(void *deviceHandle) {
         /**
          EXACTLY HERE, launch alex's app, then continue.
          */
-        
         self.runnerPID = [[ScriptRunner runScript:@"launch_runner.sh"] intValue];
         NSLog(@"Launched runner, PID=%d", self.runnerPID);
-        sleep(5);
+        sleep(6);
+        
         Receipt *r2 = [remoteObjectProxy _IDE_beginSessionWithIdentifier:self.sessionId
                                                                forClient:clientProcessUniqueIdentifier
                                                                   atPath:bundlePath];
@@ -487,9 +500,6 @@ void callback(struct AMDeviceNotificationCallbackInformation *CallbackInfo) {
             NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:@"BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE"];
             tmd.sessionId = uuid;
             
-            //LAUNCH APP ??
-            //TODO
-            
             //CONNECT TO TEST BUNDLE
             DTXSocketTransport *trans = [tmd makeTransportForTestManagerService:nil];
             [tmd setupTestBundleConnectionWithTransport:trans];
@@ -516,8 +526,6 @@ void callback(struct AMDeviceNotificationCallbackInformation *CallbackInfo) {
 }
 
 + (void)connect {
-
-    
     void *subscribe;
     int rc = AMDeviceNotificationSubscribe(callback, 0,0,0, &subscribe);
     if (rc <0) {
