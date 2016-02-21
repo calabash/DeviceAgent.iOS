@@ -70,11 +70,11 @@ struct AMDeviceNotificationCallbackInformation {
     return nil;
 }
 - (id)_XCT_testCase:(NSString *)arg1 method:(NSString *)arg2 didFinishActivity:(XCActivityRecord *)arg3{
-    NSLog(@"%@", NSStringFromSelector(_cmd));
+    NSLog(@"%@::%@::%@::%@", NSStringFromSelector(_cmd), arg1, arg2, arg3);
     return nil;
 }
 - (id)_XCT_testCase:(NSString *)arg1 method:(NSString *)arg2 willStartActivity:(XCActivityRecord *)arg3{
-    NSLog(@"%@", NSStringFromSelector(_cmd));
+    NSLog(@"%@::%@::%@::%@", NSStringFromSelector(_cmd), arg1, arg2, arg3);
     return nil;
 }
 - (id)_XCT_recordedOrientationChange:(NSString *)arg1{
