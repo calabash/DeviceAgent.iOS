@@ -10,8 +10,6 @@
 		8963095F1C79F1F5008515C9 /* launch_runner.sh in Resources */ = {isa = PBXBuildFile; fileRef = 8963095E1C79F1F5008515C9 /* launch_runner.sh */; };
 		896309621C79F2BB008515C9 /* ScriptRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 896309611C79F2BB008515C9 /* ScriptRunner.m */; };
 		896309651C79F44D008515C9 /* launch_runner.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8963095E1C79F1F5008515C9 /* launch_runner.sh */; };
-		896309671C79F780008515C9 /* kill_runner.sh in Resources */ = {isa = PBXBuildFile; fileRef = 896309661C79F780008515C9 /* kill_runner.sh */; };
-		896309681C79F79D008515C9 /* kill_runner.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 896309661C79F780008515C9 /* kill_runner.sh */; };
 		898597711C732CDA0028FEEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 898597701C732CDA0028FEEE /* main.m */; };
 		898597791C732CEF0028FEEE /* TestManagerDConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 898597781C732CEF0028FEEE /* TestManagerDConnection.m */; };
 		899D2D531C73868000A40641 /* MobileDevice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899D2D521C73868000A40641 /* MobileDevice.framework */; };
@@ -26,7 +24,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				896309681C79F79D008515C9 /* kill_runner.sh in CopyFiles */,
 				896309651C79F44D008515C9 /* launch_runner.sh in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,7 +44,6 @@
 		8963095E1C79F1F5008515C9 /* launch_runner.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = launch_runner.sh; sourceTree = "<group>"; };
 		896309601C79F2BB008515C9 /* ScriptRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScriptRunner.h; sourceTree = "<group>"; };
 		896309611C79F2BB008515C9 /* ScriptRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScriptRunner.m; sourceTree = "<group>"; };
-		896309661C79F780008515C9 /* kill_runner.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = kill_runner.sh; sourceTree = "<group>"; };
 		8985976D1C732CDA0028FEEE /* XCUITestManagerDLink */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XCUITestManagerDLink; sourceTree = BUILT_PRODUCTS_DIR; };
 		898597701C732CDA0028FEEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		898597771C732CEF0028FEEE /* TestManagerDConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestManagerDConnection.h; sourceTree = "<group>"; };
@@ -112,7 +108,6 @@
 		898597641C732CDA0028FEEE = {
 			isa = PBXGroup;
 			children = (
-				896309661C79F780008515C9 /* kill_runner.sh */,
 				8963095E1C79F1F5008515C9 /* launch_runner.sh */,
 				899D2D881C7465CA00A40641 /* DTXConnectionServices */,
 				899D2D461C7360A500A40641 /* Frameworks */,
@@ -255,7 +250,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				896309671C79F780008515C9 /* kill_runner.sh in Resources */,
 				8963095F1C79F1F5008515C9 /* launch_runner.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
