@@ -506,38 +506,38 @@ void callback(struct AMDeviceNotificationCallbackInformation *CallbackInfo) {
     static BOOL doIt = YES;
     if (doIt) {
         doIt = NO;
-    switch (CallbackInfo->msgType) {
-        case 1: {
-            fprintf(stderr, "Device %p connected\n", deviceHandle);
-            setup(deviceHandle); //IDEiOSDeviceCore
-            
-            TestManagerDConnection *tmd = [TestManagerDConnection new];
-            
-            tmd.isValid = YES;
-            tmd.targetDevice = deviceHandle;
-            NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:@"BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE"];
-            tmd.sessionId = uuid;
-            
-            //CONNECT TO TEST BUNDLE
-            DTXSocketTransport *trans = [tmd makeTransportForTestManagerService:nil];
-            [tmd setupTestBundleConnectionWithTransport:trans];
-            
-            //CONNECT TO TESTMANAGERD
-            NSLog(@"TMDLink: Test connection requires daemon assistance");
-            [tmd handleDaemonConnection:tmd.connection];
-            
-            break;
+        switch (CallbackInfo->msgType) {
+            case 1: {
+                fprintf(stderr, "Device %p connected\n", deviceHandle);
+                setup(deviceHandle); //IDEiOSDeviceCore
+                
+                TestManagerDConnection *tmd = [TestManagerDConnection new];
+                
+                tmd.isValid = YES;
+                tmd.targetDevice = deviceHandle;
+                NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:@"BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE"];
+                tmd.sessionId = uuid;
+                
+                //CONNECT TO TEST BUNDLE
+                DTXSocketTransport *trans = [tmd makeTransportForTestManagerService:nil];
+                [tmd setupTestBundleConnectionWithTransport:trans];
+                
+                //CONNECT TO TESTMANAGERD
+                NSLog(@"TMDLink: Test connection requires daemon assistance");
+                [tmd handleDaemonConnection:tmd.connection];
+                
+                break;
+            }
+            case 2:
+                fprintf(stderr, "Device %p disconnected\n", deviceHandle);
+                break;
+            case 3:
+                fprintf(stderr, "Unsubscribed\n");
+                break;
+                
+            default:
+                fprintf(stderr, "Unknown message %d\n", CallbackInfo->msgType);
         }
-        case 2:
-            fprintf(stderr, "Device %p disconnected\n", deviceHandle);
-            break;
-        case 3:
-            fprintf(stderr, "Unsubscribed\n");
-            break;
-            
-        default:
-            fprintf(stderr, "Unknown message %d\n", CallbackInfo->msgType);
-    }
     }
 }
 
