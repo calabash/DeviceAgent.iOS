@@ -1,6 +1,6 @@
 #include <CoreFoundation/CoreFoundation.h>
 #import "DTXRemoteInvocationReceipt.h"
-#import "TestManagerDConnection.h"
+#import "XcodeShim.h"
 #import "DTXSocketTransport.h"
 #import "DTXProxyChannel.h"
 #import "DTXConnection.h"
@@ -21,7 +21,7 @@
 
 typedef DTXRemoteInvocationReceipt Receipt;
 
-@interface TestManagerDConnection ()
+@interface XcodeShim ()
 @property (nonatomic, strong) id <XCTestDriverInterface> testBundleProxy;
 @property (nonatomic, strong) id <XCTestManager_DaemonConnectionInterface> daemonProxy;
 @property DTXConnection *connection;
@@ -58,7 +58,7 @@ struct AMDeviceNotificationCallbackInformation {
     uint32_t	msgType;
 } ;
 
-@implementation TestManagerDConnection
+@implementation XcodeShim
 
 - (id)_XCT_nativeFocusItemDidChangeAtTime:(NSNumber *)arg1 parameterSnapshot:(XCElementSnapshot *)arg2 applicationSnapshot:(XCElementSnapshot *)arg3 {
     NSLog(@"%@", NSStringFromSelector(_cmd));
@@ -511,7 +511,7 @@ void callback(struct AMDeviceNotificationCallbackInformation *CallbackInfo) {
                 fprintf(stderr, "Device %p connected\n", deviceHandle);
                 setup(deviceHandle); //IDEiOSDeviceCore
                 
-                TestManagerDConnection *tmd = [TestManagerDConnection new];
+                XcodeShim *tmd = [XcodeShim new];
                 
                 tmd.isValid = YES;
                 tmd.targetDevice = deviceHandle;

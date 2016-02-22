@@ -11,7 +11,7 @@
 		896309621C79F2BB008515C9 /* ScriptRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 896309611C79F2BB008515C9 /* ScriptRunner.m */; };
 		896309651C79F44D008515C9 /* launch_runner.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8963095E1C79F1F5008515C9 /* launch_runner.sh */; };
 		898597711C732CDA0028FEEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 898597701C732CDA0028FEEE /* main.m */; };
-		898597791C732CEF0028FEEE /* TestManagerDConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 898597781C732CEF0028FEEE /* TestManagerDConnection.m */; };
+		898597791C732CEF0028FEEE /* XcodeShim.m in Sources */ = {isa = PBXBuildFile; fileRef = 898597781C732CEF0028FEEE /* XcodeShim.m */; };
 		899D2D531C73868000A40641 /* MobileDevice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899D2D521C73868000A40641 /* MobileDevice.framework */; };
 		899D2DC21C74714B00A40641 /* DTXConnectionServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899D2DC11C74714B00A40641 /* DTXConnectionServices.framework */; };
 		899D2DC31C7471A700A40641 /* DTXConnectionServices.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 899D2DC11C74714B00A40641 /* DTXConnectionServices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -46,8 +46,8 @@
 		896309611C79F2BB008515C9 /* ScriptRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScriptRunner.m; sourceTree = "<group>"; };
 		8985976D1C732CDA0028FEEE /* XCUITestManagerDLink */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XCUITestManagerDLink; sourceTree = BUILT_PRODUCTS_DIR; };
 		898597701C732CDA0028FEEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		898597771C732CEF0028FEEE /* TestManagerDConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestManagerDConnection.h; sourceTree = "<group>"; };
-		898597781C732CEF0028FEEE /* TestManagerDConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestManagerDConnection.m; sourceTree = "<group>"; };
+		898597771C732CEF0028FEEE /* XcodeShim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeShim.h; sourceTree = "<group>"; };
+		898597781C732CEF0028FEEE /* XcodeShim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcodeShim.m; sourceTree = "<group>"; };
 		899D2D521C73868000A40641 /* MobileDevice.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileDevice.framework; sourceTree = "<group>"; };
 		899D2D891C7465CA00A40641 /* _DTXProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DTXProxy.h; sourceTree = "<group>"; };
 		899D2D8A1C7465CA00A40641 /* CDStructures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDStructures.h; sourceTree = "<group>"; };
@@ -128,8 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				898597701C732CDA0028FEEE /* main.m */,
-				898597771C732CEF0028FEEE /* TestManagerDConnection.h */,
-				898597781C732CEF0028FEEE /* TestManagerDConnection.m */,
+				898597771C732CEF0028FEEE /* XcodeShim.h */,
+				898597781C732CEF0028FEEE /* XcodeShim.m */,
 				896309601C79F2BB008515C9 /* ScriptRunner.h */,
 				896309611C79F2BB008515C9 /* ScriptRunner.m */,
 			);
@@ -262,7 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				896309621C79F2BB008515C9 /* ScriptRunner.m in Sources */,
-				898597791C732CEF0028FEEE /* TestManagerDConnection.m in Sources */,
+				898597791C732CEF0028FEEE /* XcodeShim.m in Sources */,
 				898597711C732CDA0028FEEE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

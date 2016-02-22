@@ -68,6 +68,6 @@
 @end
 
 
-@interface TestManagerDConnection : NSObject<XCTestManager_IDEInterface>
+@interface XcodeShim : NSObject<XCTestManager_IDEInterface>
 + (void)connect;
 @end

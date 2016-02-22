@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TestManagerDConnection.h"
+#import "XcodeShim.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        [TestManagerDConnection connect];
+        [XcodeShim connect];
     }
     return 0;
 }
