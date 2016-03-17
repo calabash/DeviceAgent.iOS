@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89C5F3501C9A60E70093A018 /* Testmanagerd.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F34E1C9A60E70093A018 /* Testmanagerd.h */; };
+		89C5F3511C9A60E70093A018 /* Testmanagerd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F34F1C9A60E70093A018 /* Testmanagerd.m */; };
+		89C5F3541C9A66E10093A018 /* NSXPCConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3531C9A66E10093A018 /* NSXPCConnection.h */; };
 		F55F81801C6DD07500A945C8 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F55F7FED1C6DD07500A945C8 /* GCDAsyncSocket.h */; };
 		F55F81811C6DD07500A945C8 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FEE1C6DD07500A945C8 /* GCDAsyncSocket.m */; };
 		F55F81851C6DD07500A945C8 /* DDData.h in Headers */ = {isa = PBXBuildFile; fileRef = F55F7FF51C6DD07500A945C8 /* DDData.h */; };
@@ -109,6 +112,9 @@
 /* Begin PBXFileReference section */
 		898743BC1C5847B30084FD93 /* CBXAppStub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBXAppStub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898743D51C5847B30084FD93 /* CBX.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CBX.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		89C5F34E1C9A60E70093A018 /* Testmanagerd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Testmanagerd.h; sourceTree = "<group>"; };
+		89C5F34F1C9A60E70093A018 /* Testmanagerd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Testmanagerd.m; sourceTree = "<group>"; };
+		89C5F3531C9A66E10093A018 /* NSXPCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXPCConnection.h; sourceTree = "<group>"; };
 		F55F7FED1C6DD07500A945C8 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		F55F7FEE1C6DD07500A945C8 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		F55F7FF51C6DD07500A945C8 /* DDData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDData.h; sourceTree = "<group>"; };
@@ -352,6 +358,15 @@
 				898743D51C5847B30084FD93 /* CBX.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		89C5F34D1C9A60CD0093A018 /* Testmanagerd */ = {
+			isa = PBXGroup;
+			children = (
+				89C5F34E1C9A60E70093A018 /* Testmanagerd.h */,
+				89C5F34F1C9A60E70093A018 /* Testmanagerd.m */,
+			);
+			name = Testmanagerd;
 			sourceTree = "<group>";
 		};
 		F55F7FEA1C6DD07500A945C8 /* Vendor */ = {
@@ -620,10 +635,12 @@
 				F55F83F01C6DDF7E00A945C8 /* CBProtocols.h */,
 				F55F83BE1C6DDF1300A945C8 /* CBXCUITestServer.h */,
 				F55F83BF1C6DDF1300A945C8 /* CBXCUITestServer.m */,
+				89C5F34D1C9A60CD0093A018 /* Testmanagerd */,
 				F55F83B71C6DDF1300A945C8 /* Application */,
 				F55F83C01C6DDF1300A945C8 /* Exceptions */,
 				F55F83C71C6DDF1300A945C8 /* Routes */,
 				F55F83D61C6DDF1300A945C8 /* Utilities */,
+				89C5F3531C9A66E10093A018 /* NSXPCConnection.h */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -746,7 +763,9 @@
 				F55F82341C6DD07500A945C8 /* DDFileLogger.h in Headers */,
 				F55F82301C6DD07500A945C8 /* DDAbstractDatabaseLogger.h in Headers */,
 				F55F82501C6DD07500A945C8 /* Route.h in Headers */,
+				89C5F3501C9A60E70093A018 /* Testmanagerd.h in Headers */,
 				F55F819B1C6DD07500A945C8 /* HTTPAsyncFileResponse.h in Headers */,
+				89C5F3541C9A66E10093A018 /* NSXPCConnection.h in Headers */,
 				F55F81871C6DD07500A945C8 /* DDNumber.h in Headers */,
 				F55F82581C6DD07500A945C8 /* RoutingHTTPServer.h in Headers */,
 				F55F82381C6DD07500A945C8 /* DDTTYLogger.h in Headers */,
@@ -916,6 +935,7 @@
 				F55F81A01C6DD07500A945C8 /* HTTPDynamicFileResponse.m in Sources */,
 				F55F83591C6DD9C400A945C8 /* XCUITestDriver.m in Sources */,
 				F55F840A1C6E437100A945C8 /* GestureRoutes.m in Sources */,
+				89C5F3511C9A60E70093A018 /* Testmanagerd.m in Sources */,
 				F55F840C1C6E437100A945C8 /* MetaRoutes.m in Sources */,
 				F55F818E1C6DD07500A945C8 /* HTTPConnection.m in Sources */,
 				F55F82511C6DD07500A945C8 /* Route.m in Sources */,

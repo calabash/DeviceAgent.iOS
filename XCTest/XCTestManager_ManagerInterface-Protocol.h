@@ -5,6 +5,7 @@
 //
 
 #import <CoreGraphics/CoreGraphics.h>
+#import "XCElementSnapshot.h"
 @class NSArray, NSDictionary, NSNumber, NSString, NSUUID, XCAccessibilityElement, XCDeviceEvent, XCSynthesizedEventRecord, XCTouchGesture;
 
 
