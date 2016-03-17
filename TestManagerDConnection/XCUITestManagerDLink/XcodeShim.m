@@ -286,14 +286,6 @@ void startSession(void *deviceHandle) {
                     
                     id <XCTestManager_DaemonConnectionInterface> remoteProxy = [channel remoteObjectProxy];
                     self.daemonProxy = remoteProxy;
-
-                    /*
-                     Right here, we need to get the PID of the process:
-                    r12 = [(r13)(r15, @selector(operation)) retain];
-                    rbx = [(r14)(r12, @selector(launchSession)) retain];
-                     
-                     We obtain the runnerPID as a result of using idevicelaunch
-                     */
                     
                     NSLog(@"Whitelisting test process ID %d", self.runnerPID);
                     
@@ -419,6 +411,8 @@ void cleanup(void *deviceHandle) {
     
     NSLog(@"TMDLink: Creating the connection");
     self.connection = [[DTXConnection alloc] initWithTransport:transport];
+    [self.connection setTracer:YES];
+    [self.connection setRemoteTracer:YES];
     
     [self.connection registerDisconnectHandler:^{
         NSLog(@"TMDLink: Disconnected handler...");
@@ -473,12 +467,6 @@ void cleanup(void *deviceHandle) {
                                                                      protocolVersion:@(0x10)];
     
     [receipt handleCompletion:^id (NSNumber *n /* 14 ?? */, NSError *e) {
-        /**
-         EXACTLY HERE, launch alex's app, then continue.
-         */
-        
-
-//        [[NSString stringWithContentsOfFile:@"/Users/chrisf/.pid" encoding:NSUTF8StringEncoding error:nil] intValue];
         if (!e) {
             Receipt *r2 = [remoteObjectProxy _IDE_beginSessionWithIdentifier:self.sessionId
                                                                    forClient:clientProcessUniqueIdentifier
@@ -516,6 +504,8 @@ void callback(struct AMDeviceNotificationCallbackInformation *CallbackInfo) {
                 tmd.isValid = YES;
                 tmd.targetDevice = deviceHandle;
                 NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:@"BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE"];
+                uuid_t bytes;
+                [uuid getUUIDBytes:bytes];
                 tmd.sessionId = uuid;
                 
                 //CONNECT TO TEST BUNDLE
