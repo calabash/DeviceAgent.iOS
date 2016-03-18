@@ -29,6 +29,10 @@
     return nil;
 }
 
+- (NSDictionary *)coordinate {
+    return self.subQuery ? [self.subQuery coordinate] : self.specifiers[@"coordinate"];
+}
+
 + (CBElementQuery *)withSpecifiers:(NSDictionary *)specifiers {
     CBElementQuery *e = [self new];
     NSMutableDictionary *s = [specifiers mutableCopy];
@@ -76,5 +80,15 @@
     
     
     return nil;
+}
+
+- (NSDictionary *)toDict {
+    NSMutableDictionary *dict = [[self specifiers] mutableCopy];
+    if (self.subQuery) dict[@"sub"] = [self.subQuery toDict];
+    return dict;
+}
+
+- (NSString *)description {
+    return [[self toDict] description];
 }
 @end

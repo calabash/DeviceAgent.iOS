@@ -6,9 +6,9 @@
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
-#import "CBInvalidGestureException.h"
+#import "CBInvalidArgumentException.h"
 
-@implementation CBInvalidGestureException
+@implementation CBInvalidArgumentException
 + (instancetype)withMessage:(NSString *)message {
     return [self withMessage:message statusCode:HTTP_STATUS_CODE_EVERYTHING_OK];
 }

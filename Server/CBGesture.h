@@ -6,7 +6,7 @@
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
-#import "CBInvalidGestureException.h"
+#import "CBInvalidArgumentException.h"
 #import <Foundation/Foundation.h>
 #import "CBElementQuery.h"
 #import "Testmanagerd.h" //just so subclasses have it
@@ -19,5 +19,5 @@
 
 - (void)execute:(CompletionBlock)completion;
 - (void)_executePrivate:(CompletionBlock)completion;
-- (void)validate; //Should be called by -_execute: and throw an exception if something goes wrong.
+- (void)validate; //Should throw an exception if something goes wrong.
 @end

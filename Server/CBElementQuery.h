@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSDictionary *specifiers;
 @property (nonatomic, strong) CBElementQuery *subQuery; //child, parent
 
+- (NSDictionary *)coordinate;
 + (CBElementQuery *)withSpecifiers:(NSDictionary *)specifiers;
 + (CBElementQuery *)withQueryString:(NSString *)queryString specifiers:(NSDictionary *)specifiers;
 
