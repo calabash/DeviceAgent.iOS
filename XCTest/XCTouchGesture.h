@@ -4,6 +4,8 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2013 by Steve Nygard.
 //
 
+#import "XCTouchPath.h"
+
 @class NSArray, NSMutableArray, NSString;
 
 @interface XCTouchGesture : NSObject <NSSecureCoding>
@@ -18,7 +20,7 @@
 @property(readonly) NSArray *touchPaths;
 
 - (void)makeImmutable;
-- (void)addTouchPath:(id)arg1;
+- (void)addTouchPath:(XCTouchPath *)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithName:(id)arg1;

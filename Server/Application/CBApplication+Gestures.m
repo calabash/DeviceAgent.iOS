@@ -7,11 +7,19 @@
 #import "CBApplication+Gestures.h"
 #import "CBApplication+Queries.h"
 #import "XCUICoordinate.h"
+#import "XCTouchGesture.h"
+#import "XCTouchEvent.h"
+#import "Testmanagerd.h"
 #import "XCUIElement.h"
+#import "XCTouchPath.h"
 #import "JSONUtils.h"
 #import "CBMacros.h"
 
 @implementation CBApplication(Gestures)
+
++ (void)performGesture:(CBGesture *)gesture completion:(CompletionBlock)completion {
+    
+}
 
 #pragma mark - Non specific API
 + (void)swipeUp {
@@ -44,11 +52,33 @@
 }
 
 + (void)tap:(float)x :(float)y {
-    [[self coordinateFor:x :y] tap];
+    XCTouchPath *path = [[XCTouchPath alloc] initWithTouchDown:CGPointMake(x, y) orientation: 0l offset: 0];
+    [path liftUpAtPoint:CGPointMake(x, y) offset:0.3];
+    [path complete];
+    
+    XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:@"touch"];
+    [gesture addTouchPath: path];
+    [[Testmanagerd get] _XCT_performTouchGesture:gesture completion:^(NSError *err) {
+        if (err) {
+            NSLog(@"Unable to tap %f, %f: %@", x, y, err);
+        }
+    }];
 }
 
 + (void)doubleTap:(float)x :(float)y {
-    [[self coordinateFor:x :y] doubleTap];
+    XCTouchPath *path = [[XCTouchPath alloc] initWithTouchDown:CGPointMake(x, y) orientation: 0l offset: 0];
+    [path liftUpAtPoint:CGPointMake(x, y) offset:0.3];
+    XCTouchEvent *event = [XCTouchEvent touchEventWithType:0 coordinate:CGPointMake(x, y) offset:0.5];
+    [path _addTouchEvent:event];
+    [path complete];
+    
+    XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:@"touch"];
+    [gesture addTouchPath: path];
+    [[Testmanagerd get] _XCT_performTouchGesture:gesture completion:^(NSError *err) {
+        if (err) {
+            NSLog(@"Unable to doubleTap %f, %f: %@", x, y, err);
+        }
+    }];
 }
 
 + (void)press:(float)x :(float)y forDuration:(NSTimeInterval)duration {

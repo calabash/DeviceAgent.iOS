@@ -10,6 +10,15 @@
 		89C5F3501C9A60E70093A018 /* Testmanagerd.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F34E1C9A60E70093A018 /* Testmanagerd.h */; };
 		89C5F3511C9A60E70093A018 /* Testmanagerd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F34F1C9A60E70093A018 /* Testmanagerd.m */; };
 		89C5F3541C9A66E10093A018 /* NSXPCConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3531C9A66E10093A018 /* NSXPCConnection.h */; };
+		89C5F3561C9B9B690093A018 /* CBTypedefs.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3551C9B9B690093A018 /* CBTypedefs.h */; };
+		89C5F35A1C9B9C850093A018 /* CBGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3581C9B9C850093A018 /* CBGesture.h */; };
+		89C5F35B1C9B9C850093A018 /* CBGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F3591C9B9C850093A018 /* CBGesture.m */; };
+		89C5F35E1C9C51680093A018 /* CBElementQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F35C1C9C51680093A018 /* CBElementQuery.h */; };
+		89C5F35F1C9C51680093A018 /* CBElementQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F35D1C9C51680093A018 /* CBElementQuery.m */; };
+		89C5F3631C9C58BD0093A018 /* CBTap.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3611C9C58BD0093A018 /* CBTap.h */; };
+		89C5F3641C9C58BD0093A018 /* CBTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F3621C9C58BD0093A018 /* CBTap.m */; };
+		89C5F3671C9C5BC20093A018 /* CBInvalidGestureException.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3651C9C5BC20093A018 /* CBInvalidGestureException.h */; };
+		89C5F3681C9C5BC20093A018 /* CBInvalidGestureException.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F3661C9C5BC20093A018 /* CBInvalidGestureException.m */; };
 		F55F81801C6DD07500A945C8 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F55F7FED1C6DD07500A945C8 /* GCDAsyncSocket.h */; };
 		F55F81811C6DD07500A945C8 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FEE1C6DD07500A945C8 /* GCDAsyncSocket.m */; };
 		F55F81851C6DD07500A945C8 /* DDData.h in Headers */ = {isa = PBXBuildFile; fileRef = F55F7FF51C6DD07500A945C8 /* DDData.h */; };
@@ -115,6 +124,15 @@
 		89C5F34E1C9A60E70093A018 /* Testmanagerd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Testmanagerd.h; sourceTree = "<group>"; };
 		89C5F34F1C9A60E70093A018 /* Testmanagerd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Testmanagerd.m; sourceTree = "<group>"; };
 		89C5F3531C9A66E10093A018 /* NSXPCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXPCConnection.h; sourceTree = "<group>"; };
+		89C5F3551C9B9B690093A018 /* CBTypedefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTypedefs.h; sourceTree = "<group>"; };
+		89C5F3581C9B9C850093A018 /* CBGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBGesture.h; sourceTree = "<group>"; };
+		89C5F3591C9B9C850093A018 /* CBGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBGesture.m; sourceTree = "<group>"; };
+		89C5F35C1C9C51680093A018 /* CBElementQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBElementQuery.h; sourceTree = "<group>"; };
+		89C5F35D1C9C51680093A018 /* CBElementQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBElementQuery.m; sourceTree = "<group>"; };
+		89C5F3611C9C58BD0093A018 /* CBTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTap.h; sourceTree = "<group>"; };
+		89C5F3621C9C58BD0093A018 /* CBTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTap.m; sourceTree = "<group>"; };
+		89C5F3651C9C5BC20093A018 /* CBInvalidGestureException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBInvalidGestureException.h; sourceTree = "<group>"; };
+		89C5F3661C9C5BC20093A018 /* CBInvalidGestureException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBInvalidGestureException.m; sourceTree = "<group>"; };
 		F55F7FED1C6DD07500A945C8 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		F55F7FEE1C6DD07500A945C8 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		F55F7FF51C6DD07500A945C8 /* DDData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDData.h; sourceTree = "<group>"; };
@@ -367,6 +385,26 @@
 				89C5F34F1C9A60E70093A018 /* Testmanagerd.m */,
 			);
 			name = Testmanagerd;
+			sourceTree = "<group>";
+		};
+		89C5F3571C9B9C6A0093A018 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				89C5F35C1C9C51680093A018 /* CBElementQuery.h */,
+				89C5F35D1C9C51680093A018 /* CBElementQuery.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		89C5F3601C9C58A10093A018 /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				89C5F3581C9B9C850093A018 /* CBGesture.h */,
+				89C5F3591C9B9C850093A018 /* CBGesture.m */,
+				89C5F3611C9C58BD0093A018 /* CBTap.h */,
+				89C5F3621C9C58BD0093A018 /* CBTap.m */,
+			);
+			name = Gestures;
 			sourceTree = "<group>";
 		};
 		F55F7FEA1C6DD07500A945C8 /* Vendor */ = {
@@ -630,11 +668,14 @@
 		F55F83B61C6DDF1300A945C8 /* Server */ = {
 			isa = PBXGroup;
 			children = (
+				89C5F3551C9B9B690093A018 /* CBTypedefs.h */,
 				F55F83EE1C6DDF7E00A945C8 /* CBConstants.h */,
 				F55F83EF1C6DDF7E00A945C8 /* CBMacros.h */,
 				F55F83F01C6DDF7E00A945C8 /* CBProtocols.h */,
 				F55F83BE1C6DDF1300A945C8 /* CBXCUITestServer.h */,
 				F55F83BF1C6DDF1300A945C8 /* CBXCUITestServer.m */,
+				89C5F3601C9C58A10093A018 /* Gestures */,
+				89C5F3571C9B9C6A0093A018 /* Models */,
 				89C5F34D1C9A60CD0093A018 /* Testmanagerd */,
 				F55F83B71C6DDF1300A945C8 /* Application */,
 				F55F83C01C6DDF1300A945C8 /* Exceptions */,
@@ -667,6 +708,8 @@
 				F55F83C21C6DDF1300A945C8 /* CBElementNotFoundException.m */,
 				F55F83C51C6DDF1300A945C8 /* CBShutdownServerException.h */,
 				F55F83C61C6DDF1300A945C8 /* CBShutdownServerException.m */,
+				89C5F3651C9C5BC20093A018 /* CBInvalidGestureException.h */,
+				89C5F3661C9C5BC20093A018 /* CBInvalidGestureException.m */,
 			);
 			path = Exceptions;
 			sourceTree = "<group>";
@@ -737,10 +780,13 @@
 				F55F81A31C6DD07500A945C8 /* HTTPFileResponse.h in Headers */,
 				F55F819D1C6DD07500A945C8 /* HTTPDataResponse.h in Headers */,
 				F55F818F1C6DD07500A945C8 /* HTTPLogging.h in Headers */,
+				89C5F3671C9C5BC20093A018 /* CBInvalidGestureException.h in Headers */,
 				F55F819F1C6DD07500A945C8 /* HTTPDynamicFileResponse.h in Headers */,
 				F55F818D1C6DD07500A945C8 /* HTTPConnection.h in Headers */,
 				F55F81991C6DD07500A945C8 /* MultipartMessageHeaderField.h in Headers */,
+				89C5F3631C9C58BD0093A018 /* CBTap.h in Headers */,
 				F55F81801C6DD07500A945C8 /* GCDAsyncSocket.h in Headers */,
+				89C5F35E1C9C51680093A018 /* CBElementQuery.h in Headers */,
 				F55F81931C6DD07500A945C8 /* HTTPServer.h in Headers */,
 				F55F82541C6DD07500A945C8 /* RouteResponse.h in Headers */,
 				F55F81A51C6DD07500A945C8 /* HTTPRedirectResponse.h in Headers */,
@@ -755,6 +801,7 @@
 				F55F818B1C6DD07500A945C8 /* HTTPAuthenticationRequest.h in Headers */,
 				F55F81891C6DD07500A945C8 /* DDRange.h in Headers */,
 				F55F82321C6DD07500A945C8 /* DDASLLogger.h in Headers */,
+				89C5F35A1C9B9C850093A018 /* CBGesture.h in Headers */,
 				F55F81A71C6DD07500A945C8 /* WebSocket.h in Headers */,
 				F55F82521C6DD07500A945C8 /* RouteRequest.h in Headers */,
 				F55F81971C6DD07500A945C8 /* MultipartMessageHeader.h in Headers */,
@@ -765,6 +812,7 @@
 				F55F82501C6DD07500A945C8 /* Route.h in Headers */,
 				89C5F3501C9A60E70093A018 /* Testmanagerd.h in Headers */,
 				F55F819B1C6DD07500A945C8 /* HTTPAsyncFileResponse.h in Headers */,
+				89C5F3561C9B9B690093A018 /* CBTypedefs.h in Headers */,
 				89C5F3541C9A66E10093A018 /* NSXPCConnection.h in Headers */,
 				F55F81871C6DD07500A945C8 /* DDNumber.h in Headers */,
 				F55F82581C6DD07500A945C8 /* RoutingHTTPServer.h in Headers */,
@@ -949,14 +997,18 @@
 				F55F819C1C6DD07500A945C8 /* HTTPAsyncFileResponse.m in Sources */,
 				F55F818C1C6DD07500A945C8 /* HTTPAuthenticationRequest.m in Sources */,
 				F55F82391C6DD07500A945C8 /* DDTTYLogger.m in Sources */,
+				89C5F3681C9C5BC20093A018 /* CBInvalidGestureException.m in Sources */,
 				F55F84091C6E436500A945C8 /* CBRoute.m in Sources */,
 				F55F81911C6DD07500A945C8 /* HTTPMessage.m in Sources */,
 				F55F82351C6DD07500A945C8 /* DDFileLogger.m in Sources */,
 				F55F81981C6DD07500A945C8 /* MultipartMessageHeader.m in Sources */,
+				89C5F35F1C9C51680093A018 /* CBElementQuery.m in Sources */,
 				F55F84121C6E438200A945C8 /* CBException.m in Sources */,
 				F55F84181C6E438E00A945C8 /* CBXCUITestServer.m in Sources */,
 				F55F84111C6E437A00A945C8 /* UIDevice+Wifi_IP.m in Sources */,
 				F55F82371C6DD07500A945C8 /* DDLog.m in Sources */,
+				89C5F35B1C9B9C850093A018 /* CBGesture.m in Sources */,
+				89C5F3641C9C58BD0093A018 /* CBTap.m in Sources */,
 				F55F81811C6DD07500A945C8 /* GCDAsyncSocket.m in Sources */,
 				F55F84161C6E438800A945C8 /* CBApplication+Gestures.m in Sources */,
 				F55F82531C6DD07500A945C8 /* RouteRequest.m in Sources */,

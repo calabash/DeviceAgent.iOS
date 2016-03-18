@@ -5,8 +5,12 @@
 
 #import <Foundation/Foundation.h>
 #import "CBApplication.h"
+#import "CBTypedefs.h"
+#import "CBGesture.h"
 
 @interface CBApplication (Gestures)
+
++ (void)performGesture:(CBGesture *)gesture completion:(CompletionBlock)completion;
 
 #pragma mark - Non specific API
 + (void)swipeUp;
