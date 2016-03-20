@@ -1,19 +1,17 @@
 //
-//  CBTap.m
+//  CBDoubleTapCoordinate.m
 //  CBXDriver
 //
-//  Created by Chris Fuentes on 3/18/16.
+//  Created by Chris Fuentes on 3/19/16.
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
-#import "CBInvalidArgumentException.h"
-#import "CBTapCoordinate.h"
-#import "XCTouchPath.h"
+#import "CBDoubleTapCoordinate.h"
 
-@implementation CBTapCoordinate
+@implementation CBDoubleTapCoordinate
 - (id)init {
     if (self = [super init]) {
-        self.name = @"tap";
+        self.name = @"double tap";
     }
     return self;
 }
@@ -37,7 +35,13 @@
     float duration = [self.query.specifiers.allKeys containsObject:CB_DURATION_KEY] ?
     [self.query.specifiers[CB_DURATION_KEY] floatValue] : 0;
     [path liftUpAtOffset:duration];
-    [event addPointerEventPath:path];
+    [event addPointerEventPath:path]; //tap 1
+    
+    path = [[XCPointerEventPath alloc] initForTouchAtPoint:coordinate
+                                                    offset:0];
+    [path liftUpAtOffset:duration];
+    [event addPointerEventPath:path]; //tap 2
+    
     return event;
 }
 
@@ -54,8 +58,14 @@
     [self.query.specifiers[CB_DURATION_KEY] floatValue] : 0;
     [path liftUpAtPoint:coordinate
                  offset:duration];
-    [gesture addTouchPath:path];
+    [gesture addTouchPath:path]; //tap 1
+    
+    path = [[XCTouchPath alloc] initWithTouchDown:coordinate
+                                      orientation:0
+                                           offset:0];
+    [path liftUpAtPoint:coordinate
+                 offset:duration];
+    [gesture addTouchPath:path]; //tap 2
     return gesture;
 }
-
 @end

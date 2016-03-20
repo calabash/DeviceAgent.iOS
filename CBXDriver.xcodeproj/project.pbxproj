@@ -19,6 +19,10 @@
 		89C5F3641C9C58BD0093A018 /* CBTapCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F3621C9C58BD0093A018 /* CBTapCoordinate.m */; };
 		89C5F3671C9C5BC20093A018 /* CBInvalidArgumentException.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3651C9C5BC20093A018 /* CBInvalidArgumentException.h */; };
 		89C5F3681C9C5BC20093A018 /* CBInvalidArgumentException.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F3661C9C5BC20093A018 /* CBInvalidArgumentException.m */; };
+		89C5F36B1C9C912F0093A018 /* CBGestureFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3691C9C912F0093A018 /* CBGestureFactory.h */; };
+		89C5F36C1C9C912F0093A018 /* CBGestureFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F36A1C9C912F0093A018 /* CBGestureFactory.m */; };
+		89C5F36F1C9E32440093A018 /* CBDoubleTapCoordinate.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F36D1C9E32440093A018 /* CBDoubleTapCoordinate.h */; };
+		89C5F3701C9E32440093A018 /* CBDoubleTapCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F36E1C9E32440093A018 /* CBDoubleTapCoordinate.m */; };
 		F55F81801C6DD07500A945C8 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F55F7FED1C6DD07500A945C8 /* GCDAsyncSocket.h */; };
 		F55F81811C6DD07500A945C8 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FEE1C6DD07500A945C8 /* GCDAsyncSocket.m */; };
 		F55F81851C6DD07500A945C8 /* DDData.h in Headers */ = {isa = PBXBuildFile; fileRef = F55F7FF51C6DD07500A945C8 /* DDData.h */; };
@@ -133,6 +137,10 @@
 		89C5F3621C9C58BD0093A018 /* CBTapCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTapCoordinate.m; sourceTree = "<group>"; };
 		89C5F3651C9C5BC20093A018 /* CBInvalidArgumentException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBInvalidArgumentException.h; sourceTree = "<group>"; };
 		89C5F3661C9C5BC20093A018 /* CBInvalidArgumentException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBInvalidArgumentException.m; sourceTree = "<group>"; };
+		89C5F3691C9C912F0093A018 /* CBGestureFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBGestureFactory.h; sourceTree = "<group>"; };
+		89C5F36A1C9C912F0093A018 /* CBGestureFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBGestureFactory.m; sourceTree = "<group>"; };
+		89C5F36D1C9E32440093A018 /* CBDoubleTapCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBDoubleTapCoordinate.h; sourceTree = "<group>"; };
+		89C5F36E1C9E32440093A018 /* CBDoubleTapCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDoubleTapCoordinate.m; sourceTree = "<group>"; };
 		F55F7FED1C6DD07500A945C8 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		F55F7FEE1C6DD07500A945C8 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		F55F7FF51C6DD07500A945C8 /* DDData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDData.h; sourceTree = "<group>"; };
@@ -399,10 +407,14 @@
 		89C5F3601C9C58A10093A018 /* Gestures */ = {
 			isa = PBXGroup;
 			children = (
+				89C5F3691C9C912F0093A018 /* CBGestureFactory.h */,
+				89C5F36A1C9C912F0093A018 /* CBGestureFactory.m */,
 				89C5F3581C9B9C850093A018 /* CBGesture.h */,
 				89C5F3591C9B9C850093A018 /* CBGesture.m */,
 				89C5F3611C9C58BD0093A018 /* CBTapCoordinate.h */,
 				89C5F3621C9C58BD0093A018 /* CBTapCoordinate.m */,
+				89C5F36D1C9E32440093A018 /* CBDoubleTapCoordinate.h */,
+				89C5F36E1C9E32440093A018 /* CBDoubleTapCoordinate.m */,
 			);
 			name = Gestures;
 			sourceTree = "<group>";
@@ -777,6 +789,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89C5F36F1C9E32440093A018 /* CBDoubleTapCoordinate.h in Headers */,
 				F55F81A31C6DD07500A945C8 /* HTTPFileResponse.h in Headers */,
 				F55F819D1C6DD07500A945C8 /* HTTPDataResponse.h in Headers */,
 				F55F818F1C6DD07500A945C8 /* HTTPLogging.h in Headers */,
@@ -815,6 +828,7 @@
 				89C5F3561C9B9B690093A018 /* CBTypedefs.h in Headers */,
 				89C5F3541C9A66E10093A018 /* NSXPCConnection.h in Headers */,
 				F55F81871C6DD07500A945C8 /* DDNumber.h in Headers */,
+				89C5F36B1C9C912F0093A018 /* CBGestureFactory.h in Headers */,
 				F55F82581C6DD07500A945C8 /* RoutingHTTPServer.h in Headers */,
 				F55F82381C6DD07500A945C8 /* DDTTYLogger.h in Headers */,
 			);
@@ -978,6 +992,7 @@
 				F55F840E1C6E437100A945C8 /* SessionRoutes.m in Sources */,
 				F55F82331C6DD07500A945C8 /* DDASLLogger.m in Sources */,
 				F55F82591C6DD07500A945C8 /* RoutingHTTPServer.m in Sources */,
+				89C5F3701C9E32440093A018 /* CBDoubleTapCoordinate.m in Sources */,
 				F55F823B1C6DD07500A945C8 /* ContextFilterLogFormatter.m in Sources */,
 				F55F81A81C6DD07500A945C8 /* WebSocket.m in Sources */,
 				F55F81A01C6DD07500A945C8 /* HTTPDynamicFileResponse.m in Sources */,
@@ -990,6 +1005,7 @@
 				F55F819E1C6DD07500A945C8 /* HTTPDataResponse.m in Sources */,
 				F55F818A1C6DD07500A945C8 /* DDRange.m in Sources */,
 				F55F81881C6DD07500A945C8 /* DDNumber.m in Sources */,
+				89C5F36C1C9C912F0093A018 /* CBGestureFactory.m in Sources */,
 				F55F819A1C6DD07500A945C8 /* MultipartMessageHeaderField.m in Sources */,
 				F55F84131C6E438200A945C8 /* CBElementNotFoundException.m in Sources */,
 				F55F81A21C6DD07500A945C8 /* HTTPErrorResponse.m in Sources */,

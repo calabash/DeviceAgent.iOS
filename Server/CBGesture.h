@@ -6,18 +6,37 @@
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
+/*
+ *  Lots of extra imports here so that all subclasses have them. 
+ */
 #import "CBInvalidArgumentException.h"
+#import "XCSynthesizedEventRecord.h"
 #import <Foundation/Foundation.h>
+#import "XCPointerEventPath.h"
 #import "CBElementQuery.h"
-#import "Testmanagerd.h" //just so subclasses have it
+#import "XCTouchGesture.h"
+#import "XCTestDriver.h"
+#import "Testmanagerd.h"
+#import "CBConstants.h"
 #import "CBTypedefs.h"
+#import "JSONUtils.h"
 #import "CBMacros.h"
 
 @interface CBGesture : NSObject
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) CBElementQuery *query; /* Identify which element or element */
 
-- (void)execute:(CompletionBlock)completion;
-- (void)_executePrivate:(CompletionBlock)completion;
+/*
+ *  Depending on the testmanagerd protocol version, only one of these will be used.
+ *  The results will be sent via _XCT_synthesizeEvent:completion: or _XCT_performTouchGesture:completion:
+ *  respectively.
+ *
+ *  They should both contain identical logic but using different XC objects to create the gestures.
+ */
+- (XCSynthesizedEventRecord *)event;
+- (XCTouchGesture *)gesture;
+
 - (void)validate; //Should throw an exception if something goes wrong.
+
++ (void)executeWithJSON:(NSDictionary *)json completion:(CompletionBlock)completion;
 @end

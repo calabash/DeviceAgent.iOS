@@ -9,13 +9,45 @@
 #import "CBGesture.h"
 
 @implementation CBGesture
-- (void)_executePrivate:(CompletionBlock)completion {
+
++ (void)executeWithJSON:(NSDictionary *)json
+             completion:(CompletionBlock)completion {
+    CBGesture *gest = [self withJSON:json];
+    [gest execute:completion];
+}
+
++ (instancetype)withJSON:(NSDictionary *)json {
+    CBGesture *gesture = [self new];
+    gesture.name = json[@"gesture"];
+    
+    id specs = [json mutableCopy];
+    [specs removeObjectForKey:@"gesture"];
+    
+    if (json[@"query"]) {
+        [specs removeObjectForKey:@"query"];
+        gesture.query = [CBElementQuery withQueryString:json[@"query"] specifiers:specs];
+    } else {
+        gesture.query = [CBElementQuery withSpecifiers:json];
+    }
+    
+    return gesture;
+}
+
+- (XCSynthesizedEventRecord *)event {
+    _must_override_exception;
+}
+
+- (XCTouchGesture *)gesture {
     _must_override_exception;
 }
 
 - (void)execute:(CompletionBlock)completion {
     [self validate];
-    [self _executePrivate:completion];
+    if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] != 0x0) {
+        [[Testmanagerd get] _XCT_synthesizeEvent:[self event] completion:completion];
+    } else {
+        [[Testmanagerd get] _XCT_performTouchGesture:[self gesture] completion:completion];
+    }
 }
 
 - (void)validate {

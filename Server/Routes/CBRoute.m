@@ -9,9 +9,9 @@
 @implementation CBRoute
 
 + (RequestHandler)handleRequestAndExceptions:(RequestHandler)block {
-    return ^(RouteRequest *request, RouteResponse *response) {
+    return ^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
         @try {
-            block(request, response);
+            block(request, body, response);
         } @catch (NSException *e) {
             if ([e isKindOfClass:[CBException class]]) {
                 if ([e isKindOfClass:[CBShutdownServerException class]]) {

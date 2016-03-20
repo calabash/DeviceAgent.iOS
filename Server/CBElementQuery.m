@@ -18,7 +18,7 @@
 }
 
 + (NSArray <CBElementQuery *> *)elementsWithSpecifierKey:(NSString *)key value:(id)value {
-    if ([key isEqualToString:@"coordinates"]) {
+    if ([key isEqualToString:CB_COORDINATE_KEY]) {
         if ([value isKindOfClass:[NSArray class]]) {
             value = @{
                       @"x" : value[0],
@@ -30,7 +30,7 @@
 }
 
 - (NSDictionary *)coordinate {
-    return self.subQuery ? [self.subQuery coordinate] : self.specifiers[@"coordinate"];
+    return self.subQuery ? [self.subQuery coordinate] : self.specifiers[CB_COORDINATE_KEY];
 }
 
 + (CBElementQuery *)withSpecifiers:(NSDictionary *)specifiers {
@@ -64,7 +64,7 @@
     if (specifiers.count == 0) return;
     
     NSString *specifierKey = specifiers.allKeys[0];
-    id specifierValue = specifiers[specifierKey];
+//    id specifierValue = specifiers[specifierKey];
     
     //TODO apply
     
@@ -75,8 +75,8 @@
 - (XCUIElement *)execute {
     if (_specifiers.count == 0) return nil;
     
-    NSString *specifierKey = _specifiers.allKeys[0];
-    id specifierValue = _specifiers[specifierKey];
+//    NSString *specifierKey = _specifiers.allKeys[0];
+//    id specifierValue = _specifiers[specifierKey];
     
     
     return nil;

@@ -139,7 +139,7 @@
 
 - (void)handleRoute:(Route *)route withRequest:(RouteRequest *)request response:(RouteResponse *)response {
 	if (route.handler) {
-		route.handler(request, response);
+		route.handler(request, DATA_TO_JSON(request.body), response);
 	} else {
 		#pragma clang diagnostic push
 		#pragma clang diagnostic ignored "-Warc-performSelector-leaks"

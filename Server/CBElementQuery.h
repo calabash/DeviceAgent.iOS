@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CBConstants.h"
 #import "XCUIElement.h"
 
 @interface CBElementQuery : NSObject
