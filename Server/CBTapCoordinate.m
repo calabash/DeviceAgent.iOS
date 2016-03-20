@@ -26,7 +26,7 @@
 }
 
 - (XCSynthesizedEventRecord *)event {
-    XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc] initWithName:@"tap"
+    XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc] initWithName:self.name
                                                                 interfaceOrientation:0];
     
     CGPoint coordinate = [JSONUtils pointFromCoordinateJSON:[self.query coordinate]];
@@ -42,7 +42,7 @@
 }
 
 - (XCTouchGesture *)gesture {
-    XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:@"tap"];
+    XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:self.name];
     
     CGPoint coordinate = [JSONUtils pointFromCoordinateJSON:[self.query coordinate]];
     
