@@ -11,22 +11,18 @@
 #import "XCTouchPath.h"
 
 @implementation CBTapCoordinate
-- (id)init {
-    if (self = [super init]) {
-        self.name = @"tap";
-    }
-    return self;
-}
+
++ (NSString *)name { return @"tap_coordinate"; }
 
 - (void)validate {
     if (![self.query coordinate]) {
         NSString *msg = @"TapCoordinate requires a coordinate. Syntax is [ x, y ] or { x : #, y : # }.";
-        @throw [CBInvalidArgumentException withMessage:[NSString stringWithFormat:@"[%@] %@ Query: %@", self.name, msg, self.query]];
+        @throw [CBInvalidArgumentException withMessage:[NSString stringWithFormat:@"[%@] %@ Query: %@", self.class.name, msg, [self.query toDict]]];
     }
 }
 
 - (XCSynthesizedEventRecord *)event {
-    XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc] initWithName:self.name
+    XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc] initWithName:self.class.name
                                                                 interfaceOrientation:0];
     
     CGPoint coordinate = [JSONUtils pointFromCoordinateJSON:[self.query coordinate]];
@@ -42,7 +38,7 @@
 }
 
 - (XCTouchGesture *)gesture {
-    XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:self.name];
+    XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:self.class.name];
     
     CGPoint coordinate = [JSONUtils pointFromCoordinateJSON:[self.query coordinate]];
     

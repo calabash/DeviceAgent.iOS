@@ -10,6 +10,10 @@
 
 @implementation CBGesture
 
++ (NSString *)name {
+    _must_override_exception;
+}
+
 + (CBGesture *)executeWithJSON:(NSDictionary *)json
                     completion:(CompletionBlock)completion {
     CBGesture *gest = [self withJSON:json];
@@ -19,7 +23,6 @@
 
 + (instancetype)withJSON:(NSDictionary *)json {
     CBGesture *gesture = [self new];
-    gesture.name = json[@"gesture"];
     
     id specs = [json mutableCopy];
     [specs removeObjectForKey:@"gesture"];

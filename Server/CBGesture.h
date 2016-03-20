@@ -22,10 +22,9 @@
 #import "JSONUtils.h"
 #import "CBMacros.h"
 
-@interface CBGesture : NSObject
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) CBElementQuery *query; /* Identify which element or element */
-
+@class CBGesture;
+@protocol CBGesture <NSObject>
++ (NSString *)name;
 /*
  *  Depending on the testmanagerd protocol version, only one of these will be used.
  *  The results will be sent via _XCT_synthesizeEvent:completion: or _XCT_performTouchGesture:completion:
@@ -39,4 +38,8 @@
 - (void)validate; //Should throw an exception if something goes wrong.
 
 + (CBGesture *)executeWithJSON:(NSDictionary *)json completion:(CompletionBlock)completion;
+@end
+
+@interface CBGesture : NSObject<CBGesture>
+@property (nonatomic, strong) CBElementQuery *query; /* Identify which element or element */
 @end

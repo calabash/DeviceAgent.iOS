@@ -8,19 +8,36 @@
 
 #import "CBInvalidArgumentException.h"
 #import "CBGestureFactory.h"
-#import "CBTapCoordinate.h"
+#import <objc/runtime.h>
 
 @implementation CBGestureFactory
+static NSMutableSet <Class> *gestureClasses;
+
+/*
+ * Obtain all gesture classes
+ */
++ (void)load {
+    gestureClasses = [NSMutableSet set];
+    unsigned int outCount;
+    Class *classes = objc_copyClassList(&outCount);
+    for (int i = 0; i < outCount; i++) {
+        Class c = classes[i];
+        if (class_conformsToProtocol(c, @protocol(CBGesture))) {
+            [gestureClasses addObject:c];
+        }
+    }
+    free(classes);
+}
+
 + (CBGesture *)executeGestureWithJSON:(NSDictionary *)json completion:(CompletionBlock)completion {
     NSString *gesture = json[@"gesture"];
-    NSArray *keys = [json allKeys];
     if (!gesture) {
         @throw [CBInvalidArgumentException withMessage:@"Invalid gesture: missing 'gesture' key."];
     }
-    
-    if ([gesture isEqualToString:@"tap"]) {
-        if ([keys containsObject:CB_COORDINATE_KEY]) {
-            return [CBTapCoordinate executeWithJSON:json completion:completion];
+
+    for (Class <CBGesture> c in gestureClasses) {
+        if ([gesture isEqualToString:[c name]]) {
+            return [c executeWithJSON:json completion:completion];
         }
     }
     

@@ -33,6 +33,10 @@
     return self.subQuery ? [self.subQuery coordinate] : self.specifiers[CB_COORDINATE_KEY];
 }
 
+- (NSArray<NSDictionary *> *)coordinates {
+    return self.subQuery ? [self.subQuery coordinates] : self.specifiers[CB_COORDINATES_KEY];
+}
+
 + (CBElementQuery *)withSpecifiers:(NSDictionary *)specifiers {
     CBElementQuery *e = [self new];
     NSMutableDictionary *s = [specifiers mutableCopy];

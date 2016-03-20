@@ -14,9 +14,12 @@
 @property (nonatomic, strong) NSDictionary *specifiers;
 @property (nonatomic, strong) CBElementQuery *subQuery; //child, parent
 
-- (NSDictionary *)coordinate;
+- (NSDictionary *)coordinate;  //e.g. for tap_coordinate
+- (NSArray<NSDictionary *> *)coordinates; //e.g., for drag_coordinates
 + (CBElementQuery *)withSpecifiers:(NSDictionary *)specifiers;
 + (CBElementQuery *)withQueryString:(NSString *)queryString specifiers:(NSDictionary *)specifiers;
 
 - (XCUIElement *)execute;
+
+- (NSDictionary *)toDict;
 @end

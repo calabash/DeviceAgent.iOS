@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89512BDB1C9EEC3C0027D61E /* CBDragCoordinates.h in Headers */ = {isa = PBXBuildFile; fileRef = 89512BD91C9EEC3C0027D61E /* CBDragCoordinates.h */; };
+		89512BDC1C9EEC3C0027D61E /* CBDragCoordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = 89512BDA1C9EEC3C0027D61E /* CBDragCoordinates.m */; };
 		89C5F3501C9A60E70093A018 /* Testmanagerd.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F34E1C9A60E70093A018 /* Testmanagerd.h */; };
 		89C5F3511C9A60E70093A018 /* Testmanagerd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F34F1C9A60E70093A018 /* Testmanagerd.m */; };
 		89C5F3541C9A66E10093A018 /* NSXPCConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3531C9A66E10093A018 /* NSXPCConnection.h */; };
@@ -123,6 +125,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89512BD91C9EEC3C0027D61E /* CBDragCoordinates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBDragCoordinates.h; sourceTree = "<group>"; };
+		89512BDA1C9EEC3C0027D61E /* CBDragCoordinates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDragCoordinates.m; sourceTree = "<group>"; };
 		898743BC1C5847B30084FD93 /* CBXAppStub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBXAppStub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898743D51C5847B30084FD93 /* CBX.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CBX.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C5F34E1C9A60E70093A018 /* Testmanagerd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Testmanagerd.h; sourceTree = "<group>"; };
@@ -362,6 +366,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89512BD81C9EE90E0027D61E /* CoordinateGestures */ = {
+			isa = PBXGroup;
+			children = (
+				89C5F3611C9C58BD0093A018 /* CBTapCoordinate.h */,
+				89C5F3621C9C58BD0093A018 /* CBTapCoordinate.m */,
+				89C5F36D1C9E32440093A018 /* CBDoubleTapCoordinate.h */,
+				89C5F36E1C9E32440093A018 /* CBDoubleTapCoordinate.m */,
+				89512BD91C9EEC3C0027D61E /* CBDragCoordinates.h */,
+				89512BDA1C9EEC3C0027D61E /* CBDragCoordinates.m */,
+			);
+			name = CoordinateGestures;
+			sourceTree = "<group>";
+		};
 		898743B31C5847B30084FD93 = {
 			isa = PBXGroup;
 			children = (
@@ -411,10 +428,7 @@
 				89C5F36A1C9C912F0093A018 /* CBGestureFactory.m */,
 				89C5F3581C9B9C850093A018 /* CBGesture.h */,
 				89C5F3591C9B9C850093A018 /* CBGesture.m */,
-				89C5F3611C9C58BD0093A018 /* CBTapCoordinate.h */,
-				89C5F3621C9C58BD0093A018 /* CBTapCoordinate.m */,
-				89C5F36D1C9E32440093A018 /* CBDoubleTapCoordinate.h */,
-				89C5F36E1C9E32440093A018 /* CBDoubleTapCoordinate.m */,
+				89512BD81C9EE90E0027D61E /* CoordinateGestures */,
 			);
 			name = Gestures;
 			sourceTree = "<group>";
@@ -806,6 +820,7 @@
 				F55F824E1C6DD07500A945C8 /* HTTPResponseProxy.h in Headers */,
 				F55F823A1C6DD07500A945C8 /* ContextFilterLogFormatter.h in Headers */,
 				F55F81901C6DD07500A945C8 /* HTTPMessage.h in Headers */,
+				89512BDB1C9EEC3C0027D61E /* CBDragCoordinates.h in Headers */,
 				F55F81A11C6DD07500A945C8 /* HTTPErrorResponse.h in Headers */,
 				F55F81851C6DD07500A945C8 /* DDData.h in Headers */,
 				F55F82561C6DD07500A945C8 /* RoutingConnection.h in Headers */,
@@ -1029,6 +1044,7 @@
 				F55F84161C6E438800A945C8 /* CBApplication+Gestures.m in Sources */,
 				F55F82531C6DD07500A945C8 /* RouteRequest.m in Sources */,
 				F55F84101C6E437A00A945C8 /* JSONUtils.m in Sources */,
+				89512BDC1C9EEC3C0027D61E /* CBDragCoordinates.m in Sources */,
 				F55F81A61C6DD07500A945C8 /* HTTPRedirectResponse.m in Sources */,
 				F55F84171C6E438800A945C8 /* CBApplication+Queries.m in Sources */,
 				F55F840B1C6E437100A945C8 /* HealthRoutes.m in Sources */,

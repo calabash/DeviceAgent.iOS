@@ -8,6 +8,8 @@
 
 #import "CBGesture.h"
 
+/*
+    Tap a coordinate. Use `duration` to set the hold time. 
+ */
 @interface CBTapCoordinate : CBGesture
-
 @end
