@@ -10,5 +10,5 @@
 #import "CBGesture.h"
 
 @interface CBGestureFactory : NSObject
-+ (void)executeGestureWithJSON:(NSDictionary *)json completion:(CompletionBlock)completion;
++ (CBGesture *)executeGestureWithJSON:(NSDictionary *)json completion:(CompletionBlock)completion;
 @end

@@ -38,5 +38,5 @@
 
 - (void)validate; //Should throw an exception if something goes wrong.
 
-+ (void)executeWithJSON:(NSDictionary *)json completion:(CompletionBlock)completion;
++ (CBGesture *)executeWithJSON:(NSDictionary *)json completion:(CompletionBlock)completion;
 @end

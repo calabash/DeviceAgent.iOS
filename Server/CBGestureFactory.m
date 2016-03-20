@@ -11,7 +11,7 @@
 #import "CBTapCoordinate.h"
 
 @implementation CBGestureFactory
-+ (void)executeGestureWithJSON:(NSDictionary *)json completion:(CompletionBlock)completion {
++ (CBGesture *)executeGestureWithJSON:(NSDictionary *)json completion:(CompletionBlock)completion {
     NSString *gesture = json[@"gesture"];
     NSArray *keys = [json allKeys];
     if (!gesture) {
@@ -20,7 +20,7 @@
     
     if ([gesture isEqualToString:@"tap"]) {
         if ([keys containsObject:CB_COORDINATE_KEY]) {
-            [CBTapCoordinate executeWithJSON:json completion:completion];
+            return [CBTapCoordinate executeWithJSON:json completion:completion];
         }
     }
     

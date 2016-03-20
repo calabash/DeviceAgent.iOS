@@ -10,10 +10,11 @@
 
 @implementation CBGesture
 
-+ (void)executeWithJSON:(NSDictionary *)json
-             completion:(CompletionBlock)completion {
++ (CBGesture *)executeWithJSON:(NSDictionary *)json
+                    completion:(CompletionBlock)completion {
     CBGesture *gest = [self withJSON:json];
     [gest execute:completion];
+    return gest;
 }
 
 + (instancetype)withJSON:(NSDictionary *)json {
