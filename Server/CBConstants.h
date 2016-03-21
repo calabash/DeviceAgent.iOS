@@ -20,6 +20,8 @@ static NSString *const CB_X2_KEY = @"x2";
 static NSString *const CB_Y2_KEY = @"y2";
 
 static NSString *const CB_DURATION_KEY = @"duration";
+static NSString *const CB_COORDINATE_KEY = @"coordinate";
+static NSString *const CB_COORDINATES_KEY = @"coordinates";
 static NSString *const CB_HEIGHT_KEY = @"height";
 static NSString *const CB_WIDTH_KEY = @"width";
 static NSString *const CB_TYPE_KEY = @"type";
@@ -53,3 +55,5 @@ static NSString *const CB_EMPTY_STRING = @"";
 static NSUInteger const HTTP_STATUS_CODE_EVERYTHING_OK = 200;
 static NSUInteger const HTTP_STATUS_CODE_INVALID_REQUEST = 400;
 static NSUInteger const HTTP_STATUS_CODE_SERVER_ERROR = 500;
+
+static float const DB_DEFAULT_DURATION = 0.1;

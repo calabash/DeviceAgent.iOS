@@ -10,4 +10,5 @@
 + (NSMutableDictionary *)snapshotToJSON:(XCElementSnapshot *)snapshot;
 + (NSMutableDictionary *)elementToJSON:(XCUIElement *)element;
 + (XCUIElementType)elementTypeForString:(NSString *)typeString;
++ (CGPoint)pointFromCoordinateJSON:(id)json;
 @end

@@ -3,6 +3,7 @@
 //  xcuitest-server
 //
 
+#import "CBInvalidArgumentException.h"
 #import "CBApplication.h"
 #import "CBConstants.h"
 #import "JSONUtils.h"
@@ -52,6 +53,29 @@ static NSDictionary *typeStringToElementType;
 + (XCUIElementType)elementTypeForString:(NSString *)typeString {
     NSNumber *typeNumber = typeStringToElementType[[typeString lowercaseString]];
     return typeNumber ? [typeNumber intValue] : -1;
+}
+
++ (CGPoint)pointFromCoordinateJSON:(id)json {
+    if ([json isKindOfClass:[NSArray class]]) {
+        if ([json count] < 2) {
+            @throw [CBInvalidArgumentException withMessage:[NSString stringWithFormat:
+                                                            @"Expected [x, y], got %@",
+                                                            json]];
+        }
+        return CGPointMake([json[0] floatValue], [json[1] floatValue]);
+    } else {
+        if (![json isKindOfClass:[NSDictionary class]]) {
+            @throw [CBInvalidArgumentException withMessage:[NSString stringWithFormat:
+                                                            @"Expected dictionary, got %@",
+                                                            NSStringFromClass([json class])]];
+        }
+        if (!([[json allKeys] containsObject:@"x"] && [[json allKeys] containsObject:@"y"])) {
+            @throw [CBInvalidArgumentException withMessage:[NSString stringWithFormat:
+                                                            @"Expected { x : #, y : # }, got %@",
+                                                            json]];
+        }
+        return CGPointMake([json[@"x"] floatValue], [json[@"y"] floatValue]);
+    }
 }
 
 + (void)load {

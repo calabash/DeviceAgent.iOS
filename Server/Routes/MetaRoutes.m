@@ -12,7 +12,7 @@
 @implementation MetaRoutes
 + (NSArray <CBRoute *> *)getRoutes {
     return @[
-             [CBRoute get:@"/sessionIdentifier" withBlock:^(RouteRequest *request, RouteResponse *response) {
+             [CBRoute get:@"/sessionIdentifier" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
                  NSUUID *testUUID = [XCTestDriver sharedTestDriver].sessionIdentifier;
                  [response respondWithString:[testUUID UUIDString]];
              }]

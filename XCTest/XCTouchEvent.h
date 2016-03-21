@@ -14,6 +14,6 @@
 @property struct CGPoint coordinate; // @synthesize coordinate=_coordinate;
 @property unsigned long long touchEventType; // @synthesize touchEventType=_touchEventType;
 
-+ (id)touchEventWithType:(unsigned long long)arg1 coordinate:(struct CGPoint)arg2 offset:(double)arg3;
++ (XCTouchEvent *)touchEventWithType:(unsigned long long)arg1 coordinate:(struct CGPoint)arg2 offset:(double)arg3;
 
 @end

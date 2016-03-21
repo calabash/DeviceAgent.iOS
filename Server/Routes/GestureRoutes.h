@@ -7,5 +7,4 @@
 #import "CBProtocols.h"
 
 @interface GestureRoutes : NSObject<CBRouteProvider>
-
 @end

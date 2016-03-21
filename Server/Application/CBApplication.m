@@ -6,6 +6,7 @@
 #import "CBElementNotFoundException.h"
 #import "XCUICoordinate.h"
 #import "CBApplication.h"
+#import "Testmanagerd.h"
 #import "XCUIElement.h"
 
 @interface CBApplication ()
@@ -70,7 +71,14 @@ static NSInteger currentElementIndex = 0;
 
 - (void)startSession {
     NSLog(@"Launching application '%@'", self.app.bundleID);
-    [self.app launch];
+    [[Testmanagerd get] _XCT_launchApplicationWithBundleID:self.app.bundleID arguments:self.app.launchArguments environment:self.app.launchEnvironment completion:^(NSError *e) {
+        if (e) {
+            @throw [[CBException alloc] initWithName:@"Unable to launch app"
+                                              reason:e.localizedDescription
+                                            userInfo:@{@"bundleId" : self.app.bundleID}];
+        }
+    }];
+//    [self.app launch];
 }
 
 + (void)killCurrentApplication {
@@ -84,9 +92,10 @@ static NSInteger currentElementIndex = 0;
               launchArgs:(NSArray *)launchArgs
                      env:(NSDictionary *)environment {
     
-    if ([currentApplication hasSession]) {
-        [currentApplication kill];
-    }
+    //TODO: This seems to crash/end the test session... 
+//    if ([currentApplication hasSession]) {
+//        [currentApplication kill];
+//    }
     
     currentApplication.app = [[XCUIApplication alloc] initPrivateWithPath:bundlePath bundleID:bundleID];
     currentApplication.app.launchArguments = launchArgs ?: @[];

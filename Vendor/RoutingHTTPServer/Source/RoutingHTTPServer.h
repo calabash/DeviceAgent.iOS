@@ -3,7 +3,7 @@
 #import "RouteRequest.h"
 #import "RouteResponse.h"
 
-typedef void (^RequestHandler)(RouteRequest *request, RouteResponse *response);
+typedef void (^RequestHandler)(RouteRequest *request, NSDictionary *body, RouteResponse *response);
 
 @interface RoutingHTTPServer : HTTPServer
 
