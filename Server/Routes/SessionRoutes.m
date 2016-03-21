@@ -7,7 +7,9 @@
 #import "CBXCUITestServer.h"
 #import "CBApplication.h"
 #import "SessionRoutes.h"
+#import "Testmanagerd.h"
 #import "CBConstants.h"
+#import "XCDeviceEvent.h"
 #import "CBMacros.h"
 
 @implementation SessionRoutes
@@ -46,6 +48,7 @@
                  [response respondWithString:@"Goodbye."];
                  [CBXCUITestServer stop];
              }]
+             
              ];
 }
 

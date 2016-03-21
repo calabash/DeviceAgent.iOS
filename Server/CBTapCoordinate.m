@@ -22,6 +22,7 @@
 }
 
 - (XCSynthesizedEventRecord *)event {
+    
     XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc] initWithName:self.class.name
                                                                 interfaceOrientation:0];
     
