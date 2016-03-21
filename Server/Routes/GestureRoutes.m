@@ -3,7 +3,6 @@
 //  xcuitest-server
 //
 
-#import "CBApplication+Gestures.h"
 #import "CBGestureFactory.h"
 #import "GestureRoutes.h"
 #import "CBConstants.h"
