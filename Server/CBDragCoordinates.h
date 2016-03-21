@@ -11,5 +11,5 @@
 /*
     Drag between any number of coordinates. Use `duration` to set the length of the drag time between points.
  */
-@interface CBDragCoordinates : CBGesture
+@interface CBDragCoordinates : CBGesture<CBGesture>
 @end

@@ -36,7 +36,7 @@ static NSMutableSet <Class> *gestureClasses;
     }
 
     for (Class <CBGesture> c in gestureClasses) {
-        if ([gesture isEqualToString:[c name]]) {
+        if (c != [CBGesture class] && [gesture isEqualToString:[c name]]) {
             return [c executeWithJSON:json completion:completion];
         }
     }

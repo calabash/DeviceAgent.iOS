@@ -31,7 +31,8 @@
                                                                         offset:0];
     
     float duration = [self.query.specifiers.allKeys containsObject:CB_DURATION_KEY] ?
-    [self.query.specifiers[CB_DURATION_KEY] floatValue] : 0;
+    [self.query.specifiers[CB_DURATION_KEY] floatValue] : DB_DEFAULT_DURATION;
+    
     [path liftUpAtOffset:duration];
     [event addPointerEventPath:path];
     return event;
@@ -47,7 +48,8 @@
                                                         offset:0];
     
     float duration = [self.query.specifiers.allKeys containsObject:CB_DURATION_KEY] ?
-    [self.query.specifiers[CB_DURATION_KEY] floatValue] : 0;
+    [self.query.specifiers[CB_DURATION_KEY] floatValue] : DB_DEFAULT_DURATION;
+    
     [path liftUpAtPoint:coordinate
                  offset:duration];
     [gesture addTouchPath:path];
