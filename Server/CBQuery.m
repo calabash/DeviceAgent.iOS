@@ -6,9 +6,9 @@
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
-#import "CBElementQuery.h"
+#import "CBQuery.h"
 
-@implementation CBElementQuery
+@implementation CBQuery
 + (NSMutableDictionary *)specifiersFromQueryString:(NSString *)queryString {
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     
@@ -37,8 +37,8 @@
     return self.subQuery ? [self.subQuery coordinates] : self.specifiers[CB_COORDINATES_KEY];
 }
 
-+ (CBElementQuery *)withSpecifiers:(NSDictionary *)specifiers {
-    CBElementQuery *e = [self new];
++ (CBQuery *)withSpecifiers:(NSDictionary *)specifiers {
+    CBQuery *e = [self new];
     NSMutableDictionary *s = [specifiers mutableCopy];
     
     /*
@@ -47,7 +47,7 @@
      */
     NSString *subKey = s[@"child"] ? @"child" : s[@"parent"] ? @"parent" : nil;
     if (subKey) {
-        CBElementQuery *sub = [self withQueryString:s[subKey][@"query"]
+        CBQuery *sub = [self withQueryString:s[subKey][@"query"]
                                          specifiers:s[subKey]];
         e.subQuery = sub;
         [s removeObjectForKey:subKey];
@@ -57,7 +57,7 @@
     return e;
 }
 
-+ (CBElementQuery *)withQueryString:(NSString *)queryString specifiers:(NSDictionary *)specifiers {
++ (CBQuery *)withQueryString:(NSString *)queryString specifiers:(NSDictionary *)specifiers {
     NSMutableDictionary *queryStringSpecifiers = [self specifiersFromQueryString:queryString];
     [queryStringSpecifiers addEntriesFromDictionary:specifiers];
     

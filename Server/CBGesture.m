@@ -9,8 +9,17 @@
 #import "CBGesture.h"
 
 @implementation CBGesture
+@synthesize warnings;
 
 + (NSString *)name {
+    _must_override_exception;
+}
+
+- (NSArray <NSString *> *)requiredKeys {
+    _must_override_exception;
+}
+
+- (NSArray <NSString *> *)optionalKeys {
     _must_override_exception;
 }
 
@@ -29,9 +38,9 @@
     
     if (json[@"query"]) {
         [specs removeObjectForKey:@"query"];
-        gesture.query = [CBElementQuery withQueryString:json[@"query"] specifiers:specs];
+        gesture.query = [CBQuery withQueryString:json[@"query"] specifiers:specs];
     } else {
-        gesture.query = [CBElementQuery withSpecifiers:json];
+        gesture.query = [CBQuery withSpecifiers:json];
     }
     
     return gesture;
@@ -46,7 +55,12 @@
 }
 
 - (void)execute:(CompletionBlock)completion {
-    [self validate];
+    /*
+        TODO: validate required keys and optional keys!!
+     */
+    
+    [self validate]; //should be invoked by subclass
+    
     if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] != 0x0) {
         [[Testmanagerd get] _XCT_synthesizeEvent:[self event] completion:^(NSError *e) {
             if (e) @throw [CBException withMessage:@"Error performing gesture"];

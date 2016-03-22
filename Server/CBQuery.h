@@ -10,14 +10,14 @@
 #import "CBConstants.h"
 #import "XCUIElement.h"
 
-@interface CBElementQuery : NSObject
+@interface CBQuery : NSObject
 @property (nonatomic, strong) NSDictionary *specifiers;
-@property (nonatomic, strong) CBElementQuery *subQuery; //child, parent
+@property (nonatomic, strong) CBQuery *subQuery; //child, parent
 
 - (NSDictionary *)coordinate;  //e.g. for tap_coordinate
-- (NSArray<NSDictionary *> *)coordinates; //e.g., for drag_coordinates
-+ (CBElementQuery *)withSpecifiers:(NSDictionary *)specifiers;
-+ (CBElementQuery *)withQueryString:(NSString *)queryString specifiers:(NSDictionary *)specifiers;
+- (NSArray <NSDictionary *> *)coordinates; //e.g., for drag_coordinates
++ (CBQuery *)withSpecifiers:(NSDictionary *)specifiers;
++ (CBQuery *)withQueryString:(NSString *)queryString specifiers:(NSDictionary *)specifiers;
 
 - (XCUIElement *)execute;
 

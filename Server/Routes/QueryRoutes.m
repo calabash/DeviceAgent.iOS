@@ -4,14 +4,19 @@
 //
 
 #import "CBApplication+Queries.h"
+#import "CBQuery.h"
 #import "QueryRoutes.h"
 #import "CBConstants.h"
 
 @implementation QueryRoutes
 + (NSArray <CBRoute *> *)getRoutes {
     return @[
-             [CBRoute get:@"/tree" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
+             [CBRoute get:@"/1.0/tree" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
                  [response respondWithJSON:[CBApplication tree]];
+             }],
+             
+             [CBRoute post:@"/1.0/gesture" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
+
              }],
              
              [CBRoute get:@"/query/marked/:text" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
@@ -29,6 +34,7 @@
                  NSString *type = request.params[CB_TYPE_KEY];
                  [response respondWithJSON:[CBApplication jsonForElementsWithType:type]];
              }],
+             
              
              ];
 }
