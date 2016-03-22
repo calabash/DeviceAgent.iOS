@@ -32,6 +32,7 @@
 
 + (instancetype)withJSON:(NSDictionary *)json {
     CBGesture *gesture = [self new];
+    gesture.warnings = [NSMutableArray array];
     
     id specs = [json mutableCopy];
     [specs removeObjectForKey:@"gesture"];
@@ -54,12 +55,30 @@
     _must_override_exception;
 }
 
+- (void)addWarning:(NSString *)format, ... {
+    va_list args;
+    va_start(args, format);
+    NSString *msg = [NSString stringWithFormat:format, args];
+    [self.warnings addObject:[NSString stringWithFormat:@"[WARNING]: %@",  msg]];
+    va_end(args);
+}
+
 - (void)execute:(CompletionBlock)completion {
-    /*
-        TODO: validate required keys and optional keys!!
-     */
+    NSArray *delta = [self.query requiredSpecifierDelta:[self requiredKeys]];
+    if (delta.count > 0) {
+        @throw [CBInvalidArgumentException withFormat:@"[%@] Missing required keys: %@",
+                [self.class name],
+                delta];
+    }
     
-    [self validate]; //should be invoked by subclass
+    delta = [self.query optionalSpecifierDelta:[self optionalKeys]];
+    if (delta.count > 0) {
+        for (NSString *key in delta) {
+            [self addWarning:@"'%@' is an unsupported key.", key];
+        }
+    }
+    
+    [self validate]; //Should be implemented by subclass
     
     if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] != 0x0) {
         [[Testmanagerd get] _XCT_synthesizeEvent:[self event] completion:^(NSError *e) {
@@ -70,7 +89,7 @@
             if (e) @throw [CBException withMessage:@"Error performing gesture"];
         }];
     }
-    completion(nil); //TODO refactor
+    completion(nil, self.warnings); //TODO refactor
 }
 
 - (void)validate {

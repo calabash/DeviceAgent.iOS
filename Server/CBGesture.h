@@ -24,6 +24,7 @@
 
 @class CBGesture;
 @protocol CBGesture <NSObject>
+@required
 + (NSString *)name;
 /*
  *  Depending on the testmanagerd protocol version, only one of these will be used.

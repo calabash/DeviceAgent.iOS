@@ -14,6 +14,14 @@
 
 + (NSString *)name { return @"tap_coordinate"; }
 
+- (NSArray <NSString *> *)requiredKeys {
+    return @[@"coordinate"];
+}
+- (NSArray <NSString *> *)optionalKeys {
+    return @[@"duration"];
+}
+
+
 - (void)validate {
     if (![self.query coordinate]) {
         NSString *msg = @"TapCoordinate requires a coordinate. Syntax is [ x, y ] or { x : #, y : # }.";

@@ -17,7 +17,7 @@
     return dict;
 }
 
-+ (NSArray <CBElementQuery *> *)elementsWithSpecifierKey:(NSString *)key value:(id)value {
++ (NSArray <CBQuery *> *)elementsWithSpecifierKey:(NSString *)key value:(id)value {
     if ([key isEqualToString:CB_COORDINATE_KEY]) {
         if ([value isKindOfClass:[NSArray class]]) {
             value = @{
@@ -95,4 +95,19 @@
 - (NSString *)description {
     return [[self toDict] description];
 }
+
+- (NSArray <NSString *> *)requiredSpecifierDelta:(NSArray <NSString *> *)required {
+    NSMutableArray *s1 = [self.specifiers.allKeys mutableCopy];
+    NSMutableArray *s2 = [required mutableCopy];
+    [s2 removeObjectsInArray:s1];
+    return s2;
+}
+
+- (NSArray <NSString *> *)optionalSpecifierDelta:(NSArray <NSString *> *)optional {
+    NSMutableArray *s1 = [self.specifiers.allKeys mutableCopy];
+    NSMutableArray *s2 = [optional mutableCopy];
+    [s1 removeObjectsInArray:s2];
+    return s1;
+}
+
 @end

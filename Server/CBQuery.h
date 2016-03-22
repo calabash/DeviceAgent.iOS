@@ -22,4 +22,14 @@
 - (XCUIElement *)execute;
 
 - (NSDictionary *)toDict;
+
+/*
+    Delta between what is required and what is provided
+ */
+- (NSArray <NSString *> *)requiredSpecifierDelta:(NSArray <NSString *> *)required;
+
+/*
+    Delta between what options are provided and which are supported
+ */
+- (NSArray <NSString *> *)optionalSpecifierDelta:(NSArray <NSString *> *)optional;
 @end

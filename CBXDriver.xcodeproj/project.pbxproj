@@ -418,6 +418,7 @@
 			children = (
 				89C5F35C1C9C51680093A018 /* CBQuery.h */,
 				89C5F35D1C9C51680093A018 /* CBQuery.m */,
+				89D537F41CA1DD9A00F62E09 /* QuerySelectors */,
 			);
 			name = Queries;
 			sourceTree = "<group>";
@@ -432,6 +433,13 @@
 				89512BD81C9EE90E0027D61E /* CoordinateGestures */,
 			);
 			name = Gestures;
+			sourceTree = "<group>";
+		};
+		89D537F41CA1DD9A00F62E09 /* QuerySelectors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = QuerySelectors;
 			sourceTree = "<group>";
 		};
 		F55F7FEA1C6DD07500A945C8 /* Vendor */ = {
