@@ -37,12 +37,8 @@
     id specs = [json mutableCopy];
     [specs removeObjectForKey:@"gesture"];
     
-    if (json[@"query"]) {
-        [specs removeObjectForKey:@"query"];
-        gesture.query = [CBQuery withQueryString:json[@"query"] specifiers:specs];
-    } else {
-        gesture.query = [CBQuery withSpecifiers:json];
-    }
+    gesture.query = [CBQuery withSpecifiers:json
+                          collectWarningsIn:gesture.warnings];
     
     return gesture;
 }

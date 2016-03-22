@@ -7,6 +7,7 @@
 #import "CBQuery.h"
 #import "QueryRoutes.h"
 #import "CBConstants.h"
+#import "JSONUtils.h"
 
 @implementation QueryRoutes
 + (NSArray <CBRoute *> *)getRoutes {
@@ -16,7 +17,16 @@
              }],
              
              [CBRoute post:@"/1.0/gesture" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
-
+                 NSMutableArray *warnings = [NSMutableArray array];
+                 CBQuery *query = [CBQuery withSpecifiers:body collectWarningsIn:warnings];
+                 XCUIElement *el = [query execute];
+                 NSDictionary *json = [JSONUtils snapshotToJSON:el];
+                 
+                 if (warnings.count) {
+                     [response respondWithJSON:@{@"result" : json, @"warnings" : warnings}];
+                 } else {
+                     [response respondWithJSON:@{@"result" : json}];
+                 }
              }],
              
              [CBRoute get:@"/query/marked/:text" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {

@@ -14,7 +14,7 @@ static NSDictionary *elementTypeToString;
 static NSDictionary *typeStringToElementType;
 
 //TODO: apparenty this causes some lag... how to optimize?
-+ (NSMutableDictionary *)snapshotToJSON:(XCElementSnapshot *)snapshot {
++ (NSMutableDictionary *)snapshotToJSON:(NSObject<XCUIElementAttributes> *)snapshot {
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
 
     if ([snapshot isKindOfClass:[XCUIElement class]]) {

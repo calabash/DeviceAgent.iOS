@@ -7,7 +7,7 @@
 #import "XCElementSnapshot.h"
 
 @interface JSONUtils : NSObject
-+ (NSMutableDictionary *)snapshotToJSON:(XCElementSnapshot *)snapshot;
++ (NSMutableDictionary *)snapshotToJSON:(NSObject<XCUIElementAttributes> *)snapshot;
 + (NSMutableDictionary *)elementToJSON:(XCUIElement *)element;
 + (XCUIElementType)elementTypeForString:(NSString *)typeString;
 + (CGPoint)pointFromCoordinateJSON:(id)json;

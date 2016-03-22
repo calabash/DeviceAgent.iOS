@@ -27,6 +27,14 @@
 		89C5F36C1C9C912F0093A018 /* CBGestureFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F36A1C9C912F0093A018 /* CBGestureFactory.m */; };
 		89C5F36F1C9E32440093A018 /* CBDoubleTapCoordinate.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F36D1C9E32440093A018 /* CBDoubleTapCoordinate.h */; };
 		89C5F3701C9E32440093A018 /* CBDoubleTapCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F36E1C9E32440093A018 /* CBDoubleTapCoordinate.m */; };
+		89D537F71CA1DF8500F62E09 /* QuerySelector.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D537F51CA1DF8500F62E09 /* QuerySelector.h */; };
+		89D537F81CA1DF8500F62E09 /* QuerySelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537F61CA1DF8500F62E09 /* QuerySelector.m */; };
+		89D537FB1CA2020700F62E09 /* QuerySelectorId.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D537F91CA2020700F62E09 /* QuerySelectorId.h */; };
+		89D537FC1CA2020700F62E09 /* QuerySelectorId.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537FA1CA2020700F62E09 /* QuerySelectorId.m */; };
+		89D537FF1CA2090500F62E09 /* QuerySelectorFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D537FD1CA2090500F62E09 /* QuerySelectorFactory.h */; };
+		89D538001CA2090500F62E09 /* QuerySelectorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537FE1CA2090500F62E09 /* QuerySelectorFactory.m */; };
+		89D538031CA20DB800F62E09 /* QuerySelectorText.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D538011CA20DB800F62E09 /* QuerySelectorText.h */; };
+		89D538041CA20DB800F62E09 /* QuerySelectorText.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538021CA20DB800F62E09 /* QuerySelectorText.m */; };
 		F55F81801C6DD07500A945C8 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F55F7FED1C6DD07500A945C8 /* GCDAsyncSocket.h */; };
 		F55F81811C6DD07500A945C8 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FEE1C6DD07500A945C8 /* GCDAsyncSocket.m */; };
 		F55F81851C6DD07500A945C8 /* DDData.h in Headers */ = {isa = PBXBuildFile; fileRef = F55F7FF51C6DD07500A945C8 /* DDData.h */; };
@@ -148,6 +156,14 @@
 		89C5F36A1C9C912F0093A018 /* CBGestureFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBGestureFactory.m; sourceTree = "<group>"; };
 		89C5F36D1C9E32440093A018 /* CBDoubleTapCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBDoubleTapCoordinate.h; sourceTree = "<group>"; };
 		89C5F36E1C9E32440093A018 /* CBDoubleTapCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDoubleTapCoordinate.m; sourceTree = "<group>"; };
+		89D537F51CA1DF8500F62E09 /* QuerySelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySelector.h; sourceTree = "<group>"; };
+		89D537F61CA1DF8500F62E09 /* QuerySelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySelector.m; sourceTree = "<group>"; };
+		89D537F91CA2020700F62E09 /* QuerySelectorId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySelectorId.h; sourceTree = "<group>"; };
+		89D537FA1CA2020700F62E09 /* QuerySelectorId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySelectorId.m; sourceTree = "<group>"; };
+		89D537FD1CA2090500F62E09 /* QuerySelectorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySelectorFactory.h; sourceTree = "<group>"; };
+		89D537FE1CA2090500F62E09 /* QuerySelectorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySelectorFactory.m; sourceTree = "<group>"; };
+		89D538011CA20DB800F62E09 /* QuerySelectorText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySelectorText.h; sourceTree = "<group>"; };
+		89D538021CA20DB800F62E09 /* QuerySelectorText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySelectorText.m; sourceTree = "<group>"; };
 		F55F7FED1C6DD07500A945C8 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		F55F7FEE1C6DD07500A945C8 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		F55F7FF51C6DD07500A945C8 /* DDData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDData.h; sourceTree = "<group>"; };
@@ -438,6 +454,14 @@
 		89D537F41CA1DD9A00F62E09 /* QuerySelectors */ = {
 			isa = PBXGroup;
 			children = (
+				89D537F51CA1DF8500F62E09 /* QuerySelector.h */,
+				89D537F61CA1DF8500F62E09 /* QuerySelector.m */,
+				89D537FD1CA2090500F62E09 /* QuerySelectorFactory.h */,
+				89D537FE1CA2090500F62E09 /* QuerySelectorFactory.m */,
+				89D537F91CA2020700F62E09 /* QuerySelectorId.h */,
+				89D537FA1CA2020700F62E09 /* QuerySelectorId.m */,
+				89D538011CA20DB800F62E09 /* QuerySelectorText.h */,
+				89D538021CA20DB800F62E09 /* QuerySelectorText.m */,
 			);
 			name = QuerySelectors;
 			sourceTree = "<group>";
@@ -831,7 +855,9 @@
 				F55F81901C6DD07500A945C8 /* HTTPMessage.h in Headers */,
 				89512BDF1CA095D20027D61E /* DeviceEventRoutes.h in Headers */,
 				89512BDB1C9EEC3C0027D61E /* CBDragCoordinates.h in Headers */,
+				89D537F71CA1DF8500F62E09 /* QuerySelector.h in Headers */,
 				F55F81A11C6DD07500A945C8 /* HTTPErrorResponse.h in Headers */,
+				89D538031CA20DB800F62E09 /* QuerySelectorText.h in Headers */,
 				F55F81851C6DD07500A945C8 /* DDData.h in Headers */,
 				F55F82561C6DD07500A945C8 /* RoutingConnection.h in Headers */,
 				F55F823C1C6DD07500A945C8 /* DispatchQueueLogFormatter.h in Headers */,
@@ -840,7 +866,9 @@
 				F55F81891C6DD07500A945C8 /* DDRange.h in Headers */,
 				F55F82321C6DD07500A945C8 /* DDASLLogger.h in Headers */,
 				89C5F35A1C9B9C850093A018 /* CBGesture.h in Headers */,
+				89D537FB1CA2020700F62E09 /* QuerySelectorId.h in Headers */,
 				F55F81A71C6DD07500A945C8 /* WebSocket.h in Headers */,
+				89D537FF1CA2090500F62E09 /* QuerySelectorFactory.h in Headers */,
 				F55F82521C6DD07500A945C8 /* RouteRequest.h in Headers */,
 				F55F81971C6DD07500A945C8 /* MultipartMessageHeader.h in Headers */,
 				F55F81951C6DD07500A945C8 /* MultipartFormDataParser.h in Headers */,
@@ -1008,9 +1036,11 @@
 			files = (
 				F55F82571C6DD07500A945C8 /* RoutingConnection.m in Sources */,
 				F55F840D1C6E437100A945C8 /* QueryRoutes.m in Sources */,
+				89D537FC1CA2020700F62E09 /* QuerySelectorId.m in Sources */,
 				F55F82551C6DD07500A945C8 /* RouteResponse.m in Sources */,
 				F55F81861C6DD07500A945C8 /* DDData.m in Sources */,
 				F55F840F1C6E437100A945C8 /* UndefinedRoutes.m in Sources */,
+				89D538041CA20DB800F62E09 /* QuerySelectorText.m in Sources */,
 				F55F84141C6E438200A945C8 /* CBShutdownServerException.m in Sources */,
 				F55F824F1C6DD07500A945C8 /* HTTPResponseProxy.m in Sources */,
 				F55F82311C6DD07500A945C8 /* DDAbstractDatabaseLogger.m in Sources */,
@@ -1018,10 +1048,12 @@
 				F55F82331C6DD07500A945C8 /* DDASLLogger.m in Sources */,
 				F55F82591C6DD07500A945C8 /* RoutingHTTPServer.m in Sources */,
 				89C5F3701C9E32440093A018 /* CBDoubleTapCoordinate.m in Sources */,
+				89D538001CA2090500F62E09 /* QuerySelectorFactory.m in Sources */,
 				F55F823B1C6DD07500A945C8 /* ContextFilterLogFormatter.m in Sources */,
 				F55F81A81C6DD07500A945C8 /* WebSocket.m in Sources */,
 				F55F81A01C6DD07500A945C8 /* HTTPDynamicFileResponse.m in Sources */,
 				F55F83591C6DD9C400A945C8 /* XCUITestDriver.m in Sources */,
+				89D537F81CA1DF8500F62E09 /* QuerySelector.m in Sources */,
 				F55F840A1C6E437100A945C8 /* GestureRoutes.m in Sources */,
 				89C5F3511C9A60E70093A018 /* Testmanagerd.m in Sources */,
 				F55F840C1C6E437100A945C8 /* MetaRoutes.m in Sources */,

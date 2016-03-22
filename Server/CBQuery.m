@@ -6,6 +6,7 @@
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
+#import "QuerySelectorFactory.h"
 #import "CBQuery.h"
 
 @implementation CBQuery
@@ -30,66 +31,67 @@
 }
 
 - (NSDictionary *)coordinate {
-    return self.subQuery ? [self.subQuery coordinate] : self.specifiers[CB_COORDINATE_KEY];
+    return self.specifiers[CB_COORDINATE_KEY];
 }
 
 - (NSArray<NSDictionary *> *)coordinates {
-    return self.subQuery ? [self.subQuery coordinates] : self.specifiers[CB_COORDINATES_KEY];
+    return self.specifiers[CB_COORDINATES_KEY];
 }
 
-+ (CBQuery *)withSpecifiers:(NSDictionary *)specifiers {
++ (CBQuery *)withSpecifiers:(NSDictionary *)specifiers
+          collectWarningsIn:(NSMutableArray <NSString *> *)warnings {
     CBQuery *e = [self new];
-    NSMutableDictionary *s = [specifiers mutableCopy];
+    NSMutableDictionary *s = [(specifiers ?: @{}) mutableCopy];
     
     /*
-     *  Subqueries should be removed from the main specifier dict, since
-     *  they need to be parsed only after all elements in the specifiers are parsed.
+        Support for calabash query strings
      */
-    NSString *subKey = s[@"child"] ? @"child" : s[@"parent"] ? @"parent" : nil;
-    if (subKey) {
-        CBQuery *sub = [self withQueryString:s[subKey][@"query"]
-                                         specifiers:s[subKey]];
-        e.subQuery = sub;
-        [s removeObjectForKey:subKey];
+    if (s[@"query"]) {
+        NSMutableDictionary *queryStringSpecifiers = [self specifiersFromQueryString:s[@"query"]];
+        [s removeObjectForKey:@"query"];
+        [s addEntriesFromDictionary:queryStringSpecifiers];
     }
     
-    e.specifiers = s ?: @{};
+    e.specifiers = s;
+    NSMutableArray *selectors = [NSMutableArray array];
+    
+    for (NSString *key in e.specifiers) {
+        QuerySelector *qs = [QuerySelectorFactory selectorWithKey:key value:e.specifiers[key]];
+        if (qs) {
+            [selectors addObject:qs];
+        } else {
+            [warnings addObject:[NSString stringWithFormat:@"[WARNING] '%@' is an invalid query selector", key]];
+        }
+    }
+    
+    //TODO: if there's a child query, add it as a sub query somehow...
+    
+    e.selectors = selectors;
     return e;
-}
-
-+ (CBQuery *)withQueryString:(NSString *)queryString specifiers:(NSDictionary *)specifiers {
-    NSMutableDictionary *queryStringSpecifiers = [self specifiersFromQueryString:queryString];
-    [queryStringSpecifiers addEntriesFromDictionary:specifiers];
-    
-    return [self withSpecifiers:queryStringSpecifiers];
-}
-
-- (void)filterResults:(NSMutableArray <XCUIElement *> *)results bySpecifiers:(NSMutableDictionary *)specifiers {
-    if (specifiers.count == 0) return;
-    
-    NSString *specifierKey = specifiers.allKeys[0];
-//    id specifierValue = specifiers[specifierKey];
-    
-    //TODO apply
-    
-    [specifiers removeObjectForKey:specifierKey];
-    [self filterResults:results bySpecifiers:specifiers];
 }
 
 - (XCUIElement *)execute {
     if (_specifiers.count == 0) return nil;
+
+    XCUIElementQuery *query = nil;
+    for (QuerySelector *querySelector in self.selectors) {
+        query = [querySelector applyToQuery:query];
+    }
     
-//    NSString *specifierKey = _specifiers.allKeys[0];
-//    id specifierValue = _specifiers[specifierKey];
+    //TODO: if there's a child query, recurse
+    //
+    //if (childQuery) {
+    //    return [childQuery execute];
+    //} else {
     
-    
-    return nil;
+    XCUIElement *result = [[XCUIElement alloc] initWithElementQuery:query];
+    [result resolve];
+    return result;
+    //}
 }
 
 - (NSDictionary *)toDict {
-    NSMutableDictionary *dict = [[self specifiers] mutableCopy];
-    if (self.subQuery) dict[@"sub"] = [self.subQuery toDict];
-    return dict;
+    return [[self specifiers] mutableCopy];
 }
 
 - (NSString *)description {
