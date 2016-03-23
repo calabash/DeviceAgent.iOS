@@ -20,7 +20,7 @@
 + (CBQuery *)withSpecifiers:(NSDictionary *)specifiers
           collectWarningsIn:(NSMutableArray <NSString *> *)warnings;
 
-- (XCUIElement *)execute;
+- (NSArray <XCUIElement *> *)execute;
 
 - (NSDictionary *)toDict;
 

@@ -11,4 +11,9 @@
 
 #define _must_override_exception NSString *msg = [NSString stringWithFormat:@"Must override [%@ %@]", NSStringFromClass(self.class), NSStringFromSelector(_cmd)]; @throw [CBException withMessage:msg]
 
+/*
+    endpoint should have the leading slash. Version should be a float with 1 decimal place. 
+ */
+#define endpoint( endpoint, version ) [NSString stringWithFormat:@"/%0.1f%@", version, endpoint]
+
 #endif /* CBMacros_h */

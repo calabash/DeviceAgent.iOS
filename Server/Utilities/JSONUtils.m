@@ -14,7 +14,7 @@ static NSDictionary *elementTypeToString;
 static NSDictionary *typeStringToElementType;
 
 //TODO: apparenty this causes some lag... how to optimize?
-+ (NSMutableDictionary *)snapshotToJSON:(NSObject<XCUIElementAttributes> *)snapshot {
++ (NSMutableDictionary *)snapshotToJSON:(NSObject<FBElement> *)snapshot {
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
 
     if ([snapshot isKindOfClass:[XCUIElement class]]) {
@@ -23,14 +23,14 @@ static NSDictionary *typeStringToElementType;
             return [@{} mutableCopy];
         }
     }
-    json[CB_TYPE_KEY] = elementTypeToString[@(snapshot.elementType)];
-    json[CB_TITLE_KEY] = snapshot.title ?: CB_EMPTY_STRING;
-    json[CB_LABEL_KEY] = snapshot.label ?: CB_EMPTY_STRING;
-    json[CB_VALUE_KEY] = snapshot.value ?: CB_EMPTY_STRING;
-    json[CB_PLACEHOLDER_KEY] = snapshot.placeholderValue ?: CB_EMPTY_STRING;
-    json[CB_RECT_KEY] = [self rectToJSON:snapshot.frame];
-    json[CB_IDENTIFIER_KEY] = snapshot.identifier ?: CB_EMPTY_STRING;
-    json[CB_ENABLED_KEY] = @(snapshot.isEnabled);
+    json[CB_TYPE_KEY] = snapshot.wdType;
+    json[CB_LABEL_KEY] = snapshot.wdLabel;
+    json[CB_TITLE_KEY] = snapshot.wdTitle;
+    json[CB_VALUE_KEY] = snapshot.wdValue;
+    json[CB_PLACEHOLDER_KEY] = snapshot.wdPlaceholderValue;
+    json[CB_RECT_KEY] = [self rectToJSON:snapshot.wdFrame];
+    json[CB_IDENTIFIER_KEY] = snapshot.wdName;
+    json[CB_ENABLED_KEY] = @(snapshot.wdEnabled);
     json[CB_TEST_ID] = [CBApplication cacheElement:(XCUIElement *)snapshot];
     
     //TODO: visibility?
@@ -53,6 +53,10 @@ static NSDictionary *typeStringToElementType;
 + (XCUIElementType)elementTypeForString:(NSString *)typeString {
     NSNumber *typeNumber = typeStringToElementType[[typeString lowercaseString]];
     return typeNumber ? [typeNumber intValue] : -1;
+}
+
++ (NSString *)stringForElementType:(XCUIElementType)type {
+    return elementTypeToString[@(type)];
 }
 
 + (CGPoint)pointFromCoordinateJSON:(id)json {

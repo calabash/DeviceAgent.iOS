@@ -4,11 +4,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "XCElementSnapshot.h"
+#import "XCUIElement+WebDriverAttributes.h"
 
 @interface JSONUtils : NSObject
-+ (NSMutableDictionary *)snapshotToJSON:(NSObject<XCUIElementAttributes> *)snapshot;
++ (NSMutableDictionary *)snapshotToJSON:(NSObject<FBElement> *)snapshot;
 + (NSMutableDictionary *)elementToJSON:(XCUIElement *)element;
 + (XCUIElementType)elementTypeForString:(NSString *)typeString;
++ (NSString *)stringForElementType:(XCUIElementType)type;
 + (CGPoint)pointFromCoordinateJSON:(id)json;
 @end

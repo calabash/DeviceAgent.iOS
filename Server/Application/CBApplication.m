@@ -104,13 +104,4 @@ static NSInteger currentElementIndex = 0;
     [currentApplication startSession];
 }
 
-+ (void)launchBundleID:(NSString *)bundleID
-            launchArgs:(NSArray *)launchArgs
-                   env:(NSDictionary *)environment {
-    [self launchBundlePath:nil
-                  bundleID:bundleID
-                launchArgs:launchArgs
-                       env:environment];
-}
-
 @end

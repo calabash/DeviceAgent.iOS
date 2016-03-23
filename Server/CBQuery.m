@@ -70,7 +70,7 @@
     return e;
 }
 
-- (XCUIElement *)execute {
+- (NSArray <XCUIElement *> *)execute {
     if (_specifiers.count == 0) return nil;
 
     XCUIElementQuery *query = nil;
@@ -84,9 +84,7 @@
     //    return [childQuery execute];
     //} else {
     
-    XCUIElement *result = [[XCUIElement alloc] initWithElementQuery:query];
-    [result resolve];
-    return result;
+    return [query allElementsBoundByIndex];
     //}
 }
 

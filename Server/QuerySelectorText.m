@@ -12,7 +12,7 @@ static NSArray *textProperties;
 
 @implementation QuerySelectorText
 + (void)load {
-    textProperties = @[@"label", @"title", @"value", @"accessibilityLabel", @"placeholderValue"];
+    textProperties = @[@"wdLabel", @"wdTitle", @"wdValue", @"wdPlaceholderValue"];
 }
 
 + (NSString *)name { return @"text"; }

@@ -6,8 +6,9 @@
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
-#import "CBApplication.h"
+#import <XCTest/XCUIElementQuery.h>
 #import "XCUIApplication.h"
+#import "CBApplication.h"
 #import "QuerySelector.h"
 
 @implementation QuerySelector
@@ -25,7 +26,8 @@
 }
 - (XCUIElementQuery *)applyToQuery:(XCUIElementQuery *)query {
     if (query == nil) {
-        return [self applyInternal:[CBApplication currentApplication].query];
+        XCUIElementQuery *all = [[CBApplication currentApplication].query descendantsMatchingType:XCUIElementTypeAny];
+        return [self applyInternal:all];
     } else {
         return [self applyInternal:query];
     }

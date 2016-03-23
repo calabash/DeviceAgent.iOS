@@ -16,16 +16,20 @@
                  [response respondWithJSON:[CBApplication tree]];
              }],
              
-             [CBRoute post:@"/1.0/gesture" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
+             [CBRoute post:@"/1.0/query" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
                  NSMutableArray *warnings = [NSMutableArray array];
                  CBQuery *query = [CBQuery withSpecifiers:body collectWarningsIn:warnings];
-                 XCUIElement *el = [query execute];
-                 NSDictionary *json = [JSONUtils snapshotToJSON:el];
+                 NSArray <XCUIElement *> *elements = [query execute];
+                 NSMutableArray *results = [NSMutableArray arrayWithCapacity:elements.count];
+                 for (XCUIElement *el in elements) {
+                     NSDictionary *json = [JSONUtils snapshotToJSON:el];
+                     [results addObject:json];
+                 }
                  
                  if (warnings.count) {
-                     [response respondWithJSON:@{@"result" : json, @"warnings" : warnings}];
+                     [response respondWithJSON:@{@"result" : results, @"warnings" : warnings}];
                  } else {
-                     [response respondWithJSON:@{@"result" : json}];
+                     [response respondWithJSON:@{@"result" : results}];
                  }
              }],
              
