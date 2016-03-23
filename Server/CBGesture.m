@@ -20,7 +20,11 @@
 }
 
 - (NSArray <NSString *> *)optionalKeys {
-    _must_override_exception;
+    return @[];
+}
+
+- (NSArray <NSString *> *)optionalSpecifiers {
+    return @[];
 }
 
 + (CBGesture *)executeWithJSON:(NSDictionary *)json
@@ -66,7 +70,7 @@
                 [JSONUtils objToJSONString:delta]];
     }
     
-    delta = [self.query optionalSpecifierDelta:[self optionalKeys]];
+    delta = [self.query optionalKeyDelta:[self optionalSpecifiers]];
     if (delta.count > 0) {
         for (NSString *key in delta) {
             [self addWarning:@"'%@' is not a supported option for %@.", key, [self.class name]];

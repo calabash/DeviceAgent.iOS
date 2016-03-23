@@ -48,7 +48,7 @@
  */
 - (NSArray <NSString *> *)requiredKeys;
 - (NSArray <NSString *> *)optionalKeys;
-
+- (NSArray <NSString *> *)optionalSpecifiers;
 
 /*
  * Should throw an exception if something goes wrong.

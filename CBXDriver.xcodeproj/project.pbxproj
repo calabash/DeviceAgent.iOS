@@ -47,6 +47,8 @@
 		89D5381A1CA3551600F62E09 /* QuerySelectorProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538181CA3551600F62E09 /* QuerySelectorProperty.m */; };
 		89D5381D1CA359B200F62E09 /* QuerySelectorPropertyLike.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D5381B1CA359B200F62E09 /* QuerySelectorPropertyLike.h */; };
 		89D5381E1CA359B200F62E09 /* QuerySelectorPropertyLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5381C1CA359B200F62E09 /* QuerySelectorPropertyLike.m */; };
+		89D538211CA35ACC00F62E09 /* CBTap.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D5381F1CA35ACC00F62E09 /* CBTap.h */; };
+		89D538221CA35ACC00F62E09 /* CBTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538201CA35ACC00F62E09 /* CBTap.m */; };
 		F55F81801C6DD07500A945C8 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F55F7FED1C6DD07500A945C8 /* GCDAsyncSocket.h */; };
 		F55F81811C6DD07500A945C8 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FEE1C6DD07500A945C8 /* GCDAsyncSocket.m */; };
 		F55F81851C6DD07500A945C8 /* DDData.h in Headers */ = {isa = PBXBuildFile; fileRef = F55F7FF51C6DD07500A945C8 /* DDData.h */; };
@@ -188,6 +190,8 @@
 		89D538181CA3551600F62E09 /* QuerySelectorProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySelectorProperty.m; sourceTree = "<group>"; };
 		89D5381B1CA359B200F62E09 /* QuerySelectorPropertyLike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySelectorPropertyLike.h; sourceTree = "<group>"; };
 		89D5381C1CA359B200F62E09 /* QuerySelectorPropertyLike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySelectorPropertyLike.m; sourceTree = "<group>"; };
+		89D5381F1CA35ACC00F62E09 /* CBTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTap.h; sourceTree = "<group>"; };
+		89D538201CA35ACC00F62E09 /* CBTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTap.m; sourceTree = "<group>"; };
 		F55F7FED1C6DD07500A945C8 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		F55F7FEE1C6DD07500A945C8 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		F55F7FF51C6DD07500A945C8 /* DDData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDData.h; sourceTree = "<group>"; };
@@ -516,6 +520,8 @@
 		89D538121CA3511A00F62E09 /* Gestures */ = {
 			isa = PBXGroup;
 			children = (
+				89D5381F1CA35ACC00F62E09 /* CBTap.h */,
+				89D538201CA35ACC00F62E09 /* CBTap.m */,
 			);
 			name = Gestures;
 			sourceTree = "<group>";
@@ -899,6 +905,7 @@
 				89D538101CA34CBE00F62E09 /* QuerySelectorTextLike.h in Headers */,
 				89C5F3631C9C58BD0093A018 /* CBTapCoordinate.h in Headers */,
 				F55F81801C6DD07500A945C8 /* GCDAsyncSocket.h in Headers */,
+				89D538211CA35ACC00F62E09 /* CBTap.h in Headers */,
 				89C5F35E1C9C51680093A018 /* CBQuery.h in Headers */,
 				F55F81931C6DD07500A945C8 /* HTTPServer.h in Headers */,
 				F55F82541C6DD07500A945C8 /* RouteResponse.h in Headers */,
@@ -1132,6 +1139,7 @@
 				F55F84151C6E438800A945C8 /* CBApplication.m in Sources */,
 				F55F819C1C6DD07500A945C8 /* HTTPAsyncFileResponse.m in Sources */,
 				F55F818C1C6DD07500A945C8 /* HTTPAuthenticationRequest.m in Sources */,
+				89D538221CA35ACC00F62E09 /* CBTap.m in Sources */,
 				F55F82391C6DD07500A945C8 /* DDTTYLogger.m in Sources */,
 				89C5F3681C9C5BC20093A018 /* CBInvalidArgumentException.m in Sources */,
 				F55F84091C6E436500A945C8 /* CBRoute.m in Sources */,

@@ -37,7 +37,8 @@
 - (NSArray <NSString *> *)requiredSpecifierDelta:(NSArray <NSString *> *)required;
 
 /*
-    Delta between what options are provided and which are supported
+    Delta between what options are provided and which are supported.
+    E.g. 'speed' might supported for 'flick' but not 'tap'
  */
-- (NSArray <NSString *> *)optionalSpecifierDelta:(NSArray <NSString *> *)optional;
+- (NSArray <NSString *> *)optionalKeyDelta:(NSArray <NSString *> *)optional;
 @end

@@ -127,7 +127,7 @@
     return s2;
 }
 
-- (NSArray <NSString *> *)optionalSpecifierDelta:(NSArray <NSString *> *)optional {
+- (NSArray <NSString *> *)optionalKeyDelta:(NSArray <NSString *> *)optional {
     NSMutableArray *s1 = [self.specifiers.allKeys mutableCopy];
     NSMutableArray *s2 = [optional mutableCopy];
     [s1 removeObjectsInArray:s2];
