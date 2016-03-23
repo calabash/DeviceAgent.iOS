@@ -1,4 +1,6 @@
 /**
+  * TODO: Licensing. See "BSD" file at the root of the project. 
+ 
  * Copyright (c) 2015-present, Facebook, Inc.
  * All rights reserved.
  *
