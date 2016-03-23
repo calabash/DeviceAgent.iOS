@@ -15,14 +15,21 @@
 @property (nonatomic, strong) NSArray <QuerySelector *> *selectors;
 @property (nonatomic, strong) NSDictionary *specifiers;
 
+/*
+    Coordinate based queries
+ */
 - (NSDictionary *)coordinate;  //e.g. for tap_coordinate
 - (NSArray <NSDictionary *> *)coordinates; //e.g., for drag_coordinates
+
+/*
+    General queries
+ */
 + (CBQuery *)withSpecifiers:(NSDictionary *)specifiers
           collectWarningsIn:(NSMutableArray <NSString *> *)warnings;
 
 - (NSArray <XCUIElement *> *)execute;
 
-- (NSDictionary *)toDict;
+- (NSString *)toJSONString;
 
 /*
     Delta between what is required and what is provided

@@ -8,11 +8,14 @@
 
 #import "QuerySelectorText.h"
 
-static NSArray *textProperties;
-
 @implementation QuerySelectorText
+static NSArray <NSString *> *textProperties;
 + (void)load {
     textProperties = @[@"wdLabel", @"wdTitle", @"wdValue", @"wdPlaceholderValue"];
+}
+
++ (NSArray <NSString *> *)textProperties {
+    return textProperties;
 }
 
 + (NSString *)name { return @"text"; }

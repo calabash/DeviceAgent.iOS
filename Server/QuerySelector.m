@@ -13,6 +13,10 @@
 
 @implementation QuerySelector
 
++ (QuerySelectorExecutionPriority)executionPriority {
+    return kQuerySelectorExecutionPriorityAny;
+}
+
 + (NSString *)name { return nil; }
 
 + (instancetype)withValue:(id)value {

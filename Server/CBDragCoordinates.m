@@ -21,7 +21,7 @@
 - (void)validate {
     if (![self.query coordinates] || [self.query coordinates].count < 2) {
         NSString *msg = @"DragCoordinates requires at least 2 coordinates. Coordinate syntax is [ x, y ] or { x : #, y : # }.";
-        @throw [CBInvalidArgumentException withFormat:@"[%@] %@ Query: %@", self.class.name, msg, [self.query toDict]];
+        @throw [CBInvalidArgumentException withFormat:@"[%@] %@ Query: %@", self.class.name, msg, [self.query toJSONString]];
     }
 }
 

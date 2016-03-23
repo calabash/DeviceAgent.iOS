@@ -6,11 +6,19 @@
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
+#import "CBInvalidArgumentException.h"
 #import <Foundation/Foundation.h>
 #import "XCUIElementQuery.h"
 #import "XCUIElement.h"
-#import "CBException.h"
 #import "CBMacros.h"
+
+typedef NS_ENUM(int, QuerySelectorExecutionPriority) {
+    kQuerySelectorExecutionPriorityAny = 0,
+    kQuerySelectorExecutionPrioritySooner = -1,
+    kQuerySelectorExecutionPriorityFirst = INT_MIN,
+    kQuerySelectorExecutionPriorityLater = 1,
+    kQuerySelectorExecutionPriorityLast = INT_MAX
+};
 
 @protocol QuerySelector <NSObject>
 + (NSString *)name;
@@ -21,4 +29,5 @@
 @interface QuerySelector : NSObject<QuerySelector>
 - (XCUIElementQuery *)applyToQuery:(XCUIElementQuery *)query;
 @property (nonatomic, strong) id value;
++ (QuerySelectorExecutionPriority)executionPriority;
 @end

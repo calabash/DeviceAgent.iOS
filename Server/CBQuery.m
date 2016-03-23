@@ -7,6 +7,7 @@
 //
 
 #import "QuerySelectorFactory.h"
+#import "JSONUtils.h"
 #import "CBQuery.h"
 
 @implementation CBQuery
@@ -38,6 +39,14 @@
     return self.specifiers[CB_COORDINATES_KEY];
 }
 
++ (NSArray <NSString *> *)ignoredKeys {
+    return @[
+             @"gesture",
+             @"coordinate",
+             @"coordinates"
+             ];
+}
+
 + (CBQuery *)withSpecifiers:(NSDictionary *)specifiers
           collectWarningsIn:(NSMutableArray <NSString *> *)warnings {
     CBQuery *e = [self new];
@@ -56,6 +65,8 @@
     NSMutableArray *selectors = [NSMutableArray array];
     
     for (NSString *key in e.specifiers) {
+        if ([[CBQuery ignoredKeys] containsObject:key]) { continue; }
+        
         QuerySelector *qs = [QuerySelectorFactory selectorWithKey:key value:e.specifiers[key]];
         if (qs) {
             [selectors addObject:qs];
@@ -63,6 +74,15 @@
             [warnings addObject:[NSString stringWithFormat:@"'%@' is an invalid query selector", key]];
         }
     }
+    
+    /*
+        Sort based on selector priority. E.g. index should come last
+     */
+    [selectors sortUsingComparator:^NSComparisonResult(QuerySelector  *_Nonnull s1, QuerySelector *_Nonnull s2) {
+        QuerySelectorExecutionPriority p1 = [s1.class executionPriority];
+        QuerySelectorExecutionPriority p2 = [s2.class executionPriority];
+        return [@(p1) compare:@(p2)];
+    }];
     
     //TODO: if there's a child query, add it as a sub query somehow...
     
@@ -92,6 +112,10 @@
     return [[self specifiers] mutableCopy];
 }
 
+- (NSString *)toJSONString {
+    return [JSONUtils objToJSONString:[self toDict]];
+}
+
 - (NSString *)description {
     return [[self toDict] description];
 }
@@ -107,6 +131,7 @@
     NSMutableArray *s1 = [self.specifiers.allKeys mutableCopy];
     NSMutableArray *s2 = [optional mutableCopy];
     [s1 removeObjectsInArray:s2];
+    [s1 removeObjectsInArray:[CBQuery ignoredKeys]];
     return s1;
 }
 

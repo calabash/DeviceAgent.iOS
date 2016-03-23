@@ -9,6 +9,7 @@
 #import "DeviceEventRoutes.h"
 #import "XCDeviceEvent.h"
 #import "Testmanagerd.h"
+#import "CBMacros.h"
 
 /*
     TODO:
@@ -28,7 +29,7 @@
 @implementation DeviceEventRoutes
 + (NSArray <CBRoute *> *)getRoutes {
     return @[
-             [CBRoute post:@"/1.0/home" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
+             [CBRoute post:endpoint(@"/home", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
                  int page = HOME_BUTTON_PAGE;
                  int usage = PRESS;
                  int duration = 1;

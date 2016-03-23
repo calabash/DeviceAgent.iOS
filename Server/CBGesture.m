@@ -69,7 +69,7 @@
     delta = [self.query optionalSpecifierDelta:[self optionalKeys]];
     if (delta.count > 0) {
         for (NSString *key in delta) {
-            [self addWarning:@"'%@' is an unsupported key.", key];
+            [self addWarning:@"'%@' is not a supported option for %@.", key, [self.class name]];
         }
     }
     
