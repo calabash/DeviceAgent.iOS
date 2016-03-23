@@ -16,7 +16,7 @@
 + (instancetype)withFormat:(NSString *)format, ... {
     va_list args;
     va_start(args, format);
-    id ret = [self withMessage:[NSString stringWithFormat:format, args]];
+    id ret = [self withMessage:[[NSString alloc] initWithFormat:format arguments:args]];
     va_end(args);
     return ret;
 }

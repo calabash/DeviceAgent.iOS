@@ -60,7 +60,7 @@
         if (qs) {
             [selectors addObject:qs];
         } else {
-            [warnings addObject:[NSString stringWithFormat:@"[WARNING] '%@' is an invalid query selector", key]];
+            [warnings addObject:[NSString stringWithFormat:@"'%@' is an invalid query selector", key]];
         }
     }
     

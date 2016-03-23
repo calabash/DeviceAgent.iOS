@@ -54,8 +54,7 @@
 - (void)addWarning:(NSString *)format, ... {
     va_list args;
     va_start(args, format);
-    NSString *msg = [NSString stringWithFormat:format, args];
-    [self.warnings addObject:[NSString stringWithFormat:@"[WARNING]: %@",  msg]];
+    [self.warnings addObject:[[NSString alloc] initWithFormat:format arguments:args]];
     va_end(args);
 }
 
@@ -64,7 +63,7 @@
     if (delta.count > 0) {
         @throw [CBInvalidArgumentException withFormat:@"[%@] Missing required keys: %@",
                 [self.class name],
-                delta];
+                [JSONUtils objToJSONString:delta]];
     }
     
     delta = [self.query optionalSpecifierDelta:[self optionalKeys]];

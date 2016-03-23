@@ -64,7 +64,7 @@ static NSDictionary *typeStringToElementType;
         if ([json count] < 2) {
             @throw [CBInvalidArgumentException withMessage:[NSString stringWithFormat:
                                                             @"Expected [x, y], got %@",
-                                                            json]];
+                                                            [JSONUtils objToJSONString:json]]];
         }
         return CGPointMake([json[0] floatValue], [json[1] floatValue]);
     } else {
@@ -76,10 +76,23 @@ static NSDictionary *typeStringToElementType;
         if (!([[json allKeys] containsObject:@"x"] && [[json allKeys] containsObject:@"y"])) {
             @throw [CBInvalidArgumentException withMessage:[NSString stringWithFormat:
                                                             @"Expected { x : #, y : # }, got %@",
-                                                            json]];
+                                                           [JSONUtils objToJSONString:json]]];
         }
         return CGPointMake([json[@"x"] floatValue], [json[@"y"] floatValue]);
     }
+}
+
++ (NSString *)objToJSONString:(id)objcJsonObject {
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:objcJsonObject
+                                                       options:0 error:&error];
+    if (error) {
+        NSLog(@"Error: %@", error);
+        return error.localizedDescription;
+    }
+    NSString *jsonString = [[NSString alloc] initWithData:jsonData
+                                                 encoding:NSUTF8StringEncoding];
+    return jsonString;
 }
 
 + (void)load {

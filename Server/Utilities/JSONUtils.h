@@ -12,4 +12,5 @@
 + (XCUIElementType)elementTypeForString:(NSString *)typeString;
 + (NSString *)stringForElementType:(XCUIElementType)type;
 + (CGPoint)pointFromCoordinateJSON:(id)json;
++ (NSString *)objToJSONString:(id)objcJsonObject;
 @end
