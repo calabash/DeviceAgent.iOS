@@ -33,7 +33,10 @@
         }
     }
     if (!contains) {
-        @throw [CBInvalidArgumentException withFormat:@"[%@] Requires at least one of the following specifiers: %@", self.class.name, [JSONUtils objToJSONString:specifiers]];
+        @throw [CBInvalidArgumentException withFormat:
+                @"[%@] Requires at least one of the following specifiers: %@",
+                self.class.name,
+                [JSONUtils objToJSONString:specifiers]];
     }
 }
 
@@ -50,8 +53,8 @@
     
     CGRect frame = el.wdFrame;
     //TODO: use visible center
-    CGPoint center = CGPointMake(frame.origin.x + (frame.size.width / 2.0),
-                                 frame.origin.y + (frame.size.height / 2.0));
+    
+    CGPoint center = CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame));
     
     XCPointerEventPath *path = [[XCPointerEventPath alloc] initForTouchAtPoint:center
                                                                         offset:0];
@@ -75,8 +78,7 @@
     
     CGRect frame = el.wdFrame;
     //TODO: use visible center
-    CGPoint center = CGPointMake(frame.origin.x + (frame.size.width / 2.0),
-                                 frame.origin.y + (frame.size.height / 2.0));
+    CGPoint center =  CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame));
     
     XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:self.class.name];
 
