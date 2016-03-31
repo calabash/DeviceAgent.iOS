@@ -4,9 +4,9 @@ language: objective-c
 osx_image: xcode7.2
 
 script:
-        bundle update
-        make app
-        make xct
+  - bundle update
+  - make app
+  - make unit
 
 notifications:
   email:
