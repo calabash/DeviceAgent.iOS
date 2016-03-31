@@ -25,3 +25,10 @@ ipa:
 app:
 	bin/make/app.sh
 
+
+#
+# Same as `make ipa`, but also embeds a specific .xctestconfiguration. 
+# Requires calabash-tool for resigning. 
+#
+runner:
+	bin/make/runner.sh

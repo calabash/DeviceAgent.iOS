@@ -13,7 +13,7 @@
 #import "XCSynthesizedEventRecord.h"
 #import <Foundation/Foundation.h>
 #import "XCPointerEventPath.h"
-#import "CBElementQuery.h"
+#import "CBQuery.h"
 #import "XCTouchGesture.h"
 #import "XCTestDriver.h"
 #import "Testmanagerd.h"
@@ -24,6 +24,7 @@
 
 @class CBGesture;
 @protocol CBGesture <NSObject>
+@required
 + (NSString *)name;
 /*
  *  Depending on the testmanagerd protocol version, only one of these will be used.
@@ -35,11 +36,32 @@
 - (XCSynthesizedEventRecord *)event;
 - (XCTouchGesture *)gesture;
 
-- (void)validate; //Should throw an exception if something goes wrong.
+/*
+ * `warnings` is a collection of any warnings generated while the query is being executed.
+ */
+@property (nonatomic, strong) NSMutableArray <NSString *> *warnings;
+
+/*
+ * Queries should specify which keys are necessary (e.g. 'coordinate' for tap_coordinate)
+ * as well as which options are available (e.g. 'duration' for tap). 
+ * Any keys present besides these should generate a warning and be added to the `warnings` array.
+ */
+- (NSArray <NSString *> *)requiredKeys;
+- (NSArray <NSString *> *)optionalKeys;
+- (NSArray <NSString *> *)optionalSpecifiers;
+
+/*
+ * Should throw an exception if something goes wrong.
+ */
+- (void)validate;
+
+/*
+ * All-in-one constructor / executor.
+ */
 
 + (CBGesture *)executeWithJSON:(NSDictionary *)json completion:(CompletionBlock)completion;
 @end
 
 @interface CBGesture : NSObject<CBGesture>
-@property (nonatomic, strong) CBElementQuery *query; /* Identify which element or element */
+@property (nonatomic, strong) CBQuery *query; /* Identify which element or element */
 @end

@@ -8,6 +8,7 @@
 
 #import "MetaRoutes.h"
 #import "XCTestDriver.h"
+#import "CBApplication.h"
 
 @implementation MetaRoutes
 + (NSArray <CBRoute *> *)getRoutes {
@@ -15,6 +16,11 @@
              [CBRoute get:@"/sessionIdentifier" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
                  NSUUID *testUUID = [XCTestDriver sharedTestDriver].sessionIdentifier;
                  [response respondWithString:[testUUID UUIDString]];
+             }],
+             [CBRoute get:@"/pid" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
+                 NSString *pidString = [NSString stringWithFormat:@"%d",
+                                        [CBApplication currentApplication].processID];
+                 [response respondWithString:pidString];
              }]
              ];
 }

@@ -1,0 +1,10 @@
+
+
+#TODO: Rewrite this formally
+
+Files used/modified from facebook web driver:
+
+- XCUIElement+WebDriverAttributes.h/.m
+- FBElement.h/.m
+- UIDevice+WiFi.h/.m
+

@@ -9,9 +9,22 @@
 #import "CBGesture.h"
 
 @implementation CBGesture
+@synthesize warnings;
 
 + (NSString *)name {
     _must_override_exception;
+}
+
+- (NSArray <NSString *> *)requiredKeys {
+    _must_override_exception;
+}
+
+- (NSArray <NSString *> *)optionalKeys {
+    return @[];
+}
+
+- (NSArray <NSString *> *)optionalSpecifiers {
+    return @[];
 }
 
 + (CBGesture *)executeWithJSON:(NSDictionary *)json
@@ -23,16 +36,13 @@
 
 + (instancetype)withJSON:(NSDictionary *)json {
     CBGesture *gesture = [self new];
+    gesture.warnings = [NSMutableArray array];
     
     id specs = [json mutableCopy];
     [specs removeObjectForKey:@"gesture"];
     
-    if (json[@"query"]) {
-        [specs removeObjectForKey:@"query"];
-        gesture.query = [CBElementQuery withQueryString:json[@"query"] specifiers:specs];
-    } else {
-        gesture.query = [CBElementQuery withSpecifiers:json];
-    }
+    gesture.query = [CBQuery withSpecifiers:json
+                          collectWarningsIn:gesture.warnings];
     
     return gesture;
 }
@@ -45,8 +55,30 @@
     _must_override_exception;
 }
 
+- (void)addWarning:(NSString *)format, ... {
+    va_list args;
+    va_start(args, format);
+    [self.warnings addObject:[[NSString alloc] initWithFormat:format arguments:args]];
+    va_end(args);
+}
+
 - (void)execute:(CompletionBlock)completion {
-    [self validate];
+    NSArray *delta = [self.query requiredSpecifierDelta:[self requiredKeys]];
+    if (delta.count > 0) {
+        @throw [CBInvalidArgumentException withFormat:@"[%@] Missing required keys: %@",
+                [self.class name],
+                [JSONUtils objToJSONString:delta]];
+    }
+    
+    delta = [self.query optionalKeyDelta:[self optionalSpecifiers]];
+    if (delta.count > 0) {
+        for (NSString *key in delta) {
+            [self addWarning:@"'%@' is not a supported option for %@.", key, [self.class name]];
+        }
+    }
+    
+    [self validate]; //Should be implemented by subclass
+    
     if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] != 0x0) {
         [[Testmanagerd get] _XCT_synthesizeEvent:[self event] completion:^(NSError *e) {
             if (e) @throw [CBException withMessage:@"Error performing gesture"];
@@ -56,7 +88,7 @@
             if (e) @throw [CBException withMessage:@"Error performing gesture"];
         }];
     }
-    completion(nil); //TODO refactor
+    completion(nil, self.warnings); //TODO refactor
 }
 
 - (void)validate {

@@ -5,8 +5,9 @@
 //
 
 #import <XCTest/XCUIApplication.h>
+#import "XCApplicationQuery.h"
 
-@class NSArray, NSDictionary, NSString, XCAccessibilityElement, XCApplicationQuery;
+@class NSArray, NSDictionary, NSString, XCAccessibilityElement;
 
 @interface XCUIApplication ()
 {

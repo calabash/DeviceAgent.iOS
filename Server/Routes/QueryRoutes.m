@@ -4,14 +4,33 @@
 //
 
 #import "CBApplication+Queries.h"
+#import "CBQuery.h"
 #import "QueryRoutes.h"
 #import "CBConstants.h"
+#import "JSONUtils.h"
 
 @implementation QueryRoutes
 + (NSArray <CBRoute *> *)getRoutes {
     return @[
-             [CBRoute get:@"/tree" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
+             [CBRoute get:@"/1.0/tree" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
                  [response respondWithJSON:[CBApplication tree]];
+             }],
+             
+             [CBRoute post:@"/1.0/query" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
+                 NSMutableArray *warnings = [NSMutableArray array];
+                 CBQuery *query = [CBQuery withSpecifiers:body collectWarningsIn:warnings];
+                 NSArray <XCUIElement *> *elements = [query execute];
+                 NSMutableArray *results = [NSMutableArray arrayWithCapacity:elements.count];
+                 for (XCUIElement *el in elements) {
+                     NSDictionary *json = [JSONUtils snapshotToJSON:el];
+                     [results addObject:json];
+                 }
+                 
+                 if (warnings.count) {
+                     [response respondWithJSON:@{@"result" : results, @"warnings" : warnings}];
+                 } else {
+                     [response respondWithJSON:@{@"result" : results}];
+                 }
              }],
              
              [CBRoute get:@"/query/marked/:text" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
@@ -29,6 +48,7 @@
                  NSString *type = request.params[CB_TYPE_KEY];
                  [response respondWithJSON:[CBApplication jsonForElementsWithType:type]];
              }],
+             
              
              ];
 }

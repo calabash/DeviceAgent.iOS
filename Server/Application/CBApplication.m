@@ -37,7 +37,10 @@ static NSInteger currentElementIndex = 0;
      *
      * TODO: ensure that the app is always resolved before a query
      */
-    [currentApplication.app resolve];
+    if ([currentApplication.app lastSnapshot] == nil) {
+        [[currentApplication.app applicationQuery] elementBoundByIndex:0];
+        [currentApplication.app resolve];
+    }
     
     return currentApplication.app;
 }
@@ -102,15 +105,6 @@ static NSInteger currentElementIndex = 0;
     currentApplication.app.launchEnvironment = environment ?: @{};
     
     [currentApplication startSession];
-}
-
-+ (void)launchBundleID:(NSString *)bundleID
-            launchArgs:(NSArray *)launchArgs
-                   env:(NSDictionary *)environment {
-    [self launchBundlePath:nil
-                  bundleID:bundleID
-                launchArgs:launchArgs
-                       env:environment];
 }
 
 @end

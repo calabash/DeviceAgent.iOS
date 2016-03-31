@@ -27,6 +27,7 @@ static NSString *const CB_WIDTH_KEY = @"width";
 static NSString *const CB_TYPE_KEY = @"type";
 static NSString *const CB_TITLE_KEY = @"title";
 static NSString *const CB_LABEL_KEY = @"label";
+static NSString *const CB_KEY_KEY = @"key";
 static NSString *const CB_VALUE_KEY = @"value";
 static NSString *const CB_PLACEHOLDER_KEY = @"placeholder";
 static NSString *const CB_RECT_KEY = @"rect";

@@ -11,10 +11,17 @@
 @implementation CBDoubleTapCoordinate
 + (NSString *)name { return @"double_tap_coordinate"; }
 
+- (NSArray <NSString *> *)requiredKeys {
+    return @[@"coordinate"];
+}
+- (NSArray <NSString *> *)optionalKeys {
+    return @[@"duration"];
+}
+
 - (void)validate {
     if (![self.query coordinate]) {
         NSString *msg = @"TapCoordinate requires a coordinate. Syntax is [ x, y ] or { x : #, y : # }.";
-        @throw [CBInvalidArgumentException withMessage:[NSString stringWithFormat:@"[%@] %@ Query: %@", self.class.name, msg, [self.query toDict]]];
+        @throw [CBInvalidArgumentException withFormat:@"[%@] %@ Query: %@", self.class.name, msg, [self.query toJSONString]];
     }
 }
 

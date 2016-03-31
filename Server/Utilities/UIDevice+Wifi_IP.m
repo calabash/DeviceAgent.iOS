@@ -1,6 +1,6 @@
 /**
  *
- * TODO: Licensing
+ * TODO: Licensing. See "BSD" file at the root of the project. 
  */
 
 #import "UIDevice+Wifi_IP.h"

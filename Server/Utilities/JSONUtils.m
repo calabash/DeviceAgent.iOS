@@ -14,7 +14,7 @@ static NSDictionary *elementTypeToString;
 static NSDictionary *typeStringToElementType;
 
 //TODO: apparenty this causes some lag... how to optimize?
-+ (NSMutableDictionary *)snapshotToJSON:(XCElementSnapshot *)snapshot {
++ (NSMutableDictionary *)snapshotToJSON:(NSObject<FBElement> *)snapshot {
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
 
     if ([snapshot isKindOfClass:[XCUIElement class]]) {
@@ -23,14 +23,14 @@ static NSDictionary *typeStringToElementType;
             return [@{} mutableCopy];
         }
     }
-    json[CB_TYPE_KEY] = elementTypeToString[@(snapshot.elementType)];
-    json[CB_TITLE_KEY] = snapshot.title ?: CB_EMPTY_STRING;
-    json[CB_LABEL_KEY] = snapshot.label ?: CB_EMPTY_STRING;
-    json[CB_VALUE_KEY] = snapshot.value ?: CB_EMPTY_STRING;
-    json[CB_PLACEHOLDER_KEY] = snapshot.placeholderValue ?: CB_EMPTY_STRING;
-    json[CB_RECT_KEY] = [self rectToJSON:snapshot.frame];
-    json[CB_IDENTIFIER_KEY] = snapshot.identifier ?: CB_EMPTY_STRING;
-    json[CB_ENABLED_KEY] = @(snapshot.isEnabled);
+    json[CB_TYPE_KEY] = snapshot.wdType;
+    json[CB_LABEL_KEY] = snapshot.wdLabel;
+    json[CB_TITLE_KEY] = snapshot.wdTitle;
+    json[CB_VALUE_KEY] = snapshot.wdValue;
+    json[CB_PLACEHOLDER_KEY] = snapshot.wdPlaceholderValue;
+    json[CB_RECT_KEY] = [self rectToJSON:snapshot.wdFrame];
+    json[CB_IDENTIFIER_KEY] = snapshot.wdName;
+    json[CB_ENABLED_KEY] = @(snapshot.wdEnabled);
     json[CB_TEST_ID] = [CBApplication cacheElement:(XCUIElement *)snapshot];
     
     //TODO: visibility?
@@ -55,12 +55,16 @@ static NSDictionary *typeStringToElementType;
     return typeNumber ? [typeNumber intValue] : -1;
 }
 
++ (NSString *)stringForElementType:(XCUIElementType)type {
+    return elementTypeToString[@(type)];
+}
+
 + (CGPoint)pointFromCoordinateJSON:(id)json {
     if ([json isKindOfClass:[NSArray class]]) {
         if ([json count] < 2) {
             @throw [CBInvalidArgumentException withMessage:[NSString stringWithFormat:
                                                             @"Expected [x, y], got %@",
-                                                            json]];
+                                                            [JSONUtils objToJSONString:json]]];
         }
         return CGPointMake([json[0] floatValue], [json[1] floatValue]);
     } else {
@@ -72,10 +76,23 @@ static NSDictionary *typeStringToElementType;
         if (!([[json allKeys] containsObject:@"x"] && [[json allKeys] containsObject:@"y"])) {
             @throw [CBInvalidArgumentException withMessage:[NSString stringWithFormat:
                                                             @"Expected { x : #, y : # }, got %@",
-                                                            json]];
+                                                           [JSONUtils objToJSONString:json]]];
         }
         return CGPointMake([json[@"x"] floatValue], [json[@"y"] floatValue]);
     }
+}
+
++ (NSString *)objToJSONString:(id)objcJsonObject {
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:objcJsonObject
+                                                       options:0 error:&error];
+    if (error) {
+        NSLog(@"Error: %@", error);
+        return error.localizedDescription;
+    }
+    NSString *jsonString = [[NSString alloc] initWithData:jsonData
+                                                 encoding:NSUTF8StringEncoding];
+    return jsonString;
 }
 
 + (void)load {
