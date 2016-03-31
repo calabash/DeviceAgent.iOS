@@ -1,7 +1,9 @@
 all:
 	$(MAKE) clean
+	$(MAKE) xct
 	$(MAKE) app
 	$(MAKE) ipa
+	$(MAKE) runner
 
 clean:
 	rm -rf build
@@ -25,10 +27,26 @@ ipa:
 app:
 	bin/make/app.sh
 
-
-#
-# Same as `make ipa`, but also embeds a specific .xctestconfiguration. 
-# Requires calabash-tool for resigning. 
-#
+# Same as `make ipa`, but also embeds a specific .xctestconfiguration.
+# Requires calabash-tool for resigning.
 runner:
 	bin/make/runner.sh
+
+# Runs the XCTest unit tests.  Would like to use xctest, but there is a
+# directory named XCTest which violates make defaults. xct is the rule
+# in the LPServer.
+#
+# If you encounter a build error, use:
+#
+# $ XCPRETTY=0 make xct
+#
+# to diagnose.
+#
+# When running with xcpretty, a junit style report can be found in:
+#
+# build/reports/junit.xml
+xct:
+	bundle exec bin/test/xctest.rb
+unit:
+	$(MAKE) xct
+
