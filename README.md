@@ -17,6 +17,7 @@ $ cd calabash-xcuitest-server
 $ bundle update
 $ make app
 $ make ipa
+$ make runner
 ```
 
 To build with an alternative Xcode:
@@ -51,7 +52,12 @@ Maintainers should be using the Calabash.keychain (calabash/calabash-codesign).
 
 ### Testing
 
-TBD
+To run the Objective-C unit tests:
+
+```
+$ bundle update
+$ make unit
+```
 
 ### Contributing
 

@@ -135,6 +135,79 @@
 		F55F84151C6E438800A945C8 /* CBApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BD1C6DDF1300A945C8 /* CBApplication.m */; };
 		F55F84171C6E438800A945C8 /* CBApplication+Queries.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BB1C6DDF1300A945C8 /* CBApplication+Queries.m */; };
 		F55F84181C6E438E00A945C8 /* CBXCUITestServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BF1C6DDF1300A945C8 /* CBXCUITestServer.m */; };
+		F5B0A11D1CAD3D8C00E056CE /* CBXTestToolsStandup.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B0A1161CAD3D8B00E056CE /* CBXTestToolsStandup.m */; };
+		F5B0A1841CAD3FB600E056CE /* libExpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B0A16B1CAD3FB600E056CE /* libExpecta.a */; };
+		F5B0A1851CAD3FB600E056CE /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B0A16C1CAD3FB600E056CE /* OCHamcrestIOS.framework */; };
+		F5B0A1861CAD3FB600E056CE /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B0A16E1CAD3FB600E056CE /* libOCMock.a */; };
+		F5B0A1871CAD3FB600E056CE /* OCMockitoIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B0A17A1CAD3FB600E056CE /* OCMockitoIOS.framework */; };
+		F5B0A1881CAD3FB600E056CE /* libSpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B0A17C1CAD3FB600E056CE /* libSpecta.a */; };
+		F5B0A18B1CAD4B4000E056CE /* CBXiOSVersionInlinesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B0A18A1CAD4B4000E056CE /* CBXiOSVersionInlinesTest.m */; };
+		F5B0A1A31CAD4DE800E056CE /* FBElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5380B1CA32AE900F62E09 /* FBElement.m */; };
+		F5B0A1A41CAD4DE800E056CE /* XCUIElement+WebDriverAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538071CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.m */; };
+		F5B0A1A51CAD4DE800E056CE /* UIDevice+Wifi_IP.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83DD1C6DDF1300A945C8 /* UIDevice+Wifi_IP.m */; };
+		F5B0A1A61CAD4DFA00E056CE /* CBXCUITestServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BF1C6DDF1300A945C8 /* CBXCUITestServer.m */; };
+		F5B0A1A71CAD4E2700E056CE /* CBGestureFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F36A1C9C912F0093A018 /* CBGestureFactory.m */; };
+		F5B0A1A81CAD4E2700E056CE /* CBGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F3591C9B9C850093A018 /* CBGesture.m */; };
+		F5B0A1A91CAD4E2700E056CE /* CBTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538201CA35ACC00F62E09 /* CBTap.m */; };
+		F5B0A1AA1CAD4E2700E056CE /* CBTapCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F3621C9C58BD0093A018 /* CBTapCoordinate.m */; };
+		F5B0A1AB1CAD4E2700E056CE /* CBDoubleTapCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F36E1C9E32440093A018 /* CBDoubleTapCoordinate.m */; };
+		F5B0A1AC1CAD4E2700E056CE /* CBDragCoordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = 89512BDA1C9EEC3C0027D61E /* CBDragCoordinates.m */; };
+		F5B0A1AD1CAD4E2700E056CE /* CBQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F35D1C9C51680093A018 /* CBQuery.m */; };
+		F5B0A1AE1CAD4E2700E056CE /* QuerySelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537F61CA1DF8500F62E09 /* QuerySelector.m */; };
+		F5B0A1AF1CAD4E2700E056CE /* QuerySelectorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537FE1CA2090500F62E09 /* QuerySelectorFactory.m */; };
+		F5B0A1B01CAD4E2700E056CE /* QuerySelectorId.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537FA1CA2020700F62E09 /* QuerySelectorId.m */; };
+		F5B0A1B11CAD4E2700E056CE /* QuerySelectorText.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538021CA20DB800F62E09 /* QuerySelectorText.m */; };
+		F5B0A1B21CAD4E2700E056CE /* QuerySelectorTextLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5380F1CA34CBE00F62E09 /* QuerySelectorTextLike.m */; };
+		F5B0A1B31CAD4E2700E056CE /* QuerySelectorIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538141CA351F400F62E09 /* QuerySelectorIndex.m */; };
+		F5B0A1B41CAD4E2700E056CE /* QuerySelectorProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538181CA3551600F62E09 /* QuerySelectorProperty.m */; };
+		F5B0A1B51CAD4E2700E056CE /* QuerySelectorPropertyLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5381C1CA359B200F62E09 /* QuerySelectorPropertyLike.m */; };
+		F5B0A1B61CAD4E2F00E056CE /* Testmanagerd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F34F1C9A60E70093A018 /* Testmanagerd.m */; };
+		F5B0A1B71CAD4E3300E056CE /* CBApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BD1C6DDF1300A945C8 /* CBApplication.m */; };
+		F5B0A1B81CAD4E3300E056CE /* CBApplication+Queries.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BB1C6DDF1300A945C8 /* CBApplication+Queries.m */; };
+		F5B0A1B91CAD4E3A00E056CE /* CBException.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C41C6DDF1300A945C8 /* CBException.m */; };
+		F5B0A1BA1CAD4E3A00E056CE /* CBElementNotFoundException.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C21C6DDF1300A945C8 /* CBElementNotFoundException.m */; };
+		F5B0A1BB1CAD4E3A00E056CE /* CBShutdownServerException.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C61C6DDF1300A945C8 /* CBShutdownServerException.m */; };
+		F5B0A1BC1CAD4E3A00E056CE /* CBInvalidArgumentException.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F3661C9C5BC20093A018 /* CBInvalidArgumentException.m */; };
+		F5B0A1BD1CAD4E4600E056CE /* CBRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C91C6DDF1300A945C8 /* CBRoute.m */; };
+		F5B0A1BE1CAD4E4600E056CE /* GestureRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83CB1C6DDF1300A945C8 /* GestureRoutes.m */; };
+		F5B0A1BF1CAD4E4600E056CE /* HealthRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83CD1C6DDF1300A945C8 /* HealthRoutes.m */; };
+		F5B0A1C01CAD4E4600E056CE /* MetaRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83CF1C6DDF1300A945C8 /* MetaRoutes.m */; };
+		F5B0A1C11CAD4E4600E056CE /* QueryRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83D11C6DDF1300A945C8 /* QueryRoutes.m */; };
+		F5B0A1C21CAD4E4600E056CE /* SessionRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83D31C6DDF1300A945C8 /* SessionRoutes.m */; };
+		F5B0A1C31CAD4E4600E056CE /* UndefinedRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83D51C6DDF1300A945C8 /* UndefinedRoutes.m */; };
+		F5B0A1C41CAD4E4600E056CE /* DeviceEventRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 89512BDE1CA095D20027D61E /* DeviceEventRoutes.m */; };
+		F5B0A1C51CAD4E4B00E056CE /* JSONUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83DB1C6DDF1300A945C8 /* JSONUtils.m */; };
+		F5B0A1C61CAD4E6400E056CE /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FEE1C6DD07500A945C8 /* GCDAsyncSocket.m */; };
+		F5B0A1C71CAD4E6B00E056CE /* DDData.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FF61C6DD07500A945C8 /* DDData.m */; };
+		F5B0A1C81CAD4E6B00E056CE /* DDNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FF81C6DD07500A945C8 /* DDNumber.m */; };
+		F5B0A1C91CAD4E6B00E056CE /* DDRange.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FFA1C6DD07500A945C8 /* DDRange.m */; };
+		F5B0A1CA1CAD4E6F00E056CE /* HTTPAuthenticationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FFC1C6DD07500A945C8 /* HTTPAuthenticationRequest.m */; };
+		F5B0A1CB1CAD4E7500E056CE /* HTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FFE1C6DD07500A945C8 /* HTTPConnection.m */; };
+		F5B0A1CC1CAD4E7500E056CE /* HTTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80011C6DD07500A945C8 /* HTTPMessage.m */; };
+		F5B0A1CD1CAD4E7500E056CE /* HTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80041C6DD07500A945C8 /* HTTPServer.m */; };
+		F5B0A1CE1CAD4E7F00E056CE /* MultipartFormDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80071C6DD07500A945C8 /* MultipartFormDataParser.m */; };
+		F5B0A1CF1CAD4E7F00E056CE /* MultipartMessageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80091C6DD07500A945C8 /* MultipartMessageHeader.m */; };
+		F5B0A1D01CAD4E7F00E056CE /* MultipartMessageHeaderField.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F800B1C6DD07500A945C8 /* MultipartMessageHeaderField.m */; };
+		F5B0A1D11CAD4E8A00E056CE /* HTTPAsyncFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F800E1C6DD07500A945C8 /* HTTPAsyncFileResponse.m */; };
+		F5B0A1D21CAD4E8A00E056CE /* HTTPDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80101C6DD07500A945C8 /* HTTPDataResponse.m */; };
+		F5B0A1D31CAD4E8A00E056CE /* HTTPDynamicFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80121C6DD07500A945C8 /* HTTPDynamicFileResponse.m */; };
+		F5B0A1D41CAD4E8A00E056CE /* HTTPErrorResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80141C6DD07500A945C8 /* HTTPErrorResponse.m */; };
+		F5B0A1D51CAD4E8A00E056CE /* HTTPFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80161C6DD07500A945C8 /* HTTPFileResponse.m */; };
+		F5B0A1D61CAD4E8A00E056CE /* HTTPRedirectResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80181C6DD07500A945C8 /* HTTPRedirectResponse.m */; };
+		F5B0A1D71CAD4E8A00E056CE /* WebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F801A1C6DD07500A945C8 /* WebSocket.m */; };
+		F5B0A1D81CAD4E9500E056CE /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80ED1C6DD07500A945C8 /* DDAbstractDatabaseLogger.m */; };
+		F5B0A1D91CAD4E9500E056CE /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80EF1C6DD07500A945C8 /* DDASLLogger.m */; };
+		F5B0A1DA1CAD4E9500E056CE /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80F11C6DD07500A945C8 /* DDFileLogger.m */; };
+		F5B0A1DB1CAD4E9500E056CE /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80F31C6DD07500A945C8 /* DDLog.m */; };
+		F5B0A1DC1CAD4E9500E056CE /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80F51C6DD07500A945C8 /* DDTTYLogger.m */; };
+		F5B0A1DD1CAD4E9B00E056CE /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80F81C6DD07500A945C8 /* ContextFilterLogFormatter.m */; };
+		F5B0A1DE1CAD4E9B00E056CE /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80FA1C6DD07500A945C8 /* DispatchQueueLogFormatter.m */; };
+		F5B0A1DF1CAD4EA700E056CE /* HTTPResponseProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F81181C6DD07500A945C8 /* HTTPResponseProxy.m */; };
+		F5B0A1E01CAD4EA700E056CE /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F811A1C6DD07500A945C8 /* Route.m */; };
+		F5B0A1E11CAD4EA700E056CE /* RouteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F811C1C6DD07500A945C8 /* RouteRequest.m */; };
+		F5B0A1E21CAD4EA700E056CE /* RouteResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F811E1C6DD07500A945C8 /* RouteResponse.m */; };
+		F5B0A1E31CAD4EA700E056CE /* RoutingConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F81201C6DD07500A945C8 /* RoutingConnection.m */; };
+		F5B0A1E41CAD4EA700E056CE /* RoutingHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F81221C6DD07500A945C8 /* RoutingHTTPServer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +217,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 898743BB1C5847B30084FD93;
 			remoteInfo = "xcuitest-server";
+		};
+		F5B0A0D41CAD3CBC00E056CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 898743B41C5847B30084FD93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 898743BB1C5847B30084FD93;
+			remoteInfo = CBXAppStub;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -391,6 +471,66 @@
 		F55F83FB1C6DE50C00A945C8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F55F83FC1C6DE50C00A945C8 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F55F83FD1C6DE50C00A945C8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F5B0A0CF1CAD3CBC00E056CE /* CBX-XCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CBX-XCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5B0A0D31CAD3CBC00E056CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5B0A1161CAD3D8B00E056CE /* CBXTestToolsStandup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXTestToolsStandup.m; sourceTree = "<group>"; };
+		F5B0A1171CAD3D8B00E056CE /* tests.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tests.pch; sourceTree = "<group>"; };
+		F5B0A14A1CAD3FB600E056CE /* EXPBlockDefinedMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPBlockDefinedMatcher.h; sourceTree = "<group>"; };
+		F5B0A14B1CAD3FB600E056CE /* EXPDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPDefines.h; sourceTree = "<group>"; };
+		F5B0A14C1CAD3FB600E056CE /* Expecta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expecta.h; sourceTree = "<group>"; };
+		F5B0A14D1CAD3FB600E056CE /* ExpectaObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpectaObject.h; sourceTree = "<group>"; };
+		F5B0A14E1CAD3FB600E056CE /* ExpectaSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpectaSupport.h; sourceTree = "<group>"; };
+		F5B0A14F1CAD3FB600E056CE /* EXPExpect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPExpect.h; sourceTree = "<group>"; };
+		F5B0A1501CAD3FB600E056CE /* EXPMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPMatcher.h; sourceTree = "<group>"; };
+		F5B0A1511CAD3FB600E056CE /* EXPMatchers+beCloseTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beCloseTo.h"; sourceTree = "<group>"; };
+		F5B0A1521CAD3FB600E056CE /* EXPMatchers+beFalsy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beFalsy.h"; sourceTree = "<group>"; };
+		F5B0A1531CAD3FB600E056CE /* EXPMatchers+beginWith.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beginWith.h"; sourceTree = "<group>"; };
+		F5B0A1541CAD3FB600E056CE /* EXPMatchers+beGreaterThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beGreaterThan.h"; sourceTree = "<group>"; };
+		F5B0A1551CAD3FB600E056CE /* EXPMatchers+beGreaterThanOrEqualTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beGreaterThanOrEqualTo.h"; sourceTree = "<group>"; };
+		F5B0A1561CAD3FB600E056CE /* EXPMatchers+beIdenticalTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beIdenticalTo.h"; sourceTree = "<group>"; };
+		F5B0A1571CAD3FB600E056CE /* EXPMatchers+beInstanceOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beInstanceOf.h"; sourceTree = "<group>"; };
+		F5B0A1581CAD3FB600E056CE /* EXPMatchers+beInTheRangeOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beInTheRangeOf.h"; sourceTree = "<group>"; };
+		F5B0A1591CAD3FB600E056CE /* EXPMatchers+beKindOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beKindOf.h"; sourceTree = "<group>"; };
+		F5B0A15A1CAD3FB600E056CE /* EXPMatchers+beLessThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beLessThan.h"; sourceTree = "<group>"; };
+		F5B0A15B1CAD3FB600E056CE /* EXPMatchers+beLessThanOrEqualTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beLessThanOrEqualTo.h"; sourceTree = "<group>"; };
+		F5B0A15C1CAD3FB600E056CE /* EXPMatchers+beNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beNil.h"; sourceTree = "<group>"; };
+		F5B0A15D1CAD3FB600E056CE /* EXPMatchers+beSubclassOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beSubclassOf.h"; sourceTree = "<group>"; };
+		F5B0A15E1CAD3FB600E056CE /* EXPMatchers+beSupersetOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beSupersetOf.h"; sourceTree = "<group>"; };
+		F5B0A15F1CAD3FB600E056CE /* EXPMatchers+beTruthy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beTruthy.h"; sourceTree = "<group>"; };
+		F5B0A1601CAD3FB600E056CE /* EXPMatchers+conformTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+conformTo.h"; sourceTree = "<group>"; };
+		F5B0A1611CAD3FB600E056CE /* EXPMatchers+contain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+contain.h"; sourceTree = "<group>"; };
+		F5B0A1621CAD3FB600E056CE /* EXPMatchers+endWith.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+endWith.h"; sourceTree = "<group>"; };
+		F5B0A1631CAD3FB600E056CE /* EXPMatchers+equal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+equal.h"; sourceTree = "<group>"; };
+		F5B0A1641CAD3FB600E056CE /* EXPMatchers+haveCountOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+haveCountOf.h"; sourceTree = "<group>"; };
+		F5B0A1651CAD3FB600E056CE /* EXPMatchers+match.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+match.h"; sourceTree = "<group>"; };
+		F5B0A1661CAD3FB600E056CE /* EXPMatchers+postNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+postNotification.h"; sourceTree = "<group>"; };
+		F5B0A1671CAD3FB600E056CE /* EXPMatchers+raise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+raise.h"; sourceTree = "<group>"; };
+		F5B0A1681CAD3FB600E056CE /* EXPMatchers+raiseWithReason.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+raiseWithReason.h"; sourceTree = "<group>"; };
+		F5B0A1691CAD3FB600E056CE /* EXPMatchers+respondTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+respondTo.h"; sourceTree = "<group>"; };
+		F5B0A16A1CAD3FB600E056CE /* EXPMatchers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPMatchers.h; sourceTree = "<group>"; };
+		F5B0A16B1CAD3FB600E056CE /* libExpecta.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libExpecta.a; sourceTree = "<group>"; };
+		F5B0A16C1CAD3FB600E056CE /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCHamcrestIOS.framework; sourceTree = "<group>"; };
+		F5B0A16E1CAD3FB600E056CE /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
+		F5B0A1701CAD3FB600E056CE /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		F5B0A1711CAD3FB600E056CE /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		F5B0A1721CAD3FB600E056CE /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		F5B0A1731CAD3FB600E056CE /* OCMFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMFunctions.h; sourceTree = "<group>"; };
+		F5B0A1741CAD3FB600E056CE /* OCMLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMLocation.h; sourceTree = "<group>"; };
+		F5B0A1751CAD3FB600E056CE /* OCMMacroState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMMacroState.h; sourceTree = "<group>"; };
+		F5B0A1761CAD3FB600E056CE /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		F5B0A1771CAD3FB600E056CE /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		F5B0A1781CAD3FB600E056CE /* OCMRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMRecorder.h; sourceTree = "<group>"; };
+		F5B0A1791CAD3FB600E056CE /* OCMStubRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMStubRecorder.h; sourceTree = "<group>"; };
+		F5B0A17A1CAD3FB600E056CE /* OCMockitoIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMockitoIOS.framework; sourceTree = "<group>"; };
+		F5B0A17C1CAD3FB600E056CE /* libSpecta.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSpecta.a; sourceTree = "<group>"; };
+		F5B0A17E1CAD3FB600E056CE /* Specta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Specta.h; sourceTree = "<group>"; };
+		F5B0A17F1CAD3FB600E056CE /* SpectaDSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpectaDSL.h; sourceTree = "<group>"; };
+		F5B0A1801CAD3FB600E056CE /* SpectaTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpectaTypes.h; sourceTree = "<group>"; };
+		F5B0A1811CAD3FB600E056CE /* SPTSharedExampleGroups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTSharedExampleGroups.h; sourceTree = "<group>"; };
+		F5B0A1821CAD3FB600E056CE /* SPTSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTSpec.h; sourceTree = "<group>"; };
+		F5B0A1831CAD3FB600E056CE /* XCTestCase+Specta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+Specta.h"; sourceTree = "<group>"; };
+		F5B0A1891CAD4A1F00E056CE /* CBXiOSVersionInlines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXiOSVersionInlines.h; sourceTree = "<group>"; };
+		F5B0A18A1CAD4B4000E056CE /* CBXiOSVersionInlinesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXiOSVersionInlinesTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,6 +548,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5B0A0CC1CAD3CBC00E056CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5B0A1861CAD3FB600E056CE /* libOCMock.a in Frameworks */,
+				F5B0A1881CAD3FB600E056CE /* libSpecta.a in Frameworks */,
+				F5B0A1871CAD3FB600E056CE /* OCMockitoIOS.framework in Frameworks */,
+				F5B0A1841CAD3FB600E056CE /* libExpecta.a in Frameworks */,
+				F5B0A1851CAD3FB600E056CE /* OCHamcrestIOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -415,11 +567,8 @@
 			isa = PBXGroup;
 			children = (
 				89C5F3611C9C58BD0093A018 /* CBTapCoordinate.h */,
-				89C5F3621C9C58BD0093A018 /* CBTapCoordinate.m */,
 				89C5F36D1C9E32440093A018 /* CBDoubleTapCoordinate.h */,
-				89C5F36E1C9E32440093A018 /* CBDoubleTapCoordinate.m */,
 				89512BD91C9EEC3C0027D61E /* CBDragCoordinates.h */,
-				89512BDA1C9EEC3C0027D61E /* CBDragCoordinates.m */,
 			);
 			name = CoordinateGestures;
 			sourceTree = "<group>";
@@ -429,6 +578,7 @@
 			children = (
 				89D538051CA32A3A00F62E09 /* FBDriverCode */,
 				F55F835A1C6DDA5F00A945C8 /* XCTest */,
+				F5B0A0D01CAD3CBC00E056CE /* CBX-XCTests */,
 				F55F83B61C6DDF1300A945C8 /* Server */,
 				F55F83541C6DD99900A945C8 /* XCUITestDriver */,
 				F55F83F21C6DE50C00A945C8 /* CBXAppStub */,
@@ -445,6 +595,7 @@
 			children = (
 				898743BC1C5847B30084FD93 /* CBXAppStub.app */,
 				898743D51C5847B30084FD93 /* CBX.xctest */,
+				F5B0A0CF1CAD3CBC00E056CE /* CBX-XCTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -462,7 +613,6 @@
 			isa = PBXGroup;
 			children = (
 				89C5F35C1C9C51680093A018 /* CBQuery.h */,
-				89C5F35D1C9C51680093A018 /* CBQuery.m */,
 				89D537F41CA1DD9A00F62E09 /* QuerySelectors */,
 			);
 			name = Queries;
@@ -472,9 +622,7 @@
 			isa = PBXGroup;
 			children = (
 				89C5F3691C9C912F0093A018 /* CBGestureFactory.h */,
-				89C5F36A1C9C912F0093A018 /* CBGestureFactory.m */,
 				89C5F3581C9B9C850093A018 /* CBGesture.h */,
-				89C5F3591C9B9C850093A018 /* CBGesture.m */,
 				89D538121CA3511A00F62E09 /* Gestures */,
 				89512BD81C9EE90E0027D61E /* CoordinateGestures */,
 			);
@@ -484,22 +632,29 @@
 		89D537F41CA1DD9A00F62E09 /* QuerySelectors */ = {
 			isa = PBXGroup;
 			children = (
+				89C5F36E1C9E32440093A018 /* CBDoubleTapCoordinate.m */,
+				89512BDA1C9EEC3C0027D61E /* CBDragCoordinates.m */,
+				89C5F3591C9B9C850093A018 /* CBGesture.m */,
+				89C5F36A1C9C912F0093A018 /* CBGestureFactory.m */,
+				89C5F35D1C9C51680093A018 /* CBQuery.m */,
+				89D538201CA35ACC00F62E09 /* CBTap.m */,
+				89C5F3621C9C58BD0093A018 /* CBTapCoordinate.m */,
 				89D537F51CA1DF8500F62E09 /* QuerySelector.h */,
 				89D537F61CA1DF8500F62E09 /* QuerySelector.m */,
 				89D537FD1CA2090500F62E09 /* QuerySelectorFactory.h */,
 				89D537FE1CA2090500F62E09 /* QuerySelectorFactory.m */,
 				89D537F91CA2020700F62E09 /* QuerySelectorId.h */,
 				89D537FA1CA2020700F62E09 /* QuerySelectorId.m */,
-				89D538011CA20DB800F62E09 /* QuerySelectorText.h */,
-				89D538021CA20DB800F62E09 /* QuerySelectorText.m */,
-				89D5380E1CA34CBE00F62E09 /* QuerySelectorTextLike.h */,
-				89D5380F1CA34CBE00F62E09 /* QuerySelectorTextLike.m */,
 				89D538131CA351F400F62E09 /* QuerySelectorIndex.h */,
 				89D538141CA351F400F62E09 /* QuerySelectorIndex.m */,
 				89D538171CA3551600F62E09 /* QuerySelectorProperty.h */,
 				89D538181CA3551600F62E09 /* QuerySelectorProperty.m */,
 				89D5381B1CA359B200F62E09 /* QuerySelectorPropertyLike.h */,
 				89D5381C1CA359B200F62E09 /* QuerySelectorPropertyLike.m */,
+				89D538011CA20DB800F62E09 /* QuerySelectorText.h */,
+				89D538021CA20DB800F62E09 /* QuerySelectorText.m */,
+				89D5380E1CA34CBE00F62E09 /* QuerySelectorTextLike.h */,
+				89D5380F1CA34CBE00F62E09 /* QuerySelectorTextLike.m */,
 			);
 			name = QuerySelectors;
 			sourceTree = "<group>";
@@ -521,7 +676,6 @@
 			isa = PBXGroup;
 			children = (
 				89D5381F1CA35ACC00F62E09 /* CBTap.h */,
-				89D538201CA35ACC00F62E09 /* CBTap.m */,
 			);
 			name = Gestures;
 			sourceTree = "<group>";
@@ -787,6 +941,7 @@
 		F55F83B61C6DDF1300A945C8 /* Server */ = {
 			isa = PBXGroup;
 			children = (
+				F5B0A1891CAD4A1F00E056CE /* CBXiOSVersionInlines.h */,
 				89C5F3551C9B9B690093A018 /* CBTypedefs.h */,
 				F55F83EE1C6DDF7E00A945C8 /* CBConstants.h */,
 				F55F83EF1C6DDF7E00A945C8 /* CBMacros.h */,
@@ -885,6 +1040,207 @@
 				F55F83FB1C6DE50C00A945C8 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5B0A0D01CAD3CBC00E056CE /* CBX-XCTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5B0A1221CAD3EC300E056CE /* Supporting Files */,
+				F5B0A0D91CAD3D8B00E056CE /* Tests */,
+			);
+			path = "CBX-XCTests";
+			sourceTree = "<group>";
+		};
+		F5B0A0D91CAD3D8B00E056CE /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F5B0A1901CAD4C9200E056CE /* Gestures */,
+				F5B0A1961CAD4C9200E056CE /* Queries */,
+				F5B0A18C1CAD4C9200E056CE /* Application */,
+				F5B0A18E1CAD4C9200E056CE /* Exceptions */,
+				F5B0A1981CAD4C9200E056CE /* Routes */,
+				F5B0A19A1CAD4C9200E056CE /* Utilities */,
+				F5B0A18A1CAD4B4000E056CE /* CBXiOSVersionInlinesTest.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		F5B0A1221CAD3EC300E056CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5B0A1481CAD3FB600E056CE /* Expecta */,
+				F5B0A16C1CAD3FB600E056CE /* OCHamcrestIOS.framework */,
+				F5B0A16D1CAD3FB600E056CE /* OCMock */,
+				F5B0A17A1CAD3FB600E056CE /* OCMockitoIOS.framework */,
+				F5B0A17B1CAD3FB600E056CE /* Specta */,
+				F5B0A1161CAD3D8B00E056CE /* CBXTestToolsStandup.m */,
+				F5B0A1171CAD3D8B00E056CE /* tests.pch */,
+				F5B0A0D31CAD3CBC00E056CE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5B0A1481CAD3FB600E056CE /* Expecta */ = {
+			isa = PBXGroup;
+			children = (
+				F5B0A1491CAD3FB600E056CE /* Expecta */,
+				F5B0A16B1CAD3FB600E056CE /* libExpecta.a */,
+			);
+			path = Expecta;
+			sourceTree = "<group>";
+		};
+		F5B0A1491CAD3FB600E056CE /* Expecta */ = {
+			isa = PBXGroup;
+			children = (
+				F5B0A14A1CAD3FB600E056CE /* EXPBlockDefinedMatcher.h */,
+				F5B0A14B1CAD3FB600E056CE /* EXPDefines.h */,
+				F5B0A14C1CAD3FB600E056CE /* Expecta.h */,
+				F5B0A14D1CAD3FB600E056CE /* ExpectaObject.h */,
+				F5B0A14E1CAD3FB600E056CE /* ExpectaSupport.h */,
+				F5B0A14F1CAD3FB600E056CE /* EXPExpect.h */,
+				F5B0A1501CAD3FB600E056CE /* EXPMatcher.h */,
+				F5B0A1511CAD3FB600E056CE /* EXPMatchers+beCloseTo.h */,
+				F5B0A1521CAD3FB600E056CE /* EXPMatchers+beFalsy.h */,
+				F5B0A1531CAD3FB600E056CE /* EXPMatchers+beginWith.h */,
+				F5B0A1541CAD3FB600E056CE /* EXPMatchers+beGreaterThan.h */,
+				F5B0A1551CAD3FB600E056CE /* EXPMatchers+beGreaterThanOrEqualTo.h */,
+				F5B0A1561CAD3FB600E056CE /* EXPMatchers+beIdenticalTo.h */,
+				F5B0A1571CAD3FB600E056CE /* EXPMatchers+beInstanceOf.h */,
+				F5B0A1581CAD3FB600E056CE /* EXPMatchers+beInTheRangeOf.h */,
+				F5B0A1591CAD3FB600E056CE /* EXPMatchers+beKindOf.h */,
+				F5B0A15A1CAD3FB600E056CE /* EXPMatchers+beLessThan.h */,
+				F5B0A15B1CAD3FB600E056CE /* EXPMatchers+beLessThanOrEqualTo.h */,
+				F5B0A15C1CAD3FB600E056CE /* EXPMatchers+beNil.h */,
+				F5B0A15D1CAD3FB600E056CE /* EXPMatchers+beSubclassOf.h */,
+				F5B0A15E1CAD3FB600E056CE /* EXPMatchers+beSupersetOf.h */,
+				F5B0A15F1CAD3FB600E056CE /* EXPMatchers+beTruthy.h */,
+				F5B0A1601CAD3FB600E056CE /* EXPMatchers+conformTo.h */,
+				F5B0A1611CAD3FB600E056CE /* EXPMatchers+contain.h */,
+				F5B0A1621CAD3FB600E056CE /* EXPMatchers+endWith.h */,
+				F5B0A1631CAD3FB600E056CE /* EXPMatchers+equal.h */,
+				F5B0A1641CAD3FB600E056CE /* EXPMatchers+haveCountOf.h */,
+				F5B0A1651CAD3FB600E056CE /* EXPMatchers+match.h */,
+				F5B0A1661CAD3FB600E056CE /* EXPMatchers+postNotification.h */,
+				F5B0A1671CAD3FB600E056CE /* EXPMatchers+raise.h */,
+				F5B0A1681CAD3FB600E056CE /* EXPMatchers+raiseWithReason.h */,
+				F5B0A1691CAD3FB600E056CE /* EXPMatchers+respondTo.h */,
+				F5B0A16A1CAD3FB600E056CE /* EXPMatchers.h */,
+			);
+			path = Expecta;
+			sourceTree = "<group>";
+		};
+		F5B0A16D1CAD3FB600E056CE /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				F5B0A16E1CAD3FB600E056CE /* libOCMock.a */,
+				F5B0A16F1CAD3FB600E056CE /* OCMock */,
+			);
+			path = OCMock;
+			sourceTree = "<group>";
+		};
+		F5B0A16F1CAD3FB600E056CE /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				F5B0A1701CAD3FB600E056CE /* NSNotificationCenter+OCMAdditions.h */,
+				F5B0A1711CAD3FB600E056CE /* OCMArg.h */,
+				F5B0A1721CAD3FB600E056CE /* OCMConstraint.h */,
+				F5B0A1731CAD3FB600E056CE /* OCMFunctions.h */,
+				F5B0A1741CAD3FB600E056CE /* OCMLocation.h */,
+				F5B0A1751CAD3FB600E056CE /* OCMMacroState.h */,
+				F5B0A1761CAD3FB600E056CE /* OCMock.h */,
+				F5B0A1771CAD3FB600E056CE /* OCMockObject.h */,
+				F5B0A1781CAD3FB600E056CE /* OCMRecorder.h */,
+				F5B0A1791CAD3FB600E056CE /* OCMStubRecorder.h */,
+			);
+			path = OCMock;
+			sourceTree = "<group>";
+		};
+		F5B0A17B1CAD3FB600E056CE /* Specta */ = {
+			isa = PBXGroup;
+			children = (
+				F5B0A17C1CAD3FB600E056CE /* libSpecta.a */,
+				F5B0A17D1CAD3FB600E056CE /* Specta */,
+			);
+			path = Specta;
+			sourceTree = "<group>";
+		};
+		F5B0A17D1CAD3FB600E056CE /* Specta */ = {
+			isa = PBXGroup;
+			children = (
+				F5B0A17E1CAD3FB600E056CE /* Specta.h */,
+				F5B0A17F1CAD3FB600E056CE /* SpectaDSL.h */,
+				F5B0A1801CAD3FB600E056CE /* SpectaTypes.h */,
+				F5B0A1811CAD3FB600E056CE /* SPTSharedExampleGroups.h */,
+				F5B0A1821CAD3FB600E056CE /* SPTSpec.h */,
+				F5B0A1831CAD3FB600E056CE /* XCTestCase+Specta.h */,
+			);
+			path = Specta;
+			sourceTree = "<group>";
+		};
+		F5B0A18C1CAD4C9200E056CE /* Application */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F5B0A18E1CAD4C9200E056CE /* Exceptions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Exceptions;
+			sourceTree = "<group>";
+		};
+		F5B0A1901CAD4C9200E056CE /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				F5B0A1921CAD4C9200E056CE /* CoordinateGestures */,
+				F5B0A1941CAD4C9200E056CE /* Gestures */,
+			);
+			path = Gestures;
+			sourceTree = "<group>";
+		};
+		F5B0A1921CAD4C9200E056CE /* CoordinateGestures */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoordinateGestures;
+			sourceTree = "<group>";
+		};
+		F5B0A1941CAD4C9200E056CE /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Gestures;
+			sourceTree = "<group>";
+		};
+		F5B0A1961CAD4C9200E056CE /* Queries */ = {
+			isa = PBXGroup;
+			children = (
+				F5B0A1971CAD4C9200E056CE /* QuerySelectors */,
+			);
+			path = Queries;
+			sourceTree = "<group>";
+		};
+		F5B0A1971CAD4C9200E056CE /* QuerySelectors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = QuerySelectors;
+			sourceTree = "<group>";
+		};
+		F5B0A1981CAD4C9200E056CE /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		F5B0A19A1CAD4C9200E056CE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -993,6 +1349,24 @@
 			productReference = 898743D51C5847B30084FD93 /* CBX.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		F5B0A0CE1CAD3CBC00E056CE /* CBX-XCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5B0A0D81CAD3CBC00E056CE /* Build configuration list for PBXNativeTarget "CBX-XCTests" */;
+			buildPhases = (
+				F5B0A0CB1CAD3CBC00E056CE /* Sources */,
+				F5B0A0CC1CAD3CBC00E056CE /* Frameworks */,
+				F5B0A0CD1CAD3CBC00E056CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5B0A0D51CAD3CBC00E056CE /* PBXTargetDependency */,
+			);
+			name = "CBX-XCTests";
+			productName = "CBX-XCTests";
+			productReference = F5B0A0CF1CAD3CBC00E056CE /* CBX-XCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1007,6 +1381,10 @@
 					};
 					898743D41C5847B30084FD93 = {
 						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 898743BB1C5847B30084FD93;
+					};
+					F5B0A0CE1CAD3CBC00E056CE = {
+						CreatedOnToolsVersion = 7.3;
 						TestTargetID = 898743BB1C5847B30084FD93;
 					};
 				};
@@ -1027,6 +1405,7 @@
 			targets = (
 				898743BB1C5847B30084FD93 /* CBXAppStub */,
 				898743D41C5847B30084FD93 /* XCUITestDriver */,
+				F5B0A0CE1CAD3CBC00E056CE /* CBX-XCTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1043,6 +1422,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		898743D31C5847B30084FD93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5B0A0CD1CAD3CBC00E056CE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1169,6 +1555,81 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5B0A0CB1CAD3CBC00E056CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5B0A1B01CAD4E2700E056CE /* QuerySelectorId.m in Sources */,
+				F5B0A1AB1CAD4E2700E056CE /* CBDoubleTapCoordinate.m in Sources */,
+				F5B0A1B41CAD4E2700E056CE /* QuerySelectorProperty.m in Sources */,
+				F5B0A1DE1CAD4E9B00E056CE /* DispatchQueueLogFormatter.m in Sources */,
+				F5B0A1D11CAD4E8A00E056CE /* HTTPAsyncFileResponse.m in Sources */,
+				F5B0A1E41CAD4EA700E056CE /* RoutingHTTPServer.m in Sources */,
+				F5B0A1CA1CAD4E6F00E056CE /* HTTPAuthenticationRequest.m in Sources */,
+				F5B0A1D31CAD4E8A00E056CE /* HTTPDynamicFileResponse.m in Sources */,
+				F5B0A1DB1CAD4E9500E056CE /* DDLog.m in Sources */,
+				F5B0A1D71CAD4E8A00E056CE /* WebSocket.m in Sources */,
+				F5B0A1BF1CAD4E4600E056CE /* HealthRoutes.m in Sources */,
+				F5B0A1AF1CAD4E2700E056CE /* QuerySelectorFactory.m in Sources */,
+				F5B0A1D61CAD4E8A00E056CE /* HTTPRedirectResponse.m in Sources */,
+				F5B0A11D1CAD3D8C00E056CE /* CBXTestToolsStandup.m in Sources */,
+				F5B0A1A41CAD4DE800E056CE /* XCUIElement+WebDriverAttributes.m in Sources */,
+				F5B0A1D51CAD4E8A00E056CE /* HTTPFileResponse.m in Sources */,
+				F5B0A1CF1CAD4E7F00E056CE /* MultipartMessageHeader.m in Sources */,
+				F5B0A1A81CAD4E2700E056CE /* CBGesture.m in Sources */,
+				F5B0A1CD1CAD4E7500E056CE /* HTTPServer.m in Sources */,
+				F5B0A1CC1CAD4E7500E056CE /* HTTPMessage.m in Sources */,
+				F5B0A1C21CAD4E4600E056CE /* SessionRoutes.m in Sources */,
+				F5B0A1A91CAD4E2700E056CE /* CBTap.m in Sources */,
+				F5B0A1B11CAD4E2700E056CE /* QuerySelectorText.m in Sources */,
+				F5B0A1DC1CAD4E9500E056CE /* DDTTYLogger.m in Sources */,
+				F5B0A1A31CAD4DE800E056CE /* FBElement.m in Sources */,
+				F5B0A1A71CAD4E2700E056CE /* CBGestureFactory.m in Sources */,
+				F5B0A1B91CAD4E3A00E056CE /* CBException.m in Sources */,
+				F5B0A1D91CAD4E9500E056CE /* DDASLLogger.m in Sources */,
+				F5B0A1C41CAD4E4600E056CE /* DeviceEventRoutes.m in Sources */,
+				F5B0A1DF1CAD4EA700E056CE /* HTTPResponseProxy.m in Sources */,
+				F5B0A1DA1CAD4E9500E056CE /* DDFileLogger.m in Sources */,
+				F5B0A18B1CAD4B4000E056CE /* CBXiOSVersionInlinesTest.m in Sources */,
+				F5B0A1B81CAD4E3300E056CE /* CBApplication+Queries.m in Sources */,
+				F5B0A1B71CAD4E3300E056CE /* CBApplication.m in Sources */,
+				F5B0A1C71CAD4E6B00E056CE /* DDData.m in Sources */,
+				F5B0A1C01CAD4E4600E056CE /* MetaRoutes.m in Sources */,
+				F5B0A1B51CAD4E2700E056CE /* QuerySelectorPropertyLike.m in Sources */,
+				F5B0A1BD1CAD4E4600E056CE /* CBRoute.m in Sources */,
+				F5B0A1DD1CAD4E9B00E056CE /* ContextFilterLogFormatter.m in Sources */,
+				F5B0A1BA1CAD4E3A00E056CE /* CBElementNotFoundException.m in Sources */,
+				F5B0A1D21CAD4E8A00E056CE /* HTTPDataResponse.m in Sources */,
+				F5B0A1BC1CAD4E3A00E056CE /* CBInvalidArgumentException.m in Sources */,
+				F5B0A1D01CAD4E7F00E056CE /* MultipartMessageHeaderField.m in Sources */,
+				F5B0A1E31CAD4EA700E056CE /* RoutingConnection.m in Sources */,
+				F5B0A1AC1CAD4E2700E056CE /* CBDragCoordinates.m in Sources */,
+				F5B0A1AD1CAD4E2700E056CE /* CBQuery.m in Sources */,
+				F5B0A1B31CAD4E2700E056CE /* QuerySelectorIndex.m in Sources */,
+				F5B0A1A61CAD4DFA00E056CE /* CBXCUITestServer.m in Sources */,
+				F5B0A1E21CAD4EA700E056CE /* RouteResponse.m in Sources */,
+				F5B0A1BE1CAD4E4600E056CE /* GestureRoutes.m in Sources */,
+				F5B0A1CB1CAD4E7500E056CE /* HTTPConnection.m in Sources */,
+				F5B0A1BB1CAD4E3A00E056CE /* CBShutdownServerException.m in Sources */,
+				F5B0A1E01CAD4EA700E056CE /* Route.m in Sources */,
+				F5B0A1E11CAD4EA700E056CE /* RouteRequest.m in Sources */,
+				F5B0A1C91CAD4E6B00E056CE /* DDRange.m in Sources */,
+				F5B0A1C51CAD4E4B00E056CE /* JSONUtils.m in Sources */,
+				F5B0A1AA1CAD4E2700E056CE /* CBTapCoordinate.m in Sources */,
+				F5B0A1B61CAD4E2F00E056CE /* Testmanagerd.m in Sources */,
+				F5B0A1D81CAD4E9500E056CE /* DDAbstractDatabaseLogger.m in Sources */,
+				F5B0A1D41CAD4E8A00E056CE /* HTTPErrorResponse.m in Sources */,
+				F5B0A1A51CAD4DE800E056CE /* UIDevice+Wifi_IP.m in Sources */,
+				F5B0A1AE1CAD4E2700E056CE /* QuerySelector.m in Sources */,
+				F5B0A1C11CAD4E4600E056CE /* QueryRoutes.m in Sources */,
+				F5B0A1B21CAD4E2700E056CE /* QuerySelectorTextLike.m in Sources */,
+				F5B0A1C61CAD4E6400E056CE /* GCDAsyncSocket.m in Sources */,
+				F5B0A1CE1CAD4E7F00E056CE /* MultipartFormDataParser.m in Sources */,
+				F5B0A1C81CAD4E6B00E056CE /* DDNumber.m in Sources */,
+				F5B0A1C31CAD4E4600E056CE /* UndefinedRoutes.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1176,6 +1637,11 @@
 			isa = PBXTargetDependency;
 			target = 898743BB1C5847B30084FD93 /* CBXAppStub */;
 			targetProxy = 898743D61C5847B30084FD93 /* PBXContainerItemProxy */;
+		};
+		F5B0A0D51CAD3CBC00E056CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 898743BB1C5847B30084FD93 /* CBXAppStub */;
+			targetProxy = F5B0A0D41CAD3CBC00E056CE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1339,6 +1805,84 @@
 			};
 			name = Release;
 		};
+		F5B0A0D61CAD3CBC00E056CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CBX-XCTests",
+				);
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/CBX-XCTests/tests.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Xcode/6.1/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/CBX-XCTests/OCMock",
+					"$(PROJECT_DIR)/CBX-XCTests/Specta",
+					"$(PROJECT_DIR)/CBX-XCTests/Expecta",
+				);
+				INFOPLIST_FILE = "CBX-XCTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CBX-XCTests/Expecta-1.0.5",
+					"$(PROJECT_DIR)/CBX-XCTests/OCMock-3.2.2",
+					"$(PROJECT_DIR)/CBX-XCTests/Specta-1.0.5",
+					"$(PROJECT_DIR)/CBX-XCTests/Expecta",
+					"$(PROJECT_DIR)/CBX-XCTests/OCMock",
+					"$(PROJECT_DIR)/CBX-XCTests/Specta",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "sh.calab.CBX-XCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CBXAppStub.app/CBXAppStub";
+			};
+			name = Debug;
+		};
+		F5B0A0D71CAD3CBC00E056CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CBX-XCTests",
+				);
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/CBX-XCTests/tests.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Xcode/6.1/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/CBX-XCTests/OCMock",
+					"$(PROJECT_DIR)/CBX-XCTests/Specta",
+					"$(PROJECT_DIR)/CBX-XCTests/Expecta",
+				);
+				INFOPLIST_FILE = "CBX-XCTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CBX-XCTests/Expecta-1.0.5",
+					"$(PROJECT_DIR)/CBX-XCTests/OCMock-3.2.2",
+					"$(PROJECT_DIR)/CBX-XCTests/Specta-1.0.5",
+					"$(PROJECT_DIR)/CBX-XCTests/Expecta",
+					"$(PROJECT_DIR)/CBX-XCTests/OCMock",
+					"$(PROJECT_DIR)/CBX-XCTests/Specta",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "sh.calab.CBX-XCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CBXAppStub.app/CBXAppStub";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1368,6 +1912,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
+		};
+		F5B0A0D81CAD3CBC00E056CE /* Build configuration list for PBXNativeTarget "CBX-XCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5B0A0D61CAD3CBC00E056CE /* Debug */,
+				F5B0A0D71CAD3CBC00E056CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
