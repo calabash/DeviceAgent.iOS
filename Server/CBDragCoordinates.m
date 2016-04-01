@@ -51,7 +51,7 @@
 - (XCTouchGesture *)gesture {
     XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:self.class.name];
     
-    CGPoint coordinate = [JSONUtils pointFromCoordinateJSON:[self.query coordinate]];
+    CGPoint coordinate = [JSONUtils pointFromCoordinateJSON:[self.query coordinates].firstObject];
     float duration = [self.query.specifiers.allKeys containsObject:CB_DURATION_KEY] ?
     [self.query.specifiers[CB_DURATION_KEY] floatValue] : DB_DEFAULT_DURATION;
     
@@ -64,6 +64,7 @@
         coordinate = [JSONUtils pointFromCoordinateJSON:coordinateJSON];
         [path moveToPoint:coordinate atOffset:duration];
     }
+    duration += duration;
     
     [path liftUpAtPoint:coordinate
                  offset:duration];

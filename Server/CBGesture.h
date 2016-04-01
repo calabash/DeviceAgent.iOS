@@ -64,4 +64,5 @@
 
 @interface CBGesture : NSObject<CBGesture>
 @property (nonatomic, strong) CBQuery *query; /* Identify which element or element */
++ (instancetype)withJSON:(NSDictionary *)json;
 @end

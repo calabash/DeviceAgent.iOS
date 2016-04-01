@@ -16,7 +16,8 @@
                  [CBGestureFactory executeGestureWithJSON:body
                                                completion:^(NSError *e, NSArray <NSString *> *warnings) {
                      if (e) {
-                         [response respondWithJSON:@{ @"error" : e.localizedDescription, @"warnings" : warnings }];
+                         [response respondWithJSON:@{ @"error" : e.localizedDescription,
+                                                      @"warnings" : warnings ?: @[] }];
                      } else {
                          if (warnings.count) {
                              [response respondWithJSON:@{ @"status" : @"success", @"warnings" : warnings }];

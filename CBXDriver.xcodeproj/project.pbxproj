@@ -11,6 +11,9 @@
 		89512BDC1C9EEC3C0027D61E /* CBDragCoordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = 89512BDA1C9EEC3C0027D61E /* CBDragCoordinates.m */; };
 		89512BDF1CA095D20027D61E /* DeviceEventRoutes.h in Headers */ = {isa = PBXBuildFile; fileRef = 89512BDD1CA095D20027D61E /* DeviceEventRoutes.h */; };
 		89512BE01CA095D20027D61E /* DeviceEventRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 89512BDE1CA095D20027D61E /* DeviceEventRoutes.m */; };
+		899696BA1CADF84B00BB42E2 /* CBEnterText.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696B81CADF84B00BB42E2 /* CBEnterText.h */; };
+		899696BB1CADF84B00BB42E2 /* CBEnterText.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696B91CADF84B00BB42E2 /* CBEnterText.m */; };
+		899696BC1CADF85B00BB42E2 /* CBEnterText.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696B91CADF84B00BB42E2 /* CBEnterText.m */; };
 		89C5F3501C9A60E70093A018 /* Testmanagerd.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F34E1C9A60E70093A018 /* Testmanagerd.h */; };
 		89C5F3511C9A60E70093A018 /* Testmanagerd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F34F1C9A60E70093A018 /* Testmanagerd.m */; };
 		89C5F3541C9A66E10093A018 /* NSXPCConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3531C9A66E10093A018 /* NSXPCConnection.h */; };
@@ -234,6 +237,8 @@
 		89512BDE1CA095D20027D61E /* DeviceEventRoutes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceEventRoutes.m; sourceTree = "<group>"; };
 		898743BC1C5847B30084FD93 /* CBXAppStub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBXAppStub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898743D51C5847B30084FD93 /* CBX.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CBX.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		899696B81CADF84B00BB42E2 /* CBEnterText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBEnterText.h; sourceTree = "<group>"; };
+		899696B91CADF84B00BB42E2 /* CBEnterText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBEnterText.m; sourceTree = "<group>"; };
 		89C5F34E1C9A60E70093A018 /* Testmanagerd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Testmanagerd.h; sourceTree = "<group>"; };
 		89C5F34F1C9A60E70093A018 /* Testmanagerd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Testmanagerd.m; sourceTree = "<group>"; };
 		89C5F3531C9A66E10093A018 /* NSXPCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXPCConnection.h; sourceTree = "<group>"; };
@@ -676,6 +681,8 @@
 			isa = PBXGroup;
 			children = (
 				89D5381F1CA35ACC00F62E09 /* CBTap.h */,
+				899696B81CADF84B00BB42E2 /* CBEnterText.h */,
+				899696B91CADF84B00BB42E2 /* CBEnterText.m */,
 			);
 			name = Gestures;
 			sourceTree = "<group>";
@@ -1253,6 +1260,7 @@
 				89C5F36F1C9E32440093A018 /* CBDoubleTapCoordinate.h in Headers */,
 				F55F81A31C6DD07500A945C8 /* HTTPFileResponse.h in Headers */,
 				F55F819D1C6DD07500A945C8 /* HTTPDataResponse.h in Headers */,
+				899696BA1CADF84B00BB42E2 /* CBEnterText.h in Headers */,
 				F55F818F1C6DD07500A945C8 /* HTTPLogging.h in Headers */,
 				89C5F3671C9C5BC20093A018 /* CBInvalidArgumentException.h in Headers */,
 				F55F819F1C6DD07500A945C8 /* HTTPDynamicFileResponse.h in Headers */,
@@ -1493,6 +1501,7 @@
 				F55F81861C6DD07500A945C8 /* DDData.m in Sources */,
 				F55F840F1C6E437100A945C8 /* UndefinedRoutes.m in Sources */,
 				89D538041CA20DB800F62E09 /* QuerySelectorText.m in Sources */,
+				899696BB1CADF84B00BB42E2 /* CBEnterText.m in Sources */,
 				F55F84141C6E438200A945C8 /* CBShutdownServerException.m in Sources */,
 				F55F824F1C6DD07500A945C8 /* HTTPResponseProxy.m in Sources */,
 				F55F82311C6DD07500A945C8 /* DDAbstractDatabaseLogger.m in Sources */,
@@ -1564,6 +1573,7 @@
 				F5B0A1B41CAD4E2700E056CE /* QuerySelectorProperty.m in Sources */,
 				F5B0A1DE1CAD4E9B00E056CE /* DispatchQueueLogFormatter.m in Sources */,
 				F5B0A1D11CAD4E8A00E056CE /* HTTPAsyncFileResponse.m in Sources */,
+				899696BC1CADF85B00BB42E2 /* CBEnterText.m in Sources */,
 				F5B0A1E41CAD4EA700E056CE /* RoutingHTTPServer.m in Sources */,
 				F5B0A1CA1CAD4E6F00E056CE /* HTTPAuthenticationRequest.m in Sources */,
 				F5B0A1D31CAD4E8A00E056CE /* HTTPDynamicFileResponse.m in Sources */,
@@ -1920,6 +1930,7 @@
 				F5B0A0D71CAD3CBC00E056CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
