@@ -35,8 +35,9 @@
             completion(e, w);
         } else {
             [[Testmanagerd get] _XCT_sendString:string completion:^(NSError *e) {
-                completion(e, warnings ?: @[]);
+                if (e) @throw [CBException withMessage:@"Error performing gesture"];
             }];
+            completion(e, warnings ?: @[]);
         }
     }];
     

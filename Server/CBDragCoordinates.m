@@ -29,7 +29,7 @@
     XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc] initWithName:self.class.name
                                                                 interfaceOrientation:0];
     float duration = [self.query.specifiers.allKeys containsObject:CB_DURATION_KEY] ?
-    [self.query.specifiers[CB_DURATION_KEY] floatValue] : DB_DEFAULT_DURATION;
+    [self.query.specifiers[CB_DURATION_KEY] floatValue] : CB_DEFAULT_DURATION;
     
     CGPoint coordinate = [JSONUtils pointFromCoordinateJSON:[self.query coordinates].firstObject];
     XCPointerEventPath *path = [[XCPointerEventPath alloc] initForTouchAtPoint:coordinate
@@ -53,7 +53,7 @@
     
     CGPoint coordinate = [JSONUtils pointFromCoordinateJSON:[self.query coordinates].firstObject];
     float duration = [self.query.specifiers.allKeys containsObject:CB_DURATION_KEY] ?
-    [self.query.specifiers[CB_DURATION_KEY] floatValue] : DB_DEFAULT_DURATION;
+    [self.query.specifiers[CB_DURATION_KEY] floatValue] : CB_DEFAULT_DURATION;
     
     XCTouchPath *path = [[XCTouchPath alloc] initWithTouchDown:coordinate
                                                    orientation:0
@@ -64,7 +64,7 @@
         coordinate = [JSONUtils pointFromCoordinateJSON:coordinateJSON];
         [path moveToPoint:coordinate atOffset:duration];
     }
-    duration += duration;
+    duration += CB_GESTURE_EPSILON;
     
     [path liftUpAtPoint:coordinate
                  offset:duration];

@@ -35,7 +35,7 @@
                                                                         offset:0];
     
     float duration = [self.query.specifiers.allKeys containsObject:CB_DURATION_KEY] ?
-    [self.query.specifiers[CB_DURATION_KEY] floatValue] : DB_DEFAULT_DURATION;
+    [self.query.specifiers[CB_DURATION_KEY] floatValue] : CB_DEFAULT_DURATION;
     [path liftUpAtOffset:duration];
     [event addPointerEventPath:path]; //tap 1
     

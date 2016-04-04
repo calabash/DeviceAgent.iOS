@@ -58,4 +58,5 @@ static NSUInteger const HTTP_STATUS_CODE_EVERYTHING_OK = 200;
 static NSUInteger const HTTP_STATUS_CODE_INVALID_REQUEST = 400;
 static NSUInteger const HTTP_STATUS_CODE_SERVER_ERROR = 500;
 
-static float const DB_DEFAULT_DURATION = 0.1;
+static float const CB_DEFAULT_DURATION = 0.1;
+static float const CB_GESTURE_EPSILON = 0.001;
