@@ -15,8 +15,8 @@
 
 + (CBGesture *)executeWithJSON:(NSDictionary *)json completion:(CompletionBlock)completion {
     NSMutableDictionary *j = [json mutableCopy];
-    NSString *string = j[@"string"];
-    [j removeObjectForKey:@"string"];
+    NSString *string = j[CB_STRING_KEY];
+    [j removeObjectForKey:CB_STRING_KEY];
     
     [[Testmanagerd get] _XCT_sendString:string completion:^(NSError *e) {
         completion(e, @[]);

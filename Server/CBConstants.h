@@ -23,6 +23,7 @@ static NSString *const CB_DURATION_KEY = @"duration";
 static NSString *const CB_COORDINATE_KEY = @"coordinate";
 static NSString *const CB_COORDINATES_KEY = @"coordinates";
 static NSString *const CB_HEIGHT_KEY = @"height";
+static NSString *const CB_STRING_KEY = @"string";
 static NSString *const CB_WIDTH_KEY = @"width";
 static NSString *const CB_TYPE_KEY = @"type";
 static NSString *const CB_TITLE_KEY = @"title";

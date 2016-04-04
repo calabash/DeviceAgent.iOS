@@ -33,7 +33,7 @@
                                       launchArgs:launchArgs
                                              env:environment];
                  
-                 [response respondWithJSON:@{@"status" : @"launching!"}];
+                 [response respondWithJSON:@{@"status" : @"launched!"}];
              }],
              
              [CBRoute delete:endpoint(@"/session", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {

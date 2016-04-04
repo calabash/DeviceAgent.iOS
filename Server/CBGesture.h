@@ -47,6 +47,8 @@
  * Any keys present besides these should generate a warning and be added to the `warnings` array.
  */
 - (NSArray <NSString *> *)requiredKeys;
+
+@optional
 - (NSArray <NSString *> *)optionalKeys;
 - (NSArray <NSString *> *)optionalSpecifiers;
 
@@ -64,5 +66,6 @@
 
 @interface CBGesture : NSObject<CBGesture>
 @property (nonatomic, strong) CBQuery *query; /* Identify which element or element */
+- (void)execute:(CompletionBlock)completion;
 + (instancetype)withJSON:(NSDictionary *)json;
 @end

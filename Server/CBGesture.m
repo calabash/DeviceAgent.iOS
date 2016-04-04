@@ -82,13 +82,14 @@
     if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] != 0x0) {
         [[Testmanagerd get] _XCT_synthesizeEvent:[self event] completion:^(NSError *e) {
             if (e) @throw [CBException withMessage:@"Error performing gesture"];
+            completion(nil, self.warnings);
         }];
     } else {
         [[Testmanagerd get] _XCT_performTouchGesture:[self gesture] completion:^(NSError *e) {
             if (e) @throw [CBException withMessage:@"Error performing gesture"];
+            completion(e, self.warnings);
         }];
     }
-    completion(nil, self.warnings); //TODO refactor
 }
 
 - (void)validate {

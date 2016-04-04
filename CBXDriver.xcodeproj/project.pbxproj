@@ -14,6 +14,9 @@
 		899696BA1CADF84B00BB42E2 /* CBEnterText.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696B81CADF84B00BB42E2 /* CBEnterText.h */; };
 		899696BB1CADF84B00BB42E2 /* CBEnterText.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696B91CADF84B00BB42E2 /* CBEnterText.m */; };
 		899696BC1CADF85B00BB42E2 /* CBEnterText.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696B91CADF84B00BB42E2 /* CBEnterText.m */; };
+		899696BF1CB2F22000BB42E2 /* CBEnterTextInCoordinate.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696BD1CB2F22000BB42E2 /* CBEnterTextInCoordinate.h */; };
+		899696C01CB2F22000BB42E2 /* CBEnterTextInCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696BE1CB2F22000BB42E2 /* CBEnterTextInCoordinate.m */; };
+		899696C11CB2F22000BB42E2 /* CBEnterTextInCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696BE1CB2F22000BB42E2 /* CBEnterTextInCoordinate.m */; };
 		89C5F3501C9A60E70093A018 /* Testmanagerd.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F34E1C9A60E70093A018 /* Testmanagerd.h */; };
 		89C5F3511C9A60E70093A018 /* Testmanagerd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F34F1C9A60E70093A018 /* Testmanagerd.m */; };
 		89C5F3541C9A66E10093A018 /* NSXPCConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3531C9A66E10093A018 /* NSXPCConnection.h */; };
@@ -239,6 +242,8 @@
 		898743D51C5847B30084FD93 /* CBX.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CBX.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		899696B81CADF84B00BB42E2 /* CBEnterText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBEnterText.h; sourceTree = "<group>"; };
 		899696B91CADF84B00BB42E2 /* CBEnterText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBEnterText.m; sourceTree = "<group>"; };
+		899696BD1CB2F22000BB42E2 /* CBEnterTextInCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBEnterTextInCoordinate.h; sourceTree = "<group>"; };
+		899696BE1CB2F22000BB42E2 /* CBEnterTextInCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBEnterTextInCoordinate.m; sourceTree = "<group>"; };
 		89C5F34E1C9A60E70093A018 /* Testmanagerd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Testmanagerd.h; sourceTree = "<group>"; };
 		89C5F34F1C9A60E70093A018 /* Testmanagerd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Testmanagerd.m; sourceTree = "<group>"; };
 		89C5F3531C9A66E10093A018 /* NSXPCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXPCConnection.h; sourceTree = "<group>"; };
@@ -577,6 +582,8 @@
 				89C5F36E1C9E32440093A018 /* CBDoubleTapCoordinate.m */,
 				89512BD91C9EEC3C0027D61E /* CBDragCoordinates.h */,
 				89512BDA1C9EEC3C0027D61E /* CBDragCoordinates.m */,
+				899696BD1CB2F22000BB42E2 /* CBEnterTextInCoordinate.h */,
+				899696BE1CB2F22000BB42E2 /* CBEnterTextInCoordinate.m */,
 			);
 			name = CoordinateGestures;
 			sourceTree = "<group>";
@@ -1258,6 +1265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89C5F36F1C9E32440093A018 /* CBDoubleTapCoordinate.h in Headers */,
+				899696BF1CB2F22000BB42E2 /* CBEnterTextInCoordinate.h in Headers */,
 				F55F81A31C6DD07500A945C8 /* HTTPFileResponse.h in Headers */,
 				F55F819D1C6DD07500A945C8 /* HTTPDataResponse.h in Headers */,
 				899696BA1CADF84B00BB42E2 /* CBEnterText.h in Headers */,
@@ -1561,6 +1569,7 @@
 				F55F81941C6DD07500A945C8 /* HTTPServer.m in Sources */,
 				89D538161CA351F400F62E09 /* QuerySelectorIndex.m in Sources */,
 				F55F823D1C6DD07500A945C8 /* DispatchQueueLogFormatter.m in Sources */,
+				899696C01CB2F22000BB42E2 /* CBEnterTextInCoordinate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1607,6 +1616,7 @@
 				F5B0A1C01CAD4E4600E056CE /* MetaRoutes.m in Sources */,
 				F5B0A1B51CAD4E2700E056CE /* QuerySelectorPropertyLike.m in Sources */,
 				F5B0A1BD1CAD4E4600E056CE /* CBRoute.m in Sources */,
+				899696C11CB2F22000BB42E2 /* CBEnterTextInCoordinate.m in Sources */,
 				F5B0A1DD1CAD4E9B00E056CE /* ContextFilterLogFormatter.m in Sources */,
 				F5B0A1BA1CAD4E3A00E056CE /* CBElementNotFoundException.m in Sources */,
 				F5B0A1D21CAD4E8A00E056CE /* HTTPDataResponse.m in Sources */,
