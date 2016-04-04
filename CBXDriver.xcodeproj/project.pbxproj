@@ -572,8 +572,11 @@
 			isa = PBXGroup;
 			children = (
 				89C5F3611C9C58BD0093A018 /* CBTapCoordinate.h */,
+				89C5F3621C9C58BD0093A018 /* CBTapCoordinate.m */,
 				89C5F36D1C9E32440093A018 /* CBDoubleTapCoordinate.h */,
+				89C5F36E1C9E32440093A018 /* CBDoubleTapCoordinate.m */,
 				89512BD91C9EEC3C0027D61E /* CBDragCoordinates.h */,
+				89512BDA1C9EEC3C0027D61E /* CBDragCoordinates.m */,
 			);
 			name = CoordinateGestures;
 			sourceTree = "<group>";
@@ -618,6 +621,7 @@
 			isa = PBXGroup;
 			children = (
 				89C5F35C1C9C51680093A018 /* CBQuery.h */,
+				89C5F35D1C9C51680093A018 /* CBQuery.m */,
 				89D537F41CA1DD9A00F62E09 /* QuerySelectors */,
 			);
 			name = Queries;
@@ -627,7 +631,9 @@
 			isa = PBXGroup;
 			children = (
 				89C5F3691C9C912F0093A018 /* CBGestureFactory.h */,
+				89C5F36A1C9C912F0093A018 /* CBGestureFactory.m */,
 				89C5F3581C9B9C850093A018 /* CBGesture.h */,
+				89C5F3591C9B9C850093A018 /* CBGesture.m */,
 				89D538121CA3511A00F62E09 /* Gestures */,
 				89512BD81C9EE90E0027D61E /* CoordinateGestures */,
 			);
@@ -637,13 +643,6 @@
 		89D537F41CA1DD9A00F62E09 /* QuerySelectors */ = {
 			isa = PBXGroup;
 			children = (
-				89C5F36E1C9E32440093A018 /* CBDoubleTapCoordinate.m */,
-				89512BDA1C9EEC3C0027D61E /* CBDragCoordinates.m */,
-				89C5F3591C9B9C850093A018 /* CBGesture.m */,
-				89C5F36A1C9C912F0093A018 /* CBGestureFactory.m */,
-				89C5F35D1C9C51680093A018 /* CBQuery.m */,
-				89D538201CA35ACC00F62E09 /* CBTap.m */,
-				89C5F3621C9C58BD0093A018 /* CBTapCoordinate.m */,
 				89D537F51CA1DF8500F62E09 /* QuerySelector.h */,
 				89D537F61CA1DF8500F62E09 /* QuerySelector.m */,
 				89D537FD1CA2090500F62E09 /* QuerySelectorFactory.h */,
@@ -681,6 +680,7 @@
 			isa = PBXGroup;
 			children = (
 				89D5381F1CA35ACC00F62E09 /* CBTap.h */,
+				89D538201CA35ACC00F62E09 /* CBTap.m */,
 				899696B81CADF84B00BB42E2 /* CBEnterText.h */,
 				899696B91CADF84B00BB42E2 /* CBEnterText.m */,
 			);
