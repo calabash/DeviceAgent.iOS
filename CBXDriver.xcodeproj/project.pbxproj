@@ -20,6 +20,9 @@
 		899696C41CB3360900BB42E2 /* CBPinchCoordinate.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696C21CB3360900BB42E2 /* CBPinchCoordinate.h */; };
 		899696C51CB3360900BB42E2 /* CBPinchCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696C31CB3360900BB42E2 /* CBPinchCoordinate.m */; };
 		899696C61CB3360900BB42E2 /* CBPinchCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696C31CB3360900BB42E2 /* CBPinchCoordinate.m */; };
+		899696C91CB356BF00BB42E2 /* QueryOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696C71CB356BF00BB42E2 /* QueryOptions.h */; };
+		899696CA1CB356BF00BB42E2 /* QueryOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696C81CB356BF00BB42E2 /* QueryOptions.m */; };
+		899696CB1CB356BF00BB42E2 /* QueryOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696C81CB356BF00BB42E2 /* QueryOptions.m */; };
 		89C5F3501C9A60E70093A018 /* Testmanagerd.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F34E1C9A60E70093A018 /* Testmanagerd.h */; };
 		89C5F3511C9A60E70093A018 /* Testmanagerd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F34F1C9A60E70093A018 /* Testmanagerd.m */; };
 		89C5F3541C9A66E10093A018 /* NSXPCConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3531C9A66E10093A018 /* NSXPCConnection.h */; };
@@ -249,6 +252,8 @@
 		899696BE1CB2F22000BB42E2 /* CBEnterTextInCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBEnterTextInCoordinate.m; sourceTree = "<group>"; };
 		899696C21CB3360900BB42E2 /* CBPinchCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPinchCoordinate.h; sourceTree = "<group>"; };
 		899696C31CB3360900BB42E2 /* CBPinchCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPinchCoordinate.m; sourceTree = "<group>"; };
+		899696C71CB356BF00BB42E2 /* QueryOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryOptions.h; sourceTree = "<group>"; };
+		899696C81CB356BF00BB42E2 /* QueryOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryOptions.m; sourceTree = "<group>"; };
 		89C5F34E1C9A60E70093A018 /* Testmanagerd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Testmanagerd.h; sourceTree = "<group>"; };
 		89C5F34F1C9A60E70093A018 /* Testmanagerd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Testmanagerd.m; sourceTree = "<group>"; };
 		89C5F3531C9A66E10093A018 /* NSXPCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXPCConnection.h; sourceTree = "<group>"; };
@@ -637,6 +642,8 @@
 				89C5F35C1C9C51680093A018 /* CBQuery.h */,
 				89C5F35D1C9C51680093A018 /* CBQuery.m */,
 				89D537F41CA1DD9A00F62E09 /* QuerySelectors */,
+				899696C71CB356BF00BB42E2 /* QueryOptions.h */,
+				899696C81CB356BF00BB42E2 /* QueryOptions.m */,
 			);
 			name = Queries;
 			sourceTree = "<group>";
@@ -1301,6 +1308,7 @@
 				89D538031CA20DB800F62E09 /* QuerySelectorText.h in Headers */,
 				F55F81851C6DD07500A945C8 /* DDData.h in Headers */,
 				F55F82561C6DD07500A945C8 /* RoutingConnection.h in Headers */,
+				899696C91CB356BF00BB42E2 /* QueryOptions.h in Headers */,
 				F55F823C1C6DD07500A945C8 /* DispatchQueueLogFormatter.h in Headers */,
 				F55F81921C6DD07500A945C8 /* HTTPResponse.h in Headers */,
 				F55F818B1C6DD07500A945C8 /* HTTPAuthenticationRequest.h in Headers */,
@@ -1560,6 +1568,7 @@
 				89C5F35F1C9C51680093A018 /* CBQuery.m in Sources */,
 				F55F84121C6E438200A945C8 /* CBException.m in Sources */,
 				F55F84181C6E438E00A945C8 /* CBXCUITestServer.m in Sources */,
+				899696CA1CB356BF00BB42E2 /* QueryOptions.m in Sources */,
 				F55F84111C6E437A00A945C8 /* UIDevice+Wifi_IP.m in Sources */,
 				F55F82371C6DD07500A945C8 /* DDLog.m in Sources */,
 				89C5F35B1C9B9C850093A018 /* CBGesture.m in Sources */,
@@ -1629,6 +1638,7 @@
 				F5B0A1DD1CAD4E9B00E056CE /* ContextFilterLogFormatter.m in Sources */,
 				F5B0A1BA1CAD4E3A00E056CE /* CBElementNotFoundException.m in Sources */,
 				F5B0A1D21CAD4E8A00E056CE /* HTTPDataResponse.m in Sources */,
+				899696CB1CB356BF00BB42E2 /* QueryOptions.m in Sources */,
 				F5B0A1BC1CAD4E3A00E056CE /* CBInvalidArgumentException.m in Sources */,
 				F5B0A1D01CAD4E7F00E056CE /* MultipartMessageHeaderField.m in Sources */,
 				F5B0A1E31CAD4EA700E056CE /* RoutingConnection.m in Sources */,

@@ -18,18 +18,20 @@
     return @[CB_COORDINATE_KEY];
 }
 - (NSArray <NSString *> *)optionalKeys {
-    return @[@"duration"];
+    return @[ CB_DURATION_KEY ];
 }
 
 - (void)validate {
     if (![self.query coordinate]) {
         NSString *msg = @"TapCoordinate requires a coordinate. Syntax is [ x, y ] or { x : #, y : # }.";
-        @throw [CBInvalidArgumentException withFormat:@"[%@] %@ Query: %@", self.class.name, msg, [self.query toJSONString]];
+        @throw [CBInvalidArgumentException withFormat:@"[%@] %@ Query: %@",
+                self.class.name,
+                msg,
+                [self.query toJSONString]];
     }
 }
 
 - (XCSynthesizedEventRecord *)event {
-    
     XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc] initWithName:self.class.name
                                                                 interfaceOrientation:0];
     

@@ -47,7 +47,6 @@
  * Any keys present besides these should generate a warning and be added to the `warnings` array.
  */
 - (NSArray <NSString *> *)requiredKeys;
-
 @optional
 - (NSArray <NSString *> *)optionalKeys;
 - (NSArray <NSString *> *)optionalSpecifiers;
