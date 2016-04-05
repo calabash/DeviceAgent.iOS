@@ -43,7 +43,7 @@
     return @[
              @"gesture",
              @"coordinate",
-             @"coordinates"
+             @"coordinates",
              ];
 }
 

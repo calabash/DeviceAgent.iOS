@@ -83,19 +83,17 @@
     //Testmanagerd calls are async, but the http server is sync so we need to synchronize it.
     __block BOOL done = NO;
     __block NSError *err;
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] != 0x0) {
-            [[Testmanagerd get] _XCT_synthesizeEvent:[self event] completion:^(NSError *e) {
-                done = YES;
-                err = e;
-            }];
-        } else {
-            [[Testmanagerd get] _XCT_performTouchGesture:[self gesture] completion:^(NSError *e) {
-                done = YES;
-                err = e;
-            }];
-        }
-    });
+    if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] != 0x0) {
+        [[Testmanagerd get] _XCT_synthesizeEvent:[self event] completion:^(NSError *e) {
+            done = YES;
+            err = e;
+        }];
+    } else {
+        [[Testmanagerd get] _XCT_performTouchGesture:[self gesture] completion:^(NSError *e) {
+            done = YES;
+            err = e;
+        }];
+    }
 
     while(!done){
         //TODO: fine-tune this. 

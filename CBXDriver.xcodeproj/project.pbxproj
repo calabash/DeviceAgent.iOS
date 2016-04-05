@@ -17,6 +17,9 @@
 		899696BF1CB2F22000BB42E2 /* CBEnterTextInCoordinate.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696BD1CB2F22000BB42E2 /* CBEnterTextInCoordinate.h */; };
 		899696C01CB2F22000BB42E2 /* CBEnterTextInCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696BE1CB2F22000BB42E2 /* CBEnterTextInCoordinate.m */; };
 		899696C11CB2F22000BB42E2 /* CBEnterTextInCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696BE1CB2F22000BB42E2 /* CBEnterTextInCoordinate.m */; };
+		899696C41CB3360900BB42E2 /* CBPinchCoordinate.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696C21CB3360900BB42E2 /* CBPinchCoordinate.h */; };
+		899696C51CB3360900BB42E2 /* CBPinchCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696C31CB3360900BB42E2 /* CBPinchCoordinate.m */; };
+		899696C61CB3360900BB42E2 /* CBPinchCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696C31CB3360900BB42E2 /* CBPinchCoordinate.m */; };
 		89C5F3501C9A60E70093A018 /* Testmanagerd.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F34E1C9A60E70093A018 /* Testmanagerd.h */; };
 		89C5F3511C9A60E70093A018 /* Testmanagerd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F34F1C9A60E70093A018 /* Testmanagerd.m */; };
 		89C5F3541C9A66E10093A018 /* NSXPCConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3531C9A66E10093A018 /* NSXPCConnection.h */; };
@@ -244,6 +247,8 @@
 		899696B91CADF84B00BB42E2 /* CBEnterText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBEnterText.m; sourceTree = "<group>"; };
 		899696BD1CB2F22000BB42E2 /* CBEnterTextInCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBEnterTextInCoordinate.h; sourceTree = "<group>"; };
 		899696BE1CB2F22000BB42E2 /* CBEnterTextInCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBEnterTextInCoordinate.m; sourceTree = "<group>"; };
+		899696C21CB3360900BB42E2 /* CBPinchCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPinchCoordinate.h; sourceTree = "<group>"; };
+		899696C31CB3360900BB42E2 /* CBPinchCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPinchCoordinate.m; sourceTree = "<group>"; };
 		89C5F34E1C9A60E70093A018 /* Testmanagerd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Testmanagerd.h; sourceTree = "<group>"; };
 		89C5F34F1C9A60E70093A018 /* Testmanagerd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Testmanagerd.m; sourceTree = "<group>"; };
 		89C5F3531C9A66E10093A018 /* NSXPCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXPCConnection.h; sourceTree = "<group>"; };
@@ -584,6 +589,8 @@
 				89512BDA1C9EEC3C0027D61E /* CBDragCoordinates.m */,
 				899696BD1CB2F22000BB42E2 /* CBEnterTextInCoordinate.h */,
 				899696BE1CB2F22000BB42E2 /* CBEnterTextInCoordinate.m */,
+				899696C21CB3360900BB42E2 /* CBPinchCoordinate.h */,
+				899696C31CB3360900BB42E2 /* CBPinchCoordinate.m */,
 			);
 			name = CoordinateGestures;
 			sourceTree = "<group>";
@@ -1284,6 +1291,7 @@
 				F55F81A51C6DD07500A945C8 /* HTTPRedirectResponse.h in Headers */,
 				F55F824E1C6DD07500A945C8 /* HTTPResponseProxy.h in Headers */,
 				F55F823A1C6DD07500A945C8 /* ContextFilterLogFormatter.h in Headers */,
+				899696C41CB3360900BB42E2 /* CBPinchCoordinate.h in Headers */,
 				F55F81901C6DD07500A945C8 /* HTTPMessage.h in Headers */,
 				89512BDF1CA095D20027D61E /* DeviceEventRoutes.h in Headers */,
 				89512BDB1C9EEC3C0027D61E /* CBDragCoordinates.h in Headers */,
@@ -1558,6 +1566,7 @@
 				89C5F3641C9C58BD0093A018 /* CBTapCoordinate.m in Sources */,
 				89512BE01CA095D20027D61E /* DeviceEventRoutes.m in Sources */,
 				F55F81811C6DD07500A945C8 /* GCDAsyncSocket.m in Sources */,
+				899696C51CB3360900BB42E2 /* CBPinchCoordinate.m in Sources */,
 				F55F82531C6DD07500A945C8 /* RouteRequest.m in Sources */,
 				F55F84101C6E437A00A945C8 /* JSONUtils.m in Sources */,
 				89512BDC1C9EEC3C0027D61E /* CBDragCoordinates.m in Sources */,
@@ -1629,6 +1638,7 @@
 				F5B0A1A61CAD4DFA00E056CE /* CBXCUITestServer.m in Sources */,
 				F5B0A1E21CAD4EA700E056CE /* RouteResponse.m in Sources */,
 				F5B0A1BE1CAD4E4600E056CE /* GestureRoutes.m in Sources */,
+				899696C61CB3360900BB42E2 /* CBPinchCoordinate.m in Sources */,
 				F5B0A1CB1CAD4E7500E056CE /* HTTPConnection.m in Sources */,
 				F5B0A1BB1CAD4E3A00E056CE /* CBShutdownServerException.m in Sources */,
 				F5B0A1E01CAD4EA700E056CE /* Route.m in Sources */,

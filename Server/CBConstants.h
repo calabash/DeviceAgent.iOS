@@ -19,6 +19,8 @@ static NSString *const CB_Y1_KEY = @"y1";
 static NSString *const CB_X2_KEY = @"x2";
 static NSString *const CB_Y2_KEY = @"y2";
 
+static NSString *const CB_AMOUNT_KEY = @"amount";
+static NSString *const CB_PINCH_DIRECTION_KEY = @"pinch_direction";
 static NSString *const CB_DURATION_KEY = @"duration";
 static NSString *const CB_COORDINATE_KEY = @"coordinate";
 static NSString *const CB_COORDINATES_KEY = @"coordinates";
@@ -45,12 +47,16 @@ static NSString *const CB_VELOCITY_KEY = @"velocity";
 static NSString *const CB_ROTATION_KEY = @"rotation";
 static NSString *const CB_NUM_TAPS_KEY = @"taps";
 static NSString *const CB_NUM_TOUCHES_KEY = @"touches";
+static NSString *const CB_PINCH_IN = @"in";
+static NSString *const CB_PINCH_OUT = @"out";
 
 static NSString *const CB_DIRECTION_KEY = @"direction";
 static NSString *const CB_UP_KEY = @"up";
 static NSString *const CB_DOWN_KEY = @"down";
 static NSString *const CB_LEFT_KEY = @"left";
 static NSString *const CB_RIGHT_KEY = @"right";
+
+static NSString *const CB_DEFAULT_PINCH_DIRECTION = @"in";
 
 static NSString *const CB_EMPTY_STRING = @"";
 
@@ -59,4 +65,5 @@ static NSUInteger const HTTP_STATUS_CODE_INVALID_REQUEST = 400;
 static NSUInteger const HTTP_STATUS_CODE_SERVER_ERROR = 500;
 
 static float const CB_DEFAULT_DURATION = 0.1;
+static float const CB_DEFAULT_PINCH_AMOUNT = 50;
 static float const CB_GESTURE_EPSILON = 0.001;

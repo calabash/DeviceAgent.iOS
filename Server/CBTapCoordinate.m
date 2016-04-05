@@ -15,7 +15,7 @@
 + (NSString *)name { return @"tap_coordinate"; }
 
 - (NSArray <NSString *> *)requiredKeys {
-    return @[@"coordinate"];
+    return @[CB_COORDINATE_KEY];
 }
 - (NSArray <NSString *> *)optionalKeys {
     return @[@"duration"];

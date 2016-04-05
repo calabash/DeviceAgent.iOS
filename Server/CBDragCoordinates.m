@@ -12,10 +12,10 @@
 + (NSString *)name { return @"drag_coordinates"; }
 
 - (NSArray <NSString *> *)requiredKeys {
-    return @[@"coordinates"];
+    return @[ CB_COORDINATES_KEY ];
 }
 - (NSArray <NSString *> *)optionalKeys {
-    return @[@"duration"];
+    return @[ CB_DURATION_KEY ];
 }
 
 - (void)validate {

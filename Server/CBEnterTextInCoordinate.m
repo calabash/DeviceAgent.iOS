@@ -14,7 +14,7 @@
 + (NSString *)name { return @"enter_text_in_coordinate"; }
 
 - (NSArray <NSString *> *)requiredKeys {
-    return @[@"coordinate"];
+    return @[CB_COORDINATE_KEY];
 }
 
 - (void)validate {
