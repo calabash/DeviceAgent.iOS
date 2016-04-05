@@ -33,22 +33,18 @@
  *
  *  They should both contain identical logic but using different XC objects to create the gestures.
  */
-- (XCSynthesizedEventRecord *)event;
-- (XCTouchGesture *)gesture;
+- (XCSynthesizedEventRecord *)eventWithElements:(NSArray <XCUIElement *> *)elements;
+- (XCTouchGesture *)gestureWithElements:(NSArray <XCUIElement *> *)elements;
 
 /*
- * `warnings` is a collection of any warnings generated while the query is being executed.
- */
-@property (nonatomic, strong) NSMutableArray <NSString *> *warnings;
-
-/*
- * Queries should specify which keys are necessary (e.g. 'coordinate' for tap_coordinate)
+ * Gestures should specify which keys are necessary (e.g. 'coordinate' for tap_coordinate)
  * as well as which options are available (e.g. 'duration' for tap). 
  * Any keys present besides these should generate a warning and be added to the `warnings` array.
  */
-- (NSArray <NSString *> *)requiredKeys;
-@optional
-- (NSArray <NSString *> *)optionalKeys;
+
+- (NSArray <NSString *> *)requiredOptions;
+- (NSArray <NSString *> *)requiredSpecifiers;
+- (NSArray <NSString *> *)optionalOptions;
 - (NSArray <NSString *> *)optionalSpecifiers;
 
 /*
@@ -59,7 +55,6 @@
 /*
  * All-in-one constructor / executor.
  */
-
 + (CBGesture *)executeWithJSON:(NSDictionary *)json completion:(CompletionBlock)completion;
 @end
 
@@ -67,4 +62,5 @@
 @property (nonatomic, strong) CBQuery *query; /* Identify which element or element */
 - (void)execute:(CompletionBlock)completion;
 + (instancetype)withJSON:(NSDictionary *)json;
++ (NSArray <NSString *> *)defaultOptionalSpecifiers;
 @end

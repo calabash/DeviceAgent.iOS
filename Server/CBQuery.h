@@ -7,13 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "QueryConfiguration.h"
 #import "QuerySelector.h"
 #import "CBConstants.h"
 #import "XCUIElement.h"
 
 @interface CBQuery : NSObject
 @property (nonatomic, strong) NSArray <QuerySelector *> *selectors;
-@property (nonatomic, strong) NSDictionary *specifiers;
+@property (nonatomic, strong) QueryConfiguration *queryConfiguration;
+
+/*
+ Convenience indexing into query options
+ */
+- (id)objectForKeyedSubscript:(NSString *)key;
 
 /*
     Coordinate based queries
@@ -24,21 +30,16 @@
 /*
     General queries
  */
-+ (CBQuery *)withSpecifiers:(NSDictionary *)specifiers
-          collectWarningsIn:(NSMutableArray <NSString *> *)warnings;
++ (CBQuery *)withQueryConfiguration:(QueryConfiguration *)queryConfig;
 
+
+/*
+    Perform the query, eval the results into XCUIElements
+ */
 - (NSArray <XCUIElement *> *)execute;
 
+/*
+    Debug description
+ */
 - (NSString *)toJSONString;
-
-/*
-    Delta between what is required and what is provided
- */
-- (NSArray <NSString *> *)requiredSpecifierDelta:(NSArray <NSString *> *)required;
-
-/*
-    Delta between what options are provided and which are supported.
-    E.g. 'speed' might supported for 'flick' but not 'tap'
- */
-- (NSArray <NSString *> *)optionalKeyDelta:(NSArray <NSString *> *)optional;
 @end

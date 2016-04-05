@@ -59,14 +59,13 @@ static NSDictionary *typeStringToElementType;
     return elementTypeToString[@(type)];
 }
 
-+ (CGPoint)pointFromCoordinateJSON:(id)json {
++ (void)validatePointJSON:(id)json {
     if ([json isKindOfClass:[NSArray class]]) {
         if ([json count] < 2) {
             @throw [CBInvalidArgumentException withMessage:[NSString stringWithFormat:
                                                             @"Expected [x, y], got %@",
                                                             [JSONUtils objToJSONString:json]]];
         }
-        return CGPointMake([json[0] floatValue], [json[1] floatValue]);
     } else {
         if (![json isKindOfClass:[NSDictionary class]]) {
             @throw [CBInvalidArgumentException withMessage:[NSString stringWithFormat:
@@ -76,9 +75,20 @@ static NSDictionary *typeStringToElementType;
         if (!([[json allKeys] containsObject:@"x"] && [[json allKeys] containsObject:@"y"])) {
             @throw [CBInvalidArgumentException withMessage:[NSString stringWithFormat:
                                                             @"Expected { x : #, y : # }, got %@",
-                                                           [JSONUtils objToJSONString:json]]];
+                                                            [JSONUtils objToJSONString:json]]];
         }
-        return CGPointMake([json[@"x"] floatValue], [json[@"y"] floatValue]);
+    }
+}
+
++ (CGPoint)pointFromCoordinateJSON:(id)json {
+    [self validatePointJSON:json];
+    
+    if ([json isKindOfClass:[NSArray class]]) {
+        return CGPointMake([json[0] floatValue],
+                           [json[1] floatValue]);
+    } else {
+        return CGPointMake([json[CB_X_KEY] floatValue],
+                           [json[CB_Y_KEY] floatValue]);
     }
 }
 

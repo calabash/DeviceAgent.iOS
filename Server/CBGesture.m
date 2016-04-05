@@ -9,22 +9,34 @@
 #import "CBGesture.h"
 
 @implementation CBGesture
-@synthesize warnings;
 
 + (NSString *)name {
     _must_override_exception;
 }
 
-- (NSArray <NSString *> *)requiredKeys {
+- (NSArray <NSString *> *)requiredOptions {
     _must_override_exception;
 }
 
-- (NSArray <NSString *> *)optionalKeys {
+- (NSArray <NSString *> *)requiredSpecifiers {
+    _must_override_exception;
+}
+
+- (NSArray <NSString *> *)optionalOptions {
     return @[];
 }
 
 - (NSArray <NSString *> *)optionalSpecifiers {
     return @[];
+}
+
++ (NSArray <NSString *> *)defaultOptionalSpecifiers {
+    return @[CB_IDENTIFIER_KEY,
+             CB_TEXT_KEY,
+             CB_TEXT_LIKE_KEY,
+             CB_PROPERTY_KEY,
+             CB_PROPERTY_LIKE_KEY,
+             CB_INDEX_KEY];
 }
 
 + (CBGesture *)executeWithJSON:(NSDictionary *)json
@@ -36,60 +48,48 @@
 
 + (instancetype)withJSON:(NSDictionary *)json {
     CBGesture *gesture = [self new];
-    gesture.warnings = [NSMutableArray array];
     
     id specs = [json mutableCopy];
     [specs removeObjectForKey:@"gesture"];
     
-    gesture.query = [CBQuery withSpecifiers:json
-                          collectWarningsIn:gesture.warnings];
+    QueryConfiguration *queryConfig = [QueryConfiguration withJSON:specs
+                                                requiredSpecifiers:[gesture requiredSpecifiers]
+                                                optionalSpecifiers:[gesture optionalSpecifiers]];
+    gesture.query = [CBQuery withQueryConfiguration:queryConfig];
     
     return gesture;
 }
 
-- (XCSynthesizedEventRecord *)event {
+- (XCSynthesizedEventRecord *)eventWithElements:(NSArray<XCUIElement *> *)elements {
     _must_override_exception;
 }
 
-- (XCTouchGesture *)gesture {
+- (XCTouchGesture *)gestureWithElements:(NSArray<XCUIElement *> *)elements {
     _must_override_exception;
 }
 
-- (void)addWarning:(NSString *)format, ... {
-    va_list args;
-    va_start(args, format);
-    [self.warnings addObject:[[NSString alloc] initWithFormat:format arguments:args]];
-    va_end(args);
-}
 
 - (void)execute:(CompletionBlock)completion {
-    NSArray *delta = [self.query requiredSpecifierDelta:[self requiredKeys]];
-    if (delta.count > 0) {
-        @throw [CBInvalidArgumentException withFormat:@"[%@] Missing required keys: %@",
-                [self.class name],
-                [JSONUtils objToJSONString:delta]];
-    }
-    
-    delta = [self.query optionalKeyDelta:[self optionalSpecifiers]];
-    if (delta.count > 0) {
-        for (NSString *key in delta) {
-            [self addWarning:@"'%@' is not a supported option for %@.", key, [self.class name]];
-        }
-    }
-    
     [self validate]; //Should be implemented by subclass
     
+    NSArray <XCUIElement *> *elements = [self.query execute];
+    if (elements.count == 0) {
+        @throw [CBException withMessage:@"Error performing gesture: No elements match query."];
+    }
     
     //Testmanagerd calls are async, but the http server is sync so we need to synchronize it.
     __block BOOL done = NO;
     __block NSError *err;
+    
     if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] != 0x0) {
-        [[Testmanagerd get] _XCT_synthesizeEvent:[self event] completion:^(NSError *e) {
+        [[Testmanagerd get] _XCT_synthesizeEvent:[self eventWithElements:elements]
+                                      completion:^(NSError *e) {
             done = YES;
             err = e;
         }];
     } else {
-        [[Testmanagerd get] _XCT_performTouchGesture:[self gesture] completion:^(NSError *e) {
+        [[Testmanagerd get] _XCT_performTouchGesture:[self gestureWithElements:elements]
+                                          completion:^(NSError *e) {
             done = YES;
             err = e;
         }];
@@ -100,10 +100,23 @@
         [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
     }
     if (err) @throw [CBException withMessage:@"Error performing gesture"];
-    completion(err, self.warnings);
+    completion(err);
 }
 
 - (void)validate {
-    _must_override_exception;
+    BOOL contains = NO;
+    NSArray *specifiers = [self optionalSpecifiers];
+    for (NSString *key in specifiers) {
+        if (self.query[key]) {
+            contains = YES;
+            break;
+        }
+    }
+    if (!contains) {
+        @throw [CBInvalidArgumentException withFormat:
+                @"[%@] Requires at least one of the following specifiers: %@",
+                self.class.name,
+                [JSONUtils objToJSONString:specifiers]];
+    }
 }
 @end

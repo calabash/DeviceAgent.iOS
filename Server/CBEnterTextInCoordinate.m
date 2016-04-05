@@ -13,31 +13,25 @@
 @implementation CBEnterTextInCoordinate
 + (NSString *)name { return @"enter_text_in_coordinate"; }
 
-- (NSArray <NSString *> *)requiredKeys {
-    return @[CB_COORDINATE_KEY];
-}
-
-- (void)validate {
-    NSDictionary *coordDict = self.query.coordinate;
-    [JSONUtils pointFromCoordinateJSON:coordDict]; //performs validation
-}
-
 + (CBGesture *)executeWithJSON:(NSDictionary *)json completion:(CompletionBlock)completion {
     NSMutableDictionary *j = [json mutableCopy];
+    
+    if (![[j allKeys] containsObject:CB_STRING_KEY]) {
+        @throw [CBInvalidArgumentException withFormat:@"Missing required key 'string'"];
+    }
+    
     NSString *string = j[CB_STRING_KEY];
     [j removeObjectForKey:CB_STRING_KEY];
     
     CBTapCoordinate *tap = [CBTapCoordinate withJSON:j];
-    [tap execute:^(NSError *e, NSArray<NSString *> *warnings) {
+    [tap execute:^(NSError *e) {
         if (e) {
-            NSMutableArray *w = [warnings mutableCopy];
-            [w addObject:@"Tap failed, unable to send string"];
-            completion(e, w);
+            completion(e);
         } else {
             [[Testmanagerd get] _XCT_sendString:string completion:^(NSError *e) {
                 if (e) @throw [CBException withMessage:@"Error performing gesture"];
             }];
-            completion(e, warnings ?: @[]);
+            completion(e);
         }
     }];
     

@@ -10,26 +10,24 @@
 
 @implementation CBDragCoordinates
 + (NSString *)name { return @"drag_coordinates"; }
-
-- (NSArray <NSString *> *)requiredKeys {
-    return @[ CB_COORDINATES_KEY ];
-}
-- (NSArray <NSString *> *)optionalKeys {
-    return @[ CB_DURATION_KEY ];
-}
+- (NSArray <NSString *> *)requiredOptions { return @[ CB_COORDINATES_KEY ]; }
 
 - (void)validate {
     if (![self.query coordinates] || [self.query coordinates].count < 2) {
         NSString *msg = @"DragCoordinates requires at least 2 coordinates. Coordinate syntax is [ x, y ] or { x : #, y : # }.";
         @throw [CBInvalidArgumentException withFormat:@"[%@] %@ Query: %@", self.class.name, msg, [self.query toJSONString]];
     }
+    for (id coordJSON in [self.query coordinates]) {
+        [JSONUtils validatePointJSON:coordJSON];
+    }
 }
 
 - (XCSynthesizedEventRecord *)event {
     XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc] initWithName:self.class.name
                                                                 interfaceOrientation:0];
-    float duration = [self.query.specifiers.allKeys containsObject:CB_DURATION_KEY] ?
-    [self.query.specifiers[CB_DURATION_KEY] floatValue] : CB_DEFAULT_DURATION;
+    float duration = self.query[CB_DURATION_KEY] ?
+        [self.query[CB_DURATION_KEY] floatValue] :
+        CB_DEFAULT_DURATION;
     
     CGPoint coordinate = [JSONUtils pointFromCoordinateJSON:[self.query coordinates].firstObject];
     XCPointerEventPath *path = [[XCPointerEventPath alloc] initForTouchAtPoint:coordinate
@@ -52,8 +50,9 @@
     XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:self.class.name];
     
     CGPoint coordinate = [JSONUtils pointFromCoordinateJSON:[self.query coordinates].firstObject];
-    float duration = [self.query.specifiers.allKeys containsObject:CB_DURATION_KEY] ?
-    [self.query.specifiers[CB_DURATION_KEY] floatValue] : CB_DEFAULT_DURATION;
+    float duration = self.query[CB_DURATION_KEY] ?
+        [self.query[CB_DURATION_KEY] floatValue] :
+        CB_DEFAULT_DURATION;
     
     XCTouchPath *path = [[XCTouchPath alloc] initWithTouchDown:coordinate
                                                    orientation:0

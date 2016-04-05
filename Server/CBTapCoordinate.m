@@ -14,23 +14,6 @@
 
 + (NSString *)name { return @"tap_coordinate"; }
 
-- (NSArray <NSString *> *)requiredKeys {
-    return @[CB_COORDINATE_KEY];
-}
-- (NSArray <NSString *> *)optionalKeys {
-    return @[ CB_DURATION_KEY ];
-}
-
-- (void)validate {
-    if (![self.query coordinate]) {
-        NSString *msg = @"TapCoordinate requires a coordinate. Syntax is [ x, y ] or { x : #, y : # }.";
-        @throw [CBInvalidArgumentException withFormat:@"[%@] %@ Query: %@",
-                self.class.name,
-                msg,
-                [self.query toJSONString]];
-    }
-}
-
 - (XCSynthesizedEventRecord *)event {
     XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc] initWithName:self.class.name
                                                                 interfaceOrientation:0];
@@ -40,8 +23,9 @@
     XCPointerEventPath *path = [[XCPointerEventPath alloc] initForTouchAtPoint:coordinate
                                                                         offset:0];
     
-    float duration = [self.query.specifiers.allKeys containsObject:CB_DURATION_KEY] ?
-    [self.query.specifiers[CB_DURATION_KEY] floatValue] : CB_DEFAULT_DURATION;
+    float duration = self.query[CB_DURATION_KEY] ?
+        [self.query[CB_DURATION_KEY] floatValue] :
+        CB_DEFAULT_DURATION;
     
     [path liftUpAtOffset:duration];
     [event addPointerEventPath:path];
@@ -57,8 +41,9 @@
                                                    orientation:0
                                                         offset:0];
     
-    float duration = [self.query.specifiers.allKeys containsObject:CB_DURATION_KEY] ?
-    [self.query.specifiers[CB_DURATION_KEY] floatValue] : CB_DEFAULT_DURATION;
+    float duration = self.query[CB_DURATION_KEY] ?
+        [self.query[CB_DURATION_KEY] floatValue] :
+        CB_DEFAULT_DURATION;
     
     [path liftUpAtPoint:coordinate
                  offset:duration];

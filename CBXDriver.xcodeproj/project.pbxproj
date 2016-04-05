@@ -20,9 +20,15 @@
 		899696C41CB3360900BB42E2 /* CBPinchCoordinate.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696C21CB3360900BB42E2 /* CBPinchCoordinate.h */; };
 		899696C51CB3360900BB42E2 /* CBPinchCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696C31CB3360900BB42E2 /* CBPinchCoordinate.m */; };
 		899696C61CB3360900BB42E2 /* CBPinchCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696C31CB3360900BB42E2 /* CBPinchCoordinate.m */; };
-		899696C91CB356BF00BB42E2 /* QueryOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696C71CB356BF00BB42E2 /* QueryOptions.h */; };
-		899696CA1CB356BF00BB42E2 /* QueryOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696C81CB356BF00BB42E2 /* QueryOptions.m */; };
-		899696CB1CB356BF00BB42E2 /* QueryOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696C81CB356BF00BB42E2 /* QueryOptions.m */; };
+		899696C91CB356BF00BB42E2 /* QueryConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696C71CB356BF00BB42E2 /* QueryConfiguration.h */; };
+		899696CA1CB356BF00BB42E2 /* QueryConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696C81CB356BF00BB42E2 /* QueryConfiguration.m */; };
+		899696CB1CB356BF00BB42E2 /* QueryConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696C81CB356BF00BB42E2 /* QueryConfiguration.m */; };
+		899696CE1CB42ACB00BB42E2 /* CBCoordinateGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696CC1CB42ACB00BB42E2 /* CBCoordinateGesture.h */; };
+		899696CF1CB42ACB00BB42E2 /* CBCoordinateGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696CD1CB42ACB00BB42E2 /* CBCoordinateGesture.m */; };
+		899696D01CB42ACB00BB42E2 /* CBCoordinateGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696CD1CB42ACB00BB42E2 /* CBCoordinateGesture.m */; };
+		899696D31CB44D9B00BB42E2 /* GestureConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696D11CB44D9B00BB42E2 /* GestureConfiguration.h */; };
+		899696D41CB44D9B00BB42E2 /* GestureConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696D21CB44D9B00BB42E2 /* GestureConfiguration.m */; };
+		899696D51CB44D9B00BB42E2 /* GestureConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696D21CB44D9B00BB42E2 /* GestureConfiguration.m */; };
 		89C5F3501C9A60E70093A018 /* Testmanagerd.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F34E1C9A60E70093A018 /* Testmanagerd.h */; };
 		89C5F3511C9A60E70093A018 /* Testmanagerd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F34F1C9A60E70093A018 /* Testmanagerd.m */; };
 		89C5F3541C9A66E10093A018 /* NSXPCConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3531C9A66E10093A018 /* NSXPCConnection.h */; };
@@ -252,8 +258,12 @@
 		899696BE1CB2F22000BB42E2 /* CBEnterTextInCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBEnterTextInCoordinate.m; sourceTree = "<group>"; };
 		899696C21CB3360900BB42E2 /* CBPinchCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPinchCoordinate.h; sourceTree = "<group>"; };
 		899696C31CB3360900BB42E2 /* CBPinchCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPinchCoordinate.m; sourceTree = "<group>"; };
-		899696C71CB356BF00BB42E2 /* QueryOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryOptions.h; sourceTree = "<group>"; };
-		899696C81CB356BF00BB42E2 /* QueryOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryOptions.m; sourceTree = "<group>"; };
+		899696C71CB356BF00BB42E2 /* QueryConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryConfiguration.h; sourceTree = "<group>"; };
+		899696C81CB356BF00BB42E2 /* QueryConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryConfiguration.m; sourceTree = "<group>"; };
+		899696CC1CB42ACB00BB42E2 /* CBCoordinateGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCoordinateGesture.h; sourceTree = "<group>"; };
+		899696CD1CB42ACB00BB42E2 /* CBCoordinateGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCoordinateGesture.m; sourceTree = "<group>"; };
+		899696D11CB44D9B00BB42E2 /* GestureConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureConfiguration.h; sourceTree = "<group>"; };
+		899696D21CB44D9B00BB42E2 /* GestureConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureConfiguration.m; sourceTree = "<group>"; };
 		89C5F34E1C9A60E70093A018 /* Testmanagerd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Testmanagerd.h; sourceTree = "<group>"; };
 		89C5F34F1C9A60E70093A018 /* Testmanagerd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Testmanagerd.m; sourceTree = "<group>"; };
 		89C5F3531C9A66E10093A018 /* NSXPCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXPCConnection.h; sourceTree = "<group>"; };
@@ -586,6 +596,8 @@
 		89512BD81C9EE90E0027D61E /* CoordinateGestures */ = {
 			isa = PBXGroup;
 			children = (
+				899696CC1CB42ACB00BB42E2 /* CBCoordinateGesture.h */,
+				899696CD1CB42ACB00BB42E2 /* CBCoordinateGesture.m */,
 				89C5F3611C9C58BD0093A018 /* CBTapCoordinate.h */,
 				89C5F3621C9C58BD0093A018 /* CBTapCoordinate.m */,
 				89C5F36D1C9E32440093A018 /* CBDoubleTapCoordinate.h */,
@@ -641,9 +653,9 @@
 			children = (
 				89C5F35C1C9C51680093A018 /* CBQuery.h */,
 				89C5F35D1C9C51680093A018 /* CBQuery.m */,
+				899696C71CB356BF00BB42E2 /* QueryConfiguration.h */,
+				899696C81CB356BF00BB42E2 /* QueryConfiguration.m */,
 				89D537F41CA1DD9A00F62E09 /* QuerySelectors */,
-				899696C71CB356BF00BB42E2 /* QueryOptions.h */,
-				899696C81CB356BF00BB42E2 /* QueryOptions.m */,
 			);
 			name = Queries;
 			sourceTree = "<group>";
@@ -655,7 +667,9 @@
 				89C5F36A1C9C912F0093A018 /* CBGestureFactory.m */,
 				89C5F3581C9B9C850093A018 /* CBGesture.h */,
 				89C5F3591C9B9C850093A018 /* CBGesture.m */,
-				89D538121CA3511A00F62E09 /* Gestures */,
+				899696D11CB44D9B00BB42E2 /* GestureConfiguration.h */,
+				899696D21CB44D9B00BB42E2 /* GestureConfiguration.m */,
+				89D538121CA3511A00F62E09 /* StandardGestures */,
 				89512BD81C9EE90E0027D61E /* CoordinateGestures */,
 			);
 			name = Gestures;
@@ -697,7 +711,7 @@
 			name = FBDriverCode;
 			sourceTree = "<group>";
 		};
-		89D538121CA3511A00F62E09 /* Gestures */ = {
+		89D538121CA3511A00F62E09 /* StandardGestures */ = {
 			isa = PBXGroup;
 			children = (
 				89D5381F1CA35ACC00F62E09 /* CBTap.h */,
@@ -705,7 +719,7 @@
 				899696B81CADF84B00BB42E2 /* CBEnterText.h */,
 				899696B91CADF84B00BB42E2 /* CBEnterText.m */,
 			);
-			name = Gestures;
+			name = StandardGestures;
 			sourceTree = "<group>";
 		};
 		F55F7FEA1C6DD07500A945C8 /* Vendor */ = {
@@ -1305,10 +1319,11 @@
 				89D537F71CA1DF8500F62E09 /* QuerySelector.h in Headers */,
 				89D538151CA351F400F62E09 /* QuerySelectorIndex.h in Headers */,
 				F55F81A11C6DD07500A945C8 /* HTTPErrorResponse.h in Headers */,
+				899696D31CB44D9B00BB42E2 /* GestureConfiguration.h in Headers */,
 				89D538031CA20DB800F62E09 /* QuerySelectorText.h in Headers */,
 				F55F81851C6DD07500A945C8 /* DDData.h in Headers */,
 				F55F82561C6DD07500A945C8 /* RoutingConnection.h in Headers */,
-				899696C91CB356BF00BB42E2 /* QueryOptions.h in Headers */,
+				899696C91CB356BF00BB42E2 /* QueryConfiguration.h in Headers */,
 				F55F823C1C6DD07500A945C8 /* DispatchQueueLogFormatter.h in Headers */,
 				F55F81921C6DD07500A945C8 /* HTTPResponse.h in Headers */,
 				F55F818B1C6DD07500A945C8 /* HTTPAuthenticationRequest.h in Headers */,
@@ -1334,6 +1349,7 @@
 				89C5F3561C9B9B690093A018 /* CBTypedefs.h in Headers */,
 				89C5F3541C9A66E10093A018 /* NSXPCConnection.h in Headers */,
 				F55F81871C6DD07500A945C8 /* DDNumber.h in Headers */,
+				899696CE1CB42ACB00BB42E2 /* CBCoordinateGesture.h in Headers */,
 				89C5F36B1C9C912F0093A018 /* CBGestureFactory.h in Headers */,
 				F55F82581C6DD07500A945C8 /* RoutingHTTPServer.h in Headers */,
 				F55F82381C6DD07500A945C8 /* DDTTYLogger.h in Headers */,
@@ -1522,6 +1538,7 @@
 				89D537FC1CA2020700F62E09 /* QuerySelectorId.m in Sources */,
 				F55F82551C6DD07500A945C8 /* RouteResponse.m in Sources */,
 				89D538091CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.m in Sources */,
+				899696CF1CB42ACB00BB42E2 /* CBCoordinateGesture.m in Sources */,
 				F55F81861C6DD07500A945C8 /* DDData.m in Sources */,
 				F55F840F1C6E437100A945C8 /* UndefinedRoutes.m in Sources */,
 				89D538041CA20DB800F62E09 /* QuerySelectorText.m in Sources */,
@@ -1564,11 +1581,12 @@
 				F55F84091C6E436500A945C8 /* CBRoute.m in Sources */,
 				F55F81911C6DD07500A945C8 /* HTTPMessage.m in Sources */,
 				F55F82351C6DD07500A945C8 /* DDFileLogger.m in Sources */,
+				899696D41CB44D9B00BB42E2 /* GestureConfiguration.m in Sources */,
 				F55F81981C6DD07500A945C8 /* MultipartMessageHeader.m in Sources */,
 				89C5F35F1C9C51680093A018 /* CBQuery.m in Sources */,
 				F55F84121C6E438200A945C8 /* CBException.m in Sources */,
 				F55F84181C6E438E00A945C8 /* CBXCUITestServer.m in Sources */,
-				899696CA1CB356BF00BB42E2 /* QueryOptions.m in Sources */,
+				899696CA1CB356BF00BB42E2 /* QueryConfiguration.m in Sources */,
 				F55F84111C6E437A00A945C8 /* UIDevice+Wifi_IP.m in Sources */,
 				F55F82371C6DD07500A945C8 /* DDLog.m in Sources */,
 				89C5F35B1C9B9C850093A018 /* CBGesture.m in Sources */,
@@ -1599,6 +1617,7 @@
 				F5B0A1AB1CAD4E2700E056CE /* CBDoubleTapCoordinate.m in Sources */,
 				F5B0A1B41CAD4E2700E056CE /* QuerySelectorProperty.m in Sources */,
 				F5B0A1DE1CAD4E9B00E056CE /* DispatchQueueLogFormatter.m in Sources */,
+				899696D51CB44D9B00BB42E2 /* GestureConfiguration.m in Sources */,
 				F5B0A1D11CAD4E8A00E056CE /* HTTPAsyncFileResponse.m in Sources */,
 				899696BC1CADF85B00BB42E2 /* CBEnterText.m in Sources */,
 				F5B0A1E41CAD4EA700E056CE /* RoutingHTTPServer.m in Sources */,
@@ -1637,8 +1656,9 @@
 				899696C11CB2F22000BB42E2 /* CBEnterTextInCoordinate.m in Sources */,
 				F5B0A1DD1CAD4E9B00E056CE /* ContextFilterLogFormatter.m in Sources */,
 				F5B0A1BA1CAD4E3A00E056CE /* CBElementNotFoundException.m in Sources */,
+				899696D01CB42ACB00BB42E2 /* CBCoordinateGesture.m in Sources */,
 				F5B0A1D21CAD4E8A00E056CE /* HTTPDataResponse.m in Sources */,
-				899696CB1CB356BF00BB42E2 /* QueryOptions.m in Sources */,
+				899696CB1CB356BF00BB42E2 /* QueryConfiguration.m in Sources */,
 				F5B0A1BC1CAD4E3A00E056CE /* CBInvalidArgumentException.m in Sources */,
 				F5B0A1D01CAD4E7F00E056CE /* MultipartMessageHeaderField.m in Sources */,
 				F5B0A1E31CAD4EA700E056CE /* RoutingConnection.m in Sources */,

@@ -11,42 +11,13 @@
 @implementation CBTap
 + (NSString *)name { return @"tap"; }
 
-- (NSArray <NSString *> *)requiredKeys {
-    return @[];
-}
+- (NSArray <NSString *> *)requiredOptions { return @[]; }
+- (NSArray <NSString *> *)requiredSpecifiers { return @[]; }
+- (NSArray <NSString *> *)optionalOptions { return @[ CB_DURATION_KEY ]; }
+- (NSArray <NSString *> *)optionalSpecifiers { return [CBGesture defaultOptionalSpecifiers]; }
 
-- (NSArray <NSString *> *)optionalKeys {
-    return @[ @"duration" ];
-}
 
-- (NSArray <NSString *> *)optionalSpecifiers {
-    return @[ @"id", @"text", @"text_like", @"property", @"property_like", @"index" ];
-}
-
-- (void)validate {
-    BOOL contains = NO;
-    NSArray *specifiers = [self optionalSpecifiers];
-    for (NSString *key in specifiers) {
-        if ([self.query.specifiers.allKeys containsObject:key]) {
-            contains = YES;
-            break;
-        }
-    }
-    if (!contains) {
-        @throw [CBInvalidArgumentException withFormat:
-                @"[%@] Requires at least one of the following specifiers: %@",
-                self.class.name,
-                [JSONUtils objToJSONString:specifiers]];
-    }
-}
-
-- (XCSynthesizedEventRecord *)event {
-    NSArray <XCUIElement *> *elements = [self.query execute];
-    if (elements.count == 0) {
-        [self.warnings addObject:@"No matches found."];
-        return nil;
-    }
-    
+- (XCSynthesizedEventRecord *)eventWithElements:(NSArray<XCUIElement *> *)elements {
     XCUIElement *el = elements[0];
     XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc] initWithName:self.class.name
                                                                 interfaceOrientation:0];
@@ -59,8 +30,9 @@
     XCPointerEventPath *path = [[XCPointerEventPath alloc] initForTouchAtPoint:center
                                                                         offset:0];
     
-    float duration = [self.query.specifiers.allKeys containsObject:CB_DURATION_KEY] ?
-    [self.query.specifiers[CB_DURATION_KEY] floatValue] : CB_DEFAULT_DURATION;
+    float duration = self.query[CB_DURATION_KEY] ?
+        [self.query[CB_DURATION_KEY] floatValue] :
+        CB_DEFAULT_DURATION;
     
     [path liftUpAtOffset:duration];
     [event addPointerEventPath:path];
@@ -68,12 +40,7 @@
     return event;
 }
 
-- (XCTouchGesture *)gesture {
-    NSArray <XCUIElement *> *elements = [self.query execute];
-    if (elements.count == 0) {
-        [self.warnings addObject:@"No matches found."];
-        return nil;
-    }
+- (XCTouchGesture *)gestureWithElements:(NSArray<XCUIElement *> *)elements {
     XCUIElement *el = elements[0];
     
     CGRect frame = el.wdFrame;
@@ -86,8 +53,9 @@
                                                    orientation:0
                                                         offset:0];
     
-    float duration = [self.query.specifiers.allKeys containsObject:CB_DURATION_KEY] ?
-    [self.query.specifiers[CB_DURATION_KEY] floatValue] : CB_DEFAULT_DURATION;
+    float duration = self.query[CB_DURATION_KEY] ?
+        [self.query[CB_DURATION_KEY] floatValue] :
+        CB_DEFAULT_DURATION;
     
     [path liftUpAtPoint:center
                  offset:duration];

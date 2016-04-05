@@ -18,7 +18,9 @@
              
              [CBRoute post:@"/1.0/query" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
                  NSMutableArray *warnings = [NSMutableArray array];
-                 CBQuery *query = [CBQuery withSpecifiers:body collectWarningsIn:warnings];
+                 QueryConfiguration *queryConfig = [QueryConfiguration withJSON:body];
+                 CBQuery *query = [CBQuery withQueryConfiguration:queryConfig];
+                 
                  NSArray <XCUIElement *> *elements = [query execute];
                  NSMutableArray *results = [NSMutableArray arrayWithCapacity:elements.count];
                  for (XCUIElement *el in elements) {

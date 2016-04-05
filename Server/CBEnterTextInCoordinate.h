@@ -6,8 +6,8 @@
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
-#import "CBGesture.h"
+#import "CBCoordinateGesture.h"
 
-@interface CBEnterTextInCoordinate : CBGesture<CBGesture>
+@interface CBEnterTextInCoordinate : CBCoordinateGesture<CBGesture>
 
 @end

@@ -11,20 +11,12 @@
 #import "CBQuery.h"
 
 @implementation CBQuery
-+ (NSMutableDictionary *)specifiersFromQueryString:(NSString *)queryString {
-    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    
-    //TODO: parse string
-    
-    return dict;
-}
-
 + (NSArray <CBQuery *> *)elementsWithSpecifierKey:(NSString *)key value:(id)value {
     if ([key isEqualToString:CB_COORDINATE_KEY]) {
         if ([value isKindOfClass:[NSArray class]]) {
             value = @{
-                      @"x" : value[0],
-                      @"y" : value[1]
+                      CB_X_KEY : value[0],
+                      CB_Y_KEY : value[1]
                       };
         }
     }
@@ -32,11 +24,11 @@
 }
 
 - (NSDictionary *)coordinate {
-    return self.specifiers[CB_COORDINATE_KEY];
+    return self[CB_COORDINATE_KEY];
 }
 
 - (NSArray<NSDictionary *> *)coordinates {
-    return self.specifiers[CB_COORDINATES_KEY];
+    return self[CB_COORDINATES_KEY];
 }
 
 + (NSArray <NSString *> *)ignoredKeys {
@@ -47,31 +39,20 @@
              ];
 }
 
-+ (CBQuery *)withSpecifiers:(NSDictionary *)specifiers
-          collectWarningsIn:(NSMutableArray <NSString *> *)warnings {
++ (CBQuery *)withQueryConfiguration:(QueryConfiguration *)queryConfig {
     CBQuery *e = [self new];
-    NSMutableDictionary *s = [(specifiers ?: @{}) mutableCopy];
     
-    /*
-        Support for calabash query strings
-     */
-    if (s[@"query"]) {
-        NSMutableDictionary *queryStringSpecifiers = [self specifiersFromQueryString:s[@"query"]];
-        [s removeObjectForKey:@"query"];
-        [s addEntriesFromDictionary:queryStringSpecifiers];
-    }
-    
-    e.specifiers = s;
     NSMutableArray *selectors = [NSMutableArray array];
     
-    for (NSString *key in e.specifiers) {
+    for (NSString *key in queryConfig.specifiers) {
         if ([[CBQuery ignoredKeys] containsObject:key]) { continue; }
         
-        QuerySelector *qs = [QuerySelectorFactory selectorWithKey:key value:e.specifiers[key]];
+        QuerySelector *qs = [QuerySelectorFactory selectorWithKey:key
+                                                            value:queryConfig[key]];
         if (qs) {
             [selectors addObject:qs];
         } else {
-            [warnings addObject:[NSString stringWithFormat:@"'%@' is an invalid query selector", key]];
+            @throw [CBInvalidArgumentException withFormat:@"'%@' is an invalid query selector", key];
         }
     }
     
@@ -91,7 +72,7 @@
 }
 
 - (NSArray <XCUIElement *> *)execute {
-    if (_specifiers.count == 0) return nil;
+    if (_queryConfiguration.specifiers.count == 0) return nil;
 
     XCUIElementQuery *query = nil;
     for (QuerySelector *querySelector in self.selectors) {
@@ -109,7 +90,9 @@
 }
 
 - (NSDictionary *)toDict {
-    return [[self specifiers] mutableCopy];
+    return @{
+             @"specifiers" : self.queryConfiguration.specifiers
+             };
 }
 
 - (NSString *)toJSONString {
@@ -120,19 +103,8 @@
     return [[self toDict] description];
 }
 
-- (NSArray <NSString *> *)requiredSpecifierDelta:(NSArray <NSString *> *)required {
-    NSMutableArray *s1 = [self.specifiers.allKeys mutableCopy];
-    NSMutableArray *s2 = [required mutableCopy];
-    [s2 removeObjectsInArray:s1];
-    return s2;
-}
-
-- (NSArray <NSString *> *)optionalKeyDelta:(NSArray <NSString *> *)optional {
-    NSMutableArray *s1 = [self.specifiers.allKeys mutableCopy];
-    NSMutableArray *s2 = [optional mutableCopy];
-    [s1 removeObjectsInArray:s2];
-    [s1 removeObjectsInArray:[CBQuery ignoredKeys]];
-    return s1;
+- (id)objectForKeyedSubscript:(NSString *)key {
+    return self.queryConfiguration[key];
 }
 
 @end
