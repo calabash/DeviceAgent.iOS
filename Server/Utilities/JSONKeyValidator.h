@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JSONActionValidator : NSObject
+@interface JSONKeyValidator : NSObject
 NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSArray <NSString *> *requiredKeys;
 @property (nonatomic, readonly) NSArray <NSString *> *optionalKeys;

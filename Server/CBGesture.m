@@ -18,8 +18,8 @@
 + (NSArray <NSString *> *)optionalKeys { return @[ CB_DURATION_KEY ]; }
 + (NSArray <NSString *> *)requiredKeys { return @[]; }
 
-+ (JSONActionValidator *)validator {
-    return [JSONActionValidator withRequiredKeys:[self requiredKeys]
++ (JSONKeyValidator *)validator {
+    return [JSONKeyValidator withRequiredKeys:[self requiredKeys]
                                     optionalKeys:[self optionalKeys]];
 }
 

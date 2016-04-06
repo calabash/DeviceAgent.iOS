@@ -20,20 +20,20 @@
 }
 
 - (float)duration {
-    return self.query[CB_DURATION_KEY] ?
-        [self.query[CB_DURATION_KEY] floatValue] :
+    return self.gestureConfiguration[CB_DURATION_KEY] ?
+        [self.gestureConfiguration[CB_DURATION_KEY] floatValue] :
         CB_DEFAULT_DURATION;
 }
 
 - (float)amount {
-    return self.query[CB_AMOUNT_KEY] ?
-        [self.query[CB_AMOUNT_KEY] floatValue] :
+    return self.gestureConfiguration[CB_AMOUNT_KEY] ?
+        [self.gestureConfiguration[CB_AMOUNT_KEY] floatValue] :
         CB_DEFAULT_PINCH_AMOUNT;
 }
 
 - (NSString *)direction {
-    return self.query[CB_PINCH_DIRECTION_KEY] ?
-        self.query[CB_PINCH_DIRECTION_KEY] :
+    return self.gestureConfiguration[CB_PINCH_DIRECTION_KEY] ?
+        self.gestureConfiguration[CB_PINCH_DIRECTION_KEY] :
         CB_DEFAULT_PINCH_DIRECTION;
 }
 

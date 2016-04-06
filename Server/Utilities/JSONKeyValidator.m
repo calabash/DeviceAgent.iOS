@@ -7,9 +7,9 @@
 //
 
 #import "CBInvalidArgumentException.h"
-#import "JSONActionValidator.h"
+#import "JSONKeyValidator.h"
 
-@implementation JSONActionValidator
+@implementation JSONKeyValidator
 NS_ASSUME_NONNULL_BEGIN
 - (id)initWithRequiredKeys:(NSArray <NSString *> *)requiredKeys
               optionalKeys:(NSArray <NSString *> *)optionalKeys {

@@ -15,8 +15,8 @@
 
 @implementation CBQuery
 
-+ (JSONActionValidator *)validator {
-    return [JSONActionValidator withRequiredKeys:@[]
++ (JSONKeyValidator *)validator {
+    return [JSONKeyValidator withRequiredKeys:@[]
                                     optionalKeys:[QuerySelectorFactory supportedSelectorNames]];
 }
 
@@ -65,7 +65,7 @@
 }
 
 - (NSString *)description {
-    return [[self toDict] description];
+    return [[self toDict] ?: @{} description];
 }
 
 - (id)objectForKeyedSubscript:(NSString *)key {

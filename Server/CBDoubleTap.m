@@ -21,8 +21,8 @@
     XCPointerEventPath *path = [[XCPointerEventPath alloc] initForTouchAtPoint:coordinate
                                                                         offset:0];
     
-    float duration = self.query[CB_DURATION_KEY] ?
-        [self.query[CB_DURATION_KEY] floatValue] :
+    float duration = self.gestureConfiguration[CB_DURATION_KEY] ?
+        [self.gestureConfiguration[CB_DURATION_KEY] floatValue] :
         CB_DEFAULT_DURATION;
     
     [path liftUpAtOffset:duration];
@@ -48,7 +48,9 @@
                                                    orientation:0
                                                         offset:0];
     
-    float duration = self.query[CB_DURATION_KEY] ? [self.query[CB_DURATION_KEY] floatValue] : 0;
+    float duration = self.gestureConfiguration[CB_DURATION_KEY] ?
+        [self.gestureConfiguration[CB_DURATION_KEY] floatValue] :
+        0;
     [path liftUpAtPoint:coordinate
                  offset:duration];
     [gesture addTouchPath:path]; //tap 1

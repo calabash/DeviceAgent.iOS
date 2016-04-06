@@ -12,7 +12,7 @@
 #import "CBInvalidArgumentException.h"
 #import "XCSynthesizedEventRecord.h"
 #import "GestureConfiguration.h"
-#import "JSONActionValidator.h"
+#import "JSONKeyValidator.h"
 #import "XCPointerEventPath.h"
 #import "XCTouchGesture.h"
 #import "CBCoordinate.h"

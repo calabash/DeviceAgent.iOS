@@ -13,7 +13,7 @@
 #import "JSONUtils.h"
 
 @interface QueryConfiguration ()
-@property (nonatomic, strong) JSONActionValidator *validator;
+@property (nonatomic, strong) JSONKeyValidator *validator;
 @end
 
 @implementation QueryConfiguration
@@ -70,7 +70,7 @@
 }
 
 + (instancetype)withJSON:(NSDictionary *)j
-               validator:(JSONActionValidator *)validator {
+               validator:(JSONKeyValidator *)validator {
     NSMutableDictionary *json = [j mutableCopy];
     
     /*

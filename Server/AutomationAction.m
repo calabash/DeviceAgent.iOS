@@ -11,5 +11,5 @@
 #import "CBMacros.h"
 
 @implementation AutomationAction
-+ (JSONActionValidator *)validator { _must_override_exception; }
++ (JSONKeyValidator *)validator { _must_override_exception; }
 @end

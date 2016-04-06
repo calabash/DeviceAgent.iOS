@@ -30,17 +30,26 @@ static NSMutableSet <Class> *gestureClasses;
     free(classes);
 }
 
++ (void)validateGestureRequestFormat:(NSDictionary *)json {
+    NSArray *requiredKeys = @[CB_GESTURE_KEY, CB_SPECIFIERS_KEY, CB_OPTIONS_KEY];
+    JSONKeyValidator *validator = [JSONKeyValidator withRequiredKeys:requiredKeys
+                                                        optionalKeys:@[]];
+    [validator validate:json];
+}
+
 + (CBGesture *)executeGestureWithJSON:(NSDictionary *)json completion:(CompletionBlock)completion {
-    NSString *gesture = json[@"gesture"];
-    if (!gesture) {
-        @throw [CBInvalidArgumentException withMessage:@"Invalid gesture: missing 'gesture' key."];
-    }
+    [self validateGestureRequestFormat:json];
+    
+    NSString *gesture = json[CB_GESTURE_KEY];
+    NSDictionary *options = json[CB_OPTIONS_KEY];
+    NSDictionary *specifiers = json[CB_SPECIFIERS_KEY];
 
     for (Class <CBGesture> c in gestureClasses) {
         if (c != [CBGesture class] && [gesture isEqualToString:[c name]]) {
-            GestureConfiguration *gestureConfig = [GestureConfiguration withJSON:json[CB_OPTIONS_KEY]
+            
+            GestureConfiguration *gestureConfig = [GestureConfiguration withJSON:options
                                                                        validator:[c validator]];
-            QueryConfiguration *queryConfig = [QueryConfiguration withJSON:json[CB_SPECIFIERS_KEY]
+            QueryConfiguration *queryConfig = [QueryConfiguration withJSON:specifiers
                                                                  validator:[CBQuery validator]];
             CBQuery *query = [CBQuery withQueryConfiguration:queryConfig];
             return [c executeWithGestureConfiguration:gestureConfig
@@ -51,6 +60,7 @@ static NSMutableSet <Class> *gestureClasses;
     
     @throw [CBInvalidArgumentException withMessage:
             [NSString stringWithFormat:
-             @"Invalid gesture: No matching gesture for '%@' with specifiers: %@", gesture, json]];
+             @"Invalid gesture: No matching gesture for '%@'",
+             gesture]];
 }
 @end

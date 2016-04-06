@@ -24,7 +24,7 @@
 }
 
 + (instancetype)withJSON:(NSDictionary *)json
-               validator:(JSONActionValidator *)validator {
+               validator:(JSONKeyValidator *)validator {
     [validator validate:json];
     return [self withJSON:json];
 }

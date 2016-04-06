@@ -32,9 +32,9 @@
 		899696E51CB46C0100BB42E2 /* CoordinateQueryConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696E31CB46C0100BB42E2 /* CoordinateQueryConfiguration.h */; };
 		899696E61CB46C0100BB42E2 /* CoordinateQueryConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696E41CB46C0100BB42E2 /* CoordinateQueryConfiguration.m */; };
 		899696E71CB46C0100BB42E2 /* CoordinateQueryConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696E41CB46C0100BB42E2 /* CoordinateQueryConfiguration.m */; };
-		899696EA1CB5857C00BB42E2 /* JSONActionValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696E81CB5857C00BB42E2 /* JSONActionValidator.h */; };
-		899696EB1CB5857C00BB42E2 /* JSONActionValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696E91CB5857C00BB42E2 /* JSONActionValidator.m */; };
-		899696EC1CB5857C00BB42E2 /* JSONActionValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696E91CB5857C00BB42E2 /* JSONActionValidator.m */; };
+		899696EA1CB5857C00BB42E2 /* JSONKeyValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696E81CB5857C00BB42E2 /* JSONKeyValidator.h */; };
+		899696EB1CB5857C00BB42E2 /* JSONKeyValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696E91CB5857C00BB42E2 /* JSONKeyValidator.m */; };
+		899696EC1CB5857C00BB42E2 /* JSONKeyValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696E91CB5857C00BB42E2 /* JSONKeyValidator.m */; };
 		899696F01CB5880F00BB42E2 /* AutomationAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696EE1CB5880F00BB42E2 /* AutomationAction.h */; };
 		899696F11CB5880F00BB42E2 /* AutomationAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696EF1CB5880F00BB42E2 /* AutomationAction.m */; };
 		899696F21CB5880F00BB42E2 /* AutomationAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696EF1CB5880F00BB42E2 /* AutomationAction.m */; };
@@ -281,8 +281,8 @@
 		899696D81CB45FFC00BB42E2 /* ActionConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionConfiguration.m; sourceTree = "<group>"; };
 		899696E31CB46C0100BB42E2 /* CoordinateQueryConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoordinateQueryConfiguration.h; sourceTree = "<group>"; };
 		899696E41CB46C0100BB42E2 /* CoordinateQueryConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinateQueryConfiguration.m; sourceTree = "<group>"; };
-		899696E81CB5857C00BB42E2 /* JSONActionValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONActionValidator.h; sourceTree = "<group>"; };
-		899696E91CB5857C00BB42E2 /* JSONActionValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONActionValidator.m; sourceTree = "<group>"; };
+		899696E81CB5857C00BB42E2 /* JSONKeyValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKeyValidator.h; sourceTree = "<group>"; };
+		899696E91CB5857C00BB42E2 /* JSONKeyValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKeyValidator.m; sourceTree = "<group>"; };
 		899696EE1CB5880F00BB42E2 /* AutomationAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutomationAction.h; sourceTree = "<group>"; };
 		899696EF1CB5880F00BB42E2 /* AutomationAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutomationAction.m; sourceTree = "<group>"; };
 		899696F31CB5B8C300BB42E2 /* CBCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCoordinate.h; sourceTree = "<group>"; };
@@ -1103,8 +1103,8 @@
 			children = (
 				F55F83DA1C6DDF1300A945C8 /* JSONUtils.h */,
 				F55F83DB1C6DDF1300A945C8 /* JSONUtils.m */,
-				899696E81CB5857C00BB42E2 /* JSONActionValidator.h */,
-				899696E91CB5857C00BB42E2 /* JSONActionValidator.m */,
+				899696E81CB5857C00BB42E2 /* JSONKeyValidator.h */,
+				899696E91CB5857C00BB42E2 /* JSONKeyValidator.m */,
 				899696F31CB5B8C300BB42E2 /* CBCoordinate.h */,
 				899696F41CB5B8C300BB42E2 /* CBCoordinate.m */,
 			);
@@ -1386,7 +1386,7 @@
 				89D5381D1CA359B200F62E09 /* QuerySelectorPropertyLike.h in Headers */,
 				F55F82321C6DD07500A945C8 /* DDASLLogger.h in Headers */,
 				89D5380C1CA32AE900F62E09 /* FBElement.h in Headers */,
-				899696EA1CB5857C00BB42E2 /* JSONActionValidator.h in Headers */,
+				899696EA1CB5857C00BB42E2 /* JSONKeyValidator.h in Headers */,
 				89C5F35A1C9B9C850093A018 /* CBGesture.h in Headers */,
 				89D537FB1CA2020700F62E09 /* QuerySelectorId.h in Headers */,
 				F55F81A71C6DD07500A945C8 /* WebSocket.h in Headers */,
@@ -1640,7 +1640,7 @@
 				F55F81911C6DD07500A945C8 /* HTTPMessage.m in Sources */,
 				F55F82351C6DD07500A945C8 /* DDFileLogger.m in Sources */,
 				899696D41CB44D9B00BB42E2 /* GestureConfiguration.m in Sources */,
-				899696EB1CB5857C00BB42E2 /* JSONActionValidator.m in Sources */,
+				899696EB1CB5857C00BB42E2 /* JSONKeyValidator.m in Sources */,
 				F55F81981C6DD07500A945C8 /* MultipartMessageHeader.m in Sources */,
 				89C5F35F1C9C51680093A018 /* CBQuery.m in Sources */,
 				F55F84121C6E438200A945C8 /* CBException.m in Sources */,
@@ -1678,7 +1678,7 @@
 				899696FC1CB5BA4600BB42E2 /* CBCoordinateQuery.m in Sources */,
 				F5B0A1AB1CAD4E2700E056CE /* CBDoubleTap.m in Sources */,
 				F5B0A1B41CAD4E2700E056CE /* QuerySelectorProperty.m in Sources */,
-				899696EC1CB5857C00BB42E2 /* JSONActionValidator.m in Sources */,
+				899696EC1CB5857C00BB42E2 /* JSONKeyValidator.m in Sources */,
 				F5B0A1DE1CAD4E9B00E056CE /* DispatchQueueLogFormatter.m in Sources */,
 				899696D51CB44D9B00BB42E2 /* GestureConfiguration.m in Sources */,
 				F5B0A1D11CAD4E8A00E056CE /* HTTPAsyncFileResponse.m in Sources */,

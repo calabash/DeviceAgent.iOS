@@ -15,8 +15,8 @@
 - (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
     XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc] initWithName:self.class.name
                                                                 interfaceOrientation:0];
-    float duration = self.query[CB_DURATION_KEY] ?
-        [self.query[CB_DURATION_KEY] floatValue] :
+    float duration = self.gestureConfiguration[CB_DURATION_KEY] ?
+        [self.gestureConfiguration[CB_DURATION_KEY] floatValue] :
         CB_DEFAULT_DURATION;
     
     CGPoint coordinate = coordinates[0].cgpoint;
@@ -40,8 +40,8 @@
     XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:self.class.name];
     
     CGPoint coordinate = coordinates[0].cgpoint;
-    float duration = self.query[CB_DURATION_KEY] ?
-        [self.query[CB_DURATION_KEY] floatValue] :
+    float duration = self.gestureConfiguration[CB_DURATION_KEY] ?
+        [self.gestureConfiguration[CB_DURATION_KEY] floatValue] :
         CB_DEFAULT_DURATION;
     
     XCTouchPath *path = [[XCTouchPath alloc] initWithTouchDown:coordinate

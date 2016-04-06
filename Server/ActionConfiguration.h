@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "JSONActionValidator.h"
+#import "JSONKeyValidator.h"
 
 @interface ActionConfiguration : NSObject
 /*
@@ -20,7 +20,7 @@
  required/optional specifiers.
  */
 + (instancetype)withJSON:(NSDictionary *)json
-               validator:(JSONActionValidator *)validator;
+               validator:(JSONKeyValidator *)validator;
 
 /*
  Debuging / error logging

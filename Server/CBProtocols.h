@@ -10,7 +10,7 @@
 + (NSArray<CBRoute *>*)getRoutes;
 @end
 
-@class JSONActionValidator;
+@class JSONKeyValidator;
 @protocol JSONActionValidatorProvider<NSObject>
-+ (JSONActionValidator *)validator;
++ (JSONKeyValidator *)validator;
 @end
