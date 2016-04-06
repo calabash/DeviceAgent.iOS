@@ -6,36 +6,21 @@
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "ActionConfiguration.h"
+#import "QuerySelector.h"
 
-@interface QueryConfiguration : NSObject
-
-/*
-    Specifiers are keys which help specify an element in the application's view hierarchy.
-    Examples would include 'coordinate', 'text', 'id', etc.
- */
-@property (nonatomic, strong) NSMutableArray *specifiers;
+@class CoordinateQueryConfiguration;
+@interface QueryConfiguration : ActionConfiguration
 
 /*
-    Convenience indexing into raw json object
+    Array of QuerySelectors for specifying a specific element(s).
  */
-- (id)objectForKeyedSubscript:(NSString *)key;
+@property (nonatomic, strong) NSArray <QuerySelector *> *selectors;
 
 /*
-    Creates a QueryConfiguration object and validates the json inputs against
-    required/optional specifiers.
+    Coordinate queries are a special case because they don't follow the normal
+    chaining logic of XCUITestQueries. They are a one-shot operation. 
  */
-+ (instancetype)withJSON:(NSDictionary *)json
-      requiredSpecifiers:(NSArray <NSString *> *)requiredSpecifiers
-      optionalSpecifiers:(NSArray <NSString *> *)optionalSpecifiers;
-
-/*
-    Creates a QueryConfiguraiton object without any validated input
- */
-+ (instancetype)withJSON:(NSDictionary *)json;
-
-/*
-    Debuging / error logging
- */
-- (NSDictionary *)toDictionary;
+@property (nonatomic) BOOL isCoordinateQuery;
+- (CoordinateQueryConfiguration *)asCoordinateQueryConfiguration;
 @end

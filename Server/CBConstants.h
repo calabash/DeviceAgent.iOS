@@ -19,6 +19,8 @@ static NSString *const CB_Y1_KEY = @"y1";
 static NSString *const CB_X2_KEY = @"x2";
 static NSString *const CB_Y2_KEY = @"y2";
 
+static NSString *const CB_OPTIONS_KEY = @"options";
+static NSString *const CB_SPECIFIERS_KEY = @"specifiers";
 static NSString *const CB_QUERY_KEY = @"query";
 static NSString *const CB_AMOUNT_KEY = @"amount";
 static NSString *const CB_PINCH_DIRECTION_KEY = @"pinch_direction";

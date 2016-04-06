@@ -6,19 +6,17 @@
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
-#import "CBInvalidArgumentException.h"
-#import "CBTapCoordinate.h"
-#import "XCTouchPath.h"
+#import "CBTouch.h"
 
-@implementation CBTapCoordinate
+@implementation CBTouch
 
-+ (NSString *)name { return @"tap_coordinate"; }
++ (NSString *)name { return @"touch"; }
 
-- (XCSynthesizedEventRecord *)event {
+- (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
     XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc] initWithName:self.class.name
                                                                 interfaceOrientation:0];
     
-    CGPoint coordinate = [JSONUtils pointFromCoordinateJSON:[self.query coordinate]];
+    CGPoint coordinate = coordinates[0].cgpoint;
     
     XCPointerEventPath *path = [[XCPointerEventPath alloc] initForTouchAtPoint:coordinate
                                                                         offset:0];
@@ -32,10 +30,10 @@
     return event;
 }
 
-- (XCTouchGesture *)gesture {
+- (XCTouchGesture *)gestureWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
     XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:self.class.name];
     
-    CGPoint coordinate = [JSONUtils pointFromCoordinateJSON:[self.query coordinate]];
+    CGPoint coordinate = coordinates[0].cgpoint;
     
     XCTouchPath *path = [[XCTouchPath alloc] initWithTouchDown:coordinate
                                                    orientation:0

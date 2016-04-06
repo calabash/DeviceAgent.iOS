@@ -11,19 +11,23 @@
  */
 #import "CBInvalidArgumentException.h"
 #import "XCSynthesizedEventRecord.h"
-#import <Foundation/Foundation.h>
+#import "GestureConfiguration.h"
+#import "JSONActionValidator.h"
 #import "XCPointerEventPath.h"
-#import "CBQuery.h"
 #import "XCTouchGesture.h"
+#import "CBCoordinate.h"
 #import "XCTestDriver.h"
+#import "XCTouchPath.h"
 #import "Testmanagerd.h"
+#import "CBProtocols.h"
 #import "CBConstants.h"
 #import "CBTypedefs.h"
 #import "JSONUtils.h"
 #import "CBMacros.h"
+#import "CBQuery.h"
 
 @class CBGesture;
-@protocol CBGesture <NSObject>
+@protocol CBGesture <NSObject, JSONActionValidatorProvider>
 @required
 + (NSString *)name;
 /*
@@ -33,8 +37,8 @@
  *
  *  They should both contain identical logic but using different XC objects to create the gestures.
  */
-- (XCSynthesizedEventRecord *)eventWithElements:(NSArray <XCUIElement *> *)elements;
-- (XCTouchGesture *)gestureWithElements:(NSArray <XCUIElement *> *)elements;
+- (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray <CBCoordinate *> *)coordinates;
+- (XCTouchGesture *)gestureWithCoordinates:(NSArray <CBCoordinate *> *)coordinates;
 
 /*
  * Gestures should specify which keys are necessary (e.g. 'coordinate' for tap_coordinate)
@@ -42,25 +46,25 @@
  * Any keys present besides these should generate a warning and be added to the `warnings` array.
  */
 
-- (NSArray <NSString *> *)requiredOptions;
-- (NSArray <NSString *> *)requiredSpecifiers;
-- (NSArray <NSString *> *)optionalOptions;
-- (NSArray <NSString *> *)optionalSpecifiers;
-
-/*
- * Should throw an exception if something goes wrong.
- */
-- (void)validate;
++ (NSArray <NSString *> *)requiredKeys;
++ (NSArray <NSString *> *)optionalKeys;
 
 /*
  * All-in-one constructor / executor.
  */
-+ (CBGesture *)executeWithJSON:(NSDictionary *)json completion:(CompletionBlock)completion;
++ (CBGesture *)executeWithGestureConfiguration:(GestureConfiguration *)gestureConfig
+                                         query:(CBQuery *)query
+                                    completion:(CompletionBlock)completion;
 @end
 
-@interface CBGesture : NSObject<CBGesture>
-@property (nonatomic, strong) CBQuery *query; /* Identify which element or element */
+@interface CBGesture : AutomationAction<CBGesture>
+
+@property (nonatomic, strong) CBQuery *query;
+@property (nonatomic, strong) GestureConfiguration *gestureConfiguration;
+
 - (void)execute:(CompletionBlock)completion;
-+ (instancetype)withJSON:(NSDictionary *)json;
+
++ (instancetype)withGestureConfiguration:(GestureConfiguration *)gestureConfig
+                                   query:(CBQuery *)query;
 + (NSArray <NSString *> *)defaultOptionalSpecifiers;
 @end

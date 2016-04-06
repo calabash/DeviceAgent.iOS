@@ -38,7 +38,14 @@ static NSMutableSet <Class> *gestureClasses;
 
     for (Class <CBGesture> c in gestureClasses) {
         if (c != [CBGesture class] && [gesture isEqualToString:[c name]]) {
-            return [c executeWithJSON:json completion:completion];
+            GestureConfiguration *gestureConfig = [GestureConfiguration withJSON:json[CB_OPTIONS_KEY]
+                                                                       validator:[c validator]];
+            QueryConfiguration *queryConfig = [QueryConfiguration withJSON:json[CB_SPECIFIERS_KEY]
+                                                                validator:nil];
+            CBQuery *query = [CBQuery withQueryConfiguration:queryConfig];
+            return [c executeWithGestureConfiguration:gestureConfig
+                                                query:query
+                                           completion:completion];
         }
     }
     

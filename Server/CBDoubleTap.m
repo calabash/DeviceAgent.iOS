@@ -6,23 +6,17 @@
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
-#import "CBDoubleTapCoordinate.h"
+#import "CBDoubleTap.h"
 
-@implementation CBDoubleTapCoordinate
-+ (NSString *)name { return @"double_tap_coordinate"; }
+@implementation CBDoubleTap
 
-- (void)validate {
-    if (![self.query coordinate]) {
-        NSString *msg = @"TapCoordinate requires a coordinate. Syntax is [ x, y ] or { x : #, y : # }.";
-        @throw [CBInvalidArgumentException withFormat:@"[%@] %@ Query: %@", self.class.name, msg, [self.query toJSONString]];
-    }
-}
++ (NSString *)name { return @"double_tap"; }
 
-- (XCSynthesizedEventRecord *)event {
+- (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
     XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc] initWithName:self.class.name
                                                                 interfaceOrientation:0];
     
-    CGPoint coordinate = [JSONUtils pointFromCoordinateJSON:[self.query coordinate]];
+    CGPoint coordinate = coordinates[0].cgpoint;
     
     XCPointerEventPath *path = [[XCPointerEventPath alloc] initForTouchAtPoint:coordinate
                                                                         offset:0];
@@ -45,10 +39,10 @@
     return event;
 }
 
-- (XCTouchGesture *)gesture {
+- (XCTouchGesture *)gestureWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
     XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:self.class.name];
     
-    CGPoint coordinate = [JSONUtils pointFromCoordinateJSON:[self.query coordinate]];
+    CGPoint coordinate = coordinates[0].cgpoint;
     
     XCTouchPath *path = [[XCTouchPath alloc] initWithTouchDown:coordinate
                                                    orientation:0

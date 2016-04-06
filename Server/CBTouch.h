@@ -6,10 +6,10 @@
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
-#import "CBCoordinateGesture.h"
+#import "CBGesture.h"
 
 /*
     Tap a coordinate. Use `duration` to set the hold time. 
  */
-@interface CBTapCoordinate : CBCoordinateGesture<CBGesture>
+@interface CBTouch : CBGesture<CBGesture>
 @end

@@ -1,13 +1,13 @@
 //
-//  CBPinchCoordinate.h
+//  CBEnterTextInCoordinates.h
 //  CBXDriver
 //
 //  Created by Chris Fuentes on 4/4/16.
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
-#import "CBCoordinateGesture.h"
+#import "CBGesture.h"
 
-@interface CBPinchCoordinate : CBCoordinateGesture<CBGesture>
+@interface CBEnterTextIn : CBGesture<CBGesture>
 
 @end

@@ -6,25 +6,24 @@
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
-#import "CBEnterTextInCoordinate.h"
-#import "CBTapCoordinate.h"
+#import "CBEnterTextIn.h"
 #import "JSONUtils.h"
+#import "CBTouch.h"
 
-@implementation CBEnterTextInCoordinate
-+ (NSString *)name { return @"enter_text_in_coordinate"; }
+@implementation CBEnterTextIn
++ (NSString *)name { return @"enter_text_in"; }
 
-+ (CBGesture *)executeWithJSON:(NSDictionary *)json completion:(CompletionBlock)completion {
-    NSMutableDictionary *j = [json mutableCopy];
++ (CBGesture *)executeWithGestureConfiguration:(GestureConfiguration *)gestureConfig
+                                         query:(CBQuery *)query
+                                    completion:(CompletionBlock)completion {
     
-    if (![[j allKeys] containsObject:CB_STRING_KEY]) {
+    NSString *string = gestureConfig[CB_STRING_KEY];
+    if (!string) {
         @throw [CBInvalidArgumentException withFormat:@"Missing required key 'string'"];
     }
     
-    NSString *string = j[CB_STRING_KEY];
-    [j removeObjectForKey:CB_STRING_KEY];
-    
-    CBTapCoordinate *tap = [CBTapCoordinate withJSON:j];
-    [tap execute:^(NSError *e) {
+    CBTouch *touch = [CBTouch withGestureConfiguration:gestureConfig query:query];
+    [touch execute:^(NSError *e) {
         if (e) {
             completion(e);
         } else {
@@ -35,6 +34,6 @@
         }
     }];
     
-    return tap;
+    return touch;
 }
 @end

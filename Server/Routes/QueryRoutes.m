@@ -4,10 +4,10 @@
 //
 
 #import "CBApplication+Queries.h"
-#import "CBQuery.h"
 #import "QueryRoutes.h"
 #import "CBConstants.h"
 #import "JSONUtils.h"
+#import "CBQuery.h"
 
 @implementation QueryRoutes
 + (NSArray <CBRoute *> *)getRoutes {
@@ -18,7 +18,9 @@
              
              [CBRoute post:@"/1.0/query" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
                  NSMutableArray *warnings = [NSMutableArray array];
-                 QueryConfiguration *queryConfig = [QueryConfiguration withJSON:body];
+                 
+                 QueryConfiguration *queryConfig = [QueryConfiguration withJSON:body
+                                                                      validator:[CBQuery validator]];
                  CBQuery *query = [CBQuery withQueryConfiguration:queryConfig];
                  
                  NSArray <XCUIElement *> *elements = [query execute];

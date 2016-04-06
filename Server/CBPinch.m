@@ -6,12 +6,18 @@
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
-#import "CBPinchCoordinate.h"
+#import "CBPinch.h"
 
-@implementation CBPinchCoordinate
-+ (NSString *)name { return @"pinch_coordinate"; }
+@implementation CBPinch
++ (NSString *)name { return @"pinch"; }
 
-- (NSArray <NSString *> *)optionalOptions { return @[ CB_DURATION_KEY, CB_AMOUNT_KEY, CB_PINCH_DIRECTION_KEY]; }
++ (NSArray <NSString *> *)optionalKeys {
+    return @[
+             CB_DURATION_KEY,
+             CB_AMOUNT_KEY,
+             CB_PINCH_DIRECTION_KEY
+             ];
+}
 
 - (float)duration {
     return self.query[CB_DURATION_KEY] ?
@@ -32,34 +38,52 @@
 }
 
 
-- (XCSynthesizedEventRecord *)event {
+- (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
     XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc] initWithName:self.class.name
                                                                 interfaceOrientation:0];
     
-    CGPoint coordinate = [JSONUtils pointFromCoordinateJSON:[self.query coordinate]];
-    
-    XCPointerEventPath *path = [[XCPointerEventPath alloc] initForTouchAtPoint:coordinate
-                                                                        offset:0];
-    
-    float duration = self.query[CB_DURATION_KEY] ?
-        [self.query[CB_DURATION_KEY] floatValue] :
-        CB_DEFAULT_DURATION;
-    
-    [path liftUpAtOffset:duration];
-    [event addPointerEventPath:path];
-    return event;
-}
-
-- (XCTouchGesture *)gesture {
-    XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:self.class.name];
-    
-    CGPoint center = [JSONUtils pointFromCoordinateJSON:[self.query coordinate]];
+    CGPoint center = coordinates[0].cgpoint;
     float duration = [self duration];
     float amount = [self amount];
     NSString *direction = [self direction];
     
     CGPoint p1 = center,
-        p2 = center;
+    p2 = center;
+    
+    //TODO: let user specify orientation of pinch?
+    p1.x -= amount;
+    p2.x += amount;
+    
+    for (NSValue *v in @[ [NSValue valueWithCGPoint:p1], [NSValue valueWithCGPoint:p2]]) {
+        if ([direction isEqualToString:CB_PINCH_OUT]) {
+            XCPointerEventPath *path = [[XCPointerEventPath alloc] initForTouchAtPoint:center
+                                                                                offset:0];
+            
+            [path moveToPoint:[v CGPointValue] atOffset:duration];
+            [path liftUpAtOffset:duration + CB_GESTURE_EPSILON];
+            [event addPointerEventPath:path];
+        } else {
+            XCPointerEventPath *path = [[XCPointerEventPath alloc] initForTouchAtPoint:[v CGPointValue]
+                                                                                offset:0];
+            [path moveToPoint:center atOffset:duration];
+            [path liftUpAtOffset:duration + CB_GESTURE_EPSILON];
+            [event addPointerEventPath:path];
+        }
+    }
+    
+    return event;
+}
+
+- (XCTouchGesture *)gestureWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
+    XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:self.class.name];
+    
+    CGPoint center = coordinates[0].cgpoint;
+    float duration = [self duration];
+    float amount = [self amount];
+    NSString *direction = [self direction];
+    
+    CGPoint p1 = center,
+            p2 = center;
     
     //TODO: let user specify orientation of pinch?
     p1.x -= amount;

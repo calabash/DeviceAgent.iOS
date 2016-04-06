@@ -9,3 +9,8 @@
 @required
 + (NSArray<CBRoute *>*)getRoutes;
 @end
+
+@class JSONActionValidator;
+@protocol JSONActionValidatorProvider<NSObject>
++ (JSONActionValidator *)validator;
+@end

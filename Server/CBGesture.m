@@ -6,6 +6,7 @@
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
+#import "CBCoordinateQuery.h"
 #import "CBGesture.h"
 
 @implementation CBGesture
@@ -14,20 +15,12 @@
     _must_override_exception;
 }
 
-- (NSArray <NSString *> *)requiredOptions {
-    _must_override_exception;
-}
++ (NSArray <NSString *> *)optionalKeys { return @[ CB_DURATION_KEY ]; }
++ (NSArray <NSString *> *)requiredKeys { return @[]; }
 
-- (NSArray <NSString *> *)requiredSpecifiers {
-    _must_override_exception;
-}
-
-- (NSArray <NSString *> *)optionalOptions {
-    return @[];
-}
-
-- (NSArray <NSString *> *)optionalSpecifiers {
-    return @[];
++ (JSONActionValidator *)validator {
+    return [JSONActionValidator withRequiredKeys:[self requiredKeys]
+                                    optionalKeys:[self optionalKeys]];
 }
 
 + (NSArray <NSString *> *)defaultOptionalSpecifiers {
@@ -39,42 +32,54 @@
              CB_INDEX_KEY];
 }
 
-+ (CBGesture *)executeWithJSON:(NSDictionary *)json
-                    completion:(CompletionBlock)completion {
-    CBGesture *gest = [self withJSON:json];
++ (CBGesture *)executeWithGestureConfiguration:(GestureConfiguration *)gestureConfig
+                                         query:(CBQuery *)query
+                                    completion:(CompletionBlock)completion {
+    CBGesture *gest = [self withGestureConfiguration:gestureConfig
+                                               query:query];
     [gest execute:completion];
     return gest;
 }
 
-+ (instancetype)withJSON:(NSDictionary *)json {
++ (instancetype)withGestureConfiguration:(GestureConfiguration *)gestureConfig
+                                   query:(CBQuery *)query {
     CBGesture *gesture = [self new];
     
-    id specs = [json mutableCopy];
-    [specs removeObjectForKey:@"gesture"];
-    
-    QueryConfiguration *queryConfig = [QueryConfiguration withJSON:specs
-                                                requiredSpecifiers:[gesture requiredSpecifiers]
-                                                optionalSpecifiers:[gesture optionalSpecifiers]];
-    gesture.query = [CBQuery withQueryConfiguration:queryConfig];
+    gesture.gestureConfiguration = gestureConfig;
+    gesture.query = query;
     
     return gesture;
 }
 
-- (XCSynthesizedEventRecord *)eventWithElements:(NSArray<XCUIElement *> *)elements {
+- (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
     _must_override_exception;
 }
 
-- (XCTouchGesture *)gestureWithElements:(NSArray<XCUIElement *> *)elements {
+- (XCTouchGesture *)gestureWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
     _must_override_exception;
 }
 
 
 - (void)execute:(CompletionBlock)completion {
-    [self validate]; //Should be implemented by subclass
-    
-    NSArray <XCUIElement *> *elements = [self.query execute];
-    if (elements.count == 0) {
-        @throw [CBException withMessage:@"Error performing gesture: No elements match query."];
+    NSMutableArray <CBCoordinate *> *coords = [NSMutableArray new];
+    if (self.query.isCoordinateQuery) {
+        CBCoordinateQuery *cq = [self.query asCoordinateQuery];
+        if (cq.coordinate) {
+            [coords addObject:cq.coordinate];
+        }
+        if (cq.coordinates) {
+            [coords addObjectsFromArray:cq.coordinates];
+        }
+    } else {
+        NSArray <XCUIElement *> *elements = [self.query execute];
+        if (elements.count == 0) {
+            @throw [CBException withMessage:@"Error performing gesture: No elements match query."];
+        }
+        for (XCUIElement *el in elements) {
+            CGRect frame = el.wdFrame;
+            CGPoint center = CGPointMake(CGRectGetMidX(frame), CGRectGetMidX(frame));
+            [coords addObject:[CBCoordinate fromRaw:center]];
+        }
     }
     
     //Testmanagerd calls are async, but the http server is sync so we need to synchronize it.
@@ -82,13 +87,13 @@
     __block NSError *err;
     
     if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] != 0x0) {
-        [[Testmanagerd get] _XCT_synthesizeEvent:[self eventWithElements:elements]
+        [[Testmanagerd get] _XCT_synthesizeEvent:[self eventWithCoordinates:coords]
                                       completion:^(NSError *e) {
             done = YES;
             err = e;
         }];
     } else {
-        [[Testmanagerd get] _XCT_performTouchGesture:[self gestureWithElements:elements]
+        [[Testmanagerd get] _XCT_performTouchGesture:[self gestureWithCoordinates:coords]
                                           completion:^(NSError *e) {
             done = YES;
             err = e;
@@ -103,20 +108,4 @@
     completion(err);
 }
 
-- (void)validate {
-    BOOL contains = NO;
-    NSArray *specifiers = [self optionalSpecifiers];
-    for (NSString *key in specifiers) {
-        if (self.query[key]) {
-            contains = YES;
-            break;
-        }
-    }
-    if (!contains) {
-        @throw [CBInvalidArgumentException withFormat:
-                @"[%@] Requires at least one of the following specifiers: %@",
-                self.class.name,
-                [JSONUtils objToJSONString:specifiers]];
-    }
-}
 @end

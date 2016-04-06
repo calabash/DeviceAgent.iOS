@@ -6,42 +6,72 @@
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
+#import "CoordinateQueryConfiguration.h"
 #import "CBInvalidArgumentException.h"
+#import "QuerySelectorFactory.h"
 #import "QueryConfiguration.h"
+#import "JSONUtils.h"
 
 @interface QueryConfiguration ()
-@property (nonatomic, strong) NSDictionary *raw;
+@property (nonatomic, strong) JSONActionValidator *validator;
 @end
 
 @implementation QueryConfiguration
 - (id)init {
     if (self = [super init]) {
-        self.specifiers = [NSMutableArray array];
+        self.selectors = [NSMutableArray array];
+        self.isCoordinateQuery = NO;
     }
     return self;
-}
-
-+ (instancetype)withJSON:(NSDictionary *)json {
-    QueryConfiguration *q = [QueryConfiguration new];
-    q.raw = json;
-    return q;
 }
 
 + (NSMutableDictionary *)specifiersFromQueryString:(NSString *)queryString {
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     
-    //TODO: parse string
+    //TODO: parse string. Maybe import the AST lib from calabash-ios-server.
     
     return dict;
 }
 
+- (void)setupQuerySelectors {
+    NSArray *keys = [self.raw allKeys];
+    NSMutableArray *selectors = [NSMutableArray array];
+    
+    for (NSString *key in keys) {
+        /*
+            If we're dealing with a coordinate query, selectors don't matter since the element
+            should be uniquely identified by the coordinates.
+         */
+        if ([key isEqualToString:CB_COORDINATE_KEY] || [key isEqualToString:CB_COORDINATES_KEY]) {
+            self.isCoordinateQuery = YES;
+            break;
+        }
+        QuerySelector *qs = [QuerySelectorFactory selectorWithKey:key
+                                                            value:self[key]];
+        if (qs) {
+            [selectors addObject:qs];
+        } else {
+            @throw [CBInvalidArgumentException withFormat:@"'%@' is an invalid query selector", key];
+        }
+    }
+    
+    /*
+     Sort based on selector priority. E.g. index should come last
+     */
+    [selectors sortUsingComparator:^NSComparisonResult(QuerySelector  *_Nonnull s1, QuerySelector *_Nonnull s2) {
+        QuerySelectorExecutionPriority p1 = [s1.class executionPriority];
+        QuerySelectorExecutionPriority p2 = [s2.class executionPriority];
+        return [@(p1) compare:@(p2)];
+    }];
+    
+    //TODO: if there's a child query, add it as a sub query somehow...
+    
+    self.selectors = selectors;
+}
+
 + (instancetype)withJSON:(NSDictionary *)j
-      requiredSpecifiers:(NSArray <NSString *> *)requiredSpecifiers
-      optionalSpecifiers:(NSArray <NSString *> *)optionalSpecifiers {
-    
+               validator:(JSONActionValidator *)validator {
     NSMutableDictionary *json = [j mutableCopy];
-    
-    QueryConfiguration *q = [self withJSON:json];
     
     /*
      Support for calabash query strings
@@ -52,33 +82,35 @@
         [json addEntriesFromDictionary:queryStringSpecifiers];
     }
     
-    NSArray *keys = [json allKeys];
-    /*
-        Ensure that every key is accepted in some manner
-     */
-    for (NSString *k in keys) {
-        if (!([requiredSpecifiers containsObject:k] ||
-             [optionalSpecifiers containsObject:k] )) {
-            @throw [CBInvalidArgumentException withFormat:@"Unsupported key: '%@'", k];
-        }
-    }
+    QueryConfiguration *q = [super withJSON:json
+                                  validator:validator];
+    q.validator = validator;
     
-    /*
-        Ensure that all required keys are present in the json
-     */
-    for (NSString *key in requiredSpecifiers) {
-        if (![keys containsObject:key]) {
-            @throw [CBInvalidArgumentException withFormat:@"Required key '%@' is missing.", key];
-        }
-    }
-    
-    [q.specifiers addObjectsFromArray:requiredSpecifiers];
-    [q.specifiers addObjectsFromArray:optionalSpecifiers];
+    [q setupQuerySelectors];
     
     return q;
 }
 
-- (id)objectForKeyedSubscript:(NSString *)key { return self.raw[key]; }
+- (CoordinateQueryConfiguration *)asCoordinateQueryConfiguration {
+    CoordinateQueryConfiguration *config = [CoordinateQueryConfiguration withJSON:self.raw
+                                                                        validator:self.validator];
+    
+    if (self.raw[CB_COORDINATE_KEY]) {
+        id json = self.raw[CB_COORDINATE_KEY];
+        [JSONUtils validatePointJSON:json];
+        config.coordinate = [CBCoordinate withJSON:json];
+    }
+    
+    if (self.raw[CB_COORDINATES_KEY]) {
+        NSMutableArray *coords = [NSMutableArray array];
+        for (id json in self.raw[CB_COORDINATES_KEY]) {
+            [JSONUtils validatePointJSON:json];
+            [coords addObject:[CBCoordinate withJSON:json]];
+        }
+        config.coordinates = coords;
+    }
+    
+    return config;
+}
 
-- (NSDictionary *)toDictionary { return self.raw; }
 @end

@@ -6,8 +6,7 @@
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "ActionConfiguration.h"
 
-@interface GestureConfiguration : NSObject
-
+@interface GestureConfiguration : ActionConfiguration
 @end
