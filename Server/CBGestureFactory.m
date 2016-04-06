@@ -41,7 +41,7 @@ static NSMutableSet <Class> *gestureClasses;
             GestureConfiguration *gestureConfig = [GestureConfiguration withJSON:json[CB_OPTIONS_KEY]
                                                                        validator:[c validator]];
             QueryConfiguration *queryConfig = [QueryConfiguration withJSON:json[CB_SPECIFIERS_KEY]
-                                                                validator:nil];
+                                                                 validator:[CBQuery validator]];
             CBQuery *query = [CBQuery withQueryConfiguration:queryConfig];
             return [c executeWithGestureConfiguration:gestureConfig
                                                 query:query
