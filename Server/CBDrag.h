@@ -6,7 +6,7 @@
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
-#import "CBGesture.h"
+#import "CBGesture+Options.h"
 
 /*
     Drag between any number of coordinates. Use `duration` to set the length of the drag time between points.

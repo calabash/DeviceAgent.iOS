@@ -12,8 +12,8 @@
 #import "CBInvalidArgumentException.h"
 #import "XCSynthesizedEventRecord.h"
 #import "GestureConfiguration.h"
-#import "JSONKeyValidator.h"
 #import "XCPointerEventPath.h"
+#import "JSONKeyValidator.h"
 #import "XCTouchGesture.h"
 #import "CBCoordinate.h"
 #import "XCTestDriver.h"
@@ -63,6 +63,7 @@
 @property (nonatomic, strong) GestureConfiguration *gestureConfiguration;
 
 - (void)execute:(CompletionBlock)completion;
+- (void)validate;
 
 + (instancetype)withGestureConfiguration:(GestureConfiguration *)gestureConfig
                                    query:(CBQuery *)query;

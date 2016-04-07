@@ -6,7 +6,7 @@
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
-#import "CBGesture.h"
+#import "CBGesture+Options.h"
 
 @interface CBPinch : CBGesture<CBGesture>
 

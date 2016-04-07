@@ -19,25 +19,6 @@
              ];
 }
 
-- (float)duration {
-    return self.gestureConfiguration[CB_DURATION_KEY] ?
-        [self.gestureConfiguration[CB_DURATION_KEY] floatValue] :
-        CB_DEFAULT_DURATION;
-}
-
-- (float)amount {
-    return self.gestureConfiguration[CB_AMOUNT_KEY] ?
-        [self.gestureConfiguration[CB_AMOUNT_KEY] floatValue] :
-        CB_DEFAULT_PINCH_AMOUNT;
-}
-
-- (NSString *)direction {
-    return self.gestureConfiguration[CB_PINCH_DIRECTION_KEY] ?
-        self.gestureConfiguration[CB_PINCH_DIRECTION_KEY] :
-        CB_DEFAULT_PINCH_DIRECTION;
-}
-
-
 - (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
     XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc] initWithName:self.class.name
                                                                 interfaceOrientation:0];

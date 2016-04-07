@@ -6,7 +6,7 @@
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
-#import "CBGesture.h"
+#import "CBGesture+Options.h"
 
 /*  
     Double tap a coordinate.  Use `duration` to set the hold time. Note that any duration > 0

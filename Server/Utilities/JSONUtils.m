@@ -63,18 +63,18 @@ static NSDictionary *typeStringToElementType;
     if ([json isKindOfClass:[NSArray class]]) {
         if ([json count] < 2) {
             @throw [CBInvalidArgumentException withMessage:[NSString stringWithFormat:
-                                                            @"Expected [x, y], got %@",
+                                                            @"Error validating point JSON: expected [x, y], got %@",
                                                             [JSONUtils objToJSONString:json]]];
         }
     } else {
         if (![json isKindOfClass:[NSDictionary class]]) {
             @throw [CBInvalidArgumentException withMessage:[NSString stringWithFormat:
-                                                            @"Expected dictionary, got %@",
+                                                            @"Error validating point JSON: expected dictionary, got %@",
                                                             NSStringFromClass([json class])]];
         }
         if (!([[json allKeys] containsObject:@"x"] && [[json allKeys] containsObject:@"y"])) {
             @throw [CBInvalidArgumentException withMessage:[NSString stringWithFormat:
-                                                            @"Expected { x : #, y : # }, got %@",
+                                                            @"Error validating point JSON: expected { x : #, y : # }, got %@",
                                                             [JSONUtils objToJSONString:json]]];
         }
     }

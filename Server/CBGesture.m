@@ -59,8 +59,14 @@
     _must_override_exception;
 }
 
+- (void)validate {
+    //TODO:
+    //Just assume it's valid by default?
+}
 
 - (void)execute:(CompletionBlock)completion {
+    [self validate];
+    
     NSMutableArray <CBCoordinate *> *coords = [NSMutableArray new];
     if (self.query.isCoordinateQuery) {
         CBCoordinateQuery *cq = [self.query asCoordinateQuery];
