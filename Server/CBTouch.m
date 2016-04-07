@@ -6,6 +6,7 @@
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
+#import "CoordinateQueryConfiguration.h"
 #import "CBTouch.h"
 
 @implementation CBTouch
@@ -13,6 +14,10 @@
 + (NSString *)name { return @"touch"; }
 
 - (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
+    if (coordinates.count == 0) {
+        @throw [CBInvalidArgumentException withFormat:@"%@ requires at least one coordinate.",  [self.class name]];
+    }
+    
     XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc] initWithName:self.class.name
                                                                 interfaceOrientation:0];
     
@@ -24,11 +29,17 @@
     float duration = [self duration];
     
     [path liftUpAtOffset:duration];
+    
+    
     [event addPointerEventPath:path];
     return event;
 }
 
 - (XCTouchGesture *)gestureWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
+    if (coordinates.count == 0) {
+        @throw [CBInvalidArgumentException withFormat:@"%@ requires at least one coordinate.",  [self.class name]];
+    }
+    
     XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:self.class.name];
     
     CGPoint coordinate = coordinates[0].cgpoint;

@@ -17,7 +17,7 @@
 
 + (JSONKeyValidator *)validator {
     return [JSONKeyValidator withRequiredKeys:@[]
-                                    optionalKeys:[QuerySelectorFactory supportedSelectorNames]];
+                                 optionalKeys:[QuerySelectorFactory supportedSelectorNames]];
 }
 
 - (id)init {
@@ -39,8 +39,12 @@
 }
 
 - (NSArray<XCUIElement *> *)execute {
+    //TODO throw exception if count == 0
     if (_queryConfiguration.selectors.count == 0) return nil;
 
+    /*
+        Building the XCUIElementQuery
+     */
     XCUIElementQuery *query = nil;
     for (QuerySelector *querySelector in self.queryConfiguration.selectors) {
         query = [querySelector applyToQuery:query];

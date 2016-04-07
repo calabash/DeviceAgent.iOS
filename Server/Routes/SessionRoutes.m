@@ -43,7 +43,7 @@
              
              [CBRoute post:endpoint(@"/shutdown", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
                  //Want to make sure this route actually returns a response to the client before shutting down
-                 [response respondWithString:@"Goodbye."];
+                 [response respondWithJSON:@{@"message" : @"Goodbye."}];
                  [CBXCUITestServer stop];
              }]
              

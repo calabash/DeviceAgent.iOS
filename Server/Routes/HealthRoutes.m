@@ -9,11 +9,15 @@
 + (NSArray<CBRoute *> *)getRoutes {
     return @[
              [CBRoute get:@"/health" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
-                 [response respondWithString:@"Calabash is ready and waiting."];
+                 [response respondWithJSON:@{
+                                             @"status" : @"Calabash is ready and waiting."
+                                             }];
              }],
              
              [CBRoute get:@"/ping" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
-                 [response respondWithString:@"honk"];
+                 [response respondWithJSON:@{
+                                             @"status" : @"honk"
+                                             }];
              }],
            ];
 }

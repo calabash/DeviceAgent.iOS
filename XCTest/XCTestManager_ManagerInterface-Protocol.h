@@ -10,13 +10,25 @@
 
 
 @protocol XCTestManager_ManagerInterface
+
+/*
+    Raw Gestures
+ */
+
+//Older protocol versions
+- (void)_XCT_performTouchGesture:(XCTouchGesture *)arg1 completion:(void (^)(NSError *))arg2;
+//Newer protocol versions
+- (void)_XCT_synthesizeEvent:(XCSynthesizedEventRecord *)arg1 completion:(void (^)(NSError *))arg2;
+
+
 - (void)_XCT_requestScreenshotWithReply:(void (^)(NSData *, NSError *))arg1;
 - (void)_XCT_sendString:(NSString *)arg1 completion:(void (^)(NSError *))arg2;
 - (void)_XCT_sendString:(NSString *)arg1 maximumFrequency:(unsigned long long)arg2 completion:(void (^)(NSError *))arg3;
+
 - (void)_XCT_updateDeviceOrientation:(long long)arg1 completion:(void (^)(NSError *))arg2;
+
 - (void)_XCT_performDeviceEvent:(XCDeviceEvent *)arg1 completion:(void (^)(NSError *))arg2;
-- (void)_XCT_performTouchGesture:(XCTouchGesture *)arg1 completion:(void (^)(NSError *))arg2;
-- (void)_XCT_synthesizeEvent:(XCSynthesizedEventRecord *)arg1 completion:(void (^)(NSError *))arg2;
+
 - (void)_XCT_requestElementAtPoint:(CGPoint)arg1 reply:(void (^)(XCAccessibilityElement *, NSError *))arg2;
 - (void)_XCT_fetchParameterizedAttributeForElement:(XCAccessibilityElement *)arg1 attributes:(NSNumber *)arg2 parameter:(id)arg3 reply:(void (^)(id, NSError *))arg4;
 - (void)_XCT_fetchAttributesForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 reply:(void (^)(NSDictionary *, NSError *))arg3;

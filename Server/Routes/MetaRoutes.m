@@ -15,12 +15,12 @@
     return @[
              [CBRoute get:@"/sessionIdentifier" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
                  NSUUID *testUUID = [XCTestDriver sharedTestDriver].sessionIdentifier;
-                 [response respondWithString:[testUUID UUIDString]];
+                 [response respondWithJSON:@{@"sessionId" : [testUUID UUIDString]}];
              }],
              [CBRoute get:@"/pid" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
                  NSString *pidString = [NSString stringWithFormat:@"%d",
                                         [CBApplication currentApplication].processID];
-                 [response respondWithString:pidString];
+                 [response respondWithJSON:@{@"pid" : pidString}];
              }]
              ];
 }

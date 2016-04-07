@@ -27,7 +27,7 @@
 #import "CBQuery.h"
 
 @class CBGesture;
-@protocol CBGesture <NSObject, JSONActionValidatorProvider>
+@protocol CBGesture <NSObject, JSONKeyValidatorProvider>
 @required
 + (NSString *)name;
 /*

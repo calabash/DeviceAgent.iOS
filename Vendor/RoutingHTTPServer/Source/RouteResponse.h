@@ -13,8 +13,8 @@
 
 - (id)initWithConnection:(HTTPConnection *)theConnection;
 - (void)setHeader:(NSString *)field value:(NSString *)value;
-- (void)respondWithString:(NSString *)string;
-- (void)respondWithString:(NSString *)string encoding:(NSStringEncoding)encoding;
+//- (void)respondWithString:(NSString *)string;
+//- (void)respondWithString:(NSString *)string encoding:(NSStringEncoding)encoding;
 - (void)respondWithJSON:(id)json; //NSArray or NSDictionary!
 - (void)respondWithData:(NSData *)data;
 - (void)respondWithFile:(NSString *)path;

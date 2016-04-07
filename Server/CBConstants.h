@@ -19,6 +19,7 @@ static NSString *const CB_Y1_KEY = @"y1";
 static NSString *const CB_X2_KEY = @"x2";
 static NSString *const CB_Y2_KEY = @"y2";
 
+static NSString *const CB_ERROR_KEY = @"error";
 static NSString *const CB_REPITITIONS_KEY = @"repititions";
 static NSString *const CB_GESTURE_KEY = @"gesture";
 static NSString *const CB_OPTIONS_KEY = @"options";
@@ -73,6 +74,7 @@ static NSUInteger const HTTP_STATUS_CODE_EVERYTHING_OK = 200;
 static NSUInteger const HTTP_STATUS_CODE_INVALID_REQUEST = 400;
 static NSUInteger const HTTP_STATUS_CODE_SERVER_ERROR = 500;
 
+static float const CB_RUNLOOP_INTERVAL = 0.1;
 static float const CB_DEFAULT_DURATION = 0.1;
 static float const CB_DEFAULT_PINCH_AMOUNT = 50;
 static float const CB_GESTURE_EPSILON = 0.001;

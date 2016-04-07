@@ -16,9 +16,9 @@
                  [CBGestureFactory executeGestureWithJSON:body
                                                completion:^(NSError *e) {
                        if (e) {
-                           [response respondWithJSON:@{ @"error" : e.localizedDescription }];
+                           [response respondWithJSON:@{ @"error" : e.localizedDescription }]; //should never execute
                        } else {
-                            [response respondWithJSON:@{ @"status" : @"success" }];
+                           [response respondWithJSON:@{ @"status" : @"success" }];
                        }
                  }];
              }]

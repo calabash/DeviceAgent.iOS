@@ -11,6 +11,7 @@
 @end
 
 @class JSONKeyValidator;
-@protocol JSONActionValidatorProvider<NSObject>
+@protocol JSONKeyValidatorProvider<NSObject>
+@required
 + (JSONKeyValidator *)validator;
 @end

@@ -12,9 +12,7 @@
 @implementation CBDrag
 + (NSString *)name { return @"drag"; }
 
-+ (NSArray <NSString *> *)optionalKeys {
-    return @[CB_DURATION_KEY, CB_REPITITIONS_KEY];
-}
++ (NSArray <NSString *> *)optionalKeys { return @[CB_DURATION_KEY, CB_REPITITIONS_KEY]; }
 
 - (void)validate {
     NSArray *coords = [[self.query.queryConfiguration asCoordinateQueryConfiguration] coordinates];

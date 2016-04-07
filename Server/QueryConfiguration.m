@@ -36,13 +36,14 @@
 - (void)setupQuerySelectors {
     NSArray *keys = [self.raw allKeys];
     NSMutableArray *selectors = [NSMutableArray array];
-    
+
     for (NSString *key in keys) {
         /*
             If we're dealing with a coordinate query, selectors don't matter since the element
             should be uniquely identified by the coordinates.
          */
-        if ([key isEqualToString:CB_COORDINATE_KEY] || [key isEqualToString:CB_COORDINATES_KEY]) {
+        if ([key isEqualToString:CB_COORDINATE_KEY] ||
+            [key isEqualToString:CB_COORDINATES_KEY]) {
             self.isCoordinateQuery = YES;
             break;
         }

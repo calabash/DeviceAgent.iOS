@@ -20,7 +20,7 @@
 
 + (JSONKeyValidator *)validator {
     return [JSONKeyValidator withRequiredKeys:[self requiredKeys]
-                                    optionalKeys:[self optionalKeys]];
+                                 optionalKeys:[self optionalKeys]];
 }
 
 + (NSArray <NSString *> *)defaultOptionalSpecifiers {
@@ -82,6 +82,9 @@
             @throw [CBException withMessage:@"Error performing gesture: No elements match query."];
         }
         for (XCUIElement *el in elements) {
+            /*
+                TODO: discussion of 'visibility'
+            */
             CGRect frame = el.wdFrame;
             CGPoint center = CGPointMake(CGRectGetMidX(frame), CGRectGetMidX(frame));
             [coords addObject:[CBCoordinate fromRaw:center]];
@@ -108,7 +111,7 @@
 
     while(!done){
         //TODO: fine-tune this. 
-        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
+        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:CB_RUNLOOP_INTERVAL]];
     }
     if (err) @throw [CBException withMessage:@"Error performing gesture"];
     completion(err);

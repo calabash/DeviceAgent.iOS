@@ -40,6 +40,27 @@
                          NSLog(@"%@", e);
                      }
                  }];
+             }],
+             [CBRoute post:endpoint(@"/siri", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
+                 int page = HOME_BUTTON_PAGE;
+                 int usage = PRESS;
+                 int duration = 5;
+                 XCDeviceEvent *event = [XCDeviceEvent deviceEventWithPage:page usage:usage duration:duration];
+                 
+                 [[Testmanagerd get] _XCT_performDeviceEvent:event completion:^(NSError *e) {
+                     if (e) {
+                         NSLog(@"%@", e);
+                     }
+                 }];
+             }],
+             [CBRoute post:endpoint(@"/orientation", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
+                 long long orientation = [data[@"orientation"] longLongValue];
+                 
+                 [[Testmanagerd get] _XCT_updateDeviceOrientation:orientation completion:^(NSError *e) {
+                     if (e) {
+                         NSLog(@"%@", e);
+                     }
+                 }];
              }]
              ];
 }

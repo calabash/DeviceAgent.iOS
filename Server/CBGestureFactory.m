@@ -41,12 +41,11 @@ static NSMutableSet <Class> *gestureClasses;
     [self validateGestureRequestFormat:json];
     
     NSString *gesture = json[CB_GESTURE_KEY];
-    NSDictionary *options = json[CB_OPTIONS_KEY];
-    NSDictionary *specifiers = json[CB_SPECIFIERS_KEY];
+    NSDictionary *options = json[CB_OPTIONS_KEY];       // => gesture
+    NSDictionary *specifiers = json[CB_SPECIFIERS_KEY]; // => queries
 
     for (Class <CBGesture> c in gestureClasses) {
         if (c != [CBGesture class] && [gesture isEqualToString:[c name]]) {
-            
             GestureConfiguration *gestureConfig = [GestureConfiguration withJSON:options
                                                                        validator:[c validator]];
             QueryConfiguration *queryConfig = [QueryConfiguration withJSON:specifiers
