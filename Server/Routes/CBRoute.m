@@ -4,6 +4,7 @@
 //
 
 #import "CBShutdownServerException.h"
+#import "CBConstants.h"
 #import "CBRoute.h"
 
 @implementation CBRoute
@@ -20,12 +21,12 @@
                     @throw e;
                 } else {
                     [response setStatusCode:((CBException *)e).HTTPErrorStatusCode];
-                    [response respondWithJSON:@{ @"error" : [e reason] }];
+                    [response respondWithJSON:@{ CB_ERROR_KEY : [e reason] }];
                 }
             } else {
                 NSLog(@"%@", e.callStackSymbols);
                 [response setStatusCode:500];
-                [response respondWithJSON:@{ @"error" : [e reason] }];
+                [response respondWithJSON:@{ CB_ERROR_KEY : [e reason] }];
             }
         }
     };

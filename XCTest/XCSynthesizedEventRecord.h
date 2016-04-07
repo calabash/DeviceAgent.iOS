@@ -6,6 +6,7 @@
 
 @import Foundation;
 @import UIKit;
+#import "XCPointerEventPath.h"
 
 @interface XCSynthesizedEventRecord : NSObject <NSSecureCoding>
 {
@@ -18,7 +19,7 @@
 @property(readonly) double maximumOffset;
 @property(readonly) NSArray *eventPaths;
 
-- (void)addPointerEventPath:(id)arg1;
+- (void)addPointerEventPath:(XCPointerEventPath *)arg1;
 - (id)initWithName:(id)arg1 interfaceOrientation:(long long)arg2;
 - (id)init;
 

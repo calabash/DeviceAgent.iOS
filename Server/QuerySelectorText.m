@@ -21,6 +21,10 @@ static NSArray <NSString *> *textProperties;
 + (NSString *)name { return @"text"; }
 
 - (XCUIElementQuery *)applyInternal:(XCUIElementQuery *)query {
+    /*
+        TODO: Performance win with NSCompoundPredicate?
+     */
+    
     NSMutableString *predString = [NSMutableString string];
     for (NSString *prop in textProperties) {
         [predString appendFormat:@"%@ == '%@'", prop, self.value];

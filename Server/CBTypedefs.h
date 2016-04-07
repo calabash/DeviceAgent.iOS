@@ -11,6 +11,6 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^CompletionBlock)(NSError *e, NSArray <NSString *> *warnings);
+typedef void (^CompletionBlock)(NSError *e);
 
 #endif /* CBTypedefs_h */

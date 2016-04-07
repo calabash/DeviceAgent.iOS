@@ -24,7 +24,12 @@
     RequestHandler unhandledBlock = ^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
         //TODO is 404 correct? "Not Found"
         [response setStatusCode:404];
-        [response respondWithString:[NSString stringWithFormat:@"Unhandled endpoint: %@ %@\nParams: %@\nBody: %@", request.method, request.url, request.params, DATA_TO_JSON(request.body)]];
+        [response respondWithJSON: @{
+                                     @"message" : @{ @"unhandled endpoint" : request.url ?: @"" },
+                                     @"method" : request.method ?: @"",
+                                     @"parameters" : request.params ?: @[],
+                                     @"body" : body ?: @{}
+         }];
     };
     return @[
              [CBRoute get:@"/*" withBlock:unhandledBlock].dontAutoregister,

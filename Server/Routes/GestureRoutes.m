@@ -14,16 +14,12 @@
     return @[
              [CBRoute post:@"/1.0/gesture" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
                  [CBGestureFactory executeGestureWithJSON:body
-                                               completion:^(NSError *e, NSArray <NSString *> *warnings) {
-                     if (e) {
-                         [response respondWithJSON:@{ @"error" : e.localizedDescription, @"warnings" : warnings }];
-                     } else {
-                         if (warnings.count) {
-                             [response respondWithJSON:@{ @"status" : @"success", @"warnings" : warnings }];
-                         } else {
-                             [response respondWithJSON:@{ @"status" : @"success" }];
-                         }
-                     }
+                                               completion:^(NSError *e) {
+                       if (e) {
+                           [response respondWithJSON:@{ @"error" : e.localizedDescription }]; //should never execute
+                       } else {
+                           [response respondWithJSON:@{ @"status" : @"success" }];
+                       }
                  }];
              }]
              ];

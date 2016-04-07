@@ -20,10 +20,15 @@ static NSMutableDictionary <NSString *, Class> *selectorClasses;
         if (class_conformsToProtocol(c, @protocol(QuerySelector))) {
             if ([c name]) {
                 selectorClasses[[c name]] = c;
+                NSLog(@"Registered support for selector: %@", [c name]);
             }
         }
     }
     free(classes);
+}
+
++ (NSArray <NSString *> *)supportedSelectorNames {
+    return [selectorClasses allKeys];
 }
 
 + (QuerySelector *)selectorWithKey:(NSString *)key value:(id)val {

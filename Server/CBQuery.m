@@ -6,95 +6,47 @@
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
+#import "CoordinateQueryConfiguration.h"
 #import "QuerySelectorFactory.h"
+#import "CBCoordinateQuery.h"
+#import "CBException.h"
 #import "JSONUtils.h"
 #import "CBQuery.h"
 
 @implementation CBQuery
-+ (NSMutableDictionary *)specifiersFromQueryString:(NSString *)queryString {
-    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    
-    //TODO: parse string
-    
-    return dict;
+
++ (JSONKeyValidator *)validator {
+    return [JSONKeyValidator withRequiredKeys:@[]
+                                 optionalKeys:[QuerySelectorFactory supportedSelectorNames]];
 }
 
-+ (NSArray <CBQuery *> *)elementsWithSpecifierKey:(NSString *)key value:(id)value {
-    if ([key isEqualToString:CB_COORDINATE_KEY]) {
-        if ([value isKindOfClass:[NSArray class]]) {
-            value = @{
-                      @"x" : value[0],
-                      @"y" : value[1]
-                      };
-        }
+- (id)init {
+    if (self = [super init]) {
+        self.isCoordinateQuery = NO;
     }
-    return nil;
+    return self;
 }
 
-- (NSDictionary *)coordinate {
-    return self.specifiers[CB_COORDINATE_KEY];
+- (CBCoordinateQuery *)asCoordinateQuery {
+    return [CBCoordinateQuery withQueryConfiguration:self.queryConfiguration];
 }
 
-- (NSArray<NSDictionary *> *)coordinates {
-    return self.specifiers[CB_COORDINATES_KEY];
-}
-
-+ (NSArray <NSString *> *)ignoredKeys {
-    return @[
-             @"gesture",
-             @"coordinate",
-             @"coordinates"
-             ];
-}
-
-+ (CBQuery *)withSpecifiers:(NSDictionary *)specifiers
-          collectWarningsIn:(NSMutableArray <NSString *> *)warnings {
++ (instancetype)withQueryConfiguration:(QueryConfiguration *)queryConfig {
     CBQuery *e = [self new];
-    NSMutableDictionary *s = [(specifiers ?: @{}) mutableCopy];
-    
-    /*
-        Support for calabash query strings
-     */
-    if (s[@"query"]) {
-        NSMutableDictionary *queryStringSpecifiers = [self specifiersFromQueryString:s[@"query"]];
-        [s removeObjectForKey:@"query"];
-        [s addEntriesFromDictionary:queryStringSpecifiers];
-    }
-    
-    e.specifiers = s;
-    NSMutableArray *selectors = [NSMutableArray array];
-    
-    for (NSString *key in e.specifiers) {
-        if ([[CBQuery ignoredKeys] containsObject:key]) { continue; }
-        
-        QuerySelector *qs = [QuerySelectorFactory selectorWithKey:key value:e.specifiers[key]];
-        if (qs) {
-            [selectors addObject:qs];
-        } else {
-            [warnings addObject:[NSString stringWithFormat:@"'%@' is an invalid query selector", key]];
-        }
-    }
-    
-    /*
-        Sort based on selector priority. E.g. index should come last
-     */
-    [selectors sortUsingComparator:^NSComparisonResult(QuerySelector  *_Nonnull s1, QuerySelector *_Nonnull s2) {
-        QuerySelectorExecutionPriority p1 = [s1.class executionPriority];
-        QuerySelectorExecutionPriority p2 = [s2.class executionPriority];
-        return [@(p1) compare:@(p2)];
-    }];
-    
-    //TODO: if there's a child query, add it as a sub query somehow...
-    
-    e.selectors = selectors;
+    e.queryConfiguration = queryConfig;
+    e.isCoordinateQuery = queryConfig.isCoordinateQuery;
     return e;
 }
 
-- (NSArray <XCUIElement *> *)execute {
-    if (_specifiers.count == 0) return nil;
+- (NSArray<XCUIElement *> *)execute {
+    //TODO throw exception if count == 0
+    if (_queryConfiguration.selectors.count == 0) return nil;
 
+    /*
+        Building the XCUIElementQuery
+     */
     XCUIElementQuery *query = nil;
-    for (QuerySelector *querySelector in self.selectors) {
+    for (QuerySelector *querySelector in self.queryConfiguration.selectors) {
         query = [querySelector applyToQuery:query];
     }
     
@@ -109,7 +61,7 @@
 }
 
 - (NSDictionary *)toDict {
-    return [[self specifiers] mutableCopy];
+    return self.queryConfiguration.raw;
 }
 
 - (NSString *)toJSONString {
@@ -117,22 +69,11 @@
 }
 
 - (NSString *)description {
-    return [[self toDict] description];
+    return [[self toDict] ?: @{} description];
 }
 
-- (NSArray <NSString *> *)requiredSpecifierDelta:(NSArray <NSString *> *)required {
-    NSMutableArray *s1 = [self.specifiers.allKeys mutableCopy];
-    NSMutableArray *s2 = [required mutableCopy];
-    [s2 removeObjectsInArray:s1];
-    return s2;
-}
-
-- (NSArray <NSString *> *)optionalKeyDelta:(NSArray <NSString *> *)optional {
-    NSMutableArray *s1 = [self.specifiers.allKeys mutableCopy];
-    NSMutableArray *s2 = [optional mutableCopy];
-    [s1 removeObjectsInArray:s2];
-    [s1 removeObjectsInArray:[CBQuery ignoredKeys]];
-    return s1;
+- (id)objectForKeyedSubscript:(NSString *)key {
+    return self.queryConfiguration[key];
 }
 
 @end

@@ -9,3 +9,9 @@
 @required
 + (NSArray<CBRoute *>*)getRoutes;
 @end
+
+@class JSONKeyValidator;
+@protocol JSONKeyValidatorProvider<NSObject>
+@required
++ (JSONKeyValidator *)validator;
+@end

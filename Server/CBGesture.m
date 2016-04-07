@@ -6,92 +6,115 @@
 //  Copyright © 2016 Calabash. All rights reserved.
 //
 
+#import "CBCoordinateQuery.h"
 #import "CBGesture.h"
 
 @implementation CBGesture
-@synthesize warnings;
 
 + (NSString *)name {
     _must_override_exception;
 }
 
-- (NSArray <NSString *> *)requiredKeys {
-    _must_override_exception;
++ (NSArray <NSString *> *)optionalKeys { return @[ CB_DURATION_KEY ]; }
++ (NSArray <NSString *> *)requiredKeys { return @[]; }
+
++ (JSONKeyValidator *)validator {
+    return [JSONKeyValidator withRequiredKeys:[self requiredKeys]
+                                 optionalKeys:[self optionalKeys]];
 }
 
-- (NSArray <NSString *> *)optionalKeys {
-    return @[];
++ (NSArray <NSString *> *)defaultOptionalSpecifiers {
+    return @[CB_IDENTIFIER_KEY,
+             CB_TEXT_KEY,
+             CB_TEXT_LIKE_KEY,
+             CB_PROPERTY_KEY,
+             CB_PROPERTY_LIKE_KEY,
+             CB_INDEX_KEY];
 }
 
-- (NSArray <NSString *> *)optionalSpecifiers {
-    return @[];
-}
-
-+ (CBGesture *)executeWithJSON:(NSDictionary *)json
-                    completion:(CompletionBlock)completion {
-    CBGesture *gest = [self withJSON:json];
++ (CBGesture *)executeWithGestureConfiguration:(GestureConfiguration *)gestureConfig
+                                         query:(CBQuery *)query
+                                    completion:(CompletionBlock)completion {
+    CBGesture *gest = [self withGestureConfiguration:gestureConfig
+                                               query:query];
     [gest execute:completion];
     return gest;
 }
 
-+ (instancetype)withJSON:(NSDictionary *)json {
++ (instancetype)withGestureConfiguration:(GestureConfiguration *)gestureConfig
+                                   query:(CBQuery *)query {
     CBGesture *gesture = [self new];
-    gesture.warnings = [NSMutableArray array];
     
-    id specs = [json mutableCopy];
-    [specs removeObjectForKey:@"gesture"];
-    
-    gesture.query = [CBQuery withSpecifiers:json
-                          collectWarningsIn:gesture.warnings];
+    gesture.gestureConfiguration = gestureConfig;
+    gesture.query = query;
     
     return gesture;
 }
 
-- (XCSynthesizedEventRecord *)event {
+- (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
     _must_override_exception;
 }
 
-- (XCTouchGesture *)gesture {
+- (XCTouchGesture *)gestureWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
     _must_override_exception;
-}
-
-- (void)addWarning:(NSString *)format, ... {
-    va_list args;
-    va_start(args, format);
-    [self.warnings addObject:[[NSString alloc] initWithFormat:format arguments:args]];
-    va_end(args);
-}
-
-- (void)execute:(CompletionBlock)completion {
-    NSArray *delta = [self.query requiredSpecifierDelta:[self requiredKeys]];
-    if (delta.count > 0) {
-        @throw [CBInvalidArgumentException withFormat:@"[%@] Missing required keys: %@",
-                [self.class name],
-                [JSONUtils objToJSONString:delta]];
-    }
-    
-    delta = [self.query optionalKeyDelta:[self optionalSpecifiers]];
-    if (delta.count > 0) {
-        for (NSString *key in delta) {
-            [self addWarning:@"'%@' is not a supported option for %@.", key, [self.class name]];
-        }
-    }
-    
-    [self validate]; //Should be implemented by subclass
-    
-    if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] != 0x0) {
-        [[Testmanagerd get] _XCT_synthesizeEvent:[self event] completion:^(NSError *e) {
-            if (e) @throw [CBException withMessage:@"Error performing gesture"];
-        }];
-    } else {
-        [[Testmanagerd get] _XCT_performTouchGesture:[self gesture] completion:^(NSError *e) {
-            if (e) @throw [CBException withMessage:@"Error performing gesture"];
-        }];
-    }
-    completion(nil, self.warnings); //TODO refactor
 }
 
 - (void)validate {
-    _must_override_exception;
+    //TODO:
+    //Just assume it's valid by default?
 }
+
+- (void)execute:(CompletionBlock)completion {
+    [self validate];
+    
+    NSMutableArray <CBCoordinate *> *coords = [NSMutableArray new];
+    if (self.query.isCoordinateQuery) {
+        CBCoordinateQuery *cq = [self.query asCoordinateQuery];
+        if (cq.coordinate) {
+            [coords addObject:cq.coordinate];
+        }
+        if (cq.coordinates) {
+            [coords addObjectsFromArray:cq.coordinates];
+        }
+    } else {
+        NSArray <XCUIElement *> *elements = [self.query execute];
+        if (elements.count == 0) {
+            @throw [CBException withMessage:@"Error performing gesture: No elements match query."];
+        }
+        for (XCUIElement *el in elements) {
+            /*
+                TODO: discussion of 'visibility'
+            */
+            CGRect frame = el.wdFrame;
+            CGPoint center = CGPointMake(CGRectGetMidX(frame), CGRectGetMidX(frame));
+            [coords addObject:[CBCoordinate fromRaw:center]];
+        }
+    }
+    
+    //Testmanagerd calls are async, but the http server is sync so we need to synchronize it.
+    __block BOOL done = NO;
+    __block NSError *err;
+    
+    if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] != 0x0) {
+        [[Testmanagerd get] _XCT_synthesizeEvent:[self eventWithCoordinates:coords]
+                                      completion:^(NSError *e) {
+            done = YES;
+            err = e;
+        }];
+    } else {
+        [[Testmanagerd get] _XCT_performTouchGesture:[self gestureWithCoordinates:coords]
+                                          completion:^(NSError *e) {
+            done = YES;
+            err = e;
+        }];
+    }
+
+    while(!done){
+        //TODO: fine-tune this. 
+        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:CB_RUNLOOP_INTERVAL]];
+    }
+    if (err) @throw [CBException withMessage:@"Error performing gesture"];
+    completion(err);
+}
+
 @end

@@ -11,6 +11,8 @@
 + (NSMutableDictionary *)elementToJSON:(XCUIElement *)element;
 + (XCUIElementType)elementTypeForString:(NSString *)typeString;
 + (NSString *)stringForElementType:(XCUIElementType)type;
+
++ (void)validatePointJSON:(id)json;
 + (CGPoint)pointFromCoordinateJSON:(id)json;
 + (NSString *)objToJSONString:(id)objcJsonObject;
 @end

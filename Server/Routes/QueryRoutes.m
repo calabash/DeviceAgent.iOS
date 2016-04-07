@@ -4,10 +4,10 @@
 //
 
 #import "CBApplication+Queries.h"
-#import "CBQuery.h"
 #import "QueryRoutes.h"
 #import "CBConstants.h"
 #import "JSONUtils.h"
+#import "CBQuery.h"
 
 @implementation QueryRoutes
 + (NSArray <CBRoute *> *)getRoutes {
@@ -17,20 +17,22 @@
              }],
              
              [CBRoute post:@"/1.0/query" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
-                 NSMutableArray *warnings = [NSMutableArray array];
-                 CBQuery *query = [CBQuery withSpecifiers:body collectWarningsIn:warnings];
+                 QueryConfiguration *queryConfig = [QueryConfiguration withJSON:body
+                                                                      validator:[CBQuery validator]];
+                 CBQuery *query = [CBQuery withQueryConfiguration:queryConfig];
+                 
                  NSArray <XCUIElement *> *elements = [query execute];
+                 
+                 /*
+                    Format and return the results
+                  */
                  NSMutableArray *results = [NSMutableArray arrayWithCapacity:elements.count];
                  for (XCUIElement *el in elements) {
                      NSDictionary *json = [JSONUtils snapshotToJSON:el];
                      [results addObject:json];
                  }
                  
-                 if (warnings.count) {
-                     [response respondWithJSON:@{@"result" : results, @"warnings" : warnings}];
-                 } else {
-                     [response respondWithJSON:@{@"result" : results}];
-                 }
+                 [response respondWithJSON:@{@"result" : results}];
              }],
              
              [CBRoute get:@"/query/marked/:text" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
