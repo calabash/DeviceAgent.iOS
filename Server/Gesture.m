@@ -1,15 +1,8 @@
-//
-//  CBGesture.m
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 3/17/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
-#import "CBCoordinateQuery.h"
-#import "CBGesture.h"
+#import "CoordinateQuery.h"
+#import "Gesture.h"
 
-@implementation CBGesture
+@implementation Gesture
 
 + (NSString *)name {
     _must_override_exception;
@@ -32,18 +25,18 @@
              CB_INDEX_KEY];
 }
 
-+ (CBGesture *)executeWithGestureConfiguration:(GestureConfiguration *)gestureConfig
-                                         query:(CBQuery *)query
++ (Gesture *)executeWithGestureConfiguration:(GestureConfiguration *)gestureConfig
+                                         query:(Query *)query
                                     completion:(CompletionBlock)completion {
-    CBGesture *gest = [self withGestureConfiguration:gestureConfig
+    Gesture *gest = [self withGestureConfiguration:gestureConfig
                                                query:query];
     [gest execute:completion];
     return gest;
 }
 
 + (instancetype)withGestureConfiguration:(GestureConfiguration *)gestureConfig
-                                   query:(CBQuery *)query {
-    CBGesture *gesture = [self new];
+                                   query:(Query *)query {
+    Gesture *gesture = [self new];
     
     gesture.gestureConfiguration = gestureConfig;
     gesture.query = query;
@@ -51,11 +44,11 @@
     return gesture;
 }
 
-- (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
+- (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<Coordinate *> *)coordinates {
     _must_override_exception;
 }
 
-- (XCTouchGesture *)gestureWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
+- (XCTouchGesture *)gestureWithCoordinates:(NSArray<Coordinate *> *)coordinates {
     _must_override_exception;
 }
 
@@ -67,9 +60,9 @@
 - (void)execute:(CompletionBlock)completion {
     [self validate];
     
-    NSMutableArray <CBCoordinate *> *coords = [NSMutableArray new];
+    NSMutableArray <Coordinate *> *coords = [NSMutableArray new];
     if (self.query.isCoordinateQuery) {
-        CBCoordinateQuery *cq = [self.query asCoordinateQuery];
+        CoordinateQuery *cq = [self.query asCoordinateQuery];
         if (cq.coordinate) {
             [coords addObject:cq.coordinate];
         }
@@ -87,7 +80,7 @@
             */
             CGRect frame = el.wdFrame;
             CGPoint center = CGPointMake(CGRectGetMidX(frame), CGRectGetMidX(frame));
-            [coords addObject:[CBCoordinate fromRaw:center]];
+            [coords addObject:[Coordinate fromRaw:center]];
         }
     }
     

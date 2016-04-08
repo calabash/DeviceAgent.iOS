@@ -1,20 +1,13 @@
-//
-//  CBEnterText.m
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 3/31/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
 #import "CBInvalidArgumentException.h"
 #import "Testmanagerd.h"
-#import "CBEnterText.h"
+#import "EnterText.h"
 
-@implementation CBEnterText
+@implementation EnterText
 
 + (NSString *)name { return @"enter_text"; }
 
-+ (CBGesture *)executeWithJSON:(NSDictionary *)json completion:(CompletionBlock)completion {
++ (Gesture *)executeWithJSON:(NSDictionary *)json completion:(CompletionBlock)completion {
     NSMutableDictionary *j = [json mutableCopy];
     
     if (![[j allKeys] containsObject:CB_STRING_KEY]) {

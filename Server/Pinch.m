@@ -1,14 +1,7 @@
-//
-//  CBPinchCoordinate.m
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 4/4/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
-#import "CBPinch.h"
+#import "Pinch.h"
 
-@implementation CBPinch
+@implementation Pinch
 + (NSString *)name { return @"pinch"; }
 
 + (NSArray <NSString *> *)optionalKeys {
@@ -19,7 +12,7 @@
              ];
 }
 
-- (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
+- (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<Coordinate *> *)coordinates {
     XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc] initWithName:self.class.name
                                                                 interfaceOrientation:0];
     
@@ -55,7 +48,7 @@
     return event;
 }
 
-- (XCTouchGesture *)gestureWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
+- (XCTouchGesture *)gestureWithCoordinates:(NSArray<Coordinate *> *)coordinates {
     XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:self.class.name];
     
     CGPoint center = coordinates[0].cgpoint;

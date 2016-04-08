@@ -1,10 +1,3 @@
-//
-//  CBElementQuery.h
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 3/18/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
 #import "QueryConfiguration.h"
@@ -14,9 +7,9 @@
 #import "CBConstants.h"
 #import "XCUIElement.h"
 
-@class CBCoordinateQuery;
+@class CoordinateQuery;
 
-@interface CBQuery : AutomationAction
+@interface Query : AutomationAction
 @property (nonatomic, strong) QueryConfiguration *queryConfiguration;
 
 /*
@@ -28,7 +21,7 @@
     Coordinate based queries
  */
 @property (nonatomic) BOOL isCoordinateQuery;
-- (CBCoordinateQuery *)asCoordinateQuery;
+- (CoordinateQuery *)asCoordinateQuery;
 
 /*
     General queries

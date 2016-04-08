@@ -4,10 +4,10 @@
 //
 
 
-#import "CBRoute.h"
+#import "CBXRoute.h"
 @protocol CBRouteProvider <NSObject>
 @required
-+ (NSArray<CBRoute *>*)getRoutes;
++ (NSArray<CBXRoute *>*)getRoutes;
 @end
 
 @class JSONKeyValidator;

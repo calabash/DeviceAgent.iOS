@@ -1,15 +1,8 @@
-//
-//  CBDragCoordinate.m
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 3/20/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
 #import "CoordinateQueryConfiguration.h"
-#import "CBDrag.h"
+#import "Drag.h"
 
-@implementation CBDrag
+@implementation Drag
 + (NSString *)name { return @"drag"; }
 
 + (NSArray <NSString *> *)optionalKeys { return @[CB_DURATION_KEY, CB_REPITITIONS_KEY]; }
@@ -22,7 +15,7 @@
     }
 }
 
-- (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
+- (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<Coordinate *> *)coordinates {
     XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc] initWithName:self.class.name
                                                                 interfaceOrientation:0];
     float duration = [self duration];
@@ -33,7 +26,7 @@
                                                                         offset:0];
     
     for (int i = 0; i < [self repititions]; i ++) {
-        for (CBCoordinate *coord in coordinates) {
+        for (Coordinate *coord in coordinates) {
             if (coord == coordinates.firstObject) { continue; }
             offset += duration;
             coordinate = coord.cgpoint;
@@ -47,7 +40,7 @@
     return event;
 }
 
-- (XCTouchGesture *)gestureWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
+- (XCTouchGesture *)gestureWithCoordinates:(NSArray<Coordinate *> *)coordinates {
     XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:self.class.name];
     
     CGPoint coordinate = coordinates[0].cgpoint;
@@ -58,7 +51,7 @@
                                                    orientation:0
                                                         offset:0];
     for (int i = 0; i < [self repititions]; i ++) {
-        for (CBCoordinate *coord in coordinates) {
+        for (Coordinate *coord in coordinates) {
             if (coord == coordinates.firstObject) { continue; }
             offset += duration;
             coordinate = coord.cgpoint;

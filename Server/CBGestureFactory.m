@@ -1,10 +1,3 @@
-//
-//  CBGestureFactory.m
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 3/18/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
 #import "CBInvalidArgumentException.h"
 #import "CBGestureFactory.h"
@@ -22,7 +15,7 @@ static NSMutableSet <Class> *gestureClasses;
     Class *classes = objc_copyClassList(&outCount);
     for (int i = 0; i < outCount; i++) {
         Class c = classes[i];
-        if (c != [CBGesture class] && class_conformsToProtocol(c, @protocol(CBGesture))) {
+        if (c != [Gesture class] && class_conformsToProtocol(c, @protocol(Gesture))) {
             NSLog(@"Registered %@ gesture", [c name]);
             [gestureClasses addObject:c];
         }
@@ -37,20 +30,20 @@ static NSMutableSet <Class> *gestureClasses;
     [validator validate:json];
 }
 
-+ (CBGesture *)executeGestureWithJSON:(NSDictionary *)json completion:(CompletionBlock)completion {
++ (Gesture *)executeGestureWithJSON:(NSDictionary *)json completion:(CompletionBlock)completion {
     [self validateGestureRequestFormat:json];
     
     NSString *gesture = json[CB_GESTURE_KEY];
     NSDictionary *options = json[CB_OPTIONS_KEY];       // => gesture
     NSDictionary *specifiers = json[CB_SPECIFIERS_KEY]; // => queries
 
-    for (Class <CBGesture> c in gestureClasses) {
-        if (c != [CBGesture class] && [gesture isEqualToString:[c name]]) {
+    for (Class <Gesture> c in gestureClasses) {
+        if (c != [Gesture class] && [gesture isEqualToString:[c name]]) {
             GestureConfiguration *gestureConfig = [GestureConfiguration withJSON:options
                                                                        validator:[c validator]];
             QueryConfiguration *queryConfig = [QueryConfiguration withJSON:specifiers
-                                                                 validator:[CBQuery validator]];
-            CBQuery *query = [CBQuery withQueryConfiguration:queryConfig];
+                                                                 validator:[Query validator]];
+            Query *query = [Query withQueryConfiguration:queryConfig];
             return [c executeWithGestureConfiguration:gestureConfig
                                                 query:query
                                            completion:completion];

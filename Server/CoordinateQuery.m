@@ -1,18 +1,11 @@
-//
-//  CBCoordinateQuery.m
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 4/6/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
 #import "CoordinateQueryConfiguration.h"
-#import "CBCoordinateQuery.h"
-#import "CBCoordinate.h"
+#import "CoordinateQuery.h"
+#import "Coordinate.h"
 
-@implementation CBCoordinateQuery
+@implementation CoordinateQuery
 
-- (CBCoordinate *)coordinate {
+- (Coordinate *)coordinate {
     if (!self.queryConfiguration.isCoordinateQuery) {
         @throw [CBException withFormat:@"Error invoking '%@' on a non-coordinate query configuration",
                 NSStringFromSelector(_cmd)];
@@ -20,7 +13,7 @@
     return [self.queryConfiguration asCoordinateQueryConfiguration].coordinate;
 }
 
-- (NSArray<CBCoordinate *> *)coordinates {
+- (NSArray<Coordinate *> *)coordinates {
     if (!self.queryConfiguration.isCoordinateQuery) {
         @throw [CBException withFormat:@"Error invoking '%@' on a non-coordinate query configuration",
                 NSStringFromSelector(_cmd)];

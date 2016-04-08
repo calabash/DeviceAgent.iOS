@@ -1,14 +1,7 @@
-//
-//  CBGesture+Options.m
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 4/6/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
-#import "CBGesture+Options.h"
+#import "Gesture+Options.h"
 
-@implementation CBGesture (Options)
+@implementation Gesture (Options)
 - (float)duration {
     return self.gestureConfiguration[CB_DURATION_KEY] ?
     [self.gestureConfiguration[CB_DURATION_KEY] floatValue] :

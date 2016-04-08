@@ -1,10 +1,3 @@
-//
-//  CBGesture.h
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 3/17/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
 /*
  *  Lots of extra imports here so that all subclasses have them. 
@@ -15,19 +8,19 @@
 #import "XCPointerEventPath.h"
 #import "JSONKeyValidator.h"
 #import "XCTouchGesture.h"
-#import "CBCoordinate.h"
 #import "XCTestDriver.h"
-#import "XCTouchPath.h"
 #import "Testmanagerd.h"
+#import "XCTouchPath.h"
 #import "CBProtocols.h"
 #import "CBConstants.h"
+#import "Coordinate.h"
 #import "CBTypedefs.h"
 #import "JSONUtils.h"
 #import "CBMacros.h"
-#import "CBQuery.h"
+#import "Query.h"
 
-@class CBGesture;
-@protocol CBGesture <NSObject, JSONKeyValidatorProvider>
+@class Gesture;
+@protocol Gesture <NSObject, JSONKeyValidatorProvider>
 @required
 + (NSString *)name;
 /*
@@ -37,8 +30,8 @@
  *
  *  They should both contain identical logic but using different XC objects to create the gestures.
  */
-- (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray <CBCoordinate *> *)coordinates;
-- (XCTouchGesture *)gestureWithCoordinates:(NSArray <CBCoordinate *> *)coordinates;
+- (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray <Coordinate *> *)coordinates;
+- (XCTouchGesture *)gestureWithCoordinates:(NSArray <Coordinate *> *)coordinates;
 
 /*
  * Gestures should specify which keys are necessary (e.g. 'coordinate' for tap_coordinate)
@@ -52,20 +45,20 @@
 /*
  * All-in-one constructor / executor.
  */
-+ (CBGesture *)executeWithGestureConfiguration:(GestureConfiguration *)gestureConfig
-                                         query:(CBQuery *)query
-                                    completion:(CompletionBlock)completion;
++ (Gesture *)executeWithGestureConfiguration:(GestureConfiguration *)gestureConfig
+                                       query:(Query *)query
+                                  completion:(CompletionBlock)completion;
 @end
 
-@interface CBGesture : AutomationAction<CBGesture>
+@interface Gesture : AutomationAction<Gesture>
 
-@property (nonatomic, strong) CBQuery *query;
+@property (nonatomic, strong) Query *query;
 @property (nonatomic, strong) GestureConfiguration *gestureConfiguration;
 
 - (void)execute:(CompletionBlock)completion;
 - (void)validate;
 
 + (instancetype)withGestureConfiguration:(GestureConfiguration *)gestureConfig
-                                   query:(CBQuery *)query;
+                                   query:(Query *)query;
 + (NSArray <NSString *> *)defaultOptionalSpecifiers;
 @end

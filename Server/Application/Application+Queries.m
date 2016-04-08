@@ -4,14 +4,14 @@
 //
 
 #import "XCElementSnapshot-Hitpoint.h"
-#import "CBApplication+Queries.h"
+#import "Application+Queries.h"
 #import "XCElementSnapshot.h"
 #import "XCUIElementQuery.h"
 #import "XCAXClient_iOS.h"
 #import "XCUIElement.h"
 #import "JSONUtils.h"
 
-@implementation CBApplication (Queries)
+@implementation Application (Queries)
 static NSArray <NSString *> *markedProperties;
 static NSArray <NSString *> *identifierProperties;
 

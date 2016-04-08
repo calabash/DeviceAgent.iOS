@@ -3,10 +3,10 @@
 //  xcuitest-server
 //
 
-#import "CBApplication.h"
+#import "Application.h"
 #import "XCElementSnapshot.h"
 
-@interface CBApplication (Queries)
+@interface Application (Queries)
 + (NSDictionary *)tree;
 
 + (NSArray <NSDictionary *> *)jsonForElementsMarked:(NSString *)text;

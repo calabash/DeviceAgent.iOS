@@ -1,10 +1,3 @@
-//
-//  QueryOptions.m
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 4/4/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
 #import "CoordinateQueryConfiguration.h"
 #import "CBInvalidArgumentException.h"
@@ -99,14 +92,14 @@
     if (self.raw[CB_COORDINATE_KEY]) {
         id json = self.raw[CB_COORDINATE_KEY];
         [JSONUtils validatePointJSON:json];
-        config.coordinate = [CBCoordinate withJSON:json];
+        config.coordinate = [Coordinate withJSON:json];
     }
     
     if (self.raw[CB_COORDINATES_KEY]) {
         NSMutableArray *coords = [NSMutableArray array];
         for (id json in self.raw[CB_COORDINATES_KEY]) {
             [JSONUtils validatePointJSON:json];
-            [coords addObject:[CBCoordinate withJSON:json]];
+            [coords addObject:[Coordinate withJSON:json]];
         }
         config.coordinates = coords;
     }

@@ -1,19 +1,12 @@
-//
-//  CBCoordinate.m
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 4/6/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
-#import "CBCoordinate.h"
+#import "Coordinate.h"
 #import "JSONUtils.h"
 
-@interface CBCoordinate()
+@interface Coordinate()
 @property (nonatomic, strong) id json;
 @end
 
-@implementation CBCoordinate
+@implementation Coordinate
 - (CGPoint)cgpoint {
     return [JSONUtils pointFromCoordinateJSON:self.json];
 }
@@ -23,7 +16,7 @@
 }
 
 + (instancetype)withJSON:(id)json {
-    CBCoordinate *coord = [self new];
+    Coordinate *coord = [self new];
     [JSONUtils validatePointJSON:json];
     coord.json = json;
     return coord;

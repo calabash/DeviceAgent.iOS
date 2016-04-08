@@ -1,19 +1,12 @@
-//
-//  CBElementQuery.m
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 3/18/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
 #import "CoordinateQueryConfiguration.h"
 #import "QuerySelectorFactory.h"
-#import "CBCoordinateQuery.h"
+#import "CoordinateQuery.h"
 #import "CBException.h"
 #import "JSONUtils.h"
-#import "CBQuery.h"
+#import "Query.h"
 
-@implementation CBQuery
+@implementation Query
 
 + (JSONKeyValidator *)validator {
     return [JSONKeyValidator withRequiredKeys:@[]
@@ -27,12 +20,12 @@
     return self;
 }
 
-- (CBCoordinateQuery *)asCoordinateQuery {
-    return [CBCoordinateQuery withQueryConfiguration:self.queryConfiguration];
+- (CoordinateQuery *)asCoordinateQuery {
+    return [CoordinateQuery withQueryConfiguration:self.queryConfiguration];
 }
 
 + (instancetype)withQueryConfiguration:(QueryConfiguration *)queryConfig {
-    CBQuery *e = [self new];
+    Query *e = [self new];
     e.queryConfiguration = queryConfig;
     e.isCoordinateQuery = queryConfig.isCoordinateQuery;
     return e;

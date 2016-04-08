@@ -4,7 +4,7 @@
 //
 
 #import "CBInvalidArgumentException.h"
-#import "CBApplication.h"
+#import "Application.h"
 #import "CBConstants.h"
 #import "JSONUtils.h"
 
@@ -31,7 +31,7 @@ static NSDictionary *typeStringToElementType;
     json[CB_RECT_KEY] = [self rectToJSON:snapshot.wdFrame];
     json[CB_IDENTIFIER_KEY] = snapshot.wdName;
     json[CB_ENABLED_KEY] = @(snapshot.wdEnabled);
-    json[CB_TEST_ID] = [CBApplication cacheElement:(XCUIElement *)snapshot];
+    json[CB_TEST_ID] = [Application cacheElement:(XCUIElement *)snapshot];
     
     //TODO: visibility?
     return json;

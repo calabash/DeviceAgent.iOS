@@ -10,9 +10,9 @@
 #import "CBMacros.h"
 
 @implementation GestureRoutes
-+ (NSArray<CBRoute *> *)getRoutes {
++ (NSArray<CBXRoute *> *)getRoutes {
     return @[
-             [CBRoute post:@"/1.0/gesture" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
+             [CBXRoute post:@"/1.0/gesture" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
                  [CBGestureFactory executeGestureWithJSON:body
                                                completion:^(NSError *e) {
                        if (e) {

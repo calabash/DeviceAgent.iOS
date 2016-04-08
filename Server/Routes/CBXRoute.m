@@ -5,9 +5,9 @@
 
 #import "CBShutdownServerException.h"
 #import "CBConstants.h"
-#import "CBRoute.h"
+#import "CBXRoute.h"
 
-@implementation CBRoute
+@implementation CBXRoute
 
 + (RequestHandler)handleRequestAndExceptions:(RequestHandler)block {
     return ^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
@@ -33,7 +33,7 @@
 }
 
 + (instancetype)http:(NSString *)verb path:(NSString *)path withBlock:(RequestHandler)block {
-    CBRoute *r = [self routeWithPath:path block:[self handleRequestAndExceptions:block]];
+    CBXRoute *r = [self routeWithPath:path block:[self handleRequestAndExceptions:block]];
     r.shouldAutoregister = YES;
     r.HTTPVerb = verb;
     r.path = path;

@@ -1,14 +1,7 @@
-//
-//  QuerySelector.m
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 3/22/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
 #import <XCTest/XCUIElementQuery.h>
 #import "XCUIApplication.h"
-#import "CBApplication.h"
+#import "Application.h"
 #import "QuerySelector.h"
 
 @implementation QuerySelector
@@ -30,7 +23,7 @@
 }
 - (XCUIElementQuery *)applyToQuery:(XCUIElementQuery *)query {
     if (query == nil) {
-        XCUIElementQuery *all = [[CBApplication currentApplication].query descendantsMatchingType:XCUIElementTypeAny];
+        XCUIElementQuery *all = [[Application currentApplication].query descendantsMatchingType:XCUIElementTypeAny];
         return [self applyInternal:all];
     } else {
         return [self applyInternal:query];

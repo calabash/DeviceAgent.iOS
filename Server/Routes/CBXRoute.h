@@ -5,7 +5,7 @@
 
 #import "Route.h"
 
-@interface CBRoute : Route
+@interface CBXRoute : Route
 @property (nonatomic, strong)   NSString *HTTPVerb;
 @property (nonatomic, strong)   NSString *path; //raw path
 @property (nonatomic)       BOOL shouldAutoregister;

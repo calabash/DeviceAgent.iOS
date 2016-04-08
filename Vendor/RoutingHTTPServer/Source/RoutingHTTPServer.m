@@ -1,7 +1,7 @@
 #import "RoutingHTTPServer.h"
 #import "RoutingConnection.h"
 #import "CBMacros.h"
-#import "CBRoute.h"
+#import "CBXRoute.h"
 
 @implementation RoutingHTTPServer {
 	NSMutableDictionary *routes;
@@ -111,7 +111,7 @@
 	[self addRoute:route forMethod:method];
 }
 
-- (void)addRoute:(CBRoute *)route {
+- (void)addRoute:(CBXRoute *)route {
     NSLog(@"Adding route: %@", route);
     [self addRoute:route forMethod:route.HTTPVerb];
 }
@@ -206,8 +206,8 @@
 			dispatch_sync(routeQueue, ^{
 				@autoreleasepool {
                     NSString *path = [route.regex description];
-                    if ([route isKindOfClass:[CBRoute class]]) {
-                        path = ((CBRoute *)route).path;
+                    if ([route isKindOfClass:[CBXRoute class]]) {
+                        path = ((CBXRoute *)route).path;
                     }
                     NSLog(@"%@ %@ %@", request.method, path, DATA_TO_JSON(request.body) ?: @"");
 					[self handleRoute:route withRequest:request response:response];

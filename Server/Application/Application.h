@@ -6,7 +6,7 @@
 #import <Foundation/Foundation.h>
 #import "XCUIApplication.h"
 
-@interface CBApplication : NSObject
+@interface Application : NSObject
 + (void)launchBundlePath:(NSString *_Nullable)bundlePath
                 bundleID:(NSString *_Nonnull)bundleID
               launchArgs:(NSArray *_Nullable)launchArgs

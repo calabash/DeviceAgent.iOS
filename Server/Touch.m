@@ -1,19 +1,12 @@
-//
-//  CBTap.m
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 3/18/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
 #import "CoordinateQueryConfiguration.h"
-#import "CBTouch.h"
+#import "Touch.h"
 
-@implementation CBTouch
+@implementation Touch
 
 + (NSString *)name { return @"touch"; }
 
-- (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
+- (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<Coordinate *> *)coordinates {
     if (coordinates.count == 0) {
         @throw [CBInvalidArgumentException withFormat:@"%@ requires at least one coordinate.",  [self.class name]];
     }
@@ -35,7 +28,7 @@
     return event;
 }
 
-- (XCTouchGesture *)gestureWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
+- (XCTouchGesture *)gestureWithCoordinates:(NSArray<Coordinate *> *)coordinates {
     if (coordinates.count == 0) {
         @throw [CBInvalidArgumentException withFormat:@"%@ requires at least one coordinate.",  [self.class name]];
     }

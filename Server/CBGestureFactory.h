@@ -1,14 +1,7 @@
-//
-//  CBGestureFactory.h
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 3/18/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
-#import "CBGesture.h"
+#import "Gesture.h"
 
 @interface CBGestureFactory : NSObject
-+ (CBGesture *)executeGestureWithJSON:(NSDictionary *)json completion:(CompletionBlock)completion;
++ (Gesture *)executeGestureWithJSON:(NSDictionary *)json completion:(CompletionBlock)completion;
 @end

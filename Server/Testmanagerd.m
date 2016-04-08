@@ -1,10 +1,3 @@
-//
-//  Testmanagerd.m
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 3/16/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
 #import "Testmanagerd.h"
 #import "NSXPCConnection.h"

@@ -1,18 +1,11 @@
-//
-//  CBDoubleTapCoordinate.m
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 3/19/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
-#import "CBDoubleTap.h"
+#import "DoubleTap.h"
 
-@implementation CBDoubleTap
+@implementation DoubleTap
 
 + (NSString *)name { return @"double_tap"; }
 
-- (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
+- (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<Coordinate *> *)coordinates {
     XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc] initWithName:self.class.name
                                                                 interfaceOrientation:0];
     
@@ -38,7 +31,7 @@
     return event;
 }
 
-- (XCTouchGesture *)gestureWithCoordinates:(NSArray<CBCoordinate *> *)coordinates {
+- (XCTouchGesture *)gestureWithCoordinates:(NSArray<Coordinate *> *)coordinates {
     XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:self.class.name];
     
     CGPoint coordinate = coordinates[0].cgpoint;

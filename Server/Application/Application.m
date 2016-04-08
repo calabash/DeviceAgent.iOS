@@ -5,17 +5,17 @@
 
 #import "CBElementNotFoundException.h"
 #import "XCUICoordinate.h"
-#import "CBApplication.h"
+#import "Application.h"
 #import "Testmanagerd.h"
 #import "XCUIElement.h"
 
-@interface CBApplication ()
+@interface Application ()
 @property (nonatomic, strong) XCUIApplication *app;
 @property (nonatomic, strong) NSMutableDictionary <NSNumber *, XCUIElement *> *elementCache;
 @end
 
-@implementation CBApplication
-static CBApplication *currentApplication;
+@implementation Application
+static Application *currentApplication;
 static NSInteger currentElementIndex = 0;
 
 + (void)load {

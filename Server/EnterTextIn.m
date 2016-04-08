@@ -1,20 +1,13 @@
-//
-//  CBEnterTextInCoordinates.m
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 4/4/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
-#import "CBEnterTextIn.h"
+#import "EnterTextIn.h"
 #import "JSONUtils.h"
-#import "CBTouch.h"
+#import "Touch.h"
 
-@implementation CBEnterTextIn
+@implementation EnterTextIn
 + (NSString *)name { return @"enter_text_in"; }
 
-+ (CBGesture *)executeWithGestureConfiguration:(GestureConfiguration *)gestureConfig
-                                         query:(CBQuery *)query
++ (Gesture *)executeWithGestureConfiguration:(GestureConfiguration *)gestureConfig
+                                         query:(Query *)query
                                     completion:(CompletionBlock)completion {
     
     NSString *string = gestureConfig[CB_STRING_KEY];
@@ -22,7 +15,7 @@
         @throw [CBInvalidArgumentException withFormat:@"Missing required key 'string'"];
     }
     
-    CBTouch *touch = [CBTouch withGestureConfiguration:gestureConfig query:query];
+    Touch *touch = [Touch withGestureConfiguration:gestureConfig query:query];
     [touch execute:^(NSError *e) {
         if (e) {
             completion(e);
