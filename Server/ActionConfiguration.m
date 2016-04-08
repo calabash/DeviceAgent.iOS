@@ -2,7 +2,7 @@
 #import "InvalidArgumentException.h"
 #import "ActionConfiguration.h"
 #import "CBXException.h"
-#import "CBMacros.h"
+#import "CBXMacros.h"
 
 @implementation ActionConfiguration
 

@@ -10,7 +10,7 @@
                                          query:(Query *)query
                                     completion:(CompletionBlock)completion {
     
-    NSString *string = gestureConfig[CB_STRING_KEY];
+    NSString *string = gestureConfig[CBX_STRING_KEY];
     if (!string) {
         @throw [InvalidArgumentException withFormat:@"Missing required key 'string'"];
     }

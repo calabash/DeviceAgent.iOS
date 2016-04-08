@@ -8,8 +8,8 @@
 #import "UIDevice+Wifi_IP.h"
 #import "UndefinedRoutes.h"
 #import <objc/runtime.h>
-#import "CBProtocols.h"
-#import "CBConstants.h"
+#import "CBXProtocols.h"
+#import "CBXConstants.h"
 
 @interface CBXCUITestServer ()
 @property (atomic, strong) RoutingHTTPServer *server;
@@ -56,7 +56,7 @@ static NSString *serverName = @"CalabashXCUITestServer";
     NSError *error;
     BOOL serverStarted = NO;
         
-    [self.server setPort:DEFAULT_SERVER_PORT];
+    [self.server setPort:CBX_DEFAULT_SERVER_PORT];
     serverStarted = [self attemptToStartWithError:&error];
     
     if (!serverStarted) {

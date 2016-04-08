@@ -5,7 +5,7 @@
 
 #import "Application+Queries.h"
 #import "QueryRoutes.h"
-#import "CBConstants.h"
+#import "CBXConstants.h"
 #import "JSONUtils.h"
 #import "Query.h"
 
@@ -36,18 +36,18 @@
              }],
              
              [CBXRoute get:@"/query/marked/:text" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
-                 NSString *text = request.params[CB_TEXT_KEY];
+                 NSString *text = request.params[CBX_TEXT_KEY];
                  //TODO: look for text in request.body
                  [response respondWithJSON:[Application jsonForElementsMarked:text]];
              }],
              
              [CBXRoute get:@"/query/id/:id" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
-                 NSString *identifier = request.params[CB_IDENTIFIER_KEY];
+                 NSString *identifier = request.params[CBX_IDENTIFIER_KEY];
                  [response respondWithJSON:[Application jsonForElementsWithID:identifier]];
              }],
              
              [CBXRoute get:@"/query/type/:type" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
-                 NSString *type = request.params[CB_TYPE_KEY];
+                 NSString *type = request.params[CBX_TYPE_KEY];
                  [response respondWithJSON:[Application jsonForElementsWithType:type]];
              }],
              

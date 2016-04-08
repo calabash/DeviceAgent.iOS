@@ -5,7 +5,7 @@
 @implementation Drag
 + (NSString *)name { return @"drag"; }
 
-+ (NSArray <NSString *> *)optionalKeys { return @[CB_DURATION_KEY, CB_REPITITIONS_KEY]; }
++ (NSArray <NSString *> *)optionalKeys { return @[CBX_DURATION_KEY, CBX_REPITITIONS_KEY]; }
 
 - (void)validate {
     NSArray *coords = [[self.query.queryConfiguration asCoordinateQueryConfiguration] coordinates];
@@ -58,7 +58,7 @@
             [path moveToPoint:coordinate atOffset:offset];
         }
     }
-    offset += CB_GESTURE_EPSILON;
+    offset += CBX_GESTURE_EPSILON;
     
     [path liftUpAtPoint:coordinate
                  offset:offset];

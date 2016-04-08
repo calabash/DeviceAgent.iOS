@@ -3,7 +3,7 @@
 #import <Foundation/Foundation.h>
 #import "XCUIElementQuery.h"
 #import "XCUIElement.h"
-#import "CBMacros.h"
+#import "CBXMacros.h"
 
 typedef NS_ENUM(int, QuerySelectorExecutionPriority) {
     kQuerySelectorExecutionPriorityAny = 0,

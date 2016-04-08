@@ -6,9 +6,9 @@
 
 + (NSArray <NSString *> *)optionalKeys {
     return @[
-             CB_DURATION_KEY,
-             CB_AMOUNT_KEY,
-             CB_PINCH_DIRECTION_KEY
+             CBX_DURATION_KEY,
+             CBX_AMOUNT_KEY,
+             CBX_PINCH_DIRECTION_KEY
              ];
 }
 
@@ -29,18 +29,18 @@
     p2.x += amount;
     
     for (NSValue *v in @[ [NSValue valueWithCGPoint:p1], [NSValue valueWithCGPoint:p2]]) {
-        if ([direction isEqualToString:CB_PINCH_OUT]) {
+        if ([direction isEqualToString:CBX_PINCH_OUT]) {
             XCPointerEventPath *path = [[XCPointerEventPath alloc] initForTouchAtPoint:center
                                                                                 offset:0];
             
             [path moveToPoint:[v CGPointValue] atOffset:duration];
-            [path liftUpAtOffset:duration + CB_GESTURE_EPSILON];
+            [path liftUpAtOffset:duration + CBX_GESTURE_EPSILON];
             [event addPointerEventPath:path];
         } else {
             XCPointerEventPath *path = [[XCPointerEventPath alloc] initForTouchAtPoint:[v CGPointValue]
                                                                                 offset:0];
             [path moveToPoint:center atOffset:duration];
-            [path liftUpAtOffset:duration + CB_GESTURE_EPSILON];
+            [path liftUpAtOffset:duration + CBX_GESTURE_EPSILON];
             [event addPointerEventPath:path];
         }
     }
@@ -64,13 +64,13 @@
     p2.x += amount;
     
     for (NSValue *v in @[ [NSValue valueWithCGPoint:p1], [NSValue valueWithCGPoint:p2]]) {
-        if ([direction isEqualToString:CB_PINCH_OUT]) {
+        if ([direction isEqualToString:CBX_PINCH_OUT]) {
             XCTouchPath *path = [[XCTouchPath alloc] initWithTouchDown:center
                                                            orientation:0
                                                                 offset:0];
             [path moveToPoint:[v CGPointValue] atOffset:duration];
             [path liftUpAtPoint:[v CGPointValue]
-                         offset:duration + CB_GESTURE_EPSILON];
+                         offset:duration + CBX_GESTURE_EPSILON];
             [gesture addTouchPath:path];
         } else {
             XCTouchPath *path = [[XCTouchPath alloc] initWithTouchDown:[v CGPointValue]
@@ -78,7 +78,7 @@
                                                                 offset:0];
             [path moveToPoint:center atOffset:duration];
             [path liftUpAtPoint:center
-                         offset:duration + CB_GESTURE_EPSILON];
+                         offset:duration + CBX_GESTURE_EPSILON];
             [gesture addTouchPath:path];
         }
     }

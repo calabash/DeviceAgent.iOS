@@ -1,10 +1,10 @@
 //
-//  CBMacros.h
+//  CBXMacros.h
 //  xcuitest-server
 //
 
-#ifndef CBMacros_h
-#define CBMacros_h
+#ifndef CBXMacros_h
+#define CBXMacros_h
 
 #define DATA_TO_JSON( data ) [NSJSONSerialization JSONObjectWithData: ( data ) options:0 error:NULL]
 #define degreesToRadians( degrees ) ( ( degrees ) / 180.0 * M_PI )
@@ -16,4 +16,4 @@
  */
 #define endpoint( endpoint, version ) [NSString stringWithFormat:@"/%0.1f%@", version, endpoint]
 
-#endif /* CBMacros_h */
+#endif /* CBXMacros_h */

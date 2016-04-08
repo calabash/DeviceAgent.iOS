@@ -11,12 +11,12 @@
 #import "XCTestDriver.h"
 #import "Testmanagerd.h"
 #import "XCTouchPath.h"
-#import "CBProtocols.h"
-#import "CBConstants.h"
+#import "CBXProtocols.h"
+#import "CBXConstants.h"
 #import "Coordinate.h"
-#import "CBTypedefs.h"
+#import "CBXTypedefs.h"
 #import "JSONUtils.h"
-#import "CBMacros.h"
+#import "CBXMacros.h"
 #import "Query.h"
 
 @class Gesture;

@@ -1,9 +1,9 @@
 
-#ifndef CBTypedefs_h
-#define CBTypedefs_h
+#ifndef CBXTypedefs_h
+#define CBXTypedefs_h
 
 #import <Foundation/Foundation.h>
 
 typedef void (^CompletionBlock)(NSError *e);
 
-#endif /* CBTypedefs_h */
+#endif /* CBXTypedefs_h */

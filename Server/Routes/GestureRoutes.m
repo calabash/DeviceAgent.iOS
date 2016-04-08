@@ -5,9 +5,9 @@
 
 #import "GestureFactory.h"
 #import "GestureRoutes.h"
-#import "CBConstants.h"
+#import "CBXConstants.h"
 #import "JSONUtils.h"
-#import "CBMacros.h"
+#import "CBXMacros.h"
 
 @implementation GestureRoutes
 + (NSArray<CBXRoute *> *)getRoutes {

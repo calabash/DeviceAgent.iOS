@@ -4,7 +4,7 @@
 //
 
 #import "UndefinedRoutes.h"
-#import "CBMacros.h"
+#import "CBXMacros.h"
 
 @interface CBXRoute (DontAutoregister)
 - (instancetype)dontAutoregister;

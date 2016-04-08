@@ -1,6 +1,6 @@
 
 #import <Foundation/Foundation.h>
-#import "CBConstants.h"
+#import "CBXConstants.h"
 
 @interface CBXException : NSException
 @property (nonatomic) NSInteger HTTPErrorStatusCode;

@@ -1,6 +1,6 @@
 
 #import <Foundation/Foundation.h>
-#import "CBProtocols.h"
+#import "CBXProtocols.h"
 
 @interface AutomationAction : NSObject<JSONKeyValidatorProvider>
 

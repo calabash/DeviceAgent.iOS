@@ -54,7 +54,7 @@
 		89C5F3501C9A60E70093A018 /* Testmanagerd.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F34E1C9A60E70093A018 /* Testmanagerd.h */; };
 		89C5F3511C9A60E70093A018 /* Testmanagerd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F34F1C9A60E70093A018 /* Testmanagerd.m */; };
 		89C5F3541C9A66E10093A018 /* NSXPCConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3531C9A66E10093A018 /* NSXPCConnection.h */; };
-		89C5F3561C9B9B690093A018 /* CBTypedefs.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3551C9B9B690093A018 /* CBTypedefs.h */; };
+		89C5F3561C9B9B690093A018 /* CBXTypedefs.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3551C9B9B690093A018 /* CBXTypedefs.h */; };
 		89C5F35A1C9B9C850093A018 /* Gesture.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3581C9B9C850093A018 /* Gesture.h */; };
 		89C5F35B1C9B9C850093A018 /* Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F3591C9B9C850093A018 /* Gesture.m */; };
 		89C5F35E1C9C51680093A018 /* Query.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F35C1C9C51680093A018 /* Query.h */; };
@@ -299,7 +299,7 @@
 		89C5F34E1C9A60E70093A018 /* Testmanagerd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Testmanagerd.h; sourceTree = "<group>"; };
 		89C5F34F1C9A60E70093A018 /* Testmanagerd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Testmanagerd.m; sourceTree = "<group>"; };
 		89C5F3531C9A66E10093A018 /* NSXPCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXPCConnection.h; sourceTree = "<group>"; };
-		89C5F3551C9B9B690093A018 /* CBTypedefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTypedefs.h; sourceTree = "<group>"; };
+		89C5F3551C9B9B690093A018 /* CBXTypedefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXTypedefs.h; sourceTree = "<group>"; };
 		89C5F3581C9B9C850093A018 /* Gesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gesture.h; sourceTree = "<group>"; };
 		89C5F3591C9B9C850093A018 /* Gesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gesture.m; sourceTree = "<group>"; };
 		89C5F35C1C9C51680093A018 /* Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Query.h; sourceTree = "<group>"; };
@@ -519,9 +519,9 @@
 		F55F83DB1C6DDF1300A945C8 /* JSONUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONUtils.m; sourceTree = "<group>"; };
 		F55F83DC1C6DDF1300A945C8 /* UIDevice+Wifi_IP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIDevice+Wifi_IP.h"; path = "Server/Utilities/UIDevice+Wifi_IP.h"; sourceTree = "<group>"; };
 		F55F83DD1C6DDF1300A945C8 /* UIDevice+Wifi_IP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+Wifi_IP.m"; path = "Server/Utilities/UIDevice+Wifi_IP.m"; sourceTree = "<group>"; };
-		F55F83EE1C6DDF7E00A945C8 /* CBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBConstants.h; sourceTree = "<group>"; };
-		F55F83EF1C6DDF7E00A945C8 /* CBMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMacros.h; sourceTree = "<group>"; };
-		F55F83F01C6DDF7E00A945C8 /* CBProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBProtocols.h; sourceTree = "<group>"; };
+		F55F83EE1C6DDF7E00A945C8 /* CBXConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXConstants.h; sourceTree = "<group>"; };
+		F55F83EF1C6DDF7E00A945C8 /* CBXMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXMacros.h; sourceTree = "<group>"; };
+		F55F83F01C6DDF7E00A945C8 /* CBXProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXProtocols.h; sourceTree = "<group>"; };
 		F55F83F31C6DE50C00A945C8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F55F83F41C6DE50C00A945C8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F55F83F51C6DE50C00A945C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1048,10 +1048,10 @@
 			children = (
 				899696ED1CB587E200BB42E2 /* AutomationActions */,
 				F5B0A1891CAD4A1F00E056CE /* CBXiOSVersionInlines.h */,
-				89C5F3551C9B9B690093A018 /* CBTypedefs.h */,
-				F55F83EE1C6DDF7E00A945C8 /* CBConstants.h */,
-				F55F83EF1C6DDF7E00A945C8 /* CBMacros.h */,
-				F55F83F01C6DDF7E00A945C8 /* CBProtocols.h */,
+				89C5F3551C9B9B690093A018 /* CBXTypedefs.h */,
+				F55F83EE1C6DDF7E00A945C8 /* CBXConstants.h */,
+				F55F83EF1C6DDF7E00A945C8 /* CBXMacros.h */,
+				F55F83F01C6DDF7E00A945C8 /* CBXProtocols.h */,
 				F55F83BE1C6DDF1300A945C8 /* CBXCUITestServer.h */,
 				F55F83BF1C6DDF1300A945C8 /* CBXCUITestServer.m */,
 				89C5F34D1C9A60CD0093A018 /* Testmanagerd */,
@@ -1419,7 +1419,7 @@
 				F55F82501C6DD07500A945C8 /* Route.h in Headers */,
 				89C5F3501C9A60E70093A018 /* Testmanagerd.h in Headers */,
 				F55F819B1C6DD07500A945C8 /* HTTPAsyncFileResponse.h in Headers */,
-				89C5F3561C9B9B690093A018 /* CBTypedefs.h in Headers */,
+				89C5F3561C9B9B690093A018 /* CBXTypedefs.h in Headers */,
 				89C5F3541C9A66E10093A018 /* NSXPCConnection.h in Headers */,
 				F55F81871C6DD07500A945C8 /* DDNumber.h in Headers */,
 				89C5F36B1C9C912F0093A018 /* GestureFactory.h in Headers */,

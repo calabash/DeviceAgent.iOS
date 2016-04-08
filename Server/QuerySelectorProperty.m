@@ -12,11 +12,11 @@
         if ([components[0] isEqualToString:@""]) {
             @throw [InvalidArgumentException withMessage:@"Invalid property selector (can not use empty string as 'key')."];
         }
-        ret[CB_KEY_KEY] = components[0];
-        ret[CB_VALUE_KEY] = components[1];
+        ret[CBX_KEY_KEY] = components[0];
+        ret[CBX_VALUE_KEY] = components[1];
     } else if ([value isKindOfClass:[NSDictionary class]]) {
-        ret[CB_KEY_KEY] = value[CB_KEY_KEY] ?: value[@"property"] ?: value[@"using"] ?: CB_EMPTY_STRING;
-        ret[CB_VALUE_KEY] = value[CB_VALUE_KEY] ?: CB_EMPTY_STRING;
+        ret[CBX_KEY_KEY] = value[CBX_KEY_KEY] ?: value[@"property"] ?: value[@"using"] ?: CBX_EMPTY_STRING;
+        ret[CBX_VALUE_KEY] = value[CBX_VALUE_KEY] ?: CBX_EMPTY_STRING;
     }
     return ret;
 }

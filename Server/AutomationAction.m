@@ -1,7 +1,7 @@
 
 #import "AutomationAction.h"
 #import "CBXException.h"
-#import "CBMacros.h"
+#import "CBXMacros.h"
 
 @implementation AutomationAction
 + (JSONKeyValidator *)validator { _must_override_exception; }

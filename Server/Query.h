@@ -3,8 +3,8 @@
 #import "QueryConfiguration.h"
 #import "AutomationAction.h"
 #import "QuerySelector.h"
-#import "CBProtocols.h"
-#import "CBConstants.h"
+#import "CBXProtocols.h"
+#import "CBXConstants.h"
 #import "XCUIElement.h"
 
 @class CoordinateQuery;

@@ -35,8 +35,8 @@
             If we're dealing with a coordinate query, selectors don't matter since the element
             should be uniquely identified by the coordinates.
          */
-        if ([key isEqualToString:CB_COORDINATE_KEY] ||
-            [key isEqualToString:CB_COORDINATES_KEY]) {
+        if ([key isEqualToString:CBX_COORDINATE_KEY] ||
+            [key isEqualToString:CBX_COORDINATES_KEY]) {
             self.isCoordinateQuery = YES;
             break;
         }
@@ -70,9 +70,9 @@
     /*
      Support for calabash query strings
      */
-    if (json[CB_QUERY_KEY]) {
-        NSMutableDictionary *queryStringSpecifiers = [self specifiersFromQueryString:json[CB_QUERY_KEY]];
-        [json removeObjectForKey:CB_QUERY_KEY];
+    if (json[CBX_QUERY_KEY]) {
+        NSMutableDictionary *queryStringSpecifiers = [self specifiersFromQueryString:json[CBX_QUERY_KEY]];
+        [json removeObjectForKey:CBX_QUERY_KEY];
         [json addEntriesFromDictionary:queryStringSpecifiers];
     }
     
@@ -89,15 +89,15 @@
     CoordinateQueryConfiguration *config = [CoordinateQueryConfiguration withJSON:self.raw
                                                                         validator:self.validator];
     
-    if (self.raw[CB_COORDINATE_KEY]) {
-        id json = self.raw[CB_COORDINATE_KEY];
+    if (self.raw[CBX_COORDINATE_KEY]) {
+        id json = self.raw[CBX_COORDINATE_KEY];
         [JSONUtils validatePointJSON:json];
         config.coordinate = [Coordinate withJSON:json];
     }
     
-    if (self.raw[CB_COORDINATES_KEY]) {
+    if (self.raw[CBX_COORDINATES_KEY]) {
         NSMutableArray *coords = [NSMutableArray array];
-        for (id json in self.raw[CB_COORDINATES_KEY]) {
+        for (id json in self.raw[CBX_COORDINATES_KEY]) {
             [JSONUtils validatePointJSON:json];
             [coords addObject:[Coordinate withJSON:json]];
         }

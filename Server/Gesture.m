@@ -8,7 +8,7 @@
     _must_override_exception;
 }
 
-+ (NSArray <NSString *> *)optionalKeys { return @[ CB_DURATION_KEY ]; }
++ (NSArray <NSString *> *)optionalKeys { return @[ CBX_DURATION_KEY ]; }
 + (NSArray <NSString *> *)requiredKeys { return @[]; }
 
 + (JSONKeyValidator *)validator {
@@ -17,12 +17,12 @@
 }
 
 + (NSArray <NSString *> *)defaultOptionalSpecifiers {
-    return @[CB_IDENTIFIER_KEY,
-             CB_TEXT_KEY,
-             CB_TEXT_LIKE_KEY,
-             CB_PROPERTY_KEY,
-             CB_PROPERTY_LIKE_KEY,
-             CB_INDEX_KEY];
+    return @[CBX_IDENTIFIER_KEY,
+             CBX_TEXT_KEY,
+             CBX_TEXT_LIKE_KEY,
+             CBX_PROPERTY_KEY,
+             CBX_PROPERTY_LIKE_KEY,
+             CBX_INDEX_KEY];
 }
 
 + (Gesture *)executeWithGestureConfiguration:(GestureConfiguration *)gestureConfig
@@ -104,7 +104,7 @@
 
     while(!done){
         //TODO: fine-tune this. 
-        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:CB_RUNLOOP_INTERVAL]];
+        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:CBX_RUNLOOP_INTERVAL]];
     }
     if (err) @throw [CBXException withMessage:@"Error performing gesture"];
     completion(err);

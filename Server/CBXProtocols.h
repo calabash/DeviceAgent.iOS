@@ -1,5 +1,5 @@
 //
-//  CBProtocols.h
+//  CBXProtocols.h
 //  xcuitest-server
 //
 
