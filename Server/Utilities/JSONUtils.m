@@ -3,7 +3,7 @@
 //  xcuitest-server
 //
 
-#import "CBInvalidArgumentException.h"
+#import "InvalidArgumentException.h"
 #import "Application.h"
 #import "CBConstants.h"
 #import "JSONUtils.h"
@@ -62,18 +62,18 @@ static NSDictionary *typeStringToElementType;
 + (void)validatePointJSON:(id)json {
     if ([json isKindOfClass:[NSArray class]]) {
         if ([json count] < 2) {
-            @throw [CBInvalidArgumentException withMessage:[NSString stringWithFormat:
+            @throw [InvalidArgumentException withMessage:[NSString stringWithFormat:
                                                             @"Error validating point JSON: expected [x, y], got %@",
                                                             [JSONUtils objToJSONString:json]]];
         }
     } else {
         if (![json isKindOfClass:[NSDictionary class]]) {
-            @throw [CBInvalidArgumentException withMessage:[NSString stringWithFormat:
+            @throw [InvalidArgumentException withMessage:[NSString stringWithFormat:
                                                             @"Error validating point JSON: expected dictionary, got %@",
                                                             NSStringFromClass([json class])]];
         }
         if (!([[json allKeys] containsObject:@"x"] && [[json allKeys] containsObject:@"y"])) {
-            @throw [CBInvalidArgumentException withMessage:[NSString stringWithFormat:
+            @throw [InvalidArgumentException withMessage:[NSString stringWithFormat:
                                                             @"Error validating point JSON: expected { x : #, y : # }, got %@",
                                                             [JSONUtils objToJSONString:json]]];
         }

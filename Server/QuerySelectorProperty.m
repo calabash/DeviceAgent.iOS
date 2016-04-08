@@ -7,10 +7,10 @@
     if ([value isKindOfClass:[NSString class]]) {
         NSArray *components = [value componentsSeparatedByString:@"="];
         if (components.count < 2) {
-            @throw [CBInvalidArgumentException withFormat:@"Malformed property selector. Expected 'key=val', got '%@'", value];
+            @throw [InvalidArgumentException withFormat:@"Malformed property selector. Expected 'key=val', got '%@'", value];
         }
         if ([components[0] isEqualToString:@""]) {
-            @throw [CBInvalidArgumentException withMessage:@"Invalid property selector (can not use empty string as 'key')."];
+            @throw [InvalidArgumentException withMessage:@"Invalid property selector (can not use empty string as 'key')."];
         }
         ret[CB_KEY_KEY] = components[0];
         ret[CB_VALUE_KEY] = components[1];

@@ -2,7 +2,7 @@
 #import "CoordinateQueryConfiguration.h"
 #import "QuerySelectorFactory.h"
 #import "CoordinateQuery.h"
-#import "CBException.h"
+#import "CBXException.h"
 #import "JSONUtils.h"
 #import "Query.h"
 

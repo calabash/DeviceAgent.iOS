@@ -3,7 +3,7 @@
 //  xcuitest-server
 //
 
-#import "CBElementNotFoundException.h"
+#import "ElementNotFoundException.h"
 #import "XCUICoordinate.h"
 #import "Application.h"
 #import "Testmanagerd.h"
@@ -57,7 +57,7 @@ static NSInteger currentElementIndex = 0;
 + (XCUIElement *)cachedElementOrThrow:(NSNumber *)index {
     XCUIElement *el = [self cachedElement:index];
     if (el == nil) {
-        @throw [CBElementNotFoundException withMessage:[NSString stringWithFormat:@"No element found with test_id %@", index]];
+        @throw [ElementNotFoundException withMessage:[NSString stringWithFormat:@"No element found with test_id %@", index]];
     }
     return el;
 }
@@ -76,7 +76,7 @@ static NSInteger currentElementIndex = 0;
     NSLog(@"Launching application '%@'", self.app.bundleID);
     [[Testmanagerd get] _XCT_launchApplicationWithBundleID:self.app.bundleID arguments:self.app.launchArguments environment:self.app.launchEnvironment completion:^(NSError *e) {
         if (e) {
-            @throw [[CBException alloc] initWithName:@"Unable to launch app"
+            @throw [[CBXException alloc] initWithName:@"Unable to launch app"
                                               reason:e.localizedDescription
                                             userInfo:@{@"bundleId" : self.app.bundleID}];
         }

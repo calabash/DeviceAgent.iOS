@@ -12,7 +12,7 @@
     
     NSString *string = gestureConfig[CB_STRING_KEY];
     if (!string) {
-        @throw [CBInvalidArgumentException withFormat:@"Missing required key 'string'"];
+        @throw [InvalidArgumentException withFormat:@"Missing required key 'string'"];
     }
     
     Touch *touch = [Touch withGestureConfiguration:gestureConfig query:query];
@@ -21,7 +21,7 @@
             completion(e);
         } else {
             [[Testmanagerd get] _XCT_sendString:string completion:^(NSError *e) {
-                if (e) @throw [CBException withMessage:@"Error performing gesture"];
+                if (e) @throw [CBXException withMessage:@"Error performing gesture"];
             }];
             completion(e);
         }

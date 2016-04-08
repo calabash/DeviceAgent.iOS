@@ -10,7 +10,7 @@
 - (void)validate {
     NSArray *coords = [[self.query.queryConfiguration asCoordinateQueryConfiguration] coordinates];
     if (!coords || coords.count < 2) {
-        @throw [CBInvalidArgumentException withFormat:@"Expected at least 2 coordinates for drag, got %li",
+        @throw [InvalidArgumentException withFormat:@"Expected at least 2 coordinates for drag, got %li",
                 (long)coords.count];
     }
 }

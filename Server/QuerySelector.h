@@ -1,5 +1,5 @@
 
-#import "CBInvalidArgumentException.h"
+#import "InvalidArgumentException.h"
 #import <Foundation/Foundation.h>
 #import "XCUIElementQuery.h"
 #import "XCUIElement.h"

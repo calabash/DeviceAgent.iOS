@@ -1,5 +1,5 @@
 
-#import "CBShutdownServerException.h"
+#import "ShutdownServerException.h"
 #import "CBXCUITestServer.h"
 #import <XCTest/XCTest.h>
 

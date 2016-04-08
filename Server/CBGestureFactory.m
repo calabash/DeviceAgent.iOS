@@ -1,5 +1,5 @@
 
-#import "CBInvalidArgumentException.h"
+#import "InvalidArgumentException.h"
 #import "CBGestureFactory.h"
 #import <objc/runtime.h>
 
@@ -50,7 +50,7 @@ static NSMutableSet <Class> *gestureClasses;
         }
     }
     
-    @throw [CBInvalidArgumentException withMessage:
+    @throw [InvalidArgumentException withMessage:
             [NSString stringWithFormat:
              @"Invalid gesture: No matching gesture for '%@'",
              gesture]];

@@ -2,7 +2,7 @@
 /*
  *  Lots of extra imports here so that all subclasses have them. 
  */
-#import "CBInvalidArgumentException.h"
+#import "InvalidArgumentException.h"
 #import "XCSynthesizedEventRecord.h"
 #import "GestureConfiguration.h"
 #import "XCPointerEventPath.h"

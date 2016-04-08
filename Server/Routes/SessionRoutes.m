@@ -3,7 +3,7 @@
 //  xcuitest-server
 //
 
-#import "CBShutdownServerException.h"
+#import "ShutdownServerException.h"
 #import "CBXCUITestServer.h"
 #import "Application.h"
 #import "SessionRoutes.h"

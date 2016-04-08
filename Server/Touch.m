@@ -8,7 +8,7 @@
 
 - (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<Coordinate *> *)coordinates {
     if (coordinates.count == 0) {
-        @throw [CBInvalidArgumentException withFormat:@"%@ requires at least one coordinate.",  [self.class name]];
+        @throw [InvalidArgumentException withFormat:@"%@ requires at least one coordinate.",  [self.class name]];
     }
     
     XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc] initWithName:self.class.name
@@ -30,7 +30,7 @@
 
 - (XCTouchGesture *)gestureWithCoordinates:(NSArray<Coordinate *> *)coordinates {
     if (coordinates.count == 0) {
-        @throw [CBInvalidArgumentException withFormat:@"%@ requires at least one coordinate.",  [self.class name]];
+        @throw [InvalidArgumentException withFormat:@"%@ requires at least one coordinate.",  [self.class name]];
     }
     
     XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:self.class.name];

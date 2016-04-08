@@ -1,6 +1,6 @@
 
 #import "CoordinateQueryConfiguration.h"
-#import "CBInvalidArgumentException.h"
+#import "InvalidArgumentException.h"
 #import "QuerySelectorFactory.h"
 #import "QueryConfiguration.h"
 #import "JSONUtils.h"
@@ -45,7 +45,7 @@
         if (qs) {
             [selectors addObject:qs];
         } else {
-            @throw [CBInvalidArgumentException withFormat:@"'%@' is an invalid query selector", key];
+            @throw [InvalidArgumentException withFormat:@"'%@' is an invalid query selector", key];
         }
     }
     

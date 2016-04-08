@@ -1,6 +1,6 @@
 
 #import "AutomationAction.h"
-#import "CBException.h"
+#import "CBXException.h"
 #import "CBMacros.h"
 
 @implementation AutomationAction

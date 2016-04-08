@@ -72,7 +72,7 @@
     } else {
         NSArray <XCUIElement *> *elements = [self.query execute];
         if (elements.count == 0) {
-            @throw [CBException withMessage:@"Error performing gesture: No elements match query."];
+            @throw [CBXException withMessage:@"Error performing gesture: No elements match query."];
         }
         for (XCUIElement *el in elements) {
             /*
@@ -106,7 +106,7 @@
         //TODO: fine-tune this. 
         [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:CB_RUNLOOP_INTERVAL]];
     }
-    if (err) @throw [CBException withMessage:@"Error performing gesture"];
+    if (err) @throw [CBXException withMessage:@"Error performing gesture"];
     completion(err);
 }
 

@@ -3,7 +3,7 @@
 //  xcuitest-server
 //
 
-#import "CBShutdownServerException.h"
+#import "ShutdownServerException.h"
 #import "CBConstants.h"
 #import "CBXRoute.h"
 
@@ -14,13 +14,13 @@
         @try {
             block(request, body, response);
         } @catch (NSException *e) {
-            if ([e isKindOfClass:[CBException class]]) {
-                if ([e isKindOfClass:[CBShutdownServerException class]]) {
+            if ([e isKindOfClass:[CBXException class]]) {
+                if ([e isKindOfClass:[ShutdownServerException class]]) {
                     //User wants to kill the server.
                     //Throw the exception back up to the calling XCTestCase
                     @throw e;
                 } else {
-                    [response setStatusCode:((CBException *)e).HTTPErrorStatusCode];
+                    [response setStatusCode:((CBXException *)e).HTTPErrorStatusCode];
                     [response respondWithJSON:@{ CB_ERROR_KEY : [e reason] }];
                 }
             } else {
