@@ -1,9 +1,9 @@
 
 #import "InvalidArgumentException.h"
-#import "CBGestureFactory.h"
+#import "GestureFactory.h"
 #import <objc/runtime.h>
 
-@implementation CBGestureFactory
+@implementation GestureFactory
 static NSMutableSet <Class> *gestureClasses;
 
 /*

@@ -3,7 +3,7 @@
 //  xcuitest-server
 //
 
-#import "CBGestureFactory.h"
+#import "GestureFactory.h"
 #import "GestureRoutes.h"
 #import "CBConstants.h"
 #import "JSONUtils.h"
@@ -13,7 +13,7 @@
 + (NSArray<CBXRoute *> *)getRoutes {
     return @[
              [CBXRoute post:@"/1.0/gesture" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
-                 [CBGestureFactory executeGestureWithJSON:body
+                 [GestureFactory executeGestureWithJSON:body
                                                completion:^(NSError *e) {
                        if (e) {
                            [response respondWithJSON:@{ @"error" : e.localizedDescription }]; //should never execute

@@ -63,8 +63,8 @@
 		89C5F3641C9C58BD0093A018 /* Touch.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F3621C9C58BD0093A018 /* Touch.m */; };
 		89C5F3671C9C5BC20093A018 /* InvalidArgumentException.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3651C9C5BC20093A018 /* InvalidArgumentException.h */; };
 		89C5F3681C9C5BC20093A018 /* InvalidArgumentException.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F3661C9C5BC20093A018 /* InvalidArgumentException.m */; };
-		89C5F36B1C9C912F0093A018 /* CBGestureFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3691C9C912F0093A018 /* CBGestureFactory.h */; };
-		89C5F36C1C9C912F0093A018 /* CBGestureFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F36A1C9C912F0093A018 /* CBGestureFactory.m */; };
+		89C5F36B1C9C912F0093A018 /* GestureFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3691C9C912F0093A018 /* GestureFactory.h */; };
+		89C5F36C1C9C912F0093A018 /* GestureFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F36A1C9C912F0093A018 /* GestureFactory.m */; };
 		89C5F36F1C9E32440093A018 /* DoubleTap.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F36D1C9E32440093A018 /* DoubleTap.h */; };
 		89C5F3701C9E32440093A018 /* DoubleTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F36E1C9E32440093A018 /* DoubleTap.m */; };
 		89D537F71CA1DF8500F62E09 /* QuerySelector.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D537F51CA1DF8500F62E09 /* QuerySelector.h */; };
@@ -184,7 +184,7 @@
 		F5B0A1A41CAD4DE800E056CE /* XCUIElement+WebDriverAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538071CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.m */; };
 		F5B0A1A51CAD4DE800E056CE /* UIDevice+Wifi_IP.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83DD1C6DDF1300A945C8 /* UIDevice+Wifi_IP.m */; };
 		F5B0A1A61CAD4DFA00E056CE /* CBXCUITestServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BF1C6DDF1300A945C8 /* CBXCUITestServer.m */; };
-		F5B0A1A71CAD4E2700E056CE /* CBGestureFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F36A1C9C912F0093A018 /* CBGestureFactory.m */; };
+		F5B0A1A71CAD4E2700E056CE /* GestureFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F36A1C9C912F0093A018 /* GestureFactory.m */; };
 		F5B0A1A81CAD4E2700E056CE /* Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F3591C9B9C850093A018 /* Gesture.m */; };
 		F5B0A1AA1CAD4E2700E056CE /* Touch.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F3621C9C58BD0093A018 /* Touch.m */; };
 		F5B0A1AB1CAD4E2700E056CE /* DoubleTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F36E1C9E32440093A018 /* DoubleTap.m */; };
@@ -308,8 +308,8 @@
 		89C5F3621C9C58BD0093A018 /* Touch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Touch.m; sourceTree = "<group>"; };
 		89C5F3651C9C5BC20093A018 /* InvalidArgumentException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvalidArgumentException.h; sourceTree = "<group>"; };
 		89C5F3661C9C5BC20093A018 /* InvalidArgumentException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvalidArgumentException.m; sourceTree = "<group>"; };
-		89C5F3691C9C912F0093A018 /* CBGestureFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBGestureFactory.h; sourceTree = "<group>"; };
-		89C5F36A1C9C912F0093A018 /* CBGestureFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBGestureFactory.m; sourceTree = "<group>"; };
+		89C5F3691C9C912F0093A018 /* GestureFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureFactory.h; sourceTree = "<group>"; };
+		89C5F36A1C9C912F0093A018 /* GestureFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureFactory.m; sourceTree = "<group>"; };
 		89C5F36D1C9E32440093A018 /* DoubleTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleTap.h; sourceTree = "<group>"; };
 		89C5F36E1C9E32440093A018 /* DoubleTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubleTap.m; sourceTree = "<group>"; };
 		89D537F51CA1DF8500F62E09 /* QuerySelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySelector.h; sourceTree = "<group>"; };
@@ -677,8 +677,8 @@
 		899696DD1CB46A3500BB42E2 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
-				89C5F3691C9C912F0093A018 /* CBGestureFactory.h */,
-				89C5F36A1C9C912F0093A018 /* CBGestureFactory.m */,
+				89C5F3691C9C912F0093A018 /* GestureFactory.h */,
+				89C5F36A1C9C912F0093A018 /* GestureFactory.m */,
 			);
 			name = Factory;
 			sourceTree = "<group>";
@@ -1422,7 +1422,7 @@
 				89C5F3561C9B9B690093A018 /* CBTypedefs.h in Headers */,
 				89C5F3541C9A66E10093A018 /* NSXPCConnection.h in Headers */,
 				F55F81871C6DD07500A945C8 /* DDNumber.h in Headers */,
-				89C5F36B1C9C912F0093A018 /* CBGestureFactory.h in Headers */,
+				89C5F36B1C9C912F0093A018 /* GestureFactory.h in Headers */,
 				F55F82581C6DD07500A945C8 /* RoutingHTTPServer.h in Headers */,
 				899697051CB5D5CF00BB42E2 /* Gesture+Options.h in Headers */,
 				F55F82381C6DD07500A945C8 /* DDTTYLogger.h in Headers */,
@@ -1642,7 +1642,7 @@
 				F55F819E1C6DD07500A945C8 /* HTTPDataResponse.m in Sources */,
 				F55F818A1C6DD07500A945C8 /* DDRange.m in Sources */,
 				F55F81881C6DD07500A945C8 /* DDNumber.m in Sources */,
-				89C5F36C1C9C912F0093A018 /* CBGestureFactory.m in Sources */,
+				89C5F36C1C9C912F0093A018 /* GestureFactory.m in Sources */,
 				F55F819A1C6DD07500A945C8 /* MultipartMessageHeaderField.m in Sources */,
 				F55F84131C6E438200A945C8 /* ElementNotFoundException.m in Sources */,
 				F55F81A21C6DD07500A945C8 /* HTTPErrorResponse.m in Sources */,
@@ -1719,7 +1719,7 @@
 				F5B0A1B11CAD4E2700E056CE /* QuerySelectorText.m in Sources */,
 				F5B0A1DC1CAD4E9500E056CE /* DDTTYLogger.m in Sources */,
 				F5B0A1A31CAD4DE800E056CE /* FBElement.m in Sources */,
-				F5B0A1A71CAD4E2700E056CE /* CBGestureFactory.m in Sources */,
+				F5B0A1A71CAD4E2700E056CE /* GestureFactory.m in Sources */,
 				F5B0A1B91CAD4E3A00E056CE /* CBXException.m in Sources */,
 				F5B0A1D91CAD4E9500E056CE /* DDASLLogger.m in Sources */,
 				F5B0A1C41CAD4E4600E056CE /* DeviceEventRoutes.m in Sources */,
