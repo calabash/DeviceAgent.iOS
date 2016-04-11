@@ -1,10 +1,3 @@
-//
-//  QuerySelectorProperty.m
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 3/23/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
 #import "QuerySelectorProperty.h"
 
@@ -14,16 +7,16 @@
     if ([value isKindOfClass:[NSString class]]) {
         NSArray *components = [value componentsSeparatedByString:@"="];
         if (components.count < 2) {
-            @throw [CBInvalidArgumentException withFormat:@"Malformed property selector. Expected 'key=val', got '%@'", value];
+            @throw [InvalidArgumentException withFormat:@"Malformed property selector. Expected 'key=val', got '%@'", value];
         }
         if ([components[0] isEqualToString:@""]) {
-            @throw [CBInvalidArgumentException withMessage:@"Invalid property selector (can not use empty string as 'key')."];
+            @throw [InvalidArgumentException withMessage:@"Invalid property selector (can not use empty string as 'key')."];
         }
-        ret[CB_KEY_KEY] = components[0];
-        ret[CB_VALUE_KEY] = components[1];
+        ret[CBX_KEY_KEY] = components[0];
+        ret[CBX_VALUE_KEY] = components[1];
     } else if ([value isKindOfClass:[NSDictionary class]]) {
-        ret[CB_KEY_KEY] = value[CB_KEY_KEY] ?: value[@"property"] ?: value[@"using"] ?: CB_EMPTY_STRING;
-        ret[CB_VALUE_KEY] = value[CB_VALUE_KEY] ?: CB_EMPTY_STRING;
+        ret[CBX_KEY_KEY] = value[CBX_KEY_KEY] ?: value[@"property"] ?: value[@"using"] ?: CBX_EMPTY_STRING;
+        ret[CBX_VALUE_KEY] = value[CBX_VALUE_KEY] ?: CBX_EMPTY_STRING;
     }
     return ret;
 }

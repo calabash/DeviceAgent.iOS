@@ -9,7 +9,7 @@
 #import "DeviceEventRoutes.h"
 #import "XCDeviceEvent.h"
 #import "Testmanagerd.h"
-#import "CBMacros.h"
+#import "CBXMacros.h"
 
 /*
     TODO:
@@ -27,9 +27,9 @@
 #define PRESS 0x40 //not entirely accurate description, but I don't have a better one
 
 @implementation DeviceEventRoutes
-+ (NSArray <CBRoute *> *)getRoutes {
++ (NSArray <CBXRoute *> *)getRoutes {
     return @[
-             [CBRoute post:endpoint(@"/home", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
+             [CBXRoute post:endpoint(@"/home", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
                  int page = HOME_BUTTON_PAGE;
                  int usage = PRESS;
                  int duration = 1;
@@ -41,7 +41,7 @@
                      }
                  }];
              }],
-             [CBRoute post:endpoint(@"/siri", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
+             [CBXRoute post:endpoint(@"/siri", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
                  int page = HOME_BUTTON_PAGE;
                  int usage = PRESS;
                  int duration = 5;
@@ -53,7 +53,7 @@
                      }
                  }];
              }],
-             [CBRoute post:endpoint(@"/orientation", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
+             [CBXRoute post:endpoint(@"/orientation", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
                  long long orientation = [data[@"orientation"] longLongValue];
                  
                  [[Testmanagerd get] _XCT_updateDeviceOrientation:orientation completion:^(NSError *e) {

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CBProtocols.h"
+#import "CBXProtocols.h"
 
 @interface DeviceEventRoutes : NSObject<CBRouteProvider>
 

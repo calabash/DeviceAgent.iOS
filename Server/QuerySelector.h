@@ -1,16 +1,9 @@
-//
-//  QuerySelector.h
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 3/22/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
-#import "CBInvalidArgumentException.h"
+#import "InvalidArgumentException.h"
 #import <Foundation/Foundation.h>
 #import "XCUIElementQuery.h"
 #import "XCUIElement.h"
-#import "CBMacros.h"
+#import "CBXMacros.h"
 
 typedef NS_ENUM(int, QuerySelectorExecutionPriority) {
     kQuerySelectorExecutionPriorityAny = 0,

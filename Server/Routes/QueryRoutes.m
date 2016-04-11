@@ -3,23 +3,23 @@
 //  xcuitest-server
 //
 
-#import "CBApplication+Queries.h"
+#import "Application+Queries.h"
 #import "QueryRoutes.h"
-#import "CBConstants.h"
+#import "CBXConstants.h"
 #import "JSONUtils.h"
-#import "CBQuery.h"
+#import "Query.h"
 
 @implementation QueryRoutes
-+ (NSArray <CBRoute *> *)getRoutes {
++ (NSArray <CBXRoute *> *)getRoutes {
     return @[
-             [CBRoute get:@"/1.0/tree" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
-                 [response respondWithJSON:[CBApplication tree]];
+             [CBXRoute get:@"/1.0/tree" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
+                 [response respondWithJSON:[Application tree]];
              }],
              
-             [CBRoute post:@"/1.0/query" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
+             [CBXRoute post:@"/1.0/query" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
                  QueryConfiguration *queryConfig = [QueryConfiguration withJSON:body
-                                                                      validator:[CBQuery validator]];
-                 CBQuery *query = [CBQuery withQueryConfiguration:queryConfig];
+                                                                      validator:[Query validator]];
+                 Query *query = [Query withQueryConfiguration:queryConfig];
                  
                  NSArray <XCUIElement *> *elements = [query execute];
                  
@@ -35,20 +35,20 @@
                  [response respondWithJSON:@{@"result" : results}];
              }],
              
-             [CBRoute get:@"/query/marked/:text" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
-                 NSString *text = request.params[CB_TEXT_KEY];
+             [CBXRoute get:@"/query/marked/:text" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
+                 NSString *text = request.params[CBX_TEXT_KEY];
                  //TODO: look for text in request.body
-                 [response respondWithJSON:[CBApplication jsonForElementsMarked:text]];
+                 [response respondWithJSON:[Application jsonForElementsMarked:text]];
              }],
              
-             [CBRoute get:@"/query/id/:id" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
-                 NSString *identifier = request.params[CB_IDENTIFIER_KEY];
-                 [response respondWithJSON:[CBApplication jsonForElementsWithID:identifier]];
+             [CBXRoute get:@"/query/id/:id" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
+                 NSString *identifier = request.params[CBX_IDENTIFIER_KEY];
+                 [response respondWithJSON:[Application jsonForElementsWithID:identifier]];
              }],
              
-             [CBRoute get:@"/query/type/:type" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
-                 NSString *type = request.params[CB_TYPE_KEY];
-                 [response respondWithJSON:[CBApplication jsonForElementsWithType:type]];
+             [CBXRoute get:@"/query/type/:type" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
+                 NSString *type = request.params[CBX_TYPE_KEY];
+                 [response respondWithJSON:[Application jsonForElementsWithType:type]];
              }],
              
              

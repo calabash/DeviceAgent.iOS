@@ -3,7 +3,7 @@
 //  xcuitest-server
 //
 
-#import "CBProtocols.h"
+#import "CBXProtocols.h"
 
 @interface HealthRoutes : NSObject<CBRouteProvider>
 @end

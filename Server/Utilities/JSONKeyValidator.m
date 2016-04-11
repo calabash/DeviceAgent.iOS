@@ -1,12 +1,5 @@
-//
-//  JSONActionValidator.m
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 4/6/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
-#import "CBInvalidArgumentException.h"
+#import "InvalidArgumentException.h"
 #import "JSONKeyValidator.h"
 
 @implementation JSONKeyValidator
@@ -33,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
     for (NSString *k in keys) {
         if (!([self.requiredKeys containsObject:k] ||
               [self.optionalKeys containsObject:k] )) {
-            @throw [CBInvalidArgumentException withFormat:@"Unsupported key: '%@'", k];
+            @throw [InvalidArgumentException withFormat:@"Unsupported key: '%@'", k];
         }
     }
     
@@ -42,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
      */
     for (NSString *key in self.requiredKeys) {
         if (![keys containsObject:key]) {
-            @throw [CBInvalidArgumentException withFormat:@"Required key '%@' is missing.", key];
+            @throw [InvalidArgumentException withFormat:@"Required key '%@' is missing.", key];
         }
     }
 }

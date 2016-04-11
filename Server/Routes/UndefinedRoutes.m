@@ -4,13 +4,13 @@
 //
 
 #import "UndefinedRoutes.h"
-#import "CBMacros.h"
+#import "CBXMacros.h"
 
-@interface CBRoute (DontAutoregister)
+@interface CBXRoute (DontAutoregister)
 - (instancetype)dontAutoregister;
 @end
 
-@implementation CBRoute (DontAutoregister)
+@implementation CBXRoute (DontAutoregister)
 - (instancetype)dontAutoregister {
     self.shouldAutoregister = NO;
     return self;
@@ -19,7 +19,7 @@
 
 
 @implementation UndefinedRoutes
-+ (NSArray <CBRoute *> *)getRoutes {
++ (NSArray <CBXRoute *> *)getRoutes {
     
     RequestHandler unhandledBlock = ^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
         //TODO is 404 correct? "Not Found"
@@ -32,10 +32,10 @@
          }];
     };
     return @[
-             [CBRoute get:@"/*" withBlock:unhandledBlock].dontAutoregister,
-             [CBRoute post:@"/*" withBlock:unhandledBlock].dontAutoregister,
-             [CBRoute put:@"/*" withBlock:unhandledBlock].dontAutoregister,
-             [CBRoute delete:@"/*" withBlock:unhandledBlock].dontAutoregister,
+             [CBXRoute get:@"/*" withBlock:unhandledBlock].dontAutoregister,
+             [CBXRoute post:@"/*" withBlock:unhandledBlock].dontAutoregister,
+             [CBXRoute put:@"/*" withBlock:unhandledBlock].dontAutoregister,
+             [CBXRoute delete:@"/*" withBlock:unhandledBlock].dontAutoregister,
              ];
 }
 @end

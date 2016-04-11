@@ -6,15 +6,15 @@
 #import "HealthRoutes.h"
 
 @implementation HealthRoutes
-+ (NSArray<CBRoute *> *)getRoutes {
++ (NSArray<CBXRoute *> *)getRoutes {
     return @[
-             [CBRoute get:@"/health" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
+             [CBXRoute get:@"/health" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
                  [response respondWithJSON:@{
                                              @"status" : @"Calabash is ready and waiting."
                                              }];
              }],
              
-             [CBRoute get:@"/ping" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
+             [CBXRoute get:@"/ping" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
                  [response respondWithJSON:@{
                                              @"status" : @"honk"
                                              }];
