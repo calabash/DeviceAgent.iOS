@@ -4,7 +4,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CBProtocols.h"
+#import "CBXProtocols.h"
 
 @interface SessionRoutes : NSObject<CBRouteProvider>
 @end

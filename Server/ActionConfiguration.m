@@ -1,15 +1,8 @@
-//
-//  ActionConfiguration.m
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 4/5/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
-#import "CBInvalidArgumentException.h"
+#import "InvalidArgumentException.h"
 #import "ActionConfiguration.h"
-#import "CBException.h"
-#import "CBMacros.h"
+#import "CBXException.h"
+#import "CBXMacros.h"
 
 @implementation ActionConfiguration
 

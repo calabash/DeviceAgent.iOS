@@ -1,8 +1,11 @@
 /**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ * All rights reserved.
  *
- * TODO: Licensing. See "BSD" file at the root of the project. 
+ * This source code is licensed under the BSD-style license found in the
+ * 'Facebook-WebDriverAgent' file inside of the 'third-party-licenses' directory
+ *  at the root of this project.
  */
-
 #import "UIDevice+Wifi_IP.h"
 
 #import <arpa/inet.h>

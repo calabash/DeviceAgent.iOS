@@ -3,9 +3,9 @@
 //  xcuitest-server
 //
 
-#import "CBInvalidArgumentException.h"
-#import "CBApplication.h"
-#import "CBConstants.h"
+#import "InvalidArgumentException.h"
+#import "Application.h"
+#import "CBXConstants.h"
 #import "JSONUtils.h"
 
 @implementation JSONUtils
@@ -23,15 +23,15 @@ static NSDictionary *typeStringToElementType;
             return [@{} mutableCopy];
         }
     }
-    json[CB_TYPE_KEY] = snapshot.wdType;
-    json[CB_LABEL_KEY] = snapshot.wdLabel;
-    json[CB_TITLE_KEY] = snapshot.wdTitle;
-    json[CB_VALUE_KEY] = snapshot.wdValue;
-    json[CB_PLACEHOLDER_KEY] = snapshot.wdPlaceholderValue;
-    json[CB_RECT_KEY] = [self rectToJSON:snapshot.wdFrame];
-    json[CB_IDENTIFIER_KEY] = snapshot.wdName;
-    json[CB_ENABLED_KEY] = @(snapshot.wdEnabled);
-    json[CB_TEST_ID] = [CBApplication cacheElement:(XCUIElement *)snapshot];
+    json[CBX_TYPE_KEY] = snapshot.wdType;
+    json[CBX_LABEL_KEY] = snapshot.wdLabel;
+    json[CBX_TITLE_KEY] = snapshot.wdTitle;
+    json[CBX_VALUE_KEY] = snapshot.wdValue;
+    json[CBX_PLACEHOLDER_KEY] = snapshot.wdPlaceholderValue;
+    json[CBX_RECT_KEY] = [self rectToJSON:snapshot.wdFrame];
+    json[CBX_IDENTIFIER_KEY] = snapshot.wdName;
+    json[CBX_ENABLED_KEY] = @(snapshot.wdEnabled);
+    json[CBX_TEST_ID] = [Application cacheElement:(XCUIElement *)snapshot];
     
     //TODO: visibility?
     return json;
@@ -43,10 +43,10 @@ static NSDictionary *typeStringToElementType;
 
 + (NSDictionary *)rectToJSON:(CGRect)rect {
     return @{
-             CB_X_KEY : @(rect.origin.x),
-             CB_Y_KEY : @(rect.origin.y),
-             CB_HEIGHT_KEY : @(rect.size.height),
-             CB_WIDTH_KEY : @(rect.size.width)
+             CBX_X_KEY : @(rect.origin.x),
+             CBX_Y_KEY : @(rect.origin.y),
+             CBX_HEIGHT_KEY : @(rect.size.height),
+             CBX_WIDTH_KEY : @(rect.size.width)
              };
 }
 
@@ -62,18 +62,18 @@ static NSDictionary *typeStringToElementType;
 + (void)validatePointJSON:(id)json {
     if ([json isKindOfClass:[NSArray class]]) {
         if ([json count] < 2) {
-            @throw [CBInvalidArgumentException withMessage:[NSString stringWithFormat:
+            @throw [InvalidArgumentException withMessage:[NSString stringWithFormat:
                                                             @"Error validating point JSON: expected [x, y], got %@",
                                                             [JSONUtils objToJSONString:json]]];
         }
     } else {
         if (![json isKindOfClass:[NSDictionary class]]) {
-            @throw [CBInvalidArgumentException withMessage:[NSString stringWithFormat:
+            @throw [InvalidArgumentException withMessage:[NSString stringWithFormat:
                                                             @"Error validating point JSON: expected dictionary, got %@",
                                                             NSStringFromClass([json class])]];
         }
         if (!([[json allKeys] containsObject:@"x"] && [[json allKeys] containsObject:@"y"])) {
-            @throw [CBInvalidArgumentException withMessage:[NSString stringWithFormat:
+            @throw [InvalidArgumentException withMessage:[NSString stringWithFormat:
                                                             @"Error validating point JSON: expected { x : #, y : # }, got %@",
                                                             [JSONUtils objToJSONString:json]]];
         }
@@ -87,8 +87,8 @@ static NSDictionary *typeStringToElementType;
         return CGPointMake([json[0] floatValue],
                            [json[1] floatValue]);
     } else {
-        return CGPointMake([json[CB_X_KEY] floatValue],
-                           [json[CB_Y_KEY] floatValue]);
+        return CGPointMake([json[CBX_X_KEY] floatValue],
+                           [json[CBX_Y_KEY] floatValue]);
     }
 }
 

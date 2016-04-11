@@ -8,8 +8,8 @@
 #import "UIDevice+Wifi_IP.h"
 #import "UndefinedRoutes.h"
 #import <objc/runtime.h>
-#import "CBProtocols.h"
-#import "CBConstants.h"
+#import "CBXProtocols.h"
+#import "CBXConstants.h"
 
 @interface CBXCUITestServer ()
 @property (atomic, strong) RoutingHTTPServer *server;
@@ -19,6 +19,7 @@
 @implementation CBXCUITestServer
 
 static CBXCUITestServer *sharedServer;
+static NSString *serverName = @"CalabashXCUITestServer";
 
 + (void)load {
     static dispatch_once_t oncet;
@@ -47,7 +48,7 @@ static CBXCUITestServer *sharedServer;
 }
 
 + (void)start {
-    NSLog(@"CalabashXCUITestServer built at %s %s", __DATE__, __TIME__);
+    NSLog(@"%@ built at %s %s", serverName, __DATE__, __TIME__);
     [sharedServer start];
 }
 
@@ -55,7 +56,7 @@ static CBXCUITestServer *sharedServer;
     NSError *error;
     BOOL serverStarted = NO;
         
-    [self.server setPort:DEFAULT_SERVER_PORT];
+    [self.server setPort:CBX_DEFAULT_SERVER_PORT];
     serverStarted = [self attemptToStartWithError:&error];
     
     if (!serverStarted) {
@@ -63,7 +64,8 @@ static CBXCUITestServer *sharedServer;
         abort();
     }
 
-    NSLog(@"CalabashXCUITestServer started on http://%@:%hu",
+    NSLog(@"%@ started on http://%@:%hu",
+          serverName,
           [UIDevice currentDevice].wifiIPAddress,
           [self.server port]);
 
@@ -98,7 +100,7 @@ static CBXCUITestServer *sharedServer;
             description = [NSString stringWithFormat:@"Unable to start web server on port %ld", (long)self.server.port];
         }
         
-        *error = [NSError errorWithDomain:CBWebServerErrorDomain code:0 userInfo:@{NSLocalizedDescriptionKey : description, NSUnderlyingErrorKey : innerError}];
+        *error = [NSError errorWithDomain:CBXWebServerErrorDomain code:0 userInfo:@{NSLocalizedDescriptionKey : description, NSUnderlyingErrorKey : innerError}];
         return NO;
     }
     return YES;
@@ -114,8 +116,8 @@ static CBXCUITestServer *sharedServer;
     for (int i = 0; i < outCount; i++) {
         Class c = classes[i];
         if (class_conformsToProtocol(c, @protocol(CBRouteProvider))) {
-            NSArray <CBRoute *> *routes = [c performSelector:@selector(getRoutes)];
-            for (CBRoute *route in routes) {
+            NSArray <CBXRoute *> *routes = [c performSelector:@selector(getRoutes)];
+            for (CBXRoute *route in routes) {
                 if ([route shouldAutoregister]) {
                     [self.server addRoute:route];
                 }
@@ -123,7 +125,7 @@ static CBXCUITestServer *sharedServer;
         }
     }
     free(classes);
-    for (CBRoute *route in [UndefinedRoutes getRoutes]) {
+    for (CBXRoute *route in [UndefinedRoutes getRoutes]) {
         [self.server addRoute:route];
     }
 }

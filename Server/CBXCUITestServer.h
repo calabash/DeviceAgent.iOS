@@ -1,11 +1,10 @@
 //
 //  CalabashXCUITestServer.h
-//  xcuitest-server
 //
 
 #import <Foundation/Foundation.h>
 
 @interface CBXCUITestServer : NSObject
-+ (void)start;
-+ (void)stop;
++ (void)start;  //Calabus driver, start your engine!
++ (void)stop;   //Come to a complete (non-rolling) stop.
 @end
