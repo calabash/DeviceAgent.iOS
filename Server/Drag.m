@@ -5,7 +5,7 @@
 @implementation Drag
 + (NSString *)name { return @"drag"; }
 
-+ (NSArray <NSString *> *)optionalKeys { return @[CBX_DURATION_KEY, CBX_REPITITIONS_KEY]; }
++ (NSArray <NSString *> *)optionalKeys { return @[CBX_DURATION_KEY, CBX_REPETITIONS_KEY]; }
 
 - (void)validate {
     NSArray *coords = [[self.query.queryConfiguration asCoordinateQueryConfiguration] coordinates];
@@ -25,7 +25,7 @@
     XCPointerEventPath *path = [[XCPointerEventPath alloc] initForTouchAtPoint:coordinate
                                                                         offset:0];
     
-    for (int i = 0; i < [self repititions]; i ++) {
+    for (int i = 0; i < [self repetitions]; i ++) {
         for (Coordinate *coord in coordinates) {
             if (coord == coordinates.firstObject) { continue; }
             offset += duration;
@@ -50,7 +50,7 @@
     XCTouchPath *path = [[XCTouchPath alloc] initWithTouchDown:coordinate
                                                    orientation:0
                                                         offset:0];
-    for (int i = 0; i < [self repititions]; i ++) {
+    for (int i = 0; i < [self repetitions]; i ++) {
         for (Coordinate *coord in coordinates) {
             if (coord == coordinates.firstObject) { continue; }
             offset += duration;

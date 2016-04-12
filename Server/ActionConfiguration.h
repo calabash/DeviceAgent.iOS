@@ -16,6 +16,11 @@
                validator:(JSONKeyValidator *)validator;
 
 /*
+ Checks if a given key exists. 
+ */
+- (BOOL)has:(NSString *)key;
+
+/*
  Debuging / error logging
  */
 @property (nonatomic, strong) NSDictionary *raw;
