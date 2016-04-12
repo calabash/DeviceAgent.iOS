@@ -24,7 +24,7 @@ args =
             "-SYMROOT=build",
             "-derivedDataPath build/xctest",
             "-workspace CBXDriver.xcworkspace",
-            "-scheme CBX-XCTests",
+            "-scheme UnitTest",
             "-destination 'platform=iOS Simulator,id=#{sim_udid}'",
             "-sdk iphonesimulator",
             "-configuration Debug",

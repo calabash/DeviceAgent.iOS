@@ -32,21 +32,19 @@ app:
 runner:
 	bin/make/runner.sh
 
-# Runs the XCTest unit tests.  Would like to use xctest, but there is a
-# directory named XCTest which violates make defaults. xct is the rule
-# in the LPServer.
+# Runs the Server (XCTest) unit tests.
 #
 # If you encounter a build error, use:
 #
-# $ XCPRETTY=0 make xct
+# $ XCPRETTY=0 make unit
 #
 # to diagnose.
 #
 # When running with xcpretty, a junit style report can be found in:
 #
 # build/reports/junit.xml
-xct:
-	bundle exec bin/test/xctest.rb
+#
+# Warnings are treated as errors. GCC_TREAT_WARNINGS_AS_ERRORS=YES
 unit:
-	$(MAKE) xct
+	bundle exec bin/test/unit.rb
 
