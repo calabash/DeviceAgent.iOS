@@ -9,7 +9,7 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
+            buildForProfiling = "NO"
             buildForArchiving = "NO"
             buildForAnalyzing = "YES">
             <BuildableReference
@@ -22,15 +22,15 @@
          </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
-            buildForRunning = "NO"
+            buildForRunning = "YES"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
+            buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "898743BB1C5847B30084FD93"
-               BuildableName = "CBXAppStub.app"
-               BlueprintName = "CBXAppStub"
+               BlueprintIdentifier = "F5954E041CBD2E1200117745"
+               BuildableName = "UnitTestApp.app"
+               BlueprintName = "UnitTestApp"
                ReferencedContainer = "container:CBXDriver.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -40,8 +40,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -57,9 +56,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F5B0A0CE1CAD3CBC00E056CE"
-            BuildableName = "UnitTest.xctest"
-            BlueprintName = "UnitTest"
+            BlueprintIdentifier = "F5954E041CBD2E1200117745"
+            BuildableName = "UnitTestApp.app"
+            BlueprintName = "UnitTestApp"
             ReferencedContainer = "container:CBXDriver.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -79,9 +78,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F5B0A0CE1CAD3CBC00E056CE"
-            BuildableName = "UnitTest.xctest"
-            BlueprintName = "UnitTest"
+            BlueprintIdentifier = "F5954E041CBD2E1200117745"
+            BuildableName = "UnitTestApp.app"
+            BlueprintName = "UnitTestApp"
             ReferencedContainer = "container:CBXDriver.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -94,15 +93,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F5B0A0CE1CAD3CBC00E056CE"
-            BuildableName = "UnitTest.xctest"
-            BlueprintName = "UnitTest"
-            ReferencedContainer = "container:CBXDriver.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
