@@ -43,7 +43,11 @@
              
              [CBXRoute post:endpoint(@"/shutdown", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
                  //Want to make sure this route actually returns a response to the client before shutting down
-                 [response respondWithJSON:@{@"message" : @"Goodbye."}];
+                 NSDictionary *json = @{
+                                        @"message" : @"Goodbye.",
+                                        @"delay" : @(CBX_SERVER_SHUTDOWN_DELAY)
+                                        };
+                 [response respondWithJSON:json];
                  [CBXCUITestServer stop];
              }]
              

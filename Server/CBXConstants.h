@@ -78,3 +78,4 @@ static float const CBX_RUNLOOP_INTERVAL = 0.1;
 static float const CBX_DEFAULT_DURATION = 0.1;
 static float const CBX_DEFAULT_PINCH_AMOUNT = 50;
 static float const CBX_GESTURE_EPSILON = 0.001;
+static float const CBX_SERVER_SHUTDOWN_DELAY = 0.2;
