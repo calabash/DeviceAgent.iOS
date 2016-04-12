@@ -81,9 +81,15 @@ static NSString *serverName = @"CalabashXCUITestServer";
 }
 
 - (void)stop {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{ [self.server stop:NO];
+    dispatch_time_t when = dispatch_time(DISPATCH_TIME_NOW,
+                                         CBX_SERVER_SHUTDOWN_DELAY * NSEC_PER_SEC);
+    dispatch_after(when, dispatch_get_main_queue(), ^{
         [self.server stop:NO];
-        NSLog(@"CALABUS DRIVER HAS RETIRED");
+        if ([self.server isRunning]) {
+            NSLog(@"DeviceAgent has retired.");
+        } else {
+            NSLog(@"DeviceAgent is still running.");
+        }
     });
 }
 
