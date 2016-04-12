@@ -21,4 +21,9 @@
     coord.json = json;
     return coord;
 }
+
+- (NSString *)description {
+    CGPoint p = [self cgpoint];
+    return [NSString stringWithFormat:@"(%f, %f)", p.x, p.y];
+}
 @end

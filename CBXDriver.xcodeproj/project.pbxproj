@@ -87,6 +87,9 @@
 		89D5381A1CA3551600F62E09 /* QuerySelectorProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538181CA3551600F62E09 /* QuerySelectorProperty.m */; };
 		89D5381D1CA359B200F62E09 /* QuerySelectorPropertyLike.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D5381B1CA359B200F62E09 /* QuerySelectorPropertyLike.h */; };
 		89D5381E1CA359B200F62E09 /* QuerySelectorPropertyLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5381C1CA359B200F62E09 /* QuerySelectorPropertyLike.m */; };
+		89F6BF8B1CBC4BDD0088269C /* Rotate.h in Headers */ = {isa = PBXBuildFile; fileRef = 89F6BF891CBC4BDD0088269C /* Rotate.h */; };
+		89F6BF8C1CBC4BDD0088269C /* Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BF8A1CBC4BDD0088269C /* Rotate.m */; };
+		89F6BF8D1CBC4BDD0088269C /* Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BF8A1CBC4BDD0088269C /* Rotate.m */; };
 		F55F81801C6DD07500A945C8 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F55F7FED1C6DD07500A945C8 /* GCDAsyncSocket.h */; };
 		F55F81811C6DD07500A945C8 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FEE1C6DD07500A945C8 /* GCDAsyncSocket.m */; };
 		F55F81851C6DD07500A945C8 /* DDData.h in Headers */ = {isa = PBXBuildFile; fileRef = F55F7FF51C6DD07500A945C8 /* DDData.h */; };
@@ -346,6 +349,8 @@
 		89D538181CA3551600F62E09 /* QuerySelectorProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySelectorProperty.m; sourceTree = "<group>"; };
 		89D5381B1CA359B200F62E09 /* QuerySelectorPropertyLike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySelectorPropertyLike.h; sourceTree = "<group>"; };
 		89D5381C1CA359B200F62E09 /* QuerySelectorPropertyLike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySelectorPropertyLike.m; sourceTree = "<group>"; };
+		89F6BF891CBC4BDD0088269C /* Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rotate.h; sourceTree = "<group>"; };
+		89F6BF8A1CBC4BDD0088269C /* Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rotate.m; sourceTree = "<group>"; };
 		F55F7FED1C6DD07500A945C8 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		F55F7FEE1C6DD07500A945C8 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		F55F7FF51C6DD07500A945C8 /* DDData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDData.h; sourceTree = "<group>"; };
@@ -778,6 +783,8 @@
 				89512BDA1C9EEC3C0027D61E /* Drag.m */,
 				899696C21CB3360900BB42E2 /* Pinch.h */,
 				899696C31CB3360900BB42E2 /* Pinch.m */,
+				89F6BF891CBC4BDD0088269C /* Rotate.h */,
+				89F6BF8A1CBC4BDD0088269C /* Rotate.m */,
 			);
 			name = Gestures;
 			sourceTree = "<group>";
@@ -1477,6 +1484,7 @@
 				89D538081CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.h in Headers */,
 				F55F82341C6DD07500A945C8 /* DDFileLogger.h in Headers */,
 				F55F82301C6DD07500A945C8 /* DDAbstractDatabaseLogger.h in Headers */,
+				89F6BF8B1CBC4BDD0088269C /* Rotate.h in Headers */,
 				F55F82501C6DD07500A945C8 /* Route.h in Headers */,
 				89C5F3501C9A60E70093A018 /* Testmanagerd.h in Headers */,
 				F55F819B1C6DD07500A945C8 /* HTTPAsyncFileResponse.h in Headers */,
@@ -1749,6 +1757,7 @@
 				F55F84091C6E436500A945C8 /* CBXRoute.m in Sources */,
 				F55F81911C6DD07500A945C8 /* HTTPMessage.m in Sources */,
 				F55F82351C6DD07500A945C8 /* DDFileLogger.m in Sources */,
+				89F6BF8C1CBC4BDD0088269C /* Rotate.m in Sources */,
 				899696D41CB44D9B00BB42E2 /* GestureConfiguration.m in Sources */,
 				899696EB1CB5857C00BB42E2 /* JSONKeyValidator.m in Sources */,
 				F55F81981C6DD07500A945C8 /* MultipartMessageHeader.m in Sources */,
@@ -1846,6 +1855,7 @@
 				F5B0A1BC1CAD4E3A00E056CE /* InvalidArgumentException.m in Sources */,
 				F5B0A1D01CAD4E7F00E056CE /* MultipartMessageHeaderField.m in Sources */,
 				F5B0A1E31CAD4EA700E056CE /* RoutingConnection.m in Sources */,
+				89F6BF8D1CBC4BDD0088269C /* Rotate.m in Sources */,
 				F5B0A1AC1CAD4E2700E056CE /* Drag.m in Sources */,
 				F5B0A1AD1CAD4E2700E056CE /* Query.m in Sources */,
 				F5B0A1B31CAD4E2700E056CE /* QuerySelectorIndex.m in Sources */,

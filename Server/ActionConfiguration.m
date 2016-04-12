@@ -16,6 +16,10 @@
     return self.raw[key];
 }
 
+- (BOOL)has:(NSString *)key {
+    return [[self.raw allKeys] containsObject:key];
+}
+
 + (instancetype)withJSON:(NSDictionary *)json
                validator:(JSONKeyValidator *)validator {
     [validator validate:json];

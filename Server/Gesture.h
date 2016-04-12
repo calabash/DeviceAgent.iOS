@@ -56,7 +56,8 @@
 @property (nonatomic, strong) GestureConfiguration *gestureConfiguration;
 
 - (void)execute:(CompletionBlock)completion;
-- (void)validate;
+- (id)setup:(NSArray <Coordinate *> *)coords; //any shared setup between eventWithCoordinates: and gestureWithCoordinates:
+- (void)validate;   //Validate gestureConfiguration specifics
 
 + (instancetype)withGestureConfiguration:(GestureConfiguration *)gestureConfig
                                    query:(Query *)query;

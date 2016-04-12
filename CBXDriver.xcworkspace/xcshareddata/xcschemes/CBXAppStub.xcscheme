@@ -38,6 +38,16 @@
                ReferencedContainer = "container:CBXDriver.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F5B0A0CE1CAD3CBC00E056CE"
+               BuildableName = "UnitTest.xctest"
+               BlueprintName = "UnitTest"
+               ReferencedContainer = "container:CBXDriver.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

@@ -20,14 +20,19 @@ static NSString *const CBX_X2_KEY = @"x2";
 static NSString *const CBX_Y2_KEY = @"y2";
 
 static NSString *const CBX_ERROR_KEY = @"error";
-static NSString *const CBX_REPITITIONS_KEY = @"repititions";
+static NSString *const CBX_REPETITIONS_KEY = @"repetitions";
 static NSString *const CBX_GESTURE_KEY = @"gesture";
 static NSString *const CBX_OPTIONS_KEY = @"options";
 static NSString *const CBX_SPECIFIERS_KEY = @"specifiers";
 static NSString *const CBX_QUERY_KEY = @"query";
 static NSString *const CBX_AMOUNT_KEY = @"amount";
+static NSString *const CBX_DEGREES_KEY = @"degrees";
 static NSString *const CBX_PINCH_DIRECTION_KEY = @"pinch_direction";
+static NSString *const CBX_ROTATE_DIRECTION_KEY = @"rotate_direction";
+static NSString *const CBX_RADIUS_KEY = @"radius";
 static NSString *const CBX_DURATION_KEY = @"duration";
+static NSString *const CBX_CLOCKWISE_KEY = @"clockwise";
+static NSString *const CBX_COUNTERCLOCKWISE_KEY = @"counterclockwise";
 static NSString *const CBX_COORDINATE_KEY = @"coordinate";
 static NSString *const CBX_COORDINATES_KEY = @"coordinates";
 static NSString *const CBX_HEIGHT_KEY = @"height";
@@ -54,7 +59,7 @@ static NSString *const CBX_TEXT1_KEY = @"text1";
 static NSString *const CBX_TEXT2_KEY = @"text2";
 static NSString *const CBX_SCALE_KEY = @"scale";
 static NSString *const CBX_VELOCITY_KEY = @"velocity";
-static NSString *const CBX_ROTATION_KEY = @"rotation";
+static NSString *const CBX_ROTATION_START_KEY = @"rotation_start";
 static NSString *const CBX_NUM_TAPS_KEY = @"taps";
 static NSString *const CBX_NUM_TOUCHES_KEY = @"touches";
 static NSString *const CBX_PINCH_IN = @"in";
@@ -67,6 +72,7 @@ static NSString *const CBX_LEFT_KEY = @"left";
 static NSString *const CBX_RIGHT_KEY = @"right";
 
 static NSString *const CBX_DEFAULT_PINCH_DIRECTION = @"in";
+static NSString *const CBX_DEFAULT_ROTATE_DIRECTION = @"clockwise";
 
 static NSString *const CBX_EMPTY_STRING = @"";
 
@@ -76,6 +82,14 @@ static NSUInteger const HTTP_STATUS_CODE_SERVER_ERROR = 500;
 
 static float const CBX_RUNLOOP_INTERVAL = 0.1;
 static float const CBX_DEFAULT_DURATION = 0.1;
+static float const CBX_DEFAULT_ROTATE_DURATION = .8;
 static float const CBX_DEFAULT_PINCH_AMOUNT = 50;
 static float const CBX_GESTURE_EPSILON = 0.001;
 static float const CBX_SERVER_SHUTDOWN_DELAY = 0.2;
+
+static float const CBX_DEFAULT_DEGREES = 0;
+static float const CBX_DEFAULT_ROTATION_START = 0;
+static float const CBX_DEFAULT_RADIUS = 25;
+static float const CBX_ROTATE_INCREMENT_DEGREES = 10;
+
+static int const CBX_DEFAULT_REPETITIONS = 1;
