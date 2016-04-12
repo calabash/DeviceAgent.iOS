@@ -85,6 +85,8 @@ static float const CBX_DEFAULT_DURATION = 0.1;
 static float const CBX_DEFAULT_ROTATE_DURATION = .8;
 static float const CBX_DEFAULT_PINCH_AMOUNT = 50;
 static float const CBX_GESTURE_EPSILON = 0.001;
+static float const CBX_SERVER_SHUTDOWN_DELAY = 0.2;
+
 static float const CBX_DEFAULT_DEGREES = 0;
 static float const CBX_DEFAULT_ROTATION_START = 0;
 static float const CBX_DEFAULT_RADIUS = 25;

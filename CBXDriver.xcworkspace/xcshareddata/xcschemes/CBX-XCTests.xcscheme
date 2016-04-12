@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F5B0A0CE1CAD3CBC00E056CE"
-               BuildableName = "CBX-XCTests.xctest"
-               BlueprintName = "CBX-XCTests"
+               BuildableName = "UnitTest.xctest"
+               BlueprintName = "UnitTest"
                ReferencedContainer = "container:CBXDriver.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,8 +48,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F5B0A0CE1CAD3CBC00E056CE"
-               BuildableName = "CBX-XCTests.xctest"
-               BlueprintName = "CBX-XCTests"
+               BuildableName = "UnitTest.xctest"
+               BlueprintName = "UnitTest"
                ReferencedContainer = "container:CBXDriver.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -58,8 +58,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F5B0A0CE1CAD3CBC00E056CE"
-            BuildableName = "CBX-XCTests.xctest"
-            BlueprintName = "CBX-XCTests"
+            BuildableName = "UnitTest.xctest"
+            BlueprintName = "UnitTest"
             ReferencedContainer = "container:CBXDriver.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -80,8 +80,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F5B0A0CE1CAD3CBC00E056CE"
-            BuildableName = "CBX-XCTests.xctest"
-            BlueprintName = "CBX-XCTests"
+            BuildableName = "UnitTest.xctest"
+            BlueprintName = "UnitTest"
             ReferencedContainer = "container:CBXDriver.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -98,8 +98,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F5B0A0CE1CAD3CBC00E056CE"
-            BuildableName = "CBX-XCTests.xctest"
-            BlueprintName = "CBX-XCTests"
+            BuildableName = "UnitTest.xctest"
+            BlueprintName = "UnitTest"
             ReferencedContainer = "container:CBXDriver.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
