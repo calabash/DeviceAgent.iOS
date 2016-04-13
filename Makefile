@@ -1,8 +1,7 @@
 all:
 	$(MAKE) clean
-	$(MAKE) xct
-	$(MAKE) app
-	$(MAKE) ipa
+	$(MAKE) app-agent
+	$(MAKE) ipa-agent
 	$(MAKE) runner
 
 clean:
@@ -17,15 +16,15 @@ clean:
 # Respects the CODE_SIGN_IDENTITY variable, which might be necessary
 # if you have multiple Developer accounts.
 # $ CODE_SIGN_IDENTITY="iPhone Developer: Joshua Moody (8<snip>F)" make ipa
-ipa:
-	bin/make/ipa.sh
+ipa-agent:
+	bin/make/ipa-agent.sh
 
 # Builds the CBX-Runner.app and CBXAppStub.app and stages them
 # to ./Products/ipa.
 #
 # Xcode Product > Build For > Testing stages apps to the same directory.
-app:
-	bin/make/app.sh
+app-agent:
+	bin/make/app-agent.sh
 
 # Same as `make ipa`, but also embeds a specific .xctestconfiguration.
 # Requires calabash-tool for resigning.
