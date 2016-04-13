@@ -1680,7 +1680,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "bin/xcode-build-phase/stage-application-to-Products.sh";
+			shellScript = "bin/xcode-build-phase/stage-appstub-to-Products.sh";
 			showEnvVarsInLog = 0;
 		};
 		F5EC9D1D1C6E5F6F00E8A59D /* Run Script Stage CBX-Runner to ./Products */ = {
