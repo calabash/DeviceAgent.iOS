@@ -1572,6 +1572,7 @@
 				F5954E011CBD2E1200117745 /* Sources */,
 				F5954E021CBD2E1200117745 /* Frameworks */,
 				F5954E031CBD2E1200117745 /* Resources */,
+				F5A252C21CBFFE2700C05F1F /* Run Script stage to ./Products */,
 			);
 			buildRules = (
 			);
@@ -1687,6 +1688,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		F5A252C21CBFFE2700C05F1F /* Run Script stage to ./Products */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script stage to ./Products";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bin/xcode-build-phase/stage-unittestapp-to-Products.sh";
+			showEnvVarsInLog = 0;
+		};
 		F5EC9D1C1C6E4FCC00E8A59D /* Run Script Stage binaries to ./Products */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
