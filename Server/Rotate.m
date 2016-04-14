@@ -34,7 +34,7 @@ typedef NS_ENUM(short, ClockDirection) {
              CBX_DURATION_KEY,
              CBX_DEGREES_KEY,
              CBX_ROTATION_START_KEY,
-             CBX_ROTATE_DIRECTION_KEY,
+             CBX_ROTATION_DIRECTION_KEY,
              CBX_RADIUS_KEY,
              CBX_REPETITIONS_KEY
              ];
@@ -96,8 +96,8 @@ float dtor(float degrees) { return degrees * (M_PI / 180); }
                                                                direction:cd
                                                                   offset:center];
     
-    float oppositeDegrees = 360 - [self degrees];
-    NSArray<Coordinate *> *coords2 = [self circleRadiusPointsFromDegrees:oppositeDegrees
+    float oppositeStart = [self rotationStart] - 180;
+    NSArray<Coordinate *> *coords2 = [self circleRadiusPointsFromDegrees:oppositeStart
                                                                 rotateBy:[self degrees]
                                                                   radius:[self radius]
                                                                direction:cd

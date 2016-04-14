@@ -19,6 +19,11 @@
                 (long)coords.count];
     }
     
+    if ([self.query.queryConfiguration asCoordinateQueryConfiguration].coordinate) {
+        @throw [InvalidArgumentException withMessage:
+                @"Drag gesture can not accept 'coordinate' as a specifier. Use 'coordinates' instead."];
+    }
+    
     if ([self numFingers] < CBX_MIN_NUM_FINGERS || [self numFingers] > CBX_MAX_NUM_FINGERS) {
         @throw [InvalidArgumentException withFormat:
                 @"%@ must be between %d and %d, inclusive.",
@@ -51,6 +56,8 @@
                 if (coord == coordinates.firstObject) { continue; }
                 offset += duration;
                 coordinate = coord.cgpoint;
+                coordinate.x += fingerOffset.x;
+                coordinate.y += fingerOffset.y;
                 [path moveToPoint:coordinate atOffset:offset];
             }
         }
@@ -85,6 +92,8 @@
                 if (coord == coordinates.firstObject) { continue; }
                 offset += duration;
                 coordinate = coord.cgpoint;
+                coordinate.x += fingerOffset.x;
+                coordinate.y += fingerOffset.y;
                 [path moveToPoint:coordinate atOffset:offset];
             }
         }

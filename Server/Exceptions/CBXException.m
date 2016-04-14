@@ -2,9 +2,6 @@
 #import "CBXException.h"
 
 @implementation CBXException
-+ (instancetype)withMessage:(NSString *)message {
-    return [self withMessage:message statusCode:HTTP_STATUS_CODE_SERVER_ERROR];
-}
 
 + (instancetype)withFormat:(NSString *)format, ... {
     va_list args;
@@ -14,8 +11,20 @@
     return ret;
 }
 
++ (instancetype)withMessage:(NSString *)message {
+    return [self withMessage:message statusCode:HTTP_STATUS_CODE_SERVER_ERROR];
+}
+
 + (instancetype)withMessage:(NSString *)message statusCode:(NSInteger)code {
-    CBXException *e = [[self alloc] initWithName:@"Exception" reason:message userInfo:nil];
+    return [self withMessage:message statusCode:code userInfo:nil];
+}
+
++ (instancetype)withMessage:(NSString *)message userInfo:(NSDictionary *)userInfo {
+    return [self withMessage:message statusCode:HTTP_STATUS_CODE_SERVER_ERROR userInfo:userInfo];
+}
+
++ (instancetype)withMessage:(NSString *)message statusCode:(NSInteger)code userInfo:(NSDictionary *)userInfo {
+    CBXException *e = [[self alloc] initWithName:@"Exception" reason:message userInfo:userInfo];
     e.HTTPErrorStatusCode = code;
     return e;
 }

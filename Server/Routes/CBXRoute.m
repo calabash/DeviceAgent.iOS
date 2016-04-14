@@ -14,6 +14,9 @@
         @try {
             block(request, body, response);
         } @catch (NSException *e) {
+            NSMutableDictionary *dict = [([e userInfo] ?: @{}) mutableCopy];
+            dict[CBX_ERROR_KEY] = [e reason];
+            
             if ([e isKindOfClass:[CBXException class]]) {
                 if ([e isKindOfClass:[ShutdownServerException class]]) {
                     //User wants to kill the server.
@@ -21,12 +24,12 @@
                     @throw e;
                 } else {
                     [response setStatusCode:((CBXException *)e).HTTPErrorStatusCode];
-                    [response respondWithJSON:@{ CBX_ERROR_KEY : [e reason] }];
+                    [response respondWithJSON:dict];
                 }
             } else {
                 NSLog(@"%@", e.callStackSymbols);
                 [response setStatusCode:500];
-                [response respondWithJSON:@{ CBX_ERROR_KEY : [e reason] }];
+                [response respondWithJSON:dict];
             }
         }
     };

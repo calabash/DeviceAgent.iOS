@@ -40,7 +40,7 @@
 }
 
 - (NSString *)rotateDirection {
-    return [self getString:CBX_ROTATE_DIRECTION_KEY default:CBX_DEFAULT_ROTATE_DIRECTION];
+    return [self getString:CBX_ROTATION_DIRECTION_KEY default:CBX_DEFAULT_ROTATE_DIRECTION];
 }
 
 

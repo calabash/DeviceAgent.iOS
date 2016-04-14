@@ -29,7 +29,7 @@
                                          query:(Query *)query
                                     completion:(CompletionBlock)completion {
     Gesture *gest = [self withGestureConfiguration:gestureConfig
-                                               query:query];
+                                             query:query];
     [gest execute:completion];
     return gest;
 }
