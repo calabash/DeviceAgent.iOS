@@ -2,6 +2,9 @@
 #import "FirstViewController.h"
 
 @interface FirstViewController ()<UIGestureRecognizerDelegate>
+
+@property (strong, nonatomic) IBOutlet UILabel *gestureLabel;
+
 @property (nonatomic, strong) UIPanGestureRecognizer *panRecognizer;
 @property (nonatomic, strong) UISwipeGestureRecognizer *swipeRecognizer;
 @property (nonatomic, strong) UITapGestureRecognizer *tapRecognizer;
@@ -43,8 +46,10 @@ static NSDictionary *colors;
 - (NSString *)textForRecognizer:(UIGestureRecognizer *)recognizer {
     if (recognizer == self.panRecognizer) {
         return @"Pan";
-    } else if (recognizer == self.tapRecognizer) {
+    } else if (recognizer == self.swipeRecognizer) {
         return @"Swipe";
+    }  else if (recognizer == self.tapRecognizer) {
+        return @"Tap";
     } else if (recognizer == self.pinchRecognizer) {
         return @"Pinch";
     } else if (recognizer == self.rotationRecognizer) {
