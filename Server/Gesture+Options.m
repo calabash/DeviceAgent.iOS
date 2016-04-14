@@ -7,6 +7,10 @@
     return [self getInt:CBX_REPETITIONS_KEY default:CBX_DEFAULT_REPETITIONS];
 }
 
+- (int)numFingers {
+    return [self getInt:CBX_NUM_FINGERS_KEY default:CBX_DEFAULT_NUM_FINGERS];
+}
+
 - (float)duration {
     return [self getFloat:CBX_DURATION_KEY default:CBX_DEFAULT_DURATION];
 }
@@ -36,7 +40,7 @@
 }
 
 - (NSString *)rotateDirection {
-    return [self getString:CBX_ROTATE_DIRECTION_KEY default:CBX_DEFAULT_ROTATE_DIRECTION];
+    return [self getString:CBX_ROTATION_DIRECTION_KEY default:CBX_DEFAULT_ROTATE_DIRECTION];
 }
 
 

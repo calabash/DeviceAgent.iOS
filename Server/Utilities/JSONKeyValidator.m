@@ -26,7 +26,12 @@ NS_ASSUME_NONNULL_BEGIN
     for (NSString *k in keys) {
         if (!([self.requiredKeys containsObject:k] ||
               [self.optionalKeys containsObject:k] )) {
-            @throw [InvalidArgumentException withFormat:@"Unsupported key: '%@'", k];
+            NSString *msg = [NSString stringWithFormat:@"Unsupported key: '%@'", k];
+            InvalidArgumentException *e = [InvalidArgumentException withMessage:msg userInfo:@{
+                         @"required keys" : self.requiredKeys ?: @[],
+                         @"optional keys" : self.optionalKeys ?: @[]
+                        }];
+            @throw e;
         }
     }
     

@@ -19,10 +19,13 @@ typedef NS_ENUM(short, ClockDirection) {
                 CBX_COUNTERCLOCKWISE_KEY];
     }
     
-    if ([self rotationStart] < 0) {
+    if ([self rotationStart] < CBX_MIN_ROTATION_START ||
+        [self rotationStart] > CBX_MAX_ROTATION_START) {
         @throw [InvalidArgumentException withFormat:
-                @"%@ must be between 0 and 360, inclusive.",
-                CBX_ROTATION_START_KEY];
+                @"%@ must be between %f and %f, inclusive.",
+                CBX_ROTATION_START_KEY,
+                CBX_MIN_ROTATION_START,
+                CBX_MAX_ROTATION_START];
     }
 }
 
@@ -31,7 +34,7 @@ typedef NS_ENUM(short, ClockDirection) {
              CBX_DURATION_KEY,
              CBX_DEGREES_KEY,
              CBX_ROTATION_START_KEY,
-             CBX_ROTATE_DIRECTION_KEY,
+             CBX_ROTATION_DIRECTION_KEY,
              CBX_RADIUS_KEY,
              CBX_REPETITIONS_KEY
              ];
@@ -50,9 +53,7 @@ typedef NS_ENUM(short, ClockDirection) {
     
 }
 
-float dtor(float degrees) {
-    return degrees * (M_PI / 180);
-}
+float dtor(float degrees) { return degrees * (M_PI / 180); }
 
 - (NSArray<Coordinate *> *)circleRadiusPointsFromDegrees:(float)start
                                                 rotateBy:(float)rotationDegrees
@@ -95,8 +96,8 @@ float dtor(float degrees) {
                                                                direction:cd
                                                                   offset:center];
     
-    float oppositeDegrees = 360 - [self degrees];
-    NSArray<Coordinate *> *coords2 = [self circleRadiusPointsFromDegrees:oppositeDegrees
+    float oppositeStart = [self rotationStart] - 180;
+    NSArray<Coordinate *> *coords2 = [self circleRadiusPointsFromDegrees:oppositeStart
                                                                 rotateBy:[self degrees]
                                                                   radius:[self radius]
                                                                direction:cd

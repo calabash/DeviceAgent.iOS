@@ -4,6 +4,7 @@
 @interface Gesture (Options)
 
 - (int)repetitions;
+- (int)numFingers;
 
 - (float)duration;
 - (float)rotateDuration;

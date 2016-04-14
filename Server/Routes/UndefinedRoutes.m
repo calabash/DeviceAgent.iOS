@@ -25,10 +25,12 @@
         //TODO is 404 correct? "Not Found"
         [response setStatusCode:404];
         [response respondWithJSON: @{
-                                     @"message" : @{ @"unhandled endpoint" : request.url ?: @"" },
-                                     @"method" : request.method ?: @"",
-                                     @"parameters" : request.params ?: @[],
-                                     @"body" : body ?: @{}
+                                     @"error" : @"unhandled endpoint",
+                                     @"requestURL" : [request.url.baseURL absoluteString] ?: @"?",
+                                     @"requestEndpoint" : [request.url relativePath] ?: @"?",
+                                     @"requestMethod" : request.method ?: @"",
+                                     @"requestParameters" : request.params ?: @[],
+                                     @"requestBody" : body ?: @{}
          }];
     };
     return @[
