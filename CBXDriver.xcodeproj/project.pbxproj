@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89331CCB1CC00E36003C2E59 /* PanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CCA1CC00E36003C2E59 /* PanViewController.m */; };
+		89331CCE1CC00E82003C2E59 /* RotatePinchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */; };
+		89331CD11CC00ECD003C2E59 /* MiscViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CD01CC00ECD003C2E59 /* MiscViewController.m */; };
 		89512BDB1C9EEC3C0027D61E /* Drag.h in Headers */ = {isa = PBXBuildFile; fileRef = 89512BD91C9EEC3C0027D61E /* Drag.h */; };
 		89512BDC1C9EEC3C0027D61E /* Drag.m in Sources */ = {isa = PBXBuildFile; fileRef = 89512BDA1C9EEC3C0027D61E /* Drag.m */; };
 		89512BDF1CA095D20027D61E /* DeviceEventRoutes.h in Headers */ = {isa = PBXBuildFile; fileRef = 89512BDD1CA095D20027D61E /* DeviceEventRoutes.h */; };
@@ -181,8 +184,8 @@
 		F55F84181C6E438E00A945C8 /* CBXCUITestServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BF1C6DDF1300A945C8 /* CBXCUITestServer.m */; };
 		F5954E091CBD2E1200117745 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5954E081CBD2E1200117745 /* main.m */; };
 		F5954E0C1CBD2E1200117745 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5954E0B1CBD2E1200117745 /* AppDelegate.m */; };
-		F5954E0F1CBD2E1200117745 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5954E0E1CBD2E1200117745 /* FirstViewController.m */; };
-		F5954E121CBD2E1200117745 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5954E111CBD2E1200117745 /* SecondViewController.m */; };
+		F5954E0F1CBD2E1200117745 /* GestureRecognizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5954E0E1CBD2E1200117745 /* GestureRecognizerViewController.m */; };
+		F5954E121CBD2E1200117745 /* TouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5954E111CBD2E1200117745 /* TouchViewController.m */; };
 		F5954E151CBD2E1200117745 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5954E131CBD2E1200117745 /* Main.storyboard */; };
 		F5954E171CBD2E1200117745 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5954E161CBD2E1200117745 /* Assets.xcassets */; };
 		F5954E1A1CBD2E1200117745 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5954E181CBD2E1200117745 /* LaunchScreen.storyboard */; };
@@ -285,6 +288,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89331CC91CC00E36003C2E59 /* PanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanViewController.h; sourceTree = "<group>"; };
+		89331CCA1CC00E36003C2E59 /* PanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanViewController.m; sourceTree = "<group>"; };
+		89331CCC1CC00E82003C2E59 /* RotatePinchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotatePinchViewController.h; sourceTree = "<group>"; };
+		89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatePinchViewController.m; sourceTree = "<group>"; };
+		89331CCF1CC00ECD003C2E59 /* MiscViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiscViewController.h; sourceTree = "<group>"; };
+		89331CD01CC00ECD003C2E59 /* MiscViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiscViewController.m; sourceTree = "<group>"; };
 		89512BD91C9EEC3C0027D61E /* Drag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drag.h; sourceTree = "<group>"; };
 		89512BDA1C9EEC3C0027D61E /* Drag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drag.m; sourceTree = "<group>"; };
 		89512BDD1CA095D20027D61E /* DeviceEventRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceEventRoutes.h; sourceTree = "<group>"; };
@@ -560,10 +569,10 @@
 		F5954E081CBD2E1200117745 /* main.m */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F5954E0A1CBD2E1200117745 /* AppDelegate.h */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F5954E0B1CBD2E1200117745 /* AppDelegate.m */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
-		F5954E0D1CBD2E1200117745 /* FirstViewController.h */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
-		F5954E0E1CBD2E1200117745 /* FirstViewController.m */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
-		F5954E101CBD2E1200117745 /* SecondViewController.h */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
-		F5954E111CBD2E1200117745 /* SecondViewController.m */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		F5954E0D1CBD2E1200117745 /* GestureRecognizerViewController.h */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = GestureRecognizerViewController.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		F5954E0E1CBD2E1200117745 /* GestureRecognizerViewController.m */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = GestureRecognizerViewController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		F5954E101CBD2E1200117745 /* TouchViewController.h */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = TouchViewController.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		F5954E111CBD2E1200117745 /* TouchViewController.m */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = TouchViewController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F5954E141CBD2E1200117745 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5954E161CBD2E1200117745 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5954E191CBD2E1200117745 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -1206,10 +1215,16 @@
 			children = (
 				F5954E0A1CBD2E1200117745 /* AppDelegate.h */,
 				F5954E0B1CBD2E1200117745 /* AppDelegate.m */,
-				F5954E0D1CBD2E1200117745 /* FirstViewController.h */,
-				F5954E0E1CBD2E1200117745 /* FirstViewController.m */,
-				F5954E101CBD2E1200117745 /* SecondViewController.h */,
-				F5954E111CBD2E1200117745 /* SecondViewController.m */,
+				F5954E0D1CBD2E1200117745 /* GestureRecognizerViewController.h */,
+				F5954E0E1CBD2E1200117745 /* GestureRecognizerViewController.m */,
+				F5954E101CBD2E1200117745 /* TouchViewController.h */,
+				F5954E111CBD2E1200117745 /* TouchViewController.m */,
+				89331CC91CC00E36003C2E59 /* PanViewController.h */,
+				89331CCA1CC00E36003C2E59 /* PanViewController.m */,
+				89331CCC1CC00E82003C2E59 /* RotatePinchViewController.h */,
+				89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */,
+				89331CCF1CC00ECD003C2E59 /* MiscViewController.h */,
+				89331CD01CC00ECD003C2E59 /* MiscViewController.m */,
 				F5954E131CBD2E1200117745 /* Main.storyboard */,
 				F5954E161CBD2E1200117745 /* Assets.xcassets */,
 				F5954E181CBD2E1200117745 /* LaunchScreen.storyboard */,
@@ -1807,10 +1822,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5954E121CBD2E1200117745 /* SecondViewController.m in Sources */,
+				F5954E121CBD2E1200117745 /* TouchViewController.m in Sources */,
 				F5954E0C1CBD2E1200117745 /* AppDelegate.m in Sources */,
-				F5954E0F1CBD2E1200117745 /* FirstViewController.m in Sources */,
+				89331CCE1CC00E82003C2E59 /* RotatePinchViewController.m in Sources */,
+				F5954E0F1CBD2E1200117745 /* GestureRecognizerViewController.m in Sources */,
+				89331CD11CC00ECD003C2E59 /* MiscViewController.m in Sources */,
 				F5954E091CBD2E1200117745 /* main.m in Sources */,
+				89331CCB1CC00E36003C2E59 /* PanViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

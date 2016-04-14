@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Gestures-->
+        <!--Touch-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="TouchViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -44,54 +44,92 @@
                             <constraint firstItem="K2c-Gh-js7" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="qdu-pJ-mgq"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Gestures" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Touch" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="gestureLabel" destination="K2c-Gh-js7" id="aoX-9A-6MK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="439" y="-617"/>
         </scene>
-        <!--Second-->
-        <scene sceneID="wg7-f3-ORb">
+        <!--Rotate/Pinch-->
+        <scene sceneID="awZ-sz-gsb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" sceneMemberID="viewController">
+                <viewController id="ore-Qo-AIA" customClass="RotatePinchViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
-                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                        <viewControllerLayoutGuide type="top" id="8sK-5X-UlP"/>
+                        <viewControllerLayoutGuide type="bottom" id="lPq-EO-1VL"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                    <view key="view" contentMode="scaleToFill" id="8eB-3E-HNJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="195" y="279" width="210" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wie geht's?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4O-xQ-Uw3">
+                                <rect key="frame" x="20" y="493" width="560" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="35"/>
+                                <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="193" y="329" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="1" height="-1"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="p4O-xQ-Uw3" secondAttribute="trailing" id="1Oc-pD-v0O"/>
+                            <constraint firstItem="p4O-xQ-Uw3" firstAttribute="centerX" secondItem="8eB-3E-HNJ" secondAttribute="centerX" id="OdE-T8-jdR"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="p4O-xQ-Uw3" secondAttribute="leading" id="P6V-G3-rVn"/>
+                            <constraint firstItem="lPq-EO-1VL" firstAttribute="top" secondItem="p4O-xQ-Uw3" secondAttribute="bottom" constant="8" id="qsy-t2-5QB"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Rotate/Pinch" image="first" id="sxX-ns-k9G"/>
+                    <connections>
+                        <outlet property="gestureLabel" destination="p4O-xQ-Uw3" id="HKS-7L-My9"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UX3-VI-Fq6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="1800" y="-627"/>
+        </scene>
+        <!--Pan-->
+        <scene sceneID="OZT-P3-eMC">
+            <objects>
+                <viewController id="r9X-Zk-Zeo" customClass="PanViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dpZ-9D-pFY"/>
+                        <viewControllerLayoutGuide type="bottom" id="dOl-y6-j5T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="096-3l-KgR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hej!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnW-eL-Ri9">
+                                <rect key="frame" x="20" y="498" width="560" height="36"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="35"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="2" height="-1"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="GnW-eL-Ri9" secondAttribute="leading" id="PpN-SC-oe1"/>
+                            <constraint firstItem="dOl-y6-j5T" firstAttribute="top" secondItem="GnW-eL-Ri9" secondAttribute="bottom" constant="17" id="S4y-8W-ktM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GnW-eL-Ri9" secondAttribute="trailing" id="gg7-8X-b6Z"/>
+                            <constraint firstItem="GnW-eL-Ri9" firstAttribute="centerX" secondItem="096-3l-KgR" secondAttribute="centerX" id="vKi-Qm-aiQ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pan" image="second" id="4XC-Hb-YUg"/>
+                    <connections>
+                        <outlet property="gestureLabel" destination="GnW-eL-Ri9" id="Mow-YY-1t2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V1Z-3z-ULq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="431" y="408"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -105,12 +143,61 @@
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="r9X-Zk-Zeo" kind="relationship" relationship="viewControllers" id="orA-4g-1GQ"/>
+                        <segue destination="ore-Qo-AIA" kind="relationship" relationship="viewControllers" id="JgZ-wp-7ZJ"/>
+                        <segue destination="xmh-5J-kwV" kind="relationship" relationship="viewControllers" id="Zg6-fr-JYw"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="1074" y="8"/>
+        </scene>
+        <!--Misc-->
+        <scene sceneID="iRq-Jn-p1h">
+            <objects>
+                <viewController id="xmh-5J-kwV" customClass="MiscViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rob-KM-ps1"/>
+                        <viewControllerLayoutGuide type="bottom" id="PTM-5r-Gq4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yqb-KX-JoO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ça va?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXs-G4-gwd">
+                                <rect key="frame" x="20" y="507" width="560" height="36"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="35"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="3" height="-1"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Schreib! " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gUN-3j-Tbv">
+                                <rect key="frame" x="20" y="70" width="560" height="30"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="mXs-G4-gwd" secondAttribute="leading" id="6US-zF-TRu"/>
+                            <constraint firstItem="mXs-G4-gwd" firstAttribute="centerX" secondItem="Yqb-KX-JoO" secondAttribute="centerX" id="8wX-Ro-fee"/>
+                            <constraint firstItem="PTM-5r-Gq4" firstAttribute="top" secondItem="mXs-G4-gwd" secondAttribute="bottom" constant="8" id="Fkb-Pe-OAX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mXs-G4-gwd" secondAttribute="trailing" id="H11-of-GmS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gUN-3j-Tbv" secondAttribute="trailing" id="SXZ-Qt-wd9"/>
+                            <constraint firstItem="gUN-3j-Tbv" firstAttribute="top" secondItem="Rob-KM-ps1" secondAttribute="bottom" constant="50" id="UAP-ZL-SvX"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="gUN-3j-Tbv" secondAttribute="leading" id="dnP-Qa-Lws"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Misc" image="second" id="usq-CR-5AO"/>
+                    <connections>
+                        <outlet property="textfield" destination="gUN-3j-Tbv" id="M28-Ew-KOb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tNA-Lv-Y1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1703" y="705"/>
         </scene>
     </scenes>
     <resources>
