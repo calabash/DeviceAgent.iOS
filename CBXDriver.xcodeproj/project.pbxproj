@@ -90,6 +90,9 @@
 		89F6BF8B1CBC4BDD0088269C /* Rotate.h in Headers */ = {isa = PBXBuildFile; fileRef = 89F6BF891CBC4BDD0088269C /* Rotate.h */; };
 		89F6BF8C1CBC4BDD0088269C /* Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BF8A1CBC4BDD0088269C /* Rotate.m */; };
 		89F6BF8D1CBC4BDD0088269C /* Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BF8A1CBC4BDD0088269C /* Rotate.m */; };
+		89F6BF901CBEB5AD0088269C /* GeometryUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 89F6BF8E1CBEB5AD0088269C /* GeometryUtils.h */; };
+		89F6BF911CBEB5AD0088269C /* GeometryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BF8F1CBEB5AD0088269C /* GeometryUtils.m */; };
+		89F6BF921CBEB5AD0088269C /* GeometryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BF8F1CBEB5AD0088269C /* GeometryUtils.m */; };
 		F55F81801C6DD07500A945C8 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F55F7FED1C6DD07500A945C8 /* GCDAsyncSocket.h */; };
 		F55F81811C6DD07500A945C8 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FEE1C6DD07500A945C8 /* GCDAsyncSocket.m */; };
 		F55F81851C6DD07500A945C8 /* DDData.h in Headers */ = {isa = PBXBuildFile; fileRef = F55F7FF51C6DD07500A945C8 /* DDData.h */; };
@@ -351,6 +354,8 @@
 		89D5381C1CA359B200F62E09 /* QuerySelectorPropertyLike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySelectorPropertyLike.m; sourceTree = "<group>"; };
 		89F6BF891CBC4BDD0088269C /* Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rotate.h; sourceTree = "<group>"; };
 		89F6BF8A1CBC4BDD0088269C /* Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rotate.m; sourceTree = "<group>"; };
+		89F6BF8E1CBEB5AD0088269C /* GeometryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeometryUtils.h; sourceTree = "<group>"; };
+		89F6BF8F1CBEB5AD0088269C /* GeometryUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeometryUtils.m; sourceTree = "<group>"; };
 		F55F7FED1C6DD07500A945C8 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		F55F7FEE1C6DD07500A945C8 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		F55F7FF51C6DD07500A945C8 /* DDData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDData.h; sourceTree = "<group>"; };
@@ -1163,6 +1168,8 @@
 				899696E91CB5857C00BB42E2 /* JSONKeyValidator.m */,
 				899696F31CB5B8C300BB42E2 /* Coordinate.h */,
 				899696F41CB5B8C300BB42E2 /* Coordinate.m */,
+				89F6BF8E1CBEB5AD0088269C /* GeometryUtils.h */,
+				89F6BF8F1CBEB5AD0088269C /* GeometryUtils.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1432,6 +1439,7 @@
 				899696BF1CB2F22000BB42E2 /* EnterTextIn.h in Headers */,
 				F55F81A31C6DD07500A945C8 /* HTTPFileResponse.h in Headers */,
 				F55F819D1C6DD07500A945C8 /* HTTPDataResponse.h in Headers */,
+				89F6BF901CBEB5AD0088269C /* GeometryUtils.h in Headers */,
 				899696BA1CADF84B00BB42E2 /* EnterText.h in Headers */,
 				F55F818F1C6DD07500A945C8 /* HTTPLogging.h in Headers */,
 				89C5F3671C9C5BC20093A018 /* InvalidArgumentException.h in Headers */,
@@ -1782,6 +1790,7 @@
 				F55F84171C6E438800A945C8 /* Application+Queries.m in Sources */,
 				F55F840B1C6E437100A945C8 /* HealthRoutes.m in Sources */,
 				F55F81961C6DD07500A945C8 /* MultipartFormDataParser.m in Sources */,
+				89F6BF911CBEB5AD0088269C /* GeometryUtils.m in Sources */,
 				F55F81A41C6DD07500A945C8 /* HTTPFileResponse.m in Sources */,
 				F55F81941C6DD07500A945C8 /* HTTPServer.m in Sources */,
 				89D538161CA351F400F62E09 /* QuerySelectorIndex.m in Sources */,
@@ -1880,6 +1889,7 @@
 				F5B0A1AE1CAD4E2700E056CE /* QuerySelector.m in Sources */,
 				899696DB1CB45FFC00BB42E2 /* ActionConfiguration.m in Sources */,
 				F5B0A1C11CAD4E4600E056CE /* QueryRoutes.m in Sources */,
+				89F6BF921CBEB5AD0088269C /* GeometryUtils.m in Sources */,
 				F5B0A1B21CAD4E2700E056CE /* QuerySelectorTextLike.m in Sources */,
 				F5B0A1C61CAD4E6400E056CE /* GCDAsyncSocket.m in Sources */,
 				F5B0A1CE1CAD4E7F00E056CE /* MultipartFormDataParser.m in Sources */,

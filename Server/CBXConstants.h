@@ -62,6 +62,7 @@ static NSString *const CBX_VELOCITY_KEY = @"velocity";
 static NSString *const CBX_ROTATION_START_KEY = @"rotation_start";
 static NSString *const CBX_NUM_TAPS_KEY = @"taps";
 static NSString *const CBX_NUM_TOUCHES_KEY = @"touches";
+static NSString *const CBX_NUM_FINGERS_KEY = @"num_fingers";
 static NSString *const CBX_PINCH_IN = @"in";
 static NSString *const CBX_PINCH_OUT = @"out";
 
@@ -80,6 +81,11 @@ static NSUInteger const HTTP_STATUS_CODE_EVERYTHING_OK = 200;
 static NSUInteger const HTTP_STATUS_CODE_INVALID_REQUEST = 400;
 static NSUInteger const HTTP_STATUS_CODE_SERVER_ERROR = 500;
 
+static int const CBX_MIN_NUM_FINGERS = 1;
+static int const CBX_MAX_NUM_FINGERS = 5; //TODO should this be 4?
+
+static float const CBX_MIN_ROTATION_START = 0;      //degrees
+static float const CBX_MAX_ROTATION_START = 360;    //degrees
 static float const CBX_RUNLOOP_INTERVAL = 0.1;
 static float const CBX_DEFAULT_DURATION = 0.1;
 static float const CBX_DEFAULT_ROTATE_DURATION = .8;
@@ -91,5 +97,7 @@ static float const CBX_DEFAULT_DEGREES = 0;
 static float const CBX_DEFAULT_ROTATION_START = 0;
 static float const CBX_DEFAULT_RADIUS = 25;
 static float const CBX_ROTATE_INCREMENT_DEGREES = 10;
+static float const CBX_FINGER_WIDTH = 45;
 
+static int const CBX_DEFAULT_NUM_FINGERS = 1;
 static int const CBX_DEFAULT_REPETITIONS = 1;
