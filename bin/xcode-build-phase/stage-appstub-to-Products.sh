@@ -37,9 +37,9 @@ if [ ! -z $COMMAND_LINE_BUILD ]; then
 fi
 
 if [ ${EFFECTIVE_PLATFORM_NAME} = "-iphoneos" ]; then
-  APP_TARGET_DIR="${SOURCE_ROOT}/Products/ipa"
+  APP_TARGET_DIR="${SOURCE_ROOT}/Products/ipa/DeviceAgent"
 else
-  APP_TARGET_DIR="${SOURCE_ROOT}/Products/app"
+  APP_TARGET_DIR="${SOURCE_ROOT}/Products/app/DeviceAgent"
 fi
 
 banner "Preparing"

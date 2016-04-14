@@ -47,10 +47,10 @@ XC_TARGET="XCUITestDriver"
 XC_PROJECT="CBXDriver.xcodeproj"
 XC_CONFIG=Debug
 
-XC_BUILD_DIR="build/app"
+XC_BUILD_DIR="build/app/DeviceAgent"
 mkdir -p "${XC_BUILD_DIR}"
 
-INSTALL_DIR=Products/app
+INSTALL_DIR=Products/app/DeviceAgent
 rm -rf "${INSTALL_DIR}"
 mkdir -p "${INSTALL_DIR}"
 
