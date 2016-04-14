@@ -1,10 +1,3 @@
-//
-//  GeometryUtils.m
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 4/13/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
 #import "GeometryUtils.h"
 #import "CBXConstants.h"
