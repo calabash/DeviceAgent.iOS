@@ -2,7 +2,6 @@ all:
 	$(MAKE) clean
 	$(MAKE) app-agent
 	$(MAKE) ipa-agent
-	$(MAKE) runner
 
 clean:
 	rm -rf build
@@ -25,11 +24,6 @@ ipa-agent:
 # Xcode Product > Build For > Testing stages apps to the same directory.
 app-agent:
 	bin/make/app-agent.sh
-
-# Same as `make ipa`, but also embeds a specific .xctestconfiguration.
-# Requires calabash-tool for resigning.
-runner:
-	bin/make/runner.sh
 
 # Runs the Server (XCTest) unit tests.
 #
