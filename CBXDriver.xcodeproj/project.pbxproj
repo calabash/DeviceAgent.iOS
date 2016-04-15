@@ -53,7 +53,6 @@
 		899697051CB5D5CF00BB42E2 /* Gesture+Options.h in Headers */ = {isa = PBXBuildFile; fileRef = 899697031CB5D5CF00BB42E2 /* Gesture+Options.h */; };
 		899697061CB5D5CF00BB42E2 /* Gesture+Options.m in Sources */ = {isa = PBXBuildFile; fileRef = 899697041CB5D5CF00BB42E2 /* Gesture+Options.m */; };
 		899697071CB5D5CF00BB42E2 /* Gesture+Options.m in Sources */ = {isa = PBXBuildFile; fileRef = 899697041CB5D5CF00BB42E2 /* Gesture+Options.m */; };
-		899697081CB8351600BB42E2 /* Gesture+Options.m in Headers */ = {isa = PBXBuildFile; fileRef = 899697041CB5D5CF00BB42E2 /* Gesture+Options.m */; };
 		89C5F3501C9A60E70093A018 /* Testmanagerd.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F34E1C9A60E70093A018 /* Testmanagerd.h */; };
 		89C5F3511C9A60E70093A018 /* Testmanagerd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F34F1C9A60E70093A018 /* Testmanagerd.m */; };
 		89C5F3541C9A66E10093A018 /* NSXPCConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3531C9A66E10093A018 /* NSXPCConnection.h */; };
@@ -1451,7 +1450,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				899697081CB8351600BB42E2 /* Gesture+Options.m in Headers */,
 				89C5F36F1C9E32440093A018 /* DoubleTap.h in Headers */,
 				899696D91CB45FFC00BB42E2 /* ActionConfiguration.h in Headers */,
 				899696BF1CB2F22000BB42E2 /* EnterTextIn.h in Headers */,
