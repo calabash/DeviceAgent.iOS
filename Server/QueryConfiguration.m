@@ -86,25 +86,7 @@
 }
 
 - (CoordinateQueryConfiguration *)asCoordinateQueryConfiguration {
-    CoordinateQueryConfiguration *config = [CoordinateQueryConfiguration withJSON:self.raw
-                                                                        validator:self.validator];
-    
-    if (self.raw[CBX_COORDINATE_KEY]) {
-        id json = self.raw[CBX_COORDINATE_KEY];
-        [JSONUtils validatePointJSON:json];
-        config.coordinate = [Coordinate withJSON:json];
-    }
-    
-    if (self.raw[CBX_COORDINATES_KEY]) {
-        NSMutableArray *coords = [NSMutableArray array];
-        for (id json in self.raw[CBX_COORDINATES_KEY]) {
-            [JSONUtils validatePointJSON:json];
-            [coords addObject:[Coordinate withJSON:json]];
-        }
-        config.coordinates = coords;
-    }
-    
-    return config;
+    return [CoordinateQueryConfiguration withJSON:self.raw validator:self.validator];
 }
 
 @end

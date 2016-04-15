@@ -10,6 +10,11 @@
 		89331CCB1CC00E36003C2E59 /* PanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CCA1CC00E36003C2E59 /* PanViewController.m */; };
 		89331CCE1CC00E82003C2E59 /* RotatePinchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */; };
 		89331CD11CC00ECD003C2E59 /* MiscViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CD01CC00ECD003C2E59 /* MiscViewController.m */; };
+		89331D201CC0F72B003C2E59 /* ActionConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D1F1CC0F72B003C2E59 /* ActionConfigurationTests.m */; };
+		89331D221CC1001E003C2E59 /* QueryConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D211CC1001E003C2E59 /* QueryConfigurationTests.m */; };
+		89331D231CC10559003C2E59 /* QuerySelectorId.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537FA1CA2020700F62E09 /* QuerySelectorId.m */; };
+		89331D251CC1060A003C2E59 /* CoordinateQueryConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D241CC1060A003C2E59 /* CoordinateQueryConfigurationTests.m */; };
+		89331D271CC10857003C2E59 /* QueryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D261CC10857003C2E59 /* QueryTests.m */; };
 		89512BDB1C9EEC3C0027D61E /* Drag.h in Headers */ = {isa = PBXBuildFile; fileRef = 89512BD91C9EEC3C0027D61E /* Drag.h */; };
 		89512BDC1C9EEC3C0027D61E /* Drag.m in Sources */ = {isa = PBXBuildFile; fileRef = 89512BDA1C9EEC3C0027D61E /* Drag.m */; };
 		89512BDF1CA095D20027D61E /* DeviceEventRoutes.h in Headers */ = {isa = PBXBuildFile; fileRef = 89512BDD1CA095D20027D61E /* DeviceEventRoutes.h */; };
@@ -293,6 +298,10 @@
 		89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatePinchViewController.m; sourceTree = "<group>"; };
 		89331CCF1CC00ECD003C2E59 /* MiscViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiscViewController.h; sourceTree = "<group>"; };
 		89331CD01CC00ECD003C2E59 /* MiscViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiscViewController.m; sourceTree = "<group>"; };
+		89331D1F1CC0F72B003C2E59 /* ActionConfigurationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionConfigurationTests.m; sourceTree = "<group>"; };
+		89331D211CC1001E003C2E59 /* QueryConfigurationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryConfigurationTests.m; sourceTree = "<group>"; };
+		89331D241CC1060A003C2E59 /* CoordinateQueryConfigurationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinateQueryConfigurationTests.m; sourceTree = "<group>"; };
+		89331D261CC10857003C2E59 /* QueryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryTests.m; sourceTree = "<group>"; };
 		89512BD91C9EEC3C0027D61E /* Drag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drag.h; sourceTree = "<group>"; };
 		89512BDA1C9EEC3C0027D61E /* Drag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drag.m; sourceTree = "<group>"; };
 		89512BDD1CA095D20027D61E /* DeviceEventRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceEventRoutes.h; sourceTree = "<group>"; };
@@ -676,6 +685,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89331D1D1CC0F64B003C2E59 /* AutomationActions */ = {
+			isa = PBXGroup;
+			children = (
+				89331D1E1CC0F6B3003C2E59 /* ActionConfiguration */,
+				F5B0A1961CAD4C9200E056CE /* Queries */,
+				F5B0A1901CAD4C9200E056CE /* Gestures */,
+			);
+			name = AutomationActions;
+			sourceTree = "<group>";
+		};
+		89331D1E1CC0F6B3003C2E59 /* ActionConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				89331D1F1CC0F72B003C2E59 /* ActionConfigurationTests.m */,
+				89331D211CC1001E003C2E59 /* QueryConfigurationTests.m */,
+				89331D241CC1060A003C2E59 /* CoordinateQueryConfigurationTests.m */,
+			);
+			name = ActionConfiguration;
+			sourceTree = "<group>";
+		};
 		898743B31C5847B30084FD93 = {
 			isa = PBXGroup;
 			children = (
@@ -1254,8 +1283,7 @@
 		F5B0A0D91CAD3D8B00E056CE /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F5B0A1901CAD4C9200E056CE /* Gestures */,
-				F5B0A1961CAD4C9200E056CE /* Queries */,
+				89331D1D1CC0F64B003C2E59 /* AutomationActions */,
 				F5B0A18C1CAD4C9200E056CE /* Application */,
 				F5B0A18E1CAD4C9200E056CE /* Exceptions */,
 				F5B0A1981CAD4C9200E056CE /* Routes */,
@@ -1394,17 +1422,9 @@
 		F5B0A1901CAD4C9200E056CE /* Gestures */ = {
 			isa = PBXGroup;
 			children = (
-				F5B0A1921CAD4C9200E056CE /* CoordinateGestures */,
 				F5B0A1941CAD4C9200E056CE /* Gestures */,
 			);
 			path = Gestures;
-			sourceTree = "<group>";
-		};
-		F5B0A1921CAD4C9200E056CE /* CoordinateGestures */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CoordinateGestures;
 			sourceTree = "<group>";
 		};
 		F5B0A1941CAD4C9200E056CE /* Gestures */ = {
@@ -1418,6 +1438,7 @@
 			isa = PBXGroup;
 			children = (
 				F5B0A1971CAD4C9200E056CE /* QuerySelectors */,
+				89331D261CC10857003C2E59 /* QueryTests.m */,
 			);
 			path = Queries;
 			sourceTree = "<group>";
@@ -1834,6 +1855,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89331D231CC10559003C2E59 /* QuerySelectorId.m in Sources */,
 				899696FC1CB5BA4600BB42E2 /* CoordinateQuery.m in Sources */,
 				F5B0A1AB1CAD4E2700E056CE /* DoubleTap.m in Sources */,
 				F5B0A1B41CAD4E2700E056CE /* QuerySelectorProperty.m in Sources */,
@@ -1844,9 +1866,12 @@
 				899696BC1CADF85B00BB42E2 /* EnterText.m in Sources */,
 				F5B0A1E41CAD4EA700E056CE /* RoutingHTTPServer.m in Sources */,
 				F5B0A1CA1CAD4E6F00E056CE /* HTTPAuthenticationRequest.m in Sources */,
+				89331D201CC0F72B003C2E59 /* ActionConfigurationTests.m in Sources */,
+				89331D271CC10857003C2E59 /* QueryTests.m in Sources */,
 				F5B0A1D31CAD4E8A00E056CE /* HTTPDynamicFileResponse.m in Sources */,
 				F5B0A1DB1CAD4E9500E056CE /* DDLog.m in Sources */,
 				F5B0A1D71CAD4E8A00E056CE /* WebSocket.m in Sources */,
+				89331D251CC1060A003C2E59 /* CoordinateQueryConfigurationTests.m in Sources */,
 				F5B0A1BF1CAD4E4600E056CE /* HealthRoutes.m in Sources */,
 				F5B0A1AF1CAD4E2700E056CE /* QuerySelectorFactory.m in Sources */,
 				F5B0A1D61CAD4E8A00E056CE /* HTTPRedirectResponse.m in Sources */,
@@ -1906,6 +1931,7 @@
 				F5B0A1D81CAD4E9500E056CE /* DDAbstractDatabaseLogger.m in Sources */,
 				F5B0A1D41CAD4E8A00E056CE /* HTTPErrorResponse.m in Sources */,
 				F5B0A1A51CAD4DE800E056CE /* UIDevice+Wifi_IP.m in Sources */,
+				89331D221CC1001E003C2E59 /* QueryConfigurationTests.m in Sources */,
 				F5B0A1AE1CAD4E2700E056CE /* QuerySelector.m in Sources */,
 				899696DB1CB45FFC00BB42E2 /* ActionConfiguration.m in Sources */,
 				F5B0A1C11CAD4E4600E056CE /* QueryRoutes.m in Sources */,
