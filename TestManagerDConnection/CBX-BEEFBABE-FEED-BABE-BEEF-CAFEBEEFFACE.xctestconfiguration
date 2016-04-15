@@ -86,7 +86,7 @@
 				<integer>3</integer>
 			</dict>
 		</dict>
-		<string>file:///Users/chrisf/Library/Developer/Xcode/DerivedData/CBXDriver-erdosoyfksqnruaufqghalxwyuud/Build/Products/Debug-iphoneos/CBX-Runner.app/PlugIns/CBX.xctest/</string>
+		<string>file://calaba/sh/CBX.xctest/</string>
 		<dict>
 			<key>$classes</key>
 			<array>
