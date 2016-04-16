@@ -28,7 +28,13 @@
     }
     
     if (!self.coordinate && !self.coordinates) {
-        @throw [InvalidArgumentException withMessage:@"Unable to create coordinate config from json" userInfo:self.raw];
+        @throw [InvalidArgumentException withMessage:@"Unable to create coordinate config from json"
+                                            userInfo:self.raw];
+    }
+    
+    if (self.coordinate && self.coordinates) {
+        @throw [InvalidArgumentException withMessage:@"Can not supply both 'coordinate' and 'coordinates'"
+                                            userInfo:self.raw];
     }
 }
 

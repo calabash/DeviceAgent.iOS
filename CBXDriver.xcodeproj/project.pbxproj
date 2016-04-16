@@ -15,6 +15,7 @@
 		89331D231CC10559003C2E59 /* QuerySelectorId.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537FA1CA2020700F62E09 /* QuerySelectorId.m */; };
 		89331D251CC1060A003C2E59 /* CoordinateQueryConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D241CC1060A003C2E59 /* CoordinateQueryConfigurationTests.m */; };
 		89331D271CC10857003C2E59 /* QueryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D261CC10857003C2E59 /* QueryTests.m */; };
+		89331D291CC1C279003C2E59 /* CoordinateQueryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D281CC1C279003C2E59 /* CoordinateQueryTests.m */; };
 		89512BDB1C9EEC3C0027D61E /* Drag.h in Headers */ = {isa = PBXBuildFile; fileRef = 89512BD91C9EEC3C0027D61E /* Drag.h */; };
 		89512BDC1C9EEC3C0027D61E /* Drag.m in Sources */ = {isa = PBXBuildFile; fileRef = 89512BDA1C9EEC3C0027D61E /* Drag.m */; };
 		89512BDF1CA095D20027D61E /* DeviceEventRoutes.h in Headers */ = {isa = PBXBuildFile; fileRef = 89512BDD1CA095D20027D61E /* DeviceEventRoutes.h */; };
@@ -302,6 +303,7 @@
 		89331D211CC1001E003C2E59 /* QueryConfigurationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryConfigurationTests.m; sourceTree = "<group>"; };
 		89331D241CC1060A003C2E59 /* CoordinateQueryConfigurationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinateQueryConfigurationTests.m; sourceTree = "<group>"; };
 		89331D261CC10857003C2E59 /* QueryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryTests.m; sourceTree = "<group>"; };
+		89331D281CC1C279003C2E59 /* CoordinateQueryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinateQueryTests.m; sourceTree = "<group>"; };
 		89512BD91C9EEC3C0027D61E /* Drag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drag.h; sourceTree = "<group>"; };
 		89512BDA1C9EEC3C0027D61E /* Drag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drag.m; sourceTree = "<group>"; };
 		89512BDD1CA095D20027D61E /* DeviceEventRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceEventRoutes.h; sourceTree = "<group>"; };
@@ -1439,6 +1441,7 @@
 			children = (
 				F5B0A1971CAD4C9200E056CE /* QuerySelectors */,
 				89331D261CC10857003C2E59 /* QueryTests.m */,
+				89331D281CC1C279003C2E59 /* CoordinateQueryTests.m */,
 			);
 			path = Queries;
 			sourceTree = "<group>";
@@ -1888,6 +1891,7 @@
 				F5B0A1A31CAD4DE800E056CE /* FBElement.m in Sources */,
 				F5B0A1A71CAD4E2700E056CE /* GestureFactory.m in Sources */,
 				F5B0A1B91CAD4E3A00E056CE /* CBXException.m in Sources */,
+				89331D291CC1C279003C2E59 /* CoordinateQueryTests.m in Sources */,
 				F5B0A1D91CAD4E9500E056CE /* DDASLLogger.m in Sources */,
 				F5B0A1C41CAD4E4600E056CE /* DeviceEventRoutes.m in Sources */,
 				899696E71CB46C0100BB42E2 /* CoordinateQueryConfiguration.m in Sources */,
