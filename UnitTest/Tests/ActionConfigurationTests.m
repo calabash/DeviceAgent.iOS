@@ -25,7 +25,7 @@
 }
 
 - (void)testInstantiationValidatesInput {
-    id json = @{@"baz" : @YES };
+    id json = @{ @"baz" : @YES };
     JSONKeyValidator *validator = [JSONKeyValidator withRequiredKeys:@[@"foo"]
                                                         optionalKeys:@[@"bar"]];
     XCTAssertThrows([ActionConfiguration withJSON:json validator:validator],
