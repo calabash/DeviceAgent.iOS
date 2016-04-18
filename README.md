@@ -2,7 +2,7 @@
 |---------|---------|-----------------------------|--------------------|--------------------------------|
 |[![Build Status](https://travis-ci.org/calabash/calabash-xcuitest-server.svg?branch=master)](https://travis-ci.org/calabash/calabash-xcuitest-server)| [![Build Status](https://travis-ci.org/calabash/calabash-xcuitest-server.svg?branch=develop)](https://travis-ci.org/calabash/calabash-xcuitest-server)| [![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://img.shields.io/badge/version-1.0.0-green.svg) |[![License](https://img.shields.io/badge/licence-Eclipse-blue.svg)](http://opensource.org/licenses/EPL-1.0) | [![Contributing](https://img.shields.io/badge/contrib-gitflow-orange.svg)](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow/)|
 
-## The Calabus Driver
+## iOS DeviceAgent
 
 
 ### Building
