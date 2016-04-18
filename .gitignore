@@ -8,7 +8,9 @@
 
 # Ruby
 .ruby-version
-Gemfile.lock
+cucumber/Gemfile.lock
+.irb-history
+.pry-history
 
 # MacOS
 .DS_Store

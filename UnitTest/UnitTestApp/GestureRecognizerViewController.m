@@ -3,8 +3,6 @@
 
 @interface GestureRecognizerViewController ()<UIGestureRecognizerDelegate>
 
-@property (strong, nonatomic) IBOutlet UILabel *gestureLabel;
-
 @property (nonatomic, strong) NSMutableArray<CALayer *> *drawings;
 
 - (void)recognizeGesture:(UIGestureRecognizer *)recognizer;
@@ -12,6 +10,8 @@
 @end
 
 @implementation GestureRecognizerViewController
+
+@synthesize gestureLabel = _gestureLabel;
 
 static NSDictionary *colors;
 

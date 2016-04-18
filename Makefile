@@ -41,3 +41,7 @@ app-agent:
 unit:
 	bundle exec bin/test/unit.rb
 
+# Makes the UnitTestApp
+make app-unit:
+	bin/make/app-unit.sh
+
