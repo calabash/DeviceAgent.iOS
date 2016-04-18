@@ -20,6 +20,7 @@
 		89331D301CC50447003C2E59 /* ThreadUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 89331D2E1CC50447003C2E59 /* ThreadUtils.h */; };
 		89331D321CC50447003C2E59 /* ThreadUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D2F1CC50447003C2E59 /* ThreadUtils.m */; };
 		89331D331CC50447003C2E59 /* ThreadUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D2F1CC50447003C2E59 /* ThreadUtils.m */; };
+		89331D391CC56BE5003C2E59 /* Gestures+OptionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D381CC56BE5003C2E59 /* Gestures+OptionsTests.m */; };
 		89512BDB1C9EEC3C0027D61E /* Drag.h in Headers */ = {isa = PBXBuildFile; fileRef = 89512BD91C9EEC3C0027D61E /* Drag.h */; };
 		89512BDC1C9EEC3C0027D61E /* Drag.m in Sources */ = {isa = PBXBuildFile; fileRef = 89512BDA1C9EEC3C0027D61E /* Drag.m */; };
 		89512BDF1CA095D20027D61E /* DeviceEventRoutes.h in Headers */ = {isa = PBXBuildFile; fileRef = 89512BDD1CA095D20027D61E /* DeviceEventRoutes.h */; };
@@ -311,6 +312,7 @@
 		89331D2C1CC50172003C2E59 /* GestureFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureFactoryTests.m; sourceTree = "<group>"; };
 		89331D2E1CC50447003C2E59 /* ThreadUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadUtils.h; sourceTree = "<group>"; };
 		89331D2F1CC50447003C2E59 /* ThreadUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadUtils.m; sourceTree = "<group>"; };
+		89331D381CC56BE5003C2E59 /* Gestures+OptionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Gestures+OptionsTests.m"; sourceTree = "<group>"; };
 		89512BD91C9EEC3C0027D61E /* Drag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drag.h; sourceTree = "<group>"; };
 		89512BDA1C9EEC3C0027D61E /* Drag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drag.m; sourceTree = "<group>"; };
 		89512BDD1CA095D20027D61E /* DeviceEventRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceEventRoutes.h; sourceTree = "<group>"; };
@@ -720,6 +722,14 @@
 				89331D2C1CC50172003C2E59 /* GestureFactoryTests.m */,
 			);
 			name = Factory;
+			sourceTree = "<group>";
+		};
+		89331D371CC56BD7003C2E59 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				89331D381CC56BE5003C2E59 /* Gestures+OptionsTests.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		898743B31C5847B30084FD93 = {
@@ -1441,6 +1451,7 @@
 		F5B0A1901CAD4C9200E056CE /* Gestures */ = {
 			isa = PBXGroup;
 			children = (
+				89331D371CC56BD7003C2E59 /* Categories */,
 				89331D341CC516A7003C2E59 /* Factory */,
 			);
 			path = Gestures;
@@ -1890,6 +1901,7 @@
 				F5B0A1BF1CAD4E4600E056CE /* HealthRoutes.m in Sources */,
 				F5B0A1AF1CAD4E2700E056CE /* QuerySelectorFactory.m in Sources */,
 				F5B0A1D61CAD4E8A00E056CE /* HTTPRedirectResponse.m in Sources */,
+				89331D391CC56BE5003C2E59 /* Gestures+OptionsTests.m in Sources */,
 				F5B0A11D1CAD3D8C00E056CE /* CBXTestToolsStandup.m in Sources */,
 				F5B0A1A41CAD4DE800E056CE /* XCUIElement+WebDriverAttributes.m in Sources */,
 				F5B0A1D51CAD4E8A00E056CE /* HTTPFileResponse.m in Sources */,
