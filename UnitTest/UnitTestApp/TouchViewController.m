@@ -18,4 +18,9 @@
     return self;
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.gestureLabel.accessibilityIdentifier = @"gesture performed";
+}
+
 @end
