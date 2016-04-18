@@ -24,9 +24,9 @@ static NSMutableSet <Class> *gestureClasses;
 }
 
 + (void)validateGestureRequestFormat:(NSDictionary *)json {
-    NSArray *requiredKeys = @[CBX_GESTURE_KEY, CBX_SPECIFIERS_KEY];
+    NSArray *requiredKeys = @[CBX_GESTURE_KEY];
     JSONKeyValidator *validator = [JSONKeyValidator withRequiredKeys:requiredKeys
-                                                        optionalKeys:@[CBX_OPTIONS_KEY]];
+                                                        optionalKeys:@[CBX_OPTIONS_KEY, CBX_SPECIFIERS_KEY]];
     [validator validate:json];
 }
 

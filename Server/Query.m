@@ -21,7 +21,7 @@
 }
 
 - (CoordinateQuery *)asCoordinateQuery {
-    return [CoordinateQuery withQueryConfiguration:self.queryConfiguration];
+    return [CoordinateQuery withQueryConfiguration:self.queryConfiguration.asCoordinateQueryConfiguration];
 }
 
 + (instancetype)withQueryConfiguration:(QueryConfiguration *)queryConfig {

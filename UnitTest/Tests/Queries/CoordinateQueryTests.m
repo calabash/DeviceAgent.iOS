@@ -1,10 +1,3 @@
-//
-//  CoordinateQueryTests.m
-//  CBXDriver
-//
-//  Created by Chris Fuentes on 4/15/16.
-//  Copyright © 2016 Calabash. All rights reserved.
-//
 
 #import <XCTest/XCTest.h>
 #import "CoordinateQueryConfiguration.h"
