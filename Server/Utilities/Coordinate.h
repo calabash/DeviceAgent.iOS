@@ -1,6 +1,6 @@
 
 #import <Foundation/Foundation.h>
-@import CoreGraphics;
+#import <CoreGraphics/CoreGraphics.h>
 
 @interface Coordinate : NSObject
 - (CGPoint)cgpoint;

@@ -21,11 +21,11 @@ sim_udid = default_sim.udid
 args =
       [
             "test",
-            "-SYMROOT=build",
-            "-derivedDataPath build/xctest",
+            "-SYMROOT=build/unit",
+            "-derivedDataPath build/unit",
             "-workspace CBXDriver.xcworkspace",
             "-scheme UnitTest",
-            "-destination 'platform=iOS Simulator,id=#{sim_udid}'",
+            "-destination id=#{sim_udid}",
             "-sdk iphonesimulator",
             "-configuration Debug",
             "GCC_TREAT_WARNINGS_AS_ERRORS=YES",
