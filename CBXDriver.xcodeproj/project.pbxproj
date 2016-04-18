@@ -99,6 +99,10 @@
 		F542EA151CC5368000D87200 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA141CC5368000D87200 /* UIKit.framework */; };
 		F542EA161CC5368F00D87200 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA141CC5368000D87200 /* UIKit.framework */; };
 		F542EA191CC536AF00D87200 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA171CC536A700D87200 /* QuartzCore.framework */; };
+		F542EA1C1CC53EC800D87200 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA1B1CC53EC800D87200 /* CFNetwork.framework */; };
+		F542EA1E1CC53EE100D87200 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA1D1CC53EE100D87200 /* Security.framework */; };
+		F542EA1F1CC53EFF00D87200 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA141CC5368000D87200 /* UIKit.framework */; };
+		F542EA211CC53F6400D87200 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA201CC53F6400D87200 /* CoreGraphics.framework */; };
 		F55F81801C6DD07500A945C8 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F55F7FED1C6DD07500A945C8 /* GCDAsyncSocket.h */; };
 		F55F81811C6DD07500A945C8 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FEE1C6DD07500A945C8 /* GCDAsyncSocket.m */; };
 		F55F81851C6DD07500A945C8 /* DDData.h in Headers */ = {isa = PBXBuildFile; fileRef = F55F7FF51C6DD07500A945C8 /* DDData.h */; };
@@ -371,6 +375,9 @@
 		89F6BF8F1CBEB5AD0088269C /* GeometryUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeometryUtils.m; sourceTree = "<group>"; };
 		F542EA141CC5368000D87200 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F542EA171CC536A700D87200 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F542EA1B1CC53EC800D87200 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F542EA1D1CC53EE100D87200 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F542EA201CC53F6400D87200 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F55F7FED1C6DD07500A945C8 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		F55F7FEE1C6DD07500A945C8 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		F55F7FF51C6DD07500A945C8 /* DDData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDData.h; sourceTree = "<group>"; };
@@ -658,6 +665,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F542EA211CC53F6400D87200 /* CoreGraphics.framework in Frameworks */,
+				F542EA1F1CC53EFF00D87200 /* UIKit.framework in Frameworks */,
+				F542EA1E1CC53EE100D87200 /* Security.framework in Frameworks */,
+				F542EA1C1CC53EC800D87200 /* CFNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,6 +706,7 @@
 				F55F83541C6DD99900A945C8 /* XCUITestDriver */,
 				F55F83F21C6DE50C00A945C8 /* CBXAppStub */,
 				F55F7FEA1C6DD07500A945C8 /* Vendor */,
+				F542EA1A1CC53DD000D87200 /* Frameworks */,
 				898743BD1C5847B30084FD93 /* Products */,
 			);
 			indentWidth = 4;
@@ -849,6 +861,18 @@
 				F55F83DD1C6DDF1300A945C8 /* UIDevice+Wifi_IP.m */,
 			);
 			name = FBDriverCode;
+			sourceTree = "<group>";
+		};
+		F542EA1A1CC53DD000D87200 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F542EA201CC53F6400D87200 /* CoreGraphics.framework */,
+				F542EA1D1CC53EE100D87200 /* Security.framework */,
+				F542EA1B1CC53EC800D87200 /* CFNetwork.framework */,
+				F542EA171CC536A700D87200 /* QuartzCore.framework */,
+				F542EA141CC5368000D87200 /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F55F7FEA1C6DD07500A945C8 /* Vendor */ = {
@@ -1253,8 +1277,6 @@
 		F5B0A0D01CAD3CBC00E056CE /* UnitTest */ = {
 			isa = PBXGroup;
 			children = (
-				F542EA171CC536A700D87200 /* QuartzCore.framework */,
-				F542EA141CC5368000D87200 /* UIKit.framework */,
 				F5954E061CBD2E1200117745 /* UnitTestApp */,
 				F5B0A1221CAD3EC300E056CE /* Supporting Files */,
 				F5B0A0D91CAD3D8B00E056CE /* Tests */,
