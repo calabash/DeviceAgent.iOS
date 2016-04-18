@@ -9,6 +9,8 @@
 # Ruby
 .ruby-version
 Gemfile.lock
+.irb-history
+.pry-history
 
 # MacOS
 .DS_Store
