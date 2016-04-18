@@ -12,7 +12,7 @@ Requires Xcode 7 and iOS 9 or higher.
 Requires ruby >= 2.0.  The latest ruby release is preferred.
 
 ```
-$ git clone git@github.com:calabash/calabash-xcuitest-server.git
+$ git clone git@github.com:calabash/DeviceAgent.iOS.git
 $ cd calabash-xcuitest-server
 $ bundle update
 $ make app
