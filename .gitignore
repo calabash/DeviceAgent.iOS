@@ -8,7 +8,7 @@
 
 # Ruby
 .ruby-version
-Gemfile.lock
+cucumber/Gemfile.lock
 .irb-history
 .pry-history
 
