@@ -8,6 +8,7 @@
  The ActionConfiguration object is responsible for storing the options to be 
  passed to an AutomationAction as well as perform validation on those options.
  
+ See also GestureConfiguration and QueryConfiguration
  */
 
 @interface ActionConfiguration : NSObject

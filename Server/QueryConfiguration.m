@@ -13,7 +13,7 @@
 - (id)init {
     if (self = [super init]) {
         self.selectors = [NSMutableArray array];
-        self.isCoordinateQuery = NO;
+        _isCoordinateQuery = NO;
     }
     return self;
 }
@@ -37,7 +37,7 @@
          */
         if ([key isEqualToString:CBX_COORDINATE_KEY] ||
             [key isEqualToString:CBX_COORDINATES_KEY]) {
-            self.isCoordinateQuery = YES;
+            _isCoordinateQuery = YES;
             break;
         }
         QuerySelector *qs = [QuerySelectorFactory selectorWithKey:key
