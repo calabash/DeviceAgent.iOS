@@ -41,7 +41,11 @@ app-agent:
 unit:
 	bundle exec bin/test/unit.rb
 
-# Makes the UnitTestApp
-make app-unit:
+# Makes the UnitTestApp.app
+app-unit:
 	bin/make/app-unit.sh
+
+# Makes the UnitTestApp.ipa
+ipa-unit:
+	bin/make/ipa-unit.sh
 
