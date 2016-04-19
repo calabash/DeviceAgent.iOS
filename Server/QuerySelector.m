@@ -29,4 +29,8 @@
         return [self applyInternal:query];
     }
 }
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"%@ = %@", [self.class name], self.value];
+}
 @end

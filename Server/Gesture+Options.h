@@ -13,6 +13,6 @@
 - (float)rotationStart;
 - (float)radius;
 
-- (NSString *)direction;
+- (NSString *)pinchDirection;
 - (NSString *)rotateDirection;
 @end

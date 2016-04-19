@@ -1,29 +1,36 @@
 
 #import "InvalidArgumentException.h"
 #import "Testmanagerd.h"
+#import "ThreadUtils.h"
 #import "EnterText.h"
 
 @implementation EnterText
 
 + (NSString *)name { return @"enter_text"; }
 
-+ (Gesture *)executeWithJSON:(NSDictionary *)json completion:(CompletionBlock)completion {
-    NSMutableDictionary *j = [json mutableCopy];
-    
-    if (![[j allKeys] containsObject:CBX_STRING_KEY]) {
++ (NSArray <NSString *> *)requiredKeys {
+    return @[@"string"];
+}
+
++ (NSArray <NSString *> *)optionalKeys {
+    return @[];
+}
+
++ (Gesture *)executeWithGestureConfiguration:(GestureConfiguration *)gestureConfig
+                                       query:(Query *)query
+                                  completion:(CompletionBlock)completion {
+    if (![gestureConfig has:CBX_STRING_KEY]) {
         @throw [InvalidArgumentException withFormat:@"Missing required key 'string'"];
     }
     
-    NSString *string = j[CBX_STRING_KEY];
-    [j removeObjectForKey:CBX_STRING_KEY];
+    NSString *string = gestureConfig[CBX_STRING_KEY];
     
-    if ([[j allKeys] count] > 0) {
-        @throw [InvalidArgumentException withFormat:@"Found unsupported keys: %@", [j allKeys]];
-    }
-    
-    [[Testmanagerd get] _XCT_sendString:string completion:^(NSError *e) {
-        completion(e);
-    }];
+    [ThreadUtils runSync:^(BOOL *setToTrueWhenDone, NSError *__autoreleasing *err) {
+        [[Testmanagerd get] _XCT_sendString:string completion:^(NSError *e) {
+            *setToTrueWhenDone = YES;
+            *err = e;
+        }];
+    } completion:completion];
     
     return nil;
 }

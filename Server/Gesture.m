@@ -1,5 +1,6 @@
 
 #import "CoordinateQuery.h"
+#import "ThreadUtils.h"
 #import "Gesture.h"
 
 @implementation Gesture
@@ -86,30 +87,23 @@
         }
     }
     
-    //Testmanagerd calls are async, but the http server is sync so we need to synchronize it.
-    __block BOOL done = NO;
-    __block NSError *err;
     
-    if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] != 0x0) {
-        [[Testmanagerd get] _XCT_synthesizeEvent:[self eventWithCoordinates:coords]
-                                      completion:^(NSError *e) {
-            done = YES;
-            err = e;
-        }];
-    } else {
-        [[Testmanagerd get] _XCT_performTouchGesture:[self gestureWithCoordinates:coords]
+    //Testmanagerd calls are async, but the http server is sync so we need to synchronize it.
+    [ThreadUtils runSync:^(BOOL *setToTrueWhenDone, NSError *__autoreleasing *err) {
+        if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] != 0x0) {
+            [[Testmanagerd get] _XCT_synthesizeEvent:[self eventWithCoordinates:coords]
                                           completion:^(NSError *e) {
-            done = YES;
-            err = e;
-        }];
-    }
-
-    while(!done){
-        //TODO: fine-tune this. 
-        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:CBX_RUNLOOP_INTERVAL]];
-    }
-    if (err) @throw [CBXException withMessage:@"Error performing gesture"];
-    completion(err);
+                                              *setToTrueWhenDone = YES;
+                                              *err = e;
+                                          }];
+        } else {
+            [[Testmanagerd get] _XCT_performTouchGesture:[self gestureWithCoordinates:coords]
+                                              completion:^(NSError *e) {
+                                                  *setToTrueWhenDone = YES;
+                                                  *err = e;
+                                              }];
+        }
+    } completion:completion];
 }
 
 @end

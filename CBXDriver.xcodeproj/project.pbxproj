@@ -10,6 +10,17 @@
 		89331CCB1CC00E36003C2E59 /* PanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CCA1CC00E36003C2E59 /* PanViewController.m */; };
 		89331CCE1CC00E82003C2E59 /* RotatePinchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */; };
 		89331CD11CC00ECD003C2E59 /* MiscViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CD01CC00ECD003C2E59 /* MiscViewController.m */; };
+		89331D201CC0F72B003C2E59 /* ActionConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D1F1CC0F72B003C2E59 /* ActionConfigurationTests.m */; };
+		89331D221CC1001E003C2E59 /* QueryConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D211CC1001E003C2E59 /* QueryConfigurationTests.m */; };
+		89331D231CC10559003C2E59 /* QuerySelectorId.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537FA1CA2020700F62E09 /* QuerySelectorId.m */; };
+		89331D251CC1060A003C2E59 /* CoordinateQueryConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D241CC1060A003C2E59 /* CoordinateQueryConfigurationTests.m */; };
+		89331D271CC10857003C2E59 /* QueryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D261CC10857003C2E59 /* QueryTests.m */; };
+		89331D291CC1C279003C2E59 /* CoordinateQueryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D281CC1C279003C2E59 /* CoordinateQueryTests.m */; };
+		89331D2D1CC50172003C2E59 /* GestureFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D2C1CC50172003C2E59 /* GestureFactoryTests.m */; };
+		89331D301CC50447003C2E59 /* ThreadUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 89331D2E1CC50447003C2E59 /* ThreadUtils.h */; };
+		89331D321CC50447003C2E59 /* ThreadUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D2F1CC50447003C2E59 /* ThreadUtils.m */; };
+		89331D331CC50447003C2E59 /* ThreadUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D2F1CC50447003C2E59 /* ThreadUtils.m */; };
+		89331D391CC56BE5003C2E59 /* Gestures+OptionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D381CC56BE5003C2E59 /* Gestures+OptionsTests.m */; };
 		89512BDB1C9EEC3C0027D61E /* Drag.h in Headers */ = {isa = PBXBuildFile; fileRef = 89512BD91C9EEC3C0027D61E /* Drag.h */; };
 		89512BDC1C9EEC3C0027D61E /* Drag.m in Sources */ = {isa = PBXBuildFile; fileRef = 89512BDA1C9EEC3C0027D61E /* Drag.m */; };
 		89512BDF1CA095D20027D61E /* DeviceEventRoutes.h in Headers */ = {isa = PBXBuildFile; fileRef = 89512BDD1CA095D20027D61E /* DeviceEventRoutes.h */; };
@@ -53,7 +64,6 @@
 		899697051CB5D5CF00BB42E2 /* Gesture+Options.h in Headers */ = {isa = PBXBuildFile; fileRef = 899697031CB5D5CF00BB42E2 /* Gesture+Options.h */; };
 		899697061CB5D5CF00BB42E2 /* Gesture+Options.m in Sources */ = {isa = PBXBuildFile; fileRef = 899697041CB5D5CF00BB42E2 /* Gesture+Options.m */; };
 		899697071CB5D5CF00BB42E2 /* Gesture+Options.m in Sources */ = {isa = PBXBuildFile; fileRef = 899697041CB5D5CF00BB42E2 /* Gesture+Options.m */; };
-		899697081CB8351600BB42E2 /* Gesture+Options.m in Headers */ = {isa = PBXBuildFile; fileRef = 899697041CB5D5CF00BB42E2 /* Gesture+Options.m */; };
 		89C5F3501C9A60E70093A018 /* Testmanagerd.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F34E1C9A60E70093A018 /* Testmanagerd.h */; };
 		89C5F3511C9A60E70093A018 /* Testmanagerd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F34F1C9A60E70093A018 /* Testmanagerd.m */; };
 		89C5F3541C9A66E10093A018 /* NSXPCConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3531C9A66E10093A018 /* NSXPCConnection.h */; };
@@ -301,6 +311,15 @@
 		89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatePinchViewController.m; sourceTree = "<group>"; };
 		89331CCF1CC00ECD003C2E59 /* MiscViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiscViewController.h; sourceTree = "<group>"; };
 		89331CD01CC00ECD003C2E59 /* MiscViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiscViewController.m; sourceTree = "<group>"; };
+		89331D1F1CC0F72B003C2E59 /* ActionConfigurationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionConfigurationTests.m; sourceTree = "<group>"; };
+		89331D211CC1001E003C2E59 /* QueryConfigurationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryConfigurationTests.m; sourceTree = "<group>"; };
+		89331D241CC1060A003C2E59 /* CoordinateQueryConfigurationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinateQueryConfigurationTests.m; sourceTree = "<group>"; };
+		89331D261CC10857003C2E59 /* QueryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryTests.m; sourceTree = "<group>"; };
+		89331D281CC1C279003C2E59 /* CoordinateQueryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinateQueryTests.m; sourceTree = "<group>"; };
+		89331D2C1CC50172003C2E59 /* GestureFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureFactoryTests.m; sourceTree = "<group>"; };
+		89331D2E1CC50447003C2E59 /* ThreadUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadUtils.h; sourceTree = "<group>"; };
+		89331D2F1CC50447003C2E59 /* ThreadUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadUtils.m; sourceTree = "<group>"; };
+		89331D381CC56BE5003C2E59 /* Gestures+OptionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Gestures+OptionsTests.m"; sourceTree = "<group>"; };
 		89512BD91C9EEC3C0027D61E /* Drag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drag.h; sourceTree = "<group>"; };
 		89512BDA1C9EEC3C0027D61E /* Drag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drag.m; sourceTree = "<group>"; };
 		89512BDD1CA095D20027D61E /* DeviceEventRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceEventRoutes.h; sourceTree = "<group>"; };
@@ -696,6 +715,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89331D1D1CC0F64B003C2E59 /* AutomationActions */ = {
+			isa = PBXGroup;
+			children = (
+				89331D1E1CC0F6B3003C2E59 /* ActionConfiguration */,
+				F5B0A1961CAD4C9200E056CE /* Queries */,
+				F5B0A1901CAD4C9200E056CE /* Gestures */,
+			);
+			name = AutomationActions;
+			sourceTree = "<group>";
+		};
+		89331D1E1CC0F6B3003C2E59 /* ActionConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				89331D1F1CC0F72B003C2E59 /* ActionConfigurationTests.m */,
+				89331D211CC1001E003C2E59 /* QueryConfigurationTests.m */,
+				89331D241CC1060A003C2E59 /* CoordinateQueryConfigurationTests.m */,
+			);
+			name = ActionConfiguration;
+			sourceTree = "<group>";
+		};
+		89331D341CC516A7003C2E59 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				89331D2C1CC50172003C2E59 /* GestureFactoryTests.m */,
+			);
+			name = Factory;
+			sourceTree = "<group>";
+		};
+		89331D371CC56BD7003C2E59 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				89331D381CC56BE5003C2E59 /* Gestures+OptionsTests.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		898743B31C5847B30084FD93 = {
 			isa = PBXGroup;
 			children = (
@@ -1214,6 +1269,8 @@
 				899696F41CB5B8C300BB42E2 /* Coordinate.m */,
 				89F6BF8E1CBEB5AD0088269C /* GeometryUtils.h */,
 				89F6BF8F1CBEB5AD0088269C /* GeometryUtils.m */,
+				89331D2E1CC50447003C2E59 /* ThreadUtils.h */,
+				89331D2F1CC50447003C2E59 /* ThreadUtils.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1287,8 +1344,7 @@
 		F5B0A0D91CAD3D8B00E056CE /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F5B0A1901CAD4C9200E056CE /* Gestures */,
-				F5B0A1961CAD4C9200E056CE /* Queries */,
+				89331D1D1CC0F64B003C2E59 /* AutomationActions */,
 				F5B0A18C1CAD4C9200E056CE /* Application */,
 				F5B0A18E1CAD4C9200E056CE /* Exceptions */,
 				F5B0A1981CAD4C9200E056CE /* Routes */,
@@ -1427,22 +1483,8 @@
 		F5B0A1901CAD4C9200E056CE /* Gestures */ = {
 			isa = PBXGroup;
 			children = (
-				F5B0A1921CAD4C9200E056CE /* CoordinateGestures */,
-				F5B0A1941CAD4C9200E056CE /* Gestures */,
-			);
-			path = Gestures;
-			sourceTree = "<group>";
-		};
-		F5B0A1921CAD4C9200E056CE /* CoordinateGestures */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CoordinateGestures;
-			sourceTree = "<group>";
-		};
-		F5B0A1941CAD4C9200E056CE /* Gestures */ = {
-			isa = PBXGroup;
-			children = (
+				89331D371CC56BD7003C2E59 /* Categories */,
+				89331D341CC516A7003C2E59 /* Factory */,
 			);
 			path = Gestures;
 			sourceTree = "<group>";
@@ -1451,6 +1493,8 @@
 			isa = PBXGroup;
 			children = (
 				F5B0A1971CAD4C9200E056CE /* QuerySelectors */,
+				89331D261CC10857003C2E59 /* QueryTests.m */,
+				89331D281CC1C279003C2E59 /* CoordinateQueryTests.m */,
 			);
 			path = Queries;
 			sourceTree = "<group>";
@@ -1483,13 +1527,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				899697081CB8351600BB42E2 /* Gesture+Options.m in Headers */,
 				89C5F36F1C9E32440093A018 /* DoubleTap.h in Headers */,
 				899696D91CB45FFC00BB42E2 /* ActionConfiguration.h in Headers */,
 				899696BF1CB2F22000BB42E2 /* EnterTextIn.h in Headers */,
 				F55F81A31C6DD07500A945C8 /* HTTPFileResponse.h in Headers */,
 				F55F819D1C6DD07500A945C8 /* HTTPDataResponse.h in Headers */,
 				89F6BF901CBEB5AD0088269C /* GeometryUtils.h in Headers */,
+				89331D301CC50447003C2E59 /* ThreadUtils.h in Headers */,
 				899696BA1CADF84B00BB42E2 /* EnterText.h in Headers */,
 				F55F818F1C6DD07500A945C8 /* HTTPLogging.h in Headers */,
 				89C5F3671C9C5BC20093A018 /* InvalidArgumentException.h in Headers */,
@@ -1813,6 +1857,7 @@
 				F55F840C1C6E437100A945C8 /* MetaRoutes.m in Sources */,
 				F55F818E1C6DD07500A945C8 /* HTTPConnection.m in Sources */,
 				89D538111CA34CBE00F62E09 /* QuerySelectorTextLike.m in Sources */,
+				89331D321CC50447003C2E59 /* ThreadUtils.m in Sources */,
 				89D5381A1CA3551600F62E09 /* QuerySelectorProperty.m in Sources */,
 				F55F82511C6DD07500A945C8 /* Route.m in Sources */,
 				F55F819E1C6DD07500A945C8 /* HTTPDataResponse.m in Sources */,
@@ -1884,6 +1929,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89331D231CC10559003C2E59 /* QuerySelectorId.m in Sources */,
 				899696FC1CB5BA4600BB42E2 /* CoordinateQuery.m in Sources */,
 				F5B0A1AB1CAD4E2700E056CE /* DoubleTap.m in Sources */,
 				F5B0A1B41CAD4E2700E056CE /* QuerySelectorProperty.m in Sources */,
@@ -1894,16 +1940,21 @@
 				899696BC1CADF85B00BB42E2 /* EnterText.m in Sources */,
 				F5B0A1E41CAD4EA700E056CE /* RoutingHTTPServer.m in Sources */,
 				F5B0A1CA1CAD4E6F00E056CE /* HTTPAuthenticationRequest.m in Sources */,
+				89331D201CC0F72B003C2E59 /* ActionConfigurationTests.m in Sources */,
+				89331D271CC10857003C2E59 /* QueryTests.m in Sources */,
 				F5B0A1D31CAD4E8A00E056CE /* HTTPDynamicFileResponse.m in Sources */,
 				F5B0A1DB1CAD4E9500E056CE /* DDLog.m in Sources */,
 				F5B0A1D71CAD4E8A00E056CE /* WebSocket.m in Sources */,
+				89331D251CC1060A003C2E59 /* CoordinateQueryConfigurationTests.m in Sources */,
 				F5B0A1BF1CAD4E4600E056CE /* HealthRoutes.m in Sources */,
 				F5B0A1AF1CAD4E2700E056CE /* QuerySelectorFactory.m in Sources */,
 				F5B0A1D61CAD4E8A00E056CE /* HTTPRedirectResponse.m in Sources */,
+				89331D391CC56BE5003C2E59 /* Gestures+OptionsTests.m in Sources */,
 				F5B0A11D1CAD3D8C00E056CE /* CBXTestToolsStandup.m in Sources */,
 				F5B0A1A41CAD4DE800E056CE /* XCUIElement+WebDriverAttributes.m in Sources */,
 				F5B0A1D51CAD4E8A00E056CE /* HTTPFileResponse.m in Sources */,
 				F5B0A1CF1CAD4E7F00E056CE /* MultipartMessageHeader.m in Sources */,
+				89331D331CC50447003C2E59 /* ThreadUtils.m in Sources */,
 				F5B0A1A81CAD4E2700E056CE /* Gesture.m in Sources */,
 				F5B0A1CD1CAD4E7500E056CE /* HTTPServer.m in Sources */,
 				F5B0A1CC1CAD4E7500E056CE /* HTTPMessage.m in Sources */,
@@ -1913,6 +1964,8 @@
 				F5B0A1A31CAD4DE800E056CE /* FBElement.m in Sources */,
 				F5B0A1A71CAD4E2700E056CE /* GestureFactory.m in Sources */,
 				F5B0A1B91CAD4E3A00E056CE /* CBXException.m in Sources */,
+				89331D291CC1C279003C2E59 /* CoordinateQueryTests.m in Sources */,
+				89331D2D1CC50172003C2E59 /* GestureFactoryTests.m in Sources */,
 				F5B0A1D91CAD4E9500E056CE /* DDASLLogger.m in Sources */,
 				F5B0A1C41CAD4E4600E056CE /* DeviceEventRoutes.m in Sources */,
 				899696E71CB46C0100BB42E2 /* CoordinateQueryConfiguration.m in Sources */,
@@ -1956,6 +2009,7 @@
 				F5B0A1D81CAD4E9500E056CE /* DDAbstractDatabaseLogger.m in Sources */,
 				F5B0A1D41CAD4E8A00E056CE /* HTTPErrorResponse.m in Sources */,
 				F5B0A1A51CAD4DE800E056CE /* UIDevice+Wifi_IP.m in Sources */,
+				89331D221CC1001E003C2E59 /* QueryConfigurationTests.m in Sources */,
 				F5B0A1AE1CAD4E2700E056CE /* QuerySelector.m in Sources */,
 				899696DB1CB45FFC00BB42E2 /* ActionConfiguration.m in Sources */,
 				F5B0A1C11CAD4E4600E056CE /* QueryRoutes.m in Sources */,

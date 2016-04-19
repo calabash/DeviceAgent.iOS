@@ -26,4 +26,10 @@
     CGPoint p = [self cgpoint];
     return [NSString stringWithFormat:@"(%f, %f)", p.x, p.y];
 }
+
+- (BOOL)isEqual:(id)object {
+    if (![object isKindOfClass:[self class]]) { return NO; }
+    Coordinate *other = (Coordinate *)object;
+    return CGPointEqualToPoint(self.cgpoint, other.cgpoint);
+}
 @end

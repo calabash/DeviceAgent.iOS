@@ -19,7 +19,7 @@
     CGPoint center = coordinates[0].cgpoint;
     float duration = [self duration];
     float amount = [self amount];
-    NSString *direction = [self direction];
+    NSString *direction = [self pinchDirection];
     
     CGPoint p1 = center,
     p2 = center;
@@ -54,7 +54,7 @@
     CGPoint center = coordinates[0].cgpoint;
     float duration = [self duration];
     float amount = [self amount];
-    NSString *direction = [self direction];
+    NSString *direction = [self pinchDirection];
     
     CGPoint p1 = center,
             p2 = center;

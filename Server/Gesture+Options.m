@@ -35,7 +35,7 @@
     return [self getFloat:CBX_ROTATION_START_KEY default:CBX_DEFAULT_ROTATION_START];
 }
 
-- (NSString *)direction {
+- (NSString *)pinchDirection {
     return [self getString:CBX_PINCH_DIRECTION_KEY default:CBX_DEFAULT_PINCH_DIRECTION];
 }
 

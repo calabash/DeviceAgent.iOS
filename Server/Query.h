@@ -10,6 +10,7 @@
 @class CoordinateQuery;
 
 @interface Query : AutomationAction
+NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) QueryConfiguration *queryConfiguration;
 
 /*
@@ -37,4 +38,5 @@
     Debug description
  */
 - (NSString *)toJSONString;
+NS_ASSUME_NONNULL_END
 @end
