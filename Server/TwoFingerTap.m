@@ -1,5 +1,6 @@
 
 #import "TwoFingerTap.h"
+#import "CBXConstants.h"
 
 @implementation TwoFingerTap
 
@@ -17,10 +18,9 @@
     // TODO Add argument for orientation of fingers.  At the moment we assume
     // the fingers are horizontal (touch happens on the same y coordinate).
 
-    // The coordinate passed is the center of the view.  Each finger is
-    // assumed to be 30 pt so the center of each finger is 15 pt from the
-    // center of the view.
-    CGFloat xOffset = 15.0;
+    // The coordinate passed is the center of the view and we assume the fingers
+    // are touching.  Therefore, we use half a finger width to offset the touch.
+    CGFloat xOffset = CBX_FINGER_WIDTH / 2.0;
     CGPoint leftFinger = CGPointMake(coordinate.x + xOffset, coordinate.y);
     CGPoint rightFinger = CGPointMake(coordinate.x - xOffset, coordinate.y);
 
@@ -48,10 +48,9 @@
     // TODO Add argument for orientation of fingers.  At the moment we assume
     // the fingers are horizontal (touch happens on the same y coordinate).
 
-    // The coordinate passed is the center of the view.  Each finger is
-    // assumed to be 30 pt so the center of each finger is 15 pt from the
-    // center of the view.
-    CGFloat xOffset = 15.0;
+    // The coordinate passed is the center of the view and we assume the fingers
+    // are touching.  Therefore, we use half a finger width to offset the touch.
+    CGFloat xOffset = CBX_FINGER_WIDTH / 2.0;
     CGPoint leftFinger = CGPointMake(coordinate.x + xOffset, coordinate.y);
     CGPoint rightFinger = CGPointMake(coordinate.x - xOffset, coordinate.y);
 
