@@ -95,6 +95,7 @@
 		89F6BF8D1CBC4BDD0088269C /* Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BF8A1CBC4BDD0088269C /* Rotate.m */; };
 		89F6BF901CBEB5AD0088269C /* GeometryUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 89F6BF8E1CBEB5AD0088269C /* GeometryUtils.h */; };
 		89F6BF921CBEB5AD0088269C /* GeometryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BF8F1CBEB5AD0088269C /* GeometryUtils.m */; };
+		F50940FB1CC6069C00E559E3 /* GeometryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BF8F1CBEB5AD0088269C /* GeometryUtils.m */; };
 		F542EA151CC5368000D87200 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA141CC5368000D87200 /* UIKit.framework */; };
 		F542EA161CC5368F00D87200 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA141CC5368000D87200 /* UIKit.framework */; };
 		F542EA191CC536AF00D87200 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA171CC536A700D87200 /* QuartzCore.framework */; };
@@ -1852,6 +1853,7 @@
 				89C5F35B1C9B9C850093A018 /* Gesture.m in Sources */,
 				89C5F3641C9C58BD0093A018 /* Touch.m in Sources */,
 				89512BE01CA095D20027D61E /* DeviceEventRoutes.m in Sources */,
+				F50940FB1CC6069C00E559E3 /* GeometryUtils.m in Sources */,
 				899697001CB5C93400BB42E2 /* QuerySelectorCoordinate.m in Sources */,
 				F55F81811C6DD07500A945C8 /* GCDAsyncSocket.m in Sources */,
 				899696C51CB3360900BB42E2 /* Pinch.m in Sources */,
@@ -1862,7 +1864,6 @@
 				F55F84171C6E438800A945C8 /* Application+Queries.m in Sources */,
 				F55F840B1C6E437100A945C8 /* HealthRoutes.m in Sources */,
 				F55F81961C6DD07500A945C8 /* MultipartFormDataParser.m in Sources */,
-				89F6BF911CBEB5AD0088269C /* GeometryUtils.m in Sources */,
 				F55B31C61CBE6EEA00DFB13C /* TwoFingerTap.m in Sources */,
 				F55F81A41C6DD07500A945C8 /* HTTPFileResponse.m in Sources */,
 				F55F81941C6DD07500A945C8 /* HTTPServer.m in Sources */,
