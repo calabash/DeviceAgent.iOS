@@ -45,3 +45,7 @@ unit:
 make app-unit:
 	bin/make/app-unit.sh
 
+
+# Generate appledocs
+docs:
+	bin/make/docs.sh
