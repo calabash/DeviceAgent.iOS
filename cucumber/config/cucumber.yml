@@ -1,2 +1,15 @@
+<%
 
-default: CBXWS=../CBXDriver.xcworkspace DEBUG=1
+require "run_loop"
+
+if RunLoop::Environment.ci?
+  formatter = "pretty"
+else
+  formatter = "Slowhandcuke::Formatter"
+end
+
+%>
+
+formatter: -f <%= formatter %>
+default: CBXWS=../CBXDriver.xcworkspace DEBUG=1 -p formatter
+
