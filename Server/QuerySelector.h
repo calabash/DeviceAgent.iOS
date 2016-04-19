@@ -10,20 +10,20 @@
     Higher-valued selectors are executed later.
  */
 typedef NS_ENUM(int, QuerySelectorExecutionPriority) {
-    /** Execution order doesn't matter */
+    /**Execution order doesn't matter*/
     kQuerySelectorExecutionPriorityAny = 0,
     /** Slight preference for sooner but not crucial */
     kQuerySelectorExecutionPrioritySooner = -1,
     /** Must be executed first.
-     @warning Onus is put on the programmer to not use this on multiple classes
+     **Onus is put on the programmer to not use this in multiple classes*
      */
-    kQuerySelectorExecutionPriorityFirst = INT_MIN,
+    kQuerySelectorExecutionPriorityFirst = -999,
     /** Slight preference for later but not crucial */
     kQuerySelectorExecutionPriorityLater = 1,
-    /** Must be executed last.
-     @warning Onus is put on the programmer to not use this on multiple classes
+    /** Must be executed last. 
+     **Onus is put on the programmer to not use this in multiple classes*
      */
-    kQuerySelectorExecutionPriorityLast = INT_MAX
+    kQuerySelectorExecutionPriorityLast = 999
 };
 
 /**

@@ -6,9 +6,15 @@
 
 @implementation ActionConfiguration
 
+- (id)initWithJSON:(id)json {
+    if (self = [super init]) {
+        _raw = json;
+    }
+    return self;
+}
+
 + (instancetype)withJSON:(NSDictionary *)json {
-    ActionConfiguration *config = [self new];
-    config.raw = json;
+    ActionConfiguration *config = [[self alloc] initWithJSON:json];
     return config;
 }
 
