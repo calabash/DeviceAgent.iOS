@@ -11,6 +11,7 @@
 cucumber/Gemfile.lock
 .irb-history
 .pry-history
+cucumber/reports
 
 # MacOS
 .DS_Store

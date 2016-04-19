@@ -44,6 +44,8 @@ static NSDictionary *colors;
         UITapGestureRecognizer *tap = (UITapGestureRecognizer *)recognizer;
         if (tap.numberOfTapsRequired == 2) {
             return @"Double Tap";
+        } else if (tap.numberOfTouchesRequired == 2) {
+            return @"Two-finger Tap";
         } else {
             return @"Tap";
         }

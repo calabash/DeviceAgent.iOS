@@ -25,8 +25,10 @@ module Calabash
     def app
       @app ||= lambda do
         if ENV["APP"].nil? || ENV["APP"] == ""
-          path = File.expand_path(File.join("..", "Products", "app", "UnitTestApp", "UnitTestApp.app"))
-
+          dir = File.expand_path(File.dirname(__FILE__))
+          path = File.expand_path(File.join(dir, "..", "..", "..",
+                                            "Products", "app",
+                                            "UnitTestApp", "UnitTestApp.app"))
           if File.exist?(path)
             path
           else

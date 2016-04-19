@@ -12,8 +12,10 @@
         UITapGestureRecognizer *touch = [self recognizerWithClass:[UITapGestureRecognizer class]];
         UITapGestureRecognizer *doubleTap = [self recognizerWithClass:[UITapGestureRecognizer class]];
         doubleTap.numberOfTapsRequired = 2;
+        UITapGestureRecognizer *twoFingerTap = [self recognizerWithClass:[UITapGestureRecognizer class]];
+        twoFingerTap.numberOfTouchesRequired = 2;
         
-        self.gestureRecognizers = @[touch, doubleTap, longPress];
+        self.gestureRecognizers = @[touch, doubleTap, longPress, twoFingerTap];
     }
     return self;
 }
