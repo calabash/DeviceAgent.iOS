@@ -101,11 +101,11 @@
 }
 
 - (void)testValidJSON {
-    dispatch_queue_t queue = dispatch_get_current_queue();
+    NSThread *cur = [NSThread currentThread];
     NSMutableArray *complete = [NSMutableArray array];
     for (NSDictionary *json in _validJSON) {
         [GestureFactory executeGestureWithJSON:json completion:^(NSError *e) {
-            XCTAssert(queue == dispatch_get_current_queue(),
+            XCTAssert(cur == [NSThread currentThread],
                       @"Completion block run on a different queue for %@!",
                       json[@"gesture"]);
             [complete addObject:json];
@@ -115,12 +115,12 @@
 }
 
 - (void)testInvalidJSON {
-    dispatch_queue_t queue = dispatch_get_current_queue();
+    NSThread *cur = [NSThread currentThread];
     NSMutableArray *complete = [NSMutableArray array];
     for (NSDictionary *json in _invalidJSON) {
         
         XCTAssertThrows([GestureFactory executeGestureWithJSON:json completion:^(NSError *e) {
-            XCTAssert(queue == dispatch_get_current_queue(),
+            XCTAssert(cur == [NSThread currentThread],
                       @"Completion block run on a different queue for %@!",
                       json[@"gesture"]);
             [complete addObject:json];
