@@ -1,5 +1,5 @@
 
-DOCS_DIR="~/documentation"
+DOCS_DIR="./documentation"
 
 appledoc \
 --project-name "CBXDriver" \

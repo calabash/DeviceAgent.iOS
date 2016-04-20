@@ -22,6 +22,8 @@
  @param json object containing action options
  @param validator a validator to use with the json
  @return A new, validated ActionConfiguration.
+ @exception InvalidArgumentException The json does not validate with the validator, or
+ there are both a `coordinate` and `coordinates` key.
  */
 + (instancetype)withJSON:(NSDictionary *)json
                validator:(JSONKeyValidator *)validator;
