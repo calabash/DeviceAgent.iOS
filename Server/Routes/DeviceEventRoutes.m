@@ -3,6 +3,7 @@
 #import "XCDeviceEvent.h"
 #import "Testmanagerd.h"
 #import "CBXMacros.h"
+#import "ThreadUtils.h"
 
 /*
     TODO:
@@ -46,13 +47,21 @@
                      }
                  }];
              }],
-             [CBXRoute post:endpoint(@"/orientation", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
+             [CBXRoute post:endpoint(@"/rotate_home_button_to", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
                  long long orientation = [data[@"orientation"] longLongValue];
-                 
-                 [[Testmanagerd get] _XCT_updateDeviceOrientation:orientation completion:^(NSError *e) {
+                 [ThreadUtils runSync:^(BOOL *setToTrueWhenDone, NSError *__autoreleasing *err) {
+                     [[Testmanagerd get] _XCT_updateDeviceOrientation:orientation completion:^(NSError *e) {
+                         *err = e;
+                         *setToTrueWhenDone = YES;
+                     }];
+                 } completion:^(NSError *e) {
+                     NSDictionary *json;
                      if (e) {
-                         NSLog(@"%@", e);
+                         json = @{ @"error" : e.localizedDescription };
+                     } else {
+                         json = @{ @"status" : @"success" };
                      }
+                     [response respondWithJSON:json];
                  }];
              }]
              ];
