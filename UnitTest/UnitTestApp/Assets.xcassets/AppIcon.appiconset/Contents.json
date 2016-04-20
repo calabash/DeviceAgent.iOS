@@ -61,6 +61,11 @@
       "scale" : "2x"
     },
     {
+      "idiom" : "ipad",
+      "size" : "50x50",
+      "scale" : "1x"
+    },
+    {
       "size" : "50x50",
       "idiom" : "ipad",
       "filename" : "Icon-Small-50@2x.png",

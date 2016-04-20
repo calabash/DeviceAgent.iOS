@@ -82,7 +82,7 @@ static NSUInteger const HTTP_STATUS_CODE_INVALID_REQUEST = 400;
 static NSUInteger const HTTP_STATUS_CODE_SERVER_ERROR = 500;
 
 static int const CBX_MIN_NUM_FINGERS = 1;
-static int const CBX_MAX_NUM_FINGERS = 5; 
+static int const CBX_MAX_NUM_FINGERS = 5;
 
 static float const CBX_MIN_ROTATION_START = 0;      //degrees
 static float const CBX_MAX_ROTATION_START = 360;    //degrees
