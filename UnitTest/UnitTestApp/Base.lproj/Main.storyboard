@@ -44,7 +44,7 @@
                             <constraint firstItem="K2c-Gh-js7" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="qdu-pJ-mgq"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Touch" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Touch" image="tab-bar-tapping" selectedImage="tab-bar-tapping-selected" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="gestureLabel" destination="K2c-Gh-js7" id="aoX-9A-6MK"/>
                     </connections>
@@ -83,7 +83,7 @@
                             <constraint firstItem="lPq-EO-1VL" firstAttribute="top" secondItem="p4O-xQ-Uw3" secondAttribute="bottom" constant="8" id="qsy-t2-5QB"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Rotate/Pinch" image="first" id="sxX-ns-k9G"/>
+                    <tabBarItem key="tabBarItem" title="Rotate/Pinch" image="tab-bar-elephant" selectedImage="tab-bar-elephant-selected" id="sxX-ns-k9G"/>
                     <connections>
                         <outlet property="gestureLabel" destination="p4O-xQ-Uw3" id="HKS-7L-My9"/>
                     </connections>
@@ -122,7 +122,7 @@
                             <constraint firstItem="GnW-eL-Ri9" firstAttribute="centerX" secondItem="096-3l-KgR" secondAttribute="centerX" id="vKi-Qm-aiQ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Pan" image="second" id="4XC-Hb-YUg"/>
+                    <tabBarItem key="tabBarItem" title="Pan" image="tab-bar-gestures" selectedImage="tab-bar-gestures-selected" id="4XC-Hb-YUg"/>
                     <connections>
                         <outlet property="gestureLabel" destination="GnW-eL-Ri9" id="Mow-YY-1t2"/>
                     </connections>
@@ -190,7 +190,7 @@
                             <constraint firstAttribute="leadingMargin" secondItem="gUN-3j-Tbv" secondAttribute="leading" id="dnP-Qa-Lws"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Misc" image="second" id="usq-CR-5AO"/>
+                    <tabBarItem key="tabBarItem" title="Misc" image="tab-bar-special" selectedImage="tab-bar-special-selected" id="usq-CR-5AO"/>
                     <connections>
                         <outlet property="textfield" destination="gUN-3j-Tbv" id="M28-Ew-KOb"/>
                     </connections>
@@ -201,7 +201,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="tab-bar-elephant" width="28" height="28"/>
+        <image name="tab-bar-elephant-selected" width="28" height="28"/>
+        <image name="tab-bar-gestures" width="28" height="26"/>
+        <image name="tab-bar-gestures-selected" width="24" height="26"/>
+        <image name="tab-bar-special" width="28" height="14"/>
+        <image name="tab-bar-special-selected" width="28" height="14"/>
+        <image name="tab-bar-tapping" width="18" height="28"/>
+        <image name="tab-bar-tapping-selected" width="18" height="28"/>
     </resources>
 </document>
