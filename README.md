@@ -1,6 +1,6 @@
 | master  | develop | [versioning](VERSIONING.md) | [license](LICENSE) | [contributing](CONTRIBUTING.md)|
 |---------|---------|-----------------------------|--------------------|--------------------------------|
-|[![Build Status](https://travis-ci.org/calabash/calabash-xcuitest-server.svg?branch=master)](https://travis-ci.org/calabash/calabash-xcuitest-server)| [![Build Status](https://travis-ci.org/calabash/calabash-xcuitest-server.svg?branch=develop)](https://travis-ci.org/calabash/calabash-xcuitest-server)| [![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://img.shields.io/badge/version-1.0.0-green.svg) |[![License](https://img.shields.io/badge/licence-Eclipse-blue.svg)](http://opensource.org/licenses/EPL-1.0) | [![Contributing](https://img.shields.io/badge/contrib-gitflow-orange.svg)](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow/)|
+|[![Build Status](https://travis-ci.com/calabash/DeviceAgent.iOS.svg?token=fsyxqhAht7X7tLURqAAp&branch=master)](https://travis-ci.com/calabash/DeviceAgent.iOS) | [![Build Status](https://travis-ci.com/calabash/DeviceAgent.iOS.svg?token=fsyxqhAht7X7tLURqAAp&branch=develop)](https://travis-ci.com/calabash/DeviceAgent.iOS)| [![Version](https://img.shields.io/badge/version-0.0.0-green.svg)](https://img.shields.io/badge/version-0.0.0-green.svg) |[![License](https://img.shields.io/badge/licence-Eclipse-blue.svg)](http://opensource.org/licenses/EPL-1.0) | [![Contributing](https://img.shields.io/badge/contrib-gitflow-orange.svg)](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow/)|
 
 ## iOS DeviceAgent
 
@@ -12,18 +12,28 @@ Requires Xcode 7 and iOS 9 or higher.
 Requires ruby >= 2.0.  The latest ruby release is preferred.
 
 ```
-$ git clone git@github.com:calabash/DeviceAgent.iOS.git
-$ cd calabash-xcuitest-server
+$ git clone git@github.com:calabash/DeviceAgent.iOS.git ios-device-agent
+$ cd ios-device-agent
+$ bundle install
+
+# Make the agent ipa and app
+$ make ipa-agent
+$ make app-agent
+
+# Unit tests; running against simulators
+$ make unit
+
+# Cucumber integration tests
+$ make app-unit
+$ cd cucumber
 $ bundle update
-$ make app
-$ make ipa
-$ make runner
+$ be cucumber
 ```
 
 To build with an alternative Xcode:
 
 ```
-$ DEVELOPER_DIR=/Xcode/7.2b2/Xcode-beta.app make < rule >
+$ DEVELOPER_DIR=/Xcode/7.3/Xcode-beta.app make < rule >
 ```
 
 If you have build errors, see the xcpretty section below.
@@ -49,15 +59,6 @@ then you must either:
    NOT CHECK THESE CHANGES INTO GIT.**
 
 Maintainers should be using the Calabash.keychain (calabash/calabash-codesign).
-
-### Testing
-
-To run the Objective-C unit tests:
-
-```
-$ bundle update
-$ make unit
-```
 
 ### Contributing
 
@@ -85,11 +86,11 @@ very well.  If you encounter an issue with any of the make rules, run
 without xcpretty:
 
 ```
-$ XCPRETTY=0 make ipa
+$ XCPRETTY=0 make ipa-agent
 ```
 
 ### Licenses
 
-Calabash iOS Server uses several third-party sources.  You can find the
-licenses for these sources in the third-party-licenses directory.
+DeviceAgent uses several third-party sources.  You can find the licenses for these
+sources in the third-party-licenses directory.
 
