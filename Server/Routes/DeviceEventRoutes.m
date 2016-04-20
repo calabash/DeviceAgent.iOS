@@ -4,6 +4,8 @@
 #import "Testmanagerd.h"
 #import "CBXMacros.h"
 #import "ThreadUtils.h"
+#import "Application.h"
+#import "XCTest/XCUIApplication.h"
 
 /*
     TODO:
@@ -55,11 +57,13 @@
                          *setToTrueWhenDone = YES;
                      }];
                  } completion:^(NSError *e) {
-                     NSDictionary *json;
+                     NSMutableDictionary *json = [@{} mutableCopy];
                      if (e) {
-                         json = @{ @"error" : e.localizedDescription };
+                         json[@"error"] = e.localizedDescription;
                      } else {
-                         json = @{ @"status" : @"success" };
+                         json[@"status"] = @"success";
+                         XCUIApplication *app = [Application currentApplication];
+                         json[@"orientation"] = @(app.interfaceOrientation);
                      }
                      [response respondWithJSON:json];
                  }];
