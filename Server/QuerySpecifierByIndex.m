@@ -1,10 +1,10 @@
 
-#import "QuerySelectorIndex.h"
+#import "QuerySpecifierByIndex.h"
 
-@implementation QuerySelectorIndex
+@implementation QuerySpecifierByIndex
 
-+ (QuerySelectorExecutionPriority)executionPriority {
-    return kQuerySelectorExecutionPriorityLast;
++ (QuerySpecifierExecutionPriority)executionPriority {
+    return kQuerySpecifierExecutionPriorityLast;
 }
 
 + (NSString *)name { return @"index"; }
@@ -13,3 +13,4 @@
     return [query elementBoundByIndex:[self.value integerValue] /* returns an XCUIElement */ ].query;
 }
 @end
+

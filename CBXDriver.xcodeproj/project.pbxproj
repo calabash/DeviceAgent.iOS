@@ -12,7 +12,7 @@
 		89331CD11CC00ECD003C2E59 /* MiscViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CD01CC00ECD003C2E59 /* MiscViewController.m */; };
 		89331D201CC0F72B003C2E59 /* ActionConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D1F1CC0F72B003C2E59 /* ActionConfigurationTests.m */; };
 		89331D221CC1001E003C2E59 /* QueryConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D211CC1001E003C2E59 /* QueryConfigurationTests.m */; };
-		89331D231CC10559003C2E59 /* QuerySelectorId.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537FA1CA2020700F62E09 /* QuerySelectorId.m */; };
+		89331D231CC10559003C2E59 /* QuerySpecifierById.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537FA1CA2020700F62E09 /* QuerySpecifierById.m */; };
 		89331D251CC1060A003C2E59 /* CoordinateQueryConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D241CC1060A003C2E59 /* CoordinateQueryConfigurationTests.m */; };
 		89331D271CC10857003C2E59 /* QueryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D261CC10857003C2E59 /* QueryTests.m */; };
 		89331D291CC1C279003C2E59 /* CoordinateQueryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D281CC1C279003C2E59 /* CoordinateQueryTests.m */; };
@@ -58,9 +58,9 @@
 		899696FA1CB5BA4600BB42E2 /* CoordinateQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696F81CB5BA4600BB42E2 /* CoordinateQuery.h */; };
 		899696FB1CB5BA4600BB42E2 /* CoordinateQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696F91CB5BA4600BB42E2 /* CoordinateQuery.m */; };
 		899696FC1CB5BA4600BB42E2 /* CoordinateQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696F91CB5BA4600BB42E2 /* CoordinateQuery.m */; };
-		899696FF1CB5C93400BB42E2 /* QuerySelectorCoordinate.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696FD1CB5C93400BB42E2 /* QuerySelectorCoordinate.h */; };
-		899697001CB5C93400BB42E2 /* QuerySelectorCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696FE1CB5C93400BB42E2 /* QuerySelectorCoordinate.m */; };
-		899697011CB5C93400BB42E2 /* QuerySelectorCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696FE1CB5C93400BB42E2 /* QuerySelectorCoordinate.m */; };
+		899696FF1CB5C93400BB42E2 /* QuerySpecifierByCoordinate.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696FD1CB5C93400BB42E2 /* QuerySpecifierByCoordinate.h */; };
+		899697001CB5C93400BB42E2 /* QuerySpecifierByCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696FE1CB5C93400BB42E2 /* QuerySpecifierByCoordinate.m */; };
+		899697011CB5C93400BB42E2 /* QuerySpecifierByCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696FE1CB5C93400BB42E2 /* QuerySpecifierByCoordinate.m */; };
 		899697051CB5D5CF00BB42E2 /* Gesture+Options.h in Headers */ = {isa = PBXBuildFile; fileRef = 899697031CB5D5CF00BB42E2 /* Gesture+Options.h */; };
 		899697061CB5D5CF00BB42E2 /* Gesture+Options.m in Sources */ = {isa = PBXBuildFile; fileRef = 899697041CB5D5CF00BB42E2 /* Gesture+Options.m */; };
 		899697071CB5D5CF00BB42E2 /* Gesture+Options.m in Sources */ = {isa = PBXBuildFile; fileRef = 899697041CB5D5CF00BB42E2 /* Gesture+Options.m */; };
@@ -80,26 +80,26 @@
 		89C5F36C1C9C912F0093A018 /* GestureFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F36A1C9C912F0093A018 /* GestureFactory.m */; };
 		89C5F36F1C9E32440093A018 /* DoubleTap.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F36D1C9E32440093A018 /* DoubleTap.h */; };
 		89C5F3701C9E32440093A018 /* DoubleTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F36E1C9E32440093A018 /* DoubleTap.m */; };
-		89D537F71CA1DF8500F62E09 /* QuerySelector.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D537F51CA1DF8500F62E09 /* QuerySelector.h */; };
-		89D537F81CA1DF8500F62E09 /* QuerySelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537F61CA1DF8500F62E09 /* QuerySelector.m */; };
-		89D537FB1CA2020700F62E09 /* QuerySelectorId.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D537F91CA2020700F62E09 /* QuerySelectorId.h */; };
-		89D537FC1CA2020700F62E09 /* QuerySelectorId.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537FA1CA2020700F62E09 /* QuerySelectorId.m */; };
-		89D537FF1CA2090500F62E09 /* QuerySelectorFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D537FD1CA2090500F62E09 /* QuerySelectorFactory.h */; };
-		89D538001CA2090500F62E09 /* QuerySelectorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537FE1CA2090500F62E09 /* QuerySelectorFactory.m */; };
-		89D538031CA20DB800F62E09 /* QuerySelectorText.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D538011CA20DB800F62E09 /* QuerySelectorText.h */; };
-		89D538041CA20DB800F62E09 /* QuerySelectorText.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538021CA20DB800F62E09 /* QuerySelectorText.m */; };
+		89D537F71CA1DF8500F62E09 /* QuerySpecifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D537F51CA1DF8500F62E09 /* QuerySpecifier.h */; };
+		89D537F81CA1DF8500F62E09 /* QuerySpecifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537F61CA1DF8500F62E09 /* QuerySpecifier.m */; };
+		89D537FB1CA2020700F62E09 /* QuerySpecifierById.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D537F91CA2020700F62E09 /* QuerySpecifierById.h */; };
+		89D537FC1CA2020700F62E09 /* QuerySpecifierById.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537FA1CA2020700F62E09 /* QuerySpecifierById.m */; };
+		89D537FF1CA2090500F62E09 /* QuerySpecifierFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D537FD1CA2090500F62E09 /* QuerySpecifierFactory.h */; };
+		89D538001CA2090500F62E09 /* QuerySpecifierFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537FE1CA2090500F62E09 /* QuerySpecifierFactory.m */; };
+		89D538031CA20DB800F62E09 /* QuerySpecifierByText.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D538011CA20DB800F62E09 /* QuerySpecifierByText.h */; };
+		89D538041CA20DB800F62E09 /* QuerySpecifierByText.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538021CA20DB800F62E09 /* QuerySpecifierByText.m */; };
 		89D538081CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D538061CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.h */; };
 		89D538091CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538071CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.m */; };
 		89D5380C1CA32AE900F62E09 /* FBElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D5380A1CA32AE900F62E09 /* FBElement.h */; };
 		89D5380D1CA32AE900F62E09 /* FBElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5380B1CA32AE900F62E09 /* FBElement.m */; };
-		89D538101CA34CBE00F62E09 /* QuerySelectorTextLike.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D5380E1CA34CBE00F62E09 /* QuerySelectorTextLike.h */; };
-		89D538111CA34CBE00F62E09 /* QuerySelectorTextLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5380F1CA34CBE00F62E09 /* QuerySelectorTextLike.m */; };
-		89D538151CA351F400F62E09 /* QuerySelectorIndex.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D538131CA351F400F62E09 /* QuerySelectorIndex.h */; };
-		89D538161CA351F400F62E09 /* QuerySelectorIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538141CA351F400F62E09 /* QuerySelectorIndex.m */; };
-		89D538191CA3551600F62E09 /* QuerySelectorProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D538171CA3551600F62E09 /* QuerySelectorProperty.h */; };
-		89D5381A1CA3551600F62E09 /* QuerySelectorProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538181CA3551600F62E09 /* QuerySelectorProperty.m */; };
-		89D5381D1CA359B200F62E09 /* QuerySelectorPropertyLike.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D5381B1CA359B200F62E09 /* QuerySelectorPropertyLike.h */; };
-		89D5381E1CA359B200F62E09 /* QuerySelectorPropertyLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5381C1CA359B200F62E09 /* QuerySelectorPropertyLike.m */; };
+		89D538101CA34CBE00F62E09 /* QuerySpecifierByTextLike.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D5380E1CA34CBE00F62E09 /* QuerySpecifierByTextLike.h */; };
+		89D538111CA34CBE00F62E09 /* QuerySpecifierByTextLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5380F1CA34CBE00F62E09 /* QuerySpecifierByTextLike.m */; };
+		89D538151CA351F400F62E09 /* QuerySpecifierByIndex.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D538131CA351F400F62E09 /* QuerySpecifierByIndex.h */; };
+		89D538161CA351F400F62E09 /* QuerySpecifierByIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538141CA351F400F62E09 /* QuerySpecifierByIndex.m */; };
+		89D538191CA3551600F62E09 /* QuerySpecifierByProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D538171CA3551600F62E09 /* QuerySpecifierByProperty.h */; };
+		89D5381A1CA3551600F62E09 /* QuerySpecifierByProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538181CA3551600F62E09 /* QuerySpecifierByProperty.m */; };
+		89D5381D1CA359B200F62E09 /* QuerySpecifierByPropertyLike.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D5381B1CA359B200F62E09 /* QuerySpecifierByPropertyLike.h */; };
+		89D5381E1CA359B200F62E09 /* QuerySpecifierByPropertyLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5381C1CA359B200F62E09 /* QuerySpecifierByPropertyLike.m */; };
 		89F6BF8B1CBC4BDD0088269C /* Rotate.h in Headers */ = {isa = PBXBuildFile; fileRef = 89F6BF891CBC4BDD0088269C /* Rotate.h */; };
 		89F6BF8C1CBC4BDD0088269C /* Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BF8A1CBC4BDD0088269C /* Rotate.m */; };
 		89F6BF8D1CBC4BDD0088269C /* Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BF8A1CBC4BDD0088269C /* Rotate.m */; };
@@ -225,13 +225,13 @@
 		F5B0A1AB1CAD4E2700E056CE /* DoubleTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F36E1C9E32440093A018 /* DoubleTap.m */; };
 		F5B0A1AC1CAD4E2700E056CE /* Drag.m in Sources */ = {isa = PBXBuildFile; fileRef = 89512BDA1C9EEC3C0027D61E /* Drag.m */; };
 		F5B0A1AD1CAD4E2700E056CE /* Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F35D1C9C51680093A018 /* Query.m */; };
-		F5B0A1AE1CAD4E2700E056CE /* QuerySelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537F61CA1DF8500F62E09 /* QuerySelector.m */; };
-		F5B0A1AF1CAD4E2700E056CE /* QuerySelectorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537FE1CA2090500F62E09 /* QuerySelectorFactory.m */; };
-		F5B0A1B11CAD4E2700E056CE /* QuerySelectorText.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538021CA20DB800F62E09 /* QuerySelectorText.m */; };
-		F5B0A1B21CAD4E2700E056CE /* QuerySelectorTextLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5380F1CA34CBE00F62E09 /* QuerySelectorTextLike.m */; };
-		F5B0A1B31CAD4E2700E056CE /* QuerySelectorIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538141CA351F400F62E09 /* QuerySelectorIndex.m */; };
-		F5B0A1B41CAD4E2700E056CE /* QuerySelectorProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538181CA3551600F62E09 /* QuerySelectorProperty.m */; };
-		F5B0A1B51CAD4E2700E056CE /* QuerySelectorPropertyLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5381C1CA359B200F62E09 /* QuerySelectorPropertyLike.m */; };
+		F5B0A1AE1CAD4E2700E056CE /* QuerySpecifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537F61CA1DF8500F62E09 /* QuerySpecifier.m */; };
+		F5B0A1AF1CAD4E2700E056CE /* QuerySpecifierFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537FE1CA2090500F62E09 /* QuerySpecifierFactory.m */; };
+		F5B0A1B11CAD4E2700E056CE /* QuerySpecifierByText.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538021CA20DB800F62E09 /* QuerySpecifierByText.m */; };
+		F5B0A1B21CAD4E2700E056CE /* QuerySpecifierByTextLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5380F1CA34CBE00F62E09 /* QuerySpecifierByTextLike.m */; };
+		F5B0A1B31CAD4E2700E056CE /* QuerySpecifierByIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538141CA351F400F62E09 /* QuerySpecifierByIndex.m */; };
+		F5B0A1B41CAD4E2700E056CE /* QuerySpecifierByProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538181CA3551600F62E09 /* QuerySpecifierByProperty.m */; };
+		F5B0A1B51CAD4E2700E056CE /* QuerySpecifierByPropertyLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5381C1CA359B200F62E09 /* QuerySpecifierByPropertyLike.m */; };
 		F5B0A1B61CAD4E2F00E056CE /* Testmanagerd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F34F1C9A60E70093A018 /* Testmanagerd.m */; };
 		F5B0A1B71CAD4E3300E056CE /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BD1C6DDF1300A945C8 /* Application.m */; };
 		F5B0A1B81CAD4E3300E056CE /* Application+Queries.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BB1C6DDF1300A945C8 /* Application+Queries.m */; };
@@ -350,8 +350,8 @@
 		899696F41CB5B8C300BB42E2 /* Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coordinate.m; sourceTree = "<group>"; };
 		899696F81CB5BA4600BB42E2 /* CoordinateQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoordinateQuery.h; sourceTree = "<group>"; };
 		899696F91CB5BA4600BB42E2 /* CoordinateQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinateQuery.m; sourceTree = "<group>"; };
-		899696FD1CB5C93400BB42E2 /* QuerySelectorCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySelectorCoordinate.h; sourceTree = "<group>"; };
-		899696FE1CB5C93400BB42E2 /* QuerySelectorCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySelectorCoordinate.m; sourceTree = "<group>"; };
+		899696FD1CB5C93400BB42E2 /* QuerySpecifierByCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySpecifierByCoordinate.h; sourceTree = "<group>"; };
+		899696FE1CB5C93400BB42E2 /* QuerySpecifierByCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySpecifierByCoordinate.m; sourceTree = "<group>"; };
 		899697031CB5D5CF00BB42E2 /* Gesture+Options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Gesture+Options.h"; sourceTree = "<group>"; };
 		899697041CB5D5CF00BB42E2 /* Gesture+Options.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Gesture+Options.m"; sourceTree = "<group>"; };
 		89C5F34E1C9A60E70093A018 /* Testmanagerd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Testmanagerd.h; sourceTree = "<group>"; };
@@ -370,26 +370,26 @@
 		89C5F36A1C9C912F0093A018 /* GestureFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureFactory.m; sourceTree = "<group>"; };
 		89C5F36D1C9E32440093A018 /* DoubleTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleTap.h; sourceTree = "<group>"; };
 		89C5F36E1C9E32440093A018 /* DoubleTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubleTap.m; sourceTree = "<group>"; };
-		89D537F51CA1DF8500F62E09 /* QuerySelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySelector.h; sourceTree = "<group>"; };
-		89D537F61CA1DF8500F62E09 /* QuerySelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySelector.m; sourceTree = "<group>"; };
-		89D537F91CA2020700F62E09 /* QuerySelectorId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySelectorId.h; sourceTree = "<group>"; };
-		89D537FA1CA2020700F62E09 /* QuerySelectorId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySelectorId.m; sourceTree = "<group>"; };
-		89D537FD1CA2090500F62E09 /* QuerySelectorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySelectorFactory.h; sourceTree = "<group>"; };
-		89D537FE1CA2090500F62E09 /* QuerySelectorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySelectorFactory.m; sourceTree = "<group>"; };
-		89D538011CA20DB800F62E09 /* QuerySelectorText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySelectorText.h; sourceTree = "<group>"; };
-		89D538021CA20DB800F62E09 /* QuerySelectorText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySelectorText.m; sourceTree = "<group>"; };
+		89D537F51CA1DF8500F62E09 /* QuerySpecifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySpecifier.h; sourceTree = "<group>"; };
+		89D537F61CA1DF8500F62E09 /* QuerySpecifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySpecifier.m; sourceTree = "<group>"; };
+		89D537F91CA2020700F62E09 /* QuerySpecifierById.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySpecifierById.h; sourceTree = "<group>"; };
+		89D537FA1CA2020700F62E09 /* QuerySpecifierById.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySpecifierById.m; sourceTree = "<group>"; };
+		89D537FD1CA2090500F62E09 /* QuerySpecifierFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySpecifierFactory.h; sourceTree = "<group>"; };
+		89D537FE1CA2090500F62E09 /* QuerySpecifierFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySpecifierFactory.m; sourceTree = "<group>"; };
+		89D538011CA20DB800F62E09 /* QuerySpecifierByText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySpecifierByText.h; sourceTree = "<group>"; };
+		89D538021CA20DB800F62E09 /* QuerySpecifierByText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySpecifierByText.m; sourceTree = "<group>"; };
 		89D538061CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIElement+WebDriverAttributes.h"; sourceTree = "<group>"; };
 		89D538071CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCUIElement+WebDriverAttributes.m"; sourceTree = "<group>"; };
 		89D5380A1CA32AE900F62E09 /* FBElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBElement.h; sourceTree = "<group>"; };
 		89D5380B1CA32AE900F62E09 /* FBElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBElement.m; sourceTree = "<group>"; };
-		89D5380E1CA34CBE00F62E09 /* QuerySelectorTextLike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySelectorTextLike.h; sourceTree = "<group>"; };
-		89D5380F1CA34CBE00F62E09 /* QuerySelectorTextLike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySelectorTextLike.m; sourceTree = "<group>"; };
-		89D538131CA351F400F62E09 /* QuerySelectorIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySelectorIndex.h; sourceTree = "<group>"; };
-		89D538141CA351F400F62E09 /* QuerySelectorIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySelectorIndex.m; sourceTree = "<group>"; };
-		89D538171CA3551600F62E09 /* QuerySelectorProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySelectorProperty.h; sourceTree = "<group>"; };
-		89D538181CA3551600F62E09 /* QuerySelectorProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySelectorProperty.m; sourceTree = "<group>"; };
-		89D5381B1CA359B200F62E09 /* QuerySelectorPropertyLike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySelectorPropertyLike.h; sourceTree = "<group>"; };
-		89D5381C1CA359B200F62E09 /* QuerySelectorPropertyLike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySelectorPropertyLike.m; sourceTree = "<group>"; };
+		89D5380E1CA34CBE00F62E09 /* QuerySpecifierByTextLike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySpecifierByTextLike.h; sourceTree = "<group>"; };
+		89D5380F1CA34CBE00F62E09 /* QuerySpecifierByTextLike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySpecifierByTextLike.m; sourceTree = "<group>"; };
+		89D538131CA351F400F62E09 /* QuerySpecifierByIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySpecifierByIndex.h; sourceTree = "<group>"; };
+		89D538141CA351F400F62E09 /* QuerySpecifierByIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySpecifierByIndex.m; sourceTree = "<group>"; };
+		89D538171CA3551600F62E09 /* QuerySpecifierByProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySpecifierByProperty.h; sourceTree = "<group>"; };
+		89D538181CA3551600F62E09 /* QuerySpecifierByProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySpecifierByProperty.m; sourceTree = "<group>"; };
+		89D5381B1CA359B200F62E09 /* QuerySpecifierByPropertyLike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySpecifierByPropertyLike.h; sourceTree = "<group>"; };
+		89D5381C1CA359B200F62E09 /* QuerySpecifierByPropertyLike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySpecifierByPropertyLike.m; sourceTree = "<group>"; };
 		89F6BF891CBC4BDD0088269C /* Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rotate.h; sourceTree = "<group>"; };
 		89F6BF8A1CBC4BDD0088269C /* Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rotate.m; sourceTree = "<group>"; };
 		89F6BF8E1CBEB5AD0088269C /* GeometryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeometryUtils.h; sourceTree = "<group>"; };
@@ -802,8 +802,8 @@
 		899696DC1CB46A2F00BB42E2 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
-				89D537FD1CA2090500F62E09 /* QuerySelectorFactory.h */,
-				89D537FE1CA2090500F62E09 /* QuerySelectorFactory.m */,
+				89D537FD1CA2090500F62E09 /* QuerySpecifierFactory.h */,
+				89D537FE1CA2090500F62E09 /* QuerySpecifierFactory.m */,
 			);
 			name = Factory;
 			sourceTree = "<group>";
@@ -891,22 +891,22 @@
 			isa = PBXGroup;
 			children = (
 				899696DC1CB46A2F00BB42E2 /* Factory */,
-				89D537F51CA1DF8500F62E09 /* QuerySelector.h */,
-				89D537F61CA1DF8500F62E09 /* QuerySelector.m */,
-				89D537F91CA2020700F62E09 /* QuerySelectorId.h */,
-				89D537FA1CA2020700F62E09 /* QuerySelectorId.m */,
-				89D538131CA351F400F62E09 /* QuerySelectorIndex.h */,
-				89D538141CA351F400F62E09 /* QuerySelectorIndex.m */,
-				89D538171CA3551600F62E09 /* QuerySelectorProperty.h */,
-				89D538181CA3551600F62E09 /* QuerySelectorProperty.m */,
-				89D5381B1CA359B200F62E09 /* QuerySelectorPropertyLike.h */,
-				89D5381C1CA359B200F62E09 /* QuerySelectorPropertyLike.m */,
-				89D538011CA20DB800F62E09 /* QuerySelectorText.h */,
-				89D538021CA20DB800F62E09 /* QuerySelectorText.m */,
-				89D5380E1CA34CBE00F62E09 /* QuerySelectorTextLike.h */,
-				89D5380F1CA34CBE00F62E09 /* QuerySelectorTextLike.m */,
-				899696FD1CB5C93400BB42E2 /* QuerySelectorCoordinate.h */,
-				899696FE1CB5C93400BB42E2 /* QuerySelectorCoordinate.m */,
+				89D537F51CA1DF8500F62E09 /* QuerySpecifier.h */,
+				89D537F61CA1DF8500F62E09 /* QuerySpecifier.m */,
+				89D537F91CA2020700F62E09 /* QuerySpecifierById.h */,
+				89D537FA1CA2020700F62E09 /* QuerySpecifierById.m */,
+				89D538131CA351F400F62E09 /* QuerySpecifierByIndex.h */,
+				89D538141CA351F400F62E09 /* QuerySpecifierByIndex.m */,
+				89D538171CA3551600F62E09 /* QuerySpecifierByProperty.h */,
+				89D538181CA3551600F62E09 /* QuerySpecifierByProperty.m */,
+				89D5381B1CA359B200F62E09 /* QuerySpecifierByPropertyLike.h */,
+				89D5381C1CA359B200F62E09 /* QuerySpecifierByPropertyLike.m */,
+				89D538011CA20DB800F62E09 /* QuerySpecifierByText.h */,
+				89D538021CA20DB800F62E09 /* QuerySpecifierByText.m */,
+				89D5380E1CA34CBE00F62E09 /* QuerySpecifierByTextLike.h */,
+				89D5380F1CA34CBE00F62E09 /* QuerySpecifierByTextLike.m */,
+				899696FD1CB5C93400BB42E2 /* QuerySpecifierByCoordinate.h */,
+				899696FE1CB5C93400BB42E2 /* QuerySpecifierByCoordinate.m */,
 			);
 			name = QuerySelectors;
 			sourceTree = "<group>";
@@ -1546,7 +1546,7 @@
 				F55F819F1C6DD07500A945C8 /* HTTPDynamicFileResponse.h in Headers */,
 				F55F818D1C6DD07500A945C8 /* HTTPConnection.h in Headers */,
 				F55F81991C6DD07500A945C8 /* MultipartMessageHeaderField.h in Headers */,
-				89D538101CA34CBE00F62E09 /* QuerySelectorTextLike.h in Headers */,
+				89D538101CA34CBE00F62E09 /* QuerySpecifierByTextLike.h in Headers */,
 				89C5F3631C9C58BD0093A018 /* Touch.h in Headers */,
 				F55F81801C6DD07500A945C8 /* GCDAsyncSocket.h in Headers */,
 				89C5F35E1C9C51680093A018 /* Query.h in Headers */,
@@ -1560,34 +1560,34 @@
 				F55F81901C6DD07500A945C8 /* HTTPMessage.h in Headers */,
 				89512BDF1CA095D20027D61E /* DeviceEventRoutes.h in Headers */,
 				89512BDB1C9EEC3C0027D61E /* Drag.h in Headers */,
-				89D537F71CA1DF8500F62E09 /* QuerySelector.h in Headers */,
-				89D538151CA351F400F62E09 /* QuerySelectorIndex.h in Headers */,
+				89D537F71CA1DF8500F62E09 /* QuerySpecifier.h in Headers */,
+				89D538151CA351F400F62E09 /* QuerySpecifierByIndex.h in Headers */,
 				F55F81A11C6DD07500A945C8 /* HTTPErrorResponse.h in Headers */,
 				899696D31CB44D9B00BB42E2 /* GestureConfiguration.h in Headers */,
-				89D538031CA20DB800F62E09 /* QuerySelectorText.h in Headers */,
+				89D538031CA20DB800F62E09 /* QuerySpecifierByText.h in Headers */,
 				F55F81851C6DD07500A945C8 /* DDData.h in Headers */,
 				899696F01CB5880F00BB42E2 /* AutomationAction.h in Headers */,
 				F55F82561C6DD07500A945C8 /* RoutingConnection.h in Headers */,
 				899696C91CB356BF00BB42E2 /* QueryConfiguration.h in Headers */,
 				899696FA1CB5BA4600BB42E2 /* CoordinateQuery.h in Headers */,
 				F55F823C1C6DD07500A945C8 /* DispatchQueueLogFormatter.h in Headers */,
-				899696FF1CB5C93400BB42E2 /* QuerySelectorCoordinate.h in Headers */,
+				899696FF1CB5C93400BB42E2 /* QuerySpecifierByCoordinate.h in Headers */,
 				F55F81921C6DD07500A945C8 /* HTTPResponse.h in Headers */,
 				F55F818B1C6DD07500A945C8 /* HTTPAuthenticationRequest.h in Headers */,
 				F55F81891C6DD07500A945C8 /* DDRange.h in Headers */,
-				89D5381D1CA359B200F62E09 /* QuerySelectorPropertyLike.h in Headers */,
+				89D5381D1CA359B200F62E09 /* QuerySpecifierByPropertyLike.h in Headers */,
 				F55F82321C6DD07500A945C8 /* DDASLLogger.h in Headers */,
 				89D5380C1CA32AE900F62E09 /* FBElement.h in Headers */,
 				899696EA1CB5857C00BB42E2 /* JSONKeyValidator.h in Headers */,
 				89C5F35A1C9B9C850093A018 /* Gesture.h in Headers */,
-				89D537FB1CA2020700F62E09 /* QuerySelectorId.h in Headers */,
+				89D537FB1CA2020700F62E09 /* QuerySpecifierById.h in Headers */,
 				F55F81A71C6DD07500A945C8 /* WebSocket.h in Headers */,
-				89D537FF1CA2090500F62E09 /* QuerySelectorFactory.h in Headers */,
+				89D537FF1CA2090500F62E09 /* QuerySpecifierFactory.h in Headers */,
 				899696F51CB5B8C300BB42E2 /* Coordinate.h in Headers */,
 				F55F82521C6DD07500A945C8 /* RouteRequest.h in Headers */,
 				F55F81971C6DD07500A945C8 /* MultipartMessageHeader.h in Headers */,
 				F55F81951C6DD07500A945C8 /* MultipartFormDataParser.h in Headers */,
-				89D538191CA3551600F62E09 /* QuerySelectorProperty.h in Headers */,
+				89D538191CA3551600F62E09 /* QuerySpecifierByProperty.h in Headers */,
 				F55F82361C6DD07500A945C8 /* DDLog.h in Headers */,
 				89D538081CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.h in Headers */,
 				F55F82341C6DD07500A945C8 /* DDFileLogger.h in Headers */,
@@ -1834,12 +1834,12 @@
 			files = (
 				F55F82571C6DD07500A945C8 /* RoutingConnection.m in Sources */,
 				F55F840D1C6E437100A945C8 /* QueryRoutes.m in Sources */,
-				89D537FC1CA2020700F62E09 /* QuerySelectorId.m in Sources */,
+				89D537FC1CA2020700F62E09 /* QuerySpecifierById.m in Sources */,
 				F55F82551C6DD07500A945C8 /* RouteResponse.m in Sources */,
 				89D538091CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.m in Sources */,
 				F55F81861C6DD07500A945C8 /* DDData.m in Sources */,
 				F55F840F1C6E437100A945C8 /* UndefinedRoutes.m in Sources */,
-				89D538041CA20DB800F62E09 /* QuerySelectorText.m in Sources */,
+				89D538041CA20DB800F62E09 /* QuerySpecifierByText.m in Sources */,
 				899696BB1CADF84B00BB42E2 /* EnterText.m in Sources */,
 				F55F84141C6E438200A945C8 /* ShutdownServerException.m in Sources */,
 				F55F824F1C6DD07500A945C8 /* HTTPResponseProxy.m in Sources */,
@@ -1849,22 +1849,22 @@
 				F55F82331C6DD07500A945C8 /* DDASLLogger.m in Sources */,
 				F55F82591C6DD07500A945C8 /* RoutingHTTPServer.m in Sources */,
 				89C5F3701C9E32440093A018 /* DoubleTap.m in Sources */,
-				89D538001CA2090500F62E09 /* QuerySelectorFactory.m in Sources */,
+				89D538001CA2090500F62E09 /* QuerySpecifierFactory.m in Sources */,
 				F55F823B1C6DD07500A945C8 /* ContextFilterLogFormatter.m in Sources */,
 				899696DA1CB45FFC00BB42E2 /* ActionConfiguration.m in Sources */,
 				899696F11CB5880F00BB42E2 /* AutomationAction.m in Sources */,
 				F55F81A81C6DD07500A945C8 /* WebSocket.m in Sources */,
 				F55F81A01C6DD07500A945C8 /* HTTPDynamicFileResponse.m in Sources */,
 				F55F83591C6DD9C400A945C8 /* XCUITestDriver.m in Sources */,
-				89D5381E1CA359B200F62E09 /* QuerySelectorPropertyLike.m in Sources */,
-				89D537F81CA1DF8500F62E09 /* QuerySelector.m in Sources */,
+				89D5381E1CA359B200F62E09 /* QuerySpecifierByPropertyLike.m in Sources */,
+				89D537F81CA1DF8500F62E09 /* QuerySpecifier.m in Sources */,
 				F55F840A1C6E437100A945C8 /* GestureRoutes.m in Sources */,
 				89C5F3511C9A60E70093A018 /* Testmanagerd.m in Sources */,
 				F55F840C1C6E437100A945C8 /* MetaRoutes.m in Sources */,
 				F55F818E1C6DD07500A945C8 /* HTTPConnection.m in Sources */,
-				89D538111CA34CBE00F62E09 /* QuerySelectorTextLike.m in Sources */,
+				89D538111CA34CBE00F62E09 /* QuerySpecifierByTextLike.m in Sources */,
 				89331D321CC50447003C2E59 /* ThreadUtils.m in Sources */,
-				89D5381A1CA3551600F62E09 /* QuerySelectorProperty.m in Sources */,
+				89D5381A1CA3551600F62E09 /* QuerySpecifierByProperty.m in Sources */,
 				F55F82511C6DD07500A945C8 /* Route.m in Sources */,
 				F55F819E1C6DD07500A945C8 /* HTTPDataResponse.m in Sources */,
 				F55F818A1C6DD07500A945C8 /* DDRange.m in Sources */,
@@ -1899,7 +1899,7 @@
 				89C5F3641C9C58BD0093A018 /* Touch.m in Sources */,
 				89512BE01CA095D20027D61E /* DeviceEventRoutes.m in Sources */,
 				F50940FB1CC6069C00E559E3 /* GeometryUtils.m in Sources */,
-				899697001CB5C93400BB42E2 /* QuerySelectorCoordinate.m in Sources */,
+				899697001CB5C93400BB42E2 /* QuerySpecifierByCoordinate.m in Sources */,
 				F55F81811C6DD07500A945C8 /* GCDAsyncSocket.m in Sources */,
 				899696C51CB3360900BB42E2 /* Pinch.m in Sources */,
 				F55F82531C6DD07500A945C8 /* RouteRequest.m in Sources */,
@@ -1912,7 +1912,7 @@
 				F55B31C61CBE6EEA00DFB13C /* TwoFingerTap.m in Sources */,
 				F55F81A41C6DD07500A945C8 /* HTTPFileResponse.m in Sources */,
 				F55F81941C6DD07500A945C8 /* HTTPServer.m in Sources */,
-				89D538161CA351F400F62E09 /* QuerySelectorIndex.m in Sources */,
+				89D538161CA351F400F62E09 /* QuerySpecifierByIndex.m in Sources */,
 				F55F823D1C6DD07500A945C8 /* DispatchQueueLogFormatter.m in Sources */,
 				899696C01CB2F22000BB42E2 /* EnterTextIn.m in Sources */,
 			);
@@ -1936,10 +1936,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89331D231CC10559003C2E59 /* QuerySelectorId.m in Sources */,
+				89331D231CC10559003C2E59 /* QuerySpecifierById.m in Sources */,
 				899696FC1CB5BA4600BB42E2 /* CoordinateQuery.m in Sources */,
 				F5B0A1AB1CAD4E2700E056CE /* DoubleTap.m in Sources */,
-				F5B0A1B41CAD4E2700E056CE /* QuerySelectorProperty.m in Sources */,
+				F5B0A1B41CAD4E2700E056CE /* QuerySpecifierByProperty.m in Sources */,
 				899696EC1CB5857C00BB42E2 /* JSONKeyValidator.m in Sources */,
 				F5B0A1DE1CAD4E9B00E056CE /* DispatchQueueLogFormatter.m in Sources */,
 				899696D51CB44D9B00BB42E2 /* GestureConfiguration.m in Sources */,
@@ -1954,7 +1954,7 @@
 				F5B0A1D71CAD4E8A00E056CE /* WebSocket.m in Sources */,
 				89331D251CC1060A003C2E59 /* CoordinateQueryConfigurationTests.m in Sources */,
 				F5B0A1BF1CAD4E4600E056CE /* HealthRoutes.m in Sources */,
-				F5B0A1AF1CAD4E2700E056CE /* QuerySelectorFactory.m in Sources */,
+				F5B0A1AF1CAD4E2700E056CE /* QuerySpecifierFactory.m in Sources */,
 				F5B0A1D61CAD4E8A00E056CE /* HTTPRedirectResponse.m in Sources */,
 				89331D391CC56BE5003C2E59 /* Gestures+OptionsTests.m in Sources */,
 				F5B0A11D1CAD3D8C00E056CE /* CBXTestToolsStandup.m in Sources */,
@@ -1966,7 +1966,7 @@
 				F5B0A1CD1CAD4E7500E056CE /* HTTPServer.m in Sources */,
 				F5B0A1CC1CAD4E7500E056CE /* HTTPMessage.m in Sources */,
 				F5B0A1C21CAD4E4600E056CE /* SessionRoutes.m in Sources */,
-				F5B0A1B11CAD4E2700E056CE /* QuerySelectorText.m in Sources */,
+				F5B0A1B11CAD4E2700E056CE /* QuerySpecifierByText.m in Sources */,
 				F5B0A1DC1CAD4E9500E056CE /* DDTTYLogger.m in Sources */,
 				F5B0A1A31CAD4DE800E056CE /* FBElement.m in Sources */,
 				F5B0A1A71CAD4E2700E056CE /* GestureFactory.m in Sources */,
@@ -1983,7 +1983,7 @@
 				F5B0A1B71CAD4E3300E056CE /* Application.m in Sources */,
 				F5B0A1C71CAD4E6B00E056CE /* DDData.m in Sources */,
 				F5B0A1C01CAD4E4600E056CE /* MetaRoutes.m in Sources */,
-				F5B0A1B51CAD4E2700E056CE /* QuerySelectorPropertyLike.m in Sources */,
+				F5B0A1B51CAD4E2700E056CE /* QuerySpecifierByPropertyLike.m in Sources */,
 				F5B0A1BD1CAD4E4600E056CE /* CBXRoute.m in Sources */,
 				899696C11CB2F22000BB42E2 /* EnterTextIn.m in Sources */,
 				F5B0A1DD1CAD4E9B00E056CE /* ContextFilterLogFormatter.m in Sources */,
@@ -1997,7 +1997,7 @@
 				89F6BF8D1CBC4BDD0088269C /* Rotate.m in Sources */,
 				F5B0A1AC1CAD4E2700E056CE /* Drag.m in Sources */,
 				F5B0A1AD1CAD4E2700E056CE /* Query.m in Sources */,
-				F5B0A1B31CAD4E2700E056CE /* QuerySelectorIndex.m in Sources */,
+				F5B0A1B31CAD4E2700E056CE /* QuerySpecifierByIndex.m in Sources */,
 				F5B0A1A61CAD4DFA00E056CE /* CBXCUITestServer.m in Sources */,
 				F5B0A1E21CAD4EA700E056CE /* RouteResponse.m in Sources */,
 				F5B0A1BE1CAD4E4600E056CE /* GestureRoutes.m in Sources */,
@@ -2006,7 +2006,7 @@
 				899696F21CB5880F00BB42E2 /* AutomationAction.m in Sources */,
 				F5B0A1CB1CAD4E7500E056CE /* HTTPConnection.m in Sources */,
 				F5B0A1BB1CAD4E3A00E056CE /* ShutdownServerException.m in Sources */,
-				899697011CB5C93400BB42E2 /* QuerySelectorCoordinate.m in Sources */,
+				899697011CB5C93400BB42E2 /* QuerySpecifierByCoordinate.m in Sources */,
 				F5B0A1E01CAD4EA700E056CE /* Route.m in Sources */,
 				F5B0A1E11CAD4EA700E056CE /* RouteRequest.m in Sources */,
 				F5B0A1C91CAD4E6B00E056CE /* DDRange.m in Sources */,
@@ -2017,12 +2017,12 @@
 				F5B0A1D41CAD4E8A00E056CE /* HTTPErrorResponse.m in Sources */,
 				F5B0A1A51CAD4DE800E056CE /* UIDevice+Wifi_IP.m in Sources */,
 				89331D221CC1001E003C2E59 /* QueryConfigurationTests.m in Sources */,
-				F5B0A1AE1CAD4E2700E056CE /* QuerySelector.m in Sources */,
+				F5B0A1AE1CAD4E2700E056CE /* QuerySpecifier.m in Sources */,
 				899696DB1CB45FFC00BB42E2 /* ActionConfiguration.m in Sources */,
 				F5B0A1C11CAD4E4600E056CE /* QueryRoutes.m in Sources */,
 				89F6BF921CBEB5AD0088269C /* GeometryUtils.m in Sources */,
 				F55B31C71CBE6EEF00DFB13C /* TwoFingerTap.m in Sources */,
-				F5B0A1B21CAD4E2700E056CE /* QuerySelectorTextLike.m in Sources */,
+				F5B0A1B21CAD4E2700E056CE /* QuerySpecifierByTextLike.m in Sources */,
 				F5B0A1C61CAD4E6400E056CE /* GCDAsyncSocket.m in Sources */,
 				F5B0A1CE1CAD4E7F00E056CE /* MultipartFormDataParser.m in Sources */,
 				F5B0A1C81CAD4E6B00E056CE /* DDNumber.m in Sources */,

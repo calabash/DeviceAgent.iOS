@@ -1,6 +1,6 @@
 
 #import "CoordinateQueryConfiguration.h"
-#import "QuerySelectorFactory.h"
+#import "QuerySpecifierFactory.h"
 #import "CoordinateQuery.h"
 #import "CBXException.h"
 #import "JSONUtils.h"
@@ -10,7 +10,7 @@
 
 + (JSONKeyValidator *)validator {
     return [JSONKeyValidator withRequiredKeys:@[]
-                                 optionalKeys:[QuerySelectorFactory supportedSelectorNames]];
+                                 optionalKeys:[QuerySpecifierFactory supportedSpecifierNames]];
 }
 
 - (id)init {
@@ -39,8 +39,8 @@
         Building the XCUIElementQuery
      */
     XCUIElementQuery *query = nil;
-    for (QuerySelector *querySelector in self.queryConfiguration.selectors) {
-        query = [querySelector applyToQuery:query];
+    for (QuerySpecifier *specifier in self.queryConfiguration.selectors) {
+        query = [specifier applyToQuery:query];
     }
     
     //TODO: if there's a child query, recurse
@@ -48,7 +48,6 @@
     //if (childQuery) {
     //    return [childQuery execute];
     //} else {
-    
     return [query allElementsBoundByIndex];
     //}
 }

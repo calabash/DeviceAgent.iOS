@@ -10,10 +10,8 @@ A special case of Query where coordinates are explicitly specified.
  a query**.
  */
 @interface CoordinateQuery : Query
-/** If a single `coordinate` is specified in the QueryConfiguration, 
- it will be accesible through this method */
+/** Alias for CoordinateQueryConfiguration.coordinate */
 - (Coordinate *)coordinate;
-/** If a multiple `coordinates` are specified in the QueryConfiguration, 
- they will be accesible through this method */
+/** Alias for CoordinateQueryConfiguration.coordinates */
 - (NSArray<Coordinate *> *)coordinates;
 @end

@@ -1,7 +1,7 @@
 
-#import "QuerySelectorId.h"
+#import "QuerySpecifierById.h"
 
-@implementation QuerySelectorId
+@implementation QuerySpecifierById
 
 + (NSString *)name { return @"id"; }
 

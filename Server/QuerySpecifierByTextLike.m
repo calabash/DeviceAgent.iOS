@@ -1,15 +1,15 @@
 
-#import "QuerySelectorTextLike.h"
+#import "QuerySpecifierByTextLike.h"
 
-@implementation QuerySelectorTextLike
+@implementation QuerySpecifierByTextLike
 
 + (NSString *)name { return @"text_like"; }
 
 - (XCUIElementQuery *)applyInternal:(XCUIElementQuery *)query {
     NSMutableString *predString = [NSMutableString string];
-    for (NSString *prop in [QuerySelectorText textProperties]) {
+    for (NSString *prop in [QuerySpecifierByText textProperties]) {
         [predString appendFormat:@"%@ LIKE[cd] '*%@*'", prop, self.value];
-        if (prop != [[QuerySelectorText textProperties] lastObject]) {
+        if (prop != [[QuerySpecifierByText textProperties] lastObject]) {
             [predString appendString:@" OR "];
         }
     }

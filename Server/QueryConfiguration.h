@@ -1,6 +1,6 @@
 
 #import "ActionConfiguration.h"
-#import "QuerySelector.h"
+#import "QuerySpecifier.h"
 
 /**
  A wrapper for the JSON passed to a query.
@@ -23,7 +23,7 @@
  Array of QuerySelectors used for resolving to a specific element(s).
  These are generated from the initial json passed in during instatiation.
  */
-@property (nonatomic, strong) NSArray <QuerySelector *> *selectors;
+@property (nonatomic, strong) NSArray <QuerySpecifier *> *selectors;
 
 /**
  A convenience getter for checking if a QueryConfiguration is actually a CoordinateQueryConfiguration

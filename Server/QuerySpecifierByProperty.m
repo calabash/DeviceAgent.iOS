@@ -1,7 +1,7 @@
 
-#import "QuerySelectorProperty.h"
+#import "QuerySpecifierByProperty.h"
 
-@implementation QuerySelectorProperty
+@implementation QuerySpecifierByProperty
 + (NSDictionary <NSString *, id> *)parseValue:(id)value {
     NSMutableDictionary *ret = [NSMutableDictionary dictionary];
     if ([value isKindOfClass:[NSString class]]) {
@@ -25,7 +25,7 @@
 
 - (XCUIElementQuery *)applyInternal:(XCUIElementQuery *)query {
     NSMutableString *predString = [NSMutableString string];
-    NSDictionary *val = [QuerySelectorProperty parseValue:self.value];
+    NSDictionary *val = [QuerySpecifierByProperty parseValue:self.value];
     
     [predString appendFormat:@"%@ == '%@'", val[@"key"], val[@"value"]];
     

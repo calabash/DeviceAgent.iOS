@@ -1,12 +1,12 @@
 
-#import "QuerySelectorPropertyLike.h"
+#import "QuerySpecifierByPropertyLike.h"
 
-@implementation QuerySelectorPropertyLike
+@implementation QuerySpecifierByPropertyLike
 + (NSString *)name { return @"property_like"; }
 
 - (XCUIElementQuery *)applyInternal:(XCUIElementQuery *)query {
     NSMutableString *predString = [NSMutableString string];
-    NSDictionary *val = [QuerySelectorProperty parseValue:self.value];
+    NSDictionary *val = [QuerySpecifierByProperty parseValue:self.value];
     
     [predString appendFormat:@"%@ LIKE[cd] '*%@*'", val[@"key"], val[@"value"]];
     

@@ -2,7 +2,7 @@
 #import <Foundation/Foundation.h>
 #import "QueryConfiguration.h"
 #import "AutomationAction.h"
-#import "QuerySelector.h"
+#import "QuerySpecifier.h"
 #import "CBXProtocols.h"
 #import "CBXConstants.h"
 #import "XCUIElement.h"

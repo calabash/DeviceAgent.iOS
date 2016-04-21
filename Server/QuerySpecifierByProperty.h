@@ -1,7 +1,7 @@
 
-#import "QuerySelector.h"
+#import "QuerySpecifier.h"
 #import "JSONUtils.h"
 
-@interface QuerySelectorProperty : QuerySelector<QuerySelector>
+@interface QuerySpecifierByProperty : QuerySpecifier<QuerySpecifier>
 + (NSDictionary <NSString *, id> *)parseValue:(id)value; // @{ @"key" : string, @"value" : id }
 @end
