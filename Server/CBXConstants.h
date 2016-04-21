@@ -25,7 +25,7 @@ static NSString *const CBX_GESTURE_KEY = @"gesture";
 static NSString *const CBX_OPTIONS_KEY = @"options";
 static NSString *const CBX_SPECIFIERS_KEY = @"specifiers";
 static NSString *const CBX_QUERY_KEY = @"query";
-static NSString *const CBX_AMOUNT_KEY = @"amount";
+static NSString *const CBX_PINCH_AMOUNT_KEY = @"amount";
 static NSString *const CBX_DEGREES_KEY = @"degrees";
 static NSString *const CBX_PINCH_DIRECTION_KEY = @"pinch_direction";
 static NSString *const CBX_ROTATION_DIRECTION_KEY = @"rotation_direction";
@@ -73,7 +73,7 @@ static NSString *const CBX_LEFT_KEY = @"left";
 static NSString *const CBX_RIGHT_KEY = @"right";
 
 static NSString *const CBX_DEFAULT_PINCH_DIRECTION = @"in";
-static NSString *const CBX_DEFAULT_ROTATE_DIRECTION = @"clockwise";
+static NSString *const CBX_DEFAULT_ROTATION_DIRECTION = @"clockwise";
 
 static NSString *const CBX_EMPTY_STRING = @"";
 

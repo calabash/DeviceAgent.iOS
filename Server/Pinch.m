@@ -7,7 +7,7 @@
 + (NSArray <NSString *> *)optionalKeys {
     return @[
              CBX_DURATION_KEY,
-             CBX_AMOUNT_KEY,
+             CBX_PINCH_AMOUNT_KEY,
              CBX_PINCH_DIRECTION_KEY
              ];
 }
@@ -18,7 +18,7 @@
     
     CGPoint center = coordinates[0].cgpoint;
     float duration = [self duration];
-    float amount = [self amount];
+    float amount = [self pinchAmount];
     NSString *direction = [self pinchDirection];
     
     CGPoint p1 = center,
@@ -53,7 +53,7 @@
     
     CGPoint center = coordinates[0].cgpoint;
     float duration = [self duration];
-    float amount = [self amount];
+    float amount = [self pinchAmount];
     NSString *direction = [self pinchDirection];
     
     CGPoint p1 = center,
