@@ -17,15 +17,6 @@
                                  optionalKeys:[self optionalKeys]];
 }
 
-+ (NSArray <NSString *> *)defaultOptionalSpecifiers {
-    return @[CBX_IDENTIFIER_KEY,
-             CBX_TEXT_KEY,
-             CBX_TEXT_LIKE_KEY,
-             CBX_PROPERTY_KEY,
-             CBX_PROPERTY_LIKE_KEY,
-             CBX_INDEX_KEY];
-}
-
 + (Gesture *)executeWithGestureConfiguration:(GestureConfiguration *)gestureConfig
                                          query:(Query *)query
                                     completion:(CompletionBlock)completion {
