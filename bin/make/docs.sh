@@ -1,4 +1,16 @@
 
+function info {
+  echo "$(tput setaf 2)INFO: $1$(tput sgr0)"
+}
+
+function warn {
+  echo "$(tput setaf 3)WARN: $1$(tput sgr0)"
+}
+
+function error {
+  echo "$(tput setaf 1)ERROR: $1$(tput sgr0)"
+}
+
 DOCS_DIR="./documentation"
 
 appledoc \
@@ -14,8 +26,17 @@ appledoc \
 --ignore "Server/NSXPCConnection.h" \
 ./Server
 
-if [ "$?" = 0 ]; then 
-  echo "Docs published to ${DOCS_DIR}"
+EC=$?
+
+if [ "$EC" = 0 ]; then 
+  info "Docs published to ${DOCS_DIR}"
+elif [ "$EC" = 1 ]; then #I am hoping that other failures will have different exit codes...
+  echo ""
+  info "Docs published to ${DOCS_DIR}"
+  echo ""
+  warn "Some headers are missing documentation."
+  warn "Please be diligent in documenting new headers!"
+  warn "See http://www.cocoanetics.com/2011/11/amazing-apple-like-documentation/"
 else
-  echo "Failed to create documentation"
+  error "Failed to create documentation"
 fi

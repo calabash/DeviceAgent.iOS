@@ -2,14 +2,14 @@
 #import "QuerySpecifier.h"
 
 /**
-    Specify elements by `id`. Seems to correspond to the original elements'
+ Specify elements by `id`. Seems to correspond to the original UIViews'
     `accessibilityIdentifier`. 
  
-    @name Usage
+
+## Usage:
  
-    ```
     { "id" : String }
-    ```
+ 
  */
 @interface QuerySpecifierById : QuerySpecifier<QuerySpecifier>
 
