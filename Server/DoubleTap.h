@@ -1,9 +1,22 @@
 
 #import "Gesture+Options.h"
 
-/*  
-    Double tap a coordinate.  Use `duration` to set the hold time. Note that any duration > 0
-    may result in UIGestureRecognizers not detecting the event as a proper double tap.
+/**
+ Double tap an element. 
+ 
+ **Warning**
+ `duration` must be less than 0.5, else the gesture will fail 
+ (durations >= 0.5 would result in two 'long press' gestures).
+ 
+ ## Name
+    @"double_tap"
+ 
+ ## Required
+ _none_
+ 
+ ## Optional
+ -  CBX_DURATION_KEY
+ 
  */
 @interface DoubleTap : Gesture<Gesture>
 @end

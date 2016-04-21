@@ -29,7 +29,7 @@
     p2.x += amount;
     
     for (NSValue *v in @[ [NSValue valueWithCGPoint:p1], [NSValue valueWithCGPoint:p2]]) {
-        if ([direction isEqualToString:CBX_PINCH_OUT]) {
+        if ([direction isEqualToString:CBX_PINCH_IN]) { //Zoom in
             XCPointerEventPath *path = [[XCPointerEventPath alloc] initForTouchAtPoint:center
                                                                                 offset:0];
             
@@ -64,7 +64,7 @@
     p2.x += amount;
     
     for (NSValue *v in @[ [NSValue valueWithCGPoint:p1], [NSValue valueWithCGPoint:p2]]) {
-        if ([direction isEqualToString:CBX_PINCH_OUT]) {
+        if ([direction isEqualToString:CBX_PINCH_IN]) { //Zoom in
             XCTouchPath *path = [[XCTouchPath alloc] initWithTouchDown:center
                                                            orientation:0
                                                                 offset:0];

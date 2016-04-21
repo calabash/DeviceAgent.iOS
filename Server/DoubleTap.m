@@ -16,9 +16,12 @@
                     CBX_COORDINATE_KEY];
         }
     }
-    //TODO: should this throw an exception?
+    
     if ([self duration] >= 0.5) {
-        NSLog(@"WARNING: Having a tap duration greater than 0.5 will trigger a LongPress, not a tap.");
+        @throw [InvalidArgumentException withFormat:
+                @"Duration %@ is too long: Must be less than %@",
+                @([self duration]),
+                @(CBX_MIN_LONG_PRESS_DURATION)];
     }
 }
 
