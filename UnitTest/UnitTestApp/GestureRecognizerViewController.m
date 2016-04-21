@@ -108,4 +108,18 @@ static NSDictionary *colors;
     [self.view bringSubviewToFront:_gestureLabel];
 }
 
+#pragma mark - Orientation / Rotation
+
+- (UIInterfaceOrientationMask) supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskAll;
+}
+
+- (BOOL) shouldAutorotate {
+    return YES;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    return UIInterfaceOrientationPortrait;
+}
+
 @end
