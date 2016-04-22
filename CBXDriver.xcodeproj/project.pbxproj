@@ -197,7 +197,6 @@
 		F55F84111C6E437A00A945C8 /* UIDevice+Wifi_IP.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83DD1C6DDF1300A945C8 /* UIDevice+Wifi_IP.m */; };
 		F55F84121C6E438200A945C8 /* CBXException.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C41C6DDF1300A945C8 /* CBXException.m */; };
 		F55F84131C6E438200A945C8 /* ElementNotFoundException.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C21C6DDF1300A945C8 /* ElementNotFoundException.m */; };
-		F55F84141C6E438200A945C8 /* ShutdownServerException.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C61C6DDF1300A945C8 /* ShutdownServerException.m */; };
 		F55F84151C6E438800A945C8 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BD1C6DDF1300A945C8 /* Application.m */; };
 		F55F84171C6E438800A945C8 /* Application+Queries.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BB1C6DDF1300A945C8 /* Application+Queries.m */; };
 		F55F84181C6E438E00A945C8 /* CBXCUITestServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BF1C6DDF1300A945C8 /* CBXCUITestServer.m */; };
@@ -237,7 +236,6 @@
 		F5B0A1B81CAD4E3300E056CE /* Application+Queries.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BB1C6DDF1300A945C8 /* Application+Queries.m */; };
 		F5B0A1B91CAD4E3A00E056CE /* CBXException.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C41C6DDF1300A945C8 /* CBXException.m */; };
 		F5B0A1BA1CAD4E3A00E056CE /* ElementNotFoundException.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C21C6DDF1300A945C8 /* ElementNotFoundException.m */; };
-		F5B0A1BB1CAD4E3A00E056CE /* ShutdownServerException.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C61C6DDF1300A945C8 /* ShutdownServerException.m */; };
 		F5B0A1BC1CAD4E3A00E056CE /* InvalidArgumentException.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F3661C9C5BC20093A018 /* InvalidArgumentException.m */; };
 		F5B0A1BD1CAD4E4600E056CE /* CBXRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C91C6DDF1300A945C8 /* CBXRoute.m */; };
 		F5B0A1BE1CAD4E4600E056CE /* GestureRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83CB1C6DDF1300A945C8 /* GestureRoutes.m */; };
@@ -568,8 +566,6 @@
 		F55F83C21C6DDF1300A945C8 /* ElementNotFoundException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElementNotFoundException.m; sourceTree = "<group>"; };
 		F55F83C31C6DDF1300A945C8 /* CBXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXException.h; sourceTree = "<group>"; };
 		F55F83C41C6DDF1300A945C8 /* CBXException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXException.m; sourceTree = "<group>"; };
-		F55F83C51C6DDF1300A945C8 /* ShutdownServerException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShutdownServerException.h; sourceTree = "<group>"; };
-		F55F83C61C6DDF1300A945C8 /* ShutdownServerException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShutdownServerException.m; sourceTree = "<group>"; };
 		F55F83C81C6DDF1300A945C8 /* CBXRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXRoute.h; sourceTree = "<group>"; };
 		F55F83C91C6DDF1300A945C8 /* CBXRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXRoute.m; sourceTree = "<group>"; };
 		F55F83CA1C6DDF1300A945C8 /* GestureRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureRoutes.h; sourceTree = "<group>"; };
@@ -1233,8 +1229,6 @@
 				F55F83C41C6DDF1300A945C8 /* CBXException.m */,
 				F55F83C11C6DDF1300A945C8 /* ElementNotFoundException.h */,
 				F55F83C21C6DDF1300A945C8 /* ElementNotFoundException.m */,
-				F55F83C51C6DDF1300A945C8 /* ShutdownServerException.h */,
-				F55F83C61C6DDF1300A945C8 /* ShutdownServerException.m */,
 				89C5F3651C9C5BC20093A018 /* InvalidArgumentException.h */,
 				89C5F3661C9C5BC20093A018 /* InvalidArgumentException.m */,
 			);
@@ -1841,7 +1835,6 @@
 				F55F840F1C6E437100A945C8 /* UndefinedRoutes.m in Sources */,
 				89D538041CA20DB800F62E09 /* QuerySpecifierByText.m in Sources */,
 				899696BB1CADF84B00BB42E2 /* EnterText.m in Sources */,
-				F55F84141C6E438200A945C8 /* ShutdownServerException.m in Sources */,
 				F55F824F1C6DD07500A945C8 /* HTTPResponseProxy.m in Sources */,
 				F55F82311C6DD07500A945C8 /* DDAbstractDatabaseLogger.m in Sources */,
 				F55F840E1C6E437100A945C8 /* SessionRoutes.m in Sources */,
@@ -2005,7 +1998,6 @@
 				899696C61CB3360900BB42E2 /* Pinch.m in Sources */,
 				899696F21CB5880F00BB42E2 /* AutomationAction.m in Sources */,
 				F5B0A1CB1CAD4E7500E056CE /* HTTPConnection.m in Sources */,
-				F5B0A1BB1CAD4E3A00E056CE /* ShutdownServerException.m in Sources */,
 				899697011CB5C93400BB42E2 /* QuerySpecifierByCoordinate.m in Sources */,
 				F5B0A1E01CAD4EA700E056CE /* Route.m in Sources */,
 				F5B0A1E11CAD4EA700E056CE /* RouteRequest.m in Sources */,

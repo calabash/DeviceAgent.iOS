@@ -103,8 +103,11 @@ An array of optional keys for the gesture (e.g., `degrees` for `rotate`). These
 - (void)execute:(CompletionBlock)completion;
 
 /**
- A convenience method that _can_ be called by eventWithCoordinates: or gestureWithCoordinates: as a shared
- setup routine.
+ A convenience method that _can_ be called by eventWithCoordinates: or 
+ gestureWithCoordinates: as a shared setup routine.
+ 
+ @param coords  Should correspond to the `coordinates` param of eventWithCoordinates: 
+ or gestureWithCoordinates:
  */
 - (id)setup:(NSArray <Coordinate *> *)coords;
 
