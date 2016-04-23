@@ -3,8 +3,8 @@
 //  xcuitest-server
 //
 
-#import "ShutdownServerException.h"
 #import "CBXConstants.h"
+#import "CBXException.h"
 #import "CBXRoute.h"
 
 @implementation CBXRoute
@@ -18,14 +18,8 @@
             dict[CBX_ERROR_KEY] = [e reason];
             
             if ([e isKindOfClass:[CBXException class]]) {
-                if ([e isKindOfClass:[ShutdownServerException class]]) {
-                    //User wants to kill the server.
-                    //Throw the exception back up to the calling XCTestCase
-                    @throw e;
-                } else {
-                    [response setStatusCode:((CBXException *)e).HTTPErrorStatusCode];
-                    [response respondWithJSON:dict];
-                }
+                [response setStatusCode:((CBXException *)e).HTTPErrorStatusCode];
+                [response respondWithJSON:dict];
             } else {
                 NSLog(@"%@", e.callStackSymbols);
                 [response setStatusCode:500];

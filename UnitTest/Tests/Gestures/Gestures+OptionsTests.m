@@ -40,10 +40,10 @@
                                                     completion:^(NSError *e){}];
     
     
-    XCTAssertEqualWithAccuracy([g amount],
-                               [config has:CBX_AMOUNT_KEY] ?
-                               [config[CBX_AMOUNT_KEY] floatValue] :
-                               [_empty amount],
+    XCTAssertEqualWithAccuracy([g pinchAmount],
+                               [config has:CBX_PINCH_AMOUNT_KEY] ?
+                               [config[CBX_PINCH_AMOUNT_KEY] floatValue] :
+                               [_empty pinchAmount],
                                EPSILON);
     
     XCTAssertEqualWithAccuracy([g degrees],

@@ -25,7 +25,7 @@ static NSString *const CBX_GESTURE_KEY = @"gesture";
 static NSString *const CBX_OPTIONS_KEY = @"options";
 static NSString *const CBX_SPECIFIERS_KEY = @"specifiers";
 static NSString *const CBX_QUERY_KEY = @"query";
-static NSString *const CBX_AMOUNT_KEY = @"amount";
+static NSString *const CBX_PINCH_AMOUNT_KEY = @"amount";
 static NSString *const CBX_DEGREES_KEY = @"degrees";
 static NSString *const CBX_PINCH_DIRECTION_KEY = @"pinch_direction";
 static NSString *const CBX_ROTATION_DIRECTION_KEY = @"rotation_direction";
@@ -72,8 +72,8 @@ static NSString *const CBX_DOWN_KEY = @"down";
 static NSString *const CBX_LEFT_KEY = @"left";
 static NSString *const CBX_RIGHT_KEY = @"right";
 
-static NSString *const CBX_DEFAULT_PINCH_DIRECTION = @"in";
-static NSString *const CBX_DEFAULT_ROTATE_DIRECTION = @"clockwise";
+static NSString *const CBX_DEFAULT_PINCH_DIRECTION = @"out";
+static NSString *const CBX_DEFAULT_ROTATION_DIRECTION = @"clockwise";
 
 static NSString *const CBX_EMPTY_STRING = @"";
 
@@ -82,10 +82,11 @@ static NSUInteger const HTTP_STATUS_CODE_INVALID_REQUEST = 400;
 static NSUInteger const HTTP_STATUS_CODE_SERVER_ERROR = 500;
 
 static int const CBX_MIN_NUM_FINGERS = 1;
-static int const CBX_MAX_NUM_FINGERS = 5; //TODO should this be 4?
+static int const CBX_MAX_NUM_FINGERS = 5;
 
 static float const CBX_MIN_ROTATION_START = 0;      //degrees
 static float const CBX_MAX_ROTATION_START = 360;    //degrees
+static float const CBX_MIN_LONG_PRESS_DURATION = 0.5; //determined through trial and error w/UILongPressGestureRecognizer
 static float const CBX_RUNLOOP_INTERVAL = 0.1;
 static float const CBX_DEFAULT_DURATION = 0.1;
 static float const CBX_DOUBLE_TAP_PAUSE_DURATION = 0.1;

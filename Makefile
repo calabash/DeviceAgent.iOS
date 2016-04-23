@@ -49,3 +49,6 @@ app-unit:
 ipa-unit:
 	bin/make/ipa-unit.sh
 
+# Generate appledocs
+docs:
+	bin/make/docs.sh

@@ -1,7 +1,7 @@
 
 #import "CoordinateQueryConfiguration.h"
 #import "InvalidArgumentException.h"
-#import "QuerySelectorFactory.h"
+#import "QuerySpecifierFactory.h"
 #import "QueryConfiguration.h"
 #import "JSONUtils.h"
 
@@ -13,7 +13,7 @@
 - (id)init {
     if (self = [super init]) {
         self.selectors = [NSMutableArray array];
-        self.isCoordinateQuery = NO;
+        _isCoordinateQuery = NO;
     }
     return self;
 }
@@ -37,11 +37,11 @@
          */
         if ([key isEqualToString:CBX_COORDINATE_KEY] ||
             [key isEqualToString:CBX_COORDINATES_KEY]) {
-            self.isCoordinateQuery = YES;
+            _isCoordinateQuery = YES;
             break;
         }
-        QuerySelector *qs = [QuerySelectorFactory selectorWithKey:key
-                                                            value:self[key]];
+        QuerySpecifier *qs = [QuerySpecifierFactory specifierWithKey:key
+                                                               value:self[key]];
         if (qs) {
             [selectors addObject:qs];
         } else {
@@ -52,9 +52,9 @@
     /*
      Sort based on selector priority. E.g. index should come last
      */
-    [selectors sortUsingComparator:^NSComparisonResult(QuerySelector  *_Nonnull s1, QuerySelector *_Nonnull s2) {
-        QuerySelectorExecutionPriority p1 = [s1.class executionPriority];
-        QuerySelectorExecutionPriority p2 = [s2.class executionPriority];
+    [selectors sortUsingComparator:^NSComparisonResult(QuerySpecifier  *_Nonnull s1, QuerySpecifier *_Nonnull s2) {
+        QuerySpecifierExecutionPriority p1 = [s1.class executionPriority];
+        QuerySpecifierExecutionPriority p2 = [s2.class executionPriority];
         return [@(p1) compare:@(p2)];
     }];
     

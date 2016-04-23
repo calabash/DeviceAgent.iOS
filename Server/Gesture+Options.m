@@ -19,8 +19,8 @@
     return [self getFloat:CBX_DURATION_KEY default:CBX_DEFAULT_ROTATE_DURATION];
 }
 
-- (float)amount {
-    return [self getFloat:CBX_AMOUNT_KEY default:CBX_DEFAULT_PINCH_AMOUNT];
+- (float)pinchAmount {
+    return [self getFloat:CBX_PINCH_AMOUNT_KEY default:CBX_DEFAULT_PINCH_AMOUNT];
 }
 
 - (float)degrees {
@@ -40,7 +40,7 @@
 }
 
 - (NSString *)rotateDirection {
-    return [self getString:CBX_ROTATION_DIRECTION_KEY default:CBX_DEFAULT_ROTATE_DIRECTION];
+    return [self getString:CBX_ROTATION_DIRECTION_KEY default:CBX_DEFAULT_ROTATION_DIRECTION];
 }
 
 

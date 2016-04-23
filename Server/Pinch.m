@@ -7,7 +7,7 @@
 + (NSArray <NSString *> *)optionalKeys {
     return @[
              CBX_DURATION_KEY,
-             CBX_AMOUNT_KEY,
+             CBX_PINCH_AMOUNT_KEY,
              CBX_PINCH_DIRECTION_KEY
              ];
 }
@@ -18,7 +18,7 @@
     
     CGPoint center = coordinates[0].cgpoint;
     float duration = [self duration];
-    float amount = [self amount];
+    float amount = [self pinchAmount];
     NSString *direction = [self pinchDirection];
     
     CGPoint p1 = center,
@@ -29,7 +29,7 @@
     p2.x += amount;
     
     for (NSValue *v in @[ [NSValue valueWithCGPoint:p1], [NSValue valueWithCGPoint:p2]]) {
-        if ([direction isEqualToString:CBX_PINCH_OUT]) {
+        if ([direction isEqualToString:CBX_PINCH_IN]) { //Zoom in
             XCPointerEventPath *path = [[XCPointerEventPath alloc] initForTouchAtPoint:center
                                                                                 offset:0];
             
@@ -53,7 +53,7 @@
     
     CGPoint center = coordinates[0].cgpoint;
     float duration = [self duration];
-    float amount = [self amount];
+    float amount = [self pinchAmount];
     NSString *direction = [self pinchDirection];
     
     CGPoint p1 = center,
@@ -64,7 +64,7 @@
     p2.x += amount;
     
     for (NSValue *v in @[ [NSValue valueWithCGPoint:p1], [NSValue valueWithCGPoint:p2]]) {
-        if ([direction isEqualToString:CBX_PINCH_OUT]) {
+        if ([direction isEqualToString:CBX_PINCH_IN]) { //Zoom in
             XCTouchPath *path = [[XCTouchPath alloc] initWithTouchDown:center
                                                            orientation:0
                                                                 offset:0];

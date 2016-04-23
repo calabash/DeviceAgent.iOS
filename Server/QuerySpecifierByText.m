@@ -1,7 +1,7 @@
 
-#import "QuerySelectorText.h"
+#import "QuerySpecifierByText.h"
 
-@implementation QuerySelectorText
+@implementation QuerySpecifierByText
 static NSArray <NSString *> *textProperties;
 + (void)load {
     textProperties = @[@"wdLabel", @"wdTitle", @"wdValue", @"wdPlaceholderValue"];

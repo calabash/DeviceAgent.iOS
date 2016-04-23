@@ -2,18 +2,18 @@
 #import <XCTest/XCUIElementQuery.h>
 #import "XCUIApplication.h"
 #import "Application.h"
-#import "QuerySelector.h"
+#import "QuerySpecifier.h"
 
-@implementation QuerySelector
+@implementation QuerySpecifier
 
-+ (QuerySelectorExecutionPriority)executionPriority {
-    return kQuerySelectorExecutionPriorityAny;
++ (QuerySpecifierExecutionPriority)executionPriority {
+    return kQuerySpecifierExecutionPriorityAny;
 }
 
 + (NSString *)name { return nil; }
 
 + (instancetype)withValue:(id)value {
-    QuerySelector *qs = [self new];
+    QuerySpecifier *qs = [self new];
     qs.value = value;
     return qs;
 }
