@@ -2,6 +2,7 @@
 #import "QuerySpecifier.h"
 
 /**
+ @name Overview
  Stub specifiers for coordinate queries. 
  
  ## NOTE
@@ -12,8 +13,10 @@
  ** Instantiation will throw a CBXException. **
  */
 
+/** Coordinate specifier stub */
 @interface QuerySpecifierByCoordinate : QuerySpecifier<QuerySpecifier>
 @end
 
+/** Coordinates specifier stub */
 @interface QuerySpecifierByCoordinates : QuerySpecifier<QuerySpecifier>
 @end
