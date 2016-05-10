@@ -63,7 +63,7 @@
 }
 
 - (void)respondWithJSON:(id)json {
-    headers[@"Content-Type"] = @"application/json";
+    headers[@"Content-Type"] = @"application/json; charset=utf-8";
     NSError *e;
     NSData *data = [NSJSONSerialization dataWithJSONObject:json options:0 error:&e];
     if (e) {
