@@ -3,11 +3,11 @@
 #import "JSONUtils.h"
 
 @implementation CoordinateQueryConfiguration
-@synthesize isCoordinateQuery;
+@synthesize isCoordinateQuery = _isCoordinateQuery;
 
 - (id)init {
     if (self = [super init]) {
-        isCoordinateQuery = YES;
+        _isCoordinateQuery = YES;
     }
     return self;
 }
