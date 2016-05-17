@@ -49,6 +49,8 @@ app-unit:
 ipa-unit:
 	bin/make/ipa-unit.sh
 
-# Generate appledocs
+# Generate appledocs.
+#
+# Requires appledoc, which can be installed with homebrew.
 docs:
 	bin/make/docs.sh
