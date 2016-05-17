@@ -15,21 +15,66 @@
 
 @implementation TaoController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
 #pragma mark - Actions
 
 - (void)handleDoubleTap:(UIGestureRecognizer *)recognizer {
-  UIGestureRecognizerState state = [recognizer state];
-  if (UIGestureRecognizerStateEnded == state) {
-    self.touchActionLabel.text = @"double tap";
-  }
+    UIGestureRecognizerState state = [recognizer state];
+    if (UIGestureRecognizerStateEnded == state) {
+        self.touchActionLabel.text = @"double tap";
+    }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+#pragma mark - Recognizers
+
+- (UIGestureRecognizer *) doubleTapRecognizer {
+    SEL selector = @selector(handleDoubleTap:);
+    UITapGestureRecognizer *recognizer;
+    recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                         action:selector];
+    recognizer.numberOfTapsRequired = 2;
+    recognizer.numberOfTouchesRequired = 1;
+    return recognizer;
+}
+
+#pragma mark - Orientation / Rotation
+
+- (UIInterfaceOrientationMask) supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskAll;
+}
+
+- (BOOL) shouldAutorotate {
+    return YES;
+}
+
+#pragma mark - View Lifecycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self.doubleTap addGestureRecognizer:[self doubleTapRecognizer]];
+}
+
+- (void) viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+}
+
+- (void) viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
 }
 
 @end
