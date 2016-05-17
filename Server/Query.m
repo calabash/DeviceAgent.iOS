@@ -13,11 +13,8 @@
                                  optionalKeys:[QuerySpecifierFactory supportedSpecifierNames]];
 }
 
-- (id)init {
-    if (self = [super init]) {
-        self.isCoordinateQuery = NO;
-    }
-    return self;
+- (BOOL)isCoordinateQuery {
+    return NO;
 }
 
 - (CoordinateQuery *)asCoordinateQuery {
@@ -27,7 +24,6 @@
 + (instancetype)withQueryConfiguration:(QueryConfiguration *)queryConfig {
     Query *e = [self new];
     e.queryConfiguration = queryConfig;
-    e.isCoordinateQuery = queryConfig.isCoordinateQuery;
     return e;
 }
 

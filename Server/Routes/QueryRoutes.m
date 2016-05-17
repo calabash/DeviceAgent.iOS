@@ -3,9 +3,11 @@
 //  xcuitest-server
 //
 
+#import "QueryConfigurationFactory.h"
 #import "Application+Queries.h"
-#import "QueryRoutes.h"
 #import "CBXConstants.h"
+#import "QueryFactory.h"
+#import "QueryRoutes.h"
 #import "JSONUtils.h"
 #import "Query.h"
 
@@ -17,9 +19,9 @@
              }],
              
              [CBXRoute post:@"/1.0/query" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
-                 QueryConfiguration *queryConfig = [QueryConfiguration withJSON:body
-                                                                      validator:[Query validator]];
-                 Query *query = [Query withQueryConfiguration:queryConfig];
+                 QueryConfiguration *queryConfig = [QueryConfigurationFactory configWithJSON:body
+                                                                                   validator:[Query validator]];
+                 Query *query = [QueryFactory queryWithQueryConfiguration:queryConfig];
                  
                  NSArray <XCUIElement *> *elements = [query execute];
                  

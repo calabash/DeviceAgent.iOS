@@ -1,6 +1,8 @@
 
-#import <XCTest/XCTest.h>
+#import "QueryConfigurationFactory.h"
 #import "Gesture+Options.h"
+#import <XCTest/XCTest.h>
+#import "QueryFactory.h"
 #import "EnterTextIn.h"
 #import "EnterText.h"
 #import "DoubleTap.h"
@@ -33,12 +35,14 @@
 
     GestureConfiguration *config = [GestureConfiguration withJSON:json[@"options"]
                                                         validator:[gestureClass validator]];
-    Query *query = [Query withQueryConfiguration:[QueryConfiguration withJSON:json[@"specifiers"]
-                                                                    validator:[Query validator]]];
+    
+    QueryConfiguration *queryConfig = [QueryConfigurationFactory configWithJSON:json[@"specifiers"]
+                                                                      validator:[Query validator]];
+    
+    Query *query = [QueryFactory queryWithQueryConfiguration:queryConfig];
     Gesture *g = [gestureClass executeWithGestureConfiguration:config
                                                          query:query
                                                     completion:^(NSError *e){}];
-    
     
     XCTAssertEqualWithAccuracy([g pinchAmount],
                                [config has:CBX_PINCH_AMOUNT_KEY] ?

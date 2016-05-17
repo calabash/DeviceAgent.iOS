@@ -25,6 +25,13 @@
 		89512BDC1C9EEC3C0027D61E /* Drag.m in Sources */ = {isa = PBXBuildFile; fileRef = 89512BDA1C9EEC3C0027D61E /* Drag.m */; };
 		89512BDF1CA095D20027D61E /* DeviceEventRoutes.h in Headers */ = {isa = PBXBuildFile; fileRef = 89512BDD1CA095D20027D61E /* DeviceEventRoutes.h */; };
 		89512BE01CA095D20027D61E /* DeviceEventRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 89512BDE1CA095D20027D61E /* DeviceEventRoutes.m */; };
+		8965867D1CEB961300E8329C /* QueryConfigurationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8965867B1CEB961000E8329C /* QueryConfigurationFactory.m */; };
+		8965867F1CEB998500E8329C /* QueryConfigurationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8965867B1CEB961000E8329C /* QueryConfigurationFactory.m */; };
+		896586821CEB9B9800E8329C /* QueryFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 896586801CEB9B9800E8329C /* QueryFactory.h */; };
+		896586831CEB9B9800E8329C /* QueryFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 896586811CEB9B9800E8329C /* QueryFactory.m */; };
+		896586841CEB9B9800E8329C /* QueryFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 896586811CEB9B9800E8329C /* QueryFactory.m */; };
+		896586891CEBA0A400E8329C /* QueryConfigurationFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 896586881CEBA0A400E8329C /* QueryConfigurationFactoryTests.m */; };
+		8965868E1CEBA19A00E8329C /* QueryFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8965868D1CEBA19A00E8329C /* QueryFactoryTests.m */; };
 		899696BA1CADF84B00BB42E2 /* EnterText.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696B81CADF84B00BB42E2 /* EnterText.h */; };
 		899696BB1CADF84B00BB42E2 /* EnterText.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696B91CADF84B00BB42E2 /* EnterText.m */; };
 		899696BC1CADF85B00BB42E2 /* EnterText.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696B91CADF84B00BB42E2 /* EnterText.m */; };
@@ -325,6 +332,12 @@
 		89512BDA1C9EEC3C0027D61E /* Drag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drag.m; sourceTree = "<group>"; };
 		89512BDD1CA095D20027D61E /* DeviceEventRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceEventRoutes.h; sourceTree = "<group>"; };
 		89512BDE1CA095D20027D61E /* DeviceEventRoutes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceEventRoutes.m; sourceTree = "<group>"; };
+		8965867A1CEB961000E8329C /* QueryConfigurationFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryConfigurationFactory.h; sourceTree = "<group>"; };
+		8965867B1CEB961000E8329C /* QueryConfigurationFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryConfigurationFactory.m; sourceTree = "<group>"; };
+		896586801CEB9B9800E8329C /* QueryFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryFactory.h; sourceTree = "<group>"; };
+		896586811CEB9B9800E8329C /* QueryFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryFactory.m; sourceTree = "<group>"; };
+		896586881CEBA0A400E8329C /* QueryConfigurationFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryConfigurationFactoryTests.m; sourceTree = "<group>"; };
+		8965868D1CEBA19A00E8329C /* QueryFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryFactoryTests.m; sourceTree = "<group>"; };
 		898743BC1C5847B30084FD93 /* CBXAppStub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBXAppStub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898743D51C5847B30084FD93 /* CBX.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CBX.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		899696B81CADF84B00BB42E2 /* EnterText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterText.h; sourceTree = "<group>"; };
@@ -731,8 +744,7 @@
 			isa = PBXGroup;
 			children = (
 				89331D1F1CC0F72B003C2E59 /* ActionConfigurationTests.m */,
-				89331D211CC1001E003C2E59 /* QueryConfigurationTests.m */,
-				89331D241CC1060A003C2E59 /* CoordinateQueryConfigurationTests.m */,
+				8965868A1CEBA17200E8329C /* QueryConfiguration */,
 			);
 			name = ActionConfiguration;
 			sourceTree = "<group>";
@@ -751,6 +763,62 @@
 				89331D381CC56BE5003C2E59 /* Gestures+OptionsTests.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		896586851CEB9B9C00E8329C /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				896586801CEB9B9800E8329C /* QueryFactory.h */,
+				896586811CEB9B9800E8329C /* QueryFactory.m */,
+			);
+			name = Factory;
+			sourceTree = "<group>";
+		};
+		896586861CEB9BA400E8329C /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				8965867A1CEB961000E8329C /* QueryConfigurationFactory.h */,
+				8965867B1CEB961000E8329C /* QueryConfigurationFactory.m */,
+			);
+			name = Factory;
+			sourceTree = "<group>";
+		};
+		896586871CEB9BA900E8329C /* QueryConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				899696C71CB356BF00BB42E2 /* QueryConfiguration.h */,
+				899696C81CB356BF00BB42E2 /* QueryConfiguration.m */,
+				899696E31CB46C0100BB42E2 /* CoordinateQueryConfiguration.h */,
+				899696E41CB46C0100BB42E2 /* CoordinateQueryConfiguration.m */,
+				896586861CEB9BA400E8329C /* Factory */,
+			);
+			name = QueryConfiguration;
+			sourceTree = "<group>";
+		};
+		8965868A1CEBA17200E8329C /* QueryConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				89331D211CC1001E003C2E59 /* QueryConfigurationTests.m */,
+				89331D241CC1060A003C2E59 /* CoordinateQueryConfigurationTests.m */,
+				8965868B1CEBA18500E8329C /* Factory */,
+			);
+			name = QueryConfiguration;
+			sourceTree = "<group>";
+		};
+		8965868B1CEBA18500E8329C /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				896586881CEBA0A400E8329C /* QueryConfigurationFactoryTests.m */,
+			);
+			name = Factory;
+			sourceTree = "<group>";
+		};
+		8965868C1CEBA18E00E8329C /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				8965868D1CEBA19A00E8329C /* QueryFactoryTests.m */,
+			);
+			name = Factory;
 			sourceTree = "<group>";
 		};
 		898743B31C5847B30084FD93 = {
@@ -789,10 +857,7 @@
 				899696D81CB45FFC00BB42E2 /* ActionConfiguration.m */,
 				899696D11CB44D9B00BB42E2 /* GestureConfiguration.h */,
 				899696D21CB44D9B00BB42E2 /* GestureConfiguration.m */,
-				899696C71CB356BF00BB42E2 /* QueryConfiguration.h */,
-				899696C81CB356BF00BB42E2 /* QueryConfiguration.m */,
-				899696E31CB46C0100BB42E2 /* CoordinateQueryConfiguration.h */,
-				899696E41CB46C0100BB42E2 /* CoordinateQueryConfiguration.m */,
+				896586871CEB9BA900E8329C /* QueryConfiguration */,
 			);
 			name = ActionConfiguration;
 			sourceTree = "<group>";
@@ -854,6 +919,7 @@
 				899696F81CB5BA4600BB42E2 /* CoordinateQuery.h */,
 				899696F91CB5BA4600BB42E2 /* CoordinateQuery.m */,
 				89D537F41CA1DD9A00F62E09 /* QuerySelectors */,
+				896586851CEB9B9C00E8329C /* Factory */,
 			);
 			name = Queries;
 			sourceTree = "<group>";
@@ -1495,6 +1561,7 @@
 		F5B0A1961CAD4C9200E056CE /* Queries */ = {
 			isa = PBXGroup;
 			children = (
+				8965868C1CEBA18E00E8329C /* Factory */,
 				F5B0A1971CAD4C9200E056CE /* QuerySelectors */,
 				89331D261CC10857003C2E59 /* QueryTests.m */,
 				89331D281CC1C279003C2E59 /* CoordinateQueryTests.m */,
@@ -1570,6 +1637,7 @@
 				F55F824E1C6DD07500A945C8 /* HTTPResponseProxy.h in Headers */,
 				F55F823A1C6DD07500A945C8 /* ContextFilterLogFormatter.h in Headers */,
 				899696C41CB3360900BB42E2 /* Pinch.h in Headers */,
+				896586821CEB9B9800E8329C /* QueryFactory.h in Headers */,
 				F55F81901C6DD07500A945C8 /* HTTPMessage.h in Headers */,
 				89512BDF1CA095D20027D61E /* DeviceEventRoutes.h in Headers */,
 				89512BDB1C9EEC3C0027D61E /* Drag.h in Headers */,
@@ -1851,6 +1919,7 @@
 				F55F82551C6DD07500A945C8 /* RouteResponse.m in Sources */,
 				89D538091CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.m in Sources */,
 				F55F81861C6DD07500A945C8 /* DDData.m in Sources */,
+				8965867D1CEB961300E8329C /* QueryConfigurationFactory.m in Sources */,
 				F55F840F1C6E437100A945C8 /* UndefinedRoutes.m in Sources */,
 				89D538041CA20DB800F62E09 /* QuerySpecifierByText.m in Sources */,
 				899696BB1CADF84B00BB42E2 /* EnterText.m in Sources */,
@@ -1923,6 +1992,7 @@
 				F55F81961C6DD07500A945C8 /* MultipartFormDataParser.m in Sources */,
 				F55B31C61CBE6EEA00DFB13C /* TwoFingerTap.m in Sources */,
 				F55F81A41C6DD07500A945C8 /* HTTPFileResponse.m in Sources */,
+				896586831CEB9B9800E8329C /* QueryFactory.m in Sources */,
 				F55F81941C6DD07500A945C8 /* HTTPServer.m in Sources */,
 				89D538161CA351F400F62E09 /* QuerySpecifierByIndex.m in Sources */,
 				F55F823D1C6DD07500A945C8 /* DispatchQueueLogFormatter.m in Sources */,
@@ -1969,6 +2039,7 @@
 				F5B0A1AF1CAD4E2700E056CE /* QuerySpecifierFactory.m in Sources */,
 				F5B0A1D61CAD4E8A00E056CE /* HTTPRedirectResponse.m in Sources */,
 				89331D391CC56BE5003C2E59 /* Gestures+OptionsTests.m in Sources */,
+				8965867F1CEB998500E8329C /* QueryConfigurationFactory.m in Sources */,
 				F5B0A11D1CAD3D8C00E056CE /* CBXTestToolsStandup.m in Sources */,
 				F5B0A1A41CAD4DE800E056CE /* XCUIElement+WebDriverAttributes.m in Sources */,
 				F5B0A1D51CAD4E8A00E056CE /* HTTPFileResponse.m in Sources */,
@@ -1978,11 +2049,13 @@
 				F5B0A1CD1CAD4E7500E056CE /* HTTPServer.m in Sources */,
 				F5B0A1CC1CAD4E7500E056CE /* HTTPMessage.m in Sources */,
 				F5B0A1C21CAD4E4600E056CE /* SessionRoutes.m in Sources */,
+				896586841CEB9B9800E8329C /* QueryFactory.m in Sources */,
 				F5B0A1B11CAD4E2700E056CE /* QuerySpecifierByText.m in Sources */,
 				F5B0A1DC1CAD4E9500E056CE /* DDTTYLogger.m in Sources */,
 				F5F49F401CC792A1003F33A6 /* RouteResponseTest.m in Sources */,
 				F5B0A1A31CAD4DE800E056CE /* FBElement.m in Sources */,
 				F5B0A1A71CAD4E2700E056CE /* GestureFactory.m in Sources */,
+				8965868E1CEBA19A00E8329C /* QueryFactoryTests.m in Sources */,
 				F5B0A1B91CAD4E3A00E056CE /* CBXException.m in Sources */,
 				89331D291CC1C279003C2E59 /* CoordinateQueryTests.m in Sources */,
 				89331D2D1CC50172003C2E59 /* GestureFactoryTests.m in Sources */,
@@ -2004,6 +2077,7 @@
 				899696F71CB5B8C300BB42E2 /* Coordinate.m in Sources */,
 				F5B0A1D21CAD4E8A00E056CE /* HTTPDataResponse.m in Sources */,
 				899696CB1CB356BF00BB42E2 /* QueryConfiguration.m in Sources */,
+				896586891CEBA0A400E8329C /* QueryConfigurationFactoryTests.m in Sources */,
 				F5B0A1BC1CAD4E3A00E056CE /* InvalidArgumentException.m in Sources */,
 				F5B0A1D01CAD4E7F00E056CE /* MultipartMessageHeaderField.m in Sources */,
 				F5B0A1E31CAD4EA700E056CE /* RoutingConnection.m in Sources */,

@@ -23,18 +23,18 @@ NS_ASSUME_NONNULL_BEGIN
 - (id)objectForKeyedSubscript:(NSString *)key;
 
 /**
- Convenience property for determining if the Query can be treated as a 
+ Convenience method for determining if the Query can be treated as a
  CoordinateQuery. 
  
  Coordinate-based queries are a special case of Query, since (in the case of
  Gestures) they already provide enough information to perform the gesture without
  needing to resolve any higher-level specifiers.
  
- It is therefore helpful to have a convenience property that indicates whether or 
+ It is therefore helpful to have a convenience method that indicates whether or
  not a Query should be treeted as a CoordinateQuery, since it is able to short-circuit
  the query evaluation logic for performing gestures.
  */
-@property (nonatomic) BOOL isCoordinateQuery;
+- (BOOL)isCoordinateQuery;
 
 
 /**
