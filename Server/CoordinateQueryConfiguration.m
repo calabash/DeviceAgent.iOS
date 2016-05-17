@@ -12,6 +12,10 @@
     return self;
 }
 
+- (BOOL)isCoordinateQuery {
+    return YES;
+}
+
 - (void)validate {
     if (self.raw[CBX_COORDINATE_KEY]) {
         id json = self.raw[CBX_COORDINATE_KEY];
