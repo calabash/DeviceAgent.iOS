@@ -13,9 +13,12 @@
 - (id)init {
     if (self = [super init]) {
         self.selectors = [NSMutableArray array];
-        _isCoordinateQuery = NO;
     }
     return self;
+}
+
+- (BOOL)isCoordinateQuery {
+    return NO;
 }
 
 + (NSMutableDictionary *)specifiersFromQueryString:(NSString *)queryString {
@@ -31,15 +34,6 @@
     NSMutableArray *selectors = [NSMutableArray array];
 
     for (NSString *key in keys) {
-        /*
-            If we're dealing with a coordinate query, selectors don't matter since the element
-            should be uniquely identified by the coordinates.
-         */
-        if ([key isEqualToString:CBX_COORDINATE_KEY] ||
-            [key isEqualToString:CBX_COORDINATES_KEY]) {
-            _isCoordinateQuery = YES;
-            break;
-        }
         QuerySpecifier *qs = [QuerySpecifierFactory specifierWithKey:key
                                                                value:self[key]];
         if (qs) {

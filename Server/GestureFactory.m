@@ -1,5 +1,7 @@
 
+#import "QueryConfigurationFactory.h"
 #import "InvalidArgumentException.h"
+#import "QueryFactory.h"
 #import "GestureFactory.h"
 #import <objc/runtime.h>
 
@@ -41,9 +43,11 @@ static NSMutableSet <Class> *gestureClasses;
         if (c != [Gesture class] && [gesture isEqualToString:[c name]]) {
             GestureConfiguration *gestureConfig = [GestureConfiguration withJSON:options
                                                                        validator:[c validator]];
-            QueryConfiguration *queryConfig = [QueryConfiguration withJSON:specifiers
-                                                                 validator:[Query validator]];
-            Query *query = [Query withQueryConfiguration:queryConfig];
+            
+            QueryConfiguration *queryConfig = [QueryConfigurationFactory configWithJSON:specifiers
+                                                                              validator:[Query validator]];
+            
+            Query *query = [QueryFactory queryWithQueryConfiguration:queryConfig];
             return [c executeWithGestureConfiguration:gestureConfig
                                                 query:query
                                            completion:completion];

@@ -26,13 +26,13 @@
 @property (nonatomic, strong) NSArray <QuerySpecifier *> *selectors;
 
 /**
- A convenience getter for checking if a QueryConfiguration is actually a CoordinateQueryConfiguration
+ A convenience method for checking if a QueryConfiguration is actually a CoordinateQueryConfiguration
  
  CoordinateQueries don't follow the normal chaining logic of XCUITestQueries
  (they are a one-shot operation). Therefore, it's helpful for a query evaluator
  to know if a Query's config indicates that it is a coordinate query.
  */
-@property (nonatomic, readonly) BOOL isCoordinateQuery;
+- (BOOL)isCoordinateQuery;
 
 /**
  If a the current query config is in fact a coordinate query config, 

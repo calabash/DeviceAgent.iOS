@@ -5,6 +5,10 @@
 
 @implementation CoordinateQuery
 
+- (BOOL)isCoordinateQuery {
+    return YES;
+}
+
 + (instancetype)withQueryConfiguration:(QueryConfiguration *)queryConfig {
     if (![queryConfig isKindOfClass:[CoordinateQueryConfiguration class]]) {
         @throw [InvalidArgumentException

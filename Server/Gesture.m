@@ -56,7 +56,7 @@
     
     NSMutableArray <Coordinate *> *coords = [NSMutableArray new];
     if (self.query.isCoordinateQuery) {
-        CoordinateQuery *cq = [self.query asCoordinateQuery];
+        CoordinateQuery *cq = (CoordinateQuery *)self.query;
         if (cq.coordinate) {
             [coords addObject:cq.coordinate];
         }

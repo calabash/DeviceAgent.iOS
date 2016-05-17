@@ -1,6 +1,7 @@
 
-#import "Query.h"
+#import "QueryConfigurationFactory.h"
 #import "CoordinateQueryConfiguration.h"
+#import "QueryFactory.h"
 #import "Application.h"
 #import "JSONUtils.h"
 #import <XCTest/XCTest.h>
@@ -20,9 +21,10 @@
     _validQueryConfig = [QueryConfiguration withJSON:json validator:nil];
     
     json = @{@"coordinate" : @[ @2, @2 ]};
-    _validCoordinateQueryConfig = [CoordinateQueryConfiguration withJSON:json validator:nil];
+    _validCoordinateQueryConfig = (CoordinateQueryConfiguration *)
+        [QueryConfigurationFactory configWithJSON:json validator:nil];
     
-    _emptyQueryConfig = [QueryConfiguration withJSON:@{} validator:nil];
+    _emptyQueryConfig = [QueryConfigurationFactory configWithJSON:@{} validator:nil];
     
 }
 
@@ -32,19 +34,19 @@
 }
 
 - (void)testIsCoordinateCarriedFromConfig {
-    Query *query = [Query withQueryConfiguration:_validQueryConfig];
+    Query *query = [QueryFactory queryWithQueryConfiguration:_validQueryConfig];
     XCTAssertFalse(query.isCoordinateQuery,
                    @"Query given %@ thinks it is a coordinate query",
                    _validQueryConfig.raw);
     
-    query = [Query withQueryConfiguration:_validCoordinateQueryConfig];
+    query = [QueryFactory queryWithQueryConfiguration:_validCoordinateQueryConfig];
     XCTAssertTrue(query.isCoordinateQuery,
                   @"Query given %@ does not think it's a coordinate query",
                   _validCoordinateQueryConfig.raw);
 }
 
 - (void)testExecuteWithNoSpecifiers {
-    Query *query = [Query withQueryConfiguration:_emptyQueryConfig];
+    Query *query = [QueryFactory queryWithQueryConfiguration:_emptyQueryConfig];
     id XCUIElementQueryMock = OCMClassMock([XCUIElementQuery class]);
     OCMStub([XCUIElementQueryMock allElementsBoundByIndex]).andReturn(@[[XCUIElement new]]);
 
@@ -55,7 +57,7 @@
     
     id results = @[];
     
-    Query *query = [Query withQueryConfiguration:_validQueryConfig];
+    Query *query = [QueryFactory queryWithQueryConfiguration:_validQueryConfig];
     
     OCMStub([OCMClassMock([Application class]) currentApplication])
     .andReturn([[XCUIApplication alloc] initPrivateWithPath:nil
@@ -72,7 +74,7 @@
 }
 
 - (void)testToJSONString {
-    Query *query = [Query withQueryConfiguration:_validQueryConfig];
+    Query *query = [QueryFactory queryWithQueryConfiguration:_validQueryConfig];
     expect([query toJSONString]).to.equal([JSONUtils objToJSONString:_validQueryConfig.raw]);
 }
 

@@ -1,7 +1,6 @@
 
 #import <XCTest/XCTest.h>
-#import "QueryConfiguration.h"
-#import "CoordinateQueryConfiguration.h"
+#import "QueryConfigurationFactory.h"
 
 @interface QueryConfigurationTests : XCTestCase
 
@@ -30,7 +29,7 @@
 
 - (void)testIsCoordinateQuery {
     id json = @{@"coordinate" : @[@1, @2]};
-    QueryConfiguration *config = [QueryConfiguration withJSON:json validator:nil];
+    QueryConfiguration *config = [CoordinateQueryConfiguration withJSON:json validator:nil];
     XCTAssertTrue(config.isCoordinateQuery,
                    @"QueryConfiguration given %@ thinks it's not a coordinate query",
                    json);
