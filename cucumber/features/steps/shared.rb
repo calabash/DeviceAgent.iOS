@@ -1,10 +1,19 @@
 
 Given(/^the app has launched$/) do
-  # Wait for a view
-  if RunLoop::Environment.ci?
-    sleep(30.0)
-  else
-    sleep(5.0)
+  ["Touch", "Pan", "Rotate/Pinch", "Misc", "Tao"].each do |mark|
+    @waiter.wait_for_view(mark)
   end
+
+  if RunLoop::Environment.ci?
+    sleep(15)
+  else
+    sleep(5)
+  end
+end
+
+Given(/^I am looking at the (Touch|Pan|Rotate\/Pinch|Misc|Tao) tab$/) do |tabname|
+  @gestures.tap_mark(tabname)
+  mark = "#{tabname.downcase} page"
+  @waiter.wait_for_view(mark)
 end
 

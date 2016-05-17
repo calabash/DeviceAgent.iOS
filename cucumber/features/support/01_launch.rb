@@ -5,6 +5,16 @@ module Calabash
     include Singleton
 
     attr_accessor :device_agent
+    attr_accessor :first_launch
+
+    def initialize
+      @first_launch = true
+    end
+
+    def running?
+      return false if !device_agent
+      device_agent.running?
+    end
 
     def xcode
       @xcode ||= RunLoop::Xcode.new
@@ -75,9 +85,17 @@ Before do |scenario|
     :app => launcher.app
   }
 
-  @device_agent = RunLoop.run(options)
-  @waiter = DeviceAgent::Wait.new(@device_agent)
-  launcher.device_agent = launcher
+  if launcher.first_launch || !launcher.running?
+    @device_agent = RunLoop.run(options)
+    @waiter = DeviceAgent::Wait.new(@device_agent)
+    @gestures = DeviceAgent::Gestures.new(@waiter)
+    launcher.device_agent = @device_agent
+    launcher.first_launch = false
+  else
+    @device_agent = launcher.device_agent
+    @waiter = DeviceAgent::Wait.new(@device_agent)
+    @gestures = DeviceAgent::Gestures.new(@waiter)
+  end
 end
 
 After do |scenario|
