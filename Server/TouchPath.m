@@ -1,19 +1,45 @@
 
-#import "XCPointerEventPath.h"
-#import "XCTouchPath.h"
 #import "TouchPath.h"
 
+@interface TouchPath ()
+@property (nonatomic, strong) XCTouchPath *xcTouchPath;
+@property (nonatomic, strong) XCPointerEventPath *eventPath;
+@property (nonatomic) CGPoint lastPoint;
+@end
+
 @implementation TouchPath
+
+- (instancetype)initWithOrientation:(NSInteger)orientation {
+    if (self = [super init]) {
+        _orientation = orientation;
+    }
+    return self;
+}
+
+
 + (instancetype)withFirstTouchPoint:(CGPoint)firstTouchPoint orientation:(NSInteger)orientation {
-    //TODO
-    return nil;
+    TouchPath *tp = [[TouchPath alloc] initWithOrientation:orientation];
+    
+    tp.lastPoint = firstTouchPoint;
+    
+    tp.xcTouchPath = [[XCTouchPath alloc] initWithTouchDown:firstTouchPoint
+                                                orientation:orientation
+                                                     offset:0];
+    
+    tp.eventPath = [[XCPointerEventPath alloc] initForTouchAtPoint:firstTouchPoint
+                                                            offset:0];
+    return tp;
 }
 
 - (void)moveToNextPoint:(CGPoint)nextPoint afterSeconds:(CGFloat)seconds {
-    //TODO
+    [self.xcTouchPath moveToPoint:nextPoint atOffset:seconds];
+    [self.eventPath moveToPoint:nextPoint atOffset:seconds];
+    self.lastPoint = nextPoint;
 }
 
-- (void)liftUpAtPoint:(CGPoint)finalPoint afterSeconds:(CGFloat)seconds {
-    //TODO
+- (void)liftUpAfterSeconds:(CGFloat)seconds {
+    [self.xcTouchPath liftUpAtPoint:_lastPoint offset:seconds];
+    [self.eventPath liftUpAtOffset:seconds];
 }
+
 @end
