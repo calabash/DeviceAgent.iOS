@@ -38,6 +38,8 @@
 		896586971CEBD97A00E8329C /* TouchPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 896586951CEBD97A00E8329C /* TouchPath.h */; };
 		896586981CEBD97A00E8329C /* TouchPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 896586961CEBD97A00E8329C /* TouchPath.m */; };
 		896586991CEBD97A00E8329C /* TouchPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 896586961CEBD97A00E8329C /* TouchPath.m */; };
+		8965869C1CECC39600E8329C /* CBXTouchEventTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8965869B1CECC39600E8329C /* CBXTouchEventTests.m */; };
+		8965869E1CECC3B100E8329C /* TouchPathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8965869D1CECC3B100E8329C /* TouchPathTests.m */; };
 		899696BA1CADF84B00BB42E2 /* EnterText.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696B81CADF84B00BB42E2 /* EnterText.h */; };
 		899696BB1CADF84B00BB42E2 /* EnterText.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696B91CADF84B00BB42E2 /* EnterText.m */; };
 		899696BC1CADF85B00BB42E2 /* EnterText.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696B91CADF84B00BB42E2 /* EnterText.m */; };
@@ -348,6 +350,8 @@
 		896586901CEBD78100E8329C /* CBXTouchEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXTouchEvent.m; sourceTree = "<group>"; };
 		896586951CEBD97A00E8329C /* TouchPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchPath.h; sourceTree = "<group>"; };
 		896586961CEBD97A00E8329C /* TouchPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchPath.m; sourceTree = "<group>"; };
+		8965869B1CECC39600E8329C /* CBXTouchEventTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXTouchEventTests.m; sourceTree = "<group>"; };
+		8965869D1CECC3B100E8329C /* TouchPathTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchPathTests.m; sourceTree = "<group>"; };
 		898743BC1C5847B30084FD93 /* CBXAppStub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBXAppStub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898743D51C5847B30084FD93 /* CBX.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CBX.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		899696B81CADF84B00BB42E2 /* EnterText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterText.h; sourceTree = "<group>"; };
@@ -838,6 +842,15 @@
 				896586901CEBD78100E8329C /* CBXTouchEvent.m */,
 				896586951CEBD97A00E8329C /* TouchPath.h */,
 				896586961CEBD97A00E8329C /* TouchPath.m */,
+			);
+			name = EventSynthesis;
+			sourceTree = "<group>";
+		};
+		8965869A1CECC24500E8329C /* EventSynthesis */ = {
+			isa = PBXGroup;
+			children = (
+				8965869B1CECC39600E8329C /* CBXTouchEventTests.m */,
+				8965869D1CECC3B100E8329C /* TouchPathTests.m */,
 			);
 			name = EventSynthesis;
 			sourceTree = "<group>";
@@ -1574,6 +1587,7 @@
 		F5B0A1901CAD4C9200E056CE /* Gestures */ = {
 			isa = PBXGroup;
 			children = (
+				8965869A1CECC24500E8329C /* EventSynthesis */,
 				89331D371CC56BD7003C2E59 /* Categories */,
 				89331D341CC516A7003C2E59 /* Factory */,
 			);
@@ -2054,6 +2068,7 @@
 				899696D51CB44D9B00BB42E2 /* GestureConfiguration.m in Sources */,
 				F5B0A1D11CAD4E8A00E056CE /* HTTPAsyncFileResponse.m in Sources */,
 				899696BC1CADF85B00BB42E2 /* EnterText.m in Sources */,
+				8965869C1CECC39600E8329C /* CBXTouchEventTests.m in Sources */,
 				F5B0A1E41CAD4EA700E056CE /* RoutingHTTPServer.m in Sources */,
 				F5B0A1CA1CAD4E6F00E056CE /* HTTPAuthenticationRequest.m in Sources */,
 				89331D201CC0F72B003C2E59 /* ActionConfigurationTests.m in Sources */,
@@ -2068,6 +2083,7 @@
 				89331D391CC56BE5003C2E59 /* Gestures+OptionsTests.m in Sources */,
 				8965867F1CEB998500E8329C /* QueryConfigurationFactory.m in Sources */,
 				F5B0A11D1CAD3D8C00E056CE /* CBXTestToolsStandup.m in Sources */,
+				8965869E1CECC3B100E8329C /* TouchPathTests.m in Sources */,
 				F5B0A1A41CAD4DE800E056CE /* XCUIElement+WebDriverAttributes.m in Sources */,
 				F5B0A1D51CAD4E8A00E056CE /* HTTPFileResponse.m in Sources */,
 				F5B0A1CF1CAD4E7F00E056CE /* MultipartMessageHeader.m in Sources */,
