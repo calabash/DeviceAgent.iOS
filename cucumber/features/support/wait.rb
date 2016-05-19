@@ -35,7 +35,11 @@ module DeviceAgent
       merged_options = default_options.merge(options)
 
       unless merged_options[:message]
-        message = "Waited #{merged_options[:timeout]} seconds query(#{mark}) to match a view"
+        message = %Q[Waited #{merged_options[:timeout]} seconds for
+
+query("#{mark}")
+
+to match a view]
         merged_options[:timeout_message] = message
       end
 
