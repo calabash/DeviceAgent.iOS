@@ -32,23 +32,9 @@ Then(/^I can tap with two fingers by coordinate$/) do
   wait_for_gesture_text("Two-finger Tap")
 end
 
-And(/^I can see the buttons in the action box$/) do
-  [
-    "double tap",
-    "tap",
-    "long press",
-    "two finger tap",
-    "triple tap",
-    "two finger long press",
-    "three finger tap",
-    "two finger double tap"
-  ].each do |mark|
-    @waiter.wait_for_view(mark)
-  end
-end
-
-And(/^I can see the button action label$/) do
-  @waiter.wait_for_view("touch action")
+And(/^I clear the touch action label$/) do
+  @gestures.tap_mark("touch action")
+  wait_for_gesture_text("CLEARED", "touch action")
 end
 
 Then(/^I double tap the button$/) do

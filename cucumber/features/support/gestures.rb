@@ -52,10 +52,19 @@ module DeviceAgent
       x = rect["x"]
       y = rect["y"]
 
-      touchx = x + (h/2)
-      touchy = y + (w/2)
-      {:x => touchx,
-       :y => touchy}
+      touchx = x + ((w/2.0).round(2))
+      touchy = y + ((h/2.0).round(2))
+
+      new_rect = rect.dup
+      new_rect[:center_x] = touchx
+      new_rect[:center_y] = touchy
+
+      RunLoop.log_debug(%Q[Rect from query:
+
+#{JSON.pretty_generate(new_rect)}
+
+])
+			{:x => touchx, :y => touchy}
     end
   end
 end
