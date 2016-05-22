@@ -1758,6 +1758,7 @@
 				F5954E021CBD2E1200117745 /* Frameworks */,
 				F5954E031CBD2E1200117745 /* Resources */,
 				F5A252C21CBFFE2700C05F1F /* Run Script stage to ./Products */,
+				F52BA3421CED200900475D5A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1873,6 +1874,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		F52BA3421CED200900475D5A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "xcrun pkill xcodebuild\nexit 0";
+			showEnvVarsInLog = 0;
+		};
 		F5A252C21CBFFE2700C05F1F /* Run Script stage to ./Products */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
