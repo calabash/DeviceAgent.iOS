@@ -152,10 +152,10 @@
                                                     <constraint firstAttribute="height" constant="4" id="pN2-bh-KxY"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rB-Ig-CMS" userLabel="Tap">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rB-Ig-CMS" userLabel="Touch">
                                                 <rect key="frame" x="32" y="16" width="4" height="4"/>
                                                 <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="tap">
+                                                <accessibility key="accessibilityConfiguration" identifier="touch">
                                                     <accessibilityTraits key="traits" button="YES"/>
                                                     <bool key="isElement" value="YES"/>
                                                 </accessibility>
@@ -278,7 +278,7 @@
                                             <constraint firstAttribute="width" constant="50" id="wiU-Pz-WIz"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -307,7 +307,7 @@
                                     <constraint firstAttribute="height" constant="88" id="80q-Pd-8te"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -325,8 +325,8 @@
                         <outlet property="centerLabel" destination="Syb-F1-lj4" id="JMn-J7-znx"/>
                         <outlet property="doubleTap" destination="d8I-jd-QqW" id="TKu-Lz-Zh5"/>
                         <outlet property="longPress" destination="krs-Wl-lQL" id="aMQ-fT-u9J"/>
-                        <outlet property="tap" destination="5rB-Ig-CMS" id="kGi-bC-oyX"/>
                         <outlet property="threeFingerTap" destination="37X-zV-EjS" id="bY2-Fc-f2Y"/>
+                        <outlet property="touch" destination="5rB-Ig-CMS" id="AiQ-Nj-SAF"/>
                         <outlet property="touchActionLabel" destination="PbZ-5y-KQC" id="sXE-hD-ftr"/>
                         <outlet property="tripleTap" destination="NMN-nN-Sbk" id="i7z-i3-aoC"/>
                         <outlet property="twoFingerDoubleTap" destination="MDb-5P-wLY" id="3eg-TC-XRo"/>

@@ -37,8 +37,13 @@ And(/^I clear the touch action label$/) do
   wait_for_gesture_text("CLEARED", "touch action")
 end
 
-Then(/^I double tap the button$/) do
+Then(/^I double tap the little button$/) do
   @gestures.double_tap_mark("double tap")
   wait_for_gesture_text("double tap", "touch action")
+end
+
+Then(/^I tap the little button$/) do
+  @gestures.tap_mark("touch")
+  wait_for_gesture_text("touch", "touch action")
 end
 

@@ -3,7 +3,7 @@
 @interface TaoController ()
 @property (weak, nonatomic) IBOutlet UILabel *touchActionLabel;
 @property (weak, nonatomic) IBOutlet UIView *doubleTap;
-@property (weak, nonatomic) IBOutlet UIView *tap;
+@property (weak, nonatomic) IBOutlet UIView *touch;
 @property (weak, nonatomic) IBOutlet UIView *longPress;
 @property (weak, nonatomic) IBOutlet UIView *twoFingerTap;
 @property (weak, nonatomic) IBOutlet UIView *tripleTap;
@@ -32,10 +32,17 @@
     }
 }
 
-- (void)handleDoubleTap:(UIGestureRecognizer *)recognizer {
+- (void)handleDoubleTapOnSmallButton:(UIGestureRecognizer *)recognizer {
     UIGestureRecognizerState state = [recognizer state];
     if (UIGestureRecognizerStateEnded == state) {
         self.touchActionLabel.text = @"double tap";
+    }
+}
+
+- (void)handleTouchOnSmallButton:(UIGestureRecognizer *)recognizer {
+    UIGestureRecognizerState state = [recognizer state];
+    if (UIGestureRecognizerStateEnded == state) {
+        self.touchActionLabel.text = @"touch";
     }
 }
 
@@ -72,22 +79,23 @@
                                          touches:1];
 
     self.touchActionLabel.userInteractionEnabled = YES;
-    [self.touchActionLabel
-     addGestureRecognizer:[self tapRecognizerWithSelector:@selector(handleTapOnTouchActionLabel:)
-                                                     taps:1
-                                                  touches:1]];
-
+    [self.touchActionLabel addGestureRecognizer:recognizer];
 
     self.centerLabel.userInteractionEnabled = YES;
-    [self.centerLabel
-     addGestureRecognizer:[self tapRecognizerWithSelector:@selector(handleTapOnCenterLabel:)
-                                                     taps:1
-                                                  touches:1]];
+    recognizer = [self tapRecognizerWithSelector:@selector(handleTapOnCenterLabel:)
+                                            taps:1
+                                         touches:1];
+    [self.centerLabel addGestureRecognizer:recognizer];
 
-    recognizer = [self tapRecognizerWithSelector:@selector(handleDoubleTap:)
+    recognizer = [self tapRecognizerWithSelector:@selector(handleDoubleTapOnSmallButton:)
                                             taps:2
                                          touches:1];
     [self.doubleTap addGestureRecognizer:recognizer];
+
+    recognizer = [self tapRecognizerWithSelector:@selector(handleTouchOnSmallButton:)
+                                            taps:1
+                                         touches:1];
+    [self.touch addGestureRecognizer:recognizer];
 }
 
 - (void)viewWillLayoutSubviews {
