@@ -3,6 +3,8 @@
  *  Lots of extra imports here so that all subclasses have them. 
  */
 #import "InvalidArgumentException.h"
+#import "CBXTouchEvent.h"
+#import "TouchPath.h"
 #import "XCSynthesizedEventRecord.h"
 #import "GestureConfiguration.h"
 #import "XCPointerEventPath.h"
@@ -42,25 +44,35 @@
  */
 
 /**
- Used if `testmanagerd.protocolVersion != 0x0`. The results will be sent via 
+ Used if `testmanagerd.protocolVersion != 0x0`. The results will be sent via
  _XCT_synthesizeEvent:completion:
- 
+
  @param coordinates An array containing all coordinates from the CoordinateQueryConfiguration.
  **Should contain identical logic to gestureWithCoordinates:**
  */
 - (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray <Coordinate *> *)coordinates;
 
 /**
- Used if `testmanagerd.protocolVerison == 0x0`. 
+ Used if `testmanagerd.protocolVerison == 0x0`.
  Results will be sent via _XCT_performTouchGesture:completion:
- 
+
  @param coordinates An array containing all coordinates from the CoordinateQueryConfiguration
  **Should contain identical logic to eventWithCoordinates:**
  */
 - (XCTouchGesture *)gestureWithCoordinates:(NSArray <Coordinate *> *)coordinates;
 
 /**
-An array containing the keys that are necessary for the gesture to be performed 
+ WIP: This method will eventually replace:
+
+ * eventWithCoordinates:
+ * gestureWithCoordinates:
+
+ @param coordinates An array containing all coordinates from the CoordinateQueryConfiguration
+ */
+- (CBXTouchEvent *)cbxEventWithCoordinates:(NSArray <Coordinate *> *)coordinates;
+
+/**
+An array containing the keys that are necessary for the gesture to be performed
  (e.g. 'string' for `enter_text`). These keys are fed into a JSONValidator
  which is used in the GestureConfiguration that instantiates the Gesture.
  */

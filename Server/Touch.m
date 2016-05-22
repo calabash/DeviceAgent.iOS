@@ -6,6 +6,19 @@
 
 + (NSString *)name { return @"touch"; }
 
+- (CBXTouchEvent *)cbxEventWithCoordinates:(NSArray <Coordinate *> *)coordinates {
+    if (coordinates.count == 0) {
+        @throw [InvalidArgumentException withFormat:@"%@ requires at least one coordinate.",  [self.class name]];
+    }
+
+    CGPoint coordinate = coordinates[0].cgpoint;
+    TouchPath *path = [TouchPath withFirstTouchPoint:coordinate orientation:0];
+
+    [path liftUpAfterSeconds:[self duration]];
+
+    return [CBXTouchEvent withTouchPath:path];
+}
+
 - (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<Coordinate *> *)coordinates {
     if (coordinates.count == 0) {
         @throw [InvalidArgumentException withFormat:@"%@ requires at least one coordinate.",  [self.class name]];
