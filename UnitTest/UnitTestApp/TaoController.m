@@ -46,6 +46,13 @@
     }
 }
 
+- (void)handleLongPressOnSmallButton:(UIGestureRecognizer *)recognizer {
+    UIGestureRecognizerState state = [recognizer state];
+    if (UIGestureRecognizerStateEnded == state) {
+        self.touchActionLabel.text = @"long press";
+    }
+}
+
 #pragma mark - Recognizers
 
 - (UITapGestureRecognizer *)tapRecognizerWithSelector:(SEL)selector
@@ -81,7 +88,6 @@
     self.touchActionLabel.userInteractionEnabled = YES;
     [self.touchActionLabel addGestureRecognizer:recognizer];
 
-    self.centerLabel.userInteractionEnabled = YES;
     recognizer = [self tapRecognizerWithSelector:@selector(handleTapOnCenterLabel:)
                                             taps:1
                                          touches:1];
@@ -96,6 +102,14 @@
                                             taps:1
                                          touches:1];
     [self.touch addGestureRecognizer:recognizer];
+
+    UILongPressGestureRecognizer *lpRecognizer;
+    lpRecognizer = [[UILongPressGestureRecognizer alloc]
+                    initWithTarget:self
+                    action:@selector(handleLongPressOnSmallButton:)];
+    lpRecognizer.minimumPressDuration = 1.0;
+    lpRecognizer.numberOfTouchesRequired = 1;
+    [self.longPress addGestureRecognizer:lpRecognizer];
 }
 
 - (void)viewWillLayoutSubviews {

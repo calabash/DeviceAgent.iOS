@@ -164,7 +164,7 @@
                                                     <constraint firstAttribute="width" constant="4" id="lgA-5D-Ebw"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="krs-Wl-lQL" userLabel="LongPress">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="krs-Wl-lQL" userLabel="LongPress" customClass="h">
                                                 <rect key="frame" x="8" y="40" width="4" height="4"/>
                                                 <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="long press">
