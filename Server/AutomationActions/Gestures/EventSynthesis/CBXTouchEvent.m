@@ -1,20 +1,26 @@
 
 #import "CBXTouchEvent.h"
+
 @interface CBXTouchEvent ()
+
 @property (nonatomic, strong) XCSynthesizedEventRecord *event;
 @property (nonatomic, strong) XCTouchGesture *gesture;
 @property (nonatomic) NSInteger orientation;
+
++ (XCSynthesizedEventRecord *)eventRecordWithOrientation:(NSInteger) orientation;
++ (XCTouchGesture *)touchGesture;
+
 @end
 
 @implementation CBXTouchEvent
+
 + (instancetype)withTouchPath:(TouchPath *)path {
     CBXTouchEvent *te = [self new];
     te.orientation = path.orientation;
-    te.event = [[XCSynthesizedEventRecord alloc] initWithName:@"CBXTouchEvent_XCSynthesizedEventRecord"
-                                         interfaceOrientation:te.orientation];
+    te.event = [CBXTouchEvent eventRecordWithOrientation:te.orientation];
     [te.event addPointerEventPath:path.eventPath];
     
-    te.gesture = [[XCTouchGesture alloc] initWithName:@"CBXTouchEvent_XCTouchGesture"];
+    te.gesture = [CBXTouchEvent touchGesture];
     [te.gesture addTouchPath:path.xcTouchPath];
     
     return te;
@@ -25,6 +31,16 @@
              @"Can not add a TouchPath with a different orientation within the same CBXTouchEvent");
     [self.event addPointerEventPath:path.eventPath];
     [self.gesture addTouchPath:path.xcTouchPath];
+}
+
++ (XCSynthesizedEventRecord *)eventRecordWithOrientation:(NSInteger) orientation {
+    return [[XCSynthesizedEventRecord alloc]
+            initWithName:@"CBXTouchEvent_XCSynthesizedEventRecord"
+            interfaceOrientation:orientation];
+}
+
++ (XCTouchGesture *)touchGesture {
+    return [[XCTouchGesture alloc] initWithName:@"CBXTouchEvent_XCTouchGesture"];
 }
 
 @end
