@@ -34,6 +34,13 @@ rescue LoadError => _
 
 end
 
+["wait.rb", "gestures.rb"].each do |file|
+  path = File.join(".", "features", "support", file)
+  print "Loading #{path}..."
+  load path
+  puts "done!"
+end
+
 puts ""
 puts "#       =>  Useful Methods  <=          #"
 puts "> xcode        => Xcode instance"
@@ -142,7 +149,28 @@ def holmes()
     :app => ENV["APP"]
   }
 
-  RunLoop.run(options)
+  @xcuitest = @holmes = @device_agent = RunLoop.run(options)
+  @waiter = DeviceAgent::Wait.new(@device_agent)
+  @gestures = DeviceAgent::Gestures.new(@waiter)
+end
+
+def booted_simulator
+  simctl.simulators.detect(nil) do |sim|
+    sim.state == "Booted"
+  end
+end
+
+def attach
+  if !@device_agent
+    device = booted_simulator
+    app = RunLoop::App.new(ENV["APP"])
+    bundle_id = app.bundle_identifier
+    @device_agent = RunLoop::XCUITest.new(bundle_id, device)
+  end
+
+  @waiter = DeviceAgent::Wait.new(@device_agent)
+  @gestures = DeviceAgent::Gestures.new(@waiter)
+  @holmes = @xcuitest = @device_agent
 end
 
 verbose

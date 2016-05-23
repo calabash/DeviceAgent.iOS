@@ -42,5 +42,6 @@ World(UnitTestApp::Orientation)
 
 Then(/^I rotate the device so the home button is on the (top|bottom|left|right)$/) do |position|
   rotate_and_expect(position)
+  sleep(0.5)
 end
 

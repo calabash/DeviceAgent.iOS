@@ -12,14 +12,18 @@ module DeviceAgent
       element_center(result)
     end
 
-    def tap_mark(mark)
+    def touch_mark(mark)
       center = query_for_coordinate(mark)
       tap(center[:x], center[:y])
     end
 
-    def tap(x, y)
+    alias_method :tap_mark, :touch_mark
+
+    def touch(x, y)
       device_agent.perform_coordinate_gesture("touch", x, y)
     end
+
+    alias_method :tap, :touch
 
     def double_tap_mark(mark)
       center = query_for_coordinate(mark)
@@ -39,6 +43,17 @@ module DeviceAgent
       device_agent.perform_coordinate_gesture("two_finger_tap", x, y)
     end
 
+    def long_press_mark(mark, duration=1.0)
+      center = query_for_coordinate(mark)
+      long_press(center[:x], center[:y], duration)
+    end
+
+    def long_press(x, y, duration=1.0)
+      device_agent.perform_coordinate_gesture("touch",
+                                              x, y,
+                                              {:duration => duration})
+    end
+
     private
 
     def device_agent
@@ -52,10 +67,19 @@ module DeviceAgent
       x = rect["x"]
       y = rect["y"]
 
-      touchx = x + (h/2)
-      touchy = y + (w/2)
-      {:x => touchx,
-       :y => touchy}
+      touchx = x + ((w/2.0).round(2))
+      touchy = y + ((h/2.0).round(2))
+
+      new_rect = rect.dup
+      new_rect[:center_x] = touchx
+      new_rect[:center_y] = touchy
+
+      RunLoop.log_debug(%Q[Rect from query:
+
+#{JSON.pretty_generate(new_rect)}
+
+])
+			{:x => touchx, :y => touchy}
     end
   end
 end

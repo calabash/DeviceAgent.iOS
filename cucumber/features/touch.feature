@@ -12,17 +12,33 @@ Scenario: Two finger touch
 And I am looking at the Touch tab
 Then I can tap with two fingers by coordinate
 
-@wip
-Scenario: Tapping in portrait
+@orientation
+Scenario: Double tap in any orientation
 Given I am looking at the Tao tab
 Given I rotate the device so the home button is on the bottom
-And I can see the buttons in the action box
-And I can see the button action label
-Then I double tap the button
-#And I tap the button
-#And I long press the button
-#And I triple tap the button
-#And I two finger long press the button
-#And I three finger tap the button
-#And I two finger tap double tap the button
+Then I double tap a little button
+And I clear the touch action label
+
+@orientation
+Scenario: Touch in any orientation
+Given I am looking at the Tao tab
+Given I rotate the device so the home button is on the bottom
+Then I touch a little button
+And I clear the touch action label
+
+@long_press
+Scenario: Long press durations
+Given I am looking at the Tao tab
+Given I rotate the device so the home button is on the bottom
+Then I long press a little button for a short time
+Then I long press a little button for enough time
+Then I long press a little button for a long time
+
+@orientation
+@long_press
+Scenario: Long press in any orientation
+Given I am looking at the Tao tab
+Given I rotate the device so the home button is on the bottom
+Then I long press a little button for enough time
+And I clear the touch action label
 

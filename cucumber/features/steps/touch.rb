@@ -17,13 +17,18 @@ Expected to find '#{text}' as a 'value' or 'label' in
 ])
       end
     end
+
+    def clear_small_button_action_label
+      @gestures.touch_mark("touch action")
+      wait_for_gesture_text("CLEARED", "touch action")
+    end
   end
 end
 
 World(UnitTestApp::TouchGestures)
 
 Then(/^I can tap the screen by coordinate$/) do
-  @gestures.tap(50, 50)
+  @gestures.touch(50, 50)
   wait_for_gesture_text("Tap")
 end
 
@@ -32,27 +37,30 @@ Then(/^I can tap with two fingers by coordinate$/) do
   wait_for_gesture_text("Two-finger Tap")
 end
 
-And(/^I can see the buttons in the action box$/) do
-  [
-    "double tap",
-    "tap",
-    "long press",
-    "two finger tap",
-    "triple tap",
-    "two finger long press",
-    "three finger tap",
-    "two finger double tap"
-  ].each do |mark|
-    @waiter.wait_for_view(mark)
+And(/^I clear the touch action label$/) do
+ clear_small_button_action_label
+end
+
+Then(/^I (double tap|touch) a little button$/) do |gesture|
+  gesture_method = "#{gesture.gsub(" ", "_").to_sym}_mark"
+  @gestures.send(gesture_method, gesture)
+  wait_for_gesture_text(gesture, "touch action")
+end
+
+Then(/^I long press a little button for (a short|a long|enough) time$/) do |time|
+  clear_small_button_action_label
+  expected_text = "long press"
+
+  if time == "a short"
+    duration = 0.5
+    expected_text = "CLEARED"
+  elsif time == "a long"
+    duration = 2.0
+  elsif time == "enough"
+    duration = 1.1
   end
-end
 
-And(/^I can see the button action label$/) do
-  @waiter.wait_for_view("touch action")
-end
-
-Then(/^I double tap the button$/) do
-  @gestures.double_tap_mark("double tap")
-  wait_for_gesture_text("double tap", "touch action")
+  @gestures.long_press_mark("long press", duration)
+  wait_for_gesture_text(expected_text, "touch action")
 end
 

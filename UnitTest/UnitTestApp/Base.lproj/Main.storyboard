@@ -137,19 +137,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XTU-cj-tFR" userLabel="ButtonAndLabel">
                                 <rect key="frame" x="20" y="20" width="60" height="168"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbZ-5y-KQC">
-                                        <rect key="frame" x="5" y="15" width="50" height="22"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="touch action">
-                                            <accessibilityTraits key="traits" none="YES"/>
-                                        </accessibility>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="22" id="69o-tD-XLQ"/>
-                                            <constraint firstAttribute="width" constant="50" id="wiU-Pz-WIz"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qX8-i5-Blb" userLabel="Buttons">
                                         <rect key="frame" x="8" y="52" width="44" height="108"/>
                                         <subviews>
@@ -165,10 +152,10 @@
                                                     <constraint firstAttribute="height" constant="4" id="pN2-bh-KxY"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rB-Ig-CMS" userLabel="Tap">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rB-Ig-CMS" userLabel="Touch">
                                                 <rect key="frame" x="32" y="16" width="4" height="4"/>
                                                 <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="tap">
+                                                <accessibility key="accessibilityConfiguration" identifier="touch">
                                                     <accessibilityTraits key="traits" button="YES"/>
                                                     <bool key="isElement" value="YES"/>
                                                 </accessibility>
@@ -177,7 +164,7 @@
                                                     <constraint firstAttribute="width" constant="4" id="lgA-5D-Ebw"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="krs-Wl-lQL" userLabel="LongPress">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="krs-Wl-lQL" userLabel="LongPress" customClass="h">
                                                 <rect key="frame" x="8" y="40" width="4" height="4"/>
                                                 <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="long press">
@@ -281,6 +268,19 @@
                                             <constraint firstItem="37X-zV-EjS" firstAttribute="leading" secondItem="qX8-i5-Blb" secondAttribute="leading" constant="8" id="xyL-ZV-QDb"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbZ-5y-KQC">
+                                        <rect key="frame" x="5" y="15" width="50" height="22"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="touch action">
+                                            <accessibilityTraits key="traits" none="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="69o-tD-XLQ"/>
+                                            <constraint firstAttribute="width" constant="50" id="wiU-Pz-WIz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.8111260776" green="0.73380926719999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="action box"/>
@@ -298,20 +298,35 @@
                                     <constraint firstItem="PbZ-5y-KQC" firstAttribute="top" secondItem="XTU-cj-tFR" secondAttribute="top" constant="15" id="wJ4-XM-pJl"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syb-F1-lj4">
+                                <rect key="frame" x="256" y="256" width="88" height="88"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="center label"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="5Ox-mj-hZ5"/>
+                                    <constraint firstAttribute="height" constant="88" id="80q-Pd-8te"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration" identifier="tao page"/>
                         <constraints>
+                            <constraint firstItem="Syb-F1-lj4" firstAttribute="centerX" secondItem="qWP-eE-JNW" secondAttribute="centerX" id="3eV-bV-Cxl"/>
                             <constraint firstItem="XTU-cj-tFR" firstAttribute="leading" secondItem="qWP-eE-JNW" secondAttribute="leadingMargin" id="Gqi-wP-qHG"/>
                             <constraint firstItem="XTU-cj-tFR" firstAttribute="top" secondItem="wnv-uZ-HQl" secondAttribute="bottom" id="e7B-Bz-Wk4"/>
+                            <constraint firstItem="Syb-F1-lj4" firstAttribute="centerY" secondItem="qWP-eE-JNW" secondAttribute="centerY" id="gVd-zA-EXJ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tao" image="tab-bar-tao" selectedImage="tab-bar-tao-selected" id="Hob-gk-olJ"/>
                     <connections>
+                        <outlet property="centerLabel" destination="Syb-F1-lj4" id="JMn-J7-znx"/>
                         <outlet property="doubleTap" destination="d8I-jd-QqW" id="TKu-Lz-Zh5"/>
                         <outlet property="longPress" destination="krs-Wl-lQL" id="aMQ-fT-u9J"/>
-                        <outlet property="tap" destination="5rB-Ig-CMS" id="kGi-bC-oyX"/>
                         <outlet property="threeFingerTap" destination="37X-zV-EjS" id="bY2-Fc-f2Y"/>
+                        <outlet property="touch" destination="5rB-Ig-CMS" id="AiQ-Nj-SAF"/>
                         <outlet property="touchActionLabel" destination="PbZ-5y-KQC" id="sXE-hD-ftr"/>
                         <outlet property="tripleTap" destination="NMN-nN-Sbk" id="i7z-i3-aoC"/>
                         <outlet property="twoFingerDoubleTap" destination="MDb-5P-wLY" id="3eg-TC-XRo"/>
