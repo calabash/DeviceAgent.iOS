@@ -44,6 +44,10 @@
     _must_override_exception;
 }
 
+- (CBXTouchEvent *)cbxEventWithCoordinates:(NSArray<Coordinate *> *)coordinates {
+    _must_override_exception;
+}
+
 - (void)validate {
     //TODO:
     //Just assume it's valid by default?
@@ -81,18 +85,38 @@
     
     //Testmanagerd calls are async, but the http server is sync so we need to synchronize it.
     [ThreadUtils runSync:^(BOOL *setToTrueWhenDone, NSError *__autoreleasing *err) {
-        if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] != 0x0) {
-            [[Testmanagerd get] _XCT_synthesizeEvent:[self eventWithCoordinates:coords]
-                                          completion:^(NSError *e) {
-                                              *setToTrueWhenDone = YES;
-                                              *err = e;
-                                          }];
-        } else {
-            [[Testmanagerd get] _XCT_performTouchGesture:[self gestureWithCoordinates:coords]
+        // This is temporary try/catch block until all the Gestures are converted
+        // to the new CBXTouchEvent interface.
+        @try {
+            CBXTouchEvent *event = [self cbxEventWithCoordinates:coords];
+            if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] != 0x0) {
+                [[Testmanagerd get] _XCT_synthesizeEvent:event.event
                                               completion:^(NSError *e) {
                                                   *setToTrueWhenDone = YES;
                                                   *err = e;
                                               }];
+            } else {
+                [[Testmanagerd get] _XCT_performTouchGesture:event.gesture
+                                                  completion:^(NSError *e) {
+                                                      *setToTrueWhenDone = YES;
+                                                      *err = e;
+                                                  }];
+            }
+        } @catch (CBXException *e) {
+            NSLog(@"cbxEventForCoordiantes is NYI, falling back to previous interface");
+            if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] != 0x0) {
+                [[Testmanagerd get] _XCT_synthesizeEvent:[self eventWithCoordinates:coords]
+                                              completion:^(NSError *e) {
+                                                  *setToTrueWhenDone = YES;
+                                                  *err = e;
+                                              }];
+            } else {
+                [[Testmanagerd get] _XCT_performTouchGesture:[self gestureWithCoordinates:coords]
+                                                  completion:^(NSError *e) {
+                                                      *setToTrueWhenDone = YES;
+                                                      *err = e;
+                                                  }];
+            }
         }
     } completion:completion];
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F31a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -17,16 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <rect key="frame" x="203" y="329" width="195" height="17"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="195" id="9zm-Cm-VkB"/>
-                                    <constraint firstAttribute="height" constant="17" id="y8G-uR-gzF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="こんにちは！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2c-Gh-js7">
                                 <rect key="frame" x="20" y="501" width="560" height="42"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,11 +26,10 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration" identifier="touch page"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="K2c-Gh-js7" secondAttribute="trailing" id="5CP-1t-PCM"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="K2c-Gh-js7" secondAttribute="bottom" constant="8" id="K72-3g-PFx"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="309" id="Mwj-ty-Xag"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="K2c-Gh-js7" secondAttribute="centerX" id="Wy1-xp-rVF"/>
                             <constraint firstItem="K2c-Gh-js7" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="qdu-pJ-mgq"/>
                         </constraints>
                     </view>
@@ -51,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439" y="-617"/>
+            <point key="canvasLocation" x="600" y="-656"/>
         </scene>
         <!--Rotate/Pinch-->
         <scene sceneID="awZ-sz-gsb">
@@ -76,6 +65,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration" identifier="rotate/pinch page"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="p4O-xQ-Uw3" secondAttribute="trailing" id="1Oc-pD-v0O"/>
                             <constraint firstItem="p4O-xQ-Uw3" firstAttribute="centerX" secondItem="8eB-3E-HNJ" secondAttribute="centerX" id="OdE-T8-jdR"/>
@@ -90,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UX3-VI-Fq6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1800" y="-627"/>
+            <point key="canvasLocation" x="1809" y="8"/>
         </scene>
         <!--Pan-->
         <scene sceneID="OZT-P3-eMC">
@@ -115,6 +105,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration" identifier="pan page"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="GnW-eL-Ri9" secondAttribute="leading" id="PpN-SC-oe1"/>
                             <constraint firstItem="dOl-y6-j5T" firstAttribute="top" secondItem="GnW-eL-Ri9" secondAttribute="bottom" constant="17" id="S4y-8W-ktM"/>
@@ -129,7 +120,223 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V1Z-3z-ULq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="431" y="408"/>
+            <point key="canvasLocation" x="433" y="932"/>
+        </scene>
+        <!--Tao-->
+        <scene sceneID="qfw-v3-Wl9">
+            <objects>
+                <viewController id="fjY-r3-q7z" userLabel="Tao" customClass="TaoController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wnv-uZ-HQl"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Up-jB-r0F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qWP-eE-JNW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XTU-cj-tFR" userLabel="ButtonAndLabel">
+                                <rect key="frame" x="20" y="20" width="60" height="168"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qX8-i5-Blb" userLabel="Buttons">
+                                        <rect key="frame" x="8" y="52" width="44" height="108"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8I-jd-QqW" userLabel="DoubleTap">
+                                                <rect key="frame" x="8" y="16" width="4" height="4"/>
+                                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="double tap">
+                                                    <accessibilityTraits key="traits" button="YES"/>
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="4" id="QXE-F3-nEE"/>
+                                                    <constraint firstAttribute="height" constant="4" id="pN2-bh-KxY"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rB-Ig-CMS" userLabel="Touch">
+                                                <rect key="frame" x="32" y="16" width="4" height="4"/>
+                                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="touch">
+                                                    <accessibilityTraits key="traits" button="YES"/>
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="4" id="WDk-11-RhD"/>
+                                                    <constraint firstAttribute="width" constant="4" id="lgA-5D-Ebw"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="krs-Wl-lQL" userLabel="LongPress" customClass="h">
+                                                <rect key="frame" x="8" y="40" width="4" height="4"/>
+                                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="long press">
+                                                    <accessibilityTraits key="traits" button="YES"/>
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="4" id="YOc-ZH-QvR"/>
+                                                    <constraint firstAttribute="width" constant="4" id="Zv0-VA-nLB"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBj-oq-gY9" userLabel="TwoFingerTap">
+                                                <rect key="frame" x="32" y="40" width="4" height="4"/>
+                                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="two finger tap">
+                                                    <accessibilityTraits key="traits" button="YES"/>
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="4" id="kvz-wL-S56"/>
+                                                    <constraint firstAttribute="width" constant="4" id="pgM-Dh-SfO"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NMN-nN-Sbk" userLabel="TripleTap">
+                                                <rect key="frame" x="8" y="64" width="4" height="4"/>
+                                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="triple tap">
+                                                    <accessibilityTraits key="traits" button="YES"/>
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="4" id="7Qh-rl-SSa"/>
+                                                    <constraint firstAttribute="height" constant="4" id="ezO-ab-npb"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rgX-SB-lks" userLabel="TwoFingerLongPress">
+                                                <rect key="frame" x="32" y="64" width="4" height="4"/>
+                                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="two finger long press">
+                                                    <accessibilityTraits key="traits" button="YES"/>
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="4" id="YLW-k3-xvN"/>
+                                                    <constraint firstAttribute="width" constant="4" id="mPg-qh-QvI"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="37X-zV-EjS" userLabel="ThreeFingerTap">
+                                                <rect key="frame" x="8" y="87" width="4" height="4"/>
+                                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="three finger tap">
+                                                    <accessibilityTraits key="traits" button="YES"/>
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="4" id="Jpb-nq-jcF"/>
+                                                    <constraint firstAttribute="width" constant="4" id="jXw-nv-oBA"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MDb-5P-wLY" userLabel="TwoFingerDoubleTap">
+                                                <rect key="frame" x="32" y="88" width="4" height="4"/>
+                                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="two finger double tap">
+                                                    <accessibilityTraits key="traits" button="YES"/>
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="4" id="33p-M6-3NJ"/>
+                                                    <constraint firstAttribute="height" constant="4" id="nfe-Fc-ve2"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="action buttons"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="rgX-SB-lks" secondAttribute="trailing" constant="8" id="0iD-64-wNh"/>
+                                            <constraint firstItem="37X-zV-EjS" firstAttribute="top" secondItem="NMN-nN-Sbk" secondAttribute="bottom" constant="19" id="1h1-ag-cqz"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="5U1-Nc-OpI"/>
+                                            <constraint firstAttribute="width" constant="44" id="BKI-GW-X2f"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="108" id="GDa-cY-eEt"/>
+                                            <constraint firstItem="bBj-oq-gY9" firstAttribute="top" secondItem="5rB-Ig-CMS" secondAttribute="bottom" constant="20" id="Grr-gL-9yG"/>
+                                            <constraint firstItem="5rB-Ig-CMS" firstAttribute="leading" secondItem="d8I-jd-QqW" secondAttribute="trailing" constant="20" id="IBK-0c-FGE"/>
+                                            <constraint firstItem="bBj-oq-gY9" firstAttribute="leading" secondItem="krs-Wl-lQL" secondAttribute="trailing" constant="20" id="K1c-fQ-brE"/>
+                                            <constraint firstAttribute="height" constant="108" id="KcC-X1-1rI"/>
+                                            <constraint firstItem="MDb-5P-wLY" firstAttribute="top" secondItem="rgX-SB-lks" secondAttribute="bottom" constant="20" id="Nip-pY-eTW"/>
+                                            <constraint firstItem="5rB-Ig-CMS" firstAttribute="top" secondItem="qX8-i5-Blb" secondAttribute="top" constant="16" id="OlS-ZC-ys1"/>
+                                            <constraint firstItem="rgX-SB-lks" firstAttribute="top" secondItem="bBj-oq-gY9" secondAttribute="bottom" constant="20" id="PwW-kn-5Wf"/>
+                                            <constraint firstItem="krs-Wl-lQL" firstAttribute="top" secondItem="d8I-jd-QqW" secondAttribute="bottom" constant="20" id="Rs4-VR-tMC"/>
+                                            <constraint firstItem="d8I-jd-QqW" firstAttribute="top" secondItem="qX8-i5-Blb" secondAttribute="top" constant="16" id="VkY-o5-mhR"/>
+                                            <constraint firstItem="NMN-nN-Sbk" firstAttribute="top" secondItem="krs-Wl-lQL" secondAttribute="bottom" constant="20" id="aFn-xD-gka"/>
+                                            <constraint firstItem="krs-Wl-lQL" firstAttribute="leading" secondItem="qX8-i5-Blb" secondAttribute="leading" constant="8" id="aaT-tQ-r6g"/>
+                                            <constraint firstAttribute="trailing" secondItem="5rB-Ig-CMS" secondAttribute="trailing" constant="8" id="d9b-HE-01B"/>
+                                            <constraint firstItem="d8I-jd-QqW" firstAttribute="leading" secondItem="qX8-i5-Blb" secondAttribute="leading" constant="8" id="h4y-XJ-2iN"/>
+                                            <constraint firstItem="bBj-oq-gY9" firstAttribute="top" secondItem="5rB-Ig-CMS" secondAttribute="bottom" constant="20" id="i9K-YE-ELM"/>
+                                            <constraint firstAttribute="trailing" secondItem="MDb-5P-wLY" secondAttribute="trailing" constant="8" id="jTv-FI-ZMv"/>
+                                            <constraint firstItem="5rB-Ig-CMS" firstAttribute="leading" secondItem="d8I-jd-QqW" secondAttribute="trailing" constant="20" id="kMc-FB-HQl"/>
+                                            <constraint firstItem="NMN-nN-Sbk" firstAttribute="leading" secondItem="qX8-i5-Blb" secondAttribute="leading" constant="8" id="kbM-eN-nO7"/>
+                                            <constraint firstAttribute="trailing" secondItem="bBj-oq-gY9" secondAttribute="trailing" constant="8" id="oEf-o3-q9c"/>
+                                            <constraint firstItem="bBj-oq-gY9" firstAttribute="leading" secondItem="krs-Wl-lQL" secondAttribute="trailing" constant="20" id="qOa-pg-Vsm"/>
+                                            <constraint firstItem="krs-Wl-lQL" firstAttribute="top" secondItem="d8I-jd-QqW" secondAttribute="bottom" constant="20" id="xhA-4H-E7G"/>
+                                            <constraint firstItem="37X-zV-EjS" firstAttribute="leading" secondItem="qX8-i5-Blb" secondAttribute="leading" constant="8" id="xyL-ZV-QDb"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbZ-5y-KQC">
+                                        <rect key="frame" x="5" y="15" width="50" height="22"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="touch action">
+                                            <accessibilityTraits key="traits" none="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="69o-tD-XLQ"/>
+                                            <constraint firstAttribute="width" constant="50" id="wiU-Pz-WIz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8111260776" green="0.73380926719999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="action box"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="5mm-FL-9aM"/>
+                                    <constraint firstItem="qX8-i5-Blb" firstAttribute="leading" secondItem="XTU-cj-tFR" secondAttribute="leading" constant="8" id="F0g-PE-3pB"/>
+                                    <constraint firstItem="PbZ-5y-KQC" firstAttribute="leading" secondItem="XTU-cj-tFR" secondAttribute="leading" constant="5" id="IgN-Ag-n1i"/>
+                                    <constraint firstAttribute="trailing" secondItem="PbZ-5y-KQC" secondAttribute="trailing" constant="5" id="LdN-XP-nEj"/>
+                                    <constraint firstItem="qX8-i5-Blb" firstAttribute="leading" secondItem="XTU-cj-tFR" secondAttribute="leading" constant="8" id="Ql1-ts-eYs"/>
+                                    <constraint firstAttribute="trailing" secondItem="qX8-i5-Blb" secondAttribute="trailing" constant="8" id="UIW-M2-X7N"/>
+                                    <constraint firstItem="qX8-i5-Blb" firstAttribute="top" secondItem="PbZ-5y-KQC" secondAttribute="bottom" constant="15" id="iLA-bs-cSF"/>
+                                    <constraint firstAttribute="bottom" secondItem="qX8-i5-Blb" secondAttribute="bottom" constant="8" id="oH8-8Q-KNE"/>
+                                    <constraint firstItem="PbZ-5y-KQC" firstAttribute="centerX" secondItem="XTU-cj-tFR" secondAttribute="centerX" id="oIV-zg-9BD"/>
+                                    <constraint firstAttribute="width" constant="60" id="r0X-rn-Oce"/>
+                                    <constraint firstItem="PbZ-5y-KQC" firstAttribute="top" secondItem="XTU-cj-tFR" secondAttribute="top" constant="15" id="wJ4-XM-pJl"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syb-F1-lj4">
+                                <rect key="frame" x="256" y="256" width="88" height="88"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="center label"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="5Ox-mj-hZ5"/>
+                                    <constraint firstAttribute="height" constant="88" id="80q-Pd-8te"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration" identifier="tao page"/>
+                        <constraints>
+                            <constraint firstItem="Syb-F1-lj4" firstAttribute="centerX" secondItem="qWP-eE-JNW" secondAttribute="centerX" id="3eV-bV-Cxl"/>
+                            <constraint firstItem="XTU-cj-tFR" firstAttribute="leading" secondItem="qWP-eE-JNW" secondAttribute="leadingMargin" id="Gqi-wP-qHG"/>
+                            <constraint firstItem="XTU-cj-tFR" firstAttribute="top" secondItem="wnv-uZ-HQl" secondAttribute="bottom" id="e7B-Bz-Wk4"/>
+                            <constraint firstItem="Syb-F1-lj4" firstAttribute="centerY" secondItem="qWP-eE-JNW" secondAttribute="centerY" id="gVd-zA-EXJ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tao" image="tab-bar-tao" selectedImage="tab-bar-tao-selected" id="Hob-gk-olJ"/>
+                    <connections>
+                        <outlet property="centerLabel" destination="Syb-F1-lj4" id="JMn-J7-znx"/>
+                        <outlet property="doubleTap" destination="d8I-jd-QqW" id="TKu-Lz-Zh5"/>
+                        <outlet property="longPress" destination="krs-Wl-lQL" id="aMQ-fT-u9J"/>
+                        <outlet property="threeFingerTap" destination="37X-zV-EjS" id="bY2-Fc-f2Y"/>
+                        <outlet property="touch" destination="5rB-Ig-CMS" id="AiQ-Nj-SAF"/>
+                        <outlet property="touchActionLabel" destination="PbZ-5y-KQC" id="sXE-hD-ftr"/>
+                        <outlet property="tripleTap" destination="NMN-nN-Sbk" id="i7z-i3-aoC"/>
+                        <outlet property="twoFingerDoubleTap" destination="MDb-5P-wLY" id="3eg-TC-XRo"/>
+                        <outlet property="twoFingerLongPress" destination="rgX-SB-lks" id="fyv-Lu-5nQ"/>
+                        <outlet property="twoFingerTap" destination="bBj-oq-gY9" id="QgX-Tx-8we"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z58-cU-sNZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1589" y="-677"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -146,6 +353,7 @@
                         <segue destination="r9X-Zk-Zeo" kind="relationship" relationship="viewControllers" id="orA-4g-1GQ"/>
                         <segue destination="ore-Qo-AIA" kind="relationship" relationship="viewControllers" id="JgZ-wp-7ZJ"/>
                         <segue destination="xmh-5J-kwV" kind="relationship" relationship="viewControllers" id="Zg6-fr-JYw"/>
+                        <segue destination="fjY-r3-q7z" kind="relationship" relationship="viewControllers" id="0rD-Qt-v8P"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -180,6 +388,7 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration" identifier="misc page"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="mXs-G4-gwd" secondAttribute="leading" id="6US-zF-TRu"/>
                             <constraint firstItem="mXs-G4-gwd" firstAttribute="centerX" secondItem="Yqb-KX-JoO" secondAttribute="centerX" id="8wX-Ro-fee"/>
@@ -197,7 +406,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNA-Lv-Y1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1703" y="705"/>
+            <point key="canvasLocation" x="1074" y="932"/>
         </scene>
     </scenes>
     <resources>
@@ -207,6 +416,8 @@
         <image name="tab-bar-gestures-selected" width="24" height="26"/>
         <image name="tab-bar-special" width="28" height="14"/>
         <image name="tab-bar-special-selected" width="28" height="14"/>
+        <image name="tab-bar-tao" width="28" height="28"/>
+        <image name="tab-bar-tao-selected" width="28" height="28"/>
         <image name="tab-bar-tapping" width="18" height="28"/>
         <image name="tab-bar-tapping-selected" width="18" height="28"/>
     </resources>
