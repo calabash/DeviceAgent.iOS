@@ -11,10 +11,10 @@
         @throw [InvalidArgumentException withFormat:@"%@ requires at least one coordinate.",  [self.class name]];
     }
 
+    XCUIApplication *shared = [Application currentApplication];
+    UIInterfaceOrientation orientation = [shared interfaceOrientation];
     CGPoint coordinate = coordinates[0].cgpoint;
-    TouchPath *path = [TouchPath withFirstTouchPoint:coordinate
-                                         orientation:0
-                                              offset:0.0];
+    TouchPath *path = [TouchPath withFirstTouchPoint:coordinate orientation:orientation];
 
     [path liftUpAfterSeconds:[self duration]];
 

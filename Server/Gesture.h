@@ -20,6 +20,8 @@
 #import "JSONUtils.h"
 #import "CBXMacros.h"
 #import "Query.h"
+#import "Application.h"
+#import "XCUIApplication.h"
 
 /**
  Convenience protocol describing functionality of a Gesture class.
