@@ -27,8 +27,8 @@
     
     [ThreadUtils runSync:^(BOOL *setToTrueWhenDone, NSError *__autoreleasing *err) {
         [[Testmanagerd get] _XCT_sendString:string completion:^(NSError *e) {
-            *setToTrueWhenDone = YES;
             *err = e;
+            *setToTrueWhenDone = YES;
         }];
     } completion:completion];
     

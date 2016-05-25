@@ -92,29 +92,29 @@
             if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] != 0x0) {
                 [[Testmanagerd get] _XCT_synthesizeEvent:event.event
                                               completion:^(NSError *e) {
-                                                  *setToTrueWhenDone = YES;
                                                   *err = e;
+                                                  *setToTrueWhenDone = YES;
                                               }];
             } else {
                 [[Testmanagerd get] _XCT_performTouchGesture:event.gesture
                                                   completion:^(NSError *e) {
-                                                      *setToTrueWhenDone = YES;
                                                       *err = e;
+                                                      *setToTrueWhenDone = YES;
                                                   }];
             }
         } @catch (CBXException *e) {
-            NSLog(@"cbxEventForCoordiantes is NYI, falling back to previous interface");
+            NSLog(@"cbxEventForCoordinates is NYI, falling back to previous interface");
             if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] != 0x0) {
                 [[Testmanagerd get] _XCT_synthesizeEvent:[self eventWithCoordinates:coords]
                                               completion:^(NSError *e) {
-                                                  *setToTrueWhenDone = YES;
                                                   *err = e;
+                                                  *setToTrueWhenDone = YES;
                                               }];
             } else {
                 [[Testmanagerd get] _XCT_performTouchGesture:[self gestureWithCoordinates:coords]
                                                   completion:^(NSError *e) {
-                                                      *setToTrueWhenDone = YES;
                                                       *err = e;
+                                                      *setToTrueWhenDone = YES;
                                                   }];
             }
         }
