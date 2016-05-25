@@ -53,6 +53,7 @@ static NSString *const CBX_INDEX_KEY = @"index";
 static NSString *const CBX_PROPERTY_KEY = @"property";
 static NSString *const CBX_PROPERTY_LIKE_KEY = @"property_like";
 static NSString *const CBX_TEST_ID = @"test_id";
+static NSString *const CBX_TEST_ID_KEY = @"test_id";
 static NSString *const CBX_TEXT_KEY = @"text";
 static NSString *const CBX_TEXT_LIKE_KEY = @"text_like";
 static NSString *const CBX_TEXT1_KEY = @"text1";

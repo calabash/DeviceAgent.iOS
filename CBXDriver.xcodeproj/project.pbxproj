@@ -79,6 +79,9 @@
 		899697051CB5D5CF00BB42E2 /* Gesture+Options.h in Headers */ = {isa = PBXBuildFile; fileRef = 899697031CB5D5CF00BB42E2 /* Gesture+Options.h */; };
 		899697061CB5D5CF00BB42E2 /* Gesture+Options.m in Sources */ = {isa = PBXBuildFile; fileRef = 899697041CB5D5CF00BB42E2 /* Gesture+Options.m */; };
 		899697071CB5D5CF00BB42E2 /* Gesture+Options.m in Sources */ = {isa = PBXBuildFile; fileRef = 899697041CB5D5CF00BB42E2 /* Gesture+Options.m */; };
+		89B9519C1CF5740C007FD0AB /* QuerySpecifierByType.h in Headers */ = {isa = PBXBuildFile; fileRef = 89B9519A1CF5740C007FD0AB /* QuerySpecifierByType.h */; };
+		89B9519D1CF5740C007FD0AB /* QuerySpecifierByType.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B9519B1CF5740C007FD0AB /* QuerySpecifierByType.m */; };
+		89B9519E1CF5740C007FD0AB /* QuerySpecifierByType.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B9519B1CF5740C007FD0AB /* QuerySpecifierByType.m */; };
 		89C5F3501C9A60E70093A018 /* Testmanagerd.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F34E1C9A60E70093A018 /* Testmanagerd.h */; };
 		89C5F3511C9A60E70093A018 /* Testmanagerd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F34F1C9A60E70093A018 /* Testmanagerd.m */; };
 		89C5F3541C9A66E10093A018 /* NSXPCConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3531C9A66E10093A018 /* NSXPCConnection.h */; };
@@ -380,6 +383,8 @@
 		899696FE1CB5C93400BB42E2 /* QuerySpecifierByCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySpecifierByCoordinate.m; sourceTree = "<group>"; };
 		899697031CB5D5CF00BB42E2 /* Gesture+Options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Gesture+Options.h"; sourceTree = "<group>"; };
 		899697041CB5D5CF00BB42E2 /* Gesture+Options.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Gesture+Options.m"; sourceTree = "<group>"; };
+		89B9519A1CF5740C007FD0AB /* QuerySpecifierByType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySpecifierByType.h; sourceTree = "<group>"; };
+		89B9519B1CF5740C007FD0AB /* QuerySpecifierByType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySpecifierByType.m; sourceTree = "<group>"; };
 		89C5F34E1C9A60E70093A018 /* Testmanagerd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Testmanagerd.h; sourceTree = "<group>"; };
 		89C5F34F1C9A60E70093A018 /* Testmanagerd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Testmanagerd.m; sourceTree = "<group>"; };
 		89C5F3531C9A66E10093A018 /* NSXPCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXPCConnection.h; sourceTree = "<group>"; };
@@ -1006,6 +1011,8 @@
 				89D5380F1CA34CBE00F62E09 /* QuerySpecifierByTextLike.m */,
 				899696FD1CB5C93400BB42E2 /* QuerySpecifierByCoordinate.h */,
 				899696FE1CB5C93400BB42E2 /* QuerySpecifierByCoordinate.m */,
+				89B9519A1CF5740C007FD0AB /* QuerySpecifierByType.h */,
+				89B9519B1CF5740C007FD0AB /* QuerySpecifierByType.m */,
 			);
 			name = QuerySelectors;
 			sourceTree = "<group>";
@@ -1717,6 +1724,7 @@
 				F55F819B1C6DD07500A945C8 /* HTTPAsyncFileResponse.h in Headers */,
 				89C5F3561C9B9B690093A018 /* CBXTypedefs.h in Headers */,
 				89C5F3541C9A66E10093A018 /* NSXPCConnection.h in Headers */,
+				89B9519C1CF5740C007FD0AB /* QuerySpecifierByType.h in Headers */,
 				F55F81871C6DD07500A945C8 /* DDNumber.h in Headers */,
 				89C5F36B1C9C912F0093A018 /* GestureFactory.h in Headers */,
 				F55F82581C6DD07500A945C8 /* RoutingHTTPServer.h in Headers */,
@@ -1814,6 +1822,7 @@
 				TargetAttributes = {
 					898743BB1C5847B30084FD93 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 58LM7J37Q8;
 					};
 					898743D41C5847B30084FD93 = {
 						CreatedOnToolsVersion = 7.2;
@@ -2023,6 +2032,7 @@
 				F55F81811C6DD07500A945C8 /* GCDAsyncSocket.m in Sources */,
 				899696C51CB3360900BB42E2 /* Pinch.m in Sources */,
 				F55F82531C6DD07500A945C8 /* RouteRequest.m in Sources */,
+				89B9519D1CF5740C007FD0AB /* QuerySpecifierByType.m in Sources */,
 				896586981CEBD97A00E8329C /* TouchPath.m in Sources */,
 				F55F84101C6E437A00A945C8 /* JSONUtils.m in Sources */,
 				89512BDC1C9EEC3C0027D61E /* Drag.m in Sources */,
@@ -2111,6 +2121,7 @@
 				F5B0A18B1CAD4B4000E056CE /* CBXiOSVersionInlinesTest.m in Sources */,
 				F5B0A1B81CAD4E3300E056CE /* Application+Queries.m in Sources */,
 				F5B0A1B71CAD4E3300E056CE /* Application.m in Sources */,
+				89B9519E1CF5740C007FD0AB /* QuerySpecifierByType.m in Sources */,
 				F5B0A1C71CAD4E6B00E056CE /* DDData.m in Sources */,
 				F5B0A1C01CAD4E4600E056CE /* MetaRoutes.m in Sources */,
 				F5B0A1B51CAD4E2700E056CE /* QuerySpecifierByPropertyLike.m in Sources */,
@@ -2307,6 +2318,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/CBXAppStub/Info.plist";
@@ -2314,6 +2327,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calabash.CBXAppStub;
 				PRODUCT_NAME = CBXAppStub;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -2322,6 +2336,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/CBXAppStub/Info.plist";
@@ -2329,6 +2345,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calabash.CBXAppStub;
 				PRODUCT_NAME = CBXAppStub;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
