@@ -77,7 +77,7 @@
                 TODO: discussion of 'visibility'
             */
             CGRect frame = el.wdFrame;
-            CGPoint center = CGPointMake(CGRectGetMidX(frame), CGRectGetMidX(frame));
+            CGPoint center = CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame));
             [coords addObject:[Coordinate fromRaw:center]];
         }
     }

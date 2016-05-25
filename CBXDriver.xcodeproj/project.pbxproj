@@ -73,6 +73,9 @@
 		899697051CB5D5CF00BB42E2 /* Gesture+Options.h in Headers */ = {isa = PBXBuildFile; fileRef = 899697031CB5D5CF00BB42E2 /* Gesture+Options.h */; };
 		899697061CB5D5CF00BB42E2 /* Gesture+Options.m in Sources */ = {isa = PBXBuildFile; fileRef = 899697041CB5D5CF00BB42E2 /* Gesture+Options.m */; };
 		899697071CB5D5CF00BB42E2 /* Gesture+Options.m in Sources */ = {isa = PBXBuildFile; fileRef = 899697041CB5D5CF00BB42E2 /* Gesture+Options.m */; };
+		89B951A11CF5B297007FD0AB /* QuerySpecifierByType.h in Headers */ = {isa = PBXBuildFile; fileRef = 89B9519F1CF5B297007FD0AB /* QuerySpecifierByType.h */; };
+		89B951A21CF5B297007FD0AB /* QuerySpecifierByType.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B951A01CF5B297007FD0AB /* QuerySpecifierByType.m */; };
+		89B951A31CF5B297007FD0AB /* QuerySpecifierByType.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B951A01CF5B297007FD0AB /* QuerySpecifierByType.m */; };
 		89C5F3501C9A60E70093A018 /* Testmanagerd.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F34E1C9A60E70093A018 /* Testmanagerd.h */; };
 		89C5F3511C9A60E70093A018 /* Testmanagerd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F34F1C9A60E70093A018 /* Testmanagerd.m */; };
 		89C5F3541C9A66E10093A018 /* NSXPCConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C5F3531C9A66E10093A018 /* NSXPCConnection.h */; };
@@ -382,6 +385,8 @@
 		899696FE1CB5C93400BB42E2 /* QuerySpecifierByCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySpecifierByCoordinate.m; sourceTree = "<group>"; };
 		899697031CB5D5CF00BB42E2 /* Gesture+Options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Gesture+Options.h"; sourceTree = "<group>"; };
 		899697041CB5D5CF00BB42E2 /* Gesture+Options.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Gesture+Options.m"; sourceTree = "<group>"; };
+		89B9519F1CF5B297007FD0AB /* QuerySpecifierByType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySpecifierByType.h; sourceTree = "<group>"; };
+		89B951A01CF5B297007FD0AB /* QuerySpecifierByType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySpecifierByType.m; sourceTree = "<group>"; };
 		89C5F34E1C9A60E70093A018 /* Testmanagerd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Testmanagerd.h; sourceTree = "<group>"; };
 		89C5F34F1C9A60E70093A018 /* Testmanagerd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Testmanagerd.m; sourceTree = "<group>"; };
 		89C5F3531C9A66E10093A018 /* NSXPCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXPCConnection.h; sourceTree = "<group>"; };
@@ -1011,6 +1016,8 @@
 				89D5380F1CA34CBE00F62E09 /* QuerySpecifierByTextLike.m */,
 				899696FD1CB5C93400BB42E2 /* QuerySpecifierByCoordinate.h */,
 				899696FE1CB5C93400BB42E2 /* QuerySpecifierByCoordinate.m */,
+				89B9519F1CF5B297007FD0AB /* QuerySpecifierByType.h */,
+				89B951A01CF5B297007FD0AB /* QuerySpecifierByType.m */,
 			);
 			name = QuerySelectors;
 			sourceTree = "<group>";
@@ -1685,6 +1692,7 @@
 				F55F819F1C6DD07500A945C8 /* HTTPDynamicFileResponse.h in Headers */,
 				F55F818D1C6DD07500A945C8 /* HTTPConnection.h in Headers */,
 				F55F81991C6DD07500A945C8 /* MultipartMessageHeaderField.h in Headers */,
+				89B951A11CF5B297007FD0AB /* QuerySpecifierByType.h in Headers */,
 				89D538101CA34CBE00F62E09 /* QuerySpecifierByTextLike.h in Headers */,
 				89C5F3631C9C58BD0093A018 /* Touch.h in Headers */,
 				F55F81801C6DD07500A945C8 /* GCDAsyncSocket.h in Headers */,
@@ -2072,6 +2080,7 @@
 				896586831CEB9B9800E8329C /* QueryFactory.m in Sources */,
 				F55F81941C6DD07500A945C8 /* HTTPServer.m in Sources */,
 				89D538161CA351F400F62E09 /* QuerySpecifierByIndex.m in Sources */,
+				89B951A21CF5B297007FD0AB /* QuerySpecifierByType.m in Sources */,
 				F5870B401CF0BEFF00B3376C /* CBXTouchEvent.m in Sources */,
 				F55F823D1C6DD07500A945C8 /* DispatchQueueLogFormatter.m in Sources */,
 				899696C01CB2F22000BB42E2 /* EnterTextIn.m in Sources */,
@@ -2124,6 +2133,7 @@
 				8965867F1CEB998500E8329C /* QueryConfigurationFactory.m in Sources */,
 				F5B0A11D1CAD3D8C00E056CE /* CBXTestToolsStandup.m in Sources */,
 				8965869E1CECC3B100E8329C /* TouchPathTests.m in Sources */,
+				89B951A31CF5B297007FD0AB /* QuerySpecifierByType.m in Sources */,
 				F5B0A1A41CAD4DE800E056CE /* XCUIElement+WebDriverAttributes.m in Sources */,
 				F5B0A1D51CAD4E8A00E056CE /* HTTPFileResponse.m in Sources */,
 				F5B0A1CF1CAD4E7F00E056CE /* MultipartMessageHeader.m in Sources */,

@@ -1,5 +1,6 @@
 
 #import <XCTest/XCTest.h>
+
 #import "CBXTouchEvent.h"
 #import "TouchPath.h"
 #import "XCSynthesizedEventRecord.h"
@@ -23,6 +24,7 @@
 @end
 
 @implementation CBXTouchEventTests
+
 
 - (void)setUp {
     [super setUp];

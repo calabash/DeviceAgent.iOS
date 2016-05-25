@@ -30,6 +30,7 @@
                   */
                  NSMutableArray *results = [NSMutableArray arrayWithCapacity:elements.count];
                  for (XCUIElement *el in elements) {
+                     [Application cacheElement:el];
                      NSDictionary *json = [JSONUtils snapshotToJSON:el];
                      [results addObject:json];
                  }
@@ -46,6 +47,12 @@
              [CBXRoute get:@"/query/id/:id" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
                  NSString *identifier = request.params[CBX_IDENTIFIER_KEY];
                  [response respondWithJSON:[Application jsonForElementsWithID:identifier]];
+             }],
+             
+             [CBXRoute get:@"/1.0/query/test_id/:test_id" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
+                 NSNumber *identifier = @([request.params[CBX_TEST_ID_KEY] integerValue]);
+                 XCUIElement *el = [Application cachedElementOrThrow:identifier];
+                 [response respondWithJSON:[JSONUtils elementToJSON:el]];
              }],
              
              [CBXRoute get:@"/query/type/:type" withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
