@@ -130,6 +130,10 @@
 		F542EA1E1CC53EE100D87200 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA1D1CC53EE100D87200 /* Security.framework */; };
 		F542EA1F1CC53EFF00D87200 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA141CC5368000D87200 /* UIKit.framework */; };
 		F542EA211CC53F6400D87200 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA201CC53F6400D87200 /* CoreGraphics.framework */; };
+		F54514111CF624C900A0BB14 /* CBXDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = F545140F1CF624C900A0BB14 /* CBXDevice.h */; };
+		F54514121CF624C900A0BB14 /* CBXDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = F54514101CF624C900A0BB14 /* CBXDevice.m */; };
+		F54514131CF624C900A0BB14 /* CBXDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = F54514101CF624C900A0BB14 /* CBXDevice.m */; };
+		F54514161CF6268500A0BB14 /* CBXDeviceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F54514141CF6268500A0BB14 /* CBXDeviceTest.m */; };
 		F55B31C61CBE6EEA00DFB13C /* TwoFingerTap.m in Sources */ = {isa = PBXBuildFile; fileRef = F55B31C41CBE6E3800DFB13C /* TwoFingerTap.m */; };
 		F55B31C71CBE6EEF00DFB13C /* TwoFingerTap.m in Sources */ = {isa = PBXBuildFile; fileRef = F55B31C41CBE6E3800DFB13C /* TwoFingerTap.m */; };
 		F55F81801C6DD07500A945C8 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F55F7FED1C6DD07500A945C8 /* GCDAsyncSocket.h */; };
@@ -436,6 +440,9 @@
 		F542EA1B1CC53EC800D87200 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		F542EA1D1CC53EE100D87200 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		F542EA201CC53F6400D87200 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F545140F1CF624C900A0BB14 /* CBXDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXDevice.h; sourceTree = "<group>"; usesTabs = 0; };
+		F54514101CF624C900A0BB14 /* CBXDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXDevice.m; sourceTree = "<group>"; usesTabs = 0; };
+		F54514141CF6268500A0BB14 /* CBXDeviceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXDeviceTest.m; sourceTree = "<group>"; usesTabs = 0; };
 		F55B31C31CBE6E3800DFB13C /* TwoFingerTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoFingerTap.h; sourceTree = "<group>"; };
 		F55B31C41CBE6E3800DFB13C /* TwoFingerTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoFingerTap.m; sourceTree = "<group>"; };
 		F55F7FED1C6DD07500A945C8 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
@@ -616,7 +623,7 @@
 		F55F83D01C6DDF1300A945C8 /* QueryRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryRoutes.h; sourceTree = "<group>"; };
 		F55F83D11C6DDF1300A945C8 /* QueryRoutes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryRoutes.m; sourceTree = "<group>"; };
 		F55F83D21C6DDF1300A945C8 /* SessionRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionRoutes.h; sourceTree = "<group>"; };
-		F55F83D31C6DDF1300A945C8 /* SessionRoutes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionRoutes.m; sourceTree = "<group>"; };
+		F55F83D31C6DDF1300A945C8 /* SessionRoutes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionRoutes.m; sourceTree = "<group>"; usesTabs = 0; };
 		F55F83D41C6DDF1300A945C8 /* UndefinedRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UndefinedRoutes.h; sourceTree = "<group>"; };
 		F55F83D51C6DDF1300A945C8 /* UndefinedRoutes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UndefinedRoutes.m; sourceTree = "<group>"; };
 		F55F83DA1C6DDF1300A945C8 /* JSONUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONUtils.h; sourceTree = "<group>"; };
@@ -1388,6 +1395,8 @@
 				89F6BF8F1CBEB5AD0088269C /* GeometryUtils.m */,
 				89331D2E1CC50447003C2E59 /* ThreadUtils.h */,
 				89331D2F1CC50447003C2E59 /* ThreadUtils.m */,
+				F545140F1CF624C900A0BB14 /* CBXDevice.h */,
+				F54514101CF624C900A0BB14 /* CBXDevice.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1652,6 +1661,7 @@
 		F5B0A19A1CAD4C9200E056CE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F54514141CF6268500A0BB14 /* CBXDeviceTest.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1695,6 +1705,7 @@
 				89B951A11CF5B297007FD0AB /* QuerySpecifierByType.h in Headers */,
 				89D538101CA34CBE00F62E09 /* QuerySpecifierByTextLike.h in Headers */,
 				89C5F3631C9C58BD0093A018 /* Touch.h in Headers */,
+				F54514111CF624C900A0BB14 /* CBXDevice.h in Headers */,
 				F55F81801C6DD07500A945C8 /* GCDAsyncSocket.h in Headers */,
 				89C5F35E1C9C51680093A018 /* Query.h in Headers */,
 				F55F81931C6DD07500A945C8 /* HTTPServer.h in Headers */,
@@ -2064,6 +2075,7 @@
 				89C5F3641C9C58BD0093A018 /* Touch.m in Sources */,
 				89512BE01CA095D20027D61E /* DeviceEventRoutes.m in Sources */,
 				F50940FB1CC6069C00E559E3 /* GeometryUtils.m in Sources */,
+				F54514121CF624C900A0BB14 /* CBXDevice.m in Sources */,
 				899697001CB5C93400BB42E2 /* QuerySpecifierByCoordinate.m in Sources */,
 				F55F81811C6DD07500A945C8 /* GCDAsyncSocket.m in Sources */,
 				899696C51CB3360900BB42E2 /* Pinch.m in Sources */,
@@ -2178,9 +2190,11 @@
 				89F6BF8D1CBC4BDD0088269C /* Rotate.m in Sources */,
 				F5B0A1AC1CAD4E2700E056CE /* Drag.m in Sources */,
 				F5B0A1AD1CAD4E2700E056CE /* Query.m in Sources */,
+				F54514161CF6268500A0BB14 /* CBXDeviceTest.m in Sources */,
 				F5B0A1B31CAD4E2700E056CE /* QuerySpecifierByIndex.m in Sources */,
 				F5B0A1A61CAD4DFA00E056CE /* CBXCUITestServer.m in Sources */,
 				F5B0A1E21CAD4EA700E056CE /* RouteResponse.m in Sources */,
+				F54514131CF624C900A0BB14 /* CBXDevice.m in Sources */,
 				F5B0A1BE1CAD4E4600E056CE /* GestureRoutes.m in Sources */,
 				899697071CB5D5CF00BB42E2 /* Gesture+Options.m in Sources */,
 				899696C61CB3360900BB42E2 /* Pinch.m in Sources */,

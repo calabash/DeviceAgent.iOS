@@ -1,8 +1,3 @@
-//
-//  SessionRoutes.m
-//  xcuitest-server
-//
-
 #import "CBXCUITestServer.h"
 #import "Application.h"
 #import "SessionRoutes.h"
@@ -10,6 +5,7 @@
 #import "CBXConstants.h"
 #import "XCDeviceEvent.h"
 #import "CBXMacros.h"
+#import "CBXDevice.h"
 
 @implementation SessionRoutes
 
@@ -48,8 +44,15 @@
                                         };
                  [response respondWithJSON:json];
                  [CBXCUITestServer stop];
+             }],
+
+             [CBXRoute get:endpoint(@"/device", 1.0) withBlock:^(RouteRequest *request,
+                                                                 NSDictionary *data,
+                                                                 RouteResponse *response) {
+                 NSDictionary *json = [[CBXDevice sharedDevice]
+                                       dictionaryRepresentation];
+                 [response respondWithJSON:json];
              }]
-             
              ];
 }
 
