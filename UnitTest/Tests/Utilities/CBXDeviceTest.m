@@ -23,6 +23,7 @@ static NSString *const LPiPhone5sSimVersionInfo = @"CoreSimulator 110.4 - Device
 - (NSString *)simulatorModelIdentfier;
 - (NSString *)simulatorVersionInfo;
 - (NSDictionary *)formFactorMap;
+- (NSDictionary *)instructionSetMap;
 - (BOOL)isLetterBox;
 
 @end
@@ -413,7 +414,20 @@ static NSString *const LPiPhone5sSimVersionInfo = @"CoreSimulator 110.4 - Device
 
 - (void)testDictionaryRepresentation {
     NSDictionary *dictionary = [self.device dictionaryRepresentation];
-    expect(dictionary.count).to.equal(17);
+    expect(dictionary.count).to.equal(18);
 }
 
+- (void)testInstructionSetMap {
+    NSDictionary *map = [self.device instructionSetMap];
+    expect(map.count).to.equal(3);
+
+    expect([map[@"armv7"] count]).to.equal(15);
+    expect([map[@"armv7s"] count]).to.equal(7);
+    expect([map[@"arm64"] count]).to.equal(24);
+}
+
+- (void)testArmVersion {
+    NSString *version = [self.device armVersion];
+    expect(version).notTo.equal(@"unknown");
+}
 @end

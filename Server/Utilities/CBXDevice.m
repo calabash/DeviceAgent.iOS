@@ -14,6 +14,7 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
 @property(assign, nonatomic, readonly) CGFloat sampleFactor;
 @property(strong, nonatomic) NSDictionary *processEnvironment;
 @property(strong, nonatomic) NSDictionary *formFactorMap;
+@property(strong, nonatomic) NSDictionary *instructionSetMap;
 @property(copy, nonatomic, readonly) NSString *physicalDeviceModelIdentifier;
 @property(copy, nonatomic, readonly) NSString *deviceFamily;
 
@@ -39,6 +40,8 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
 @synthesize formFactor = _formFactor;
 @synthesize processEnvironment = _processEnvironment;
 @synthesize formFactorMap = _formFactorMap;
+@synthesize instructionSetMap = _instructionSetMap;
+@synthesize armVersion = _armVersion;
 @synthesize deviceFamily = _deviceFamily;
 @synthesize name = _name;
 @synthesize iOSVersion = _iOSVersion;
@@ -217,6 +220,114 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
     return _formFactorMap;
 }
 
+// https://www.innerfence.com/howto/apple-ios-devices-dates-versions-instruction-sets
+- (NSDictionary *)instructionSetMap {
+    if (_instructionSetMap) { return _instructionSetMap; }
+
+    _instructionSetMap =
+
+    @{
+      @"armv7" : @[
+              // iPhone 4/4s and iPod 4th
+              @"iPhone3,1",
+              @"iPhone3,3",
+              @"iPhone4,1",
+              @"iPod4,1",
+              @"iPod5,1",
+
+              // iPad 2 and 3 and iPad Mini
+              @"iPad2,1",
+              @"iPad2,2",
+              @"iPad2,3",
+              @"iPad2,4",
+              @"iPad2,5",
+              @"iPad2,6",
+              @"iPad2,7",
+              @"iPad3,1",
+              @"iPad3,2",
+              @"iPad3,3",
+              ],
+      @"armv7s" : @[
+              // iPhone 5/5c
+              @"iPhone5,1",
+              @"iPhone5,2",
+              @"iPhone5,3",
+              @"iPhone5,4",
+
+              // iPad 4
+              @"iPad3,4",
+              @"iPad3,5",
+              @"iPad3,6"
+              ],
+
+      @"arm64" : @[
+              // iPhone 6/6s
+              @"iPhone7,2",
+              @"iPhone8,1",
+
+              // iPhone 6+
+              @"iPhone7,1",
+              @"iPhone8,2",
+              
+              // iPad Pro 13in
+              @"iPad6,7",
+              @"iPad6,8",
+              
+              // iPad Pro 9in
+              @"iPad6,3",
+              @"iPad6,4",
+
+              // iPhone 6se
+              @"iPhone8,4",
+
+              // iPod 6 and 7
+              @"iPod6,1",
+              @"iPod7,1",
+
+              // iPhone 5s
+              @"iPhone6,1",
+              @"iPhone6,2",
+              @"iPhone6,3",
+              @"iPhone6,4",
+
+              // iPad Air, Air2, mini Retina
+              @"iPad4,1",
+              @"iPad4,2",
+              @"iPad4,4",
+              @"iPad4,5",
+              @"iPad4,6",
+              @"iPad5,1",
+              @"iPad5,2",
+              @"iPad5,3",
+              @"iPad5,4"
+              ]
+      };
+
+    return _instructionSetMap;
+}
+
+- (NSString *)armVersion {
+    if (_armVersion) { return _armVersion; }
+
+    NSString *match = nil;
+    NSString *model = [self modelIdentifier];
+    NSDictionary *map = [self instructionSetMap];
+    for(NSString *arch in [map allKeys]) {
+        NSArray *models = map[arch];
+        if ([models containsObject:model]) {
+            match = arch;
+            break;
+        }
+    }
+
+    if (match) {
+        _armVersion = match;
+    } else {
+        _armVersion = @"unknown";
+    }
+    return _armVersion;
+}
+
 - (NSDictionary *)processEnvironment {
     if (_processEnvironment) { return _processEnvironment; }
     _processEnvironment = [[NSProcessInfo processInfo] environment];
@@ -346,7 +457,8 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
       @"family" : [self deviceFamily],
       @"name" : [self name],
       @"ios_version" : [self iOSVersion],
-      @"physical_device_model_identifier" : [self physicalDeviceModelIdentifier]
+      @"physical_device_model_identifier" : [self physicalDeviceModelIdentifier],
+      @"arm_version" : [self armVersion]
       };
 }
 

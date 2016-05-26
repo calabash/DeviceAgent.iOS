@@ -32,6 +32,11 @@ extern NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY;
 @property(copy, nonatomic, readonly) NSString *iOSVersion;
 
 /**
+ The ARM version.
+ */
+@property(copy, nonatomic, readonly) NSString *armVersion;
+
+/**
  CBXDevice is a singleton class.
 
  @return The single instance of CBXDevice.
