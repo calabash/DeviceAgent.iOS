@@ -18,8 +18,10 @@ typedef void (^CDUnknownBlockType)(void);
 - (CGPoint) lastPoint;
 - (instancetype)initWithOrientation:(NSInteger)orientation;
 + (XCTouchPath *)touchPathForFirstTouchPoint:(CGPoint)point
-                                 orientation:(NSInteger)orientation;
-+ (XCPointerEventPath *)eventPathForFirstTouchPoint:(CGPoint)point;
+                                 orientation:(NSInteger)orientation
+                                      offset:(float)seconds;
++ (XCPointerEventPath *)eventPathForFirstTouchPoint:(CGPoint)point
+                                             offset:(float)seconds;
 
 @end
 
@@ -38,6 +40,7 @@ typedef void (^CDUnknownBlockType)(void);
 - (void)testWithFirstTouchPoint {
     CGPoint point = CGPointMake(44, 64);
     NSInteger orientation = 1;
+    float seconds = 0.0;
 
     TouchPath *inner = [TouchPath new];
 
@@ -46,12 +49,15 @@ typedef void (^CDUnknownBlockType)(void);
 
     OCMExpect([classMock
                touchPathForFirstTouchPoint:point
-               orientation:orientation]).andForwardToRealObject();
+               orientation:orientation
+               offset:seconds]).andForwardToRealObject();
 
-    OCMExpect([classMock eventPathForFirstTouchPoint:point]).andForwardToRealObject();
+    OCMExpect([classMock eventPathForFirstTouchPoint:point
+                                              offset:seconds]).andForwardToRealObject();
 
     TouchPath *tp = [TouchPath withFirstTouchPoint:point
-                                       orientation:orientation];
+                                       orientation:orientation
+                                            offset:0.0];
 
     expect(tp.orientation).to.equal(orientation);
     expect(tp.lastPoint).to.equal(point);
@@ -85,7 +91,8 @@ typedef void (^CDUnknownBlockType)(void);
     CGFloat seconds = 20;
 
     TouchPath *tp = [TouchPath withFirstTouchPoint:firstPoint
-                                       orientation:orientation];
+                                       orientation:orientation
+                                            offset:0.0];
 
     id xcTouchPath = OCMPartialMock(tp.xcTouchPath);
     OCMExpect([xcTouchPath moveToPoint:nextPoint
@@ -123,7 +130,8 @@ typedef void (^CDUnknownBlockType)(void);
     CGFloat seconds = 20;
 
     TouchPath *tp = [TouchPath withFirstTouchPoint:point
-                                       orientation:0];
+                                       orientation:0
+                                            offset:0.0];
 
     id xcTouchPath = OCMPartialMock(tp.xcTouchPath);
     OCMExpect([xcTouchPath liftUpAtPoint:point

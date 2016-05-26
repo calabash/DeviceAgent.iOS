@@ -7,8 +7,10 @@
 @property (nonatomic) CGPoint lastPoint;
 
 + (XCTouchPath *)touchPathForFirstTouchPoint:(CGPoint)point
-                                 orientation:(NSInteger)orientation;
-+ (XCPointerEventPath *)eventPathForFirstTouchPoint:(CGPoint)point;
+                                 orientation:(NSInteger)orientation
+                                      offset:(float)offset;
++ (XCPointerEventPath *)eventPathForFirstTouchPoint:(CGPoint)point
+                                             offset:(float)offset;
 
 @end
 
@@ -22,15 +24,18 @@
 }
 
 + (instancetype)withFirstTouchPoint:(CGPoint)firstTouchPoint
-                        orientation:(NSInteger)orientation {
+                        orientation:(NSInteger)orientation
+                             offset:(float)seconds {
     TouchPath *tp = [[TouchPath alloc] initWithOrientation:orientation];
     
     tp.lastPoint = firstTouchPoint;
     
     tp.xcTouchPath = [TouchPath touchPathForFirstTouchPoint:firstTouchPoint
-                                                orientation:orientation];
+                                                orientation:orientation
+                                                     offset:seconds];
 
-    tp.eventPath = [TouchPath eventPathForFirstTouchPoint:firstTouchPoint];
+    tp.eventPath = [TouchPath eventPathForFirstTouchPoint:firstTouchPoint
+                                                   offset:seconds];
     return tp;
 }
 
@@ -52,15 +57,17 @@
 }
 
 + (XCTouchPath *)touchPathForFirstTouchPoint:(CGPoint)point
-                                 orientation:(NSInteger)orientation {
+                                 orientation:(NSInteger)orientation
+                                     offset:(float)seconds {
     return [[XCTouchPath alloc] initWithTouchDown:point
                                       orientation:orientation
-                                           offset:0.0];
+                                           offset:seconds];
 }
 
-+ (XCPointerEventPath *)eventPathForFirstTouchPoint:(CGPoint)point {
++ (XCPointerEventPath *)eventPathForFirstTouchPoint:(CGPoint)point
+                                            offset:(float)seconds {
     return [[XCPointerEventPath alloc] initForTouchAtPoint:point
-                                                    offset:0.0];
+                                                    offset:seconds];
 }
 
 @end
