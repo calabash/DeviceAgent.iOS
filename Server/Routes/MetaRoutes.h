@@ -11,6 +11,10 @@
  ## GET @"/pid"
  Returns the PID of the current app under test. 
  
+ ## GET @"/device"
+ Returns information about the device under test like model, name, and form
+ factor.
+
  */
 @interface MetaRoutes : NSObject<CBRouteProvider>
 @end

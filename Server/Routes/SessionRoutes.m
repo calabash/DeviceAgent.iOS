@@ -1,8 +1,3 @@
-//
-//  SessionRoutes.m
-//  xcuitest-server
-//
-
 #import "CBXCUITestServer.h"
 #import "Application.h"
 #import "SessionRoutes.h"
@@ -49,7 +44,6 @@
                  [response respondWithJSON:json];
                  [CBXCUITestServer stop];
              }]
-             
              ];
 }
 
