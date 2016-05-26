@@ -10,8 +10,12 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
 
 @interface CBXDevice ()
 
+@property(strong, nonatomic, readonly) NSDictionary *screenDimensions;
+@property(assign, nonatomic, readonly) CGFloat sampleFactor;
 @property(strong, nonatomic) NSDictionary *processEnvironment;
 @property(strong, nonatomic) NSDictionary *formFactorMap;
+@property(copy, nonatomic, readonly) NSString *physicalDeviceModelIdentifier;
+@property(copy, nonatomic, readonly) NSString *deviceFamily;
 
 - (id) init_private;
 
@@ -22,6 +26,8 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
 - (CGFloat)heightForMainScreenBounds;
 - (NSString *)physicalDeviceModelIdentifier;
 - (NSString *)simulatorModelIdentfier;
+- (NSString *)simulatorVersionInfo;
+- (BOOL)isLetterBox;
 
 @end
 
