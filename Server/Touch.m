@@ -1,67 +1,62 @@
 
 #import "CoordinateQueryConfiguration.h"
+#import "Coordinate.h"
 #import "Touch.h"
+#import "Application.h"
 
 @implementation Touch
 
 + (NSString *)name { return @"touch"; }
 
-- (CBXTouchEvent *)cbxEventWithCoordinates:(NSArray <Coordinate *> *)coordinates {
-    if (coordinates.count == 0) {
-        @throw [InvalidArgumentException withFormat:@"%@ requires at least one coordinate.",  [self.class name]];
++ (NSArray <NSString *> *)optionalKeys {
+    return @[CBX_REPETITIONS_KEY, CBX_DURATION_KEY];
+}
+
+- (void)validate {
+    NSArray *coordinates = [[self.query.queryConfiguration
+                             asCoordinateQueryConfiguration] coordinates];
+    if (coordinates) {
+      @throw [InvalidArgumentException
+              withFormat:@"'coordinates' is an invalid key; use 'coordinate'. \n\
+              The Touch gesture only accepts single coordinates."];
     }
+}
+
+- (CBXTouchEvent *)cbxEventWithCoordinates:(NSArray <Coordinate *> *)coordinates {
 
     XCUIApplication *shared = [Application currentApplication];
     UIInterfaceOrientation orientation = [shared interfaceOrientation];
     CGPoint coordinate = coordinates[0].cgpoint;
-    TouchPath *path = [TouchPath withFirstTouchPoint:coordinate orientation:orientation];
-
-    [path liftUpAfterSeconds:[self duration]];
-
-    return [CBXTouchEvent withTouchPath:path];
-}
-
-- (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<Coordinate *> *)coordinates {
-    if (coordinates.count == 0) {
-        @throw [InvalidArgumentException withFormat:@"%@ requires at least one coordinate.",  [self.class name]];
-    }
-
-    XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc] initWithName:self.class.name
-                                                                interfaceOrientation:0];
-
-    CGPoint coordinate = coordinates[0].cgpoint;
-
-    XCPointerEventPath *path = [[XCPointerEventPath alloc] initForTouchAtPoint:coordinate
-                                                                        offset:0];
 
     float duration = [self duration];
+    float offset = duration;
 
-    [path liftUpAtOffset:duration];
+    CBXTouchEvent *touchEvent = nil;
 
+    for (NSUInteger repsIndex = 0; repsIndex < [self repetitions]; repsIndex++) {
+        TouchPath *path = nil;
+        if (repsIndex == 0) {
+            path = [TouchPath withFirstTouchPoint:coordinate
+                                      orientation:orientation];
+        } else {
+            path = [TouchPath withFirstTouchPoint:coordinate
+                                      orientation:orientation
+                                           offset:offset];
+            offset += CBX_DOUBLE_TAP_PAUSE_DURATION;
+        }
 
-    [event addPointerEventPath:path];
-    return event;
-}
-
-- (XCTouchGesture *)gestureWithCoordinates:(NSArray<Coordinate *> *)coordinates {
-    if (coordinates.count == 0) {
-        @throw [InvalidArgumentException withFormat:@"%@ requires at least one coordinate.",  [self.class name]];
+        [path liftUpAfterSeconds:offset];
+        offset += CBX_DOUBLE_TAP_PAUSE_DURATION;
+        if (touchEvent) {
+            [touchEvent addTouchPath:path];
+        } else {
+            touchEvent = [CBXTouchEvent withTouchPath:path];
+        }
+        offset += duration;
     }
 
-    XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:self.class.name];
-
-    CGPoint coordinate = coordinates[0].cgpoint;
-
-    XCTouchPath *path = [[XCTouchPath alloc] initWithTouchDown:coordinate
-                                                   orientation:0
-                                                        offset:0];
-
-    float duration = [self duration];
-
-    [path liftUpAtPoint:coordinate
-                 offset:duration];
-    [gesture addTouchPath:path];
-    return gesture;
+    NSLog(@"touch event: %@", touchEvent);
+    return touchEvent;
 }
 
 @end

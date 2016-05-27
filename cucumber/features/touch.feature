@@ -22,9 +22,27 @@ And I clear the touch action label
 @orientation
 Scenario: Touch in any orientation
 Given I am looking at the Tao tab
-Given I rotate the device so the home button is on the bottom
+And I rotate the device so the home button is on the bottom
 Then I touch a little button
-And I clear the touch action label
+Then I rotate the device so the home button is on the left
+Then I touch a little button
+Then I rotate the device so the home button is on the right
+Then I touch a little button
+Then I rotate the device so the home button is on the top
+Then I touch a little button
+
+@wip
+@orientation
+Scenario: Triple tap in any orientation
+Given I am looking at the Tao tab
+And I rotate the device so the home button is on the bottom
+Then I triple tap a little button
+Then I rotate the device so the home button is on the left
+Then I triple tap a little button
+Then I rotate the device so the home button is on the right
+Then I triple tap a little button
+Then I rotate the device so the home button is on the top
+Then I triple tap a little button
 
 @long_press
 Scenario: Long press durations

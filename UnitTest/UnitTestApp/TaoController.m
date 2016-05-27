@@ -53,6 +53,13 @@
     }
 }
 
+- (void)handleTripleTapOnSmallButton:(UIGestureRecognizer *)recognizer {
+    UIGestureRecognizerState state = [recognizer state];
+    if (UIGestureRecognizerStateEnded == state) {
+        self.touchActionLabel.text = @"triple tap";
+    }
+}
+
 #pragma mark - Recognizers
 
 - (UITapGestureRecognizer *)tapRecognizerWithSelector:(SEL)selector
@@ -110,6 +117,11 @@
     lpRecognizer.minimumPressDuration = 1.0;
     lpRecognizer.numberOfTouchesRequired = 1;
     [self.longPress addGestureRecognizer:lpRecognizer];
+
+    recognizer = [self tapRecognizerWithSelector:@selector(handleTripleTapOnSmallButton:)
+                                            taps:3
+                                         touches:1];
+    [self.tripleTap addGestureRecognizer:recognizer];
 }
 
 - (void)viewWillLayoutSubviews {

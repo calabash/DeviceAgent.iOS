@@ -12,15 +12,17 @@ module DeviceAgent
       element_center(result)
     end
 
-    def touch_mark(mark)
+    def touch_mark(mark, options={})
       center = query_for_coordinate(mark)
-      tap(center[:x], center[:y])
+      tap(center[:x], center[:y], options)
     end
 
     alias_method :tap_mark, :touch_mark
 
-    def touch(x, y)
-      device_agent.perform_coordinate_gesture("touch", x, y)
+    def touch(x, y, options={})
+      device_agent.perform_coordinate_gesture("touch",
+                                              x, y,
+                                              options)
     end
 
     alias_method :tap, :touch
