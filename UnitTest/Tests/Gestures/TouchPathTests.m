@@ -16,9 +16,9 @@ typedef void (^CDUnknownBlockType)(void);
 - (XCTouchPath *)xcTouchPath;
 - (XCPointerEventPath *)eventPath;
 - (CGPoint) lastPoint;
-- (instancetype)initWithOrientation:(NSInteger)orientation;
+- (instancetype)initWithOrientation:(long long)orientation;
 + (XCTouchPath *)touchPathForFirstTouchPoint:(CGPoint)point
-                                 orientation:(NSInteger)orientation
+                                 orientation:(long long)orientation
                                       offset:(float)seconds;
 + (XCPointerEventPath *)eventPathForFirstTouchPoint:(CGPoint)point
                                              offset:(float)seconds;
@@ -37,9 +37,9 @@ typedef void (^CDUnknownBlockType)(void);
     expect(tp.orientation).to.equal(1);
 }
 
-- (void)testWithFirstTouchPoint {
+- (void)testWithFirstTouchPointWithOffset {
     CGPoint point = CGPointMake(44, 64);
-    NSInteger orientation = 1;
+    long long orientation = 1;
     float seconds = 0.0;
 
     TouchPath *inner = [TouchPath new];
@@ -87,7 +87,7 @@ typedef void (^CDUnknownBlockType)(void);
 - (void)testMoveToNextPointAfterSeconds {
     CGPoint firstPoint = CGPointMake(44, 64);
     CGPoint nextPoint = CGPointMake(64, 44);
-    NSInteger orientation = 1;
+    long long orientation = 1;
     CGFloat seconds = 20;
 
     TouchPath *tp = [TouchPath withFirstTouchPoint:firstPoint

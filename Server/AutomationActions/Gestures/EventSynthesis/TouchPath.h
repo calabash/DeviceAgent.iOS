@@ -10,7 +10,7 @@
  testmanagerd.
  */
 @interface TouchPath : NSObject
-@property (nonatomic, readonly) NSInteger orientation;
+@property (nonatomic, readonly) long long orientation;
 
 /**
  Static initializer. Note that the event **does not** perform any actual touches
@@ -24,7 +24,7 @@
  @return A new TouchPath instance.
  */
 + (instancetype)withFirstTouchPoint:(CGPoint)firstTouchPoint
-                        orientation:(NSInteger)orientation
+                        orientation:(long long)orientation
                              offset:(float)seconds;
 
 /**
