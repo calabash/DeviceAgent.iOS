@@ -19,6 +19,18 @@
  @param firstTouchPoint The first point on the screen you'd like to touch.
  @param orientation This is an undocumented parameter in the XCTest API, but
    presumably is a map from number to device orientations.
+ @return A new TouchPath instance.
+ */
++ (instancetype)withFirstTouchPoint:(CGPoint)firstTouchPoint
+                        orientation:(long long)orientation;
+
+/**
+ Static initializer. Note that the event **does not** perform any actual touches
+ until it is sent to testmanagerd.
+
+ @param firstTouchPoint The first point on the screen you'd like to touch.
+ @param orientation This is an undocumented parameter in the XCTest API, but
+   presumably is a map from number to device orientations.
  @param seconds The number of seconds, from now, when the gesture should be
    performed.
  @return A new TouchPath instance.
