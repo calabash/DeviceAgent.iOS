@@ -118,6 +118,17 @@
 		89F6BF901CBEB5AD0088269C /* GeometryUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 89F6BF8E1CBEB5AD0088269C /* GeometryUtils.h */; };
 		89F6BF921CBEB5AD0088269C /* GeometryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BF8F1CBEB5AD0088269C /* GeometryUtils.m */; };
 		F50940FB1CC6069C00E559E3 /* GeometryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BF8F1CBEB5AD0088269C /* GeometryUtils.m */; };
+		F5169D151CFE06B700252F52 /* CocoaAsyncSocket.LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D0F1CFE06B700252F52 /* CocoaAsyncSocket.LICENSE */; };
+		F5169D161CFE06B700252F52 /* CocoaHTTPServer.LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D101CFE06B700252F52 /* CocoaHTTPServer.LICENSE */; };
+		F5169D171CFE06B700252F52 /* CocoaLumberjack.LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D111CFE06B700252F52 /* CocoaLumberjack.LICENSE */; };
+		F5169D181CFE06B700252F52 /* Facebook-WebDriverAgent.LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D121CFE06B700252F52 /* Facebook-WebDriverAgent.LICENSE */; };
+		F5169D1A1CFE06B700252F52 /* RoutingHTTPServer.LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D141CFE06B700252F52 /* RoutingHTTPServer.LICENSE */; };
+		F5169D1B1CFE06C800252F52 /* CocoaAsyncSocket.LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D0F1CFE06B700252F52 /* CocoaAsyncSocket.LICENSE */; };
+		F5169D1C1CFE06CC00252F52 /* CocoaHTTPServer.LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D101CFE06B700252F52 /* CocoaHTTPServer.LICENSE */; };
+		F5169D1D1CFE06CF00252F52 /* CocoaLumberjack.LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D111CFE06B700252F52 /* CocoaLumberjack.LICENSE */; };
+		F5169D1E1CFE06D300252F52 /* Facebook-WebDriverAgent.LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D121CFE06B700252F52 /* Facebook-WebDriverAgent.LICENSE */; };
+		F5169D1F1CFE06D700252F52 /* Fingertips.LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D131CFE06B700252F52 /* Fingertips.LICENSE */; };
+		F5169D201CFE06D900252F52 /* RoutingHTTPServer.LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D141CFE06B700252F52 /* RoutingHTTPServer.LICENSE */; };
 		F52BA3411CED1F9C00475D5A /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52BA33F1CED1F6A00475D5A /* Reveal.framework */; };
 		F52BA3431CED23E400475D5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA201CC53F6400D87200 /* CoreGraphics.framework */; };
 		F52BA3451CED23EC00475D5A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F52BA3441CED23EC00475D5A /* libz.tbd */; };
@@ -431,6 +442,12 @@
 		89F6BF8A1CBC4BDD0088269C /* Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rotate.m; sourceTree = "<group>"; };
 		89F6BF8E1CBEB5AD0088269C /* GeometryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeometryUtils.h; sourceTree = "<group>"; };
 		89F6BF8F1CBEB5AD0088269C /* GeometryUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeometryUtils.m; sourceTree = "<group>"; };
+		F5169D0F1CFE06B700252F52 /* CocoaAsyncSocket.LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CocoaAsyncSocket.LICENSE; sourceTree = "<group>"; };
+		F5169D101CFE06B700252F52 /* CocoaHTTPServer.LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CocoaHTTPServer.LICENSE; sourceTree = "<group>"; };
+		F5169D111CFE06B700252F52 /* CocoaLumberjack.LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CocoaLumberjack.LICENSE; sourceTree = "<group>"; };
+		F5169D121CFE06B700252F52 /* Facebook-WebDriverAgent.LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Facebook-WebDriverAgent.LICENSE"; sourceTree = "<group>"; };
+		F5169D131CFE06B700252F52 /* Fingertips.LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fingertips.LICENSE; sourceTree = "<group>"; };
+		F5169D141CFE06B700252F52 /* RoutingHTTPServer.LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RoutingHTTPServer.LICENSE; sourceTree = "<group>"; };
 		F52BA33F1CED1F6A00475D5A /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		F52BA3441CED23EC00475D5A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F52BA3471CEDE1C400475D5A /* MBFingerTipWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBFingerTipWindow.h; path = Vendor/Fingertips/MBFingerTipWindow.h; sourceTree = SOURCE_ROOT; };
@@ -882,6 +899,7 @@
 				F55F83541C6DD99900A945C8 /* XCUITestDriver */,
 				F55F83F21C6DE50C00A945C8 /* CBXAppStub */,
 				F55F7FEA1C6DD07500A945C8 /* Vendor */,
+				F5169D0E1CFE06B700252F52 /* third-party-licences */,
 				F542EA1A1CC53DD000D87200 /* Frameworks */,
 				898743BD1C5847B30084FD93 /* Products */,
 			);
@@ -1040,6 +1058,19 @@
 				F55F83DD1C6DDF1300A945C8 /* UIDevice+Wifi_IP.m */,
 			);
 			name = FBDriverCode;
+			sourceTree = "<group>";
+		};
+		F5169D0E1CFE06B700252F52 /* third-party-licences */ = {
+			isa = PBXGroup;
+			children = (
+				F5169D0F1CFE06B700252F52 /* CocoaAsyncSocket.LICENSE */,
+				F5169D101CFE06B700252F52 /* CocoaHTTPServer.LICENSE */,
+				F5169D111CFE06B700252F52 /* CocoaLumberjack.LICENSE */,
+				F5169D121CFE06B700252F52 /* Facebook-WebDriverAgent.LICENSE */,
+				F5169D131CFE06B700252F52 /* Fingertips.LICENSE */,
+				F5169D141CFE06B700252F52 /* RoutingHTTPServer.LICENSE */,
+			);
+			path = "third-party-licences";
 			sourceTree = "<group>";
 		};
 		F542EA1A1CC53DD000D87200 /* Frameworks */ = {
@@ -1909,6 +1940,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5C1E8BD1CBF5BBE0019A52F /* CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration in Resources */,
+				F5169D171CFE06B700252F52 /* CocoaLumberjack.LICENSE in Resources */,
+				F5169D151CFE06B700252F52 /* CocoaAsyncSocket.LICENSE in Resources */,
+				F5169D181CFE06B700252F52 /* Facebook-WebDriverAgent.LICENSE in Resources */,
+				F5169D1A1CFE06B700252F52 /* RoutingHTTPServer.LICENSE in Resources */,
+				F5169D161CFE06B700252F52 /* CocoaHTTPServer.LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1918,6 +1954,7 @@
 			files = (
 				F5954E1A1CBD2E1200117745 /* LaunchScreen.storyboard in Resources */,
 				F5954E171CBD2E1200117745 /* Assets.xcassets in Resources */,
+				F5169D1F1CFE06D700252F52 /* Fingertips.LICENSE in Resources */,
 				F5954E151CBD2E1200117745 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1926,6 +1963,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5169D1E1CFE06D300252F52 /* Facebook-WebDriverAgent.LICENSE in Resources */,
+				F5169D1D1CFE06CF00252F52 /* CocoaLumberjack.LICENSE in Resources */,
+				F5169D1C1CFE06CC00252F52 /* CocoaHTTPServer.LICENSE in Resources */,
+				F5169D1B1CFE06C800252F52 /* CocoaAsyncSocket.LICENSE in Resources */,
+				F5169D201CFE06D900252F52 /* RoutingHTTPServer.LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
