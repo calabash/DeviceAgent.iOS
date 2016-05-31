@@ -5,25 +5,25 @@
 ## iOS DeviceAgent
 
 ### Docs
-DeviceAgent is fully documented! But the docs are not published publicly. 
+DeviceAgent is fully documented! But the docs are not published publicly.
 
-To generate the docset, 
+To generate the docset,
 
 ```
 make docs
 ```
 
-Currently, this will generate appledocs for any header file under the 
-`Server` directory. If any headers contain no documentation, a warning 
+Currently, this will generate appledocs for any header file under the
+`Server` directory. If any headers contain no documentation, a warning
 will be generated. However, *no warning will be generated for undocumented
 symbols*, so please be diligent when adding new methods/properties!
 
-Docs will be output in html in a new `documentation` directory at the 
-root of the project. You can open the `html/index.html` file in any 
-browser and have a go. 
+Docs will be output in html in a new `documentation` directory at the
+root of the project. You can open the `html/index.html` file in any
+browser and have a go.
 
-It will also install the docs into your Xcode, so you can option-click 
-any symbol from the repo and see the docs. 
+It will also install the docs into your Xcode, so you can option-click
+any symbol from the repo and see the docs.
 
 ### Building
 
