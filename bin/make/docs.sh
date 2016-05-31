@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 function info {
   echo "$(tput setaf 2)INFO: $1$(tput sgr0)"
