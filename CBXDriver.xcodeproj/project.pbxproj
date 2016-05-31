@@ -18,15 +18,15 @@
 			name = UnitTestBuildNumber;
 			productName = CBXBuildNumber;
 		};
-		F5169CE61CFD9E9400252F52 /* AppStubBuildNumber */ = {
+		F5169CE61CFD9E9400252F52 /* CBXRunnerBuildNumber */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = F5169CE71CFD9E9400252F52 /* Build configuration list for PBXAggregateTarget "AppStubBuildNumber" */;
+			buildConfigurationList = F5169CE71CFD9E9400252F52 /* Build configuration list for PBXAggregateTarget "CBXRunnerBuildNumber" */;
 			buildPhases = (
 				F5169CEA1CFD9EFA00252F52 /* ShellScript */,
 			);
 			dependencies = (
 			);
-			name = AppStubBuildNumber;
+			name = CBXRunnerBuildNumber;
 			productName = AppStubBuildNumber;
 		};
 /* End PBXAggregateTarget section */
@@ -1933,8 +1933,8 @@
 			projectRoot = "";
 			targets = (
 				898743BB1C5847B30084FD93 /* CBXAppStub */,
-				F5169CE61CFD9E9400252F52 /* AppStubBuildNumber */,
 				898743D41C5847B30084FD93 /* XCUITestDriver */,
+				F5169CE61CFD9E9400252F52 /* CBXRunnerBuildNumber */,
 				F5954E041CBD2E1200117745 /* UnitTestApp */,
 				F5B0A0CE1CAD3CBC00E056CE /* UnitTest */,
 				F5169CDF1CFD982800252F52 /* UnitTestBuildNumber */,
@@ -2316,7 +2316,7 @@
 		};
 		F5169CEC1CFD9F0C00252F52 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F5169CE61CFD9E9400252F52 /* AppStubBuildNumber */;
+			target = F5169CE61CFD9E9400252F52 /* CBXRunnerBuildNumber */;
 			targetProxy = F5169CEB1CFD9F0C00252F52 /* PBXContainerItemProxy */;
 		};
 		F5954E201CBD2EBB00117745 /* PBXTargetDependency */ = {
@@ -2496,6 +2496,8 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = XCUITestDriver/Info.plist;
+				INFOPLIST_PREFIX_HEADER = CBXAppStub/InfoPlist.h;
+				INFOPLIST_PREPROCESS = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.XCUITestDriver;
 				PRODUCT_NAME = CBX;
@@ -2511,6 +2513,8 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = XCUITestDriver/Info.plist;
+				INFOPLIST_PREFIX_HEADER = CBXAppStub/InfoPlist.h;
+				INFOPLIST_PREPROCESS = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.XCUITestDriver;
 				PRODUCT_NAME = CBX;
@@ -2721,14 +2725,16 @@
 				F5169CE11CFD982800252F52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
-		F5169CE71CFD9E9400252F52 /* Build configuration list for PBXAggregateTarget "AppStubBuildNumber" */ = {
+		F5169CE71CFD9E9400252F52 /* Build configuration list for PBXAggregateTarget "CBXRunnerBuildNumber" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5169CE81CFD9E9400252F52 /* Debug */,
 				F5169CE91CFD9E9400252F52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		F5954E1C1CBD2E1200117745 /* Build configuration list for PBXNativeTarget "UnitTestApp" */ = {
 			isa = XCConfigurationList;
