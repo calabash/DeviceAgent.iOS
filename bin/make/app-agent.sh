@@ -112,5 +112,12 @@ info "Installed ${INSTALLED_DSYM}"
 ditto_or_exit "${BUILD_PRODUCTS_RUNNER}" "${INSTALLED_RUNNER}"
 info "Installed ${INSTALLED_RUNNER}"
 
+ZIP_TARGET="${INSTALLED_RUNNER}.zip"
+xcrun ditto -ck --rsrc --sequesterRsrc --keepParent \
+  "${INSTALLED_RUNNER}" \
+  "${ZIP_TARGET}"
+
+info "Installed ${ZIP_TARGET}"
+
 info "Done!"
 
