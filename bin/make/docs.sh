@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 function info {
   echo "$(tput setaf 2)INFO: $1$(tput sgr0)"
@@ -17,6 +18,8 @@ appledoc \
 --project-name "CBXDriver" \
 --project-company "Xamarin" \
 --company-id "sh.calaba" \
+--templates "${PWD}/.appledoc" \
+--install-docset \
 --output "${DOCS_DIR}" \
 --keep-undocumented-objects \
 --keep-intermediate-files YES\
@@ -28,11 +31,13 @@ appledoc \
 
 EC=$?
 
-if [ "$EC" = 0 ]; then 
+if [ "$EC" = 0 ]; then
   info "Docs published to ${DOCS_DIR}"
+  info "Docs installed to Xcode"
 elif [ "$EC" = 1 ]; then #I am hoping that other failures will have different exit codes...
   echo ""
   info "Docs published to ${DOCS_DIR}"
+  info "Docs installed to Xcode"
   echo ""
   warn "Some headers are missing documentation."
   warn "Please be diligent in documenting new headers!"
