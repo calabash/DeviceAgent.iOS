@@ -5,12 +5,13 @@
 ## iOS DeviceAgent
 
 ### Docs
+
 DeviceAgent is fully documented! But the docs are not published publicly.
 
 To generate the docset,
 
 ```
-make docs
+$ make docs
 ```
 
 Currently, this will generate appledocs for any header file under the
@@ -26,6 +27,27 @@ It will also install the docs into your Xcode, so you can option-click
 any symbol from the repo and see the docs.
 
 ### Building
+
+Maintainers must install the calabash/calabash-resign private repo.
+Details are below.
+
+All build products are staged to the ./Products directory - even when
+building from Xcode.
+
+Enjoy.
+
+#### Xcode
+
+To build the CBXRunner from Xcode, select the XCUITestDriver scheme and
+Build for Testing (Shift + Command + U).  Rinse and repeat for simulator
+or device targets.  This will generate binaries for distribution in the
+./Products directory.
+
+The application targets can be built as usual (Command + B).
+
+You should never have to build the UnitTest target for distribution.
+
+#### Command line
 
 Requires Xcode 7 and iOS 9 or higher.
 
@@ -57,8 +79,6 @@ $ DEVELOPER_DIR=/Xcode/7.3/Xcode-beta.app make < rule >
 ```
 
 If you have build errors, see the xcpretty section below.
-
-Maintainers must install the calabash/calabash-resign private repo. Details are below.
 
 ### Code Signing
 
