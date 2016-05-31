@@ -129,6 +129,10 @@
 		F5169D1E1CFE06D300252F52 /* Facebook-WebDriverAgent.LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D121CFE06B700252F52 /* Facebook-WebDriverAgent.LICENSE */; };
 		F5169D1F1CFE06D700252F52 /* Fingertips.LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D131CFE06B700252F52 /* Fingertips.LICENSE */; };
 		F5169D201CFE06D900252F52 /* RoutingHTTPServer.LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D141CFE06B700252F52 /* RoutingHTTPServer.LICENSE */; };
+		F5169D221CFE07F500252F52 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D211CFE07F500252F52 /* LICENSE */; };
+		F5169D231CFE07FD00252F52 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D211CFE07F500252F52 /* LICENSE */; };
+		F5169D241CFE07FE00252F52 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D211CFE07F500252F52 /* LICENSE */; };
+		F5169D251CFE07FF00252F52 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D211CFE07F500252F52 /* LICENSE */; };
 		F52BA3411CED1F9C00475D5A /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52BA33F1CED1F6A00475D5A /* Reveal.framework */; };
 		F52BA3431CED23E400475D5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA201CC53F6400D87200 /* CoreGraphics.framework */; };
 		F52BA3451CED23EC00475D5A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F52BA3441CED23EC00475D5A /* libz.tbd */; };
@@ -448,6 +452,7 @@
 		F5169D121CFE06B700252F52 /* Facebook-WebDriverAgent.LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Facebook-WebDriverAgent.LICENSE"; sourceTree = "<group>"; };
 		F5169D131CFE06B700252F52 /* Fingertips.LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fingertips.LICENSE; sourceTree = "<group>"; };
 		F5169D141CFE06B700252F52 /* RoutingHTTPServer.LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RoutingHTTPServer.LICENSE; sourceTree = "<group>"; };
+		F5169D211CFE07F500252F52 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = LICENSE; sourceTree = "<group>"; };
 		F52BA33F1CED1F6A00475D5A /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		F52BA3441CED23EC00475D5A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F52BA3471CEDE1C400475D5A /* MBFingerTipWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBFingerTipWindow.h; path = Vendor/Fingertips/MBFingerTipWindow.h; sourceTree = SOURCE_ROOT; };
@@ -892,6 +897,7 @@
 		898743B31C5847B30084FD93 = {
 			isa = PBXGroup;
 			children = (
+				F5169D211CFE07F500252F52 /* LICENSE */,
 				89D538051CA32A3A00F62E09 /* FBDriverCode */,
 				F55F835A1C6DDA5F00A945C8 /* XCTest */,
 				F5B0A0D01CAD3CBC00E056CE /* UnitTest */,
@@ -1931,6 +1937,7 @@
 			files = (
 				F55F84011C6DE50C00A945C8 /* Main.storyboard in Resources */,
 				F55F83FF1C6DE50C00A945C8 /* Assets.xcassets in Resources */,
+				F5169D231CFE07FD00252F52 /* LICENSE in Resources */,
 				F55F84001C6DE50C00A945C8 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1942,6 +1949,7 @@
 				F5C1E8BD1CBF5BBE0019A52F /* CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration in Resources */,
 				F5169D171CFE06B700252F52 /* CocoaLumberjack.LICENSE in Resources */,
 				F5169D151CFE06B700252F52 /* CocoaAsyncSocket.LICENSE in Resources */,
+				F5169D221CFE07F500252F52 /* LICENSE in Resources */,
 				F5169D181CFE06B700252F52 /* Facebook-WebDriverAgent.LICENSE in Resources */,
 				F5169D1A1CFE06B700252F52 /* RoutingHTTPServer.LICENSE in Resources */,
 				F5169D161CFE06B700252F52 /* CocoaHTTPServer.LICENSE in Resources */,
@@ -1956,6 +1964,7 @@
 				F5954E171CBD2E1200117745 /* Assets.xcassets in Resources */,
 				F5169D1F1CFE06D700252F52 /* Fingertips.LICENSE in Resources */,
 				F5954E151CBD2E1200117745 /* Main.storyboard in Resources */,
+				F5169D241CFE07FE00252F52 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1963,6 +1972,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5169D251CFE07FF00252F52 /* LICENSE in Resources */,
 				F5169D1E1CFE06D300252F52 /* Facebook-WebDriverAgent.LICENSE in Resources */,
 				F5169D1D1CFE06CF00252F52 /* CocoaLumberjack.LICENSE in Resources */,
 				F5169D1C1CFE06CC00252F52 /* CocoaHTTPServer.LICENSE in Resources */,
