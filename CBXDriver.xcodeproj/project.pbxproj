@@ -18,6 +18,17 @@
 			name = UnitTestBuildNumber;
 			productName = CBXBuildNumber;
 		};
+		F5169CE61CFD9E9400252F52 /* AppStubBuildNumber */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F5169CE71CFD9E9400252F52 /* Build configuration list for PBXAggregateTarget "AppStubBuildNumber" */;
+			buildPhases = (
+				F5169CEA1CFD9EFA00252F52 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = AppStubBuildNumber;
+			productName = AppStubBuildNumber;
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
@@ -337,6 +348,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = F5169CDF1CFD982800252F52;
 			remoteInfo = UnitTestBuildNumber;
+		};
+		F5169CEB1CFD9F0C00252F52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 898743B41C5847B30084FD93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5169CE61CFD9E9400252F52;
+			remoteInfo = AppStubBuildNumber;
 		};
 		F5954E1F1CBD2EBB00117745 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1803,6 +1821,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F5169CEC1CFD9F0C00252F52 /* PBXTargetDependency */,
 			);
 			name = CBXAppStub;
 			productName = "xcuitest-server";
@@ -1887,6 +1906,9 @@
 					F5169CDF1CFD982800252F52 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
+					F5169CE61CFD9E9400252F52 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					F5954E041CBD2E1200117745 = {
 						CreatedOnToolsVersion = 7.3;
 					};
@@ -1911,6 +1933,7 @@
 			projectRoot = "";
 			targets = (
 				898743BB1C5847B30084FD93 /* CBXAppStub */,
+				F5169CE61CFD9E9400252F52 /* AppStubBuildNumber */,
 				898743D41C5847B30084FD93 /* XCUITestDriver */,
 				F5954E041CBD2E1200117745 /* UnitTestApp */,
 				F5B0A0CE1CAD3CBC00E056CE /* UnitTest */,
@@ -1969,7 +1992,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "bin/xcode-build-phase/increment-build-number.sh";
+			shellScript = "bin/xcode-build-phase/increment-build-number.sh\n";
+			showEnvVarsInLog = 0;
+		};
+		F5169CEA1CFD9EFA00252F52 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bin/xcode-build-phase/increment-build-number.sh\n";
 			showEnvVarsInLog = 0;
 		};
 		F52BA3421CED200900475D5A /* ShellScript */ = {
@@ -2277,6 +2314,11 @@
 			target = F5169CDF1CFD982800252F52 /* UnitTestBuildNumber */;
 			targetProxy = F5169CE41CFD9D2800252F52 /* PBXContainerItemProxy */;
 		};
+		F5169CEC1CFD9F0C00252F52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5169CE61CFD9E9400252F52 /* AppStubBuildNumber */;
+			targetProxy = F5169CEB1CFD9F0C00252F52 /* PBXContainerItemProxy */;
+		};
 		F5954E201CBD2EBB00117745 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F5954E041CBD2E1200117745 /* UnitTestApp */;
@@ -2419,7 +2461,9 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "$(SRCROOT)/CBXAppStub/Info.plist";
+				INFOPLIST_FILE = CBXAppStub/Info.plist;
+				INFOPLIST_PREFIX_HEADER = CBXAppStub/InfoPlist.h;
+				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calabash.CBXAppStub;
@@ -2435,7 +2479,9 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "$(SRCROOT)/CBXAppStub/Info.plist";
+				INFOPLIST_FILE = CBXAppStub/Info.plist;
+				INFOPLIST_PREFIX_HEADER = CBXAppStub/InfoPlist.h;
+				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calabash.CBXAppStub;
@@ -2487,6 +2533,24 @@
 			buildSettings = {
 				INFOPLIST_FILE = UnitTest/UnitTestApp/Info.plist;
 				INFOPLIST_PREFIX_HEADER = UnitTest/UnitTestApp/InfoPlist.h;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F5169CE81CFD9E9400252F52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CBXAppStub/Info.plist;
+				INFOPLIST_PREFIX_HEADER = CBXAppStub/InfoPlist.h;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F5169CE91CFD9E9400252F52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CBXAppStub/Info.plist;
+				INFOPLIST_PREFIX_HEADER = CBXAppStub/InfoPlist.h;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -2655,6 +2719,14 @@
 			buildConfigurations = (
 				F5169CE01CFD982800252F52 /* Debug */,
 				F5169CE11CFD982800252F52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F5169CE71CFD9E9400252F52 /* Build configuration list for PBXAggregateTarget "AppStubBuildNumber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5169CE81CFD9E9400252F52 /* Debug */,
+				F5169CE91CFD9E9400252F52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
