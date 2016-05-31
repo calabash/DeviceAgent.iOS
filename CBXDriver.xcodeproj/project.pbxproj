@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		F5169CDF1CFD982800252F52 /* UnitTestBuildNumber */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F5169CE21CFD982800252F52 /* Build configuration list for PBXAggregateTarget "UnitTestBuildNumber" */;
+			buildPhases = (
+				F5169CE31CFD9A2600252F52 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = UnitTestBuildNumber;
+			productName = CBXBuildNumber;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		89331CCB1CC00E36003C2E59 /* PanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CCA1CC00E36003C2E59 /* PanViewController.m */; };
 		89331CCE1CC00E82003C2E59 /* RotatePinchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */; };
@@ -316,6 +330,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 898743BB1C5847B30084FD93;
 			remoteInfo = "xcuitest-server";
+		};
+		F5169CE41CFD9D2800252F52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 898743B41C5847B30084FD93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5169CDF1CFD982800252F52;
+			remoteInfo = UnitTestBuildNumber;
 		};
 		F5954E1F1CBD2EBB00117745 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1821,6 +1842,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F5169CE51CFD9D2800252F52 /* PBXTargetDependency */,
 			);
 			name = UnitTestApp;
 			productName = UnitTestApp;
@@ -1862,6 +1884,9 @@
 						CreatedOnToolsVersion = 7.2;
 						TestTargetID = 898743BB1C5847B30084FD93;
 					};
+					F5169CDF1CFD982800252F52 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					F5954E041CBD2E1200117745 = {
 						CreatedOnToolsVersion = 7.3;
 					};
@@ -1889,6 +1914,7 @@
 				898743D41C5847B30084FD93 /* XCUITestDriver */,
 				F5954E041CBD2E1200117745 /* UnitTestApp */,
 				F5B0A0CE1CAD3CBC00E056CE /* UnitTest */,
+				F5169CDF1CFD982800252F52 /* UnitTestBuildNumber */,
 			);
 		};
 /* End PBXProject section */
@@ -1932,6 +1958,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		F5169CE31CFD9A2600252F52 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bin/xcode-build-phase/increment-build-number.sh";
+			showEnvVarsInLog = 0;
+		};
 		F52BA3421CED200900475D5A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2232,6 +2272,11 @@
 			target = 898743BB1C5847B30084FD93 /* CBXAppStub */;
 			targetProxy = 898743D61C5847B30084FD93 /* PBXContainerItemProxy */;
 		};
+		F5169CE51CFD9D2800252F52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5169CDF1CFD982800252F52 /* UnitTestBuildNumber */;
+			targetProxy = F5169CE41CFD9D2800252F52 /* PBXContainerItemProxy */;
+		};
 		F5954E201CBD2EBB00117745 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F5954E041CBD2E1200117745 /* UnitTestApp */;
@@ -2428,6 +2473,24 @@
 			};
 			name = Release;
 		};
+		F5169CE01CFD982800252F52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = UnitTest/UnitTestApp/Info.plist;
+				INFOPLIST_PREFIX_HEADER = UnitTest/UnitTestApp/InfoPlist.h;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F5169CE11CFD982800252F52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = UnitTest/UnitTestApp/Info.plist;
+				INFOPLIST_PREFIX_HEADER = UnitTest/UnitTestApp/InfoPlist.h;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		F5954E1D1CBD2E1200117745 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2441,6 +2504,8 @@
 					"$(PROJECT_DIR)/Vendor",
 				);
 				INFOPLIST_FILE = UnitTest/UnitTestApp/Info.plist;
+				INFOPLIST_PREFIX_HEADER = UnitTest/UnitTestApp/InfoPlist.h;
+				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -2466,6 +2531,8 @@
 					"$(PROJECT_DIR)/Vendor",
 				);
 				INFOPLIST_FILE = UnitTest/UnitTestApp/Info.plist;
+				INFOPLIST_PREFIX_HEADER = UnitTest/UnitTestApp/InfoPlist.h;
+				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -2582,6 +2649,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
+		};
+		F5169CE21CFD982800252F52 /* Build configuration list for PBXAggregateTarget "UnitTestBuildNumber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5169CE01CFD982800252F52 /* Debug */,
+				F5169CE11CFD982800252F52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		F5954E1C1CBD2E1200117745 /* Build configuration list for PBXNativeTarget "UnitTestApp" */ = {
 			isa = XCConfigurationList;
