@@ -18,6 +18,7 @@ appledoc \
 --project-name "CBXDriver" \
 --project-company "Xamarin" \
 --company-id "sh.calaba" \
+--templates "${PWD}/.appledoc" \
 --output "${DOCS_DIR}" \
 --keep-undocumented-objects \
 --keep-intermediate-files YES\
