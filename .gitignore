@@ -28,6 +28,10 @@ build/
 tmp
 Products
 
+# Info.plist preprocessor files
+UnitTest/UnitTestApp/InfoPlist.h
+CBXAppStub/InfoPlist.h
+
 ## Various settings
 *.pbxuser
 !default.pbxuser
