@@ -17,6 +17,9 @@ cucumber/Gemfile.lock
 .pry-history
 cucumber/reports
 
+# JetBrains
+.idea
+
 # MacOS
 .DS_Store
 
