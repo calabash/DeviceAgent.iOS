@@ -28,7 +28,7 @@ appledoc \
 
 EC=$?
 
-if [ "$EC" = 0 ]; then 
+if [ "$EC" = 0 ]; then
   info "Docs published to ${DOCS_DIR}"
 elif [ "$EC" = 1 ]; then #I am hoping that other failures will have different exit codes...
   echo ""
