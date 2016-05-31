@@ -157,6 +157,14 @@ xcrun ditto -ck --rsrc --sequesterRsrc --keepParent \
 
 info "Installed ${INSTALLED_RUNNER_IPA}"
 
+ZIP_TARGET="${INSTALL_DIR}/${RUNNER}.zip"
+
+xcrun ditto -ck --rsrc --sequesterRsrc --keepParent \
+  "${INSTALLED_RUNNER}" \
+  "${ZIP_TARGET}"
+
+info "Installed ${ZIP_TARGET}"
+
 ditto_or_exit "${BUILD_PRODUCTS_DSYM}" "${INSTALLED_DSYM}"
 info "Installed ${INSTALLED_DSYM}"
 
@@ -171,6 +179,13 @@ banner "RUNNER Code Signing Details"
 DETAILS=`xcrun codesign --display --verbose=2 ${INSTALLED_RUNNER} 2>&1`
 
 echo "$(tput setaf 4)$DETAILS$(tput sgr0)"
+
+info "Installed ${INSTALLED_APP}"
+info "Installed ${INSTALLED_IPA}"
+info "Installed ${INSTALLED_RUNNER}"
+info "Installed ${INSTALLED_RUNNER_IPA}"
+info "Installed ${INSTALLED_DSYM}"
+info "Installed ${ZIP_TARGET}"
 
 info "Done!"
 
