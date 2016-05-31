@@ -10,19 +10,37 @@
  testmanagerd.
  */
 @interface TouchPath : NSObject
-@property (nonatomic, readonly) NSInteger orientation;
+@property (nonatomic, readonly) long long orientation;
 
 /**
- Static initializer. Note that the event **does not** perform any actual touches until it is sent to testmanagerd.
+ Static initializer. Note that the event **does not** perform any actual touches
+ until it is sent to testmanagerd.
+
  @param firstTouchPoint The first point on the screen you'd like to touch.
- @param orientation This is an undocumented parameter in the XCTest API, but presumably is a map from number to device orientations. 
+ @param orientation This is an undocumented parameter in the XCTest API, but
+   presumably is a map from number to device orientations.
  @return A new TouchPath instance.
  */
 + (instancetype)withFirstTouchPoint:(CGPoint)firstTouchPoint
-                        orientation:(NSInteger)orientation; //NOTE: should this be `long long` ?
+                        orientation:(long long)orientation;
 
 /**
- Define the next point for the touch path. 
+ Static initializer. Note that the event **does not** perform any actual touches
+ until it is sent to testmanagerd.
+
+ @param firstTouchPoint The first point on the screen you'd like to touch.
+ @param orientation This is an undocumented parameter in the XCTest API, but
+   presumably is a map from number to device orientations.
+ @param seconds The number of seconds, from now, when the gesture should be
+   performed.
+ @return A new TouchPath instance.
+ */
++ (instancetype)withFirstTouchPoint:(CGPoint)firstTouchPoint
+                        orientation:(long long)orientation
+                             offset:(float)seconds;
+
+/**
+ Define the next point for the touch path.
  @param nextPoint The next point to which to move.
  @param seconds Time (in seconds) after which to perform the move. May use decimals.
  */
@@ -30,11 +48,13 @@
 
 /**
  Effectively ends the current gesture.
- 
- Note: It is not clear whether it is valid to perform `moveToNextPoint:afterSeconds:` after
- performong `liftUpAfterSeconds:`. The behavior is currently considered undefined.
- 
- @param seconds Time (in seconds) after which to lift up the touch at the last recorded point.
+
+ Note: It is not clear whether it is valid to perform `moveToNextPoint:afterSeconds:`
+ after performing `liftUpAfterSeconds:`. The behavior is currently considered
+ undefined.
+
+ @param seconds Time (in seconds) after which to lift up the touch at the last
+   recorded point.
  */
 - (void)liftUpAfterSeconds:(CGFloat)seconds;
 

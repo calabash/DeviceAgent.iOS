@@ -30,7 +30,9 @@
     [super setUp];
 
     CGPoint point = CGPointMake(20, 46);
-    self.touchPath = [TouchPath withFirstTouchPoint:point orientation:1];
+    self.touchPath = [TouchPath withFirstTouchPoint:point
+                                        orientation:1
+                                             offset:0.0];
 }
 
 - (void)testWithTouchPath {
@@ -52,7 +54,8 @@
     CGPoint point = CGPointMake(54, 47);
     NSInteger nextOrientation = self.touchPath.orientation;
     TouchPath *nextPath = [TouchPath withFirstTouchPoint:point
-                                             orientation:nextOrientation + 1];
+                                             orientation:nextOrientation + 1
+                                                  offset:1.0];
 
     CBXTouchEvent *event = [CBXTouchEvent withTouchPath:self.touchPath];
     expect(^{
@@ -63,7 +66,8 @@
 - (void)testAddTouchPath {
     CBXTouchEvent *event = [CBXTouchEvent withTouchPath:self.touchPath];
     TouchPath *nextPath = [TouchPath withFirstTouchPoint:CGPointMake(311, 420)
-                                             orientation:self.touchPath.orientation];
+                                             orientation:self.touchPath.orientation
+                                                  offset:0.5];
 
     XCSynthesizedEventRecord *eventRecord = event.event;
     id recordMock = OCMPartialMock(eventRecord);
