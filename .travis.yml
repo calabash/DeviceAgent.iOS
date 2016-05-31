@@ -3,6 +3,10 @@ language: objective-c
 
 osx_image: xcode7.2
 
+before_install:
+  - brew update
+  - brew install appledoc
+
 script:
   - bin/ci/travis.sh
 

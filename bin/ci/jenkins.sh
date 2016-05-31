@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
+set -e
+
 bundle install
+make docs
 make app-agent
 make unit
 bin/ci/make-ipa-agent.sh
