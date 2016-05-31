@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 bundle install
 make docs
 make app-agent
