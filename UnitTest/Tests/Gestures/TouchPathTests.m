@@ -16,10 +16,15 @@ typedef void (^CDUnknownBlockType)(void);
 - (XCTouchPath *)xcTouchPath;
 - (XCPointerEventPath *)eventPath;
 - (CGPoint) lastPoint;
-- (instancetype)initWithOrientation:(NSInteger)orientation;
+
+- (instancetype)initWithFirstTouchPoint:(CGPoint)firstTouchPoint
+                            orientation:(long long)orientation
+                                 offset:(float)seconds;
 + (XCTouchPath *)touchPathForFirstTouchPoint:(CGPoint)point
-                                 orientation:(NSInteger)orientation;
-+ (XCPointerEventPath *)eventPathForFirstTouchPoint:(CGPoint)point;
+                                 orientation:(long long)orientation
+                                      offset:(float)seconds;
++ (XCPointerEventPath *)eventPathForFirstTouchPoint:(CGPoint)point
+                                             offset:(float)seconds;
 
 @end
 
@@ -29,46 +34,70 @@ typedef void (^CDUnknownBlockType)(void);
 
 @implementation TouchPathTests
 
-- (void)testInitWithOrientation {
-    TouchPath *tp = [[TouchPath alloc] initWithOrientation:1];
-    expect(tp).notTo.equal(nil);
-    expect(tp.orientation).to.equal(1);
-}
+- (void)expectTouchPath:(TouchPath *)touchPath
+              withPoint:(CGPoint)point
+            orientation:(long long)orientation
+                 offset:(float)seconds {
+    expect(touchPath.orientation).to.equal(orientation);
+    expect(touchPath.lastPoint).to.equal(point);
+    expect(touchPath.xcTouchPath).to.beAKindOf([XCTouchPath class]);
+    expect(touchPath.eventPath).to.beAKindOf([XCPointerEventPath class]);
 
-- (void)testWithFirstTouchPoint {
-    CGPoint point = CGPointMake(44, 64);
-    NSInteger orientation = 1;
-
-    TouchPath *inner = [TouchPath new];
-
-    id classMock = OCMClassMock([TouchPath class]);
-    OCMStub([classMock initWithOrientation:orientation]).andReturn(inner);
-
-    OCMExpect([classMock
-               touchPathForFirstTouchPoint:point
-               orientation:orientation]).andForwardToRealObject();
-
-    OCMExpect([classMock eventPathForFirstTouchPoint:point]).andForwardToRealObject();
-
-    TouchPath *tp = [TouchPath withFirstTouchPoint:point
-                                       orientation:orientation];
-
-    expect(tp.orientation).to.equal(orientation);
-    expect(tp.lastPoint).to.equal(point);
-    expect(tp.xcTouchPath).to.beAKindOf([XCTouchPath class]);
-    expect(tp.eventPath).to.beAKindOf([XCPointerEventPath class]);
-
-
-    XCTouchPath *xcTouchPath = tp.xcTouchPath;
+    XCTouchPath *xcTouchPath = touchPath.xcTouchPath;
     expect(xcTouchPath.touchEvents.count).to.equal(1);
     expect([xcTouchPath.touchEvents[0] coordinate]).to.equal(point);
+    expect([xcTouchPath.touchEvents[0] offset]).to.equal(seconds);
     expect(xcTouchPath.interfaceOrientation).to.equal(orientation);
 
-    XCPointerEventPath *eventPath = tp.eventPath;
+    XCPointerEventPath *eventPath = touchPath.eventPath;
     expect(eventPath.pointerEvents.count).to.equal(1);
     expect([eventPath.pointerEvents[0] coordinate]).to.equal(point);
+    expect([eventPath.pointerEvents[0] offset]).to.equal(seconds);
+}
 
-    OCMVerifyAll(classMock);
+- (void)testInitWithFirstTouchPointOrientationAndOffset {
+    CGPoint point = CGPointMake(44, 64);
+    long long orientation = 1;
+    float seconds = 15.0;
+
+    TouchPath *touchPath = [[TouchPath alloc]
+                            initWithFirstTouchPoint:point
+                            orientation:orientation
+                            offset:seconds];
+
+    [self expectTouchPath:touchPath
+                withPoint:point
+              orientation:orientation
+                   offset:seconds];
+}
+
+- (void)testWithFirstTouchPointOrientation {
+    CGPoint point = CGPointMake(30, 90);
+    long long orientation = 1;
+    float seconds = 0.0;
+
+    TouchPath *touchPath = [TouchPath withFirstTouchPoint:point
+                                              orientation:orientation];
+
+    [self expectTouchPath:touchPath
+                withPoint:point
+              orientation:orientation
+                   offset:seconds];
+}
+
+- (void)testWithFirstTouchPointOrientationOffset {
+    CGPoint point = CGPointMake(30, 90);
+    long long orientation = 1;
+    float seconds = 15.0;
+
+    TouchPath *touchPath = [TouchPath withFirstTouchPoint:point
+                                              orientation:orientation
+                                                   offset:seconds];
+
+    [self expectTouchPath:touchPath
+                withPoint:point
+              orientation:orientation
+                   offset:seconds];
 }
 
 - (void)testMoveToNextPointTouchAndEventPathNotDefined {
@@ -81,11 +110,12 @@ typedef void (^CDUnknownBlockType)(void);
 - (void)testMoveToNextPointAfterSeconds {
     CGPoint firstPoint = CGPointMake(44, 64);
     CGPoint nextPoint = CGPointMake(64, 44);
-    NSInteger orientation = 1;
+    long long orientation = 1;
     CGFloat seconds = 20;
 
     TouchPath *tp = [TouchPath withFirstTouchPoint:firstPoint
-                                       orientation:orientation];
+                                       orientation:orientation
+                                            offset:0.0];
 
     id xcTouchPath = OCMPartialMock(tp.xcTouchPath);
     OCMExpect([xcTouchPath moveToPoint:nextPoint
@@ -123,7 +153,8 @@ typedef void (^CDUnknownBlockType)(void);
     CGFloat seconds = 20;
 
     TouchPath *tp = [TouchPath withFirstTouchPoint:point
-                                       orientation:0];
+                                       orientation:0
+                                            offset:0.0];
 
     id xcTouchPath = OCMPartialMock(tp.xcTouchPath);
     OCMExpect([xcTouchPath liftUpAtPoint:point

@@ -33,6 +33,14 @@
     [self.gesture addTouchPath:path.xcTouchPath];
 }
 
+- (NSString *)description {
+    return [NSString stringWithFormat:@"#<%@ orientation: %@\ngesture: %@\nevent: %@",
+            NSStringFromClass([CBXTouchEvent class]),
+            @(self.orientation),
+            self.gesture,
+            self.event];
+}
+
 + (XCSynthesizedEventRecord *)eventRecordWithOrientation:(NSInteger) orientation {
     return [[XCSynthesizedEventRecord alloc]
             initWithName:@"CBXTouchEvent_XCSynthesizedEventRecord"

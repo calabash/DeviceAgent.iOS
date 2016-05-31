@@ -12,7 +12,9 @@
     }
 
     CGPoint coordinate = coordinates[0].cgpoint;
-    TouchPath *path = [TouchPath withFirstTouchPoint:coordinate orientation:0];
+    TouchPath *path = [TouchPath withFirstTouchPoint:coordinate
+                                         orientation:0
+                                              offset:0.0];
 
     [path liftUpAfterSeconds:[self duration]];
 
