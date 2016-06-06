@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F31a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -134,11 +134,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MDb-5P-wLY" userLabel="TwoFingerDoubleTap">
+                                <rect key="frame" x="306" y="171" width="44" height="44"/>
+                                <accessibility key="accessibilityConfiguration" identifier="two finger double tap">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="33p-M6-3NJ"/>
+                                    <constraint firstAttribute="height" constant="44" id="nfe-Fc-ve2"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rgX-SB-lks" userLabel="TwoFingerLongPress">
+                                <rect key="frame" x="298" y="80" width="44" height="44"/>
+                                <accessibility key="accessibilityConfiguration" identifier="two finger long press">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="YLW-k3-xvN"/>
+                                    <constraint firstAttribute="width" constant="44" id="mPg-qh-QvI"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="37X-zV-EjS" userLabel="ThreeFingerTap">
+                                <rect key="frame" x="432" y="196" width="44" height="44"/>
+                                <accessibility key="accessibilityConfiguration" identifier="three finger tap">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="Jpb-nq-jcF"/>
+                                    <constraint firstAttribute="width" constant="4" id="jXw-nv-oBA"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XTU-cj-tFR" userLabel="ButtonAndLabel">
-                                <rect key="frame" x="20" y="20" width="60" height="168"/>
+                                <rect key="frame" x="20" y="20" width="60" height="136"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qX8-i5-Blb" userLabel="Buttons">
-                                        <rect key="frame" x="8" y="52" width="44" height="108"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qX8-i5-Blb" userLabel="Buttons">
+                                        <rect key="frame" x="8" y="52" width="44" height="64"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8I-jd-QqW" userLabel="DoubleTap">
                                                 <rect key="frame" x="8" y="16" width="4" height="4"/>
@@ -176,20 +209,8 @@
                                                     <constraint firstAttribute="width" constant="4" id="Zv0-VA-nLB"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBj-oq-gY9" userLabel="TwoFingerTap">
-                                                <rect key="frame" x="32" y="40" width="4" height="4"/>
-                                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="two finger tap">
-                                                    <accessibilityTraits key="traits" button="YES"/>
-                                                    <bool key="isElement" value="YES"/>
-                                                </accessibility>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="4" id="kvz-wL-S56"/>
-                                                    <constraint firstAttribute="width" constant="4" id="pgM-Dh-SfO"/>
-                                                </constraints>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NMN-nN-Sbk" userLabel="TripleTap">
-                                                <rect key="frame" x="8" y="64" width="4" height="4"/>
+                                                <rect key="frame" x="32" y="40" width="4" height="4"/>
                                                 <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="triple tap">
                                                     <accessibilityTraits key="traits" button="YES"/>
@@ -200,72 +221,25 @@
                                                     <constraint firstAttribute="height" constant="4" id="ezO-ab-npb"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rgX-SB-lks" userLabel="TwoFingerLongPress">
-                                                <rect key="frame" x="32" y="64" width="4" height="4"/>
-                                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="two finger long press">
-                                                    <accessibilityTraits key="traits" button="YES"/>
-                                                    <bool key="isElement" value="YES"/>
-                                                </accessibility>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="4" id="YLW-k3-xvN"/>
-                                                    <constraint firstAttribute="width" constant="4" id="mPg-qh-QvI"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="37X-zV-EjS" userLabel="ThreeFingerTap">
-                                                <rect key="frame" x="8" y="87" width="4" height="4"/>
-                                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="three finger tap">
-                                                    <accessibilityTraits key="traits" button="YES"/>
-                                                    <bool key="isElement" value="YES"/>
-                                                </accessibility>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="4" id="Jpb-nq-jcF"/>
-                                                    <constraint firstAttribute="width" constant="4" id="jXw-nv-oBA"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MDb-5P-wLY" userLabel="TwoFingerDoubleTap">
-                                                <rect key="frame" x="32" y="88" width="4" height="4"/>
-                                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="two finger double tap">
-                                                    <accessibilityTraits key="traits" button="YES"/>
-                                                    <bool key="isElement" value="YES"/>
-                                                </accessibility>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="4" id="33p-M6-3NJ"/>
-                                                    <constraint firstAttribute="height" constant="4" id="nfe-Fc-ve2"/>
-                                                </constraints>
-                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <accessibility key="accessibilityConfiguration" identifier="action buttons"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="rgX-SB-lks" secondAttribute="trailing" constant="8" id="0iD-64-wNh"/>
-                                            <constraint firstItem="37X-zV-EjS" firstAttribute="top" secondItem="NMN-nN-Sbk" secondAttribute="bottom" constant="19" id="1h1-ag-cqz"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="5U1-Nc-OpI"/>
                                             <constraint firstAttribute="width" constant="44" id="BKI-GW-X2f"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="108" id="GDa-cY-eEt"/>
-                                            <constraint firstItem="bBj-oq-gY9" firstAttribute="top" secondItem="5rB-Ig-CMS" secondAttribute="bottom" constant="20" id="Grr-gL-9yG"/>
                                             <constraint firstItem="5rB-Ig-CMS" firstAttribute="leading" secondItem="d8I-jd-QqW" secondAttribute="trailing" constant="20" id="IBK-0c-FGE"/>
-                                            <constraint firstItem="bBj-oq-gY9" firstAttribute="leading" secondItem="krs-Wl-lQL" secondAttribute="trailing" constant="20" id="K1c-fQ-brE"/>
                                             <constraint firstAttribute="height" constant="108" id="KcC-X1-1rI"/>
-                                            <constraint firstItem="MDb-5P-wLY" firstAttribute="top" secondItem="rgX-SB-lks" secondAttribute="bottom" constant="20" id="Nip-pY-eTW"/>
                                             <constraint firstItem="5rB-Ig-CMS" firstAttribute="top" secondItem="qX8-i5-Blb" secondAttribute="top" constant="16" id="OlS-ZC-ys1"/>
-                                            <constraint firstItem="rgX-SB-lks" firstAttribute="top" secondItem="bBj-oq-gY9" secondAttribute="bottom" constant="20" id="PwW-kn-5Wf"/>
+                                            <constraint firstItem="NMN-nN-Sbk" firstAttribute="top" secondItem="5rB-Ig-CMS" secondAttribute="bottom" constant="20" id="RbW-JG-MeA"/>
                                             <constraint firstItem="krs-Wl-lQL" firstAttribute="top" secondItem="d8I-jd-QqW" secondAttribute="bottom" constant="20" id="Rs4-VR-tMC"/>
                                             <constraint firstItem="d8I-jd-QqW" firstAttribute="top" secondItem="qX8-i5-Blb" secondAttribute="top" constant="16" id="VkY-o5-mhR"/>
-                                            <constraint firstItem="NMN-nN-Sbk" firstAttribute="top" secondItem="krs-Wl-lQL" secondAttribute="bottom" constant="20" id="aFn-xD-gka"/>
                                             <constraint firstItem="krs-Wl-lQL" firstAttribute="leading" secondItem="qX8-i5-Blb" secondAttribute="leading" constant="8" id="aaT-tQ-r6g"/>
                                             <constraint firstAttribute="trailing" secondItem="5rB-Ig-CMS" secondAttribute="trailing" constant="8" id="d9b-HE-01B"/>
                                             <constraint firstItem="d8I-jd-QqW" firstAttribute="leading" secondItem="qX8-i5-Blb" secondAttribute="leading" constant="8" id="h4y-XJ-2iN"/>
-                                            <constraint firstItem="bBj-oq-gY9" firstAttribute="top" secondItem="5rB-Ig-CMS" secondAttribute="bottom" constant="20" id="i9K-YE-ELM"/>
-                                            <constraint firstAttribute="trailing" secondItem="MDb-5P-wLY" secondAttribute="trailing" constant="8" id="jTv-FI-ZMv"/>
                                             <constraint firstItem="5rB-Ig-CMS" firstAttribute="leading" secondItem="d8I-jd-QqW" secondAttribute="trailing" constant="20" id="kMc-FB-HQl"/>
-                                            <constraint firstItem="NMN-nN-Sbk" firstAttribute="leading" secondItem="qX8-i5-Blb" secondAttribute="leading" constant="8" id="kbM-eN-nO7"/>
-                                            <constraint firstAttribute="trailing" secondItem="bBj-oq-gY9" secondAttribute="trailing" constant="8" id="oEf-o3-q9c"/>
-                                            <constraint firstItem="bBj-oq-gY9" firstAttribute="leading" secondItem="krs-Wl-lQL" secondAttribute="trailing" constant="20" id="qOa-pg-Vsm"/>
+                                            <constraint firstItem="NMN-nN-Sbk" firstAttribute="leading" secondItem="qX8-i5-Blb" secondAttribute="leading" constant="32" id="kbM-eN-nO7"/>
                                             <constraint firstItem="krs-Wl-lQL" firstAttribute="top" secondItem="d8I-jd-QqW" secondAttribute="bottom" constant="20" id="xhA-4H-E7G"/>
-                                            <constraint firstItem="37X-zV-EjS" firstAttribute="leading" secondItem="qX8-i5-Blb" secondAttribute="leading" constant="8" id="xyL-ZV-QDb"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbZ-5y-KQC">
@@ -285,14 +259,14 @@
                                 <color key="backgroundColor" red="0.8111260776" green="0.73380926719999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="action box"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="168" id="5mm-FL-9aM"/>
+                                    <constraint firstAttribute="height" constant="136" id="5mm-FL-9aM"/>
                                     <constraint firstItem="qX8-i5-Blb" firstAttribute="leading" secondItem="XTU-cj-tFR" secondAttribute="leading" constant="8" id="F0g-PE-3pB"/>
                                     <constraint firstItem="PbZ-5y-KQC" firstAttribute="leading" secondItem="XTU-cj-tFR" secondAttribute="leading" constant="5" id="IgN-Ag-n1i"/>
                                     <constraint firstAttribute="trailing" secondItem="PbZ-5y-KQC" secondAttribute="trailing" constant="5" id="LdN-XP-nEj"/>
                                     <constraint firstItem="qX8-i5-Blb" firstAttribute="leading" secondItem="XTU-cj-tFR" secondAttribute="leading" constant="8" id="Ql1-ts-eYs"/>
                                     <constraint firstAttribute="trailing" secondItem="qX8-i5-Blb" secondAttribute="trailing" constant="8" id="UIW-M2-X7N"/>
                                     <constraint firstItem="qX8-i5-Blb" firstAttribute="top" secondItem="PbZ-5y-KQC" secondAttribute="bottom" constant="15" id="iLA-bs-cSF"/>
-                                    <constraint firstAttribute="bottom" secondItem="qX8-i5-Blb" secondAttribute="bottom" constant="8" id="oH8-8Q-KNE"/>
+                                    <constraint firstAttribute="bottom" secondItem="qX8-i5-Blb" secondAttribute="bottom" constant="20" id="oH8-8Q-KNE"/>
                                     <constraint firstItem="PbZ-5y-KQC" firstAttribute="centerX" secondItem="XTU-cj-tFR" secondAttribute="centerX" id="oIV-zg-9BD"/>
                                     <constraint firstAttribute="width" constant="60" id="r0X-rn-Oce"/>
                                     <constraint firstItem="PbZ-5y-KQC" firstAttribute="top" secondItem="XTU-cj-tFR" secondAttribute="top" constant="15" id="wJ4-XM-pJl"/>
@@ -301,7 +275,9 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syb-F1-lj4">
                                 <rect key="frame" x="256" y="256" width="88" height="88"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <accessibility key="accessibilityConfiguration" identifier="center label"/>
+                                <accessibility key="accessibilityConfiguration" identifier="center label">
+                                    <accessibilityTraits key="traits" staticText="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="88" id="5Ox-mj-hZ5"/>
                                     <constraint firstAttribute="height" constant="88" id="80q-Pd-8te"/>
@@ -310,11 +286,43 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBj-oq-gY9" userLabel="TwoFingerTap">
+                                <rect key="frame" x="88" y="20" width="100" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2-finger tap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1g-am-hC1">
+                                        <rect key="frame" x="5" y="28" width="91" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="two finger tap">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstItem="I1g-am-hC1" firstAttribute="centerY" secondItem="bBj-oq-gY9" secondAttribute="centerY" id="TPD-xX-Kgc"/>
+                                    <constraint firstAttribute="height" constant="100" id="kvz-wL-S56"/>
+                                    <constraint firstItem="I1g-am-hC1" firstAttribute="centerX" secondItem="bBj-oq-gY9" secondAttribute="centerX" id="nzZ-W2-1oh"/>
+                                    <constraint firstAttribute="width" constant="100" id="pgM-Dh-SfO"/>
+                                    <constraint firstItem="I1g-am-hC1" firstAttribute="top" secondItem="bBj-oq-gY9" secondAttribute="top" constant="28" id="u8M-av-LIE"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Grüezi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSV-J3-9ym">
+                                <rect key="frame" x="20" y="501" width="560" height="42"/>
+                                <accessibility key="accessibilityConfiguration" identifier="complex touches" label="Complex touches"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration" identifier="tao page"/>
                         <constraints>
                             <constraint firstItem="Syb-F1-lj4" firstAttribute="centerX" secondItem="qWP-eE-JNW" secondAttribute="centerX" id="3eV-bV-Cxl"/>
+                            <constraint firstItem="bBj-oq-gY9" firstAttribute="leading" secondItem="XTU-cj-tFR" secondAttribute="trailing" constant="8" symbolic="YES" id="7jA-bg-NSA"/>
+                            <constraint firstItem="bBj-oq-gY9" firstAttribute="top" secondItem="XTU-cj-tFR" secondAttribute="top" id="D4v-Da-dj8"/>
                             <constraint firstItem="XTU-cj-tFR" firstAttribute="leading" secondItem="qWP-eE-JNW" secondAttribute="leadingMargin" id="Gqi-wP-qHG"/>
                             <constraint firstItem="XTU-cj-tFR" firstAttribute="top" secondItem="wnv-uZ-HQl" secondAttribute="bottom" id="e7B-Bz-Wk4"/>
                             <constraint firstItem="Syb-F1-lj4" firstAttribute="centerY" secondItem="qWP-eE-JNW" secondAttribute="centerY" id="gVd-zA-EXJ"/>

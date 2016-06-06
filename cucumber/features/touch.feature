@@ -31,7 +31,6 @@ Then I touch a little button
 Then I rotate the device so the home button is on the top
 Then I touch a little button
 
-@wip
 @orientation
 Scenario: Triple tap in any orientation
 Given I am looking at the Tao tab
