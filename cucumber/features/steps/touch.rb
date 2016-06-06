@@ -19,8 +19,8 @@ Expected to find '#{text}' as a 'value' or 'label' in
     end
 
     def clear_small_button_action_label
-      @gestures.touch_mark("touch action")
-      wait_for_gesture_text("CLEARED", "touch action")
+      @gestures.touch_mark("small button action")
+      wait_for_gesture_text("CLEARED", "small button action")
     end
   end
 end
@@ -44,13 +44,13 @@ end
 Then(/^I (double tap|touch) a little button$/) do |gesture|
   gesture_method = "#{gesture.gsub(" ", "_").to_sym}_mark"
   @gestures.send(gesture_method, gesture)
-  wait_for_gesture_text(gesture, "touch action")
+  wait_for_gesture_text(gesture, "small button action")
   clear_small_button_action_label
 end
 
 Then(/^I triple tap a little button$/) do
   @gestures.touch_mark("triple tap", {:repetitions => 3})
-  wait_for_gesture_text("triple tap", "touch action")
+  wait_for_gesture_text("triple tap", "small button action")
   clear_small_button_action_label
 end
 
@@ -68,6 +68,6 @@ Then(/^I long press a little button for (a short|a long|enough) time$/) do |time
   end
 
   @gestures.long_press_mark("long press", duration)
-  wait_for_gesture_text(expected_text, "touch action")
+  wait_for_gesture_text(expected_text, "small button action")
 end
 

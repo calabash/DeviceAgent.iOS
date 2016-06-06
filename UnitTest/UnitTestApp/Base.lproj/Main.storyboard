@@ -244,7 +244,7 @@
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbZ-5y-KQC">
                                         <rect key="frame" x="5" y="15" width="50" height="22"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="touch action">
+                                        <accessibility key="accessibilityConfiguration" identifier="small button action">
                                             <accessibilityTraits key="traits" none="YES"/>
                                         </accessibility>
                                         <constraints>
@@ -309,9 +309,12 @@
                                     <constraint firstItem="I1g-am-hC1" firstAttribute="top" secondItem="bBj-oq-gY9" secondAttribute="top" constant="28" id="u8M-av-LIE"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Grüezi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSV-J3-9ym">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grüezi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSV-J3-9ym">
                                 <rect key="frame" x="20" y="501" width="560" height="42"/>
                                 <accessibility key="accessibilityConfiguration" identifier="complex touches" label="Complex touches"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="jkm-lL-hNB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -322,8 +325,11 @@
                         <constraints>
                             <constraint firstItem="Syb-F1-lj4" firstAttribute="centerX" secondItem="qWP-eE-JNW" secondAttribute="centerX" id="3eV-bV-Cxl"/>
                             <constraint firstItem="bBj-oq-gY9" firstAttribute="leading" secondItem="XTU-cj-tFR" secondAttribute="trailing" constant="8" symbolic="YES" id="7jA-bg-NSA"/>
+                            <constraint firstItem="0Up-jB-r0F" firstAttribute="top" secondItem="cSV-J3-9ym" secondAttribute="bottom" constant="8" symbolic="YES" id="CIf-03-fkA"/>
                             <constraint firstItem="bBj-oq-gY9" firstAttribute="top" secondItem="XTU-cj-tFR" secondAttribute="top" id="D4v-Da-dj8"/>
+                            <constraint firstItem="cSV-J3-9ym" firstAttribute="centerX" secondItem="qWP-eE-JNW" secondAttribute="centerX" id="G2S-qO-WsP"/>
                             <constraint firstItem="XTU-cj-tFR" firstAttribute="leading" secondItem="qWP-eE-JNW" secondAttribute="leadingMargin" id="Gqi-wP-qHG"/>
+                            <constraint firstItem="cSV-J3-9ym" firstAttribute="leading" secondItem="XTU-cj-tFR" secondAttribute="leading" id="aTG-KK-YGd"/>
                             <constraint firstItem="XTU-cj-tFR" firstAttribute="top" secondItem="wnv-uZ-HQl" secondAttribute="bottom" id="e7B-Bz-Wk4"/>
                             <constraint firstItem="Syb-F1-lj4" firstAttribute="centerY" secondItem="qWP-eE-JNW" secondAttribute="centerY" id="gVd-zA-EXJ"/>
                         </constraints>
@@ -331,11 +337,12 @@
                     <tabBarItem key="tabBarItem" title="Tao" image="tab-bar-tao" selectedImage="tab-bar-tao-selected" id="Hob-gk-olJ"/>
                     <connections>
                         <outlet property="centerLabel" destination="Syb-F1-lj4" id="JMn-J7-znx"/>
+                        <outlet property="complexTouchesLabel" destination="cSV-J3-9ym" id="gCK-a0-eFk"/>
                         <outlet property="doubleTap" destination="d8I-jd-QqW" id="TKu-Lz-Zh5"/>
                         <outlet property="longPress" destination="krs-Wl-lQL" id="aMQ-fT-u9J"/>
+                        <outlet property="smallButtonActionLabel" destination="PbZ-5y-KQC" id="tey-XJ-A4P"/>
                         <outlet property="threeFingerTap" destination="37X-zV-EjS" id="bY2-Fc-f2Y"/>
                         <outlet property="touch" destination="5rB-Ig-CMS" id="AiQ-Nj-SAF"/>
-                        <outlet property="touchActionLabel" destination="PbZ-5y-KQC" id="sXE-hD-ftr"/>
                         <outlet property="tripleTap" destination="NMN-nN-Sbk" id="i7z-i3-aoC"/>
                         <outlet property="twoFingerDoubleTap" destination="MDb-5P-wLY" id="3eg-TC-XRo"/>
                         <outlet property="twoFingerLongPress" destination="rgX-SB-lks" id="fyv-Lu-5nQ"/>
