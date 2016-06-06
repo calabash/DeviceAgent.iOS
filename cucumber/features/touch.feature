@@ -57,5 +57,10 @@ Scenario: Long press in any orientation
 Given I am looking at the Tao tab
 Given I rotate the device so the home button is on the bottom
 Then I long press a little button for enough time
-And I clear the touch action label
+Then I rotate the device so the home button is on the left
+Then I long press a little button for enough time
+Then I rotate the device so the home button is on the right
+Then I long press a little button for enough time
+Then I rotate the device so the home button is on the top
+Then I long press a little button for enough time
 
