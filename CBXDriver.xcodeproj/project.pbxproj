@@ -2072,7 +2072,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "xcrun pkill xcodebuild\nexit 0";
+			shellScript = "xcrun pkill xcodebuild\nxcrun pkill testmanagerd\nexit 0";
 			showEnvVarsInLog = 0;
 		};
 		F5A252C21CBFFE2700C05F1F /* Run Script stage to ./Products */ = {
