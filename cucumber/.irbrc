@@ -146,7 +146,8 @@ def holmes()
     :xcode => xcode,
     :simctl => simctl,
     :instruments => instruments,
-    :app => ENV["APP"]
+    :app => ENV["APP"],
+    :cbx_launcher => :xcodebuild
   }
 
   @xcuitest = @holmes = @device_agent = RunLoop.run(options)
@@ -165,7 +166,8 @@ def attach
     device = booted_simulator
     app = RunLoop::App.new(ENV["APP"])
     bundle_id = app.bundle_identifier
-    @device_agent = RunLoop::XCUITest.new(bundle_id, device)
+    launcher = RunLoop::DeviceAgent::Xcodebuild.new(device)
+    @device_agent = RunLoop::XCUITest.new(bundle_id, device, launcher)
   end
 
   @waiter = DeviceAgent::Wait.new(@device_agent)
