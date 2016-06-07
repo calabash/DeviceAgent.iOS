@@ -82,7 +82,8 @@ Before do |scenario|
     :xcode => launcher.xcode,
     :simctl => launcher.simctl,
     :instruments => launcher.instruments,
-    :app => launcher.app
+    :app => launcher.app,
+    :cbx_launcher => :xcodebuild
   }
 
   if launcher.first_launch || !launcher.running?

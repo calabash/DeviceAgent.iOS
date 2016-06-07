@@ -128,7 +128,7 @@
     }
 }
 
-- (void)testGestureWithJSON:(id)json gestureClass:(Class<Gesture>)gestureClass {
+- (void)expectGestureWithJSON:(id)json gestureClass:(Class<Gesture>)gestureClass {
     XCTAssertEqual([gestureClass name], json[@"gesture"], @"You wrote your test wrong!");
     [self assertJSON:json[@"options"]
       hasAllRequired:[gestureClass requiredKeys]
@@ -146,7 +146,7 @@
                             @"string"  : @"banana"
                         }
                 };
-    [self testGestureWithJSON:json gestureClass:[EnterText class]];
+    [self expectGestureWithJSON:json gestureClass:[EnterText class]];
 }
 
 - (void)testEnterTextIn {
@@ -159,7 +159,7 @@
                         @"string"  : @"banana"
                         }
                 };
-    [self testGestureWithJSON:json gestureClass:[EnterTextIn class]];
+    [self expectGestureWithJSON:json gestureClass:[EnterTextIn class]];
 }
 
 - (void)testDoubleTap {
@@ -172,7 +172,7 @@
                         @"duration" : @0.1
                         }
                 };
-    [self testGestureWithJSON:json gestureClass:[DoubleTap class]];
+    [self expectGestureWithJSON:json gestureClass:[DoubleTap class]];
 }
 
 - (void)testTouch {
@@ -182,10 +182,12 @@
                         @"coordinate" :  @[ @50, @50 ]
                         },
                 @"options" : @{
-                        @"duration" : @0.1
+                        @"duration" : @0.1,
+                        @"repetitions" : @2,
+                        @"num_fingers" : @1
                         }
                 };
-    [self testGestureWithJSON:json gestureClass:[Touch class]];
+    [self expectGestureWithJSON:json gestureClass:[Touch class]];
 }
 
 - (void)testDrag {
@@ -200,7 +202,7 @@
                         @"repetitions" : @10
                         }
                 };
-    [self testGestureWithJSON:json gestureClass:[Drag class]];
+    [self expectGestureWithJSON:json gestureClass:[Drag class]];
 }
 
 - (void)testPinch {
@@ -215,7 +217,7 @@
                         @"amount" : @100
                         }
                 };
-    [self testGestureWithJSON:json gestureClass:[Pinch class]];
+    [self expectGestureWithJSON:json gestureClass:[Pinch class]];
 }
 
 - (void)testRotate {
@@ -233,7 +235,7 @@
                         @"radius" : @90
                         }
                 };
-    [self testGestureWithJSON:json gestureClass:[Rotate class]];
+    [self expectGestureWithJSON:json gestureClass:[Rotate class]];
 }
 
 @end

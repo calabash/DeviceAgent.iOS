@@ -1,7 +1,7 @@
 #import "TaoController.h"
 
 @interface TaoController ()
-@property (weak, nonatomic) IBOutlet UILabel *touchActionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *smallButtonActionLabel;
 @property (weak, nonatomic) IBOutlet UIView *doubleTap;
 @property (weak, nonatomic) IBOutlet UIView *touch;
 @property (weak, nonatomic) IBOutlet UIView *longPress;
@@ -10,7 +10,8 @@
 @property (weak, nonatomic) IBOutlet UIView *twoFingerLongPress;
 @property (weak, nonatomic) IBOutlet UIView *threeFingerTap;
 @property (weak, nonatomic) IBOutlet UIView *twoFingerDoubleTap;
-@property (strong, nonatomic) IBOutlet UILabel *centerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *complexTouchesLabel;
+@property (weak, nonatomic) IBOutlet UIView *fourFingerTap;
 
 @end
 
@@ -18,38 +19,74 @@
 
 #pragma mark - Actions
 
-- (void)handleTapOnCenterLabel:(UIGestureRecognizer *)recognizer {
-    UIGestureRecognizerState state = [recognizer state];
-    if (UIGestureRecognizerStateEnded == state) {
-        self.centerLabel.text = @"TOUCHED";
-    }
-}
-
 - (void)handleTapOnTouchActionLabel:(UIGestureRecognizer *)recognizer {
     UIGestureRecognizerState state = [recognizer state];
     if (UIGestureRecognizerStateEnded == state) {
-        self.touchActionLabel.text = @"CLEARED";
+        UILabel *label = (UILabel *)recognizer.view;
+        label.text = @"CLEARED";
     }
 }
 
 - (void)handleDoubleTapOnSmallButton:(UIGestureRecognizer *)recognizer {
     UIGestureRecognizerState state = [recognizer state];
     if (UIGestureRecognizerStateEnded == state) {
-        self.touchActionLabel.text = @"double tap";
+        self.smallButtonActionLabel.text = @"double tap";
     }
 }
 
 - (void)handleTouchOnSmallButton:(UIGestureRecognizer *)recognizer {
     UIGestureRecognizerState state = [recognizer state];
     if (UIGestureRecognizerStateEnded == state) {
-        self.touchActionLabel.text = @"touch";
+        self.smallButtonActionLabel.text = @"touch";
     }
 }
 
 - (void)handleLongPressOnSmallButton:(UIGestureRecognizer *)recognizer {
     UIGestureRecognizerState state = [recognizer state];
     if (UIGestureRecognizerStateEnded == state) {
-        self.touchActionLabel.text = @"long press";
+        self.smallButtonActionLabel.text = @"long press";
+    }
+}
+
+- (void)handleTripleTapOnSmallButton:(UIGestureRecognizer *)recognizer {
+    UIGestureRecognizerState state = [recognizer state];
+    if (UIGestureRecognizerStateEnded == state) {
+        self.smallButtonActionLabel.text = @"triple tap";
+    }
+}
+
+- (void)handleTwoFingerTap:(UIGestureRecognizer *)recognizer {
+    UIGestureRecognizerState state = [recognizer state];
+    if (UIGestureRecognizerStateEnded == state) {
+       self.complexTouchesLabel.text = @"two-finger tap";
+    }
+}
+
+- (void)handleThreeFingerTap:(UIGestureRecognizer *)recognizer {
+    UIGestureRecognizerState state = [recognizer state];
+    if (UIGestureRecognizerStateEnded == state) {
+       self.complexTouchesLabel.text = @"three-finger tap";
+    }
+}
+
+- (void)handleFourFingerTap:(UIGestureRecognizer *)recognizer {
+    UIGestureRecognizerState state = [recognizer state];
+    if (UIGestureRecognizerStateEnded == state) {
+       self.complexTouchesLabel.text = @"four-finger tap";
+    }
+}
+
+- (void)handleTwoFingerDoubleTap:(UIGestureRecognizer *)recognizer {
+    UIGestureRecognizerState state = [recognizer state];
+    if (UIGestureRecognizerStateEnded == state) {
+       self.complexTouchesLabel.text = @"two-finger double tap";
+    }
+}
+
+- (void)handleTwoFingerLongpress:(UIGestureRecognizer *)recognizer {
+    UIGestureRecognizerState state = [recognizer state];
+    if (UIGestureRecognizerStateEnded == state) {
+       self.complexTouchesLabel.text = @"two-finger long press";
     }
 }
 
@@ -85,13 +122,14 @@
                                             taps:1
                                          touches:1];
 
-    self.touchActionLabel.userInteractionEnabled = YES;
-    [self.touchActionLabel addGestureRecognizer:recognizer];
+    self.smallButtonActionLabel.userInteractionEnabled = YES;
+    [self.smallButtonActionLabel addGestureRecognizer:recognizer];
 
-    recognizer = [self tapRecognizerWithSelector:@selector(handleTapOnCenterLabel:)
+    recognizer = [self tapRecognizerWithSelector:@selector(handleTapOnTouchActionLabel:)
                                             taps:1
                                          touches:1];
-    [self.centerLabel addGestureRecognizer:recognizer];
+    self.complexTouchesLabel.userInteractionEnabled = YES;
+    [self.complexTouchesLabel addGestureRecognizer:recognizer];
 
     recognizer = [self tapRecognizerWithSelector:@selector(handleDoubleTapOnSmallButton:)
                                             taps:2
@@ -103,6 +141,31 @@
                                          touches:1];
     [self.touch addGestureRecognizer:recognizer];
 
+    recognizer = [self tapRecognizerWithSelector:@selector(handleTripleTapOnSmallButton:)
+                                            taps:3
+                                         touches:1];
+    [self.tripleTap addGestureRecognizer:recognizer];
+
+    recognizer = [self tapRecognizerWithSelector:@selector(handleTwoFingerTap:)
+                                            taps:1
+                                            touches:2];
+    [self.twoFingerTap addGestureRecognizer:recognizer];
+
+    recognizer = [self tapRecognizerWithSelector:@selector(handleThreeFingerTap:)
+                                            taps:1
+                                            touches:3];
+    [self.threeFingerTap addGestureRecognizer:recognizer];
+
+    recognizer = [self tapRecognizerWithSelector:@selector(handleFourFingerTap:)
+                                            taps:1
+                                            touches:4];
+    [self.fourFingerTap addGestureRecognizer:recognizer];
+
+    recognizer = [self tapRecognizerWithSelector:@selector(handleTwoFingerDoubleTap:)
+                                            taps:2
+                                            touches:2];
+    [self.twoFingerDoubleTap addGestureRecognizer:recognizer];
+
     UILongPressGestureRecognizer *lpRecognizer;
     lpRecognizer = [[UILongPressGestureRecognizer alloc]
                     initWithTarget:self
@@ -110,6 +173,13 @@
     lpRecognizer.minimumPressDuration = 1.0;
     lpRecognizer.numberOfTouchesRequired = 1;
     [self.longPress addGestureRecognizer:lpRecognizer];
+
+    lpRecognizer = [[UILongPressGestureRecognizer alloc]
+                    initWithTarget:self
+                    action:@selector(handleTwoFingerLongpress:)];
+    lpRecognizer.minimumPressDuration = 1.0;
+    lpRecognizer.numberOfTouchesRequired = 2;
+    [self.complexTouchesLabel addGestureRecognizer:lpRecognizer];
 }
 
 - (void)viewWillLayoutSubviews {
