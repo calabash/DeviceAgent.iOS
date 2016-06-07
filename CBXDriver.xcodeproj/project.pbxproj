@@ -394,15 +394,15 @@
 		89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatePinchViewController.m; sourceTree = "<group>"; };
 		89331CCF1CC00ECD003C2E59 /* MiscViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiscViewController.h; sourceTree = "<group>"; };
 		89331CD01CC00ECD003C2E59 /* MiscViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiscViewController.m; sourceTree = "<group>"; };
-		89331D1F1CC0F72B003C2E59 /* ActionConfigurationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionConfigurationTests.m; sourceTree = "<group>"; };
-		89331D211CC1001E003C2E59 /* QueryConfigurationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryConfigurationTests.m; sourceTree = "<group>"; };
-		89331D241CC1060A003C2E59 /* CoordinateQueryConfigurationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinateQueryConfigurationTests.m; sourceTree = "<group>"; };
-		89331D261CC10857003C2E59 /* QueryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryTests.m; sourceTree = "<group>"; };
-		89331D281CC1C279003C2E59 /* CoordinateQueryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinateQueryTests.m; sourceTree = "<group>"; };
-		89331D2C1CC50172003C2E59 /* GestureFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureFactoryTests.m; sourceTree = "<group>"; };
+		89331D1F1CC0F72B003C2E59 /* ActionConfigurationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = ActionConfigurationTests.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		89331D211CC1001E003C2E59 /* QueryConfigurationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = QueryConfigurationTests.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		89331D241CC1060A003C2E59 /* CoordinateQueryConfigurationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinateQueryConfigurationTests.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		89331D261CC10857003C2E59 /* QueryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = QueryTests.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		89331D281CC1C279003C2E59 /* CoordinateQueryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinateQueryTests.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		89331D2C1CC50172003C2E59 /* GestureFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = GestureFactoryTests.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		89331D2E1CC50447003C2E59 /* ThreadUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadUtils.h; sourceTree = "<group>"; };
 		89331D2F1CC50447003C2E59 /* ThreadUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadUtils.m; sourceTree = "<group>"; };
-		89331D381CC56BE5003C2E59 /* Gestures+OptionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Gestures+OptionsTests.m"; sourceTree = "<group>"; };
+		89331D381CC56BE5003C2E59 /* Gestures+OptionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = "Gestures+OptionsTests.m"; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		89512BD91C9EEC3C0027D61E /* Drag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drag.h; sourceTree = "<group>"; };
 		89512BDA1C9EEC3C0027D61E /* Drag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drag.m; sourceTree = "<group>"; };
 		89512BDD1CA095D20027D61E /* DeviceEventRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceEventRoutes.h; sourceTree = "<group>"; };
@@ -411,10 +411,10 @@
 		8965867B1CEB961000E8329C /* QueryConfigurationFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryConfigurationFactory.m; sourceTree = "<group>"; };
 		896586801CEB9B9800E8329C /* QueryFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryFactory.h; sourceTree = "<group>"; };
 		896586811CEB9B9800E8329C /* QueryFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryFactory.m; sourceTree = "<group>"; };
-		896586881CEBA0A400E8329C /* QueryConfigurationFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryConfigurationFactoryTests.m; sourceTree = "<group>"; };
-		8965868D1CEBA19A00E8329C /* QueryFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryFactoryTests.m; sourceTree = "<group>"; };
+		896586881CEBA0A400E8329C /* QueryConfigurationFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = QueryConfigurationFactoryTests.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		8965868D1CEBA19A00E8329C /* QueryFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = QueryFactoryTests.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		8965869B1CECC39600E8329C /* CBXTouchEventTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = CBXTouchEventTests.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
-		8965869D1CECC3B100E8329C /* TouchPathTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchPathTests.m; sourceTree = "<group>"; usesTabs = 0; };
+		8965869D1CECC3B100E8329C /* TouchPathTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = TouchPathTests.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		898743BC1C5847B30084FD93 /* CBXAppStub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBXAppStub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898743D51C5847B30084FD93 /* CBX.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CBX.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		899696B81CADF84B00BB42E2 /* EnterText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterText.h; sourceTree = "<group>"; };
@@ -840,7 +840,7 @@
 				F5B0A1961CAD4C9200E056CE /* Queries */,
 				F5B0A1901CAD4C9200E056CE /* Gestures */,
 			);
-			name = AutomationActions;
+			path = AutomationActions;
 			sourceTree = "<group>";
 		};
 		89331D1E1CC0F6B3003C2E59 /* ActionConfiguration */ = {
@@ -849,7 +849,7 @@
 				89331D1F1CC0F72B003C2E59 /* ActionConfigurationTests.m */,
 				8965868A1CEBA17200E8329C /* QueryConfiguration */,
 			);
-			name = ActionConfiguration;
+			path = ActionConfiguration;
 			sourceTree = "<group>";
 		};
 		89331D341CC516A7003C2E59 /* Factory */ = {
@@ -857,7 +857,7 @@
 			children = (
 				89331D2C1CC50172003C2E59 /* GestureFactoryTests.m */,
 			);
-			name = Factory;
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		89331D371CC56BD7003C2E59 /* Categories */ = {
@@ -865,7 +865,7 @@
 			children = (
 				89331D381CC56BE5003C2E59 /* Gestures+OptionsTests.m */,
 			);
-			name = Categories;
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		896586851CEB9B9C00E8329C /* Factory */ = {
@@ -905,7 +905,7 @@
 				89331D241CC1060A003C2E59 /* CoordinateQueryConfigurationTests.m */,
 				8965868B1CEBA18500E8329C /* Factory */,
 			);
-			name = QueryConfiguration;
+			path = QueryConfiguration;
 			sourceTree = "<group>";
 		};
 		8965868B1CEBA18500E8329C /* Factory */ = {
@@ -913,7 +913,7 @@
 			children = (
 				896586881CEBA0A400E8329C /* QueryConfigurationFactoryTests.m */,
 			);
-			name = Factory;
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		8965868C1CEBA18E00E8329C /* Factory */ = {
@@ -921,7 +921,7 @@
 			children = (
 				8965868D1CEBA19A00E8329C /* QueryFactoryTests.m */,
 			);
-			name = Factory;
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		8965869A1CECC24500E8329C /* EventSynthesis */ = {
@@ -930,7 +930,7 @@
 				8965869B1CECC39600E8329C /* CBXTouchEventTests.m */,
 				8965869D1CECC3B100E8329C /* TouchPathTests.m */,
 			);
-			name = EventSynthesis;
+			path = EventSynthesis;
 			sourceTree = "<group>";
 		};
 		898743B31C5847B30084FD93 = {
