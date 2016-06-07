@@ -17,7 +17,12 @@ Scenario: Double tap in any orientation
 Given I am looking at the Tao tab
 Given I rotate the device so the home button is on the bottom
 Then I double tap a little button
-And I clear the touch action label
+Given I rotate the device so the home button is on the left
+Then I double tap a little button
+Given I rotate the device so the home button is on the right
+Then I double tap a little button
+Given I rotate the device so the home button is on the top
+Then I double tap a little button
 
 @orientation
 Scenario: Touch in any orientation
