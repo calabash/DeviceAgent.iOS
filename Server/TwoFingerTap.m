@@ -44,7 +44,7 @@
 
     // The coordinate passed is the center of the view and we assume the fingers
     // are touching.  Therefore, we use half a finger width to offset the touch.
-    CGFloat xOffset = CBX_FINGER_WIDTH / 2.0;
+    CGFloat xOffset = CBX_FINGER_WIDTH_TOUCH/2.0;
     CGPoint leftFinger = CGPointMake(coordinate.x + xOffset, coordinate.y);
     CGPoint rightFinger = CGPointMake(coordinate.x - xOffset, coordinate.y);
 

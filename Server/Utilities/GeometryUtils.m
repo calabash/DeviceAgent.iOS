@@ -10,13 +10,13 @@
         case 0:
             return CGPointZero;
         case 1:
-            return CGPointMake(CBX_FINGER_WIDTH, 0);
+            return CGPointMake(CBX_FINGER_WIDTH_DRAG, 0);
         case 2:
-            return CGPointMake(0, CBX_FINGER_WIDTH);
+            return CGPointMake(0, CBX_FINGER_WIDTH_DRAG);
         case 3:
-            return CGPointMake(-CBX_FINGER_WIDTH, 0);
+            return CGPointMake(-CBX_FINGER_WIDTH_DRAG, 0);
         case 4:
-            return CGPointMake(0, -CBX_FINGER_WIDTH);
+            return CGPointMake(0, -CBX_FINGER_WIDTH_DRAG);
         default:
             @throw [InvalidArgumentException withMessage:@"Invalid finger index"
                                                 userInfo:@{@"max finger index" : @(CBX_MAX_NUM_FINGERS - 1)}];
