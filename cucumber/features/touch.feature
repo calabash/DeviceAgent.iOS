@@ -12,122 +12,73 @@ Scenario: Two finger touch
 And I am looking at the Touch tab
 Then I can tap with two fingers by coordinate
 
-@orientation
 Scenario: Double tap in any orientation
 Given I am looking at the Tao tab
-Given I rotate the device so the home button is on the bottom
-Then I double tap a little button
-Given I rotate the device so the home button is on the left
-Then I double tap a little button
-Given I rotate the device so the home button is on the right
-Then I double tap a little button
-Given I rotate the device so the home button is on the top
-Then I double tap a little button
+When the home button is on the bottom, I can double tap
+When the home button is on the right, I can double tap
+When the home button is on the left, I can double tap
+When the home button is on the top, I can double tap
 
-@orientation
 Scenario: Touch in any orientation
 Given I am looking at the Tao tab
 And I rotate the device so the home button is on the bottom
-Then I touch a little button
-Then I rotate the device so the home button is on the left
-Then I touch a little button
-Then I rotate the device so the home button is on the right
-Then I touch a little button
-Then I rotate the device so the home button is on the top
-Then I touch a little button
+When the home button is on the bottom, I can touch
+When the home button is on the right, I can touch
+When the home button is on the left, I can touch
+When the home button is on the top, I can touch
 
-@orientation
 Scenario: Triple tap in any orientation
 Given I am looking at the Tao tab
-And I rotate the device so the home button is on the bottom
-Then I triple tap a little button
-Then I rotate the device so the home button is on the left
-Then I triple tap a little button
-Then I rotate the device so the home button is on the right
-Then I triple tap a little button
-Then I rotate the device so the home button is on the top
-Then I triple tap a little button
+When the home button is on the bottom, I can triple tap
+When the home button is on the left, I can triple tap
+When the home button is on the right, I can triple tap
+When the home button is on the top, I can triple tap
 
-@long_press
 Scenario: Long press durations
 Given I am looking at the Tao tab
-Given I rotate the device so the home button is on the bottom
 Then I long press a little button for a short time
 Then I long press a little button for enough time
 Then I long press a little button for a long time
 
-@orientation
-@long_press
 Scenario: Long press in any orientation
 Given I am looking at the Tao tab
-Given I rotate the device so the home button is on the bottom
-Then I long press a little button for enough time
-Then I rotate the device so the home button is on the left
-Then I long press a little button for enough time
-Then I rotate the device so the home button is on the right
-Then I long press a little button for enough time
-Then I rotate the device so the home button is on the top
-Then I long press a little button for enough time
+When the home button is on the top, I can long press
+When the home button is on the right, I can long press
+When the home button is on the left, I can long press
+When the home button is on the bottom, I can long press
 
-@two_finger_tap
 Scenario: Two finger tap in any orientation
 Given I am looking at the Tao tab
-And I rotate the device so the home button is on the bottom
-And I two-finger tap the cyan box
-And I rotate the device so the home button is on the left
-And I two-finger tap the cyan box
-And I rotate the device so the home button is on the right
-And I two-finger tap the cyan box
-And I rotate the device so the home button is on the top
-And I two-finger tap the cyan box
+When the home button is on the left, I can two-finger tap
+When the home button is on the top, I can two-finger tap
+When the home button is on the right, I can two-finger tap
+When the home button is on the bottom, I can two-finger tap
 
-@three_finger_tap
 Scenario: Three finger tap in any orientation
 Given I am looking at the Tao tab
-And I rotate the device so the home button is on the bottom
-And I three-finger tap the magenta box
-And I rotate the device so the home button is on the left
-And I three-finger tap the magenta box
-And I rotate the device so the home button is on the right
-And I three-finger tap the magenta box
-And I rotate the device so the home button is on the top
-And I three-finger tap the magenta box
+When the home button is on the right, I can three-finger tap
+When the home button is on the bottom, I can three-finger tap
+When the home button is on the top, I can three-finger tap
+When the home button is on the left, I can three-finger tap
 
-@four_finger_tap
 Scenario: Four finger tap in any orientation
 Given I am looking at the Tao tab
-And I rotate the device so the home button is on the bottom
-And I four-finger tap the moss box
-And I rotate the device so the home button is on the left
-And I four-finger tap the moss box
-And I rotate the device so the home button is on the right
-And I four-finger tap the moss box
-And I rotate the device so the home button is on the top
-And I four-finger tap the moss box
+When the home button is on the top, I can four-finger tap
+When the home button is on the left, I can four-finger tap
+When the home button is on the right, I can four-finger tap
+When the home button is on the bottom, I can four-finger tap
 
-@double_tap
-@two_finger_tap
 Scenario: Two finger double tap in any orientation
 Given I am looking at the Tao tab
-And I rotate the device so the home button is on the bottom
-And I two-finger tap the blueberry box
-And I rotate the device so the home button is on the left
-And I two-finger tap the blueberry box
-And I rotate the device so the home button is on the right
-And I two-finger tap the blueberry box
-And I rotate the device so the home button is on the top
-And I two-finger tap the blueberry box
+When the home button is on the right, I can two-finger double tap
+When the home button is on the top, I can two-finger double tap
+When the home button is on the bottom, I can two-finger double tap
+When the home button is on the left, I can two-finger double tap
 
-@long_press
-@two_finger_tap
 Scenario: Two finger long press in any orientation
 Given I am looking at the Tao tab
-And I rotate the device so the home button is on the bottom
-And I two-finger long press on the gray box
-And I rotate the device so the home button is on the left
-And I two-finger long press on the gray box
-And I rotate the device so the home button is on the right
-And I two-finger long press on the gray box
-And I rotate the device so the home button is on the top
-And I two-finger long press on the gray box
+When the home button is on the bottom, I can two-finger long press
+When the home button is on the top, I can two-finger long press
+When the home button is on the right, I can two-finger long press
+When the home button is on the left, I can two-finger long press
 

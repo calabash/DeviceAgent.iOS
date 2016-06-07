@@ -46,14 +46,16 @@ And(/^I clear the touch action label$/) do
  clear_small_button_action_label
 end
 
-Then(/^I (double tap|touch) a little button$/) do |gesture|
+When(/^the home button is on the (top|right|left|bottom), I can (double tap|touch)$/) do |position, gesture|
+  rotate_and_expect(position)
   gesture_method = "#{gesture.gsub(" ", "_").to_sym}_mark"
   @gestures.send(gesture_method, gesture)
   wait_for_gesture_text(gesture, "small button action")
   clear_small_button_action_label
 end
 
-Then(/^I triple tap a little button$/) do
+When(/^the home button is on the (top|right|left|bottom), I can triple tap$/) do |position|
+  rotate_and_expect(position)
   @gestures.touch_mark("triple tap", {:repetitions => 3})
   wait_for_gesture_text("triple tap", "small button action")
   clear_small_button_action_label
@@ -76,36 +78,48 @@ Then(/^I long press a little button for (a short|a long|enough) time$/) do |time
   wait_for_gesture_text(expected_text, "small button action")
 end
 
-Then(/^I two-finger tap the cyan box$/) do
+When(/^the home button is on the (top|right|left|bottom), I can long press$/) do |position|
+  clear_small_button_action_label
+  rotate_and_expect(position)
+  @gestures.long_press_mark("long press", 1.1)
+  wait_for_gesture_text("long press", "small button action")
+  clear_small_button_action_label
+end
+
+When(/^the home button is on the (top|right|left|bottom), I can two-finger tap$/) do |position|
+  rotate_and_expect(position)
   @gestures.two_finger_tap_mark("two finger tap")
   wait_for_gesture_text("two-finger tap", "complex touches")
   clear_complex_button_action_label
 end
 
-Then(/^I three-finger tap the magenta box$/) do
+When(/^the home button is on the (top|right|left|bottom), I can three-finger tap$/) do |position|
+  rotate_and_expect(position)
   @gestures.touch_mark("three finger tap", {:num_fingers => 3})
   wait_for_gesture_text("three-finger tap", "complex touches")
   clear_complex_button_action_label
 end
 
-Then(/^I four-finger tap the moss box$/) do
+When(/^the home button is on the (top|right|left|bottom), I can four-finger tap$/) do |position|
+  rotate_and_expect(position)
   @gestures.touch_mark("four finger tap", {:num_fingers => 4})
   wait_for_gesture_text("four-finger tap", "complex touches")
   clear_complex_button_action_label
 end
 
-Then(/^I two-finger tap the blueberry box$/) do
+When(/^the home button is on the (top|right|left|bottom), I can two-finger double tap$/) do |position|
+  rotate_and_expect(position)
   @gestures.touch_mark("two finger double tap", {:num_fingers => 2,
                                                  :repetitions => 2})
   wait_for_gesture_text("two-finger double tap", "complex touches")
   clear_complex_button_action_label
 end
 
-Then(/^I two-finger long press on the gray box$/) do
+When(/^the home button is on the (top|right|left|bottom), I can two-finger long press$/) do |position|
+  rotate_and_expect(position)
   @gestures.touch_mark("complex touches", {:num_fingers => 2,
                                                  :duration => 1.1})
   wait_for_gesture_text("two-finger long press", "complex touches")
   clear_complex_button_action_label
 end
-
 

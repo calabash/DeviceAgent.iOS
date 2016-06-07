@@ -14,6 +14,7 @@ module UnitTestApp
     def rotate_and_expect(position)
       symbol = position.to_sym
       json = @device_agent.rotate_home_button_to(symbol)
+      sleep(0.5)
       orientation = json["orientation"]
 
       if [:top, :up].include?(symbol) && !upside_down_supported?
@@ -50,6 +51,5 @@ World(UnitTestApp::Orientation)
 
 Then(/^I rotate the device so the home button is on the (top|bottom|left|right)$/) do |position|
   rotate_and_expect(position)
-  sleep(0.5)
 end
 
