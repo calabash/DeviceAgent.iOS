@@ -291,6 +291,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2-finger tap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1g-am-hC1">
                                         <rect key="frame" x="5" y="28" width="91" height="43"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="two-finger tap"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -311,7 +312,9 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grüezi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSV-J3-9ym">
                                 <rect key="frame" x="20" y="501" width="560" height="42"/>
-                                <accessibility key="accessibilityConfiguration" identifier="complex touches" label="Complex touches"/>
+                                <accessibility key="accessibilityConfiguration" identifier="complex touches">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="jkm-lL-hNB"/>
                                 </constraints>

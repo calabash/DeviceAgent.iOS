@@ -65,6 +65,7 @@
 - (void)handleTwoFingerTap:(UIGestureRecognizer *)recognizer {
     UIGestureRecognizerState state = [recognizer state];
     if (UIGestureRecognizerStateEnded == state) {
+       self.complexTouchesLabel.text = @"two-finger tap";
     }
 }
 
@@ -136,6 +137,11 @@
                                             taps:3
                                          touches:1];
     [self.tripleTap addGestureRecognizer:recognizer];
+
+    recognizer = [self tapRecognizerWithSelector:@selector(handleTwoFingerTap:)
+                                            taps:1
+                                            touches:2];
+    [self.twoFingerTap addGestureRecognizer:recognizer];
 }
 
 - (void)viewWillLayoutSubviews {

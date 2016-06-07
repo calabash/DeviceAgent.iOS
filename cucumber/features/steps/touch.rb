@@ -22,6 +22,11 @@ Expected to find '#{text}' as a 'value' or 'label' in
       @gestures.touch_mark("small button action")
       wait_for_gesture_text("CLEARED", "small button action")
     end
+
+    def clear_complex_button_action_label
+      @gestures.touch_mark("complex touches")
+      wait_for_gesture_text("CLEARED", "complex touches")
+    end
   end
 end
 
@@ -69,5 +74,11 @@ Then(/^I long press a little button for (a short|a long|enough) time$/) do |time
 
   @gestures.long_press_mark("long press", duration)
   wait_for_gesture_text(expected_text, "small button action")
+end
+
+Then(/^I two-finger tap the cyan box$/) do
+  @gestures.two_finger_tap_mark("two finger tap")
+  wait_for_gesture_text("two-finger tap", "complex touches")
+  clear_complex_button_action_label
 end
 
