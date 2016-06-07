@@ -274,6 +274,7 @@
 		F5954E151CBD2E1200117745 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5954E131CBD2E1200117745 /* Main.storyboard */; };
 		F5954E171CBD2E1200117745 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5954E161CBD2E1200117745 /* Assets.xcassets */; };
 		F5954E1A1CBD2E1200117745 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5954E181CBD2E1200117745 /* LaunchScreen.storyboard */; };
+		F59E52381D06B0F9001FC1A3 /* TouchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F59E52371D06B0F9001FC1A3 /* TouchTest.m */; };
 		F5AC714D1CEB816E00DE059A /* TaoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5AC714C1CEB816E00DE059A /* TaoController.m */; };
 		F5B0A11D1CAD3D8C00E056CE /* CBXTestToolsStandup.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B0A1161CAD3D8B00E056CE /* CBXTestToolsStandup.m */; };
 		F5B0A1841CAD3FB600E056CE /* libExpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B0A16B1CAD3FB600E056CE /* libExpecta.a */; };
@@ -719,6 +720,7 @@
 		F5954E161CBD2E1200117745 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5954E191CBD2E1200117745 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5954E1B1CBD2E1200117745 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F59E52371D06B0F9001FC1A3 /* TouchTest.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = TouchTest.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F5AC714B1CEB816E00DE059A /* TaoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaoController.h; sourceTree = "<group>"; };
 		F5AC714C1CEB816E00DE059A /* TaoController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = TaoController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F5B0A0CF1CAD3CBC00E056CE /* UnitTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1705,6 +1707,7 @@
 				8965869A1CECC24500E8329C /* EventSynthesis */,
 				89331D371CC56BD7003C2E59 /* Categories */,
 				89331D341CC516A7003C2E59 /* Factory */,
+				F59E52371D06B0F9001FC1A3 /* TouchTest.m */,
 			);
 			path = Gestures;
 			sourceTree = "<group>";
@@ -2343,6 +2346,7 @@
 				F5B0A1AE1CAD4E2700E056CE /* QuerySpecifier.m in Sources */,
 				899696DB1CB45FFC00BB42E2 /* ActionConfiguration.m in Sources */,
 				F5B0A1C11CAD4E4600E056CE /* QueryRoutes.m in Sources */,
+				F59E52381D06B0F9001FC1A3 /* TouchTest.m in Sources */,
 				89F6BF921CBEB5AD0088269C /* GeometryUtils.m in Sources */,
 				F55B31C71CBE6EEF00DFB13C /* TwoFingerTap.m in Sources */,
 				F5B0A1B21CAD4E2700E056CE /* QuerySpecifierByTextLike.m in Sources */,

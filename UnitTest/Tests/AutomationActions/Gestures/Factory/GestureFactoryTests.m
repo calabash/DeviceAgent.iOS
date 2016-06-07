@@ -183,7 +183,8 @@
                         },
                 @"options" : @{
                         @"duration" : @0.1,
-                        @"repetitions" : @2
+                        @"repetitions" : @2,
+                        @"num_fingers" : @1
                         }
                 };
     [self expectGestureWithJSON:json gestureClass:[Touch class]];

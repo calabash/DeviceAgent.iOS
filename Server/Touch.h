@@ -12,6 +12,8 @@
  
  ## Optional
  -  CBX_DURATION_KEY
+ -  CBX_REPETIONS_KEY
+ -  CBX_NUM_FINGERS_KEY
  
  */
 @interface Touch : Gesture<Gesture>

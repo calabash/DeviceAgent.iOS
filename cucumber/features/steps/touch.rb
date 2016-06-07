@@ -82,3 +82,23 @@ Then(/^I two-finger tap the cyan box$/) do
   clear_complex_button_action_label
 end
 
+Then(/^I three-finger tap the magenta box$/) do
+  @gestures.touch_mark("three finger tap", {:num_fingers => 3})
+  wait_for_gesture_text("three-finger tap", "complex touches")
+  clear_complex_button_action_label
+end
+
+Then(/^I four-finger tap the moss box$/) do
+  @gestures.touch_mark("four finger tap", {:num_fingers => 4})
+  wait_for_gesture_text("four-finger tap", "complex touches")
+  clear_complex_button_action_label
+end
+
+Then(/^I two-finger tap the blueberry box$/) do
+  @gestures.touch_mark("two finger double tap", {:num_fingers => 2,
+                                                 :repetitions => 2})
+  wait_for_gesture_text("two-finger double tap", "complex touches")
+  clear_complex_button_action_label
+end
+
+

@@ -24,7 +24,7 @@
 
     if ([self duration] >= 0.5) {
         @throw [InvalidArgumentException withFormat:
-                @"Duration %@ is too long: Must be less than %@",
+                @"Duration %@ is too long: must be less than %@",
                 @([self duration]),
                 @(CBX_MIN_LONG_PRESS_DURATION)];
     }
