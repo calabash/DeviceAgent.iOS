@@ -24,7 +24,8 @@
 }
 
 + (instancetype)withMessage:(NSString *)message statusCode:(NSInteger)code userInfo:(NSDictionary *)userInfo {
-    CBXException *e = [[self alloc] initWithName:@"Exception" reason:message userInfo:userInfo];
+    NSString *name = NSStringFromClass([self class]);
+    CBXException *e = [[self alloc] initWithName:name reason:message userInfo:userInfo];
     e.HTTPErrorStatusCode = code;
     return e;
 }
