@@ -53,8 +53,6 @@
     //Just assume it's valid by default?
 }
 
-- (id)setup:(NSArray<Coordinate *> *)coords { return nil; }
-
 - (void)execute:(CompletionBlock)completion {
     [self validate];
     
