@@ -83,6 +83,13 @@
     }
 }
 
+- (void)handleTwoFingerLongpress:(UIGestureRecognizer *)recognizer {
+    UIGestureRecognizerState state = [recognizer state];
+    if (UIGestureRecognizerStateEnded == state) {
+       self.complexTouchesLabel.text = @"two-finger long press";
+    }
+}
+
 #pragma mark - Recognizers
 
 - (UITapGestureRecognizer *)tapRecognizerWithSelector:(SEL)selector
@@ -134,14 +141,6 @@
                                          touches:1];
     [self.touch addGestureRecognizer:recognizer];
 
-    UILongPressGestureRecognizer *lpRecognizer;
-    lpRecognizer = [[UILongPressGestureRecognizer alloc]
-                    initWithTarget:self
-                    action:@selector(handleLongPressOnSmallButton:)];
-    lpRecognizer.minimumPressDuration = 1.0;
-    lpRecognizer.numberOfTouchesRequired = 1;
-    [self.longPress addGestureRecognizer:lpRecognizer];
-
     recognizer = [self tapRecognizerWithSelector:@selector(handleTripleTapOnSmallButton:)
                                             taps:3
                                          touches:1];
@@ -166,6 +165,21 @@
                                             taps:2
                                             touches:2];
     [self.twoFingerDoubleTap addGestureRecognizer:recognizer];
+
+    UILongPressGestureRecognizer *lpRecognizer;
+    lpRecognizer = [[UILongPressGestureRecognizer alloc]
+                    initWithTarget:self
+                    action:@selector(handleLongPressOnSmallButton:)];
+    lpRecognizer.minimumPressDuration = 1.0;
+    lpRecognizer.numberOfTouchesRequired = 1;
+    [self.longPress addGestureRecognizer:lpRecognizer];
+
+    lpRecognizer = [[UILongPressGestureRecognizer alloc]
+                    initWithTarget:self
+                    action:@selector(handleTwoFingerLongpress:)];
+    lpRecognizer.minimumPressDuration = 1.0;
+    lpRecognizer.numberOfTouchesRequired = 2;
+    [self.complexTouchesLabel addGestureRecognizer:lpRecognizer];
 }
 
 - (void)viewWillLayoutSubviews {

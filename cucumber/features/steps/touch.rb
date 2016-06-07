@@ -101,4 +101,11 @@ Then(/^I two-finger tap the blueberry box$/) do
   clear_complex_button_action_label
 end
 
+Then(/^I two-finger long press on the gray box$/) do
+  @gestures.touch_mark("complex touches", {:num_fingers => 2,
+                                                 :duration => 1.1})
+  wait_for_gesture_text("two-finger long press", "complex touches")
+  clear_complex_button_action_label
+end
+
 

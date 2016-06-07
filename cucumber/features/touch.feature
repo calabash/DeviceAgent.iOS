@@ -118,3 +118,16 @@ And I two-finger tap the blueberry box
 And I rotate the device so the home button is on the top
 And I two-finger tap the blueberry box
 
+@long_press
+@two_finger_tap
+Scenario: Two finger long press in any orientation
+Given I am looking at the Tao tab
+And I rotate the device so the home button is on the bottom
+And I two-finger long press on the gray box
+And I rotate the device so the home button is on the left
+And I two-finger long press on the gray box
+And I rotate the device so the home button is on the right
+And I two-finger long press on the gray box
+And I rotate the device so the home button is on the top
+And I two-finger long press on the gray box
+
