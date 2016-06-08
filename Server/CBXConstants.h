@@ -100,10 +100,8 @@ static float const CBX_DEFAULT_DEGREES = 90;
 static float const CBX_DEFAULT_ROTATION_START = 0;
 static float const CBX_DEFAULT_RADIUS = 25;
 static float const CBX_ROTATE_INCREMENT_DEGREES = 1;
-// Drag and pinch
-static float const CBX_FINGER_WIDTH_DRAG = 45;
-// Multi-finger touch - 2 finger touch is confortable in 156 pt view.
-static float const CBX_FINGER_WIDTH_TOUCH = 78;
+// Determined by the width of a two-finger touch.
+static float const CBX_FINGER_WIDTH = 78;
 
 static int const CBX_DEFAULT_NUM_FINGERS = 1;
 static int const CBX_DEFAULT_REPETITIONS = 1;

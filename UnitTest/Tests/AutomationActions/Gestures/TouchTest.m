@@ -72,11 +72,11 @@
     expect(actual.count).to.equal(2);
     Coordinate *coordinate;
     coordinate = actual[0];
-    expect(coordinate.cgpoint.x).to.equal(point.x - (CBX_FINGER_WIDTH_TOUCH/2.0));
+    expect(coordinate.cgpoint.x).to.equal(point.x - (CBX_FINGER_WIDTH/2.0));
     expect(coordinate.cgpoint.y).to.equal(point.y);
 
     coordinate = actual[1];
-    expect(coordinate.cgpoint.x).to.equal(point.x + (CBX_FINGER_WIDTH_TOUCH/2.0));
+    expect(coordinate.cgpoint.x).to.equal(point.x + (CBX_FINGER_WIDTH/2.0));
     expect(coordinate.cgpoint.y).to.equal(point.y);
 }
 
@@ -87,7 +87,7 @@
     expect(actual.count).to.equal(3);
     Coordinate *coordinate;
     coordinate = actual[0];
-    expect(coordinate.cgpoint.x).to.equal(point.x - CBX_FINGER_WIDTH_TOUCH);
+    expect(coordinate.cgpoint.x).to.equal(point.x - CBX_FINGER_WIDTH);
     expect(coordinate.cgpoint.y).to.equal(point.y);
 
     coordinate = actual[1];
@@ -95,7 +95,7 @@
     expect(coordinate.cgpoint.y).to.equal(point.y);
 
     coordinate = actual[2];
-    expect(coordinate.cgpoint.x).to.equal(point.x + CBX_FINGER_WIDTH_TOUCH);
+    expect(coordinate.cgpoint.x).to.equal(point.x + CBX_FINGER_WIDTH);
     expect(coordinate.cgpoint.y).to.equal(point.y);
 }
 
@@ -106,21 +106,21 @@
     expect(actual.count).to.equal(4);
     Coordinate *coordinate;
     coordinate = actual[0];
-    expect(coordinate.cgpoint.x).to.equal(point.x - (CBX_FINGER_WIDTH_TOUCH +
-                                                     (CBX_FINGER_WIDTH_TOUCH/2.0)));
+    expect(coordinate.cgpoint.x).to.equal(point.x - (CBX_FINGER_WIDTH +
+                                                     (CBX_FINGER_WIDTH/2.0)));
     expect(coordinate.cgpoint.y).to.equal(point.y);
 
     coordinate = actual[1];
-    expect(coordinate.cgpoint.x).to.equal(point.x - (CBX_FINGER_WIDTH_TOUCH/2.0));
+    expect(coordinate.cgpoint.x).to.equal(point.x - (CBX_FINGER_WIDTH/2.0));
     expect(coordinate.cgpoint.y).to.equal(point.y);
 
     coordinate = actual[2];
-    expect(coordinate.cgpoint.x).to.equal(point.x + (CBX_FINGER_WIDTH_TOUCH/2.0));
+    expect(coordinate.cgpoint.x).to.equal(point.x + (CBX_FINGER_WIDTH/2.0));
     expect(coordinate.cgpoint.y).to.equal(point.y);
 
     coordinate = actual[3];
-    expect(coordinate.cgpoint.x).to.equal(point.x + (CBX_FINGER_WIDTH_TOUCH +
-                                                     (CBX_FINGER_WIDTH_TOUCH/2.0)));
+    expect(coordinate.cgpoint.x).to.equal(point.x + (CBX_FINGER_WIDTH +
+                                                     (CBX_FINGER_WIDTH/2.0)));
     expect(coordinate.cgpoint.y).to.equal(point.y);
 }
 
