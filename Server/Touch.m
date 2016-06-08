@@ -104,7 +104,7 @@
         }
 
         case 2: {
-            CGFloat xOffset = CBX_FINGER_WIDTH_TOUCH / 2.0;
+            CGFloat xOffset = CBX_FINGER_WIDTH / 2.0;
             CGPoint left = CGPointMake(point.x - xOffset, point.y);
             CGPoint right = CGPointMake(point.x + xOffset, point.y);
             [array addObject:[Coordinate fromRaw:left]];
@@ -113,9 +113,9 @@
         }
 
         case 3: {
-            CGPoint left = CGPointMake(point.x - CBX_FINGER_WIDTH_TOUCH, point.y);
+            CGPoint left = CGPointMake(point.x - CBX_FINGER_WIDTH, point.y);
             CGPoint middle = point;
-            CGPoint right = CGPointMake(point.x + CBX_FINGER_WIDTH_TOUCH, point.y);
+            CGPoint right = CGPointMake(point.x + CBX_FINGER_WIDTH, point.y);
             [array addObject:[Coordinate fromRaw:left]];
             [array addObject:[Coordinate fromRaw:middle]];
             [array addObject:[Coordinate fromRaw:right]];
@@ -123,13 +123,13 @@
         }
 
         case 4: {
-            CGPoint leftMost = CGPointMake(point.x - (CBX_FINGER_WIDTH_TOUCH +
-                                                      CBX_FINGER_WIDTH_TOUCH/2.0),
+            CGPoint leftMost = CGPointMake(point.x - (CBX_FINGER_WIDTH +
+                                                      CBX_FINGER_WIDTH/2.0),
                                                        point.y);
-            CGPoint left = CGPointMake(point.x - (CBX_FINGER_WIDTH_TOUCH/2.0), point.y);
-            CGPoint right = CGPointMake(point.x + (CBX_FINGER_WIDTH_TOUCH/2.0), point.y);
-            CGPoint rightMost = CGPointMake(point.x + (CBX_FINGER_WIDTH_TOUCH +
-                                                      CBX_FINGER_WIDTH_TOUCH/2.0),
+            CGPoint left = CGPointMake(point.x - (CBX_FINGER_WIDTH/2.0), point.y);
+            CGPoint right = CGPointMake(point.x + (CBX_FINGER_WIDTH/2.0), point.y);
+            CGPoint rightMost = CGPointMake(point.x + (CBX_FINGER_WIDTH +
+                                                      CBX_FINGER_WIDTH/2.0),
                                                        point.y);
 
             [array addObject:[Coordinate fromRaw:leftMost]];
