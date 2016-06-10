@@ -22,12 +22,7 @@
     _must_override_exception;
 }
 - (XCUIElementQuery *)applyToQuery:(XCUIElementQuery *)query {
-    if (query == nil) {
-        XCUIElementQuery *all = [[Application currentApplication].query descendantsMatchingType:XCUIElementTypeAny];
-        return [self applyInternal:all];
-    } else {
-        return [self applyInternal:query];
-    }
+    return [self applyInternal:query];
 }
 
 - (NSString *)description {

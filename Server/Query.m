@@ -3,6 +3,7 @@
 #import "QuerySpecifierFactory.h"
 #import "CoordinateQuery.h"
 #import "CBXException.h"
+#import "Application.h"
 #import "JSONUtils.h"
 #import "Query.h"
 
@@ -30,11 +31,14 @@
 - (NSArray<XCUIElement *> *)execute {
     //TODO throw exception if count == 0
     if (_queryConfiguration.selectors.count == 0) return nil;
+    if ([Application currentApplication] == nil) {
+        @throw [CBXException withMessage:@"Can not perform queries until application has been launched!"];
+    }
 
     /*
         Building the XCUIElementQuery
      */
-    XCUIElementQuery *query = nil;
+    XCUIElementQuery *query = [[Application currentApplication].query descendantsMatchingType:XCUIElementTypeAny];;
     for (QuerySpecifier *specifier in self.queryConfiguration.selectors) {
         query = [specifier applyToQuery:query];
     }
