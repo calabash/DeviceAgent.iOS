@@ -29,7 +29,12 @@
                  
                  NSMutableDictionary *b = [body mutableCopy];
                  b[@"specifiers"] = [(body[@"specifiers"] ?: @{}) mutableCopy];
-                 b[@"specifiers"][@"coordinate"] = el.wdRect[@"origin"];
+                 
+                 //Center point
+                 NSDictionary *coordinate = @{@"x" : @(CGRectGetMidX(el.frame)),
+                                              @"y" : @(CGRectGetMidY(el.frame)) };
+                 
+                 b[@"specifiers"][@"coordinate"] = coordinate;
                  
                  [GestureFactory executeGestureWithJSON:b
                                              completion:^(NSError *e) {

@@ -18,7 +18,7 @@
 }
 
 - (BOOL)isCoordinateQuery {
-    return NO;
+    return self.raw[CBX_COORDINATE_KEY] != nil && self.raw[CBX_COORDINATES_KEY] != nil;
 }
 
 + (NSMutableDictionary *)specifiersFromQueryString:(NSString *)queryString {

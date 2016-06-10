@@ -20,12 +20,14 @@
 }
 
 - (void)validate {
-    NSArray *coordinates = [[self.query.queryConfiguration
-                             asCoordinateQueryConfiguration] coordinates];
-    if (coordinates) {
-      @throw [InvalidArgumentException
-              withFormat:@"'coordinates' is an invalid key; use 'coordinate'. \n\
-              The Touch gesture only accepts single coordinates."];
+    if ([self.query.queryConfiguration isCoordinateQuery]) {
+        NSArray *coordinates = [[self.query.queryConfiguration
+                                 asCoordinateQueryConfiguration] coordinates];
+        if (coordinates) {
+          @throw [InvalidArgumentException
+                  withFormat:@"'coordinates' is an invalid key; use 'coordinate'. \n\
+                  The Touch gesture only accepts single coordinates."];
+        }
     }
 
     if ([self numFingers] >= CBX_MAX_NUM_FINGERS) {
