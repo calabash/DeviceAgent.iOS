@@ -54,3 +54,11 @@ ipa-unit:
 # Requires appledoc, which can be installed with homebrew.
 docs:
 	bin/make/docs.sh
+
+# Installs DeviceAgent onto your machine
+#
+# Builds DeviceAgent for Sim and Device, installs to
+# ~/.calabash/DeviceAgent/simulator and 
+# ~/.calabash/DeviceAgent/device
+install:
+	bin/install/device_agent.sh
