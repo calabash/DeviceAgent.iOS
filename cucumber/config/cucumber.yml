@@ -11,5 +11,6 @@ end
 %>
 
 formatter: -f <%= formatter %>
-default: CBXWS=../CBXDriver.xcworkspace DEBUG=1 -p formatter
+default: CBXWS=../CBXDriver.xcworkspace -p formatter
+verbose: DEBUG=1
 
