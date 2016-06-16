@@ -57,7 +57,7 @@ typedef void (^CDUnknownBlockType)(void);
 
 - (void)testInitWithFirstTouchPointOrientationAndOffset {
     CGPoint point = CGPointMake(44, 64);
-    long long orientation = 1;
+    UIInterfaceOrientation orientation = 1;
     float seconds = 15.0;
 
     TouchPath *touchPath = [[TouchPath alloc]
@@ -73,7 +73,7 @@ typedef void (^CDUnknownBlockType)(void);
 
 - (void)testWithFirstTouchPointOrientation {
     CGPoint point = CGPointMake(30, 90);
-    long long orientation = 1;
+    UIInterfaceOrientation orientation = 1;
     float seconds = 0.0;
 
     TouchPath *touchPath = [TouchPath withFirstTouchPoint:point
@@ -87,7 +87,7 @@ typedef void (^CDUnknownBlockType)(void);
 
 - (void)testWithFirstTouchPointOrientationOffset {
     CGPoint point = CGPointMake(30, 90);
-    long long orientation = 1;
+    UIInterfaceOrientation orientation = 1;
     float seconds = 15.0;
 
     TouchPath *touchPath = [TouchPath withFirstTouchPoint:point
@@ -110,7 +110,7 @@ typedef void (^CDUnknownBlockType)(void);
 - (void)testMoveToNextPointAfterSeconds {
     CGPoint firstPoint = CGPointMake(44, 64);
     CGPoint nextPoint = CGPointMake(64, 44);
-    long long orientation = 1;
+    UIInterfaceOrientation orientation = 1;
     CGFloat seconds = 20;
 
     TouchPath *tp = [TouchPath withFirstTouchPoint:firstPoint

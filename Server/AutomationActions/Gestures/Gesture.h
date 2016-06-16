@@ -101,6 +101,12 @@ An array of optional keys for the gesture (e.g., `degrees` for `rotate`). These
 + (Gesture *)executeWithGestureConfiguration:(GestureConfiguration *)gestureConfig
                                        query:(Query *)query
                                   completion:(CompletionBlock)completion;
+
+/**
+ The current orientation of the application under test.
+ */
++ (UIInterfaceOrientation)interfaceOrientation;
+
 @end
 
 @interface Gesture : AutomationAction<Gesture>

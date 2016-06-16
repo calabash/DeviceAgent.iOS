@@ -50,9 +50,10 @@
                  }];
              }],
              [CBXRoute post:endpoint(@"/rotate_home_button_to", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
-                 long long orientation = [data[@"orientation"] longLongValue];
+                 UIInterfaceOrientation orientation = [data[@"orientation"] unsignedIntegerValue];
                  [ThreadUtils runSync:^(BOOL *setToTrueWhenDone, NSError *__autoreleasing *err) {
-                     [[Testmanagerd get] _XCT_updateDeviceOrientation:orientation completion:^(NSError *e) {
+                     [[Testmanagerd get] _XCT_updateDeviceOrientation:orientation
+                                                           completion:^(NSError *e) {
                          *err = e;
                          *setToTrueWhenDone = YES;
                      }];
