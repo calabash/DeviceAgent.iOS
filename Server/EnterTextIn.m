@@ -8,7 +8,7 @@
 + (NSString *)name { return @"enter_text_in"; }
 
 + (NSArray <NSString *> *)requiredKeys {
-    return @[@"string"];
+    return @[ CBX_STRING_KEY ];
 }
 
 + (NSArray <NSString *> *)optionalKeys {
