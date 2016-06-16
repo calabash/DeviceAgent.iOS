@@ -2,6 +2,7 @@
 #import "CoordinateQuery.h"
 #import "ThreadUtils.h"
 #import "Gesture.h"
+#import "Application.h"
 
 @implementation Gesture
 
@@ -46,6 +47,11 @@
 
 - (CBXTouchEvent *)cbxEventWithCoordinates:(NSArray<Coordinate *> *)coordinates {
     _must_override_exception;
+}
+
++ (UIInterfaceOrientation)interfaceOrientation {
+    XCUIApplication *shared = [Application currentApplication];
+    return [shared interfaceOrientation];
 }
 
 - (void)validate {
