@@ -5,7 +5,7 @@
 
 @property (nonatomic, strong) XCSynthesizedEventRecord *event;
 @property (nonatomic, strong) XCTouchGesture *gesture;
-@property (nonatomic) NSInteger orientation;
+@property (nonatomic) UIInterfaceOrientation orientation;
 
 + (XCSynthesizedEventRecord *)eventRecordWithOrientation:(NSInteger) orientation;
 + (XCTouchGesture *)touchGesture;
