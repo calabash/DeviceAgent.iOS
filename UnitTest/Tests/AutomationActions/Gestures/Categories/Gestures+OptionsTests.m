@@ -3,7 +3,6 @@
 #import "Gesture+Options.h"
 #import <XCTest/XCTest.h>
 #import "QueryFactory.h"
-#import "EnterTextIn.h"
 #import "EnterText.h"
 #import "DoubleTap.h"
 #import "Rotate.h"
