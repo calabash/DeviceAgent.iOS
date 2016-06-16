@@ -56,6 +56,22 @@ module DeviceAgent
                                               {:duration => duration})
     end
 
+    def keyboard_visible?
+      device_agent.keyboard_visible?
+    end
+
+    def enter_text(string)
+      device_agent.enter_text(string)
+    end
+
+    def delete_with_backspace_char
+      device_agent.enter_text("\b")
+    end
+
+    def touch_keyboard_delete_key
+      touch_mark("delete")
+    end
+
     private
 
     def device_agent

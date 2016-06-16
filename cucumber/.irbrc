@@ -175,6 +175,10 @@ def attach
   @holmes = @xcuitest = @device_agent
 end
 
+def device_agent
+  attach
+end
+
 verbose
 
 motd=["Let's get this done!", "Ready to rumble.", "Enjoy.", "Remember to breathe.",
