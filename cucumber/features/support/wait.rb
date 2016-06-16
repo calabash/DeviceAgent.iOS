@@ -30,6 +30,34 @@ module DeviceAgent
       end
     end
 
+    def wait_for_keyboard
+      timeout = @@default_options[:timeout]
+
+      message = %Q[Waited #{timeout} seconds for they keyboard.]
+
+      wait_for(message, @@default_options) do
+        device_agent.keyboard_visible?
+      end
+    end
+
+    def wait_for_text_in_view(text, mark)
+      result = wait_for_view(mark)
+
+      candidates = [result["value"],
+                    result["label"]]
+      match = candidates.any? do |elm|
+        elm == text
+      end
+      if !match
+        fail(%Q[
+Expected to find '#{text}' as a 'value' or 'label' in
+
+#{JSON.pretty_generate(result)}
+
+])
+      end
+    end
+
     def wait_for_view(mark, options={})
       default_options = @@default_options.dup
       merged_options = default_options.merge(options)
