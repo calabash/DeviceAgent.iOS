@@ -280,7 +280,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3-finger tap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5O-lF-aXq">
                                         <rect key="frame" x="52" y="5" width="130" height="50"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -305,7 +305,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4-finger tap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ilc-vn-gtm">
                                         <rect key="frame" x="101" y="5" width="130" height="50"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -416,17 +416,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ça va?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXs-G4-gwd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="itp-iG-vg1">
+                                <rect key="frame" x="20" y="114" width="559" height="18"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="text delegate"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="559" id="LSj-pt-jE5"/>
+                                    <constraint firstAttribute="height" constant="18" id="aDS-e0-zGK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L77-WD-uO0">
+                                <rect key="frame" x="282" y="285" width="36" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="clear text field button"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3Z8-fc-gwx"/>
+                                    <constraint firstAttribute="width" constant="36" id="dgf-nd-VbL"/>
+                                </constraints>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearTextFieldButtonTouched:" destination="xmh-5J-kwV" eventType="touchUpInside" id="N7a-TI-5R1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ça va?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="mXs-G4-gwd">
                                 <rect key="frame" x="20" y="507" width="560" height="36"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="question"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="SUW-vR-WwA"/>
+                                    <constraint firstAttribute="width" constant="560" id="o0c-vv-Z4i"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="35"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="3" height="-1"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Schreib! " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gUN-3j-Tbv">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Schreib!" textAlignment="center" minimumFontSize="12" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="gUN-3j-Tbv">
                                 <rect key="frame" x="20" y="70" width="560" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="text field"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="JyQ-0o-JTA"/>
+                                    <constraint firstAttribute="height" constant="30" id="Qdz-Q9-CTj"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -435,22 +469,31 @@
                         <accessibility key="accessibilityConfiguration" identifier="misc page"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="mXs-G4-gwd" secondAttribute="leading" id="6US-zF-TRu"/>
+                            <constraint firstItem="itp-iG-vg1" firstAttribute="top" secondItem="gUN-3j-Tbv" secondAttribute="bottom" constant="14" id="8Lq-l2-9eE"/>
                             <constraint firstItem="mXs-G4-gwd" firstAttribute="centerX" secondItem="Yqb-KX-JoO" secondAttribute="centerX" id="8wX-Ro-fee"/>
-                            <constraint firstItem="PTM-5r-Gq4" firstAttribute="top" secondItem="mXs-G4-gwd" secondAttribute="bottom" constant="8" id="Fkb-Pe-OAX"/>
+                            <constraint firstItem="L77-WD-uO0" firstAttribute="centerY" secondItem="Yqb-KX-JoO" secondAttribute="centerY" id="9wX-0p-5xY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mXs-G4-gwd" secondAttribute="trailing" id="H11-of-GmS"/>
+                            <constraint firstItem="itp-iG-vg1" firstAttribute="trailing" secondItem="gUN-3j-Tbv" secondAttribute="trailing" constant="-1" id="Jgz-3L-LEO"/>
+                            <constraint firstItem="itp-iG-vg1" firstAttribute="top" secondItem="gUN-3j-Tbv" secondAttribute="bottom" constant="14" id="MpD-DN-5xv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gUN-3j-Tbv" secondAttribute="trailing" id="SXZ-Qt-wd9"/>
                             <constraint firstItem="gUN-3j-Tbv" firstAttribute="top" secondItem="Rob-KM-ps1" secondAttribute="bottom" constant="50" id="UAP-ZL-SvX"/>
+                            <constraint firstItem="PTM-5r-Gq4" firstAttribute="top" secondItem="mXs-G4-gwd" secondAttribute="bottom" constant="8" symbolic="YES" id="X9f-Zh-0tj"/>
                             <constraint firstAttribute="leadingMargin" secondItem="gUN-3j-Tbv" secondAttribute="leading" id="dnP-Qa-Lws"/>
+                            <constraint firstItem="L77-WD-uO0" firstAttribute="centerX" secondItem="Yqb-KX-JoO" secondAttribute="centerX" id="fKU-My-YQR"/>
+                            <constraint firstItem="itp-iG-vg1" firstAttribute="centerX" secondItem="Yqb-KX-JoO" secondAttribute="centerX" id="kVf-3G-vzQ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Misc" image="tab-bar-special" selectedImage="tab-bar-special-selected" id="usq-CR-5AO"/>
                     <connections>
-                        <outlet property="textfield" destination="gUN-3j-Tbv" id="M28-Ew-KOb"/>
+                        <outlet property="clearTextFieldButton" destination="L77-WD-uO0" id="OZ9-SB-aUL"/>
+                        <outlet property="howGoesItLabel" destination="mXs-G4-gwd" id="0Wv-Ip-CJ9"/>
+                        <outlet property="textDelegateMessage" destination="itp-iG-vg1" id="L2W-l4-cjR"/>
+                        <outlet property="textField" destination="gUN-3j-Tbv" id="DZi-AH-9hN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNA-Lv-Y1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1074" y="932"/>
+            <point key="canvasLocation" x="1148" y="918"/>
         </scene>
     </scenes>
     <resources>
