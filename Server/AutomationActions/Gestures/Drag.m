@@ -73,7 +73,9 @@
 
 - (XCTouchGesture *)gestureWithCoordinates:(NSArray<Coordinate *> *)coordinates {
     XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:self.class.name];
-    
+
+    UIInterfaceOrientation orientation = [Gesture interfaceOrientation];
+
     for (int fingerIndex = 0; fingerIndex < [self numFingers]; fingerIndex++ ) {
         CGPoint fingerOffset = [GeometryUtils fingerOffsetForFingerIndex:fingerIndex];
         CGPoint coordinate = coordinates[0].cgpoint;
@@ -83,9 +85,9 @@
         
         float duration = [self duration];
         float offset = duration;
-        
+
         XCTouchPath *path = [[XCTouchPath alloc] initWithTouchDown:coordinate
-                                                       orientation:0
+                                                       orientation:orientation
                                                             offset:0];
         for (int i = 0; i < [self repetitions]; i ++) {
             for (Coordinate *coord in coordinates) {
