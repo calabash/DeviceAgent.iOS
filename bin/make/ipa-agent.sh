@@ -98,6 +98,7 @@ if [ -z "${CODE_SIGN_IDENTITY}" ]; then
     ARCHS="armv7 armv7s arm64" \
     VALID_ARCHS="armv7 armv7s arm64" \
     ONLY_ACTIVE_ARCH=NO \
+    GCC_TREAT_WARNINGS_AS_ERRORS=YES \
     build | $XC_PIPE
 else
   COMMAND_LINE_BUILD=1 xcrun xcodebuild \
@@ -113,6 +114,7 @@ else
     ARCHS="armv7 armv7s arm64" \
     VALID_ARCHS="armv7 armv7s arm64" \
     ONLY_ACTIVE_ARCH=NO \
+    GCC_TREAT_WARNINGS_AS_ERRORS=YES \
     build | $XC_PIPE
 fi
 
