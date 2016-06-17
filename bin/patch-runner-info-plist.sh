@@ -26,14 +26,21 @@ if [ ! -e "${RUNNER}" ]; then
   exit 1
 fi
 
-
-banner "Patching CBX-Runner.app/Info.plist"
+banner "Patching $(basename ${RUNNER})/Info.plist"
 
 PLIST="${RUNNER}/Info.plist"
 
-CONTENTS=$(<${PLIST})
+if [ "$(head -n 1 $PLIST)" == "" ]; then
+  info "${PLIST} needs patching"
+  TMP_PLIST=`mktemp`
+  tail -n +2 "${PLIST}" > "${TMP_PLIST}"
+  mv "${TMP_PLIST}" "${PLIST}"
+else
+  info "${PLIST} does not need patching"
+  info "Nothing to do; exiting 0"
+  exit 0
+fi
 
-echo -n ${CONTENTS} > ${PLIST}
 info "Removed leading newline from ${PLIST}"
 
 set +e
