@@ -50,7 +50,10 @@
 
 - (XCTouchGesture *)gestureWithCoordinates:(NSArray<Coordinate *> *)coordinates {
     XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:self.class.name];
-    
+
+    UIInterfaceOrientation orientation = [[Application currentApplication]
+                                          interfaceOrientation];
+
     CGPoint center = coordinates[0].cgpoint;
     float duration = [self duration];
     float amount = [self pinchAmount];
@@ -74,7 +77,7 @@
             [gesture addTouchPath:path];
         } else {
             XCTouchPath *path = [[XCTouchPath alloc] initWithTouchDown:[v CGPointValue]
-                                                           orientation:0
+                                                           orientation:orientation
                                                                 offset:0];
             [path moveToPoint:center atOffset:duration];
             [path liftUpAtPoint:center

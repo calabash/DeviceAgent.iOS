@@ -101,6 +101,7 @@ An array of optional keys for the gesture (e.g., `degrees` for `rotate`). These
 + (Gesture *)executeWithGestureConfiguration:(GestureConfiguration *)gestureConfig
                                        query:(Query *)query
                                   completion:(CompletionBlock)completion;
+
 @end
 
 @interface Gesture : AutomationAction<Gesture>
