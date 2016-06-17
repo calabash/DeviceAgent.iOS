@@ -19,6 +19,12 @@
                                              @"status" : @"honk"
                                              }];
              }],
+             
+             [CBXRoute get:@"/status" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
+                 [response respondWithJSON:@{
+                                             @"status" : @"DeviceAgent is ready and waiting."
+                                             }];
+             }],
            ];
 }
 @end
