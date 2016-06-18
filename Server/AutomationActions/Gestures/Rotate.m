@@ -110,8 +110,12 @@ float dtor(float degrees) { return degrees * (M_PI / 180); }
 - (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<Coordinate *> *)coordinates {
     NSArray<NSArray<Coordinate *> *> *circleCoords = [self setup:coordinates];
     
-    XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc] initWithName:[self.class name]
-                                                                interfaceOrientation:0];
+    long long orientation = [[Application currentApplication]
+                             longLongInterfaceOrientation];
+
+    XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc]
+                                       initWithName:[self.class name]
+                                       interfaceOrientation:orientation];
     
     
     float timeIncrement = [self rotateDuration] / circleCoords[0].count;
@@ -137,9 +141,11 @@ float dtor(float degrees) { return degrees * (M_PI / 180); }
 - (XCTouchGesture *)gestureWithCoordinates:(NSArray<Coordinate *> *)coordinates {
     NSArray<NSArray<Coordinate *> *> *circleCoords = [self setup:coordinates];
     
-    
     XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:[self.class name]];
-    
+
+    long long orientation = [[Application currentApplication]
+                             longLongInterfaceOrientation];
+
     float timeIncrement = [self rotateDuration] / circleCoords[0].count;
     for (NSArray<Coordinate *> *fingerCoords in circleCoords) {
         float offset = 0;
@@ -147,7 +153,7 @@ float dtor(float degrees) { return degrees * (M_PI / 180); }
         for (int i = 0; i < [self repetitions]; i++) {
             CGPoint c = fingerCoords[0].cgpoint;
             XCTouchPath *path = [[XCTouchPath alloc] initWithTouchDown:c
-                                                           orientation:0
+                                                           orientation:orientation
                                                                 offset:offset];
 
             for (Coordinate *coord in fingerCoords) {
