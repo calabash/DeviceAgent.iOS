@@ -10,9 +10,9 @@
 
 @property (nonatomic, strong) XCSynthesizedEventRecord *event;
 @property (nonatomic, strong) XCTouchGesture *gesture;
-@property (nonatomic) NSInteger orientation;
+@property (nonatomic) long long orientation;
 
-+ (XCSynthesizedEventRecord *)eventRecordWithOrientation:(NSInteger) orientation;
++ (XCSynthesizedEventRecord *)eventRecordWithOrientation:(long long) orientation;
 + (XCTouchGesture *)touchGesture;
 
 @end
@@ -36,7 +36,7 @@
 }
 
 - (void)testWithTouchPath {
-    NSInteger orientation = self.touchPath.orientation;
+    long long orientation = self.touchPath.orientation;
 
     id classMock = OCMClassMock([CBXTouchEvent class]);
     OCMExpect([classMock
@@ -52,7 +52,7 @@
 
 - (void)testAddTouchPathOrientationInvalid {
     CGPoint point = CGPointMake(54, 47);
-    NSInteger nextOrientation = self.touchPath.orientation;
+    long long nextOrientation = self.touchPath.orientation;
     TouchPath *nextPath = [TouchPath withFirstTouchPoint:point
                                              orientation:nextOrientation + 1
                                                   offset:1.0];
