@@ -132,8 +132,7 @@
                         },
                 @"options" : @{
                         @"duration" : @0.1,
-                        @"num_fingers" : @1,
-                        @"repetitions" : @10
+                        @"num_fingers" : @1
                         }
                 };
     [self testGestureWithJSON:json gestureClass:[Drag class]];
@@ -165,7 +164,6 @@
                         @"rotation_direction" : @"clockwise",
                         @"degrees" : @180,
                         @"rotation_start" : @90,
-                        @"repetitions" : @2,
                         @"radius" : @90
                         }
                 };
