@@ -36,7 +36,6 @@ typedef NS_ENUM(short, ClockDirection) {
              CBX_ROTATION_START_KEY,
              CBX_ROTATION_DIRECTION_KEY,
              CBX_RADIUS_KEY,
-             CBX_REPETITIONS_KEY
              ];
 }
 

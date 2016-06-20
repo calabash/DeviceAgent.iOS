@@ -23,7 +23,6 @@ Currently, the positions of the fingers beyond the first are determined by
  
  ## Optional
  -  CBX_DURATION_KEY
- -  CBX_REPETITIONS_KEY
  -  CBX_NUM_FINGERS_KEY
  
  */
