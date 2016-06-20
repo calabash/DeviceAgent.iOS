@@ -15,7 +15,9 @@
 + (NSString *)name { return @"touch"; }
 
 + (NSArray <NSString *> *)optionalKeys {
-    return @[CBX_REPETITIONS_KEY, CBX_DURATION_KEY, CBX_NUM_FINGERS_KEY];
+    return @[CBX_REPETITIONS_KEY,
+             CBX_DURATION_KEY,
+             CBX_NUM_FINGERS_KEY];
 }
 
 - (void)validate {

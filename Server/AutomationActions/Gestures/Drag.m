@@ -8,7 +8,6 @@
 
 + (NSArray <NSString *> *)optionalKeys {
     return @[CBX_DURATION_KEY,
-             CBX_REPETITIONS_KEY,
              CBX_NUM_FINGERS_KEY];
 }
 

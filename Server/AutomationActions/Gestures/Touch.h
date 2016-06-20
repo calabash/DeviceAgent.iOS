@@ -12,7 +12,7 @@
  
  ## Optional
  -  CBX_DURATION_KEY
- -  CBX_REPETIONS_KEY
+ -  CBX_REPETITIONS_KEY
  -  CBX_NUM_FINGERS_KEY
  
  */
