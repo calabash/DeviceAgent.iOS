@@ -2,7 +2,6 @@
 #import "CoordinateQueryConfiguration.h"
 #import "Coordinate.h"
 #import "Touch.h"
-#import "Application.h"
 
 @interface Touch ()
 
@@ -41,8 +40,9 @@
 
 - (CBXTouchEvent *)cbxEventWithCoordinates:(NSArray <Coordinate *> *)coordinates {
 
-    XCUIApplication *shared = [Application currentApplication];
-    UIInterfaceOrientation orientation = [shared interfaceOrientation];
+    long long orientation = [[Application currentApplication]
+                             longLongInterfaceOrientation];
+
     CGPoint coordinate = coordinates[0].cgpoint;
 
     float duration = [self duration];

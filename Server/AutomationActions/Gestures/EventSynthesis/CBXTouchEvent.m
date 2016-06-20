@@ -5,9 +5,9 @@
 
 @property (nonatomic, strong) XCSynthesizedEventRecord *event;
 @property (nonatomic, strong) XCTouchGesture *gesture;
-@property (nonatomic) NSInteger orientation;
+@property (nonatomic) long long orientation;
 
-+ (XCSynthesizedEventRecord *)eventRecordWithOrientation:(NSInteger) orientation;
++ (XCSynthesizedEventRecord *)eventRecordWithOrientation:(long long)orientation;
 + (XCTouchGesture *)touchGesture;
 
 @end
@@ -41,7 +41,7 @@
             self.event];
 }
 
-+ (XCSynthesizedEventRecord *)eventRecordWithOrientation:(NSInteger) orientation {
++ (XCSynthesizedEventRecord *)eventRecordWithOrientation:(long long)orientation {
     return [[XCSynthesizedEventRecord alloc]
             initWithName:@"CBXTouchEvent_XCSynthesizedEventRecord"
             interfaceOrientation:orientation];
