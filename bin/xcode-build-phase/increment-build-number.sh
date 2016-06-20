@@ -8,7 +8,7 @@ touch "${PLIST}"
 
 VERSION=`/usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" $PLIST | tr -d '\n'`
 
-NEW_BUILD_NUMBER=`date +%s`
+NEW_BUILD_NUMBER=`date +%s | tr -d '\n'`
 
 cat > "${HEADER}" <<EOF
 /*

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 function info {
   echo "$(tput setaf 2)INFO: $1$(tput sgr0)"
 }
@@ -103,6 +105,8 @@ else
 fi
 
 banner "Installing ${APP}"
+
+bin/patch-runner-info-plist.sh "${BUILD_PRODUCTS_RUNNER}"
 
 ditto_or_exit "${BUILD_PRODUCTS_APP}" "${INSTALLED_APP}"
 info "Installed ${INSTALLED_APP}"

@@ -2,6 +2,8 @@
 
 # Stages CBX-Runner.app built by Xcode to ./Products/
 
+set -e
+
 function info {
   echo "INFO: $1"
 }
@@ -55,6 +57,8 @@ mkdir -p "${APP_TARGET_DIR}/tmp/runner"
 
 ditto_or_exit "${APP_SOURCE_PATH}" "${APP_TARGET_PATH}"
 info "Copied .app to ${APP_TARGET_DIR}/${APP_NAME}"
+
+bin/patch-runner-info-plist.sh "${APP_TARGET_PATH}"
 
 ZIP_PATH="${APP_TARGET_PATH}.zip"
   xcrun ditto -ck --rsrc --sequesterRsrc --keepParent \
