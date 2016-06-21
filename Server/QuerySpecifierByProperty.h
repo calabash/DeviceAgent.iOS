@@ -14,15 +14,27 @@
  
  ## Usage:
  
-    { "property" : "<String>=<String>" }
+    { "property" : "<String>=\"<String>\"" }
     OR
     { "property" : { "key|property|using" : String, "value" : String } }
  
  ### Examples
-    { "property" : "title=Banana" }
-    { "property" : { "key" : "title", "value" : "Banana" }
-    { "property" : { "property" : "title", "value" : "Banana" }
-    { "property" : { "using" : "title", "value" : "Banana" }
+    { "property" : "title=\"Banana\"" }
+    { "property" : { "key" : "title", "value" : "\"Banana\"" }
+    { "property" : { "property" : "title", "value" : "\"Banana\"" }
+    { "property" : { "using" : "title", "value" : "\"Banana\"" }
+ 
+ **NOTE** 
+ String values must be in escaped quotes. This tells Objective C to differentiate them from
+ primitives. E.g. 
+ 
+     { "property" : "hasKeyboardFocus=YES" }
+ 
+    vs
+ 
+     { "property" : "label=\"YES\"" }
+ 
+ 
  */
 
 // TODO: Perhaps make a class method that returns all supported properties?

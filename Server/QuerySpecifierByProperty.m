@@ -24,12 +24,11 @@
 + (NSString *)name { return @"property"; }
 
 - (XCUIElementQuery *)applyInternal:(XCUIElementQuery *)query {
-    NSMutableString *predString = [NSMutableString string];
     NSDictionary *val = [QuerySpecifierByProperty parseValue:self.value];
-    
-    [predString appendFormat:@"%@ == '%@'", val[@"key"], val[@"value"]];
-    
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:predString];
+    id key = val[@"key"];
+    id value = val[@"value"];
+    NSString *pred = [NSString stringWithFormat:@"SELF.%@ = %@", key, value];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:pred];
     return [query matchingPredicate:predicate];
 }
 @end
