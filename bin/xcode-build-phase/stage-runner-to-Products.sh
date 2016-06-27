@@ -58,7 +58,7 @@ mkdir -p "${APP_TARGET_DIR}/tmp/runner"
 ditto_or_exit "${APP_SOURCE_PATH}" "${APP_TARGET_PATH}"
 info "Copied .app to ${APP_TARGET_DIR}/${APP_NAME}"
 
-bin/patch-runner-info-plist.sh "${APP_TARGET_PATH}"
+bin/patch-runner-info-plist.sh "${APP_TARGET_PATH}" || true
 
 ZIP_PATH="${APP_TARGET_PATH}.zip"
   xcrun ditto -ck --rsrc --sequesterRsrc --keepParent \
