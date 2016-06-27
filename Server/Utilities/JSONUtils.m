@@ -125,7 +125,7 @@ static NSDictionary *typeStringToElementType;
                                 @(XCUIElementTypeDisclosureTriangle) : @"DisclosureTriangle",
                                 @(XCUIElementTypePopUpButton) : @"PopUpButton",
                                 @(XCUIElementTypeComboBox) : @"ComboBox",
-                                @(XCUIElementTypeMenuButton) : @"Button",
+                                @(XCUIElementTypeMenuButton) : @"MenuButton",
                                 @(XCUIElementTypeToolbarButton) : @"ToolbarButton",
                                 @(XCUIElementTypePopover) : @"Popover",
                                 @(XCUIElementTypeKeyboard) : @"Keyboard",
