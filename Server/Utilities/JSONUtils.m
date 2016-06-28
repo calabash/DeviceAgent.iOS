@@ -62,10 +62,14 @@ static NSDictionary *typeStringToElementType;
 + (UIDeviceOrientation)parseOrientation:(id)orientation {
     if ([orientation isKindOfClass:[NSString class]]) {
         NSString *o = [orientation lowercaseString];
-        if ([o isEqualToString:@"left"]) return UIDeviceOrientationLandscapeRight;
-        if ([o isEqualToString:@"right"]) return UIDeviceOrientationLandscapeLeft;
-        if ([o isEqualToString:@"up"]) return UIDeviceOrientationPortrait;
-        if ([o isEqualToString:@"down"]) return UIDeviceOrientationPortraitUpsideDown;
+        if ([o isEqualToString:@"left"])
+            return UIDeviceOrientationLandscapeRight;
+        if ([o isEqualToString:@"right"])
+            return UIDeviceOrientationLandscapeLeft;
+        if ([o isEqualToString:@"up"] || [o isEqualToString:@"top"])
+            return UIDeviceOrientationPortrait;
+        if ([o isEqualToString:@"down"] || [o isEqualToString:@"bottom"])
+            return UIDeviceOrientationPortraitUpsideDown;
         /*TODO
             Validate the use case for face up / down orientations.
         */

@@ -64,7 +64,7 @@
 
 /**
  Parse an orientation out of a raw json value passed to the server. 
- @param orientation An integer or string { left, right, up, down }
+ @param orientation An integer or string { left, right, up/top, down/bottom }
  @return A UIDeviceOrientation, either cast directly from the input if a number
  was provided, or parsed from the string to correspond to the position of
  the home button. E.g. 'left' means home button is on the left (landscape right)
