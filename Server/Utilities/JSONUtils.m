@@ -60,16 +60,17 @@ static NSDictionary *typeStringToElementType;
 }
 
 + (UIDeviceOrientation)parseOrientation:(id)orientation {
-    if ([orientation isKindOfClass:[NSNumber class]]) {
-        return (UIDeviceOrientation)[orientation longLongValue];
-    } else if ([orientation isKindOfClass:[NSString class]]) {
+    if ([orientation isKindOfClass:[NSString class]]) {
         NSString *o = [orientation lowercaseString];
         if ([o isEqualToString:@"left"]) return UIDeviceOrientationLandscapeRight;
         if ([o isEqualToString:@"right"]) return UIDeviceOrientationLandscapeLeft;
         if ([o isEqualToString:@"up"]) return UIDeviceOrientationPortrait;
         if ([o isEqualToString:@"down"]) return UIDeviceOrientationPortraitUpsideDown;
-        if ([o isEqualToString:@"face_up"]) return UIDeviceOrientationFaceUp;
-        if ([o isEqualToString:@"face_down"]) return UIDeviceOrientationFaceDown;
+        /*TODO
+            Validate the use case for face up / down orientations.
+        */
+//        if ([o isEqualToString:@"face_up"]) return UIDeviceOrientationFaceUp;
+//        if ([o isEqualToString:@"face_down"]) return UIDeviceOrientationFaceDown;
     }
     @throw [CBXException withMessage:@"Unrecognized orientation."
                             userInfo:@{@"orientation" : orientation?:[NSNull null]}];
