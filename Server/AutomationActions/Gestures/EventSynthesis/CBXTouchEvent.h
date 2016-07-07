@@ -2,7 +2,6 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import "XCSynthesizedEventRecord.h"
-#import "XCTouchGesture.h"
 #import "TouchPath.h"
 
 /**
@@ -25,12 +24,6 @@
  @param path New TouchPath to add
  */
 - (void)addTouchPath:(TouchPath *)path;
-
-/**
- Expose the underlying XCTouchGesture object.
- @return XCTouchGesture filled with the paths provided
- */
-- (XCTouchGesture *)gesture;
 
 /**
  Expose the underlying XCSynthesizedEventRecord object.

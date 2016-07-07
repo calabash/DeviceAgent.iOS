@@ -32,46 +32,8 @@
     }
 }
 
-
-- (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<Coordinate *> *)coordinates {
-    XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc] initWithName:self.class.name
-                                                                interfaceOrientation:0];
-    
-    for (int fingerIndex = 0; fingerIndex < [self numFingers]; fingerIndex++ ) {
-        float duration = [self duration];
-        float offset = duration;
-        
-        CGPoint coordinate = coordinates[0].cgpoint;
-        CGPoint fingerOffset = [GeometryUtils fingerOffsetForFingerIndex:fingerIndex];
-        
-        coordinate.x += fingerOffset.x;
-        coordinate.y += fingerOffset.y;
-        
-        XCPointerEventPath *path = [[XCPointerEventPath alloc] initForTouchAtPoint:coordinate
-                                                                            offset:0];
-        
-        for (int i = 0; i < [self repetitions]; i ++) {
-            for (Coordinate *coord in coordinates) {
-                if (coord == coordinates.firstObject) { continue; }
-                offset += duration;
-                coordinate = coord.cgpoint;
-                coordinate.x += fingerOffset.x;
-                coordinate.y += fingerOffset.y;
-                [path moveToPoint:coordinate atOffset:offset];
-            }
-        }
-        
-        [path liftUpAtOffset:offset];
-        
-        
-        [event addPointerEventPath:path];
-    }
-    
-    return event;
-}
-
-- (XCTouchGesture *)gestureWithCoordinates:(NSArray<Coordinate *> *)coordinates {
-    XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:self.class.name];
+- (CBXTouchEvent *)cbxEventWithCoordinates:(NSArray<Coordinate *> *)coordinates {
+    CBXTouchEvent *event = [CBXTouchEvent new];
 
     long long orientation = [[Application currentApplication]
                              longLongInterfaceOrientation];
@@ -86,9 +48,7 @@
         float duration = [self duration];
         float offset = duration;
 
-        XCTouchPath *path = [[XCTouchPath alloc] initWithTouchDown:coordinate
-                                                       orientation:orientation
-                                                            offset:0];
+        TouchPath *path = [TouchPath withFirstTouchPoint:coordinate orientation:orientation];
         for (int i = 0; i < [self repetitions]; i ++) {
             for (Coordinate *coord in coordinates) {
                 if (coord == coordinates.firstObject) { continue; }
@@ -96,15 +56,15 @@
                 coordinate = coord.cgpoint;
                 coordinate.x += fingerOffset.x;
                 coordinate.y += fingerOffset.y;
-                [path moveToPoint:coordinate atOffset:offset];
+                [path moveToNextPoint:coordinate afterSeconds:offset];
             }
         }
         offset += CBX_GESTURE_EPSILON;
         
-        [path liftUpAtPoint:coordinate
-                     offset:offset];
-        [gesture addTouchPath:path];
+        [path liftUpAfterSeconds:offset];
+        [event addTouchPath:path];
     }
-    return gesture;
+    
+    return event;
 }
 @end

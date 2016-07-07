@@ -2,7 +2,6 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <Foundation/Foundation.h>
 #import "XCPointerEventPath.h"
-#import "XCTouchPath.h"
 
 /**
  Wrapper class for `XCTouchPath` and `XCPointerEventPath` which
@@ -57,12 +56,6 @@
    recorded point.
  */
 - (void)liftUpAfterSeconds:(CGFloat)seconds;
-
-/**
- Interface to unwrap the underlying XCTouchPath object
- @return The XCTouchPath created as a result of the touch points added
- */
-- (XCTouchPath *)xcTouchPath;
 
 /**
  Interface to unwrap the underlying XCPointerEventPath object
