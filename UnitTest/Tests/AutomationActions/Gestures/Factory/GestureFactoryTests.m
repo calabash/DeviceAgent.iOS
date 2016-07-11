@@ -1,7 +1,6 @@
 
 #import <XCTest/XCTest.h>
 #import "GestureFactory.h"
-#import "EnterTextIn.h"
 #import "EnterText.h"
 #import "DoubleTap.h"
 #import "Rotate.h"
@@ -40,11 +39,6 @@
                        @"options" : @{ @"string" : @"banana" }
                        },
                    @{
-                       @"gesture" : @"enter_text_in",
-                       @"specifiers" : @{ @"coordinate" : @[ @50, @50 ] },
-                       @"options" : @{ @"string" : @"banana" }
-                       },
-                   @{
                        @"gesture" : @"double_tap",
                        @"specifiers" : @{ @"coordinate" : @[ @50, @50 ] },
                        },
@@ -69,11 +63,6 @@
                     @{
                         @"gesture" : @"enter_text",
                         @"specifiers" : @{ @"banana" : @"yeah" },
-                        @"options" : @{ @"string" : @"banana" }
-                        },
-                    @{
-                        @"gesture" : @"enter_text_in",
-                        @"specifiers" : @{ @"coordinates" : @[ @50, @50 ] },
                         @"options" : @{ @"string" : @"banana" }
                         },
                     @{
@@ -147,19 +136,6 @@
                         }
                 };
     [self expectGestureWithJSON:json gestureClass:[EnterText class]];
-}
-
-- (void)testEnterTextIn {
-    id json = @{
-                @"gesture" : @"enter_text_in",
-                @"specifiers" : @{
-                        @"coordinate" : @[ @50, @50 ]
-                },
-                @"options" : @{
-                        @"string"  : @"banana"
-                        }
-                };
-    [self expectGestureWithJSON:json gestureClass:[EnterTextIn class]];
 }
 
 - (void)testDoubleTap {

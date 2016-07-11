@@ -62,9 +62,6 @@
 		899696BA1CADF84B00BB42E2 /* EnterText.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696B81CADF84B00BB42E2 /* EnterText.h */; };
 		899696BB1CADF84B00BB42E2 /* EnterText.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696B91CADF84B00BB42E2 /* EnterText.m */; };
 		899696BC1CADF85B00BB42E2 /* EnterText.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696B91CADF84B00BB42E2 /* EnterText.m */; };
-		899696BF1CB2F22000BB42E2 /* EnterTextIn.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696BD1CB2F22000BB42E2 /* EnterTextIn.h */; };
-		899696C01CB2F22000BB42E2 /* EnterTextIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696BE1CB2F22000BB42E2 /* EnterTextIn.m */; };
-		899696C11CB2F22000BB42E2 /* EnterTextIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696BE1CB2F22000BB42E2 /* EnterTextIn.m */; };
 		899696C41CB3360900BB42E2 /* Pinch.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696C21CB3360900BB42E2 /* Pinch.h */; };
 		899696C51CB3360900BB42E2 /* Pinch.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696C31CB3360900BB42E2 /* Pinch.m */; };
 		899696C61CB3360900BB42E2 /* Pinch.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696C31CB3360900BB42E2 /* Pinch.m */; };
@@ -424,8 +421,6 @@
 		898743D51C5847B30084FD93 /* CBX.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CBX.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		899696B81CADF84B00BB42E2 /* EnterText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterText.h; sourceTree = "<group>"; };
 		899696B91CADF84B00BB42E2 /* EnterText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterText.m; sourceTree = "<group>"; };
-		899696BD1CB2F22000BB42E2 /* EnterTextIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterTextIn.h; sourceTree = "<group>"; };
-		899696BE1CB2F22000BB42E2 /* EnterTextIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterTextIn.m; sourceTree = "<group>"; };
 		899696C21CB3360900BB42E2 /* Pinch.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = Pinch.h; path = AutomationActions/Gestures/Pinch.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		899696C31CB3360900BB42E2 /* Pinch.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Pinch.m; path = AutomationActions/Gestures/Pinch.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		899696C71CB356BF00BB42E2 /* QueryConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryConfiguration.h; sourceTree = "<group>"; };
@@ -1056,8 +1051,6 @@
 				89C5F3591C9B9C850093A018 /* Gesture.m */,
 				899696B81CADF84B00BB42E2 /* EnterText.h */,
 				899696B91CADF84B00BB42E2 /* EnterText.m */,
-				899696BD1CB2F22000BB42E2 /* EnterTextIn.h */,
-				899696BE1CB2F22000BB42E2 /* EnterTextIn.m */,
 				89C5F36D1C9E32440093A018 /* DoubleTap.h */,
 				89C5F36E1C9E32440093A018 /* DoubleTap.m */,
 				F55B31C31CBE6E3800DFB13C /* TwoFingerTap.h */,
@@ -1780,7 +1773,6 @@
 			files = (
 				89C5F36F1C9E32440093A018 /* DoubleTap.h in Headers */,
 				899696D91CB45FFC00BB42E2 /* ActionConfiguration.h in Headers */,
-				899696BF1CB2F22000BB42E2 /* EnterTextIn.h in Headers */,
 				F55F81A31C6DD07500A945C8 /* HTTPFileResponse.h in Headers */,
 				F55F819D1C6DD07500A945C8 /* HTTPDataResponse.h in Headers */,
 				89F6BF901CBEB5AD0088269C /* GeometryUtils.h in Headers */,
@@ -2239,7 +2231,6 @@
 				89B951A21CF5B297007FD0AB /* QuerySpecifierByType.m in Sources */,
 				F5870B401CF0BEFF00B3376C /* CBXTouchEvent.m in Sources */,
 				F55F823D1C6DD07500A945C8 /* DispatchQueueLogFormatter.m in Sources */,
-				899696C01CB2F22000BB42E2 /* EnterTextIn.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2321,7 +2312,6 @@
 				F5B0A1B51CAD4E2700E056CE /* QuerySpecifierByPropertyLike.m in Sources */,
 				F5870B411CF0BEFF00B3376C /* CBXTouchEvent.m in Sources */,
 				F5B0A1BD1CAD4E4600E056CE /* CBXRoute.m in Sources */,
-				899696C11CB2F22000BB42E2 /* EnterTextIn.m in Sources */,
 				F5B0A1DD1CAD4E9B00E056CE /* ContextFilterLogFormatter.m in Sources */,
 				F5B0A1BA1CAD4E3A00E056CE /* ElementNotFoundException.m in Sources */,
 				899696F71CB5B8C300BB42E2 /* Coordinate.m in Sources */,
