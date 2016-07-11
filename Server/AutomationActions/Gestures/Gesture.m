@@ -83,8 +83,9 @@
     //Testmanagerd calls are async, but the http server is sync so we need to synchronize it.
     [ThreadUtils runSync:^(BOOL *setToTrueWhenDone, NSError *__autoreleasing *err) {
 
-        NSAssert([[XCTestDriver sharedTestDriver] daemonProtocolVersion] > 0x0,
-                 @"Testing on older test daemons is no longer supported.");
+        if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] ) {
+            NSLog(@"WARNING: Testing on daemonProtocolVersion %@", @([[XCTestDriver sharedTestDriver] daemonProtocolVersion]));
+        }
         CBXTouchEvent *event = [self cbxEventWithCoordinates:coords];
         [[Testmanagerd get] _XCT_synthesizeEvent:event.event
                                       completion:^(NSError *e) {
