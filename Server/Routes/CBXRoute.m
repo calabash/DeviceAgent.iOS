@@ -17,13 +17,19 @@
             NSMutableDictionary *dict = [([e userInfo] ?: @{}) mutableCopy];
             dict[CBX_ERROR_KEY] = [e reason];
             
-            if ([e isKindOfClass:[CBXException class]]) {
-                [response setStatusCode:((CBXException *)e).HTTPErrorStatusCode];
-                [response respondWithJSON:dict];
-            } else {
-                NSLog(@"%@", e.callStackSymbols);
+            @try {
+                if ([e isKindOfClass:[CBXException class]]) {
+                    [response setStatusCode:((CBXException *)e).HTTPErrorStatusCode];
+                    [response respondWithJSON:dict];
+                } else {
+                    NSLog(@"%@", e.callStackSymbols);
+                    [response setStatusCode:500];
+                    [response respondWithJSON:dict];
+                }
+            } @catch (NSException *innerException) {
                 [response setStatusCode:500];
-                [response respondWithJSON:dict];
+                [response respondWithJSON:@{@"error" : @"Internal exception occurred. See DeviceAgent log",
+                                            @"inner exception" : innerException.debugDescription ?: @""}];
             }
         }
     };

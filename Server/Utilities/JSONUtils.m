@@ -52,7 +52,10 @@ static NSDictionary *typeStringToElementType;
 
 + (XCUIElementType)elementTypeForString:(NSString *)typeString {
     NSNumber *typeNumber = typeStringToElementType[[typeString lowercaseString]];
-    return typeNumber ? [typeNumber intValue] : -1;
+    if (typeNumber) {
+        return [typeNumber unsignedIntegerValue];
+    }
+    @throw [CBXException withFormat:@"Invalid type '%@'", typeString];
 }
 
 + (NSString *)stringForElementType:(XCUIElementType)type {
@@ -93,6 +96,9 @@ static NSDictionary *typeStringToElementType;
 }
 
 + (NSString *)objToJSONString:(id)objcJsonObject {
+    if (!objcJsonObject) {
+        return @"";
+    }
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:objcJsonObject
                                                        options:0 error:&error];
