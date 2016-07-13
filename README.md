@@ -28,7 +28,7 @@ any symbol from the repo and see the docs.
 
 ### Building
 
-Maintainers must install the calabash/calabash-resign private repo.
+Maintainers must install the calabash/calabash-codesign private repo.
 Details are below.
 
 All build products are staged to the ./Products directory - even when
