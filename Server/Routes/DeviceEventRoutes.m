@@ -1,11 +1,14 @@
 
+#import "XCTest/XCUIApplication.h"
 #import "DeviceEventRoutes.h"
 #import "XCDeviceEvent.h"
 #import "Testmanagerd.h"
-#import "CBXMacros.h"
 #import "ThreadUtils.h"
 #import "Application.h"
-#import "XCTest/XCUIApplication.h"
+#import "XCUIDevice.h"
+#import "CBXMacros.h"
+#import "JSONUtils.h"
+
 
 /*
     TODO:
@@ -50,24 +53,12 @@
                  }];
              }],
              [CBXRoute post:endpoint(@"/rotate_home_button_to", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
-                 long long orientation = [data[@"orientation"] longLongValue];
-                 [ThreadUtils runSync:^(BOOL *setToTrueWhenDone, NSError *__autoreleasing *err) {
-                     [[Testmanagerd get] _XCT_updateDeviceOrientation:orientation
-                                                           completion:^(NSError *e) {
-                         *err = e;
-                         *setToTrueWhenDone = YES;
-                     }];
-                 } completion:^(NSError *e) {
-                     NSMutableDictionary *json = [@{} mutableCopy];
-                     if (e) {
-                         json[@"error"] = e.localizedDescription;
-                     } else {
-                         json[@"status"] = @"success";
-                         XCUIApplication *app = [Application currentApplication];
-                         json[@"orientation"] = @(app.interfaceOrientation);
-                     }
-                     [response respondWithJSON:json];
-                 }];
+                 [XCUIDevice sharedDevice].orientation = (UIDeviceOrientation)[data[@"orientation"] longLongValue];
+                 XCUIApplication *app = [Application currentApplication];
+                 [response respondWithJSON:@{
+                                             @"status" : @"success",
+                                             @"orientation" : @(app.interfaceOrientation)
+                                             }];
              }]
              ];
 }
