@@ -76,8 +76,6 @@
 
     XCTouchGesture *gesture = event.gesture;
     id gestureMock = OCMPartialMock(gesture);
-    OCMStub([gestureMock
-             addTouchPath:nextPath.xcTouchPath]).andForwardToRealObject();
 
     [event addTouchPath:nextPath];
 
