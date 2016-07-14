@@ -1949,8 +1949,8 @@
 				TargetAttributes = {
 					898743BB1C5847B30084FD93 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 58LM7J37Q8;
-						DevelopmentTeamName = "Xamarin Inc";
+						DevelopmentTeam = FYD86LA7RE;
+						DevelopmentTeamName = "Karl Krukow";
 					};
 					898743D41C5847B30084FD93 = {
 						CreatedOnToolsVersion = 7.2;
@@ -1965,6 +1965,8 @@
 					};
 					F5954E041CBD2E1200117745 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = FYD86LA7RE;
+						DevelopmentTeamName = "Karl Krukow";
 					};
 					F5B0A0CE1CAD3CBC00E056CE = {
 						CreatedOnToolsVersion = 7.3;
