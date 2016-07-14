@@ -1,4 +1,5 @@
 
+
 #import "ClearText.h"
 #import "ThreadUtils.h"
 
@@ -11,7 +12,7 @@
 + (Gesture *)executeWithGestureConfiguration:(GestureConfiguration *)gestureConfig
                                        query:(Query *)query
                                   completion:(CompletionBlock)completion {
-    
+
     QueryConfiguration *config = [QueryConfiguration withJSON:@{
                                                                 @"property" : @"hasKeyboardFocus=YES"
                                                                 }
@@ -24,7 +25,7 @@
         @throw [CBXException withMessage:@"Refusing to clear text: multiple elements have focus"];
     }
     XCUIElement *el = results[0];
-    
+
     [ThreadUtils runSync:^(BOOL *setToTrueWhenDone, NSError *__autoreleasing *err) {
         NSString *string = el.value;
         NSMutableString *delString = [NSMutableString new];
@@ -32,13 +33,13 @@
             [delString appendString:@"\b"];
         }
         [el typeText:delString];
-        
+
         [[Testmanagerd get] _XCT_sendString:string
                            maximumFrequency:CBX_DEFAULT_SEND_STRING_FREQUENCY
                                  completion:^(NSError *e) {
-            *err = e;
-            *setToTrueWhenDone = YES;
-        }];
+                                     *err = e;
+                                     *setToTrueWhenDone = YES;
+                                 }];
     } completion:completion];
     
     return nil;

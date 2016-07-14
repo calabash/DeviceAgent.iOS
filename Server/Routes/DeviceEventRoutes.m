@@ -66,8 +66,10 @@
                      @throw [CBXException withMessage:@"Invalid volume direction. Please specify 'up' or 'down'"
                                              userInfo:@{@"direction" : volumeDirection ?: @""}];
                  }
-                 XCDeviceEvent *event = [XCDeviceEvent deviceEventWithPage:page usage:direction duration:0.2];
 
+                 id event = [NSClassFromString(@"XCDeviceEvent") deviceEventWithPage:page
+                                                                               usage:direction
+                                                                            duration:0.2];
                  [[Testmanagerd get] _XCT_performDeviceEvent:event completion:^(NSError *e) {
                      if (e) {
                          NSLog(@"%@", e);
