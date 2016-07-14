@@ -4,16 +4,13 @@
 #import "CBXTouchEvent.h"
 #import "TouchPath.h"
 #import "XCSynthesizedEventRecord.h"
-#import "XCTouchGesture.h"
 
 @interface CBXTouchEvent ()
 
 @property (nonatomic, strong) XCSynthesizedEventRecord *event;
-@property (nonatomic, strong) XCTouchGesture *gesture;
 @property (nonatomic) long long orientation;
 
 + (XCSynthesizedEventRecord *)eventRecordWithOrientation:(long long) orientation;
-+ (XCTouchGesture *)touchGesture;
 
 @end
 
@@ -41,8 +38,6 @@
     id classMock = OCMClassMock([CBXTouchEvent class]);
     OCMExpect([classMock
                eventRecordWithOrientation:orientation]).andForwardToRealObject();
-
-    OCMExpect([classMock touchGesture]).andForwardToRealObject();
 
     CBXTouchEvent *event = [CBXTouchEvent withTouchPath:self.touchPath];
     expect(event.orientation).to.equal(orientation);
@@ -74,13 +69,9 @@
     OCMStub([recordMock
              addPointerEventPath:nextPath.eventPath]).andForwardToRealObject();
 
-    XCTouchGesture *gesture = event.gesture;
-    id gestureMock = OCMPartialMock(gesture);
-
     [event addTouchPath:nextPath];
 
     OCMVerifyAll(recordMock);
-    OCMVerifyAll(gestureMock);
 }
 
 @end

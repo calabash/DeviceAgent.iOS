@@ -6,7 +6,6 @@ typedef void (^CDUnknownBlockType)(void);
 
 #import <XCTest/XCTest.h>
 #import "TouchPath.h"
-#import "XCTouchEvent.h"
 #import "XCPointerEventPath.h"
 #import "XCPointerEvent.h"
 
