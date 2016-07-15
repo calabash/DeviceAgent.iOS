@@ -55,10 +55,9 @@
              }],
              [CBXRoute post:endpoint(@"/rotate_home_button_to", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
                  [XCUIDevice sharedDevice].orientation = (UIDeviceOrientation)[data[@"orientation"] longLongValue];
-                 XCUIApplication *app = [Application currentApplication];
                  [response respondWithJSON:@{
                                              @"status" : @"success",
-                                             @"orientation" : @(app.interfaceOrientation)
+                                             @"orientation" : @([XCUIDevice sharedDevice].orientation)
                                              }];
              }]
              ];
