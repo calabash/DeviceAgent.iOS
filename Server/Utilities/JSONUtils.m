@@ -52,11 +52,35 @@ static NSDictionary *typeStringToElementType;
 
 + (XCUIElementType)elementTypeForString:(NSString *)typeString {
     NSNumber *typeNumber = typeStringToElementType[[typeString lowercaseString]];
-    return typeNumber ? [typeNumber intValue] : -1;
+    if (typeNumber) {
+        return [typeNumber unsignedIntegerValue];
+    }
+    @throw [CBXException withFormat:@"Invalid type '%@'", typeString];
 }
 
 + (NSString *)stringForElementType:(XCUIElementType)type {
     return elementTypeToString[@(type)];
+}
+
++ (UIDeviceOrientation)parseOrientation:(id)orientation {
+    if ([orientation isKindOfClass:[NSString class]]) {
+        NSString *o = [orientation lowercaseString];
+        if ([o isEqualToString:@"left"])
+            return UIDeviceOrientationLandscapeRight;
+        if ([o isEqualToString:@"right"])
+            return UIDeviceOrientationLandscapeLeft;
+        if ([o isEqualToString:@"up"] || [o isEqualToString:@"top"])
+            return UIDeviceOrientationPortrait;
+        if ([o isEqualToString:@"down"] || [o isEqualToString:@"bottom"])
+            return UIDeviceOrientationPortraitUpsideDown;
+        /*TODO
+            Validate the use case for face up / down orientations.
+        */
+//        if ([o isEqualToString:@"face_up"]) return UIDeviceOrientationFaceUp;
+//        if ([o isEqualToString:@"face_down"]) return UIDeviceOrientationFaceDown;
+    }
+    @throw [CBXException withMessage:@"Unrecognized orientation."
+                            userInfo:@{@"orientation" : orientation?:[NSNull null]}];
 }
 
 + (void)validatePointJSON:(id)json {
@@ -93,6 +117,9 @@ static NSDictionary *typeStringToElementType;
 }
 
 + (NSString *)objToJSONString:(id)objcJsonObject {
+    if (!objcJsonObject) {
+        return @"";
+    }
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:objcJsonObject
                                                        options:0 error:&error];
