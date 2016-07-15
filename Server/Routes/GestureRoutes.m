@@ -13,7 +13,7 @@
 @implementation GestureRoutes
 + (NSArray<CBXRoute *> *)getRoutes {
     return @[
-             [CBXRoute post:endpoint(@"gesture", 1.0) withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
+             [CBXRoute post:endpoint(@"/gesture", 1.0) withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
                  [GestureFactory executeGestureWithJSON:body
                                                completion:^(NSError *e) {
                        if (e) {
@@ -23,7 +23,7 @@
                        }
                  }];
              }],
-             [CBXRoute post:endpoint(@"gesture/:test_id", 1.0) withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
+             [CBXRoute post:endpoint(@"/gesture/:test_id", 1.0) withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
                  NSNumber *identifier = @([request.params[CBX_TEST_ID_KEY] integerValue]);
                  XCUIElement *el = [Application cachedElementOrThrow:identifier];
                  
