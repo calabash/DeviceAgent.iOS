@@ -58,7 +58,12 @@ banner "Resigning"
 DETAILS=`xcrun codesign --display --verbose=3 ${RUNNER} 2>&1`
 CODE_SIGN_IDENTITY=`echo ${DETAILS} | egrep -o "iPhone Developer: .*\)" |  tr -d '\n'`
 
-info "Will resign with original identity: ${CODE_SIGN_IDENTITY}"
+if [ "${CODE_SIGN_IDENTITY}" = "" ]; then
+  CODE_SIGN_IDENTITY="Mac Developer"
+  info "Will resign with default identity: ${CODE_SIGN_IDENTITY}"
+else
+  info "Will resign with original identity: ${CODE_SIGN_IDENTITY}"
+fi
 
 echo ""
 

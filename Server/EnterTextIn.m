@@ -31,7 +31,9 @@
             completion(e);
         } else {
             [ThreadUtils runSync:^(BOOL *setToTrueWhenDone, NSError *__autoreleasing *err) {
-                [[Testmanagerd get] _XCT_sendString:string completion:^(NSError *e) {
+                [[Testmanagerd get] _XCT_sendString:string
+                                         maximumFrequency:CBX_DEFAULT_SEND_STRING_FREQUENCY
+                                         completion:^(NSError *e) {
                     if (e) @throw [CBXException withMessage:@"Error performing gesture"];
                     *err = e;
                     *setToTrueWhenDone = YES;

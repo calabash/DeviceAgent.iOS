@@ -53,25 +53,25 @@
     expect([query execute]).to.equal(nil);
 }
 
-- (void)testExecuteWithSpecifiers {
-    
-    id results = @[];
-    
-    Query *query = [QueryFactory queryWithQueryConfiguration:_validQueryConfig];
-    
-    OCMStub([OCMClassMock([Application class]) currentApplication])
-    .andReturn([[XCUIApplication alloc] initPrivateWithPath:nil
-                                                   bundleID:@"com.apple.banana"]);
-
-    
-    expect([query execute]).to.equal(results);
+//FIXME
+//- (void)testExecuteWithSpecifiers {
+//    id results = @[];
+//    
+//    Query *query = [QueryFactory queryWithQueryConfiguration:_validQueryConfig];
+//    
+//    OCMStub([OCMClassMock([Application class]) currentApplication])
+//    .andReturn([[XCUIApplication alloc] initPrivateWithPath:nil
+//                                                   bundleID:@"com.apple.banana"]);
+//
+//    
+//    expect([query execute]).to.equal(results);
     //TODO: Pair with Moody
 //    id mock = OCMPartialMock([XCUIElementQuery new]);
 //    OCMStub([mock allElementsBoundByIndex]).andReturn(@"banana");
 //    id selectorMock = OCMPartialMock([QuerySelectorId new]);
 //    OCMStub([selectorMock applyToQuery:[OCMArg any]]).andReturn(mock);
 //    OCMVerify([mock allElementsBoundByIndex]);
-}
+//}
 
 - (void)testToJSONString {
     Query *query = [QueryFactory queryWithQueryConfiguration:_validQueryConfig];

@@ -80,42 +80,18 @@
         }
     }
     
-    
     //Testmanagerd calls are async, but the http server is sync so we need to synchronize it.
     [ThreadUtils runSync:^(BOOL *setToTrueWhenDone, NSError *__autoreleasing *err) {
-        // This is temporary try/catch block until all the Gestures are converted
-        // to the new CBXTouchEvent interface.
-        @try {
-            CBXTouchEvent *event = [self cbxEventWithCoordinates:coords];
-            if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] != 0x0) {
-                [[Testmanagerd get] _XCT_synthesizeEvent:event.event
-                                              completion:^(NSError *e) {
-                                                  *err = e;
-                                                  *setToTrueWhenDone = YES;
-                                              }];
-            } else {
-                [[Testmanagerd get] _XCT_performTouchGesture:event.gesture
-                                                  completion:^(NSError *e) {
-                                                      *err = e;
-                                                      *setToTrueWhenDone = YES;
-                                                  }];
-            }
-        } @catch (CBXException *e) {
-            NSLog(@"cbxEventForCoordinates is NYI, falling back to previous interface");
-            if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] != 0x0) {
-                [[Testmanagerd get] _XCT_synthesizeEvent:[self eventWithCoordinates:coords]
-                                              completion:^(NSError *e) {
-                                                  *err = e;
-                                                  *setToTrueWhenDone = YES;
-                                              }];
-            } else {
-                [[Testmanagerd get] _XCT_performTouchGesture:[self gestureWithCoordinates:coords]
-                                                  completion:^(NSError *e) {
-                                                      *err = e;
-                                                      *setToTrueWhenDone = YES;
-                                                  }];
-            }
+
+        if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] ) {
+            NSLog(@"WARNING: Testing on daemonProtocolVersion %@", @([[XCTestDriver sharedTestDriver] daemonProtocolVersion]));
         }
+        CBXTouchEvent *event = [self cbxEventWithCoordinates:coords];
+        [[Testmanagerd get] _XCT_synthesizeEvent:event.event
+                                      completion:^(NSError *e) {
+                                          *err = e;
+                                          *setToTrueWhenDone = YES;
+                                      }];
     } completion:completion];
 }
 

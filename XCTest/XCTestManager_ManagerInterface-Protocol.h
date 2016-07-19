@@ -22,7 +22,8 @@
 
 
 - (void)_XCT_requestScreenshotWithReply:(void (^)(NSData *, NSError *))arg1;
-- (void)_XCT_sendString:(NSString *)arg1 completion:(void (^)(NSError *))arg2;
+//No longer used in iOS10?
+//- (void)_XCT_sendString:(NSString *)arg1 completion:(void (^)(NSError *))arg2;
 - (void)_XCT_sendString:(NSString *)arg1 maximumFrequency:(unsigned long long)arg2 completion:(void (^)(NSError *))arg3;
 
 - (void)_XCT_updateDeviceOrientation:(long long)arg1 completion:(void (^)(NSError *))arg2;

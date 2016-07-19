@@ -25,11 +25,11 @@ function error {
 function banner {
   if [ "${TERM}" = "dumb" ]; then
     echo ""
-    echo "######## $1 #######$"
+    echo "######## $1 ########"
     echo ""
   else
     echo ""
-    echo "$(tput setaf 5)######## $1 #######$(tput sgr0)"
+    echo "$(tput setaf 5)######## $1 ########$(tput sgr0)"
     echo ""
   fi
 }

@@ -32,7 +32,8 @@
                  int page = HOME_BUTTON_PAGE;
                  int usage = PRESS;
                  int duration = 1;
-                 XCDeviceEvent *event = [XCDeviceEvent deviceEventWithPage:page usage:usage duration:duration];
+                 
+                 id event = [NSClassFromString(@"XCDeviceEvent") deviceEventWithPage:page usage:usage duration:duration];
                  
                  [[Testmanagerd get] _XCT_performDeviceEvent:event completion:^(NSError *e) {
                      if (e) {
@@ -44,7 +45,7 @@
                  int page = HOME_BUTTON_PAGE;
                  int usage = PRESS;
                  int duration = 5;
-                 XCDeviceEvent *event = [XCDeviceEvent deviceEventWithPage:page usage:usage duration:duration];
+                 id event = [NSClassFromString(@"XCDeviceEvent") deviceEventWithPage:page usage:usage duration:duration];
                  
                  [[Testmanagerd get] _XCT_performDeviceEvent:event completion:^(NSError *e) {
                      if (e) {
@@ -54,10 +55,9 @@
              }],
              [CBXRoute post:endpoint(@"/rotate_home_button_to", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
                  [XCUIDevice sharedDevice].orientation = (UIDeviceOrientation)[data[@"orientation"] longLongValue];
-                 XCUIApplication *app = [Application currentApplication];
                  [response respondWithJSON:@{
                                              @"status" : @"success",
-                                             @"orientation" : @(app.interfaceOrientation)
+                                             @"orientation" : @([XCUIDevice sharedDevice].orientation)
                                              }];
              }]
              ];

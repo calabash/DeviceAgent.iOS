@@ -1960,14 +1960,17 @@
 		898743B41C5847B30084FD93 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Calabash;
 				TargetAttributes = {
 					898743BB1C5847B30084FD93 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = FYD86LA7RE;
+						DevelopmentTeamName = "Karl Krukow";
 					};
 					898743D41C5847B30084FD93 = {
 						CreatedOnToolsVersion = 7.2;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 898743BB1C5847B30084FD93;
 					};
 					F5169CDF1CFD982800252F52 = {
@@ -1978,6 +1981,8 @@
 					};
 					F5954E041CBD2E1200117745 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = FYD86LA7RE;
+						DevelopmentTeamName = "Karl Krukow";
 					};
 					F5B0A0CE1CAD3CBC00E056CE = {
 						CreatedOnToolsVersion = 7.3;
@@ -2461,6 +2466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = NO;
@@ -2507,6 +2513,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = NO;
@@ -2584,6 +2591,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = XCUITestDriver/Info.plist;
@@ -2593,8 +2601,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.XCUITestDriver;
 				PRODUCT_NAME = CBX;
-				TEST_TARGET_NAME = "xcuitest-server";
-				USES_XCTRUNNER = YES;
+				TEST_TARGET_NAME = CBXAppStub;
 			};
 			name = Debug;
 		};
@@ -2602,6 +2609,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = XCUITestDriver/Info.plist;
@@ -2610,8 +2618,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.XCUITestDriver;
 				PRODUCT_NAME = CBX;
-				TEST_TARGET_NAME = "xcuitest-server";
-				USES_XCTRUNNER = YES;
+				TEST_TARGET_NAME = CBXAppStub;
 			};
 			name = Release;
 		};

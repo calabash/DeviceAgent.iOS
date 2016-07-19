@@ -1,4 +1,5 @@
 
+#import "CBXTouchEvent.h"
 #import "Rotate.h"
 
 typedef NS_ENUM(short, ClockDirection) {
@@ -105,68 +106,32 @@ float dtor(float degrees) { return degrees * (M_PI / 180); }
     return @[coords1, coords2];
 }
 
-
-- (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<Coordinate *> *)coordinates {
+- (CBXTouchEvent *)cbxEventWithCoordinates:(NSArray<Coordinate *> *)coordinates {
     NSArray<NSArray<Coordinate *> *> *circleCoords = [self setup:coordinates];
     
     long long orientation = [[Application currentApplication]
                              longLongInterfaceOrientation];
 
-    XCSynthesizedEventRecord *event = [[XCSynthesizedEventRecord alloc]
-                                       initWithName:[self.class name]
-                                       interfaceOrientation:orientation];
+    CBXTouchEvent *event = [CBXTouchEvent new];
     
     
     float timeIncrement = [self rotateDuration] / circleCoords[0].count;
     for (NSArray<Coordinate *> *fingerCoords in circleCoords) {
         float offset = 0;
-        
-        for (int i = 0; i < [self repetitions]; i++) {
-            CGPoint c = fingerCoords[0].cgpoint;
-            XCPointerEventPath *path = [[XCPointerEventPath alloc] initForTouchAtPoint:c
-                                                                                offset:offset];
-            for (Coordinate *coord in fingerCoords) {
-                if (coord == fingerCoords[0]) continue; //we've already done it
-                [path moveToPoint:coord.cgpoint atOffset: (offset += timeIncrement)];
-            }
-            [path liftUpAtOffset:offset];
-            [event addPointerEventPath:path];
+        CGPoint c = fingerCoords[0].cgpoint;
+        TouchPath *path = [TouchPath withFirstTouchPoint:c orientation:orientation];
+                           
+        for (Coordinate *coord in fingerCoords) {
+            if (coord == fingerCoords[0]) continue; //we've already done it
+            [path moveToNextPoint:coord.cgpoint afterSeconds:(offset += timeIncrement)];
         }
+        [path liftUpAfterSeconds:offset];
+        [event addTouchPath:path];
     }
     
     return event;
 }
 
-- (XCTouchGesture *)gestureWithCoordinates:(NSArray<Coordinate *> *)coordinates {
-    NSArray<NSArray<Coordinate *> *> *circleCoords = [self setup:coordinates];
-    
-    XCTouchGesture *gesture = [[XCTouchGesture alloc] initWithName:[self.class name]];
-
-    long long orientation = [[Application currentApplication]
-                             longLongInterfaceOrientation];
-
-    float timeIncrement = [self rotateDuration] / circleCoords[0].count;
-    for (NSArray<Coordinate *> *fingerCoords in circleCoords) {
-        float offset = 0;
-        
-        for (int i = 0; i < [self repetitions]; i++) {
-            CGPoint c = fingerCoords[0].cgpoint;
-            XCTouchPath *path = [[XCTouchPath alloc] initWithTouchDown:c
-                                                           orientation:orientation
-                                                                offset:offset];
-
-            for (Coordinate *coord in fingerCoords) {
-                if (coord == fingerCoords[0]) continue; //we've already done it
-                c = coord.cgpoint;
-                [path moveToPoint:c atOffset: (offset += timeIncrement)];
-            }
-            [path liftUpAtPoint:c offset:offset + CBX_GESTURE_EPSILON];
-            [gesture addTouchPath:path];
-        }
-    }
-    
-    return gesture;
-}
 
 
 

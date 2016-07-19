@@ -33,7 +33,9 @@
         }
         [el typeText:delString];
         
-        [[Testmanagerd get] _XCT_sendString:delString completion:^(NSError *e) {
+        [[Testmanagerd get] _XCT_sendString:string
+                           maximumFrequency:CBX_DEFAULT_SEND_STRING_FREQUENCY
+                                 completion:^(NSError *e) {
             *err = e;
             *setToTrueWhenDone = YES;
         }];

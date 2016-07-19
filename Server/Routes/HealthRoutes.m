@@ -3,24 +3,25 @@
 //  xcuitest-server
 //
 
+#import "CBXMacros.h"
 #import "HealthRoutes.h"
 
 @implementation HealthRoutes
 + (NSArray<CBXRoute *> *)getRoutes {
     return @[
-             [CBXRoute get:@"/health" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
+             [CBXRoute get:endpoint(@"/health", 1.0) withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
                  [response respondWithJSON:@{
                                              @"status" : @"Calabash is ready and waiting."
                                              }];
              }],
              
-             [CBXRoute get:@"/ping" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
+             [CBXRoute get:endpoint(@"/ping", 1.0) withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
                  [response respondWithJSON:@{
                                              @"status" : @"honk"
                                              }];
              }],
              
-             [CBXRoute get:@"/status" withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
+             [CBXRoute get:endpoint(@"/status", 1.0) withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
                  [response respondWithJSON:@{
                                              @"status" : @"DeviceAgent is ready and waiting."
                                              }];

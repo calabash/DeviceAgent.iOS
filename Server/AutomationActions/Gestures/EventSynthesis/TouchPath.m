@@ -2,17 +2,12 @@
 #import "TouchPath.h"
 
 @interface TouchPath ()
-@property (nonatomic, strong) XCTouchPath *xcTouchPath;
 @property (nonatomic, strong) XCPointerEventPath *eventPath;
 @property (nonatomic) CGPoint lastPoint;
 
 - (instancetype)initWithFirstTouchPoint:(CGPoint)firstTouchPoint
                             orientation:(long long)orientation
                                  offset:(float)seconds;
-
-+ (XCTouchPath *)touchPathForFirstTouchPoint:(CGPoint)point
-                                 orientation:(long long)orientation
-                                      offset:(float)offset;
 
 + (XCPointerEventPath *)eventPathForFirstTouchPoint:(CGPoint)point
                                              offset:(float)offset;
@@ -29,10 +24,6 @@
     if (self) {
         _orientation = orientation;
         _lastPoint = firstTouchPoint;
-
-        _xcTouchPath = [TouchPath touchPathForFirstTouchPoint:firstTouchPoint
-                                                  orientation:orientation
-                                                       offset:seconds];
 
         _eventPath = [TouchPath eventPathForFirstTouchPoint:firstTouchPoint
                                                      offset:seconds];
@@ -59,28 +50,18 @@
 }
 
 - (void)moveToNextPoint:(CGPoint)nextPoint afterSeconds:(CGFloat)seconds {
-    NSAssert((self.xcTouchPath && self.eventPath),
+    NSAssert((self.eventPath),
              @"Expected xcTouchPath and eventPath to be non-nil");
-    [self.xcTouchPath moveToPoint:nextPoint atOffset:seconds];
     [self.eventPath moveToPoint:nextPoint atOffset:seconds];
     self.lastPoint = nextPoint;
 }
 
 - (void)liftUpAfterSeconds:(CGFloat)seconds {
-    NSAssert((self.xcTouchPath && self.eventPath),
+    NSAssert((self.eventPath),
              @"Expected xcTouchPath and eventPath to be non-nil");
     // No good way to assert that lastPoint has been set; it will default to
     // CGPointZero if not assigned.
-    [self.xcTouchPath liftUpAtPoint:self.lastPoint offset:seconds];
     [self.eventPath liftUpAtOffset:seconds];
-}
-
-+ (XCTouchPath *)touchPathForFirstTouchPoint:(CGPoint)point
-                                 orientation:(long long)orientation
-                                      offset:(float)seconds {
-    return [[XCTouchPath alloc] initWithTouchDown:point
-                                      orientation:orientation
-                                           offset:seconds];
 }
 
 + (XCPointerEventPath *)eventPathForFirstTouchPoint:(CGPoint)point

@@ -6,23 +6,17 @@ typedef void (^CDUnknownBlockType)(void);
 
 #import <XCTest/XCTest.h>
 #import "TouchPath.h"
-#import "XCTouchPath.h"
-#import "XCTouchEvent.h"
 #import "XCPointerEventPath.h"
 #import "XCPointerEvent.h"
 
 @interface TouchPath ()
 
-- (XCTouchPath *)xcTouchPath;
 - (XCPointerEventPath *)eventPath;
 - (CGPoint) lastPoint;
 
 - (instancetype)initWithFirstTouchPoint:(CGPoint)firstTouchPoint
                             orientation:(long long)orientation
                                  offset:(float)seconds;
-+ (XCTouchPath *)touchPathForFirstTouchPoint:(CGPoint)point
-                                 orientation:(long long)orientation
-                                      offset:(float)seconds;
 + (XCPointerEventPath *)eventPathForFirstTouchPoint:(CGPoint)point
                                              offset:(float)seconds;
 
@@ -40,14 +34,7 @@ typedef void (^CDUnknownBlockType)(void);
                  offset:(float)seconds {
     expect(touchPath.orientation).to.equal(orientation);
     expect(touchPath.lastPoint).to.equal(point);
-    expect(touchPath.xcTouchPath).to.beAKindOf([XCTouchPath class]);
     expect(touchPath.eventPath).to.beAKindOf([XCPointerEventPath class]);
-
-    XCTouchPath *xcTouchPath = touchPath.xcTouchPath;
-    expect(xcTouchPath.touchEvents.count).to.equal(1);
-    expect([xcTouchPath.touchEvents[0] coordinate]).to.equal(point);
-    expect([xcTouchPath.touchEvents[0] offset]).to.equal(seconds);
-    expect(xcTouchPath.interfaceOrientation).to.equal(orientation);
 
     XCPointerEventPath *eventPath = touchPath.eventPath;
     expect(eventPath.pointerEvents.count).to.equal(1);
@@ -117,9 +104,6 @@ typedef void (^CDUnknownBlockType)(void);
                                        orientation:orientation
                                             offset:0.0];
 
-    id xcTouchPath = OCMPartialMock(tp.xcTouchPath);
-    OCMExpect([xcTouchPath moveToPoint:nextPoint
-                              atOffset:seconds]).andForwardToRealObject();
 
     id eventPath = OCMPartialMock(tp.eventPath);
     OCMExpect([eventPath moveToPoint:nextPoint
@@ -128,16 +112,10 @@ typedef void (^CDUnknownBlockType)(void);
     [tp moveToNextPoint:nextPoint afterSeconds:seconds];
     expect(tp.lastPoint).to.equal(nextPoint);
 
-    XCTouchPath *xctp = tp.xcTouchPath;
-    expect(xctp.touchEvents.count).to.equal(2);
-    expect([xctp.touchEvents[1] coordinate]).to.equal(nextPoint);
-    expect(xctp.interfaceOrientation).to.equal(orientation);
-
     XCPointerEventPath *ep = tp.eventPath;
     expect(ep.pointerEvents.count).to.equal(2);
     expect([ep.pointerEvents[1] coordinate]).to.equal(nextPoint);
-
-    OCMVerifyAll(xcTouchPath);
+    
     OCMVerifyAll(eventPath);
 }
 
@@ -156,16 +134,11 @@ typedef void (^CDUnknownBlockType)(void);
                                        orientation:0
                                             offset:0.0];
 
-    id xcTouchPath = OCMPartialMock(tp.xcTouchPath);
-    OCMExpect([xcTouchPath liftUpAtPoint:point
-                              offset:seconds]).andForwardToRealObject();
-
     id eventPath = OCMPartialMock(tp.eventPath);
     OCMExpect([eventPath liftUpAtOffset:seconds]).andForwardToRealObject();
 
     [tp liftUpAfterSeconds:seconds];
 
-    OCMVerifyAll(xcTouchPath);
     OCMVerifyAll(eventPath);
 }
 
