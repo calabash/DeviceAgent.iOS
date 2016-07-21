@@ -72,6 +72,10 @@ module DeviceAgent
       touch_mark("delete")
     end
 
+    def change_volume(direction)
+      device_agent.change_volume(direction)
+    end
+
     private
 
     def device_agent

@@ -6,8 +6,16 @@ module DeviceAgent
     def wait_for_app
       return true if DeviceAgent::Shared.class_variable_get(:@@app_ready)
 
+      if @device_agent.runtime["simulator"]
+        timeout = 8
+      else
+        timeout = 20
+      end
+
+      wait_options = {:timeout => timeout}
+
       ["Touch", "Pan", "Rotate/Pinch", "Misc", "Tao"].each do |mark|
-        @waiter.wait_for_view(mark)
+        @waiter.wait_for_view(mark, wait_options)
       end
 
       if RunLoop::Environment.ci?
