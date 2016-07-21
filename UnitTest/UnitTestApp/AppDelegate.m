@@ -18,10 +18,10 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  return YES;
+    return YES;
 }
 
-- (UIInterfaceOrientationMask) application:(UIApplication *)application
+- (UIInterfaceOrientationMask)application:(UIApplication *)application
    supportedInterfaceOrientationsForWindow:(UIWindow *)window {
     return UIInterfaceOrientationMaskAll;
 }
