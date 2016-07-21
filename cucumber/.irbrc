@@ -142,12 +142,12 @@ def holmes()
 
   options = {
     :device => device.udid,
-    :xcuitest => true,
     :xcode => xcode,
     :simctl => simctl,
     :instruments => instruments,
     :app => ENV["APP"],
-    :cbx_launcher => :xcodebuild
+    :cbx_launcher => :xcodebuild,
+    :gesture_performer => :device_agent
   }
 
   @xcuitest = @holmes = @device_agent = RunLoop.run(options)

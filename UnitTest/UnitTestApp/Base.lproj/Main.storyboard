@@ -464,28 +464,62 @@
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nji-qy-6ud">
+                                <rect key="frame" x="263" y="435" width="74" height="62"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjS-22-oHe">
+                                        <rect key="frame" x="8" y="8" width="58" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="2b4-mp-peB"/>
+                                            <constraint firstAttribute="width" constant="58" id="dcg-Zi-rlr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.8888" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTD-ts-eVi">
+                                        <rect key="frame" x="9" y="33" width="56" height="21"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="current volume"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="9tb-0E-bJy"/>
+                                            <constraint firstAttribute="width" constant="56" id="hqh-XJ-8D1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="gjS-22-oHe" firstAttribute="leading" secondItem="Nji-qy-6ud" secondAttribute="leadingMargin" id="1FB-PO-QSh"/>
+                                    <constraint firstAttribute="bottom" secondItem="rTD-ts-eVi" secondAttribute="bottom" constant="8" id="2cL-Kr-1dh"/>
+                                    <constraint firstItem="rTD-ts-eVi" firstAttribute="centerX" secondItem="Nji-qy-6ud" secondAttribute="centerX" id="OLf-ES-wGg"/>
+                                    <constraint firstItem="gjS-22-oHe" firstAttribute="top" secondItem="Nji-qy-6ud" secondAttribute="top" constant="8" id="WLp-6q-ueJ"/>
+                                    <constraint firstItem="gjS-22-oHe" firstAttribute="centerX" secondItem="Nji-qy-6ud" secondAttribute="centerX" id="XpY-hy-hst"/>
+                                    <constraint firstItem="rTD-ts-eVi" firstAttribute="top" secondItem="gjS-22-oHe" secondAttribute="bottom" constant="4" id="yMS-CM-OO2"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration" identifier="misc page"/>
                         <constraints>
-                            <constraint firstAttribute="leadingMargin" secondItem="mXs-G4-gwd" secondAttribute="leading" id="6US-zF-TRu"/>
                             <constraint firstItem="itp-iG-vg1" firstAttribute="top" secondItem="gUN-3j-Tbv" secondAttribute="bottom" constant="14" id="8Lq-l2-9eE"/>
                             <constraint firstItem="mXs-G4-gwd" firstAttribute="centerX" secondItem="Yqb-KX-JoO" secondAttribute="centerX" id="8wX-Ro-fee"/>
                             <constraint firstItem="L77-WD-uO0" firstAttribute="centerY" secondItem="Yqb-KX-JoO" secondAttribute="centerY" id="9wX-0p-5xY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mXs-G4-gwd" secondAttribute="trailing" id="H11-of-GmS"/>
-                            <constraint firstItem="itp-iG-vg1" firstAttribute="trailing" secondItem="gUN-3j-Tbv" secondAttribute="trailing" constant="-1" id="Jgz-3L-LEO"/>
+                            <constraint firstItem="mXs-G4-gwd" firstAttribute="top" secondItem="Nji-qy-6ud" secondAttribute="bottom" constant="10" id="Fap-Q2-K2l"/>
                             <constraint firstItem="itp-iG-vg1" firstAttribute="top" secondItem="gUN-3j-Tbv" secondAttribute="bottom" constant="14" id="MpD-DN-5xv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gUN-3j-Tbv" secondAttribute="trailing" id="SXZ-Qt-wd9"/>
                             <constraint firstItem="gUN-3j-Tbv" firstAttribute="top" secondItem="Rob-KM-ps1" secondAttribute="bottom" constant="50" id="UAP-ZL-SvX"/>
                             <constraint firstItem="PTM-5r-Gq4" firstAttribute="top" secondItem="mXs-G4-gwd" secondAttribute="bottom" constant="8" symbolic="YES" id="X9f-Zh-0tj"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="gUN-3j-Tbv" secondAttribute="leading" id="dnP-Qa-Lws"/>
                             <constraint firstItem="L77-WD-uO0" firstAttribute="centerX" secondItem="Yqb-KX-JoO" secondAttribute="centerX" id="fKU-My-YQR"/>
                             <constraint firstItem="itp-iG-vg1" firstAttribute="centerX" secondItem="Yqb-KX-JoO" secondAttribute="centerX" id="kVf-3G-vzQ"/>
+                            <constraint firstItem="gUN-3j-Tbv" firstAttribute="centerX" secondItem="Yqb-KX-JoO" secondAttribute="centerX" id="n8h-S4-kkq"/>
+                            <constraint firstItem="Nji-qy-6ud" firstAttribute="centerX" secondItem="Yqb-KX-JoO" secondAttribute="centerX" id="uSX-6p-Ax3"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Misc" image="tab-bar-special" selectedImage="tab-bar-special-selected" id="usq-CR-5AO"/>
                     <connections>
                         <outlet property="clearTextFieldButton" destination="L77-WD-uO0" id="OZ9-SB-aUL"/>
+                        <outlet property="currentVolume" destination="rTD-ts-eVi" id="9Wk-V1-T4C"/>
                         <outlet property="howGoesItLabel" destination="mXs-G4-gwd" id="0Wv-Ip-CJ9"/>
                         <outlet property="textDelegateMessage" destination="itp-iG-vg1" id="L2W-l4-cjR"/>
                         <outlet property="textField" destination="gUN-3j-Tbv" id="DZi-AH-9hN"/>

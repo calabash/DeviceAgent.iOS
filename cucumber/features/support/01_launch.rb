@@ -78,11 +78,11 @@ Before do |scenario|
   launcher = Calabash::Launcher.instance
   options = {
     :device => launcher.device.udid,
-    :xcuitest => true,
     :xcode => launcher.xcode,
     :simctl => launcher.simctl,
     :instruments => launcher.instruments,
     :app => launcher.app,
+    :gesture_performer => :device_agent,
     :cbx_launcher => :xcodebuild
   }
 

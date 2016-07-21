@@ -357,6 +357,7 @@
 		F5B0A1E31CAD4EA700E056CE /* RoutingConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F81201C6DD07500A945C8 /* RoutingConnection.m */; };
 		F5B0A1E41CAD4EA700E056CE /* RoutingHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F81221C6DD07500A945C8 /* RoutingHTTPServer.m */; };
 		F5C1E8BD1CBF5BBE0019A52F /* CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration in Resources */ = {isa = PBXBuildFile; fileRef = F5C1E8BC1CBF5B120019A52F /* CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration */; };
+		F5D42A191D40E3150041105C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D42A181D40E3150041105C /* AVFoundation.framework */; };
 		F5F49F401CC792A1003F33A6 /* RouteResponseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F49F3F1CC792A1003F33A6 /* RouteResponseTest.m */; };
 /* End PBXBuildFile section */
 
@@ -801,6 +802,7 @@
 		F5B0A1891CAD4A1F00E056CE /* CBXiOSVersionInlines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXiOSVersionInlines.h; sourceTree = "<group>"; };
 		F5B0A18A1CAD4B4000E056CE /* CBXiOSVersionInlinesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = CBXiOSVersionInlinesTest.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F5C1E8BC1CBF5B120019A52F /* CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration"; path = "TestManagerDConnection/CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration"; sourceTree = SOURCE_ROOT; };
+		F5D42A181D40E3150041105C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F5F49F3F1CC792A1003F33A6 /* RouteResponseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteResponseTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -828,6 +830,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5D42A191D40E3150041105C /* AVFoundation.framework in Frameworks */,
 				F52BA3461CED23F700475D5A /* CFNetwork.framework in Frameworks */,
 				F52BA3451CED23EC00475D5A /* libz.tbd in Frameworks */,
 				F52BA3431CED23E400475D5A /* CoreGraphics.framework in Frameworks */,
@@ -1144,6 +1147,7 @@
 		F542EA1A1CC53DD000D87200 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F5D42A181D40E3150041105C /* AVFoundation.framework */,
 				F52BA3441CED23EC00475D5A /* libz.tbd */,
 				F542EA201CC53F6400D87200 /* CoreGraphics.framework */,
 				F542EA1D1CC53EE100D87200 /* Security.framework */,

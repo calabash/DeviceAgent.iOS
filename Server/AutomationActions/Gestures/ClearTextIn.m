@@ -1,4 +1,3 @@
-
 #import "ThreadUtils.h"
 #import "ClearTextIn.h"
 #import "Touch.h"
@@ -22,7 +21,7 @@
         @throw [CBXException withMessage:@"Can not clear text: Element does not have a 'value'"
                                 userInfo:[JSONUtils elementToJSON:el]];
     }
-    
+
     [ThreadUtils runSync:^(BOOL *setToTrueWhenDone, NSError *__autoreleasing *err) {
         NSString *string = el.value;
         NSMutableString *delString = [NSMutableString new];
@@ -30,13 +29,13 @@
             [delString appendString:@"\b"];
         }
         [el typeText:delString];
-        
+
         [[Testmanagerd get] _XCT_sendString:string
                            maximumFrequency:CBX_DEFAULT_SEND_STRING_FREQUENCY
                                  completion:^(NSError *e) {
-            *err = e;
-            *setToTrueWhenDone = YES;
-        }];
+                                     *err = e;
+                                     *setToTrueWhenDone = YES;
+                                 }];
     } completion:completion];
     
     return nil;
