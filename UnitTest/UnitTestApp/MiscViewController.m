@@ -88,6 +88,11 @@ static NSString *const kCaVa = @"Ça va?";
     [super didReceiveMemoryWarning];
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self.session removeObserver:self forKeyPath:@"outputVolume"];
+}
+
 - (void)handleTapOnTouchQuestionLabel:(UIGestureRecognizer *)recognizer {
     UIGestureRecognizerState state = [recognizer state];
     if (UIGestureRecognizerStateEnded == state) {
