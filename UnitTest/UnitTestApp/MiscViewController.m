@@ -67,6 +67,21 @@ static NSString *const kCaVa = @"Ça va?";
                          context:nil];
         }
     }
+
+    // Not being triggered.
+    // Leaving so that someone else does not try this approach.
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(handleVolumeChanged:)
+     name:@"AVSystemController_SystemVolumeDidChangeNotification"
+     object:nil];
+
+}
+
+- (void)handleVolumeChanged:(NSNotification *)notification {
+    NSNumber *number = [[notification userInfo]
+                        objectForKey:@"AVSystemController_AudioVolumeNotificationParameter"];
+    NSLog(@"Volume changed notification: %@", number);
 }
 
 - (void)didReceiveMemoryWarning {
