@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
 # Stages CBX-Runner.app built by Xcode to ./Products/
+# Called from XCUITestDriver scheme Build Post Action
 
 set -e
 
+# Cannot source from bin/log_functions.sh
 function info {
   echo "INFO: $1"
 }
@@ -18,6 +20,7 @@ function banner {
   echo ""
 }
 
+# Cannot source from bin/copy-with-ditto.sh
 function ditto_or_exit {
   ditto "${1}" "${2}"
   if [ "$?" != 0 ]; then
