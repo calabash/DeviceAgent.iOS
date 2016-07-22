@@ -1887,7 +1887,6 @@
 				898743B81C5847B30084FD93 /* Sources */,
 				898743B91C5847B30084FD93 /* Frameworks */,
 				898743BA1C5847B30084FD93 /* Resources */,
-				F5EC9D1C1C6E4FCC00E8A59D /* Run Script Stage binaries to ./Products */,
 			);
 			buildRules = (
 			);
@@ -2127,20 +2126,6 @@
 			shellPath = /bin/sh;
 			shellScript = "bin/xcode-build-phase/stage-unittestapp-to-Products.sh";
 			showEnvVarsInLog = 0;
-		};
-		F5EC9D1C1C6E4FCC00E8A59D /* Run Script Stage binaries to ./Products */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script Stage binaries to ./Products";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "bin/xcode-build-phase/stage-appstub-to-Products.sh";
 		};
 /* End PBXShellScriptBuildPhase section */
 
