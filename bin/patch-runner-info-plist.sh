@@ -20,15 +20,9 @@ if [ $# == 0 ]; then
 fi
 
 RUNNER="${1}"
-APPSTUB="${1}/../CBXAppStub.app"
 
 if [ ! -e "${RUNNER}" ]; then
   error "Runner does not exist: ${RUNNER}"
-  exit 1
-fi
-
-if [ ! -e "${APPSTUB}" ]; then
-  error "CBXAppStub does not exist: ${APPSTUB}"
   exit 1
 fi
 
