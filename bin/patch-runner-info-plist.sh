@@ -112,21 +112,32 @@ else
       info "Runner was not signed with a valid identity"
       info "Checking CBXAppStub"
 
-      extract_identity IDENTITY "${APPSTUB}"
-
-      # Extracted an identity form the CBXAppStub
-      if [ "${IDENTITY}" != "" ]; then
-        info "Will resign with CBXAppStub identity: ${IDENTITY}"
-      else
-        info "CBXAppStub was not signed with an iPhone Developer identity"
+      set +e
+      xcrun codesign --display --verbose=3 "${APPSTUB}"
+      if [ "$?" != "0" ]; then
+        set -e
+        info "CBXAppStub has no code siging information"
 
         IDENTITY="iPhone Developer"
         info "Will resign with default identity: ${IDENTITY}"
+      else
+        set -e
+        extract_identity IDENTITY "${APPSTUB}"
+
+        # Extracted an identity form the CBXAppStub
+        if [ "${IDENTITY}" != "" ]; then
+          info "Will resign with CBXAppStub identity: ${IDENTITY}"
+        else
+          info "CBXAppStub was not signed with an iPhone Developer identity"
+
+          IDENTITY="iPhone Developer"
+          info "Will resign with default identity: ${IDENTITY}"
+        fi
       fi
     fi
   else
 
-    # User probably updated the Xcode project with a specific identity
+    # User updated the Xcode project with a specific identity
     info "CODE_SIGN_IDENTITY is set - will use ${CODE_SIGN_IDENTITY} to resign"
     IDENTITY="${CODE_SIGN_IDENTITY}"
   fi
