@@ -41,7 +41,15 @@ Enjoy.
 To build the CBXRunner from Xcode, select the XCUITestDriver scheme and
 Build for Testing (Shift + Command + U).  Rinse and repeat for simulator
 or device targets.  This will generate binaries for distribution in the
-./Products directory.
+./Products directory.  The post-build staging is done in a Post Build Runi
+Script Action in the CBXAppStub and XCUITestDriver schemes.
+
+The logs for these scripts can be found here:
+
+```
+/tmp/CBX-Runner-post-build.log
+/tmp/CBXAppStub-post-build.log
+```
 
 The application targets can be built as usual (Command + B).
 
