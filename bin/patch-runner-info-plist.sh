@@ -22,7 +22,7 @@ fi
 RUNNER="${1}"
 
 if [ ! -e "${RUNNER}" ]; then
-  error "Runner does not exit: ${RUNNER}"
+  error "Runner does not exist: ${RUNNER}"
   exit 1
 fi
 
@@ -55,14 +55,36 @@ set -e
 
 banner "Resigning"
 
-DETAILS=`xcrun codesign --display --verbose=3 ${RUNNER} 2>&1`
-CODE_SIGN_IDENTITY=`echo ${DETAILS} | egrep -o "iPhone Developer: .*\)" |  tr -d '\n'`
+# $1 variable to store the identity in
+# $2 the .app to extract the identity from
+# extract_identity IDENTITY "${RUNNER}"
+function extract_identity {
+    DETAILS=`xcrun codesign --display --verbose=3 ${2} 2>&1`
+    TMP=`echo ${DETAILS} | egrep -o "iPhone Developer: .*\)" |  tr -d '\n'`
+    eval "$1=\"${TMP}\""
+}
 
-if [ "${CODE_SIGN_IDENTITY}" = "" ]; then
-  CODE_SIGN_IDENTITY="Mac Developer"
-  info "Will resign with default identity: ${CODE_SIGN_IDENTITY}"
+IDENTITY=""
+
+if [ "${TERM}" = "dumb" ]; then
+  XCODE_UI_BUILD=1
+  info "Detected a build from Xcode UI"
 else
-  info "Will resign with original identity: ${CODE_SIGN_IDENTITY}"
+  XCODE_UI_BUILD=0
+  info "Detected a command line build"
+fi
+
+if [ "${XCODE_UI_BUILD}" = 0 ]; then
+  if [ -n "${CODE_SIGN_IDENTITY}" ]; then
+    info "CODE_SIGN_IDENTITY is set - will use ${CODE_SIGN_IDENTITY} to resign"
+    IDENTITY="${CODE_SIGN_IDENTITY}"
+  else
+    extract_identity IDENTITY "${RUNNER}"
+    info "Will resign with original identity: ${IDENTITY}"
+  fi
+else
+  extract_identity IDENTITY "${RUNNER}"
+  info "Will resign with original identity: ${IDENTITY}"
 fi
 
 echo ""
@@ -71,7 +93,7 @@ echo ""
 # --deep because the embedded CBX.xctest binary needs to be signed
 # Preserve metadata because we don't want to have to provide a provisioning profile
 xcrun codesign \
-  --sign "${CODE_SIGN_IDENTITY}" \
+  --sign "${IDENTITY}" \
   --force \
   --deep \
   --preserve-metadata=identifier,entitlements,requirements \

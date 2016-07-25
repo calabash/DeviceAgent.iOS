@@ -5,6 +5,25 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "exec &gt; /tmp/CBX-Runner-post-build.log&#10;&#10;echo &quot;Changing directory to ${PROJECT_DIR}&quot;&#10;(cd &quot;${PROJECT_DIR}&quot;; bin/xcode-scheme-post-build-action/stage-DeviceAgent-binaries-to-Products.sh)&#10;"
+               shellToInvoke = "/bin/bash">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "898743D41C5847B30084FD93"
+                     BuildableName = "CBX.xctest"
+                     BlueprintName = "XCUITestDriver"
+                     ReferencedContainer = "container:CBXDriver.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
