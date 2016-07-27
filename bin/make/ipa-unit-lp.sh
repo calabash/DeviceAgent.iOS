@@ -93,6 +93,7 @@ COMMAND_LINE_BUILD=1 xcrun xcodebuild \
   -project "${XC_PROJECT}" \
   -target "${XC_TARGET}" \
   -configuration "${XC_CONFIG}" \
+  OTHER_LDFLAGS="-ObjC -lz -framework Reveal -framework Security -force_load ${CALABASH_FRAMEWORK}/calabash" \
   -sdk iphoneos \
   ARCHS="armv7 armv7s arm64" \
   VALID_ARCHS="armv7 armv7s arm64" \
