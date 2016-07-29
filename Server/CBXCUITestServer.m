@@ -1,7 +1,3 @@
-//
-//  CalabashXCUITestServer.m
-//  xcuitest-server
-
 #import "RoutingHTTPServer.h"
 #import "RoutingConnection.h"
 #import "CBXCUITestServer.h"

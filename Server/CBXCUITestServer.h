@@ -1,7 +1,3 @@
-//
-//  CalabashXCUITestServer.h
-//
-
 #import <Foundation/Foundation.h>
 
 /**
