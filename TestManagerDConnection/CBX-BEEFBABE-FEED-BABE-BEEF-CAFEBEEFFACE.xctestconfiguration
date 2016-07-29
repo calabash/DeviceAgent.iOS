@@ -35,7 +35,7 @@
 			<key>reportActivities</key>
 			<true/>
 			<key>reportResultsToIDE</key>
-			<true/>
+			<false/>
 			<key>sessionIdentifier</key>
 			<dict>
 				<key>CF$UID</key>
