@@ -72,6 +72,7 @@ static NSString *serverName = @"CalabashXCUITestServer";
     BOOL serverStarted = NO;
         
     [self.server setPort:CBX_DEFAULT_SERVER_PORT];
+    NSLog(@"Attempting to start the DeviceAgent server");
     serverStarted = [self attemptToStartWithError:&error];
     
     if (!serverStarted) {
@@ -104,9 +105,9 @@ static NSString *serverName = @"CalabashXCUITestServer";
     dispatch_after(when, dispatch_get_main_queue(), ^{
         [self.server stop:NO];
         if ([self.server isRunning]) {
-            NSLog(@"DeviceAgent has retired.");
+            NSLog(@"DeviceAgent server has retired.");
         } else {
-            NSLog(@"DeviceAgent is still running.");
+            NSLog(@"DeviceAgent server is still running.");
         }
         self.isFinishedTesting = YES;
     });

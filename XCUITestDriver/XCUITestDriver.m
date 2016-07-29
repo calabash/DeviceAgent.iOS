@@ -23,6 +23,7 @@
 }
 
 - (void)testRunner {
+    NSLog(@"TEST RUNNER IS STARTING");
     [CBXCUITestServer start];
     NSLog(@"TEST RUNNER HAS FINISHED.");
 }
