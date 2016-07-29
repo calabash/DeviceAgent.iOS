@@ -19,7 +19,9 @@
 				<integer>0</integer>
 			</dict>
 			<key>disablePerformanceMetrics</key>
-			<false/>
+                        <false/>
+                        <key>initializeForUITesting</key>
+                        <true/>
 			<key>pathToXcodeReportingSocket</key>
 			<dict>
 				<key>CF$UID</key>
