@@ -9,7 +9,7 @@
 
 @interface CBXCUITestServer ()
 @property (atomic, strong) RoutingHTTPServer *server;
-@property (atomic, strong) NSRunLoop *runLoop;
+@property (atomic, assign) BOOL isFinishedTesting;
 
 + (CBXCUITestServer *)sharedServer;
 - (id)init_private;
@@ -29,6 +29,7 @@ static NSString *serverName = @"CalabashXCUITestServer";
 - (instancetype)init_private {
     self = [super init];
     if (self) {
+        _isFinishedTesting = NO;
         _server = [[RoutingHTTPServer alloc] init];
         [_server setRouteQueue:dispatch_get_main_queue()];
         [_server setDefaultHeader:@"CalabusDriver"
@@ -83,10 +84,13 @@ static NSString *serverName = @"CalabashXCUITestServer";
           [UIDevice currentDevice].wifiIPAddress,
           [self.server port]);
 
-    self.runLoop = [NSRunLoop mainRunLoop];
-    while ([self.server isRunning] && [self.runLoop runMode:NSDefaultRunLoopMode
-                                                 beforeDate:[NSDate distantFuture]]) {
-        ;
+    NSTimeInterval interval = 0.1;
+    while ([self.server isRunning] && !self.isFinishedTesting) {
+        // If we are worried about alloc'ing NSDate objects, it might be
+        // possible to replace with:
+        // CFRunLoopRunInMode(kCFRunLoopDefaultMode, timeout_, false);
+        NSDate *until = [[NSDate date] dateByAddingTimeInterval:interval];
+        [[NSRunLoop mainRunLoop] runUntilDate:until];
     }
 }
 
@@ -104,6 +108,7 @@ static NSString *serverName = @"CalabashXCUITestServer";
         } else {
             NSLog(@"DeviceAgent is still running.");
         }
+        self.isFinishedTesting = YES;
     });
 }
 
