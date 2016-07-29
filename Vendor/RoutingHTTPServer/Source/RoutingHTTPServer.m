@@ -41,6 +41,11 @@
 	[defaultHeaders setObject:value forKey:field];
 }
 
+// For testing that routes are loaded.
+- (NSDictionary *)routes {
+    return [NSDictionary dictionaryWithDictionary:routes];
+}
+
 - (dispatch_queue_t)routeQueue {
 	return routeQueue;
 }
