@@ -18,15 +18,15 @@
 			name = UnitTestBuildNumber;
 			productName = CBXBuildNumber;
 		};
-		F5169CE61CFD9E9400252F52 /* CBXRunnerBuildNumber */ = {
+		F5169CE61CFD9E9400252F52 /* CBXAppStubBuildNumber */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = F5169CE71CFD9E9400252F52 /* Build configuration list for PBXAggregateTarget "CBXRunnerBuildNumber" */;
+			buildConfigurationList = F5169CE71CFD9E9400252F52 /* Build configuration list for PBXAggregateTarget "CBXAppStubBuildNumber" */;
 			buildPhases = (
 				F5169CEA1CFD9EFA00252F52 /* ShellScript */,
 			);
 			dependencies = (
 			);
-			name = CBXRunnerBuildNumber;
+			name = CBXAppStubBuildNumber;
 			productName = AppStubBuildNumber;
 		};
 /* End PBXAggregateTarget section */
@@ -2008,7 +2008,7 @@
 			targets = (
 				898743BB1C5847B30084FD93 /* CBXAppStub */,
 				898743D41C5847B30084FD93 /* XCUITestDriver */,
-				F5169CE61CFD9E9400252F52 /* CBXRunnerBuildNumber */,
+				F5169CE61CFD9E9400252F52 /* CBXAppStubBuildNumber */,
 				F5954E041CBD2E1200117745 /* UnitTestApp */,
 				F5B0A0CE1CAD3CBC00E056CE /* UnitTest */,
 				F5169CDF1CFD982800252F52 /* UnitTestBuildNumber */,
@@ -2383,7 +2383,7 @@
 		};
 		F5169CEC1CFD9F0C00252F52 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F5169CE61CFD9E9400252F52 /* CBXRunnerBuildNumber */;
+			target = F5169CE61CFD9E9400252F52 /* CBXAppStubBuildNumber */;
 			targetProxy = F5169CEB1CFD9F0C00252F52 /* PBXContainerItemProxy */;
 		};
 		F5954E201CBD2EBB00117745 /* PBXTargetDependency */ = {
@@ -2802,7 +2802,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		F5169CE71CFD9E9400252F52 /* Build configuration list for PBXAggregateTarget "CBXRunnerBuildNumber" */ = {
+		F5169CE71CFD9E9400252F52 /* Build configuration list for PBXAggregateTarget "CBXAppStubBuildNumber" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5169CE81CFD9E9400252F52 /* Debug */,
