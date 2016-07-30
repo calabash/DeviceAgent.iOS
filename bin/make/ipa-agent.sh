@@ -149,6 +149,30 @@ info "Installed ${ZIP_TARGET}"
 ditto_or_exit "${BUILD_PRODUCTS_DSYM}" "${INSTALLED_DSYM}"
 info "Installed ${INSTALLED_DSYM}"
 
+banner "Test"
+
+APP_BUNDLE_VERSION=""
+plist_read_key "${INSTALLED_APP}/Info.plist" \
+  "CFBundleVersion" \
+  APP_BUNDLE_VERSION
+
+APP_SHORT_VERSION=""
+plist_read_key "${INSTALLED_APP}/Info.plist" \
+  "CFBundleShortVersionString" \
+  APP_SHORT_VERSION
+
+expect_version_equal "${APP_BUNDLE_VERSION}" \
+  "${INSTALLED_RUNNER}/Info.plist" "CFBundleVersion"
+
+expect_version_equal "${APP_SHORT_VERSION}" \
+  "${INSTALLED_RUNNER}/Info.plist" "CFBundleShortVersionString"
+
+expect_version_equal "${APP_BUNDLE_VERSION}" \
+  "${INSTALLED_RUNNER}/PlugIns/CBX.xctest/Info.plist" "CFBundleVersion"
+
+expect_version_equal "${APP_SHORT_VERSION}" \
+  "${INSTALLED_RUNNER}/PlugIns/CBX.xctest/Info.plist" "CFBundleShortVersionString"
+
 banner "IPA Code Signing Details"
 
 DETAILS=`xcrun codesign --display --verbose=2 ${INSTALLED_APP} 2>&1`
@@ -161,12 +185,21 @@ DETAILS=`xcrun codesign --display --verbose=2 ${INSTALLED_RUNNER} 2>&1`
 
 echo "$(tput setaf 4)$DETAILS$(tput sgr0)"
 
+banner "Info"
+
 info "Installed ${INSTALLED_APP}"
 info "Installed ${INSTALLED_IPA}"
 info "Installed ${INSTALLED_RUNNER}"
 info "Installed ${INSTALLED_RUNNER_IPA}"
 info "Installed ${INSTALLED_DSYM}"
 info "Installed ${ZIP_TARGET}"
+
+echo ""
+
+info "CFBundleShortVersionString: ${APP_SHORT_VERSION}"
+info "           CFBundleVersion: ${APP_BUNDLE_VERSION}"
+
+echo ""
 
 info "Done!"
 
