@@ -54,22 +54,23 @@ APPSTUB_NAME="${TEST_TARGET_NAME}"
 APPSTUB_SOURCE_APP="${CONFIGURATION_BUILD_DIR}/${APPSTUB_NAME}.app"
 APPSTUB_TARGET_APP="${INSTALL_DIR}/${APPSTUB_NAME}.app"
 
+banner "Installing the ${APPSTUB_NAME}.app"
+
+ditto_or_exit "${APPSTUB_SOURCE_APP}" "${APPSTUB_TARGET_APP}"
+info "Copied .app to ${RUNNER_TARGET_APP}"
+
 banner "Installing the ${RUNNER_NAME}.app"
 
 ditto_or_exit "${RUNNER_SOURCE_APP}" "${RUNNER_TARGET_APP}"
 info "Copied .app to ${RUNNER_TARGET_APP}"
 
-bin/patch-runner-info-plist.sh "${RUNNER_TARGET_APP}"
+bin/patch-runner-info-plist.sh "${APPSTUB_TARGET_APP}" "${RUNNER_TARGET_APP}"
 
 # Required for iOSDeviceManager packaging.
 RUNNER_ZIP_PATH="${RUNNER_TARGET_APP}.zip"
   xcrun ditto -ck --rsrc --sequesterRsrc --keepParent \
     "${RUNNER_TARGET_APP}" \
     "${RUNNER_ZIP_PATH}"
-
-banner "Installing the ${APPSTUB_NAME}.app"
-ditto_or_exit "${APPSTUB_SOURCE_APP}" "${APPSTUB_TARGET_APP}"
-info "Copied .app to ${RUNNER_TARGET_APP}"
 
 if [ ${EFFECTIVE_PLATFORM_NAME} = "-iphoneos" ]; then
 
