@@ -2567,8 +2567,8 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = XCUITestDriver/Info.plist;
-				INFOPLIST_PREFIX_HEADER = CBXAppStub/InfoPlist.h;
-				INFOPLIST_PREPROCESS = YES;
+				INFOPLIST_PREFIX_HEADER = "";
+				INFOPLIST_PREPROCESS = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.XCUITestDriver;
@@ -2585,8 +2585,8 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = XCUITestDriver/Info.plist;
-				INFOPLIST_PREFIX_HEADER = CBXAppStub/InfoPlist.h;
-				INFOPLIST_PREPROCESS = YES;
+				INFOPLIST_PREFIX_HEADER = "";
+				INFOPLIST_PREPROCESS = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.XCUITestDriver;
 				PRODUCT_NAME = CBX;
