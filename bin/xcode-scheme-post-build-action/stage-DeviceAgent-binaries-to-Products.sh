@@ -5,38 +5,8 @@
 
 set -e
 
-# Cannot source from bin/log_functions.sh
-function info {
-  echo "INFO: $1"
-}
-
-# Cannot source from bin/log_functions.sh
-function error {
-  echo "ERROR: $1"
-}
-
-# Cannot source from bin/log_functions.sh
-function banner {
-  echo ""
-  echo "######## $1 #######"
-  echo ""
-}
-
-# Cannot source from bin/copy-with-ditto.sh
-function ditto_or_exit {
-  ditto "${1}" "${2}"
-  if [ "$?" != 0 ]; then
-    error "Could not copy:"
-    error "  source: ${1}"
-    error "  target: ${2}"
-    if [ ! -e "${1}" ]; then
-      error "The source file does not exist"
-      error "Did a previous xcodebuild step fail?"
-    fi
-    error "Exiting 1"
-    exit 1
-  fi
-}
+source "${BASH_SOURCE%/*}/../log_functions.sh"
+source "${BASH_SOURCE%/*}/../copy-with-ditto.sh"
 
 # Command line builds already stage binaries to Products/
 if [ ! -z $COMMAND_LINE_BUILD ]; then
