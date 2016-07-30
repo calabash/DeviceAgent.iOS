@@ -3,11 +3,14 @@
 set -e
 
 source bin/log_functions.sh
+source bin/plist-buddy.sh
 
 if [ $# == 0 ]; then
   echo ""
-  echo "Removes the leading new line from the CBX-Runner.app/Info.plist"
-  echo "and resigns if the CBX-Runner was build for physical devices."
+  echo "1. Removes the leading new line from the CBX-Runner.app/Info.plist."
+  echo "2. Syncs the CBX-Runner.app/Info.plist and CBX.xctest/Info.plist"
+  echo "   CFBundleShortVersionString and CFBundleVersion with the CBXAppStub."
+  echo "3. Resigns if the CBX-Runner was build for physical devices."
   echo ""
   echo "This script is suitable for xcode-build-phase Run Scripts and"
   echo "the make ipa-agent rule."
@@ -15,45 +18,83 @@ if [ $# == 0 ]; then
   echo "You should not never call this script directly."
   echo ""
   echo "Usage:"
-  echo "   $0 path/to/CBX-Runner.app"
+  echo "   $0 path/to/CBXAppStub.app path/to/CBX-Runner.app"
   exit 1;
 fi
 
-RUNNER="${1}"
+STUB="${1}"
+RUNNER="${2}"
+CBX="${RUNNER}/PlugIns/CBX.xctest"
+
+if [ ! -e "${STUB}" ]; then
+  error "App stub does not exist: ${STUB}"
+  exit 1
+fi
 
 if [ ! -e "${RUNNER}" ]; then
   error "Runner does not exist: ${RUNNER}"
   exit 1
 fi
 
-banner "Patching $(basename ${RUNNER})/Info.plist"
-
-PLIST="${RUNNER}/Info.plist"
-
-if [ "$(head -n 1 $PLIST)" == "" ]; then
-  info "${PLIST} needs patching"
-  TMP_PLIST=`mktemp`
-  tail -n +2 "${PLIST}" > "${TMP_PLIST}"
-  mv "${TMP_PLIST}" "${PLIST}"
-else
-  info "${PLIST} does not need patching"
-  info "Nothing to do; exiting 0"
-  exit 0
+if [ ! -e "${CBX}" ]; then
+  error "CBX.xctest does not exist: ${CBX}"
+  exit 1
 fi
 
-info "Removed leading newline from ${PLIST}"
+banner "Extracting $(basename ${STUB}) Version Info"
+
+STUB_PLIST="${STUB}/Info.plist"
+
+BUNDLE_VERSION=""
+plist_read_key "${STUB_PLIST}" "CFBundleVersion" BUNDLE_VERSION
+info "CFBundleVersion: ${BUNDLE_VERSION}"
+
+SHORT_VERSION=""
+plist_read_key "${STUB_PLIST}" "CFBundleShortVersionString" SHORT_VERSION
+info "CFBundleShortVersionString: ${SHORT_VERSION}"
+
+banner "Patching Info.plists"
+
+RUNNER_PLIST="${RUNNER}/Info.plist"
+info "${RUNNER_PLIST}"
+
+if [ "$(head -n 1 $RUNNER_PLIST)" == "" ]; then
+  info "$(basename ${RUNNER})/Info.plist has a leading newline!"
+  TMP_PLIST=`mktemp`
+  tail -n +2 "${RUNNER_PLIST}" > "${TMP_PLIST}"
+  mv "${TMP_PLIST}" "${RUNNER_PLIST}"
+  info "Removed leading newline from $(basename ${RUNNER})/Info.plist"
+else
+  info "$(basename ${RUNNER})/Info.plist does not have a leading newline!"
+fi
+
+info "Syncing $(basename ${RUNNER}) version"
+
+plist_set_key "${RUNNER_PLIST}" "CFBundleVersion" "${BUNDLE_VERSION}"
+plist_set_key "${RUNNER_PLIST}" "CFBundleShortVersionString" "${SHORT_VERSION}"
+
+echo ""
+
+CBX_PLIST="${CBX}/Info.plist"
+info "${CBX_PLIST}"
+
+info "Syncing $(basename ${CBX}) version"
+
+plist_set_key "${CBX_PLIST}" "CFBundleVersion" "${BUNDLE_VERSION}"
+plist_set_key "${CBX_PLIST}" "CFBundleShortVersionString" "${SHORT_VERSION}"
+
+banner "Resigning"
 
 set +e
 ARCHINFO=`xcrun lipo -info "${RUNNER}/XCTRunner"`
 IGNORED=`echo ${ARCHINFO} | egrep -o "arm"`
 
 if [ $? != 0 ]; then
-  info "Simulator binary detected; skipping resign step"
+  info "Simulator build detected; skipping resign step"
+  info "Done!"
   exit 0
 fi
 set -e
-
-banner "Resigning"
 
 # $1 variable to store the identity in
 # $2 the .app to extract the identity from
