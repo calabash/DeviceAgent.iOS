@@ -96,8 +96,45 @@ ZIP_TARGET="${INSTALLED_RUNNER}.zip"
 xcrun ditto -ck --rsrc --sequesterRsrc --keepParent \
   "${INSTALLED_RUNNER}" \
   "${ZIP_TARGET}"
-
 info "Installed ${ZIP_TARGET}"
+
+banner "Test"
+
+APP_BUNDLE_VERSION=""
+plist_read_key "${INSTALLED_APP}/Info.plist" \
+  "CFBundleVersion" \
+  APP_BUNDLE_VERSION
+
+APP_SHORT_VERSION=""
+plist_read_key "${INSTALLED_APP}/Info.plist" \
+  "CFBundleShortVersionString" \
+  APP_SHORT_VERSION
+
+expect_version_equal "${APP_BUNDLE_VERSION}" \
+  "${INSTALLED_RUNNER}/Info.plist" "CFBundleVersion"
+
+expect_version_equal "${APP_SHORT_VERSION}" \
+  "${INSTALLED_RUNNER}/Info.plist" "CFBundleShortVersionString"
+
+expect_version_equal "${APP_BUNDLE_VERSION}" \
+  "${INSTALLED_RUNNER}/PlugIns/CBX.xctest/Info.plist" "CFBundleVersion"
+
+expect_version_equal "${APP_SHORT_VERSION}" \
+  "${INSTALLED_RUNNER}/PlugIns/CBX.xctest/Info.plist" "CFBundleShortVersionString"
+
+banner "Info"
+
+info "Installed ${INSTALLED_APP}"
+info "Installed ${INSTALLED_RUNNER}"
+info "Installed ${INSTALLED_DSYM}"
+info "Installed ${ZIP_TARGET}"
+
+echo ""
+
+info "CFBundleShortVersionString: ${APP_SHORT_VERSION}"
+info "           CFBundleVersion: ${APP_BUNDLE_VERSION}"
+
+echo ""
 
 info "Done!"
 
