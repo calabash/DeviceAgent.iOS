@@ -104,9 +104,9 @@ else
   info "Building ipa succeeded."
 fi
 
-banner "Installing ipa"
+bin/patch-runner-info-plist.sh "${BUILD_PRODUCTS_APP}" "${BUILD_PRODUCTS_RUNNER}"
 
-bin/patch-runner-info-plist.sh "${BUILD_PRODUCTS_RUNNER}"
+banner "Installing ipa"
 
 ditto_or_exit "${BUILD_PRODUCTS_APP}" "${INSTALLED_APP}"
 info "Installed ${INSTALLED_APP}"
