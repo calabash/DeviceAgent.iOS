@@ -1,33 +1,7 @@
 #!/usr/bin/env bash
 
-function info {
-  echo "$(tput setaf 2)INFO: $1$(tput sgr0)"
-}
-
-function error {
-  echo "$(tput setaf 1)ERROR: $1$(tput sgr0)"
-}
-
-function banner {
-  echo ""
-  echo "$(tput setaf 5)######## $1 #######$(tput sgr0)"
-  echo ""
-}
-
-function ditto_or_exit {
-  ditto "${1}" "${2}"
-  if [ "$?" != 0 ]; then
-    error "Could not copy:"
-    error "  source: ${1}"
-    error "  target: ${2}"
-    if [ ! -e "${1}" ]; then
-      error "The source file does not exist"
-      error "Did a previous xcodebuild step fail?"
-    fi
-    error "Exiting 1"
-    exit 1
-  fi
-}
+source bin/log_functions.sh
+source bin/copy-with-ditto.sh
 
 banner "Preparing"
 
@@ -106,6 +80,11 @@ info "Installed ${INSTALLED_APP}"
 
 ditto_or_exit "${BUILD_PRODUCTS_DSYM}" "${INSTALLED_DSYM}"
 info "Installed ${INSTALLED_DSYM}"
+
+CAL_VERSION=`xcrun strings "${INSTALLED_APP}/${XC_TARGET}" | grep -E 'CALABASH VERSION'`
+info "${CAL_VERSION}"
+
+echo ""
 
 info "Done!"
 
