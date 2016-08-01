@@ -29,7 +29,7 @@ tmp
 Products
 
 # Info.plist preprocessor files
-UnitTest/UnitTestApp/InfoPlist.h
+TestApp/App/InfoPlist.h
 CBXAppStub/InfoPlist.h
 
 ## Various settings

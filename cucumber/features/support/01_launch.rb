@@ -38,7 +38,7 @@ module Calabash
           dir = File.expand_path(File.dirname(__FILE__))
           path = File.expand_path(File.join(dir, "..", "..", "..",
                                             "Products", "app",
-                                            "UnitTestApp", "UnitTestApp.app"))
+                                            "TestApp", "TestApp.app"))
           if File.exist?(path)
             path
           else
@@ -48,8 +48,8 @@ module Calabash
             $stderr.puts ""
             $stderr.puts "You have some options:"
             $stderr.puts ""
-            $stderr.puts " 1. Run against the UnitTestApp"
-            $stderr.puts "   $ (cd .. && make unit-app)"
+            $stderr.puts " 1. Run against the TestApp"
+            $stderr.puts "   $ (cd .. && make test-app)"
             $stderr.puts "   $ be cucumber"
             $stderr.puts ""
             $stderr.puts "2. Run against another app on the simulator."
