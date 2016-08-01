@@ -52,16 +52,6 @@
                ReferencedContainer = "container:CBXDriver.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F58D28171D4F964D000FF6C0"
-               BuildableName = "UITest.xctest"
-               BlueprintName = "UITest"
-               ReferencedContainer = "container:CBXDriver.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
