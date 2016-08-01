@@ -7,5 +7,5 @@ bin/make/docs.sh
 make app-agent
 make unit-tests
 bin/ci/make-ipa-agent.sh
-bin/ci/make-test-app.sh
+bin/ci/make-test-ipa.sh
 

@@ -17,5 +17,5 @@ KEYCHAIN="${CODE_SIGN_DIR}/ios/Calabash.keychain"
 
 OUT=`xcrun security find-identity -p codesigning -v "${KEYCHAIN}"`
 IDENTITY=`echo $OUT | perl -lne 'print $& if /iPhone Developer: Karl Krukow \([A-Z0-9]{10}\)/' | tr -d '\n'`
-CODE_SIGN_IDENTITY="${IDENTITY}" make ipa-unit
+CODE_SIGN_IDENTITY="${IDENTITY}" make test-ipa
 
