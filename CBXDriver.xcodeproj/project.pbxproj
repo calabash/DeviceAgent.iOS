@@ -153,6 +153,7 @@
 		F5169D231CFE07FD00252F52 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D211CFE07F500252F52 /* LICENSE */; };
 		F5169D241CFE07FE00252F52 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D211CFE07F500252F52 /* LICENSE */; };
 		F5169D251CFE07FF00252F52 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D211CFE07F500252F52 /* LICENSE */; };
+		F52975BF1D4FB1FA009094D5 /* CBXUITestServerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F52975BE1D4FB1FA009094D5 /* CBXUITestServerTest.m */; };
 		F52BA3411CED1F9C00475D5A /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52BA33F1CED1F6A00475D5A /* Reveal.framework */; };
 		F52BA3431CED23E400475D5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA201CC53F6400D87200 /* CoreGraphics.framework */; };
 		F52BA3451CED23EC00475D5A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F52BA3441CED23EC00475D5A /* libz.tbd */; };
@@ -506,6 +507,7 @@
 		F5169D131CFE06B700252F52 /* Fingertips.LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fingertips.LICENSE; sourceTree = "<group>"; };
 		F5169D141CFE06B700252F52 /* RoutingHTTPServer.LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RoutingHTTPServer.LICENSE; sourceTree = "<group>"; };
 		F5169D211CFE07F500252F52 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = LICENSE; sourceTree = "<group>"; };
+		F52975BE1D4FB1FA009094D5 /* CBXUITestServerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXUITestServerTest.m; sourceTree = "<group>"; };
 		F52BA33F1CED1F6A00475D5A /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		F52BA3441CED23EC00475D5A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F52BA3471CEDE1C400475D5A /* MBFingerTipWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBFingerTipWindow.h; path = Vendor/Fingertips/MBFingerTipWindow.h; sourceTree = SOURCE_ROOT; };
@@ -1605,6 +1607,7 @@
 				F58D27D61D4F947F000FF6C0 /* AutomationActions */,
 				F58D27F01D4F947F000FF6C0 /* CBXiOSVersionInlinesTest.m */,
 				F58D27F11D4F947F000FF6C0 /* CBXTestToolsStandup.m */,
+				F52975BE1D4FB1FA009094D5 /* CBXUITestServerTest.m */,
 				F58D27F21D4F947F000FF6C0 /* Exceptions */,
 				F58D27F41D4F947F000FF6C0 /* Routes */,
 				F58D27F61D4F947F000FF6C0 /* Utilities */,
@@ -2398,6 +2401,7 @@
 				F58D28001D4F947F000FF6C0 /* QueryConfigurationFactoryTests.m in Sources */,
 				89F6BF8D1CBC4BDD0088269C /* Rotate.m in Sources */,
 				F5B0A1AC1CAD4E2700E056CE /* Drag.m in Sources */,
+				F52975BF1D4FB1FA009094D5 /* CBXUITestServerTest.m in Sources */,
 				F5B0A1AD1CAD4E2700E056CE /* Query.m in Sources */,
 				F5B0A1B31CAD4E2700E056CE /* QuerySpecifierByIndex.m in Sources */,
 				F5B0A1A61CAD4DFA00E056CE /* CBXCUITestServer.m in Sources */,
@@ -2925,6 +2929,7 @@
 				F58D28211D4F964D000FF6C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		F5954E1C1CBD2E1200117745 /* Build configuration list for PBXNativeTarget "TestApp" */ = {
 			isa = XCConfigurationList;
