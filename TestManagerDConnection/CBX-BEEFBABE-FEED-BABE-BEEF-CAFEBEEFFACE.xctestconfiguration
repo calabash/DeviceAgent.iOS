@@ -19,7 +19,9 @@
 				<integer>0</integer>
 			</dict>
 			<key>disablePerformanceMetrics</key>
-			<false/>
+                        <false/>
+                        <key>initializeForUITesting</key>
+                        <true/>
 			<key>pathToXcodeReportingSocket</key>
 			<dict>
 				<key>CF$UID</key>
@@ -33,7 +35,7 @@
 			<key>reportActivities</key>
 			<true/>
 			<key>reportResultsToIDE</key>
-			<true/>
+			<false/>
 			<key>sessionIdentifier</key>
 			<dict>
 				<key>CF$UID</key>
