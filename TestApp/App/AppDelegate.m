@@ -18,6 +18,7 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSLog(@"Application did finish launching");
     return YES;
 }
 
@@ -27,18 +28,23 @@
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
+    NSLog(@"Application will resign active");
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
+    NSLog(@"Application did enter background");
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
+    NSLog(@"Application will enter foreground");
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    NSLog(@"Application did become active");
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
+    NSLog(@"Application will terminate");
 }
 
 @end
