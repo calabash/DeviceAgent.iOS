@@ -2611,7 +2611,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = sh.calabash.CBXAppStub;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.CBXAppStub;
 				PRODUCT_NAME = CBXAppStub;
 			};
 			name = Debug;
@@ -2629,7 +2629,7 @@
 				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sh.calabash.CBXAppStub;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.CBXAppStub;
 				PRODUCT_NAME = CBXAppStub;
 			};
 			name = Release;
