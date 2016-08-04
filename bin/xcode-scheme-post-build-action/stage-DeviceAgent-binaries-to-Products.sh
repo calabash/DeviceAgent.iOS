@@ -5,38 +5,8 @@
 
 set -e
 
-# Cannot source from bin/log_functions.sh
-function info {
-  echo "INFO: $1"
-}
-
-# Cannot source from bin/log_functions.sh
-function error {
-  echo "ERROR: $1"
-}
-
-# Cannot source from bin/log_functions.sh
-function banner {
-  echo ""
-  echo "######## $1 #######"
-  echo ""
-}
-
-# Cannot source from bin/copy-with-ditto.sh
-function ditto_or_exit {
-  ditto "${1}" "${2}"
-  if [ "$?" != 0 ]; then
-    error "Could not copy:"
-    error "  source: ${1}"
-    error "  target: ${2}"
-    if [ ! -e "${1}" ]; then
-      error "The source file does not exist"
-      error "Did a previous xcodebuild step fail?"
-    fi
-    error "Exiting 1"
-    exit 1
-  fi
-}
+source "${BASH_SOURCE%/*}/../log_functions.sh"
+source "${BASH_SOURCE%/*}/../copy-with-ditto.sh"
 
 # Command line builds already stage binaries to Products/
 if [ ! -z $COMMAND_LINE_BUILD ]; then
@@ -84,22 +54,23 @@ APPSTUB_NAME="${TEST_TARGET_NAME}"
 APPSTUB_SOURCE_APP="${CONFIGURATION_BUILD_DIR}/${APPSTUB_NAME}.app"
 APPSTUB_TARGET_APP="${INSTALL_DIR}/${APPSTUB_NAME}.app"
 
+banner "Installing the ${APPSTUB_NAME}.app"
+
+ditto_or_exit "${APPSTUB_SOURCE_APP}" "${APPSTUB_TARGET_APP}"
+info "Copied .app to ${RUNNER_TARGET_APP}"
+
 banner "Installing the ${RUNNER_NAME}.app"
 
 ditto_or_exit "${RUNNER_SOURCE_APP}" "${RUNNER_TARGET_APP}"
 info "Copied .app to ${RUNNER_TARGET_APP}"
 
-bin/patch-runner-info-plist.sh "${RUNNER_TARGET_APP}"
+bin/patch-runner-info-plist.sh "${APPSTUB_TARGET_APP}" "${RUNNER_TARGET_APP}"
 
 # Required for iOSDeviceManager packaging.
 RUNNER_ZIP_PATH="${RUNNER_TARGET_APP}.zip"
   xcrun ditto -ck --rsrc --sequesterRsrc --keepParent \
     "${RUNNER_TARGET_APP}" \
     "${RUNNER_ZIP_PATH}"
-
-banner "Installing the ${APPSTUB_NAME}.app"
-ditto_or_exit "${APPSTUB_SOURCE_APP}" "${APPSTUB_TARGET_APP}"
-info "Copied .app to ${RUNNER_TARGET_APP}"
 
 if [ ${EFFECTIVE_PLATFORM_NAME} = "-iphoneos" ]; then
 

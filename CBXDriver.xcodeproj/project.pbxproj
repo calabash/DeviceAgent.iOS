@@ -18,15 +18,15 @@
 			name = TestAppBuildNumber;
 			productName = CBXBuildNumber;
 		};
-		F5169CE61CFD9E9400252F52 /* CBXRunnerBuildNumber */ = {
+		F5169CE61CFD9E9400252F52 /* CBXAppStubBuildNumber */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = F5169CE71CFD9E9400252F52 /* Build configuration list for PBXAggregateTarget "CBXRunnerBuildNumber" */;
+			buildConfigurationList = F5169CE71CFD9E9400252F52 /* Build configuration list for PBXAggregateTarget "CBXAppStubBuildNumber" */;
 			buildPhases = (
 				F5169CEA1CFD9EFA00252F52 /* ShellScript */,
 			);
 			dependencies = (
 			);
-			name = CBXRunnerBuildNumber;
+			name = CBXAppStubBuildNumber;
 			productName = AppStubBuildNumber;
 		};
 /* End PBXAggregateTarget section */
@@ -2453,7 +2453,7 @@
 		};
 		F5169CEC1CFD9F0C00252F52 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F5169CE61CFD9E9400252F52 /* CBXRunnerBuildNumber */;
+			target = F5169CE61CFD9E9400252F52 /* CBXAppStubBuildNumber */;
 			targetProxy = F5169CEB1CFD9F0C00252F52 /* PBXContainerItemProxy */;
 		};
 		F58D281E1D4F964D000FF6C0 /* PBXTargetDependency */ = {
@@ -2642,8 +2642,8 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = XCUITestDriver/Info.plist;
-				INFOPLIST_PREFIX_HEADER = CBXAppStub/InfoPlist.h;
-				INFOPLIST_PREPROCESS = YES;
+				INFOPLIST_PREFIX_HEADER = "";
+				INFOPLIST_PREPROCESS = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.XCUITestDriver;
@@ -2660,8 +2660,8 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = XCUITestDriver/Info.plist;
-				INFOPLIST_PREFIX_HEADER = CBXAppStub/InfoPlist.h;
-				INFOPLIST_PREPROCESS = YES;
+				INFOPLIST_PREFIX_HEADER = "";
+				INFOPLIST_PREPROCESS = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.XCUITestDriver;
 				PRODUCT_NAME = CBX;
@@ -2909,7 +2909,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		F5169CE71CFD9E9400252F52 /* Build configuration list for PBXAggregateTarget "CBXRunnerBuildNumber" */ = {
+		F5169CE71CFD9E9400252F52 /* Build configuration list for PBXAggregateTarget "CBXAppStubBuildNumber" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5169CE81CFD9E9400252F52 /* Debug */,

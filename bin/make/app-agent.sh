@@ -2,34 +2,9 @@
 
 set -e
 
-function info {
-  echo "$(tput setaf 2)INFO: $1$(tput sgr0)"
-}
-
-function error {
-  echo "$(tput setaf 1)ERROR: $1$(tput sgr0)"
-}
-
-function banner {
-  echo ""
-  echo "$(tput setaf 5)######## $1 #######$(tput sgr0)"
-  echo ""
-}
-
-function ditto_or_exit {
-  ditto "${1}" "${2}"
-  if [ "$?" != 0 ]; then
-    error "Could not copy:"
-    error "  source: ${1}"
-    error "  target: ${2}"
-    if [ ! -e "${1}" ]; then
-      error "The source file does not exist"
-      error "Did a previous xcodebuild step fail?"
-    fi
-    error "Exiting 1"
-    exit 1
-  fi
-}
+source bin/log_functions.sh
+source bin/copy-with-ditto.sh
+source bin/plist-buddy.sh
 
 banner "Preparing"
 
@@ -104,9 +79,9 @@ else
   info "Building app succeeded."
 fi
 
-banner "Installing ${APP}"
+bin/patch-runner-info-plist.sh "${BUILD_PRODUCTS_APP}" "${BUILD_PRODUCTS_RUNNER}"
 
-bin/patch-runner-info-plist.sh "${BUILD_PRODUCTS_RUNNER}"
+banner "Installing ${APP}"
 
 ditto_or_exit "${BUILD_PRODUCTS_APP}" "${INSTALLED_APP}"
 info "Installed ${INSTALLED_APP}"
@@ -121,8 +96,45 @@ ZIP_TARGET="${INSTALLED_RUNNER}.zip"
 xcrun ditto -ck --rsrc --sequesterRsrc --keepParent \
   "${INSTALLED_RUNNER}" \
   "${ZIP_TARGET}"
-
 info "Installed ${ZIP_TARGET}"
+
+banner "Test"
+
+APP_BUNDLE_VERSION=""
+plist_read_key "${INSTALLED_APP}/Info.plist" \
+  "CFBundleVersion" \
+  APP_BUNDLE_VERSION
+
+APP_SHORT_VERSION=""
+plist_read_key "${INSTALLED_APP}/Info.plist" \
+  "CFBundleShortVersionString" \
+  APP_SHORT_VERSION
+
+expect_version_equal "${APP_BUNDLE_VERSION}" \
+  "${INSTALLED_RUNNER}/Info.plist" "CFBundleVersion"
+
+expect_version_equal "${APP_SHORT_VERSION}" \
+  "${INSTALLED_RUNNER}/Info.plist" "CFBundleShortVersionString"
+
+expect_version_equal "${APP_BUNDLE_VERSION}" \
+  "${INSTALLED_RUNNER}/PlugIns/CBX.xctest/Info.plist" "CFBundleVersion"
+
+expect_version_equal "${APP_SHORT_VERSION}" \
+  "${INSTALLED_RUNNER}/PlugIns/CBX.xctest/Info.plist" "CFBundleShortVersionString"
+
+banner "Info"
+
+info "Installed ${INSTALLED_APP}"
+info "Installed ${INSTALLED_RUNNER}"
+info "Installed ${INSTALLED_DSYM}"
+info "Installed ${ZIP_TARGET}"
+
+echo ""
+
+info "CFBundleShortVersionString: ${APP_SHORT_VERSION}"
+info "           CFBundleVersion: ${APP_BUNDLE_VERSION}"
+
+echo ""
 
 info "Done!"
 
