@@ -9,43 +9,62 @@
 
 @interface CBXCUITestServer ()
 @property (atomic, strong) RoutingHTTPServer *server;
-@property (atomic, strong) NSRunLoop *runLoop;
+@property (atomic, assign) BOOL isFinishedTesting;
+
++ (CBXCUITestServer *)sharedServer;
+- (id)init_private;
+
 @end
 
 @implementation CBXCUITestServer
 
-static CBXCUITestServer *sharedServer;
 static NSString *serverName = @"CalabashXCUITestServer";
 
-+ (void)load {
-    static dispatch_once_t oncet;
-    dispatch_once(&oncet, ^{
-        sharedServer = [self new];
-        sharedServer.server = [[RoutingHTTPServer alloc] init];
-        [sharedServer.server setRouteQueue:dispatch_get_main_queue()];
-        [sharedServer.server setDefaultHeader:@"CalabusDriver"
+- (id)init {
+    @throw [NSException exceptionWithName:@"SingletonException"
+                                   reason:@"This is a singleton class. init is not available."
+                                 userInfo:nil];
+}
+
+- (instancetype)init_private {
+    self = [super init];
+    if (self) {
+        _isFinishedTesting = NO;
+        _server = [[RoutingHTTPServer alloc] init];
+        [_server setRouteQueue:dispatch_get_main_queue()];
+        [_server setDefaultHeader:@"CalabusDriver"
                                         value:@"CalabashXCUITestServer/1.0"];
-        [sharedServer.server setConnectionClass:[RoutingConnection self]];
-        [sharedServer.server setType:@"_calabus._tcp."];
+        [_server setConnectionClass:[RoutingConnection self]];
+        [_server setType:@"_calabus._tcp."];
 
         NSString *uuid = [[NSProcessInfo processInfo] globallyUniqueString];
         NSString *token = [uuid componentsSeparatedByString:@"-"][0];
         NSString *serverName = [NSString stringWithFormat:@"CalabusDriver-%@", token];
-        [sharedServer.server setName:serverName];
+        [_server setName:serverName];
 
         NSDictionary *capabilities =
         @{
           @"name" : [[UIDevice currentDevice] name]
           };
 
-        [sharedServer.server setTXTRecordDictionary:capabilities];
-        [sharedServer registerRoutes];
+        [_server setTXTRecordDictionary:capabilities];
+        [self registerRoutes];
+    }
+    return self;
+}
+
++ (CBXCUITestServer *)sharedServer {
+    static CBXCUITestServer *shared = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        shared = [[CBXCUITestServer alloc] init_private];
     });
+    return shared;
 }
 
 + (void)start {
     NSLog(@"%@ built at %s %s", serverName, __DATE__, __TIME__);
-    [sharedServer start];
+    [[CBXCUITestServer sharedServer] start];
 }
 
 - (void)start {
@@ -53,6 +72,7 @@ static NSString *serverName = @"CalabashXCUITestServer";
     BOOL serverStarted = NO;
         
     [self.server setPort:CBX_DEFAULT_SERVER_PORT];
+    NSLog(@"Attempting to start the DeviceAgent server");
     serverStarted = [self attemptToStartWithError:&error];
     
     if (!serverStarted) {
@@ -65,15 +85,18 @@ static NSString *serverName = @"CalabashXCUITestServer";
           [UIDevice currentDevice].wifiIPAddress,
           [self.server port]);
 
-    self.runLoop = [NSRunLoop mainRunLoop];
-    while ([self.server isRunning] && [self.runLoop runMode:NSDefaultRunLoopMode
-                                                 beforeDate:[NSDate distantFuture]]) {
-        ;
+    NSTimeInterval interval = 0.1;
+    while ([self.server isRunning] && !self.isFinishedTesting) {
+        // If we are worried about alloc'ing NSDate objects, it might be
+        // possible to replace with:
+        // CFRunLoopRunInMode(kCFRunLoopDefaultMode, timeout_, false);
+        NSDate *until = [[NSDate date] dateByAddingTimeInterval:interval];
+        [[NSRunLoop mainRunLoop] runUntilDate:until];
     }
 }
 
 + (void)stop {
-    [sharedServer stop];
+    [[CBXCUITestServer sharedServer] stop];
 }
 
 - (void)stop {
@@ -82,10 +105,11 @@ static NSString *serverName = @"CalabashXCUITestServer";
     dispatch_after(when, dispatch_get_main_queue(), ^{
         [self.server stop:NO];
         if ([self.server isRunning]) {
-            NSLog(@"DeviceAgent has retired.");
+            NSLog(@"DeviceAgent server has retired.");
         } else {
-            NSLog(@"DeviceAgent is still running.");
+            NSLog(@"DeviceAgent server is still running.");
         }
+        self.isFinishedTesting = YES;
     });
 }
 

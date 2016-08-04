@@ -9,6 +9,9 @@ typedef void (^RequestHandler)(RouteRequest *request, NSDictionary *body, RouteR
 
 @property (nonatomic, readonly) NSDictionary *defaultHeaders;
 
+// For testing that routes are loaded.
+- (NSDictionary *)routes;
+
 // Specifies headers that will be set on every response.
 // These headers can be overridden by RouteResponses.
 - (void)setDefaultHeaders:(NSDictionary *)headers;
