@@ -1978,7 +1978,6 @@
 				F5954E021CBD2E1200117745 /* Frameworks */,
 				F5954E031CBD2E1200117745 /* Resources */,
 				F5A252C21CBFFE2700C05F1F /* Run Script stage to ./Products */,
-				F52BA3421CED200900475D5A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -2161,20 +2160,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "bin/xcode-build-phase/increment-build-number.sh\n";
-			showEnvVarsInLog = 0;
-		};
-		F52BA3421CED200900475D5A /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/bash;
-			shellScript = "xcrun pkill xcodebuild\nxcrun pkill testmanagerd\nexit 0";
 			showEnvVarsInLog = 0;
 		};
 		F5A252C21CBFFE2700C05F1F /* Run Script stage to ./Products */ = {
