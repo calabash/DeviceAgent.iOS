@@ -76,6 +76,22 @@ module DeviceAgent
       device_agent.change_volume(direction)
     end
 
+    def server_version
+      device_agent.server_version
+    end
+
+    def session_identifier
+      device_agent.session_identifier
+    end
+
+    def device_info
+      device_agent.device_info
+    end
+
+    def server_pid
+      device_agent.server_pid
+    end
+
     private
 
     def device_agent
