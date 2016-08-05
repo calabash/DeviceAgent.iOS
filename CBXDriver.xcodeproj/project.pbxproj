@@ -794,7 +794,7 @@
 		F58D27F81D4F947F000FF6C0 /* CBXDeviceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = CBXDeviceTest.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F58D27FB1D4F947F000FF6C0 /* RouteResponseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = RouteResponseTest.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F58D28181D4F964D000FF6C0 /* UITest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F58D28291D4F96BD000FF6C0 /* UITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITest.m; sourceTree = "<group>"; };
+		F58D28291D4F96BD000FF6C0 /* UITest.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = UITest.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F58D282C1D4F9755000FF6C0 /* UITestInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UITestInfo.plist; sourceTree = "<group>"; };
 		F5954E051CBD2E1200117745 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5954E081CBD2E1200117745 /* main.m */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };

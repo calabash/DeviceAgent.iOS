@@ -2,6 +2,8 @@
 
 @interface UITest : XCTestCase
 
+@property(strong) XCUIApplication *aut;
+
 @end
 
 @implementation UITest
@@ -10,7 +12,8 @@
     [super setUp];
     
     self.continueAfterFailure = NO;
-    [[[XCUIApplication alloc] init] launch];
+    self.aut = [[XCUIApplication alloc] init];
+    [self.aut launch];
 }
 
 - (void)tearDown {
@@ -27,6 +30,22 @@
 //
 //    XCTAssertEqual([@(deviceOrientation) integerValue],
 //                   [@(interfaceOrientation) integerValue]);
+}
+
+- (void)testTextEntry {
+    [XCUIDevice sharedDevice].orientation = UIDeviceOrientationPortrait;
+
+    [self.aut.tabBars.buttons[@"Misc"] tap];
+
+    [self.aut.textFields[@"text field"] tap];
+    [self.aut typeText:@"Good"];
+    [self.aut.buttons[@"Done"] tap];
+
+
+    XCUIElement *element = self.aut.staticTexts[@"question"];
+    NSString *answer = [element label];
+
+    XCTAssertEqualObjects(answer, @"Ça va? - Good");
 }
 
 @end
