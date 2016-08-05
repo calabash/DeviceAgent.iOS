@@ -6,7 +6,7 @@ module DeviceAgent
     def wait_for_app
       return true if DeviceAgent::Shared.class_variable_get(:@@app_ready)
 
-      if @device_agent.runtime["simulator"]
+      if @gestures.device_info["simulator"]
         timeout = 8
       else
         timeout = 20
