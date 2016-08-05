@@ -83,7 +83,13 @@ Before do |scenario|
     :instruments => launcher.instruments,
     :app => launcher.app,
     :gesture_performer => :device_agent,
-    :cbx_launcher => :xcodebuild
+    # Comment this out for iOSDeviceManager launching.
+    :cbx_launcher => :xcodebuild,
+
+    # Keep this as true.  The Launcher singleton ensures
+    # that the CBX-Runner is launched only once on physical
+    # devices.  Keeping the simulator open is WIP.
+    :shutdown_device_agent_before_launch => true
   }
 
   if launcher.first_launch || !launcher.running?
