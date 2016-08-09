@@ -417,7 +417,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="itp-iG-vg1">
-                                <rect key="frame" x="20" y="114" width="559" height="18"/>
+                                <rect key="frame" x="20" y="114" width="560" height="18"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="text delegate"/>
                                 <constraints>
@@ -427,6 +427,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="LSj-pt-jE5"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L77-WD-uO0">
                                 <rect key="frame" x="282" y="285" width="36" height="30"/>
@@ -507,11 +512,17 @@
                             <constraint firstItem="mXs-G4-gwd" firstAttribute="centerX" secondItem="Yqb-KX-JoO" secondAttribute="centerX" id="8wX-Ro-fee"/>
                             <constraint firstItem="L77-WD-uO0" firstAttribute="centerY" secondItem="Yqb-KX-JoO" secondAttribute="centerY" id="9wX-0p-5xY"/>
                             <constraint firstItem="mXs-G4-gwd" firstAttribute="top" secondItem="Nji-qy-6ud" secondAttribute="bottom" constant="10" id="Fap-Q2-K2l"/>
+                            <constraint firstItem="gUN-3j-Tbv" firstAttribute="trailing" secondItem="Yqb-KX-JoO" secondAttribute="trailingMargin" id="IB1-rn-sXB"/>
+                            <constraint firstItem="mXs-G4-gwd" firstAttribute="trailing" secondItem="Yqb-KX-JoO" secondAttribute="trailingMargin" id="JtC-66-Dze"/>
+                            <constraint firstItem="itp-iG-vg1" firstAttribute="leading" secondItem="Yqb-KX-JoO" secondAttribute="leadingMargin" id="Lwh-nx-kUJ"/>
                             <constraint firstItem="itp-iG-vg1" firstAttribute="top" secondItem="gUN-3j-Tbv" secondAttribute="bottom" constant="14" id="MpD-DN-5xv"/>
                             <constraint firstItem="gUN-3j-Tbv" firstAttribute="top" secondItem="Rob-KM-ps1" secondAttribute="bottom" constant="50" id="UAP-ZL-SvX"/>
                             <constraint firstItem="PTM-5r-Gq4" firstAttribute="top" secondItem="mXs-G4-gwd" secondAttribute="bottom" constant="8" symbolic="YES" id="X9f-Zh-0tj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="itp-iG-vg1" secondAttribute="trailing" id="apW-nR-BME"/>
                             <constraint firstItem="L77-WD-uO0" firstAttribute="centerX" secondItem="Yqb-KX-JoO" secondAttribute="centerX" id="fKU-My-YQR"/>
                             <constraint firstItem="itp-iG-vg1" firstAttribute="centerX" secondItem="Yqb-KX-JoO" secondAttribute="centerX" id="kVf-3G-vzQ"/>
+                            <constraint firstItem="gUN-3j-Tbv" firstAttribute="leading" secondItem="Yqb-KX-JoO" secondAttribute="leadingMargin" id="mVf-US-ixO"/>
+                            <constraint firstItem="mXs-G4-gwd" firstAttribute="leading" secondItem="Yqb-KX-JoO" secondAttribute="leadingMargin" id="n1V-r8-7Lb"/>
                             <constraint firstItem="gUN-3j-Tbv" firstAttribute="centerX" secondItem="Yqb-KX-JoO" secondAttribute="centerX" id="n8h-S4-kkq"/>
                             <constraint firstItem="Nji-qy-6ud" firstAttribute="centerX" secondItem="Yqb-KX-JoO" secondAttribute="centerX" id="uSX-6p-Ax3"/>
                         </constraints>
