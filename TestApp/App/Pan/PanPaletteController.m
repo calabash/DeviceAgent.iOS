@@ -1,11 +1,11 @@
 
-#import "PanViewController.h"
+#import "PanPaletteController.h"
 
-@interface PanViewController ()
+@interface PanPaletteController ()
 
 @end
 
-@implementation PanViewController
+@implementation PanPaletteController
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
         UIPanGestureRecognizer *pan = [self recognizerWithClass:[UIPanGestureRecognizer class]];

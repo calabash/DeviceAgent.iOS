@@ -32,7 +32,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		89331CCB1CC00E36003C2E59 /* PanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CCA1CC00E36003C2E59 /* PanViewController.m */; };
 		89331CCE1CC00E82003C2E59 /* RotatePinchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */; };
 		89331CD11CC00ECD003C2E59 /* MiscViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CD01CC00ECD003C2E59 /* MiscViewController.m */; };
 		89331D231CC10559003C2E59 /* QuerySpecifierById.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537FA1CA2020700F62E09 /* QuerySpecifierById.m */; };
@@ -366,6 +365,7 @@
 		F5B0A1E21CAD4EA700E056CE /* RouteResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F811E1C6DD07500A945C8 /* RouteResponse.m */; };
 		F5B0A1E31CAD4EA700E056CE /* RoutingConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F81201C6DD07500A945C8 /* RoutingConnection.m */; };
 		F5B0A1E41CAD4EA700E056CE /* RoutingHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F81221C6DD07500A945C8 /* RoutingHTTPServer.m */; };
+		F5BCAB0E1D5BBEDA00ED6EE3 /* PanPaletteController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BCAB0D1D5BBEDA00ED6EE3 /* PanPaletteController.m */; };
 		F5C1E8BD1CBF5BBE0019A52F /* CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration in Resources */ = {isa = PBXBuildFile; fileRef = F5C1E8BC1CBF5B120019A52F /* CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration */; };
 		F5D42A191D40E3150041105C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D42A181D40E3150041105C /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
@@ -416,8 +416,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		89331CC91CC00E36003C2E59 /* PanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanViewController.h; sourceTree = "<group>"; };
-		89331CCA1CC00E36003C2E59 /* PanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanViewController.m; sourceTree = "<group>"; };
 		89331CCC1CC00E82003C2E59 /* RotatePinchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotatePinchViewController.h; sourceTree = "<group>"; };
 		89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatePinchViewController.m; sourceTree = "<group>"; };
 		89331CCF1CC00ECD003C2E59 /* MiscViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiscViewController.h; sourceTree = "<group>"; };
@@ -829,6 +827,8 @@
 		F5B0A0D31CAD3CBC00E056CE /* UnitTestInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UnitTestInfo.plist; sourceTree = "<group>"; };
 		F5B0A1171CAD3D8B00E056CE /* UnitTest.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitTest.pch; sourceTree = "<group>"; };
 		F5B0A1891CAD4A1F00E056CE /* CBXiOSVersionInlines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXiOSVersionInlines.h; sourceTree = "<group>"; };
+		F5BCAB0C1D5BBEDA00ED6EE3 /* PanPaletteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanPaletteController.h; sourceTree = "<group>"; };
+		F5BCAB0D1D5BBEDA00ED6EE3 /* PanPaletteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanPaletteController.m; sourceTree = "<group>"; };
 		F5C1E8BC1CBF5B120019A52F /* CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration"; path = "TestManagerDConnection/CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration"; sourceTree = SOURCE_ROOT; };
 		F5D42A181D40E3150041105C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -1800,14 +1800,13 @@
 				F5954E0E1CBD2E1200117745 /* GestureRecognizerViewController.m */,
 				F5954E101CBD2E1200117745 /* TouchViewController.h */,
 				F5954E111CBD2E1200117745 /* TouchViewController.m */,
-				89331CC91CC00E36003C2E59 /* PanViewController.h */,
-				89331CCA1CC00E36003C2E59 /* PanViewController.m */,
 				89331CCC1CC00E82003C2E59 /* RotatePinchViewController.h */,
 				89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */,
 				89331CCF1CC00ECD003C2E59 /* MiscViewController.h */,
 				89331CD01CC00ECD003C2E59 /* MiscViewController.m */,
 				F5AC714B1CEB816E00DE059A /* TaoController.h */,
 				F5AC714C1CEB816E00DE059A /* TaoController.m */,
+				F5BCAB0B1D5BBEDA00ED6EE3 /* Pan */,
 				F5954E131CBD2E1200117745 /* Main.storyboard */,
 				F5954E161CBD2E1200117745 /* Assets.xcassets */,
 				F5954E181CBD2E1200117745 /* LaunchScreen.storyboard */,
@@ -1843,6 +1842,15 @@
 			sourceTree = "<group>";
 			tabWidth = 4;
 			usesTabs = 0;
+		};
+		F5BCAB0B1D5BBEDA00ED6EE3 /* Pan */ = {
+			isa = PBXGroup;
+			children = (
+				F5BCAB0C1D5BBEDA00ED6EE3 /* PanPaletteController.h */,
+				F5BCAB0D1D5BBEDA00ED6EE3 /* PanPaletteController.m */,
+			);
+			path = Pan;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -2325,12 +2333,12 @@
 				F5954E121CBD2E1200117745 /* TouchViewController.m in Sources */,
 				F5954E0C1CBD2E1200117745 /* AppDelegate.m in Sources */,
 				F5AC714D1CEB816E00DE059A /* TaoController.m in Sources */,
+				F5BCAB0E1D5BBEDA00ED6EE3 /* PanPaletteController.m in Sources */,
 				89331CCE1CC00E82003C2E59 /* RotatePinchViewController.m in Sources */,
 				F5963EC61D5DEA9A002F9304 /* UIView+Positioning.m in Sources */,
 				F5954E0F1CBD2E1200117745 /* GestureRecognizerViewController.m in Sources */,
 				89331CD11CC00ECD003C2E59 /* MiscViewController.m in Sources */,
 				F5954E091CBD2E1200117745 /* main.m in Sources */,
-				89331CCB1CC00E36003C2E59 /* PanViewController.m in Sources */,
 				F52BA3491CEDE1C400475D5A /* MBFingerTipWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
