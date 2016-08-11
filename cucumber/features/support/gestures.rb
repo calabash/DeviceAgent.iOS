@@ -20,6 +20,11 @@ module DeviceAgent
       element_center(result)
     end
 
+    def rotate_home_button_to(symbol_or_string)
+      position = symbol_or_string.to_sym
+      device_agent.rotate_home_button_to(position)["orientation"]
+    end
+
     def touch_mark(mark, options={})
       center = query_for_coordinate(mark)
       tap(center[:x], center[:y], options)
@@ -169,7 +174,7 @@ Could not find element with mark: '#{mark}' using :all
 #{JSON.pretty_generate(new_rect)}
 
 ])
-			{:x => touchx, :y => touchy}
+      {:x => touchx, :y => touchy}
     end
   end
 end

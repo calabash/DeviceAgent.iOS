@@ -22,6 +22,12 @@ And(/^I am looking at the Pan Palette page$/) do
   @waiter.wait_for_animations
 end
 
+Given(/^I am looking at the Drag and Drop page$/) do
+  @gestures.tap_mark("drag and drop row")
+  @waiter.wait_for_view("drag and drop page")
+  @waiter.wait_for_animations
+end
+
 And(/^I can pan with (\d+) fingers?$/) do |fingers|
   clear_pan_action_label
 
@@ -78,5 +84,14 @@ And(/^I can pan (quickly|slowly)$/) do |speed|
   wait_for_pan_action_text("Pan")
 end
 
+Then(/^I can drag the red box to the right well$/) do
+  # TODO Figure out how to query for these elements so we can test in other
+  # orientations and form factors.
+  @gestures.rotate_home_button_to(:bottom)
 
+  from_point = {:x => 83.5, :y => 124}
+  to_point = {:x => 105.5, :y => 333.5}
+  @gestures.pan_between_coordinates(from_point, to_point)
 
+  # TODO figure out how to assert the drag and drop happened.
+end
