@@ -366,6 +366,7 @@
 		F5B0A1E31CAD4EA700E056CE /* RoutingConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F81201C6DD07500A945C8 /* RoutingConnection.m */; };
 		F5B0A1E41CAD4EA700E056CE /* RoutingHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F81221C6DD07500A945C8 /* RoutingHTTPServer.m */; };
 		F5BCAB0E1D5BBEDA00ED6EE3 /* PanPaletteController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BCAB0D1D5BBEDA00ED6EE3 /* PanPaletteController.m */; };
+		F5BCAB111D5BC15500ED6EE3 /* DragDropController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BCAB101D5BC15500ED6EE3 /* DragDropController.m */; };
 		F5C1E8BD1CBF5BBE0019A52F /* CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration in Resources */ = {isa = PBXBuildFile; fileRef = F5C1E8BC1CBF5B120019A52F /* CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration */; };
 		F5D42A191D40E3150041105C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D42A181D40E3150041105C /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
@@ -829,6 +830,8 @@
 		F5B0A1891CAD4A1F00E056CE /* CBXiOSVersionInlines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXiOSVersionInlines.h; sourceTree = "<group>"; };
 		F5BCAB0C1D5BBEDA00ED6EE3 /* PanPaletteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanPaletteController.h; sourceTree = "<group>"; };
 		F5BCAB0D1D5BBEDA00ED6EE3 /* PanPaletteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanPaletteController.m; sourceTree = "<group>"; };
+		F5BCAB0F1D5BC15500ED6EE3 /* DragDropController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragDropController.h; sourceTree = "<group>"; };
+		F5BCAB101D5BC15500ED6EE3 /* DragDropController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = DragDropController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F5C1E8BC1CBF5B120019A52F /* CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration"; path = "TestManagerDConnection/CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration"; sourceTree = SOURCE_ROOT; };
 		F5D42A181D40E3150041105C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -1846,6 +1849,8 @@
 		F5BCAB0B1D5BBEDA00ED6EE3 /* Pan */ = {
 			isa = PBXGroup;
 			children = (
+				F5BCAB0F1D5BC15500ED6EE3 /* DragDropController.h */,
+				F5BCAB101D5BC15500ED6EE3 /* DragDropController.m */,
 				F5BCAB0C1D5BBEDA00ED6EE3 /* PanPaletteController.h */,
 				F5BCAB0D1D5BBEDA00ED6EE3 /* PanPaletteController.m */,
 			);
@@ -2340,6 +2345,7 @@
 				89331CD11CC00ECD003C2E59 /* MiscViewController.m in Sources */,
 				F5954E091CBD2E1200117745 /* main.m in Sources */,
 				F52BA3491CEDE1C400475D5A /* MBFingerTipWindow.m in Sources */,
+				F5BCAB111D5BC15500ED6EE3 /* DragDropController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

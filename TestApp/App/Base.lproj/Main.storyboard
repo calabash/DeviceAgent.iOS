@@ -141,7 +141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="600" y="-656"/>
+            <point key="canvasLocation" x="462" y="-824"/>
         </scene>
         <!--Rotate/Pinch-->
         <scene sceneID="awZ-sz-gsb">
@@ -181,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UX3-VI-Fq6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1809" y="8"/>
+            <point key="canvasLocation" x="1828" y="-822"/>
         </scene>
         <!--Pan Palette-->
         <scene sceneID="OZT-P3-eMC">
@@ -206,7 +206,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <accessibility key="accessibilityConfiguration" identifier="pan page"/>
+                        <accessibility key="accessibilityConfiguration" identifier="pan palette page"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="GnW-eL-Ri9" secondAttribute="leading" id="PpN-SC-oe1"/>
                             <constraint firstItem="dOl-y6-j5T" firstAttribute="top" secondItem="GnW-eL-Ri9" secondAttribute="bottom" constant="17" id="S4y-8W-ktM"/>
@@ -214,14 +214,13 @@
                             <constraint firstItem="GnW-eL-Ri9" firstAttribute="centerX" secondItem="096-3l-KgR" secondAttribute="centerX" id="vKi-Qm-aiQ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Pan" image="tab-bar-gestures" selectedImage="tab-bar-gestures-selected" id="4XC-Hb-YUg"/>
                     <connections>
                         <outlet property="gestureLabel" destination="GnW-eL-Ri9" id="Mow-YY-1t2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V1Z-3z-ULq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1773" y="1739"/>
+            <point key="canvasLocation" x="284" y="2529"/>
         </scene>
         <!--Tao-->
         <scene sceneID="qfw-v3-Wl9">
@@ -481,7 +480,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z58-cU-sNZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1299" y="-817"/>
+            <point key="canvasLocation" x="1151" y="-820"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -503,12 +502,12 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1074" y="8"/>
+            <point key="canvasLocation" x="1158" y="-133"/>
         </scene>
-        <!--Pan-->
+        <!--Pan Navigation Controller-->
         <scene sceneID="gSK-Zo-H1V">
             <objects>
-                <tableViewController id="4XE-2z-6yu" sceneMemberID="viewController">
+                <tableViewController id="4XE-2z-6yu" userLabel="Pan Navigation Controller" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mg0-aH-Bet" userLabel="TableView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -539,7 +538,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <accessibility key="accessibilityConfiguration" identifier="palette"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="palette row"/>
                                         <connections>
                                             <segue destination="r9X-Zk-Zeo" kind="show" id="TVp-sM-M2i"/>
                                         </connections>
@@ -567,7 +566,10 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <accessibility key="accessibilityConfiguration" identifier="drag and drop"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="drag and drop row"/>
+                                        <connections>
+                                            <segue destination="e2q-w7-3pK" kind="show" id="jI7-iK-kgW"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="zFh-jv-lzm" detailTextLabel="Zfs-87-9hj" style="IBUITableViewCellStyleSubtitle" id="lB5-w8-rK1" userLabel="Everything's On the Table">
                                         <rect key="frame" x="0.0" y="176" width="600" height="56"/>
@@ -593,7 +595,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <accessibility key="accessibilityConfiguration" identifier="table"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="table row"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="eCp-qc-o6q" detailTextLabel="yyu-9d-PEN" style="IBUITableViewCellStyleSubtitle" id="pzm-XV-vkW" userLabel="Paging Doctor Octagon">
                                         <rect key="frame" x="0.0" y="232" width="600" height="56"/>
@@ -618,7 +620,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <accessibility key="accessibilityConfiguration" identifier="paging"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="paging row"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="HOa-bC-G0P" detailTextLabel="KUH-Lc-S3e" style="IBUITableViewCellStyleSubtitle" id="INU-kM-Sd1" userLabel="Scrollplications">
                                         <rect key="frame" x="0.0" y="288" width="600" height="56"/>
@@ -643,11 +645,14 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <accessibility key="accessibilityConfiguration" identifier="scrollplicated"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="scrollplicated row"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="pan page"/>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="4XE-2z-6yu" id="sNZ-iE-Kz1"/>
                             <outlet property="delegate" destination="4XE-2z-6yu" id="oMQ-dO-1yH"/>
@@ -659,10 +664,114 @@
             </objects>
             <point key="canvasLocation" x="1016" y="1741"/>
         </scene>
-        <!--Pan-->
+        <!--Drag and Drop-->
+        <scene sceneID="e8v-we-cUO">
+            <objects>
+                <viewController id="e2q-w7-3pK" userLabel="Drag and Drop" customClass="DragDropController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a8D-6L-PJV"/>
+                        <viewControllerLayoutGuide type="bottom" id="u37-Zn-Lpx"/>
+                    </layoutGuides>
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="XTt-RW-E7Z">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green" translatesAutoresizingMaskIntoConstraints="NO" id="fK5-mI-M2c">
+                                <rect key="frame" x="360" y="80" width="88" height="88"/>
+                                <accessibility key="accessibilityConfiguration" identifier="green" label="Green image">
+                                    <accessibilityTraits key="traits" image="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="aPj-ZA-Oxs"/>
+                                    <constraint firstAttribute="width" constant="88" id="tiV-RG-Gtt"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red" translatesAutoresizingMaskIntoConstraints="NO" id="eR0-o0-wZX">
+                                <rect key="frame" x="152" y="80" width="88" height="88"/>
+                                <accessibility key="accessibilityConfiguration" identifier="red" label="Red image">
+                                    <accessibilityTraits key="traits" image="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="Nsn-Dv-lJu"/>
+                                    <constraint firstAttribute="height" constant="88" id="Z2i-oZ-3Gr"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzh-0f-VLX">
+                                <rect key="frame" x="316" y="234" width="132" height="132"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="right well" label="Right well">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="132" id="3uh-KY-rE2"/>
+                                    <constraint firstAttribute="width" constant="132" id="ZJ5-w5-1NW"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="syI-7k-WqE">
+                                <rect key="frame" x="152" y="234" width="132" height="132"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="left well" label="Left well">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="NGZ-Lq-2so"/>
+                                    <constraint firstAttribute="height" constant="132" id="duA-ox-DvO"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue" translatesAutoresizingMaskIntoConstraints="NO" id="sfC-8i-CAX">
+                                <rect key="frame" x="256" y="80" width="88" height="88"/>
+                                <accessibility key="accessibilityConfiguration" identifier="blue" label="Blue image">
+                                    <accessibilityTraits key="traits" image="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="ARg-83-CJ5"/>
+                                    <constraint firstAttribute="height" constant="88" id="x1x-NT-x5i"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration" identifier="drag and drop page" label="Drag and drop">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="sfC-8i-CAX" firstAttribute="leading" secondItem="eR0-o0-wZX" secondAttribute="trailing" constant="16" id="82F-p6-THj"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fK5-mI-M2c" secondAttribute="trailing" constant="10" id="Ere-uG-uyQ"/>
+                            <constraint firstItem="fK5-mI-M2c" firstAttribute="trailing" secondItem="qzh-0f-VLX" secondAttribute="trailing" id="ILy-pW-K1L"/>
+                            <constraint firstAttribute="centerX" secondItem="sfC-8i-CAX" secondAttribute="centerX" id="SRe-4Y-dmL"/>
+                            <constraint firstAttribute="centerY" secondItem="syI-7k-WqE" secondAttribute="centerY" id="Y7K-84-M24"/>
+                            <constraint firstItem="sfC-8i-CAX" firstAttribute="top" secondItem="XTt-RW-E7Z" secondAttribute="top" constant="80" id="YNx-nF-XEM"/>
+                            <constraint firstItem="fK5-mI-M2c" firstAttribute="top" secondItem="XTt-RW-E7Z" secondAttribute="top" constant="80" id="dMk-jb-9qB"/>
+                            <constraint firstItem="syI-7k-WqE" firstAttribute="top" secondItem="qzh-0f-VLX" secondAttribute="top" id="g4a-NM-GHt"/>
+                            <constraint firstItem="syI-7k-WqE" firstAttribute="bottom" secondItem="qzh-0f-VLX" secondAttribute="bottom" id="hvb-eu-9zY"/>
+                            <constraint firstItem="qzh-0f-VLX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="syI-7k-WqE" secondAttribute="trailing" constant="16" id="jWy-hP-TWV"/>
+                            <constraint firstItem="syI-7k-WqE" firstAttribute="leading" secondItem="eR0-o0-wZX" secondAttribute="leading" id="kG7-g8-VUy"/>
+                            <constraint firstItem="eR0-o0-wZX" firstAttribute="top" secondItem="XTt-RW-E7Z" secondAttribute="top" constant="80" id="ljF-04-pCv"/>
+                            <constraint firstAttribute="centerY" secondItem="qzh-0f-VLX" secondAttribute="centerY" id="qzH-8e-rCM"/>
+                            <constraint firstItem="eR0-o0-wZX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XTt-RW-E7Z" secondAttribute="leading" constant="10" id="zcZ-RZ-uZA"/>
+                            <constraint firstItem="fK5-mI-M2c" firstAttribute="leading" secondItem="sfC-8i-CAX" secondAttribute="trailing" constant="16" id="zxp-9e-P32"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blueImageView" destination="sfC-8i-CAX" id="3DW-zD-Vde"/>
+                        <outlet property="greenImageView" destination="fK5-mI-M2c" id="qAk-6S-faN"/>
+                        <outlet property="leftDropTarget" destination="syI-7k-WqE" id="Jpc-Sp-cCL"/>
+                        <outlet property="redImageView" destination="eR0-o0-wZX" id="U6Y-GR-tCj"/>
+                        <outlet property="rightDropTarget" destination="qzh-0f-VLX" id="hkm-Wt-xvO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MN5-Em-yEv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1026" y="2532"/>
+        </scene>
+        <!--Pan Menu-->
         <scene sceneID="aZb-3W-CDm">
             <objects>
-                <navigationController id="i73-Yh-aNC" sceneMemberID="viewController">
+                <navigationController id="i73-Yh-aNC" userLabel="Pan Menu" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Pan" image="tab-bar-gestures" selectedImage="tab-bar-gestures-selected" id="MWC-Y2-cbM" userLabel="Pan"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="M9H-v1-Vuc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -810,10 +919,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNA-Lv-Y1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1148" y="918"/>
+            <point key="canvasLocation" x="1952" y="217"/>
         </scene>
     </scenes>
     <resources>
+        <image name="blue" width="88" height="88"/>
+        <image name="green" width="88" height="88"/>
+        <image name="red" width="88" height="88"/>
         <image name="tab-bar-elephant" width="28" height="28"/>
         <image name="tab-bar-elephant-selected" width="28" height="28"/>
         <image name="tab-bar-gestures" width="28" height="26"/>
