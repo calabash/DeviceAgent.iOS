@@ -15,7 +15,7 @@ module UnitTestApp
 
     def expect_volume_gt(volume)
       current = current_volume
-      if @device_agent.runtime["simulator"] == true
+      if @gestures.device_info["simulator"] == true
         message = "Changing the volume is not supported on iOS Simulators"
         colored = RunLoop::Color.blue(message)
         $stdout.puts("    #{colored}")
@@ -37,7 +37,7 @@ Expected volume to be larger that previous value:
     def expect_volume_lt(volume)
       current = current_volume
 
-      if @device_agent.runtime["simulator"] == true
+      if @gestures.device_info["simulator"] == true
         message = "Changing the volume is not supported on iOS Simulators"
         colored = RunLoop::Color.blue(message)
         $stdout.puts("    #{colored}")

@@ -4,6 +4,7 @@
 #import "Application.h"
 #import "CBXMacros.h"
 #import "CBXDevice.h"
+#import "CBXInfoPlist.h"
 
 @implementation MetaRoutes
 + (NSArray <CBXRoute *> *)getRoutes {
@@ -24,6 +25,13 @@
                  NSDictionary *json = [[CBXDevice sharedDevice]
                                        dictionaryRepresentation];
                  [response respondWithJSON:json];
+             }],
+
+             [CBXRoute get:endpoint(@"/version", 1.0) withBlock:^(RouteRequest *request,
+                                                                  NSDictionary *data,
+                                                                  RouteResponse *response) {
+                 CBXInfoPlist *plist = [CBXInfoPlist new];
+                 [response respondWithJSON:[plist versionInfo]];
              }]
              ];
 }

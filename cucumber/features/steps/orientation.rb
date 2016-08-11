@@ -3,7 +3,7 @@ module UnitTestApp
   module Orientation
 
     def upside_down_supported?
-      hash = @device_agent.runtime
+      hash = @gestures.device_info
       if hash["iphone6"] || hash["iphone6+"]
         false
       else
