@@ -44,3 +44,8 @@ Given(/^I am looking at the (Touch|Pan|Rotate\/Pinch|Misc|Tao) tab$/) do |tabnam
   @waiter.wait_for_view(mark)
 end
 
+Given(/^I am looking at the Drag and Drop page$/) do
+  @gestures.tap_mark("drag and drop row")
+  @waiter.wait_for_view("drag and drop page")
+end
+

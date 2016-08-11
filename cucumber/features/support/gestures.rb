@@ -11,6 +11,10 @@ module DeviceAgent
       device_agent.query(mark, options)
     end
 
+    def query_for_rect(mark)
+      waiter.wait_for_view(mark)["rect"]
+    end
+
     def query_for_coordinate(mark)
       result = waiter.wait_for_view(mark)
       element_center(result)
@@ -116,6 +120,28 @@ Could not find element with mark: '#{mark}' using :all
 
     def alert_visible?
       device_agent.alert_visible?
+    end
+
+    def pan_between_marks(from_mark, to_mark, options={})
+      default_options = {
+        :duration => 1.0,
+        :num_fingers => 1
+      }
+      merged_options = default_options.merge(options)
+
+      from_point = query_for_coordinate(from_mark)
+      to_point = query_for_coordinate(to_mark)
+
+      device_agent.pan_between_coordinates(from_point, to_point, merged_options)
+    end
+
+    def pan_between_coordinates(from_point, to_point, options={})
+      default_options = {
+        :duration => 1.0,
+        :num_fingers => 1
+      }
+      merged_options = default_options.merge(options)
+      device_agent.pan_between_coordinates(from_point, to_point, merged_options)
     end
 
     private

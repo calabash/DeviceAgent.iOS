@@ -16,6 +16,10 @@ module DeviceAgent
         exception_class: Timeout::Error
      }
 
+    def wait_for_animations
+      sleep(0.5)
+    end
+
     def wait_for(timeout_message, options={}, &block)
       wait_options = @@default_options.merge(options)
       timeout = wait_options[:timeout]
