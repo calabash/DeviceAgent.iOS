@@ -1,7 +1,3 @@
-//
-//  JSONUtils.m
-//  xcuitest-server
-//
 
 #import "InvalidArgumentException.h"
 #import "Application.h"

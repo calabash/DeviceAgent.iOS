@@ -1,7 +1,3 @@
-//
-//  JSONUtils.h
-//  xcuitest-server
-//
 
 #import <Foundation/Foundation.h>
 #import "XCUIElement+WebDriverAttributes.h"
