@@ -296,6 +296,8 @@
 		F5954E151CBD2E1200117745 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5954E131CBD2E1200117745 /* Main.storyboard */; };
 		F5954E171CBD2E1200117745 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5954E161CBD2E1200117745 /* Assets.xcassets */; };
 		F5954E1A1CBD2E1200117745 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5954E181CBD2E1200117745 /* LaunchScreen.storyboard */; };
+		F5963EC61D5DEA9A002F9304 /* UIView+Positioning.m in Sources */ = {isa = PBXBuildFile; fileRef = F5963EC51D5DEA9A002F9304 /* UIView+Positioning.m */; };
+		F5963EC91D5DEAFB002F9304 /* UIView+Postioning.LICENCE in Resources */ = {isa = PBXBuildFile; fileRef = F5963EC71D5DEAD4002F9304 /* UIView+Postioning.LICENCE */; };
 		F59E94751D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F59E94731D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.h */; };
 		F59E94761D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F59E94741D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m */; };
 		F59E94771D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F59E94741D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m */; };
@@ -814,6 +816,9 @@
 		F5954E161CBD2E1200117745 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5954E191CBD2E1200117745 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5954E1B1CBD2E1200117745 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5963EC41D5DEA9A002F9304 /* UIView+Positioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Positioning.h"; path = "Vendor/UIView+Positioning/UIView+Positioning.h"; sourceTree = SOURCE_ROOT; };
+		F5963EC51D5DEA9A002F9304 /* UIView+Positioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Positioning.m"; path = "Vendor/UIView+Positioning/UIView+Positioning.m"; sourceTree = SOURCE_ROOT; };
+		F5963EC71D5DEAD4002F9304 /* UIView+Postioning.LICENCE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UIView+Postioning.LICENCE"; sourceTree = "<group>"; };
 		F59E94731D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIApplication+DeviceAgentAdditions.h"; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F59E94741D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCUIApplication+DeviceAgentAdditions.m"; sourceTree = "<group>"; };
 		F5AC714B1CEB816E00DE059A /* TaoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaoController.h; sourceTree = "<group>"; };
@@ -1093,6 +1098,7 @@
 		F5169D0E1CFE06B700252F52 /* third-party-licences */ = {
 			isa = PBXGroup;
 			children = (
+				F5963EC71D5DEAD4002F9304 /* UIView+Postioning.LICENCE */,
 				F5169D0F1CFE06B700252F52 /* CocoaAsyncSocket.LICENSE */,
 				F5169D101CFE06B700252F52 /* CocoaHTTPServer.LICENSE */,
 				F5169D111CFE06B700252F52 /* CocoaLumberjack.LICENSE */,
@@ -1781,6 +1787,8 @@
 		F5954E061CBD2E1200117745 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				F5963EC41D5DEA9A002F9304 /* UIView+Positioning.h */,
+				F5963EC51D5DEA9A002F9304 /* UIView+Positioning.m */,
 				F52BA3471CEDE1C400475D5A /* MBFingerTipWindow.h */,
 				F52BA3481CEDE1C400475D5A /* MBFingerTipWindow.m */,
 				F5954E0A1CBD2E1200117745 /* AppDelegate.h */,
@@ -2123,6 +2131,7 @@
 				F5954E171CBD2E1200117745 /* Assets.xcassets in Resources */,
 				F5169D1F1CFE06D700252F52 /* Fingertips.LICENSE in Resources */,
 				F5954E151CBD2E1200117745 /* Main.storyboard in Resources */,
+				F5963EC91D5DEAFB002F9304 /* UIView+Postioning.LICENCE in Resources */,
 				F5169D241CFE07FE00252F52 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2314,6 +2323,7 @@
 				F5954E0C1CBD2E1200117745 /* AppDelegate.m in Sources */,
 				F5AC714D1CEB816E00DE059A /* TaoController.m in Sources */,
 				89331CCE1CC00E82003C2E59 /* RotatePinchViewController.m in Sources */,
+				F5963EC61D5DEA9A002F9304 /* UIView+Positioning.m in Sources */,
 				F5954E0F1CBD2E1200117745 /* GestureRecognizerViewController.m in Sources */,
 				89331CD11CC00ECD003C2E59 /* MiscViewController.m in Sources */,
 				F5954E091CBD2E1200117745 /* main.m in Sources */,
