@@ -21,7 +21,7 @@
 }
 
 - (void)testRotate {
-    [XCUIDevice sharedDevice].orientation = UIInterfaceOrientationLandscapeLeft;
+//    [XCUIDevice sharedDevice].orientation = UIInterfaceOrientationLandscapeLeft;
 //    UIDeviceOrientation deviceOrientation = [XCUIDevice sharedDevice].orientation;
 //    NSLog(@"device orientation = %@", @(deviceOrientation));
 //
