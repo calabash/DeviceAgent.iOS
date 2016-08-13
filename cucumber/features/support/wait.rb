@@ -8,8 +8,8 @@ module DeviceAgent
       @device_agent = device_agent
     end
 
-    @@default_options = {
-        timeout: 8.0,
+    DEFAULTS = {
+        timeout: RunLoop::Environment.ci? ? 16 : 8,
         retry_frequency: 0.1,
         # The default is to only return visible (hitable) views
         all: false,
@@ -21,7 +21,7 @@ module DeviceAgent
     end
 
     def wait_for(timeout_message, options={}, &block)
-      wait_options = @@default_options.merge(options)
+      wait_options = DEFAULTS.merge(options)
       timeout = wait_options[:timeout]
 
       exception_class = wait_options[:exception_class]
@@ -37,27 +37,27 @@ module DeviceAgent
     end
 
     def wait_for_keyboard
-      timeout = @@default_options[:timeout]
+      timeout = DEFAULTS[:timeout]
 
       message = %Q[Timed out after #{timeout} seconds waiting for the keyboard to appear.]
 
-      wait_for(message, @@default_options) do
+      wait_for(message, DEFAULTS) do
         device_agent.keyboard_visible?
       end
     end
 
     def wait_for_alert
-      timeout = @@default_options[:timeout]
+      timeout = DEFAULTS[:timeout]
 
       message = %Q[Timed out after #{timeout} seconds waiting for an alert to appear.]
 
-      wait_for(message, @@default_options) do
+      wait_for(message, DEFAULTS) do
         device_agent.alert_visible?
       end
     end
 
     def wait_for_no_alert
-      timeout = @@default_options[:timeout]
+      timeout = DEFAULTS[:timeout]
 
       message = %Q[Timed out after #{timeout} seconds waiting for an alert to disappear.]
 
@@ -68,7 +68,7 @@ module DeviceAgent
       end
       sleep(delay)
 
-      wait_for(message, @@default_options) do
+      wait_for(message, DEFAULTS) do
         !device_agent.alert_visible?
       end
     end
@@ -92,7 +92,7 @@ Expected to find '#{text}' as a 'value' or 'label' in
     end
 
     def wait_for_view(mark, options={})
-      default_options = @@default_options.dup
+      default_options = DEFAULTS.dup
       merged_options = default_options.merge(options)
 
       unless merged_options[:message]
@@ -116,7 +116,7 @@ to match a view.
     end
 
     def wait_for_no_view(mark, options={})
-      default_options = @@default_options.dup
+      default_options = DEFAULTS.dup
       merged_options = default_options.merge(options)
 
       unless merged_options[:message]
