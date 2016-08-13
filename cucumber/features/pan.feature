@@ -22,3 +22,8 @@ And I can pan slowly
 Scenario: Visual confirmation of drag and drop
 And I am looking at the Drag and Drop page
 Then I can drag the red box to the right well
+
+Scenario: Table Views
+And I am looking at the Everything's On the Table page
+Then I can scroll down to the Windows row
+And then back up to the Apple row
