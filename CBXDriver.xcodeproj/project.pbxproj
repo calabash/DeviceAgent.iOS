@@ -298,6 +298,7 @@
 		F5954E1A1CBD2E1200117745 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5954E181CBD2E1200117745 /* LaunchScreen.storyboard */; };
 		F5963EC61D5DEA9A002F9304 /* UIView+Positioning.m in Sources */ = {isa = PBXBuildFile; fileRef = F5963EC51D5DEA9A002F9304 /* UIView+Positioning.m */; };
 		F5963EC91D5DEAFB002F9304 /* UIView+Postioning.LICENCE in Resources */ = {isa = PBXBuildFile; fileRef = F5963EC71D5DEAD4002F9304 /* UIView+Postioning.LICENCE */; };
+		F5963ECC1D5F3F0C002F9304 /* JSONUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F5963ECA1D5F335F002F9304 /* JSONUtilsTest.m */; };
 		F59E94751D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F59E94731D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.h */; };
 		F59E94761D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F59E94741D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m */; };
 		F59E94771D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F59E94741D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m */; };
@@ -819,6 +820,7 @@
 		F5963EC41D5DEA9A002F9304 /* UIView+Positioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Positioning.h"; path = "Vendor/UIView+Positioning/UIView+Positioning.h"; sourceTree = SOURCE_ROOT; };
 		F5963EC51D5DEA9A002F9304 /* UIView+Positioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Positioning.m"; path = "Vendor/UIView+Positioning/UIView+Positioning.m"; sourceTree = SOURCE_ROOT; };
 		F5963EC71D5DEAD4002F9304 /* UIView+Postioning.LICENCE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UIView+Postioning.LICENCE"; sourceTree = "<group>"; };
+		F5963ECA1D5F335F002F9304 /* JSONUtilsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONUtilsTest.m; sourceTree = "<group>"; };
 		F59E94731D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIApplication+DeviceAgentAdditions.h"; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F59E94741D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCUIApplication+DeviceAgentAdditions.m"; sourceTree = "<group>"; };
 		F5AC714B1CEB816E00DE059A /* TaoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaoController.h; sourceTree = "<group>"; };
@@ -1754,6 +1756,7 @@
 		F58D27F61D4F947F000FF6C0 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F5963ECA1D5F335F002F9304 /* JSONUtilsTest.m */,
 				F58D27F81D4F947F000FF6C0 /* CBXDeviceTest.m */,
 				F549E1A01D5471EC00C4FA36 /* CBXInfoPlistTest.m */,
 			);
@@ -2433,6 +2436,7 @@
 				F5B0A1D81CAD4E9500E056CE /* DDAbstractDatabaseLogger.m in Sources */,
 				F5B0A1D41CAD4E8A00E056CE /* HTTPErrorResponse.m in Sources */,
 				F5B0A1A51CAD4DE800E056CE /* UIDevice+Wifi_IP.m in Sources */,
+				F5963ECC1D5F3F0C002F9304 /* JSONUtilsTest.m in Sources */,
 				F59E94771D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m in Sources */,
 				F5B0A1AE1CAD4E2700E056CE /* QuerySpecifier.m in Sources */,
 				899696DB1CB45FFC00BB42E2 /* ActionConfiguration.m in Sources */,
