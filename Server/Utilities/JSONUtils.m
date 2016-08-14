@@ -53,6 +53,11 @@ static NSDictionary *typeStringToElementType;
 
 + (BOOL)elementHitable:(XCUIElement *)element {
     BOOL hitable = NO;
+
+    if (![element respondsToSelector:@selector(isHittable)]) {
+        return hitable;
+    }
+
     @try {
         hitable = [element isHittable];
     } @catch (NSException *exception) {
@@ -80,14 +85,21 @@ static NSDictionary *typeStringToElementType;
     NSDictionary *dictionary = nil;
 
     @try {
-        hitPoint = [element hitPointCoordinate];
-        if (hitPoint) {
-            coordinate = (XCUICoordinate *)hitPoint;
-            CGPoint point = [coordinate screenPoint];
-            dictionary = @{
-                           @"x" : @(point.x),
-                           @"y": @(point.y)
-                           };
+        // element is sometimes an XCUIElementSnapshot; like after a flick.
+        if ([element respondsToSelector:@selector(hitPointCoordinate)]) {
+            hitPoint = [element hitPointCoordinate];
+            if (hitPoint) {
+                // Be defensive.
+                if ([hitPoint respondsToSelector:@selector(screenPoint)]) {
+
+                    coordinate = (XCUICoordinate *)hitPoint;
+                    CGPoint point = [coordinate screenPoint];
+                    dictionary = @{
+                                   @"x" : @(point.x),
+                                   @"y": @(point.y)
+                                   };
+                }
+            }
         }
     } @catch (NSException *exception) {
         NSLog(@"DeviceAgent caught an exception while trying to find the hit point of an element.");
@@ -177,7 +189,7 @@ static NSDictionary *typeStringToElementType;
 
 + (CGPoint)pointFromCoordinateJSON:(id)json {
     [self validatePointJSON:json];
-    
+
     if ([json isKindOfClass:[NSArray class]]) {
         return CGPointMake([json[0] floatValue],
                            [json[1] floatValue]);
@@ -294,7 +306,7 @@ static NSDictionary *typeStringToElementType;
             _typeStringToElementType[[elementTypeToString[type] lowercaseString]] = type;
         }
         typeStringToElementType = _typeStringToElementType;
-        
+
     });
 }
 @end
