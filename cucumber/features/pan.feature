@@ -31,10 +31,16 @@ And then back up to the Apple row
 Scenario: Flicking
 And I am looking at the Everything's On the Table page
 Given I see the Apple row
-Then I can flick to the bottom of the company table
-Then I can flick to the top of the company table
+Then I can flick to the bottom of the Companies table
+Then I can flick to the top of the Companies table
 
-Scenario: Swipe to delete
+Scenario: Swipe to delete table view row
 And I am looking at the Everything's On the Table page
-Then I can flick to the bottom of the company table
+Then I can flick to the bottom of the Companies table
 And I can swipe to delete the Windows row
+
+Scenario: Reorder table view row
+And I am looking at the Everything's On the Table page
+And I have scrolled to the top of the Companies table
+When I touch the Edit button, the table is in Edit mode
+Then I move the Android row above the Apple row

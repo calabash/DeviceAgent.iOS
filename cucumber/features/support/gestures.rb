@@ -11,10 +11,6 @@ module DeviceAgent
       device_agent.query(mark, options)
     end
 
-    def query_for_rect(mark)
-      waiter.wait_for_view(mark)["rect"]
-    end
-
     def query_for_coordinate(mark)
       result = waiter.wait_for_view(mark)
       element_center(result)

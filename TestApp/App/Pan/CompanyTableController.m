@@ -20,9 +20,9 @@
     _logoNames =
     @[
       @"amazon",
-      @"android",
       @"apple",
       @"basecamp",
+      @"android",
       @"blogger",
       @"digg",
       @"dropbox",
@@ -120,14 +120,14 @@
     return cell;
 }
 
-- (BOOL)tableView:(UITableView *) tableView
+- (BOOL)    tableView:(UITableView *) tableView
 canEditRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     return YES;
 }
 
-- (void)tableView:(UITableView *)tableView
+- (void) tableView:(UITableView *)tableView
 commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
-forRowAtIndexPath:(NSIndexPath *)indexPath {
+ forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [self.logoImages removeObjectAtIndex:indexPath.row];
         [self.companyNames removeObjectAtIndex:indexPath.row];
@@ -136,6 +136,23 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
     } else {
         NSLog(@"Unhandled editing style! %@", @(editingStyle));
     }
+}
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void) tableView:(UITableView *)tableView
+moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
+       toIndexPath:(NSIndexPath *)destinationIndexPath {
+    UIImage *image = [self.logoImages objectAtIndex:sourceIndexPath.row];
+    NSString *name = [self.companyNames objectAtIndex:sourceIndexPath.row];
+
+    [self.logoImages removeObjectAtIndex:sourceIndexPath.row];
+    [self.companyNames removeObjectAtIndex:sourceIndexPath.row];
+
+    [self.logoImages insertObject:image atIndex:destinationIndexPath.row];
+    [self.companyNames insertObject:name atIndex:destinationIndexPath.row];
 }
 
 #pragma mark - Orientation / Rotation
@@ -153,6 +170,11 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.accessibilityIdentifier = @"table page";
+
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+    // tapping the status bar scrolls to the top
+    self.tableView.scrollsToTop = YES;
 }
 
 - (void) viewWillLayoutSubviews {

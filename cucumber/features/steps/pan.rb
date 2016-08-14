@@ -224,13 +224,13 @@ Given(/^I see the Apple row$/) do
   end
 end
 
-Then(/^I can flick to the bottom of the company table$/) do
+Then(/^I can flick to the bottom of the Companies table$/) do
   scroll_view_mark = "table page"
   view_mark = "youtube row"
   flick_to(:up, scroll_view_mark, view_mark, 1)
 end
 
-Then(/^I can flick to the top of the company table$/) do
+Then(/^I can flick to the top of the Companies table$/) do
   scroll_view_mark = "table page"
   view_mark = "amazon row"
   flick_to(:down, scroll_view_mark, view_mark, 1)
@@ -244,4 +244,29 @@ And(/^I can swipe to delete the Windows row$/) do
   @gestures.touch_mark("Delete")
 
   @waiter.wait_for_no_view("Delete")
+end
+
+And(/^I have scrolled to the top of the Companies table$/) do
+  element = @waiter.wait_for_view("StatusBar", {:all => true, :specifier => :type})
+  center = @gestures.element_center(element)
+  @gestures.touch(center[:x], center[:y])
+  sleep(0.4)
+end
+
+When(/^I touch the Edit button, the table is in Edit mode$/) do
+  @gestures.touch_mark("Edit")
+  @waiter.wait_for_view("Done")
+end
+
+Then(/^I move the Android row above the Apple row$/) do
+  android_element = @waiter.wait_for_view("Reorder Android")
+  android_center = @gestures.element_center(android_element)
+  apple_element = @waiter.wait_for_view("Reorder Apple")
+  apple_center = @gestures.element_center(apple_element)
+
+  from_point = {x: android_center[:x], y: android_center[:y]}
+  to_point = {x: apple_center[:x], y: apple_center[:y]}
+  @gestures.pan_between_coordinates(from_point, to_point)
+  sleep(0.4)
+  @gestures.touch_mark("Done")
 end
