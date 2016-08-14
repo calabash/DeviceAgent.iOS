@@ -33,3 +33,8 @@ And I am looking at the Everything's On the Table page
 Given I see the Apple row
 Then I can flick to the bottom of the company table
 Then I can flick to the top of the company table
+
+Scenario: Swipe to delete
+And I am looking at the Everything's On the Table page
+Then I can flick to the bottom of the company table
+And I can swipe to delete the Windows row

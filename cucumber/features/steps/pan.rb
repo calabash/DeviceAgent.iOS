@@ -235,3 +235,13 @@ Then(/^I can flick to the top of the company table$/) do
   view_mark = "amazon row"
   flick_to(:down, scroll_view_mark, view_mark, 1)
 end
+
+And(/^I can swipe to delete the Windows row$/) do
+  identifier = "windows row"
+  @waiter.wait_for_view(identifier)
+
+  swipe(:left, identifier)
+  @gestures.touch_mark("Delete")
+
+  @waiter.wait_for_no_view("Delete")
+end

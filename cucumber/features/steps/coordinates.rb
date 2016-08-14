@@ -226,7 +226,7 @@ module TestApp
       element_center = @gestures.element_center(element)
 
       lowest_possible = 10
-      view_left_mid = element_center[:x] - (element["rect"]/4.0)
+      view_left_mid = element_center[:x] - (element["rect"]["width"]/4.0)
 
       {
         x: [lowest_possible, view_left_mid].max,
@@ -245,7 +245,7 @@ module TestApp
       element_center = @gestures.element_center(element)
 
       highest_possible = window_size[:width] - 10
-      view_right_mid = element_center[:x] + (element["rect"]/4.0)
+      view_right_mid = element_center[:x] + (element["rect"]["width"]/4.0)
 
       {
         x: [highest_possible, view_right_mid].min,

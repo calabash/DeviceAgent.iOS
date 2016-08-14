@@ -58,6 +58,12 @@
     if (_logoImages) { return _logoImages; }
 
     _logoImages = [[NSMutableArray alloc] initWithCapacity:[self.logoNames count]];
+
+    for (NSString *name in self.logoNames) {
+        NSString *imageName = [NSString stringWithFormat:@"logo-%@", name];
+        UIImage *image = [UIImage imageNamed:imageName];
+        [_logoImages addObject:image];
+    }
     return _logoImages;
 }
 
@@ -65,45 +71,30 @@
     if (_companyNames) { return _companyNames; }
 
     _companyNames = [[NSMutableArray alloc] initWithCapacity:[self.logoNames count]];
+
+    for (NSString *name in self.logoNames) {
+        NSString *companyName = nil;
+        if ([name isEqualToString:@"google-plus"]) {
+            companyName = @"Google +";
+        } else if ([name isEqualToString:@"icloud"]) {
+            companyName = @"iCloud";
+        } else if ([name isEqualToString:@"youtube"]) {
+            companyName = @"YouTube";
+        } else {
+            companyName = [name capitalizedString];
+        }
+
+        [_companyNames addObject:[companyName copy]];
+    }
     return _companyNames;
 }
 
-- (UIImage *)imageForRowAtIndexPath:(NSIndexPath *)path {
-    NSUInteger row = path.row;
-    if (row >= self.logoImages.count) {
-        NSString *logoName = self.logoNames[row];
-        NSString *imageName = [NSString stringWithFormat:@"logo-%@", logoName];
-        UIImage *image = [UIImage imageNamed:imageName];
-        self.logoImages[row] = image;
-    }
-    return self.logoImages[row];
-}
-
-- (NSString *)nameForRowAtIndexPath:(NSIndexPath *)path {
-    NSUInteger row = path.row;
-    if (row >= self.companyNames.count) {
-        NSString *logoName = self.logoNames[row];
-        NSString *companyName = [logoName copy];
-        
-        if ([companyName isEqualToString:@"google-plus"]) {
-            companyName = @"Google +";
-        } else if ([companyName isEqualToString:@"icloud"]) {
-            companyName = @"iCloud";
-        } else {
-            companyName = [companyName capitalizedString];
-        }
-        
-        self.companyNames[row] =  companyName;
-    }
-    
-    return self.companyNames[row];
-}
 
 #pragma mark - <UITableViewDataSource>
 
 - (NSInteger) tableView:(UITableView *) tableView
   numberOfRowsInSection:(NSInteger) aSection {
-    return [self.logoNames count];
+    return self.logoImages.count;
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *) tableView {
@@ -115,18 +106,36 @@
     UITableViewCell *cell;
     cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier"
                                            forIndexPath:indexPath];
-    NSString *name = [self nameForRowAtIndexPath:indexPath];
+    NSString *name = [self.companyNames objectAtIndex:indexPath.row];
 
     UILabel *label = (UILabel *)[cell.contentView viewWithTag:3030];
     label.text = name;
 
     UIImageView *imageView = (UIImageView *)[cell.contentView viewWithTag:3031];
-    imageView.image = [self imageForRowAtIndexPath:indexPath];
+    imageView.image = [self.logoImages objectAtIndex:indexPath.row];
 
     cell.accessibilityIdentifier = [NSString stringWithFormat:@"%@ row",
                                     [name lowercaseString]];
 
     return cell;
+}
+
+- (BOOL)tableView:(UITableView *) tableView
+canEditRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView
+commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.logoImages removeObjectAtIndex:indexPath.row];
+        [self.companyNames removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath]
+                         withRowAnimation:UITableViewRowAnimationAutomatic];
+    } else {
+        NSLog(@"Unhandled editing style! %@", @(editingStyle));
+    }
 }
 
 #pragma mark - Orientation / Rotation
@@ -156,6 +165,9 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    _logoImages = nil;
+    _companyNames = nil;
+    [self.tableView reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
