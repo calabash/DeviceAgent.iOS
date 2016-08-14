@@ -96,7 +96,9 @@ Expected to find '#{text}' as a 'value' or 'label' in
 
 query("#{mark}", {all: #{merged_options[:all]}})
 
-to match a view]
+to match a view.
+
+]
         merged_options[:timeout_message] = message
       end
 
@@ -118,7 +120,7 @@ to match a view]
 
 query("#{mark}", {all: #{merged_options[:all]}})
 
-to match no views
+to match no views.
 
 ]
         merged_options[:timeout_message] = message

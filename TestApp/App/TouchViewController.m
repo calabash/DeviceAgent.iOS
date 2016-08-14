@@ -18,11 +18,20 @@
 @property(strong, nonatomic) UIButton *rightMidPointButton;
 - (void)rightMidPointButtonTouched:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIButton *alphaButton;
+- (IBAction)alphaButtonTouched:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIButton *zeroButton;
+- (IBAction)zeroButtonTouched:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIButton *animatedButton;
+- (IBAction)animatedButtonTouched:(id)sender;
 
 - (void)presentAlertWithTitle:(NSString *)title
                       message:(NSString *)message;
 
 - (void)handleTapOnPurpleLabel:(UITapGestureRecognizer *) recognizer;
+- (void)handleTwoFingerTapOnAnimatedButton:(UITapGestureRecognizer *)recognizer;
 
 - (UIButton *)buttonWithIdentifier:(NSString *) identifier
                              title:(NSString *) title
@@ -45,7 +54,7 @@
         doubleTap.numberOfTapsRequired = 2;
         UITapGestureRecognizer *twoFingerTap = [self recognizerWithClass:[UITapGestureRecognizer class]];
         twoFingerTap.numberOfTouchesRequired = 2;
-        
+
         self.gestureRecognizers = @[touch, doubleTap, longPress, twoFingerTap];
     }
     return self;
@@ -118,6 +127,96 @@
 }
 
 #pragma mark - Actions
+
+- (IBAction)alphaButtonTouched:(id)sender {
+    __weak UIButton *button = self.alphaButton;
+
+    // If we use an animation, the button remains hittable!
+    button.alpha = 0.0;
+    dispatch_time_t when = dispatch_time(DISPATCH_TIME_NOW,
+                                         4.0 * NSEC_PER_SEC);
+    dispatch_after(when, dispatch_get_main_queue(), ^{
+        button.alpha = 1.0;
+    });
+}
+
+- (IBAction)zeroButtonTouched:(id)sender {
+    __weak UIButton *button = self.zeroButton;
+
+    CGSize originalSize = button.size;
+    button.size = CGSizeZero;
+
+    // If we use an animation, the button remains hittable!
+    dispatch_time_t when = dispatch_time(DISPATCH_TIME_NOW,
+                                         4.0 * NSEC_PER_SEC);
+    dispatch_after(when, dispatch_get_main_queue(), ^{
+        button.size = originalSize;
+    });
+}
+
+- (void)handleTwoFingerTapOnAnimatedButton:(UITapGestureRecognizer *)recognizer {
+    UIGestureRecognizerState state = [recognizer state];
+    if (UIGestureRecognizerStateEnded == state) {
+        NSTimeInterval duration = 1.0;
+
+        UIViewAnimationOptions options = (
+                                          UIViewAnimationOptionAllowUserInteraction |
+                                          UIViewAnimationOptionCurveEaseIn
+                                          );
+        UIButton *button = (UIButton *)recognizer.view;
+
+        [UIView animateWithDuration:duration
+                              delay:0.0
+                            options:options
+                         animations:^{
+                             button.transform = CGAffineTransformMakeScale(0.0, 0.0);
+                         }
+                         completion:^(BOOL finished) {
+                             [button setTitle:@"Animated" forState:UIControlStateNormal];
+                         }];
+
+        [UIView animateWithDuration:duration
+                              delay:3.0
+                            options:options
+                         animations:^{
+                             button.transform = CGAffineTransformIdentity;
+                         }
+                         completion:^(BOOL finished) {
+                             [button setTitle:@"Had Size Zero" forState:UIControlStateNormal];
+                         }];
+    }
+}
+
+- (IBAction)animatedButtonTouched:(id)sender {
+    __weak UIButton *button = self.animatedButton;
+    NSTimeInterval duration = 1.0;
+
+    UIViewAnimationOptions options = (
+                                      UIViewAnimationOptionAllowUserInteraction |
+                                      UIViewAnimationOptionCurveEaseIn
+                                      );
+
+    [UIView animateWithDuration:duration
+                          delay:0.0
+                        options:options
+                     animations:^{
+                         button.alpha = 0.0;
+                     }
+                     completion:^(BOOL finished) {
+                         [button setTitle:@"Animated" forState:UIControlStateNormal];
+                     }];
+
+    [UIView animateWithDuration:duration
+                          delay:3.0
+                        options:options
+                     animations:^{
+                         button.alpha = 1.0;
+                     }
+                     completion:^(BOOL finished) {
+                         [button setTitle:@"Had Alpha Zero" forState:UIControlStateNormal];
+
+                     }];
+}
 
 - (void)presentAlertWithTitle:(NSString *)title
                       message:(NSString *)message {
@@ -195,22 +294,30 @@ Touches with coordinates that are off screen happen at closest screen edge."];
     [super viewDidLoad];
     self.gestureLabel.accessibilityIdentifier = @"gesture performed";
 
-    UITapGestureRecognizer *recognizer;
-    recognizer = [[UITapGestureRecognizer alloc]
+    UITapGestureRecognizer *tapRecognizer;
+    tapRecognizer = [[UITapGestureRecognizer alloc]
                   initWithTarget:self
                   action:@selector(handleTapOnPurpleLabel:)];
-    recognizer.numberOfTapsRequired = 1;
-    recognizer.numberOfTouchesRequired = 1;
+    tapRecognizer.numberOfTapsRequired = 1;
+    tapRecognizer.numberOfTouchesRequired = 1;
 
-    [self.gestureLabel addGestureRecognizer:recognizer];
+    [self.gestureLabel addGestureRecognizer:tapRecognizer];
 
-    recognizer = [[UITapGestureRecognizer alloc]
+    tapRecognizer = [[UITapGestureRecognizer alloc]
                   initWithTarget:self
                   action:@selector(handleTapOnPurpleLabel:)];
-    recognizer.numberOfTapsRequired = 1;
-    recognizer.numberOfTouchesRequired = 2;
+    tapRecognizer.numberOfTapsRequired = 1;
+    tapRecognizer.numberOfTouchesRequired = 2;
 
-    [self.gestureLabel addGestureRecognizer:recognizer];
+    [self.gestureLabel addGestureRecognizer:tapRecognizer];
+
+    tapRecognizer = [[UITapGestureRecognizer alloc]
+                     initWithTarget:self
+                     action:@selector(handleTwoFingerTapOnAnimatedButton:)];
+    tapRecognizer.numberOfTapsRequired = 1;
+    tapRecognizer.numberOfTouchesRequired = 2;
+
+    [self.animatedButton addGestureRecognizer:tapRecognizer];
 }
 
 - (void)viewWillLayoutSubviews {

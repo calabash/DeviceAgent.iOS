@@ -13,6 +13,43 @@ And I am looking at the Touch tab
 # Sending the option :all => true will return all views in the hierarchy. This
 # is similar to query("all *").
 #
+# Views that have alpha 0 are not hitable.
+# Views that have size 0,0 are not hitable.
+Scenario: What is hitable?
+Then the tab bar is visible and hitable
+And the status bar is visible, but not hitable
+And the disabled button is visible, hitable, but not enabled
+When I touch the alpha button its alpha goes to zero
+Then the alpha button is not visible and not hitable
+But after a moment the alpha button is visible and hitable
+When I touch the zero button its size goes to zero
+Then the zero button is not visible and not hitable
+But after a moment the zero button is visible and hitable
+
+# Using an animation to move the alpha to 0 or the size to 0,0 does not make
+# the view un-hitable.
+#
+# Why is this happening?
+#
+# * Setting the alpha or size outside of an animation causes hitable to be false.
+# * Animating the alpha or size causes hitable to remain truthy.
+#
+# Using the UIViewAnimationOptionAllowUserInteraction option does not have
+# an effect.
+#
+# Is XCUITest maintaining a cache that we need to clear?  Or is there something
+# going on in the animation stack?
+Scenario: Animations cause confusing hitable state
+When I touch the animated button its alpha animates to zero
+Then the animated button is not visible after the touch, but it is hitable
+When I two finger tap the animated button its size animates to zero
+Then the animated button is not visible after the tap, but it is hitable
+
+# The run-loop ruby client filters by "hitable" = true
+#
+# Sending the option :all => true will return all views in the hierarchy. This
+# is similar to query("all *").
+#
 # The label has "User Interaction Enabled" - this is enough to block touch
 # events from being passed to the view below; a gesture recognizer on the label
 # is not needed (but there is one).
