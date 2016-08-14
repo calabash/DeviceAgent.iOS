@@ -53,16 +53,10 @@
     OCMVerify(mockElement);
 }
 
+// Not possible to test with mocks because FB overrides
+// forwardInvocationForRealObject: in XCUIElement(WebDriverAttributesForwarding)
 - (void)testElementHitableCatchesExceptions {
-    XCUIElement *element = [XCUIElement new];
-    id mockElement = OCMPartialMock(element);
-
-    NSException *exception = [NSException new];
-    OCMExpect([mockElement isHittable]).andThrow(exception);
-
-    expect([JSONUtils elementHitable:mockElement]).to.equal(NO);
-
-    OCMVerify(mockElement);
+  // Has integration test coverage.
 }
 
 - (void)testElementHitPointToJSON_NoHitpoint {
