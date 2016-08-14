@@ -1,7 +1,7 @@
 @pan
 Feature: Pan
 In order to drag and drop, swipe, flick, and scroll
-As a iOS UI Tester
+As an iOS UI Tester
 I want a pan API
 
 Background: Navigate to Pan page
@@ -23,7 +23,13 @@ Scenario: Visual confirmation of drag and drop
 And I am looking at the Drag and Drop page
 Then I can drag the red box to the right well
 
-Scenario: Table Views
+Scenario: Scrolling
 And I am looking at the Everything's On the Table page
 Then I can scroll down to the Windows row
 And then back up to the Apple row
+
+Scenario: Flicking
+And I am looking at the Everything's On the Table page
+Given I see the Apple row
+Then I can flick to the bottom of the company table
+Then I can flick to the top of the company table

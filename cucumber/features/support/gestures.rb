@@ -149,12 +149,6 @@ Could not find element with mark: '#{mark}' using :all
       device_agent.pan_between_coordinates(from_point, to_point, merged_options)
     end
 
-    private
-
-    def device_agent
-      @waiter.device_agent
-    end
-
     def element_center(hash)
       rect = hash["rect"]
       h = rect["height"]
@@ -173,8 +167,14 @@ Could not find element with mark: '#{mark}' using :all
 
 #{JSON.pretty_generate(new_rect)}
 
-])
+                        ])
       {:x => touchx, :y => touchy}
+    end
+
+    private
+
+    def device_agent
+      @waiter.device_agent
     end
   end
 end

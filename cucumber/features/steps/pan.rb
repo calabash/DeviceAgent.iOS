@@ -11,53 +11,63 @@ module TestApp
       @waiter.wait_for_text_in_view(text, "pan action")
     end
 
-    def top_midpoint_for_scrolling(mark)
-      rect = @gestures.query_for_rect(mark)
-      x = rect["width"]/2.0
+    def pan(direction, mark, duration, size, query_options={})
+      merged_options = {
+        :all => false,
+        :specifier => :id
+      }.merge(query_options)
 
-      mid_y = rect["height"]/2.0
-      y = mid_y - (mid_y/2.0)
-      {x: x, y: y}
+      case size
+        when :large
+          from_point = point_for_full_pan_start(direction, mark, merged_options)
+          to_point = point_for_full_pan_end(direction, mark, merged_options)
+        when :medium
+          from_point = point_for_medium_pan_start(direction, mark, merged_options)
+          to_point = point_for_medium_pan_end(direction, mark, merged_options)
+        when :small
+         raise "NYI"
+        else
+          raise ArgumentError, "Expected '#{size}' to be :large, :medium, :small"
+      end
+
+      @gestures.pan_between_coordinates(from_point, to_point,
+                                        {duration: duration})
     end
 
-    def bottom_midpoint_for_scrolling(mark)
-      rect = @gestures.query_for_rect(mark)
-      x = rect["width"]/2.0
+    def scroll(direction, mark, query_options={})
+      merged_options = {
+        :all => false,
+        :specifier => :id
+      }.merge(query_options)
 
-      mid_y = rect["height"]/2.0
-      y = mid_y + (mid_y/2.0)
-      {x: x, y: y}
+      pan(direction, mark, 1.0, :medium, merged_options)
     end
 
-    def hit_point_same_as_element_center(hit_point, element_center, delta=4)
-      x_diff = (hit_point["x"].to_i - element_center[:x].to_i).abs.to_i
-      y_diff = (hit_point["y"].to_i - element_center[:y].to_i).abs.to_i
-      x_diff.between?(0, delta) && y_diff.between?(0, delta)
+    alias_method :swipe, :scroll
+
+    def flick(direction, mark, query_options={})
+      merged_options = {
+        :all => false,
+        :specifier => :id
+      }.merge(query_options)
+
+      pan(direction, mark, 0.1, :medium, merged_options)
     end
 
     def scroll_to(direction, scroll_view_mark, view_mark, times)
-      options = {
-        :duration => 0.5
-      }
-
-      if direction == :down
-        from_point = bottom_midpoint_for_scrolling(scroll_view_mark)
-        to_point = top_midpoint_for_scrolling(scroll_view_mark)
-      else
-        from_point = top_midpoint_for_scrolling(scroll_view_mark)
-        to_point = bottom_midpoint_for_scrolling(scroll_view_mark)
-      end
+      return if !@gestures.query(view_mark).empty?
 
       found = false
 
       times.times do
-        @gestures.pan_between_coordinates(from_point, to_point, options)
-        sleep(0.5)
+        scroll(direction, scroll_view_mark)
+        # Gesture takes 1.0 seconds
+        sleep(1.5)
 
         view = @gestures.query(view_mark).first
         if view
           hit_point = view["hit_point"]
-          element_center = @gestures.send(:element_center, view)
+          element_center = @gestures.element_center(view)
           found = hit_point_same_as_element_center(hit_point, element_center)
         end
 
@@ -66,18 +76,38 @@ module TestApp
 
       if !found
         fail(%Q[
-Scrolled down on '#{scroll_view_mark}' #{times} times,
+Scrolled :#{direction} on '#{scroll_view_mark}' #{times} times,
 but did not see '#{view_mark}'
 ])
       end
     end
 
-    def scroll_down_to(scroll_view_mark, view_mark, times)
-      scroll_to(:down, scroll_view_mark, view_mark, times)
-    end
+    def flick_to(direction, scroll_view_mark, view_mark, times)
+      return if !@gestures.query(view_mark).empty?
 
-    def scroll_up_to(scroll_view_mark, view_mark, times)
-      scroll_to(:up, scroll_view_mark, view_mark, times)
+      found = false
+
+      times.times do
+        flick(direction, scroll_view_mark)
+        # Gesture takes 0.1 seconds
+        sleep(1.0)
+
+        view = @gestures.query(view_mark).first
+        if view
+          hit_point = view["hit_point"]
+          element_center = @gestures.element_center(view)
+          found = hit_point_same_as_element_center(hit_point, element_center)
+        end
+
+        break if found
+      end
+
+      if !found
+        fail(%Q[
+Flicked :#{direction} on '#{scroll_view_mark}' #{times} times,
+but did not see '#{view_mark}'
+])
+      end
     end
   end
 end
@@ -92,8 +122,8 @@ And(/^I am looking at the Pan Palette page$/) do
 end
 
 Given(/^I am looking at the Drag and Drop page$/) do
-  @gestures.tap_mark("table row")
-  @waiter.wait_for_view("table page")
+  @gestures.tap_mark("drag and drop row")
+  @waiter.wait_for_view("drag and drop page")
   @waiter.wait_for_animations
 end
 
@@ -171,16 +201,37 @@ Then(/^I can drag the red box to the right well$/) do
   # TODO figure out how to assert the drag and drop happened.
 end
 
-
 Then(/^I can scroll down to the Windows row$/) do
   scroll_view_mark = "table page"
   view_mark = "windows row"
-  scroll_down_to(scroll_view_mark, view_mark, 5)
-
+  scroll_to(:up, scroll_view_mark, view_mark, 5)
+  # TODO touch the row
 end
 
 And(/^then back up to the Apple row$/) do
   scroll_view_mark = "table page"
   view_mark = "apple row"
-  scroll_up_to(scroll_view_mark, view_mark, 5)
+  scroll_to(:down, scroll_view_mark, view_mark, 5)
+  # TODO touch the row
+end
+
+Given(/^I see the Apple row$/) do
+  scroll_view_mark = "table page"
+  view_mark = "apple row"
+
+  if @gestures.query(view_mark).empty?
+    scroll_to(:down, scroll_view_mark, view_mark, 5)
+  end
+end
+
+Then(/^I can flick to the bottom of the company table$/) do
+  scroll_view_mark = "table page"
+  view_mark = "youtube row"
+  flick_to(:up, scroll_view_mark, view_mark, 1)
+end
+
+Then(/^I can flick to the top of the company table$/) do
+  scroll_view_mark = "table page"
+  view_mark = "amazon row"
+  flick_to(:down, scroll_view_mark, view_mark, 1)
 end

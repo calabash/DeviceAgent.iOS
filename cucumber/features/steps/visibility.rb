@@ -92,7 +92,7 @@ And(/^I cannot touch the button behind the purple label using the view center$/)
   mark = "hidden button"
   element = @waiter.wait_for_view(mark, {all: true})
 
-  center = @gestures.send(:element_center, element)
+  center = @gestures.element_center(element)
   @gestures.touch(center[:x], center[:y])
 
   @waiter.wait_for_view("That was touching.")
@@ -179,7 +179,7 @@ end
 When(/^I touch the off screen button using its center point$/) do
   mark = "off screen button"
   element = @waiter.wait_for_view(mark, {all: true})
-  center = @gestures.send(:element_center, element)
+  center = @gestures.element_center(element)
   @gestures.touch(center[:x], center[:y])
 end
 
