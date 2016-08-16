@@ -17,25 +17,126 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="こんにちは！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2c-Gh-js7">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="こんにちは！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2c-Gh-js7">
                                 <rect key="frame" x="20" y="501" width="560" height="42"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7sx-D5-q7V">
+                                <rect key="frame" x="20" y="319" width="238" height="142"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Silly Buttons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1v-YP-Pj5">
+                                        <rect key="frame" x="72" y="8" width="95" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Cgc-Z6-1uZ"/>
+                                            <constraint firstAttribute="width" constant="95" id="LZ6-JM-dSE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySD-iS-omE">
+                                        <rect key="frame" x="8" y="37" width="60" height="60"/>
+                                        <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="alpha button"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="aGV-Jc-Dhc"/>
+                                            <constraint firstAttribute="height" constant="60" id="d3z-ia-Rqc"/>
+                                        </constraints>
+                                        <state key="normal" title="Alpha">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="alphaButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="C5o-dT-4RO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xi-u4-e9s">
+                                        <rect key="frame" x="80" y="37" width="60" height="60"/>
+                                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="zero button"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="ZLL-n6-n7H"/>
+                                            <constraint firstAttribute="width" constant="60" id="rIU-6L-fZ0"/>
+                                        </constraints>
+                                        <state key="normal" title="Zero">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="zeroButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="chI-kg-jLc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhG-EI-aLB">
+                                        <rect key="frame" x="64" y="104" width="110" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="disabled button"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="97K-Pm-ghA"/>
+                                            <constraint firstAttribute="height" constant="30" id="qwZ-Qh-5Vo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                        <state key="normal" title="Disabled Button"/>
+                                    </button>
+                                    <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Inb-f1-nFB">
+                                        <rect key="frame" x="150" y="37" width="80" height="60"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="animated button"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="FBL-RL-fM7"/>
+                                            <constraint firstAttribute="height" constant="60" id="eB6-KT-G9t"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Animated">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="animatedButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="EDD-6t-6Xe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ySD-iS-omE" firstAttribute="top" secondItem="N1v-YP-Pj5" secondAttribute="bottom" constant="8" id="0rU-R7-TUt"/>
+                                    <constraint firstItem="6xi-u4-e9s" firstAttribute="top" secondItem="N1v-YP-Pj5" secondAttribute="bottom" constant="8" id="3mV-bm-kfc"/>
+                                    <constraint firstAttribute="width" constant="238" id="7EY-8a-cky"/>
+                                    <constraint firstItem="6xi-u4-e9s" firstAttribute="leading" secondItem="ySD-iS-omE" secondAttribute="trailing" constant="12" id="ImN-Dz-dgX"/>
+                                    <constraint firstItem="Inb-f1-nFB" firstAttribute="leading" secondItem="6xi-u4-e9s" secondAttribute="trailing" constant="10" id="M8B-Hm-ozg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Inb-f1-nFB" secondAttribute="trailing" constant="8" id="XuN-G4-Ceg"/>
+                                    <constraint firstItem="OhG-EI-aLB" firstAttribute="centerX" secondItem="7sx-D5-q7V" secondAttribute="centerX" id="col-4V-cOa"/>
+                                    <constraint firstItem="OhG-EI-aLB" firstAttribute="top" secondItem="6xi-u4-e9s" secondAttribute="bottom" constant="7" id="csS-5q-Qys"/>
+                                    <constraint firstAttribute="trailing" secondItem="Inb-f1-nFB" secondAttribute="trailing" constant="8" id="dUi-WA-eKA"/>
+                                    <constraint firstAttribute="trailing" secondItem="6xi-u4-e9s" secondAttribute="trailing" constant="98" id="dVa-lt-3kh"/>
+                                    <constraint firstItem="N1v-YP-Pj5" firstAttribute="centerX" secondItem="7sx-D5-q7V" secondAttribute="centerX" id="dh2-eC-fCJ"/>
+                                    <constraint firstItem="OhG-EI-aLB" firstAttribute="top" secondItem="ySD-iS-omE" secondAttribute="bottom" constant="7" id="eAk-9H-uyA"/>
+                                    <constraint firstItem="Inb-f1-nFB" firstAttribute="top" secondItem="N1v-YP-Pj5" secondAttribute="bottom" constant="8" id="eNL-gy-td2"/>
+                                    <constraint firstAttribute="height" constant="142" id="gvl-Je-fPl"/>
+                                    <constraint firstItem="N1v-YP-Pj5" firstAttribute="top" secondItem="7sx-D5-q7V" secondAttribute="top" constant="8" id="nwo-fZ-EnS"/>
+                                    <constraint firstItem="6xi-u4-e9s" firstAttribute="leading" secondItem="ySD-iS-omE" secondAttribute="trailing" constant="12" id="oYY-Jh-W5N"/>
+                                    <constraint firstItem="ySD-iS-omE" firstAttribute="leading" secondItem="7sx-D5-q7V" secondAttribute="leading" constant="8" id="q7x-xJ-FV8"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dUi-WA-eKA"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration" identifier="touch page"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="K2c-Gh-js7" secondAttribute="trailing" id="5CP-1t-PCM"/>
+                            <constraint firstItem="K2c-Gh-js7" firstAttribute="top" secondItem="7sx-D5-q7V" secondAttribute="bottom" constant="40" id="C0L-Uk-JUJ"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="K2c-Gh-js7" secondAttribute="bottom" constant="8" id="K72-3g-PFx"/>
+                            <constraint firstItem="7sx-D5-q7V" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="eeH-fX-TSY"/>
                             <constraint firstItem="K2c-Gh-js7" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="qdu-pJ-mgq"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Touch" image="tab-bar-tapping" selectedImage="tab-bar-tapping-selected" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="alphaButton" destination="ySD-iS-omE" id="hnI-c5-Q7G"/>
+                        <outlet property="animatedButton" destination="Inb-f1-nFB" id="qfy-kS-vac"/>
                         <outlet property="gestureLabel" destination="K2c-Gh-js7" id="aoX-9A-6MK"/>
+                        <outlet property="zeroButton" destination="6xi-u4-e9s" id="mM7-Zp-89q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>

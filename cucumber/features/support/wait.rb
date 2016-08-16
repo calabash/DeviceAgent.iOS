@@ -11,6 +11,8 @@ module DeviceAgent
     @@default_options = {
         timeout: 8.0,
         retry_frequency: 0.1,
+        # The default is to only return visible (hitable) views
+        all: false,
         exception_class: Timeout::Error
      }
 
@@ -33,10 +35,37 @@ module DeviceAgent
     def wait_for_keyboard
       timeout = @@default_options[:timeout]
 
-      message = %Q[Waited #{timeout} seconds for they keyboard.]
+      message = %Q[Timed out after #{timeout} seconds waiting for the keyboard to appear.]
 
       wait_for(message, @@default_options) do
         device_agent.keyboard_visible?
+      end
+    end
+
+    def wait_for_alert
+      timeout = @@default_options[:timeout]
+
+      message = %Q[Timed out after #{timeout} seconds waiting for an alert to appear.]
+
+      wait_for(message, @@default_options) do
+        device_agent.alert_visible?
+      end
+    end
+
+    def wait_for_no_alert
+      timeout = @@default_options[:timeout]
+
+      message = %Q[Timed out after #{timeout} seconds waiting for an alert to disappear.]
+
+      if RunLoop::Environment.ci?
+        delay = 2.0
+      else
+        delay = 1.0
+      end
+      sleep(delay)
+
+      wait_for(message, @@default_options) do
+        !device_agent.alert_visible?
       end
     end
 
@@ -65,16 +94,43 @@ Expected to find '#{text}' as a 'value' or 'label' in
       unless merged_options[:message]
         message = %Q[Waited #{merged_options[:timeout]} seconds for
 
-query("#{mark}")
+query("#{mark}", {all: #{merged_options[:all]}})
 
-to match a view]
+to match a view.
+
+]
         merged_options[:timeout_message] = message
       end
 
       result = nil
       wait_for(merged_options[:timeout_message], options) do
-        result = device_agent.query(mark)["result"]
+        result = device_agent.query(mark, merged_options)
         !result.empty?
+      end
+
+      result[0]
+    end
+
+    def wait_for_no_view(mark, options={})
+      default_options = @@default_options.dup
+      merged_options = default_options.merge(options)
+
+      unless merged_options[:message]
+        message = %Q[Waited #{merged_options[:timeout]} seconds for
+
+query("#{mark}", {all: #{merged_options[:all]}})
+
+to match no views.
+
+]
+        merged_options[:timeout_message] = message
+      end
+
+
+      result = nil
+      wait_for(merged_options[:timeout_message], options) do
+        result = device_agent.query(mark, merged_options)
+        result.empty?
       end
 
       result[0]

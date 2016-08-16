@@ -1,12 +1,9 @@
-//
-//  JSONUtils.m
-//  xcuitest-server
-//
 
 #import "InvalidArgumentException.h"
 #import "Application.h"
 #import "CBXConstants.h"
 #import "JSONUtils.h"
+#import "XCUICoordinate.h"
 
 @implementation JSONUtils
 
@@ -22,6 +19,7 @@ static NSDictionary *typeStringToElementType;
         if (![el exists]) {
             return [@{} mutableCopy];
         }
+
     }
     json[CBX_TYPE_KEY] = snapshot.wdType;
     json[CBX_LABEL_KEY] = snapshot.wdLabel;
@@ -32,8 +30,11 @@ static NSDictionary *typeStringToElementType;
     json[CBX_IDENTIFIER_KEY] = snapshot.wdName;
     json[CBX_ENABLED_KEY] = @(snapshot.wdEnabled);
     json[CBX_TEST_ID] = [Application cacheElement:(XCUIElement *)snapshot];
-    
-    //TODO: visibility?
+
+    // visibility
+    json[CBX_HITABLE_KEY] = @([JSONUtils elementHitable:(XCUIElement *)snapshot]);
+    json[CBX_HIT_POINT_KEY] = [JSONUtils elementHitPointToJSON:(XCUIElement *)snapshot];
+
     return json;
 }
 
@@ -48,6 +49,88 @@ static NSDictionary *typeStringToElementType;
              CBX_HEIGHT_KEY : @(rect.size.height),
              CBX_WIDTH_KEY : @(rect.size.width)
              };
+}
+
++ (BOOL)elementHitable:(XCUIElement *)element {
+    BOOL hitable = NO;
+
+    if (![element respondsToSelector:@selector(isHittable)]) {
+        return hitable;
+    }
+
+    @try {
+        hitable = [element isHittable];
+    } @catch (NSException *exception) {
+        NSLog(@"DeviceAgent caught an exception while calling isHitable on an element.");
+
+        NSLog(@"===  EXCEPTION ===");
+        NSLog(@"%@", exception);
+        NSLog(@"");
+
+        NSLog(@"=== STACK SYMBOLS === ");
+        NSLog(@"%@", [exception callStackSymbols]);
+        NSLog(@"");
+
+        NSLog(@"=== RUNTIME DETAILS ===");
+        NSLog(@"        element: %@", element);
+        NSLog(@"  element class: %@", [element class]);
+    }
+    return hitable;
+}
+
++ (NSDictionary *)elementHitPointToJSON:(XCUIElement *)element {
+
+    id hitPoint = nil;
+    XCUICoordinate *coordinate = nil;
+    NSDictionary *dictionary = nil;
+
+    @try {
+        // element is sometimes an XCUIElementSnapshot; like after a flick.
+        if ([element respondsToSelector:@selector(hitPointCoordinate)]) {
+            hitPoint = [element hitPointCoordinate];
+            if (hitPoint) {
+                // Be defensive.
+                if ([hitPoint respondsToSelector:@selector(screenPoint)]) {
+
+                    coordinate = (XCUICoordinate *)hitPoint;
+                    CGPoint point = [coordinate screenPoint];
+                    dictionary = @{
+                                   @"x" : @(point.x),
+                                   @"y": @(point.y)
+                                   };
+                }
+            }
+        }
+    } @catch (NSException *exception) {
+        NSLog(@"DeviceAgent caught an exception while trying to find the hit point of an element.");
+
+        NSLog(@"===  EXCEPTION ===");
+        NSLog(@"%@", exception);
+        NSLog(@"");
+
+        NSLog(@"=== STACK SYMBOLS === ");
+        NSLog(@"%@", [exception callStackSymbols]);
+        NSLog(@"");
+
+        NSLog(@"=== RUNTIME DETAILS ===");
+        NSLog(@"         element: %@", element);
+        NSLog(@"   element class: %@", [element class]);
+        if (coordinate) {
+            NSLog(@"      coordinate: %@", coordinate);
+            NSLog(@"coordinate class: %@", [coordinate class]);
+        }
+
+    } @finally {
+        if (!dictionary) {
+            // The default values return when element is not hitable.
+            dictionary = @{
+                           @"x" : @(-1),
+                           @"y" : @(-1)
+                           };
+        }
+    }
+
+    return dictionary;
 }
 
 + (XCUIElementType)elementTypeForString:(NSString *)typeString {
@@ -106,7 +189,7 @@ static NSDictionary *typeStringToElementType;
 
 + (CGPoint)pointFromCoordinateJSON:(id)json {
     [self validatePointJSON:json];
-    
+
     if ([json isKindOfClass:[NSArray class]]) {
         return CGPointMake([json[0] floatValue],
                            [json[1] floatValue]);
@@ -223,7 +306,7 @@ static NSDictionary *typeStringToElementType;
             _typeStringToElementType[[elementTypeToString[type] lowercaseString]] = type;
         }
         typeStringToElementType = _typeStringToElementType;
-        
+
     });
 }
 @end

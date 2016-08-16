@@ -7,6 +7,10 @@ module DeviceAgent
       @waiter = waiter
     end
 
+    def query(mark, options={})
+      device_agent.query(mark, options)
+    end
+
     def query_for_coordinate(mark)
       result = waiter.wait_for_view(mark)
       element_center(result)
@@ -18,6 +22,20 @@ module DeviceAgent
     end
 
     alias_method :tap_mark, :touch_mark
+
+    def touch_hidden(mark)
+      element = device_agent.query(mark, {all: true}).first
+
+      if !element
+        raise RuntimeError, %Q[
+Could not find element with mark: '#{mark}' using :all
+
+]
+      end
+
+      center = element_center(element)
+      tap(center[:x], center[:y])
+    end
 
     def touch(x, y, options={})
       device_agent.perform_coordinate_gesture("touch",
@@ -90,6 +108,14 @@ module DeviceAgent
 
     def server_pid
       device_agent.server_pid
+    end
+
+    def running?
+      device_agent.running?
+    end
+
+    def alert_visible?
+      device_agent.alert_visible?
     end
 
     private
