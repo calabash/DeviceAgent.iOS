@@ -3,6 +3,7 @@
 #import "Testmanagerd.h"
 #import "ThreadUtils.h"
 #import "EnterText.h"
+#import "Application.h"
 
 @implementation EnterText
 
@@ -24,16 +25,24 @@
     }
     
     NSString *string = gestureConfig[CBX_STRING_KEY];
+
+// Original implementation - not working on iOS 10 physical devices
+// https://xamarin.atlassian.net/browse/TCFW-333
+//
+//    [ThreadUtils runSync:^(BOOL *setToTrueWhenDone, NSError *__autoreleasing *err) {
+//        [[Testmanagerd get] _XCT_sendString:string
+//         maximumFrequency:CBX_DEFAULT_SEND_STRING_FREQUENCY
+//                                 completion:^(NSError *e) {
+//            *err = e;
+//            *setToTrueWhenDone = YES;
+//        }];
+//    } completion:completion];
+
+    // This is working on iOS 9 - 10 sims and physical devices.
+    XCUIApplication *application = [Application currentApplication];
+    [application typeText:string];
     
-    [ThreadUtils runSync:^(BOOL *setToTrueWhenDone, NSError *__autoreleasing *err) {
-        [[Testmanagerd get] _XCT_sendString:string
-         maximumFrequency:CBX_DEFAULT_SEND_STRING_FREQUENCY
-                                 completion:^(NSError *e) {
-            *err = e;
-            *setToTrueWhenDone = YES;
-        }];
-    } completion:completion];
-    
+    completion(nil);
     return nil;
 }
 
