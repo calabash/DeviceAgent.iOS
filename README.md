@@ -72,10 +72,10 @@ $ make ipa-agent
 $ make app-agent
 
 # Unit tests; running against simulators
-$ make unit
+$ make unit-tests
 
 # Cucumber integration tests
-$ make app-unit
+$ make test-app
 $ cd cucumber
 $ bundle update
 $ be cucumber

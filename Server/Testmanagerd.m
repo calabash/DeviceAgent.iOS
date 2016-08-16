@@ -24,7 +24,8 @@ static Testmanagerd *testmanagerd;
                                                                   [NSDictionary class],
                                                                   [NSDate class],
                                                                   [NSNull class],
-                                                                  [NSNumber class],[XCAccessibilityElement class], nil]
+                                                                  [NSNumber class],
+                                                                  [XCAccessibilityElement class], nil]
                                                      forSelector:@selector(_XCT_fetchAttributesForElement:attributes:reply:) argumentIndex:0x0 ofReply:0x1];
         
         

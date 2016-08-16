@@ -10,7 +10,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "exec &gt; /tmp/CBX-Runner-post-build.log&#10;&#10;echo &quot;Changing directory to ${PROJECT_DIR}&quot;&#10;(cd &quot;${PROJECT_DIR}&quot;; bin/xcode-scheme-post-build-action/stage-DeviceAgent-binaries-to-Products.sh)"
+               scriptText = "exec &gt; /tmp/CBX-Runner-post-build.log&#10;&#10;echo &quot;Changing directory to ${PROJECT_DIR}&quot;&#10;(cd &quot;${PROJECT_DIR}&quot;; bin/xcode-scheme-post-build-action/stage-DeviceAgent-binaries-to-Products.sh)&#10;"
                shellToInvoke = "/bin/bash">
                <EnvironmentBuildable>
                   <BuildableReference

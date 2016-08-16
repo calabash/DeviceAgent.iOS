@@ -29,8 +29,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F5954E041CBD2E1200117745"
-               BuildableName = "UnitTestApp.app"
-               BlueprintName = "UnitTestApp"
+               BuildableName = "TestApp.app"
+               BlueprintName = "TestApp"
                ReferencedContainer = "container:CBXDriver.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -57,8 +57,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F5954E041CBD2E1200117745"
-            BuildableName = "UnitTestApp.app"
-            BlueprintName = "UnitTestApp"
+            BuildableName = "TestApp.app"
+            BlueprintName = "TestApp"
             ReferencedContainer = "container:CBXDriver.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -79,8 +79,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F5954E041CBD2E1200117745"
-            BuildableName = "UnitTestApp.app"
-            BlueprintName = "UnitTestApp"
+            BuildableName = "TestApp.app"
+            BlueprintName = "TestApp"
             ReferencedContainer = "container:CBXDriver.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -93,6 +93,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "F5B0A0CE1CAD3CBC00E056CE"
+            BuildableName = "UnitTest.xctest"
+            BlueprintName = "UnitTest"
+            ReferencedContainer = "container:CBXDriver.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

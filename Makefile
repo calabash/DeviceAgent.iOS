@@ -38,16 +38,16 @@ app-agent:
 # build/reports/junit.xml
 #
 # Warnings are treated as errors. GCC_TREAT_WARNINGS_AS_ERRORS=YES
-unit:
-	bundle exec bin/test/unit.rb
+unit-tests:
+	bundle exec bin/make/unit-tests.rb
 
-# Makes the UnitTestApp.app
-app-unit:
-	bin/make/app-unit.sh
+# Makes the TestApp.app
+test-app:
+	bin/make/test-app.sh
 
-# Makes the UnitTestApp.ipa
-ipa-unit:
-	bin/make/ipa-unit.sh
+# Makes the TestApp.ipa
+test-ipa:
+	bin/make/test-ipa.sh
 
 # Generate appledocs.
 #
@@ -62,3 +62,17 @@ docs:
 # ~/.calabash/DeviceAgent/device
 install:
 	bin/install/device_agent.sh
+
+# Below this line are rules that have been renamed.
+app-unit:
+	echo "Replaced with 'make test-app'"
+	exit 1
+
+ipa-unit:
+	echo "Replaced with 'make test-ipa'"
+	exit 1
+
+unit:
+	echo "Replaced with 'make unit-tests'"
+	exit 1
+

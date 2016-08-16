@@ -38,6 +38,16 @@
                ReferencedContainer = "container:CBXDriver.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "89FFA3A11D5E0CDE00596122"
+               BuildableName = "DeleteMe.xctest"
+               BlueprintName = "DeleteMe"
+               ReferencedContainer = "container:CBXDriver.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

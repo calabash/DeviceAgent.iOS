@@ -11,7 +11,17 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>8</integer>
+				<integer>18</integer>
+			</dict>
+			<key>aggregateStatisticsBeforeCrash</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>13</integer>
+			</dict>
+			<key>baselineFileRelativePath</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>0</integer>
 			</dict>
 			<key>baselineFileURL</key>
 			<dict>
@@ -20,6 +30,8 @@
 			</dict>
 			<key>disablePerformanceMetrics</key>
 			<false/>
+			<key>initializeForUITesting</key>
+			<true/>
 			<key>pathToXcodeReportingSocket</key>
 			<dict>
 				<key>CF$UID</key>
@@ -28,7 +40,7 @@
 			<key>productModuleName</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>7</integer>
+				<integer>12</integer>
 			</dict>
 			<key>reportActivities</key>
 			<true/>
@@ -37,7 +49,7 @@
 			<key>sessionIdentifier</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>5</integer>
+				<integer>8</integer>
 			</dict>
 			<key>targetApplicationBundleID</key>
 			<dict>
@@ -45,6 +57,11 @@
 				<integer>0</integer>
 			</dict>
 			<key>targetApplicationPath</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>10</integer>
+			</dict>
+			<key>testBundleRelativePath</key>
 			<dict>
 				<key>CF$UID</key>
 				<integer>0</integer>
@@ -59,7 +76,7 @@
 			<key>testsToRun</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>0</integer>
+				<integer>5</integer>
 			</dict>
 			<key>testsToSkip</key>
 			<dict>
@@ -100,12 +117,36 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>6</integer>
+				<integer>7</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>6</integer>
+				</dict>
+			</array>
+		</dict>
+		<string>XCUITestDriver/testRunner</string>
+		<dict>
+			<key>$classes</key>
+			<array>
+				<string>NSSet</string>
+				<string>NSObject</string>
+			</array>
+			<key>$classname</key>
+			<string>NSSet</string>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>9</integer>
 			</dict>
 			<key>NS.uuidbytes</key>
 			<data>
 			vu+6vv7tur6+78r+vu/6zg==
-			</data>
+                        </data>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -116,7 +157,61 @@
 			<key>$classname</key>
 			<string>NSUUID</string>
 		</dict>
+		<string>file://calaba/sh/CBX.xctest/</string>
+		<string>com.xamarin.touchserver</string>
 		<string>CBX</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>17</integer>
+			</dict>
+			<key>NS.keys</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>14</integer>
+				</dict>
+			</array>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>15</integer>
+				</dict>
+			</array>
+		</dict>
+		<string>XCSuiteRecordsKey</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>16</integer>
+			</dict>
+			<key>NS.keys</key>
+			<array/>
+			<key>NS.objects</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>$classes</key>
+			<array>
+				<string>NSMutableDictionary</string>
+				<string>NSDictionary</string>
+				<string>NSObject</string>
+			</array>
+			<key>$classname</key>
+			<string>NSMutableDictionary</string>
+		</dict>
+		<dict>
+			<key>$classes</key>
+			<array>
+				<string>NSDictionary</string>
+				<string>NSObject</string>
+			</array>
+			<key>$classname</key>
+			<string>NSDictionary</string>
+		</dict>
 		<dict>
 			<key>$classes</key>
 			<array>
