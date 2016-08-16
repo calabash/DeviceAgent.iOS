@@ -43,4 +43,3 @@ Given(/^I am looking at the (Touch|Pan|Rotate\/Pinch|Misc|Tao) tab$/) do |tabnam
   mark = "#{tabname.downcase} page"
   @waiter.wait_for_view(mark)
 end
-

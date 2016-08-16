@@ -13,9 +13,7 @@ module UnitTestApp
 
     def rotate_and_expect(position)
       symbol = position.to_sym
-      json = @device_agent.rotate_home_button_to(symbol)
-      sleep(0.5)
-      orientation = json["orientation"]
+      orientation = @gestures.rotate_home_button_to(symbol)
 
       if [:top, :up].include?(symbol) && !upside_down_supported?
         message = "Upside down orientation is not supported iPhone 6*"

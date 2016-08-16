@@ -16,6 +16,11 @@ module DeviceAgent
       element_center(result)
     end
 
+    def rotate_home_button_to(symbol_or_string)
+      position = symbol_or_string.to_sym
+      device_agent.rotate_home_button_to(position)["orientation"]
+    end
+
     def touch_mark(mark, options={})
       center = query_for_coordinate(mark)
       tap(center[:x], center[:y], options)
@@ -118,10 +123,26 @@ Could not find element with mark: '#{mark}' using :all
       device_agent.alert_visible?
     end
 
-    private
+    def pan_between_marks(from_mark, to_mark, options={})
+      default_options = {
+        :duration => 1.0,
+        :num_fingers => 1
+      }
+      merged_options = default_options.merge(options)
 
-    def device_agent
-      @waiter.device_agent
+      from_point = query_for_coordinate(from_mark)
+      to_point = query_for_coordinate(to_mark)
+
+      device_agent.pan_between_coordinates(from_point, to_point, merged_options)
+    end
+
+    def pan_between_coordinates(from_point, to_point, options={})
+      default_options = {
+        :duration => 1.0,
+        :num_fingers => 1
+      }
+      merged_options = default_options.merge(options)
+      device_agent.pan_between_coordinates(from_point, to_point, merged_options)
     end
 
     def element_center(hash)
@@ -142,8 +163,14 @@ Could not find element with mark: '#{mark}' using :all
 
 #{JSON.pretty_generate(new_rect)}
 
-])
-			{:x => touchx, :y => touchy}
+                        ])
+      {:x => touchx, :y => touchy}
+    end
+
+    private
+
+    def device_agent
+      @waiter.device_agent
     end
   end
 end

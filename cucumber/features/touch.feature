@@ -27,13 +27,6 @@ When the home button is on the right, I can touch
 When the home button is on the left, I can touch
 When the home button is on the top, I can touch
 
-Scenario: Triple tap in any orientation
-Given I am looking at the Tao tab
-When the home button is on the bottom, I can triple tap
-When the home button is on the left, I can triple tap
-When the home button is on the right, I can triple tap
-When the home button is on the top, I can triple tap
-
 Scenario: Long press durations
 Given I am looking at the Tao tab
 Then I long press a little button for a short time
@@ -46,6 +39,13 @@ When the home button is on the top, I can long press
 When the home button is on the right, I can long press
 When the home button is on the left, I can long press
 When the home button is on the bottom, I can long press
+
+Scenario: Triple tap in any orientation
+Given I am looking at the Tao tab
+When the home button is on the bottom, I can triple tap
+When the home button is on the left, I can triple tap
+When the home button is on the right, I can triple tap
+When the home button is on the top, I can triple tap
 
 Scenario: Two finger tap in any orientation
 Given I am looking at the Tao tab
@@ -81,4 +81,3 @@ When the home button is on the bottom, I can two-finger long press
 When the home button is on the top, I can two-finger long press
 When the home button is on the right, I can two-finger long press
 When the home button is on the left, I can two-finger long press
-
