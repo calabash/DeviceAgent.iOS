@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "898743BB1C5847B30084FD93"
-               BuildableName = "CBXAppStub.app"
+               BuildableName = "AppStub.app"
                BlueprintName = "AppStub"
                ReferencedContainer = "container:DeviceAgent.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "898743D41C5847B30084FD93"
-               BuildableName = "CBX.xctest"
+               BuildableName = "DeviceAgent.xctest"
                BlueprintName = "DeviceAgent"
                ReferencedContainer = "container:DeviceAgent.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "898743BB1C5847B30084FD93"
-            BuildableName = "CBXAppStub.app"
+            BuildableName = "AppStub.app"
             BlueprintName = "AppStub"
             ReferencedContainer = "container:DeviceAgent.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "898743BB1C5847B30084FD93"
-            BuildableName = "CBXAppStub.app"
+            BuildableName = "AppStub.app"
             BlueprintName = "AppStub"
             ReferencedContainer = "container:DeviceAgent.xcodeproj">
          </BuildableReference>
@@ -85,7 +85,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "898743BB1C5847B30084FD93"
-            BuildableName = "CBXAppStub.app"
+            BuildableName = "AppStub.app"
             BlueprintName = "AppStub"
             ReferencedContainer = "container:DeviceAgent.xcodeproj">
          </BuildableReference>
