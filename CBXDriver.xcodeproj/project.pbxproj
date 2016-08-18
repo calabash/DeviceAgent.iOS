@@ -370,6 +370,7 @@
 		F5BCAB111D5BC15500ED6EE3 /* DragDropController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BCAB101D5BC15500ED6EE3 /* DragDropController.m */; };
 		F5C1E8BD1CBF5BBE0019A52F /* CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration in Resources */ = {isa = PBXBuildFile; fileRef = F5C1E8BC1CBF5B120019A52F /* CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration */; };
 		F5D42A191D40E3150041105C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D42A181D40E3150041105C /* AVFoundation.framework */; };
+		F5F718411D63A4B300E402EE /* ScrollplicationsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F718401D63A4B300E402EE /* ScrollplicationsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -837,6 +838,8 @@
 		F5BCAB101D5BC15500ED6EE3 /* DragDropController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = DragDropController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F5C1E8BC1CBF5B120019A52F /* CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration"; path = "TestManagerDConnection/CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration"; sourceTree = SOURCE_ROOT; };
 		F5D42A181D40E3150041105C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F5F7183F1D63A4B300E402EE /* ScrollplicationsController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = ScrollplicationsController.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
+		F5F718401D63A4B300E402EE /* ScrollplicationsController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollplicationsController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1852,6 +1855,8 @@
 		F5BCAB0B1D5BBEDA00ED6EE3 /* Pan */ = {
 			isa = PBXGroup;
 			children = (
+				F5F7183F1D63A4B300E402EE /* ScrollplicationsController.h */,
+				F5F718401D63A4B300E402EE /* ScrollplicationsController.m */,
 				F5BCAB0C1D5BBEDA00ED6EE3 /* PanPaletteController.h */,
 				F5BCAB0D1D5BBEDA00ED6EE3 /* PanPaletteController.m */,
 				F5BCAB0F1D5BC15500ED6EE3 /* DragDropController.h */,
@@ -2349,6 +2354,7 @@
 				F5BC7ABA1D5CF38F00D9AC8E /* CompanyTableController.m in Sources */,
 				F5954E0F1CBD2E1200117745 /* GestureRecognizerViewController.m in Sources */,
 				89331CD11CC00ECD003C2E59 /* MiscViewController.m in Sources */,
+				F5F718411D63A4B300E402EE /* ScrollplicationsController.m in Sources */,
 				F5954E091CBD2E1200117745 /* main.m in Sources */,
 				F52BA3491CEDE1C400475D5A /* MBFingerTipWindow.m in Sources */,
 				F5BCAB111D5BC15500ED6EE3 /* DragDropController.m in Sources */,
