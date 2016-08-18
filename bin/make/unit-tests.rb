@@ -23,7 +23,7 @@ args =
             "test",
             "-SYMROOT=build/unit-test",
             "-derivedDataPath build/unit-test",
-            "-workspace CBXDriver.xcworkspace",
+            "-workspace DeviceAgent.xcworkspace",
             "-scheme UnitTest",
             "-destination id=#{sim_udid}",
             "-sdk iphonesimulator",
