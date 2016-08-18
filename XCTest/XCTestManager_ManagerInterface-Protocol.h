@@ -15,15 +15,10 @@
     Raw Gestures
  */
 
-//Older protocol versions
-- (void)_XCT_performTouchGesture:(XCTouchGesture *)arg1 completion:(void (^)(NSError *))arg2;
-//Newer protocol versions
 - (void)_XCT_synthesizeEvent:(XCSynthesizedEventRecord *)arg1 completion:(void (^)(NSError *))arg2;
 
-
 - (void)_XCT_requestScreenshotWithReply:(void (^)(NSData *, NSError *))arg1;
-//No longer used in iOS10?
-//- (void)_XCT_sendString:(NSString *)arg1 completion:(void (^)(NSError *))arg2;
+
 - (void)_XCT_sendString:(NSString *)arg1 maximumFrequency:(unsigned long long)arg2 completion:(void (^)(NSError *))arg3;
 
 - (void)_XCT_updateDeviceOrientation:(long long)arg1 completion:(void (^)(NSError *))arg2;

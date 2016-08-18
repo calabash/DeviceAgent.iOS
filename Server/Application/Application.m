@@ -74,14 +74,18 @@ static NSInteger currentElementIndex = 0;
 
 - (void)startSession {
     NSLog(@"Launching application '%@'", self.app.bundleID);
-    [[Testmanagerd get] _XCT_launchApplicationWithBundleID:self.app.bundleID arguments:self.app.launchArguments environment:self.app.launchEnvironment completion:^(NSError *e) {
+    [[Testmanagerd get] _XCT_launchApplicationWithBundleID:self.app.bundleID
+                                                 arguments:self.app.launchArguments
+                                               environment:self.app.launchEnvironment
+                                                completion:^(NSError *e) {
         if (e) {
             @throw [[CBXException alloc] initWithName:@"Unable to launch app"
                                               reason:e.localizedDescription
                                             userInfo:@{@"bundleId" : self.app.bundleID}];
         }
     }];
-//    [self.app launch];
+ 
+    //    [self.app launch];
 }
 
 + (void)killCurrentApplication {
@@ -94,12 +98,6 @@ static NSInteger currentElementIndex = 0;
                 bundleID:(NSString *)bundleID
               launchArgs:(NSArray *)launchArgs
                      env:(NSDictionary *)environment {
-    
-    //TODO: This seems to crash/end the test session... 
-//    if ([currentApplication hasSession]) {
-//        [currentApplication kill];
-//    }
-    
     currentApplication.app = [[XCUIApplication alloc] initPrivateWithPath:bundlePath bundleID:bundleID];
     currentApplication.app.launchArguments = launchArgs ?: @[];
     currentApplication.app.launchEnvironment = environment ?: @{};

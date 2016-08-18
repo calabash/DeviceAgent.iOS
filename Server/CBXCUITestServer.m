@@ -119,6 +119,7 @@ static NSString *serverName = @"CalabashXCUITestServer";
     if (!started) {
         if (!error) {
             return NO;
+            
         }
         
         NSString *description = @"Unknown Error when Starting server";
