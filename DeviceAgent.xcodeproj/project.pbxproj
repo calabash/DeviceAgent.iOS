@@ -237,7 +237,7 @@
 		F55F82571C6DD07500A945C8 /* RoutingConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F81201C6DD07500A945C8 /* RoutingConnection.m */; };
 		F55F82581C6DD07500A945C8 /* RoutingHTTPServer.h in Headers */ = {isa = PBXBuildFile; fileRef = F55F81211C6DD07500A945C8 /* RoutingHTTPServer.h */; };
 		F55F82591C6DD07500A945C8 /* RoutingHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F81221C6DD07500A945C8 /* RoutingHTTPServer.m */; };
-		F55F83591C6DD9C400A945C8 /* XCUITestDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83561C6DD99900A945C8 /* XCUITestDriver.m */; };
+		F55F83591C6DD9C400A945C8 /* TestRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83561C6DD99900A945C8 /* TestRunner.m */; };
 		F55F83FE1C6DE50C00A945C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83F41C6DE50C00A945C8 /* AppDelegate.m */; };
 		F55F83FF1C6DE50C00A945C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F55F83F51C6DE50C00A945C8 /* Assets.xcassets */; };
 		F55F84001C6DE50C00A945C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55F83F61C6DE50C00A945C8 /* LaunchScreen.storyboard */; };
@@ -438,7 +438,7 @@
 		896C7C751D19AE990017CE08 /* ClearText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClearText.h; sourceTree = "<group>"; };
 		896C7C761D19AE990017CE08 /* ClearText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClearText.m; sourceTree = "<group>"; };
 		898743BC1C5847B30084FD93 /* AppStub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStub.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		898743D51C5847B30084FD93 /* CBX.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CBX.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		898743D51C5847B30084FD93 /* DeviceAgent.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceAgent.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		899696B81CADF84B00BB42E2 /* EnterText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterText.h; sourceTree = "<group>"; };
 		899696B91CADF84B00BB42E2 /* EnterText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterText.m; sourceTree = "<group>"; };
 		899696BD1CB2F22000BB42E2 /* EnterTextIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterTextIn.h; sourceTree = "<group>"; };
@@ -596,7 +596,7 @@
 		F55F81211C6DD07500A945C8 /* RoutingHTTPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutingHTTPServer.h; sourceTree = "<group>"; };
 		F55F81221C6DD07500A945C8 /* RoutingHTTPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutingHTTPServer.m; sourceTree = "<group>"; };
 		F55F83551C6DD99900A945C8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F55F83561C6DD99900A945C8 /* XCUITestDriver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCUITestDriver.m; sourceTree = "<group>"; };
+		F55F83561C6DD99900A945C8 /* TestRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = TestRunner.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F55F835B1C6DDA5F00A945C8 /* _XCDarwinNotificationExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _XCDarwinNotificationExpectation.h; sourceTree = "<group>"; };
 		F55F835C1C6DDA5F00A945C8 /* _XCInternalTestRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _XCInternalTestRun.h; sourceTree = "<group>"; };
 		F55F835D1C6DDA5F00A945C8 /* _XCKVOExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _XCKVOExpectation.h; sourceTree = "<group>"; };
@@ -937,7 +937,7 @@
 				F55F835A1C6DDA5F00A945C8 /* XCTest */,
 				F5B0A0D01CAD3CBC00E056CE /* TestApp */,
 				F55F83B61C6DDF1300A945C8 /* Server */,
-				F55F83541C6DD99900A945C8 /* XCUITestDriver */,
+				F55F83541C6DD99900A945C8 /* DeviceAgent */,
 				F55F83F21C6DE50C00A945C8 /* AppStub */,
 				F55F7FEA1C6DD07500A945C8 /* Vendor */,
 				F5169D0E1CFE06B700252F52 /* third-party-licences */,
@@ -953,7 +953,7 @@
 			isa = PBXGroup;
 			children = (
 				898743BC1C5847B30084FD93 /* AppStub.app */,
-				898743D51C5847B30084FD93 /* CBX.xctest */,
+				898743D51C5847B30084FD93 /* DeviceAgent.xctest */,
 				F5B0A0CF1CAD3CBC00E056CE /* UnitTest.xctest */,
 				F5954E051CBD2E1200117745 /* TestApp.app */,
 				F58D28181D4F964D000FF6C0 /* UITest.xctest */,
@@ -1291,13 +1291,13 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
-		F55F83541C6DD99900A945C8 /* XCUITestDriver */ = {
+		F55F83541C6DD99900A945C8 /* DeviceAgent */ = {
 			isa = PBXGroup;
 			children = (
 				F55F83551C6DD99900A945C8 /* Info.plist */,
-				F55F83561C6DD99900A945C8 /* XCUITestDriver.m */,
+				F55F83561C6DD99900A945C8 /* TestRunner.m */,
 			);
-			path = XCUITestDriver;
+			path = DeviceAgent;
 			sourceTree = "<group>";
 		};
 		F55F835A1C6DDA5F00A945C8 /* XCTest */ = {
@@ -1976,9 +1976,9 @@
 			productReference = 898743BC1C5847B30084FD93 /* AppStub.app */;
 			productType = "com.apple.product-type.application";
 		};
-		898743D41C5847B30084FD93 /* XCUITestDriver */ = {
+		898743D41C5847B30084FD93 /* DeviceAgent */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 898743E11C5847B30084FD93 /* Build configuration list for PBXNativeTarget "XCUITestDriver" */;
+			buildConfigurationList = 898743E11C5847B30084FD93 /* Build configuration list for PBXNativeTarget "DeviceAgent" */;
 			buildPhases = (
 				898743D11C5847B30084FD93 /* Sources */,
 				898743D21C5847B30084FD93 /* Frameworks */,
@@ -1990,9 +1990,9 @@
 			dependencies = (
 				898743D71C5847B30084FD93 /* PBXTargetDependency */,
 			);
-			name = XCUITestDriver;
+			name = DeviceAgent;
 			productName = "xcuitest-serverUITests";
-			productReference = 898743D51C5847B30084FD93 /* CBX.xctest */;
+			productReference = 898743D51C5847B30084FD93 /* DeviceAgent.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		F58D28171D4F964D000FF6C0 /* UITest */ = {
@@ -2106,7 +2106,7 @@
 			projectRoot = "";
 			targets = (
 				898743BB1C5847B30084FD93 /* AppStub */,
-				898743D41C5847B30084FD93 /* XCUITestDriver */,
+				898743D41C5847B30084FD93 /* DeviceAgent */,
 				F5169CE61CFD9E9400252F52 /* AppStubBuildNumber */,
 				F5954E041CBD2E1200117745 /* TestApp */,
 				F5B0A0CE1CAD3CBC00E056CE /* UnitTest */,
@@ -2262,7 +2262,7 @@
 				899696F11CB5880F00BB42E2 /* AutomationAction.m in Sources */,
 				F55F81A81C6DD07500A945C8 /* WebSocket.m in Sources */,
 				F55F81A01C6DD07500A945C8 /* HTTPDynamicFileResponse.m in Sources */,
-				F55F83591C6DD9C400A945C8 /* XCUITestDriver.m in Sources */,
+				F55F83591C6DD9C400A945C8 /* TestRunner.m in Sources */,
 				89D5381E1CA359B200F62E09 /* QuerySpecifierByPropertyLike.m in Sources */,
 				89D537F81CA1DF8500F62E09 /* QuerySpecifier.m in Sources */,
 				F55F840A1C6E437100A945C8 /* GestureRoutes.m in Sources */,
@@ -2686,14 +2686,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = XCUITestDriver/Info.plist;
+				INFOPLIST_FILE = DeviceAgent/Info.plist;
 				INFOPLIST_PREFIX_HEADER = "";
 				INFOPLIST_PREPROCESS = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.XCUITestDriver;
-				PRODUCT_NAME = CBX;
-				TEST_TARGET_NAME = CBXAppStub;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.DeviceAgent;
+				PRODUCT_NAME = DeviceAgent;
+				TEST_TARGET_NAME = AppStub;
 			};
 			name = Debug;
 		};
@@ -2704,13 +2704,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = XCUITestDriver/Info.plist;
+				INFOPLIST_FILE = DeviceAgent/Info.plist;
 				INFOPLIST_PREFIX_HEADER = "";
 				INFOPLIST_PREPROCESS = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.XCUITestDriver;
-				PRODUCT_NAME = CBX;
-				TEST_TARGET_NAME = CBXAppStub;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.DeviceAgent;
+				PRODUCT_NAME = DeviceAgent;
+				TEST_TARGET_NAME = AppStub;
 			};
 			name = Release;
 		};
@@ -2936,7 +2936,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		898743E11C5847B30084FD93 /* Build configuration list for PBXNativeTarget "XCUITestDriver" */ = {
+		898743E11C5847B30084FD93 /* Build configuration list for PBXNativeTarget "DeviceAgent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				898743E21C5847B30084FD93 /* Debug */,

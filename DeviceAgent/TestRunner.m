@@ -2,11 +2,12 @@
 #import "CBXCUITestServer.h"
 #import <XCTest/XCTest.h>
 
-@interface XCUITestDriver : XCTestCase
+@interface TestRunner : XCTestCase
 
 @end
 
-@implementation XCUITestDriver
+@implementation TestRunner
+
 - (void)setUp {
     [super setUp];
     self.continueAfterFailure = YES;

@@ -17,7 +17,7 @@
                      BuildableIdentifier = "primary"
                      BlueprintIdentifier = "898743D41C5847B30084FD93"
                      BuildableName = "CBX.xctest"
-                     BlueprintName = "XCUITestDriver"
+                     BlueprintName = "DeviceAgent"
                      ReferencedContainer = "container:DeviceAgent.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>
@@ -35,7 +35,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "898743D41C5847B30084FD93"
                BuildableName = "CBX.xctest"
-               BlueprintName = "XCUITestDriver"
+               BlueprintName = "DeviceAgent"
                ReferencedContainer = "container:DeviceAgent.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,7 +45,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -53,7 +54,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "898743D41C5847B30084FD93"
                BuildableName = "CBX.xctest"
-               BlueprintName = "XCUITestDriver"
+               BlueprintName = "DeviceAgent"
                ReferencedContainer = "container:DeviceAgent.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -63,7 +64,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "898743D41C5847B30084FD93"
             BuildableName = "CBX.xctest"
-            BlueprintName = "XCUITestDriver"
+            BlueprintName = "DeviceAgent"
             ReferencedContainer = "container:DeviceAgent.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

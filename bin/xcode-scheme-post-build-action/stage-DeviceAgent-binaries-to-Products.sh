@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Stages CBX-Runner.app built by Xcode to ./Products/
-# Called from XCUITestDriver scheme Build Post Action
+# Stages DeviceAgent-Runner.app built by Xcode to ./Products/
+# Called from DeviceAgent scheme Build Post Action
 
 set -e
 

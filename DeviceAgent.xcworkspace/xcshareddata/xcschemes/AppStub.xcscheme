@@ -34,7 +34,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "898743D41C5847B30084FD93"
                BuildableName = "CBX.xctest"
-               BlueprintName = "XCUITestDriver"
+               BlueprintName = "DeviceAgent"
                ReferencedContainer = "container:DeviceAgent.xcodeproj">
             </BuildableReference>
          </TestableReference>

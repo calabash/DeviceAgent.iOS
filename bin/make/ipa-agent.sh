@@ -20,7 +20,7 @@ else
   XC_PIPE='cat'
 fi
 
-XC_TARGET="XCUITestDriver"
+XC_TARGET="DeviceAgent"
 XC_PROJECT="DeviceAgent.xcodeproj"
 XC_CONFIG=Debug
 
@@ -34,8 +34,8 @@ mkdir -p "${INSTALL_DIR}"
 APP="AppStub.app"
 DSYM="${APP}.dSYM"
 IPA="AppStub.ipa"
-RUNNER="CBX-Runner.app"
-RUNNER_IPA="CBX-Runner.ipa"
+RUNNER="DeviceAgent-Runner.app"
+RUNNER_IPA="DeviceAgent-Runner.ipa"
 
 INSTALLED_APP="${INSTALL_DIR}/${APP}"
 INSTALLED_DSYM="${INSTALL_DIR}/${DSYM}"
@@ -150,10 +150,10 @@ expect_version_equal "${APP_SHORT_VERSION}" \
   "${INSTALLED_RUNNER}/Info.plist" "CFBundleShortVersionString"
 
 expect_version_equal "${APP_BUNDLE_VERSION}" \
-  "${INSTALLED_RUNNER}/PlugIns/CBX.xctest/Info.plist" "CFBundleVersion"
+  "${INSTALLED_RUNNER}/PlugIns/DeviceAgent.xctest/Info.plist" "CFBundleVersion"
 
 expect_version_equal "${APP_SHORT_VERSION}" \
-  "${INSTALLED_RUNNER}/PlugIns/CBX.xctest/Info.plist" "CFBundleShortVersionString"
+  "${INSTALLED_RUNNER}/PlugIns/DeviceAgent.xctest/Info.plist" "CFBundleShortVersionString"
 
 banner "IPA Code Signing Details"
 
