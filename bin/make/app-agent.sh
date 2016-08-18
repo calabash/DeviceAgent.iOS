@@ -21,7 +21,7 @@ else
 fi
 
 XC_TARGET="XCUITestDriver"
-XC_PROJECT="CBXDriver.xcodeproj"
+XC_PROJECT="DeviceAgent.xcodeproj"
 XC_CONFIG=Debug
 
 XC_BUILD_DIR="build/app/DeviceAgent"
@@ -31,7 +31,7 @@ INSTALL_DIR=Products/app/DeviceAgent
 rm -rf "${INSTALL_DIR}"
 mkdir -p "${INSTALL_DIR}"
 
-APP="CBXAppStub.app"
+APP="AppStub.app"
 DSYM="${APP}.dSYM"
 RUNNER="CBX-Runner.app"
 

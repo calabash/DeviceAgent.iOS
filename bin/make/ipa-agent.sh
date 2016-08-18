@@ -21,7 +21,7 @@ else
 fi
 
 XC_TARGET="XCUITestDriver"
-XC_PROJECT="CBXDriver.xcodeproj"
+XC_PROJECT="DeviceAgent.xcodeproj"
 XC_CONFIG=Debug
 
 XC_BUILD_DIR="build/ipa/DeviceAgent"
@@ -31,9 +31,9 @@ INSTALL_DIR="Products/ipa/DeviceAgent"
 rm -rf "${INSTALL_DIR}"
 mkdir -p "${INSTALL_DIR}"
 
-APP="CBXAppStub.app"
+APP="AppStub.app"
 DSYM="${APP}.dSYM"
-IPA="CBXAppStub.ipa"
+IPA="AppStub.ipa"
 RUNNER="CBX-Runner.app"
 RUNNER_IPA="CBX-Runner.ipa"
 
@@ -62,38 +62,20 @@ info "Prepared archive directory"
 
 banner "Building ${IPA}"
 
-if [ -z "${CODE_SIGN_IDENTITY}" ]; then
-  COMMAND_LINE_BUILD=1 xcrun xcodebuild \
-    -SYMROOT="${XC_BUILD_DIR}" \
-    BUILT_PRODUCTS_DIR="${BUILD_PRODUCTS_DIR}" \
-    TARGET_BUILD_DIR="${BUILD_PRODUCTS_DIR}" \
-    DWARF_DSYM_FOLDER_PATH="${BUILD_PRODUCTS_DIR}" \
-    -project "${XC_PROJECT}" \
-    -target "${XC_TARGET}" \
-    -configuration "${XC_CONFIG}" \
-    -sdk iphoneos \
-    ARCHS="armv7 armv7s arm64" \
-    VALID_ARCHS="armv7 armv7s arm64" \
-    ONLY_ACTIVE_ARCH=NO \
-    GCC_TREAT_WARNINGS_AS_ERRORS=YES \
-    build | $XC_PIPE
-else
-  COMMAND_LINE_BUILD=1 xcrun xcodebuild \
-    CODE_SIGN_IDENTITY="${CODE_SIGN_IDENTITY}" \
-    -SYMROOT="${XC_BUILD_DIR}" \
-    BUILT_PRODUCTS_DIR="${BUILD_PRODUCTS_DIR}" \
-    TARGET_BUILD_DIR="${BUILD_PRODUCTS_DIR}" \
-    DWARF_DSYM_FOLDER_PATH="${BUILD_PRODUCTS_DIR}" \
-    -project "${XC_PROJECT}" \
-    -target "${XC_TARGET}" \
-    -configuration "${XC_CONFIG}" \
-    -sdk iphoneos \
-    ARCHS="armv7 armv7s arm64" \
-    VALID_ARCHS="armv7 armv7s arm64" \
-    ONLY_ACTIVE_ARCH=NO \
-    GCC_TREAT_WARNINGS_AS_ERRORS=YES \
-    build | $XC_PIPE
-fi
+COMMAND_LINE_BUILD=1 xcrun xcodebuild \
+  -SYMROOT="${XC_BUILD_DIR}" \
+  BUILT_PRODUCTS_DIR="${BUILD_PRODUCTS_DIR}" \
+  TARGET_BUILD_DIR="${BUILD_PRODUCTS_DIR}" \
+  DWARF_DSYM_FOLDER_PATH="${BUILD_PRODUCTS_DIR}" \
+  -project "${XC_PROJECT}" \
+  -target "${XC_TARGET}" \
+  -configuration "${XC_CONFIG}" \
+  -sdk iphoneos \
+  ARCHS="armv7 armv7s arm64" \
+  VALID_ARCHS="armv7 armv7s arm64" \
+  ONLY_ACTIVE_ARCH=NO \
+  GCC_TREAT_WARNINGS_AS_ERRORS=YES \
+  build | $XC_PIPE
 
 EXIT_CODE=${PIPESTATUS[0]}
 

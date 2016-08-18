@@ -18,15 +18,15 @@
 			name = TestAppBuildNumber;
 			productName = CBXBuildNumber;
 		};
-		F5169CE61CFD9E9400252F52 /* CBXAppStubBuildNumber */ = {
+		F5169CE61CFD9E9400252F52 /* AppStubBuildNumber */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = F5169CE71CFD9E9400252F52 /* Build configuration list for PBXAggregateTarget "CBXAppStubBuildNumber" */;
+			buildConfigurationList = F5169CE71CFD9E9400252F52 /* Build configuration list for PBXAggregateTarget "AppStubBuildNumber" */;
 			buildPhases = (
 				F5169CEA1CFD9EFA00252F52 /* ShellScript */,
 			);
 			dependencies = (
 			);
-			name = CBXAppStubBuildNumber;
+			name = AppStubBuildNumber;
 			productName = AppStubBuildNumber;
 		};
 /* End PBXAggregateTarget section */
@@ -437,7 +437,7 @@
 		896C7C711D18AA800017CE08 /* ClearTextIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClearTextIn.m; path = AutomationActions/Gestures/ClearTextIn.m; sourceTree = "<group>"; };
 		896C7C751D19AE990017CE08 /* ClearText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClearText.h; sourceTree = "<group>"; };
 		896C7C761D19AE990017CE08 /* ClearText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClearText.m; sourceTree = "<group>"; };
-		898743BC1C5847B30084FD93 /* CBXAppStub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBXAppStub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		898743BC1C5847B30084FD93 /* AppStub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898743D51C5847B30084FD93 /* CBX.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CBX.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		899696B81CADF84B00BB42E2 /* EnterText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterText.h; sourceTree = "<group>"; };
 		899696B91CADF84B00BB42E2 /* EnterText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterText.m; sourceTree = "<group>"; };
@@ -719,15 +719,15 @@
 		F55F83EE1C6DDF7E00A945C8 /* CBXConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXConstants.h; sourceTree = "<group>"; };
 		F55F83EF1C6DDF7E00A945C8 /* CBXMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXMacros.h; sourceTree = "<group>"; };
 		F55F83F01C6DDF7E00A945C8 /* CBXProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXProtocols.h; sourceTree = "<group>"; };
-		F55F83F31C6DE50C00A945C8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F55F83F41C6DE50C00A945C8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F55F83F31C6DE50C00A945C8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
+		F55F83F41C6DE50C00A945C8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F55F83F51C6DE50C00A945C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F55F83F71C6DE50C00A945C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F55F83F91C6DE50C00A945C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F55F83FA1C6DE50C00A945C8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F55F83FB1C6DE50C00A945C8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F55F83FC1C6DE50C00A945C8 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F55F83FD1C6DE50C00A945C8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F55F83FB1C6DE50C00A945C8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
+		F55F83FC1C6DE50C00A945C8 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
+		F55F83FD1C6DE50C00A945C8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F5870B3B1CF0BEFF00B3376C /* CBXTouchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXTouchEvent.h; sourceTree = "<group>"; };
 		F5870B3C1CF0BEFF00B3376C /* CBXTouchEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = CBXTouchEvent.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F5870B3D1CF0BEFF00B3376C /* TouchPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchPath.h; sourceTree = "<group>"; };
@@ -938,7 +938,7 @@
 				F5B0A0D01CAD3CBC00E056CE /* TestApp */,
 				F55F83B61C6DDF1300A945C8 /* Server */,
 				F55F83541C6DD99900A945C8 /* XCUITestDriver */,
-				F55F83F21C6DE50C00A945C8 /* CBXAppStub */,
+				F55F83F21C6DE50C00A945C8 /* AppStub */,
 				F55F7FEA1C6DD07500A945C8 /* Vendor */,
 				F5169D0E1CFE06B700252F52 /* third-party-licences */,
 				F542EA1A1CC53DD000D87200 /* Frameworks */,
@@ -952,7 +952,7 @@
 		898743BD1C5847B30084FD93 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				898743BC1C5847B30084FD93 /* CBXAppStub.app */,
+				898743BC1C5847B30084FD93 /* AppStub.app */,
 				898743D51C5847B30084FD93 /* CBX.xctest */,
 				F5B0A0CF1CAD3CBC00E056CE /* UnitTest.xctest */,
 				F5954E051CBD2E1200117745 /* TestApp.app */,
@@ -1489,7 +1489,7 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		F55F83F21C6DE50C00A945C8 /* CBXAppStub */ = {
+		F55F83F21C6DE50C00A945C8 /* AppStub */ = {
 			isa = PBXGroup;
 			children = (
 				F55F83F31C6DE50C00A945C8 /* AppDelegate.h */,
@@ -1501,7 +1501,7 @@
 				F55F83F81C6DE50C00A945C8 /* Main.storyboard */,
 				F55F84051C6DE51500A945C8 /* Supporting Files */,
 			);
-			path = CBXAppStub;
+			path = AppStub;
 			sourceTree = "<group>";
 		};
 		F55F84051C6DE51500A945C8 /* Supporting Files */ = {
@@ -1958,9 +1958,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		898743BB1C5847B30084FD93 /* CBXAppStub */ = {
+		898743BB1C5847B30084FD93 /* AppStub */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 898743DE1C5847B30084FD93 /* Build configuration list for PBXNativeTarget "CBXAppStub" */;
+			buildConfigurationList = 898743DE1C5847B30084FD93 /* Build configuration list for PBXNativeTarget "AppStub" */;
 			buildPhases = (
 				898743B81C5847B30084FD93 /* Sources */,
 				898743B91C5847B30084FD93 /* Frameworks */,
@@ -1971,9 +1971,9 @@
 			dependencies = (
 				F5169CEC1CFD9F0C00252F52 /* PBXTargetDependency */,
 			);
-			name = CBXAppStub;
+			name = AppStub;
 			productName = "xcuitest-server";
-			productReference = 898743BC1C5847B30084FD93 /* CBXAppStub.app */;
+			productReference = 898743BC1C5847B30084FD93 /* AppStub.app */;
 			productType = "com.apple.product-type.application";
 		};
 		898743D41C5847B30084FD93 /* XCUITestDriver */ = {
@@ -2105,9 +2105,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				898743BB1C5847B30084FD93 /* CBXAppStub */,
+				898743BB1C5847B30084FD93 /* AppStub */,
 				898743D41C5847B30084FD93 /* XCUITestDriver */,
-				F5169CE61CFD9E9400252F52 /* CBXAppStubBuildNumber */,
+				F5169CE61CFD9E9400252F52 /* AppStubBuildNumber */,
 				F5954E041CBD2E1200117745 /* TestApp */,
 				F5B0A0CE1CAD3CBC00E056CE /* UnitTest */,
 				F58D28171D4F964D000FF6C0 /* UITest */,
@@ -2484,7 +2484,7 @@
 /* Begin PBXTargetDependency section */
 		898743D71C5847B30084FD93 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 898743BB1C5847B30084FD93 /* CBXAppStub */;
+			target = 898743BB1C5847B30084FD93 /* AppStub */;
 			targetProxy = 898743D61C5847B30084FD93 /* PBXContainerItemProxy */;
 		};
 		F5169CE51CFD9D2800252F52 /* PBXTargetDependency */ = {
@@ -2494,7 +2494,7 @@
 		};
 		F5169CEC1CFD9F0C00252F52 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F5169CE61CFD9E9400252F52 /* CBXAppStubBuildNumber */;
+			target = F5169CE61CFD9E9400252F52 /* AppStubBuildNumber */;
 			targetProxy = F5169CEB1CFD9F0C00252F52 /* PBXContainerItemProxy */;
 		};
 		F58D281E1D4F964D000FF6C0 /* PBXTargetDependency */ = {
@@ -2509,7 +2509,7 @@
 		};
 		F5B0A0D51CAD3CBC00E056CE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 898743BB1C5847B30084FD93 /* CBXAppStub */;
+			target = 898743BB1C5847B30084FD93 /* AppStub */;
 			targetProxy = F5B0A0D41CAD3CBC00E056CE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -2650,14 +2650,14 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = CBXAppStub/Info.plist;
-				INFOPLIST_PREFIX_HEADER = CBXAppStub/InfoPlist.h;
+				INFOPLIST_FILE = AppStub/Info.plist;
+				INFOPLIST_PREFIX_HEADER = AppStub/InfoPlist.h;
 				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.CBXAppStub;
-				PRODUCT_NAME = CBXAppStub;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.AppStub;
+				PRODUCT_NAME = AppStub;
 			};
 			name = Debug;
 		};
@@ -2669,13 +2669,13 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = CBXAppStub/Info.plist;
-				INFOPLIST_PREFIX_HEADER = CBXAppStub/InfoPlist.h;
+				INFOPLIST_FILE = AppStub/Info.plist;
+				INFOPLIST_PREFIX_HEADER = AppStub/InfoPlist.h;
 				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.CBXAppStub;
-				PRODUCT_NAME = CBXAppStub;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.AppStub;
+				PRODUCT_NAME = AppStub;
 			};
 			name = Release;
 		};
@@ -2736,8 +2736,8 @@
 		F5169CE81CFD9E9400252F52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = CBXAppStub/Info.plist;
-				INFOPLIST_PREFIX_HEADER = CBXAppStub/InfoPlist.h;
+				INFOPLIST_FILE = AppStub/Info.plist;
+				INFOPLIST_PREFIX_HEADER = AppStub/InfoPlist.h;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -2746,8 +2746,8 @@
 		F5169CE91CFD9E9400252F52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = CBXAppStub/Info.plist;
-				INFOPLIST_PREFIX_HEADER = CBXAppStub/InfoPlist.h;
+				INFOPLIST_FILE = AppStub/Info.plist;
+				INFOPLIST_PREFIX_HEADER = AppStub/InfoPlist.h;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -2927,7 +2927,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		898743DE1C5847B30084FD93 /* Build configuration list for PBXNativeTarget "CBXAppStub" */ = {
+		898743DE1C5847B30084FD93 /* Build configuration list for PBXNativeTarget "AppStub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				898743DF1C5847B30084FD93 /* Debug */,
@@ -2954,7 +2954,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		F5169CE71CFD9E9400252F52 /* Build configuration list for PBXAggregateTarget "CBXAppStubBuildNumber" */ = {
+		F5169CE71CFD9E9400252F52 /* Build configuration list for PBXAggregateTarget "AppStubBuildNumber" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5169CE81CFD9E9400252F52 /* Debug */,
