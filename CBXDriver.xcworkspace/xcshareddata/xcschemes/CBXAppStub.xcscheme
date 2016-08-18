@@ -17,7 +17,7 @@
                BlueprintIdentifier = "898743BB1C5847B30084FD93"
                BuildableName = "CBXAppStub.app"
                BlueprintName = "CBXAppStub"
-               ReferencedContainer = "container:CBXDriver.xcodeproj">
+               ReferencedContainer = "container:DeviceAgent.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "898743D41C5847B30084FD93"
                BuildableName = "CBX.xctest"
                BlueprintName = "XCUITestDriver"
-               ReferencedContainer = "container:CBXDriver.xcodeproj">
+               ReferencedContainer = "container:DeviceAgent.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,7 +45,7 @@
             BlueprintIdentifier = "898743BB1C5847B30084FD93"
             BuildableName = "CBXAppStub.app"
             BlueprintName = "CBXAppStub"
-            ReferencedContainer = "container:CBXDriver.xcodeproj">
+            ReferencedContainer = "container:DeviceAgent.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -68,7 +68,7 @@
             BlueprintIdentifier = "898743BB1C5847B30084FD93"
             BuildableName = "CBXAppStub.app"
             BlueprintName = "CBXAppStub"
-            ReferencedContainer = "container:CBXDriver.xcodeproj">
+            ReferencedContainer = "container:DeviceAgent.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -87,7 +87,7 @@
             BlueprintIdentifier = "898743BB1C5847B30084FD93"
             BuildableName = "CBXAppStub.app"
             BlueprintName = "CBXAppStub"
-            ReferencedContainer = "container:CBXDriver.xcodeproj">
+            ReferencedContainer = "container:DeviceAgent.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

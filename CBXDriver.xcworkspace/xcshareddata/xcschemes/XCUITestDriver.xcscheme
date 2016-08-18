@@ -18,7 +18,7 @@
                      BlueprintIdentifier = "898743D41C5847B30084FD93"
                      BuildableName = "CBX.xctest"
                      BlueprintName = "XCUITestDriver"
-                     ReferencedContainer = "container:CBXDriver.xcodeproj">
+                     ReferencedContainer = "container:DeviceAgent.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>
             </ActionContent>
@@ -36,7 +36,7 @@
                BlueprintIdentifier = "898743D41C5847B30084FD93"
                BuildableName = "CBX.xctest"
                BlueprintName = "XCUITestDriver"
-               ReferencedContainer = "container:CBXDriver.xcodeproj">
+               ReferencedContainer = "container:DeviceAgent.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -54,7 +54,7 @@
                BlueprintIdentifier = "898743D41C5847B30084FD93"
                BuildableName = "CBX.xctest"
                BlueprintName = "XCUITestDriver"
-               ReferencedContainer = "container:CBXDriver.xcodeproj">
+               ReferencedContainer = "container:DeviceAgent.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "898743D41C5847B30084FD93"
             BuildableName = "CBX.xctest"
             BlueprintName = "XCUITestDriver"
-            ReferencedContainer = "container:CBXDriver.xcodeproj">
+            ReferencedContainer = "container:DeviceAgent.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>

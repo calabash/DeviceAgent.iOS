@@ -17,7 +17,7 @@
                BlueprintIdentifier = "F5B0A0CE1CAD3CBC00E056CE"
                BuildableName = "UnitTest.xctest"
                BlueprintName = "UnitTest"
-               ReferencedContainer = "container:CBXDriver.xcodeproj">
+               ReferencedContainer = "container:DeviceAgent.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "F5954E041CBD2E1200117745"
                BuildableName = "TestApp.app"
                BlueprintName = "TestApp"
-               ReferencedContainer = "container:CBXDriver.xcodeproj">
+               ReferencedContainer = "container:DeviceAgent.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "F5B0A0CE1CAD3CBC00E056CE"
                BuildableName = "UnitTest.xctest"
                BlueprintName = "UnitTest"
-               ReferencedContainer = "container:CBXDriver.xcodeproj">
+               ReferencedContainer = "container:DeviceAgent.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -59,7 +59,7 @@
             BlueprintIdentifier = "F5954E041CBD2E1200117745"
             BuildableName = "TestApp.app"
             BlueprintName = "TestApp"
-            ReferencedContainer = "container:CBXDriver.xcodeproj">
+            ReferencedContainer = "container:DeviceAgent.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -81,7 +81,7 @@
             BlueprintIdentifier = "F5954E041CBD2E1200117745"
             BuildableName = "TestApp.app"
             BlueprintName = "TestApp"
-            ReferencedContainer = "container:CBXDriver.xcodeproj">
+            ReferencedContainer = "container:DeviceAgent.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -99,7 +99,7 @@
             BlueprintIdentifier = "F5B0A0CE1CAD3CBC00E056CE"
             BuildableName = "UnitTest.xctest"
             BlueprintName = "UnitTest"
-            ReferencedContainer = "container:CBXDriver.xcodeproj">
+            ReferencedContainer = "container:DeviceAgent.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
