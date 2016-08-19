@@ -152,6 +152,7 @@ And(/^I can pan with (\d+) fingers?$/) do |fingers|
   @gestures.pan_between_coordinates(from_point, to_point, options)
 
   wait_for_pan_action_text("Pan")
+  clear_pan_action_label
 end
 
 But(/^I cannot pan with 6 fingers$/) do
@@ -165,7 +166,7 @@ But(/^I cannot pan with 6 fingers$/) do
 
   expect do
     @gestures.pan_between_coordinates(from_point, to_point, options)
-  end.to raise_error RunLoop::XCUITest::HTTPError,
+  end.to raise_error RunLoop::DeviceAgent::Client::HTTPError,
                      /num_fingers must be between 1 and 5, inclusive/
 end
 
@@ -187,6 +188,7 @@ And(/^I can pan (quickly|slowly)$/) do |speed|
   @gestures.pan_between_coordinates(from_point, to_point, options)
 
   wait_for_pan_action_text("Pan")
+  clear_pan_action_label
 end
 
 Then(/^I can drag the red box to the right well$/) do

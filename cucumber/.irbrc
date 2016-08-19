@@ -82,7 +82,7 @@ def quiet
 end
 
 if !ENV["CBXWS"]
-  path = File.expand_path(File.join("..", "CBXDriver.xcworkspace"))
+  path = File.expand_path(File.join("..", "DeviceAgent.xcworkspace"))
 
   if File.directory?(path)
     ENV["CBXWS"] = path
@@ -97,7 +97,7 @@ if !ENV["CBXWS"]
 end
 
 if ENV["APP"].nil? || ENV["APP"] == ""
-  path = File.expand_path(File.join("..", "Products", "app", "UnitTestApp", "UnitTestApp.app"))
+  path = File.expand_path(File.join("..", "Products", "app", "TestApp", "TestApp.app"))
 
   if File.exist?(path)
     ENV["APP"] = path
@@ -108,8 +108,8 @@ if ENV["APP"].nil? || ENV["APP"] == ""
     puts ""
     puts "You have some options:"
     puts ""
-    puts " 1. Run against the UnitTestApp"
-    puts "   $ (cd .. && make unit-app)"
+    puts " 1. Run against the TestApp"
+    puts "   $ (cd .. && make test-app)"
     puts "   $ be irb"
     puts "   > holmes"
     puts ""
@@ -132,7 +132,7 @@ puts "DeviceAgent workspace = #{ENV["CBXWS"]}"
 puts "APP = #{ENV["APP"]}"
 puts "DEVICE_TARGET = #{RunLoop::Device.detect_device({}, xcode, simctl, instruments)}"
 
-def device_agent(bundle_id="sh.calab.UnitTestApp")
+def device_agent(bundle_id="sh.calaba.TestApp")
   device = RunLoop::Device.detect_device({}, xcode, simctl, instruments)
   RunLoop::XCUITest.new(bundle_id, device)
 end

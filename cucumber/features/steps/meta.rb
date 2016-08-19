@@ -3,9 +3,9 @@ Then(/^I can ask for the server version$/) do
   expected =
     {
       "bundle_version" => "1",
-      "bundle_identifier" => "com.apple.test.CBX-Runner",
+      "bundle_identifier" => "com.apple.test.DeviceAgent-Runner",
       "bundle_short_version" => "1.0",
-      "bundle_name" => "CBX"
+      "bundle_name" => "DeviceAgent"
   }
 
   actual = @gestures.server_version

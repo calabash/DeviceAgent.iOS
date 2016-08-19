@@ -7,10 +7,10 @@ source bin/plist-buddy.sh
 
 if [ $# == 0 ]; then
   echo ""
-  echo "1. Removes the leading new line from the CBX-Runner.app/Info.plist."
-  echo "2. Syncs the CBX-Runner.app/Info.plist and CBX.xctest/Info.plist"
-  echo "   CFBundleShortVersionString and CFBundleVersion with the CBXAppStub."
-  echo "3. Resigns if the CBX-Runner was build for physical devices."
+  echo "1. Removes the leading new line from the DeviceAgent-Runner.app/Info.plist."
+  echo "2. Syncs the DeviceAgent-Runner.app/Info.plist and DeviceAgent.xctest/Info.plist"
+  echo "   CFBundleShortVersionString and CFBundleVersion with the AppStub."
+  echo "3. Resigns if the DeviceAgent-Runner was build for physical devices."
   echo ""
   echo "This script is suitable for xcode-build-phase Run Scripts and"
   echo "the make ipa-agent rule."
@@ -18,13 +18,13 @@ if [ $# == 0 ]; then
   echo "You should not never call this script directly."
   echo ""
   echo "Usage:"
-  echo "   $0 path/to/CBXAppStub.app path/to/CBX-Runner.app"
+  echo "   $0 path/to/AppStub.app path/to/DeviceAgent-Runner.app"
   exit 1;
 fi
 
 STUB="${1}"
 RUNNER="${2}"
-CBX="${RUNNER}/PlugIns/CBX.xctest"
+DEVICE_AGENT="${RUNNER}/PlugIns/DeviceAgent.xctest"
 
 if [ ! -e "${STUB}" ]; then
   error "App stub does not exist: ${STUB}"
@@ -36,8 +36,8 @@ if [ ! -e "${RUNNER}" ]; then
   exit 1
 fi
 
-if [ ! -e "${CBX}" ]; then
-  error "CBX.xctest does not exist: ${CBX}"
+if [ ! -e "${DEVICE_AGENT}" ]; then
+  error "DeviceAgent.xctest does not exist: ${DEVICE_AGENT}"
   exit 1
 fi
 
@@ -75,13 +75,13 @@ plist_set_key "${RUNNER_PLIST}" "CFBundleShortVersionString" "${SHORT_VERSION}"
 
 echo ""
 
-CBX_PLIST="${CBX}/Info.plist"
-info "${CBX_PLIST}"
+DEVICE_AGENT_PLIST="${DEVICE_AGENT}/Info.plist"
+info "${DEVICE_AGENT_PLIST}"
 
-info "Syncing $(basename ${CBX}) version"
+info "Syncing $(basename ${DEVICE_AGENT}) version"
 
-plist_set_key "${CBX_PLIST}" "CFBundleVersion" "${BUNDLE_VERSION}"
-plist_set_key "${CBX_PLIST}" "CFBundleShortVersionString" "${SHORT_VERSION}"
+plist_set_key "${DEVICE_AGENT_PLIST}" "CFBundleVersion" "${BUNDLE_VERSION}"
+plist_set_key "${DEVICE_AGENT_PLIST}" "CFBundleShortVersionString" "${SHORT_VERSION}"
 
 banner "Resigning"
 
@@ -131,7 +131,7 @@ fi
 echo ""
 
 # --force to resign an app that is already signed
-# --deep because the embedded CBX.xctest binary needs to be signed
+# --deep because the embedded DeviceAgent.xctest binary needs to be signed
 # Preserve metadata because we don't want to have to provide a provisioning profile
 xcrun codesign \
   --sign "${IDENTITY}" \

@@ -1,8 +1,3 @@
-//
-//  main.m
-//  xcuitest-server
-//
-
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 

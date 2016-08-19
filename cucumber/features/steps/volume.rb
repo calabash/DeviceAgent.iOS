@@ -82,6 +82,6 @@ end
 And(/^sending an invalid volume direction raises an error$/) do
   expect do
     @gestures.change_volume("bad")
-  end.to raise_error RunLoop::XCUITest::HTTPError,
+  end.to raise_error RunLoop::DeviceAgent::Client::HTTPError,
                      /Invalid volume direction. Please specify/
 end

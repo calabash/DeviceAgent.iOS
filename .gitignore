@@ -30,7 +30,7 @@ Products
 
 # Info.plist preprocessor files
 TestApp/App/InfoPlist.h
-CBXAppStub/InfoPlist.h
+AppStub/InfoPlist.h
 
 ## Various settings
 *.pbxuser

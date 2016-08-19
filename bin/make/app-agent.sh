@@ -20,8 +20,8 @@ else
   XC_PIPE='cat'
 fi
 
-XC_TARGET="XCUITestDriver"
-XC_PROJECT="CBXDriver.xcodeproj"
+XC_TARGET="DeviceAgent"
+XC_PROJECT="DeviceAgent.xcodeproj"
 XC_CONFIG=Debug
 
 XC_BUILD_DIR="build/app/DeviceAgent"
@@ -31,9 +31,9 @@ INSTALL_DIR=Products/app/DeviceAgent
 rm -rf "${INSTALL_DIR}"
 mkdir -p "${INSTALL_DIR}"
 
-APP="CBXAppStub.app"
+APP="AppStub.app"
 DSYM="${APP}.dSYM"
-RUNNER="CBX-Runner.app"
+RUNNER="DeviceAgent-Runner.app"
 
 INSTALLED_APP="${INSTALL_DIR}/${APP}"
 INSTALLED_DSYM="${INSTALL_DIR}/${DSYM}"
@@ -117,10 +117,10 @@ expect_version_equal "${APP_SHORT_VERSION}" \
   "${INSTALLED_RUNNER}/Info.plist" "CFBundleShortVersionString"
 
 expect_version_equal "${APP_BUNDLE_VERSION}" \
-  "${INSTALLED_RUNNER}/PlugIns/CBX.xctest/Info.plist" "CFBundleVersion"
+  "${INSTALLED_RUNNER}/PlugIns/DeviceAgent.xctest/Info.plist" "CFBundleVersion"
 
 expect_version_equal "${APP_SHORT_VERSION}" \
-  "${INSTALLED_RUNNER}/PlugIns/CBX.xctest/Info.plist" "CFBundleShortVersionString"
+  "${INSTALLED_RUNNER}/PlugIns/DeviceAgent.xctest/Info.plist" "CFBundleShortVersionString"
 
 banner "Info"
 

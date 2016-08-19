@@ -17,7 +17,7 @@
                BlueprintIdentifier = "F5954E041CBD2E1200117745"
                BuildableName = "TestApp.app"
                BlueprintName = "TestApp"
-               ReferencedContainer = "container:CBXDriver.xcodeproj">
+               ReferencedContainer = "container:DeviceAgent.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "F58D28171D4F964D000FF6C0"
                BuildableName = "UITest.xctest"
                BlueprintName = "UITest"
-               ReferencedContainer = "container:CBXDriver.xcodeproj">
+               ReferencedContainer = "container:DeviceAgent.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "F5954E041CBD2E1200117745"
             BuildableName = "TestApp.app"
             BlueprintName = "TestApp"
-            ReferencedContainer = "container:CBXDriver.xcodeproj">
+            ReferencedContainer = "container:DeviceAgent.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,7 +76,7 @@
             BlueprintIdentifier = "F5954E041CBD2E1200117745"
             BuildableName = "TestApp.app"
             BlueprintName = "TestApp"
-            ReferencedContainer = "container:CBXDriver.xcodeproj">
+            ReferencedContainer = "container:DeviceAgent.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

@@ -31,7 +31,7 @@ function fail_in_ci {
 DOCS_DIR="./documentation"
 
 appledoc \
---project-name "CBXDriver" \
+--project-name "DeviceAgent" \
 --project-company "Xamarin" \
 --company-id "sh.calaba" \
 --templates "${PWD}/.appledoc" \
