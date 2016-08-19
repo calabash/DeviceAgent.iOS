@@ -103,7 +103,7 @@
 				<integer>3</integer>
 			</dict>
 		</dict>
-		<string>file:///private/var/containers/Bundle/Application/21A83AF9-9B32-4BF6-A016-00605F990879/UITest-Runner.app/PlugIns/UITest.xctest</string>
+		<string>file:///private/var/containers/Bundle/Application/21A83AF9-FACE-FACE-FACE-00605F990879/UITest-Runner.app/PlugIns/UITest.xctest</string>
 		<dict>
 			<key>$classes</key>
 			<array>
@@ -133,7 +133,7 @@
 			<key>$classname</key>
 			<string>NSUUID</string>
 		</dict>
-		<string>/Users/moody/Library/Developer/Xcode/DerivedData/CBXDriver-aewnlqtolcmvwhfyuphfblhkryeq/Build/Products/Debug-iphoneos/TestApp.app</string>
+		<string>/Users/calabash/Library/Developer/Xcode/DerivedData/CBXDriver-thankyouforusingcalabash/Build/Products/Debug-iphoneos/TestApp.app</string>
 		<string>sh.calaba.TestApp</string>
 		<string>UITest</string>
 		<dict>
