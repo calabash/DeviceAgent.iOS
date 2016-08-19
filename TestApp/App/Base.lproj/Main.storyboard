@@ -665,7 +665,7 @@
                             <outlet property="delegate" destination="4XE-2z-6yu" id="oMQ-dO-1yH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Pan" id="y8p-5Y-Woy" userLabel="Pan"/>
+                    <navigationItem key="navigationItem" title="Pan Menu" id="y8p-5Y-Woy" userLabel="Pan"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbN-sy-lAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

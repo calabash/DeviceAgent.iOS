@@ -83,9 +83,6 @@ Before do |scenario|
     :instruments => launcher.instruments,
     :app => launcher.app,
     :gesture_performer => :device_agent,
-
-    # Comment this out for iOSDeviceManager launching and turn set
-    # :shutdown_device_agent_before_launch => false
     :cbx_launcher => :xcodebuild,
 
     # Keep this as true.  The Launcher singleton ensures

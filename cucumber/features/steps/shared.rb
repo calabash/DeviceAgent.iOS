@@ -36,6 +36,7 @@ World(DeviceAgent::Shared)
 
 Given(/^the app has launched$/) do
   wait_for_app
+  @gestures.rotate_home_button_to(:down)
 end
 
 Given(/^I am looking at the (Touch|Pan|Rotate\/Pinch|Misc|Tao) tab$/) do |tabname|
