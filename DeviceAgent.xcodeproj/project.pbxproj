@@ -2064,10 +2064,12 @@
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = FYD86LA7RE;
 						DevelopmentTeamName = "Karl Krukow";
+						ProvisioningStyle = Manual;
 					};
 					898743D41C5847B30084FD93 = {
 						CreatedOnToolsVersion = 7.2;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = FYD86LA7RE;
+						ProvisioningStyle = Manual;
 						TestTargetID = 898743BB1C5847B30084FD93;
 					};
 					F5169CDF1CFD982800252F52 = {
@@ -2648,6 +2650,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = FYD86LA7RE;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AppStub/Info.plist;
@@ -2658,6 +2661,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.AppStub;
 				PRODUCT_NAME = AppStub;
+				PROVISIONING_PROFILE = "9af395ed-6bc4-4fe2-9d60-a5f5adfdf61a";
+				PROVISIONING_PROFILE_SPECIFIER = CalabashWildcard;
 			};
 			name = Debug;
 		};
@@ -2667,6 +2672,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = FYD86LA7RE;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AppStub/Info.plist;
@@ -2676,6 +2682,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.AppStub;
 				PRODUCT_NAME = AppStub;
+				PROVISIONING_PROFILE = "9af395ed-6bc4-4fe2-9d60-a5f5adfdf61a";
+				PROVISIONING_PROFILE_SPECIFIER = CalabashWildcard;
 			};
 			name = Release;
 		};
@@ -2685,6 +2693,7 @@
 				CLANG_ENABLE_MODULES = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = FYD86LA7RE;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = DeviceAgent/Info.plist;
 				INFOPLIST_PREFIX_HEADER = "";
@@ -2693,6 +2702,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.DeviceAgent;
 				PRODUCT_NAME = DeviceAgent;
+				PROVISIONING_PROFILE = "9af395ed-6bc4-4fe2-9d60-a5f5adfdf61a";
+				PROVISIONING_PROFILE_SPECIFIER = CalabashWildcard;
 				TEST_TARGET_NAME = AppStub;
 			};
 			name = Debug;
@@ -2703,6 +2714,7 @@
 				CLANG_ENABLE_MODULES = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = FYD86LA7RE;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = DeviceAgent/Info.plist;
 				INFOPLIST_PREFIX_HEADER = "";
@@ -2710,6 +2722,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.DeviceAgent;
 				PRODUCT_NAME = DeviceAgent;
+				PROVISIONING_PROFILE = "9af395ed-6bc4-4fe2-9d60-a5f5adfdf61a";
+				PROVISIONING_PROFILE_SPECIFIER = CalabashWildcard;
 				TEST_TARGET_NAME = AppStub;
 			};
 			name = Release;
