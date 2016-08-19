@@ -18,7 +18,7 @@ else
 fi
 
 XC_TARGET="TestApp"
-XC_PROJECT="CBXDriver.xcodeproj"
+XC_PROJECT="DeviceAgent.xcodeproj"
 XC_CONFIG=Debug
 
 XC_BUILD_DIR="build/app/TestApp"
