@@ -89,7 +89,7 @@ Before do |scenario|
     :cbx_launcher => :xcodebuild,
 
     # Keep this as true.  The Launcher singleton ensures
-    # that the CBX-Runner is launched only once on physical
+    # that the DeviceAgent-Runner is launched only once on physical
     # devices.  Keeping the simulator open is WIP (iOSDeviceManager limitation).
     :shutdown_device_agent_before_launch => true
   }

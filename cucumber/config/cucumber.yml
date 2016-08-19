@@ -5,5 +5,5 @@ require "run_loop"
 %>
 
 formatter: -f pretty
-default: CBXWS=../CBXDriver.xcworkspace -p formatter
+default: CBXWS=../DeviceAgent.xcworkspace -p formatter
 verbose: DEBUG=1
