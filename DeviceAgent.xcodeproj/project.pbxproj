@@ -2660,7 +2660,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.AppStub;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apple.test.AppStub;
 				PRODUCT_NAME = AppStub;
 				PROVISIONING_PROFILE = "fb4b8ed8-fb70-4b90-8f51-33e10f8f670e";
 				PROVISIONING_PROFILE_SPECIFIER = DeviceAgent;
@@ -2682,7 +2682,7 @@
 				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.AppStub;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apple.test.AppStub;
 				PRODUCT_NAME = AppStub;
 				PROVISIONING_PROFILE = "fb4b8ed8-fb70-4b90-8f51-33e10f8f670e";
 				PROVISIONING_PROFILE_SPECIFIER = DeviceAgent;
@@ -2703,7 +2703,7 @@
 				INFOPLIST_PREPROCESS = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.DeviceAgent;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.apple.test.DeviceAgent-Runner";
 				PRODUCT_NAME = DeviceAgent;
 				PROVISIONING_PROFILE = "fb4b8ed8-fb70-4b90-8f51-33e10f8f670e";
 				PROVISIONING_PROFILE_SPECIFIER = DeviceAgent;
@@ -2724,7 +2724,7 @@
 				INFOPLIST_PREFIX_HEADER = "";
 				INFOPLIST_PREPROCESS = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.DeviceAgent;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.apple.test.DeviceAgent-Runner";
 				PRODUCT_NAME = DeviceAgent;
 				PROVISIONING_PROFILE = "fb4b8ed8-fb70-4b90-8f51-33e10f8f670e";
 				PROVISIONING_PROFILE_SPECIFIER = DeviceAgent;
