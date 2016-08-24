@@ -88,12 +88,7 @@ banner "Resigning"
 set +e
 ARCHINFO=`xcrun lipo -info "${RUNNER}/XCTRunner"`
 IGNORED=`echo ${ARCHINFO} | egrep -o "arm"`
-
-if [ $? != 0 ]; then
-  info "Simulator build detected; skipping resign step"
-  info "Done!"
-  exit 0
-fi
+EXIT_STATUS=$?
 set -e
 
 # $1 variable to store the identity in
@@ -105,38 +100,58 @@ function extract_identity {
     eval "$1=\"${TMP}\""
 }
 
-IDENTITY=""
+if [ "${EXIT_STATUS}" != "0" ]; then
 
-if [ "${TERM}" = "dumb" ]; then
-  XCODE_UI_BUILD=1
-  info "Detected a build from Xcode UI"
+  xcrun codesign \
+    --sign - \
+    --force \
+    --deep \
+    --timestamp=none \
+    "${DEVICE_AGENT}"
+
+  xcrun codesign \
+    --sign - \
+    --force \
+    --deep \
+    --timestamp=none \
+    "${RUNNER}/Frameworks/XCTest.framework"
+
+  xcrun codesign \
+    --sign - \
+    --force \
+    --deep \
+    --timestamp=none \
+    "${RUNNER}"
+  set +e
+  bin/codesign/verify.sh "${RUNNER}"
+  set -e
 else
-  XCODE_UI_BUILD=0
-  info "Detected a command line build"
-fi
-
-if [ "${XCODE_UI_BUILD}" = 0 ]; then
-  if [ -n "${CODE_SIGN_IDENTITY}" ]; then
-    info "CODE_SIGN_IDENTITY is set - will use ${CODE_SIGN_IDENTITY} to resign"
-    IDENTITY="${CODE_SIGN_IDENTITY}"
-  else
+    ENTITLEMENTS=bin/codesign/DeviceAgent.xctest.xcent
+    IDENTITY=""
     extract_identity IDENTITY "${RUNNER}"
-    info "Will resign with original identity: ${IDENTITY}"
-  fi
-else
-  extract_identity IDENTITY "${RUNNER}"
-  info "Will resign with original identity: ${IDENTITY}"
+
+    rm -rf "${RUNNER}/embedded.mobileprovision"
+
+    xcrun codesign \
+      --sign "${IDENTITY}" \
+      --force \
+      --deep \
+      --entitlements "${ENTITLEMENTS}" \
+      ${DEVICE_AGENT}
+
+    xcrun codesign \
+      --sign "${IDENTITY}" \
+      --force \
+      --deep \
+      "${RUNNER}/Frameworks/XCTest.framework"
+
+    xcrun codesign \
+      --sign "${IDENTITY}" \
+      --force \
+      --deep \
+      --entitlements "${ENTITLEMENTS}" \
+      ${RUNNER}
+
+    bin/codesign/verify.sh "${RUNNER}"
 fi
-
-echo ""
-
-# --force to resign an app that is already signed
-# --deep because the embedded DeviceAgent.xctest binary needs to be signed
-# Preserve metadata because we don't want to have to provide a provisioning profile
-xcrun codesign \
-  --sign "${IDENTITY}" \
-  --force \
-  --deep \
-  --preserve-metadata=identifier,entitlements,requirements \
-  ${RUNNER}
 
