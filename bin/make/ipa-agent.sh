@@ -155,18 +155,6 @@ expect_version_equal "${APP_BUNDLE_VERSION}" \
 expect_version_equal "${APP_SHORT_VERSION}" \
   "${INSTALLED_RUNNER}/PlugIns/DeviceAgent.xctest/Info.plist" "CFBundleShortVersionString"
 
-banner "IPA Code Signing Details"
-
-DETAILS=`xcrun codesign --display --verbose=2 ${INSTALLED_APP} 2>&1`
-
-echo "$(tput setaf 4)$DETAILS$(tput sgr0)"
-
-banner "RUNNER Code Signing Details"
-
-DETAILS=`xcrun codesign --display --verbose=2 ${INSTALLED_RUNNER} 2>&1`
-
-echo "$(tput setaf 4)$DETAILS$(tput sgr0)"
-
 banner "Info"
 
 info "Installed ${INSTALLED_APP}"
