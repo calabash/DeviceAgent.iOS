@@ -122,9 +122,7 @@ if [ "${EXIT_STATUS}" != "0" ]; then
     --deep \
     --timestamp=none \
     "${RUNNER}"
-  set +e
-  bin/codesign/verify.sh "${RUNNER}"
-  set -e
+  xcrun codesign --verify --verbose=4 "${RUNNER}"
 else
     ENTITLEMENTS=bin/codesign/DeviceAgent.xctest.xcent
     IDENTITY=""
@@ -152,6 +150,6 @@ else
       --entitlements "${ENTITLEMENTS}" \
       ${RUNNER}
 
-    bin/codesign/verify.sh "${RUNNER}"
+    bin/codesign/verify-ios-certs.sh "${RUNNER}"
 fi
 
