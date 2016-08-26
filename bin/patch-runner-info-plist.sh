@@ -128,8 +128,6 @@ else
     IDENTITY=""
     extract_identity IDENTITY "${RUNNER}"
 
-    rm -rf "${RUNNER}/embedded.mobileprovision"
-
     xcrun codesign \
       --sign "${IDENTITY}" \
       --force \
