@@ -122,12 +122,14 @@ And(/^I am looking at the Pan Palette page$/) do
 end
 
 Given(/^I am looking at the Drag and Drop page$/) do
+  @waiter.wait_for_animations
   @gestures.tap_mark("drag and drop row")
   @waiter.wait_for_view("drag and drop page")
   @waiter.wait_for_animations
 end
 
 Given(/^I am looking at the Everything's On the Table page$/) do
+  @waiter.wait_for_animations
   @gestures.tap_mark("table row")
   @waiter.wait_for_view("table page")
   @waiter.wait_for_animations

@@ -14,6 +14,9 @@ Then(/^I can dismiss an alert and wait for the alert message to disappear$/) do
   mark = "If we can see most of you, we can touch you."
   @waiter.wait_for_view(mark)
 
+  # The OK button is visible, but not touchable.
+  @waiter.wait_for_animations
+
   @gestures.touch_mark("OK")
   @waiter.wait_for_no_view(mark)
 end
@@ -33,7 +36,7 @@ And(/^I can dismiss an alert, wait for a while, and wait for the alert title to 
     sleep(1.0)
   end
 
-  @waiter.wait_for_no_view(mark)
+    @waiter.wait_for_no_view(mark)
 end
 
 But(/^if I dismiss an alert and query for the alert title without sleeping$/) do
@@ -47,6 +50,6 @@ But(/^if I dismiss an alert and query for the alert title without sleeping$/) do
   @waiter.wait_for_no_view(mark)
 end
 
-Then(/^the DeviceAgent terminates$/) do
-  expect(@gestures.running?).to be_falsey
+Then(/^the DeviceAgent does not terminate$/) do
+  expect(@gestures.running?).to be_truthy
 end

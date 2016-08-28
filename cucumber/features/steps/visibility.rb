@@ -38,9 +38,22 @@ end
 
 Then(/^the (alpha|zero) button is not visible and not hitable$/) do |mark|
   identifier = "#{mark} button"
-  element = @gestures.query(identifier, {all: true}).first
-  expect(element).to be_truthy
-  expect(element["hitable"]).to be == false
+
+  options = {
+    :retry_frequency => 0.1,
+    :timeout => 2
+  }
+
+  message = "Waited for #{options[:timeout]} seconds for #{mark} button to disappear"
+
+  @waiter.wait_for(message, options) do
+    element = @gestures.query(identifier, {all: true}).first
+    if !element # Xcode 8
+      true
+    else # Xcode 7.3.1
+      element["hitable"] == false
+    end
+  end
 end
 
 But(/^after a moment the (alpha|zero) button is visible and hitable$/) do |mark|
@@ -159,6 +172,10 @@ And(/^I can touch the mostly (hidden|visible) button using the hit point$/) do |
   end
 
   @waiter.wait_for_view(mark)
+
+  # The alert is clearly visible, but touching the alert too soon after it
+  # appears can cause the DeviceAgent to crash.
+  @waiter.wait_for_animations
 
   @gestures.touch_mark("OK")
   @waiter.wait_for_no_alert

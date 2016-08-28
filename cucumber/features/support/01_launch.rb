@@ -83,11 +83,11 @@ Before do |scenario|
     :instruments => launcher.instruments,
     :app => launcher.app,
     :gesture_performer => :device_agent,
-    :cbx_launcher => :xcodebuild,
+    #:cbx_launcher => :xcodebuild,
 
     # Keep this as true.  The Launcher singleton ensures
     # that the DeviceAgent-Runner is launched only once on physical
-    # devices.  Keeping the simulator open is WIP (iOSDeviceManager limitation).
+    # devices.
     :shutdown_device_agent_before_launch => true
   }
 
@@ -105,6 +105,9 @@ Before do |scenario|
 end
 
 After do |scenario|
-
+  # Restart if a Scenario fails.
+  if scenario.failed?
+    Calabash::Launcher.instance.first_launch = true
+  end
 end
 
