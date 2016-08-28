@@ -42,14 +42,35 @@
     for (QuerySpecifier *specifier in self.queryConfiguration.selectors) {
         query = [specifier applyToQuery:query];
     }
-    
-    //TODO: if there's a child query, recurse
-    //
-    //if (childQuery) {
-    //    return [childQuery execute];
-    //} else {
-    return [query allElementsBoundByIndex];
-    //}
+
+
+    NSArray<XCUIElement *> *elements = @[];
+
+    // I have seen this happen when querying for a UIAlertView button directly after the
+    // alert appears.  I have also seen it happen when touching a UIAlertView button too
+    // soon after the alert appears.
+    @try {
+        //TODO: if there's a child query, recurse
+        //
+        //if (childQuery) {
+        //    return [childQuery execute];
+        //}
+        elements = [query allElementsBoundByIndex];
+    } @catch (NSException *exception) {
+        NSLog(@"DeviceAgent caught an exception while calling allElementsBoundByIndex");
+
+        NSLog(@"===  EXCEPTION ===");
+        NSLog(@"%@", exception);
+        NSLog(@"");
+
+        NSLog(@"=== STACK SYMBOLS === ");
+        NSLog(@"%@", [exception callStackSymbols]);
+        NSLog(@"");
+
+        NSLog(@"=== RUNTIME DETAILS ===");
+        NSLog(@"        query: %@", query);
+    }
+    return elements;
 }
 
 - (NSDictionary *)toDict {
