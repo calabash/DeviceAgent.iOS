@@ -9,7 +9,10 @@ Then(/^I can ask for the server version$/) do
   }
 
   actual = @gestures.server_version
-  expect(actual).to be == expected
+  expect(actual["bundle_identifier"]).to be == expected["bundle_identifier"]
+  expect(actual["bundle_name"]).to be == expected["bundle_name"]
+  expect(actual["bundle_version"]).to be_truthy
+  expect(actual["bundle_short_version"]).to be_truthy
 end
 
 Then(/^I can ask for the session identifier$/) do

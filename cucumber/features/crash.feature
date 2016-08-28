@@ -23,9 +23,11 @@ Given the app has launched
 # despite the exceptions being caught in JSONUtils.
 #
 # Waiting for the alert _message_ is not a problem; it can be done without delay.
+#
+# Update for Xcode beta 6 and DeviceAgent >= 0.1.0: crash does not happen
 Scenario: Querying too soon for an alert title after dismissing an alert
 And I am looking at the Touch tab
 Then I can dismiss an alert and wait for the alert message to disappear
 And I can dismiss an alert, wait for a while, and wait for the alert title to disappear
 But if I dismiss an alert and query for the alert title without sleeping
-Then the DeviceAgent terminates
+Then the DeviceAgent does not terminate
