@@ -251,7 +251,6 @@
 		F55F840E1C6E437100A945C8 /* SessionRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83D31C6DDF1300A945C8 /* SessionRoutes.m */; };
 		F55F840F1C6E437100A945C8 /* UndefinedRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83D51C6DDF1300A945C8 /* UndefinedRoutes.m */; };
 		F55F84101C6E437A00A945C8 /* JSONUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83DB1C6DDF1300A945C8 /* JSONUtils.m */; };
-		F55F84111C6E437A00A945C8 /* UIDevice+Wifi_IP.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83DD1C6DDF1300A945C8 /* UIDevice+Wifi_IP.m */; };
 		F55F84121C6E438200A945C8 /* CBXException.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C41C6DDF1300A945C8 /* CBXException.m */; };
 		F55F84131C6E438200A945C8 /* ElementNotFoundException.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C21C6DDF1300A945C8 /* ElementNotFoundException.m */; };
 		F55F84151C6E438800A945C8 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BD1C6DDF1300A945C8 /* Application.m */; };
@@ -304,7 +303,6 @@
 		F5AC714D1CEB816E00DE059A /* TaoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5AC714C1CEB816E00DE059A /* TaoController.m */; };
 		F5B0A1A31CAD4DE800E056CE /* FBElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5380B1CA32AE900F62E09 /* FBElement.m */; };
 		F5B0A1A41CAD4DE800E056CE /* XCUIElement+WebDriverAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538071CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.m */; };
-		F5B0A1A51CAD4DE800E056CE /* UIDevice+Wifi_IP.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83DD1C6DDF1300A945C8 /* UIDevice+Wifi_IP.m */; };
 		F5B0A1A61CAD4DFA00E056CE /* CBXCUITestServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BF1C6DDF1300A945C8 /* CBXCUITestServer.m */; };
 		F5B0A1A71CAD4E2700E056CE /* GestureFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F36A1C9C912F0093A018 /* GestureFactory.m */; };
 		F5B0A1A81CAD4E2700E056CE /* Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F3591C9B9C850093A018 /* Gesture.m */; };
@@ -371,6 +369,9 @@
 		F5C1E8BD1CBF5BBE0019A52F /* CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration in Resources */ = {isa = PBXBuildFile; fileRef = F5C1E8BC1CBF5B120019A52F /* CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration */; };
 		F5D42A191D40E3150041105C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D42A181D40E3150041105C /* AVFoundation.framework */; };
 		F5F718411D63A4B300E402EE /* ScrollplicationsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F718401D63A4B300E402EE /* ScrollplicationsController.m */; };
+		F5FEA0B81D747CCD00B5EF42 /* UIDevice+Wifi_IP.h in Headers */ = {isa = PBXBuildFile; fileRef = F5FEA0B61D747CCD00B5EF42 /* UIDevice+Wifi_IP.h */; };
+		F5FEA0B91D747CCD00B5EF42 /* UIDevice+Wifi_IP.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FEA0B71D747CCD00B5EF42 /* UIDevice+Wifi_IP.m */; };
+		F5FEA0BA1D747CCD00B5EF42 /* UIDevice+Wifi_IP.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FEA0B71D747CCD00B5EF42 /* UIDevice+Wifi_IP.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -714,8 +715,6 @@
 		F55F83D51C6DDF1300A945C8 /* UndefinedRoutes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UndefinedRoutes.m; sourceTree = "<group>"; };
 		F55F83DA1C6DDF1300A945C8 /* JSONUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONUtils.h; sourceTree = "<group>"; };
 		F55F83DB1C6DDF1300A945C8 /* JSONUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONUtils.m; sourceTree = "<group>"; };
-		F55F83DC1C6DDF1300A945C8 /* UIDevice+Wifi_IP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIDevice+Wifi_IP.h"; path = "Server/Utilities/UIDevice+Wifi_IP.h"; sourceTree = "<group>"; };
-		F55F83DD1C6DDF1300A945C8 /* UIDevice+Wifi_IP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+Wifi_IP.m"; path = "Server/Utilities/UIDevice+Wifi_IP.m"; sourceTree = "<group>"; };
 		F55F83EE1C6DDF7E00A945C8 /* CBXConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXConstants.h; sourceTree = "<group>"; };
 		F55F83EF1C6DDF7E00A945C8 /* CBXMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXMacros.h; sourceTree = "<group>"; };
 		F55F83F01C6DDF7E00A945C8 /* CBXProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXProtocols.h; sourceTree = "<group>"; };
@@ -840,6 +839,8 @@
 		F5D42A181D40E3150041105C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F5F7183F1D63A4B300E402EE /* ScrollplicationsController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = ScrollplicationsController.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F5F718401D63A4B300E402EE /* ScrollplicationsController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollplicationsController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
+		F5FEA0B61D747CCD00B5EF42 /* UIDevice+Wifi_IP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Wifi_IP.h"; sourceTree = "<group>"; };
+		F5FEA0B71D747CCD00B5EF42 /* UIDevice+Wifi_IP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Wifi_IP.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -933,7 +934,6 @@
 			isa = PBXGroup;
 			children = (
 				F5169D211CFE07F500252F52 /* LICENSE */,
-				89D538051CA32A3A00F62E09 /* FBDriverCode */,
 				F55F835A1C6DDA5F00A945C8 /* XCTest */,
 				F5B0A0D01CAD3CBC00E056CE /* TestApp */,
 				F55F83B61C6DDF1300A945C8 /* Server */,
@@ -1093,17 +1093,17 @@
 			name = QuerySpecifiers;
 			sourceTree = "<group>";
 		};
-		89D538051CA32A3A00F62E09 /* FBDriverCode */ = {
+		89D538051CA32A3A00F62E09 /* FBWebDriverAgent */ = {
 			isa = PBXGroup;
 			children = (
 				89D5380A1CA32AE900F62E09 /* FBElement.h */,
 				89D5380B1CA32AE900F62E09 /* FBElement.m */,
 				89D538061CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.h */,
 				89D538071CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.m */,
-				F55F83DC1C6DDF1300A945C8 /* UIDevice+Wifi_IP.h */,
-				F55F83DD1C6DDF1300A945C8 /* UIDevice+Wifi_IP.m */,
+				F5FEA0B61D747CCD00B5EF42 /* UIDevice+Wifi_IP.h */,
+				F5FEA0B71D747CCD00B5EF42 /* UIDevice+Wifi_IP.m */,
 			);
-			name = FBDriverCode;
+			path = FBWebDriverAgent;
 			sourceTree = "<group>";
 		};
 		F5169D0E1CFE06B700252F52 /* Licenses */ = {
@@ -1401,6 +1401,7 @@
 		F55F83B61C6DDF1300A945C8 /* Server */ = {
 			isa = PBXGroup;
 			children = (
+				89D538051CA32A3A00F62E09 /* FBWebDriverAgent */,
 				899696ED1CB587E200BB42E2 /* AutomationActions */,
 				F5B0A1891CAD4A1F00E056CE /* CBXiOSVersionInlines.h */,
 				89C5F3551C9B9B690093A018 /* CBXTypedefs.h */,
@@ -1913,6 +1914,7 @@
 				899696D31CB44D9B00BB42E2 /* GestureConfiguration.h in Headers */,
 				896C7C721D18AA800017CE08 /* ClearTextIn.h in Headers */,
 				89D538031CA20DB800F62E09 /* QuerySpecifierByText.h in Headers */,
+				F5FEA0B81D747CCD00B5EF42 /* UIDevice+Wifi_IP.h in Headers */,
 				F55F81851C6DD07500A945C8 /* DDData.h in Headers */,
 				899696F01CB5880F00BB42E2 /* AutomationAction.h in Headers */,
 				F55F82561C6DD07500A945C8 /* RoutingConnection.h in Headers */,
@@ -2301,8 +2303,8 @@
 				89C5F35F1C9C51680093A018 /* Query.m in Sources */,
 				F55F84121C6E438200A945C8 /* CBXException.m in Sources */,
 				F55F84181C6E438E00A945C8 /* CBXCUITestServer.m in Sources */,
+				F5FEA0B91D747CCD00B5EF42 /* UIDevice+Wifi_IP.m in Sources */,
 				899696CA1CB356BF00BB42E2 /* QueryConfiguration.m in Sources */,
-				F55F84111C6E437A00A945C8 /* UIDevice+Wifi_IP.m in Sources */,
 				899696E61CB46C0100BB42E2 /* CoordinateQueryConfiguration.m in Sources */,
 				F55F82371C6DD07500A945C8 /* DDLog.m in Sources */,
 				89C5F35B1C9B9C850093A018 /* Gesture.m in Sources */,
@@ -2376,6 +2378,7 @@
 				899696EC1CB5857C00BB42E2 /* JSONKeyValidator.m in Sources */,
 				F5B0A1DE1CAD4E9B00E056CE /* DispatchQueueLogFormatter.m in Sources */,
 				899696D51CB44D9B00BB42E2 /* GestureConfiguration.m in Sources */,
+				F5FEA0BA1D747CCD00B5EF42 /* UIDevice+Wifi_IP.m in Sources */,
 				F5B0A1D11CAD4E8A00E056CE /* HTTPAsyncFileResponse.m in Sources */,
 				899696BC1CADF85B00BB42E2 /* EnterText.m in Sources */,
 				F5B0A1E41CAD4EA700E056CE /* RoutingHTTPServer.m in Sources */,
@@ -2463,7 +2466,6 @@
 				F5B0A1B61CAD4E2F00E056CE /* Testmanagerd.m in Sources */,
 				F5B0A1D81CAD4E9500E056CE /* DDAbstractDatabaseLogger.m in Sources */,
 				F5B0A1D41CAD4E8A00E056CE /* HTTPErrorResponse.m in Sources */,
-				F5B0A1A51CAD4DE800E056CE /* UIDevice+Wifi_IP.m in Sources */,
 				F5963ECC1D5F3F0C002F9304 /* JSONUtilsTest.m in Sources */,
 				F59E94771D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m in Sources */,
 				F5B0A1AE1CAD4E2700E056CE /* QuerySpecifier.m in Sources */,
