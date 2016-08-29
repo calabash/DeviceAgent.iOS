@@ -31,9 +31,17 @@ static NSDictionary *typeStringToElementType;
     json[CBX_ENABLED_KEY] = @(snapshot.wdEnabled);
     json[CBX_TEST_ID] = [Application cacheElement:(XCUIElement *)snapshot];
 
-    // visibility
-    json[CBX_HITABLE_KEY] = @([JSONUtils elementHitable:(XCUIElement *)snapshot]);
-    json[CBX_HIT_POINT_KEY] = [JSONUtils elementHitPointToJSON:(XCUIElement *)snapshot];
+    // Visibility
+    BOOL hitable = [JSONUtils elementHitable:(XCUIElement *)snapshot];
+    json[CBX_HITABLE_KEY] = @(hitable);
+
+    // If the element is not hitable, XCUITest can crash if you ask for the
+    // hit point coordinates.
+    if (hitable) {
+        json[CBX_HIT_POINT_KEY] = [JSONUtils elementHitPointToJSON:(XCUIElement *)snapshot];
+    } else {
+        json[CBX_HIT_POINT_KEY] = @{@"x" : @(-1), @"y" : @(-1)};
+    }
 
     return json;
 }
