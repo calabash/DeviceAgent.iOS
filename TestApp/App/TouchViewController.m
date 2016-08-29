@@ -221,18 +221,18 @@
 - (void)presentAlertWithTitle:(NSString *)title
                       message:(NSString *)message {
     UIAlertController *controller =
-    [UIAlertController
-    alertControllerWithTitle:title
-     message:message
-     preferredStyle:UIAlertControllerStyleAlert];
+            [UIAlertController
+                    alertControllerWithTitle:title
+                                     message:message
+                              preferredStyle:UIAlertControllerStyleAlert];
 
     [controller addAction:[UIAlertAction
-                           actionWithTitle:@"OK"
-                           style:UIAlertActionStyleDefault
-                           handler:^(UIAlertAction * action)
-                           {
-                               [self dismissViewControllerAnimated:YES completion:nil];
-                           }]];
+            actionWithTitle:@"OK"
+                      style:UIAlertActionStyleDefault
+                    handler:^(UIAlertAction * action)
+                    {
+                        [self dismissViewControllerAnimated:YES completion:nil];
+                    }]];
     [self presentViewController:controller animated:YES completion:nil];
 }
 
