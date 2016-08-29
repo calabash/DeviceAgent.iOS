@@ -239,7 +239,6 @@
 		F55F82591C6DD07500A945C8 /* RoutingHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F81221C6DD07500A945C8 /* RoutingHTTPServer.m */; };
 		F55F83591C6DD9C400A945C8 /* TestRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83561C6DD99900A945C8 /* TestRunner.m */; };
 		F55F83FE1C6DE50C00A945C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83F41C6DE50C00A945C8 /* AppDelegate.m */; };
-		F55F83FF1C6DE50C00A945C8 /* AppStub.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F55F83F51C6DE50C00A945C8 /* AppStub.xcassets */; };
 		F55F84001C6DE50C00A945C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55F83F61C6DE50C00A945C8 /* LaunchScreen.storyboard */; };
 		F55F84011C6DE50C00A945C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55F83F81C6DE50C00A945C8 /* Main.storyboard */; };
 		F55F84031C6DE50C00A945C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83FB1C6DE50C00A945C8 /* main.m */; };
@@ -258,6 +257,7 @@
 		F55F84151C6E438800A945C8 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BD1C6DDF1300A945C8 /* Application.m */; };
 		F55F84171C6E438800A945C8 /* Application+Queries.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BB1C6DDF1300A945C8 /* Application+Queries.m */; };
 		F55F84181C6E438E00A945C8 /* CBXCUITestServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BF1C6DDF1300A945C8 /* CBXCUITestServer.m */; };
+		F57287491D747E0800C65208 /* AppStub.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F57287481D747E0800C65208 /* AppStub.xcassets */; };
 		F5870B3F1CF0BEFF00B3376C /* CBXTouchEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = F5870B3B1CF0BEFF00B3376C /* CBXTouchEvent.h */; };
 		F5870B401CF0BEFF00B3376C /* CBXTouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F5870B3C1CF0BEFF00B3376C /* CBXTouchEvent.m */; };
 		F5870B411CF0BEFF00B3376C /* CBXTouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F5870B3C1CF0BEFF00B3376C /* CBXTouchEvent.m */; };
@@ -721,13 +721,13 @@
 		F55F83F01C6DDF7E00A945C8 /* CBXProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXProtocols.h; sourceTree = "<group>"; };
 		F55F83F31C6DE50C00A945C8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F55F83F41C6DE50C00A945C8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
-		F55F83F51C6DE50C00A945C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F55F83F71C6DE50C00A945C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F55F83F91C6DE50C00A945C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F55F83FA1C6DE50C00A945C8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F55F83FB1C6DE50C00A945C8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F55F83FC1C6DE50C00A945C8 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F55F83FD1C6DE50C00A945C8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
+		F57287481D747E0800C65208 /* AppStub.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppStub.xcassets; sourceTree = "<group>"; };
 		F5870B3B1CF0BEFF00B3376C /* CBXTouchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXTouchEvent.h; sourceTree = "<group>"; };
 		F5870B3C1CF0BEFF00B3376C /* CBXTouchEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = CBXTouchEvent.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F5870B3D1CF0BEFF00B3376C /* TouchPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchPath.h; sourceTree = "<group>"; };
@@ -1496,7 +1496,7 @@
 				F55F83F41C6DE50C00A945C8 /* AppDelegate.m */,
 				F55F83FC1C6DE50C00A945C8 /* ViewController.h */,
 				F55F83FD1C6DE50C00A945C8 /* ViewController.m */,
-				F55F83F51C6DE50C00A945C8 /* AppStub.xcassets */,
+				F57287481D747E0800C65208 /* AppStub.xcassets */,
 				F55F83F61C6DE50C00A945C8 /* LaunchScreen.storyboard */,
 				F55F83F81C6DE50C00A945C8 /* Main.storyboard */,
 				F55F84051C6DE51500A945C8 /* Supporting Files */,
@@ -2124,9 +2124,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F55F84011C6DE50C00A945C8 /* Main.storyboard in Resources */,
-				F55F83FF1C6DE50C00A945C8 /* AppStub.xcassets in Resources */,
 				F5169D231CFE07FD00252F52 /* LICENSE in Resources */,
 				F55F84001C6DE50C00A945C8 /* LaunchScreen.storyboard in Resources */,
+				F57287491D747E0800C65208 /* AppStub.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
