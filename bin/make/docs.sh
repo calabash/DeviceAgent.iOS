@@ -43,6 +43,9 @@ appledoc \
 --no-repeat-first-par \
 --ignore "*.m" \
 --ignore "Server/NSXPCConnection.h" \
+--ignore "Server/Testmanagerd" \
+--ignore "Server/XCTest" \
+--ignore "Server/FBWebDriverAgent" \
 ./Server
 
 EC=$?
