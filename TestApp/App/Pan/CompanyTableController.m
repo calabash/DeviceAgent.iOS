@@ -50,7 +50,7 @@
       @"wordpress",
       @"youtube"
       ];
-    
+
     return _logoNames;
 }
 
@@ -106,16 +106,16 @@
     UITableViewCell *cell;
     cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier"
                                            forIndexPath:indexPath];
-    NSString *name = [self.companyNames objectAtIndex:indexPath.row];
+    NSString *name = self.companyNames[(NSUInteger)indexPath.row];
 
     UILabel *label = (UILabel *)[cell.contentView viewWithTag:3030];
     label.text = name;
 
     UIImageView *imageView = (UIImageView *)[cell.contentView viewWithTag:3031];
-    imageView.image = [self.logoImages objectAtIndex:indexPath.row];
+    imageView.image = self.logoImages[(NSUInteger)indexPath.row];
 
     cell.accessibilityIdentifier = [NSString stringWithFormat:@"%@ row",
-                                    [name lowercaseString]];
+                                                              [name lowercaseString]];
 
     return cell;
 }
@@ -129,8 +129,8 @@ canEditRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
 commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
  forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.logoImages removeObjectAtIndex:indexPath.row];
-        [self.companyNames removeObjectAtIndex:indexPath.row];
+        [self.logoImages removeObjectAtIndex:(NSUInteger)indexPath.row];
+        [self.companyNames removeObjectAtIndex:(NSUInteger)indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath]
                          withRowAnimation:UITableViewRowAnimationAutomatic];
     } else {
@@ -145,14 +145,16 @@ commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
 - (void) tableView:(UITableView *)tableView
 moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
        toIndexPath:(NSIndexPath *)destinationIndexPath {
-    UIImage *image = [self.logoImages objectAtIndex:sourceIndexPath.row];
-    NSString *name = [self.companyNames objectAtIndex:sourceIndexPath.row];
+    UIImage *image = self.logoImages[(NSUInteger)sourceIndexPath.row];
+    NSString *name = self.companyNames[(NSUInteger)sourceIndexPath.row];
 
-    [self.logoImages removeObjectAtIndex:sourceIndexPath.row];
-    [self.companyNames removeObjectAtIndex:sourceIndexPath.row];
+    [self.logoImages removeObjectAtIndex:(NSUInteger)sourceIndexPath.row];
+    [self.companyNames removeObjectAtIndex:(NSUInteger)sourceIndexPath.row];
 
-    [self.logoImages insertObject:image atIndex:destinationIndexPath.row];
-    [self.companyNames insertObject:name atIndex:destinationIndexPath.row];
+    [self.logoImages insertObject:image
+                          atIndex:(NSUInteger)destinationIndexPath.row];
+    [self.companyNames insertObject:name
+                            atIndex:(NSUInteger)destinationIndexPath.row];
 }
 
 #pragma mark - Orientation / Rotation
