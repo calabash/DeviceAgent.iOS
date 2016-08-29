@@ -239,7 +239,7 @@
 		F55F82591C6DD07500A945C8 /* RoutingHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F81221C6DD07500A945C8 /* RoutingHTTPServer.m */; };
 		F55F83591C6DD9C400A945C8 /* TestRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83561C6DD99900A945C8 /* TestRunner.m */; };
 		F55F83FE1C6DE50C00A945C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83F41C6DE50C00A945C8 /* AppDelegate.m */; };
-		F55F83FF1C6DE50C00A945C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F55F83F51C6DE50C00A945C8 /* Assets.xcassets */; };
+		F55F83FF1C6DE50C00A945C8 /* AppStub.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F55F83F51C6DE50C00A945C8 /* AppStub.xcassets */; };
 		F55F84001C6DE50C00A945C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55F83F61C6DE50C00A945C8 /* LaunchScreen.storyboard */; };
 		F55F84011C6DE50C00A945C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55F83F81C6DE50C00A945C8 /* Main.storyboard */; };
 		F55F84031C6DE50C00A945C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83FB1C6DE50C00A945C8 /* main.m */; };
@@ -293,7 +293,7 @@
 		F5954E0F1CBD2E1200117745 /* GestureRecognizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5954E0E1CBD2E1200117745 /* GestureRecognizerViewController.m */; };
 		F5954E121CBD2E1200117745 /* TouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5954E111CBD2E1200117745 /* TouchViewController.m */; };
 		F5954E151CBD2E1200117745 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5954E131CBD2E1200117745 /* Main.storyboard */; };
-		F5954E171CBD2E1200117745 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5954E161CBD2E1200117745 /* Assets.xcassets */; };
+		F5954E171CBD2E1200117745 /* TestApp.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5954E161CBD2E1200117745 /* TestApp.xcassets */; };
 		F5954E1A1CBD2E1200117745 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5954E181CBD2E1200117745 /* LaunchScreen.storyboard */; };
 		F5963EC61D5DEA9A002F9304 /* UIView+Positioning.m in Sources */ = {isa = PBXBuildFile; fileRef = F5963EC51D5DEA9A002F9304 /* UIView+Positioning.m */; };
 		F5963ECC1D5F3F0C002F9304 /* JSONUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F5963ECA1D5F335F002F9304 /* JSONUtilsTest.m */; };
@@ -815,7 +815,7 @@
 		F5954E101CBD2E1200117745 /* TouchViewController.h */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = TouchViewController.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F5954E111CBD2E1200117745 /* TouchViewController.m */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = TouchViewController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F5954E141CBD2E1200117745 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F5954E161CBD2E1200117745 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5954E161CBD2E1200117745 /* TestApp.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestApp.xcassets; sourceTree = "<group>"; };
 		F5954E191CBD2E1200117745 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5954E1B1CBD2E1200117745 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5963EC41D5DEA9A002F9304 /* UIView+Positioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Positioning.h"; path = "Vendor/UIView+Positioning/UIView+Positioning.h"; sourceTree = SOURCE_ROOT; };
@@ -1496,7 +1496,7 @@
 				F55F83F41C6DE50C00A945C8 /* AppDelegate.m */,
 				F55F83FC1C6DE50C00A945C8 /* ViewController.h */,
 				F55F83FD1C6DE50C00A945C8 /* ViewController.m */,
-				F55F83F51C6DE50C00A945C8 /* Assets.xcassets */,
+				F55F83F51C6DE50C00A945C8 /* AppStub.xcassets */,
 				F55F83F61C6DE50C00A945C8 /* LaunchScreen.storyboard */,
 				F55F83F81C6DE50C00A945C8 /* Main.storyboard */,
 				F55F84051C6DE51500A945C8 /* Supporting Files */,
@@ -1817,7 +1817,7 @@
 				F5AC714C1CEB816E00DE059A /* TaoController.m */,
 				F5BCAB0B1D5BBEDA00ED6EE3 /* Pan */,
 				F5954E131CBD2E1200117745 /* Main.storyboard */,
-				F5954E161CBD2E1200117745 /* Assets.xcassets */,
+				F5954E161CBD2E1200117745 /* TestApp.xcassets */,
 				F5954E181CBD2E1200117745 /* LaunchScreen.storyboard */,
 				F5954E1B1CBD2E1200117745 /* Info.plist */,
 				F5954E071CBD2E1200117745 /* Supporting Files */,
@@ -2124,7 +2124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F55F84011C6DE50C00A945C8 /* Main.storyboard in Resources */,
-				F55F83FF1C6DE50C00A945C8 /* Assets.xcassets in Resources */,
+				F55F83FF1C6DE50C00A945C8 /* AppStub.xcassets in Resources */,
 				F5169D231CFE07FD00252F52 /* LICENSE in Resources */,
 				F55F84001C6DE50C00A945C8 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -2157,7 +2157,7 @@
 			files = (
 				F5988E831D67508D00049DE4 /* UIView+Positioning.LICENSE in Resources */,
 				F5954E1A1CBD2E1200117745 /* LaunchScreen.storyboard in Resources */,
-				F5954E171CBD2E1200117745 /* Assets.xcassets in Resources */,
+				F5954E171CBD2E1200117745 /* TestApp.xcassets in Resources */,
 				F5169D1F1CFE06D700252F52 /* Fingertips.LICENSE in Resources */,
 				F5954E151CBD2E1200117745 /* Main.storyboard in Resources */,
 				F5169D241CFE07FE00252F52 /* LICENSE in Resources */,
@@ -2647,7 +2647,7 @@
 		898743DF1C5847B30084FD93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppStubIcon;
 				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Karl Krukow (YTTN6Y2QS9)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -2670,7 +2670,7 @@
 		898743E01C5847B30084FD93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppStubIcon;
 				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Karl Krukow (YTTN6Y2QS9)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -2801,7 +2801,7 @@
 		F5954E1D1CBD2E1200117745 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = TestAppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -2832,7 +2832,7 @@
 		F5954E1E1CBD2E1200117745 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = TestAppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = NO;
 				ENABLE_BITCODE = NO;
