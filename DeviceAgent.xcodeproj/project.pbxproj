@@ -835,7 +835,7 @@
 		F5BCAB0D1D5BBEDA00ED6EE3 /* PanPaletteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanPaletteController.m; sourceTree = "<group>"; };
 		F5BCAB0F1D5BC15500ED6EE3 /* DragDropController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragDropController.h; sourceTree = "<group>"; };
 		F5BCAB101D5BC15500ED6EE3 /* DragDropController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = DragDropController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
-		F5C1E8BC1CBF5B120019A52F /* CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration"; path = "TestManagerDConnection/CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration"; sourceTree = SOURCE_ROOT; };
+		F5C1E8BC1CBF5B120019A52F /* CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration"; path = "Server/Testmanagerd/CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration"; sourceTree = SOURCE_ROOT; };
 		F5D42A181D40E3150041105C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F5F7183F1D63A4B300E402EE /* ScrollplicationsController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = ScrollplicationsController.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F5F718401D63A4B300E402EE /* ScrollplicationsController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollplicationsController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
@@ -1019,7 +1019,7 @@
 				89C5F34E1C9A60E70093A018 /* Testmanagerd.h */,
 				89C5F34F1C9A60E70093A018 /* Testmanagerd.m */,
 			);
-			name = Testmanagerd;
+			path = Testmanagerd;
 			sourceTree = "<group>";
 		};
 		89C5F3571C9B9C6A0093A018 /* Queries */ = {
@@ -1401,6 +1401,7 @@
 		F55F83B61C6DDF1300A945C8 /* Server */ = {
 			isa = PBXGroup;
 			children = (
+				89C5F34D1C9A60CD0093A018 /* Testmanagerd */,
 				89D538051CA32A3A00F62E09 /* FBWebDriverAgent */,
 				899696ED1CB587E200BB42E2 /* AutomationActions */,
 				F5B0A1891CAD4A1F00E056CE /* CBXiOSVersionInlines.h */,
@@ -1410,7 +1411,6 @@
 				F55F83F01C6DDF7E00A945C8 /* CBXProtocols.h */,
 				F55F83BE1C6DDF1300A945C8 /* CBXCUITestServer.h */,
 				F55F83BF1C6DDF1300A945C8 /* CBXCUITestServer.m */,
-				89C5F34D1C9A60CD0093A018 /* Testmanagerd */,
 				F55F83B71C6DDF1300A945C8 /* Application */,
 				F55F83C01C6DDF1300A945C8 /* Exceptions */,
 				F55F83C71C6DDF1300A945C8 /* Routes */,
