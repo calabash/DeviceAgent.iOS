@@ -66,7 +66,7 @@ static NSString *const LPiPhone5sSimVersionInfo = @"CoreSimulator 110.4 - Device
 
 #else
 
-- (void)testSimulatorModelIdentiferReturnsNothing {
+- (void)testSimulatorModelIdentifierReturnsNothing {
     expect([self.device simulatorModelIdentfier]).to.equal(nil);
 }
 
@@ -394,9 +394,9 @@ static NSString *const LPiPhone5sSimVersionInfo = @"CoreSimulator 110.4 - Device
     OCMExpect([mock isIPhone4Like]).andReturn(NO);
     OCMExpect([mock scaleForMainScreen]).andReturn(2.0);
     OCMExpect([mock heightForMainScreenBounds]).andReturn(10);
-    
+
     expect([mock isLetterBox]).to.equal(NO);
-    
+
     OCMVerifyAll(mock);
 }
 
@@ -406,9 +406,9 @@ static NSString *const LPiPhone5sSimVersionInfo = @"CoreSimulator 110.4 - Device
     OCMExpect([mock isIPhone4Like]).andReturn(NO);
     OCMExpect([mock scaleForMainScreen]).andReturn(2.0);
     OCMExpect([mock heightForMainScreenBounds]).andReturn(480);
-    
+
     expect([mock isLetterBox]).to.equal(YES);
-    
+
     OCMVerifyAll(mock);
 }
 
