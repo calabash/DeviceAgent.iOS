@@ -70,11 +70,11 @@ static NSString *serverName = @"CalabashXCUITestServer";
 - (void)start {
     NSError *error;
     BOOL serverStarted = NO;
-        
+
     [self.server setPort:CBX_DEFAULT_SERVER_PORT];
     NSLog(@"Attempting to start the DeviceAgent server");
     serverStarted = [self attemptToStartWithError:&error];
-    
+
     if (!serverStarted) {
         NSLog(@"Attempt to start web server failed with error %@", [error description]);
         abort();
@@ -120,12 +120,12 @@ static NSString *serverName = @"CalabashXCUITestServer";
         if (!error) {
             return NO;
         }
-        
+
         NSString *description = @"Unknown Error when Starting server";
         if ([innerError.domain isEqualToString:NSPOSIXErrorDomain] && innerError.code == EADDRINUSE) {
             description = [NSString stringWithFormat:@"Unable to start web server on port %ld", (long)self.server.port];
         }
-        
+
         *error = [NSError errorWithDomain:CBXWebServerErrorDomain code:0 userInfo:@{NSLocalizedDescriptionKey : description, NSUnderlyingErrorKey : innerError}];
         return NO;
     }
