@@ -43,7 +43,11 @@ appledoc \
 --no-repeat-first-par \
 --ignore "*.m" \
 --ignore "Server/NSXPCConnection.h" \
---ignore "Server/Testmanagerd" \
+--ignore "Server/Testmanagerd/DTXConnectionServices" \
+--ignore "Server/Testmanagerd/DTXConnectionServices.framework" \
+--ignore "Server/Testmanagerd/MobileDevice.framework" \
+--ignore "Server/Testmanagerd/XCUITestManagerDLink" \
+--ignore "Server/Testmanagerd/XCUITestManagerDLink.framework" \
 --ignore "Server/XCTest" \
 --ignore "Server/FBWebDriverAgent" \
 ./Server
