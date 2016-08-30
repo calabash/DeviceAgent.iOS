@@ -374,6 +374,8 @@
 		F5DED0401D7634AB00563648 /* SpringboardAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DED03E1D7634AB00563648 /* SpringboardAlert.m */; };
 		F5DED0411D7634AB00563648 /* SpringboardAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DED03E1D7634AB00563648 /* SpringboardAlert.m */; };
 		F5DED0431D76368000563648 /* SpringboardAlertTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DED0421D76368000563648 /* SpringboardAlertTest.m */; };
+		F5E663211D74958200068CE9 /* SpringboardApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E6631F1D74946000068CE9 /* SpringboardApplication.m */; };
+		F5E663221D74958300068CE9 /* SpringboardApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E6631F1D74946000068CE9 /* SpringboardApplication.m */; };
 		F5F718411D63A4B300E402EE /* ScrollplicationsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F718401D63A4B300E402EE /* ScrollplicationsController.m */; };
 		F5FEA0B51D7478CF00B5EF42 /* SpringboardAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 634244EC948D56732C2565E5 /* SpringboardAlerts.m */; };
 		F5FEA0B81D747CCD00B5EF42 /* UIDevice+Wifi_IP.h in Headers */ = {isa = PBXBuildFile; fileRef = F5FEA0B61D747CCD00B5EF42 /* UIDevice+Wifi_IP.h */; };
@@ -850,6 +852,8 @@
 		F5DED03D1D7634AB00563648 /* SpringboardAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringboardAlert.h; sourceTree = "<group>"; };
 		F5DED03E1D7634AB00563648 /* SpringboardAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringboardAlert.m; sourceTree = "<group>"; };
 		F5DED0421D76368000563648 /* SpringboardAlertTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringboardAlertTest.m; sourceTree = "<group>"; };
+		F5E6631E1D74946000068CE9 /* SpringboardApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringboardApplication.h; sourceTree = "<group>"; };
+		F5E6631F1D74946000068CE9 /* SpringboardApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringboardApplication.m; sourceTree = "<group>"; };
 		F5F7183F1D63A4B300E402EE /* ScrollplicationsController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = ScrollplicationsController.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F5F718401D63A4B300E402EE /* ScrollplicationsController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollplicationsController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F5FEA0B61D747CCD00B5EF42 /* UIDevice+Wifi_IP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Wifi_IP.h"; sourceTree = "<group>"; };
@@ -1356,6 +1360,8 @@
 			children = (
 				F55F83BC1C6DDF1300A945C8 /* Application.h */,
 				F55F83BD1C6DDF1300A945C8 /* Application.m */,
+				F5E6631E1D74946000068CE9 /* SpringboardApplication.h */,
+				F5E6631F1D74946000068CE9 /* SpringboardApplication.m */,
 				F55F83BA1C6DDF1300A945C8 /* Application+Queries.h */,
 				F55F83BB1C6DDF1300A945C8 /* Application+Queries.m */,
 				F59E94731D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.h */,
@@ -2284,6 +2290,7 @@
 				899696C51CB3360900BB42E2 /* Pinch.m in Sources */,
 				F55F82531C6DD07500A945C8 /* RouteRequest.m in Sources */,
 				F55F84101C6E437A00A945C8 /* JSONUtils.m in Sources */,
+				F5E663211D74958200068CE9 /* SpringboardApplication.m in Sources */,
 				F5870B431CF0BEFF00B3376C /* TouchPath.m in Sources */,
 				89512BDC1C9EEC3C0027D61E /* Drag.m in Sources */,
 				F55F81A61C6DD07500A945C8 /* HTTPRedirectResponse.m in Sources */,
@@ -2438,6 +2445,7 @@
 				F5963ECC1D5F3F0C002F9304 /* JSONUtilsTest.m in Sources */,
 				F59E94771D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m in Sources */,
 				F5B0A1AE1CAD4E2700E056CE /* QuerySpecifier.m in Sources */,
+				F5E663221D74958300068CE9 /* SpringboardApplication.m in Sources */,
 				899696DB1CB45FFC00BB42E2 /* ActionConfiguration.m in Sources */,
 				F5B0A1C11CAD4E4600E056CE /* QueryRoutes.m in Sources */,
 				89F6BF921CBEB5AD0088269C /* GeometryUtils.m in Sources */,
