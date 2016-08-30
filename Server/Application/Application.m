@@ -81,7 +81,6 @@ static NSInteger currentElementIndex = 0;
                                             userInfo:@{@"bundleId" : self.app.bundleID}];
         }
     }];
-//    [self.app launch];
 }
 
 + (void)killCurrentApplication {
