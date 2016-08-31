@@ -27,7 +27,7 @@
 - (void)testAlerts {
     NSArray<SpringboardAlert *> *actual;
     actual = [[SpringboardAlerts shared] alerts];
-    expect(actual.count).to.equal(85);
+    expect(actual.count).to.equal(83);
 }
 
 - (void)testAlertForTitle {
