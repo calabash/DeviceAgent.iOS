@@ -29,7 +29,9 @@
 }
 
 - (BOOL)matchesAlertTitle:(NSString *)alertTitle {
-    return [alertTitle containsString:self.alertTitleFragment];
+    return [[alertTitle lowercaseString]
+            containsString:[self.alertTitleFragment
+                            lowercaseString]];
 }
 
 @end

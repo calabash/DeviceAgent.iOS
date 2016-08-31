@@ -100,9 +100,7 @@ static SpringboardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"OK", YES, @"Would Like Access to Twitter Accounts"),
              alert(@"OK", YES, @"data available to nearby bluetooth devices"),
              alert(@"OK", YES, @"Would Like to Send You Push Notifications"),
-             alert(@"OK", YES, @"would like to send you Push Notifications"),
              alert(@"OK", YES, @"Would Like to Send You Notifications"),
-             alert(@"OK", YES, @"would like to send you Notifications"),
              alert(@"OK", YES, @"No SIM Card Installed"),
              alert(@"Not Now", NO, @"Carrier Settings Update")
              ];

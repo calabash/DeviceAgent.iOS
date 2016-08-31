@@ -55,6 +55,19 @@
 
     actual = [alert matchesAlertTitle:@"Not found"];
     expect(actual).to.equal(NO);
+
+    // matching is done with lowercase strings
+    alert = [[SpringboardAlert alloc] initWithAlertTitleFragment:@"MATCH"
+                                              dismissButtonTitle:@"OK"
+                                                    shouldAccept:YES];
+    actual = [alert matchesAlertTitle:@"Found a match"];
+    expect(actual).to.equal(YES);
+
+    alert = [[SpringboardAlert alloc] initWithAlertTitleFragment:@"match"
+                                              dismissButtonTitle:@"OK"
+                                                    shouldAccept:YES];
+    actual = [alert matchesAlertTitle:@"Found a MATCH"];
+    expect(actual).to.equal(YES);
 }
 
 @end
