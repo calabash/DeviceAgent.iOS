@@ -11,6 +11,9 @@
 #import "SpringboardAlerts.h"
 #import "SpringboardAlert.h"
 
+// Alerts are animated on and off. The animation is ~0.4 seconds.
+static NSTimeInterval const SpringboardAlertHandlerSleep = 0.4;
+
 @interface CBXCUITestServer ()
 @property (atomic, strong) RoutingHTTPServer *server;
 @property (atomic, assign) BOOL isFinishedTesting;
@@ -113,8 +116,13 @@ static NSString *serverName = @"CalabashXCUITestServer";
         // Alerts are animated on.  Interacting with the alert before it is
         // fully animated can cause crashes and touch events that do perform
         // no action.
+        //
+        // It is not clear yet if the sleep is value is good.  It works, but
+        // maybe it is not necessary, can be shorter, or needs to be longer.
+        //
+        // It is not clear yet what the effect of waiting for quiescence is.
         [[SpringboardApplication springboard] _waitForQuiescence];
-        NSDate *until = [[NSDate date] dateByAddingTimeInterval:0.4];
+        NSDate *until = [[NSDate date] dateByAddingTimeInterval:SpringboardAlertHandlerSleep];
         [[NSRunLoop mainRunLoop] runUntilDate:until];
 
         if (alert.exists) {
@@ -152,8 +160,10 @@ static NSString *serverName = @"CalabashXCUITestServer";
                     [button tap];
 
                     // Alerts are animated off.
+                    // It is not clear yet if we need to sleep or wait for
+                    // quiescence.
                     [[SpringboardApplication springboard] _waitForQuiescence];
-                    until = [[NSDate date] dateByAddingTimeInterval:0.4];
+                    until = [[NSDate date] dateByAddingTimeInterval:SpringboardAlertHandlerSleep];
                     [[NSRunLoop mainRunLoop] runUntilDate:until];
                 }
             }
