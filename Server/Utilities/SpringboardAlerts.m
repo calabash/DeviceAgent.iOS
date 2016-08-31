@@ -2,13 +2,21 @@
 #import "SpringboardAlerts.h"
 #import "SpringboardAlert.h"
 
+
+// Convenience method for creating alerts from the regexes found in run_loop
+// scripts/lib/on_alert.js
+static SpringboardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSString *title) {
+    return [[SpringboardAlert alloc] initWithAlertTitleFragment:title
+                                             dismissButtonTitle:buttonTitle
+                                                   shouldAccept:shouldAccept];
+}
+
 @interface SpringboardAlerts ()
 
 @property(strong) NSArray<SpringboardAlert *> *alerts;
 
 - (instancetype)init_private;
 - (NSArray<SpringboardAlert *> *)concatenateArrays:(NSArray<NSArray *> *)arrays;
-- (NSArray<SpringboardAlert *> *)alertsFromButtonTitleAndTitleArray:(NSArray<NSArray *> *)array;
 - (NSArray<SpringboardAlert *> *)USEnglishAlerts;
 - (NSArray<SpringboardAlert *> *)DanishAlerts;
 - (NSArray<SpringboardAlert *> *)DutchAlerts;
@@ -31,7 +39,6 @@
 - (instancetype)init_private {
     self = [super init];
     if (self) {
-        // Approximate count of existing regular expressions from UIA
         _alerts = [self concatenateArrays:@[
                                             [self USEnglishAlerts],
                                             [self DanishAlerts],
@@ -77,153 +84,130 @@
     return final;
 }
 
-- (NSArray<SpringboardAlert *> *)alertsFromButtonTitleAndTitleArray:(NSArray<NSArray *> *)array {
-    NSMutableArray<SpringboardAlert *> *alerts = [NSMutableArray arrayWithCapacity:array.count];
-
-    __block NSString *buttonTitle, *title;
-    __block BOOL shouldAccept;
-    [array enumerateObjectsUsingBlock:^(NSArray *tokens, NSUInteger idx, BOOL *stop) {
-        buttonTitle = tokens[0];
-        shouldAccept = [tokens[1] boolValue];
-        title = tokens[2];
-        [alerts addObject:[[SpringboardAlert alloc] initWithAlertTitleFragment:title
-                                                           dismissButtonTitle:buttonTitle
-                                                                 shouldAccept:shouldAccept]];
-    }];
-    return [NSArray arrayWithArray:alerts];
-}
-
 - (NSArray<SpringboardAlert *> *)USEnglishAlerts {
-    NSArray *array = @[
-                       @[@"OK", @YES, @"Would Like to Use Your Current Location"],
-                       @[@"OK", @YES, @"Location Accuracy"],
-                       @[@"Allow", @YES, @"access your location"],
-                       @[@"OK", @YES, @"Would Like to Access Your Photos"],
-                       @[@"OK", @YES, @"Would Like to Access Your Contacts"],
-                       @[@"OK", @YES, @"Access the Microphone"],
-                       @[@"OK", @YES, @"Would Like to Access Your Calendar"],
-                       @[@"OK", @YES, @"Would Like to Access Your Reminders"],
-                       @[@"OK", @YES, @"Would Like to Access Your Motion Activity"],
-                       @[@"OK", @YES, @"Would Like to Access the Camera"],
-                       @[@"OK", @YES, @"Would Like to Access Your Motion & Fitness Activity"],
-                       @[@"OK", @YES, @"Would Like Access to Twitter Accounts"],
-                       @[@"OK", @YES, @"data available to nearby bluetooth devices"],
-                       @[@"OK", @YES, @"Would Like to Send You Push Notifications"],
-                       @[@"OK", @YES, @"would like to send you Push Notifications"],
-                       @[@"OK", @YES, @"Would Like to Send You Notifications"],
-                       @[@"OK", @YES, @"would like to send you Notifications"],
-                       @[@"OK", @YES, @"No SIM Card Installed"],
-                       @[@"Not Now", @NO, @"Carrier Settings Update"]
-                       ];
-    return [self alertsFromButtonTitleAndTitleArray:array];
+    return @[
+             alert(@"OK", YES, @"Would Like to Use Your Current Location"),
+             alert(@"OK", YES, @"Location Accuracy"),
+             alert(@"Allow", YES, @"access your location"),
+             alert(@"OK", YES, @"Would Like to Access Your Photos"),
+             alert(@"OK", YES, @"Would Like to Access Your Contacts"),
+             alert(@"OK", YES, @"Access the Microphone"),
+             alert(@"OK", YES, @"Would Like to Access Your Calendar"),
+             alert(@"OK", YES, @"Would Like to Access Your Reminders"),
+             alert(@"OK", YES, @"Would Like to Access Your Motion Activity"),
+             alert(@"OK", YES, @"Would Like to Access the Camera"),
+             alert(@"OK", YES, @"Would Like to Access Your Motion & Fitness Activity"),
+             alert(@"OK", YES, @"Would Like Access to Twitter Accounts"),
+             alert(@"OK", YES, @"data available to nearby bluetooth devices"),
+             alert(@"OK", YES, @"Would Like to Send You Push Notifications"),
+             alert(@"OK", YES, @"would like to send you Push Notifications"),
+             alert(@"OK", YES, @"Would Like to Send You Notifications"),
+             alert(@"OK", YES, @"would like to send you Notifications"),
+             alert(@"OK", YES, @"No SIM Card Installed"),
+             alert(@"Not Now", NO, @"Carrier Settings Update")
+             ];
 }
 
 - (NSArray<SpringboardAlert *> *)DanishAlerts {
-    NSArray *array = @[
-                       @[@"Tillad", @YES, @"bruge din lokalitet, når du bruger appen"],
-                       @[@"Tillad", @YES, @"også når du ikke bruger appen"],
-                       @[@"OK", @YES, @"vil bruge din aktuelle placering"],
-                       @[@"OK", @YES, @"vil bruge dine kontakter"],
-                       @[@"OK", @YES, @"vil bruge mikrofonen"],
-                       @[@"OK", @YES, @"vil bruge din kalender"],
-                       @[@"OK", @YES, @"vil bruge dine påmindelser"],
-                       @[@"OK", @YES, @"vil bruge dine fotos"],
-                       @[@"OK", @YES, @"ønsker adgang til Twitter-konti"],
-                       @[@"OK", @YES, @"vil bruge din fysiske aktivitet og din træningsaktivitet"],
-                       @[@"OK", @YES, @"vil bruge kameraet"],
-                       @[@"OK", @YES, @"vil gerne sende dig meddelelser"]
-                       ];
-    return [self alertsFromButtonTitleAndTitleArray:array];
+    return @[
+             alert(@"Tillad", YES, @"bruge din lokalitet, når du bruger appen"),
+             alert(@"Tillad", YES, @"også når du ikke bruger appen"),
+             alert(@"OK", YES, @"vil bruge din aktuelle placering"),
+             alert(@"OK", YES, @"vil bruge dine kontakter"),
+             alert(@"OK", YES, @"vil bruge mikrofonen"),
+             alert(@"OK", YES, @"vil bruge din kalender"),
+             alert(@"OK", YES, @"vil bruge dine påmindelser"),
+             alert(@"OK", YES, @"vil bruge dine fotos"),
+             alert(@"OK", YES, @"ønsker adgang til Twitter-konti"),
+             alert(@"OK", YES, @"vil bruge din fysiske aktivitet og din træningsaktivitet"),
+             alert(@"OK", YES, @"vil bruge kameraet"),
+             alert(@"OK", YES, @"vil gerne sende dig meddelelser")
+             ];
 }
 
 - (NSArray<SpringboardAlert *> *)DutchAlerts {
-    NSArray *array = @[
-                       @[@"Sta toe", @YES, @"tot uw locatie toestaan terwijl u de app gebruikt"],
-                       @[@"Sta toe", @YES, @"toegang tot uw locatie toestaan terwijl u de app gebruikt"],
-                       @[@"Sta toe", @YES, @"ook toegang tot uw locatie toestaan, zelfs als u de app niet gebruikt"],
-                       @[@"Sta toe", @YES, @"toegang tot uw locatie toestaan, zelfs als u de app niet gebruikt"],
-                       @[@"OK", @YES, @"wil toegang tot uw contacten"],
-                       @[@"OK", @YES, @"wil toegang tot uw agenda"],
-                       @[@"OK", @YES, @"wil toegang tot uw herinneringen"],
-                       @[@"OK", @YES, @"wil toegang tot uw foto's"],
-                       @[@"OK", @YES, @"wil toegang tot Twitter-accounts"],
-                       @[@"OK", @YES, @"wil toegang tot de microfoon"],
-                       @[@"OK", @YES, @"wil toegang tot uw bewegings- en fitnessactiviteit"],
-                       @[@"OK", @YES, @"wil toegang tot de camera"],
-                       @[@"OK", @YES, @"wil u berichten sturen"]
-                       ];
-    return [self alertsFromButtonTitleAndTitleArray:array];
+    return @[
+             alert(@"Sta toe", YES, @"tot uw locatie toestaan terwijl u de app gebruikt"),
+             alert(@"Sta toe", YES, @"toegang tot uw locatie toestaan terwijl u de app gebruikt"),
+             alert(@"Sta toe", YES, @"ook toegang tot uw locatie toestaan, zelfs als u de app niet gebruikt"),
+             alert(@"Sta toe", YES, @"toegang tot uw locatie toestaan, zelfs als u de app niet gebruikt"),
+             alert(@"OK", YES, @"wil toegang tot uw contacten"),
+             alert(@"OK", YES, @"wil toegang tot uw agenda"),
+             alert(@"OK", YES, @"wil toegang tot uw herinneringen"),
+             alert(@"OK", YES, @"wil toegang tot uw foto's"),
+             alert(@"OK", YES, @"wil toegang tot Twitter-accounts"),
+             alert(@"OK", YES, @"wil toegang tot de microfoon"),
+             alert(@"OK", YES, @"wil toegang tot uw bewegings- en fitnessactiviteit"),
+             alert(@"OK", YES, @"wil toegang tot de camera"),
+             alert(@"OK", YES, @"wil u berichten sturen")
+             ];
 }
 
 - (NSArray<SpringboardAlert *> *)GermanAlerts {
-    NSArray *array = @[
-                       @[@"Ja", @YES, @"Ihren aktuellen Ort verwenden"],
-                       @[@"Erlauben", @YES, @"auf Ihren Standort zugreifen, wenn Sie die App benutzen"],
-                       @[@"Erlauben", @YES, @"auch auf Ihren Standort zugreifen, wenn Sie die App nicht benutzen"],
-                       @[@"Erlauben", @YES, @"auf Ihren Standort zugreifen, selbst wenn Sie die App nicht benutzen"],
-                       @[@"Ja", @YES, @"auf Ihre Kontakte zugreifen"],
-                       @[@"Ja", @YES, @"auf Ihren Kalender zugreifen"],
-                       @[@"Ja", @YES, @"auf Ihre Erinnerungen zugreifen"],
-                       @[@"Ja", @YES, @"auf Ihre Fotos zugreifen"],
-                       @[@"Erlauben", @YES, @"möchte auf Twitter-Accounts zugreifen"],
-                       @[@"Ja", @YES, @"auf das Mikrofon zugreifen"],
-                       @[@"Ja", @YES, @"möchte auf Ihre Bewegungs- und Fitnessdaten zugreifen"],
-                       @[@"Ja", @YES, @"auf Ihre Kamera zugreifen"],
-                       @[@"OK", @YES, @"Ihnen Mitteilungen senden"],
-                       @[@"OK", @YES, @"Keine SIM-Karte eingelegt"]
-                       ];
-    return [self alertsFromButtonTitleAndTitleArray:array];
+    return @[
+             alert(@"Ja", YES, @"Ihren aktuellen Ort verwenden"),
+             alert(@"Erlauben", YES, @"auf Ihren Standort zugreifen, wenn Sie die App benutzen"),
+             alert(@"Erlauben", YES, @"auch auf Ihren Standort zugreifen, wenn Sie die App nicht benutzen"),
+             alert(@"Erlauben", YES, @"auf Ihren Standort zugreifen, selbst wenn Sie die App nicht benutzen"),
+             alert(@"Ja", YES, @"auf Ihre Kontakte zugreifen"),
+             alert(@"Ja", YES, @"auf Ihren Kalender zugreifen"),
+             alert(@"Ja", YES, @"auf Ihre Erinnerungen zugreifen"),
+             alert(@"Ja", YES, @"auf Ihre Fotos zugreifen"),
+             alert(@"Erlauben", YES, @"möchte auf Twitter-Accounts zugreifen"),
+             alert(@"Ja", YES, @"auf das Mikrofon zugreifen"),
+             alert(@"Ja", YES, @"möchte auf Ihre Bewegungs- und Fitnessdaten zugreifen"),
+             alert(@"Ja", YES, @"auf Ihre Kamera zugreifen"),
+             alert(@"OK", YES, @"Ihnen Mitteilungen senden"),
+             alert(@"OK", YES, @"Keine SIM-Karte eingelegt")
+             ];
 }
 
 - (NSArray<SpringboardAlert *> *)EUSpanishAlerts {
-    NSArray *array = @[
-                       @[@"Permitir", @YES, @"acceder a tu ubicación mientras utilizas la aplicación"],
-                       @[@"Permitir", @YES, @"acceder a tu ubicación aunque no estés utilizando la aplicación"],
-                       @[@"OK", @YES, @"quiere acceder a tus contactos"],
-                       @[@"OK", @YES, @"quiere acceder a tu calendario"],
-                       @[@"OK", @YES, @"quiere acceder a tus recordatorios"],
-                       @[@"OK", @YES, @"quiere acceder a tus fotos"],
-                       @[@"OK", @YES, @"quiere obtener acceso a cuentas Twitter"],
-                       @[@"OK", @YES, @"quiere acceder al micrófono"],
-                       @[@"OK", @YES, @"desea acceder a tu actividad física y deportiva"],
-                       @[@"OK", @YES, @"quiere acceder a la cámara"],
-                       @[@"OK", @YES, @"quiere enviarte notificaciones"]
-                       ];
-    return [self alertsFromButtonTitleAndTitleArray:array];
+    return @[
+             alert(@"Permitir", YES, @"acceder a tu ubicación mientras utilizas la aplicación"),
+             alert(@"Permitir", YES, @"acceder a tu ubicación aunque no estés utilizando la aplicación"),
+             alert(@"OK", YES, @"quiere acceder a tus contactos"),
+             alert(@"OK", YES, @"quiere acceder a tu calendario"),
+             alert(@"OK", YES, @"quiere acceder a tus recordatorios"),
+             alert(@"OK", YES, @"quiere acceder a tus fotos"),
+             alert(@"OK", YES, @"quiere obtener acceso a cuentas Twitter"),
+             alert(@"OK", YES, @"quiere acceder al micrófono"),
+             alert(@"OK", YES, @"desea acceder a tu actividad física y deportiva"),
+             alert(@"OK", YES, @"quiere acceder a la cámara"),
+             alert(@"OK", YES, @"quiere enviarte notificaciones")
+             ];
 }
 
 - (NSArray<SpringboardAlert *> *)ES419SpanishAlerts {
-    NSArray *array = @[
-                       @[@"Permitir", @YES, @"acceda a tu ubicación mientras la app está en uso"],
-                       @[@"Permitir", @YES, @"acceda a tu ubicación incluso cuando la app no está en uso"],
-                       @[@"OK", @YES, @"quiere acceder a tu condición y actividad física"]
-                       ];
-    return [self alertsFromButtonTitleAndTitleArray:array];
+    return @[
+             alert(@"Permitir", YES, @"acceda a tu ubicación mientras la app está en uso"),
+             alert(@"Permitir", YES, @"acceda a tu ubicación incluso cuando la app no está en uso"),
+             alert(@"OK", YES, @"quiere acceder a tu condición y actividad física")
+             ];
 }
+
 - (NSArray<SpringboardAlert *> *)FrenchAlerts {
-    NSArray *array = @[
-                       @[@"OK", @YES, @"vous envoyer des notifications"],
-                       @[@"Autoriser", @YES, @"à accéder à vos données de localisation lorsque vous utilisez l’app"],
-                       @[@"Autoriser", @YES, @"à accéder à vos données de localisation même lorsque vous n’utilisez pas l’app"],
-                       @[@"Autoriser", @YES, @"à accéder aussi à vos données de localisation lorsque vous n’utilisez pas l’app"],
-                       @[@"OK", @YES, @"souhaite accéder à vos contacts"],
-                       @[@"OK", @YES, @"souhaite accéder à votre calendrier"],
-                       @[@"OK", @YES, @"souhaite accéder à vos rappels"],
-                       @[@"OK", @YES, @"souhaite accéder à vos mouvements et vos activités physiques"],
-                       @[@"OK", @YES, @"souhaite accéder à vos photos"],
-                       @[@"OK", @YES, @"souhaite accéder à l’appareil photo"],
-                       @[@"OK", @YES, @"souhaite accéder aux comptes Twitter"],
-                       @[@"OK", @YES, @"souhaite accéder au micro"]
-                       ];
-    return [self alertsFromButtonTitleAndTitleArray:array];
+    return @[
+             alert(@"OK", YES, @"vous envoyer des notifications"),
+             alert(@"Autoriser", YES, @"à accéder à vos données de localisation lorsque vous utilisez l’app"),
+             alert(@"Autoriser", YES, @"à accéder à vos données de localisation même lorsque vous n’utilisez pas l’app"),
+             alert(@"Autoriser", YES, @"à accéder aussi à vos données de localisation lorsque vous n’utilisez pas l’app"),
+             alert(@"OK", YES, @"souhaite accéder à vos contacts"),
+             alert(@"OK", YES, @"souhaite accéder à votre calendrier"),
+             alert(@"OK", YES, @"souhaite accéder à vos rappels"),
+             alert(@"OK", YES, @"souhaite accéder à vos mouvements et vos activités physiques"),
+             alert(@"OK", YES, @"souhaite accéder à vos photos"),
+             alert(@"OK", YES, @"souhaite accéder à l’appareil photo"),
+             alert(@"OK", YES, @"souhaite accéder aux comptes Twitter"),
+             alert(@"OK", YES, @"souhaite accéder au micro")
+             ];
 }
 
 - (NSArray<SpringboardAlert *> *)RussianAlerts {
-    NSArray *array = @[
-                       // Location
-                       @[@"OK", @YES, @"запрашивает разрешение на использование Ващей текущей пгеопозиции"]
-                       ];
-    return [self alertsFromButtonTitleAndTitleArray:array];
+    return @[
+             // Location
+             alert(@"OK", YES, @"запрашивает разрешение на использование Ващей текущей пгеопозиции")
+             ];
 }
 
 @end
