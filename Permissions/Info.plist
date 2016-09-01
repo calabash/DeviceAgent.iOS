@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en_US</string>
+	<key>CFBundleDisplayName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>CFBundleExecutable</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.19.2</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>0.19.2</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Permissions wants to drain your battery with Bluetooth.</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Permissions wants to know who are are meeting with.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Permissions wants to take pictures of you.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Permissions wants to know who your friends are.</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Permissions wants to share your state-of-health with other apps.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Permissions wants to do something? With your health updates?</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Permissions needs to know where you are ALWAYS.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Permissons need to use your location to spy on you.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Permissons need to use your location to spy on you.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Permissions wants to record your conversations.</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Permissions wants to see how fast you can run.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Permissions wants pictures of known associates.</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>Permissions wants to bug you all the time.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>location-services</string>
+		<string>armv7</string>
+		<string>healthkit</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+	</array>
+</dict>
+</plist>

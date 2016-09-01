@@ -6,6 +6,13 @@
 #import <objc/runtime.h>
 #import "CBXProtocols.h"
 #import "CBXConstants.h"
+#import "SpringboardApplication.h"
+#import "Application+Queries.h"
+#import "SpringboardAlerts.h"
+#import "SpringboardAlert.h"
+
+// Alerts are animated on and off. The animation is ~0.4 seconds.
+static NSTimeInterval const SpringboardAlertHandlerSleep = 0.4;
 
 @interface CBXCUITestServer ()
 @property (atomic, strong) RoutingHTTPServer *server;
@@ -13,6 +20,7 @@
 
 + (CBXCUITestServer *)sharedServer;
 - (id)init_private;
+- (void)handleSpringboardAlert;
 
 @end
 
@@ -87,11 +95,79 @@ static NSString *serverName = @"CalabashXCUITestServer";
 
     NSTimeInterval interval = 0.1;
     while ([self.server isRunning] && !self.isFinishedTesting) {
+
         // If we are worried about alloc'ing NSDate objects, it might be
         // possible to replace with:
         // CFRunLoopRunInMode(kCFRunLoopDefaultMode, timeout_, false);
         NSDate *until = [[NSDate date] dateByAddingTimeInterval:interval];
         [[NSRunLoop mainRunLoop] runUntilDate:until];
+
+        [self handleSpringboardAlert];
+    }
+}
+
+- (void)handleSpringboardAlert {
+    XCUIElementQuery *query = [[SpringboardApplication springboard]
+                               descendantsMatchingType:XCUIElementTypeAlert];
+    NSArray <XCUIElement *> *elements = [query allElementsBoundByIndex];
+    if ([elements count] != 0) {
+        XCUIElement *alert = elements[0];
+
+        // Alerts are animated on.  Interacting with the alert before it is
+        // fully animated can cause crashes and touch events that do perform
+        // no action.
+        //
+        // It is not clear yet if the sleep is value is good.  It works, but
+        // maybe it is not necessary, can be shorter, or needs to be longer.
+        //
+        // It is not clear yet what the effect of waiting for quiescence is.
+        [[SpringboardApplication springboard] _waitForQuiescence];
+        NSDate *until = [[NSDate date] dateByAddingTimeInterval:SpringboardAlertHandlerSleep];
+        [[NSRunLoop mainRunLoop] runUntilDate:until];
+
+        if (alert.exists) {
+            NSString *title = alert.label;
+
+            SpringboardAlert *springboardAlert;
+            springboardAlert = [[SpringboardAlerts shared] springboardAlertForAlertTitle:title];
+
+            // The alert is on the list of alerts to auto dismiss
+            if (springboardAlert) {
+
+                XCUIElement *button = nil;
+                NSString *mark = springboardAlert.defaultDismissButtonMark;
+                button = alert.buttons[mark];
+
+                // The default button does not exist.  It probably changed
+                // after an iOS update.
+                if (!button.exists) {
+                    button = nil;
+                }
+
+                // Use the default button.
+                if (!button) {
+                    query = [alert descendantsMatchingType:XCUIElementTypeButton];
+                    NSArray<XCUIElement *> *buttons = [query allElementsBoundByIndex];
+
+                    if (springboardAlert.shouldAccept) {
+                        button = buttons.lastObject;
+                    } else {
+                        button = buttons.firstObject;
+                    }
+                }
+
+                if (button && button.exists) {
+                    [button tap];
+
+                    // Alerts are animated off.
+                    // It is not clear yet if we need to sleep or wait for
+                    // quiescence.
+                    [[SpringboardApplication springboard] _waitForQuiescence];
+                    until = [[NSDate date] dateByAddingTimeInterval:SpringboardAlertHandlerSleep];
+                    [[NSRunLoop mainRunLoop] runUntilDate:until];
+                }
+            }
+        }
     }
 }
 
