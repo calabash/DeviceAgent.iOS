@@ -82,12 +82,12 @@ Before do |scenario|
     :simctl => launcher.simctl,
     :instruments => launcher.instruments,
     :app => launcher.app,
-    :gesture_performer => :device_agent,
+    :automator => :device_agent,
     #:cbx_launcher => :xcodebuild,
 
     # Keep this as true.  The Launcher singleton ensures
-    # that the DeviceAgent-Runner is launched only once on physical
-    # devices.
+    # that the DeviceAgent-Runner is launched only once
+    # on physical devices.
     :shutdown_device_agent_before_launch => true
   }
 
