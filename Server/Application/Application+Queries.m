@@ -12,13 +12,11 @@
 #import "JSONUtils.h"
 
 @implementation Application (Queries)
-static NSArray <NSString *> *markedProperties;
 static NSArray <NSString *> *identifierProperties;
 
 + (void)load {
-    static dispatch_once_t oncet;
-    dispatch_once(&oncet, ^{
-        markedProperties = @[@"label", @"title", @"value", @"accessibilityLabel", @"placeholderValue"];
+    static dispatch_once_t once_token;
+    dispatch_once(&once_token, ^{
         identifierProperties = @[@"identifier", @"accessibilityIdentifier"];
     });
 }
@@ -53,15 +51,6 @@ static NSArray <NSString *> *identifierProperties;
 /*
     General Querying
  */
-
-+ (XCUIElement *)elementMarked:(NSString *)mark {
-    NSArray *elements = [self elementsMarked:mark];
-    return elements.count > 0 ? [elements firstObject] : nil;
-}
-
-+ (NSArray <XCUIElement *> *)elementsMarked:(NSString *)text {
-    return [self elementsWithAnyOfTheseProperties:markedProperties equalToValue:text];
-}
 
 + (XCUIElement *)elementWithIdentifier:(NSString *)identifier {
     NSArray *elements = [self elementsWithIdentifier:identifier];
@@ -111,11 +100,6 @@ static NSArray <NSString *> *identifierProperties;
         [ret addObject:[JSONUtils elementToJSON:element]];
     }
     return ret;
-}
-
-+ (NSArray <NSDictionary *> *)jsonForElementsMarked:(NSString *)text {
-    return [self jsonForElementsWithAnyOfTheseProperties:markedProperties
-                                            equalToValue:text];
 }
 
 + (NSArray <NSDictionary *> *)jsonForElementsWithID:(NSString *)identifier {

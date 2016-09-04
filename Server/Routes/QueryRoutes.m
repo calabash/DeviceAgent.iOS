@@ -37,13 +37,7 @@
                  
                  [response respondWithJSON:@{@"result" : results}];
              }],
-             
-             [CBXRoute get:endpoint(@"/query/marked/:text", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
-                 NSString *text = request.params[CBX_TEXT_KEY];
-                 //TODO: look for text in request.body
-                 [response respondWithJSON:[Application jsonForElementsMarked:text]];
-             }],
-             
+
              [CBXRoute get:endpoint(@"/query/id/:id", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
                  NSString *identifier = request.params[CBX_IDENTIFIER_KEY];
                  [response respondWithJSON:[Application jsonForElementsWithID:identifier]];
