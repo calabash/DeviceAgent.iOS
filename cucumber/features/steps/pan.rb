@@ -11,19 +11,16 @@ module TestApp
       @waiter.wait_for_text_in_view(text, "pan action")
     end
 
-    def pan(direction, mark, duration, size, query_options={})
-      merged_options = {
-        :all => false,
-        :specifier => :id
-      }.merge(query_options)
+    def pan(direction, mark, duration, size, wait_options={})
 
+      uiquery = {marked: mark}
       case size
         when :large
-          from_point = point_for_full_pan_start(direction, mark, merged_options)
-          to_point = point_for_full_pan_end(direction, mark, merged_options)
+          from_point = point_for_full_pan_start(direction, uiquery, wait_options)
+          to_point = point_for_full_pan_end(direction, uiquery, wait_options)
         when :medium
-          from_point = point_for_medium_pan_start(direction, mark, merged_options)
-          to_point = point_for_medium_pan_end(direction, mark, merged_options)
+          from_point = point_for_medium_pan_start(direction, uiquery, wait_options)
+          to_point = point_for_medium_pan_end(direction, uiquery, wait_options)
         when :small
          raise "NYI"
         else
@@ -34,28 +31,18 @@ module TestApp
                                         {duration: duration})
     end
 
-    def scroll(direction, mark, query_options={})
-      merged_options = {
-        :all => false,
-        :specifier => :id
-      }.merge(query_options)
-
-      pan(direction, mark, 1.0, :medium, merged_options)
+    def scroll(direction, mark, wait_options={})
+      pan(direction, mark, 1.0, :medium, wait_options)
     end
 
     alias_method :swipe, :scroll
 
-    def flick(direction, mark, query_options={})
-      merged_options = {
-        :all => false,
-        :specifier => :id
-      }.merge(query_options)
-
-      pan(direction, mark, 0.1, :medium, merged_options)
+    def flick(direction, mark, wait_options={})
+      pan(direction, mark, 0.1, :medium, wait_options)
     end
 
     def scroll_to(direction, scroll_view_mark, view_mark, times)
-      return if !@gestures.query(view_mark).empty?
+      return if !@gestures.query({marked: view_mark}).empty?
 
       found = false
 
@@ -64,7 +51,7 @@ module TestApp
         # Gesture takes 1.0 seconds
         sleep(1.5)
 
-        view = @gestures.query(view_mark).first
+        view = @gestures.query({marked: view_mark}).first
         if view
           hit_point = view["hit_point"]
           element_center = @gestures.element_center(view)
@@ -83,7 +70,7 @@ but did not see '#{view_mark}'
     end
 
     def flick_to(direction, scroll_view_mark, view_mark, times)
-      return if !@gestures.query(view_mark).empty?
+      return if !@gestures.query({marked: view_mark}).empty?
 
       found = false
 
@@ -92,7 +79,7 @@ but did not see '#{view_mark}'
         # Gesture takes 0.1 seconds
         sleep(1.0)
 
-        view = @gestures.query(view_mark).first
+        view = @gestures.query({marked: view_mark}).first
         if view
           hit_point = view["hit_point"]
           element_center = @gestures.element_center(view)
@@ -115,23 +102,23 @@ end
 World(TestApp::Pan)
 
 And(/^I am looking at the Pan Palette page$/) do
-  @waiter.wait_for_view("pan page")
+  @waiter.wait_for_view({marked: "pan page"})
   @gestures.touch_mark("pan palette row")
-  @waiter.wait_for_view("pan palette page")
+  @waiter.wait_for_view({marked: "pan palette page"})
   @waiter.wait_for_animations
 end
 
 Given(/^I am looking at the Drag and Drop page$/) do
   @waiter.wait_for_animations
   @gestures.tap_mark("drag and drop row")
-  @waiter.wait_for_view("drag and drop page")
+  @waiter.wait_for_view({marked: "drag and drop page"})
   @waiter.wait_for_animations
 end
 
 Given(/^I am looking at the Everything's On the Table page$/) do
   @waiter.wait_for_animations
   @gestures.tap_mark("table row")
-  @waiter.wait_for_view("table page")
+  @waiter.wait_for_view({marked: "table page"})
   @waiter.wait_for_animations
 end
 
@@ -223,7 +210,7 @@ Given(/^I see the Apple row$/) do
   scroll_view_mark = "table page"
   view_mark = "apple row"
 
-  if @gestures.query(view_mark).empty?
+  if @gestures.query({marked: view_mark}).empty?
     scroll_to(:down, scroll_view_mark, view_mark, 5)
   end
 end
@@ -242,16 +229,16 @@ end
 
 And(/^I can swipe to delete the Windows row$/) do
   identifier = "windows row"
-  @waiter.wait_for_view(identifier)
+  @waiter.wait_for_view({marked: identifier})
 
   swipe(:left, identifier)
   @gestures.touch_mark("Delete")
 
-  @waiter.wait_for_no_view("Delete")
+  @waiter.wait_for_no_view({marked: "Delete"})
 end
 
 And(/^I have scrolled to the top of the Companies table$/) do
-  element = @waiter.wait_for_view("StatusBar", {:all => true, :specifier => :type})
+  element = @waiter.wait_for_view({type: "StatusBar", :all => true})
   center = @gestures.element_center(element)
   @gestures.touch(center[:x], center[:y])
   sleep(0.4)
@@ -259,13 +246,13 @@ end
 
 When(/^I touch the Edit button, the table is in Edit mode$/) do
   @gestures.touch_mark("Edit")
-  @waiter.wait_for_view("Done")
+  @waiter.wait_for_view({marked: "Done"})
 end
 
 Then(/^I move the Android row above the Apple row$/) do
-  android_element = @waiter.wait_for_view("Reorder Android")
+  android_element = @waiter.wait_for_view({marked: "Reorder Android"})
   android_center = @gestures.element_center(android_element)
-  apple_element = @waiter.wait_for_view("Reorder Apple")
+  apple_element = @waiter.wait_for_view({marked: "Reorder Apple"})
   apple_center = @gestures.element_center(apple_element)
 
   from_point = {x: android_center[:x], y: android_center[:y]}

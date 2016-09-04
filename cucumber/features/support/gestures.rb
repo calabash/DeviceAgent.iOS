@@ -7,12 +7,12 @@ module DeviceAgent
       @waiter = waiter
     end
 
-    def query(mark, options={})
-      device_agent.query(mark, options)
+    def query(uiquery)
+      device_agent.query(uiquery)
     end
 
     def query_for_coordinate(mark)
-      result = waiter.wait_for_view(mark)
+      result = waiter.wait_for_view({marked: mark})
       element_center(result)
     end
 
@@ -29,7 +29,7 @@ module DeviceAgent
     alias_method :tap_mark, :touch_mark
 
     def touch_hidden(mark)
-      element = device_agent.query(mark, {all: true}).first
+      element = device_agent.query({marked: mark, all: true}).first
 
       if !element
         raise RuntimeError, %Q[

@@ -7,6 +7,9 @@ if !ENV['XAMARIN_TEST_CLOUD']
   require 'pry'
   Pry.config.history.file = '.pry-history'
   require 'pry-nav'
+
+  require 'pry/config'
+  class Pry
+    trap('INT') { exit!(1) }
+  end
 end
-
-

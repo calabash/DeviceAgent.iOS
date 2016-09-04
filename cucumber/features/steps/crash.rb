@@ -12,13 +12,13 @@ Then(/^I can dismiss an alert and wait for the alert message to disappear$/) do
   @gestures.touch_mark(mark)
 
   mark = "If we can see most of you, we can touch you."
-  @waiter.wait_for_view(mark)
+  @waiter.wait_for_view({marked: mark})
 
   # The OK button is visible, but not touchable.
   @waiter.wait_for_animations
 
   @gestures.touch_mark("OK")
-  @waiter.wait_for_no_view(mark)
+  @waiter.wait_for_no_view({marked: mark})
 end
 
 And(/^I can dismiss an alert, wait for a while, and wait for the alert title to disappear$/) do
@@ -26,7 +26,7 @@ And(/^I can dismiss an alert, wait for a while, and wait for the alert title to 
   @gestures.touch_mark(mark)
 
   mark = "Mostly Visible Button"
-  @waiter.wait_for_view(mark)
+  @waiter.wait_for_view({marked: mark})
 
   @gestures.touch_mark("OK")
 
@@ -36,7 +36,7 @@ And(/^I can dismiss an alert, wait for a while, and wait for the alert title to 
     sleep(1.0)
   end
 
-    @waiter.wait_for_no_view(mark)
+  @waiter.wait_for_no_view({marked: mark})
 end
 
 Then(/^I dismiss an alert and query for the alert title without sleeping$/) do
@@ -44,10 +44,10 @@ Then(/^I dismiss an alert and query for the alert title without sleeping$/) do
   @gestures.touch_mark(mark)
 
   mark = "Mostly Visible Button"
-  @waiter.wait_for_view(mark)
+  @waiter.wait_for_view({marked: mark})
 
   @gestures.touch_mark("OK")
-  @waiter.wait_for_no_view(mark)
+  @waiter.wait_for_no_view({marked: mark})
 end
 
 Then(/^on Xcode (\d+) the DeviceAgent does not crash$/) do |_|

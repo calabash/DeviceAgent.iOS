@@ -73,8 +73,8 @@ module DeviceAgent
       end
     end
 
-    def wait_for_text_in_view(text, mark)
-      result = wait_for_view(mark)
+    def wait_for_text_in_view(text, mark, wait_options={})
+      result = wait_for_view({marked: mark}, wait_options)
 
       candidates = [result["value"],
                     result["label"]]
@@ -91,14 +91,14 @@ Expected to find '#{text}' as a 'value' or 'label' in
       end
     end
 
-    def wait_for_view(mark, options={})
+    def wait_for_view(uiquery, options={})
       default_options = DEFAULTS.dup
       merged_options = default_options.merge(options)
 
       unless merged_options[:message]
         message = %Q[Waited #{merged_options[:timeout]} seconds for
 
-query("#{mark}", {all: #{merged_options[:all]}})
+#{uiquery}
 
 to match a view.
 
@@ -108,21 +108,21 @@ to match a view.
 
       result = nil
       wait_for(merged_options[:timeout_message], options) do
-        result = device_agent.query(mark, merged_options)
+        result = device_agent.query(uiquery)
         !result.empty?
       end
 
       result[0]
     end
 
-    def wait_for_no_view(mark, options={})
+    def wait_for_no_view(uiquery, options={})
       default_options = DEFAULTS.dup
       merged_options = default_options.merge(options)
 
       unless merged_options[:message]
         message = %Q[Waited #{merged_options[:timeout]} seconds for
 
-query("#{mark}", {all: #{merged_options[:all]}})
+#{uiquery}
 
 to match no views.
 
@@ -133,7 +133,7 @@ to match no views.
 
       result = nil
       wait_for(merged_options[:timeout_message], options) do
-        result = device_agent.query(mark, merged_options)
+        result = device_agent.query(uiquery)
         result.empty?
       end
 

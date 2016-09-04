@@ -2,7 +2,7 @@ module UnitTestApp
   module Volume
 
     def current_volume
-      result = @waiter.wait_for_view("current volume")
+      result = @waiter.wait_for_view({marked: "current volume"})
 
       candidates = [result["value"], result["label"]]
 

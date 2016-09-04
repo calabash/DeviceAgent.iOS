@@ -16,7 +16,7 @@ module DeviceAgent
     end
 
     def text_from_text_field
-      result = @waiter.wait_for_view("text field")
+      result = @waiter.wait_for_view({marked: "text field"})
       result["value"]
     end
 

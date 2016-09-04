@@ -15,7 +15,7 @@ module DeviceAgent
       wait_options = {:timeout => timeout}
 
       ["Touch", "Pan", "Rotate/Pinch", "Misc", "Tao"].each do |mark|
-        @waiter.wait_for_view(mark, wait_options)
+        @waiter.wait_for_view({marked: mark}, wait_options)
       end
 
       if RunLoop::Environment.ci?
@@ -42,5 +42,5 @@ end
 Given(/^I am looking at the (Touch|Pan|Rotate\/Pinch|Misc|Tao) tab$/) do |tabname|
   @gestures.tap_mark(tabname)
   mark = "#{tabname.downcase} page"
-  @waiter.wait_for_view(mark)
+  @waiter.wait_for_view({marked: mark})
 end
