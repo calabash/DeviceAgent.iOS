@@ -2,7 +2,7 @@ module UnitTestApp
   module Volume
 
     def current_volume
-      result = @waiter.wait_for_view({marked: "current volume"})
+      result = wait_for_view({marked: "current volume"})
 
       candidates = [result["value"], result["label"]]
 
@@ -15,7 +15,7 @@ module UnitTestApp
 
     def expect_volume_gt(volume)
       current = current_volume
-      if @gestures.device_info["simulator"] == true
+      if device_info["simulator"] == true
         message = "Changing the volume is not supported on iOS Simulators"
         colored = RunLoop::Color.blue(message)
         $stdout.puts("    #{colored}")
@@ -25,7 +25,7 @@ module UnitTestApp
           fail(%Q[
 Expected volume to be larger that previous value:
 
-  currrent: #{current}
+   current: #{current}
   previous: #{volume}
 
 ])
@@ -37,7 +37,7 @@ Expected volume to be larger that previous value:
     def expect_volume_lt(volume)
       current = current_volume
 
-      if @gestures.device_info["simulator"] == true
+      if device_info["simulator"] == true
         message = "Changing the volume is not supported on iOS Simulators"
         colored = RunLoop::Color.blue(message)
         $stdout.puts("    #{colored}")
@@ -57,13 +57,13 @@ Expected volume to be smaller that previous value:
 
     def volume_up
       previous = current_volume
-      @gestures.change_volume("up")
+      change_volume("up")
       expect_volume_gt(previous)
     end
 
     def volume_down
       previous = current_volume
-      @gestures.change_volume("down")
+      change_volume("down")
       expect_volume_lt(previous)
     end
   end
@@ -81,7 +81,7 @@ end
 
 And(/^sending an invalid volume direction raises an error$/) do
   expect do
-    @gestures.change_volume("bad")
+    change_volume("bad")
   end.to raise_error RunLoop::DeviceAgent::Client::HTTPError,
                      /Invalid volume direction. Please specify/
 end

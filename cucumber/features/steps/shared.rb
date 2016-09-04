@@ -6,7 +6,7 @@ module DeviceAgent
     def wait_for_app
       return true if DeviceAgent::Shared.class_variable_get(:@@app_ready)
 
-      if @gestures.device_info["simulator"]
+      if device_info["simulator"]
         timeout = 8
       else
         timeout = 20
@@ -15,7 +15,7 @@ module DeviceAgent
       wait_options = {:timeout => timeout}
 
       ["Touch", "Pan", "Rotate/Pinch", "Misc", "Tao"].each do |mark|
-        @waiter.wait_for_view({marked: mark}, wait_options)
+        wait_for_view({marked: mark}, wait_options)
       end
 
       if RunLoop::Environment.ci?
@@ -36,11 +36,11 @@ World(DeviceAgent::Shared)
 
 Given(/^the app has launched$/) do
   wait_for_app
-  @gestures.rotate_home_button_to(:down)
+  rotate_home_button_to(:down)
 end
 
 Given(/^I am looking at the (Touch|Pan|Rotate\/Pinch|Misc|Tao) tab$/) do |tabname|
-  @gestures.tap_mark(tabname)
+  touch({marked: tabname})
   mark = "#{tabname.downcase} page"
-  @waiter.wait_for_view({marked: mark})
+  wait_for_view({marked: mark})
 end

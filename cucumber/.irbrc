@@ -34,7 +34,7 @@ rescue LoadError => _
 
 end
 
-["wait.rb", "gestures.rb"].each do |file|
+["automator.rb"].each do |file|
   path = File.join(".", "features", "support", file)
   print "Loading #{path}..."
   load path

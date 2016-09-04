@@ -8,7 +8,7 @@ Then(/^I can ask for the server version$/) do
       "bundle_name" => "DeviceAgent"
   }
 
-  actual = @gestures.server_version
+  actual = server_version
   expect(actual["bundle_identifier"]).to be == expected["bundle_identifier"]
   expect(actual["bundle_name"]).to be == expected["bundle_name"]
   expect(actual["bundle_version"]).to be_truthy
@@ -16,19 +16,18 @@ Then(/^I can ask for the server version$/) do
 end
 
 Then(/^I can ask for the session identifier$/) do
-  identifier = @gestures.session_identifier
+  identifier = session_identifier
 
   expect(identifier).not_to be == nil
   expect(identifier.count).not_to be == 0
 end
 
 Then(/^I can ask for information about the device under test$/) do
-  device_info = @gestures.device_info
   expect(device_info.empty?).to be_falsey
 end
 
 Then(/^I can ask for the pid of the server$/) do
-  pid = @gestures.server_pid
+  pid = server_pid
   expect(pid).not_to be == nil
   expect(pid.count).not_to be == 0
 end

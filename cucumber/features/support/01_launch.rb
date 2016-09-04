@@ -92,15 +92,13 @@ Before do |scenario|
   }
 
   if launcher.first_launch || !launcher.running?
-    @device_agent = RunLoop.run(options)
-    @waiter = DeviceAgent::Wait.new(@device_agent)
-    @gestures = DeviceAgent::Gestures.new(@waiter)
-    launcher.device_agent = @device_agent
+    client = RunLoop.run(options)
+    DeviceAgent::Automator.client = client
+    launcher.device_agent = client
     launcher.first_launch = false
   else
-    @device_agent = launcher.device_agent
-    @waiter = DeviceAgent::Wait.new(@device_agent)
-    @gestures = DeviceAgent::Gestures.new(@waiter)
+    client = launcher.device_agent
+    DeviceAgent::Automator.client = client
   end
 end
 

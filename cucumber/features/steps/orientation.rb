@@ -3,7 +3,7 @@ module UnitTestApp
   module Orientation
 
     def upside_down_supported?
-      hash = @gestures.device_info
+      hash = device_info
       if hash["iphone6"] || hash["iphone6+"]
         false
       else
@@ -13,7 +13,7 @@ module UnitTestApp
 
     def rotate_and_expect(position)
       symbol = position.to_sym
-      orientation = @gestures.rotate_home_button_to(symbol)
+      orientation = rotate_home_button_to(symbol)
 
       if [:top, :up].include?(symbol) && !upside_down_supported?
         message = "Upside down orientation is not supported iPhone 6*"

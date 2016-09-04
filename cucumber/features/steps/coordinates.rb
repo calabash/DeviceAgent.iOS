@@ -8,7 +8,7 @@ module TestApp
     # once per gesture.
 
     def status_bar
-      @gestures.query({type: "StatusBar",  all: true}).first
+      query({type: "StatusBar",  all: true}).first
     end
 
     def status_bar_height
@@ -21,7 +21,7 @@ module TestApp
     end
 
     def tab_bar
-      @gestures.query({type: "TabBar", all: true}).first
+      query({type: "TabBar", all: true}).first
     end
 
     def tab_bar_height
@@ -35,7 +35,7 @@ module TestApp
     end
 
     def nav_bar
-      @gestures.query({type: "NavigationBar",  all: true}).first
+      query({type: "NavigationBar",  all: true}).first
     end
 
     def nav_bar_height
@@ -48,7 +48,7 @@ module TestApp
     end
 
     def tool_bar
-      @gestures.query({type: "ToolBar", all: true}).first
+      query({type: "ToolBar", all: true}).first
     end
 
     def tool_bar_height
@@ -62,7 +62,7 @@ module TestApp
 
     # TODO there can be more than one window.
     def window
-      @gestures.query({type: "Window", all: true}).first
+      query({type: "Window", all: true}).first
     end
 
     def window_size
@@ -74,8 +74,8 @@ module TestApp
     end
 
     def left_full_pan_point(uiquery, wait_options={})
-      element = @waiter.wait_for_view(uiquery, wait_options)
-      element_center = @gestures.element_center(element)
+      element = wait_for_view(uiquery, wait_options)
+      element_center = element_center(element)
 
       {
         x: 10,
@@ -84,8 +84,8 @@ module TestApp
     end
 
     def right_full_pan_point(uiquery, wait_options={})
-      element = @waiter.wait_for_view(uiquery, wait_options)
-      element_center = @gestures.element_center(element)
+      element = wait_for_view(uiquery, wait_options)
+      element_center = element_center(element)
 
       {
         x: element["rect"]["x"] + element["rect"]["width"] - 10,
@@ -94,8 +94,8 @@ module TestApp
     end
 
     def top_full_pan_point(uiquery, wait_options={})
-      element = @waiter.wait_for_view(uiquery, wait_options)
-      element_center = @gestures.element_center(element)
+      element = wait_for_view(uiquery, wait_options)
+      element_center = element_center(element)
 
       highest_possible = status_bar_height + nav_bar_height + 10
       element_highest = element["rect"]["y"]
@@ -106,8 +106,8 @@ module TestApp
     end
 
     def bottom_full_pan_point(uiquery, wait_options={})
-      element = @waiter.wait_for_view(uiquery, wait_options)
-      element_center = @gestures.element_center(element)
+      element = wait_for_view(uiquery, wait_options)
+      element_center = element_center(element)
 
       lowest_possible = window_size[:height] - (tab_bar_height + tool_bar_height + 10)
       element_lowest = element["rect"]["y"] + element["rect"]["height"]
@@ -151,8 +151,8 @@ module TestApp
 
     # Half-way between the middle of the view and the top of the view
     def top_medium_pan_point(uiquery, wait_options={})
-      element = @waiter.wait_for_view(uiquery, wait_options)
-      element_center = @gestures.element_center(element)
+      element = wait_for_view(uiquery, wait_options)
+      element_center = element_center(element)
 
       highest_possible = status_bar_height + nav_bar_height + 10
       element_top_mid = element_center[:y] - (element["rect"]["height"]/4.0)
@@ -164,8 +164,8 @@ module TestApp
 
     # Half-way between the middle of the view and the bottom of the view
     def bottom_medium_pan_point(uiquery, wait_options={})
-      element = @waiter.wait_for_view(uiquery, wait_options)
-      element_center = @gestures.element_center(element)
+      element = wait_for_view(uiquery, wait_options)
+      element_center = element_center(element)
 
       lowest_possible = window_size[:height] - (tab_bar_height + tool_bar_height + 10)
       element_bottom_mid = element_center[:y] + (element["rect"]["height"]/4.0)
@@ -177,8 +177,8 @@ module TestApp
 
     # Half-way between the middle of the view and the left of the view
     def left_medium_pan_point(uiquery, wait_options={})
-      element = @waiter.wait_for_view(uiquery, wait_options)
-      element_center = @gestures.element_center(element)
+      element = wait_for_view(uiquery, wait_options)
+      element_center = element_center(element)
 
       lowest_possible = 10
       view_left_mid = element_center[:x] - (element["rect"]["width"]/4.0)
@@ -191,8 +191,8 @@ module TestApp
 
     # Half-way between the middle of the view and the right side of the view
     def right_medium_pan_point(uiquery, wait_options={})
-      element = @waiter.wait_for_view(uiquery, wait_options)
-      element_center = @gestures.element_center(element)
+      element = wait_for_view(uiquery, wait_options)
+      element_center = element_center(element)
 
       highest_possible = window_size[:width] - 10
       view_right_mid = element_center[:x] + (element["rect"]["width"]/4.0)
