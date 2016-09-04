@@ -7,6 +7,19 @@
 @property (weak, nonatomic) IBOutlet UILabel *howGoesItLabel;
 @property (strong, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UILabel *currentVolume;
+@property (weak, nonatomic) IBOutlet UIView *sameAsView;
+@property (weak, nonatomic) IBOutlet UIButton *sameAsButton;
+@property (weak, nonatomic) IBOutlet UILabel *sameAsLabel;
+@property (weak, nonatomic) IBOutlet UITextField *sameAsTextFieldWithPlaceholder;
+@property (weak, nonatomic) IBOutlet UITextField *sameAsTextFieldWithText;
+@property (weak, nonatomic) IBOutlet UITextView *sameAsTextView;
+@property (weak, nonatomic) IBOutlet UITextView *sameAsTextViewWithText;
+@property (weak, nonatomic) IBOutlet UILabel *newlinesLabel;
+@property (weak, nonatomic) IBOutlet UILabel *percentLabel;
+@property (weak, nonatomic) IBOutlet UILabel *controlLabel;
+@property (weak, nonatomic) IBOutlet UILabel *quotedLabel;
+@property (weak, nonatomic) IBOutlet UILabel *singleQuoteLabel;
+@property (weak, nonatomic) IBOutlet UILabel *likeLabel;
 
 // These are temporary - once run-loop can support pan, I will replace
 // with a pan gesture on the UITextField that will set the text to @"".
@@ -23,6 +36,10 @@ static NSString *const kCaVa = @"Ça va?";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.newlinesLabel.text = @"Here\nthere be\nnewlines";
+    self.controlLabel.text = @"TAB:\tchar";
+
     _textField.delegate = self;
     _textField.returnKeyType = UIReturnKeyDone;
     _textField.clearButtonMode = UITextFieldViewModeAlways;
