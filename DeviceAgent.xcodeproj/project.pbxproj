@@ -166,6 +166,9 @@
 		F52BA3451CED23EC00475D5A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F52BA3441CED23EC00475D5A /* libz.tbd */; };
 		F52BA3461CED23F700475D5A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA1B1CC53EC800D87200 /* CFNetwork.framework */; };
 		F52BA3491CEDE1C400475D5A /* MBFingerTipWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F52BA3481CEDE1C400475D5A /* MBFingerTipWindow.m */; };
+		F53679A11D7C324E009956D0 /* QuerySpecifierByMark.h in Headers */ = {isa = PBXBuildFile; fileRef = F536799F1D7C324E009956D0 /* QuerySpecifierByMark.h */; };
+		F53679A21D7C324E009956D0 /* QuerySpecifierByMark.m in Sources */ = {isa = PBXBuildFile; fileRef = F53679A01D7C324E009956D0 /* QuerySpecifierByMark.m */; };
+		F53679A31D7C324E009956D0 /* QuerySpecifierByMark.m in Sources */ = {isa = PBXBuildFile; fileRef = F53679A01D7C324E009956D0 /* QuerySpecifierByMark.m */; };
 		F542EA151CC5368000D87200 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA141CC5368000D87200 /* UIKit.framework */; };
 		F542EA161CC5368F00D87200 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA141CC5368000D87200 /* UIKit.framework */; };
 		F542EA191CC536AF00D87200 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA171CC536A700D87200 /* QuartzCore.framework */; };
@@ -562,6 +565,8 @@
 		F52BA3441CED23EC00475D5A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F52BA3471CEDE1C400475D5A /* MBFingerTipWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBFingerTipWindow.h; path = Vendor/Fingertips/MBFingerTipWindow.h; sourceTree = SOURCE_ROOT; };
 		F52BA3481CEDE1C400475D5A /* MBFingerTipWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBFingerTipWindow.m; path = Vendor/Fingertips/MBFingerTipWindow.m; sourceTree = SOURCE_ROOT; };
+		F536799F1D7C324E009956D0 /* QuerySpecifierByMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySpecifierByMark.h; sourceTree = "<group>"; };
+		F53679A01D7C324E009956D0 /* QuerySpecifierByMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySpecifierByMark.m; sourceTree = "<group>"; };
 		F542EA141CC5368000D87200 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F542EA171CC536A700D87200 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F542EA1B1CC53EC800D87200 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -1563,6 +1568,8 @@
 				899696FE1CB5C93400BB42E2 /* QuerySpecifierByCoordinate.m */,
 				89B9519F1CF5B297007FD0AB /* QuerySpecifierByType.h */,
 				89B951A01CF5B297007FD0AB /* QuerySpecifierByType.m */,
+				F536799F1D7C324E009956D0 /* QuerySpecifierByMark.h */,
+				F53679A01D7C324E009956D0 /* QuerySpecifierByMark.m */,
 			);
 			path = Specifiers;
 			sourceTree = "<group>";
@@ -1934,6 +1941,7 @@
 				899696D91CB45FFC00BB42E2 /* ActionConfiguration.h in Headers */,
 				899696BF1CB2F22000BB42E2 /* EnterTextIn.h in Headers */,
 				F55F81A31C6DD07500A945C8 /* HTTPFileResponse.h in Headers */,
+				F53679A11D7C324E009956D0 /* QuerySpecifierByMark.h in Headers */,
 				F55F819D1C6DD07500A945C8 /* HTTPDataResponse.h in Headers */,
 				89F6BF901CBEB5AD0088269C /* GeometryUtils.h in Headers */,
 				89331D301CC50447003C2E59 /* ThreadUtils.h in Headers */,
@@ -2444,6 +2452,7 @@
 				89C5F3641C9C58BD0093A018 /* Touch.m in Sources */,
 				89512BE01CA095D20027D61E /* DeviceEventRoutes.m in Sources */,
 				F50940FB1CC6069C00E559E3 /* GeometryUtils.m in Sources */,
+				F53679A21D7C324E009956D0 /* QuerySpecifierByMark.m in Sources */,
 				F54514121CF624C900A0BB14 /* CBXDevice.m in Sources */,
 				899697001CB5C93400BB42E2 /* QuerySpecifierByCoordinate.m in Sources */,
 				F55F81811C6DD07500A945C8 /* GCDAsyncSocket.m in Sources */,
@@ -2612,6 +2621,7 @@
 				899696F21CB5880F00BB42E2 /* AutomationAction.m in Sources */,
 				F5B0A1CB1CAD4E7500E056CE /* HTTPConnection.m in Sources */,
 				899697011CB5C93400BB42E2 /* QuerySpecifierByCoordinate.m in Sources */,
+				F53679A31D7C324E009956D0 /* QuerySpecifierByMark.m in Sources */,
 				F58D280A1D4F947F000FF6C0 /* QueryFactoryTests.m in Sources */,
 				F58D27FF1D4F947F000FF6C0 /* CoordinateQueryConfigurationTests.m in Sources */,
 				F5B0A1E01CAD4EA700E056CE /* Route.m in Sources */,
