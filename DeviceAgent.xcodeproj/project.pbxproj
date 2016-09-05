@@ -160,6 +160,8 @@
 		F5169D231CFE07FD00252F52 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D211CFE07F500252F52 /* LICENSE */; };
 		F5169D241CFE07FE00252F52 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D211CFE07F500252F52 /* LICENSE */; };
 		F5169D251CFE07FF00252F52 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D211CFE07F500252F52 /* LICENSE */; };
+		F519E0FE1D79E336003A84B0 /* FBFailureProofTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = F519E0F81D79E336003A84B0 /* FBFailureProofTestCase.h */; };
+		F519E0FF1D79E336003A84B0 /* FBFailureProofTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F519E0F91D79E336003A84B0 /* FBFailureProofTestCase.m */; };
 		F52975BF1D4FB1FA009094D5 /* CBXUITestServerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F52975BE1D4FB1FA009094D5 /* CBXUITestServerTest.m */; };
 		F52BA3411CED1F9C00475D5A /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52BA33F1CED1F6A00475D5A /* Reveal.framework */; };
 		F52BA3431CED23E400475D5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA201CC53F6400D87200 /* CoreGraphics.framework */; };
@@ -557,6 +559,8 @@
 		F5169D131CFE06B700252F52 /* Fingertips.LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fingertips.LICENSE; sourceTree = "<group>"; };
 		F5169D141CFE06B700252F52 /* RoutingHTTPServer.LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RoutingHTTPServer.LICENSE; sourceTree = "<group>"; };
 		F5169D211CFE07F500252F52 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = LICENSE; sourceTree = "<group>"; };
+		F519E0F81D79E336003A84B0 /* FBFailureProofTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFailureProofTestCase.h; sourceTree = "<group>"; };
+		F519E0F91D79E336003A84B0 /* FBFailureProofTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFailureProofTestCase.m; sourceTree = "<group>"; };
 		F52975BE1D4FB1FA009094D5 /* CBXUITestServerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXUITestServerTest.m; sourceTree = "<group>"; };
 		F52BA33F1CED1F6A00475D5A /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		F52BA3441CED23EC00475D5A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -1313,8 +1317,10 @@
 		F55F83541C6DD99900A945C8 /* DeviceAgent */ = {
 			isa = PBXGroup;
 			children = (
-				F55F83551C6DD99900A945C8 /* Info.plist */,
 				F55F83561C6DD99900A945C8 /* TestRunner.m */,
+				F519E0F81D79E336003A84B0 /* FBFailureProofTestCase.h */,
+				F519E0F91D79E336003A84B0 /* FBFailureProofTestCase.m */,
+				F55F83551C6DD99900A945C8 /* Info.plist */,
 			);
 			path = DeviceAgent;
 			sourceTree = "<group>";
@@ -1930,6 +1936,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F519E0FE1D79E336003A84B0 /* FBFailureProofTestCase.h in Headers */,
 				89C5F36F1C9E32440093A018 /* DoubleTap.h in Headers */,
 				899696D91CB45FFC00BB42E2 /* ActionConfiguration.h in Headers */,
 				899696BF1CB2F22000BB42E2 /* EnterTextIn.h in Headers */,
@@ -2405,6 +2412,7 @@
 				F55F840C1C6E437100A945C8 /* MetaRoutes.m in Sources */,
 				F55F818E1C6DD07500A945C8 /* HTTPConnection.m in Sources */,
 				89D538111CA34CBE00F62E09 /* QuerySpecifierByTextLike.m in Sources */,
+				F519E0FF1D79E336003A84B0 /* FBFailureProofTestCase.m in Sources */,
 				89331D321CC50447003C2E59 /* ThreadUtils.m in Sources */,
 				89D5381A1CA3551600F62E09 /* QuerySpecifierByProperty.m in Sources */,
 				F55F82511C6DD07500A945C8 /* Route.m in Sources */,
