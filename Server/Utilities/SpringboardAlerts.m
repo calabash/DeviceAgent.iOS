@@ -1,34 +1,34 @@
 
-#import "SpringboardAlerts.h"
-#import "SpringboardAlert.h"
+#import "SpringBoardAlerts.h"
+#import "SpringBoardAlert.h"
 
 
-// Convenience method for creating alerts from the regexes found in run_loop
+// Convenience method for creating alerts from the regular expressions found in run_loop
 // scripts/lib/on_alert.js
-static SpringboardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSString *title) {
-    return [[SpringboardAlert alloc] initWithAlertTitleFragment:title
+static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSString *title) {
+    return [[SpringBoardAlert alloc] initWithAlertTitleFragment:title
                                              dismissButtonTitle:buttonTitle
                                                    shouldAccept:shouldAccept];
 }
 
-@interface SpringboardAlerts ()
+@interface SpringBoardAlerts ()
 
-@property(strong) NSArray<SpringboardAlert *> *alerts;
+@property(strong) NSArray<SpringBoardAlert *> *alerts;
 
 - (instancetype)init_private;
-- (NSArray<SpringboardAlert *> *)concatenateArrays:(NSArray<NSArray *> *)arrays;
-- (NSArray<SpringboardAlert *> *)USEnglishAlerts;
-- (NSArray<SpringboardAlert *> *)DanishAlerts;
-- (NSArray<SpringboardAlert *> *)DutchAlerts;
-- (NSArray<SpringboardAlert *> *)GermanAlerts;
-- (NSArray<SpringboardAlert *> *)EUSpanishAlerts;
-- (NSArray<SpringboardAlert *> *)ES419SpanishAlerts;
-- (NSArray<SpringboardAlert *> *)FrenchAlerts;
-- (NSArray<SpringboardAlert *> *)RussianAlerts;
+- (NSArray<SpringBoardAlert *> *)concatenateArrays:(NSArray<NSArray *> *)arrays;
+- (NSArray<SpringBoardAlert *> *)USEnglishAlerts;
+- (NSArray<SpringBoardAlert *> *)DanishAlerts;
+- (NSArray<SpringBoardAlert *> *)DutchAlerts;
+- (NSArray<SpringBoardAlert *> *)GermanAlerts;
+- (NSArray<SpringBoardAlert *> *)EUSpanishAlerts;
+- (NSArray<SpringBoardAlert *> *)ES419SpanishAlerts;
+- (NSArray<SpringBoardAlert *> *)FrenchAlerts;
+- (NSArray<SpringBoardAlert *> *)RussianAlerts;
 
 @end
 
-@implementation SpringboardAlerts
+@implementation SpringBoardAlerts
 
 - (instancetype)init {
     @throw [NSException exceptionWithName:@"Cannot call init"
@@ -53,20 +53,20 @@ static SpringboardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
     return self;
 }
 
-+ (SpringboardAlerts *)shared {
-    static SpringboardAlerts *shared = nil;
++ (SpringBoardAlerts *)shared {
+    static SpringBoardAlerts *shared = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        shared = [[SpringboardAlerts alloc] init_private];
+        shared = [[SpringBoardAlerts alloc] init_private];
     });
     return shared;
 }
 
 
-- (SpringboardAlert *)springboardAlertForAlertTitle:(NSString *)alertTitle {
+- (SpringBoardAlert *)alertMatchingTitle:(NSString *)alertTitle {
 
-    __block SpringboardAlert *match = nil;
-    [self.alerts enumerateObjectsUsingBlock:^(SpringboardAlert *alert, NSUInteger idx, BOOL *stop) {
+    __block SpringBoardAlert *match = nil;
+    [self.alerts enumerateObjectsUsingBlock:^(SpringBoardAlert *alert, NSUInteger idx, BOOL *stop) {
         if ([alert matchesAlertTitle:alertTitle]) {
             match = alert;
             *stop = YES;
@@ -76,7 +76,7 @@ static SpringboardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
     return match;
 }
 
-- (NSArray<SpringboardAlert *> *)concatenateArrays:(NSArray<NSArray *> *)arrays {
+- (NSArray<SpringBoardAlert *> *)concatenateArrays:(NSArray<NSArray *> *)arrays {
     __block NSArray *final = @[];
     [arrays enumerateObjectsUsingBlock:^(NSArray *array, NSUInteger idx, BOOL *stop) {
         final = [final arrayByAddingObjectsFromArray:array];
@@ -84,7 +84,7 @@ static SpringboardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
     return final;
 }
 
-- (NSArray<SpringboardAlert *> *)USEnglishAlerts {
+- (NSArray<SpringBoardAlert *> *)USEnglishAlerts {
     return @[
              alert(@"OK", YES, @"Would Like to Use Your Current Location"),
              alert(@"OK", YES, @"Location Accuracy"),
@@ -106,7 +106,7 @@ static SpringboardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              ];
 }
 
-- (NSArray<SpringboardAlert *> *)DanishAlerts {
+- (NSArray<SpringBoardAlert *> *)DanishAlerts {
     return @[
              alert(@"Tillad", YES, @"bruge din lokalitet, når du bruger appen"),
              alert(@"Tillad", YES, @"også når du ikke bruger appen"),
@@ -123,7 +123,7 @@ static SpringboardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              ];
 }
 
-- (NSArray<SpringboardAlert *> *)DutchAlerts {
+- (NSArray<SpringBoardAlert *> *)DutchAlerts {
     return @[
              alert(@"Sta toe", YES, @"tot uw locatie toestaan terwijl u de app gebruikt"),
              alert(@"Sta toe", YES, @"toegang tot uw locatie toestaan terwijl u de app gebruikt"),
@@ -141,7 +141,7 @@ static SpringboardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              ];
 }
 
-- (NSArray<SpringboardAlert *> *)GermanAlerts {
+- (NSArray<SpringBoardAlert *> *)GermanAlerts {
     return @[
              alert(@"Ja", YES, @"Ihren aktuellen Ort verwenden"),
              alert(@"Erlauben", YES, @"auf Ihren Standort zugreifen, wenn Sie die App benutzen"),
@@ -160,7 +160,7 @@ static SpringboardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              ];
 }
 
-- (NSArray<SpringboardAlert *> *)EUSpanishAlerts {
+- (NSArray<SpringBoardAlert *> *)EUSpanishAlerts {
     return @[
              alert(@"Permitir", YES, @"acceder a tu ubicación mientras utilizas la aplicación"),
              alert(@"Permitir", YES, @"acceder a tu ubicación aunque no estés utilizando la aplicación"),
@@ -176,7 +176,7 @@ static SpringboardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              ];
 }
 
-- (NSArray<SpringboardAlert *> *)ES419SpanishAlerts {
+- (NSArray<SpringBoardAlert *> *)ES419SpanishAlerts {
     return @[
              alert(@"Permitir", YES, @"acceda a tu ubicación mientras la app está en uso"),
              alert(@"Permitir", YES, @"acceda a tu ubicación incluso cuando la app no está en uso"),
@@ -184,7 +184,7 @@ static SpringboardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              ];
 }
 
-- (NSArray<SpringboardAlert *> *)FrenchAlerts {
+- (NSArray<SpringBoardAlert *> *)FrenchAlerts {
     return @[
              alert(@"OK", YES, @"vous envoyer des notifications"),
              alert(@"Autoriser", YES, @"à accéder à vos données de localisation lorsque vous utilisez l’app"),
@@ -201,7 +201,7 @@ static SpringboardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              ];
 }
 
-- (NSArray<SpringboardAlert *> *)RussianAlerts {
+- (NSArray<SpringBoardAlert *> *)RussianAlerts {
     return @[
              // Location
              alert(@"OK", YES, @"запрашивает разрешение на использование Ващей текущей пгеопозиции")

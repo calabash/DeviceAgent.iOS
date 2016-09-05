@@ -1,20 +1,20 @@
 
-#import "SpringboardAlerts.h"
-#import "SpringboardAlert.h"
+#import "SpringBoardAlerts.h"
+#import "SpringBoardAlert.h"
 
 #pragma mark - PrivacyAlerts
 
-@interface SpringboardAlerts(TEST)
+@interface SpringBoardAlerts(TEST)
 
-- (NSMutableArray<SpringboardAlert *> *)alerts;
-
-@end
-
-@interface SpringboardAlertsTest : XCTestCase
+- (NSMutableArray<SpringBoardAlert *> *)alerts;
 
 @end
 
-@implementation SpringboardAlertsTest
+@interface SpringBoardAlertsTest : XCTestCase
+
+@end
+
+@implementation SpringBoardAlertsTest
 
 - (void)setUp {
     [super setUp];
@@ -25,25 +25,25 @@
 }
 
 - (void)testAlerts {
-    NSArray<SpringboardAlert *> *actual;
-    actual = [[SpringboardAlerts shared] alerts];
-    expect(actual.count).to.equal(83);
+    NSArray<SpringBoardAlert *> *actual;
+    actual = [[SpringBoardAlerts shared] alerts];
+    expect(actual.count > 0).to.beTruthy();
 }
 
 - (void)testAlertForTitle {
     NSString *alertTitle, *expectedButton;
     BOOL expectedShouldAccept;
-    SpringboardAlert *actual;
+    SpringBoardAlert *actual;
 
-    alertTitle = @"Some alert generated Springboard that we cannot handle";
-    actual = [[SpringboardAlerts shared] springboardAlertForAlertTitle:alertTitle];
+    alertTitle = @"Some alert generated SpringBoard that we cannot handle";
+    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
     expect(actual).to.equal(nil);
 
     alertTitle = @"souhaite accéder à vos rappels";
     expectedButton = @"OK";
     expectedShouldAccept = YES;
-    actual = [[SpringboardAlerts shared] springboardAlertForAlertTitle:alertTitle];
+    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
     expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
@@ -51,7 +51,7 @@
     alertTitle = @"запрашивает разрешение на использование Ващей текущей пгеопозиции";
     expectedButton = @"OK";
     expectedShouldAccept = YES;
-    actual = [[SpringboardAlerts shared] springboardAlertForAlertTitle:alertTitle];
+    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
     expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
@@ -59,7 +59,7 @@
     alertTitle = @"No SIM Card Installed";
     expectedButton = @"OK";
     expectedShouldAccept = YES;
-    actual = [[SpringboardAlerts shared] springboardAlertForAlertTitle:alertTitle];
+    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
     expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
@@ -67,13 +67,10 @@
     alertTitle = @"Carrier Settings Update";
     expectedButton = @"Not Now";
     expectedShouldAccept = NO;
-    actual = [[SpringboardAlerts shared] springboardAlertForAlertTitle:alertTitle];
+    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
     expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
 }
 
 @end
-
-#pragma mark - PrivacyAlert
-

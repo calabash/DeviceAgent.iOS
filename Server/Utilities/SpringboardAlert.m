@@ -1,7 +1,7 @@
 
-#import "SpringboardAlert.h"
+#import "SpringBoardAlert.h"
 
-@interface SpringboardAlert ()
+@interface SpringBoardAlert ()
 
 - (instancetype)initWithAlertTitleFragment:(NSString *)alertTitleFragment
                         dismissButtonTitle:(NSString *)acceptButtonTitle
@@ -13,7 +13,7 @@
 
 @end
 
-@implementation SpringboardAlert
+@implementation SpringBoardAlert
 
 - (instancetype)initWithAlertTitleFragment:(NSString *)alertTitleFragment
                         dismissButtonTitle:(NSString *)dismissButtonTitle

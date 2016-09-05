@@ -1,8 +1,8 @@
 
-#import "SpringboardAlerts.h"
-#import "SpringboardAlert.h"
+#import "SpringBoardAlerts.h"
+#import "SpringBoardAlert.h"
 
-@interface SpringboardAlert (TEST)
+@interface SpringBoardAlert (TEST)
 
 - (instancetype)initWithAlertTitleFragment:(NSString *)matchText
                         dismissButtonTitle:(NSString *)acceptButtonTitle
@@ -12,11 +12,11 @@
 
 @end
 
-@interface SpringboardAlertTest : XCTestCase
+@interface SpringBoardAlertTest : XCTestCase
 
 @end
 
-@implementation SpringboardAlertTest
+@implementation SpringBoardAlertTest
 
 - (void)setUp {
     [super setUp];
@@ -27,8 +27,8 @@
 }
 
 - (void)testInit {
-    SpringboardAlert *alert;
-    alert = [[SpringboardAlert alloc] initWithAlertTitleFragment:@"match"
+    SpringBoardAlert *alert;
+    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"match"
                                               dismissButtonTitle:@"OK"
                                                     shouldAccept:YES];
 
@@ -36,7 +36,7 @@
     expect(alert.defaultDismissButtonMark).to.equal(@"OK");
     expect(alert.shouldAccept).to.equal(YES);
 
-    alert = [[SpringboardAlert alloc] initWithAlertTitleFragment:@"match"
+    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"match"
                                               dismissButtonTitle:@"Dismiss"
                                                     shouldAccept:NO];
     expect(alert.alertTitleFragment).to.equal(@"match");
@@ -45,8 +45,8 @@
 }
 
 - (void)testMatchesAlertTitle {
-    SpringboardAlert *alert;
-    alert = [[SpringboardAlert alloc] initWithAlertTitleFragment:@"match"
+    SpringBoardAlert *alert;
+    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"match"
                                               dismissButtonTitle:@"OK"
                                                     shouldAccept:YES];
 
@@ -57,13 +57,13 @@
     expect(actual).to.equal(NO);
 
     // matching is done with lowercase strings
-    alert = [[SpringboardAlert alloc] initWithAlertTitleFragment:@"MATCH"
+    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"MATCH"
                                               dismissButtonTitle:@"OK"
                                                     shouldAccept:YES];
     actual = [alert matchesAlertTitle:@"Found a match"];
     expect(actual).to.equal(YES);
 
-    alert = [[SpringboardAlert alloc] initWithAlertTitleFragment:@"match"
+    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"match"
                                               dismissButtonTitle:@"OK"
                                                     shouldAccept:YES];
     actual = [alert matchesAlertTitle:@"Found a MATCH"];
