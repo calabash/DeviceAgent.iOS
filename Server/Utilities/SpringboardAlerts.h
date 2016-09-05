@@ -1,28 +1,28 @@
 
 #import <Foundation/Foundation.h>
 
-@class SpringboardAlert;
+@class SpringBoardAlert;
 
 /**
- * An interface to the iOS Privacy Alerts that can be dismissed automatically.
+ * An interface to the SpringBoard alerts that can be dismissed automatically.
  *
  * This is a singleton class.  Calling `init` will raise an exception.
  */
-@interface SpringboardAlerts : NSObject
+@interface SpringBoardAlerts : NSObject
 
 /**
- * A singleton for reasoning about iOS Privacy Alerts
+ * A singleton for reasoning about SpringBoard alerts
  *
- * @return the PrivacyAlerts instance.
+ * @return the SpringBoardAlerts instance.
  */
-+ (SpringboardAlerts *)shared;
++ (SpringBoardAlerts *)shared;
 
 /**
- * Returns a SpringboardAlert if the the alertTitle matches one of the known
+ * Returns a SpringBoardAlert if the the alertTitle matches one of the known
  * alerts. If the alert title matches no known alert, this method returns nil.
  * @param alertTitle The title of the alert; alert.label
- * @return a SpringboardAlert or nil
+ * @return a SpringBoardAlert or nil
  */
-- (SpringboardAlert *)springboardAlertForAlertTitle:(NSString *)alertTitle;
+- (SpringBoardAlert *)alertMatchingTitle:(NSString *)alertTitle;
 
 @end

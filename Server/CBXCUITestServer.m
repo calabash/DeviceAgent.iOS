@@ -6,13 +6,13 @@
 #import <objc/runtime.h>
 #import "CBXProtocols.h"
 #import "CBXConstants.h"
-#import "SpringboardApplication.h"
+#import "SpringBoard.h"
 #import "Application+Queries.h"
-#import "SpringboardAlerts.h"
-#import "SpringboardAlert.h"
+#import "SpringBoardAlerts.h"
+#import "SpringBoardAlert.h"
 
 // Alerts are animated on and off. The animation is ~0.4 seconds.
-static NSTimeInterval const SpringboardAlertHandlerSleep = 0.4;
+static NSTimeInterval const SpringBoardAlertHandlerSleep = 0.4;
 
 @interface CBXCUITestServer ()
 @property (atomic, strong) RoutingHTTPServer *server;
@@ -20,7 +20,7 @@ static NSTimeInterval const SpringboardAlertHandlerSleep = 0.4;
 
 + (CBXCUITestServer *)sharedServer;
 - (id)init_private;
-- (void)handleSpringboardAlert;
+- (void)handleSpringBoardAlert;
 
 @end
 
@@ -102,12 +102,12 @@ static NSString *serverName = @"CalabashXCUITestServer";
         NSDate *until = [[NSDate date] dateByAddingTimeInterval:interval];
         [[NSRunLoop mainRunLoop] runUntilDate:until];
 
-        [self handleSpringboardAlert];
+        [self handleSpringBoardAlert];
     }
 }
 
-- (void)handleSpringboardAlert {
-    XCUIElementQuery *query = [[SpringboardApplication springboard]
+- (void)handleSpringBoardAlert {
+    XCUIElementQuery *query = [[SpringBoard application]
                                descendantsMatchingType:XCUIElementTypeAlert];
     NSArray <XCUIElement *> *elements = [query allElementsBoundByIndex];
     if ([elements count] != 0) {
@@ -121,21 +121,21 @@ static NSString *serverName = @"CalabashXCUITestServer";
         // maybe it is not necessary, can be shorter, or needs to be longer.
         //
         // It is not clear yet what the effect of waiting for quiescence is.
-        [[SpringboardApplication springboard] _waitForQuiescence];
-        NSDate *until = [[NSDate date] dateByAddingTimeInterval:SpringboardAlertHandlerSleep];
+        [[SpringBoard application] _waitForQuiescence];
+        NSDate *until = [[NSDate date] dateByAddingTimeInterval:SpringBoardAlertHandlerSleep];
         [[NSRunLoop mainRunLoop] runUntilDate:until];
 
         if (alert.exists) {
             NSString *title = alert.label;
 
-            SpringboardAlert *springboardAlert;
-            springboardAlert = [[SpringboardAlerts shared] springboardAlertForAlertTitle:title];
+            SpringBoardAlert *springBoardAlert;
+            springBoardAlert = [[SpringBoardAlerts shared] alertMatchingTitle:title];
 
             // The alert is on the list of alerts to auto dismiss
-            if (springboardAlert) {
+            if (springBoardAlert) {
 
                 XCUIElement *button = nil;
-                NSString *mark = springboardAlert.defaultDismissButtonMark;
+                NSString *mark = springBoardAlert.defaultDismissButtonMark;
                 button = alert.buttons[mark];
 
                 // The default button does not exist.  It probably changed
@@ -149,7 +149,7 @@ static NSString *serverName = @"CalabashXCUITestServer";
                     query = [alert descendantsMatchingType:XCUIElementTypeButton];
                     NSArray<XCUIElement *> *buttons = [query allElementsBoundByIndex];
 
-                    if (springboardAlert.shouldAccept) {
+                    if (springBoardAlert.shouldAccept) {
                         button = buttons.lastObject;
                     } else {
                         button = buttons.firstObject;
@@ -162,8 +162,8 @@ static NSString *serverName = @"CalabashXCUITestServer";
                     // Alerts are animated off.
                     // It is not clear yet if we need to sleep or wait for
                     // quiescence.
-                    [[SpringboardApplication springboard] _waitForQuiescence];
-                    until = [[NSDate date] dateByAddingTimeInterval:SpringboardAlertHandlerSleep];
+                    [[SpringBoard application] _waitForQuiescence];
+                    until = [[NSDate date] dateByAddingTimeInterval:SpringBoardAlertHandlerSleep];
                     [[NSRunLoop mainRunLoop] runUntilDate:until];
                 }
             }

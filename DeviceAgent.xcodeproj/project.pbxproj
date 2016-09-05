@@ -32,8 +32,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		63424B259D47BEBE49AB3B22 /* SpringboardAlertsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 63424E46759C6B27C2BEC337 /* SpringboardAlertsTest.m */; };
-		63424F9A7D4F43F01E9595B8 /* SpringboardAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 634244EC948D56732C2565E5 /* SpringboardAlerts.m */; };
+		63424B259D47BEBE49AB3B22 /* SpringBoardAlertsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 63424E46759C6B27C2BEC337 /* SpringBoardAlertsTest.m */; };
+		63424F9A7D4F43F01E9595B8 /* SpringBoardAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 634244EC948D56732C2565E5 /* SpringBoardAlerts.m */; };
 		89331CCE1CC00E82003C2E59 /* RotatePinchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */; };
 		89331CD11CC00ECD003C2E59 /* MiscViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CD01CC00ECD003C2E59 /* MiscViewController.m */; };
 		89331D231CC10559003C2E59 /* QuerySpecifierById.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537FA1CA2020700F62E09 /* QuerySpecifierById.m */; };
@@ -381,14 +381,14 @@
 		F5BCAB111D5BC15500ED6EE3 /* DragDropController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BCAB101D5BC15500ED6EE3 /* DragDropController.m */; };
 		F5C1E8BD1CBF5BBE0019A52F /* CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration in Resources */ = {isa = PBXBuildFile; fileRef = F5C1E8BC1CBF5B120019A52F /* CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration */; };
 		F5D42A191D40E3150041105C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D42A181D40E3150041105C /* AVFoundation.framework */; };
-		F5DED03F1D7634AB00563648 /* SpringboardAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = F5DED03D1D7634AB00563648 /* SpringboardAlert.h */; };
-		F5DED0401D7634AB00563648 /* SpringboardAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DED03E1D7634AB00563648 /* SpringboardAlert.m */; };
-		F5DED0411D7634AB00563648 /* SpringboardAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DED03E1D7634AB00563648 /* SpringboardAlert.m */; };
-		F5DED0431D76368000563648 /* SpringboardAlertTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DED0421D76368000563648 /* SpringboardAlertTest.m */; };
-		F5E663211D74958200068CE9 /* SpringboardApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E6631F1D74946000068CE9 /* SpringboardApplication.m */; };
-		F5E663221D74958300068CE9 /* SpringboardApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E6631F1D74946000068CE9 /* SpringboardApplication.m */; };
+		F5DED03F1D7634AB00563648 /* SpringBoardAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = F5DED03D1D7634AB00563648 /* SpringBoardAlert.h */; };
+		F5DED0401D7634AB00563648 /* SpringBoardAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DED03E1D7634AB00563648 /* SpringBoardAlert.m */; };
+		F5DED0411D7634AB00563648 /* SpringBoardAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DED03E1D7634AB00563648 /* SpringBoardAlert.m */; };
+		F5DED0431D76368000563648 /* SpringBoardAlertTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DED0421D76368000563648 /* SpringBoardAlertTest.m */; };
+		F5E663211D74958200068CE9 /* SpringBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E6631F1D74946000068CE9 /* SpringBoard.m */; };
+		F5E663221D74958300068CE9 /* SpringBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E6631F1D74946000068CE9 /* SpringBoard.m */; };
 		F5F718411D63A4B300E402EE /* ScrollplicationsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F718401D63A4B300E402EE /* ScrollplicationsController.m */; };
-		F5FEA0B51D7478CF00B5EF42 /* SpringboardAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 634244EC948D56732C2565E5 /* SpringboardAlerts.m */; };
+		F5FEA0B51D7478CF00B5EF42 /* SpringBoardAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 634244EC948D56732C2565E5 /* SpringBoardAlerts.m */; };
 		F5FEA0B81D747CCD00B5EF42 /* UIDevice+Wifi_IP.h in Headers */ = {isa = PBXBuildFile; fileRef = F5FEA0B61D747CCD00B5EF42 /* UIDevice+Wifi_IP.h */; };
 		F5FEA0B91D747CCD00B5EF42 /* UIDevice+Wifi_IP.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FEA0B71D747CCD00B5EF42 /* UIDevice+Wifi_IP.m */; };
 		F5FEA0BA1D747CCD00B5EF42 /* UIDevice+Wifi_IP.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FEA0B71D747CCD00B5EF42 /* UIDevice+Wifi_IP.m */; };
@@ -447,9 +447,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		634244EC948D56732C2565E5 /* SpringboardAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = SpringboardAlerts.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
-		6342494C7C23506565D2B802 /* SpringboardAlerts.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = SpringboardAlerts.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
-		63424E46759C6B27C2BEC337 /* SpringboardAlertsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = SpringboardAlertsTest.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		634244EC948D56732C2565E5 /* SpringBoardAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoardAlerts.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		6342494C7C23506565D2B802 /* SpringBoardAlerts.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = SpringBoardAlerts.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		63424E46759C6B27C2BEC337 /* SpringBoardAlertsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoardAlertsTest.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		89331CCC1CC00E82003C2E59 /* RotatePinchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotatePinchViewController.h; sourceTree = "<group>"; };
 		89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatePinchViewController.m; sourceTree = "<group>"; };
 		89331CCF1CC00ECD003C2E59 /* MiscViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiscViewController.h; sourceTree = "<group>"; };
@@ -884,11 +884,11 @@
 		F5BCAB101D5BC15500ED6EE3 /* DragDropController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = DragDropController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F5C1E8BC1CBF5B120019A52F /* CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration"; path = "Server/Testmanagerd/CBX-BEEFBABE-FEED-BABE-BEEF-CAFEBEEFFACE.xctestconfiguration"; sourceTree = SOURCE_ROOT; };
 		F5D42A181D40E3150041105C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		F5DED03D1D7634AB00563648 /* SpringboardAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringboardAlert.h; sourceTree = "<group>"; };
-		F5DED03E1D7634AB00563648 /* SpringboardAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringboardAlert.m; sourceTree = "<group>"; };
-		F5DED0421D76368000563648 /* SpringboardAlertTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringboardAlertTest.m; sourceTree = "<group>"; };
-		F5E6631E1D74946000068CE9 /* SpringboardApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringboardApplication.h; sourceTree = "<group>"; };
-		F5E6631F1D74946000068CE9 /* SpringboardApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringboardApplication.m; sourceTree = "<group>"; };
+		F5DED03D1D7634AB00563648 /* SpringBoardAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringBoardAlert.h; sourceTree = "<group>"; };
+		F5DED03E1D7634AB00563648 /* SpringBoardAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoardAlert.m; sourceTree = "<group>"; };
+		F5DED0421D76368000563648 /* SpringBoardAlertTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoardAlertTest.m; sourceTree = "<group>"; };
+		F5E6631E1D74946000068CE9 /* SpringBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringBoard.h; sourceTree = "<group>"; };
+		F5E6631F1D74946000068CE9 /* SpringBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoard.m; sourceTree = "<group>"; };
 		F5F7183F1D63A4B300E402EE /* ScrollplicationsController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = ScrollplicationsController.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F5F718401D63A4B300E402EE /* ScrollplicationsController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollplicationsController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F5FEA0B61D747CCD00B5EF42 /* UIDevice+Wifi_IP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Wifi_IP.h"; sourceTree = "<group>"; };
@@ -1445,8 +1445,8 @@
 			children = (
 				F55F83BC1C6DDF1300A945C8 /* Application.h */,
 				F55F83BD1C6DDF1300A945C8 /* Application.m */,
-				F5E6631E1D74946000068CE9 /* SpringboardApplication.h */,
-				F5E6631F1D74946000068CE9 /* SpringboardApplication.m */,
+				F5E6631E1D74946000068CE9 /* SpringBoard.h */,
+				F5E6631F1D74946000068CE9 /* SpringBoard.m */,
 				F55F83BA1C6DDF1300A945C8 /* Application+Queries.h */,
 				F55F83BB1C6DDF1300A945C8 /* Application+Queries.m */,
 				F59E94731D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.h */,
@@ -1508,10 +1508,10 @@
 				F54514101CF624C900A0BB14 /* CBXDevice.m */,
 				F549E1A21D54723300C4FA36 /* CBXInfoPlist.h */,
 				F549E1A31D54723300C4FA36 /* CBXInfoPlist.m */,
-				F5DED03D1D7634AB00563648 /* SpringboardAlert.h */,
-				F5DED03E1D7634AB00563648 /* SpringboardAlert.m */,
-				6342494C7C23506565D2B802 /* SpringboardAlerts.h */,
-				634244EC948D56732C2565E5 /* SpringboardAlerts.m */,
+				F5DED03D1D7634AB00563648 /* SpringBoardAlert.h */,
+				F5DED03E1D7634AB00563648 /* SpringBoardAlert.m */,
+				6342494C7C23506565D2B802 /* SpringBoardAlerts.h */,
+				634244EC948D56732C2565E5 /* SpringBoardAlerts.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1822,8 +1822,8 @@
 				F5963ECA1D5F335F002F9304 /* JSONUtilsTest.m */,
 				F58D27F81D4F947F000FF6C0 /* CBXDeviceTest.m */,
 				F549E1A01D5471EC00C4FA36 /* CBXInfoPlistTest.m */,
-				F5DED0421D76368000563648 /* SpringboardAlertTest.m */,
-				63424E46759C6B27C2BEC337 /* SpringboardAlertsTest.m */,
+				F5DED0421D76368000563648 /* SpringBoardAlertTest.m */,
+				63424E46759C6B27C2BEC337 /* SpringBoardAlertsTest.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1989,7 +1989,7 @@
 				F55F81A71C6DD07500A945C8 /* WebSocket.h in Headers */,
 				89D537FF1CA2090500F62E09 /* QuerySpecifierFactory.h in Headers */,
 				899696F51CB5B8C300BB42E2 /* Coordinate.h in Headers */,
-				F5DED03F1D7634AB00563648 /* SpringboardAlert.h in Headers */,
+				F5DED03F1D7634AB00563648 /* SpringBoardAlert.h in Headers */,
 				F55F82521C6DD07500A945C8 /* RouteRequest.h in Headers */,
 				F55F81971C6DD07500A945C8 /* MultipartMessageHeader.h in Headers */,
 				F55F81951C6DD07500A945C8 /* MultipartFormDataParser.h in Headers */,
@@ -2437,8 +2437,8 @@
 				F5FEA0B91D747CCD00B5EF42 /* UIDevice+Wifi_IP.m in Sources */,
 				899696CA1CB356BF00BB42E2 /* QueryConfiguration.m in Sources */,
 				899696E61CB46C0100BB42E2 /* CoordinateQueryConfiguration.m in Sources */,
-				F5DED0401D7634AB00563648 /* SpringboardAlert.m in Sources */,
-				F5FEA0B51D7478CF00B5EF42 /* SpringboardAlerts.m in Sources */,
+				F5DED0401D7634AB00563648 /* SpringBoardAlert.m in Sources */,
+				F5FEA0B51D7478CF00B5EF42 /* SpringBoardAlerts.m in Sources */,
 				F55F82371C6DD07500A945C8 /* DDLog.m in Sources */,
 				89C5F35B1C9B9C850093A018 /* Gesture.m in Sources */,
 				89C5F3641C9C58BD0093A018 /* Touch.m in Sources */,
@@ -2450,7 +2450,7 @@
 				899696C51CB3360900BB42E2 /* Pinch.m in Sources */,
 				F55F82531C6DD07500A945C8 /* RouteRequest.m in Sources */,
 				F55F84101C6E437A00A945C8 /* JSONUtils.m in Sources */,
-				F5E663211D74958200068CE9 /* SpringboardApplication.m in Sources */,
+				F5E663211D74958200068CE9 /* SpringBoard.m in Sources */,
 				F5870B431CF0BEFF00B3376C /* TouchPath.m in Sources */,
 				89512BDC1C9EEC3C0027D61E /* Drag.m in Sources */,
 				F55F81A61C6DD07500A945C8 /* HTTPRedirectResponse.m in Sources */,
@@ -2527,7 +2527,7 @@
 				89331D231CC10559003C2E59 /* QuerySpecifierById.m in Sources */,
 				899696FC1CB5BA4600BB42E2 /* CoordinateQuery.m in Sources */,
 				F58D28041D4F947F000FF6C0 /* CBXTouchEventTests.m in Sources */,
-				F5DED0411D7634AB00563648 /* SpringboardAlert.m in Sources */,
+				F5DED0411D7634AB00563648 /* SpringBoardAlert.m in Sources */,
 				F5B0A1AB1CAD4E2700E056CE /* DoubleTap.m in Sources */,
 				F5B0A1B41CAD4E2700E056CE /* QuerySpecifierByProperty.m in Sources */,
 				899696EC1CB5857C00BB42E2 /* JSONKeyValidator.m in Sources */,
@@ -2551,7 +2551,7 @@
 				F58D28121D4F947F000FF6C0 /* CBXDeviceTest.m in Sources */,
 				89B951A31CF5B297007FD0AB /* QuerySpecifierByType.m in Sources */,
 				F5B0A1A41CAD4DE800E056CE /* XCUIElement+WebDriverAttributes.m in Sources */,
-				F5DED0431D76368000563648 /* SpringboardAlertTest.m in Sources */,
+				F5DED0431D76368000563648 /* SpringBoardAlertTest.m in Sources */,
 				F5B0A1D51CAD4E8A00E056CE /* HTTPFileResponse.m in Sources */,
 				F5B0A1CF1CAD4E7F00E056CE /* MultipartMessageHeader.m in Sources */,
 				89331D331CC50447003C2E59 /* ThreadUtils.m in Sources */,
@@ -2625,7 +2625,7 @@
 				F5963ECC1D5F3F0C002F9304 /* JSONUtilsTest.m in Sources */,
 				F59E94771D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m in Sources */,
 				F5B0A1AE1CAD4E2700E056CE /* QuerySpecifier.m in Sources */,
-				F5E663221D74958300068CE9 /* SpringboardApplication.m in Sources */,
+				F5E663221D74958300068CE9 /* SpringBoard.m in Sources */,
 				899696DB1CB45FFC00BB42E2 /* ActionConfiguration.m in Sources */,
 				F5B0A1C11CAD4E4600E056CE /* QueryRoutes.m in Sources */,
 				89F6BF921CBEB5AD0088269C /* GeometryUtils.m in Sources */,
@@ -2637,8 +2637,8 @@
 				F5B0A1C81CAD4E6B00E056CE /* DDNumber.m in Sources */,
 				F58D28051D4F947F000FF6C0 /* TouchPathTests.m in Sources */,
 				F5B0A1C31CAD4E4600E056CE /* UndefinedRoutes.m in Sources */,
-				63424B259D47BEBE49AB3B22 /* SpringboardAlertsTest.m in Sources */,
-				63424F9A7D4F43F01E9595B8 /* SpringboardAlerts.m in Sources */,
+				63424B259D47BEBE49AB3B22 /* SpringBoardAlertsTest.m in Sources */,
+				63424F9A7D4F43F01E9595B8 /* SpringBoardAlerts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

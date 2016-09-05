@@ -9,12 +9,11 @@
 
 #import "XCUIApplication.h"
 
-@interface SpringboardApplication : XCUIApplication
+@interface SpringBoard : XCUIApplication
 
 /**
- @return Application that is attached to SpringBoard
+ @return The XCUIApplication that is attached to SpringBoard
  */
-+ (instancetype)springboard;
++ (instancetype)application;
 
 @end
-
