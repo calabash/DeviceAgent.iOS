@@ -265,8 +265,8 @@
 		F55F84151C6E438800A945C8 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BD1C6DDF1300A945C8 /* Application.m */; };
 		F55F84171C6E438800A945C8 /* Application+Queries.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BB1C6DDF1300A945C8 /* Application+Queries.m */; };
 		F55F84181C6E438E00A945C8 /* CBXCUITestServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BF1C6DDF1300A945C8 /* CBXCUITestServer.m */; };
-		F57287491D747E0800C65208 /* AppStub.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F57287481D747E0800C65208 /* AppStub.xcassets */; };
 		F56F44951D733A8200E58B0D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56F44941D733A8200E58B0D /* HealthKit.framework */; };
+		F57287491D747E0800C65208 /* AppStub.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F57287481D747E0800C65208 /* AppStub.xcassets */; };
 		F5870B3F1CF0BEFF00B3376C /* CBXTouchEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = F5870B3B1CF0BEFF00B3376C /* CBXTouchEvent.h */; };
 		F5870B401CF0BEFF00B3376C /* CBXTouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F5870B3C1CF0BEFF00B3376C /* CBXTouchEvent.m */; };
 		F5870B411CF0BEFF00B3376C /* CBXTouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F5870B3C1CF0BEFF00B3376C /* CBXTouchEvent.m */; };
@@ -770,9 +770,9 @@
 		F55F83FB1C6DE50C00A945C8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F55F83FC1C6DE50C00A945C8 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F55F83FD1C6DE50C00A945C8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
-		F57287481D747E0800C65208 /* AppStub.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppStub.xcassets; sourceTree = "<group>"; };
 		F56F44931D733A8200E58B0D /* Permissions.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Permissions.entitlements; sourceTree = "<group>"; };
 		F56F44941D733A8200E58B0D /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		F57287481D747E0800C65208 /* AppStub.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppStub.xcassets; sourceTree = "<group>"; };
 		F5870B3B1CF0BEFF00B3376C /* CBXTouchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXTouchEvent.h; sourceTree = "<group>"; };
 		F5870B3C1CF0BEFF00B3376C /* CBXTouchEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = CBXTouchEvent.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F5870B3D1CF0BEFF00B3376C /* TouchPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchPath.h; sourceTree = "<group>"; };
