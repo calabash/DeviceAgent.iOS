@@ -102,7 +102,13 @@ static NSString *serverName = @"CalabashXCUITestServer";
         NSDate *until = [[NSDate date] dateByAddingTimeInterval:interval];
         [[NSRunLoop mainRunLoop] runUntilDate:until];
 
-        [self handleSpringBoardAlert];
+        // Turning this behavior off because it has some unpleasant side effects.
+        //
+        // Your tests have completed on a device and the DeviceAgent is still
+        // running.  You open Twitter and DeviceAgent auto-allows Twitter access
+        // to your Contacts.
+        //
+        // [self handleSpringBoardAlert];
     }
 }
 
