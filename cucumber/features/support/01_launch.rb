@@ -29,7 +29,10 @@ module Calabash
     end
 
     def device
-      @device ||= RunLoop::Device.detect_device({}, self.xcode, self.simctl, self.instruments)
+      @device ||= RunLoop::Device.detect_device({},
+                                                self.xcode,
+                                                self.simctl,
+                                                self.instruments)
     end
 
     def app
@@ -85,9 +88,14 @@ Before do |scenario|
     :automator => :device_agent,
     #:cbx_launcher => :xcodebuild,
 
-    # Keep this as true.  The Launcher singleton ensures
-    # that the DeviceAgent-Runner is launched only once
-    # on physical devices.
+    # Keep this as true.
+    #
+    # In this context, these means - when the tests
+    # first start, shutdown any running DeviceAgent
+    #
+    # See the guard below: RunLoop.run(options) is
+    # only called on first launch or when the
+    # DeviceAgent is not running.
     :shutdown_device_agent_before_launch => true
   }
 
@@ -98,7 +106,7 @@ Before do |scenario|
     launcher.first_launch = false
   else
     client = launcher.device_agent
-    DeviceAgent::Automator.client = client
+    DeviceAgent::Automator.client = launcher.device_agent
   end
 end
 
