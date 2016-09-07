@@ -1,8 +1,8 @@
 
 #import "CBXCUITestServer.h"
-#import <XCTest/XCTest.h>
+#import "FBFailureProofTestCase.h"
 
-@interface TestRunner : XCTestCase
+@interface TestRunner : FBFailureProofTestCase
 
 @end
 
