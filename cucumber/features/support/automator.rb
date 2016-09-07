@@ -13,6 +13,10 @@ module DeviceAgent
       @@client = client
     end
 
+    def self.shutdown
+      Automator.client.send(:shutdown)
+    end
+
     def query(uiquery)
       Automator.client.query(uiquery)
     end

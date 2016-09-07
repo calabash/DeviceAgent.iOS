@@ -103,7 +103,19 @@ Before do |scenario|
 end
 
 After do |scenario|
-  # Restart if a Scenario fails.
+
+  # TODO: write a Scenario to test this.
+  # Test Client#shutdown
+#  if DeviceAgent::Automator.client
+#    begin
+#      DeviceAgent::Automator.shutdown
+#    rescue => e
+#      RunLoop.log_error("#{e}")
+#      exit!(1)
+#    end
+#  end
+
+  # Restart the app if a Scenario fails
   if scenario.failed?
     Calabash::Launcher.instance.first_launch = true
   end
