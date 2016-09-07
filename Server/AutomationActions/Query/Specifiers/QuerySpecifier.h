@@ -100,4 +100,13 @@ typedef NS_ENUM(int, QuerySpecifierExecutionPriority) {
     @return Class's execution priority
  */
 + (QuerySpecifierExecutionPriority)executionPriority;
+
+/**
+ Escapes control characters, single, and double quotes if necessary.
+
+ @param string The string to escape.
+ @return String ready for NSPredicate
+ */
++ (NSString *)escapeString:(NSString *)string;
+
 @end

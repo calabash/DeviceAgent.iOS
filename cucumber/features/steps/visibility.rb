@@ -8,7 +8,7 @@ end
 World(TestApp::Visibility)
 
 Then(/^the tab bar is visible and hitable$/) do
-  element = @gestures.query("TabBar", {specifier: :type, all: true}).first
+  element = query({type: "TabBar", all: true}).first
   expect(element).to be_truthy
   # Just print for now; we need more information.
   puts "TabBar hitable: #{element["hitable"]}"
@@ -16,7 +16,7 @@ Then(/^the tab bar is visible and hitable$/) do
 end
 
 Then(/^the status bar is visible, but not hitable$/) do
-  element = @gestures.query("StatusBar", {specifier: :type, all: true}).first
+  element = query({type: "StatusBar", all: true}).first
   expect(element).to be_truthy
   # Just print for now; we need more information.
   puts "TabBar hitable: #{element["hitable"]}"
@@ -24,7 +24,7 @@ Then(/^the status bar is visible, but not hitable$/) do
 end
 
 And(/^the disabled button is visible, hitable, but not enabled$/) do
-  element = @gestures.query("disabled button", {all: true}).first
+  element = query({marked: "disabled button", all: true}).first
   expect(element).to be_truthy
   expect(element["hitable"]).to be == true
   expect(element["enabled"]).to be == false
@@ -32,8 +32,8 @@ end
 
 When(/^I touch the (alpha|zero) button its (?:alpha|size) goes to zero$/) do |mark|
   identifier = "#{mark} button"
-  @gestures.touch_mark(identifier)
-  @waiter.wait_for_no_view(identifier)
+  touch({marked: identifier})
+  wait_for_no_view({marked: identifier})
 end
 
 Then(/^the (alpha|zero) button is not visible and not hitable$/) do |mark|
@@ -46,8 +46,8 @@ Then(/^the (alpha|zero) button is not visible and not hitable$/) do |mark|
 
   message = "Waited for #{options[:timeout]} seconds for #{mark} button to disappear"
 
-  @waiter.wait_for(message, options) do
-    element = @gestures.query(identifier, {all: true}).first
+  wait_for(message, options) do
+    element = query({marked: identifier, all: true}).first
     if !element # Xcode 8
       true
     else # Xcode 7.3.1
@@ -58,7 +58,7 @@ end
 
 But(/^after a moment the (alpha|zero) button is visible and hitable$/) do |mark|
   identifier = "#{mark} button"
-  @waiter.wait_for_view(identifier)
+  wait_for_view({marked: identifier})
 end
 
 When(/^I (touch|two finger tap) the animated button its (?:alpha|size) animates to zero$/) do |gesture|
@@ -67,9 +67,9 @@ When(/^I (touch|two finger tap) the animated button its (?:alpha|size) animates 
   @animation_start = Time.now
 
   if gesture == "touch"
-    @gestures.touch_mark(identifier)
+    touch({marked: identifier})
   else
-    @gestures.two_finger_tap_mark(identifier)
+    two_finger_tap({marked: identifier})
   end
 
   # First animation has duration 1.0.  Next animation starts in 3.0 seconds.
@@ -83,7 +83,7 @@ Then(/^the animated button is not visible after the (touch|tap), but it is hitab
   elapsed = Time.now - @animation_start
   expect(elapsed).to be < 3.0
 
-  element = @gestures.query(identifier).first
+  element = query({marked: identifier}).first
   expect(element).to be_truthy
   expect(element["hitable"]).to be == true
 
@@ -94,76 +94,76 @@ Then(/^the animated button is not visible after the (touch|tap), but it is hitab
     title = "Had Size Zero"
   end
 
-  @waiter.wait_for_view(title)
+  wait_for_view({marked: title})
 end
 
 When(/^I query for the button behind the purple label, I get no results$/) do
-  @waiter.wait_for_no_view("hidden button")
+  wait_for_no_view({marked: "hidden button"})
 end
 
 But(/^I can find the button behind the purple label using query :all$/) do
-  @waiter.wait_for_view("hidden button", {all: true})
+  wait_for_view({marked: "hidden button", all: true})
 end
 
 And(/^I cannot touch the button behind the purple label using the view center$/) do
   mark = "hidden button"
-  element = @waiter.wait_for_view(mark, {all: true})
+  element = wait_for_view({marked: mark, all: true})
 
-  center = @gestures.element_center(element)
-  @gestures.touch(center[:x], center[:y])
+  center = element_center(element)
+  touch_coordinate(center)
 
-  @waiter.wait_for_view("That was touching.")
+  wait_for_view({marked: "That was touching."})
 
-  @gestures.two_finger_tap_mark("gesture performed")
-  @waiter.wait_for_text_in_view("CLEARED", "gesture performed")
+  two_finger_tap({marked: "gesture performed"})
+  wait_for_text_in_view("CLEARED", {marked: "gesture performed"})
 end
 
 And(/^I cannot touch the button behind the purple label using the hit point$/) do
-  element = @waiter.wait_for_view("hidden button", {all: true})
+  element = wait_for_view({marked: "hidden button", all: true})
 
   hit_point = element["hit_point"]
 
-  @gestures.touch(hit_point["x"], hit_point["y"])
+  touch_coordinate(hit_point)
 
   # Alert might take a long time to appear.
   sleep(1.0)
 
-  @waiter.wait_for_no_view("If we can't see you, how can we touch you?")
+  wait_for_no_view({marked: "If we can't see you, how can we touch you?"})
 end
 
 When(/^I query for the mostly (hidden|visible) button I can find it$/) do |state|
   mark = "mostly #{state} button"
-  @waiter.wait_for_view(mark)
+  wait_for_view({marked: mark})
 end
 
 But(/^I cannot touch the mostly hidden button using the view center$/) do
   mark = "mostly hidden button"
-  @gestures.touch_mark(mark)
+  touch({marked: mark})
 
-  @waiter.wait_for_view("That was touching.")
+  wait_for_view({marked: "That was touching."})
 
-  @gestures.two_finger_tap_mark("gesture performed")
-  @waiter.wait_for_text_in_view("CLEARED", "gesture performed")
+  two_finger_tap({marked: "gesture performed"})
+  wait_for_text_in_view("CLEARED", {marked: "gesture performed"})
 end
 
 But(/^I can touch the mostly visible button using the view center$/) do
   mark = "mostly visible button"
-  @gestures.touch_mark(mark)
+  touch({marked: mark})
 
   mark = "If we can see most of you, we can touch you."
-  @waiter.wait_for_view(mark)
+  wait_for_view({marked: mark})
 
-  @gestures.touch_mark("OK")
-  @waiter.wait_for_no_alert
+  touch({marked: "OK"})
+  wait_for_no_alert
 end
 
 And(/^I can touch the mostly (hidden|visible) button using the hit point$/) do |state|
   mark = "mostly #{state} button"
 
-  element = @waiter.wait_for_view(mark)
+  element = wait_for_view({marked: mark})
   hit_point = element["hit_point"]
 
-  @gestures.touch(hit_point["x"], hit_point["y"])
+  touch_coordinate(hit_point)
 
   if state == "hidden"
     mark = "If we can see part of you, we can touch you."
@@ -171,14 +171,14 @@ And(/^I can touch the mostly (hidden|visible) button using the hit point$/) do |
     mark = "If we can see most of you, we can touch you."
   end
 
-  @waiter.wait_for_view(mark)
+  wait_for_view({marked: mark})
 
   # The alert is clearly visible, but touching the alert too soon after it
   # appears can cause the DeviceAgent to crash.
-  @waiter.wait_for_animations
+  wait_for_animations
 
-  @gestures.touch_mark("OK")
-  @waiter.wait_for_no_alert
+  touch({marked: "OK"})
+  wait_for_no_alert
 end
 
 Given(/^there is an invisible button centered at the right mid-point of the view$/) do
@@ -190,18 +190,18 @@ And(/^touching that button causes an Off Screen Touch alert to be shown$/) do
 end
 
 When(/^I query for the button that is off screen, I get no results$/) do
-  @waiter.wait_for_no_view("off screen button")
+  wait_for_no_view({marked: "off screen button"})
 end
 
 But(/^I can find the button that is off screen using query :all$/) do
-  @waiter.wait_for_view("off screen button", {all: true})
+  wait_for_view({marked: "off screen button", all: true})
 end
 
 When(/^I touch the off screen button using its center point$/) do
   mark = "off screen button"
-  element = @waiter.wait_for_view(mark, {all: true})
-  center = @gestures.element_center(element)
-  @gestures.touch(center[:x], center[:y])
+  element = wait_for_view({marked: mark, all: true})
+  center = element_center(element)
+  touch_coordinate(center)
 end
 
 Then(/^the touch happens at the right middle edge, not on the button that is off screen$/) do
@@ -210,8 +210,8 @@ end
 
 And(/^this causes the Off Screen Touch alert to show$/) do
   mark = "Off Screen Touch!?!"
-  @waiter.wait_for_view(mark)
+  wait_for_view({marked: mark})
 
-  @gestures.touch_mark("OK")
-  @waiter.wait_for_no_alert
+  touch({marked: "OK"})
+  wait_for_no_alert
 end

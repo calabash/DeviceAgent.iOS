@@ -29,7 +29,10 @@ module Calabash
     end
 
     def device
-      @device ||= RunLoop::Device.detect_device({}, self.xcode, self.simctl, self.instruments)
+      @device ||= RunLoop::Device.detect_device({},
+                                                self.xcode,
+                                                self.simctl,
+                                                self.instruments)
     end
 
     def app
@@ -85,27 +88,42 @@ Before do |scenario|
     :automator => :device_agent,
     #:cbx_launcher => :xcodebuild,
 
-    # Keep this as true.  The Launcher singleton ensures
-    # that the DeviceAgent-Runner is launched only once
-    # on physical devices.
+    # Keep this as true.
+    #
+    # In this context, these means - when the tests
+    # first start, shutdown any running DeviceAgent
+    #
+    # See the guard below: RunLoop.run(options) is
+    # only called on first launch or when the
+    # DeviceAgent is not running.
     :shutdown_device_agent_before_launch => true
   }
 
   if launcher.first_launch || !launcher.running?
-    @device_agent = RunLoop.run(options)
-    @waiter = DeviceAgent::Wait.new(@device_agent)
-    @gestures = DeviceAgent::Gestures.new(@waiter)
-    launcher.device_agent = @device_agent
+    client = RunLoop.run(options)
+    DeviceAgent::Automator.client = client
+    launcher.device_agent = client
     launcher.first_launch = false
   else
-    @device_agent = launcher.device_agent
-    @waiter = DeviceAgent::Wait.new(@device_agent)
-    @gestures = DeviceAgent::Gestures.new(@waiter)
+    client = launcher.device_agent
+    DeviceAgent::Automator.client = launcher.device_agent
   end
 end
 
 After do |scenario|
-  # Restart if a Scenario fails.
+
+  # TODO: write a Scenario to test this.
+  # Test Client#shutdown
+#  if DeviceAgent::Automator.client
+#    begin
+#      DeviceAgent::Automator.shutdown
+#    rescue => e
+#      RunLoop.log_error("#{e}")
+#      exit!(1)
+#    end
+#  end
+
+  # Restart the app if a Scenario fails
   if scenario.failed?
     Calabash::Launcher.instance.first_launch = true
   end

@@ -8,7 +8,7 @@ module TestApp
     # once per gesture.
 
     def status_bar
-      @gestures.query("StatusBar", {specifier: :type, all: true}).first
+      query({type: "StatusBar",  all: true}).first
     end
 
     def status_bar_height
@@ -21,7 +21,7 @@ module TestApp
     end
 
     def tab_bar
-      @gestures.query("TabBar", {specifier: :type, all: true}).first
+      query({type: "TabBar", all: true}).first
     end
 
     def tab_bar_height
@@ -35,7 +35,7 @@ module TestApp
     end
 
     def nav_bar
-      @gestures.query("NavigationBar", {specifier: :type, all: true}).first
+      query({type: "NavigationBar",  all: true}).first
     end
 
     def nav_bar_height
@@ -48,7 +48,7 @@ module TestApp
     end
 
     def tool_bar
-      @gestures.query("ToolBar", {specifier: :type, all: true}).first
+      query({type: "ToolBar", all: true}).first
     end
 
     def tool_bar_height
@@ -62,7 +62,7 @@ module TestApp
 
     # TODO there can be more than one window.
     def window
-      @gestures.query("Window", {specifier: :type, all: true}).first
+      query({type: "Window", all: true}).first
     end
 
     def window_size
@@ -73,14 +73,9 @@ module TestApp
       }
     end
 
-    def left_full_pan_point(query, options={})
-      merged_options = {
-        :all => false,
-        :specifier => :id
-      }.merge(options)
-
-      element = @waiter.wait_for_view(query, merged_options)
-      element_center = @gestures.element_center(element)
+    def left_full_pan_point(uiquery, wait_options={})
+      element = wait_for_view(uiquery, wait_options)
+      element_center = element_center(element)
 
       {
         x: 10,
@@ -88,14 +83,9 @@ module TestApp
       }
     end
 
-    def right_full_pan_point(query, options={})
-      merged_options = {
-        :all => false,
-        :specifier => :id
-      }.merge(options)
-
-      element = @waiter.wait_for_view(query, merged_options)
-      element_center = @gestures.element_center(element)
+    def right_full_pan_point(uiquery, wait_options={})
+      element = wait_for_view(uiquery, wait_options)
+      element_center = element_center(element)
 
       {
         x: element["rect"]["x"] + element["rect"]["width"] - 10,
@@ -103,14 +93,9 @@ module TestApp
       }
     end
 
-    def top_full_pan_point(query, options={})
-      merged_options = {
-        :all => false,
-        :specifier => :id
-      }.merge(options)
-
-      element = @waiter.wait_for_view(query, merged_options)
-      element_center = @gestures.element_center(element)
+    def top_full_pan_point(uiquery, wait_options={})
+      element = wait_for_view(uiquery, wait_options)
+      element_center = element_center(element)
 
       highest_possible = status_bar_height + nav_bar_height + 10
       element_highest = element["rect"]["y"]
@@ -120,14 +105,9 @@ module TestApp
       }
     end
 
-    def bottom_full_pan_point(query, options={})
-      merged_options = {
-        :all => false,
-        :specifier => :id
-      }.merge(options)
-
-      element = @waiter.wait_for_view(query, merged_options)
-      element_center = @gestures.element_center(element)
+    def bottom_full_pan_point(uiquery, wait_options={})
+      element = wait_for_view(uiquery, wait_options)
+      element_center = element_center(element)
 
       lowest_possible = window_size[:height] - (tab_bar_height + tool_bar_height + 10)
       element_lowest = element["rect"]["y"] + element["rect"]["height"]
@@ -137,42 +117,32 @@ module TestApp
       }
     end
 
-    def point_for_full_pan_start(direction, query, options={})
-      merged_options = {
-        :all => false,
-        :specifier => :id
-      }.merge(options)
-
+    def point_for_full_pan_start(direction, uiquery, wait_options={})
       case direction
         when :left
-          right_full_pan_point(query, merged_options)
+          right_full_pan_point(uiquery, wait_options)
         when :right
-          left_full_pan_point(query, merged_options)
+          left_full_pan_point(uiquery, wait_options)
         when :up
-          bottom_full_pan_point(query, merged_options)
+          bottom_full_pan_point(uiquery, wait_options)
         when :down
-          top_full_pan_point(query, merged_options)
+          top_full_pan_point(uiquery, wait_options)
         else
           raise ArgumentError,
                 "Direction #{direction} is not supported; use :left, :right, :top, :bottom"
       end
     end
 
-    def point_for_full_pan_end(direction, query, options={})
-      merged_options = {
-        :all => false,
-        :specifier => :id
-      }.merge(options)
-
+    def point_for_full_pan_end(direction, uiquery, wait_options={})
       case direction
         when :left
-          left_full_pan_point(query, merged_options)
+          left_full_pan_point(uiquery, wait_options)
         when :right
-          right_full_pan_point(query, merged_options)
+          right_full_pan_point(uiquery, wait_options)
         when :up
-          top_full_pan_point(query, merged_options)
+          top_full_pan_point(uiquery, wait_options)
         when :down
-          bottom_full_pan_point(query, merged_options)
+          bottom_full_pan_point(uiquery, wait_options)
         else
           raise ArgumentError,
                 "Direction #{direction} is not supported; use :left, :right, :top, :bottom"
@@ -180,14 +150,9 @@ module TestApp
     end
 
     # Half-way between the middle of the view and the top of the view
-    def top_medium_pan_point(query, options={})
-      merged_options = {
-        :all => false,
-        :specifier => :id
-      }.merge(options)
-
-      element = @waiter.wait_for_view(query, merged_options)
-      element_center = @gestures.element_center(element)
+    def top_medium_pan_point(uiquery, wait_options={})
+      element = wait_for_view(uiquery, wait_options)
+      element_center = element_center(element)
 
       highest_possible = status_bar_height + nav_bar_height + 10
       element_top_mid = element_center[:y] - (element["rect"]["height"]/4.0)
@@ -198,14 +163,9 @@ module TestApp
     end
 
     # Half-way between the middle of the view and the bottom of the view
-    def bottom_medium_pan_point(query, options={})
-      merged_options = {
-        :all => false,
-        :specifier => :id
-      }.merge(options)
-
-      element = @waiter.wait_for_view(query, merged_options)
-      element_center = @gestures.element_center(element)
+    def bottom_medium_pan_point(uiquery, wait_options={})
+      element = wait_for_view(uiquery, wait_options)
+      element_center = element_center(element)
 
       lowest_possible = window_size[:height] - (tab_bar_height + tool_bar_height + 10)
       element_bottom_mid = element_center[:y] + (element["rect"]["height"]/4.0)
@@ -216,14 +176,9 @@ module TestApp
     end
 
     # Half-way between the middle of the view and the left of the view
-    def left_medium_pan_point(query, options={})
-      merged_options = {
-        :all => false,
-        :specifier => :id
-      }.merge(options)
-
-      element = @waiter.wait_for_view(query, merged_options)
-      element_center = @gestures.element_center(element)
+    def left_medium_pan_point(uiquery, wait_options={})
+      element = wait_for_view(uiquery, wait_options)
+      element_center = element_center(element)
 
       lowest_possible = 10
       view_left_mid = element_center[:x] - (element["rect"]["width"]/4.0)
@@ -235,14 +190,9 @@ module TestApp
     end
 
     # Half-way between the middle of the view and the right side of the view
-    def right_medium_pan_point(query, options={})
-      merged_options = {
-        :all => false,
-        :specifier => :id
-      }.merge(options)
-
-      element = @waiter.wait_for_view(query, merged_options)
-      element_center = @gestures.element_center(element)
+    def right_medium_pan_point(uiquery, wait_options={})
+      element = wait_for_view(uiquery, wait_options)
+      element_center = element_center(element)
 
       highest_possible = window_size[:width] - 10
       view_right_mid = element_center[:x] + (element["rect"]["width"]/4.0)
@@ -253,42 +203,32 @@ module TestApp
       }
     end
 
-    def point_for_medium_pan_start(direction, query, options={})
-      merged_options = {
-        :all => false,
-        :specifier => :id
-      }.merge(options)
-
+    def point_for_medium_pan_start(direction, uiquery, wait_options={})
       case direction
         when :left
-          right_medium_pan_point(query, merged_options)
+          right_medium_pan_point(uiquery, wait_options)
         when :right
-          left_medium_pan_point(query, merged_options)
+          left_medium_pan_point(uiquery, wait_options)
         when :up
-          bottom_medium_pan_point(query, merged_options)
+          bottom_medium_pan_point(uiquery, wait_options)
         when :down
-          top_medium_pan_point(query, merged_options)
+          top_medium_pan_point(uiquery, wait_options)
         else
           raise ArgumentError,
                 "Direction #{direction} is not supported; use :left, :right, :top, :bottom"
       end
     end
 
-    def point_for_medium_pan_end(direction, query, options={})
-      merged_options = {
-        :all => false,
-        :specifier => :id
-      }.merge(options)
-
+    def point_for_medium_pan_end(direction, uiquery, wait_options={})
       case direction
         when :left
-          left_medium_pan_point(query, merged_options)
+          left_medium_pan_point(uiquery, wait_options)
         when :right
-          right_medium_pan_point(query, merged_options)
+          right_medium_pan_point(uiquery, wait_options)
         when :up
-          top_medium_pan_point(query, merged_options)
+          top_medium_pan_point(uiquery, wait_options)
         when :down
-          bottom_medium_pan_point(query, merged_options)
+          bottom_medium_pan_point(uiquery, wait_options)
         else
           raise ArgumentError,
                 "Direction #{direction} is not supported; use :left, :right, :top, :bottom"

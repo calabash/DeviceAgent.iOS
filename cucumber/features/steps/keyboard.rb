@@ -4,7 +4,7 @@ module DeviceAgent
     QUESTION = "Ça va?"
 
     def wait_for_question_text(text)
-      @waiter.wait_for_text_in_view(text, "question")
+      wait_for_text_in_view(text, {marked: "question"})
     end
 
     def wait_for_question_reset
@@ -12,11 +12,11 @@ module DeviceAgent
     end
 
     def wait_for_text_field(text)
-      @waiter.wait_for_text_in_view(text, "text field")
+      wait_for_text_in_view(text, {marked: "text field"})
     end
 
     def text_from_text_field
-      result = @waiter.wait_for_view("text field")
+      result = wait_for_view({marked: "text field"})
       result["value"]
     end
 
@@ -28,17 +28,6 @@ module DeviceAgent
       "#{QUESTION} - #{answer}"
     end
 
-    def enter_text(text)
-      @gestures.enter_text(text)
-      @last_text_entered = text
-    end
-
-    def enter_text_in(mark, text)
-      @gestures.touch_mark("text field")
-      @waiter.wait_for_keyboard
-      enter_text(text)
-    end
-
     def trim_n_chars_from_end(string, n)
       string[0...(-1 * n)]
     end
@@ -47,9 +36,9 @@ module DeviceAgent
       n.times do
         case delete_with
         when :backspace
-          @gestures.delete_with_backspace_char
+          delete_with_backspace_char
         when :delete_key
-          @gestures.touch_keyboard_delete_key
+          touch_keyboard_delete_key
         else
           raise ArgumentError, "Unsupported delete_with: #{delete_with}"
         end
@@ -58,7 +47,7 @@ module DeviceAgent
 
     def expect_text(expected, actual, message)
       if expected != actual
-        @waiter.fail(%Q[#{message}:
+        fail(%Q[#{message}:
 Expected text: #{expected}
           got: #{actual}
 ])
@@ -76,7 +65,8 @@ Expected text: #{expected}
                   "Error deleting text")
 
       enter_text(replacement)
-      @gestures.tap_mark("Done")
+      @last_text_entered = replacement
+      touch({marked: "Done"})
 
       expected_after_replacement = "#{actual_after_delete}#{replacement}"
       actual_after_replacement = text_from_text_field
@@ -90,18 +80,19 @@ end
 World(DeviceAgent::Keyboard)
 
 And(/^the text field and question label are reset$/) do
-  @gestures.tap_mark("question")
+  touch({marked: "question"})
   wait_for_question_reset
 
-  @gestures.tap_mark("clear text field button")
+  touch({marked: "clear text field button"})
   wait_for_text_field_reset
 end
 
 When(/^I try to type without the keyboard$/) do
-  expect(@gestures.keyboard_visible?).to be_falsey
+  expect(keyboard_visible?).to be_falsey
 
   begin
-    @gestures.enter_text("Gut, und Sie?")
+    enter_text("Gut, und Sie?")
+    @last_text_entered = "Gut, und Sie?"
   rescue => e
     @last_error = e
   end
@@ -113,25 +104,27 @@ Then(/^a keyboard-not-visible error is raised$/) do
 end
 
 When(/^I touch the text field$/) do
-  @gestures.touch_mark("text field")
+  touch({marked: "text field"})
 end
 
 Then(/^the keyboard is visible$/) do
-  @waiter.wait_for_keyboard
+  wait_for_keyboard
 end
 
 When(/^I type "([^\"]*)"$/) do |text|
   enter_text(text)
+  @last_text_entered = text
 end
 
 Then(/^what I typed appears in the red box$/) do
-  @gestures.tap_mark("Done")
+  touch({marked: "Done"})
   answer = compose_answer(@last_text_entered)
   wait_for_question_text(answer)
 end
 
 Given(/^I typed "([^\"]*)"$/) do |text|
-  enter_text_in("text field", text)
+  enter_text_in({marked: "text field"}, text)
+  @last_text_entered = text
 end
 
 And(/^I decide I should be more formal$/) do
