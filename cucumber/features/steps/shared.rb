@@ -18,14 +18,23 @@ module DeviceAgent
         wait_for_view({marked: mark}, wait_options)
       end
 
-      if RunLoop::Environment.ci?
-        delay = 15
-      else
-        delay = 5
+      RunLoop.log_debug("Waiting for app to start responding to touches")
+
+      start = Time.now
+
+      timeout = 30
+      message = %Q[Waited #{timeout} second for the app to start responding to touches.]
+      query = {:text => "That was touching."}
+      touch_count = 0
+      wait_for(message, timeout: timeout) do
+        touch({marked: "gesture performed"})
+        touch_count = touch_count + 1
+        !query(query).empty?
+        sleep(0.4)
       end
 
-      RunLoop.log_debug("Adding #{delay} second sleep; app is not ready to receive touches?")
-      sleep(delay)
+      RunLoop.log_debug("Waited #{Time.now - start} seconds for the app to respond to touches")
+      RunLoop.log_debug("Performed #{touch_count} touches while waiting")
 
       DeviceAgent::Shared.class_variable_set(:@@app_ready, true)
     end
