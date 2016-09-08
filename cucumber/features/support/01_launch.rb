@@ -110,10 +110,14 @@ Before do |scenario|
   end
 end
 
+# TODO:  Scenario: Client#shutdown
+# TODO:  Scenario: Client#launch_other_app
+# TODO:  Scenario: SpringBoard
+# TODO:  Scenario: Locale
+# TODO:  Scenario: Location
+
 After do |scenario|
 
-  # TODO: write a Scenario to test this.
-  # Test Client#shutdown
 #  if DeviceAgent::Automator.client
 #    begin
 #      DeviceAgent::Automator.shutdown

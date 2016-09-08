@@ -85,7 +85,7 @@ module DeviceAgent
     end
 
     def session_identifier
-      Automator.client.session_identifier
+      Automator.client.send(:session_identifier)
     end
 
     def device_info
@@ -93,7 +93,7 @@ module DeviceAgent
     end
 
     def server_pid
-      Automator.client.server_pid
+      Automator.client.send(:server_pid)
     end
 
     def running?
