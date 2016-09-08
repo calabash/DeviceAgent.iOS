@@ -14,7 +14,7 @@ GEM
       thor (~> 0.19)
     retriable (2.0.2)
     rouge (1.11.1)
-    run_loop (2.1.8)
+    run_loop (2.1.9)
       CFPropertyList (~> 2.2)
       awesome_print (~> 1.2)
       command_runner_ng (>= 0.0.2)
@@ -31,7 +31,7 @@ PLATFORMS
 
 DEPENDENCIES
   luffa
-  run_loop (~> 2.1.8, < 3.0)
+  run_loop (~> 2.1.9, < 3.0)
   xcpretty (~> 0.2)
 
 BUNDLED WITH
