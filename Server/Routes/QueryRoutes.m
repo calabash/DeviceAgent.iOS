@@ -10,15 +10,18 @@
 #import "QueryRoutes.h"
 #import "JSONUtils.h"
 #import "Query.h"
+#import "SpringBoard.h"
 
 @implementation QueryRoutes
 + (NSArray <CBXRoute *> *)getRoutes {
     return @[
              [CBXRoute get:endpoint(@"/tree", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
+                 [[SpringBoard application] handleAlertsOrThrow];
                  [response respondWithJSON:[Application tree]];
              }],
-             
+
              [CBXRoute post:endpoint(@"/query", 1.0) withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
+                 [[SpringBoard application] handleAlertsOrThrow];
                  QueryConfiguration *queryConfig = [QueryConfigurationFactory configWithJSON:body
                                                                                    validator:[Query validator]];
                  Query *query = [QueryFactory queryWithQueryConfiguration:queryConfig];
@@ -34,7 +37,8 @@
                      NSDictionary *json = [JSONUtils snapshotToJSON:el];
                      [results addObject:json];
                  }
-                 
+                 [response respondWithJSON:@{@"result" : results}];
+             }],
 
              [CBXRoute get:endpoint(@"/springBoardAlert", 1.0) withBlock:^(RouteRequest *request,
                                                                            NSDictionary *data,
