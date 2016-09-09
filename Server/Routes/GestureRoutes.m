@@ -29,7 +29,7 @@
 
 #pragma mark - Experimental API
 
-             [CBXRoute post:endpoint(@"/dismissSpringBoardAlert", 1.0) withBlock:^(RouteRequest *request,
+             [CBXRoute post:endpoint(@"/dismiss-springboard-alert", 1.0) withBlock:^(RouteRequest *request,
                                                                                    NSDictionary *body,
                                                                                    RouteResponse *response) {
                  NSString *buttonTitle = body[@"button"];
