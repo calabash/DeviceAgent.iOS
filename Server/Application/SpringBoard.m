@@ -136,69 +136,67 @@
     }
 }
 
-// If something goes wrong, SpringBoardAlertHandlerNoAlert is returned.
-// This method is not protected by a lock!  It should only be called by
-// handleAlertsOrThrow
 - (SpringBoardAlertHandlerResult)handleAlert {
-
-    XCUIElement *alert = [self queryForAlert];
-
-    // Alert is now gone? It can happen.
-    if (!alert || !alert.exists) {
-        return SpringBoardAlertHandlerNoAlert;
-    }
-
-    // .label is the title for English and German.  Hopefully for others too.
-    NSString *title = alert.label;
-    SpringBoardAlert *springBoardAlert;
-    springBoardAlert = [[SpringBoardAlerts shared] alertMatchingTitle:title];
-
-    // We don't know about this alert.
-    if (!springBoardAlert) {
-        return SpringBoardAlertHandlerUnrecognizedAlert;
-    }
-
-    XCUIElement *button = nil;
-    NSString *mark = springBoardAlert.defaultDismissButtonMark;
-
-    // Alert is now gone? It can happen...
-    if (!alert.exists) {
-        return SpringBoardAlertHandlerNoAlert;
-    }
-
-    button = alert.buttons[mark];
-    [button resolve];
-
-    // A button with the expected title does not exist.
-    // It probably changed after an iOS update.
-    if (!button.exists) {
-        button = nil;
-    }
-
-    // Use the default accept/deny button.
-    if (!button) {
+    @synchronized (self) {
+        XCUIElement *alert = [self queryForAlert];
+        
+        // Alert is now gone? It can happen.
+        if (!alert || !alert.exists) {
+            return SpringBoardAlertHandlerNoAlert;
+        }
+        
+        // .label is the title for English and German.  Hopefully for others too.
+        NSString *title = alert.label;
+        SpringBoardAlert *springBoardAlert;
+        springBoardAlert = [[SpringBoardAlerts shared] alertMatchingTitle:title];
+        
+        // We don't know about this alert.
+        if (!springBoardAlert) {
+            return SpringBoardAlertHandlerUnrecognizedAlert;
+        }
+        
+        XCUIElement *button = nil;
+        NSString *mark = springBoardAlert.defaultDismissButtonMark;
+        
+        // Alert is now gone? It can happen...
         if (!alert.exists) {
             return SpringBoardAlertHandlerNoAlert;
         }
-
-        XCUIElementQuery *query = [alert descendantsMatchingType:XCUIElementTypeButton];
-        NSArray<XCUIElement *> *buttons = [query allElementsBoundByIndex];
-
-        if ([buttons count] == 0) {
+        
+        button = alert.buttons[mark];
+        [button resolve];
+        
+        // A button with the expected title does not exist.
+        // It probably changed after an iOS update.
+        if (!button.exists) {
+            button = nil;
+        }
+        
+        // Use the default accept/deny button.
+        if (!button) {
+            if (!alert.exists) {
+                return SpringBoardAlertHandlerNoAlert;
+            }
+            
+            XCUIElementQuery *query = [alert descendantsMatchingType:XCUIElementTypeButton];
+            NSArray<XCUIElement *> *buttons = [query allElementsBoundByIndex];
+            
+            if ([buttons count] == 0) {
+                return SpringBoardAlertHandlerNoAlert;
+            }
+            
+            if (springBoardAlert.shouldAccept) {
+                button = buttons.lastObject;
+            } else {
+                button = buttons.firstObject;
+            }
+        }
+        
+        if ([self tapAlertButton:button]) {
+            return SpringBoardAlertHandlerDismissedAlert;
+        } else {
             return SpringBoardAlertHandlerNoAlert;
         }
-
-        if (springBoardAlert.shouldAccept) {
-            button = buttons.lastObject;
-        } else {
-            button = buttons.firstObject;
-        }
-    }
-
-    if ([self tapAlertButton:button]) {
-        return SpringBoardAlertHandlerDismissedAlert;
-    } else {
-        return SpringBoardAlertHandlerNoAlert;
     }
 }
 
