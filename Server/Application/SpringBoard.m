@@ -73,25 +73,24 @@
     }
 
     @synchronized (self) {
-
-        SpringBoardAlertHandlerResult current = SpringBoardAlertHandlerNoAlert;
-        SpringBoardAlertHandlerResult final = SpringBoardAlertHandlerNoAlert;
+        SpringBoardAlertHandlerResult result = SpringBoardAlertHandlerNoAlert;
 
         // There are fewer than 20 kinds of SpringBoard alerts.
-        NSUInteger maxTries = 20;
-        NSUInteger try = 0;
+        NSUInteger try = 0, maxTries = 20;
 
-        current = [self handleAlert];
+        result = [self handleAlert];
 
-        while(current > SpringBoardAlertHandlerNoAlert && try < maxTries) {
-            current = [self handleAlert];
-            if (current == SpringBoardAlertHandlerUnrecognizedAlert) {
+        while(result != SpringBoardAlertHandlerNoAlert &&
+              result != SpringBoardAlertHandlerIgnoringAlerts &&
+              try < maxTries) {
+            result = [self handleAlert];
+            if (result == SpringBoardAlertHandlerUnrecognizedAlert) {
                 break;
             }
-            try = try + 1;
+            ++try;
         }
 
-        if (try == maxTries || current == SpringBoardAlertHandlerUnrecognizedAlert) {
+        if (try == maxTries || result == SpringBoardAlertHandlerUnrecognizedAlert) {
             XCUIElement *alert = nil;
             NSString *alertTitle = nil;
             NSArray *alertButtonTitles = @[];
@@ -129,9 +128,11 @@
         // In the case where multiple alerts are encountered and all the alerts
         // are dismissed, 'current" will be SpringBoardAlertHandlerNoAlert.  The
         // caller might be interested to know that an alert was dismissed.
-        final = MAX(final, current);
-
-        return final;
+        if (result == SpringBoardAlertHandlerDismissedAlert ||
+            result == SpringBoardAlertHandlerIgnoringAlerts) {
+            return result;
+        }
+        return SpringBoardAlertHandlerNoAlert;
     }
 }
 
@@ -142,12 +143,8 @@
 
     XCUIElement *alert = [self queryForAlert];
 
-    if (!alert) {
-        return SpringBoardAlertHandlerNoAlert;
-    }
-
     // Alert is now gone? It can happen.
-    if (!alert.exists) {
+    if (!alert || !alert.exists) {
         return SpringBoardAlertHandlerNoAlert;
     }
 
@@ -180,7 +177,6 @@
 
     // Use the default accept/deny button.
     if (!button) {
-
         if (!alert.exists) {
             return SpringBoardAlertHandlerNoAlert;
         }
@@ -199,28 +195,11 @@
         }
     }
 
-    [button resolve];
-
-    if (!button.exists) {
-        return SpringBoardAlertHandlerNoAlert;
-    }
-
-    // There are cases where the button does not respond to wdFrame.
-    // I cannot explain why, but it was happening during development.
-    CGRect frame;
-    if (![button respondsToSelector:@selector(wdFrame)]) {
-        frame = [button frame];
+    if ([self tapAlertButton:button]) {
+        return SpringBoardAlertHandlerDismissedAlert;
     } else {
-        frame = [button wdFrame];
-    }
-
-    BOOL success = [self tapAlertButtonWithFrame:frame];
-
-    if (!success) {
         return SpringBoardAlertHandlerNoAlert;
     }
-
-    return SpringBoardAlertHandlerDismissedAlert;
 }
 
 - (BOOL)tapAlertButtonWithFrame:(CGRect)frame {
@@ -286,6 +265,24 @@
     }
 }
 
+- (BOOL)tapAlertButton:(XCUIElement *)button {
+    [button resolve];
+    
+    if (!button.exists) {
+        return SpringBoardDismissAlertNoMatchingButton;
+    }
+    
+    // There are cases where the button does not respond to wdFrame.
+    CGRect frame;
+    if (![button respondsToSelector:@selector(wdFrame)]) {
+        frame = [button frame];
+    } else {
+        frame = [button wdFrame];
+    }
+    
+    return [self tapAlertButtonWithFrame:frame];
+}
+
 - (SpringBoardDismissAlertResult)dismissAlertByTappingButtonWithTitle:(NSString *)title {
     @synchronized (self) {
         XCUIElement *alert = [self queryForAlert];
@@ -293,30 +290,11 @@
         if (!alert) {
             return SpringBoardDismissAlertNoAlert;
         } else {
-            XCUIElement *button = alert.buttons[title];
-            [button resolve];
-
-            if (!button.exists) {
-                return SpringBoardDismissAlertNoMatchingButton;
-            }
-
-            // There are cases where the button does not respond to wdFrame.
-            CGRect frame;
-            if (![button respondsToSelector:@selector(wdFrame)]) {
-                frame = [button frame];
+            if ([self tapAlertButton:alert.buttons[title]]) {
+                return SpringBoardDismissAlertDismissedAlert;
             } else {
-                frame = [button wdFrame];
+                return SpringBoardDismissAlertDismissTouchFailed;
             }
-
-            BOOL success = [self tapAlertButtonWithFrame:frame];
-
-            SpringBoardDismissAlertResult result;
-            if (success) {
-                result = SpringBoardDismissAlertDismissedAlert;
-            } else {
-                result = SpringBoardDismissAlertDismissTouchFailed;
-            }
-            return result;
         }
     }
 }
