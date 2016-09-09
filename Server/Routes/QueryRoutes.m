@@ -35,6 +35,18 @@
                      [results addObject:json];
                  }
                  
+
+             [CBXRoute get:endpoint(@"/springBoardAlert", 1.0) withBlock:^(RouteRequest *request,
+                                                                           NSDictionary *data,
+                                                                           RouteResponse *response) {
+                 XCUIElement *alert = [[SpringBoard application] queryForAlert];
+                 NSArray *results;
+                 if (alert) {
+                     results = [NSArray arrayWithObject:[JSONUtils elementToJSON:alert]];
+                 } else {
+                     results = @[];
+                 }
+
                  [response respondWithJSON:@{@"result" : results}];
              }],
 
