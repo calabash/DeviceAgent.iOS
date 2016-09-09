@@ -40,7 +40,7 @@
                  [response respondWithJSON:@{@"result" : results}];
              }],
 
-             [CBXRoute get:endpoint(@"/springBoardAlert", 1.0) withBlock:^(RouteRequest *request,
+             [CBXRoute get:endpoint(@"/springboard-alert", 1.0) withBlock:^(RouteRequest *request,
                                                                            NSDictionary *data,
                                                                            RouteResponse *response) {
                  XCUIElement *alert = [[SpringBoard application] queryForAlert];
