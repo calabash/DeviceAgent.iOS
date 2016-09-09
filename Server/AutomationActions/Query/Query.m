@@ -36,13 +36,19 @@
     }
 
     /*
-        Building the XCUIElementQuery
+     Building the XCUIElementQuery
      */
+
+    if ([[Application currentApplication] lastSnapshot] == nil) {
+        [[[Application currentApplication] applicationQuery] elementBoundByIndex:0];
+        [[Application currentApplication] resolve];
+    }
+
     XCUIElementQuery *query = [[Application currentApplication].query descendantsMatchingType:XCUIElementTypeAny];;
     for (QuerySpecifier *specifier in self.queryConfiguration.selectors) {
         query = [specifier applyToQuery:query];
     }
-    
+
     //TODO: if there's a child query, recurse
     //
     //if (childQuery) {
