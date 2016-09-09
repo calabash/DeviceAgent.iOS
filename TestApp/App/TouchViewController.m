@@ -266,6 +266,17 @@ you touched me instead!\
 Touches with coordinates that are off screen happen at closest screen edge."];
 }
 
+- (void)handleSwipeOnPurpleLabel:(UISwipeGestureRecognizer *)recognizer {
+    UIGestureRecognizerState state = [recognizer state];
+    if (UIGestureRecognizerStateEnded == state) {
+        if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
+            self.gestureLabel.text = @"こんにちは！";
+        } else {
+            self.gestureLabel.text = @"またね";
+        }
+    }
+}
+
 - (void)handleTapOnPurpleLabel:(UITapGestureRecognizer *) recognizer {
     UIGestureRecognizerState state = [recognizer state];
     if (UIGestureRecognizerStateEnded == state) {
@@ -310,6 +321,17 @@ Touches with coordinates that are off screen happen at closest screen edge."];
     tapRecognizer.numberOfTouchesRequired = 2;
 
     [self.gestureLabel addGestureRecognizer:tapRecognizer];
+
+    UISwipeGestureRecognizer *swipeRecognizer;
+    swipeRecognizer = [[UISwipeGestureRecognizer alloc]
+                       initWithTarget:self action:@selector(handleSwipeOnPurpleLabel:)];
+    swipeRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.gestureLabel addGestureRecognizer:swipeRecognizer];
+
+    swipeRecognizer = [[UISwipeGestureRecognizer alloc]
+                       initWithTarget:self action:@selector(handleSwipeOnPurpleLabel:)];
+    swipeRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.gestureLabel addGestureRecognizer:swipeRecognizer];
 
     tapRecognizer = [[UITapGestureRecognizer alloc]
                      initWithTarget:self

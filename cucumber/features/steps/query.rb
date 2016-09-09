@@ -127,6 +127,11 @@ newlines]
 end
 
 Then(/^I can query for Japanese$/) do
+  swipe(:left, "gesture performed")
   elements = query({text: "こんにちは！"})
+  expect(elements.count).to be == 1
+
+  swipe(:right, "gesture performed")
+  elements = query({text: "またね"})
   expect(elements.count).to be == 1
 end

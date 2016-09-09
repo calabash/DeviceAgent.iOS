@@ -85,7 +85,7 @@ Before do |scenario|
     :simctl => launcher.simctl,
     :instruments => launcher.instruments,
     :app => launcher.app,
-    :automator => :device_agent,
+    # Maintainers only.
     #:cbx_launcher => :xcodebuild,
 
     # Keep this as true.
@@ -111,25 +111,35 @@ Before do |scenario|
 end
 
 # TODO:  Scenario: Client#shutdown
-# TODO:  Scenario: Client#launch_other_app
-# TODO:  Scenario: SpringBoard
-# TODO:  Scenario: Locale
-# TODO:  Scenario: Location
+# TODO:  Feature: Client#launch_other_app
+# TODO:  Feature: SpringBoard alerts
+# TODO:    Scenario: All alerts at once
+# TODO:  Feature: SpringBoard views
+# TODO:  Feature: Locale
+# TODO:  Feature: Location
+# TODO:  Feature: WebViews
 
 After do |scenario|
 
-#  if DeviceAgent::Automator.client
-#    begin
-#      DeviceAgent::Automator.shutdown
-#    rescue => e
-#      RunLoop.log_error("#{e}")
-#      exit!(1)
-#    end
-#  end
+  after = :default
 
-  # Restart the app if a Scenario fails
-  if scenario.failed?
-    Calabash::Launcher.instance.first_launch = true
+  case after
+  when :default
+    # Restart the app if a Scenario fails
+    if scenario.failed?
+      Calabash::Launcher.instance.first_launch = true
+    end
+  when :shutdown
+    begin
+      DeviceAgent::Automator.shutdown
+    rescue => e
+      RunLoop.log_error("#{e}")
+      exit!(1)
+    end
+  when :exit
+    if scenario.failed?
+      exit!(1)
+    end
   end
 end
 
