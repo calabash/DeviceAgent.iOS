@@ -9,6 +9,11 @@
 
 #import "SpringBoard.h"
 #import "Application+Queries.h"
+@interface SpringBoard ()
+
+- (BOOL)shouldDismissAlertsAutomatically;
+
+@end
 
 @implementation SpringBoard
 
@@ -22,5 +27,11 @@
     });
     return _springBoard;
 }
+
+- (BOOL)shouldDismissAlertsAutomatically {
+    // TODO Provide a launch argument or route to disable the automatic dismiss.
+    return YES;
+}
+
 
 @end
