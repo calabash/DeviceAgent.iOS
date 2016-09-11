@@ -9,6 +9,9 @@
 
 #import "XCUIApplication.h"
 
+// Experimental
+// This enum describes the success or failure of the
+// dismissAlertByTappingAlertButtonWithTitle
 typedef enum : NSUInteger {
     SpringBoardDismissAlertDismissedAlert = 0,
     SpringBoardDismissAlertNoAlert,
