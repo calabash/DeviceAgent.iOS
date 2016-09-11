@@ -140,12 +140,8 @@ typedef enum : NSUInteger {
 
     XCUIElement *alert = [self queryForAlert];
 
-    if (!alert) {
-        return SpringBoardAlertHandlerNoAlert;
-    }
-
-    // Alert is now gone? It can happen.
-    if (!alert.exists) {
+    // There is not alert.
+    if (!alert || !alert.exists) {
         return SpringBoardAlertHandlerNoAlert;
     }
 
@@ -168,15 +164,16 @@ typedef enum : NSUInteger {
     }
 
     button = alert.buttons[mark];
+    // Resolve before asking if the button exists.
     [button resolve];
 
     // A button with the expected title does not exist.
     // It probably changed after an iOS update.
-    if (!button.exists) {
+    if (!button || !button.exists) {
         button = nil;
     }
 
-    // Use the default accept/deny button.
+    // Use the default accept/deny button, but only if we recognize this alert.
     if (!button) {
 
         if (!alert.exists) {
@@ -197,9 +194,10 @@ typedef enum : NSUInteger {
         }
     }
 
+    // Resolve before asking if the button exists.
     [button resolve];
 
-    if (!button.exists) {
+    if (!button || !button.exists) {
         return SpringBoardAlertHandlerNoAlert;
     }
 
@@ -242,9 +240,9 @@ typedef enum : NSUInteger {
           @"specifiers" : @{@"coordinate" : @{ @"x" : @(x), @"y" : @(y)}}
           };
 
-        __block BOOL success = NO;
+        __block BOOL success = YES;
         [GestureFactory executeGestureWithJSON:body completion:^(NSError *e) {
-            success = !e;
+            if (e) { success = NO; }
         }];
 
         if (success) {
