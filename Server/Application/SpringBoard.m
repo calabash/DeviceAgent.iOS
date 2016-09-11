@@ -248,7 +248,7 @@ typedef enum : NSUInteger {
         }];
 
         if (success) {
-            // There is one alert that is very problematic:
+            // There is one alert workflow that is very problematic:
             //
             // PhotoRoll
             //
@@ -261,8 +261,9 @@ typedef enum : NSUInteger {
             // The AXServer crashes, then the AUT crashes, and then DeviceAgent
             // performs the gesture or query on the SpringBoard.  For example, if
             // the gesture was a touch to Cancel the Photo Roll, the Newstand app
-            // would open.  Sleeping after the dismiss definitely reduced the
-            // frequency of crashes - they still happened.
+            // would open because that is the App Icon at the position of the
+            // of the Cancel touch.  Sleeping after the dismiss definitely
+            // reduced the frequency of crashes - they still happened.
             //
             // The AUT crash was caused by IImagePickerViewController which has a
             // history of crashing in situations like this.
