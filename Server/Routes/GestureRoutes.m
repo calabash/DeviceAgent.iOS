@@ -27,6 +27,13 @@
                  }];
              }],
 
+             [CBXRoute post:endpoint(@"/dismiss-springboard-alerts", 1.0) withBlock:^(RouteRequest *request,
+                                                                                      NSDictionary *body,
+                                                                                      RouteResponse *response) {
+                 [[SpringBoard application] handleAlertsOrThrow];
+                 [response respondWithJSON:@{ @"status" : @"no alerts" }];
+             }],
+
 #pragma mark - Experimental API
 
              [CBXRoute post:endpoint(@"/dismiss-springboard-alert", 1.0) withBlock:^(RouteRequest *request,
