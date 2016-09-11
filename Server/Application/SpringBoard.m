@@ -16,6 +16,13 @@
 #import "XCUIElement+WebDriverAttributes.h"
 #import "CBXException.h"
 
+typedef enum : NSUInteger {
+    SpringBoardAlertHandlerIgnoringAlerts = 0,
+    SpringBoardAlertHandlerNoAlert,
+    SpringBoardAlertHandlerDismissedAlert,
+    SpringBoardAlertHandlerUnrecognizedAlert
+} SpringBoardAlertHandlerResult;
+
 @interface SpringBoard ()
 
 - (BOOL)shouldDismissAlertsAutomatically;
@@ -67,15 +74,13 @@
     return YES;
 }
 
-- (SpringBoardAlertHandlerResult)handleAlertsOrThrow {
-    if (![self shouldDismissAlertsAutomatically]) {
-        return SpringBoardAlertHandlerIgnoringAlerts;
-    }
+- (void)handleAlertsOrThrow {
 
     @synchronized (self) {
 
+        if (![self shouldDismissAlertsAutomatically]) { return; }
+
         SpringBoardAlertHandlerResult current = SpringBoardAlertHandlerNoAlert;
-        SpringBoardAlertHandlerResult final = SpringBoardAlertHandlerNoAlert;
 
         // There are fewer than 20 kinds of SpringBoard alerts.
         NSUInteger maxTries = 20;
@@ -83,7 +88,7 @@
 
         current = [self handleAlert];
 
-        while(current > SpringBoardAlertHandlerNoAlert && try < maxTries) {
+        while(current != SpringBoardAlertHandlerNoAlert && try < maxTries) {
             current = [self handleAlert];
             if (current == SpringBoardAlertHandlerUnrecognizedAlert) {
                 break;
@@ -125,13 +130,6 @@
                                                @"tries" : @(maxTries)
                                                }];
         }
-
-        // In the case where multiple alerts are encountered and all the alerts
-        // are dismissed, 'current" will be SpringBoardAlertHandlerNoAlert.  The
-        // caller might be interested to know that an alert was dismissed.
-        final = MAX(final, current);
-
-        return final;
     }
 }
 

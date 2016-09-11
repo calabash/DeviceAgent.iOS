@@ -10,13 +10,6 @@
 #import "XCUIApplication.h"
 
 typedef enum : NSUInteger {
-    SpringBoardAlertHandlerIgnoringAlerts = 0,
-    SpringBoardAlertHandlerNoAlert,
-    SpringBoardAlertHandlerDismissedAlert,
-    SpringBoardAlertHandlerUnrecognizedAlert
-} SpringBoardAlertHandlerResult;
-
-typedef enum : NSUInteger {
     SpringBoardDismissAlertDismissedAlert = 0,
     SpringBoardDismissAlertNoAlert,
     SpringBoardDismissAlertNoMatchingButton,
@@ -55,26 +48,13 @@ typedef enum : NSUInteger {
 
  This method does not call #dismissAlertByTappingButtonTitle:
 
- The SpringBoardAlertHandlerResult enum describes the possible alert handling outcomes.
-
- * SpringBoardAlertHandlerIgnoringAlerts - automatic dismissally is disabled
- * SpringBoardAlertHandlerNoAlert - there was no alert
- * SpringBoardAlertHandlerDismissedAlert - at least one alert was dismissed
- * SpringBoardAlertHandlerUnrecognizedAlert - an alert is showing, but it not recognized.
-
- If an unrecognized alert is showing, it is up to the caller to decide what action to
- take.
-
- If an alert is dismissed, the caller may want to sleep or perform some other action.
-
  @see SpringBoardAlerts
 
  @exception SpringBoardAlertHandlerException To avoid an infinite loop, this method will
  raise an exception if it cannot dismiss the alert after number of tries.
 
- @return SpringBoardAlertHandlerResult describes how alerts were or were not handled.
  */
-- (SpringBoardAlertHandlerResult)handleAlertsOrThrow;
+- (void)handleAlertsOrThrow;
 
 /**
  Attempts to dismiss a SpringBoard alert by tapping a specific button.
