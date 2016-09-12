@@ -24,11 +24,13 @@ static NSArray <NSString *> *identifierProperties;
 /*
  * Tree
  */
-
 + (NSDictionary *)tree {
+    if ([[self currentApplication] lastSnapshot] == nil) {
+        [[[self currentApplication] applicationQuery] elementBoundByIndex:0];
+        [[self currentApplication] resolve];
+    }
     return [self snapshotTree:[[self currentApplication] lastSnapshot]];
 }
-
 
 + (XCElementSnapshot *)elementAtCoordinates:(float)x :(float)y {
     XCElementSnapshot *appSnap = (XCElementSnapshot *)[[[self currentApplication] lastSnapshot] hitTest:CGPointMake(x, y)];

@@ -31,17 +31,6 @@ static NSInteger currentElementIndex = 0;
 }
 
 + (XCUIApplication *)currentApplication {
-    /*
-     * The application is apparently somewhat lazily instantiated.
-     * Calling `resolve` grabs a current snapshot of the app. 
-     *
-     * TODO: ensure that the app is always resolved before a query
-     */
-    if ([currentApplication.app lastSnapshot] == nil) {
-        [[currentApplication.app applicationQuery] elementBoundByIndex:0];
-        [currentApplication.app resolve];
-    }
-    
     return currentApplication.app;
 }
 
