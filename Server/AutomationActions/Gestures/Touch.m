@@ -47,7 +47,7 @@
 
     CGPoint coordinate = coordinates[0].cgpoint;
 
-    float duration = [self duration];
+    float duration = [self duration] + 0.01;
     float offset = duration;
 
     NSUInteger numberFingers = [self numFingers];
