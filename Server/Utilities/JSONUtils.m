@@ -52,30 +52,14 @@ static NSDictionary *typeStringToElementType;
 }
 
 + (BOOL)elementHitable:(XCUIElement *)element {
-    BOOL hitable = NO;
-
+    // element is sometimes an XCElementSnapshot.
+    // For example, /tree generates snapshots.
+    // TODO: Should /tree include hitable information.
     if (![element respondsToSelector:@selector(isHittable)]) {
-        return hitable;
+        return NO;
+    } else {
+        return [element isHittable];
     }
-
-    @try {
-        hitable = [element isHittable];
-    } @catch (NSException *exception) {
-        NSLog(@"DeviceAgent caught an exception while calling isHitable on an element.");
-
-        NSLog(@"===  EXCEPTION ===");
-        NSLog(@"%@", exception);
-        NSLog(@"");
-
-        NSLog(@"=== STACK SYMBOLS === ");
-        NSLog(@"%@", [exception callStackSymbols]);
-        NSLog(@"");
-
-        NSLog(@"=== RUNTIME DETAILS ===");
-        NSLog(@"        element: %@", element);
-        NSLog(@"  element class: %@", [element class]);
-    }
-    return hitable;
 }
 
 
