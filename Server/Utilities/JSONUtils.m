@@ -145,26 +145,6 @@ static NSDictionary *typeStringToElementType;
     return elementTypeToString[@(type)];
 }
 
-+ (UIDeviceOrientation)parseOrientation:(id)orientation {
-    if ([orientation isKindOfClass:[NSString class]]) {
-        NSString *o = [orientation lowercaseString];
-        if ([o isEqualToString:@"left"])
-            return UIDeviceOrientationLandscapeRight;
-        if ([o isEqualToString:@"right"])
-            return UIDeviceOrientationLandscapeLeft;
-        if ([o isEqualToString:@"up"] || [o isEqualToString:@"top"])
-            return UIDeviceOrientationPortrait;
-        if ([o isEqualToString:@"down"] || [o isEqualToString:@"bottom"])
-            return UIDeviceOrientationPortraitUpsideDown;
-        /*TODO
-            Validate the use case for face up / down orientations.
-        */
-//        if ([o isEqualToString:@"face_up"]) return UIDeviceOrientationFaceUp;
-//        if ([o isEqualToString:@"face_down"]) return UIDeviceOrientationFaceDown;
-    }
-    @throw [CBXException withMessage:@"Unrecognized orientation."
-                            userInfo:@{@"orientation" : orientation?:[NSNull null]}];
-}
 
 + (void)validatePointJSON:(id)json {
     if ([json isKindOfClass:[NSArray class]]) {
