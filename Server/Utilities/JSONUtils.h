@@ -29,7 +29,7 @@
         "test_id" : Number
     }
 
- @param snapshot XCUIElement or XCUIElementSnapshot to convert to JSON
+ @param snapshot XCUIElement or XCElementSnapshot to convert to JSON
  */
 + (NSMutableDictionary *)snapshotToJSON:(NSObject<FBElement> *)snapshot;
 
