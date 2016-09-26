@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 set -e
-set -x
 
 source bin/log_functions.sh
 source bin/plist-buddy.sh
@@ -97,12 +96,14 @@ set -e
 # extract_identity IDENTITY "${RUNNER}"
 function extract_identity {
     DETAILS=`xcrun codesign --display --verbose=3 ${2} 2>&1`
-    NAME=`echo ${DETAILS} | egrep -o "iPhone Developer: .*\)" |  tr -d '\n'`
-    NAME=`echo $NAME | cut -d\( -f2 | cut -d\) -f1`
-    SHA=`xcrun security find-certificate -a -Z -c $NAME | grep "SHA-1 hash" | tr -d '\n' | cut -d: -f2 | head -n1`
-    echo "SHA=$SHA"
+    NAME=`echo ${DETAILS} | \egrep -o "iPhone Developer: .*\)" |  tr -d '\n'`
+    CLEAN_NAME=`echo $NAME | cut -d\( -f1 | sed -e 's/[[:space:]]*$//'`
+    SHA=`xcrun security find-certificate -a -Z -c "${CLEAN_NAME}" \
+| grep "SHA-1" \
+| head -n1 \
+| cut -d: -f2 \
+| sed -e 's/^[[:space:]]*//'`
     eval "$1=\"${SHA}\""
-    exit 0
 }
 
 if [ "${EXIT_STATUS}" != "0" ]; then
