@@ -15,6 +15,10 @@
     return [self getFloat:CBX_DURATION_KEY default:CBX_DEFAULT_DURATION];
 }
 
+- (bool)avoidInertia {
+    return [self getBool:CBX_AVOID_INERTIA_KEY default:CBX_DEFAULT_AVOID_INERTIA];
+}
+
 - (float)rotateDuration {
     return [self getFloat:CBX_DURATION_KEY default:CBX_DEFAULT_ROTATE_DURATION];
 }
@@ -61,6 +65,12 @@
 - (NSString *)getString:(NSString *)key default:(NSString *)defaultValue {
     return [self.gestureConfiguration has:key] ?
     self.gestureConfiguration[key] :
+    defaultValue;
+}
+
+- (bool)getBool:(NSString *)key default:(bool)defaultValue {
+    return [self.gestureConfiguration has:key] ?
+    [self.gestureConfiguration[key] boolValue] :
     defaultValue;
 }
 

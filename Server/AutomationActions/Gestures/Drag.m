@@ -7,7 +7,8 @@
 + (NSString *)name { return @"drag"; }
 
 + (NSArray <NSString *> *)optionalKeys {
-    return @[CBX_DURATION_KEY,
+    return @[CBX_AVOID_INERTIA_KEY,
+             CBX_DURATION_KEY,
              CBX_NUM_FINGERS_KEY];
 }
 
@@ -37,7 +38,7 @@
 
     long long orientation = [[Application currentApplication]
                              longLongInterfaceOrientation];
-
+    
     for (int fingerIndex = 0; fingerIndex < [self numFingers]; fingerIndex++ ) {
         CGPoint fingerOffset = [GeometryUtils fingerOffsetForFingerIndex:fingerIndex];
         CGPoint coordinate = coordinates[0].cgpoint;
@@ -54,12 +55,37 @@
             for (Coordinate *coord in coordinates) {
                 if (coord == coordinates.firstObject) { continue; }
                 offset += duration;
+                if ([self avoidInertia] && coord == coordinates.lastObject)
+                {
+                    coordinate = coord.cgpoint;
+                    Coordinate *previousCoord = coordinates[coordinates.count - 2];
+                    int dragHaltDistance = 2;
+                    if (coordinate.x > previousCoord.cgpoint.x)
+                    {
+                        coordinate.x += dragHaltDistance;
+                    }
+                    else if (coordinate.x < previousCoord.cgpoint.x)
+                    {
+                        coordinate.x -= dragHaltDistance;
+                    }
+                    if (coordinate.y > previousCoord.cgpoint.y)
+                    {
+                        coordinate.y += dragHaltDistance;
+                    }
+                    else if (coordinate.y < previousCoord.cgpoint.y)
+                    {
+                        coordinate.y -= dragHaltDistance;
+                    }
+                    coordinate.x += fingerOffset.x;
+                    coordinate.y += fingerOffset.y;
+                    [path moveToNextPoint:coordinate afterSeconds:offset];
+                    offset += 0.05;
+                }
                 coordinate = coord.cgpoint;
                 coordinate.x += fingerOffset.x;
                 coordinate.y += fingerOffset.y;
                 [path moveToNextPoint:coordinate afterSeconds:offset];
             }
-        
             
             [path liftUpAfterSeconds:offset];
             [event addTouchPath:path];
