@@ -46,10 +46,11 @@
         coordinate.y += fingerOffset.y;
         
         float duration = [self duration];
-        float offset = duration;
+        float offset = 0.0;
 
-        TouchPath *path = [TouchPath withFirstTouchPoint:coordinate orientation:orientation];
         for (int i = 0; i < [self repetitions]; i ++) {
+            TouchPath *path = [TouchPath withFirstTouchPoint:coordinate orientation:orientation];
+        
             for (Coordinate *coord in coordinates) {
                 if (coord == coordinates.firstObject) { continue; }
                 offset += duration;
@@ -58,11 +59,13 @@
                 coordinate.y += fingerOffset.y;
                 [path moveToNextPoint:coordinate afterSeconds:offset];
             }
-        }
-        offset += CBX_GESTURE_EPSILON;
         
-        [path liftUpAfterSeconds:offset];
-        [event addTouchPath:path];
+            
+            [path liftUpAfterSeconds:offset];
+            [event addTouchPath:path];
+            
+            offset += CBX_GESTURE_EPSILON;
+        }
     }
     
     return event;
