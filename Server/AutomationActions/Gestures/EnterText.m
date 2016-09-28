@@ -23,7 +23,7 @@
     if (![gestureConfig has:CBX_STRING_KEY]) {
         @throw [InvalidArgumentException withFormat:@"Missing required key 'string'"];
     }
-    
+
     NSString *string = gestureConfig[CBX_STRING_KEY];
 
 // Original implementation - not working on iOS 10 physical devices
@@ -40,8 +40,13 @@
 
     // This is working on iOS 9 - 10 sims and physical devices.
     XCUIApplication *application = [Application currentApplication];
+    if ([application lastSnapshot] == nil) {
+        [[application applicationQuery] elementBoundByIndex:0];
+        [application resolve];
+    }
+
     [application typeText:string];
-    
+
     completion(nil);
     return nil;
 }

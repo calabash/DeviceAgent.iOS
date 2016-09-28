@@ -29,7 +29,7 @@
         "test_id" : Number
     }
 
- @param snapshot XCUIElement or XCUIElementSnapshot to convert to JSON
+ @param snapshot XCUIElement or XCElementSnapshot to convert to JSON
  */
 + (NSMutableDictionary *)snapshotToJSON:(NSObject<FBElement> *)snapshot;
 
@@ -57,17 +57,6 @@
  @return Human-readable string version of the XCUIElementType or `nil` if not found. 
  */
 + (NSString *)stringForElementType:(XCUIElementType)type;
-
-/**
- Parse an orientation out of a raw json value passed to the server. 
- @param orientation An integer or string { left, right, up/top, down/bottom }
- @return A UIDeviceOrientation, either cast directly from the input if a number
- was provided, or parsed from the string to correspond to the position of
- the home button. E.g. 'left' means home button is on the left (landscape right)
- @throw CBXException thrown if input is unparseable
- @warn Doesn't validate that input numbers are in a valid range for the UIDeviceOrientation enum. 
- */
-+ (UIDeviceOrientation)parseOrientation:(id)orientation;
 
 /**
  Validates that given json correctly describes a point. This is convenient

@@ -52,82 +52,47 @@ static NSDictionary *typeStringToElementType;
 }
 
 + (BOOL)elementHitable:(XCUIElement *)element {
-    BOOL hitable = NO;
-
+    // element is sometimes an XCElementSnapshot.
+    // For example, /tree generates snapshots.
+    // TODO: Should /tree include hitable information.
     if (![element respondsToSelector:@selector(isHittable)]) {
-        return hitable;
+        return NO;
+    } else {
+        return [element isHittable];
     }
-
-    @try {
-        hitable = [element isHittable];
-    } @catch (NSException *exception) {
-        NSLog(@"DeviceAgent caught an exception while calling isHitable on an element.");
-
-        NSLog(@"===  EXCEPTION ===");
-        NSLog(@"%@", exception);
-        NSLog(@"");
-
-        NSLog(@"=== STACK SYMBOLS === ");
-        NSLog(@"%@", [exception callStackSymbols]);
-        NSLog(@"");
-
-        NSLog(@"=== RUNTIME DETAILS ===");
-        NSLog(@"        element: %@", element);
-        NSLog(@"  element class: %@", [element class]);
-    }
-    return hitable;
 }
 
-+ (NSDictionary *)elementHitPointToJSON:(XCUIElement *)element {
 
++ (NSDictionary *)elementHitPointToJSON:(XCUIElement *)element {
     id hitPoint = nil;
     XCUICoordinate *coordinate = nil;
     NSDictionary *dictionary = nil;
 
-    @try {
-        // element is sometimes an XCUIElementSnapshot; like after a flick.
-        if ([element respondsToSelector:@selector(hitPointCoordinate)]) {
-            hitPoint = [element hitPointCoordinate];
-            if (hitPoint) {
-                // Be defensive.
-                if ([hitPoint respondsToSelector:@selector(screenPoint)]) {
+    // element is sometimes an XCElementSnapshot.
+    // For example, /tree generates snapshots.
+    // TODO: Should /tree include hitpoint information.
+    if ([element respondsToSelector:@selector(hitPointCoordinate)]) {
+        hitPoint = [element hitPointCoordinate];
+        if (hitPoint) {
+            // Be defensive.
+            if ([hitPoint respondsToSelector:@selector(screenPoint)]) {
 
-                    coordinate = (XCUICoordinate *)hitPoint;
-                    CGPoint point = [coordinate screenPoint];
-                    dictionary = @{
-                                   @"x" : @(point.x),
-                                   @"y": @(point.y)
-                                   };
-                }
+                coordinate = (XCUICoordinate *)hitPoint;
+                CGPoint point = [coordinate screenPoint];
+                dictionary = @{
+                               @"x" : @(point.x),
+                               @"y": @(point.y)
+                               };
             }
         }
-    } @catch (NSException *exception) {
-        NSLog(@"DeviceAgent caught an exception while trying to find the hit point of an element.");
+    }
 
-        NSLog(@"===  EXCEPTION ===");
-        NSLog(@"%@", exception);
-        NSLog(@"");
-
-        NSLog(@"=== STACK SYMBOLS === ");
-        NSLog(@"%@", [exception callStackSymbols]);
-        NSLog(@"");
-
-        NSLog(@"=== RUNTIME DETAILS ===");
-        NSLog(@"         element: %@", element);
-        NSLog(@"   element class: %@", [element class]);
-        if (coordinate) {
-            NSLog(@"      coordinate: %@", coordinate);
-            NSLog(@"coordinate class: %@", [coordinate class]);
-        }
-
-    } @finally {
-        if (!dictionary) {
-            // The default values return when element is not hitable.
-            dictionary = @{
-                           @"x" : @(-1),
-                           @"y" : @(-1)
-                           };
-        }
+    if (!dictionary) {
+        // The default values return when element is not hitable.
+        dictionary = @{
+                       @"x" : @(-1),
+                       @"y" : @(-1)
+                       };
     }
 
     return dictionary;
@@ -145,26 +110,6 @@ static NSDictionary *typeStringToElementType;
     return elementTypeToString[@(type)];
 }
 
-+ (UIDeviceOrientation)parseOrientation:(id)orientation {
-    if ([orientation isKindOfClass:[NSString class]]) {
-        NSString *o = [orientation lowercaseString];
-        if ([o isEqualToString:@"left"])
-            return UIDeviceOrientationLandscapeRight;
-        if ([o isEqualToString:@"right"])
-            return UIDeviceOrientationLandscapeLeft;
-        if ([o isEqualToString:@"up"] || [o isEqualToString:@"top"])
-            return UIDeviceOrientationPortrait;
-        if ([o isEqualToString:@"down"] || [o isEqualToString:@"bottom"])
-            return UIDeviceOrientationPortraitUpsideDown;
-        /*TODO
-            Validate the use case for face up / down orientations.
-        */
-//        if ([o isEqualToString:@"face_up"]) return UIDeviceOrientationFaceUp;
-//        if ([o isEqualToString:@"face_down"]) return UIDeviceOrientationFaceDown;
-    }
-    @throw [CBXException withMessage:@"Unrecognized orientation."
-                            userInfo:@{@"orientation" : orientation?:[NSNull null]}];
-}
 
 + (void)validatePointJSON:(id)json {
     if ([json isKindOfClass:[NSArray class]]) {
