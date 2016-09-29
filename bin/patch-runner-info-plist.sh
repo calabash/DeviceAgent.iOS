@@ -96,7 +96,7 @@ set -e
 # extract_identity IDENTITY "${RUNNER}"
 function extract_identity {
     DETAILS=`xcrun codesign --display --verbose=3 ${2} 2>&1`
-    NAME=`echo ${DETAILS} | \egrep -o "iPhone Developer: .*\)" |  tr -d '\n'`
+    NAME=`echo ${DETAILS} | egrep -o "iPhone Developer: .*\)" |  tr -d '\n'`
     CLEAN_NAME=`echo $NAME | cut -d\( -f1 | sed -e 's/[[:space:]]*$//'`
     SHA=`xcrun security find-certificate -a -Z -c "${CLEAN_NAME}" \
 | grep "SHA-1" \
