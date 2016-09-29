@@ -99,10 +99,10 @@ function extract_identity {
     NAME=`echo ${DETAILS} | egrep -o "iPhone Developer: .*\)" |  tr -d '\n'`
     CLEAN_NAME=`echo $NAME | cut -d\( -f1 | sed -e 's/[[:space:]]*$//'`
     SHA=`xcrun security find-certificate -a -Z -c "${CLEAN_NAME}" \
-| grep "SHA-1" \
-| head -n1 \
-| cut -d: -f2 \
-| sed -e 's/^[[:space:]]*//'`
+      | grep "SHA-1" \
+      | head -n1 \
+      | cut -d: -f2 \
+      | sed -e 's/^[[:space:]]*//'`
     eval "$1=\"${SHA}\""
 }
 
