@@ -3,15 +3,13 @@
 #import "CBXConstants.h"
 
 @implementation ThreadUtils
-+ (void)runSync:(AsyncBlock)block completion:(CompletionBlock)completion {
++ (void)runSync:(AsyncBlock)block {
     BOOL done = NO;
-    __block NSError *err;
-    block(&done, &err);
+    
+    block(&done);
     
     while(!done){
         [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:CBX_RUNLOOP_INTERVAL]];
     }
-    
-    completion(err);
 }
 @end

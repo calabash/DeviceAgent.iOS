@@ -25,23 +25,23 @@
     }
     
     Touch *touch = [Touch withGestureConfiguration:gestureConfig query:query];
-
+    __block NSError *err;
     [touch execute:^(NSError *e) {
         if (e) {
             completion(e);
         } else {
-            [ThreadUtils runSync:^(BOOL *setToTrueWhenDone, NSError *__autoreleasing *err) {
+            [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
                 [[Testmanagerd get] _XCT_sendString:string
                                          maximumFrequency:CBX_DEFAULT_SEND_STRING_FREQUENCY
                                          completion:^(NSError *e) {
                     if (e) @throw [CBXException withMessage:@"Error performing gesture"];
-                    *err = e;
+                    err = e;
                     *setToTrueWhenDone = YES;
                 }];
-            } completion:completion];
+            }];
         }
     }];
-    
+    completion(err);
     return touch;
 }
 @end

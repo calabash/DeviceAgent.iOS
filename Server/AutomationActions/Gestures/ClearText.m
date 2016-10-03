@@ -26,7 +26,8 @@
     }
     XCUIElement *el = results[0];
 
-    [ThreadUtils runSync:^(BOOL *setToTrueWhenDone, NSError *__autoreleasing *err) {
+    __block NSError *err;
+    [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
         NSString *string = el.value;
         NSMutableString *delString = [NSMutableString new];
         for (int i = 0; i < string.length; i++) {
@@ -37,11 +38,12 @@
         [[Testmanagerd get] _XCT_sendString:string
                            maximumFrequency:CBX_DEFAULT_SEND_STRING_FREQUENCY
                                  completion:^(NSError *e) {
-                                     *err = e;
+                                     err = e;
                                      *setToTrueWhenDone = YES;
                                  }];
-    } completion:completion];
+    }];
     
+    completion(err);
     return nil;
 }
 
