@@ -4,14 +4,16 @@
 /**
  Two-finger pinch.
  
- Specify the amount of pinch (in UI points) with the `pinch_amount` key.
+ This is also known as zoom in or zoom out.
+ 
+ Specify the amount of pinch (in UI points) with the `amount` key.  The default is 50.
+ 
  Specify the direction of the pinch ("in" or "out") with the `pinch_direction` key.
- (E.g. on a map `pinch_direction : "in"` corresponds to zooming in,
- `pinch_direction : "out"` corresponds to zooming out).
- 
- Defaults to pinching out (fingers come together, as though you were pinching someone.
- Gently, of course).
- 
+ The default behavior is to pinch "out" or "zoom out".
+
+ Note that the behavior of pinch does not always match the gesture the user is performing.
+ For example, "zooming out" on a map requires a pinch (fingers come together).  Zooming in
+ requires a "reverse pinch" (fingers move away from each other).
  
  ## Name
  @"pinch"
