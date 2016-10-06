@@ -25,6 +25,10 @@ module DeviceAgent
       Automator.client.query_for_coordinate(uiquery)
     end
 
+    def tree
+      Automator.client.tree
+    end
+
     def rotate_home_button_to(symbol_or_string)
       position = symbol_or_string.to_sym
       Automator.client.rotate_home_button_to(position)["orientation"]

@@ -44,3 +44,14 @@ Then I query for newlines using backslashes
 Scenario: Query supports multiple languages
 Then I am looking at the Touch tab
 Then I can query for Japanese
+
+@wildcard
+Scenario: Query supports "*"
+Then I am looking at the Touch tab
+Then I query for all visible elements using an empty array
+And I query for all elements using an empty array
+
+@tree
+Scenario: Can ask for a tree representation
+Then I am looking at the Misc tab
+Then I ask for the tree representation of the view hierarchy
