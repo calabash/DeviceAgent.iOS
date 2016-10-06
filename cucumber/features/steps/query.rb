@@ -135,3 +135,18 @@ Then(/^I can query for Japanese$/) do
   elements = query({text: "またね"})
   expect(elements.count).to be == 1
 end
+
+Then(/^I query for all visible elements using an empty array$/) do
+  elements = query({})
+  expect(elements.count).to be == 19
+end
+
+Then(/^I query for all elements using an empty array$/) do
+  elements = query({all: true})
+  expect(elements.count).to be == 20
+end
+
+Then(/^I ask for the tree representation of the view hierarchy$/) do
+  elements = tree
+  expect(elements.count).to be == 9
+end
