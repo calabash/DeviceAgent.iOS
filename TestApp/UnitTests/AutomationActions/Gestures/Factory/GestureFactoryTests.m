@@ -198,7 +198,8 @@
                         },
                 @"options" : @{
                         @"duration" : @0.1,
-                        @"num_fingers" : @1
+                        @"num_fingers" : @1,
+                        @"allow_inertia" : @YES
                         }
                 };
     [self expectGestureWithJSON:json gestureClass:[Drag class]];
