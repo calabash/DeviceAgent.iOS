@@ -33,13 +33,13 @@ Extension to Gesture with convenience methods for attempting to get a value or, 
 
 /**
  Defines whether drag gestures are performed in such a way as to avoid inertia being
- performed within scrollable elements.  When true, the last part of a drag gestures 
+ performed within scrollable elements.  When NO, the last part of a drag gestures
  is performed 2 pixels longer than requested and is follwed by a 2 pixel 100 ms drag
  in the opposite direction.
  
- @return `self.gestureConfiguration[CBX_AVOID_INERTIA_KEY] || CBX_DEFAULT_AVOID_INERTIA`
+ @return Defaults to YES.
  */
-- (bool)avoidInertia;
+- (BOOL)allowDragToHaveInertia;
 
 /**
  Duration of a rotation gesture specifically. Separate from `duration` because
