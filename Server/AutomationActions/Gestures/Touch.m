@@ -47,7 +47,11 @@
 
     CGPoint coordinate = coordinates[0].cgpoint;
 
-    float duration = [self duration];
+    // Increase the duration by a little to trigger long press gestures.
+    // For example, a recognizer with 1.0 minimum duration will not be
+    // triggered by a 1.0 duration, but it will be triggered by a 1.0.1
+    // duration.
+    float duration = [self duration] + 0.01;
     float offset = duration;
 
     NSUInteger numberFingers = [self numFingers];
