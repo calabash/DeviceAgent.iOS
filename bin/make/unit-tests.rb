@@ -29,7 +29,7 @@ args =
             "-sdk iphonesimulator",
             "-configuration Debug",
             "GCC_TREAT_WARNINGS_AS_ERRORS=YES",
-            use_xcpretty ? "| xcpretty -tc --report junit && exit ${PIPESTATUS[0]}" : ""
+            use_xcpretty ? "| xcpretty -c --report junit && exit ${PIPESTATUS[0]}" : ""
       ]
 
 Dir.chdir(working_dir) do
