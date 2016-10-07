@@ -55,30 +55,15 @@
             for (Coordinate *coordinate in coordinates) {
                 if (coordinate == coordinates.firstObject) { continue; }
                 offset += duration;
-                if ([self avoidInertia] && coord == coordinates.lastObject)
-                {
-                    coordinate = coord.cgpoint;
+
+                // Add an additional point to halt inertia.
+                if (![self allowDragToHaveInertia] && coordinate == coordinates.lastObject) {
                     Coordinate *previousCoord = coordinates[coordinates.count - 2];
-                    int dragHaltDistance = 2;
-                    if (coordinate.x > previousCoord.cgpoint.x)
-                    {
-                        coordinate.x += dragHaltDistance;
-                    }
-                    else if (coordinate.x < previousCoord.cgpoint.x)
-                    {
-                        coordinate.x -= dragHaltDistance;
-                    }
-                    if (coordinate.y > previousCoord.cgpoint.y)
-                    {
-                        coordinate.y += dragHaltDistance;
-                    }
-                    else if (coordinate.y < previousCoord.cgpoint.y)
-                    {
-                        coordinate.y -= dragHaltDistance;
-                    }
-                    coordinate.x += fingerOffset.x;
-                    coordinate.y += fingerOffset.y;
-                    [path moveToNextPoint:coordinate afterSeconds:offset];
+                    CGPoint haltPoint = [Drag pointByApplyingHaltDistanceToCoordinate:coordinate
+                                                                   previousCoordinate:previousCoord];
+                    haltPoint.x += fingerOffset.x;
+                    haltPoint.y += fingerOffset.y;
+                    [path moveToNextPoint:haltPoint afterSeconds:offset];
                     offset += 0.05;
                 }
 
@@ -97,4 +82,26 @@
     
     return event;
 }
+
++ (CGPoint)pointByApplyingHaltDistanceToCoordinate:(Coordinate *)coordinate
+                                previousCoordinate:(Coordinate *)previousCoordinate {
+
+    CGPoint point = coordinate.cgpoint;
+    CGPoint previousPoint = previousCoordinate.cgpoint;
+    CGFloat dragHaltDistance = 2;
+
+    if (point.x > previousPoint.x) {
+        point.x += dragHaltDistance;
+    } else if (point.x < previousPoint.x) {
+        point.x -= dragHaltDistance;
+    }
+
+    if (point.y > previousPoint.y) {
+        point.y += dragHaltDistance;
+    } else if (point.y < previousPoint.y) {
+        point.y -= dragHaltDistance;
+    }
+    return point;
+}
+
 @end
