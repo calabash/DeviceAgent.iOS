@@ -77,7 +77,7 @@ Then(/^I long press a little button for (a short|a long|enough) time$/) do |time
   elsif time == "a long"
     duration = 2.0
   elsif time == "enough"
-    duration = 1.1
+    duration = 1.0
   end
 
   long_press({marked: "long press"}, {duration: duration})
@@ -87,7 +87,7 @@ end
 When(/^the home button is on the (top|right|left|bottom), I can long press$/) do |position|
   clear_small_button_action_label
   rotate_and_expect(position)
-  long_press({marked: "long press"}, {duration: 1.1})
+  long_press({marked: "long press"}, {duration: 1.0})
   wait_for_gesture_text("long press", "small button action")
   clear_small_button_action_label
 end
@@ -124,7 +124,7 @@ end
 When(/^the home button is on the (top|right|left|bottom), I can two-finger long press$/) do |position|
   rotate_and_expect(position)
   touch({marked: "complex touches"}, {:num_fingers => 2,
-                                                :duration => 1.1})
+                                      :duration => 1.0})
   wait_for_gesture_text("two-finger long press", "complex touches")
   clear_complex_button_action_label
 end
