@@ -207,6 +207,12 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
       @"iPhone7,1" : @"iphone 6+",
       @"iPhone8,2" : @"iphone 6+",
 
+      // iPhone 7/7+
+      @"iPhone9,1" : @"iphone 6",
+      @"iPhone9,3" : @"iphone 6",
+      @"iPhone9,2" : @"iphone 6+",
+      @"iPhone9,4" : @"iphone 6+",
+
       // iPad Pro 13in
       @"iPad6,7" : @"ipad pro",
       @"iPad6,8" : @"ipad pro",
@@ -261,6 +267,13 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
               ],
 
       @"arm64" : @[
+
+              // iPhone 7/7+
+              @"iPhone9,1",
+              @"iPhone9,3",
+              @"iPhone9,2",
+              @"iPhone9,4",
+
               // iPhone 6/6s
               @"iPhone7,2",
               @"iPhone8,1",

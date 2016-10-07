@@ -423,11 +423,12 @@ static NSString *const LPiPhone5sSimVersionInfo = @"CoreSimulator 110.4 - Device
 
     expect([map[@"armv7"] count]).to.equal(15);
     expect([map[@"armv7s"] count]).to.equal(7);
-    expect([map[@"arm64"] count]).to.equal(24);
+    expect([map[@"arm64"] count]).to.equal(28);
 }
 
 - (void)testArmVersion {
     NSString *version = [self.device armVersion];
     expect(version).notTo.equal(@"unknown");
 }
+
 @end
