@@ -41,19 +41,19 @@
     
     for (int fingerIndex = 0; fingerIndex < [self numFingers]; fingerIndex++ ) {
         CGPoint fingerOffset = [GeometryUtils fingerOffsetForFingerIndex:fingerIndex];
-        CGPoint coordinate = coordinates[0].cgpoint;
+        CGPoint point = coordinates[0].cgpoint;
         
-        coordinate.x += fingerOffset.x;
-        coordinate.y += fingerOffset.y;
+        point.x += fingerOffset.x;
+        point.y += fingerOffset.y;
         
         float duration = [self duration];
         float offset = 0.0;
 
         for (int i = 0; i < [self repetitions]; i ++) {
-            TouchPath *path = [TouchPath withFirstTouchPoint:coordinate orientation:orientation];
+            TouchPath *path = [TouchPath withFirstTouchPoint:point orientation:orientation];
         
-            for (Coordinate *coord in coordinates) {
-                if (coord == coordinates.firstObject) { continue; }
+            for (Coordinate *coordinate in coordinates) {
+                if (coordinate == coordinates.firstObject) { continue; }
                 offset += duration;
                 if ([self avoidInertia] && coord == coordinates.lastObject)
                 {
@@ -81,10 +81,11 @@
                     [path moveToNextPoint:coordinate afterSeconds:offset];
                     offset += 0.05;
                 }
-                coordinate = coord.cgpoint;
-                coordinate.x += fingerOffset.x;
-                coordinate.y += fingerOffset.y;
-                [path moveToNextPoint:coordinate afterSeconds:offset];
+
+                point = coordinate.cgpoint;
+                point.x += fingerOffset.x;
+                point.y += fingerOffset.y;
+                [path moveToNextPoint:point afterSeconds:offset];
             }
             
             [path liftUpAfterSeconds:offset];
