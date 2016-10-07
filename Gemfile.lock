@@ -32,7 +32,7 @@ PLATFORMS
 DEPENDENCIES
   luffa
   run_loop (>= 2.1.9, < 3.0)
-  xcpretty (~> 0.2)
+  xcpretty (= 0.2.2)
 
 BUNDLED WITH
    1.13.1
