@@ -7,7 +7,7 @@
 + (NSString *)name { return @"drag"; }
 
 + (NSArray <NSString *> *)optionalKeys {
-    return @[CBX_AVOID_INERTIA_KEY,
+    return @[CBX_ALLOW_INERTIA_DRAG_KEY,
              CBX_DURATION_KEY,
              CBX_NUM_FINGERS_KEY];
 }

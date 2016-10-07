@@ -16,7 +16,7 @@
 }
 
 - (bool)avoidInertia {
-    return [self getBool:CBX_AVOID_INERTIA_KEY default:CBX_DEFAULT_AVOID_INERTIA];
+    return [self getBool:CBX_ALLOW_INERTIA_DRAG_KEY default:CBX_DEFAULT_ALLOW_INERTIA_IN_DRAG];
 }
 
 - (float)rotateDuration {
