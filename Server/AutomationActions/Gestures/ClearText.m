@@ -37,7 +37,10 @@
         for (NSUInteger index = 0; index < [string length]; index++) {
           // touch the delete key
           // In the run-loop client I use `marked:'delete'`
-
+          // Is there an advantage of tapping the XCUIElement with QueryConfig @"marked": @"delete"?
+          // In theory having to execute both queries makes the tapping approach slightly slower ~14s compared to ~11s
+          // when using type text
+          [elementWithFocus typeText:@"\b"];
         }
         completion(nil);
         return nil;
