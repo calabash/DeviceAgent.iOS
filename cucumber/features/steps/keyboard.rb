@@ -149,3 +149,11 @@ Then(/^I replace "([^\"]*)" with "([^\"]*)" using the delete key$/) do |to_repla
   wait_for_question_text(answer)
 end
 
+And(/^I clear the text$/) do
+  clear_text()
+end
+
+Then(/^I should see an empty text field$/) do
+  actual_text = text_from_text_field
+  expect_text("", actual_text, "Error deleting text")
+end

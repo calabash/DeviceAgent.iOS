@@ -30,3 +30,7 @@ Given I typed "Tack, bra."
 And I decide I want to be more emphatic
 Then I replace "." with "!" using the delete key
 
+Scenario: Deleting text using clear text
+Given I typed "Tack, bra."
+And I clear the text
+Then I should see an empty text field
