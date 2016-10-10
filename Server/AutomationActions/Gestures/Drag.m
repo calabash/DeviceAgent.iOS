@@ -7,7 +7,8 @@
 + (NSString *)name { return @"drag"; }
 
 + (NSArray <NSString *> *)optionalKeys {
-    return @[CBX_DURATION_KEY,
+    return @[CBX_ALLOW_INERTIA_DRAG_KEY,
+             CBX_DURATION_KEY,
              CBX_NUM_FINGERS_KEY];
 }
 
@@ -37,29 +38,40 @@
 
     long long orientation = [[Application currentApplication]
                              longLongInterfaceOrientation];
-
+    
     for (int fingerIndex = 0; fingerIndex < [self numFingers]; fingerIndex++ ) {
         CGPoint fingerOffset = [GeometryUtils fingerOffsetForFingerIndex:fingerIndex];
-        CGPoint coordinate = coordinates[0].cgpoint;
+        CGPoint point = coordinates[0].cgpoint;
         
-        coordinate.x += fingerOffset.x;
-        coordinate.y += fingerOffset.y;
+        point.x += fingerOffset.x;
+        point.y += fingerOffset.y;
         
         float duration = [self duration];
         float offset = 0.0;
 
         for (int i = 0; i < [self repetitions]; i ++) {
-            TouchPath *path = [TouchPath withFirstTouchPoint:coordinate orientation:orientation];
+            TouchPath *path = [TouchPath withFirstTouchPoint:point orientation:orientation];
         
-            for (Coordinate *coord in coordinates) {
-                if (coord == coordinates.firstObject) { continue; }
+            for (Coordinate *coordinate in coordinates) {
+                if (coordinate == coordinates.firstObject) { continue; }
                 offset += duration;
-                coordinate = coord.cgpoint;
-                coordinate.x += fingerOffset.x;
-                coordinate.y += fingerOffset.y;
-                [path moveToNextPoint:coordinate afterSeconds:offset];
+
+                // Add an additional point to halt inertia.
+                if (![self allowDragToHaveInertia] && coordinate == coordinates.lastObject) {
+                    Coordinate *previousCoord = coordinates[coordinates.count - 2];
+                    CGPoint haltPoint = [Drag pointByApplyingHaltDistanceToCoordinate:coordinate
+                                                                   previousCoordinate:previousCoord];
+                    haltPoint.x += fingerOffset.x;
+                    haltPoint.y += fingerOffset.y;
+                    [path moveToNextPoint:haltPoint afterSeconds:offset];
+                    offset += 0.05;
+                }
+
+                point = coordinate.cgpoint;
+                point.x += fingerOffset.x;
+                point.y += fingerOffset.y;
+                [path moveToNextPoint:point afterSeconds:offset];
             }
-        
             
             [path liftUpAfterSeconds:offset];
             [event addTouchPath:path];
@@ -70,4 +82,26 @@
     
     return event;
 }
+
++ (CGPoint)pointByApplyingHaltDistanceToCoordinate:(Coordinate *)coordinate
+                                previousCoordinate:(Coordinate *)previousCoordinate {
+
+    CGPoint point = coordinate.cgpoint;
+    CGPoint previousPoint = previousCoordinate.cgpoint;
+    CGFloat dragHaltDistance = 2;
+
+    if (point.x > previousPoint.x) {
+        point.x += dragHaltDistance;
+    } else if (point.x < previousPoint.x) {
+        point.x -= dragHaltDistance;
+    }
+
+    if (point.y > previousPoint.y) {
+        point.y += dragHaltDistance;
+    } else if (point.y < previousPoint.y) {
+        point.y -= dragHaltDistance;
+    }
+    return point;
+}
+
 @end

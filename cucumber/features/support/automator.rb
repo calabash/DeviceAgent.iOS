@@ -111,7 +111,8 @@ module DeviceAgent
     def pan_between_coordinates(from_point, to_point, options={})
       default_options = {
         :duration => 1.0,
-        :num_fingers => 1
+        :num_fingers => 1,
+        :allow_inertia => true
       }
       merged_options = default_options.merge(options)
       Automator.client.pan_between_coordinates(from_point, to_point, merged_options)

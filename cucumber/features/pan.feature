@@ -25,8 +25,10 @@ Then I can drag the red box to the right well
 
 Scenario: Scrolling
 And I am looking at the Everything's On the Table page
-Then I can scroll down to the Windows row
-And then back up to the Apple row
+Then I can scroll down to the Windows row with inertia
+And then back up to the Apple row with inertia
+Then I can scroll down to the Windows row without inertia
+And then back up to the Apple row without inertia
 
 Scenario: Flicking
 And I am looking at the Everything's On the Table page
