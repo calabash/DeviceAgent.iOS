@@ -11,7 +11,7 @@ module TestApp
       wait_for_text_in_view(text, {marked: "pan action"})
     end
 
-    def pan(direction, mark, duration, size, wait_options={})
+    def pan(direction, mark, duration, size, allow_inertia, wait_options={})
 
       uiquery = {marked: mark}
       case size
@@ -28,26 +28,29 @@ module TestApp
       end
 
       pan_between_coordinates(from_point, to_point,
-                                        {duration: duration})
+                                        {duration: duration,
+                                        allow_inertia: allow_inertia})
     end
 
-    def scroll(direction, mark, wait_options={})
-      pan(direction, mark, 1.0, :medium, wait_options)
+    def scroll(direction, mark, allow_inertia, wait_options={})
+      pan(direction, mark, 1.0, :medium, allow_inertia, wait_options)
     end
 
-    alias_method :swipe, :scroll
+    def swipe(direction, mark, wait_options={})
+      pan(direction, mark, 1.0, :medium, true, wait_options)
+    end
 
     def flick(direction, mark, wait_options={})
-      pan(direction, mark, 0.1, :medium, wait_options)
+      pan(direction, mark, 0.1, :medium, true, wait_options)
     end
 
-    def scroll_to(direction, scroll_view_mark, view_mark, times)
+    def scroll_to(direction, scroll_view_mark, view_mark, times, allow_inertia=true)
       return if !query({marked: view_mark}).empty?
 
       found = false
 
       times.times do
-        scroll(direction, scroll_view_mark)
+        scroll(direction, scroll_view_mark, allow_inertia)
         # Gesture takes 1.0 seconds
         sleep(1.5)
 
@@ -192,17 +195,20 @@ Then(/^I can drag the red box to the right well$/) do
   # TODO figure out how to assert the drag and drop happened.
 end
 
-Then(/^I can scroll down to the Windows row$/) do
+Then(/^I can scroll down to the Windows row (with|without) inertia$/) do |allow_inertia|
   scroll_view_mark = "table page"
   view_mark = "windows row"
-  scroll_to(:up, scroll_view_mark, view_mark, 5)
+
+  inertia = allow_inertia == "with"
+  scroll_to(:up, scroll_view_mark, view_mark, 5, inertia)
   # TODO touch the row
 end
 
-And(/^then back up to the Apple row$/) do
+And(/^then back up to the Apple row (with|without) inertia$/) do |allow_inertia|
   scroll_view_mark = "table page"
   view_mark = "apple row"
-  scroll_to(:down, scroll_view_mark, view_mark, 5)
+  inertia = allow_inertia == "with"
+  scroll_to(:down, scroll_view_mark, view_mark, 5, inertia)
   # TODO touch the row
 end
 

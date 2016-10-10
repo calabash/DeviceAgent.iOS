@@ -138,12 +138,20 @@ end
 
 Then(/^I query for all visible elements using an empty array$/) do
   elements = query({})
-  expect(elements.count).to be == 19
+  if device_info["simulator"]
+    expect(elements.count).to be == 19
+  else
+    expect(elements.count).to be == 20
+  end
 end
 
 Then(/^I query for all elements using an empty array$/) do
   elements = query({all: true})
-  expect(elements.count).to be == 20
+  if device_info["simulator"]
+    expect(elements.count).to be == 35
+  else
+    expect(elements.count).to be == 36
+  end
 end
 
 Then(/^I ask for the tree representation of the view hierarchy$/) do
