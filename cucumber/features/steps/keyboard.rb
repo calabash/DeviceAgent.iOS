@@ -47,9 +47,24 @@ module DeviceAgent
 
     def expect_text(expected, actual, message)
       if expected != actual
-        fail(%Q[#{message}:
-Expected text: #{expected}
-          got: #{actual}
+
+        if expected.nil?
+          expected_message = "nil"
+        else
+          expected_message = expected
+        end
+
+        if actual.nil?
+          actual_message = "nil"
+        else
+          actual_message = actual
+        end
+
+        fail(%Q[
+#{message}
+
+Expected text: #{expected_message}
+          got: #{actual_message}
 ])
       end
     end
@@ -150,10 +165,10 @@ Then(/^I replace "([^\"]*)" with "([^\"]*)" using the delete key$/) do |to_repla
 end
 
 And(/^I clear the text$/) do
-  clear_text()
+  clear_text
 end
 
 Then(/^I should see an empty text field$/) do
   actual_text = text_from_text_field
-  expect_text("", actual_text, "Error deleting text")
+  expect_text(nil, actual_text, "Error clearing text")
 end
