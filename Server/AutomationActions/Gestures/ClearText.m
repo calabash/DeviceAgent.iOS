@@ -1,9 +1,27 @@
 
-
 #import "ClearText.h"
-#import "ThreadUtils.h"
+
+@interface ClearText ()
+
+@property(strong, readonly) NSPredicate *deleteKeyPredicate;
+
++ (ClearText *)shared;
+- (XCUIElement *)deleteKey;
+
+@end
 
 @implementation ClearText
+
+@synthesize deleteKeyPredicate = _deleteKeyPredicate;
+
++ (ClearText *)shared {
+    static ClearText *instance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [[ClearText alloc] init];
+    });
+    return instance;
+}
 
 + (NSString *)name { return @"clear_text"; }
 + (NSArray <NSString *> *)optionalKeys { return @[]; }
@@ -34,17 +52,52 @@
         completion(nil);
         return nil;
     } else {
-        for (NSUInteger index = 0; index < [string length]; index++) {
-          // touch the delete key
-          // In the run-loop client I use `marked:'delete'`
-          // Is there an advantage of tapping the XCUIElement with QueryConfig @"marked": @"delete"?
-          // In theory having to execute both queries makes the tapping approach slightly slower ~14s compared to ~11s
-          // when using type text
-          [elementWithFocus typeText:@"\b"];
+        XCUIElement *deleteKey = [[ClearText shared] deleteKey];
+        [deleteKey resolve];
+        if (deleteKey == nil || !deleteKey.exists) {
+            for (NSUInteger index = 0; index < [string length]; index++) {
+                [elementWithFocus typeText:@"\b"];
+            }
+        } else {
+            for (NSUInteger index = 0; index < [string length]; index++) {
+               [deleteKey tap];
+            }
         }
+
         completion(nil);
         return nil;
     }
 }
 
+- (NSPredicate *)deleteKeyPredicate {
+    if (_deleteKeyPredicate) { return _deleteKeyPredicate; }
+    NSMutableString *predicateString = [NSMutableString string];
+    NSArray *properties = @[@"identifier", @"accessibilityIdentifier",
+                            @"label", @"accessibilityLabel"];
+    for (NSString *property in properties) {
+        [predicateString appendFormat:@"%@ == 'delete'", property];
+        if (property != [properties lastObject]) {
+            [predicateString appendString:@" OR "];
+        }
+    }
+    _deleteKeyPredicate = [NSPredicate predicateWithFormat:predicateString];
+    return _deleteKeyPredicate;
+}
+
+- (XCUIElement *)deleteKey {
+    XCUIApplication *application = [Application currentApplication];
+    XCUIElementQuery *query = [application descendantsMatchingType:XCUIElementTypeKey];
+    XCUIElementQuery *matching = [query matchingPredicate:[self deleteKeyPredicate]];
+    NSArray <XCUIElement *> *elements = [matching allElementsBoundByIndex];
+    if ([elements count] == 1) {
+        NSLog(@"Expected 1 element to match type 'Key' and id 'delete', found none");
+       return nil;
+    } else if ([elements count] != 1) {
+        NSLog(@"Expected 1 element to match type 'Key' and id 'delete', found %@",
+              @([elements count]));
+        return elements[0];
+    } else {
+        return elements[0];
+    }
+}
 @end
