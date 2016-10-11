@@ -76,6 +76,8 @@
                             @"label", @"accessibilityLabel"];
     for (NSString *property in properties) {
         [predicateString appendFormat:@"%@ == 'delete'", property];
+        [predicateString appendString:@" OR "];
+        [predicateString appendFormat:@"%@ == 'Delete'", property];
         if (property != [properties lastObject]) {
             [predicateString appendString:@" OR "];
         }
