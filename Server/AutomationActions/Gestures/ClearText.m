@@ -54,6 +54,7 @@
     } else {
         XCUIElement *deleteKey = [[ClearText shared] deleteKey];
         [deleteKey resolve];
+
         if (deleteKey == nil || !deleteKey.exists) {
             for (NSUInteger index = 0; index < [string length]; index++) {
                 [elementWithFocus typeText:@"\b"];
@@ -94,6 +95,8 @@
     if ([elements count] == 1) {
         NSLog(@"Expected 1 element to match type 'Key' and id 'delete', found none");
        return nil;
+    } else if ([elements count] == nil) {
+        return nil;
     } else if ([elements count] != 1) {
         NSLog(@"Expected 1 element to match type 'Key' and id 'delete', found %@",
               @([elements count]));
