@@ -95,7 +95,7 @@
     if ([elements count] == 1) {
         NSLog(@"Expected 1 element to match type 'Key' and id 'delete', found none");
        return nil;
-    } else if ([elements count] == nil) {
+    } else if (elements.firstObject == nil) {
         return nil;
     } else if ([elements count] != 1) {
         NSLog(@"Expected 1 element to match type 'Key' and id 'delete', found %@",
