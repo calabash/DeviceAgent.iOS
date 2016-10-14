@@ -14,4 +14,3 @@ Calabash version numbers will be in this form:
 
 - [1] http://semver.org/
 - [2] http://gravitext.com/2012/07/22/versioning.html
-
