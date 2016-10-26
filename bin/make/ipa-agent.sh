@@ -43,9 +43,6 @@ INSTALLED_IPA="${INSTALL_DIR}/${IPA}"
 INSTALLED_RUNNER="${INSTALL_DIR}/${RUNNER}"
 INSTALLED_RUNNER_IPA="${INSTALL_DIR}/${RUNNER_IPA}"
 
-rm -rf "${INSTALL_DIR}"
-mkdir -p "${INSTALL_DIR}"
-
 info "Prepared install directory ${INSTALL_DIR}"
 
 BUILD_PRODUCTS_DIR="${XC_BUILD_DIR}/Build/Products/${XC_CONFIG}-iphoneos"
