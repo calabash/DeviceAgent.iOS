@@ -62,6 +62,10 @@ module DeviceAgent
       Automator.client.keyboard_visible?
     end
 
+    def clear_text
+      Automator.client.clear_text
+    end
+
     def enter_text(string)
       Automator.client.enter_text(string)
     end
