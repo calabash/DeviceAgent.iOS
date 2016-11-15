@@ -154,12 +154,13 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"Ja", YES, @"auf Ihren Kalender zugreifen"),
              alert(@"Ja", YES, @"auf Ihre Erinnerungen zugreifen"),
              alert(@"Ja", YES, @"auf Ihre Fotos zugreifen"),
+             alert(@"OK", YES, @"möchte auf deine Fotos zugreifen"),
              alert(@"Erlauben", YES, @"möchte auf Twitter-Accounts zugreifen"),
              alert(@"Ja", YES, @"auf das Mikrofon zugreifen"),
              alert(@"Ja", YES, @"möchte auf Ihre Bewegungs- und Fitnessdaten zugreifen"),
              alert(@"Ja", YES, @"auf Ihre Kamera zugreifen"),
              alert(@"OK", YES, @"Ihnen Mitteilungen senden"),
-             alert(@"OK", YES, @"Keine SIM-Karte eingelegt")
+             alert(@"OK", YES, @"Keine SIM-Karte eingelegt"),
              ];
 }
 
