@@ -5,6 +5,8 @@
 @interface Testmanagerd()
 @property (nonatomic, strong) id<XCTestManager_ManagerInterface> proxy;
 @property (nonatomic, strong) NSXPCConnection *managerConnection;
+@property (nonatomic, strong) NSString *invalidationReason;
+@property BOOL hasValidConnection;
 @end
 
 @implementation Testmanagerd
@@ -12,6 +14,8 @@ static Testmanagerd *testmanagerd;
 
 - (id)init {
     if (self = [super init]) {
+        self.hasValidConnection = YES;
+        self.invalidationReason = @"connection is valid";
         self.managerConnection = [[NSXPCConnection alloc] initWithMachServiceName:@"com.apple.testmanagerd" options:0x0];
         NSXPCInterface *interface = [NSXPCInterface interfaceWithProtocol:@protocol(XCTestManager_ManagerInterface)];
         
@@ -24,19 +28,25 @@ static Testmanagerd *testmanagerd;
                                                                   [NSDictionary class],
                                                                   [NSDate class],
                                                                   [NSNull class],
-                                                                  [NSNumber class],[XCAccessibilityElement class], nil]
-                                                     forSelector:@selector(_XCT_fetchAttributesForElement:attributes:reply:) argumentIndex:0x0 ofReply:0x1];
-        
+                                                                  [NSNumber class],
+                                                                  [XCAccessibilityElement class], nil]
+                                                     forSelector:@selector(_XCT_fetchAttributesForElement:attributes:reply:)
+                                                   argumentIndex:0x0
+                                                         ofReply:0x1];
         
         [self.managerConnection setExportedInterface:[NSXPCInterface interfaceWithProtocol:@protocol(XCTestManager_TestsInterface)]];
         
         [self.managerConnection setExportedObject:self];
         
         [self.managerConnection setInterruptionHandler:^{
+            _hasValidConnection = NO;
+            _invalidationReason = @"Remote process crashed or exited.";
             NSLog(@"Interruption handler");
         }];
         
         [self.managerConnection setInvalidationHandler:^{
+            _hasValidConnection = NO;
+            _invalidationReason = @"Connection to remote process dropped";
             NSLog(@"Invalidation handler");
         }];
         
@@ -45,6 +55,10 @@ static Testmanagerd *testmanagerd;
         [self.managerConnection resume];
         
         self.proxy = [self.managerConnection remoteObjectProxyWithErrorHandler:^(NSError *error) {
+            _hasValidConnection = NO;
+            _invalidationReason
+                = [NSString stringWithFormat:@"Unable to establish connection to remote object proxy: %@",
+                   error];
             NSLog(@"Error getting remote proxy: %@", error);
         }];
     }
@@ -59,5 +73,13 @@ static Testmanagerd *testmanagerd;
 }
 
 + (id<XCTestManager_ManagerInterface>)get { return testmanagerd.proxy; }
+
++ (BOOL)hasValidConnection {
+    return testmanagerd.hasValidConnection;
+}
+
++ (NSString *)invalidationReason {
+    return testmanagerd.invalidationReason;
+}
 
 @end
