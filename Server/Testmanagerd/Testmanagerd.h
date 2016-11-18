@@ -1,5 +1,6 @@
 
 #import <Foundation/Foundation.h>
+#import "XCTestDriver.h"
 #import "XCTestManager_ManagerInterface-Protocol.h"
 
 /**
@@ -24,15 +25,4 @@
  */
 + (id<XCTestManager_ManagerInterface>)get;
 
-/**
- Returns the state of the connection to Testmanagerd. If invalid, the
- managing process should attempt to re-establish the connection to 
- testmanagerd (which likely involves killing and re-launching DeviceAgent).
- */
-+ (BOOL)hasValidConnection;
-
-/**
- If the connection was invalidated, returns the reson for invalidation.
- */
-+ (NSString *)invalidationReason;
 @end

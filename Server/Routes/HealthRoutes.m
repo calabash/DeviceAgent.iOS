@@ -12,19 +12,6 @@
                                              }];
              }],
              
-             [CBXRoute get:endpoint(@"/testmanagerd-health", 1.0) withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
-                 if ([Testmanagerd hasValidConnection]) {
-                     [response respondWithJSON:@{
-                                                 @"status" : @"Ready for orders"
-                                                }];
-                 } else {
-                     [response respondWithJSON:@{
-                                                 @"error" : @"Connection invalid",
-                                                 @"reason" : [Testmanagerd invalidationReason]
-                                                 }];
-                 }
-             }],
-             
              [CBXRoute get:endpoint(@"/ping", 1.0) withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
                  [response respondWithJSON:@{
                                              @"status" : @"honk"
