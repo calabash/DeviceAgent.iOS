@@ -34,7 +34,7 @@ static NSDictionary *unhitablePoint;
     json[CBX_ENABLED_KEY] = @(snapshot.wdEnabled);
     json[CBX_TEST_ID] = [Application cacheElement:(XCUIElement *)snapshot];
 
-    NSDictionary *visibilityInfo;
+    NSDictionary *visibilityInfo = @{};
     if ([[snapshot class] isSubclassOfClass:[XCElementSnapshot class]]) {
         visibilityInfo = [JSONUtils visibilityInfoWithSnapshot:(XCElementSnapshot *)snapshot];
     } else if ([[snapshot class] isSubclassOfClass:[XCUIElement class]]) {
