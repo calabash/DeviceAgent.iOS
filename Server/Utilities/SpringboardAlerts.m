@@ -25,6 +25,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
 - (NSArray<SpringBoardAlert *> *)ES419SpanishAlerts;
 - (NSArray<SpringBoardAlert *> *)FrenchAlerts;
 - (NSArray<SpringBoardAlert *> *)RussianAlerts;
+- (NSArray<SpringBoardAlert *> *)PTBrazilAlerts;
 
 @end
 
@@ -47,7 +48,8 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
                                             [self ES419SpanishAlerts],
                                             [self GermanAlerts],
                                             [self FrenchAlerts],
-                                            [self RussianAlerts]
+                                            [self RussianAlerts],
+                                            [self PTBrazilAlerts]
                                             ]];
     }
     return self;
@@ -212,4 +214,20 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              ];
 }
 
+- (NSArray<SpringBoardAlert *> *)PTBrazilAlerts {
+    return @[
+             alert(@"Permitir", YES, @"acesso à sua localização"),
+             alert(@"Permitir", YES, @"acesso à sua localização"),
+             alert(@"OK", YES, @"Deseja Ter Acesso às Suas Fotos"),
+             alert(@"OK", YES, @"Deseja Ter Acesso aos Seus Contatos"),
+             alert(@"OK", YES, @"Acesso ao Seu Calendário"),
+             alert(@"OK", YES, @"Deseja Ter Acesso aos Seus Lembretes"),
+             alert(@"OK", YES, @"Would Like to Access Your Motion Activity"),
+             alert(@"OK", YES, @"Deseja Ter Acesso à Câmera"),
+             alert(@"OK", YES, @"Deseja Ter Acesso às Suas Atividades de Movimento e Preparo Físico"),
+             alert(@"OK", YES, @"Deseja Ter Acesso às Contas do Twitter"),
+             alert(@"OK", YES, @"data available to nearby bluetooth devices"),
+             alert(@"OK", YES, @"[Dd]eseja [Ee]nviar-lhe [Nn]otificações")
+             ];
+}
 @end
