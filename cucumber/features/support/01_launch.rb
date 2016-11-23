@@ -121,7 +121,8 @@ end
 
 After do |scenario|
 
-  after = :default
+  # See bin/test/jmoody scripts.
+  after = ENV["ON_SCENARIO_FAILURE"].to_sym || :default
 
   case after
   when :default
@@ -143,3 +144,9 @@ After do |scenario|
   end
 end
 
+at_exit do
+  # See bin/test/jmoody scripts.
+  if ENV["QUIT_AUT_AFTER_CUCUMBER"] == "1"
+    DeviceAgent::Automator.shutdown
+  end
+end
