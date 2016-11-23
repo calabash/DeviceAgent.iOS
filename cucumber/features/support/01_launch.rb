@@ -122,7 +122,12 @@ end
 After do |scenario|
 
   # See bin/test/jmoody scripts.
-  after = ENV["ON_SCENARIO_FAILURE"].to_sym || :default
+  on_scenario_failure = ENV["ON_SCENARIO_FAILURE"]
+  if on_scenario_failure
+    on_scenario_failure = on_scenario_failure.to_sym
+  end
+
+  after = on_scenario_failure || :default
 
   case after
   when :default
@@ -141,6 +146,8 @@ After do |scenario|
     if scenario.failed?
       exit!(1)
     end
+  else
+    # Do nothing
   end
 end
 
