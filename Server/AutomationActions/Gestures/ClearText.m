@@ -86,7 +86,7 @@
         frame = [deleteKey wdFrame];
     }
 
-    // There are cases where we cannot find a hitpoint.
+    // There are cases where we cannot find a hit point.
     if (frame.origin.x <= 0.0 || frame.origin.y <= 0.0) {
         NSString *message;
         message = [NSString stringWithFormat:@"Keyboard delete key did not have a valid"
@@ -105,10 +105,12 @@
       };
 
     CompletionBlock completion = ^(NSError *error) {
-        NSString *message = [NSString stringWithFormat:@"Encountered an error tapping the"
-                             "keyboard delete key: %@",
-                             error];
-        @throw [CBXException withMessage:message];
+        if (error) {
+            NSString *message = [NSString stringWithFormat:@"Encountered an"
+            " error tapping the keyboard delete key: %@ for element %@",
+                                 error, deleteKey];
+            @throw [CBXException withMessage:message];
+        }
     };
     for (NSUInteger index = 0; index < [string length]; index++) {
         [GestureFactory executeGestureWithJSON:body
