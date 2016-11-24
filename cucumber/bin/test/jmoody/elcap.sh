@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
 set -e
-CUCUMBER_ARGS="--format progress --tags @keyboard"
-
-TEST_SIM=1
-TEST_DEVICE=1
+CUCUMBER_ARGS="--format pretty --tags @keyboard"
 
 if [ "${1}" = "device" ]; then
   TEST_SIM=0
@@ -12,6 +9,9 @@ if [ "${1}" = "device" ]; then
 elif [ "${1}" = "sim" ]; then
   TEST_SIM=1
   TEST_DEVICE=0
+elif [ "${1}" = "" ]; then
+  TEST_SIM=1
+  TEST_DEVICE=1
 else
   echo "Error: unknown argument: ${1}"
   exit 1
