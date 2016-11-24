@@ -173,7 +173,7 @@
     XCUIElementQuery *query = [application descendantsMatchingType:XCUIElementTypeKey];
     XCUIElementQuery *matching = [query matchingPredicate:[self deleteKeyPredicate]];
     NSArray <XCUIElement *> *elements = [matching allElementsBoundByIndex];
-    if ([elements count] == 1) {
+    if ([elements count] == 0) {
         NSLog(@"Expected 1 element to match type 'Key' and id 'delete', found none");
         return nil;
     } else if (elements.firstObject == nil) {

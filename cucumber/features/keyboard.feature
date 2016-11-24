@@ -25,11 +25,13 @@ Given I typed "Dangge, guet, und dir?"
 And I decide I should be more formal
 Then I replace "dir?" with "Ihre?" by sending backspace
 
+@delete_key
 Scenario: Deleting text by touching delete key
 Given I typed "Tack, bra."
 And I decide I want to be more emphatic
 Then I replace "." with "!" using the delete key
 
+@clear_text
 Scenario: Deleting text using clear text
 Given I typed "Tack, bra."
 And I clear the text
