@@ -431,4 +431,22 @@ static NSString *const LPiPhone5sSimVersionInfo = @"CoreSimulator 110.4 - Device
     expect(version).notTo.equal(@"unknown");
 }
 
+- (void)testIsArm64YES {
+    id mock = OCMPartialMock(self.device);
+    OCMExpect([mock armVersion]).andReturn(@"arm64");
+
+    expect([mock isArm64]).to.equal(YES);
+
+    OCMVerifyAll(mock);
+}
+
+- (void)testIsArm64NO {
+    id mock = OCMPartialMock(self.device);
+    OCMExpect([mock armVersion]).andReturn(@"armv7");
+
+    expect([mock isArm64]).to.equal(NO);
+
+    OCMVerifyAll(mock);
+}
+
 @end

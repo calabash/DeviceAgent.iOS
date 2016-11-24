@@ -84,6 +84,11 @@ extern NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY;
 - (BOOL)isIPhone5Like;
 
 /**
+ @return True if the device is arm64
+ */
+- (BOOL)isArm64;
+
+/**
  @return A dictionary describing the attributes of this device.
  */
 - (NSDictionary *)dictionaryRepresentation;

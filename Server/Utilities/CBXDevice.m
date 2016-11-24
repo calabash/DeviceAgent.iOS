@@ -451,6 +451,10 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
     }
 }
 
+- (BOOL)isArm64 {
+    return [self.armVersion containsString:@"arm64"];
+}
+
 - (NSDictionary *)dictionaryRepresentation {
     return
     @{
