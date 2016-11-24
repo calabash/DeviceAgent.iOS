@@ -43,7 +43,15 @@ info "Default Simulator"
 bundle exec cucumber ${CUCUMBER_ARGS}
 
 info "iOS 9.3 Simulator"
-DEVICE_TARGET=7D25AA5B-F939-4BC8-AD5D-6280E71DAE0B \
+DEVICE_TARGET=BD2010F9-401C-4E56-AE8A-ECB7CD3370D8 \
+  bundle exec cucumber ${CUCUMBER_ARGS}
+
+info "iOS 9.3 Simulator iPhone 5c"
+DEVICE_TARGET=D1B22B9C-F105-4DF0-8FA3-7AE41E212A9D \
+  bundle exec cucumber ${CUCUMBER_ARGS}
+
+info "iOS 10.0 Simulator iPhone 5c"
+DEVICE_TARGET=FEBB7F64-516F-46B5-9CD8-BC361A297A34 \
   bundle exec cucumber ${CUCUMBER_ARGS}
 
 declare -a devices=("mercury" "wolf" "uranus")
@@ -67,11 +75,23 @@ info "Default Simulator"
 bundle exec cucumber ${CUCUMBER_ARGS}
 
 info "iOS 10.0 Simulator"
-DEVICE_TARGET=B6D21623-32F6-44F5-90ED-7E520DC94A69 \
+DEVICE_TARGET=B35DFE6A-3675-4154-912D-2C6864AD4AAF \
   bundle exec cucumber ${CUCUMBER_ARGS}
 
 info "iOS 9.3 Simlator"
-DEVICE_TARGET=6DD279B3-7FED-4902-96F4-618D55540ADC \
+DEVICE_TARGET=F6EF1FA5-1C3F-465E-8B29-70C293DE0F66 \
+  bundle exec cucumber ${CUCUMBER_ARGS}
+
+info "iOS 9.3 Simulator iPhone 5c"
+DEVICE_TARGET=D1B22B9C-F105-4DF0-8FA3-7AE41E212A9D \
+  bundle exec cucumber ${CUCUMBER_ARGS}
+
+info "iOS 10.0 Simulator iPhone 5c"
+DEVICE_TARGET=FEBB7F64-516F-46B5-9CD8-BC361A297A34 \
+  bundle exec cucumber ${CUCUMBER_ARGS}
+
+info "iOS 10.1 Simulator iPhone 5c"
+DEVICE_TARGET=E0D0814E-E655-482C-A10A-3019E3A0BCE7 \
   bundle exec cucumber ${CUCUMBER_ARGS}
 
 declare -a devices=("mercury" "wolf" "uranus" "pegasi" "denis")
@@ -94,18 +114,34 @@ info "Default Simulator"
 bundle exec cucumber ${CUCUMBER_ARGS}
 
 info "iOS 10.1 Simulator"
-DEVICE_TARGET=E160BC4E-CAD5-4680-9C42-D510FB4BB052 \
+DEVICE_TARGET= 8B9B8DE5-79DA-4C2E-B430-0FD0FC4FE58D \
   bundle exec cucumber ${CUCUMBER_ARGS}
 
 info "iOS 10.0 Simlator"
-DEVICE_TARGET=6DD279B3-7FED-4902-96F4-618D55540ADC \
+DEVICE_TARGET=B35DFE6A-3675-4154-912D-2C6864AD4AAF \
   bundle exec cucumber ${CUCUMBER_ARGS}
 
 info "iOS 9.3 Simulator"
-DEVICE_TARGET=B6D21623-32F6-44F5-90ED-7E520DC94A69 \
+DEVICE_TARGET=F6EF1FA5-1C3F-465E-8B29-70C293DE0F66 \
   bundle exec cucumber ${CUCUMBER_ARGS}
 
-eclare -a devices=("mercury" "wolf" "uranus" "pegasi" "denis" "hat")
+info "iOS 9.3 Simulator iPhone 5c"
+DEVICE_TARGET=D1B22B9C-F105-4DF0-8FA3-7AE41E212A9D \
+  bundle exec cucumber ${CUCUMBER_ARGS}
+
+info "iOS 10.0 Simulator iPhone 5c"
+DEVICE_TARGET=FEBB7F64-516F-46B5-9CD8-BC361A297A34 \
+  bundle exec cucumber ${CUCUMBER_ARGS}
+
+info "iOS 10.1 Simulator iPhone 5c"
+DEVICE_TARGET=E0D0814E-E655-482C-A10A-3019E3A0BCE7 \
+  bundle exec cucumber ${CUCUMBER_ARGS}
+
+info "iOS 10.2 Simulator iPhone 5c"
+DEVICE_TARGET=8B4F2F90-FEAB-4014-8B20-419ED7D63DD5 \
+  bundle exec cucumber ${CUCUMBER_ARGS}
+
+declare -a devices=("mercury" "wolf" "uranus" "pegasi" "denis" "hat")
 
 for device in "${devices[@]}"
 do

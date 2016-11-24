@@ -105,7 +105,7 @@ info "iOS 9.3 Simulator"
 DEVICE_TARGET=B6D21623-32F6-44F5-90ED-7E520DC94A69 \
   bundle exec cucumber ${CUCUMBER_ARGS}
 
-eclare -a devices=("mercury" "wolf" "uranus" "pegasi" "denis" "hat")
+declare -a devices=("mercury" "wolf" "uranus" "pegasi" "denis" "hat")
 
 for device in "${devices[@]}"
 do
