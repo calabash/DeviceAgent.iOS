@@ -169,6 +169,9 @@
 		F52BA3461CED23F700475D5A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA1B1CC53EC800D87200 /* CFNetwork.framework */; };
 		F52BA3491CEDE1C400475D5A /* MBFingerTipWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F52BA3481CEDE1C400475D5A /* MBFingerTipWindow.m */; };
 		F52C9D871DA7E60300DAFC75 /* DragTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F52C9D861DA7E60300DAFC75 /* DragTest.m */; };
+		F5366D9E1DE6CC2900E7C765 /* TextInputFirstResponderProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = F5366D9C1DE6CC2900E7C765 /* TextInputFirstResponderProvider.h */; };
+		F5366D9F1DE6CC2900E7C765 /* TextInputFirstResponderProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F5366D9D1DE6CC2900E7C765 /* TextInputFirstResponderProvider.m */; };
+		F5366DA01DE6CC2900E7C765 /* TextInputFirstResponderProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F5366D9D1DE6CC2900E7C765 /* TextInputFirstResponderProvider.m */; };
 		F53679A11D7C324E009956D0 /* QuerySpecifierByMark.h in Headers */ = {isa = PBXBuildFile; fileRef = F536799F1D7C324E009956D0 /* QuerySpecifierByMark.h */; };
 		F53679A21D7C324E009956D0 /* QuerySpecifierByMark.m in Sources */ = {isa = PBXBuildFile; fileRef = F53679A01D7C324E009956D0 /* QuerySpecifierByMark.m */; };
 		F53679A31D7C324E009956D0 /* QuerySpecifierByMark.m in Sources */ = {isa = PBXBuildFile; fileRef = F53679A01D7C324E009956D0 /* QuerySpecifierByMark.m */; };
@@ -571,6 +574,8 @@
 		F52BA3471CEDE1C400475D5A /* MBFingerTipWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBFingerTipWindow.h; path = Vendor/Fingertips/MBFingerTipWindow.h; sourceTree = SOURCE_ROOT; };
 		F52BA3481CEDE1C400475D5A /* MBFingerTipWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBFingerTipWindow.m; path = Vendor/Fingertips/MBFingerTipWindow.m; sourceTree = SOURCE_ROOT; };
 		F52C9D861DA7E60300DAFC75 /* DragTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragTest.m; sourceTree = "<group>"; };
+		F5366D9C1DE6CC2900E7C765 /* TextInputFirstResponderProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextInputFirstResponderProvider.h; sourceTree = "<group>"; };
+		F5366D9D1DE6CC2900E7C765 /* TextInputFirstResponderProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextInputFirstResponderProvider.m; sourceTree = "<group>"; };
 		F536799F1D7C324E009956D0 /* QuerySpecifierByMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySpecifierByMark.h; sourceTree = "<group>"; };
 		F53679A01D7C324E009956D0 /* QuerySpecifierByMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySpecifierByMark.m; sourceTree = "<group>"; };
 		F542EA141CC5368000D87200 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -1525,6 +1530,8 @@
 				F5DED03E1D7634AB00563648 /* SpringBoardAlert.m */,
 				6342494C7C23506565D2B802 /* SpringBoardAlerts.h */,
 				634244EC948D56732C2565E5 /* SpringBoardAlerts.m */,
+				F5366D9C1DE6CC2900E7C765 /* TextInputFirstResponderProvider.h */,
+				F5366D9D1DE6CC2900E7C765 /* TextInputFirstResponderProvider.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -2012,6 +2019,7 @@
 				F55F81971C6DD07500A945C8 /* MultipartMessageHeader.h in Headers */,
 				F55F81951C6DD07500A945C8 /* MultipartFormDataParser.h in Headers */,
 				89D538191CA3551600F62E09 /* QuerySpecifierByProperty.h in Headers */,
+				F5366D9E1DE6CC2900E7C765 /* TextInputFirstResponderProvider.h in Headers */,
 				F55F82361C6DD07500A945C8 /* DDLog.h in Headers */,
 				89D538081CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.h in Headers */,
 				F55F82341C6DD07500A945C8 /* DDFileLogger.h in Headers */,
@@ -2426,6 +2434,7 @@
 				F519E0FF1D79E336003A84B0 /* FBFailureProofTestCase.m in Sources */,
 				89331D321CC50447003C2E59 /* ThreadUtils.m in Sources */,
 				89D5381A1CA3551600F62E09 /* QuerySpecifierByProperty.m in Sources */,
+				F5366D9F1DE6CC2900E7C765 /* TextInputFirstResponderProvider.m in Sources */,
 				F55F82511C6DD07500A945C8 /* Route.m in Sources */,
 				F55F819E1C6DD07500A945C8 /* HTTPDataResponse.m in Sources */,
 				F55F818A1C6DD07500A945C8 /* DDRange.m in Sources */,
@@ -2585,6 +2594,7 @@
 				F58D280C1D4F947F000FF6C0 /* QueryTests.m in Sources */,
 				F5B0A1B11CAD4E2700E056CE /* QuerySpecifierByText.m in Sources */,
 				F5B0A1DC1CAD4E9500E056CE /* DDTTYLogger.m in Sources */,
+				F5366DA01DE6CC2900E7C765 /* TextInputFirstResponderProvider.m in Sources */,
 				F5B0A1A31CAD4DE800E056CE /* FBElement.m in Sources */,
 				F5B0A1A71CAD4E2700E056CE /* GestureFactory.m in Sources */,
 				F5B0A1B91CAD4E3A00E056CE /* CBXException.m in Sources */,
