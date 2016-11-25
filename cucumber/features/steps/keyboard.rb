@@ -94,6 +94,13 @@ end
 
 World(DeviceAgent::Keyboard)
 
+And(/^I am looking at the Text Input page$/) do
+  touch_tab("Misc")
+  touch({marked: "text input row"})
+  wait_for_view({marked: "text input page"})
+  wait_for_animations
+end
+
 And(/^the text field and question label are reset$/) do
   touch({marked: "question"})
   wait_for_question_reset
