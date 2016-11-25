@@ -395,6 +395,7 @@
 		F5DED0411D7634AB00563648 /* SpringBoardAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DED03E1D7634AB00563648 /* SpringBoardAlert.m */; };
 		F5DED0431D76368000563648 /* SpringBoardAlertTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DED0421D76368000563648 /* SpringBoardAlertTest.m */; };
 		F5E1D8831DE8869900B72A8E /* TextInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E1D8821DE8869900B72A8E /* TextInputController.m */; };
+		F5E1D8861DE891F500B72A8E /* VolumeController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E1D8851DE891F500B72A8E /* VolumeController.m */; };
 		F5E663211D74958200068CE9 /* SpringBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E6631F1D74946000068CE9 /* SpringBoard.m */; };
 		F5E663221D74958300068CE9 /* SpringBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E6631F1D74946000068CE9 /* SpringBoard.m */; };
 		F5F718411D63A4B300E402EE /* ScrollplicationsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F718401D63A4B300E402EE /* ScrollplicationsController.m */; };
@@ -906,6 +907,8 @@
 		F5DED0421D76368000563648 /* SpringBoardAlertTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoardAlertTest.m; sourceTree = "<group>"; };
 		F5E1D8811DE8869900B72A8E /* TextInputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextInputController.h; sourceTree = "<group>"; };
 		F5E1D8821DE8869900B72A8E /* TextInputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextInputController.m; sourceTree = "<group>"; };
+		F5E1D8841DE891F500B72A8E /* VolumeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumeController.h; sourceTree = "<group>"; };
+		F5E1D8851DE891F500B72A8E /* VolumeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolumeController.m; sourceTree = "<group>"; };
 		F5E6631E1D74946000068CE9 /* SpringBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringBoard.h; sourceTree = "<group>"; };
 		F5E6631F1D74946000068CE9 /* SpringBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoard.m; sourceTree = "<group>"; };
 		F5F7183F1D63A4B300E402EE /* ScrollplicationsController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = ScrollplicationsController.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
@@ -1897,6 +1900,8 @@
 				89331CD01CC00ECD003C2E59 /* ViewsToQueryController.m */,
 				F5E1D8811DE8869900B72A8E /* TextInputController.h */,
 				F5E1D8821DE8869900B72A8E /* TextInputController.m */,
+				F5E1D8841DE891F500B72A8E /* VolumeController.h */,
+				F5E1D8851DE891F500B72A8E /* VolumeController.m */,
 				F5AC714B1CEB816E00DE059A /* TaoController.h */,
 				F5AC714C1CEB816E00DE059A /* TaoController.m */,
 				F5BCAB0B1D5BBEDA00ED6EE3 /* Pan */,
@@ -2544,6 +2549,7 @@
 				F5BCAB0E1D5BBEDA00ED6EE3 /* PanPaletteController.m in Sources */,
 				89331CCE1CC00E82003C2E59 /* RotatePinchViewController.m in Sources */,
 				F5963EC61D5DEA9A002F9304 /* UIView+Positioning.m in Sources */,
+				F5E1D8861DE891F500B72A8E /* VolumeController.m in Sources */,
 				F5BC7ABA1D5CF38F00D9AC8E /* CompanyTableController.m in Sources */,
 				F5954E0F1CBD2E1200117745 /* GestureRecognizerViewController.m in Sources */,
 				89331CD11CC00ECD003C2E59 /* ViewsToQueryController.m in Sources */,

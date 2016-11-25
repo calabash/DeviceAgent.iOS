@@ -47,7 +47,7 @@ Expected volume to be larger that previous value:
           fail(%Q[
 Expected volume to be smaller that previous value:
 
-  currrent: #{current}
+   current: #{current}
   previous: #{volume}
 
 ])
@@ -70,6 +70,13 @@ Expected volume to be smaller that previous value:
 end
 
 World(UnitTestApp::Volume)
+
+And(/^I am looking at the Volume page$/) do
+  touch_tab("Misc")
+  touch({marked: "volume row"})
+  wait_for_view({marked: "volume page"})
+  wait_for_animations
+end
 
 Then(/^I can turn the volume (up|down)$/) do |direction|
   if direction == "up"

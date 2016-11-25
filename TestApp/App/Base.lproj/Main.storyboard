@@ -1534,7 +1534,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <accessibility key="accessibilityConfiguration" identifier="misc page"/>
+                        <accessibility key="accessibilityConfiguration" identifier="volume page"/>
                         <constraints>
                             <constraint firstItem="aGy-qN-w6G" firstAttribute="centerY" secondItem="3RP-os-eE5" secondAttribute="centerY" id="7f0-AI-mJG"/>
                             <constraint firstItem="aGy-qN-w6G" firstAttribute="centerX" secondItem="3RP-os-eE5" secondAttribute="centerX" id="Efc-Ly-xeh"/>
@@ -1546,7 +1546,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9zC-HO-fWY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3600" y="2213"/>
+            <point key="canvasLocation" x="3540" y="2229"/>
         </scene>
     </scenes>
     <resources>
