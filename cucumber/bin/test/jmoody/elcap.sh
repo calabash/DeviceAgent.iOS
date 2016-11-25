@@ -175,5 +175,5 @@ if [ $TEST_DEVICE -eq 1 ]; then
       APP=sh.calaba.TestApp \
       bundle exec cucumber ${CUCUMBER_ARGS}
   done
-if
+fi
 
