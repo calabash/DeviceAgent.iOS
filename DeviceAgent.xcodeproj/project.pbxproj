@@ -35,7 +35,7 @@
 		63424B259D47BEBE49AB3B22 /* SpringBoardAlertsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 63424E46759C6B27C2BEC337 /* SpringBoardAlertsTest.m */; };
 		63424F9A7D4F43F01E9595B8 /* SpringBoardAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 634244EC948D56732C2565E5 /* SpringBoardAlerts.m */; };
 		89331CCE1CC00E82003C2E59 /* RotatePinchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */; };
-		89331CD11CC00ECD003C2E59 /* MiscViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CD01CC00ECD003C2E59 /* MiscViewController.m */; };
+		89331CD11CC00ECD003C2E59 /* ViewsToQueryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CD01CC00ECD003C2E59 /* ViewsToQueryController.m */; };
 		89331D231CC10559003C2E59 /* QuerySpecifierById.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537FA1CA2020700F62E09 /* QuerySpecifierById.m */; };
 		89331D301CC50447003C2E59 /* ThreadUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 89331D2E1CC50447003C2E59 /* ThreadUtils.h */; };
 		89331D321CC50447003C2E59 /* ThreadUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D2F1CC50447003C2E59 /* ThreadUtils.m */; };
@@ -461,8 +461,8 @@
 		63424E46759C6B27C2BEC337 /* SpringBoardAlertsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoardAlertsTest.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		89331CCC1CC00E82003C2E59 /* RotatePinchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotatePinchViewController.h; sourceTree = "<group>"; };
 		89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatePinchViewController.m; sourceTree = "<group>"; };
-		89331CCF1CC00ECD003C2E59 /* MiscViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiscViewController.h; sourceTree = "<group>"; };
-		89331CD01CC00ECD003C2E59 /* MiscViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiscViewController.m; sourceTree = "<group>"; };
+		89331CCF1CC00ECD003C2E59 /* ViewsToQueryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewsToQueryController.h; sourceTree = "<group>"; };
+		89331CD01CC00ECD003C2E59 /* ViewsToQueryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewsToQueryController.m; sourceTree = "<group>"; };
 		89331D2E1CC50447003C2E59 /* ThreadUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadUtils.h; sourceTree = "<group>"; };
 		89331D2F1CC50447003C2E59 /* ThreadUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadUtils.m; sourceTree = "<group>"; };
 		89512BD91C9EEC3C0027D61E /* Drag.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = Drag.h; path = AutomationActions/Gestures/Drag.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
@@ -1890,8 +1890,8 @@
 				F5954E111CBD2E1200117745 /* TouchViewController.m */,
 				89331CCC1CC00E82003C2E59 /* RotatePinchViewController.h */,
 				89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */,
-				89331CCF1CC00ECD003C2E59 /* MiscViewController.h */,
-				89331CD01CC00ECD003C2E59 /* MiscViewController.m */,
+				89331CCF1CC00ECD003C2E59 /* ViewsToQueryController.h */,
+				89331CD01CC00ECD003C2E59 /* ViewsToQueryController.m */,
 				F5AC714B1CEB816E00DE059A /* TaoController.h */,
 				F5AC714C1CEB816E00DE059A /* TaoController.m */,
 				F5BCAB0B1D5BBEDA00ED6EE3 /* Pan */,
@@ -2540,7 +2540,7 @@
 				F5963EC61D5DEA9A002F9304 /* UIView+Positioning.m in Sources */,
 				F5BC7ABA1D5CF38F00D9AC8E /* CompanyTableController.m in Sources */,
 				F5954E0F1CBD2E1200117745 /* GestureRecognizerViewController.m in Sources */,
-				89331CD11CC00ECD003C2E59 /* MiscViewController.m in Sources */,
+				89331CD11CC00ECD003C2E59 /* ViewsToQueryController.m in Sources */,
 				F5F718411D63A4B300E402EE /* ScrollplicationsController.m in Sources */,
 				F5954E091CBD2E1200117745 /* main.m in Sources */,
 				F52BA3491CEDE1C400475D5A /* MBFingerTipWindow.m in Sources */,

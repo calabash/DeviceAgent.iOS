@@ -29,7 +29,7 @@ Then I query for Same as views by mark using id and use an index to find the But
 # labels and text.
 @escaping
 Scenario: Queries with special characters
-Then I am looking at the Misc tab
+And I am looking at the Query page
 Then I query for the 110 percent by text and mark
 Then I query for the text with a question mark
 Then I query for Karl's Problem using a backslash to escape the quote
@@ -53,5 +53,5 @@ And I query for all elements using an empty array
 
 @tree
 Scenario: Can ask for a tree representation
-Then I am looking at the Misc tab
+And I am looking at the Query page
 Then I ask for the tree representation of the view hierarchy

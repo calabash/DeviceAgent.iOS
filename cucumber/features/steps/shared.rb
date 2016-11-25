@@ -38,6 +38,12 @@ module DeviceAgent
 
       DeviceAgent::Shared.class_variable_set(:@@app_ready, true)
     end
+
+    def touch_tab(tabname)
+      touch({marked: tabname})
+      mark = "#{tabname.downcase} page"
+      wait_for_view({marked: mark})
+    end
   end
 end
 
@@ -49,7 +55,5 @@ Given(/^the app has launched$/) do
 end
 
 Given(/^I am looking at the (Touch|Pan|Rotate\/Pinch|Misc|Tao) tab$/) do |tabname|
-  touch({marked: tabname})
-  mark = "#{tabname.downcase} page"
-  wait_for_view({marked: mark})
+  touch_tab(tabname)
 end

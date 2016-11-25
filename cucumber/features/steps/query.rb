@@ -1,4 +1,11 @@
 
+And(/^I am looking at the Query page$/) do
+  touch_tab("Misc")
+  touch({marked: "query row"})
+  wait_for_view({marked: "query page"})
+  wait_for_animations
+end
+
 Then(/^I query for the Silly Alpha button by mark using id$/) do
   elements = query({marked: "alpha button"})
   expect(elements.count).to be == 1
