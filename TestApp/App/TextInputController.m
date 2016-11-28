@@ -6,12 +6,15 @@
 @property (weak, nonatomic) IBOutlet UILabel *textDelegateMessage;
 @property (weak, nonatomic) IBOutlet UILabel *howGoesItLabel;
 @property (strong, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
-// These are temporary - once run-loop can support pan, I will replace
-// with a pan gesture on the UITextField that will set the text to @"".
-// Adding pan at this point is beyond the scope of the changeset.
 @property (weak, nonatomic) IBOutlet UIButton *clearTextFieldButton;
 - (IBAction)clearTextFieldButtonTouched:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *clearTextView;
+- (IBAction)clearTextViewButtonTouched:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *dismissTextViewKeyboardButton;
+- (IBAction)dismissTextViewKeyboardButtonTouched:(id)sender;
+
 
 @end
 
@@ -25,6 +28,8 @@ static NSString *const kCaVa = @"Ça va?";
     _textField.delegate = self;
     _textField.returnKeyType = UIReturnKeyDone;
     _textField.clearButtonMode = UITextFieldViewModeAlways;
+
+  _textView.delegate = self;
 
     UITapGestureRecognizer *recognizer;
     recognizer = [[UITapGestureRecognizer alloc]
@@ -54,6 +59,15 @@ static NSString *const kCaVa = @"Ça va?";
 - (IBAction)clearTextFieldButtonTouched:(id)sender {
     self.textField.text = @"";
 }
+
+- (IBAction)clearTextViewButtonTouched:(id)sender {
+  self.textView.text = nil;
+}
+
+- (IBAction)dismissTextViewKeyboardButtonTouched:(id)sender {
+  [self.textView resignFirstResponder];
+}
+
 
 #pragma mark - Text Field Delegate
 
@@ -98,6 +112,37 @@ replacementString:(NSString *)string  {
                         kCaVa, textField.text];
     self.howGoesItLabel.text = answer;
     return YES;
+}
+
+#pragma mark - Text View Delegate
+
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
+   self.textDelegateMessage.text = @"textViewShouldBeginEditing:";
+   return YES;
+}
+
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+   self.textDelegateMessage.text = @"textViewDidBeginEditing";
+}
+
+- (BOOL)textViewShouldEndEditing:(UITextView *)textView {
+  self.textDelegateMessage.text = @"textViewShouldEndEditing";
+  return YES;
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView {
+  self.textDelegateMessage.text = @"textViewDidEndEditing:";
+}
+
+- (BOOL)textView:(UITextView *)textView
+shouldChangeTextInRange:(NSRange)range
+replacementText:(NSString *)text {
+  self.textDelegateMessage.text = @"textView:shouldChangeTextInRange:replacementText:";
+  return YES;
+}
+
+- (void)textViewDidChange:(UITextView *)textView {
+   self.textDelegateMessage.text = @"textViewDidChange:";
 }
 
 @end

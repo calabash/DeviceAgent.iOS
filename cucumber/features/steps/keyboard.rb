@@ -179,3 +179,59 @@ Then(/^I should see an empty text field$/) do
   actual_text = text_from_text_field
   expect_text(nil, actual_text, "Error clearing text")
 end
+
+Given(/^I touched the Text View$/) do
+  query = {marked: "text view"}
+  wait_for_view(query)
+  touch(query)
+  wait_for_keyboard
+end
+
+Then(/^I can clear the Text View$/) do
+  touch({marked: "clear text view button"})
+end
+
+Then(/^I can type a lot of text$/) do
+  text = %Q[Grünliche Dämmerung, nach oben zu lichter, nach unten zu dunkler.
+Die Höhe ist von wogendem Gewässer erfüllt, das rastlos von rechts nach links zu
+strömt. Nach der Tiefe zu lösen die Fluten sich in einen immer feineren feuchten
+Nebel auf, so dass der Raum in Manneshöhe vom Boden auf gänzlich frei vom Wasser
+zu sein scheint, welches wie in Wolkenzügen über den nächtlichen Grund dahinfliesst.
+
+Überall ragen schroffe Felsenriffe aus der Tiefe auf und grenzen den Raum der
+Bühne ab; der ganze Boden ist in ein wildes Zackengewirr zerspalten, so dass er
+nirgends vollkommen eben ist und nach allen Seiten hin in dichtester Finsternis
+tiefere Schlüfte annehmen lässt.
+]
+
+  enter_text(text)
+end
+
+And(/^I can dismiss the Text View keyboard$/) do
+  touch({marked: "dismiss text view keyboard"})
+  wait_for_animations
+
+  expect(keyboard_visible?).to be_falsey
+end
+
+And(/^I can select all the text in the Text View$/) do
+  touch({marked: "text view"}, {duration: 1.0})
+end
+
+Then(/^I cannot clear the Text View by cutting$/) do
+  query = {marked: "Select All" }
+  wait_for_view(query)
+  touch(query)
+
+  # Cut does not work; it does not appear when testing
+  query = {marked: "Cut" }
+  wait_for_no_view(query)
+end
+
+But(/^I can clear the Text View after selecting all and using the delete key$/) do
+  query = {marked: "delete", type: "Key"}
+  wait_for_view(query)
+  touch(query)
+
+  wait_for_text_in_view(nil, {marked: "text view"})
+end

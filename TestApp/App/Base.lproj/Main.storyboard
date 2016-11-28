@@ -1087,6 +1087,18 @@
                                     <action selector="clearTextFieldButtonTouched:" destination="xmh-5J-kwV" eventType="touchUpInside" id="N7a-TI-5R1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJp-FR-igg" userLabel="Clear Text View Button">
+                                <rect key="frame" x="284" y="122" width="36" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="clear text view button"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="AAo-hg-bBi"/>
+                                    <constraint firstAttribute="height" constant="30" id="Ig4-Ti-jY6"/>
+                                </constraints>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearTextViewButtonTouched:" destination="xmh-5J-kwV" eventType="touchUpInside" id="g1Z-Cz-rzo"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ça va?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mXs-G4-gwd">
                                 <rect key="frame" x="0.0" y="473" width="320" height="36"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1100,31 +1112,66 @@
                                 <color key="shadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="shadowOffset" width="3" height="-1"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CXw-ot-Afk">
+                                <rect key="frame" x="0.0" y="122" width="284" height="120"/>
+                                <color key="backgroundColor" red="0.69049358370000002" green="0.69049358370000002" blue="0.69049358370000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="text view"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="u7k-Sd-Ik0" userLabel="height = 120"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DB-XL-KGR" userLabel="Clear Text View Button">
+                                <rect key="frame" x="284" y="152" width="36" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="dismiss text view keyboard"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="iBu-Sp-46o"/>
+                                    <constraint firstAttribute="width" constant="36" id="z0m-Gg-scy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismissTextViewKeyboardButtonTouched:" destination="xmh-5J-kwV" eventType="touchUpInside" id="OO5-Qs-1kD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <accessibility key="accessibilityConfiguration" identifier="text input page"/>
                         <constraints>
                             <constraint firstItem="PTM-5r-Gq4" firstAttribute="top" secondItem="mXs-G4-gwd" secondAttribute="bottom" constant="10" id="2RY-8n-9aX"/>
                             <constraint firstItem="mXs-G4-gwd" firstAttribute="leading" secondItem="Yqb-KX-JoO" secondAttribute="leading" id="4cW-I9-kYY"/>
+                            <constraint firstItem="CXw-ot-Afk" firstAttribute="leading" secondItem="Yqb-KX-JoO" secondAttribute="leading" id="67T-Sh-xDx"/>
                             <constraint firstItem="itp-iG-vg1" firstAttribute="leading" secondItem="Yqb-KX-JoO" secondAttribute="leading" id="CqQ-BV-O3L"/>
                             <constraint firstItem="L77-WD-uO0" firstAttribute="leading" secondItem="gUN-3j-Tbv" secondAttribute="trailing" id="D1i-ua-aPZ"/>
                             <constraint firstItem="L77-WD-uO0" firstAttribute="leading" secondItem="gUN-3j-Tbv" secondAttribute="trailing" id="End-Lq-s65"/>
                             <constraint firstAttribute="trailing" secondItem="L77-WD-uO0" secondAttribute="trailing" id="GG8-e3-aN2"/>
                             <constraint firstAttribute="trailing" secondItem="itp-iG-vg1" secondAttribute="trailing" id="ISz-9M-NoL"/>
+                            <constraint firstAttribute="trailing" secondItem="3DB-XL-KGR" secondAttribute="trailing" id="Rsa-pN-Q8A"/>
                             <constraint firstItem="itp-iG-vg1" firstAttribute="top" secondItem="L77-WD-uO0" secondAttribute="bottom" id="TQN-dM-s8M"/>
                             <constraint firstAttribute="trailing" secondItem="mXs-G4-gwd" secondAttribute="trailing" id="Umc-9J-zUu"/>
                             <constraint firstItem="L77-WD-uO0" firstAttribute="top" secondItem="Rob-KM-ps1" secondAttribute="bottom" constant="10" id="W82-Yj-BUz"/>
                             <constraint firstItem="gUN-3j-Tbv" firstAttribute="leading" secondItem="Yqb-KX-JoO" secondAttribute="leading" id="YLq-AO-2aC"/>
                             <constraint firstItem="gUN-3j-Tbv" firstAttribute="top" secondItem="Rob-KM-ps1" secondAttribute="bottom" constant="10" id="eCr-hE-7aR"/>
+                            <constraint firstItem="CXw-ot-Afk" firstAttribute="top" secondItem="itp-iG-vg1" secondAttribute="bottom" id="eqj-Qa-kaH"/>
                             <constraint firstItem="itp-iG-vg1" firstAttribute="top" secondItem="gUN-3j-Tbv" secondAttribute="bottom" id="foS-Gi-0mm"/>
+                            <constraint firstItem="DJp-FR-igg" firstAttribute="top" secondItem="itp-iG-vg1" secondAttribute="bottom" id="kOp-KS-uE0"/>
+                            <constraint firstAttribute="trailing" secondItem="DJp-FR-igg" secondAttribute="trailing" id="m5M-Ik-mJ5"/>
+                            <constraint firstItem="3DB-XL-KGR" firstAttribute="top" secondItem="DJp-FR-igg" secondAttribute="bottom" id="nsa-I4-dHJ"/>
+                            <constraint firstItem="DJp-FR-igg" firstAttribute="leading" secondItem="CXw-ot-Afk" secondAttribute="trailing" id="pL2-y7-Cso"/>
+                            <constraint firstItem="3DB-XL-KGR" firstAttribute="leading" secondItem="CXw-ot-Afk" secondAttribute="trailing" id="sFI-Ou-hbV"/>
                             <constraint firstItem="itp-iG-vg1" firstAttribute="top" secondItem="L77-WD-uO0" secondAttribute="bottom" id="wLb-yu-WVi"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="clearTextFieldButton" destination="L77-WD-uO0" id="OZ9-SB-aUL"/>
+                        <outlet property="clearTextView" destination="DJp-FR-igg" id="ljP-kg-e6L"/>
+                        <outlet property="dismissTextViewKeyboardButton" destination="3DB-XL-KGR" id="X0e-6d-TwH"/>
                         <outlet property="howGoesItLabel" destination="mXs-G4-gwd" id="0Wv-Ip-CJ9"/>
                         <outlet property="textDelegateMessage" destination="itp-iG-vg1" id="L2W-l4-cjR"/>
                         <outlet property="textField" destination="gUN-3j-Tbv" id="DZi-AH-9hN"/>
+                        <outlet property="textView" destination="CXw-ot-Afk" id="FQX-Kq-55z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNA-Lv-Y1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
