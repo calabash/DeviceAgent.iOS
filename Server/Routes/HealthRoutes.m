@@ -1,9 +1,6 @@
-//
-//  HealthRoute.m
-//  xcuitest-server
-//
 
 #import "CBXMacros.h"
+#import "Testmanagerd.h"
 #import "HealthRoutes.h"
 
 @implementation HealthRoutes

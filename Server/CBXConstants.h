@@ -112,4 +112,4 @@ static float const CBX_FINGER_WIDTH = 78;
 static int const CBX_DEFAULT_NUM_FINGERS = 1;
 static int const CBX_DEFAULT_REPETITIONS = 1;
 
-static unsigned long long CBX_DEFAULT_SEND_STRING_FREQUENCY = 0.4; //seconds per letter
+static unsigned long long CBX_DEFAULT_SEND_STRING_FREQUENCY = 60; //FB uses 60
