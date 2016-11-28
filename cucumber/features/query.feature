@@ -14,7 +14,7 @@ Then I query for the Silly Alpha button by mark using id
 Then I query for the Silly Zero button by mark using the title
 Then I find the button behind the purple label using marked and :all
 But I cannot find the button behind the purple label using marked without :all
-And I am looking at the Misc tab
+And I am looking at the Query page
 Then I query for Same as views by mark using id
 Then I query for Same as views by mark using id and filter by TextField
 Then I query for Same as views by mark using id and filter by TextView
