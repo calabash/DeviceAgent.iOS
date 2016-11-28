@@ -120,7 +120,13 @@ end
 
 After("@keyboard") do |scenario|
   if keyboard_visible?
-    touch({marked:"Done"})
+    if !query({marked: "Done", type: "Key"}).empty?
+      touch({marked:"Done", type: "Key"})
+    elsif !query({marked: "dismiss text view keyboard"}).empty?
+      touch({marked: "dismiss text view keyboard"})
+    else
+      raise "Keyboard is showing, but there is no way to dismiss it"
+    end
     wait_for_animations
   end
 end

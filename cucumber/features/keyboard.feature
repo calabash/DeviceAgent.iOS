@@ -37,12 +37,21 @@ Given I typed "Tack, bra."
 And I clear the text
 Then I should see an empty text field
 
+@text_view
 Scenario: Typing in a TextView
 Given I touched the Text View
 Then I can clear the Text View
 Then I can type a lot of text
 And I can dismiss the Text View keyboard
 And I can select all the text in the Text View
-Then I cannot clear the Text View by cutting
-But I can clear the Text View after selecting all and using the delete key
+And I can clear the Text View after selecting all using the delete key or Cut
 And I can dismiss the Text View keyboard
+
+@alert
+@alert_text_field
+Scenario: Typing in an Alert Text Field
+Given I touch the Alert nav bar button
+Then I see an authentication alert
+And I enter my name for authentication
+And I enter my password for authentication
+Then I submit my credentials for authentication

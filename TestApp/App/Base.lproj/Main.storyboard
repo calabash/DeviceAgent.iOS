@@ -1099,8 +1099,21 @@
                                     <action selector="clearTextViewButtonTouched:" destination="xmh-5J-kwV" eventType="touchUpInside" id="g1Z-Cz-rzo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DB-XL-KGR" userLabel="Clear Text View Button">
+                                <rect key="frame" x="284" y="152" width="36" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="dismiss text view keyboard"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="iBu-Sp-46o"/>
+                                    <constraint firstAttribute="width" constant="36" id="z0m-Gg-scy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismissTextViewKeyboardButtonTouched:" destination="xmh-5J-kwV" eventType="touchUpInside" id="OO5-Qs-1kD"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ça va?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mXs-G4-gwd">
-                                <rect key="frame" x="0.0" y="473" width="320" height="36"/>
+                                <rect key="frame" x="0.0" y="478" width="320" height="36"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="question"/>
                                 <constraints>
@@ -1121,21 +1134,8 @@
                                 </constraints>
                                 <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DB-XL-KGR" userLabel="Clear Text View Button">
-                                <rect key="frame" x="284" y="152" width="36" height="30"/>
-                                <accessibility key="accessibilityConfiguration" identifier="dismiss text view keyboard"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="iBu-Sp-46o"/>
-                                    <constraint firstAttribute="width" constant="36" id="z0m-Gg-scy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                <state key="normal" title="Dismiss"/>
-                                <connections>
-                                    <action selector="dismissTextViewKeyboardButtonTouched:" destination="xmh-5J-kwV" eventType="touchUpInside" id="OO5-Qs-1kD"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <accessibility key="accessibilityConfiguration" identifier="text input page"/>
@@ -1164,6 +1164,8 @@
                             <constraint firstItem="itp-iG-vg1" firstAttribute="top" secondItem="L77-WD-uO0" secondAttribute="bottom" id="wLb-yu-WVi"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="clearTextFieldButton" destination="L77-WD-uO0" id="OZ9-SB-aUL"/>
                         <outlet property="clearTextView" destination="DJp-FR-igg" id="ljP-kg-e6L"/>

@@ -216,22 +216,53 @@ end
 
 And(/^I can select all the text in the Text View$/) do
   touch({marked: "text view"}, {duration: 1.0})
-end
-
-Then(/^I cannot clear the Text View by cutting$/) do
   query = {marked: "Select All" }
   wait_for_view(query)
   touch(query)
-
-  # Cut does not work; it does not appear when testing
-  query = {marked: "Cut" }
-  wait_for_no_view(query)
+  2.times { wait_for_animations }
 end
 
-But(/^I can clear the Text View after selecting all and using the delete key$/) do
-  query = {marked: "delete", type: "Key"}
-  wait_for_view(query)
-  touch(query)
+But(/^I can clear the Text View after selecting all using the delete key or Cut$/) do
+  # Cut sometimes appears, sometimes it does not.
+  query = {marked: "Cut" }
+
+  if !query(query).empty?
+    touch(query)
+  else
+    query = {marked: "delete", type: "Key"}
+    wait_for_view(query)
+    touch(query)
+    wait_for_animations
+  end
 
   wait_for_text_in_view(nil, {marked: "text view"})
+end
+
+Given(/^I touch the Alert nav bar button$/) do
+  query = {marked: "Alert", type: "Button"}
+  wait_for_view(query)
+  touch(query)
+end
+
+Then(/^I see an authentication alert$/) do
+  wait_for_view({marked: "Authorize"})
+  wait_for_animations
+end
+
+Then(/^I enter my name for authentication$/) do
+  touch({marked: "Name"})
+  wait_for_keyboard
+  enter_text("clever-user")
+end
+
+Then(/^I enter my password for authentication$/) do
+  touch({marked: "Password"})
+  wait_for_keyboard
+  enter_text("pa$$w0rd")
+end
+
+Then(/^I submit my credentials for authentication$/) do
+  touch({marked: "Submit"})
+
+  wait_for_text_in_view("clever-user pa$$w0rd", {marked: "text delegate"})
 end

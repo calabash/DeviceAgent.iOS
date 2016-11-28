@@ -22,6 +22,62 @@ static NSString *const kCaVa = @"Ça va?";
 
 @implementation TextInputController
 
+#pragma mark - Actions
+
+- (IBAction)clearTextFieldButtonTouched:(id)sender {
+    self.textField.text = @"";
+}
+
+- (IBAction)clearTextViewButtonTouched:(id)sender {
+    self.textView.text = nil;
+}
+
+- (IBAction)dismissTextViewKeyboardButtonTouched:(id)sender {
+    [self.textView resignFirstResponder];
+}
+
+- (void)handleAlertButtonTouched:(id)sender {
+    __block UIAlertController *alert;
+    alert = [UIAlertController alertControllerWithTitle:@"Authorize"
+                                                message:@"Enter your credentials."
+                                                preferredStyle:UIAlertControllerStyleAlert];
+
+    UIAlertAction *cancel, *submit;
+    cancel = [UIAlertAction actionWithTitle:@"Cancel"
+                                      style:UIAlertActionStyleDefault
+                                    handler:^(UIAlertAction * _Nonnull action) {
+                                        self.textDelegateMessage.text = @"Cancelled";
+                                    }];
+    [alert addAction:cancel];
+
+    submit = [UIAlertAction
+    actionWithTitle:@"Submit"
+              style:UIAlertActionStyleDefault
+              handler:^(UIAlertAction * _Nonnull action) {
+                  NSArray <UITextField *>*textFields = [alert textFields];
+                  NSString *name = textFields[0].text;
+                  NSString *pass = textFields[1].text;
+
+                  self.textDelegateMessage.text = [NSString stringWithFormat:@"%@ %@",
+                                                   name, pass];
+              }];
+    [alert addAction:submit];
+
+    [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.placeholder = @"Name";
+        textField.secureTextEntry = NO;
+    }];
+
+    [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.placeholder = @"Password";
+        textField.secureTextEntry = YES;
+    }];
+
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+#pragma mark - View Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -56,18 +112,29 @@ static NSString *const kCaVa = @"Ça va?";
     }
 }
 
-- (IBAction)clearTextFieldButtonTouched:(id)sender {
-    self.textField.text = @"";
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationItem setRightBarButtonItem:nil];
+    UIBarButtonItem *alertItem;
+    alertItem = [[UIBarButtonItem alloc]
+                 initWithTitle:@"Alert"
+                 style:UIBarButtonItemStylePlain
+                 target:self
+                 action:@selector(handleAlertButtonTouched:)];
+    [self.navigationItem setRightBarButtonItem:alertItem];
 }
 
-- (IBAction)clearTextViewButtonTouched:(id)sender {
-  self.textView.text = nil;
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
 }
 
-- (IBAction)dismissTextViewKeyboardButtonTouched:(id)sender {
-  [self.textView resignFirstResponder];
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+}
 
 #pragma mark - Text Field Delegate
 
@@ -144,5 +211,9 @@ replacementText:(NSString *)text {
 - (void)textViewDidChange:(UITextView *)textView {
    self.textDelegateMessage.text = @"textViewDidChange:";
 }
+
+#pragma mark - Alert Delegate
+
+
 
 @end
