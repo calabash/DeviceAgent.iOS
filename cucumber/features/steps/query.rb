@@ -161,7 +161,11 @@ Then(/^I query for all elements using all$/) do
     expect(elements.count).to be >= 35
     expect(elements.count).to be <= 37
   else
-    expect(elements.count).to be == 36
+    # When the @wildcard or @query Scenarios are run in isolation, the element
+    # count is 36.  When run with the complete test suite, there is an extra
+    # Window and Other view.
+    expect(elements.count).to be >= 36
+    expect(elements.count).to be <= 38
   end
 end
 
