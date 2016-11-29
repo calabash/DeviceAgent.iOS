@@ -105,7 +105,6 @@ Before do |scenario|
     launcher.device_agent = client
     launcher.first_launch = false
   else
-    client = launcher.device_agent
     DeviceAgent::Automator.client = launcher.device_agent
   end
 end
@@ -118,6 +117,19 @@ end
 # TODO:  Feature: Locale
 # TODO:  Feature: Location
 # TODO:  Feature: WebViews
+
+After("@keyboard") do |scenario|
+  if keyboard_visible?
+    if !query({marked: "Done", type: "Key"}).empty?
+      touch({marked:"Done", type: "Key"})
+    elsif !query({marked: "dismiss text view keyboard"}).empty?
+      touch({marked: "dismiss text view keyboard"})
+    else
+      raise "Keyboard is showing, but there is no way to dismiss it"
+    end
+    wait_for_animations
+  end
+end
 
 After do |scenario|
 
@@ -146,6 +158,10 @@ After do |scenario|
     if scenario.failed?
       exit!(1)
     end
+    when :pry
+      if scenario.failed?
+        binding.pry
+      end
   else
     # Do nothing
   end

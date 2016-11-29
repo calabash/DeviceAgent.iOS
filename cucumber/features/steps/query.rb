@@ -1,4 +1,11 @@
 
+And(/^I am looking at the Query page$/) do
+  touch_tab("Misc")
+  touch({marked: "query row"})
+  wait_for_view({marked: "query page"})
+  wait_for_animations
+end
+
 Then(/^I query for the Silly Alpha button by mark using id$/) do
   elements = query({marked: "alpha button"})
   expect(elements.count).to be == 1
@@ -136,7 +143,7 @@ Then(/^I can query for Japanese$/) do
   expect(elements.count).to be == 1
 end
 
-Then(/^I query for all visible elements using an empty array$/) do
+Then(/^I query for all visible elements using an empty hash$/) do
   elements = query({})
   if device_info["simulator"]
     expect(elements.count).to be == 19
@@ -145,12 +152,20 @@ Then(/^I query for all visible elements using an empty array$/) do
   end
 end
 
-Then(/^I query for all elements using an empty array$/) do
+Then(/^I query for all elements using all$/) do
   elements = query({all: true})
   if device_info["simulator"]
-    expect(elements.count).to be == 35
+    # When the @wildcard or @query Scenarios are run in isolation, the element
+    # count is 35.  When run with the complete test suite, there is an extra
+    # Window and Other view.
+    expect(elements.count).to be >= 35
+    expect(elements.count).to be <= 37
   else
-    expect(elements.count).to be == 36
+    # When the @wildcard or @query Scenarios are run in isolation, the element
+    # count is 36.  When run with the complete test suite, there is an extra
+    # Window and Other view.
+    expect(elements.count).to be >= 36
+    expect(elements.count).to be <= 38
   end
 end
 

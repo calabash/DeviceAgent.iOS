@@ -14,7 +14,7 @@ Then I query for the Silly Alpha button by mark using id
 Then I query for the Silly Zero button by mark using the title
 Then I find the button behind the purple label using marked and :all
 But I cannot find the button behind the purple label using marked without :all
-And I am looking at the Misc tab
+And I am looking at the Query page
 Then I query for Same as views by mark using id
 Then I query for Same as views by mark using id and filter by TextField
 Then I query for Same as views by mark using id and filter by TextView
@@ -29,7 +29,7 @@ Then I query for Same as views by mark using id and use an index to find the But
 # labels and text.
 @escaping
 Scenario: Queries with special characters
-Then I am looking at the Misc tab
+And I am looking at the Query page
 Then I query for the 110 percent by text and mark
 Then I query for the text with a question mark
 Then I query for Karl's Problem using a backslash to escape the quote
@@ -48,10 +48,10 @@ Then I can query for Japanese
 @wildcard
 Scenario: Query supports "*"
 Then I am looking at the Touch tab
-Then I query for all visible elements using an empty array
-And I query for all elements using an empty array
+Then I query for all visible elements using an empty hash
+And I query for all elements using all
 
 @tree
 Scenario: Can ask for a tree representation
-Then I am looking at the Misc tab
+And I am looking at the Query page
 Then I ask for the tree representation of the view hierarchy

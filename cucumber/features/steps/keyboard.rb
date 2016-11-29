@@ -94,6 +94,13 @@ end
 
 World(DeviceAgent::Keyboard)
 
+And(/^I am looking at the Text Input page$/) do
+  touch_tab("Misc")
+  touch({marked: "text input row"})
+  wait_for_view({marked: "text input page"})
+  wait_for_animations
+end
+
 And(/^the text field and question label are reset$/) do
   touch({marked: "question"})
   wait_for_question_reset
@@ -171,4 +178,91 @@ end
 Then(/^I should see an empty text field$/) do
   actual_text = text_from_text_field
   expect_text(nil, actual_text, "Error clearing text")
+end
+
+Given(/^I touched the Text View$/) do
+  query = {marked: "text view"}
+  wait_for_view(query)
+  touch(query)
+  wait_for_keyboard
+end
+
+Then(/^I can clear the Text View$/) do
+  touch({marked: "clear text view button"})
+end
+
+Then(/^I can type a lot of text$/) do
+  text = %Q[Grünliche Dämmerung, nach oben zu lichter, nach unten zu dunkler.
+Die Höhe ist von wogendem Gewässer erfüllt, das rastlos von rechts nach links zu
+strömt. Nach der Tiefe zu lösen die Fluten sich in einen immer feineren feuchten
+Nebel auf, so dass der Raum in Manneshöhe vom Boden auf gänzlich frei vom Wasser
+zu sein scheint, welches wie in Wolkenzügen über den nächtlichen Grund dahinfliesst.
+
+Überall ragen schroffe Felsenriffe aus der Tiefe auf und grenzen den Raum der
+Bühne ab; der ganze Boden ist in ein wildes Zackengewirr zerspalten, so dass er
+nirgends vollkommen eben ist und nach allen Seiten hin in dichtester Finsternis
+tiefere Schlüfte annehmen lässt.
+]
+
+  enter_text(text)
+end
+
+And(/^I can dismiss the Text View keyboard$/) do
+  touch({marked: "dismiss text view keyboard"})
+  wait_for_animations
+
+  expect(keyboard_visible?).to be_falsey
+end
+
+And(/^I can select all the text in the Text View$/) do
+  touch({marked: "text view"}, {duration: 1.0})
+  query = {marked: "Select All" }
+  wait_for_view(query)
+  touch(query)
+  2.times { wait_for_animations }
+end
+
+But(/^I can clear the Text View after selecting all using the delete key or Cut$/) do
+  # Cut sometimes appears, sometimes it does not.
+  query = {marked: "Cut" }
+
+  if !query(query).empty?
+    touch(query)
+  else
+    query = {marked: "delete", type: "Key"}
+    wait_for_view(query)
+    touch(query)
+    wait_for_animations
+  end
+
+  wait_for_text_in_view(nil, {marked: "text view"})
+end
+
+Given(/^I touch the Alert nav bar button$/) do
+  query = {marked: "Alert", type: "Button"}
+  wait_for_view(query)
+  touch(query)
+end
+
+Then(/^I see an authentication alert$/) do
+  wait_for_view({marked: "Authorize"})
+  wait_for_animations
+end
+
+Then(/^I enter my name for authentication$/) do
+  touch({marked: "Name"})
+  wait_for_keyboard
+  enter_text("clever-user")
+end
+
+Then(/^I enter my password for authentication$/) do
+  touch({marked: "Password"})
+  wait_for_keyboard
+  enter_text("pa$$w0rd")
+end
+
+Then(/^I submit my credentials for authentication$/) do
+  touch({marked: "Submit"})
+
+  wait_for_text_in_view("clever-user pa$$w0rd", {marked: "text delegate"})
 end

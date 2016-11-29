@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+xcrun simctl help >/dev/null 2>&1
+xcrun simctl help >/dev/null 2>&1
+xcrun simctl help >/dev/null 2>&1
+
 set -e
 
 source bin/log_functions.sh
