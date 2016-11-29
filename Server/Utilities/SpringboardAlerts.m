@@ -86,14 +86,12 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
     return final;
 }
 
-// TODO: Add:
-//
-// OK, YES "Health Access"
 - (NSArray<SpringBoardAlert *> *)USEnglishAlerts {
     return @[
              alert(@"OK", YES, @"Would Like to Use Your Current Location"),
              alert(@"OK", YES, @"Location Accuracy"),
              alert(@"Allow", YES, @"access your location"),
+             alert(@"OK", YES, @"Health Access"),
              alert(@"OK", YES, @"Would Like to Access Your Photos"),
              alert(@"OK", YES, @"Would Like to Access Your Contacts"),
              alert(@"OK", YES, @"Access the Microphone"),
