@@ -16,13 +16,19 @@ Bundler.with_clean_env do
     FileUtils.rm_rf("reports")
     FileUtils.mkdir_p("reports")
 
+    # Load the correct CoreSimulatorService
+    RunLoop::Simctl.new
     RunLoop::CoreSimulator.terminate_core_simulator_processes
+
+    env = {
+       "DEVELOPER_DIR" => RunLoop::Xcode.new.developer_dir
+    }
 
     cmd = "bundle exec cucumber -p default --format json -o reports/cucumber.json"
 
     RunLoop.log_unix_cmd(cmd)
     cmd = cmd.split(" ")
-    system(*cmd)
+    system(env, *cmd)
   end
 end
 

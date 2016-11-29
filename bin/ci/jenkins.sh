@@ -18,6 +18,6 @@ make ipa-agent
 #make test-ipa
 
 # app-unit is required for cucumber tests.
-#make test-app
-#bundle exec bin/ci/cucumber.rb
+make test-app
+bundle exec bin/ci/cucumber.rb
 
