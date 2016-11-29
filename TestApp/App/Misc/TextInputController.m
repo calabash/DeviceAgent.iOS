@@ -1,6 +1,5 @@
 
 #import "TextInputController.h"
-#import <AVFoundation/AVFoundation.h>
 
 @interface TextInputController ()
 @property (weak, nonatomic) IBOutlet UILabel *textDelegateMessage;
@@ -14,7 +13,6 @@
 - (IBAction)clearTextViewButtonTouched:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *dismissTextViewKeyboardButton;
 - (IBAction)dismissTextViewKeyboardButtonTouched:(id)sender;
-
 
 @end
 
@@ -211,9 +209,5 @@ replacementText:(NSString *)text {
 - (void)textViewDidChange:(UITextView *)textView {
    self.textDelegateMessage.text = @"textViewDidChange:";
 }
-
-#pragma mark - Alert Delegate
-
-
 
 @end
