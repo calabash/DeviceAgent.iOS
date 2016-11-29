@@ -105,7 +105,8 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"OK", YES, @"Would Like to Send You Push Notifications"),
              alert(@"OK", YES, @"Would Like to Send You Notifications"),
              alert(@"OK", YES, @"No SIM Card Installed"),
-             alert(@"Not Now", NO, @"Carrier Settings Update")
+             alert(@"Not Now", NO, @"Carrier Settings Update"),
+             alert(@"Not Now", NO, @"Enable Dictation?")
              ];
 }
 
