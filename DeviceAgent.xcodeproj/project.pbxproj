@@ -161,6 +161,7 @@
 		F5169D251CFE07FF00252F52 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D211CFE07F500252F52 /* LICENSE */; };
 		F519E0FE1D79E336003A84B0 /* FBFailureProofTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = F519E0F81D79E336003A84B0 /* FBFailureProofTestCase.h */; };
 		F519E0FF1D79E336003A84B0 /* FBFailureProofTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F519E0F91D79E336003A84B0 /* FBFailureProofTestCase.m */; };
+		F52802181DED9F280085D4CB /* ArgumentsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = F52802171DED9F280085D4CB /* ArgumentsTableController.m */; };
 		F52975BF1D4FB1FA009094D5 /* CBXUITestServerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F52975BE1D4FB1FA009094D5 /* CBXUITestServerTest.m */; };
 		F52BA3411CED1F9C00475D5A /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52BA33F1CED1F6A00475D5A /* Reveal.framework */; };
 		F52BA3431CED23E400475D5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA201CC53F6400D87200 /* CoreGraphics.framework */; };
@@ -187,6 +188,7 @@
 		F549E1A51D5472B100C4FA36 /* CBXInfoPlistTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F549E1A01D5471EC00C4FA36 /* CBXInfoPlistTest.m */; };
 		F549E1A61D5472B900C4FA36 /* CBXInfoPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = F549E1A31D54723300C4FA36 /* CBXInfoPlist.m */; };
 		F549E1A71D5472BA00C4FA36 /* CBXInfoPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = F549E1A31D54723300C4FA36 /* CBXInfoPlist.m */; };
+		F54B07651DEDB26200C88A8E /* EnvironmentTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = F54B07641DEDB26200C88A8E /* EnvironmentTableController.m */; };
 		F5536CEE1D737611006B4EA4 /* AlertFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5536CED1D737611006B4EA4 /* AlertFactory.m */; };
 		F55B31C61CBE6EEA00DFB13C /* TwoFingerTap.m in Sources */ = {isa = PBXBuildFile; fileRef = F55B31C41CBE6E3800DFB13C /* TwoFingerTap.m */; };
 		F55B31C71CBE6EEF00DFB13C /* TwoFingerTap.m in Sources */ = {isa = PBXBuildFile; fileRef = F55B31C41CBE6E3800DFB13C /* TwoFingerTap.m */; };
@@ -568,6 +570,8 @@
 		F5169D211CFE07F500252F52 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = LICENSE; sourceTree = "<group>"; };
 		F519E0F81D79E336003A84B0 /* FBFailureProofTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFailureProofTestCase.h; sourceTree = "<group>"; };
 		F519E0F91D79E336003A84B0 /* FBFailureProofTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFailureProofTestCase.m; sourceTree = "<group>"; };
+		F52802161DED9F280085D4CB /* ArgumentsTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArgumentsTableController.h; sourceTree = "<group>"; };
+		F52802171DED9F280085D4CB /* ArgumentsTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArgumentsTableController.m; sourceTree = "<group>"; };
 		F52975BE1D4FB1FA009094D5 /* CBXUITestServerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXUITestServerTest.m; sourceTree = "<group>"; };
 		F52BA33F1CED1F6A00475D5A /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		F52BA3441CED23EC00475D5A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -588,6 +592,8 @@
 		F549E1A01D5471EC00C4FA36 /* CBXInfoPlistTest.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = CBXInfoPlistTest.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F549E1A21D54723300C4FA36 /* CBXInfoPlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXInfoPlist.h; sourceTree = "<group>"; };
 		F549E1A31D54723300C4FA36 /* CBXInfoPlist.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = CBXInfoPlist.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		F54B07631DEDB26200C88A8E /* EnvironmentTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnvironmentTableController.h; sourceTree = "<group>"; };
+		F54B07641DEDB26200C88A8E /* EnvironmentTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnvironmentTableController.m; sourceTree = "<group>"; };
 		F5536CEC1D737611006B4EA4 /* AlertFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = AlertFactory.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F5536CED1D737611006B4EA4 /* AlertFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = AlertFactory.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F55B31C31CBE6E3800DFB13C /* TwoFingerTap.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TwoFingerTap.h; path = AutomationActions/Gestures/TwoFingerTap.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
@@ -1960,6 +1966,10 @@
 				F5E1D88E1DEC8EDE00B72A8E /* ViewsToQueryController.m */,
 				F5E1D88F1DEC8EDE00B72A8E /* VolumeController.h */,
 				F5E1D8901DEC8EDE00B72A8E /* VolumeController.m */,
+				F54B07631DEDB26200C88A8E /* EnvironmentTableController.h */,
+				F54B07641DEDB26200C88A8E /* EnvironmentTableController.m */,
+				F52802161DED9F280085D4CB /* ArgumentsTableController.h */,
+				F52802171DED9F280085D4CB /* ArgumentsTableController.m */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -2558,8 +2568,10 @@
 				F5E1D8921DEC8EDE00B72A8E /* ViewsToQueryController.m in Sources */,
 				89331CCE1CC00E82003C2E59 /* RotatePinchViewController.m in Sources */,
 				F5963EC61D5DEA9A002F9304 /* UIView+Positioning.m in Sources */,
+				F54B07651DEDB26200C88A8E /* EnvironmentTableController.m in Sources */,
 				F5E1D8931DEC8EDE00B72A8E /* VolumeController.m in Sources */,
 				F5BC7ABA1D5CF38F00D9AC8E /* CompanyTableController.m in Sources */,
+				F52802181DED9F280085D4CB /* ArgumentsTableController.m in Sources */,
 				F5954E0F1CBD2E1200117745 /* GestureRecognizerViewController.m in Sources */,
 				F5F718411D63A4B300E402EE /* ScrollplicationsController.m in Sources */,
 				F5954E091CBD2E1200117745 /* main.m in Sources */,
