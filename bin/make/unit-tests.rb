@@ -8,6 +8,9 @@ working_dir = File.expand_path(File.join(File.dirname(__FILE__), "..", ".."))
 
 use_xcpretty = ENV["XCPRETTY"] != "0"
 
+# Load the correct CoreSimulatorService
+RunLoop::Simctl.new
+
 xcode = RunLoop::Xcode.new
 
 default_sim_name = RunLoop::Core.default_simulator
@@ -56,7 +59,8 @@ Dir.chdir(working_dir) do
       :on => [XCTestFailedError]
   }
 
-  env = { "COMMAND_LINE_BUILD" => "1" }
+  env = { "COMMAND_LINE_BUILD" => "1",
+          "DEVELOPER_DIR" => xcode.developer_dir }
 
   Retriable.retriable(options) do
     exit_code = Luffa.unix_command(cmd,

@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+xcrun simctl help >/dev/null 2>&1
+xcrun simctl help >/dev/null 2>&1
+xcrun simctl help >/dev/null 2>&1
+
+set -e
+
 source bin/log_functions.sh
 source bin/copy-with-ditto.sh
 
@@ -55,14 +61,7 @@ info "Prepared archive directory"
 
 banner "Building ${IPA}"
 
-if [ -z "${CODE_SIGN_IDENTITY}" ]; then
-  CODE_SIGN_IDENTITY="iPhone Developer"
-fi
-
-info "CODE_SIGN_IDENTITY is ${CODE_SIGN_IDENTITY}"
-
 COMMAND_LINE_BUILD=1 xcrun xcodebuild \
-  CODE_SIGN_IDENTITY="${CODE_SIGN_IDENTITY}" \
   -SYMROOT="${XC_BUILD_DIR}" \
   BUILT_PRODUCTS_DIR="${BUILD_PRODUCTS_DIR}" \
   TARGET_BUILD_DIR="${BUILD_PRODUCTS_DIR}" \
