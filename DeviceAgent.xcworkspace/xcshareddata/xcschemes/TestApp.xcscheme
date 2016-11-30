@@ -73,7 +73,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "APPLE"
+            argument = "CALABUS_DRIVER"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
