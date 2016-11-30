@@ -3,42 +3,99 @@
 
 @interface ArgumentsTableController ()
 
-@property (copy, readonly) NSDictionary<NSString *, NSString *> *arguments;
+@property (copy, readonly) NSArray<NSString *> *arguments;
+@property (strong, readonly) NSDictionary<NSString *, NSString *> *rowDetails;
 
 @end
 
 @implementation ArgumentsTableController
 
 @synthesize arguments = _arguments;
+@synthesize rowDetails = _rowDetails;
 
-- (NSDictionary<NSString *, NSString *> *)arguments {
+
+- (NSArray<NSString *> *)arguments {
     if (_arguments) { return _arguments; }
 
     NSArray <NSString *> *processArgs = NSProcessInfo.processInfo.arguments;
-    NSMutableDictionary <NSString *, NSString *> *mutable;
-    mutable = [NSMutableDictionary dictionaryWithCapacity:[processArgs count]];
+    _arguments = [NSArray arrayWithArray:processArgs];
+    return _arguments;
+}
 
-    for (NSString *arg in processArgs) {
-       NSArray *tokens = [arg componentsSeparatedByString:@"="];
-        if (tokens.count == 1) {
-            [mutable setObject:@"< variable defined >"
-                        forKey:tokens[0]];
-        } else if (tokens.count == 2) {
-            [mutable setObject:tokens[1]
-                        forKey:tokens[0]];
-        } else {
-          [mutable setObject:@"< multiple = signs >"
-                      forKey:tokens[0]];
-        }
+- (NSDictionary <NSString *, NSString *> *)rowDetails {
+   if (_rowDetails) { return _rowDetails; }
+
+    NSMutableArray *arguments = [self.arguments mutableCopy];
+    NSMutableDictionary <NSString *, NSString *> *mutable;
+    mutable = [NSMutableDictionary dictionaryWithCapacity:[arguments count]];
+
+    NSUInteger index;
+    index = [arguments indexOfObject:@"CALABUS_DRIVER"];
+
+    if (index != NSNotFound) {
+        [mutable setObject:@"CALABUS_DRIVER is in the arguments"
+                    forKey:@"The Calabus Driver is on the job!"];
+        [arguments removeObjectAtIndex:index];
+    } else {
+        [mutable setObject:@"CALABUS_DRIVER is not in the arguments"
+                    forKey:@"The Calabus Driver is no where to be found!"];
     }
 
-    _arguments = [NSDictionary dictionaryWithDictionary:mutable];
-    return _arguments;
+    index = [arguments indexOfObject:@"-AppleLanguages"];
+    if (index != NSNotFound) {
+        NSUInteger valueIndex = index + 1;
+        if (valueIndex < [arguments count]) {
+            NSString *value = arguments[valueIndex];
+            [mutable setObject:[NSString stringWithFormat:@"\"-AppleLanguages\", \"%@\"",
+                                                          value]
+                        forKey:[NSString stringWithFormat:@"Language precedence: %@",
+                                                          value]];
+            [arguments removeObjectAtIndex:valueIndex];
+            [arguments removeObjectAtIndex:index];
+        } else {
+            [mutable setObject:@"Value missing for key: -AppleLanguages"
+                        forKey:@"-AppleLanguages ???"];
+            [arguments removeObjectAtIndex:index];
+        }
+    } else {
+        [mutable setObject:@"-AppleLanguages key/value pair is not in the arguments"
+                    forKey:@"Language precedence is not set"];
+    }
+
+    index = [arguments indexOfObject:@"-AppleLocale"];
+    if (index != NSNotFound) {
+        NSUInteger valueIndex = index + 1;
+        if (valueIndex < [arguments count]) {
+            NSString *value = arguments[valueIndex];
+            [mutable setObject:[NSString stringWithFormat:@"\"-AppleLocale\", \"%@\"",
+                                                          value]
+                        forKey:[NSString stringWithFormat:@"Preferred locale: %@",
+                                                          value]];
+
+            [arguments removeObjectAtIndex:valueIndex];
+            [arguments removeObjectAtIndex:index];
+        } else {
+            [mutable setObject:@"Value missing for key: -AppleLocale"
+                        forKey:@"-AppleLocale ???"];
+            [arguments removeObjectAtIndex:index];
+        }
+    } else {
+        [mutable setObject:@"-AppleLocale key/value pair is not in the arguments"
+                    forKey:@"Preferred locale is not set"];
+    }
+
+    for (NSString *argument in arguments) {
+        [mutable setObject:@"< Argument >"
+                    forKey:argument];
+    }
+
+    _rowDetails = [NSDictionary dictionaryWithDictionary:mutable];
+    return _rowDetails;
 }
 
 - (NSString *)keyForIndexPath:(NSIndexPath *)indexPath {
     SEL selector = @selector(caseInsensitiveCompare:);
-    NSArray *sorted = [self.arguments.allKeys sortedArrayUsingSelector:selector];
+    NSArray *sorted = [self.rowDetails.allKeys sortedArrayUsingSelector:selector];
     return sorted[indexPath.row];
 }
 
@@ -46,7 +103,7 @@
 
 - (NSInteger) tableView:(UITableView *) tableView
   numberOfRowsInSection:(NSInteger) aSection {
-    return self.arguments.count;
+    return self.rowDetails.count;
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *) tableView {
@@ -59,7 +116,7 @@
     cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier"
                                            forIndexPath:indexPath];
     NSString *title = [self keyForIndexPath:indexPath];
-    NSString *details = self.arguments[title];
+    NSString *details = self.rowDetails[title];
 
     UILabel *titleLabel = (UILabel *)[cell.contentView viewWithTag:3030];
     titleLabel.text = title;
