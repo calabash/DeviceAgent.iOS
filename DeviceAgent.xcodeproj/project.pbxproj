@@ -3160,6 +3160,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5f9752ef-87bc-4cd7-9c7e-5c2478f07391";
+				PROVISIONING_PROFILE_SPECIFIER = CalabashWildcard;
 			};
 			name = Debug;
 		};
@@ -3191,6 +3193,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5f9752ef-87bc-4cd7-9c7e-5c2478f07391";
+				PROVISIONING_PROFILE_SPECIFIER = CalabashWildcard;
 			};
 			name = Release;
 		};
