@@ -43,6 +43,7 @@
     UITableViewCell *cell;
     cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier"
                                            forIndexPath:indexPath];
+
     NSString *title = [self keyForIndexPath:indexPath];
     NSString *details = self.environment[title];
 
@@ -52,8 +53,11 @@
     UILabel *detailsLabel = (UILabel *)[cell.contentView viewWithTag:3031];
     detailsLabel.text = details;
 
-    cell.accessibilityIdentifier = [NSString stringWithFormat:@"%@ row",
-                                    [title lowercaseString]];
+    NSString *rowIdentifier = [NSString stringWithFormat:@"%@ row",
+                                        [title lowercaseString]];
+    cell.accessibilityIdentifier = rowIdentifier;
+    titleLabel.accessibilityIdentifier = [rowIdentifier stringByAppendingString:@" title"];
+    detailsLabel.accessibilityIdentifier = [rowIdentifier stringByAppendingString:@" details"];
 
     return cell;
 }
