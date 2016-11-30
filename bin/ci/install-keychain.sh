@@ -26,7 +26,6 @@ else
 fi
 
 (cd "${CODE_SIGN_DIR}" && ios/create-keychain.sh)
-(cd "${CODE_SIGN_DIR}" && ios/import-profiles.sh)
 
 API_TOKEN=`${CODE_SIGN_DIR}/ios/find-xtc-credential.sh api-token | tr -d '\n'`
 

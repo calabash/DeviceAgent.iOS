@@ -11,13 +11,13 @@ set -e
 
 bundle install
 make docs
+bin/ci/install-keychain.sh
 make app-agent
 make unit-tests
 make ipa-agent
-# TODO failing in CI because of Code Signing
-#make test-ipa
+make test-ipa
 
-# app-unit is required for cucumber tests.
+# TestApp is required for Cucumber tests.
 make test-app
 bundle exec bin/ci/cucumber.rb
 
