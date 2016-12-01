@@ -84,6 +84,14 @@ Before do |scenario|
     :xcode => launcher.xcode,
     :simctl => launcher.simctl,
     :instruments => launcher.instruments,
+    :args => ["-AppleLanguages", "(da)",
+              "-AppleLocale", "da",
+              "CALABUS_DRIVER"],
+    :env => {
+      "APPLE" => true,
+      "ANDROID" => false
+    },
+
     :app => launcher.app,
     # Maintainers only.
     #:cbx_launcher => :xcodebuild,

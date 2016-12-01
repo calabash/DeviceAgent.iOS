@@ -32,6 +32,44 @@
                                                                   RouteResponse *response) {
                  CBXInfoPlist *plist = [CBXInfoPlist new];
                  [response respondWithJSON:[plist versionInfo]];
+             }],
+
+             [CBXRoute get:endpoint(@"/arguments", 1.0) withBlock:^(RouteRequest *request,
+                                                                    NSDictionary *data,
+                                                                    RouteResponse *response) {
+                 NSArray *aut_arguments = @[];
+                 if ([Application currentApplication]) {
+                     aut_arguments = [[Application currentApplication] launchArguments];
+                 }
+
+                 NSArray *device_agent_arguments;
+                 device_agent_arguments = [[NSProcessInfo processInfo] arguments];
+
+                 NSDictionary *json;
+                 json = @{
+                          @"aut_arguments" : aut_arguments,
+                          @"device_agent_arguments" : device_agent_arguments };
+
+                 [response respondWithJSON:json];
+             }],
+
+             [CBXRoute get:endpoint(@"/environment", 1.0) withBlock:^(RouteRequest *request,
+                                                                      NSDictionary *data,
+                                                                      RouteResponse *response) {
+                 NSDictionary *aut_environment = @{};
+                 if ([Application currentApplication]) {
+                     aut_environment = [[Application currentApplication] launchEnvironment];
+                 }
+
+                 NSDictionary *device_agent_environment;
+                 device_agent_environment = [[NSProcessInfo processInfo] environment];
+
+                 NSDictionary *json;
+                 json = @{
+                          @"aut_environment" : aut_environment,
+                          @"device_agent_environment" : device_agent_environment };
+
+                 [response respondWithJSON:json];
              }]
              ];
 }
