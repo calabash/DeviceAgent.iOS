@@ -84,6 +84,14 @@ Before do |scenario|
     :xcode => launcher.xcode,
     :simctl => launcher.simctl,
     :instruments => launcher.instruments,
+    :args => ["-AppleLanguages", "(da)",
+              "-AppleLocale", "da",
+              "CALABUS_DRIVER"],
+    :env => {
+      "APPLE" => true,
+      "ANDROID" => false
+    },
+
     :app => launcher.app,
     # Maintainers only.
     #:cbx_launcher => :xcodebuild,
@@ -105,7 +113,6 @@ Before do |scenario|
     launcher.device_agent = client
     launcher.first_launch = false
   else
-    client = launcher.device_agent
     DeviceAgent::Automator.client = launcher.device_agent
   end
 end
@@ -119,9 +126,28 @@ end
 # TODO:  Feature: Location
 # TODO:  Feature: WebViews
 
+After("@keyboard") do |scenario|
+  if keyboard_visible?
+    if !query({marked: "Done", type: "Key"}).empty?
+      touch({marked:"Done", type: "Key"})
+    elsif !query({marked: "dismiss text view keyboard"}).empty?
+      touch({marked: "dismiss text view keyboard"})
+    else
+      raise "Keyboard is showing, but there is no way to dismiss it"
+    end
+    wait_for_animations
+  end
+end
+
 After do |scenario|
 
-  after = :default
+  # See bin/test/jmoody scripts.
+  on_scenario_failure = ENV["ON_SCENARIO_FAILURE"]
+  if on_scenario_failure
+    on_scenario_failure = on_scenario_failure.to_sym
+  end
+
+  after = on_scenario_failure || :default
 
   case after
   when :default
@@ -140,6 +166,18 @@ After do |scenario|
     if scenario.failed?
       exit!(1)
     end
+    when :pry
+      if scenario.failed?
+        binding.pry
+      end
+  else
+    # Do nothing
   end
 end
 
+at_exit do
+  # See bin/test/jmoody scripts.
+  if ENV["QUIT_AUT_AFTER_CUCUMBER"] == "1"
+    DeviceAgent::Automator.shutdown
+  end
+end

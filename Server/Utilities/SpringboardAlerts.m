@@ -25,6 +25,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
 - (NSArray<SpringBoardAlert *> *)ES419SpanishAlerts;
 - (NSArray<SpringBoardAlert *> *)FrenchAlerts;
 - (NSArray<SpringBoardAlert *> *)RussianAlerts;
+- (NSArray<SpringBoardAlert *> *)PTBrazilAlerts;
 
 @end
 
@@ -47,7 +48,8 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
                                             [self ES419SpanishAlerts],
                                             [self GermanAlerts],
                                             [self FrenchAlerts],
-                                            [self RussianAlerts]
+                                            [self RussianAlerts],
+                                            [self PTBrazilAlerts]
                                             ]];
     }
     return self;
@@ -84,14 +86,12 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
     return final;
 }
 
-// TODO: Add:
-//
-// OK, YES "Health Access"
 - (NSArray<SpringBoardAlert *> *)USEnglishAlerts {
     return @[
              alert(@"OK", YES, @"Would Like to Use Your Current Location"),
              alert(@"OK", YES, @"Location Accuracy"),
              alert(@"Allow", YES, @"access your location"),
+             alert(@"OK", YES, @"Health Access"),
              alert(@"OK", YES, @"Would Like to Access Your Photos"),
              alert(@"OK", YES, @"Would Like to Access Your Contacts"),
              alert(@"OK", YES, @"Access the Microphone"),
@@ -105,7 +105,10 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"OK", YES, @"Would Like to Send You Push Notifications"),
              alert(@"OK", YES, @"Would Like to Send You Notifications"),
              alert(@"OK", YES, @"No SIM Card Installed"),
-             alert(@"Not Now", NO, @"Carrier Settings Update")
+             alert(@"Not Now", NO, @"Carrier Settings Update"),
+             alert(@"Not Now", NO, @"Enable Dictation?"),
+             alert(@"Cancel", NO, @"Sign In to iTunes Store"),
+             alert(@"OK", YES, @"Would Like to Access Apple Music And Your Media Library")
              ];
 }
 
@@ -154,12 +157,13 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"Ja", YES, @"auf Ihren Kalender zugreifen"),
              alert(@"Ja", YES, @"auf Ihre Erinnerungen zugreifen"),
              alert(@"Ja", YES, @"auf Ihre Fotos zugreifen"),
+             alert(@"OK", YES, @"möchte auf deine Fotos zugreifen"),
              alert(@"Erlauben", YES, @"möchte auf Twitter-Accounts zugreifen"),
              alert(@"Ja", YES, @"auf das Mikrofon zugreifen"),
              alert(@"Ja", YES, @"möchte auf Ihre Bewegungs- und Fitnessdaten zugreifen"),
              alert(@"Ja", YES, @"auf Ihre Kamera zugreifen"),
              alert(@"OK", YES, @"Ihnen Mitteilungen senden"),
-             alert(@"OK", YES, @"Keine SIM-Karte eingelegt")
+             alert(@"OK", YES, @"Keine SIM-Karte eingelegt"),
              ];
 }
 
@@ -211,4 +215,20 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              ];
 }
 
+- (NSArray<SpringBoardAlert *> *)PTBrazilAlerts {
+    return @[
+             alert(@"Permitir", YES, @"acesso à sua localização"),
+             alert(@"Permitir", YES, @"acesso à sua localização"),
+             alert(@"OK", YES, @"Deseja Ter Acesso às Suas Fotos"),
+             alert(@"OK", YES, @"Deseja Ter Acesso aos Seus Contatos"),
+             alert(@"OK", YES, @"Acesso ao Seu Calendário"),
+             alert(@"OK", YES, @"Deseja Ter Acesso aos Seus Lembretes"),
+             alert(@"OK", YES, @"Would Like to Access Your Motion Activity"),
+             alert(@"OK", YES, @"Deseja Ter Acesso à Câmera"),
+             alert(@"OK", YES, @"Deseja Ter Acesso às Suas Atividades de Movimento e Preparo Físico"),
+             alert(@"OK", YES, @"Deseja Ter Acesso às Contas do Twitter"),
+             alert(@"OK", YES, @"data available to nearby bluetooth devices"),
+             alert(@"OK", YES, @"[Dd]eseja [Ee]nviar-lhe [Nn]otificações")
+             ];
+}
 @end

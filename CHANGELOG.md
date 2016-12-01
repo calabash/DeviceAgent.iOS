@@ -1,3 +1,24 @@
+### 1.0.3
+
+DeviceAgent now dismisses the following US English SpringBoard alerts:
+
+* Sign In to iTunes
+* Access Apple Music And Your Media
+* Health Access
+* Enable Dictation
+
+@oscartanner added support for Brazil PT for most of the SpringBoard
+alerts.
+
+* Add iTunes and Apple Music SpringBoard alerts #183
+* Add UITextView to TestApp #181
+* Use Testmanagerd `XCT_sendString` to enter text except on i386/armv7
+  devices #178
+* Fixes if statement in querying delete key for clear text #177
+* Add GET environment and arguments #176
+* Update SpringBoard alert definitions for iOS 10 #175
+* clear\_text should tap keyboard delete key #170
+
 ### 1.0.2
 
 * Cucumber: add @tree and @wildcard query Scenarios #169

@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+xcrun simctl help >/dev/null 2>&1
+xcrun simctl help >/dev/null 2>&1
+xcrun simctl help >/dev/null 2>&1
+
 set -e
 
 source bin/log_functions.sh
@@ -42,9 +46,6 @@ INSTALLED_DSYM="${INSTALL_DIR}/${DSYM}"
 INSTALLED_IPA="${INSTALL_DIR}/${IPA}"
 INSTALLED_RUNNER="${INSTALL_DIR}/${RUNNER}"
 INSTALLED_RUNNER_IPA="${INSTALL_DIR}/${RUNNER_IPA}"
-
-rm -rf "${INSTALL_DIR}"
-mkdir -p "${INSTALL_DIR}"
 
 info "Prepared install directory ${INSTALL_DIR}"
 

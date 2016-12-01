@@ -34,6 +34,10 @@ rescue LoadError => _
 
 end
 
+def World(*args)
+
+end
+
 ["automator.rb"].each do |file|
   path = File.join(".", "features", "support", file)
   print "Loading #{path}..."

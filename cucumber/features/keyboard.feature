@@ -3,7 +3,7 @@ Feature: Keyboard
 
 Background: App has launched
 Given the app has launched
-And I am looking at the Misc tab
+And I am looking at the Text Input page
 And the text field and question label are reset
 
 Scenario: Keyboard must be visible
@@ -25,8 +25,33 @@ Given I typed "Dangge, guet, und dir?"
 And I decide I should be more formal
 Then I replace "dir?" with "Ihre?" by sending backspace
 
+@delete_key
 Scenario: Deleting text by touching delete key
 Given I typed "Tack, bra."
 And I decide I want to be more emphatic
 Then I replace "." with "!" using the delete key
 
+@clear_text
+Scenario: Deleting text using clear text
+Given I typed "Tack, bra."
+And I clear the text
+Then I should see an empty text field
+
+@text_view
+Scenario: Typing in a TextView
+Given I touched the Text View
+Then I can clear the Text View
+Then I can type a lot of text
+And I can dismiss the Text View keyboard
+And I can select all the text in the Text View
+And I can clear the Text View after selecting all using the delete key or Cut
+And I can dismiss the Text View keyboard
+
+@alert
+@alert_text_field
+Scenario: Typing in an Alert Text Field
+Given I touch the Alert nav bar button
+Then I see an authentication alert
+And I enter my name for authentication
+And I enter my password for authentication
+Then I submit my credentials for authentication

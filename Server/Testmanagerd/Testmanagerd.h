@@ -1,5 +1,6 @@
 
 #import <Foundation/Foundation.h>
+#import "XCTestDriver.h"
 #import "XCTestManager_ManagerInterface-Protocol.h"
 
 /**
@@ -23,4 +24,5 @@
  of the methods. 
  */
 + (id<XCTestManager_ManagerInterface>)get;
+
 @end

@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-if [ -z "${TRAVIS}" ] && [ -z "${JENKINS_HOME}" ]; then
-  echo "FAIL: only run this script on Travis or Jenkins"
+# Xcode < 8 only.  Setting the CODE_SIGN_IDENTITY will cause
+# the build to fail.  Do not run this script on Jenkins which
+# requires Xcode >= 8.
+if [ -z "${TRAVIS}" ]; then
+  echo "FAIL: only run this script on Travis"
   exit 1
 fi
 

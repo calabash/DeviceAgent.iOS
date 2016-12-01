@@ -71,6 +71,14 @@
 
     expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
+
+    alertTitle = @"acesso à sua localização";
+    expectedButton = @"Permitir";
+    expectedShouldAccept = YES;
+    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
+
+    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.shouldAccept).to.equal(expectedShouldAccept);
 }
 
 @end

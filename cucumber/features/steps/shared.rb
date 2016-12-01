@@ -38,6 +38,24 @@ module DeviceAgent
 
       DeviceAgent::Shared.class_variable_set(:@@app_ready, true)
     end
+
+    def touch_tab(tabname)
+      # Dismiss the keyboard if it is showing
+      if keyboard_visible?
+        touch({marked:"Done"})
+        wait_for_animations
+      end
+
+      touch({marked: tabname})
+      wait_for_animations
+      # Get back to the root view controller of the tab.
+      if tabname == "Pan" || tabname == "Misc"
+        touch({marked: tabname})
+        wait_for_animations
+      end
+      mark = "#{tabname.downcase} page"
+      wait_for_view({marked: mark})
+    end
   end
 end
 
@@ -49,7 +67,5 @@ Given(/^the app has launched$/) do
 end
 
 Given(/^I am looking at the (Touch|Pan|Rotate\/Pinch|Misc|Tao) tab$/) do |tabname|
-  touch({marked: tabname})
-  mark = "#{tabname.downcase} page"
-  wait_for_view({marked: mark})
+  touch_tab(tabname)
 end
