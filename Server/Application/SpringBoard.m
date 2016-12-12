@@ -275,9 +275,8 @@ typedef enum : NSUInteger {
             // environments e.g. CI, XTC, Simulators, etc.
             //
             // We prefer stability over speed.
-            NSTimeInterval interval = 1.0;
-            NSDate *until = [[NSDate date] dateByAddingTimeInterval:interval];
-            [[NSRunLoop mainRunLoop] runUntilDate:until];
+            CFTimeInterval interval = 1.0;
+            CFRunLoopRunInMode(kCFRunLoopDefaultMode, interval, false);
         }
         return success;
     }

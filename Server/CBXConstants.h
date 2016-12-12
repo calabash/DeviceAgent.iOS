@@ -90,10 +90,10 @@ static NSUInteger const HTTP_STATUS_CODE_SERVER_ERROR = 500;
 static int const CBX_MIN_NUM_FINGERS = 1;
 static int const CBX_MAX_NUM_FINGERS = 5;
 
+static CFTimeInterval const CBX_RUNLOOP_INTERVAL = 0.1; // seconds
 static float const CBX_MIN_ROTATION_START = 0;      //degrees
 static float const CBX_MAX_ROTATION_START = 360;    //degrees
 static float const CBX_MIN_LONG_PRESS_DURATION = 0.5; //determined through trial and error w/UILongPressGestureRecognizer
-static float const CBX_RUNLOOP_INTERVAL = 0.1;
 static float const CBX_DEFAULT_DURATION = 0.1;
 static BOOL const CBX_DEFAULT_ALLOW_INERTIA_IN_DRAG = YES;
 static float const CBX_DOUBLE_TAP_PAUSE_DURATION = 0.1;
