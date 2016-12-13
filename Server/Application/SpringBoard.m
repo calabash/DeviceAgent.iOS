@@ -26,8 +26,8 @@ typedef enum : NSUInteger {
 @interface SpringBoard ()
 
 - (BOOL)shouldDismissAlertsAutomatically;
-- (BOOL)tapAlertButtonWithFrame:(CGRect)frame;
 - (SpringBoardAlertHandlerResult)handleAlert;
+- (void)tapAlertButton:(XCUIElement *)button;
 
 @end
 
@@ -201,84 +201,46 @@ typedef enum : NSUInteger {
         return SpringBoardAlertHandlerNoAlert;
     }
 
-    // There are cases where the button does not respond to wdFrame.
-    // I cannot explain why, but it was happening during development.
-    CGRect frame;
-    if (![button respondsToSelector:@selector(wdFrame)]) {
-        frame = [button frame];
-    } else {
-        frame = [button wdFrame];
-    }
-
-    BOOL success = [self tapAlertButtonWithFrame:frame];
-
-    if (!success) {
-        return SpringBoardAlertHandlerNoAlert;
-    }
+    [self tapAlertButton:button];
 
     return SpringBoardAlertHandlerDismissedAlert;
 }
 
-- (BOOL)tapAlertButtonWithFrame:(CGRect)frame {
+- (void)tapAlertButton:(XCUIElement *)button {
     @synchronized (self) {
+        [button tap];
 
-        // There are cases where we cannot find a hitpoint.
-        if (frame.origin.x <= 0.0 || frame.origin.y <= 0.0) {
-            return NO;
-        }
-
-        // This could also be done with [button tap].
+        // There is one alert workflow that is very problematic:
         //
-        // However, the system seems more stable if we use our touch gesture.
-        CGFloat x = CGRectGetMinX(frame) + (CGRectGetWidth(frame)/2.0);
-        CGFloat y = CGRectGetMinY(frame) + (CGRectGetHeight(frame)/2.0);
-
-        NSDictionary *body =
-        @{
-          @"gesture" : @"touch",
-          @"options" : @{},
-          @"specifiers" : @{@"coordinate" : @{ @"x" : @(x), @"y" : @(y)}}
-          };
-
-        __block BOOL success = YES;
-        [GestureFactory executeGestureWithJSON:body completion:^(NSError *e) {
-            if (e) { success = NO; }
-        }];
-
-        if (success) {
-            // There is one alert workflow that is very problematic:
-            //
-            // PhotoRoll
-            //
-            // 1. Trigger the alert
-            // 2. Alert appears
-            // 3. Alert is automatically dismissed
-            // 3. Photo Roll is animated on behind the alert
-            // 4. Next gesture or query triggers an alert query
-            //
-            // The AXServer crashes, then the AUT crashes, and then DeviceAgent
-            // performs the gesture or query on the SpringBoard.  For example, if
-            // the gesture was a touch to Cancel the Photo Roll, the Newstand app
-            // would open because that is the App Icon at the position of the
-            // of the Cancel touch.  Sleeping after the dismiss definitely
-            // reduced the frequency of crashes - they still happened.
-            //
-            // The AUT crash was caused by IImagePickerViewController which has a
-            // history of crashing in situations like this.
-            //
-            // After days device and simulator testing, I settled on 1.0 second.
-            // If there is no sleep or the sleep is too short the AXServer can
-            // disconnect which can cause the DeviceAgent to fail: crashes,
-            // TestPlan exits, etc.
-            //
-            // We will need to see if this value needs to be adjusted for different
-            // environments e.g. CI, XTC, Simulators, etc.
-            //
-            // We prefer stability over speed.
-            CFTimeInterval interval = 1.0;
-            CFRunLoopRunInMode(kCFRunLoopDefaultMode, interval, false);
-        }
-        return success;
+        // PhotoRoll
+        //
+        // 1. Trigger the alert
+        // 2. Alert appears
+        // 3. Alert is automatically dismissed
+        // 3. Photo Roll is animated on behind the alert
+        // 4. Next gesture or query triggers an alert query
+        //
+        // The AXServer crashes, then the AUT crashes, and then DeviceAgent
+        // performs the gesture or query on the SpringBoard.  For example, if
+        // the gesture was a touch to Cancel the Photo Roll, the Newstand app
+        // would open because that is the App Icon at the position of the
+        // of the Cancel touch.  Sleeping after the dismiss definitely
+        // reduced the frequency of crashes - they still happened.
+        //
+        // The AUT crash was caused by IImagePickerViewController which has a
+        // history of crashing in situations like this.
+        //
+        // After days device and simulator testing, I settled on 1.0 second.
+        // If there is no sleep or the sleep is too short the AXServer can
+        // disconnect which can cause the DeviceAgent to fail: crashes,
+        // TestPlan exits, etc.
+        //
+        // We will need to see if this value needs to be adjusted for different
+        // environments e.g. CI, XTC, Simulators, etc.
+        //
+        // We prefer stability over speed.
+        CFTimeInterval interval = 1.0;
+        CFRunLoopRunInMode(kCFRunLoopDefaultMode, interval, false);
     }
 }
 
@@ -296,23 +258,9 @@ typedef enum : NSUInteger {
                 return SpringBoardDismissAlertNoMatchingButton;
             }
 
-            // There are cases where the button does not respond to wdFrame.
-            CGRect frame;
-            if (![button respondsToSelector:@selector(wdFrame)]) {
-                frame = [button frame];
-            } else {
-                frame = [button wdFrame];
-            }
+            [self tapAlertButton:button];
 
-            BOOL success = [self tapAlertButtonWithFrame:frame];
-
-            SpringBoardDismissAlertResult result;
-            if (success) {
-                result = SpringBoardDismissAlertDismissedAlert;
-            } else {
-                result = SpringBoardDismissAlertDismissTouchFailed;
-            }
-            return result;
+            return SpringBoardDismissAlertDismissedAlert;
         }
     }
 }
