@@ -9,7 +9,7 @@
     block(&done);
     
     while(!done){
-        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:CBX_RUNLOOP_INTERVAL]];
+        CFRunLoopRunInMode(kCFRunLoopDefaultMode, CBX_RUNLOOP_INTERVAL, false);
     }
 }
 @end

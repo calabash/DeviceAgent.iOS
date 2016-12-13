@@ -86,14 +86,9 @@ static NSString *serverName = @"CalabashXCUITestServer";
           [UIDevice currentDevice].wifiIPAddress,
           [self.server port]);
 
-    NSTimeInterval interval = 0.1;
     while ([self.server isRunning] && !self.isFinishedTesting) {
 
-        // If we are worried about alloc'ing NSDate objects, it might be
-        // possible to replace with:
-        // CFRunLoopRunInMode(kCFRunLoopDefaultMode, timeout_, false);
-        NSDate *until = [[NSDate date] dateByAddingTimeInterval:interval];
-        [[NSRunLoop mainRunLoop] runUntilDate:until];
+         CFRunLoopRunInMode(kCFRunLoopDefaultMode, CBX_RUNLOOP_INTERVAL, false);
 
         // Turning this behavior off because it has some unpleasant side effects.
         //
