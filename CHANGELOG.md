@@ -1,3 +1,12 @@
+### 1.0.4
+
+DeviceAgent can dismiss SpringBoard alerts in any orientation.
+
+* Replace NSRunLoop runUntilDate: with CFRunLoopRunInMode to avoid
+  unreliable NSDate behaviors #187
+* SpringBoard: use XCUIElement#tap to dismiss alerts #186
+* DeviceAgent: generate and distribute a dSYM #185
+
 ### 1.0.3
 
 DeviceAgent now dismisses the following US English SpringBoard alerts:
