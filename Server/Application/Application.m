@@ -63,13 +63,20 @@ static NSInteger currentElementIndex = 0;
 
 - (void)startSession {
     NSLog(@"Launching application '%@'", self.app.bundleID);
-    [[Testmanagerd get] _XCT_launchApplicationWithBundleID:self.app.bundleID arguments:self.app.launchArguments environment:self.app.launchEnvironment completion:^(NSError *e) {
-        if (e) {
-            @throw [[CBXException alloc] initWithName:@"Unable to launch app"
-                                              reason:e.localizedDescription
-                                            userInfo:@{@"bundleId" : self.app.bundleID}];
-        }
-    }];
+
+    [[Testmanagerd get] _XCT_launchApplicationWithBundleID:self.app.bundleID
+                                                 arguments:self.app.launchArguments
+                                               environment:self.app.launchEnvironment
+                                                completion:^(NSError *innerError) {
+                                                    if (innerError) {
+                                                        // This is async call.
+                                                        //
+                                                        // An @throw will never result in a HTTP error response.
+                                                        //
+                                                        // It is not possible to capture the innerError in
+                                                        // a local variable.
+                                                    }
+                                                }];
 }
 
 + (void)killCurrentApplication {
