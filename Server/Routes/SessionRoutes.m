@@ -1,10 +1,10 @@
 #import "CBXCUITestServer.h"
 #import "Application.h"
 #import "SessionRoutes.h"
-#import "Testmanagerd.h"
 #import "CBXConstants.h"
-#import "XCDeviceEvent.h"
 #import "CBXMacros.h"
+#import "CBLSApplicationWorkspace.h"
+#import "CBXException.h"
 
 @implementation SessionRoutes
 
@@ -21,6 +21,14 @@
                  
                  if (!bundlePath || [bundlePath isEqual:[NSNull null]]) {
                      bundlePath = nil;
+                     if (![CBLSApplicationWorkspace applicationIsInstalled:bundleID]) {
+                         NSString *errorMsg;
+                         errorMsg = [NSString stringWithFormat:@"Application with identifier: %@ is not installed.",
+                                                               bundleID];
+                         @throw [CBXException withMessage:errorMsg userInfo:nil];
+                     }
+                 } else {
+                     // Passing bundle paths is not supported yet.
                  }
                  [Application launchBundlePath:bundlePath
                                         bundleID:bundleID
