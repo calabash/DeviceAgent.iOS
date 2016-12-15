@@ -89,17 +89,40 @@ static NSInteger currentElementIndex = 0;
                 bundleID:(NSString *)bundleID
               launchArgs:(NSArray *)launchArgs
                      env:(NSDictionary *)environment {
-    
-    //TODO: This seems to crash/end the test session... 
-//    if ([currentApplication hasSession]) {
-//        [currentApplication kill];
-//    }
-    
-    currentApplication.app = [[XCUIApplication alloc] initPrivateWithPath:bundlePath bundleID:bundleID];
+
+    // TODO: This seems to crash/end the test session...
+    //    if ([currentApplication hasSession]) {
+    //        [currentApplication kill];
+    //    }
+
+    currentApplication.app = [[XCUIApplication alloc] initPrivateWithPath:bundlePath
+                                                                 bundleID:bundleID];
     currentApplication.app.launchArguments = launchArgs ?: @[];
     currentApplication.app.launchEnvironment = environment ?: @{};
-    
+
     [currentApplication startSession];
+
+    NSDate *startDate = [NSDate date];
+    BOOL running = NO;
+    NSUInteger count = 1;
+    NSUInteger tries = 30;
+    CFTimeInterval interval = 1.0;
+    while (!running && count <= tries) {
+        NSLog(@"Waiting for application to launch: try %@ of %@", @(count), @(tries));
+        running = [[Application currentApplication] running];
+        CFRunLoopRunInMode(kCFRunLoopDefaultMode, interval, false);
+        count = count + 1;
+    }
+
+    NSTimeInterval elapsed = ABS([startDate timeIntervalSinceDate:[NSDate date]]);
+    if (!running) {
+        NSString *errorMsg;
+        errorMsg = [NSString stringWithFormat:@"Application %@ could not launch after %@ seconds",
+                    bundleID, @(elapsed)];
+        @throw [CBXException withMessage:errorMsg userInfo:nil];
+    } else {
+        NSLog(@"Took %@ seconds to launch %@", @(elapsed), bundleID);
+    }
 }
 
 @end
