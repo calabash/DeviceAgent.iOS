@@ -323,6 +323,9 @@
 		F59E94751D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F59E94731D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.h */; };
 		F59E94761D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F59E94741D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m */; };
 		F59E94771D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F59E94741D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m */; };
+		F5A14DE51E02CF84001A0037 /* CBLSApplicationWorkspace.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A14DE31E02CF84001A0037 /* CBLSApplicationWorkspace.h */; };
+		F5A14DE61E02CF84001A0037 /* CBLSApplicationWorkspace.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A14DE41E02CF84001A0037 /* CBLSApplicationWorkspace.m */; };
+		F5A14DE71E02CF84001A0037 /* CBLSApplicationWorkspace.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A14DE41E02CF84001A0037 /* CBLSApplicationWorkspace.m */; };
 		F5AC714D1CEB816E00DE059A /* TaoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5AC714C1CEB816E00DE059A /* TaoController.m */; };
 		F5B0A1A31CAD4DE800E056CE /* FBElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5380B1CA32AE900F62E09 /* FBElement.m */; };
 		F5B0A1A41CAD4DE800E056CE /* XCUIElement+WebDriverAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538071CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.m */; };
@@ -892,6 +895,8 @@
 		F5988E811D67507E00049DE4 /* UIView+Positioning.LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UIView+Positioning.LICENSE"; sourceTree = "<group>"; };
 		F59E94731D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIApplication+DeviceAgentAdditions.h"; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F59E94741D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCUIApplication+DeviceAgentAdditions.m"; sourceTree = "<group>"; };
+		F5A14DE31E02CF84001A0037 /* CBLSApplicationWorkspace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBLSApplicationWorkspace.h; sourceTree = "<group>"; };
+		F5A14DE41E02CF84001A0037 /* CBLSApplicationWorkspace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBLSApplicationWorkspace.m; sourceTree = "<group>"; };
 		F5AC714B1CEB816E00DE059A /* TaoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaoController.h; sourceTree = "<group>"; };
 		F5AC714C1CEB816E00DE059A /* TaoController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = TaoController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F5B0A0CF1CAD3CBC00E056CE /* UnitTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1481,6 +1486,8 @@
 				F55F83BB1C6DDF1300A945C8 /* Application+Queries.m */,
 				F59E94731D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.h */,
 				F59E94741D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m */,
+				F5A14DE31E02CF84001A0037 /* CBLSApplicationWorkspace.h */,
+				F5A14DE41E02CF84001A0037 /* CBLSApplicationWorkspace.m */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -1988,6 +1995,7 @@
 				F55F81A31C6DD07500A945C8 /* HTTPFileResponse.h in Headers */,
 				F53679A11D7C324E009956D0 /* QuerySpecifierByMark.h in Headers */,
 				F55F819D1C6DD07500A945C8 /* HTTPDataResponse.h in Headers */,
+				F5A14DE51E02CF84001A0037 /* CBLSApplicationWorkspace.h in Headers */,
 				89F6BF901CBEB5AD0088269C /* GeometryUtils.h in Headers */,
 				89331D301CC50447003C2E59 /* ThreadUtils.h in Headers */,
 				899696BA1CADF84B00BB42E2 /* EnterText.h in Headers */,
@@ -2441,6 +2449,7 @@
 				F55F82311C6DD07500A945C8 /* DDAbstractDatabaseLogger.m in Sources */,
 				F55F840E1C6E437100A945C8 /* SessionRoutes.m in Sources */,
 				89D5380D1CA32AE900F62E09 /* FBElement.m in Sources */,
+				F5A14DE61E02CF84001A0037 /* CBLSApplicationWorkspace.m in Sources */,
 				F55F82331C6DD07500A945C8 /* DDASLLogger.m in Sources */,
 				F55F82591C6DD07500A945C8 /* RoutingHTTPServer.m in Sources */,
 				89C5F3701C9E32440093A018 /* DoubleTap.m in Sources */,
@@ -2604,6 +2613,7 @@
 				896C7C791D19AE990017CE08 /* ClearText.m in Sources */,
 				F5B0A1D31CAD4E8A00E056CE /* HTTPDynamicFileResponse.m in Sources */,
 				F58D28031D4F947F000FF6C0 /* Gestures+OptionsTests.m in Sources */,
+				F5A14DE71E02CF84001A0037 /* CBLSApplicationWorkspace.m in Sources */,
 				F5B0A1DB1CAD4E9500E056CE /* DDLog.m in Sources */,
 				F5B0A1D71CAD4E8A00E056CE /* WebSocket.m in Sources */,
 				F5B0A1BF1CAD4E4600E056CE /* HealthRoutes.m in Sources */,
