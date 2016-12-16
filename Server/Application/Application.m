@@ -8,6 +8,7 @@
 #import "Application.h"
 #import "Testmanagerd.h"
 #import "XCUIElement.h"
+#import "ThreadUtils.h"
 
 @interface Application ()
 @property (nonatomic, strong) XCUIApplication *app;
@@ -64,19 +65,23 @@ static NSInteger currentElementIndex = 0;
 - (void)startSession {
     NSLog(@"Launching application '%@'", self.app.bundleID);
 
-    [[Testmanagerd get] _XCT_launchApplicationWithBundleID:self.app.bundleID
-                                                 arguments:self.app.launchArguments
-                                               environment:self.app.launchEnvironment
-                                                completion:^(NSError *innerError) {
-                                                    if (innerError) {
-                                                        // This is async call.
-                                                        //
-                                                        // An @throw will never result in a HTTP error response.
-                                                        //
-                                                        // It is not possible to capture the innerError in
-                                                        // a local variable.
-                                                    }
-                                                }];
+    __block NSError *outerError = nil;
+    [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
+        [[Testmanagerd get] _XCT_launchApplicationWithBundleID:self.app.bundleID
+                                                     arguments:self.app.launchArguments
+                                                   environment:self.app.launchEnvironment
+                                                    completion:^(NSError *innerError) {
+                                                        outerError = innerError;
+                                                        *setToTrueWhenDone = YES;
+                                                    }];
+    }];
+
+    if (outerError) {
+        NSString *errorMessage;
+        errorMessage = [NSString stringWithFormat:@"Could not launch application with bundle identifier: %@\n%@",
+                        self.app.bundleID, outerError.localizedDescription];
+        @throw [CBXException withMessage:errorMessage userInfo:nil];
+    }
 }
 
 + (void)killCurrentApplication {
@@ -101,28 +106,6 @@ static NSInteger currentElementIndex = 0;
     currentApplication.app.launchEnvironment = environment ?: @{};
 
     [currentApplication startSession];
-
-    NSDate *startDate = [NSDate date];
-    BOOL running = NO;
-    NSUInteger count = 1;
-    NSUInteger tries = 30;
-    CFTimeInterval interval = 1.0;
-    while (!running && count <= tries) {
-        NSLog(@"Waiting for application to launch: try %@ of %@", @(count), @(tries));
-        running = [[Application currentApplication] running];
-        CFRunLoopRunInMode(kCFRunLoopDefaultMode, interval, false);
-        count = count + 1;
-    }
-
-    NSTimeInterval elapsed = ABS([startDate timeIntervalSinceDate:[NSDate date]]);
-    if (!running) {
-        NSString *errorMsg;
-        errorMsg = [NSString stringWithFormat:@"Application %@ could not launch after %@ seconds",
-                    bundleID, @(elapsed)];
-        @throw [CBXException withMessage:errorMsg userInfo:nil];
-    } else {
-        NSLog(@"Took %@ seconds to launch %@", @(elapsed), bundleID);
-    }
 }
 
 @end
