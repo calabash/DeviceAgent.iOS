@@ -1,10 +1,10 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    CFPropertyList (2.3.3)
+    CFPropertyList (2.3.4)
     awesome_print (1.7.0)
     command_runner_ng (0.1.0)
-    httpclient (2.8.2.4)
+    httpclient (2.8.3)
     i18n (0.7.0)
     json (1.8.3)
     luffa (2.0.0)
@@ -14,7 +14,7 @@ GEM
       thor (~> 0.19)
     retriable (2.0.2)
     rouge (1.11.1)
-    run_loop (2.2.1)
+    run_loop (2.2.4)
       CFPropertyList (~> 2.2)
       awesome_print (~> 1.2)
       command_runner_ng (>= 0.0.2)
@@ -22,7 +22,7 @@ GEM
       i18n (>= 0.7.0, < 1.0)
       json (~> 1.8)
       thor (>= 0.18.1, < 1.0)
-    thor (0.19.1)
+    thor (0.19.4)
     xcpretty (0.2.2)
       rouge (~> 1.8)
 
@@ -35,4 +35,4 @@ DEPENDENCIES
   xcpretty (= 0.2.2)
 
 BUNDLED WITH
-   1.13.1
+   1.13.6
