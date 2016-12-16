@@ -126,8 +126,8 @@ if [ $TEST_DEVICE -eq 1 ]; then
   done
 fi
 
-# Xcode 8.2 beta 2
-export DEVELOPER_DIR=/Xcode/8.2/Xcode-beta.app/Contents/Developer
+# Xcode 8.2
+export DEVELOPER_DIR=/Xcode/8.2/Xcode.app/Contents/Developer
 
 banner "Xcode 8.2"
 xcrun xcodebuild -version
