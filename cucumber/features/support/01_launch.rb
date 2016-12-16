@@ -150,28 +150,28 @@ After do |scenario|
   after = on_scenario_failure || :default
 
   case after
-  when :default
-    # Restart the app if a Scenario fails
-    if scenario.failed?
-      Calabash::Launcher.instance.first_launch = true
-    end
-  when :shutdown
-    begin
-      DeviceAgent::Automator.shutdown
-    rescue => e
-      RunLoop.log_error("#{e}")
-      exit!(1)
-    end
-  when :exit
-    if scenario.failed?
-      exit!(1)
-    end
+    when :default
+      # Restart the app if a Scenario fails
+      if scenario.failed?
+        Calabash::Launcher.instance.first_launch = true
+      end
+    when :shutdown
+      begin
+        DeviceAgent::Automator.shutdown
+      rescue => e
+        RunLoop.log_error("#{e}")
+        exit!(1)
+      end
+    when :exit
+      if scenario.failed?
+        exit!(1)
+      end
     when :pry
       if scenario.failed?
         binding.pry
       end
-  else
-    # Do nothing
+    else
+      # Do nothing
   end
 end
 
