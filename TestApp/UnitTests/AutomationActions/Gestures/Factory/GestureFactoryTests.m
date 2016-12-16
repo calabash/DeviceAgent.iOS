@@ -139,29 +139,6 @@
     }];
 }
 
-- (void)testEnterText {
-    id json = @{
-                @"gesture" : @"enter_text",
-                @"options" : @{
-                            @"string"  : @"banana"
-                        }
-                };
-    [self expectGestureWithJSON:json gestureClass:[EnterText class]];
-}
-
-- (void)testEnterTextIn {
-    id json = @{
-                @"gesture" : @"enter_text_in",
-                @"specifiers" : @{
-                        @"coordinate" : @[ @50, @50 ]
-                },
-                @"options" : @{
-                        @"string"  : @"banana"
-                        }
-                };
-    [self expectGestureWithJSON:json gestureClass:[EnterTextIn class]];
-}
-
 - (void)testDoubleTap {
     id json = @{
                 @"gesture" : @"double_tap",
