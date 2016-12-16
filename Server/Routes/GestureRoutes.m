@@ -15,11 +15,12 @@
 + (NSArray<CBXRoute *> *)getRoutes {
     return @[
              [CBXRoute post:endpoint(@"/gesture", 1.0) withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
+
+                 // SpringBoard alerts block gestures.
                  [[SpringBoard application] handleAlertsOrThrow];
 
                  [GestureFactory executeGestureWithJSON:body completion:^(NSError *e) {
                      if (e) {
-                         //should never execute
                          [response respondWithJSON:@{ @"error" : e.localizedDescription }];
                      } else {
                          [response respondWithJSON:@{ @"status" : @"success" }];
