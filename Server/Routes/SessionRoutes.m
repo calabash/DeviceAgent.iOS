@@ -28,7 +28,10 @@
                          @throw [CBXException withMessage:errorMsg userInfo:nil];
                      }
                  } else {
-                     // Passing bundle paths is not supported yet.
+                     // Passing bundle paths is supported, but not well understood.
+                     // See the docs in Application.h
+                     //
+                     // Calabash and UITest do not use this feature.
                  }
 
                  [Application launchBundlePath:bundlePath
