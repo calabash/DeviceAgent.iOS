@@ -20,6 +20,7 @@
  signed .ipas.
 
  @param bundleID The only necessary parameter. Please ensure this corresponds to an app that
+ is currently installed on the device/sim, else undefined behavior will occur.
  is currently running on the device/sim, else undefined behavior will occur.
 
  @param launchArgs Arguments to pass to the application upon launch.
