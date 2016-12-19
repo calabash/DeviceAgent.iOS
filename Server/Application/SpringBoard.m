@@ -15,6 +15,13 @@
 #import "GestureFactory.h"
 #import "XCUIElement+WebDriverAttributes.h"
 #import "CBXException.h"
+#import <UIKit/UIKit.h>
+
+@interface UIApplication (CB_SPRING_BOARD)
+
+- (BOOL)_isSpringBoardShowingAnAlert;
+
+@end
 
 typedef enum : NSUInteger {
     SpringBoardAlertHandlerIgnoringAlerts = 0,
@@ -59,11 +66,15 @@ typedef enum : NSUInteger {
     @synchronized (self) {
         XCUIElement *alert = nil;
 
-        XCUIElementQuery *query = [self descendantsMatchingType:XCUIElementTypeAlert];
-        NSArray <XCUIElement *> *elements = [query allElementsBoundByIndex];
+        if ([[UIApplication sharedApplication] _isSpringBoardShowingAnAlert]) {
 
-        if ([elements count] != 0) {
-            alert = elements[0];
+            [self _waitForQuiescence];
+            XCUIElementQuery *query = [self descendantsMatchingType:XCUIElementTypeAlert];
+            NSArray <XCUIElement *> *elements = [query allElementsBoundByIndex];
+
+            if ([elements count] != 0) {
+                alert = elements[0];
+            }
         }
         return alert;
     }
