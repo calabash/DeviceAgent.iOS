@@ -304,6 +304,10 @@ typedef enum : NSUInteger {
             }
         }];
 
+        // Let the main RunLoop progress before executing more queries or
+        // gestures.  It is possible that a failed touch will succeed on the
+        // next pass.
+        //
         // There is one alert workflow that is very problematic:
         //
         // PhotoRoll
@@ -321,7 +325,7 @@ typedef enum : NSUInteger {
         // of the Cancel touch.  Sleeping after the dismiss definitely
         // reduced the frequency of crashes - they still happened.
         //
-        // The AUT crash was caused by IImagePickerViewController which has a
+        // The AUT crash was caused by UIImagePickerViewController which has a
         // history of crashing in situations like this.
         //
         // After days device and simulator testing, I settled on 1.0 second.
@@ -335,7 +339,9 @@ typedef enum : NSUInteger {
         // We prefer stability over speed.
         CFTimeInterval interval = 1.0;
         CFRunLoopRunInMode(kCFRunLoopDefaultMode, interval, false);
-    }
+
+        return success;
+   }
 }
 
 - (CGPoint)hitPointForAlertButton:(XCUIElement *)alertButton {
