@@ -13,6 +13,7 @@
 #import "XCUIElement.h"
 #import "XCElementSnapshot.h"
 #import "GestureFactory.h"
+#import "XCUICoordinate.h"
 #import "XCUIElement+WebDriverAttributes.h"
 #import "CBXException.h"
 #import <UIKit/UIKit.h>
@@ -29,7 +30,9 @@ typedef enum : NSUInteger {
 - (BOOL)UIApplication_isSpringBoardShowingAnAlert;
 - (BOOL)shouldDismissAlertsAutomatically;
 - (SpringBoardAlertHandlerResult)handleAlert;
-- (void)tapAlertButton:(XCUIElement *)button;
+- (BOOL)tapAlertButton:(XCUIElement *)alertButton;
+- (CGPoint)hitPointForAlertButton:(XCUIElement *)alertButton;
+- (CGPoint)pointByTranslatingPoint:(CGPoint)point;
 
 @end
 
@@ -236,14 +239,70 @@ typedef enum : NSUInteger {
         return SpringBoardAlertHandlerNoAlert;
     }
 
-    [self tapAlertButton:button];
+    BOOL success = [self tapAlertButton:button];
+
+    if (!success) {
+        return SpringBoardAlertHandlerNoAlert;
+    }
 
     return SpringBoardAlertHandlerDismissedAlert;
 }
 
-- (void)tapAlertButton:(XCUIElement *)button {
+- (SpringBoardDismissAlertResult)dismissAlertByTappingButtonWithTitle:(NSString *)title {
     @synchronized (self) {
-        [button tap];
+        XCUIElement *alert = [self queryForAlert];
+
+        if (!alert) {
+            return SpringBoardDismissAlertNoAlert;
+        } else {
+            XCUIElement *button = alert.buttons[title];
+            [button resolve];
+
+            if (!button || !button.exists) {
+                return SpringBoardDismissAlertNoMatchingButton;
+            }
+
+            BOOL success = [self tapAlertButton:button];
+
+            SpringBoardDismissAlertResult result;
+            if (success) {
+                result = SpringBoardDismissAlertDismissedAlert;
+            } else {
+                result = SpringBoardDismissAlertDismissTouchFailed;
+            }
+
+            return result;
+        }
+    }
+}
+
+- (BOOL)tapAlertButton:(XCUIElement *)alertButton {
+    @synchronized (self) {
+        [alertButton resolve];
+        CGPoint hitPoint = [self hitPointForAlertButton:alertButton];
+
+        if (hitPoint.x < 0 || hitPoint.y < 0) {
+           return NO;
+        }
+
+        NSDictionary *body =
+        @{
+          @"gesture" : @"touch",
+          @"options" : @{},
+          @"specifiers" : @{@"coordinate" :
+                                @{ @"x" : @(hitPoint.x),
+                                   @"y" : @(hitPoint.y)
+                                   }
+                            }
+          };
+
+        __block BOOL success = YES;
+        [GestureFactory executeGestureWithJSON:body completion:^(NSError *error) {
+            if (error) {
+                NSLog(@"Error dismissing alert: %@", error.localizedDescription);
+                success = NO;
+            }
+        }];
 
         // There is one alert workflow that is very problematic:
         //
@@ -279,25 +338,49 @@ typedef enum : NSUInteger {
     }
 }
 
-- (SpringBoardDismissAlertResult)dismissAlertByTappingButtonWithTitle:(NSString *)title {
-    @synchronized (self) {
-        XCUIElement *alert = [self queryForAlert];
+- (CGPoint)hitPointForAlertButton:(XCUIElement *)alertButton {
+    [alertButton resolve];
 
-        if (!alert) {
-            return SpringBoardDismissAlertNoAlert;
-        } else {
-            XCUIElement *button = alert.buttons[title];
-            [button resolve];
+    XCElementSnapshot *snapshot = alertButton.lastSnapshot;
 
-            if (!button.exists) {
-                return SpringBoardDismissAlertNoMatchingButton;
-            }
+    NSValue *hitPointValue = snapshot.suggestedHitpoints.firstObject;
 
-            [self tapAlertButton:button];
-
-            return SpringBoardDismissAlertDismissedAlert;
-        }
+    CGPoint hitPoint;
+    if (!hitPointValue) {
+        XCUICoordinate *coordinate;
+        coordinate = [alertButton coordinateWithNormalizedOffset:CGVectorMake(0.5, 0.5)];
+        hitPoint = coordinate.screenPoint;
+    } else {
+        hitPoint = hitPointValue.CGPointValue;
     }
+
+    return [self pointByTranslatingPoint:hitPoint];
+}
+
+- (CGPoint)pointByTranslatingPoint:(CGPoint)point {
+    CGPoint translated = point;
+    CGSize appSize = self.frame.size;
+    UIInterfaceOrientation orientation = self.interfaceOrientation;
+
+    switch (orientation) {
+        case UIInterfaceOrientationPortraitUpsideDown: {
+            translated = CGPointMake(appSize.width - point.x,
+                                     appSize.height - point.y);
+            break;
+        }
+        case UIInterfaceOrientationLandscapeLeft: {
+            translated = CGPointMake(appSize.height - point.y, point.x);
+            break;
+        }
+        case UIInterfaceOrientationLandscapeRight: {
+            translated = CGPointMake(point.y, appSize.width - point.x);
+            break;
+        }
+
+        default: { break; }
+    }
+
+    return translated;
 }
 
 @end
