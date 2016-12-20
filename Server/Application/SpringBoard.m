@@ -89,8 +89,9 @@ typedef enum : NSUInteger {
     @synchronized (self) {
         XCUIElement *alert = nil;
 
+        [self _waitForQuiescence];
+
         if([self UIApplication_isSpringBoardShowingAnAlert]) {
-            [self _waitForQuiescence];
 
             XCUIElementQuery *query = [self descendantsMatchingType:XCUIElementTypeAlert];
             NSArray <XCUIElement *> *elements = [query allElementsBoundByIndex];
