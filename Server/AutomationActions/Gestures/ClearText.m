@@ -130,26 +130,17 @@
     }
 
     for (NSUInteger index = 0; index < [string length]; index++) {
-        if (isArm64) {
-            [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
-                [[Testmanagerd get]
-                 _XCT_sendString:@"\b"
-                 maximumFrequency:CBX_DEFAULT_SEND_STRING_FREQUENCY
-                 completion:^(NSError *innerError) {
-                     *setToTrueWhenDone = YES;
-                     if (innerError) {
-                         @throw [CBXException withMessage:@"Error performing gesture"];
-                     }
-                 }];
-            }];
-        } else {
-            // Gestures need to be automatic - a gesture must complete before the next
-            // gesture started.  Depending on the internal implementation of typeText:,
-            // this should block other gestures.
-            @synchronized([Testmanagerd get]) {
-                [firstResponder typeText:@"\b"];
-            }
-        }
+        [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
+            [[Testmanagerd get]
+             _XCT_sendString:@"\b"
+             maximumFrequency:CBX_DEFAULT_SEND_STRING_FREQUENCY
+             completion:^(NSError *innerError) {
+                 *setToTrueWhenDone = YES;
+                 if (innerError) {
+                     @throw [CBXException withMessage:@"Error performing gesture"];
+                 }
+             }];
+        }];
     }
 }
 
