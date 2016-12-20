@@ -4,8 +4,7 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2013 by Steve Nygard.
 //
 
-//#import <XCTWebDriverAgentLib/CDStructures.h>
-
+#import "CDStructures.h"
 #import "XCDebugLogDelegate-Protocol.h"
 #import "XCTestDriverInterface-Protocol.h"
 #import "XCTestManager_TestsInterface-Protocol.h"
@@ -18,7 +17,7 @@
 {
     XCTestSuite *_currentTestSuite;
     XCTestConfiguration *_currentTestConfiguration;
-//    CDUnknownBlockType _completionHandler;
+    CDUnknownBlockType _completionHandler;
     NSXPCConnection *_managerConnection;
     BOOL _connectionInProgress;
     BOOL _waitingToStart;
@@ -49,14 +48,18 @@
 
 - (void)_XCT_receivedAccessibilityNotification:(int)arg1 withPayload:(id)arg2;
 - (void)_XCT_applicationWithBundleID:(id)arg1 didUpdatePID:(int)arg2 andState:(unsigned long long)arg3;
+- (id)_IDE_processWithToken:(id)arg1 exitedWithStatus:(id)arg2;
+- (id)_IDE_stopTrackingProcessWithToken:(id)arg1;
+- (id)_IDE_processWithBundleID:(id)arg1 path:(id)arg2 pid:(id)arg3 crashedUnderSymbol:(id)arg4;
 - (id)_IDE_startExecutingTestPlanWithProtocolVersion:(id)arg1;
-//- (void)runTestConfiguration:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
-//- (void)runTestSuite:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)runTestConfiguration:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)runTestSuite:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)_checkForTestManager;
 - (void)_connectToTestManager;
 - (void)_checkManagerDaemonStateAndConnectIfAvailable;
 - (void)_resetManagerConnection;
 - (void)_connectToIDEWithTransport:(id)arg1;
+- (BOOL)_preTestingInitialization;
 - (void)_runSuite;
 - (void)resumeAppSleep:(id)arg1;
 - (id)suspendAppSleep;

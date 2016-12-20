@@ -1,5 +1,6 @@
 #import "TextInputFirstResponderProvider.h"
 #import "XCUIElement.h"
+#import "XCUIElementQuery.h"
 #import "XCUIApplication.h"
 #import "Application.h"
 #import "JSONUtils.h"

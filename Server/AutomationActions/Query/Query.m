@@ -6,6 +6,7 @@
 #import "Application.h"
 #import "JSONUtils.h"
 #import "Query.h"
+#import "XCApplicationQuery.h"
 
 @implementation Query
 

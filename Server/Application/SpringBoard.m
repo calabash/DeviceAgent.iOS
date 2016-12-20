@@ -17,6 +17,7 @@
 #import "XCUIElement+WebDriverAttributes.h"
 #import "CBXException.h"
 #import <UIKit/UIKit.h>
+#import "XCApplicationQuery.h"
 
 typedef enum : NSUInteger {
     SpringBoardAlertHandlerIgnoringAlerts = 0,

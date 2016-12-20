@@ -10,6 +10,7 @@
 #import "XCAXClient_iOS.h"
 #import "XCUIElement.h"
 #import "JSONUtils.h"
+#import "XCApplicationQuery.h"
 
 @implementation Application (Queries)
 static NSArray <NSString *> *identifierProperties;
