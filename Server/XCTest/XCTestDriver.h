@@ -29,12 +29,12 @@
     DTXConnection *_IDEConnection;
     id <XCTestManager_IDEInterface> _IDEProxy;
     long long _IDEProtocolVersion;
-    unsigned long long _daemonProtocolVersion;
+    NSUInteger _daemonProtocolVersion;
     int _daemonAvailabilityToken;
     NSMutableArray *_debugMessageBuffer;
     int _debugMessageBufferOverflow;
 }
-@property unsigned long long daemonProtocolVersion; // @synthesize daemonProtocolVersion=_daemonProtocolVersion;
+@property NSUInteger daemonProtocolVersion; // @synthesize daemonProtocolVersion=_daemonProtocolVersion;
 @property BOOL hasIDEConnection; // @synthesize hasIDEConnection=_hasIDEConnection;
 @property BOOL waitingToStart; // @synthesize waitingToStart=_waitingToStart;
 @property long long IDEProtocolVersion; // @synthesize IDEProtocolVersion=_IDEProtocolVersion;
