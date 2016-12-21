@@ -8,11 +8,9 @@
  */
 
 #import "XCUIElement+WebDriverAttributes.h"
-
+#import "XCUIElement+FBIsVisible.h"
 #import <objc/runtime.h>
-
 #import "XCUIElement.h"
-
 #import "JSONUtils.h"
 
 #define FBTransferEmptyStringToNil(value) ([value isEqual:@""] ? nil : value)
@@ -79,12 +77,6 @@
 {
   return self.frame;
 }
-
-//TODO: necessary?
-//- (BOOL)isWDVisible
-//{
-//  return self.isFBVisible;
-//}
 
 - (BOOL)isWDEnabled
 {
