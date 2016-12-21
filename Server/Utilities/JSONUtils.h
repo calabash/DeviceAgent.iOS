@@ -7,11 +7,11 @@
  */
 @interface JSONUtils : NSObject
 /**
- Convert an object conforming to the FBElement protocol into JSON 
+ Convert an object conforming to the FBElement protocol into JSON
  that can be returned to the client.
- 
+
  Output format is currently:
- 
+
     {
         "type" : String,
         "label" : String,
@@ -29,14 +29,14 @@
         "test_id" : Number
     }
 
- @param snapshot XCUIElement or XCElementSnapshot to convert to JSON
+ @param snapshotOrElement XCUIElement or XCElementSnapshot to convert to JSON
  */
-+ (NSMutableDictionary *)snapshotToJSON:(NSObject<FBElement> *)snapshot;
++ (NSMutableDictionary *)snapshotOrElementToJSON:(NSObject<FBElement> *)snapshotOrElement;
 
 /**
- Convenience wrapper for snapshotToJSON:
- @param element XCUIElement to convert to JSON. 
- See snapshotToJSON:
+ Convenience wrapper for snapshotOrElementToJSON:
+ @param element XCUIElement to convert to JSON.
+ See snapshotOrElementToJSON:
  */
 + (NSMutableDictionary *)elementToJSON:(XCUIElement *)element;
 

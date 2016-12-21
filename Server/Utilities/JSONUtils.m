@@ -10,30 +10,28 @@
 static NSDictionary *elementTypeToString;
 static NSDictionary *typeStringToElementType;
 
-//TODO: apparenty this causes some lag... how to optimize?
-+ (NSMutableDictionary *)snapshotToJSON:(NSObject<FBElement> *)snapshot {
++ (NSMutableDictionary *)snapshotOrElementToJSON:(NSObject<FBElement> *)snapshotOrElement {
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
 
-    if ([snapshot isKindOfClass:[XCUIElement class]]) {
-        XCUIElement *el = (XCUIElement *)snapshot;
-        if (![el exists]) {
+    if ([snapshotOrElement isKindOfClass:[XCUIElement class]]) {
+        XCUIElement *element = (XCUIElement *)snapshotOrElement;
+        if (![element exists]) {
             return [@{} mutableCopy];
         }
-
     }
 
-    json[CBX_TYPE_KEY] = snapshot.wdType;
-    json[CBX_LABEL_KEY] = snapshot.wdLabel;
-    json[CBX_TITLE_KEY] = snapshot.wdTitle;
-    json[CBX_VALUE_KEY] = snapshot.wdValue;
-    json[CBX_PLACEHOLDER_KEY] = snapshot.wdPlaceholderValue;
-    json[CBX_RECT_KEY] = [self rectToJSON:snapshot.wdFrame];
-    json[CBX_IDENTIFIER_KEY] = snapshot.wdName;
-    json[CBX_ENABLED_KEY] = @(snapshot.wdEnabled);
+    json[CBX_TYPE_KEY] = snapshotOrElement.wdType;
+    json[CBX_LABEL_KEY] = snapshotOrElement.wdLabel;
+    json[CBX_TITLE_KEY] = snapshotOrElement.wdTitle;
+    json[CBX_VALUE_KEY] = snapshotOrElement.wdValue;
+    json[CBX_PLACEHOLDER_KEY] = snapshotOrElement.wdPlaceholderValue;
+    json[CBX_RECT_KEY] = [self rectToJSON:snapshotOrElement.wdFrame];
+    json[CBX_IDENTIFIER_KEY] = snapshotOrElement.wdName;
+    json[CBX_ENABLED_KEY] = @(snapshotOrElement.wdEnabled);
 
     BOOL visible;
     CGPoint hitPoint;
-    [snapshot getHitPoint:&hitPoint visibility:&visible];
+    [snapshotOrElement getHitPoint:&hitPoint visibility:&visible];
 
     json[CBX_HITABLE_KEY] = @(visible);
     json[CBX_HIT_POINT_KEY] = @{@"x" : @(hitPoint.x), @"y" : @(hitPoint.y)};
@@ -42,7 +40,7 @@ static NSDictionary *typeStringToElementType;
 }
 
 + (NSMutableDictionary *)elementToJSON:(XCUIElement *)element {
-    return [self snapshotToJSON:element];
+    return [self snapshotOrElementToJSON:element];
 }
 
 + (NSDictionary *)rectToJSON:(CGRect)rect {
