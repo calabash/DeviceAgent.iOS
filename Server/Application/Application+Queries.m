@@ -87,7 +87,7 @@ static NSArray <NSString *> *identifierProperties;
     NSPredicate *predicate = [NSPredicate predicateWithFormat:predString];
     XCUIElementQuery *query = [[[self currentApplication] descendantsMatchingType:XCUIElementTypeAny]
                                matchingPredicate:predicate];
-    
+
     return [query allElementsBoundByIndex];
 }
 
@@ -96,7 +96,7 @@ static NSArray <NSString *> *identifierProperties;
     NSArray *childElements = [self elementsWithAnyOfTheseProperties:properties
                                                        equalToValue:value];
     NSMutableArray *ret = [NSMutableArray array];
-    
+
     //TODO: Should we check the application itself?
     for (XCUIElement *element in childElements) {
         [ret addObject:[JSONUtils elementToJSON:element]];
@@ -107,7 +107,7 @@ static NSArray <NSString *> *identifierProperties;
 + (NSArray <NSDictionary *> *)jsonForElementsWithID:(NSString *)identifier {
     NSArray *elements = [self elementsWithIdentifier:identifier];
     NSMutableArray *ret = [NSMutableArray array];
-    
+
     //TODO: Should we check the application itself?
     for (XCUIElement *element in elements) {
         [ret addObject:[JSONUtils elementToJSON:element]];
@@ -118,7 +118,7 @@ static NSArray <NSString *> *identifierProperties;
 + (NSArray <NSDictionary *> *)jsonForElementsWithType:(NSString *)type {
     NSArray *elements = [self elementsWithType:type];
     NSMutableArray *ret = [NSMutableArray array];
-    
+
     //TODO: Should we check the application itself?
     for (XCUIElement *element in elements) {
         [ret addObject:[JSONUtils elementToJSON:element]];

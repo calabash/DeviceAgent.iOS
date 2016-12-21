@@ -25,9 +25,9 @@
                  QueryConfiguration *queryConfig = [QueryConfigurationFactory configWithJSON:body
                                                                                    validator:[Query validator]];
                  Query *query = [QueryFactory queryWithQueryConfiguration:queryConfig];
-                 
+
                  NSArray <XCUIElement *> *elements = [query execute];
-                 
+
                  /*
                     Format and return the results
                   */
@@ -58,19 +58,19 @@
                  NSString *identifier = request.params[CBX_IDENTIFIER_KEY];
                  [response respondWithJSON:[Application jsonForElementsWithID:identifier]];
              }],
-             
+
              [CBXRoute get:endpoint(@"/query/test_id/:test_id", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
                  NSNumber *identifier = @([request.params[CBX_TEST_ID_KEY] integerValue]);
                  XCUIElement *el = [Application cachedElementOrThrow:identifier];
                  [response respondWithJSON:[JSONUtils elementToJSON:el]];
              }],
-             
+
              [CBXRoute get:endpoint(@"/query/type/:type", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
                  NSString *type = request.params[CBX_TYPE_KEY];
                  [response respondWithJSON:[Application jsonForElementsWithType:type]];
              }],
-             
-             
+
+
              ];
 }
 @end
