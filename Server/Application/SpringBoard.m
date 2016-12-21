@@ -15,6 +15,7 @@
 #import "GestureFactory.h"
 #import "XCUIElement+WebDriverAttributes.h"
 #import "CBXException.h"
+#import <UIKit/UIKit.h>
 
 typedef enum : NSUInteger {
     SpringBoardAlertHandlerIgnoringAlerts = 0,
@@ -25,6 +26,7 @@ typedef enum : NSUInteger {
 
 @interface SpringBoard ()
 
+- (BOOL)UIApplication_isSpringBoardShowingAnAlert;
 - (BOOL)shouldDismissAlertsAutomatically;
 - (SpringBoardAlertHandlerResult)handleAlert;
 - (void)tapAlertButton:(XCUIElement *)button;
@@ -55,15 +57,48 @@ typedef enum : NSUInteger {
     return _springBoard;
 }
 
+- (BOOL)UIApplication_isSpringBoardShowingAnAlert {
+    SEL selector = NSSelectorFromString(@"_isSpringBoardShowingAnAlert");
+    if (![[UIApplication sharedApplication] respondsToSelector:selector]) {
+        NSLog(@"UIApplication does not respond to %@; returning YES to force XCUIElementQuery",
+              NSStringFromSelector(selector));
+        return YES;
+    }
+
+    NSMethodSignature *signature;
+    signature = [[UIApplication class] instanceMethodSignatureForSelector:selector];
+    NSInvocation *invocation;
+
+    invocation = [NSInvocation invocationWithMethodSignature:signature];
+    invocation.target = [UIApplication sharedApplication];
+    invocation.selector = selector;
+
+    [invocation invoke];
+
+    BOOL alertShowing = NO;
+    char ref;
+    [invocation getReturnValue:(void **) &ref];
+    if (ref == (BOOL)1) {
+        alertShowing = YES;
+    }
+
+    return alertShowing;
+}
+
 - (XCUIElement *)queryForAlert {
     @synchronized (self) {
         XCUIElement *alert = nil;
 
-        XCUIElementQuery *query = [self descendantsMatchingType:XCUIElementTypeAlert];
-        NSArray <XCUIElement *> *elements = [query allElementsBoundByIndex];
+        [self _waitForQuiescence];
 
-        if ([elements count] != 0) {
-            alert = elements[0];
+        if([self UIApplication_isSpringBoardShowingAnAlert]) {
+
+            XCUIElementQuery *query = [self descendantsMatchingType:XCUIElementTypeAlert];
+            NSArray <XCUIElement *> *elements = [query allElementsBoundByIndex];
+
+            if ([elements count] != 0) {
+                alert = elements[0];
+            }
         }
         return alert;
     }
