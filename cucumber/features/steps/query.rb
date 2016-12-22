@@ -146,9 +146,9 @@ end
 Then(/^I query for all visible elements using an empty hash$/) do
   elements = query({})
   if device_info["simulator"]
-    expect(elements.count).to be == 19
+    expect(elements.count).to be == 29
   else
-    expect(elements.count).to be == 20
+    expect(elements.count).to be == 30
   end
 end
 
