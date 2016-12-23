@@ -1,5 +1,5 @@
 #import <UIKit/UIKit.h>
 
-@interface TaoController : UIViewController
+@interface TaoController : UIViewController <UIScrollViewDelegate>
 
 @end

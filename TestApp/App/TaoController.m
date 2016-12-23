@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIView *twoFingerDoubleTap;
 @property (weak, nonatomic) IBOutlet UILabel *complexTouchesLabel;
 @property (weak, nonatomic) IBOutlet UIView *fourFingerTap;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -111,6 +112,13 @@
 
 - (BOOL)shouldAutorotate {
     return YES;
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)sender {
+    CGPoint offset = sender.contentOffset;
+    [sender setContentOffset:CGPointMake(0, offset.y)];
 }
 
 #pragma mark - View Lifecycle
