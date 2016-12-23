@@ -171,5 +171,5 @@ end
 
 Then(/^I ask for the tree representation of the view hierarchy$/) do
   elements = tree
-  expect(elements.count).to be == 9
+  expect(elements.count).to be == 8
 end

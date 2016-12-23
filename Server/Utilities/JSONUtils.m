@@ -24,6 +24,7 @@ static NSDictionary *unhitablePoint;
         }
 
     }
+
     json[CBX_TYPE_KEY] = snapshot.wdType;
     json[CBX_LABEL_KEY] = snapshot.wdLabel;
     json[CBX_TITLE_KEY] = snapshot.wdTitle;
@@ -32,7 +33,6 @@ static NSDictionary *unhitablePoint;
     json[CBX_RECT_KEY] = [self rectToJSON:snapshot.wdFrame];
     json[CBX_IDENTIFIER_KEY] = snapshot.wdName;
     json[CBX_ENABLED_KEY] = @(snapshot.wdEnabled);
-    json[CBX_TEST_ID] = [Application cacheElement:(XCUIElement *)snapshot];
 
     NSDictionary *visibilityInfo;
     if ([[snapshot class] isSubclassOfClass:[XCElementSnapshot class]]) {
