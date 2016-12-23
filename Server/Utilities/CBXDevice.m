@@ -3,6 +3,7 @@
 #import <sys/utsname.h>
 #import <arpa/inet.h>
 #import <ifaddrs.h>
+#import "XCUIDevice.h"
 
 NSString *const LPDeviceSimKeyModelIdentifier = @"SIMULATOR_MODEL_IDENTIFIER";
 NSString *const LPDeviceSimKeyVersionInfo = @"SIMULATOR_VERSION_INFO";
@@ -455,7 +456,20 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
     return [self.armVersion containsString:@"arm64"];
 }
 
+- (NSString *)stringRepresentationOfOrientation:(UIDeviceOrientation)orientation {
+    switch (orientation) {
+        case UIDeviceOrientationPortrait: { return @"portrait"; }
+        case UIDeviceOrientationPortraitUpsideDown: { return @"upside_down"; }
+        case UIDeviceOrientationLandscapeLeft: { return @"landscape_left"; }
+        case UIDeviceOrientationLandscapeRight: { return @"landscape_right"; }
+        case UIDeviceOrientationFaceUp: { return @"face_up"; }
+        case UIDeviceOrientationFaceDown: { return @"face_down"; }
+        default: { return @"unknown"; }
+    }
+}
+
 - (NSDictionary *)dictionaryRepresentation {
+    UIDeviceOrientation orientation = [[XCUIDevice sharedDevice] orientation];
     return
     @{
       @"simulator" : @([self isSimulator]),
@@ -475,7 +489,9 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
       @"name" : [self name],
       @"ios_version" : [self iOSVersion],
       @"physical_device_model_identifier" : [self physicalDeviceModelIdentifier],
-      @"arm_version" : [self armVersion]
+      @"arm_version" : [self armVersion],
+      @"orientation_numeric" : @(orientation),
+      @"orientation_string" : [self stringRepresentationOfOrientation:orientation]
       };
 }
 
