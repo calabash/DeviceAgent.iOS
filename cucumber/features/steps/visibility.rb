@@ -153,6 +153,7 @@ But(/^I can touch the mostly visible button using the view center$/) do
   mark = "If we can see most of you, we can touch you."
   wait_for_view({marked: mark})
 
+  wait_for_animations
   touch({marked: "OK"})
   wait_for_no_alert
 end
