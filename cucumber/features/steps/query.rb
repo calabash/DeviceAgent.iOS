@@ -144,29 +144,21 @@ Then(/^I can query for Japanese$/) do
 end
 
 Then(/^I query for all visible elements using an empty hash$/) do
-  elements = query({})
-  if device_info["simulator"]
-    expect(elements.count).to be == 29
-  else
-    expect(elements.count).to be == 30
-  end
+  elements = query_for_automatable_elements({})
+  # Results vary per iOS and across simulator and devices.
+  # If the @wildcard or @query Scenarios are in isolation, the element count
+  # is different than if the the entire test suite is run.
+  expect(elements.count).to be >= 21
+  expect(elements.count).to be <= 23
 end
 
 Then(/^I query for all elements using all$/) do
-  elements = query({all: true})
-  if device_info["simulator"]
-    # When the @wildcard or @query Scenarios are run in isolation, the element
-    # count is 35.  When run with the complete test suite, there is an extra
-    # Window and Other view.
-    expect(elements.count).to be >= 35
-    expect(elements.count).to be <= 37
-  else
-    # When the @wildcard or @query Scenarios are run in isolation, the element
-    # count is 36.  When run with the complete test suite, there is an extra
-    # Window and Other view.
-    expect(elements.count).to be >= 36
-    expect(elements.count).to be <= 38
-  end
+  elements = query_for_automatable_elements({all: true})
+  # Results vary per iOS and across simulator and devices.
+  # If the @wildcard or @query Scenarios are in isolation, the element count
+  # is different than if the the entire test suite is run.
+  expect(elements.count).to be >= 23
+  expect(elements.count).to be <= 25
 end
 
 Then(/^I ask for the tree representation of the view hierarchy$/) do
