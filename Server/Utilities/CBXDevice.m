@@ -26,7 +26,7 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
 - (CGFloat)scaleForMainScreen;
 - (CGFloat)heightForMainScreenBounds;
 - (NSString *)physicalDeviceModelIdentifier;
-- (NSString *)simulatorModelIdentfier;
+- (NSString *)simulatorModelIdentifier;
 - (NSString *)simulatorVersionInfo;
 - (BOOL)isLetterBox;
 
@@ -347,7 +347,7 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
     return _processEnvironment;
 }
 
-- (NSString *)simulatorModelIdentfier {
+- (NSString *)simulatorModelIdentifier {
     return [self.processEnvironment objectForKey:LPDeviceSimKeyModelIdentifier];
 }
 
@@ -385,7 +385,7 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
 - (NSString *)modelIdentifier {
     if (_modelIdentifier) { return _modelIdentifier; }
     if ([self isSimulator]) {
-        _modelIdentifier = [self simulatorModelIdentfier];
+        _modelIdentifier = [self simulatorModelIdentifier];
     } else {
         _modelIdentifier = [self physicalDeviceModelIdentifier];
     }
@@ -411,7 +411,7 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
 }
 
 - (BOOL)isSimulator {
-    return [self simulatorModelIdentfier] != nil;
+    return [self simulatorModelIdentifier] != nil;
 }
 
 - (BOOL)isPhysicalDevice {
