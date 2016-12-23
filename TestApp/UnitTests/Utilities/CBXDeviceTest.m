@@ -414,7 +414,7 @@ static NSString *const LPiPhone5sSimVersionInfo = @"CoreSimulator 110.4 - Device
 
 - (void)testDictionaryRepresentation {
     NSDictionary *dictionary = [self.device dictionaryRepresentation];
-    expect(dictionary.count).to.equal(18);
+    expect(dictionary.count).to.equal(20);
 }
 
 - (void)testInstructionSetMap {
