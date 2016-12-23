@@ -58,35 +58,35 @@
 - (void)handleTwoFingerTap:(UIGestureRecognizer *)recognizer {
     UIGestureRecognizerState state = [recognizer state];
     if (UIGestureRecognizerStateEnded == state) {
-       self.complexTouchesLabel.text = @"two-finger tap";
+        self.complexTouchesLabel.text = @"two-finger tap";
     }
 }
 
 - (void)handleThreeFingerTap:(UIGestureRecognizer *)recognizer {
     UIGestureRecognizerState state = [recognizer state];
     if (UIGestureRecognizerStateEnded == state) {
-       self.complexTouchesLabel.text = @"three-finger tap";
+        self.complexTouchesLabel.text = @"three-finger tap";
     }
 }
 
 - (void)handleFourFingerTap:(UIGestureRecognizer *)recognizer {
     UIGestureRecognizerState state = [recognizer state];
     if (UIGestureRecognizerStateEnded == state) {
-       self.complexTouchesLabel.text = @"four-finger tap";
+        self.complexTouchesLabel.text = @"four-finger tap";
     }
 }
 
 - (void)handleTwoFingerDoubleTap:(UIGestureRecognizer *)recognizer {
     UIGestureRecognizerState state = [recognizer state];
     if (UIGestureRecognizerStateEnded == state) {
-       self.complexTouchesLabel.text = @"two-finger double tap";
+        self.complexTouchesLabel.text = @"two-finger double tap";
     }
 }
 
 - (void)handleTwoFingerLongpress:(UIGestureRecognizer *)recognizer {
     UIGestureRecognizerState state = [recognizer state];
     if (UIGestureRecognizerStateEnded == state) {
-       self.complexTouchesLabel.text = @"two-finger long press";
+        self.complexTouchesLabel.text = @"two-finger long press";
     }
 }
 
@@ -148,22 +148,22 @@
 
     recognizer = [self tapRecognizerWithSelector:@selector(handleTwoFingerTap:)
                                             taps:1
-                                            touches:2];
+                                         touches:2];
     [self.twoFingerTap addGestureRecognizer:recognizer];
 
     recognizer = [self tapRecognizerWithSelector:@selector(handleThreeFingerTap:)
                                             taps:1
-                                            touches:3];
+                                         touches:3];
     [self.threeFingerTap addGestureRecognizer:recognizer];
 
     recognizer = [self tapRecognizerWithSelector:@selector(handleFourFingerTap:)
                                             taps:1
-                                            touches:4];
+                                         touches:4];
     [self.fourFingerTap addGestureRecognizer:recognizer];
 
     recognizer = [self tapRecognizerWithSelector:@selector(handleTwoFingerDoubleTap:)
                                             taps:2
-                                            touches:2];
+                                         touches:2];
     [self.twoFingerDoubleTap addGestureRecognizer:recognizer];
 
     UILongPressGestureRecognizer *lpRecognizer;
