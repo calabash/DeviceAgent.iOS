@@ -149,7 +149,7 @@ Then(/^I query for all visible elements using an empty hash$/) do
   # If the @wildcard or @query Scenarios are in isolation, the element count
   # is different than if the the entire test suite is run.
   expect(elements.count).to be >= 21
-  expect(elements.count).to be <= 23
+  expect(elements.count).to be <= 24
 end
 
 Then(/^I query for all elements using all$/) do
@@ -158,7 +158,7 @@ Then(/^I query for all elements using all$/) do
   # If the @wildcard or @query Scenarios are in isolation, the element count
   # is different than if the the entire test suite is run.
   expect(elements.count).to be >= 23
-  expect(elements.count).to be <= 25
+  expect(elements.count).to be <= 27
 end
 
 Then(/^I ask for the tree representation of the view hierarchy$/) do
