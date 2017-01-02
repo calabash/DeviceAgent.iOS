@@ -3,8 +3,7 @@
 #import "Testmanagerd.h"
 #import "ThreadUtils.h"
 #import "EnterText.h"
-#import "CBXDevice.h"
-#import "TextInputFirstResponderProvider.h"
+#import "CBXConstants.h"
 
 @implementation EnterText
 
@@ -29,26 +28,16 @@
     NSString *string = gestureConfig[CBX_STRING_KEY];
 
     __block NSError *outerError = nil;
-
-    if ([[CBXDevice sharedDevice] isArm64]) {
-        NSLog(@"Device has arm64 architecture: %@", [[CBXDevice sharedDevice] armVersion]);
-    } else {
-        NSLog(@"Device does not have arm64 architecture: %@",
-              [[CBXDevice sharedDevice] armVersion]);
-    }
     [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
         [[Testmanagerd get]
          _XCT_sendString:string
          maximumFrequency:CBX_DEFAULT_SEND_STRING_FREQUENCY
          completion:^(NSError *innerError) {
              outerError = innerError;
-             *setToTrueWhenDone = YES;
-             NSString *message;
-             message = [NSString stringWithFormat:@"Encountered an error typing text: %@",
-                        innerError];
              if (innerError) {
-                 @throw [CBXException withMessage:message];
+                 NSLog(@"Encountered error typing text: %@", innerError);
              }
+             *setToTrueWhenDone = YES;
          }];
     }];
 
