@@ -112,4 +112,11 @@ static float const CBX_FINGER_WIDTH = 78;
 static int const CBX_DEFAULT_NUM_FINGERS = 1;
 static int const CBX_DEFAULT_REPETITIONS = 1;
 
-static NSUInteger CBX_DEFAULT_SEND_STRING_FREQUENCY = 60; //FB uses 60
+
+/*
+ Seems to have no influence on the occurrence of "Timed out waiting for key event to
+ complete" errors.
+
+ WebDriverAgent uses 60
+*/
+static NSUInteger const CBX_DEFAULT_SEND_STRING_FREQUENCY = 60;
