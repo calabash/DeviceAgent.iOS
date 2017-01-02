@@ -27,6 +27,7 @@ When the home button is on the right, I can touch
 When the home button is on the left, I can touch
 When the home button is on the top, I can touch
 
+@long_press
 Scenario: Long press durations
 Given I am looking at the Tao tab
 Then I long press a little button for a short time
@@ -75,6 +76,7 @@ When the home button is on the top, I can two-finger double tap
 When the home button is on the bottom, I can two-finger double tap
 When the home button is on the left, I can two-finger double tap
 
+@long_press
 Scenario: Two finger long press in any orientation
 Given I am looking at the Tao tab
 When the home button is on the bottom, I can two-finger long press

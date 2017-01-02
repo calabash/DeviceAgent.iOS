@@ -38,8 +38,8 @@ static NSArray <NSString *> *identifierProperties;
 }
 
 + (NSDictionary *)snapshotTree:(XCElementSnapshot *)snapshot {
-    NSMutableDictionary *json = [JSONUtils snapshotToJSON:snapshot];
-    
+    NSMutableDictionary *json = [JSONUtils snapshotOrElementToJSON:snapshot];
+
     if (snapshot.children.count) {
         NSMutableArray *children = [NSMutableArray array];
         for (XCElementSnapshot *child in snapshot.children) {

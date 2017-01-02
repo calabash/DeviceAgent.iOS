@@ -2,6 +2,24 @@
 module TestApp
   module Visibility
 
+    def element_has_an_automation_property?(element)
+      type = element["type"]
+
+      return true if type != "Window" && type != "Other"
+
+      ["id", "label", "title", "value"].any? { |key| element[key] }
+    end
+
+    def automatable_elements(elements)
+      elements.select { |element| element_has_an_automation_property?(element) }
+    end
+
+    # Exploring this as an option for the clients.  There are many elements
+    # that are not interesting at all for automation.
+    def query_for_automatable_elements(uiquery)
+      sleep(1.0)
+      automatable_elements(query(uiquery))
+    end
   end
 end
 
@@ -153,6 +171,7 @@ But(/^I can touch the mostly visible button using the view center$/) do
   mark = "If we can see most of you, we can touch you."
   wait_for_view({marked: mark})
 
+  wait_for_animations
   touch({marked: "OK"})
   wait_for_no_alert
 end

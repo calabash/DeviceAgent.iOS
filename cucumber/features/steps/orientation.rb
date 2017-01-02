@@ -42,6 +42,15 @@ Expected '#{position}' to be [:top, :up, :bottom, :down, :left, :right]
 ]
       end
     end
+
+    def landscape?
+      !portrait?
+    end
+
+    def portrait?
+      device_orientation = device_info["orientation_string"]
+      device_orientation == "portrait" || device_orientation == "upside_down"
+    end
   end
 end
 

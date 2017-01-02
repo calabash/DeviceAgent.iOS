@@ -1,57 +1,46 @@
 
 #import "JSONUtils.h"
-#import "XCElementSnapshot.h"
 #import "XCElementSnapshot-Hitpoint.h"
 #import "InvalidArgumentException.h"
 #import "Application.h"
 #import "CBXConstants.h"
-#import "XCUICoordinate.h"
 
 @implementation JSONUtils
 
 static NSDictionary *elementTypeToString;
 static NSDictionary *typeStringToElementType;
-static NSDictionary *unhitablePoint;
 
-//TODO: apparenty this causes some lag... how to optimize?
-+ (NSMutableDictionary *)snapshotToJSON:(NSObject<FBElement> *)snapshot {
++ (NSMutableDictionary *)snapshotOrElementToJSON:(NSObject<FBElement> *)snapshotOrElement {
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
 
-    if ([snapshot isKindOfClass:[XCUIElement class]]) {
-        XCUIElement *el = (XCUIElement *)snapshot;
-        if (![el exists]) {
+    if ([snapshotOrElement isKindOfClass:[XCUIElement class]]) {
+        XCUIElement *element = (XCUIElement *)snapshotOrElement;
+        if (![element exists]) {
             return [@{} mutableCopy];
         }
-
     }
 
-    json[CBX_TYPE_KEY] = snapshot.wdType;
-    json[CBX_LABEL_KEY] = snapshot.wdLabel;
-    json[CBX_TITLE_KEY] = snapshot.wdTitle;
-    json[CBX_VALUE_KEY] = snapshot.wdValue;
-    json[CBX_PLACEHOLDER_KEY] = snapshot.wdPlaceholderValue;
-    json[CBX_RECT_KEY] = [self rectToJSON:snapshot.wdFrame];
-    json[CBX_IDENTIFIER_KEY] = snapshot.wdName;
-    json[CBX_ENABLED_KEY] = @(snapshot.wdEnabled);
+    json[CBX_TYPE_KEY] = snapshotOrElement.wdType;
+    json[CBX_LABEL_KEY] = snapshotOrElement.wdLabel;
+    json[CBX_TITLE_KEY] = snapshotOrElement.wdTitle;
+    json[CBX_VALUE_KEY] = snapshotOrElement.wdValue;
+    json[CBX_PLACEHOLDER_KEY] = snapshotOrElement.wdPlaceholderValue;
+    json[CBX_RECT_KEY] = [self rectToJSON:snapshotOrElement.wdFrame];
+    json[CBX_IDENTIFIER_KEY] = snapshotOrElement.wdName;
+    json[CBX_ENABLED_KEY] = @(snapshotOrElement.wdEnabled);
 
-    NSDictionary *visibilityInfo;
-    if ([[snapshot class] isSubclassOfClass:[XCElementSnapshot class]]) {
-        visibilityInfo = [JSONUtils visibilityInfoWithSnapshot:(XCElementSnapshot *)snapshot];
-    } else if ([[snapshot class] isSubclassOfClass:[XCUIElement class]]) {
-        visibilityInfo = [JSONUtils visibilityInfoWithElement:(XCUIElement *)snapshot];
-    } else {
-        visibilityInfo = @{ CBX_HITABLE_KEY : @(NO),
-                            CBX_HIT_POINT_KEY : unhitablePoint };
-    }
+    BOOL visible;
+    CGPoint hitPoint;
+    [snapshotOrElement getHitPoint:&hitPoint visibility:&visible];
 
-    json[CBX_HITABLE_KEY] = visibilityInfo[CBX_HITABLE_KEY];
-    json[CBX_HIT_POINT_KEY] = visibilityInfo[CBX_HIT_POINT_KEY];
+    json[CBX_HITABLE_KEY] = @(visible);
+    json[CBX_HIT_POINT_KEY] = @{@"x" : @(hitPoint.x), @"y" : @(hitPoint.y)};
 
     return json;
 }
 
 + (NSMutableDictionary *)elementToJSON:(XCUIElement *)element {
-    return [self snapshotToJSON:(XCElementSnapshot *)element];
+    return [self snapshotOrElementToJSON:element];
 }
 
 + (NSDictionary *)rectToJSON:(CGRect)rect {
@@ -61,55 +50,6 @@ static NSDictionary *unhitablePoint;
              CBX_HEIGHT_KEY : @(rect.size.height),
              CBX_WIDTH_KEY : @(rect.size.width)
              };
-}
-
-+ (NSDictionary *)visibilityInfoWithElement:(XCUIElement *)element {
-    return @{ CBX_HITABLE_KEY : @([JSONUtils elementHitable:element]),
-             CBX_HIT_POINT_KEY : [JSONUtils elementHitPointToJSON:element] };
-}
-
-+ (NSDictionary *)visibilityInfoWithSnapshot:(XCElementSnapshot *)snapshot {
-    if ([snapshot respondsToSelector:@selector(hitPoint)]) {
-        CGPoint point = [snapshot hitPoint];
-
-        id value = [snapshot hitTest:point];
-        BOOL hitable = (value && value == snapshot);
-
-        return @{ CBX_HITABLE_KEY : @(hitable),
-                  CBX_HIT_POINT_KEY : @{ @"x" : @(point.x), @"y": @(point.y) } };
-    } else {
-        return @{ CBX_HITABLE_KEY : @(NO),
-                  CBX_HIT_POINT_KEY : unhitablePoint };
-    }
-}
-
-+ (BOOL)elementHitable:(XCUIElement *)element {
-    if (![element respondsToSelector:@selector(isHittable)]) {
-        return NO;
-    } else {
-        return [element isHittable];
-    }
-}
-
-+ (NSDictionary *)elementHitPointToJSON:(XCUIElement *)element {
-    id hitPoint = nil;
-    XCUICoordinate *coordinate = nil;
-    NSDictionary *dictionary = nil;
-    if ([element respondsToSelector:@selector(hitPointCoordinate)]) {
-        hitPoint = [element hitPointCoordinate];
-        if (hitPoint) {
-            if ([hitPoint respondsToSelector:@selector(screenPoint)]) {
-
-                coordinate = (XCUICoordinate *)hitPoint;
-                CGPoint point = [coordinate screenPoint];
-                dictionary = @{ @"x" : @(point.x), @"y": @(point.y) };
-            }
-        }
-    }
-
-    if (!dictionary) { dictionary = unhitablePoint; }
-
-    return dictionary;
 }
 
 + (XCUIElementType)elementTypeForString:(NSString *)typeString {
@@ -264,8 +204,6 @@ static NSDictionary *unhitablePoint;
             _typeStringToElementType[[elementTypeToString[type] lowercaseString]] = type;
         }
         typeStringToElementType = _typeStringToElementType;
-
-        unhitablePoint = @{ @"x" : @(-1), @"y" : @(-1) };
     });
 }
 @end
