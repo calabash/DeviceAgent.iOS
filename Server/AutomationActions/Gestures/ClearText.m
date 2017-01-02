@@ -3,7 +3,6 @@
 #import "TextInputFirstResponderProvider.h"
 #import "Testmanagerd.h"
 #import "ThreadUtils.h"
-#import "CBXDevice.h"
 #import "XCUIElement.h"
 #import "XCElementSnapshot.h"
 #import "XCUIElement+WebDriverAttributes.h"
@@ -43,42 +42,49 @@
     XCUIElement *firstResponder = [[ClearText shared] firstResponder];
 
     if (!firstResponder) {
-        @throw [CBXException withMessage:@"Can not clear text: no element has focus"];
+        NSString *message = @"Can not clear text: no element has focus";
+        NSError *error = [NSError errorWithDomain:CBXWebServerErrorDomain
+                                             code:1
+                                         userInfo:@{NSLocalizedDescriptionKey : message}];
+        completion(error);
+        return nil;
     }
 
     NSString *string = firstResponder.value;
 
     if (!string || [string length] == 0) {
-        completion(nil);
-        return nil;
-    } else {
-        XCUIElement *deleteKey = [[ClearText shared] deleteKey];
-        [deleteKey resolve];
-
-        if (deleteKey && deleteKey.exists) {
-            [ClearText tapDeleteKeyToDeleteString:string
-                                        deleteKey:deleteKey];
-        } else {
-            [ClearText typeDeleteCharacterToDeleteString:string
-                                          firstResponder:(XCUIElement *)firstResponder];
-        }
-
-        if (deleteKey == nil || !deleteKey.exists) {
-            for (NSUInteger index = 0; index < [string length]; index++) {
-
-            }
-        } else {
-        }
-
+        NSLog(@"There is no text in the element with keyboard focus %@",
+              [JSONUtils snapshotOrElementToJSON:firstResponder]);
         completion(nil);
         return nil;
     }
+
+    XCUIElement *deleteKey = [[ClearText shared] deleteKey];
+
+    NSError *error = nil;
+    BOOL success = NO;
+    if (deleteKey && deleteKey.exists) {
+        success = [ClearText tapDeleteKeyToDeleteString:string
+                                              deleteKey:deleteKey
+                                                  error:&error];
+    } else {
+        success = [ClearText typeDeleteCharacterToDeleteString:string
+                                                         error:&error];
+    }
+
+    if (success) {
+        NSLog(@"Failed to clear text: %@", error);
+    }
+
+    completion(error);
+    return nil;
 }
 
-+ (void)tapDeleteKeyToDeleteString:(NSString *)string
-                         deleteKey:(XCUIElement *)deleteKey {
++ (BOOL)tapDeleteKeyToDeleteString:(NSString *)string
+                         deleteKey:(XCUIElement *)deleteKey
+                             error:(NSError **)error {
     NSLog(@"Clearing text with by tapping the delete key");
-    // There are cases where the deleteKey does not respond to wdFrame.
+
     CGRect frame;
     if (![deleteKey respondsToSelector:@selector(wdFrame)]) {
         frame = [deleteKey frame];
@@ -89,9 +95,13 @@
     // There are cases where we cannot find a hit point.
     if (frame.origin.x <= 0.0 || frame.origin.y <= 0.0) {
         NSString *message;
-        message = [NSString stringWithFormat:@"Keyboard delete key did not have a valid"
-                   "hit point: %@", NSStringFromCGRect(frame)];
-        @throw [CBXException withMessage:message];
+        message = [NSString stringWithFormat:@"Keyboard delete key did not have a valid "
+                   "hit point: %@",
+                   NSStringFromCGRect(frame)];
+        *error = [NSError errorWithDomain:CBXWebServerErrorDomain
+                                     code:1
+                                 userInfo:@{NSLocalizedDescriptionKey : message }];
+        return NO;
     }
 
     CGFloat x = CGRectGetMinX(frame) + (CGRectGetWidth(frame)/2.0);
@@ -104,44 +114,57 @@
       @"specifiers" : @{@"coordinate" : @{ @"x" : @(x), @"y" : @(y)}}
       };
 
-    CompletionBlock completion = ^(NSError *error) {
-        if (error) {
-            NSString *message = [NSString stringWithFormat:@"Encountered an"
-            " error tapping the keyboard delete key: %@ for element %@",
-                                 error, deleteKey];
-            @throw [CBXException withMessage:message];
-        }
-    };
+    __block NSError *outerError = nil;
+    BOOL success = YES;
     for (NSUInteger index = 0; index < [string length]; index++) {
         [GestureFactory executeGestureWithJSON:body
-                                    completion:completion];
+                                    completion:^(NSError *innerError) {
+                                        outerError = innerError;
+                                    }];
+        if (outerError) {
+            NSLog(@"Encountered an error touching the keyboard delete key: %@", outerError);
+            NSLog(@"Error occurred on the %@ tap of %@ required taps", @(index + 1),
+                  @([string length]));
+            NSLog(@"Delete key: %@", [JSONUtils snapshotOrElementToJSON:deleteKey]);
+            success = NO;
+            break;
+        }
     }
+
+    if (error) { *error = outerError; }
+    return success;
 }
 
-+ (void)typeDeleteCharacterToDeleteString:(NSString *)string
-                           firstResponder:(XCUIElement *)firstResponder {
++ (BOOL)typeDeleteCharacterToDeleteString:(NSString *)string
+                                    error:(NSError **)error {
     NSLog(@"Clearing text by typing the delete character");
-    BOOL isArm64 = [[CBXDevice sharedDevice] isArm64];
-    if (isArm64) {
-        NSLog(@"Device has arm64 architecture: %@", [[CBXDevice sharedDevice] armVersion]);
-    } else {
-        NSLog(@"Device does not have arm64 architecture: %@",
-              [[CBXDevice sharedDevice] armVersion]);
-    }
 
+    BOOL success = YES;
+    __block NSError *outerError = nil;
     for (NSUInteger index = 0; index < [string length]; index++) {
         [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
             [[Testmanagerd get]
-             _XCT_sendString:@"\b"
+             _XCT_sendString:string
              maximumFrequency:CBX_DEFAULT_SEND_STRING_FREQUENCY
              completion:^(NSError *innerError) {
-                 *setToTrueWhenDone = YES;
+                 outerError = innerError;
                  if (innerError) {
-                     @throw [CBXException withMessage:@"Error performing gesture"];
+                     NSLog(@"Encountered error typing text: %@", innerError);
                  }
+                 *setToTrueWhenDone = YES;
              }];
         }];
+
+        if (outerError) {
+            NSLog(@"Error occurred on the %@ character of %@ required characters",
+                  @(index + 1), @([string length]));
+            success = NO;
+            break;
+        }
     }
+
+    if (error) { *error = outerError; }
+    return success;
 }
 
 - (NSPredicate *)deleteKeyPredicate {
@@ -166,18 +189,23 @@
     XCUIElementQuery *query = [application descendantsMatchingType:XCUIElementTypeKey];
     XCUIElementQuery *matching = [query matchingPredicate:[self deleteKeyPredicate]];
     NSArray <XCUIElement *> *elements = [matching allElementsBoundByIndex];
+
     if ([elements count] == 0) {
         NSLog(@"Expected 1 element to match type 'Key' and id 'delete', found none");
         return nil;
-    } else if (elements.firstObject == nil) {
-        return nil;
-    } else if ([elements count] != 1) {
+    }
+
+    if ([elements count] != 1) {
         NSLog(@"Expected 1 element to match type 'Key' and id 'delete', found %@",
               @([elements count]));
-        return elements[0];
-    } else {
-        return elements[0];
     }
+    XCUIElement *deleteKey = elements[0];
+
+    if (!deleteKey.lastSnapshot) {
+        [deleteKey resolve];
+    }
+
+    return deleteKey;
 }
 
 - (XCUIElement *)firstResponder {
