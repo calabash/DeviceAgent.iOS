@@ -144,7 +144,7 @@
     for (NSUInteger index = 0; index < [string length]; index++) {
         [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
             [[Testmanagerd get]
-             _XCT_sendString:string
+             _XCT_sendString:@"\b"
              maximumFrequency:CBX_DEFAULT_SEND_STRING_FREQUENCY
              completion:^(NSError *innerError) {
                  outerError = innerError;
