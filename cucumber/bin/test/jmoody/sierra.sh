@@ -126,10 +126,10 @@ if [ $TEST_DEVICE -eq 1 ]; then
   done
 fi
 
-# Xcode 8.2
-export DEVELOPER_DIR=/Xcode/8.2/Xcode.app/Contents/Developer
+# Xcode 8.2.1
+export DEVELOPER_DIR=/Xcode/8.2.1/Xcode.app/Contents/Developer
 
-banner "Xcode 8.2"
+banner "Xcode 8.2.1"
 xcrun xcodebuild -version
 
 if [ $TEST_SIM -eq 1 ]; then
@@ -141,11 +141,11 @@ if [ $TEST_SIM -eq 1 ]; then
     bundle exec cucumber ${CUCUMBER_ARGS}
 
   info "iOS 10.0 Simlator"
-  DEVICE_TARGET=6DD279B3-7FED-4902-96F4-618D55540ADC \
+  DEVICE_TARGET=B6D21623-32F6-44F5-90ED-7E520DC94A69 \
     bundle exec cucumber ${CUCUMBER_ARGS}
 
   info "iOS 9.3 Simulator"
-  DEVICE_TARGET=B6D21623-32F6-44F5-90ED-7E520DC94A69 \
+  DEVICE_TARGET=6DD279B3-7FED-4902-96F4-618D55540ADC \
     bundle exec cucumber ${CUCUMBER_ARGS}
 
   info "iOS 9.3 Simulator iPhone 5c"
@@ -166,7 +166,7 @@ if [ $TEST_SIM -eq 1 ]; then
 fi
 
 if [ $TEST_DEVICE -eq 1 ]; then
-  declare -a devices=("mercury" "wolf" "uranus" "pegasi" "denis" "hat")
+  declare -a devices=("mercury" "wolf" "uranus" "pegasi" "denis")
 
   for device in "${devices[@]}"
   do
