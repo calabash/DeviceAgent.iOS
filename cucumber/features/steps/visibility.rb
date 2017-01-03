@@ -29,7 +29,7 @@ Then(/^the tab bar is visible and hitable$/) do
   element = query({type: "TabBar", all: true}).first
   expect(element).to be_truthy
   # Just print for now; we need more information.
-  puts "TabBar hitable: #{element["hitable"]}"
+  log_inline("TabBar hitable: #{element["hitable"]}")
   # expect(element["hitable"]).to be == true
 end
 
@@ -37,7 +37,7 @@ Then(/^the status bar is visible, but not hitable$/) do
   element = query({type: "StatusBar", all: true}).first
   expect(element).to be_truthy
   # Just print for now; we need more information.
-  puts "TabBar hitable: #{element["hitable"]}"
+  log_inline("TabBar hitable: #{element["hitable"]}")
   # expect(element["hitable"]).to be == true
 end
 

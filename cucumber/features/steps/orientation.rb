@@ -16,9 +16,7 @@ module UnitTestApp
       orientation = rotate_home_button_to(symbol)
 
       if [:top, :up].include?(symbol) && !upside_down_supported?
-        message = "Upside down orientation is not supported iPhone 6*"
-        colored = RunLoop::Color.blue(message)
-        $stdout.puts("    #{colored}")
+        log_inline("Upside down orientation is not supported iPhone 6*")
       else
         expected = expected_position(position)
         expect(orientation).to be == expected
