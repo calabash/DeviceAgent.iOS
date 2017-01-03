@@ -262,7 +262,7 @@ Then(/^I enter my password for authentication$/) do
 end
 
 Then(/^I submit my credentials for authentication$/) do
-  4.times { wait_for_animations }
+  wait_for_animations
   touch({marked: "Submit"})
   wait_for_animations
 

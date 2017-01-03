@@ -231,6 +231,9 @@ And(/^this causes the Off Screen Touch alert to show$/) do
   mark = "Off Screen Touch!?!"
   wait_for_view({marked: mark})
 
+  # Alert subviews are visible before they are touchable.
+  sleep(1.0)
+
   touch({marked: "OK"})
   wait_for_no_alert
 end
