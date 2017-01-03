@@ -209,9 +209,7 @@ end
 
 And(/^I can dismiss the Text View keyboard$/) do
   touch({marked: "dismiss text view keyboard"})
-  wait_for_animations
-
-  expect(keyboard_visible?).to be_falsey
+  wait_for_no_keyboard
 end
 
 And(/^I can select all the text in the Text View$/) do
