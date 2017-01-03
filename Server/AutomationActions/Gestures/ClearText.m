@@ -72,7 +72,7 @@
                                                          error:&error];
     }
 
-    if (success) {
+    if (!success) {
         NSLog(@"Failed to clear text: %@", error);
     }
 
