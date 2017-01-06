@@ -118,5 +118,9 @@ static int const CBX_DEFAULT_REPETITIONS = 1;
  complete" errors.
 
  WebDriverAgent uses 60
-*/
+
+ Xcode 8.2.1 / Sierra against i386 and x86_64 simulators with XCUITest typeText in a
+ UITextField, found ~12 characters/second over 100 runs on a UUID string with 59
+ characters.
+ */
 static NSUInteger const CBX_DEFAULT_SEND_STRING_FREQUENCY = 60;
