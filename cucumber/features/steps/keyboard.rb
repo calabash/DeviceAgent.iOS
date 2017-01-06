@@ -96,6 +96,7 @@ World(DeviceAgent::Keyboard)
 
 And(/^I am looking at the Text Input page$/) do
   touch_tab("Misc")
+  wait_for_animations
   touch({marked: "text input row"})
   wait_for_view({marked: "text input page"})
   wait_for_animations
@@ -209,9 +210,7 @@ end
 
 And(/^I can dismiss the Text View keyboard$/) do
   touch({marked: "dismiss text view keyboard"})
-  wait_for_animations
-
-  expect(keyboard_visible?).to be_falsey
+  wait_for_no_keyboard
 end
 
 And(/^I can select all the text in the Text View$/) do
@@ -259,10 +258,13 @@ Then(/^I enter my password for authentication$/) do
   touch({marked: "Password"})
   wait_for_keyboard
   enter_text("pa$$w0rd")
+  wait_for_animations
 end
 
 Then(/^I submit my credentials for authentication$/) do
+  wait_for_animations
   touch({marked: "Submit"})
+  wait_for_animations
 
   wait_for_text_in_view("clever-user pa$$w0rd", {marked: "text delegate"})
 end

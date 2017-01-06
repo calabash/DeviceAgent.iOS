@@ -5,33 +5,18 @@
 //
 
 #import <CoreGraphics/CoreGraphics.h>
-#import "XCElementSnapshot.h"
+
 @class NSArray, NSDictionary, NSNumber, NSString, NSUUID, XCAccessibilityElement, XCDeviceEvent, XCSynthesizedEventRecord, XCTouchGesture;
 
-
 @protocol XCTestManager_ManagerInterface
-
-/*
-    Raw Gestures
- */
-
-//Older protocol versions
-- (void)_XCT_performTouchGesture:(XCTouchGesture *)arg1 completion:(void (^)(NSError *))arg2;
-//Newer protocol versions
-- (void)_XCT_synthesizeEvent:(XCSynthesizedEventRecord *)arg1 completion:(void (^)(NSError *))arg2;
-
-
+- (void)_XCT_loadAccessibilityWithTimeout:(double)arg1 reply:(void (^)(BOOL, NSError *))arg2;
+- (void)_XCT_setAXTimeout:(double)arg1 reply:(void (^)(int))arg2;
 - (void)_XCT_requestScreenshotWithReply:(void (^)(NSData *, NSError *))arg1;
-//No longer used in iOS10?
-//- (void)_XCT_sendString:(NSString *)arg1 completion:(void (^)(NSError *))arg2;
-- (void)_XCT_sendString:(NSString *)arg1 maximumFrequency:(unsigned long long)arg2 completion:(void (^)(NSError *))arg3;
-
+- (void)_XCT_sendString:(NSString *)arg1 maximumFrequency:(NSUInteger)arg2 completion:(void (^)(NSError *))arg3;
 - (void)_XCT_updateDeviceOrientation:(long long)arg1 completion:(void (^)(NSError *))arg2;
-
 - (void)_XCT_performDeviceEvent:(XCDeviceEvent *)arg1 completion:(void (^)(NSError *))arg2;
-
-- (void)_XCT_requestElementAtPoint:(CGPoint)arg1 reply:(void (^)(XCAccessibilityElement *, NSError *))arg2;
-
+- (void)_XCT_synthesizeEvent:(XCSynthesizedEventRecord *)arg1 completion:(void (^)(NSError *))arg2;
+- (void)_XCT_requestElementAtPoint:(struct CGPoint)arg1 reply:(void (^)(XCAccessibilityElement *, NSError *))arg2;
 - (void)_XCT_fetchParameterizedAttributeForElement:(XCAccessibilityElement *)arg1 attributes:(NSNumber *)arg2 parameter:(id)arg3 reply:(void (^)(id, NSError *))arg4;
 - (void)_XCT_fetchAttributesForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 reply:(void (^)(NSDictionary *, NSError *))arg3;
 - (void)_XCT_snapshotForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 parameters:(NSDictionary *)arg3 reply:(void (^)(XCElementSnapshot *, NSError *))arg4;
@@ -41,6 +26,7 @@
 - (void)_XCT_registerForAccessibilityNotification:(int)arg1 reply:(void (^)(NSNumber *, NSError *))arg2;
 - (void)_XCT_launchApplicationWithBundleID:(NSString *)arg1 arguments:(NSArray *)arg2 environment:(NSDictionary *)arg3 completion:(void (^)(NSError *))arg4;
 - (void)_XCT_startMonitoringApplicationWithBundleID:(NSString *)arg1;
+- (void)_XCT_requestBackgroundAssertionForPID:(int)arg1 reply:(void (^)(BOOL))arg2;
 - (void)_XCT_requestBackgroundAssertionWithReply:(void (^)(void))arg1;
 - (void)_XCT_requestSocketForSessionIdentifier:(NSUUID *)arg1 reply:(void (^)(NSFileHandle *))arg2;
 - (void)_XCT_exchangeProtocolVersion:(unsigned long long)arg1 reply:(void (^)(unsigned long long))arg2;

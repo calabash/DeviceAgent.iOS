@@ -156,6 +156,10 @@ module DeviceAgent
       Automator.client.wait_for_keyboard
     end
 
+    def wait_for_no_keyboard
+      Automator.client.wait_for_no_keyboard
+    end
+
     def wait_for_alert
       Automator.client.wait_for_alert
     end
