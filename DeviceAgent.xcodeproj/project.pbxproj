@@ -301,6 +301,7 @@
 		F57140091E2602C7003CF20C /* CBXWaiter.m in Sources */ = {isa = PBXBuildFile; fileRef = F57140071E2602C7003CF20C /* CBXWaiter.m */; };
 		F571400A1E2602C7003CF20C /* CBXWaiter.m in Sources */ = {isa = PBXBuildFile; fileRef = F57140071E2602C7003CF20C /* CBXWaiter.m */; };
 		F57287491D747E0800C65208 /* AppStub.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F57287481D747E0800C65208 /* AppStub.xcassets */; };
+		F57F079E1E23CD35005EF2B4 /* EnterTextTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F57F079D1E23CD35005EF2B4 /* EnterTextTest.m */; };
 		F5870B3F1CF0BEFF00B3376C /* CBXTouchEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = F5870B3B1CF0BEFF00B3376C /* CBXTouchEvent.h */; };
 		F5870B401CF0BEFF00B3376C /* CBXTouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F5870B3C1CF0BEFF00B3376C /* CBXTouchEvent.m */; };
 		F5870B411CF0BEFF00B3376C /* CBXTouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F5870B3C1CF0BEFF00B3376C /* CBXTouchEvent.m */; };
@@ -831,6 +832,7 @@
 		F57140061E2602C7003CF20C /* CBXWaiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXWaiter.h; sourceTree = "<group>"; };
 		F57140071E2602C7003CF20C /* CBXWaiter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXWaiter.m; sourceTree = "<group>"; };
 		F57287481D747E0800C65208 /* AppStub.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppStub.xcassets; sourceTree = "<group>"; };
+		F57F079D1E23CD35005EF2B4 /* EnterTextTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterTextTest.m; sourceTree = "<group>"; };
 		F5870B3B1CF0BEFF00B3376C /* CBXTouchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXTouchEvent.h; sourceTree = "<group>"; };
 		F5870B3C1CF0BEFF00B3376C /* CBXTouchEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = CBXTouchEvent.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F5870B3D1CF0BEFF00B3376C /* TouchPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchPath.h; sourceTree = "<group>"; };
@@ -1850,6 +1852,7 @@
 				F58D27E51D4F947F000FF6C0 /* Factory */,
 				F58D27E71D4F947F000FF6C0 /* TouchTest.m */,
 				F52C9D861DA7E60300DAFC75 /* DragTest.m */,
+				F57F079D1E23CD35005EF2B4 /* EnterTextTest.m */,
 			);
 			path = Gestures;
 			sourceTree = "<group>";
@@ -2783,6 +2786,7 @@
 				F5041F4B1E092D2A000B3E3E /* XCUIElement+FBIsVisible.m in Sources */,
 				F5E663221D74958300068CE9 /* SpringBoard.m in Sources */,
 				899696DB1CB45FFC00BB42E2 /* ActionConfiguration.m in Sources */,
+				F57F079E1E23CD35005EF2B4 /* EnterTextTest.m in Sources */,
 				F5B0A1C11CAD4E4600E056CE /* QueryRoutes.m in Sources */,
 				89F6BF921CBEB5AD0088269C /* GeometryUtils.m in Sources */,
 				F55B31C71CBE6EEF00DFB13C /* TwoFingerTap.m in Sources */,

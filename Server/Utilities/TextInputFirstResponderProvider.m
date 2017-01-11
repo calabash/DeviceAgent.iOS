@@ -2,6 +2,7 @@
 #import "XCUIElement.h"
 #import "XCUIElementQuery.h"
 #import "XCUIApplication.h"
+#import "XCUIApplication+DeviceAgentAdditions.h"
 #import "Application.h"
 #import "JSONUtils.h"
 #import "CBXConstants.h"
@@ -33,6 +34,8 @@
 
 - (XCUIElement *)firstResponder {
     XCUIApplication *application = [Application currentApplication];
+    [application cbx_resolvedSnapshot];
+
     NSPredicate *predicate = self.predicate;
     XCUIElement *firstResponder = nil;
     for (NSNumber *number in self.elementTypes) {
