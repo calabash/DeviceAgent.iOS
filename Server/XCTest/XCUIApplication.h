@@ -29,7 +29,6 @@
 @property(readonly, copy) NSString *bundleID; // @synthesize bundleID=_bundleID;
 @property(readonly, copy) NSString *path; // @synthesize path=_path;
 @property BOOL ancillary; // @synthesize ancillary=_ancillary;
-@property(nonatomic) BOOL accessibilityActive; // @synthesize accessibilityActive=_accessibilityActive;
 @property(readonly) XCUIElement *keyboard; // @synthesize keyboard=_keyboard;
 @property(readonly, nonatomic) UIInterfaceOrientation interfaceOrientation; //TODO tvos
 @property(readonly, nonatomic) BOOL running;
