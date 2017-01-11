@@ -14,7 +14,7 @@
     BOOL _ancillary;
     BOOL _eventLoopIsIdle;
     int _processID;
-    unsigned long long _state;
+    NSUInteger _state;
     XCUIElement *_keyboard;
     NSArray *_launchArguments;
     NSDictionary *_launchEnvironment;
@@ -34,7 +34,7 @@
 @property(readonly, nonatomic) UIInterfaceOrientation interfaceOrientation; //TODO tvos
 @property(readonly, nonatomic) BOOL running;
 @property(nonatomic) pid_t processID; // @synthesize processID=_processID;
-@property unsigned long long state; // @synthesize state=_state;
+@property NSUInteger state; // @synthesize state=_state;
 @property(readonly) XCAccessibilityElement *accessibilityElement;
 
 + (id)keyPathsForValuesAffectingRunning;
