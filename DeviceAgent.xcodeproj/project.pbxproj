@@ -765,7 +765,6 @@
 		F55F839A1C6DDA5F00A945C8 /* XCTestManager_TestsInterface-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestManager_TestsInterface-Protocol.h"; sourceTree = "<group>"; };
 		F55F839B1C6DDA5F00A945C8 /* XCTestObservation-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestObservation-Protocol.h"; sourceTree = "<group>"; };
 		F55F839C1C6DDA5F00A945C8 /* XCTestObservationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTestObservationCenter.h; sourceTree = "<group>"; };
-		F55F839D1C6DDA5F00A945C8 /* XCTestObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTestObserver.h; sourceTree = "<group>"; };
 		F55F839E1C6DDA5F00A945C8 /* XCTestProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTestProbe.h; sourceTree = "<group>"; };
 		F55F839F1C6DDA5F00A945C8 /* XCTestRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTestRun.h; sourceTree = "<group>"; };
 		F55F83A01C6DDA5F00A945C8 /* XCTestSuite-XCTestProbeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestSuite-XCTestProbeExtensions.h"; sourceTree = "<group>"; };
@@ -960,6 +959,15 @@
 		F5F718401D63A4B300E402EE /* ScrollplicationsController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollplicationsController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F5F9872F1E1F78B0005DB9A1 /* CBXMachClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXMachClock.h; sourceTree = "<group>"; };
 		F5F987301E1F78B0005DB9A1 /* CBXMachClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXMachClock.m; sourceTree = "<group>"; };
+		F5F987341E1F8E27005DB9A1 /* _XCTestExpectationWaiterImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _XCTestExpectationWaiterImplementation.h; sourceTree = "<group>"; };
+		F5F987351E1F8E27005DB9A1 /* _XCTestSuiteImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _XCTestSuiteImplementation.h; sourceTree = "<group>"; };
+		F5F987361E1F8E27005DB9A1 /* NSString-XCTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString-XCTAdditions.h"; sourceTree = "<group>"; };
+		F5F987371E1F8E27005DB9A1 /* NSValue-XCTestAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue-XCTestAdditions.h"; sourceTree = "<group>"; };
+		F5F987381E1F8E27005DB9A1 /* XCTestExpectationDelegate-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestExpectationDelegate-Protocol.h"; sourceTree = "<group>"; };
+		F5F987391E1F8E27005DB9A1 /* XCTestExpectationWaiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTestExpectationWaiter.h; sourceTree = "<group>"; };
+		F5F9873A1E1F8E27005DB9A1 /* XCUIApplicationImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUIApplicationImpl.h; sourceTree = "<group>"; };
+		F5F9873B1E1F8E27005DB9A1 /* XCUIApplicationProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUIApplicationProcess.h; sourceTree = "<group>"; };
+		F5FDACE71E26688600C4ED85 /* XCTestObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTestObserver.h; sourceTree = "<group>"; };
 		F5FEA0B61D747CCD00B5EF42 /* UIDevice+Wifi_IP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Wifi_IP.h"; sourceTree = "<group>"; };
 		F5FEA0B71D747CCD00B5EF42 /* UIDevice+Wifi_IP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Wifi_IP.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1392,6 +1400,10 @@
 		F55F835A1C6DDA5F00A945C8 /* XCTest */ = {
 			isa = PBXGroup;
 			children = (
+				F5F987361E1F8E27005DB9A1 /* NSString-XCTAdditions.h */,
+				F5F987371E1F8E27005DB9A1 /* NSValue-XCTestAdditions.h */,
+				F5F987341E1F8E27005DB9A1 /* _XCTestExpectationWaiterImplementation.h */,
+				F5F987351E1F8E27005DB9A1 /* _XCTestSuiteImplementation.h */,
 				F55F835B1C6DDA5F00A945C8 /* _XCDarwinNotificationExpectation.h */,
 				F55F835C1C6DDA5F00A945C8 /* _XCInternalTestRun.h */,
 				F55F835D1C6DDA5F00A945C8 /* _XCKVOExpectation.h */,
@@ -1452,13 +1464,15 @@
 				F55F83941C6DDA5F00A945C8 /* XCTestDriver.h */,
 				F55F83951C6DDA5F00A945C8 /* XCTestDriverInterface-Protocol.h */,
 				F55F83961C6DDA5F00A945C8 /* XCTestExpectation.h */,
+				F5F987381E1F8E27005DB9A1 /* XCTestExpectationDelegate-Protocol.h */,
+				F5F987391E1F8E27005DB9A1 /* XCTestExpectationWaiter.h */,
 				F55F83971C6DDA5F00A945C8 /* XCTestLog.h */,
 				F55F83981C6DDA5F00A945C8 /* XCTestManager_IDEInterface-Protocol.h */,
 				F55F83991C6DDA5F00A945C8 /* XCTestManager_ManagerInterface-Protocol.h */,
 				F55F839A1C6DDA5F00A945C8 /* XCTestManager_TestsInterface-Protocol.h */,
+				F5FDACE71E26688600C4ED85 /* XCTestObserver.h */,
 				F55F839B1C6DDA5F00A945C8 /* XCTestObservation-Protocol.h */,
 				F55F839C1C6DDA5F00A945C8 /* XCTestObservationCenter.h */,
-				F55F839D1C6DDA5F00A945C8 /* XCTestObserver.h */,
 				F55F839E1C6DDA5F00A945C8 /* XCTestProbe.h */,
 				F55F839F1C6DDA5F00A945C8 /* XCTestRun.h */,
 				F55F83A01C6DDA5F00A945C8 /* XCTestSuite-XCTestProbeExtensions.h */,
@@ -1468,6 +1482,8 @@
 				F55F83A41C6DDA5F00A945C8 /* XCTouchGesture.h */,
 				F55F83A51C6DDA5F00A945C8 /* XCTouchPath.h */,
 				F55F83A61C6DDA5F00A945C8 /* XCUIApplication.h */,
+				F5F9873A1E1F8E27005DB9A1 /* XCUIApplicationImpl.h */,
+				F5F9873B1E1F8E27005DB9A1 /* XCUIApplicationProcess.h */,
 				F55F83A71C6DDA5F00A945C8 /* XCUICoordinate.h */,
 				F55F83A81C6DDA5F00A945C8 /* XCUIDevice.h */,
 				F55F83A91C6DDA5F00A945C8 /* XCUIElement-PrivateEvents.h */,
