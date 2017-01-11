@@ -2529,6 +2529,8 @@
 				89C5F3681C9C5BC20093A018 /* InvalidArgumentException.m in Sources */,
 				F55F84091C6E436500A945C8 /* CBXRoute.m in Sources */,
 				F55F81911C6DD07500A945C8 /* HTTPMessage.m in Sources */,
+				F5F987321E1F78BD005DB9A1 /* CBXMachClock.m in Sources */,
+				F55F82351C6DD07500A945C8 /* DDFileLogger.m in Sources */,
 				89F6BF8C1CBC4BDD0088269C /* Rotate.m in Sources */,
 				899696D41CB44D9B00BB42E2 /* GestureConfiguration.m in Sources */,
 				899696EB1CB5857C00BB42E2 /* JSONKeyValidator.m in Sources */,
