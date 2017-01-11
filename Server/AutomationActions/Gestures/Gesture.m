@@ -2,6 +2,8 @@
 #import "CoordinateQuery.h"
 #import "ThreadUtils.h"
 #import "Gesture.h"
+#import "XCUIApplication.h"
+#import "XCUIApplication+DeviceAgentAdditions.h"
 
 @implementation Gesture
 
@@ -82,18 +84,22 @@
     
     //Testmanagerd calls are async, but the http server is sync so we need to synchronize it.
     __block NSError *err;
-    [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
+    [[Application currentApplication] cbx_waitUntilIdle];
 
         if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] ) {
             DDLogDebug(@"WARNING: Testing on daemonProtocolVersion %@", @([[XCTestDriver sharedTestDriver] daemonProtocolVersion]));
         }
+    [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
         CBXTouchEvent *event = [self cbxEventWithCoordinates:coords];
+
         [[Testmanagerd get] _XCT_synthesizeEvent:event.event
                                       completion:^(NSError *e) {
                                           err = e;
                                           *setToTrueWhenDone = YES;
                                       }];
     }];
+
+    [[Application currentApplication] cbx_waitUntilIdle];
     completion(err);
 }
 
