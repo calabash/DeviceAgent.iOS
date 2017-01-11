@@ -1,5 +1,7 @@
 
 #import "Pinch.h"
+#import "XCUIApplication.h"
+#import "XCUIApplication+DeviceAgentAdditions.h"
 
 @implementation Pinch
 + (NSString *)name { return @"pinch"; }

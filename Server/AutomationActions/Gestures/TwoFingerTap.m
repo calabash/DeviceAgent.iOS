@@ -3,6 +3,8 @@
 #import "CBXConstants.h"
 #import "CoordinateQueryConfiguration.h"
 #import "Coordinate.h"
+#import "XCUIApplication.h"
+#import "XCUIApplication+DeviceAgentAdditions.h"
 
 @implementation TwoFingerTap
 

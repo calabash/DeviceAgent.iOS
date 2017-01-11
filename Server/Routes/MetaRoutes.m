@@ -2,6 +2,8 @@
 #import "MetaRoutes.h"
 #import "XCTestDriver.h"
 #import "Application.h"
+#import "XCUIApplication.h"
+#import "XCUIApplication+DeviceAgentAdditions.h"
 #import "CBXMacros.h"
 #import "CBXDevice.h"
 #import "CBXInfoPlist.h"

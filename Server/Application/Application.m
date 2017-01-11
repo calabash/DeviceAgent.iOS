@@ -1,13 +1,9 @@
-//
-//  CBApplication.m
-//  xcuitest-server
-//
 
-#import "ElementNotFoundException.h"
-#import "XCUICoordinate.h"
 #import "Application.h"
+#import "XCUIApplication.h"
+#import "XCUIApplication+DeviceAgentAdditions.h"
+#import "ElementNotFoundException.h"
 #import "Testmanagerd.h"
-#import "XCUIElement.h"
 #import "ThreadUtils.h"
 
 @interface Application ()
@@ -95,17 +91,14 @@ static NSInteger currentElementIndex = 0;
               launchArgs:(NSArray *)launchArgs
                      env:(NSDictionary *)environment {
 
-    // TODO: This seems to crash/end the test session...
-    //    if ([currentApplication hasSession]) {
-    //        [currentApplication kill];
-    //    }
-
     currentApplication.app = [[XCUIApplication alloc] initPrivateWithPath:bundlePath
                                                                  bundleID:bundleID];
     currentApplication.app.launchArguments = launchArgs ?: @[];
     currentApplication.app.launchEnvironment = environment ?: @{};
 
     [currentApplication startSession];
+    [currentApplication.app cbx_waitUntilAccessibilityActive];
+    [currentApplication.app cbx_waitUntilIdle];
 }
 
 @end
