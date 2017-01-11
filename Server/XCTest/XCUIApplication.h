@@ -22,7 +22,7 @@
     XCApplicationQuery *_applicationQuery;
     unsigned long long _generation;
 }
-@property unsigned long long generation; // @synthesize generation=_generation;
+@property NSUInteger generation; // @synthesize generation=_generation;
 @property BOOL eventLoopIsIdle; // @synthesize eventLoopIsIdle=_eventLoopIsIdle;
 @property(retain) XCApplicationQuery *applicationQuery; // @synthesize applicationQuery=_applicationQuery;
 @property(retain) XCUIApplicationImpl *applicationImpl; // @synthesize applicationQuery=_applicationQuery;
