@@ -298,6 +298,8 @@
 		F55F84171C6E438800A945C8 /* Application+Queries.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BB1C6DDF1300A945C8 /* Application+Queries.m */; };
 		F55F84181C6E438E00A945C8 /* CBXCUITestServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BF1C6DDF1300A945C8 /* CBXCUITestServer.m */; };
 		F56F44951D733A8200E58B0D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56F44941D733A8200E58B0D /* HealthKit.framework */; };
+		F57140091E2602C7003CF20C /* CBXWaiter.m in Sources */ = {isa = PBXBuildFile; fileRef = F57140071E2602C7003CF20C /* CBXWaiter.m */; };
+		F571400A1E2602C7003CF20C /* CBXWaiter.m in Sources */ = {isa = PBXBuildFile; fileRef = F57140071E2602C7003CF20C /* CBXWaiter.m */; };
 		F57287491D747E0800C65208 /* AppStub.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F57287481D747E0800C65208 /* AppStub.xcassets */; };
 		F5870B3F1CF0BEFF00B3376C /* CBXTouchEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = F5870B3B1CF0BEFF00B3376C /* CBXTouchEvent.h */; };
 		F5870B401CF0BEFF00B3376C /* CBXTouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F5870B3C1CF0BEFF00B3376C /* CBXTouchEvent.m */; };
@@ -419,6 +421,8 @@
 		F5E663211D74958200068CE9 /* SpringBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E6631F1D74946000068CE9 /* SpringBoard.m */; };
 		F5E663221D74958300068CE9 /* SpringBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E6631F1D74946000068CE9 /* SpringBoard.m */; };
 		F5F718411D63A4B300E402EE /* ScrollplicationsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F718401D63A4B300E402EE /* ScrollplicationsController.m */; };
+		F5F987321E1F78BD005DB9A1 /* CBXMachClock.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F987301E1F78B0005DB9A1 /* CBXMachClock.m */; };
+		F5F987331E1F78BF005DB9A1 /* CBXMachClock.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F987301E1F78B0005DB9A1 /* CBXMachClock.m */; };
 		F5FEA0B51D7478CF00B5EF42 /* SpringBoardAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 634244EC948D56732C2565E5 /* SpringBoardAlerts.m */; };
 		F5FEA0B81D747CCD00B5EF42 /* UIDevice+Wifi_IP.h in Headers */ = {isa = PBXBuildFile; fileRef = F5FEA0B61D747CCD00B5EF42 /* UIDevice+Wifi_IP.h */; };
 		F5FEA0B91D747CCD00B5EF42 /* UIDevice+Wifi_IP.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FEA0B71D747CCD00B5EF42 /* UIDevice+Wifi_IP.m */; };
@@ -825,6 +829,8 @@
 		F55F83FD1C6DE50C00A945C8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F56F44931D733A8200E58B0D /* Permissions.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Permissions.entitlements; sourceTree = "<group>"; };
 		F56F44941D733A8200E58B0D /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		F57140061E2602C7003CF20C /* CBXWaiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXWaiter.h; sourceTree = "<group>"; };
+		F57140071E2602C7003CF20C /* CBXWaiter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXWaiter.m; sourceTree = "<group>"; };
 		F57287481D747E0800C65208 /* AppStub.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppStub.xcassets; sourceTree = "<group>"; };
 		F5870B3B1CF0BEFF00B3376C /* CBXTouchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXTouchEvent.h; sourceTree = "<group>"; };
 		F5870B3C1CF0BEFF00B3376C /* CBXTouchEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = CBXTouchEvent.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
@@ -952,6 +958,8 @@
 		F5E6631F1D74946000068CE9 /* SpringBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoard.m; sourceTree = "<group>"; };
 		F5F7183F1D63A4B300E402EE /* ScrollplicationsController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = ScrollplicationsController.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F5F718401D63A4B300E402EE /* ScrollplicationsController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollplicationsController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
+		F5F9872F1E1F78B0005DB9A1 /* CBXMachClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXMachClock.h; sourceTree = "<group>"; };
+		F5F987301E1F78B0005DB9A1 /* CBXMachClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXMachClock.m; sourceTree = "<group>"; };
 		F5FEA0B61D747CCD00B5EF42 /* UIDevice+Wifi_IP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Wifi_IP.h"; sourceTree = "<group>"; };
 		F5FEA0B71D747CCD00B5EF42 /* UIDevice+Wifi_IP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Wifi_IP.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1558,6 +1566,10 @@
 		F55F83D61C6DDF1300A945C8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F5F9872F1E1F78B0005DB9A1 /* CBXMachClock.h */,
+				F5F987301E1F78B0005DB9A1 /* CBXMachClock.m */,
+				F57140061E2602C7003CF20C /* CBXWaiter.h */,
+				F57140071E2602C7003CF20C /* CBXWaiter.m */,
 				F55F83DA1C6DDF1300A945C8 /* JSONUtils.h */,
 				F55F83DB1C6DDF1300A945C8 /* JSONUtils.m */,
 				899696E81CB5857C00BB42E2 /* JSONKeyValidator.h */,
@@ -2486,6 +2498,8 @@
 				89D538041CA20DB800F62E09 /* QuerySpecifierByText.m in Sources */,
 				899696BB1CADF84B00BB42E2 /* EnterText.m in Sources */,
 				F55F824F1C6DD07500A945C8 /* HTTPResponseProxy.m in Sources */,
+				F55F82311C6DD07500A945C8 /* DDAbstractDatabaseLogger.m in Sources */,
+				F57140091E2602C7003CF20C /* CBXWaiter.m in Sources */,
 				F55F840E1C6E437100A945C8 /* SessionRoutes.m in Sources */,
 				89D5380D1CA32AE900F62E09 /* FBElement.m in Sources */,
 				F5A14DE61E02CF84001A0037 /* CBLSApplicationWorkspace.m in Sources */,
@@ -2686,6 +2700,8 @@
 				F5B0A1A71CAD4E2700E056CE /* GestureFactory.m in Sources */,
 				F5B0A1B91CAD4E3A00E056CE /* CBXException.m in Sources */,
 				F5538B7E1E28AC7B003EC5F3 /* DDFileLogger.m in Sources */,
+				F571400A1E2602C7003CF20C /* CBXWaiter.m in Sources */,
+				F5B0A1D91CAD4E9500E056CE /* DDASLLogger.m in Sources */,
 				F5B0A1C41CAD4E4600E056CE /* DeviceEventRoutes.m in Sources */,
 				F549E1A51D5472B100C4FA36 /* CBXInfoPlistTest.m in Sources */,
 				899696E71CB46C0100BB42E2 /* CoordinateQueryConfiguration.m in Sources */,
@@ -2709,6 +2725,7 @@
 				F5B0A1BC1CAD4E3A00E056CE /* InvalidArgumentException.m in Sources */,
 				F58D27FD1D4F947F000FF6C0 /* XCUIApplication+DeviceAgentAdditions.m in Sources */,
 				F5B0A1D01CAD4E7F00E056CE /* MultipartMessageHeaderField.m in Sources */,
+				F5F987331E1F78BF005DB9A1 /* CBXMachClock.m in Sources */,
 				F5B0A1E31CAD4EA700E056CE /* RoutingConnection.m in Sources */,
 				F58D28131D4F947F000FF6C0 /* RouteResponseTest.m in Sources */,
 				F58D28001D4F947F000FF6C0 /* QueryConfigurationFactoryTests.m in Sources */,
