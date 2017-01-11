@@ -74,21 +74,17 @@
         }
         for (XCUIElement *el in elements) {
             /*
-                TODO: discussion of 'visibility'
-            */
+             TODO: discussion of 'visibility'
+             */
             CGRect frame = el.wdFrame;
             CGPoint center = CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame));
             [coords addObject:[Coordinate fromRaw:center]];
         }
     }
-    
-    //Testmanagerd calls are async, but the http server is sync so we need to synchronize it.
+
     __block NSError *err;
     [[Application currentApplication] cbx_waitUntilIdle];
 
-        if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] ) {
-            DDLogDebug(@"WARNING: Testing on daemonProtocolVersion %@", @([[XCTestDriver sharedTestDriver] daemonProtocolVersion]));
-        }
     [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
         CBXTouchEvent *event = [self cbxEventWithCoordinates:coords];
 
