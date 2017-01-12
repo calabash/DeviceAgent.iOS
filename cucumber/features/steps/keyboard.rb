@@ -97,7 +97,7 @@ World(DeviceAgent::Keyboard)
 And(/^I am looking at the Text Input page$/) do
   touch_tab("Misc")
   wait_for_animations
-  touch({marked: "text input row"})
+  touch({marked: "text input row", all: true})
   wait_for_view({marked: "text input page"})
   wait_for_animations
 end
@@ -218,7 +218,8 @@ And(/^I can select all the text in the Text View$/) do
   query = {marked: "Select All" }
   wait_for_view(query)
   touch(query)
-  2.times { wait_for_animations }
+  # This causes many animations.
+  sleep(1.4)
 end
 
 But(/^I can clear the Text View after selecting all using the delete key or Cut$/) do
@@ -227,11 +228,13 @@ But(/^I can clear the Text View after selecting all using the delete key or Cut$
 
   if !query(query).empty?
     touch(query)
+    # This causes many animations
+    sleep(1.0)
   else
     query = {marked: "delete", type: "Key"}
     wait_for_view(query)
     touch(query)
-    wait_for_animations
+    sleep(0.5)
   end
 
   wait_for_text_in_view(nil, {marked: "text view"})
@@ -262,7 +265,9 @@ Then(/^I enter my password for authentication$/) do
 end
 
 Then(/^I submit my credentials for authentication$/) do
-  wait_for_animations
+  # For some reason, touching the alert "submit" button fails
+  # unless we wait a long time.
+  sleep(2.0)
   touch({marked: "Submit"})
   wait_for_animations
 
