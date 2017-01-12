@@ -19,7 +19,7 @@ typedef NS_ENUM(short, ClockDirection) {
                 CBX_CLOCKWISE_KEY,
                 CBX_COUNTERCLOCKWISE_KEY];
     }
-    
+
     if ([self rotationStart] < CBX_MIN_ROTATION_START ||
         [self rotationStart] > CBX_MAX_ROTATION_START) {
         @throw [InvalidArgumentException withFormat:
@@ -50,7 +50,7 @@ typedef NS_ENUM(short, ClockDirection) {
             dirString,
             CBX_CLOCKWISE_KEY,
             CBX_COUNTERCLOCKWISE_KEY];
-    
+
 }
 
 float dtor(float degrees) { return degrees * (M_PI / 180); }
@@ -66,19 +66,19 @@ float dtor(float degrees) { return degrees * (M_PI / 180); }
         increment = CBX_ROTATE_INCREMENT_DEGREES <= rotationDegrees ?
         CBX_ROTATE_INCREMENT_DEGREES :
         rotationDegrees / 2.0;
-    
+
     NSMutableArray <Coordinate *> *coordinates = [NSMutableArray array];
-    
+
     while (rotationDegrees > 0) {
         x = (cosf(dtor(degrees)) * radius) + offset.x;
         y = (sinf(dtor(degrees)) * radius) + offset.y;
-        
+
         rotationDegrees -= increment;
         degrees += direction == kClockDirectionClockwise ? increment : -increment;
         [coordinates addObject:[Coordinate fromRaw:CGPointMake(x, y)]];
-        
+
     }
-    
+
     return coordinates;
 }
 
@@ -86,23 +86,23 @@ float dtor(float degrees) { return degrees * (M_PI / 180); }
     if (coordinates.count == 0) {
         @throw [InvalidArgumentException withFormat:@"%@ requires a coordinate", NSStringFromClass(self.class)];
     }
-    
+
     CGPoint center = coordinates[0].cgpoint;
-    
+
     ClockDirection cd = [self directionFromString:[self rotateDirection]];
     NSArray<Coordinate *> *coords1 = [self circleRadiusPointsFromDegrees:[self rotationStart]
                                                                 rotateBy:[self degrees]
                                                                   radius:[self radius]
                                                                direction:cd
                                                                   offset:center];
-    
+
     float oppositeStart = [self rotationStart] - 180;
     NSArray<Coordinate *> *coords2 = [self circleRadiusPointsFromDegrees:oppositeStart
                                                                 rotateBy:[self degrees]
                                                                   radius:[self radius]
                                                                direction:cd
                                                                   offset:center];
-    
+
     return @[coords1, coords2];
 }
 
@@ -113,14 +113,14 @@ float dtor(float degrees) { return degrees * (M_PI / 180); }
                              longLongInterfaceOrientation];
 
     CBXTouchEvent *event = [CBXTouchEvent new];
-    
-    
+
+
     float timeIncrement = [self rotateDuration] / circleCoords[0].count;
     for (NSArray<Coordinate *> *fingerCoords in circleCoords) {
         float offset = 0;
         CGPoint c = fingerCoords[0].cgpoint;
         TouchPath *path = [TouchPath withFirstTouchPoint:c orientation:orientation];
-                           
+
         for (Coordinate *coord in fingerCoords) {
             if (coord == fingerCoords[0]) continue; //we've already done it
             [path moveToNextPoint:coord.cgpoint afterSeconds:(offset += timeIncrement)];
@@ -128,7 +128,7 @@ float dtor(float degrees) { return degrees * (M_PI / 180); }
         [path liftUpAfterSeconds:offset];
         [event addTouchPath:path];
     }
-    
+
     return event;
 }
 
