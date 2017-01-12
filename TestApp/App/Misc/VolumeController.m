@@ -89,6 +89,7 @@ static NSString *const kCaVa = @"Ça va?";
 - (void)viewWillAppear:(BOOL)animated {
     self.currentVolume.text = [NSString stringWithFormat:@"%@",
                                @(self.session.outputVolume)];
+    [super viewWillAppear:animated];
 }
 
 @end
