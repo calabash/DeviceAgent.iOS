@@ -98,9 +98,13 @@
         message = [NSString stringWithFormat:@"Keyboard delete key did not have a valid "
                    "hit point: %@",
                    NSStringFromCGRect(frame)];
-        *error = [NSError errorWithDomain:CBXWebServerErrorDomain
-                                     code:1
-                                 userInfo:@{NSLocalizedDescriptionKey : message }];
+        if (error) {
+            *error = [NSError errorWithDomain:CBXWebServerErrorDomain
+                                         code:1
+                                     userInfo:@{NSLocalizedDescriptionKey : message }];
+        } else {
+            NSLog(@"ERROR: %@", message);
+        }
         return NO;
     }
 
