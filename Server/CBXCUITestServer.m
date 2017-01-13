@@ -91,7 +91,7 @@ static NSString *serverName = @"CalabashXCUITestServer";
           [self.server port]);
 
     if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] ) {
-        NSLog(@"Testing on daemonProtocolVersion %@",
+        DDLogDebug(@"Testing on daemonProtocolVersion %@",
               @([[XCTestDriver sharedTestDriver] daemonProtocolVersion]));
     }
 

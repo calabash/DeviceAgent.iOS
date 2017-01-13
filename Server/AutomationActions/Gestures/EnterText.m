@@ -106,9 +106,9 @@
 
     NSTimeInterval elapsed = [[CBXMachClock sharedClock] absoluteTime] - startTime;
     if (stable) {
-        NSLog(@"Waited %@ seconds for keyboard animation", @(elapsed));
+        DDLogDebug(@"Waited %@ seconds for keyboard animation", @(elapsed));
     } else {
-        NSLog(@"Timed out waiting after %@ seconds for keyboard animation", @(elapsed));
+        DDLogDebug(@"Timed out waiting after %@ seconds for keyboard animation", @(elapsed));
     }
 }
 

@@ -6,6 +6,7 @@
 #import "XCUIElement.h"
 #import "XCElementSnapshot.h"
 #import "XCApplicationQuery.h"
+#import "CBXConstants.h"
 
 @implementation XCUIApplication (DeviceAgentAdditions)
 
@@ -16,13 +17,13 @@
 - (BOOL)cbx_accessibilityActive {
     XCUIApplicationImpl *impl = [self applicationImpl];
     if (!impl) {
-        NSLog(@"ERROR: there is no application implementation for application");
+        DDLogError(@"ERROR: there is no application implementation for application");
         return YES;
     }
 
     XCUIApplicationProcess *process = [impl currentProcess];
     if (!process) {
-        NSLog(@"ERROR: there is no application process for application implementation");
+        DDLogError(@"ERROR: there is no application process for application implementation");
         return YES;
     }
 
@@ -42,9 +43,9 @@
 
     NSTimeInterval elapsed = [[CBXMachClock sharedClock] absoluteTime] - startTime;
     if (!active) {
-        NSLog(@"Application accessibility not active after: %@ seconds", @(elapsed));
+        DDLogDebug(@"Application accessibility not active after: %@ seconds", @(elapsed));
     } else {
-        NSLog(@"Application accessibility active after: %@ seconds", @(elapsed));
+        DDLogDebug(@"Application accessibility active after: %@ seconds", @(elapsed));
     }
     return active;
 }
@@ -53,13 +54,13 @@
 
     XCUIApplicationImpl *impl = [self applicationImpl];
     if (!impl) {
-        NSLog(@"ERROR: there is no application implementation for current application");
+        DDLogDebug(@"ERROR: there is no application implementation for current application");
         return YES;
     }
 
     XCUIApplicationProcess *process = [impl currentProcess];
     if (!process) {
-        NSLog(@"ERROR: there is no application process for current application implementation");
+        DDLogError(@"ERROR: there is no application process for current application implementation");
         return YES;
     }
 
@@ -69,10 +70,10 @@
         // ecosystem has become unstable.
         [self _waitForQuiescence];
         NSTimeInterval elapsed = [[CBXMachClock sharedClock] absoluteTime] - startTime;
-        NSLog(@"Waited %@ seconds for quiescence while checking for event loop idle", @(elapsed));
+        DDLogDebug(@"Waited %@ seconds for quiescence while checking for event loop idle", @(elapsed));
 
         if (elapsed > 5.0) {
-            NSLog(@"Application state: %@ after waiting for %@", @([self state]), @(elapsed));
+            DDLogDebug(@"Application state: %@ after waiting for %@", @([self state]), @(elapsed));
         }
     }
 
@@ -97,9 +98,9 @@
 
     NSTimeInterval elapsed = [[CBXMachClock sharedClock] absoluteTime] - startTime;
     if (!idle) {
-        NSLog(@"Application event loop was not idle after: %@ seconds", @(elapsed));
+        DDLogDebug(@"Application event loop was not idle after: %@ seconds", @(elapsed));
     } else {
-        NSLog(@"Application event loop was idle after: %@ seconds", @(elapsed));
+        DDLogDebug(@"Application event loop was idle after: %@ seconds", @(elapsed));
     }
 
     return idle;
