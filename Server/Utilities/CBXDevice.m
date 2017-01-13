@@ -4,6 +4,7 @@
 #import <arpa/inet.h>
 #import <ifaddrs.h>
 #import "XCUIDevice.h"
+#import "CBXConstants.h"
 
 NSString *const LPDeviceSimKeyModelIdentifier = @"SIMULATOR_MODEL_IDENTIFIER";
 NSString *const LPDeviceSimKeyVersionInfo = @"SIMULATOR_VERSION_INFO";
@@ -120,29 +121,29 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
     CGSize screenSizeForMode = screenMode.size;
     CGFloat pixelAspectRatio = screenMode.pixelAspectRatio;
 
-    NSLog(@"         Form factor: %@", [self formFactor]);
-    NSLog(@" Current screen mode: %@", screenMode);
-    NSLog(@"Screen size for mode: %@", NSStringFromCGSize(screenSizeForMode));
-    NSLog(@"       Screen height: %@", @(screenHeight));
-    NSLog(@"        Screen scale: %@", @(scale));
-    NSLog(@" Screen native scale: %@", @(nativeScale));
-    NSLog(@"Pixel Aspect Ratio: %@", @(pixelAspectRatio));
+    DDLogDebug(@"         Form factor: %@", [self formFactor]);
+    DDLogDebug(@" Current screen mode: %@", screenMode);
+    DDLogDebug(@"Screen size for mode: %@", NSStringFromCGSize(screenSizeForMode));
+    DDLogDebug(@"       Screen height: %@", @(screenHeight));
+    DDLogDebug(@"        Screen scale: %@", @(scale));
+    DDLogDebug(@" Screen native scale: %@", @(nativeScale));
+    DDLogDebug(@"Pixel Aspect Ratio: %@", @(pixelAspectRatio));
 
     if ([self isIPhone6PlusLike]) {
         if (screenHeight == 568.0 && nativeScale > scale) { // native => 2.88
-            NSLog(@"iPhone 6 Plus: Zoom display mode and app is not optimized for screen size - adjusting sampleFactor");
+            DDLogDebug(@"iPhone 6 Plus: Zoom display mode and app is not optimized for screen size - adjusting sampleFactor");
             _sampleFactor = iphone6p_zoom_sample;
         } else if (screenHeight == 667.0 && nativeScale <= scale) { // native => ???
-            NSLog(@"iPhone 6 Plus: Zoomed display mode - sampleFactor remains the same");
+            DDLogDebug(@"iPhone 6 Plus: Zoomed display mode - sampleFactor remains the same");
         } else if (screenHeight == 736 && nativeScale < scale) { // native => 2.61
-            NSLog(@"iPhone 6 Plus: Standard Display and app is not optimized for screen size - sampleFactor remains the same");
+            DDLogDebug(@"iPhone 6 Plus: Standard Display and app is not optimized for screen size - sampleFactor remains the same");
         }
     } else if ([self isIPhone6Like]) {
         if (screenHeight == 568.0 && nativeScale <= scale) {
-            NSLog(@"iPhone 6: application not optimized for screen size - adjusting sampleFactor");
+            DDLogDebug(@"iPhone 6: application not optimized for screen size - adjusting sampleFactor");
             _sampleFactor = iphone6_zoom_sample;
         } else if (screenHeight == 568.0 && nativeScale > scale) {
-            NSLog(@"iPhone 6: Zoomed display mode - sampleFactor remains the same");
+            DDLogDebug(@"iPhone 6: Zoomed display mode - sampleFactor remains the same");
         }
     }
 

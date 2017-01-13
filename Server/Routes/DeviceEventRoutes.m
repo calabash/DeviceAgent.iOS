@@ -38,7 +38,7 @@
 
                  [[Testmanagerd get] _XCT_performDeviceEvent:event completion:^(NSError *e) {
                      if (e) {
-                         NSLog(@"%@", e);
+                         DDLogDebug(@"%@", e);
                      }
                  }];
              }],
@@ -50,7 +50,7 @@
 
                  [[Testmanagerd get] _XCT_performDeviceEvent:event completion:^(NSError *e) {
                      if (e) {
-                         NSLog(@"%@", e);
+                         DDLogDebug(@"%@", e);
                      }
                  }];
              }],
@@ -72,7 +72,7 @@
                                                                             duration:0.2];
                  [[Testmanagerd get] _XCT_performDeviceEvent:event completion:^(NSError *e) {
                      if (e) {
-                         NSLog(@"%@", e);
+                         DDLogDebug(@"%@", e);
                      }
                  }];
                  [response respondWithJSON:@{@"status" : @"success", @"volumeDirection" : volumeDirection}];

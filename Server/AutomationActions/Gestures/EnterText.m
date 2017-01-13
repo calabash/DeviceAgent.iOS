@@ -35,7 +35,7 @@
          completion:^(NSError *innerError) {
              outerError = innerError;
              if (innerError) {
-                 NSLog(@"Encountered error typing text: %@", innerError);
+                 DDLogError(@"Encountered error typing text: %@", innerError);
              }
              *setToTrueWhenDone = YES;
          }];

@@ -7,6 +7,7 @@
 #import "CBXProtocols.h"
 #import "CBXConstants.h"
 #import "Application+Queries.h"
+#import "CBXLogging.h"
 
 @interface CBXCUITestServer ()
 @property (atomic, strong) RoutingHTTPServer *server;
@@ -64,7 +65,9 @@ static NSString *serverName = @"CalabashXCUITestServer";
 }
 
 + (void)start {
-    NSLog(@"%@ built at %s %s", serverName, __DATE__, __TIME__);
+    [CBXLogging startLumberjackLogging];
+
+    DDLogDebug(@"%@ built at %s %s", serverName, __DATE__, __TIME__);
     [[CBXCUITestServer sharedServer] start];
 }
 
@@ -73,15 +76,15 @@ static NSString *serverName = @"CalabashXCUITestServer";
     BOOL serverStarted = NO;
 
     [self.server setPort:CBX_DEFAULT_SERVER_PORT];
-    NSLog(@"Attempting to start the DeviceAgent server");
+    DDLogDebug(@"Attempting to start the DeviceAgent server");
     serverStarted = [self attemptToStartWithError:&error];
 
     if (!serverStarted) {
-        NSLog(@"Attempt to start web server failed with error %@", [error description]);
+        DDLogDebug(@"Attempt to start web server failed with error %@", [error description]);
         abort();
     }
 
-    NSLog(@"%@ started on http://%@:%hu",
+    DDLogDebug(@"%@ started on http://%@:%hu",
           serverName,
           [UIDevice currentDevice].wifiIPAddress,
           [self.server port]);
@@ -110,9 +113,9 @@ static NSString *serverName = @"CalabashXCUITestServer";
     dispatch_after(when, dispatch_get_main_queue(), ^{
         [self.server stop:NO];
         if ([self.server isRunning]) {
-            NSLog(@"DeviceAgent server has retired.");
+            DDLogDebug(@"DeviceAgent server has retired.");
         } else {
-            NSLog(@"DeviceAgent server is still running.");
+            DDLogDebug(@"DeviceAgent server is still running.");
         }
         self.isFinishedTesting = YES;
     });

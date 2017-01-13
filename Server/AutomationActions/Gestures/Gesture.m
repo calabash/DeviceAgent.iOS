@@ -85,7 +85,7 @@
     [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
 
         if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] ) {
-            NSLog(@"WARNING: Testing on daemonProtocolVersion %@", @([[XCTestDriver sharedTestDriver] daemonProtocolVersion]));
+            DDLogDebug(@"WARNING: Testing on daemonProtocolVersion %@", @([[XCTestDriver sharedTestDriver] daemonProtocolVersion]));
         }
         CBXTouchEvent *event = [self cbxEventWithCoordinates:coords];
         [[Testmanagerd get] _XCT_synthesizeEvent:event.event

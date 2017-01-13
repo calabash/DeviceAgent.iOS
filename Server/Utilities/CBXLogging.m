@@ -59,13 +59,13 @@ static NSString *const IDMLogFormatterDateFormatterKey = @"sh.calaba-IDMLogForma
     default                : logLevel = @"DEBUG"; break;
   }
 
-  //NSString *dateAndTime = [self stringFromDate:(logMessage.timestamp)];
+  NSString *dateAndTime = [self stringFromDate:(logMessage.timestamp)];
   NSString *logMsg = logMessage->_message;
 
   NSString *filenameAndNumber = [NSString stringWithFormat:@"%@:%@",
                                  logMessage.fileName, @(logMessage.line)];
-  return [NSString stringWithFormat:@"%@ %@ | %@",
-    //      dateAndTime,
+  return [NSString stringWithFormat:@"%@ %@ %@ | %@",
+          dateAndTime,
           logLevel,
           filenameAndNumber,
           logMsg];

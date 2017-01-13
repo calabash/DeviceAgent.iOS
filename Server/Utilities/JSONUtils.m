@@ -105,7 +105,7 @@ static NSDictionary *typeStringToElementType;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:objcJsonObject
                                                        options:0 error:&error];
     if (error) {
-        NSLog(@"Error: %@", error);
+        DDLogError(@"Error serializing object: %@: %@", objcJsonObject, error);
         return error.localizedDescription;
     }
     NSString *jsonString = [[NSString alloc] initWithData:jsonData

@@ -4,6 +4,7 @@
 #import "XCUIApplication.h"
 #import "Application.h"
 #import "JSONUtils.h"
+#import "CBXConstants.h"
 
 @interface TextInputFirstResponderProvider ()
 
@@ -41,13 +42,13 @@
         NSArray <XCUIElement *> *elements = [matching allElementsBoundByIndex];
         if ([elements count] == 1) {
             firstResponder = elements[0];
-            NSLog(@"Element with keyboard focus has type %@",
+            DDLogDebug(@"Element with keyboard focus has type %@",
                   [JSONUtils stringForElementType:type]);
             break;
         }
     }
     if (!firstResponder) {
-        NSLog(@"Could not find an element with keyboard focus");
+        DDLogDebug(@"Could not find an element with keyboard focus");
     }
 
     return firstResponder;

@@ -57,13 +57,13 @@ static NSInteger currentElementIndex = 0;
 }
 
 - (void)kill {
-    NSLog(@"Killing application '%@'", self.app.bundleID);
+    DDLogDebug(@"Killing application '%@'", self.app.bundleID);
     [self.app terminate];
     self.app = nil;
 }
 
 - (void)startSession {
-    NSLog(@"Launching application '%@'", self.app.bundleID);
+    DDLogDebug(@"Launching application '%@'", self.app.bundleID);
 
     __block NSError *outerError = nil;
     [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
