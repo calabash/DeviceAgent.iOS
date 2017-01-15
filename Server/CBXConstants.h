@@ -155,4 +155,4 @@ static int const CBX_DEFAULT_REPETITIONS = 1;
  TextInput.kbd seg faults can happen at any rate - dramatically faster or slower do not
  appear to make the seg faults happen more or less often.
  */
-static NSUInteger const CBX_DEFAULT_SEND_STRING_FREQUENCY = 30;
+static NSUInteger const CBX_DEFAULT_SEND_STRING_FREQUENCY = 60;
