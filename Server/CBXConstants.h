@@ -103,6 +103,8 @@ static float const CBX_MIN_LONG_PRESS_DURATION = 0.5;
 // determined by observing testmanagerd logs for XCUIElement#tap gestures.
 static float const CBX_DEFAULT_DURATION = 0.2;
 static BOOL const CBX_DEFAULT_ALLOW_INERTIA_IN_DRAG = YES;
+
+// determined by observing testmanagerd logs for XCUIElement double tap gestures.
 static float const CBX_DOUBLE_TAP_PAUSE_DURATION = 0.1;
 static float const CBX_DEFAULT_ROTATE_DURATION = .8;
 static float const CBX_DEFAULT_PINCH_AMOUNT = 50;
@@ -119,15 +121,38 @@ static float const CBX_FINGER_WIDTH = 78;
 static int const CBX_DEFAULT_NUM_FINGERS = 1;
 static int const CBX_DEFAULT_REPETITIONS = 1;
 
-
 /*
- Seems to have no influence on the occurrence of "Timed out waiting for key event to
- complete" errors.
+ XCUITest#typeText: when called in the context of a DeviceAgent HTTP call, can cause
+ the kbd process to seg fault.  Testmanagerd `_XCT_sendString:` can also generate this
+ error.  So far, we have been unable to cause this seg fault in the context of an
+ XCUITest.
 
- WebDriverAgent uses 60
+ TestApp: -[UIKeyboardInputManagerClient handleError:forRequest:] will retry sending
+           handleKeyboardInput:keyboardState:completionHandler: to keyboard daemon after
+           receiving Error Domain=NSCocoaErrorDomain Code=4097
+           "connection to service named com.apple.TextInput"
+            UserInfo={NSDebugDescription=connection to service named com.apple.TextInput}
+ com.apple.CoreSimulator.SimDevice.6DD279B3-7FED-4902-96F4-618D55540ADC.launchd_sim[16869]
+           (com.apple.TextInput.kbd[16986]): Service exited due to signal:
+           Segmentation fault: 11
 
- Xcode 8.2.1 / Sierra against i386 and x86_64 simulators with XCUITest typeText in a
+ The outward symptom is a "Timed out waiting for key event to complete" error.  A kbd seg
+ fault does not always result in a 'timed out waiting' error, but it often does.  This
+ is, in most cases, a fatal error - the DeviceAgent stops responding to requests because
+ the `EnterText` request never finishes because it is hanging on something???
+
+
+
+ Xcode 8.2.1 / Sierra against i386 and x86_64 simulators with XCUITest typeText: in a
  UITextField, found ~12 characters/second over 100 runs on a UUID string with 59
- characters.
+ characters.  In UITextView, the characters/second over 100 on a string with ~250
+ characters is ~30 characters/second.
+
+ * Frequencies larger than 60 (like 10000) and 0 result in very fast typing.
+ * 0 < frequency <= 10 result in unrealistically slow typing.
+ * WebDriverAgent uses 60
+
+ TextInput.kbd seg faults can happen at any rate - dramatically faster or slower do not
+ appear to make the seg faults happen more or less often.
  */
-static NSUInteger const CBX_DEFAULT_SEND_STRING_FREQUENCY = 60;
+static NSUInteger const CBX_DEFAULT_SEND_STRING_FREQUENCY = 30;
