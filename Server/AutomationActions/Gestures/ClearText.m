@@ -53,7 +53,7 @@
     NSString *string = firstResponder.value;
 
     if (!string || [string length] == 0) {
-        NSLog(@"There is no text in the element with keyboard focus %@",
+        DDLogDebug(@"There is no text in the element with keyboard focus %@",
               [JSONUtils snapshotOrElementToJSON:firstResponder]);
         completion(nil);
         return nil;
@@ -73,7 +73,7 @@
     }
 
     if (!success) {
-        NSLog(@"Failed to clear text: %@", error);
+        DDLogError(@"Failed to clear text: %@", error);
     }
 
     completion(error);
@@ -83,7 +83,7 @@
 + (BOOL)tapDeleteKeyToDeleteString:(NSString *)string
                          deleteKey:(XCUIElement *)deleteKey
                              error:(NSError **)error {
-    NSLog(@"Clearing text with by tapping the delete key");
+    DDLogDebug(@"Clearing text with by tapping the delete key");
 
     CGRect frame;
     if (![deleteKey respondsToSelector:@selector(wdFrame)]) {
@@ -103,7 +103,7 @@
                                          code:1
                                      userInfo:@{NSLocalizedDescriptionKey : message }];
         } else {
-            NSLog(@"ERROR: %@", message);
+            DDLogDebug(@"ERROR: %@", message);
         }
         return NO;
     }
@@ -126,10 +126,10 @@
                                         outerError = innerError;
                                     }];
         if (outerError) {
-            NSLog(@"Encountered an error touching the keyboard delete key: %@", outerError);
-            NSLog(@"Error occurred on the %@ tap of %@ required taps", @(index + 1),
+            DDLogError(@"Encountered an error touching the keyboard delete key: %@", outerError);
+            DDLogError(@"Error occurred on the %@ tap of %@ required taps", @(index + 1),
                   @([string length]));
-            NSLog(@"Delete key: %@", [JSONUtils snapshotOrElementToJSON:deleteKey]);
+            DDLogError(@"Delete key: %@", [JSONUtils snapshotOrElementToJSON:deleteKey]);
             success = NO;
             break;
         }
@@ -141,7 +141,7 @@
 
 + (BOOL)typeDeleteCharacterToDeleteString:(NSString *)string
                                     error:(NSError **)error {
-    NSLog(@"Clearing text by typing the delete character");
+    DDLogDebug(@"Clearing text by typing the delete character");
 
     BOOL success = YES;
     __block NSError *outerError = nil;
@@ -153,14 +153,14 @@
              completion:^(NSError *innerError) {
                  outerError = innerError;
                  if (innerError) {
-                     NSLog(@"Encountered error typing text: %@", innerError);
+                     DDLogError(@"Encountered error typing text: %@", innerError);
                  }
                  *setToTrueWhenDone = YES;
              }];
         }];
 
         if (outerError) {
-            NSLog(@"Error occurred on the %@ character of %@ required characters",
+            DDLogError(@"Error occurred on the %@ character of %@ required characters",
                   @(index + 1), @([string length]));
             success = NO;
             break;
@@ -195,12 +195,12 @@
     NSArray <XCUIElement *> *elements = [matching allElementsBoundByIndex];
 
     if ([elements count] == 0) {
-        NSLog(@"Expected 1 element to match type 'Key' and id 'delete', found none");
+        DDLogDebug(@"Expected 1 element to match type 'Key' and id 'delete', found none");
         return nil;
     }
 
     if ([elements count] != 1) {
-        NSLog(@"Expected 1 element to match type 'Key' and id 'delete', found %@",
+        DDLogDebug(@"Expected 1 element to match type 'Key' and id 'delete', found %@",
               @([elements count]));
     }
     XCUIElement *deleteKey = elements[0];

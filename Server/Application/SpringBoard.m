@@ -64,7 +64,7 @@ typedef enum : NSUInteger {
 - (BOOL)UIApplication_isSpringBoardShowingAnAlert {
     SEL selector = NSSelectorFromString(@"_isSpringBoardShowingAnAlert");
     if (![[UIApplication sharedApplication] respondsToSelector:selector]) {
-        NSLog(@"UIApplication does not respond to %@; returning YES to force XCUIElementQuery",
+        DDLogDebug(@"UIApplication does not respond to %@; returning YES to force XCUIElementQuery",
               NSStringFromSelector(selector));
         return YES;
     }
@@ -300,7 +300,7 @@ typedef enum : NSUInteger {
         __block BOOL success = YES;
         [GestureFactory executeGestureWithJSON:body completion:^(NSError *error) {
             if (error) {
-                NSLog(@"Error dismissing alert: %@", error.localizedDescription);
+                DDLogError(@"Error dismissing alert: %@", error.localizedDescription);
                 success = NO;
             }
         }];

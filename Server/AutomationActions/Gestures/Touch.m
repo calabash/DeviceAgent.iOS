@@ -93,7 +93,7 @@
         offset += duration;
     }
 
-    NSLog(@"touch event: %@", touchEvent);
+    DDLogDebug(@"touch event: %@", touchEvent);
     return touchEvent;
 }
 

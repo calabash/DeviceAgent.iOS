@@ -4,6 +4,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CocoaLumberjack.h"
+
+static const NSUInteger ddLogLevel = DDLogLevelDebug;
 
 static NSUInteger const CBX_DEFAULT_SERVER_PORT = 27753;
 static NSString *const CBXWebServerErrorDomain = @"sh.calaba.xcuitest-server";

@@ -53,7 +53,7 @@
     CBXTouchEvent *touchEvent = [CBXTouchEvent withTouchPath:first];
     [touchEvent addTouchPath:second];
 
-    NSLog(@"double_tap event: %@", touchEvent);
+    DDLogDebug(@"double_tap event: %@", touchEvent);
     return touchEvent;
 }
 
