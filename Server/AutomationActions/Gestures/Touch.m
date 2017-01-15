@@ -38,6 +38,13 @@
               @([self numFingers]),
               @(CBX_MAX_NUM_FINGERS)];
     }
+
+    if ([self duration] < CBX_DEFAULT_DURATION) {
+        @throw [InvalidArgumentException
+                withFormat:@"Invalid duration for touch: %@.  The minimum duration is %@",
+                @([self duration]),
+                @(CBX_DEFAULT_DURATION)];
+    }
 }
 
 - (CBXTouchEvent *)cbxEventWithCoordinates:(NSArray <Coordinate *> *)coordinates {

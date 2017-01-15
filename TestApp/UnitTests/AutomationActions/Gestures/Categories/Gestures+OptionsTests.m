@@ -118,7 +118,7 @@
                         @"coordinate" :  @[ @50, @50 ]
                         },
                 @"options" : @{
-                        @"duration" : @0.1
+                        @"duration" : @(CBX_DEFAULT_DURATION)
                         }
                 };
     [self testGestureWithJSON:json gestureClass:[Touch class]];
