@@ -18,6 +18,7 @@
 #import "CBXException.h"
 #import <UIKit/UIKit.h>
 #import "XCApplicationQuery.h"
+#import "XCUIApplication+DeviceAgentAdditions.h"
 
 typedef enum : NSUInteger {
     SpringBoardAlertHandlerIgnoringAlerts = 0,
@@ -93,14 +94,17 @@ typedef enum : NSUInteger {
     @synchronized (self) {
         XCUIElement *alert = nil;
 
-        if([self UIApplication_isSpringBoardShowingAnAlert]) {
-
+        if ([self UIApplication_isSpringBoardShowingAnAlert]) {
+            // Will also wait for quiesence.
+            [self cbx_resolvedSnapshot];
             XCUIElementQuery *query = [self descendantsMatchingType:XCUIElementTypeAlert];
             NSArray <XCUIElement *> *elements = [query allElementsBoundByIndex];
 
             if ([elements count] != 0) {
                 alert = elements[0];
             }
+        } else {
+            DDLogDebug(@"There is no SpringBoard alert showing");
         }
         return alert;
     }
