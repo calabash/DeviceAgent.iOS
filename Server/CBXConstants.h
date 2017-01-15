@@ -96,8 +96,12 @@ static int const CBX_MAX_NUM_FINGERS = 5;
 static CFTimeInterval const CBX_RUNLOOP_INTERVAL = 0.1; // seconds
 static float const CBX_MIN_ROTATION_START = 0;      //degrees
 static float const CBX_MAX_ROTATION_START = 360;    //degrees
-static float const CBX_MIN_LONG_PRESS_DURATION = 0.5; //determined through trial and error w/UILongPressGestureRecognizer
-static float const CBX_DEFAULT_DURATION = 0.1;
+
+// determined empirically with UILongPressGestureRecognizer
+static float const CBX_MIN_LONG_PRESS_DURATION = 0.5;
+
+// determined by observing testmanagerd logs for XCUIElement#tap gestures.
+static float const CBX_DEFAULT_DURATION = 0.2;
 static BOOL const CBX_DEFAULT_ALLOW_INERTIA_IN_DRAG = YES;
 static float const CBX_DOUBLE_TAP_PAUSE_DURATION = 0.1;
 static float const CBX_DEFAULT_ROTATE_DURATION = .8;
