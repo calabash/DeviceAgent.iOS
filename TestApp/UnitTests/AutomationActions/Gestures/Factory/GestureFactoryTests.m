@@ -159,7 +159,7 @@
                         @"coordinate" :  @[ @50, @50 ]
                         },
                 @"options" : @{
-                        @"duration" : @0.1,
+                        @"duration" : @0.2,
                         @"repetitions" : @2,
                         @"num_fingers" : @1
                         }

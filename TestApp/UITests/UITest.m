@@ -82,6 +82,49 @@
     NSLog(@"char per second = %@", @(charPerSecond));
 }
 
+- (void)testLongTextEntry {
+    [XCUIDevice sharedDevice].orientation = UIDeviceOrientationPortrait;
+
+    [self.aut.tabBars.buttons[@"Misc"] tap];
+
+    NSMutableArray *times = [NSMutableArray arrayWithCapacity:100];
+
+    NSString *text = @"Grünliche Dämmerung, nach oben zu lichter, nach unten zu dunkler. "
+    "Die Höhe ist von wogendem Gewässer erfüllt, das rastlos von rechts nach links zu "
+    "strömt. Nach der Tiefe zu lösen die Fluten sich in einen immer feineren feuchten\n";
+
+
+
+    for (NSUInteger try = 0; try < 100; try++) {
+        [self.aut.tables[@"misc page"].cells[@"text input row"] tap];
+        [self.aut.buttons[@"clear text view button"] tap];
+        [self.aut.textViews[@"text view"] tap];
+        CFTimeInterval startTime = CACurrentMediaTime();
+        [self.aut.textViews[@"text view"] typeText:text];
+        CFTimeInterval elapsed = CACurrentMediaTime() - startTime;
+        [times addObject:@(elapsed)];
+
+        // dismiss the keyboard
+        [self.aut.buttons[@"dismiss text view keyboard"] tap];
+
+        XCTAssertEqualObjects([self.aut.textViews[@"text view"] value], text);
+        [self.aut.navigationBars[@"Misc Menu"].buttons[@"Misc Menu"] tap];
+    }
+
+    CFTimeInterval accumulator = 0.0;
+    for (NSNumber *time in times) {
+        accumulator = accumulator + [time doubleValue];
+    }
+
+    CFTimeInterval mean = accumulator/(times.count * 1.0);
+
+    NSLog(@"mean = %@", @(mean));
+
+    CGFloat charPerSecond = [text length]/mean;
+
+    NSLog(@"char per second = %@", @(charPerSecond));
+}
+
 - (void)testDoubleTap {
 
     NSMutableArray *times = [NSMutableArray arrayWithCapacity:100];

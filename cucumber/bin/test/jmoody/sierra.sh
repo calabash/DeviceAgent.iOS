@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -e
-CUCUMBER_ARGS="--format pretty --tags @keyboard"
+CUCUMBER_ARGS="--format pretty --tags ~@tree"
 
 if [ "${1}" = "device" ]; then
   TEST_SIM=0
