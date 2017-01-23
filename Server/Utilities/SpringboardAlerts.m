@@ -20,6 +20,8 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
 - (NSArray<SpringBoardAlert *> *)USEnglishAlerts;
 - (NSArray<SpringBoardAlert *> *)DanishAlerts;
 - (NSArray<SpringBoardAlert *> *)DutchAlerts;
+- (NSArray<SpringBoardAlert *> *)DutchAlerts_BE;
+- (NSArray<SpringBoardAlert *> *)SwedishAlerts;
 - (NSArray<SpringBoardAlert *> *)GermanAlerts;
 - (NSArray<SpringBoardAlert *> *)EUSpanishAlerts;
 - (NSArray<SpringBoardAlert *> *)ES419SpanishAlerts;
@@ -44,6 +46,8 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
                                             [self USEnglishAlerts],
                                             [self DanishAlerts],
                                             [self DutchAlerts],
+                                            [self DutchAlerts_BE],
+                                            [self SwedishAlerts],
                                             [self EUSpanishAlerts],
                                             [self ES419SpanishAlerts],
                                             [self GermanAlerts],
@@ -147,6 +151,37 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              ];
 }
 
+- (NSArray<SpringBoardAlert *> *)DutchAlerts_BE {
+    return @[
+             alert(@"Sta toe", YES, @"toegang tot je locatie toestaan terwijl je de app gebruikt"),
+             alert(@"Sta toe", YES, @"toegang tot je locatie toestaan, zelfs als je de app niet gebruikt"),
+             alert(@"OK", YES, @"wil toegang tot je contacten"),
+             alert(@"OK", YES, @"wil toegang tot je agenda"),
+             alert(@"OK", YES, @"wil toegang tot je herinneringen"),
+             alert(@"OK", YES, @"wil toegang tot je foto's"),
+             alert(@"OK", YES, @"wil toegang tot Twitter-accounts"),
+             alert(@"OK", YES, @"wil toegang tot de microfoon"),
+             alert(@"OK", YES, @"wil toegang tot je bewegings- en fitnessactiviteit"),
+             alert(@"OK", YES, @"wil toegang tot de camera")
+             ];
+}
+
+- (NSArray<SpringBoardAlert *> *)SwedishAlerts {
+    return @[
+             alert(@"Tillåt", YES, @"att se din platsinfo när du använder appen"),
+             alert(@"Tillåt", YES, @"även ser din platsinfo när du inte använder appen"),
+             alert(@"Tillåt", YES, @"att se din platsinfo även när du inte använder appen"),
+             alert(@"OK", YES, @"begär åtkomst till dina kontakter"),
+             alert(@"OK", YES, @"begär åtkomst till din kalender"),
+             alert(@"OK", YES, @"begär åtkomst till dina påminnelser"),
+             alert(@"OK", YES, @"begär åtkomst till dina bilder"),
+             alert(@"OK", YES, @"vill komma åt dina Twitter-konton"),
+             alert(@"OK", YES, @"begär åtkomst till mikrofonen"),
+             alert(@"OK", YES, @"begär åtkomst till din rörelse- och träningsaktivitet"),
+             alert(@"OK", YES, @"begär åtkomst till kameran"),
+             alert(@"Tillåt", YES, @"vill skicka notiser till dig")
+             ];
+}
 - (NSArray<SpringBoardAlert *> *)GermanAlerts {
     return @[
              alert(@"Ja", YES, @"Ihren aktuellen Ort verwenden"),
