@@ -22,7 +22,7 @@
                     [response setStatusCode:((CBXException *)e).HTTPErrorStatusCode];
                     [response respondWithJSON:dict];
                 } else {
-                    NSLog(@"%@", e.callStackSymbols);
+                    DDLogDebug(@"%@", e.callStackSymbols);
                     [response setStatusCode:500];
                     [response respondWithJSON:dict];
                 }

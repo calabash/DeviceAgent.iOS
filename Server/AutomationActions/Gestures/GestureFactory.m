@@ -18,7 +18,7 @@ static NSMutableSet <Class> *gestureClasses;
     for (int i = 0; i < outCount; i++) {
         Class c = classes[i];
         if (c != [Gesture class] && class_conformsToProtocol(c, @protocol(Gesture))) {
-            NSLog(@"Registered %@ gesture", [c name]);
+            DDLogDebug(@"Registered %@ gesture", [c name]);
             [gestureClasses addObject:c];
         }
     }

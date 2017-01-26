@@ -38,6 +38,13 @@
               @([self numFingers]),
               @(CBX_MAX_NUM_FINGERS)];
     }
+
+    if ([self duration] < CBX_DEFAULT_DURATION) {
+        @throw [InvalidArgumentException
+                withFormat:@"Invalid duration for touch: %@.  The minimum duration is %@",
+                @([self duration]),
+                @(CBX_DEFAULT_DURATION)];
+    }
 }
 
 - (CBXTouchEvent *)cbxEventWithCoordinates:(NSArray <Coordinate *> *)coordinates {
@@ -49,7 +56,7 @@
 
     // Increase the duration by a little to trigger long press gestures.
     // For example, a recognizer with 1.0 minimum duration will not be
-    // triggered by a 1.0 duration, but it will be triggered by a 1.0.1
+    // triggered by a 1.0 duration, but it will be triggered by a 1.01
     // duration.
     float duration = [self duration] + 0.01;
     float offset = duration;
@@ -93,7 +100,7 @@
         offset += duration;
     }
 
-    NSLog(@"touch event: %@", touchEvent);
+    DDLogDebug(@"touch event: %@", touchEvent);
     return touchEvent;
 }
 

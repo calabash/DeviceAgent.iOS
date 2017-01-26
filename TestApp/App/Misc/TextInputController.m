@@ -120,6 +120,10 @@ static NSString *const kCaVa = @"Ça va?";
                  target:self
                  action:@selector(handleAlertButtonTouched:)];
     [self.navigationItem setRightBarButtonItem:alertItem];
+
+
+    UIEdgeInsets insets = UIEdgeInsetsMake(10, 10, 18, 10);
+    self.textView.textContainerInset = insets;
 }
 
 - (void)viewDidAppear:(BOOL)animated {

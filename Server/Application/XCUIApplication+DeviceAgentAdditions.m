@@ -1,6 +1,7 @@
+
 #import "XCUIApplication+DeviceAgentAdditions.h"
 
-@implementation XCUIApplication (DeviceAgentAddtions)
+@implementation XCUIApplication (DeviceAgentAdditions)
 
 - (long long)longLongInterfaceOrientation {
     return (long long)[self interfaceOrientation];

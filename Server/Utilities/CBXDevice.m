@@ -3,6 +3,8 @@
 #import <sys/utsname.h>
 #import <arpa/inet.h>
 #import <ifaddrs.h>
+#import "XCUIDevice.h"
+#import "CBXConstants.h"
 
 NSString *const LPDeviceSimKeyModelIdentifier = @"SIMULATOR_MODEL_IDENTIFIER";
 NSString *const LPDeviceSimKeyVersionInfo = @"SIMULATOR_VERSION_INFO";
@@ -26,7 +28,7 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
 - (CGFloat)scaleForMainScreen;
 - (CGFloat)heightForMainScreenBounds;
 - (NSString *)physicalDeviceModelIdentifier;
-- (NSString *)simulatorModelIdentfier;
+- (NSString *)simulatorModelIdentifier;
 - (NSString *)simulatorVersionInfo;
 - (BOOL)isLetterBox;
 
@@ -119,29 +121,29 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
     CGSize screenSizeForMode = screenMode.size;
     CGFloat pixelAspectRatio = screenMode.pixelAspectRatio;
 
-    NSLog(@"         Form factor: %@", [self formFactor]);
-    NSLog(@" Current screen mode: %@", screenMode);
-    NSLog(@"Screen size for mode: %@", NSStringFromCGSize(screenSizeForMode));
-    NSLog(@"       Screen height: %@", @(screenHeight));
-    NSLog(@"        Screen scale: %@", @(scale));
-    NSLog(@" Screen native scale: %@", @(nativeScale));
-    NSLog(@"Pixel Aspect Ratio: %@", @(pixelAspectRatio));
+    DDLogDebug(@"         Form factor: %@", [self formFactor]);
+    DDLogDebug(@" Current screen mode: %@", screenMode);
+    DDLogDebug(@"Screen size for mode: %@", NSStringFromCGSize(screenSizeForMode));
+    DDLogDebug(@"       Screen height: %@", @(screenHeight));
+    DDLogDebug(@"        Screen scale: %@", @(scale));
+    DDLogDebug(@" Screen native scale: %@", @(nativeScale));
+    DDLogDebug(@"Pixel Aspect Ratio: %@", @(pixelAspectRatio));
 
     if ([self isIPhone6PlusLike]) {
         if (screenHeight == 568.0 && nativeScale > scale) { // native => 2.88
-            NSLog(@"iPhone 6 Plus: Zoom display mode and app is not optimized for screen size - adjusting sampleFactor");
+            DDLogDebug(@"iPhone 6 Plus: Zoom display mode and app is not optimized for screen size - adjusting sampleFactor");
             _sampleFactor = iphone6p_zoom_sample;
         } else if (screenHeight == 667.0 && nativeScale <= scale) { // native => ???
-            NSLog(@"iPhone 6 Plus: Zoomed display mode - sampleFactor remains the same");
+            DDLogDebug(@"iPhone 6 Plus: Zoomed display mode - sampleFactor remains the same");
         } else if (screenHeight == 736 && nativeScale < scale) { // native => 2.61
-            NSLog(@"iPhone 6 Plus: Standard Display and app is not optimized for screen size - sampleFactor remains the same");
+            DDLogDebug(@"iPhone 6 Plus: Standard Display and app is not optimized for screen size - sampleFactor remains the same");
         }
     } else if ([self isIPhone6Like]) {
         if (screenHeight == 568.0 && nativeScale <= scale) {
-            NSLog(@"iPhone 6: application not optimized for screen size - adjusting sampleFactor");
+            DDLogDebug(@"iPhone 6: application not optimized for screen size - adjusting sampleFactor");
             _sampleFactor = iphone6_zoom_sample;
         } else if (screenHeight == 568.0 && nativeScale > scale) {
-            NSLog(@"iPhone 6: Zoomed display mode - sampleFactor remains the same");
+            DDLogDebug(@"iPhone 6: Zoomed display mode - sampleFactor remains the same");
         }
     }
 
@@ -281,11 +283,11 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
               // iPhone 6+
               @"iPhone7,1",
               @"iPhone8,2",
-              
+
               // iPad Pro 13in
               @"iPad6,7",
               @"iPad6,8",
-              
+
               // iPad Pro 9in
               @"iPad6,3",
               @"iPad6,4",
@@ -347,7 +349,7 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
     return _processEnvironment;
 }
 
-- (NSString *)simulatorModelIdentfier {
+- (NSString *)simulatorModelIdentifier {
     return [self.processEnvironment objectForKey:LPDeviceSimKeyModelIdentifier];
 }
 
@@ -385,7 +387,7 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
 - (NSString *)modelIdentifier {
     if (_modelIdentifier) { return _modelIdentifier; }
     if ([self isSimulator]) {
-        _modelIdentifier = [self simulatorModelIdentfier];
+        _modelIdentifier = [self simulatorModelIdentifier];
     } else {
         _modelIdentifier = [self physicalDeviceModelIdentifier];
     }
@@ -411,7 +413,7 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
 }
 
 - (BOOL)isSimulator {
-    return [self simulatorModelIdentfier] != nil;
+    return [self simulatorModelIdentifier] != nil;
 }
 
 - (BOOL)isPhysicalDevice {
@@ -455,7 +457,20 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
     return [self.armVersion containsString:@"arm64"];
 }
 
+- (NSString *)stringRepresentationOfOrientation:(UIDeviceOrientation)orientation {
+    switch (orientation) {
+        case UIDeviceOrientationPortrait: { return @"portrait"; }
+        case UIDeviceOrientationPortraitUpsideDown: { return @"upside_down"; }
+        case UIDeviceOrientationLandscapeLeft: { return @"landscape_left"; }
+        case UIDeviceOrientationLandscapeRight: { return @"landscape_right"; }
+        case UIDeviceOrientationFaceUp: { return @"face_up"; }
+        case UIDeviceOrientationFaceDown: { return @"face_down"; }
+        default: { return @"unknown"; }
+    }
+}
+
 - (NSDictionary *)dictionaryRepresentation {
+    UIDeviceOrientation orientation = [[XCUIDevice sharedDevice] orientation];
     return
     @{
       @"simulator" : @([self isSimulator]),
@@ -475,7 +490,9 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
       @"name" : [self name],
       @"ios_version" : [self iOSVersion],
       @"physical_device_model_identifier" : [self physicalDeviceModelIdentifier],
-      @"arm_version" : [self armVersion]
+      @"arm_version" : [self armVersion],
+      @"orientation_numeric" : @(orientation),
+      @"orientation_string" : [self stringRepresentationOfOrientation:orientation]
       };
 }
 

@@ -6,6 +6,7 @@
 #import "Application.h"
 #import "JSONUtils.h"
 #import "Query.h"
+#import "XCApplicationQuery.h"
 
 @implementation Query
 
@@ -30,7 +31,10 @@
 
 - (NSArray<XCUIElement *> *)execute {
     //TODO throw exception if count == 0
-    if (_queryConfiguration.selectors.count == 0) return nil;
+    if (_queryConfiguration.selectors.count == 0) {
+        return nil;
+    }
+
     if ([Application currentApplication] == nil) {
         @throw [CBXException withMessage:@"Can not perform queries until application has been launched!"];
     }

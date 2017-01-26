@@ -18,8 +18,8 @@
 }
 
 + (Gesture *)executeWithGestureConfiguration:(GestureConfiguration *)gestureConfig
-                                         query:(Query *)query
-                                    completion:(CompletionBlock)completion {
+                                       query:(Query *)query
+                                  completion:(CompletionBlock)completion {
     Gesture *gest = [self withGestureConfiguration:gestureConfig
                                              query:query];
     [gest execute:completion];
@@ -29,10 +29,10 @@
 + (instancetype)withGestureConfiguration:(GestureConfiguration *)gestureConfig
                                    query:(Query *)query {
     Gesture *gesture = [self new];
-    
+
     gesture.gestureConfiguration = gestureConfig;
     gesture.query = query;
-    
+
     return gesture;
 }
 
@@ -55,7 +55,7 @@
 
 - (void)execute:(CompletionBlock)completion {
     [self validate];
-    
+
     NSMutableArray <Coordinate *> *coords = [NSMutableArray new];
     if (self.query.isCoordinateQuery) {
         CoordinateQuery *cq = (CoordinateQuery *)self.query;
@@ -85,7 +85,7 @@
     [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
 
         if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] ) {
-            NSLog(@"WARNING: Testing on daemonProtocolVersion %@", @([[XCTestDriver sharedTestDriver] daemonProtocolVersion]));
+            DDLogDebug(@"WARNING: Testing on daemonProtocolVersion %@", @([[XCTestDriver sharedTestDriver] daemonProtocolVersion]));
         }
         CBXTouchEvent *event = [self cbxEventWithCoordinates:coords];
         [[Testmanagerd get] _XCT_synthesizeEvent:event.event

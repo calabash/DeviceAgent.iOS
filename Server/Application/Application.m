@@ -8,6 +8,7 @@
 #import "Application.h"
 #import "Testmanagerd.h"
 #import "XCUIElement.h"
+#import "ThreadUtils.h"
 
 @interface Application ()
 @property (nonatomic, strong) XCUIApplication *app;
@@ -56,20 +57,31 @@ static NSInteger currentElementIndex = 0;
 }
 
 - (void)kill {
-    NSLog(@"Killing application '%@'", self.app.bundleID);
+    DDLogDebug(@"Killing application '%@'", self.app.bundleID);
     [self.app terminate];
     self.app = nil;
 }
 
 - (void)startSession {
-    NSLog(@"Launching application '%@'", self.app.bundleID);
-    [[Testmanagerd get] _XCT_launchApplicationWithBundleID:self.app.bundleID arguments:self.app.launchArguments environment:self.app.launchEnvironment completion:^(NSError *e) {
-        if (e) {
-            @throw [[CBXException alloc] initWithName:@"Unable to launch app"
-                                              reason:e.localizedDescription
-                                            userInfo:@{@"bundleId" : self.app.bundleID}];
-        }
+    DDLogDebug(@"Launching application '%@'", self.app.bundleID);
+
+    __block NSError *outerError = nil;
+    [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
+        [[Testmanagerd get] _XCT_launchApplicationWithBundleID:self.app.bundleID
+                                                     arguments:self.app.launchArguments
+                                                   environment:self.app.launchEnvironment
+                                                    completion:^(NSError *innerError) {
+                                                        outerError = innerError;
+                                                        *setToTrueWhenDone = YES;
+                                                    }];
     }];
+
+    if (outerError) {
+        NSString *errorMessage;
+        errorMessage = [NSString stringWithFormat:@"Could not launch application with bundle identifier: %@\n%@",
+                        self.app.bundleID, outerError.localizedDescription];
+        @throw [CBXException withMessage:errorMessage userInfo:nil];
+    }
 }
 
 + (void)killCurrentApplication {
@@ -82,16 +94,17 @@ static NSInteger currentElementIndex = 0;
                 bundleID:(NSString *)bundleID
               launchArgs:(NSArray *)launchArgs
                      env:(NSDictionary *)environment {
-    
-    //TODO: This seems to crash/end the test session... 
-//    if ([currentApplication hasSession]) {
-//        [currentApplication kill];
-//    }
-    
-    currentApplication.app = [[XCUIApplication alloc] initPrivateWithPath:bundlePath bundleID:bundleID];
+
+    // TODO: This seems to crash/end the test session...
+    //    if ([currentApplication hasSession]) {
+    //        [currentApplication kill];
+    //    }
+
+    currentApplication.app = [[XCUIApplication alloc] initPrivateWithPath:bundlePath
+                                                                 bundleID:bundleID];
     currentApplication.app.launchArguments = launchArgs ?: @[];
     currentApplication.app.launchEnvironment = environment ?: @{};
-    
+
     [currentApplication startSession];
 }
 

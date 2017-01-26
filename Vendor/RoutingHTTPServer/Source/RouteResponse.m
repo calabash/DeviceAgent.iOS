@@ -4,6 +4,7 @@
 #import "HTTPFileResponse.h"
 #import "HTTPAsyncFileResponse.h"
 #import "HTTPResponseProxy.h"
+#import "CBXConstants.h"
 
 @implementation RouteResponse {
 	NSMutableDictionary *headers;
@@ -67,7 +68,7 @@
     NSError *e;
     NSData *data = [NSJSONSerialization dataWithJSONObject:json options:0 error:&e];
     if (e) {
-        NSLog(@"Error serializing: %@\n %@", e, json);
+        DDLogError(@"Error serializing: %@\n %@", e, json);
     }
     [self respondWithData:data];
 }

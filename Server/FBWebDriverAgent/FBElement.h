@@ -25,9 +25,8 @@ NSString *wdAttributeNameForAttributeName(NSString *name);
 @property (readonly, copy) NSString *wdPlaceholderValue; //new
 @property (readonly, strong) id wdValue;
 @property (readonly, getter = isWDEnabled) BOOL wdEnabled;
-//TODO: Necessary?
-//@property (readonly, getter = isWDVisible) BOOL wdVisible;
 
 - (id)valueForWDAttributeName:(NSString *)name;
+- (void)getHitPoint:(CGPoint *)point visibility:(BOOL *)visible;
 
 @end
