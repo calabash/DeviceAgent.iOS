@@ -141,8 +141,6 @@ static int const CBX_DEFAULT_REPETITIONS = 1;
  is, in most cases, a fatal error - the DeviceAgent stops responding to requests because
  the `EnterText` request never finishes because it is hanging on something???
 
-
-
  Xcode 8.2.1 / Sierra against i386 and x86_64 simulators with XCUITest typeText: in a
  UITextField, found ~12 characters/second over 100 runs on a UUID string with 59
  characters.  In UITextView, the characters/second over 100 on a string with ~250
