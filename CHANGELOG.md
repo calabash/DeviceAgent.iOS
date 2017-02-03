@@ -1,5 +1,9 @@
-### 1.0.5
+### 1.0.6
 
+1.0.5 was never released.
+
+* Add mach clock and a simple waiter #202
+* SpringBoard#queryForAlert: skip\_waitForQuiescence check #201
 * Increase touch duration to 0.2 to match XCUITest #198
 * Use CocoaLumberjack for logging #197
 * Update CocoaLumberjack to 3.0.0 #196
