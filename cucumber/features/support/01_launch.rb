@@ -107,7 +107,16 @@ Before do |scenario|
     :shutdown_device_agent_before_launch => true
   }
 
+  if launcher.first_launch
+    device = launcher.device
+    if ENV["ERASE_SIM_BEFORE"] == "1" && device.simulator?
+      RunLoop.log_info2("Erasing simulator!")
+      RunLoop::CoreSimulator.erase(device)
+    end
+  end
+
   if launcher.first_launch || !launcher.running?
+    # See bin/test/jmoody scripts.
     client = RunLoop.run(options)
     DeviceAgent::Automator.client = client
     launcher.device_agent = client

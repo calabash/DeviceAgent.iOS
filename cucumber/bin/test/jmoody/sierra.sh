@@ -27,6 +27,10 @@ export QUIT_AUT_AFTER_CUCUMBER="1"
 # See features/support/01_launch.rb
 export ON_SCENARIO_FAILURE="exit"
 
+# Erase the simulator before starting the first test.
+# See features/support/01_launch.rb
+export ERASE_SIM_BEFORE="1"
+
 function banner {
   if [ "${TERM}" = "dumb" ]; then
     echo ""
