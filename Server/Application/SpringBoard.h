@@ -22,6 +22,11 @@ typedef enum : NSUInteger {
 @interface SpringBoard : XCUIApplication
 
 /**
+ Controls whether or not SpringBoard alerts are dismissed automatically or manually
+ */
+@property (atomic, assign) BOOL shouldDismissAlertsAutomatically;
+
+/**
  @return The XCUIApplication that is attached to SpringBoard
  */
 + (instancetype)application;
@@ -32,13 +37,6 @@ typedef enum : NSUInteger {
  @return An alert if one is visible and nil otherwise.
  */
 - (XCUIElement *)queryForAlert;
-
-/**
- This method always returns true.
-
- @return YES if alerts should be automatically dismissed.
- */
-- (BOOL)shouldDismissAlertsAutomatically;
 
 /**
  Alerts presented by SpringBoard block automation.  This method tries to automatically

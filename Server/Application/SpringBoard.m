@@ -42,8 +42,7 @@ typedef enum : NSUInteger {
 - (instancetype)initPrivateWithPath:(id)arg1 bundleID:(id)arg2 {
     self = [super initPrivateWithPath:arg1 bundleID:arg2];
     if (self) {
-        // Please keep.  There were implementations that required ivars.
-        // Interacting with SpringBoard is a WIP.
+        _shouldDismissAlertsAutomatically = YES;
     }
     return self;
 }
@@ -104,11 +103,6 @@ typedef enum : NSUInteger {
         }
         return alert;
     }
-}
-
-- (BOOL)shouldDismissAlertsAutomatically {
-    // TODO Provide a launch argument or route to disable the automatic dismiss.
-    return YES;
 }
 
 - (void)handleAlertsOrThrow {
