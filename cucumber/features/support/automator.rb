@@ -174,6 +174,10 @@ module DeviceAgent
       Automator.client.wait_for_no_alert
     end
 
+    def set_dismiss_springboard_alerts_automatically(true_or_false)
+      Automator.client.set_dismiss_springboard_alerts_automatically(true_or_false)
+    end
+
     def wait_for_text_in_view(text, uiquery, options={})
       Automator.client.wait_for_text_in_view(text, uiquery, options)
     end
