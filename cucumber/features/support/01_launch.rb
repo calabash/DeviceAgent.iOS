@@ -77,6 +77,25 @@ module Calabash
   end
 end
 
+Before("@simulator") do |scenario|
+  device = Calabash::Launcher.instance.device
+  if device.physical_device?
+    raise "This scenario does not run on physical devices"
+    exit 1
+  end
+end
+
+Before("@reset_device") do |scenario|
+  device = Calabash::Launcher.instance.device
+  if device.simulator?
+    RunLoop::CoreSimulator.erase(device)
+    RunLoop.log_info2("Erasing simulator!")
+  else
+    raise "Cannot reset a physical device"
+    exit 1
+  end
+end
+
 Before do |scenario|
   launcher = Calabash::Launcher.instance
   options = {
@@ -98,7 +117,7 @@ Before do |scenario|
 
     # Keep this as true.
     #
-    # In this context, these means - when the tests
+    # In this context, this means - when the tests
     # first start, shutdown any running DeviceAgent
     #
     # See the guard below: RunLoop.run(options) is
@@ -109,6 +128,7 @@ Before do |scenario|
 
   if launcher.first_launch
     device = launcher.device
+    # See the bin/test/jmoody scripts.
     if ENV["ERASE_SIM_BEFORE"] == "1" && device.simulator?
       RunLoop.log_info2("Erasing simulator!")
       RunLoop::CoreSimulator.erase(device)

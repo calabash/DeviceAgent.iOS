@@ -26,6 +26,12 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>TestApp wants to know who you are meeting with.</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>TestApp wants to know what is on your shopping list</string>
+	<key>NSContactsUsageDescription</key>
+	<string>TestApp wants to know who your friends are</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

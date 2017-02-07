@@ -35,16 +35,14 @@
                  [response respondWithJSON:@{ @"status" : @"no alerts" }];
              }],
 
-#pragma mark - Experimental API
-
              [CBXRoute post:endpoint(@"/dismiss-springboard-alert", 1.0) withBlock:^(RouteRequest *request,
-                                                                                   NSDictionary *body,
-                                                                                   RouteResponse *response) {
-                 NSString *buttonTitle = body[@"button"];
+                                                                                     NSDictionary *body,
+                                                                                     RouteResponse *response) {
+                 NSString *buttonTitle = body[@"button_title"];
 
                  if (!buttonTitle) {
                      @throw [InvalidArgumentException
-                     withMessage:@"Request body is missing required key: 'button'"
+                             withMessage:@"Request body is missing required key: 'button_title'"
                              userInfo:@{@"received_body" : body}];
                  }
 
@@ -92,19 +90,21 @@
                  [response respondWithJSON:responseBody];
              }],
 
+#pragma mark - Experimental API
+
              [CBXRoute post:endpoint(@"/gesture/:test_id", 1.0) withBlock:^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
                  NSNumber *identifier = @([request.params[CBX_TEST_ID_KEY] integerValue]);
                  XCUIElement *el = [Application cachedElementOrThrow:identifier];
-                 
+
                  NSMutableDictionary *b = [body mutableCopy];
                  b[@"specifiers"] = [(body[@"specifiers"] ?: @{}) mutableCopy];
-                 
+
                  //Center point
                  NSDictionary *coordinate = @{@"x" : @(CGRectGetMidX(el.frame)),
                                               @"y" : @(CGRectGetMidY(el.frame)) };
-                 
+
                  b[@"specifiers"][@"coordinate"] = coordinate;
-                 
+
                  [GestureFactory executeGestureWithJSON:b
                                              completion:^(NSError *e) {
                                                  if (e) {

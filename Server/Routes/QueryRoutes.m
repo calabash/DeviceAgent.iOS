@@ -41,17 +41,40 @@
              }],
 
              [CBXRoute get:endpoint(@"/springboard-alert", 1.0) withBlock:^(RouteRequest *request,
-                                                                           NSDictionary *data,
-                                                                           RouteResponse *response) {
+                                                                            NSDictionary *data,
+                                                                            RouteResponse *response) {
                  XCUIElement *alert = [[SpringBoard application] queryForAlert];
-                 NSArray *results;
-                 if (alert) {
-                     results = [NSArray arrayWithObject:[JSONUtils elementToJSON:alert]];
+                 NSDictionary *results;
+
+                 if (alert && alert.exists) {
+                     NSString *alertTitle = alert.label;
+                     XCUIElementQuery *query = [alert descendantsMatchingType:XCUIElementTypeButton];
+                     NSArray<XCUIElement *> *buttons = [query allElementsBoundByIndex];
+
+                     NSMutableArray *mutable = [NSMutableArray arrayWithCapacity:buttons.count];
+
+                     for (XCUIElement *button in buttons) {
+                         if (button.exists) {
+                             NSString *name = button.label;
+                             if (name) {
+                                 [mutable addObject:name];
+                             }
+                         }
+                     }
+
+                     NSArray *alertButtonTitles = [NSArray arrayWithArray:mutable];
+                     NSMutableDictionary *alertJSON;
+                     alertJSON = [NSMutableDictionary dictionaryWithDictionary:[JSONUtils elementToJSON:alert]];
+                     alertJSON[@"is_springboard_alert"] = @(YES);
+                     alertJSON[@"button_titles"] = alertButtonTitles;
+                     alertJSON[@"alert_title" ] = alertTitle;
+
+                     results = [NSDictionary dictionaryWithDictionary:alertJSON];
                  } else {
-                     results = @[];
+                     results = @{};
                  }
 
-                 [response respondWithJSON:@{@"result" : results}];
+                 [response respondWithJSON:results];
              }],
 
              [CBXRoute get:endpoint(@"/query/id/:id", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
