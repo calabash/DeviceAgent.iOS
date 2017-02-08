@@ -311,7 +311,7 @@
 		F58D27CC1D4F913B000FF6C0 /* libExpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F58D27B51D4F913B000FF6C0 /* libExpecta.a */; };
 		F58D27CD1D4F913C000FF6C0 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F58D27B71D4F913B000FF6C0 /* libOCMock.a */; };
 		F58D27CE1D4F913C000FF6C0 /* libSpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F58D27C41D4F913B000FF6C0 /* libSpecta.a */; };
-		F58D27FD1D4F947F000FF6C0 /* XCUIApplication+DeviceAgentAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27D51D4F947F000FF6C0 /* XCUIApplication+DeviceAgentAdditions.m */; };
+		F58D27FD1D4F947F000FF6C0 /* XCUIApplication+DeviceAgentAdditionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27D51D4F947F000FF6C0 /* XCUIApplication+DeviceAgentAdditionsTest.m */; };
 		F58D27FE1D4F947F000FF6C0 /* ActionConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27D81D4F947F000FF6C0 /* ActionConfigurationTests.m */; };
 		F58D27FF1D4F947F000FF6C0 /* CoordinateQueryConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27DA1D4F947F000FF6C0 /* CoordinateQueryConfigurationTests.m */; };
 		F58D28001D4F947F000FF6C0 /* QueryConfigurationFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27DC1D4F947F000FF6C0 /* QueryConfigurationFactoryTests.m */; };
@@ -884,7 +884,7 @@
 		F58D27C91D4F913B000FF6C0 /* SPTSharedExampleGroups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTSharedExampleGroups.h; sourceTree = "<group>"; };
 		F58D27CA1D4F913B000FF6C0 /* SPTSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTSpec.h; sourceTree = "<group>"; };
 		F58D27CB1D4F913B000FF6C0 /* XCTestCase+Specta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+Specta.h"; sourceTree = "<group>"; };
-		F58D27D51D4F947F000FF6C0 /* XCUIApplication+DeviceAgentAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = "XCUIApplication+DeviceAgentAdditions.m"; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		F58D27D51D4F947F000FF6C0 /* XCUIApplication+DeviceAgentAdditionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = "XCUIApplication+DeviceAgentAdditionsTest.m"; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F58D27D81D4F947F000FF6C0 /* ActionConfigurationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = ActionConfigurationTests.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F58D27DA1D4F947F000FF6C0 /* CoordinateQueryConfigurationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinateQueryConfigurationTests.m; sourceTree = "<group>"; };
 		F58D27DC1D4F947F000FF6C0 /* QueryConfigurationFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = QueryConfigurationFactoryTests.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
@@ -1772,7 +1772,7 @@
 		F58D27D31D4F947F000FF6C0 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				F58D27D51D4F947F000FF6C0 /* XCUIApplication+DeviceAgentAdditions.m */,
+				F58D27D51D4F947F000FF6C0 /* XCUIApplication+DeviceAgentAdditionsTest.m */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -2705,7 +2705,7 @@
 				F5B0A1D21CAD4E8A00E056CE /* HTTPDataResponse.m in Sources */,
 				899696CB1CB356BF00BB42E2 /* QueryConfiguration.m in Sources */,
 				F5B0A1BC1CAD4E3A00E056CE /* InvalidArgumentException.m in Sources */,
-				F58D27FD1D4F947F000FF6C0 /* XCUIApplication+DeviceAgentAdditions.m in Sources */,
+				F58D27FD1D4F947F000FF6C0 /* XCUIApplication+DeviceAgentAdditionsTest.m in Sources */,
 				F5B0A1D01CAD4E7F00E056CE /* MultipartMessageHeaderField.m in Sources */,
 				F5B0A1E31CAD4EA700E056CE /* RoutingConnection.m in Sources */,
 				F58D28131D4F947F000FF6C0 /* RouteResponseTest.m in Sources */,
