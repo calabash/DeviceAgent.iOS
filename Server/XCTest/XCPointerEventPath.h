@@ -4,8 +4,6 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2013 by Steve Nygard.
 //
 
-#import <Foundation/Foundation.h>
-#import <CoreGraphics/CoreGraphics.h>
 @class NSArray, NSMutableArray;
 
 @interface XCPointerEventPath : NSObject <NSSecureCoding>
@@ -26,10 +24,11 @@
 - (void)releaseButton:(unsigned long long)arg1 atOffset:(double)arg2;
 - (void)pressButton:(unsigned long long)arg1 atOffset:(double)arg2;
 - (void)liftUpAtOffset:(double)arg1;
-- (void)moveToPoint:(CGPoint)arg1 atOffset:(double)arg2;
+- (void)moveToPoint:(struct CGPoint)arg1 atOffset:(double)arg2;
+- (void)pressDownWithPressure:(double)arg1 atOffset:(double)arg2;
 - (void)pressDownAtOffset:(double)arg1;
-- (id)initForMouseAtPoint:(CGPoint)arg1 offset:(double)arg2;
-- (id)initForTouchAtPoint:(CGPoint)arg1 offset:(double)arg2;
+- (id)initForMouseAtPoint:(struct CGPoint)arg1 offset:(double)arg2;
+- (id)initForTouchAtPoint:(struct CGPoint)arg1 offset:(double)arg2;
 - (id)init;
 
 @end
