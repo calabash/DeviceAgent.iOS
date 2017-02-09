@@ -1,6 +1,7 @@
 
 #import "MetaRoutes.h"
 #import "XCTestDriver.h"
+#import "XCTestConfiguration.h"
 #import "Application.h"
 #import "CBXMacros.h"
 #import "CBXDevice.h"
@@ -10,9 +11,16 @@
 + (NSArray <CBXRoute *> *)getRoutes {
     return @[
              [CBXRoute get:endpoint(@"/sessionIdentifier", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
-                 NSUUID *testUUID = [XCTestDriver sharedTestDriver].sessionIdentifier;
-                 [response respondWithJSON:@{@"sessionId" : [testUUID UUIDString]}];
+
+                 NSUUID *testUUID = [[XCTestConfiguration activeTestConfiguration] sessionIdentifier];
+
+                 if (testUUID) {
+                     [response respondWithJSON:@{@"sessionId" : [testUUID UUIDString]}];
+                 } else {
+                     [response respondWithJSON:@{@"sessionId" : [NSNull null]}];
+                 }
              }],
+
              [CBXRoute get:endpoint(@"/pid", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
                  NSString *pidString = [NSString stringWithFormat:@"%d",
                                         [Application currentApplication].processID];
