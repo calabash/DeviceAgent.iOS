@@ -2,6 +2,8 @@
 #import "CoordinateQueryConfiguration.h"
 #import "Coordinate.h"
 #import "Touch.h"
+#import "XCUIApplication.h"
+#import "XCUIApplication+DeviceAgentAdditions.h"
 
 @interface Touch ()
 

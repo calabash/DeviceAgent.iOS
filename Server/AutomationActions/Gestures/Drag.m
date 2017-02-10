@@ -2,6 +2,8 @@
 #import "CoordinateQueryConfiguration.h"
 #import "GeometryUtils.h"
 #import "Drag.h"
+#import "XCUIApplication.h"
+#import "XCUIApplication+DeviceAgentAdditions.h"
 
 @implementation Drag
 + (NSString *)name { return @"drag"; }

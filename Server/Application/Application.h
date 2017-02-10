@@ -1,11 +1,7 @@
-//
-//  CBApplication.h
-//  xcuitest-server
-//
 
 #import <Foundation/Foundation.h>
-#import "XCUIApplication.h"
-#import "XCUIApplication+DeviceAgentAdditions.h"
+
+@class XCUIApplication, XCUIElement;
 
 /**
  DeviceAgent wrapper class for XCUIApplication

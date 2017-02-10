@@ -14,7 +14,7 @@
     BOOL _ancillary;
     BOOL _eventLoopIsIdle;
     int _processID;
-    unsigned long long _state;
+    NSUInteger _state;
     XCUIElement *_keyboard;
     NSArray *_launchArguments;
     NSDictionary *_launchEnvironment;
@@ -22,19 +22,18 @@
     XCApplicationQuery *_applicationQuery;
     unsigned long long _generation;
 }
-@property unsigned long long generation; // @synthesize generation=_generation;
+@property NSUInteger generation; // @synthesize generation=_generation;
 @property BOOL eventLoopIsIdle; // @synthesize eventLoopIsIdle=_eventLoopIsIdle;
 @property(retain) XCApplicationQuery *applicationQuery; // @synthesize applicationQuery=_applicationQuery;
 @property(retain) XCUIApplicationImpl *applicationImpl; // @synthesize applicationQuery=_applicationQuery;
 @property(readonly, copy) NSString *bundleID; // @synthesize bundleID=_bundleID;
 @property(readonly, copy) NSString *path; // @synthesize path=_path;
 @property BOOL ancillary; // @synthesize ancillary=_ancillary;
-@property(nonatomic) BOOL accessibilityActive; // @synthesize accessibilityActive=_accessibilityActive;
 @property(readonly) XCUIElement *keyboard; // @synthesize keyboard=_keyboard;
 @property(readonly, nonatomic) UIInterfaceOrientation interfaceOrientation; //TODO tvos
 @property(readonly, nonatomic) BOOL running;
 @property(nonatomic) pid_t processID; // @synthesize processID=_processID;
-@property unsigned long long state; // @synthesize state=_state;
+@property NSUInteger state; // @synthesize state=_state;
 @property(readonly) XCAccessibilityElement *accessibilityElement;
 
 + (id)keyPathsForValuesAffectingRunning;

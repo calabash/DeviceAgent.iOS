@@ -1,6 +1,8 @@
 
 #import "CoordinateQueryConfiguration.h"
 #import "DoubleTap.h"
+#import "XCUIApplication.h"
+#import "XCUIApplication+DeviceAgentAdditions.h"
 
 @implementation DoubleTap
 

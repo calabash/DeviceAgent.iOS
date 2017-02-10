@@ -17,6 +17,8 @@
     unsigned long long *_alertNotificationCounter;
 }
 
+@property NSTimeInterval AXTimeout;
+
 + (id)sharedClient;
 - (NSData *)screenshotData;
 - (BOOL)performAction:(int)arg1 onElement:(id)arg2 value:(id)arg3 error:(id *)arg4;
@@ -40,6 +42,7 @@
 - (BOOL)loadAccessibility:(id *)arg1;
 - (BOOL)_registerForAXNotification:(int)arg1 error:(id *)arg2;
 - (BOOL)_loadAccessibility:(id *)arg1;
+- (BOOL) _setAXTimeout:(double)arg1 error:(id*)arg2;
 - (id)init;
 
 @end

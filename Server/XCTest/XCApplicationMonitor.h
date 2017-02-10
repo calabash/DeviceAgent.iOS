@@ -4,9 +4,9 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2013 by Steve Nygard.
 //
 
-#import "XCTestObservation.h"
+#import "XCTestObservation-Protocol.h"
 
-@class NSArray, NSMutableDictionary, NSObject<OS_dispatch_queue>, NSString;
+@class NSArray, NSMutableDictionary, NSString;
 
 @interface XCApplicationMonitor : NSObject <XCTestObservation>
 {
@@ -17,7 +17,7 @@
     NSObject<OS_dispatch_queue> *_queue;
 }
 @property NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
-@property(readonly, copy) NSArray *allMonitoredApplications;
+@property(readonly, copy) NSArray *monitoredApplications;
 
 + (instancetype)sharedMonitor;
 

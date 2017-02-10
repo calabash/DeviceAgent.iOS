@@ -8,6 +8,7 @@
 #import "CBXConstants.h"
 #import "Application+Queries.h"
 #import "CBXLogging.h"
+#import "Testmanagerd.h"
 
 @interface CBXCUITestServer ()
 @property (atomic, strong) RoutingHTTPServer *server;
@@ -88,6 +89,11 @@ static NSString *serverName = @"CalabashXCUITestServer";
           serverName,
           [UIDevice currentDevice].wifiIPAddress,
           [self.server port]);
+
+    if ([[XCTestDriver sharedTestDriver] daemonProtocolVersion] ) {
+        DDLogDebug(@"Testing on daemonProtocolVersion %@",
+              @([[XCTestDriver sharedTestDriver] daemonProtocolVersion]));
+    }
 
     while ([self.server isRunning] && !self.isFinishedTesting) {
 

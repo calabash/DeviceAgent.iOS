@@ -7,6 +7,8 @@
 #import "JSONUtils.h"
 #import "Query.h"
 #import "XCApplicationQuery.h"
+#import "XCUIApplication.h"
+#import "XCUIApplication+DeviceAgentAdditions.h"
 
 @implementation Query
 
@@ -39,16 +41,10 @@
         @throw [CBXException withMessage:@"Can not perform queries until application has been launched!"];
     }
 
-    /*
-     Building the XCUIElementQuery
-     */
+    [[Application currentApplication] cbx_resolvedSnapshot];
 
-    if ([[Application currentApplication] lastSnapshot] == nil) {
-        [[[Application currentApplication] applicationQuery] elementBoundByIndex:0];
-        [[Application currentApplication] resolve];
-    }
-
-    XCUIElementQuery *query = [[Application currentApplication].query descendantsMatchingType:XCUIElementTypeAny];;
+    XCUIElementQuery *query = [[Application currentApplication].query
+                               descendantsMatchingType:XCUIElementTypeAny];;
     for (QuerySpecifier *specifier in self.queryConfiguration.selectors) {
         query = [specifier applyToQuery:query];
     }

@@ -1,6 +1,8 @@
 
 #import "CBXTouchEvent.h"
 #import "Rotate.h"
+#import "XCUIApplication.h"
+#import "XCUIApplication+DeviceAgentAdditions.h"
 
 typedef NS_ENUM(short, ClockDirection) {
     kClockDirectionClockwise = 1,
