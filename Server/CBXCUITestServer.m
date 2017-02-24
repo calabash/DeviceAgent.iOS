@@ -89,6 +89,9 @@ static NSString *serverName = @"CalabashXCUITestServer";
           [UIDevice currentDevice].wifiIPAddress,
           [self.server port]);
 
+    DDLogDebug(@"Disabling screenshots in NSUserDefaults");
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"DisableScreenshots"];
+
     while ([self.server isRunning] && !self.isFinishedTesting) {
 
          CFRunLoopRunInMode(kCFRunLoopDefaultMode, CBX_RUNLOOP_INTERVAL, false);
