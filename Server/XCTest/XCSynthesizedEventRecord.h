@@ -4,9 +4,9 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2013 by Steve Nygard.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "XCPointerEventPath.h"
+
+@class NSArray, NSMutableArray, NSString;
 
 @interface XCSynthesizedEventRecord : NSObject <NSSecureCoding>
 {
@@ -19,8 +19,9 @@
 @property(readonly) double maximumOffset;
 @property(readonly) NSArray *eventPaths;
 
-- (void)addPointerEventPath:(XCPointerEventPath *)arg1;
+- (void)addPointerEventPath:(id)arg1;
 - (id)initWithName:(id)arg1 interfaceOrientation:(long long)arg2;
 - (id)init;
+- (BOOL)synthesizeWithError:(id *)arg1;
 
 @end
