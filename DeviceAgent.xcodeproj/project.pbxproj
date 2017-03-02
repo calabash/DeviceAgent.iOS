@@ -141,6 +141,7 @@
 		F5041F4B1E092D2A000B3E3E /* XCUIElement+FBIsVisible.m in Sources */ = {isa = PBXBuildFile; fileRef = F5041F481E092D1C000B3E3E /* XCUIElement+FBIsVisible.m */; };
 		F5041F4C1E092D30000B3E3E /* XCTestPrivateSymbols.m in Sources */ = {isa = PBXBuildFile; fileRef = F5041F451E092BAC000B3E3E /* XCTestPrivateSymbols.m */; };
 		F5041F4D1E092D32000B3E3E /* XCTestPrivateSymbols.m in Sources */ = {isa = PBXBuildFile; fileRef = F5041F451E092BAC000B3E3E /* XCTestPrivateSymbols.m */; };
+		F504568D1E6703B700642B8F /* Xcode83.xctestconfiguration in Resources */ = {isa = PBXBuildFile; fileRef = F504568C1E6703B700642B8F /* Xcode83.xctestconfiguration */; };
 		F50940FB1CC6069C00E559E3 /* GeometryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BF8F1CBEB5AD0088269C /* GeometryUtils.m */; };
 		F50BB27F1D73392100264915 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F50BB27E1D73392100264915 /* main.m */; };
 		F50BB2821D73392100264915 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F50BB2811D73392100264915 /* AppDelegate.m */; };
@@ -698,6 +699,7 @@
 		F5041F451E092BAC000B3E3E /* XCTestPrivateSymbols.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCTestPrivateSymbols.m; sourceTree = "<group>"; };
 		F5041F471E092D1C000B3E3E /* XCUIElement+FBIsVisible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIElement+FBIsVisible.h"; sourceTree = "<group>"; };
 		F5041F481E092D1C000B3E3E /* XCUIElement+FBIsVisible.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCUIElement+FBIsVisible.m"; sourceTree = "<group>"; };
+		F504568C1E6703B700642B8F /* Xcode83.xctestconfiguration */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Xcode83.xctestconfiguration; sourceTree = "<group>"; };
 		F50BB27B1D73392100264915 /* Permissions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Permissions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50BB27E1D73392100264915 /* main.m */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F50BB2801D73392100264915 /* AppDelegate.h */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
@@ -1242,6 +1244,7 @@
 		89C5F34D1C9A60CD0093A018 /* Testmanagerd */ = {
 			isa = PBXGroup;
 			children = (
+				F504568C1E6703B700642B8F /* Xcode83.xctestconfiguration */,
 				F5C1E8BC1CBF5B120019A52F /* CBX.xctestconfiguration */,
 				89C5F34E1C9A60E70093A018 /* Testmanagerd.h */,
 				89C5F34F1C9A60E70093A018 /* Testmanagerd.m */,
@@ -2678,6 +2681,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5C1E8BD1CBF5BBE0019A52F /* CBX.xctestconfiguration in Resources */,
+				F504568D1E6703B700642B8F /* Xcode83.xctestconfiguration in Resources */,
 				F5169D171CFE06B700252F52 /* CocoaLumberjack.LICENSE in Resources */,
 				F5169D151CFE06B700252F52 /* CocoaAsyncSocket.LICENSE in Resources */,
 				F5169D221CFE07F500252F52 /* LICENSE in Resources */,
