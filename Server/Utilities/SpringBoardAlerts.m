@@ -272,15 +272,15 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
 
 - (NSArray<SpringBoardAlert *> *)KoreanAlerts {
     return @[
-             alert(@"허용", YES, @"앱을 사용하는 동안 ‘Permissions’에서 사용자의 위치에 접근하도록 허용하겠습니까?"),
-             alert(@"허용", YES, @"‘Permissions’을(를) 사용하지 않을 때에도 해당 앱이 사용자의 위치에 접근하도록 허용하곘습니까?"),
-             alert(@"승인", YES, @"‘Permissions’이(가) 사용자의 연락처에 접근하려고 합니다"),
-             alert(@"승인", YES, @"‘Permissions’이(가) 사용자의 캘린더에 접근하려고 합니다"),
-             alert(@"승인", YES, @"‘Permissions’이(가) 사용자의 미리 알림에 접근하려고 합니다"),
-             alert(@"승인", YES, @"‘Permissions’이(가) 사용자의 사진에 접근하려고 합니다"),
-             alert(@"승인", YES, @"‘Permissions’이(가) 카메라에 접근하려고 합니다"),
-             alert(@"승인", YES, @"‘Permissions’에서 Twitter 계정에 접근하려고 합니다."),
-             alert(@"승인", YES, @"‘Permissions’이(가) 사용자의 동작 및 피트니스 활동에 접근하려고 합니다")
+             alert(@"허용", YES, @"에서 사용자의 위치에 접근하도록 허용하겠습니까?"),
+             alert(@"허용", YES, @"을(를) 사용하지 않을 때에도 해당 앱이 사용자의 위치에 접근하도록 허용하곘습니까?"),
+             alert(@"승인", YES, @"이(가) 사용자의 연락처에 접근하려고 합니다"),
+             alert(@"승인", YES, @"이(가) 사용자의 캘린더에 접근하려고 합니다"),
+             alert(@"승인", YES, @"이(가) 사용자의 미리 알림에 접근하려고 합니다"),
+             alert(@"승인", YES, @"이(가) 사용자의 사진에 접근하려고 합니다"),
+             alert(@"승인", YES, @"이(가) 카메라에 접근하려고 합니다"),
+             alert(@"승인", YES, @"에서 Twitter 계정에 접근하려고 합니다."),
+             alert(@"승인", YES, @"이(가) 사용자의 동작 및 피트니스 활동에 접근하려고 합니다")
              ];
 }
 
