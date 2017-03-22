@@ -280,7 +280,9 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"승인", YES, @"이(가) 사용자의 사진에 접근하려고 합니다"),
              alert(@"승인", YES, @"이(가) 카메라에 접근하려고 합니다"),
              alert(@"승인", YES, @"에서 Twitter 계정에 접근하려고 합니다."),
-             alert(@"승인", YES, @"이(가) 사용자의 동작 및 피트니스 활동에 접근하려고 합니다")
+             alert(@"승인", YES, @"이(가) 마이크에 접근하려고 합니다"),
+             alert(@"승인", YES, @"이(가) 사용자의 동작 및 피트니스 활동에 접근하려고 합니다"),
+             alert(@"허용", YES, @"에서 알림을 보내고자 합니다")
              ];
 }
 
