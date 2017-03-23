@@ -8,6 +8,7 @@ And I am looking at the Misc tab
 And I am looking at the Alerts and Sheets page
 
 @reset_device
+@auto_dismiss
 Scenario: Auto-dismiss contacts
 When DeviceAgent is dismissing alerts automatically
 When I touch the Contacts row
@@ -18,6 +19,7 @@ Then the Calendar Privacy alert appears
 And the next gesture dismisses the alert
 
 @reset_device
+@manual_dismiss
 Scenario: Dismiss Alerts Manually
 When DeviceAgent is not dismissing alerts automatically
 When I touch the Reminders row
