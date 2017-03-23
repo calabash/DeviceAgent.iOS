@@ -22,6 +22,15 @@ typedef enum : NSUInteger {
 @interface SpringBoard : XCUIApplication
 
 /**
+ Controls whether or not SpringBoard alerts are dismissed automatically or
+ manually.  The default is to dismiss alerts automatically by accepting or
+ allowing a privacy alert.  Other alerts, like the no SIM detected alert,
+ are dismissed by touching the least disruptive (to testing) button.
+
+ */
+@property (atomic, assign) BOOL shouldDismissAlertsAutomatically;
+
+/**
  @return The XCUIApplication that is attached to SpringBoard
  */
 + (instancetype)application;
@@ -32,13 +41,6 @@ typedef enum : NSUInteger {
  @return An alert if one is visible and nil otherwise.
  */
 - (XCUIElement *)queryForAlert;
-
-/**
- This method always returns true.
-
- @return YES if alerts should be automatically dismissed.
- */
-- (BOOL)shouldDismissAlertsAutomatically;
 
 /**
  Alerts presented by SpringBoard block automation.  This method tries to automatically

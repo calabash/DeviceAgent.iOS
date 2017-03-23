@@ -31,3 +31,11 @@ Then(/^I can ask for the pid of the server$/) do
   expect(pid).not_to be == nil
   expect(pid.count).not_to be == 0
 end
+
+Then(/^I can tell DeviceAgent not to automatically dismiss SpringBoard alerts$/) do
+  expect(set_dismiss_springboard_alerts_automatically(false)).to be_falsey
+end
+
+Then(/^I can tell DeviceAgent to automatically dismiss SpringBoard alerts$/) do
+  expect(set_dismiss_springboard_alerts_automatically(true)).to be_truthy
+end

@@ -174,6 +174,36 @@ module DeviceAgent
       Automator.client.wait_for_no_alert
     end
 
+    def set_dismiss_springboard_alerts_automatically(true_or_false)
+      Automator.client.set_dismiss_springboard_alerts_automatically(true_or_false)
+    end
+
+    def springboard_alert
+      Automator.client.springboard_alert
+    end
+
+    def springboard_alert_visible?
+      Automator.client.springboard_alert_visible?
+    end
+
+    def wait_for_springboard_alert
+      Automator.client.wait_for_springboard_alert
+    end
+
+    def wait_for_no_springboard_alert
+      if RunLoop::Environment.ci?
+        delay = 2.0
+      else
+        delay = 1.0
+      end
+      sleep(delay)
+      Automator.client.wait_for_no_springboard_alert
+    end
+
+    def dismiss_springboard_alert(button_title)
+      Automator.client.dismiss_springboard_alert(button_title)
+    end
+
     def wait_for_text_in_view(text, uiquery, options={})
       Automator.client.wait_for_text_in_view(text, uiquery, options)
     end

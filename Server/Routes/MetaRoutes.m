@@ -6,6 +6,8 @@
 #import "CBXMacros.h"
 #import "CBXDevice.h"
 #import "CBXInfoPlist.h"
+#import "SpringBoard.h"
+#import "InvalidArgumentException.h"
 
 @implementation MetaRoutes
 + (NSArray <CBXRoute *> *)getRoutes {
@@ -61,24 +63,28 @@
                  [response respondWithJSON:json];
              }],
 
-             [CBXRoute get:endpoint(@"/environment", 1.0) withBlock:^(RouteRequest *request,
-                                                                      NSDictionary *data,
-                                                                      RouteResponse *response) {
-                 NSDictionary *aut_environment = @{};
-                 if ([Application currentApplication]) {
-                     aut_environment = [[Application currentApplication] launchEnvironment];
-                 }
+             [CBXRoute post:endpoint(@"/set-dismiss-springboard-alerts-automatically", 1.0)
+                  withBlock:^(RouteRequest *request,
+                              NSDictionary *body,
+                              RouteResponse *response) {
 
-                 NSDictionary *device_agent_environment;
-                 device_agent_environment = [[NSProcessInfo processInfo] environment];
+                      NSString *key = @"dismiss_automatically";
+                      NSNumber *valueFromBody = body[key];
+                      if (!valueFromBody) {
+                          NSString *message;
+                          message = [NSString stringWithFormat:@"Request body is missing"
+                                     "required key: '%@'", key];
+                          @throw [InvalidArgumentException withMessage:message
+                                                              userInfo:@{@"received_body" : body}];
 
-                 NSDictionary *json;
-                 json = @{
-                          @"aut_environment" : aut_environment,
-                          @"device_agent_environment" : device_agent_environment };
+                      }
 
-                 [response respondWithJSON:json];
-             }]
+                      [SpringBoard application].shouldDismissAlertsAutomatically = [valueFromBody boolValue];
+                      BOOL value = [[SpringBoard application] shouldDismissAlertsAutomatically];
+                      NSDictionary *json = @{@"is_dismissing_alerts_automatically" : @(value)};
+                      [response respondWithJSON:json];
+                  }]
              ];
 }
+
 @end
