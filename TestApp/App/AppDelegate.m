@@ -17,6 +17,21 @@
     return _window;
 }
 
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSURL *customURL = launchOptions[UIApplicationLaunchOptionsURLKey];
+    if (customURL) {
+        return [@"calabash" isEqualToString:customURL.scheme];
+    } else {
+        return NO;
+    }
+}
+
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    return [@"calabash" isEqualToString:url.scheme];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSLog(@"Application did finish launching");
     return YES;
