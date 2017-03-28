@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -e
-CUCUMBER_ARGS="--format pretty --tags ~@tree"
+CUCUMBER_ARGS="--format pretty --tags @meta"
 
 if [ "${1}" = "device" ]; then
   TEST_SIM=0
@@ -26,6 +26,10 @@ export QUIT_AUT_AFTER_CUCUMBER="1"
 # If a Scenario fails, exit the cucumber process and fail this script.
 # See features/support/01_launch.rb
 export ON_SCENARIO_FAILURE="exit"
+
+# Erase the simulator before starting the first test.
+# See features/support/01_launch.rb
+export ERASE_SIM_BEFORE="1"
 
 function banner {
   if [ "${TERM}" = "dumb" ]; then
@@ -57,16 +61,16 @@ if [ $TEST_SIM -eq 1 ]; then
   info "Xcode 8.0 Default Simulator"
   bundle exec cucumber ${CUCUMBER_ARGS}
 
-  info "Xcode 8.0 iOS 9.3 Simulator"
-  DEVICE_TARGET=7D25AA5B-F939-4BC8-AD5D-6280E71DAE0B \
+  info "Xcode 8.0 iOS 9.3 iPad 2 Simulator"
+  DEVICE_TARGET=655161BC-6746-4C9B-9E76-E45997E3B4B5 \
     bundle exec cucumber ${CUCUMBER_ARGS}
 
   info "Xcode 8.0 iOS 9.3 Simulator iPhone 5c"
-  DEVICE_TARGET=3BFEF174-BBF3-48C0-B860-7898250F2254 \
+  DEVICE_TARGET=0325DDEB-950D-43EB-8FC1-82728AD04815 \
     bundle exec cucumber ${CUCUMBER_ARGS}
 
   info "Xcode 8.0 iOS 10.0 Simulator iPhone 5c"
-  DEVICE_TARGET=42EF5066-9946-498C-A684-9C8AF702DEC3 \
+  DEVICE_TARGET=296E455E-DEDB-40D5-8E42-7A6AEBEDC13F \
     bundle exec cucumber ${CUCUMBER_ARGS}
 fi
 
@@ -94,23 +98,23 @@ if [ $TEST_SIM -eq 1 ]; then
   bundle exec cucumber ${CUCUMBER_ARGS}
 
   info "Xcode 8.1 iOS 10.0 Simulator"
-  DEVICE_TARGET=B6D21623-32F6-44F5-90ED-7E520DC94A69 \
+  DEVICE_TARGET=F4B699F0-B10A-4FBD-850A-AC416DAC4AA0 \
     bundle exec cucumber ${CUCUMBER_ARGS}
 
-  info "Xcode 8.1 iOS 9.3 Simlator"
-  DEVICE_TARGET=6DD279B3-7FED-4902-96F4-618D55540ADC \
+  info "Xcode 8.1 iOS 9.3 iPad 2 Simlator"
+  DEVICE_TARGET=655161BC-6746-4C9B-9E76-E45997E3B4B5 \
     bundle exec cucumber ${CUCUMBER_ARGS}
 
   info "Xcode 8.1 iOS 9.3 Simulator iPhone 5c"
-  DEVICE_TARGET=3BFEF174-BBF3-48C0-B860-7898250F2254 \
+  DEVICE_TARGET=0325DDEB-950D-43EB-8FC1-82728AD04815 \
     bundle exec cucumber ${CUCUMBER_ARGS}
 
   info "Xcode 8.1 iOS 10.0 Simulator iPhone 5c"
-  DEVICE_TARGET=42EF5066-9946-498C-A684-9C8AF702DEC3 \
+  DEVICE_TARGET=296E455E-DEDB-40D5-8E42-7A6AEBEDC13F \
     bundle exec cucumber ${CUCUMBER_ARGS}
 
   info "Xcode 8.1 iOS 10.1 Simulator iPhone 5c"
-  DEVICE_TARGET=659F0339-A6A9-460E-BFDD-30E7F12F7E7C \
+  DEVICE_TARGET=0CFC523F-DA85-4BDF-B9EC-4C4A37045122 \
     bundle exec cucumber ${CUCUMBER_ARGS}
 fi
 
@@ -137,31 +141,31 @@ if [ $TEST_SIM -eq 1 ]; then
   bundle exec cucumber ${CUCUMBER_ARGS}
 
   info "Xcode 8.2.1 iOS 10.1 Simulator"
-  DEVICE_TARGET=E160BC4E-CAD5-4680-9C42-D510FB4BB052 \
+  DEVICE_TARGET=EB5DCF8D-F3DC-4A12-AD6D-E9B249194728 \
     bundle exec cucumber ${CUCUMBER_ARGS}
 
   info "Xcode 8.2.1 iOS 10.0 Simlator"
-  DEVICE_TARGET=B6D21623-32F6-44F5-90ED-7E520DC94A69 \
+  DEVICE_TARGET=F4B699F0-B10A-4FBD-850A-AC416DAC4AA0 \
     bundle exec cucumber ${CUCUMBER_ARGS}
 
-  info "Xcode 8.2.1 iOS 9.3 Simulator"
-  DEVICE_TARGET=6DD279B3-7FED-4902-96F4-618D55540ADC \
+  info "Xcode 8.2.1 iOS 9.3 Simulator iPad 2"
+  DEVICE_TARGET=655161BC-6746-4C9B-9E76-E45997E3B4B5 \
     bundle exec cucumber ${CUCUMBER_ARGS}
 
   info "Xcode 8.2.1 iOS 9.3 Simulator iPhone 5c"
-  DEVICE_TARGET=3BFEF174-BBF3-48C0-B860-7898250F2254 \
+  DEVICE_TARGET=0325DDEB-950D-43EB-8FC1-82728AD04815 \
     bundle exec cucumber ${CUCUMBER_ARGS}
 
   info "Xcode 8.2.1 iOS 10.0 Simulator iPhone 5c"
-  DEVICE_TARGET=42EF5066-9946-498C-A684-9C8AF702DEC3 \
+  DEVICE_TARGET=296E455E-DEDB-40D5-8E42-7A6AEBEDC13F \
     bundle exec cucumber ${CUCUMBER_ARGS}
 
   info "Xcode 8.2.1 iOS 10.1 Simulator iPhone 5c"
-  DEVICE_TARGET=659F0339-A6A9-460E-BFDD-30E7F12F7E7C \
+  DEVICE_TARGET=0CFC523F-DA85-4BDF-B9EC-4C4A37045122 \
     bundle exec cucumber ${CUCUMBER_ARGS}
 
   info "Xcode 8.2.1 iOS 10.2 Simulator iPhone 5c"
-  DEVICE_TARGET=83B48D5E-A97B-4CE0-8B43-AD8B841303A7 \
+  DEVICE_TARGET=1A34A398-2B17-469D-87C1-554C68605C0D \
     bundle exec cucumber ${CUCUMBER_ARGS}
 fi
 

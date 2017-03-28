@@ -97,7 +97,7 @@ World(DeviceAgent::Keyboard)
 And(/^I am looking at the Text Input page$/) do
   touch_tab("Misc")
   wait_for_animations
-  touch({marked: "text input row"})
+  touch({marked: "text input row", all: true})
   wait_for_view({marked: "text input page"})
   wait_for_animations
 end

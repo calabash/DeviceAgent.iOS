@@ -18,10 +18,29 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>sh.calabash.TestAppURL0</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>calabash</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>PRODUCT_BUILD_NUMBER</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCalendarsUsageDescription</key>
+	<string>TestApp wants to know who you are meeting with.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>TestApp wants to know who your friends are</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>TestApp wants to know what is on your shopping list</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
