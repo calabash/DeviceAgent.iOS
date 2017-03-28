@@ -1,3 +1,14 @@
+### 1.1.0
+
+* Dismiss 'Open in' alerts automatically #212
+* Fix PT-br APNS SpringBoard alert localizations #211
+* Add Korean localizations for SpringBoard alerts #209
+* Adds handling for VPN configuration springboard alert. #208
+* Update for Xcode 8.3 #206
+* Allow users to interact with SpringBoard alerts and control whether or
+  not alerts are automatically dismissed #205
+* Server: disable screenshots on server start #204
+
 ### 1.0.6
 
 1.0.5 was never released.
