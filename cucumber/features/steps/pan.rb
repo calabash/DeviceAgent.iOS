@@ -99,6 +99,16 @@ but did not see '#{view_mark}'
 ])
       end
     end
+
+    def flick_broken?
+      version = RunLoop::Version.new(device_info["ios_version"])
+      if version.major == 10 && version.minor == 3
+        log_inline("Flick is broken for iOS #{version.to_s}")
+        true
+      else
+        false
+      end
+    end
   end
 end
 
@@ -224,13 +234,21 @@ end
 Then(/^I can flick to the bottom of the Companies table$/) do
   scroll_view_mark = "table page"
   view_mark = "youtube row"
-  flick_to(:up, scroll_view_mark, view_mark, 1)
+  if flick_broken?
+    flick_to(:up, scroll_view_mark, view_mark, 5)
+  else
+    flick_to(:up, scroll_view_mark, view_mark, 1)
+  end
 end
 
 Then(/^I can flick to the top of the Companies table$/) do
   scroll_view_mark = "table page"
   view_mark = "amazon row"
-  flick_to(:down, scroll_view_mark, view_mark, 1)
+  if flick_broken?
+    flick_to(:down, scroll_view_mark, view_mark, 5)
+  else
+    flick_to(:down, scroll_view_mark, view_mark, 1)
+  end
 end
 
 And(/^I can swipe to delete the Windows row$/) do
