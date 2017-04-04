@@ -433,6 +433,8 @@
 		F5870B431CF0BEFF00B3376C /* TouchPath.m in Sources */ = {isa = PBXBuildFile; fileRef = F5870B3E1CF0BEFF00B3376C /* TouchPath.m */; };
 		F5870B441CF0BEFF00B3376C /* TouchPath.m in Sources */ = {isa = PBXBuildFile; fileRef = F5870B3E1CF0BEFF00B3376C /* TouchPath.m */; };
 		F58935F81E93F09A00BDF39D /* CBX.xctestconfiguration in Resources */ = {isa = PBXBuildFile; fileRef = F58935F71E93F09A00BDF39D /* CBX.xctestconfiguration */; };
+		F58935FB1E93F16D00BDF39D /* DeviceAgent-device.xctestrun in Resources */ = {isa = PBXBuildFile; fileRef = F58935F91E93F16D00BDF39D /* DeviceAgent-device.xctestrun */; };
+		F58935FC1E93F16D00BDF39D /* DeviceAgent-simulator-template.xctestrun in Resources */ = {isa = PBXBuildFile; fileRef = F58935FA1E93F16D00BDF39D /* DeviceAgent-simulator-template.xctestrun */; };
 		F58D27351D4F63B2000FF6C0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA1D1CC53EE100D87200 /* Security.framework */; };
 		F58D27901D4F911A000FF6C0 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58D278E1D4F911A000FF6C0 /* OCHamcrestIOS.framework */; };
 		F58D27911D4F911A000FF6C0 /* OCMockitoIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58D278F1D4F911A000FF6C0 /* OCMockitoIOS.framework */; };
@@ -997,6 +999,8 @@
 		F5870B3D1CF0BEFF00B3376C /* TouchPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchPath.h; sourceTree = "<group>"; };
 		F5870B3E1CF0BEFF00B3376C /* TouchPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchPath.m; sourceTree = "<group>"; };
 		F58935F71E93F09A00BDF39D /* CBX.xctestconfiguration */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CBX.xctestconfiguration; sourceTree = "<group>"; };
+		F58935F91E93F16D00BDF39D /* DeviceAgent-device.xctestrun */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "DeviceAgent-device.xctestrun"; sourceTree = "<group>"; };
+		F58935FA1E93F16D00BDF39D /* DeviceAgent-simulator-template.xctestrun */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "DeviceAgent-simulator-template.xctestrun"; sourceTree = "<group>"; };
 		F58D278E1D4F911A000FF6C0 /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCHamcrestIOS.framework; sourceTree = "<group>"; };
 		F58D278F1D4F911A000FF6C0 /* OCMockitoIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMockitoIOS.framework; sourceTree = "<group>"; };
 		F58D27941D4F913B000FF6C0 /* EXPBlockDefinedMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPBlockDefinedMatcher.h; sourceTree = "<group>"; };
@@ -1542,6 +1546,8 @@
 		F55F83541C6DD99900A945C8 /* DeviceAgent */ = {
 			isa = PBXGroup;
 			children = (
+				F58935F91E93F16D00BDF39D /* DeviceAgent-device.xctestrun */,
+				F58935FA1E93F16D00BDF39D /* DeviceAgent-simulator-template.xctestrun */,
 				F58935F71E93F09A00BDF39D /* CBX.xctestconfiguration */,
 				F55F83561C6DD99900A945C8 /* TestRunner.m */,
 				F519E0F81D79E336003A84B0 /* FBFailureProofTestCase.h */,
@@ -2691,8 +2697,10 @@
 				F5169D151CFE06B700252F52 /* CocoaAsyncSocket.LICENSE in Resources */,
 				F5169D221CFE07F500252F52 /* LICENSE in Resources */,
 				F5169D181CFE06B700252F52 /* Facebook-WebDriverAgent.LICENSE in Resources */,
+				F58935FC1E93F16D00BDF39D /* DeviceAgent-simulator-template.xctestrun in Resources */,
 				F58935F81E93F09A00BDF39D /* CBX.xctestconfiguration in Resources */,
 				F5169D1A1CFE06B700252F52 /* RoutingHTTPServer.LICENSE in Resources */,
+				F58935FB1E93F16D00BDF39D /* DeviceAgent-device.xctestrun in Resources */,
 				F5169D161CFE06B700252F52 /* CocoaHTTPServer.LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
