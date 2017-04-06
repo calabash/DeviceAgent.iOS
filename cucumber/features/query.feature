@@ -55,3 +55,8 @@ And I query for all elements using all
 Scenario: Can ask for a tree representation
 And I am looking at the Query page
 Then I ask for the tree representation of the view hierarchy
+
+@wip
+Scenario: Time queries
+And I am looking at the Query page
+Then I time how long it takes to make a bunch of queries

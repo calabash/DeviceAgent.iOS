@@ -167,3 +167,77 @@ Then(/^I ask for the tree representation of the view hierarchy$/) do
   elements = tree
   expect(elements.count).to be == 8
 end
+
+Then(/^I time how long it takes to make a bunch of queries$/) do
+  start = Time.now
+
+  10.times do
+    elements = query({marked: "hidden button", all: false})
+    expect(elements.count).to be == 0
+
+    elements = query({marked: "same as"})
+    expect(elements.count).to be == 7
+
+    elements = query({marked: "same as", :type => "TextField"})
+    expect(elements.count).to be == 2
+
+    elements = query({marked: "same as", :type => "TextView"})
+    expect(elements.count).to be == 2
+
+    elements = query({marked: "same as", :type => "Button"})
+    expect(elements.count).to be == 1
+    expected = elements[0]
+    elements = query({marked: "same as", :index => 5})
+    expect(elements.count).to be == 1
+    actual = elements[0]
+    expect(actual).to be == expected
+
+    elements = query({text: "110%"})
+    expect(elements.count).to be == 1
+
+    elements = query({marked: "110%"})
+    expect(elements.count).to be == 1
+
+    elements = query({text: "LIKE?"})
+    expect(elements.count).to be == 1
+
+    elements = query({marked: "LIKE?"})
+    expect(elements.count).to be == 1
+
+    elements = query({marked: "Karl\'s Problem"})
+    expect(elements.count).to be == 1
+    elements = query({text: "Karl\'s Problem"})
+    expect(elements.count).to be == 1
+    elements = query({marked: "Karl's Problem"})
+    expect(elements.count).to be == 1
+    elements = query({text: "Karl's Problem"})
+    expect(elements.count).to be == 1
+
+    elements = query({marked: "\"quoted\""})
+    expect(elements.count).to be == 1
+    elements = query({text: "\"quoted\""})
+    expect(elements.count).to be == 1
+
+    elements = query({marked: %Q["quoted"]})
+    expect(elements.count).to be == 1
+    elements = query({text: %Q["quoted"]})
+    expect(elements.count).to be == 1
+
+    elements = query({marked: "TAB:\tchar"})
+    expect(elements.count).to be == 1
+    elements = query({text: "TAB:\tchar"})
+    expect(elements.count).to be == 1
+
+    elements = query({marked: "TAB:	char"})
+    expect(elements.count).to be == 1
+    elements = query({text: "TAB:	char"})
+    expect(elements.count).to be == 1
+
+    elements = query({marked: "Here\nthere be\nnewlines"})
+    expect(elements.count).to be == 0
+  end
+
+  elapsed = Time.now - start
+  log_inline "Took #{elapsed} seconds to make all those queries"
+
+end

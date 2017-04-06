@@ -90,6 +90,7 @@ Before("@reset_device") do |scenario|
   if device.simulator?
     RunLoop::CoreSimulator.erase(device)
     RunLoop.log_info2("Erasing simulator!")
+    RunLoop::CoreSimulator.new(device, nil).launch_simulator
   else
     raise "Cannot reset a physical device"
     exit 1
