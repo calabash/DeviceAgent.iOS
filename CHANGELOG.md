@@ -1,5 +1,9 @@
-### 1.1.0
+### 1.1.1
 
+DeviceAgent 1.1.0 was never released because of iOSDeviceManager
+failures related to Xcode 8.3.
+
+* DeviceAgent.xctest bundle includes xctestrun files #214
 * Dismiss 'Open in' alerts automatically #212
 * Fix PT-br APNS SpringBoard alert localizations #211
 * Add Korean localizations for SpringBoard alerts #209
