@@ -249,7 +249,8 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"OK", YES, @"souhaite accéder à l’appareil photo"),
              alert(@"OK", YES, @"souhaite accéder aux comptes Twitter"),
              alert(@"OK", YES, @"souhaite accéder au micro"),
-             alert(@"Ouvrir", YES, @"Ouvrir dans")
+             alert(@"Ouvrir", YES, @"Ouvrir dans"),
+             alert(@"OK", YES, @"Aucune carte SIM")
              ];
 }
 
