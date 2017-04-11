@@ -34,25 +34,6 @@
 + (XCUIApplication *_Nonnull)currentApplication;
 
 /**
- Caches an XCUIElement in a static dictionary such that it is quick to reference later
- (indexed by an incrementing `test_id` key).
- @param el XCUIElement to cache
-
- ### TODO: deprecate? Remove? Document? Talk to Moody & Karl...
- */
-+ (NSNumber *_Nonnull)cacheElement:(XCUIElement  * _Nonnull)el;
-
-/**
- Returns a cached element
- @param index `test_id` of the element to find
- @exception ElementNotFoundException If the `test_id` isn't present in the cache,
- you will see an exception raised. `test_id`s are _not_ stable between sessions -
- make sure you are only querying for `test_id`s that you have discovered during
- the current testing session.
- */
-+ (XCUIElement *_Nullable)cachedElementOrThrow:(NSNumber *_Nonnull)index;
-
-/**
  Attempt to kill the current application.
  */
 + (void)killCurrentApplication;
