@@ -5,12 +5,12 @@
 #import "TouchPath.h"
 #import "XCSynthesizedEventRecord.h"
 
-@interface CBXTouchEvent ()
+@interface CBXTouchEvent (TEST)
 
 @property (nonatomic, strong) XCSynthesizedEventRecord *event;
-@property (nonatomic) long long orientation;
+@property (nonatomic) UIInterfaceOrientation orientation;
 
-+ (XCSynthesizedEventRecord *)eventRecordWithOrientation:(long long) orientation;
++ (XCSynthesizedEventRecord *)eventRecordWithOrientation:(UIInterfaceOrientation) orientation;
 
 @end
 
@@ -33,7 +33,7 @@
 }
 
 - (void)testWithTouchPath {
-    long long orientation = self.touchPath.orientation;
+    UIInterfaceOrientation orientation = self.touchPath.orientation;
 
     id classMock = OCMClassMock([CBXTouchEvent class]);
     OCMExpect([classMock
@@ -47,7 +47,7 @@
 
 - (void)testAddTouchPathOrientationInvalid {
     CGPoint point = CGPointMake(54, 47);
-    long long nextOrientation = self.touchPath.orientation;
+    UIInterfaceOrientation nextOrientation = self.touchPath.orientation;
     TouchPath *nextPath = [TouchPath withFirstTouchPoint:point
                                              orientation:nextOrientation + 1
                                                   offset:1.0];

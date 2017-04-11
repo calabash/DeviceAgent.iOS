@@ -36,8 +36,8 @@
 - (CBXTouchEvent *)cbxEventWithCoordinates:(NSArray<Coordinate *> *)coordinates {
     CBXTouchEvent *event = [CBXTouchEvent new];
 
-    long long orientation = [[Application currentApplication]
-                             longLongInterfaceOrientation];
+    UIInterfaceOrientation orientation = [[Application currentApplication]
+                                          interfaceOrientation];
     
     for (int fingerIndex = 0; fingerIndex < [self numFingers]; fingerIndex++ ) {
         CGPoint fingerOffset = [GeometryUtils fingerOffsetForFingerIndex:fingerIndex];

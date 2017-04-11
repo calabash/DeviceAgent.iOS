@@ -31,8 +31,8 @@
 
 - (CBXTouchEvent *)cbxEventWithCoordinates:(NSArray <Coordinate *> *)coordinates {
 
-    long long orientation = [[Application currentApplication]
-                             longLongInterfaceOrientation];
+    UIInterfaceOrientation orientation = [[Application currentApplication]
+                                          interfaceOrientation];
 
     CGPoint coordinate = coordinates[0].cgpoint;
 
