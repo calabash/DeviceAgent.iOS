@@ -39,3 +39,16 @@ end
 Then(/^I can tell DeviceAgent to automatically dismiss SpringBoard alerts$/) do
   expect(set_dismiss_springboard_alerts_automatically(true)).to be_truthy
 end
+
+When(/^I POST \/session again$/) do
+  DeviceAgent::Shared.class_variable_set(:@@app_ready, nil)
+  DeviceAgent::Automator.client.send(:launch_aut)
+end
+
+Then(/^I can tell the AUT has quit because I see the Touch tab$/) do
+  wait_for_app
+end
+
+Then(/^I can tell the AUT was not quit because I see the Misc tab$/) do
+  wait_for_view({marked: "Misc Menu"})
+end
