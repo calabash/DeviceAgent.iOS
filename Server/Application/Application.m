@@ -56,12 +56,6 @@ static NSInteger currentElementIndex = 0;
     return self.app.exists;
 }
 
-- (void)kill {
-    DDLogDebug(@"Killing application '%@'", self.app.bundleID);
-    [self.app terminate];
-    self.app = nil;
-}
-
 - (void)startSession {
     DDLogDebug(@"Launching application '%@'", self.app.bundleID);
 
