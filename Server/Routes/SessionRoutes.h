@@ -15,8 +15,10 @@ Routes for managing the life & death of an application and, to a lesser extent,
  If the bundle ID currently matches no app on the device, undefined behavior will occurr. 
  Don't do it.
  
- ## TODO the rest of these once we settle on semantics. 
- 
+
+ ## DELETE /session # Terminates the current AUT
+
+ ## POST /shutdown # Stops the DeviceAgent HTTP Server
  */
 @interface SessionRoutes : NSObject<CBRouteProvider>
 @end
