@@ -93,7 +93,8 @@ static NSInteger currentElementIndex = 0;
 + (void)launchBundlePath:(NSString *)bundlePath
                 bundleID:(NSString *)bundleID
               launchArgs:(NSArray *)launchArgs
-                     env:(NSDictionary *)environment {
+                     env:(NSDictionary *)environment
+      terminateIfRunning:(BOOL)terminateIfRunning {
 
     // TODO: This seems to crash/end the test session...
     //    if ([currentApplication hasSession]) {

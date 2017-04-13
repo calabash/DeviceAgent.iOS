@@ -16,6 +16,8 @@
                  NSString *bundleID = json[CBX_BUNDLE_ID_KEY] ?: json[@"bundleId"] ?: json[@"bundle_id"];
                  NSArray *launchArgs = json[CBX_LAUNCH_ARGS_KEY] ?: @[];
                  NSDictionary *environment = json[CBX_ENVIRONMENT_KEY] ?: @{};
+                 NSNumber *terminateNumber = json[CBX_TERMINATE_AUT_IF_RUNNING_KEY] ?: @(NO);
+                 BOOL terminateIfRunning = [terminateNumber boolValue];
 
                  NSAssert(bundleID, @"Must specify \"bundleID\"");
 
@@ -37,7 +39,8 @@
                  [Application launchBundlePath:bundlePath
                                       bundleID:bundleID
                                     launchArgs:launchArgs
-                                           env:environment];
+                                           env:environment
+                            terminateIfRunning:terminateIfRunning];
 
                  [response respondWithJSON:@{@"status" : @"launched!"}];
              }],
