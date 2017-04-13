@@ -1,7 +1,3 @@
-//
-//  CBXConstants.h
-//  xcuitest-server
-//
 
 #import <Foundation/Foundation.h>
 #import "CocoaLumberjack.h"

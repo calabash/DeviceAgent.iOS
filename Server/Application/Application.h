@@ -1,7 +1,3 @@
-//
-//  CBApplication.h
-//  xcuitest-server
-//
 
 #import <Foundation/Foundation.h>
 #import "XCUIApplication.h"
