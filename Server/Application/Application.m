@@ -134,16 +134,17 @@ static NSInteger currentElementIndex = 0;
                      env:(NSDictionary *)environment
       terminateIfRunning:(BOOL)terminateIfRunning {
 
-    // TODO: This seems to crash/end the test session...
-    //    if ([currentApplication hasSession]) {
-    //        [currentApplication kill];
-    //    }
+    if (terminateIfRunning) {
+        [Application killApplicationWithBundleIdentifier:bundleID];
+    }
 
-    currentApplication.app = [[XCUIApplication alloc] initPrivateWithPath:bundlePath
-                                                                 bundleID:bundleID];
-    currentApplication.app.launchArguments = launchArgs ?: @[];
-    currentApplication.app.launchEnvironment = environment ?: @{};
+    XCUIApplication *application = [[XCUIApplication alloc] initPrivateWithPath:bundlePath
+                                                                       bundleID:bundleID];
 
+    application.launchArguments = launchArgs ?: @[];
+    application.launchEnvironment = environment ?: @{};
+
+    currentApplication.app = application;
     [currentApplication startSession];
 }
 
