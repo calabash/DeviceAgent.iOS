@@ -21,11 +21,14 @@
 
  @param launchArgs Arguments to pass to the application upon launch.
  @param environment Key-value dict of environment variables to pass to the app upon launch.
+ @param terminateIfRunning If true and the application with bundle id is running,
+   then DeviceAgent will terminate the app before relaunching.
  */
 + (void)launchBundlePath:(NSString *_Nullable)bundlePath
                 bundleID:(NSString *_Nonnull)bundleID
               launchArgs:(NSArray *_Nullable)launchArgs
-                     env:(NSDictionary *_Nullable)environment;
+                     env:(NSDictionary *_Nullable)environment
+      terminateIfRunning:(BOOL)terminateIfRunning;
 
 /**A reference to the currently running application. */
 + (XCUIApplication *_Nonnull)currentApplication;

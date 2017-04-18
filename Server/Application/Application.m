@@ -9,6 +9,8 @@
 #import "Testmanagerd.h"
 #import "XCUIElement.h"
 #import "ThreadUtils.h"
+#import "CBXWaiter.h"
+#import "CBXMachClock.h"
 
 @interface Application ()
 @property (nonatomic, strong) XCUIApplication *app;
@@ -56,12 +58,6 @@ static NSInteger currentElementIndex = 0;
     return self.app.exists;
 }
 
-- (void)kill {
-    DDLogDebug(@"Killing application '%@'", self.app.bundleID);
-    [self.app terminate];
-    self.app = nil;
-}
-
 - (void)startSession {
     DDLogDebug(@"Launching application '%@'", self.app.bundleID);
 
@@ -85,26 +81,70 @@ static NSInteger currentElementIndex = 0;
 }
 
 + (void)killCurrentApplication {
-    //TODO: This may throw an exception that ends the test.
-    //https://forums.developer.apple.com/message/59121
-    [currentApplication kill];
+   if (!currentApplication.app) {
+       DDLogDebug(@"There is no current application");
+   } else {
+       [Application killApplicationWithBundleIdentifier:[currentApplication.app bundleID]];
+   }
+}
+
++ (void)killApplicationWithBundleIdentifier:(NSString *)bundleIdentifier {
+    XCUIApplication *application = [[XCUIApplication alloc] initPrivateWithPath:nil
+                                                                       bundleID:bundleIdentifier];
+
+    if (application.state == CBXCApplicationStateNotRunning) {
+        DDLogDebug(@"Application %@ is not running", bundleIdentifier);
+        return;
+    }
+
+    NSTimeInterval startTime = [[CBXMachClock sharedClock] absoluteTime];
+    __block NSError *outerError = nil;
+    [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
+      [[Testmanagerd get] _XCT_terminateApplicationWithBundleID:bundleIdentifier
+                                                     completion:^(NSError *innerError) {
+                                                       outerError = innerError;
+                                                       *setToTrueWhenDone = YES;
+                                                     }];
+    }];
+
+    if (outerError) {
+        NSString *message;
+        message = [NSString stringWithFormat:@"Could not terminate application with bundle identifier: %@\n%@",
+                                             bundleIdentifier, outerError.localizedDescription];
+        @throw [CBXException withMessage:message userInfo:nil];
+    } else {
+        [CBXWaiter waitWithTimeout:10
+                         untilTrue:^BOOL{
+                           return application.state == CBXCApplicationStateNotRunning;
+                         }];
+    }
+
+    NSTimeInterval elapsed = [[CBXMachClock sharedClock] absoluteTime] - startTime;
+
+    if (application.state != CBXCApplicationStateNotRunning) {
+        DDLogDebug(@"Application did not terminate after %@ seconds", @(elapsed));
+    } else {
+        DDLogDebug(@"Application did terminate after %@ seconds", @(elapsed));
+    }
 }
 
 + (void)launchBundlePath:(NSString *)bundlePath
                 bundleID:(NSString *)bundleID
               launchArgs:(NSArray *)launchArgs
-                     env:(NSDictionary *)environment {
+                     env:(NSDictionary *)environment
+      terminateIfRunning:(BOOL)terminateIfRunning {
 
-    // TODO: This seems to crash/end the test session...
-    //    if ([currentApplication hasSession]) {
-    //        [currentApplication kill];
-    //    }
+    if (terminateIfRunning) {
+        [Application killApplicationWithBundleIdentifier:bundleID];
+    }
 
-    currentApplication.app = [[XCUIApplication alloc] initPrivateWithPath:bundlePath
-                                                                 bundleID:bundleID];
-    currentApplication.app.launchArguments = launchArgs ?: @[];
-    currentApplication.app.launchEnvironment = environment ?: @{};
+    XCUIApplication *application = [[XCUIApplication alloc] initPrivateWithPath:bundlePath
+                                                                       bundleID:bundleID];
 
+    application.launchArguments = launchArgs ?: @[];
+    application.launchEnvironment = environment ?: @{};
+
+    currentApplication.app = application;
     [currentApplication startSession];
 }
 

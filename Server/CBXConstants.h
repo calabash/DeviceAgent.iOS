@@ -10,6 +10,7 @@ static NSString *const CBX_BUNDLE_PATH_KEY = @"bundlePath";
 static NSString *const CBX_BUNDLE_ID_KEY = @"bundleID";
 static NSString *const CBX_LAUNCH_ARGS_KEY = @"launchArgs";
 static NSString *const CBX_ENVIRONMENT_KEY = @"environment";
+static NSString *const CBX_TERMINATE_AUT_IF_RUNNING_KEY = @"terminate_aut_if_running";
 
 static NSString *const CBX_X_KEY = @"x";
 static NSString *const CBX_Y_KEY = @"y";
