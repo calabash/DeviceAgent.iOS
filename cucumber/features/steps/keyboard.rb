@@ -268,3 +268,44 @@ Then(/^I submit my credentials for authentication$/) do
 
   wait_for_text_in_view("clever-user pa$$w0rd", {marked: "text delegate"})
 end
+
+Given(/^I touched the UIKeyInput view$/) do
+  touch({marked: "key input"})
+  wait_for_keyboard
+  wait_for_animations
+end
+
+When(/^I try to use the clear text gesture on the UIKeyInput view$/) do
+  # documentation step
+end
+
+Then(/^an error is raised because DeviceAgent cannot find a first responder$/) do
+  expect do
+    clear_text
+  end.to raise_error(RuntimeError, /Can not clear text: no element has focus/)
+end
+
+Then(/^I type some text in the UIKeyInput view$/) do
+  touch({marked: "clear key input button"})
+  wait_for_text_in_view("", {marked: "key input"})
+
+  string = "This is a UIKeyInput view"
+  enter_text(string)
+  wait_for_text_in_view(string, {marked: "key input"})
+end
+
+Then(/^I can delete text in the UIKeyInput view by tapping the keyboard delete key$/) do
+  result = wait_for_view({marked: "key input"})
+  string = result["label"] || result["value"]
+  string.each_char do |_|
+    touch_keyboard_delete_key
+    sleep(0.1)
+  end
+
+  wait_for_text_in_view("", {marked: "key input"})
+end
+
+And(/^I dismiss the UIKeyInput keyboard by tapping the return button$/) do
+  enter_text("\n")
+  wait_for_no_keyboard
+end

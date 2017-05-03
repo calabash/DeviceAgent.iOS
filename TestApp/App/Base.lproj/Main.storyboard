@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1134,6 +1134,18 @@
                                     <action selector="clearTextViewButtonTouched:" destination="xmh-5J-kwV" eventType="touchUpInside" id="g1Z-Cz-rzo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBY-8b-gsy" userLabel="Clear Text View Button">
+                                <rect key="frame" x="0.0" y="202" width="36" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="clear key input button"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="McS-dj-qNd"/>
+                                    <constraint firstAttribute="height" constant="21" id="la6-zT-b3e"/>
+                                </constraints>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearKeyInputButtonTouched:" destination="xmh-5J-kwV" eventType="touchUpInside" id="D17-RU-Dbp"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DB-XL-KGR" userLabel="Dismiss Text View Keyboard">
                                 <rect key="frame" x="284" y="152" width="36" height="30"/>
                                 <accessibility key="accessibilityConfiguration" identifier="dismiss text view keyboard"/>
@@ -1161,16 +1173,42 @@
                                 <size key="shadowOffset" width="3" height="-1"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CXw-ot-Afk">
-                                <rect key="frame" x="0.0" y="122" width="284" height="120"/>
+                                <rect key="frame" x="0.0" y="122" width="284" height="80"/>
                                 <color key="backgroundColor" red="0.69049358370000002" green="0.69049358370000002" blue="0.69049358370000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="text view"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="u7k-Sd-Ik0" userLabel="height = 120"/>
+                                    <constraint firstAttribute="height" constant="80" id="u7k-Sd-Ik0" userLabel="height = 120"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="id&lt;UIKeyInput&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NsS-bY-ri4" customClass="CalTextField">
+                                <rect key="frame" x="36" y="202" width="248" height="21"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="key input">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="FC0-TL-4TX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CsY-yF-dii" userLabel="Dismiss Text View Keyboard">
+                                <rect key="frame" x="284" y="202" width="36" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="dismiss key input keyboard"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="GFX-vv-ti9"/>
+                                    <constraint firstAttribute="height" constant="21" id="yZ9-lQ-k8P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismissKeyInputKeyboardButtonTouched:" destination="xmh-5J-kwV" eventType="touchUpInside" id="zXY-17-4Ys"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <accessibility key="accessibilityConfiguration" identifier="text input page"/>
@@ -1181,31 +1219,41 @@
                             <constraint firstItem="itp-iG-vg1" firstAttribute="leading" secondItem="Yqb-KX-JoO" secondAttribute="leading" id="CqQ-BV-O3L"/>
                             <constraint firstItem="L77-WD-uO0" firstAttribute="leading" secondItem="gUN-3j-Tbv" secondAttribute="trailing" id="D1i-ua-aPZ"/>
                             <constraint firstItem="L77-WD-uO0" firstAttribute="leading" secondItem="gUN-3j-Tbv" secondAttribute="trailing" id="End-Lq-s65"/>
+                            <constraint firstItem="kBY-8b-gsy" firstAttribute="leading" secondItem="Yqb-KX-JoO" secondAttribute="leading" id="Etr-qg-hKz"/>
                             <constraint firstAttribute="trailing" secondItem="L77-WD-uO0" secondAttribute="trailing" id="GG8-e3-aN2"/>
                             <constraint firstAttribute="trailing" secondItem="itp-iG-vg1" secondAttribute="trailing" id="ISz-9M-NoL"/>
+                            <constraint firstAttribute="trailing" secondItem="CsY-yF-dii" secondAttribute="trailing" id="QtI-34-5Yu"/>
                             <constraint firstAttribute="trailing" secondItem="3DB-XL-KGR" secondAttribute="trailing" id="Rsa-pN-Q8A"/>
                             <constraint firstItem="itp-iG-vg1" firstAttribute="top" secondItem="L77-WD-uO0" secondAttribute="bottom" id="TQN-dM-s8M"/>
                             <constraint firstAttribute="trailing" secondItem="mXs-G4-gwd" secondAttribute="trailing" id="Umc-9J-zUu"/>
                             <constraint firstItem="L77-WD-uO0" firstAttribute="top" secondItem="Rob-KM-ps1" secondAttribute="bottom" constant="10" id="W82-Yj-BUz"/>
                             <constraint firstItem="gUN-3j-Tbv" firstAttribute="leading" secondItem="Yqb-KX-JoO" secondAttribute="leading" id="YLq-AO-2aC"/>
+                            <constraint firstItem="kBY-8b-gsy" firstAttribute="top" secondItem="CXw-ot-Afk" secondAttribute="bottom" id="bMD-5E-1v5"/>
                             <constraint firstItem="gUN-3j-Tbv" firstAttribute="top" secondItem="Rob-KM-ps1" secondAttribute="bottom" constant="10" id="eCr-hE-7aR"/>
+                            <constraint firstItem="CsY-yF-dii" firstAttribute="leading" secondItem="NsS-bY-ri4" secondAttribute="trailing" id="ec6-tU-Q7t"/>
                             <constraint firstItem="CXw-ot-Afk" firstAttribute="top" secondItem="itp-iG-vg1" secondAttribute="bottom" id="eqj-Qa-kaH"/>
                             <constraint firstItem="itp-iG-vg1" firstAttribute="top" secondItem="gUN-3j-Tbv" secondAttribute="bottom" id="foS-Gi-0mm"/>
+                            <constraint firstItem="CsY-yF-dii" firstAttribute="top" secondItem="3DB-XL-KGR" secondAttribute="bottom" constant="20" id="jKe-w6-0ma"/>
                             <constraint firstItem="DJp-FR-igg" firstAttribute="top" secondItem="itp-iG-vg1" secondAttribute="bottom" id="kOp-KS-uE0"/>
+                            <constraint firstItem="NsS-bY-ri4" firstAttribute="leading" secondItem="kBY-8b-gsy" secondAttribute="trailing" id="m33-Od-mTk"/>
                             <constraint firstAttribute="trailing" secondItem="DJp-FR-igg" secondAttribute="trailing" id="m5M-Ik-mJ5"/>
                             <constraint firstItem="3DB-XL-KGR" firstAttribute="top" secondItem="DJp-FR-igg" secondAttribute="bottom" id="nsa-I4-dHJ"/>
                             <constraint firstItem="DJp-FR-igg" firstAttribute="leading" secondItem="CXw-ot-Afk" secondAttribute="trailing" id="pL2-y7-Cso"/>
                             <constraint firstItem="3DB-XL-KGR" firstAttribute="leading" secondItem="CXw-ot-Afk" secondAttribute="trailing" id="sFI-Ou-hbV"/>
+                            <constraint firstItem="NsS-bY-ri4" firstAttribute="top" secondItem="CXw-ot-Afk" secondAttribute="bottom" id="vJ9-IT-ZA4"/>
                             <constraint firstItem="itp-iG-vg1" firstAttribute="top" secondItem="L77-WD-uO0" secondAttribute="bottom" id="wLb-yu-WVi"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="clearKeyInputButton" destination="kBY-8b-gsy" id="e5j-vY-Xpv"/>
                         <outlet property="clearTextFieldButton" destination="L77-WD-uO0" id="OZ9-SB-aUL"/>
-                        <outlet property="clearTextView" destination="DJp-FR-igg" id="ljP-kg-e6L"/>
+                        <outlet property="clearTextViewButton" destination="DJp-FR-igg" id="ljP-kg-e6L"/>
+                        <outlet property="dismissKeyInputKeyboardButton" destination="CsY-yF-dii" id="0aS-J0-8Ky"/>
                         <outlet property="dismissTextViewKeyboardButton" destination="3DB-XL-KGR" id="X0e-6d-TwH"/>
                         <outlet property="howGoesItLabel" destination="mXs-G4-gwd" id="0Wv-Ip-CJ9"/>
+                        <outlet property="keyInputView" destination="NsS-bY-ri4" id="kjI-Ex-y9h"/>
                         <outlet property="textDelegateMessage" destination="itp-iG-vg1" id="L2W-l4-cjR"/>
                         <outlet property="textField" destination="gUN-3j-Tbv" id="DZi-AH-9hN"/>
                         <outlet property="textView" destination="CXw-ot-Afk" id="FQX-Kq-55z"/>
@@ -1213,7 +1261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNA-Lv-Y1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2270.625" y="2228.8732394366198"/>
+            <point key="canvasLocation" x="2270.625" y="2228.75"/>
         </scene>
         <!--Misc Navigation Controller-->
         <scene sceneID="OVr-0Z-dBV">

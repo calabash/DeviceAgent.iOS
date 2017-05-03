@@ -1,18 +1,27 @@
 
 #import "TextInputController.h"
+#import "CalTextField.h"
 
 @interface TextInputController ()
+
 @property (weak, nonatomic) IBOutlet UILabel *textDelegateMessage;
 @property (weak, nonatomic) IBOutlet UILabel *howGoesItLabel;
-@property (strong, nonatomic) IBOutlet UITextField *textField;
-@property (weak, nonatomic) IBOutlet UITextView *textView;
 
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIButton *clearTextFieldButton;
 - (IBAction)clearTextFieldButtonTouched:(id)sender;
-@property (weak, nonatomic) IBOutlet UIButton *clearTextView;
+
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UIButton *clearTextViewButton;
 - (IBAction)clearTextViewButtonTouched:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *dismissTextViewKeyboardButton;
 - (IBAction)dismissTextViewKeyboardButtonTouched:(id)sender;
+
+@property (weak, nonatomic) IBOutlet CalTextField *keyInputView;
+@property(weak, nonatomic) IBOutlet UIButton *dismissKeyInputKeyboardButton;
+- (IBAction)dismissKeyInputKeyboardButtonTouched:(id)sender;
+@property(weak, nonatomic) IBOutlet UIButton *clearKeyInputButton;
+- (IBAction)clearKeyInputButtonTouched:(id)sender;
 
 @end
 
@@ -212,6 +221,16 @@ replacementText:(NSString *)text {
 
 - (void)textViewDidChange:(UITextView *)textView {
    self.textDelegateMessage.text = @"textViewDidChange:";
+}
+
+- (IBAction)dismissKeyInputKeyboardButtonTouched:(id)sender {
+    if ([self.keyInputView isFirstResponder]) {
+        [self.keyInputView resignFirstResponder];
+    }
+}
+
+- (IBAction)clearKeyInputButtonTouched:(id)sender {
+    self.keyInputView.text = @"";
 }
 
 @end
