@@ -148,6 +148,7 @@
 		F50BB2881D73392100264915 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50BB2861D73392100264915 /* Main.storyboard */; };
 		F50BB28A1D73392100264915 /* Permissions.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50BB2891D73392100264915 /* Permissions.xcassets */; };
 		F50BB2981D73392200264915 /* Dismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = F50BB2971D73392200264915 /* Dismiss.m */; };
+		F51054E81EB9DA78001D7C5E /* CalTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F51054E71EB9DA78001D7C5E /* CalTextField.m */; };
 		F5169D151CFE06B700252F52 /* CocoaAsyncSocket.LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D0F1CFE06B700252F52 /* CocoaAsyncSocket.LICENSE */; };
 		F5169D161CFE06B700252F52 /* CocoaHTTPServer.LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D101CFE06B700252F52 /* CocoaHTTPServer.LICENSE */; };
 		F5169D171CFE06B700252F52 /* CocoaLumberjack.LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5169D111CFE06B700252F52 /* CocoaLumberjack.LICENSE */; };
@@ -306,6 +307,14 @@
 		F53679A11D7C324E009956D0 /* QuerySpecifierByMark.h in Headers */ = {isa = PBXBuildFile; fileRef = F536799F1D7C324E009956D0 /* QuerySpecifierByMark.h */; };
 		F53679A21D7C324E009956D0 /* QuerySpecifierByMark.m in Sources */ = {isa = PBXBuildFile; fileRef = F53679A01D7C324E009956D0 /* QuerySpecifierByMark.m */; };
 		F53679A31D7C324E009956D0 /* QuerySpecifierByMark.m in Sources */ = {isa = PBXBuildFile; fileRef = F53679A01D7C324E009956D0 /* QuerySpecifierByMark.m */; };
+		F54063F51EBB344200C80B4E /* UIWebView+FLUIWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F54063F11EBB344200C80B4E /* UIWebView+FLUIWebView.m */; };
+		F54063F61EBB344200C80B4E /* WKWebView+FLWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F54063F31EBB344200C80B4E /* WKWebView+FLWKWebView.m */; };
+		F54063FA1EBB34B500C80B4E /* FLWebView.LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F54063F91EBB34B500C80B4E /* FLWebView.LICENSE */; };
+		F54064031EBB410600C80B4E /* iframe.html in Resources */ = {isa = PBXBuildFile; fileRef = F54063FC1EBB410600C80B4E /* iframe.html */; };
+		F54064041EBB410600C80B4E /* page.html in Resources */ = {isa = PBXBuildFile; fileRef = F54063FD1EBB410600C80B4E /* page.html */; };
+		F54064051EBB410600C80B4E /* x-domain-iframe.html in Resources */ = {isa = PBXBuildFile; fileRef = F54063FE1EBB410600C80B4E /* x-domain-iframe.html */; };
+		F54064061EBB410600C80B4E /* XamUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F54064001EBB410600C80B4E /* XamUIWebViewController.m */; };
+		F54064071EBB410600C80B4E /* XamWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F54064021EBB410600C80B4E /* XamWKWebViewController.m */; };
 		F542EA151CC5368000D87200 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA141CC5368000D87200 /* UIKit.framework */; };
 		F542EA161CC5368F00D87200 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA141CC5368000D87200 /* UIKit.framework */; };
 		F542EA191CC536AF00D87200 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA171CC536A700D87200 /* QuartzCore.framework */; };
@@ -715,6 +724,8 @@
 		F50BB2931D73392200264915 /* Dismiss.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dismiss.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50BB2971D73392200264915 /* Dismiss.m */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = Dismiss.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F50BB2991D73392200264915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F51054E61EB9DA78001D7C5E /* CalTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalTextField.h; sourceTree = "<group>"; };
+		F51054E71EB9DA78001D7C5E /* CalTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalTextField.m; sourceTree = "<group>"; };
 		F5169D0F1CFE06B700252F52 /* CocoaAsyncSocket.LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CocoaAsyncSocket.LICENSE; sourceTree = "<group>"; };
 		F5169D101CFE06B700252F52 /* CocoaHTTPServer.LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CocoaHTTPServer.LICENSE; sourceTree = "<group>"; };
 		F5169D111CFE06B700252F52 /* CocoaLumberjack.LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CocoaLumberjack.LICENSE; sourceTree = "<group>"; };
@@ -863,6 +874,19 @@
 		F5366D9D1DE6CC2900E7C765 /* TextInputFirstResponderProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextInputFirstResponderProvider.m; sourceTree = "<group>"; };
 		F536799F1D7C324E009956D0 /* QuerySpecifierByMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySpecifierByMark.h; sourceTree = "<group>"; };
 		F53679A01D7C324E009956D0 /* QuerySpecifierByMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySpecifierByMark.m; sourceTree = "<group>"; };
+		F54063EE1EBB344200C80B4E /* FLWebViewProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLWebViewProvider.h; sourceTree = "<group>"; };
+		F54063F01EBB344200C80B4E /* UIWebView+FLUIWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+FLUIWebView.h"; sourceTree = "<group>"; };
+		F54063F11EBB344200C80B4E /* UIWebView+FLUIWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+FLUIWebView.m"; sourceTree = "<group>"; };
+		F54063F21EBB344200C80B4E /* WKWebView+FLWKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WKWebView+FLWKWebView.h"; sourceTree = "<group>"; };
+		F54063F31EBB344200C80B4E /* WKWebView+FLWKWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+FLWKWebView.m"; sourceTree = "<group>"; };
+		F54063F91EBB34B500C80B4E /* FLWebView.LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FLWebView.LICENSE; sourceTree = "<group>"; };
+		F54063FC1EBB410600C80B4E /* iframe.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = iframe.html; sourceTree = "<group>"; };
+		F54063FD1EBB410600C80B4E /* page.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = page.html; sourceTree = "<group>"; };
+		F54063FE1EBB410600C80B4E /* x-domain-iframe.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "x-domain-iframe.html"; sourceTree = "<group>"; };
+		F54063FF1EBB410600C80B4E /* XamUIWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XamUIWebViewController.h; sourceTree = "<group>"; };
+		F54064001EBB410600C80B4E /* XamUIWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XamUIWebViewController.m; sourceTree = "<group>"; };
+		F54064011EBB410600C80B4E /* XamWKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XamWKWebViewController.h; sourceTree = "<group>"; };
+		F54064021EBB410600C80B4E /* XamWKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XamWKWebViewController.m; sourceTree = "<group>"; };
 		F542EA141CC5368000D87200 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F542EA171CC536A700D87200 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F542EA1B1CC53EC800D87200 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -1364,6 +1388,7 @@
 		F5169D0E1CFE06B700252F52 /* Licenses */ = {
 			isa = PBXGroup;
 			children = (
+				F54063F91EBB34B500C80B4E /* FLWebView.LICENSE */,
 				F5988E811D67507E00049DE4 /* UIView+Positioning.LICENSE */,
 				F5169D0F1CFE06B700252F52 /* CocoaAsyncSocket.LICENSE */,
 				F5169D101CFE06B700252F52 /* CocoaHTTPServer.LICENSE */,
@@ -1373,6 +1398,32 @@
 				F5169D141CFE06B700252F52 /* RoutingHTTPServer.LICENSE */,
 			);
 			path = Licenses;
+			sourceTree = "<group>";
+		};
+		F54063ED1EBB344200C80B4E /* FLWebView */ = {
+			isa = PBXGroup;
+			children = (
+				F54063EE1EBB344200C80B4E /* FLWebViewProvider.h */,
+				F54063F01EBB344200C80B4E /* UIWebView+FLUIWebView.h */,
+				F54063F11EBB344200C80B4E /* UIWebView+FLUIWebView.m */,
+				F54063F21EBB344200C80B4E /* WKWebView+FLWKWebView.h */,
+				F54063F31EBB344200C80B4E /* WKWebView+FLWKWebView.m */,
+			);
+			path = FLWebView;
+			sourceTree = "<group>";
+		};
+		F54063FB1EBB410600C80B4E /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				F54063FC1EBB410600C80B4E /* iframe.html */,
+				F54063FD1EBB410600C80B4E /* page.html */,
+				F54063FE1EBB410600C80B4E /* x-domain-iframe.html */,
+				F54063FF1EBB410600C80B4E /* XamUIWebViewController.h */,
+				F54064001EBB410600C80B4E /* XamUIWebViewController.m */,
+				F54064011EBB410600C80B4E /* XamWKWebViewController.h */,
+				F54064021EBB410600C80B4E /* XamWKWebViewController.m */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		F542EA1A1CC53DD000D87200 /* Frameworks */ = {
@@ -1394,6 +1445,7 @@
 		F55F7FEA1C6DD07500A945C8 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				F54063ED1EBB344200C80B4E /* FLWebView */,
 				F58D27921D4F913B000FF6C0 /* Expecta */,
 				F58D27B61D4F913B000FF6C0 /* OCMock */,
 				F58D27C31D4F913B000FF6C0 /* Specta */,
@@ -2215,6 +2267,8 @@
 			children = (
 				F5E1D88B1DEC8EDE00B72A8E /* TextInputController.h */,
 				F5E1D88C1DEC8EDE00B72A8E /* TextInputController.m */,
+				F51054E61EB9DA78001D7C5E /* CalTextField.h */,
+				F51054E71EB9DA78001D7C5E /* CalTextField.m */,
 				F5E1D88D1DEC8EDE00B72A8E /* ViewsToQueryController.h */,
 				F5E1D88E1DEC8EDE00B72A8E /* ViewsToQueryController.m */,
 				F5E1D88F1DEC8EDE00B72A8E /* VolumeController.h */,
@@ -2225,6 +2279,7 @@
 				F52802171DED9F280085D4CB /* ArgumentsTableController.m */,
 				F5BA9ED61E48B462008CFE64 /* AlertsAndSheetsTableController.h */,
 				F5BA9ED71E48B462008CFE64 /* AlertsAndSheetsTableController.m */,
+				F54063FB1EBB410600C80B4E /* WebView */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -2734,7 +2789,11 @@
 			files = (
 				F5988E831D67508D00049DE4 /* UIView+Positioning.LICENSE in Resources */,
 				F5954E1A1CBD2E1200117745 /* LaunchScreen.storyboard in Resources */,
+				F54064031EBB410600C80B4E /* iframe.html in Resources */,
+				F54064051EBB410600C80B4E /* x-domain-iframe.html in Resources */,
 				F5954E171CBD2E1200117745 /* TestApp.xcassets in Resources */,
+				F54063FA1EBB34B500C80B4E /* FLWebView.LICENSE in Resources */,
+				F54064041EBB410600C80B4E /* page.html in Resources */,
 				F5169D1F1CFE06D700252F52 /* Fingertips.LICENSE in Resources */,
 				F5954E151CBD2E1200117745 /* Main.storyboard in Resources */,
 				F5169D241CFE07FE00252F52 /* LICENSE in Resources */,
@@ -2958,12 +3017,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5954E121CBD2E1200117745 /* TouchViewController.m in Sources */,
+				F54063F51EBB344200C80B4E /* UIWebView+FLUIWebView.m in Sources */,
 				F5954E0C1CBD2E1200117745 /* AppDelegate.m in Sources */,
 				F5E1D8911DEC8EDE00B72A8E /* TextInputController.m in Sources */,
 				F5AC714D1CEB816E00DE059A /* TaoController.m in Sources */,
 				F5BCAB0E1D5BBEDA00ED6EE3 /* PanPaletteController.m in Sources */,
 				F5E1D8921DEC8EDE00B72A8E /* ViewsToQueryController.m in Sources */,
 				89331CCE1CC00E82003C2E59 /* RotatePinchViewController.m in Sources */,
+				F51054E81EB9DA78001D7C5E /* CalTextField.m in Sources */,
 				F5963EC61D5DEA9A002F9304 /* UIView+Positioning.m in Sources */,
 				F54B07651DEDB26200C88A8E /* EnvironmentTableController.m in Sources */,
 				F5E1D8931DEC8EDE00B72A8E /* VolumeController.m in Sources */,
@@ -2973,8 +3034,11 @@
 				F5954E0F1CBD2E1200117745 /* GestureRecognizerViewController.m in Sources */,
 				F5F718411D63A4B300E402EE /* ScrollplicationsController.m in Sources */,
 				F5954E091CBD2E1200117745 /* main.m in Sources */,
+				F54063F61EBB344200C80B4E /* WKWebView+FLWKWebView.m in Sources */,
 				F52BA3491CEDE1C400475D5A /* MBFingerTipWindow.m in Sources */,
+				F54064061EBB410600C80B4E /* XamUIWebViewController.m in Sources */,
 				F5BCAB111D5BC15500ED6EE3 /* DragDropController.m in Sources */,
+				F54064071EBB410600C80B4E /* XamWKWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

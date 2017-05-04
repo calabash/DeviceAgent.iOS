@@ -185,10 +185,12 @@ end
 
 After("@keyboard") do |scenario|
   if keyboard_visible?
-    if !query({marked: "Done", type: "Key"}).empty?
-      touch({marked:"Done", type: "Key"})
+    if !query({marked: "Done", type: "Button"}).empty?
+      touch({marked:"Done", type: "Button"})
     elsif !query({marked: "dismiss text view keyboard"}).empty?
       touch({marked: "dismiss text view keyboard"})
+    elsif !query({marked: "Search", type: "Button"}).empty
+      touch({marked: "Search", type: "Button"})
     else
       raise "Keyboard is showing, but there is no way to dismiss it"
     end
@@ -199,6 +201,14 @@ end
 After("@keep_app_running") do |scenario|
   # Force RunLoop.run options to re-eval'd
   Calabash::Launcher.instance.first_launch = true
+end
+
+After("@search_bar") do |scenario|
+  result = query({marked: "Cancel"})
+  if !result.empty?
+    touch({marked: "Cancel"})
+    wait_for_animations
+  end
 end
 
 After do |scenario|

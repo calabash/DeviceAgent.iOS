@@ -55,3 +55,12 @@ Then I see an authentication alert
 And I enter my name for authentication
 And I enter my password for authentication
 Then I submit my credentials for authentication
+
+@key_input
+Scenario: Typing in a UIKeyInput view
+Given I touched the UIKeyInput view
+When I try to use the clear text gesture on the UIKeyInput view
+Then an error is raised because DeviceAgent cannot find a first responder
+Then I type some text in the UIKeyInput view
+Then I can delete text in the UIKeyInput view by tapping the keyboard delete key
+And I dismiss the UIKeyInput keyboard by tapping the return button
