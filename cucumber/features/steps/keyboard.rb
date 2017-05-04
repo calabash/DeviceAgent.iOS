@@ -151,7 +151,7 @@ Given(/^I typed "([^\"]*)"$/) do |text|
 end
 
 And(/^I decide I should be more formal$/) do
-  # nop
+  # documentation step
 end
 
 Given(/^I replace "([^\"]*)" with "([^\"]*)" by sending backspace$/) do |to_replace, replacement|
@@ -162,7 +162,7 @@ Given(/^I replace "([^\"]*)" with "([^\"]*)" by sending backspace$/) do |to_repl
 end
 
 And(/^I decide I want to be more emphatic$/) do
-  # nop
+  # documention step
 end
 
 Then(/^I replace "([^\"]*)" with "([^\"]*)" using the delete key$/) do |to_replace, replacement|
