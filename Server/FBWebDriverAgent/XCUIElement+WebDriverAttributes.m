@@ -110,4 +110,13 @@
     return self.wdRect[@"origin"];
 }
 
+
+- (BOOL)wdHasFocus {
+    return self.hasFocus;
+}
+
+- (BOOL)wdHasKeyboardFocus {
+    return self.hasKeyboardFocus;
+}
+
 @end

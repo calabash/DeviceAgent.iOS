@@ -134,6 +134,20 @@ Then(/^the keyboard is visible$/) do
   wait_for_keyboard
 end
 
+And(/^the text (field|view) has keyboard focus$/) do |type|
+  if type == "field"
+    text_field = query({marked: "text field"}).first
+  else
+    text_field = query({marked: "text view"}).first
+  end
+  expect(text_field["has_keyboard_focus"]).to be == true
+end
+
+Then(/^the UIKeyInput view does _not_ have keyboard focus$/) do
+  input_field = query({marked: "key input"}).first
+  expect(input_field["has_keyboard_focus"]).to be == false
+end
+
 When(/^I type "([^\"]*)"$/) do |text|
   enter_text(text)
   @last_text_entered = text
