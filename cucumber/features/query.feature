@@ -48,8 +48,8 @@ Then I can query for Japanese
 @wildcard
 Scenario: Query supports "*"
 Then I am looking at the Touch tab
-Then I query for all visible elements using an empty hash
-And I query for all elements using all
+Then an empty hash query returns between 21 and 25 elements
+And an empty hash query with :all returns between 23 and 28 elements
 
 @tree
 Scenario: Can ask for a tree representation
