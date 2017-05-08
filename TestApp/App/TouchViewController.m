@@ -30,6 +30,9 @@
 - (void)presentAlertWithTitle:(NSString *)title
                       message:(NSString *)message;
 
+@property (weak, nonatomic) IBOutlet UISwitch *onOffSwitch;
+- (IBAction)onOffSwitchButtonTouched:(id)sender;
+
 - (void)handleTapOnPurpleLabel:(UITapGestureRecognizer *) recognizer;
 - (void)handleTwoFingerTapOnAnimatedButton:(UITapGestureRecognizer *)recognizer;
 
@@ -289,6 +292,10 @@ Touches with coordinates that are off screen happen at closest screen edge."];
     }
 }
 
+- (IBAction)onOffSwitchButtonTouched:(id)sender {
+    NSLog(@"on off switch button touched: %@", @([(UISwitch *)sender isOn]));
+}
+
 #pragma mark - Orientation / Rotation
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
@@ -386,6 +393,7 @@ Touches with coordinates that are off screen happen at closest screen edge."];
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    self.onOffSwitch.on = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated {

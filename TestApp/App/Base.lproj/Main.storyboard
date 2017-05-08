@@ -139,14 +139,44 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MnM-k1-4At">
+                                <rect key="frame" x="259" y="254" width="51" height="31"/>
+                                <accessibility key="accessibilityConfiguration" identifier="switch"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="EDb-zy-e0Y"/>
+                                    <constraint firstAttribute="width" constant="49" id="fHP-sn-NCd"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="onOffSwitchButtonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="8mp-pQ-jXP"/>
+                                </connections>
+                            </switch>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CG1-wS-k0E">
+                                <rect key="frame" x="16" y="163" width="288" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="smz-It-1eK"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                </segments>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="segmented"/>
+                                </userDefinedRuntimeAttributes>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <accessibility key="accessibilityConfiguration" identifier="touch page"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="K2c-Gh-js7" secondAttribute="trailing" id="5CP-1t-PCM"/>
+                            <constraint firstItem="CG1-wS-k0E" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="Amn-nf-E3U"/>
                             <constraint firstItem="K2c-Gh-js7" firstAttribute="top" secondItem="7sx-D5-q7V" secondAttribute="bottom" constant="40" id="C0L-Uk-JUJ"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="K2c-Gh-js7" secondAttribute="bottom" constant="8" id="K72-3g-PFx"/>
+                            <constraint firstItem="K2c-Gh-js7" firstAttribute="top" secondItem="MnM-k1-4At" secondAttribute="bottom" constant="96" id="WbY-Zp-OU0"/>
+                            <constraint firstItem="7sx-D5-q7V" firstAttribute="top" secondItem="CG1-wS-k0E" secondAttribute="bottom" constant="8" id="aDH-1w-7CE"/>
                             <constraint firstItem="7sx-D5-q7V" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="eeH-fX-TSY"/>
+                            <constraint firstItem="CG1-wS-k0E" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="gyD-w6-QY1"/>
+                            <constraint firstAttribute="trailing" secondItem="MnM-k1-4At" secondAttribute="trailing" constant="12" id="mIa-o9-4Qx"/>
                             <constraint firstItem="K2c-Gh-js7" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="qdu-pJ-mgq"/>
                         </constraints>
                     </view>
@@ -155,12 +185,13 @@
                         <outlet property="alphaButton" destination="ySD-iS-omE" id="hnI-c5-Q7G"/>
                         <outlet property="animatedButton" destination="Inb-f1-nFB" id="qfy-kS-vac"/>
                         <outlet property="gestureLabel" destination="K2c-Gh-js7" id="aoX-9A-6MK"/>
+                        <outlet property="onOffSwitch" destination="MnM-k1-4At" id="G8t-r8-KNN"/>
                         <outlet property="zeroButton" destination="6xi-u4-e9s" id="mM7-Zp-89q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="462" y="-824"/>
+            <point key="canvasLocation" x="461.25" y="-825"/>
         </scene>
         <!--Rotate/Pinch-->
         <scene sceneID="awZ-sz-gsb">
@@ -1856,14 +1887,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" tag="3030" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" id="T5L-SR-UDt">
-                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" tag="3031" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" id="Xp4-r0-KMH">
-                                            <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
+                                            <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -1903,14 +1934,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" tag="3030" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" id="yHz-mI-KPt">
-                                            <rect key="frame" x="16" y="15" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="15" y="15" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" tag="3031" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" id="Qfe-Vf-8L3">
-                                            <rect key="frame" x="16" y="35.5" width="33" height="14.5"/>
+                                            <rect key="frame" x="15" y="35.5" width="33" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>

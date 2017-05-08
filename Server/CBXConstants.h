@@ -52,6 +52,7 @@ static NSString *const CBX_IDENTIFIER_KEY = @"id";
 static NSString *const CBX_IDENTIFIER1_KEY = @"id1";
 static NSString *const CBX_IDENTIFIER2_KEY = @"id2";
 static NSString *const CBX_ENABLED_KEY = @"enabled";
+static NSString *const CBX_SELECTED_KEY = @"selected";
 static NSString *const CBX_HAS_FOCUS_KEY = @"has_focus";
 static NSString *const CBX_HAS_KEYBOARD_FOCUS_KEY = @"has_keyboard_focus";
 static NSString *const CBX_HITABLE_KEY = @"hitable";
