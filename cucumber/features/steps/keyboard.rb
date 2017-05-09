@@ -217,6 +217,7 @@ And(/^I can select all the text in the Text View$/) do
   touch({marked: "text view"}, {duration: 1.0})
   query = {marked: "Select All" }
   wait_for_view(query)
+  2.times { wait_for_animations }
   touch(query)
   2.times { wait_for_animations }
 end
