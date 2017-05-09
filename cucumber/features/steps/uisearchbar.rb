@@ -7,10 +7,12 @@ When(/^I type A in the company search bar$/) do
 end
 
 Then(/^the search results are Amazon, Apple, and Android$/) do
-  wait_for_view({marked: "amazon row"})
-  wait_for_view({marked: "apple row"})
-  wait_for_view({marked: "android row"})
-  expect(query({marked: "basecamp row"})).to be == []
+  # Depending on the iOS version, the filtered rows may or many not
+  # be hitable which is how the ruby client interprets visibility.
+  wait_for_view({marked: "amazon row", all: true})
+  wait_for_view({marked: "apple row", all: true})
+  wait_for_view({marked: "android row", all: true})
+  expect(query({marked: "basecamp row", all: true})).to be == []
 end
 
 Then(/^I dismiss the keyboard by tapping the Search key$/) do
