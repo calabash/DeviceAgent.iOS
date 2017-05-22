@@ -40,13 +40,28 @@
     return [self stringForKey:@"CFBundleShortVersionString"];
 }
 
+- (NSString *)platformVersion {
+    return [self stringForKey:@"DTPlatformVersion"];
+}
+
+- (NSString *)xcodeVersion {
+    return [self stringForKey:@"DTXcode"];
+}
+
+- (NSString *)minimumOSVersion {
+    return [self stringForKey:@"MinimumOSVersion"];
+}
+
 - (NSDictionary *)versionInfo {
-   return @{
-            @"bundle_version" : [self bundleVersion],
-            @"bundle_short_version" : [self bundleShortVersion],
-            @"bundle_identifier" : [self bundleIdentifier],
-            @"bundle_name" : [self bundleName],
-            };
+    return @{
+             @"bundle_version" : [self bundleVersion],
+             @"bundle_short_version" : [self bundleShortVersion],
+             @"bundle_identifier" : [self bundleIdentifier],
+             @"bundle_name" : [self bundleName],
+             @"platform_version" : [self platformVersion],
+             @"xcode_version" : [self xcodeVersion],
+             @"minimum_os_version" : [self minimumOSVersion]
+             };
 }
 
 @end

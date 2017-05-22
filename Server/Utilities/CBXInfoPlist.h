@@ -16,14 +16,29 @@
 - (NSString *)bundleIdentifier;
 
 /**
- Returns the CFBundleVersion - AKA the build version.
+ Returns the CFBundleVersion - the build version.
  */
 - (NSString *)bundleVersion;
 
 /**
- Returns the CFBundleShortVersionString - AKA the marketing version.
+ Returns the CFBundleShortVersionString - the marketing version.
  */
 - (NSString *)bundleShortVersion;
+
+/**
+ * Returns the DTPlatformVersion - the iOS SDK Version
+ */
+- (NSString *)platformVersion;
+
+/**
+ * Returns the DTXcode - the version of Xcode used to build DeviceAgent
+ */
+- (NSString *)xcodeVersion;
+
+/**
+ * Returns the MinimumOSVersion - iOS Deployment Target
+ */
+- (NSString *)minimumOSVersion;
 
 /**
  Returns a dictionary of version information.
