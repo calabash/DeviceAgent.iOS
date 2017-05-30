@@ -25,6 +25,8 @@ NSString *wdAttributeNameForAttributeName(NSString *name);
 @property (readonly, copy) NSString *wdPlaceholderValue; //new
 @property (readonly, strong) id wdValue;
 @property (readonly, getter = isWDEnabled) BOOL wdEnabled;
+@property (readonly, assign) BOOL wdHasFocus;
+@property (readonly, assign) BOOL wdHasKeyboardFocus;
 
 - (id)valueForWDAttributeName:(NSString *)name;
 - (void)getHitPoint:(CGPoint *)point visibility:(BOOL *)visible;

@@ -1,8 +1,12 @@
-
-When(/^I type A in the company search bar$/) do
+When(/^I touch the company search bar$/) do
   touch({marked: "Search", type: "SearchField"})
   wait_for_keyboard
   wait_for_animations
+  search_field = query({type: "SearchField"}).first
+  expect(search_field["has_keyboard_focus"]).to be_truthy
+end
+
+And(/^I type A in the company search bar$/) do
   enter_text("A")
 end
 
