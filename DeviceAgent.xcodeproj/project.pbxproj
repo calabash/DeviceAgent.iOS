@@ -549,6 +549,9 @@
 		F5BC7ABA1D5CF38F00D9AC8E /* CompanyTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BC7AB91D5CF38F00D9AC8E /* CompanyTableController.m */; };
 		F5BCAB0E1D5BBEDA00ED6EE3 /* PanPaletteController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BCAB0D1D5BBEDA00ED6EE3 /* PanPaletteController.m */; };
 		F5BCAB111D5BC15500ED6EE3 /* DragDropController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BCAB101D5BC15500ED6EE3 /* DragDropController.m */; };
+		F5CE18E21E8BBA61001116A5 /* CBLSApplicationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = F5CE18E01E8BBA61001116A5 /* CBLSApplicationProxy.h */; };
+		F5CE18E31E8BBA61001116A5 /* CBLSApplicationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE18E11E8BBA61001116A5 /* CBLSApplicationProxy.m */; };
+		F5CE18E41E8BBA61001116A5 /* CBLSApplicationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE18E11E8BBA61001116A5 /* CBLSApplicationProxy.m */; };
 		F5D42A191D40E3150041105C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D42A181D40E3150041105C /* AVFoundation.framework */; };
 		F5DED03F1D7634AB00563648 /* SpringBoardAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = F5DED03D1D7634AB00563648 /* SpringBoardAlert.h */; };
 		F5DED0401D7634AB00563648 /* SpringBoardAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DED03E1D7634AB00563648 /* SpringBoardAlert.m */; };
@@ -1137,6 +1140,8 @@
 		F5BCAB0D1D5BBEDA00ED6EE3 /* PanPaletteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanPaletteController.m; sourceTree = "<group>"; };
 		F5BCAB0F1D5BC15500ED6EE3 /* DragDropController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragDropController.h; sourceTree = "<group>"; };
 		F5BCAB101D5BC15500ED6EE3 /* DragDropController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = DragDropController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		F5CE18E01E8BBA61001116A5 /* CBLSApplicationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBLSApplicationProxy.h; sourceTree = "<group>"; };
+		F5CE18E11E8BBA61001116A5 /* CBLSApplicationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBLSApplicationProxy.m; sourceTree = "<group>"; };
 		F5D42A181D40E3150041105C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F5DED03D1D7634AB00563648 /* SpringBoardAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringBoardAlert.h; sourceTree = "<group>"; };
 		F5DED03E1D7634AB00563648 /* SpringBoardAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoardAlert.m; sourceTree = "<group>"; };
@@ -1784,6 +1789,8 @@
 				F59E94741D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m */,
 				F5A14DE31E02CF84001A0037 /* CBLSApplicationWorkspace.h */,
 				F5A14DE41E02CF84001A0037 /* CBLSApplicationWorkspace.m */,
+				F5CE18E01E8BBA61001116A5 /* CBLSApplicationProxy.h */,
+				F5CE18E11E8BBA61001116A5 /* CBLSApplicationProxy.m */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -2311,6 +2318,7 @@
 				F519116B1E4CC50000BB6D92 /* XCTAXClient-Protocol.h in Headers */,
 				F51911A01E4CC50000BB6D92 /* XCTWaiterManager.h in Headers */,
 				F519114D1E4CC50000BB6D92 /* UISwipeGestureRecognizer-RecordingAdditions.h in Headers */,
+				F5CE18E21E8BBA61001116A5 /* CBLSApplicationProxy.h in Headers */,
 				899696BF1CB2F22000BB42E2 /* EnterTextIn.h in Headers */,
 				F51911341E4CC50000BB6D92 /* _XCDarwinNotificationExpectation.h in Headers */,
 				F519118F1E4CC50000BB6D92 /* XCTMetric.h in Headers */,
@@ -2972,6 +2980,7 @@
 				F55F81A61C6DD07500A945C8 /* HTTPRedirectResponse.m in Sources */,
 				F59E94761D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m in Sources */,
 				F55F84171C6E438800A945C8 /* Application+Queries.m in Sources */,
+				F5CE18E31E8BBA61001116A5 /* CBLSApplicationProxy.m in Sources */,
 				F55F840B1C6E437100A945C8 /* HealthRoutes.m in Sources */,
 				F5538B731E28AC7B003EC5F3 /* DDAbstractDatabaseLogger.m in Sources */,
 				F55F81961C6DD07500A945C8 /* MultipartFormDataParser.m in Sources */,
@@ -3061,6 +3070,7 @@
 				F5B0A1B41CAD4E2700E056CE /* QuerySpecifierByProperty.m in Sources */,
 				899696EC1CB5857C00BB42E2 /* JSONKeyValidator.m in Sources */,
 				899696D51CB44D9B00BB42E2 /* GestureConfiguration.m in Sources */,
+				F5CE18E41E8BBA61001116A5 /* CBLSApplicationProxy.m in Sources */,
 				F5FEA0BA1D747CCD00B5EF42 /* UIDevice+Wifi_IP.m in Sources */,
 				F5538B741E28AC7B003EC5F3 /* DDAbstractDatabaseLogger.m in Sources */,
 				F5B0A1D11CAD4E8A00E056CE /* HTTPAsyncFileResponse.m in Sources */,
