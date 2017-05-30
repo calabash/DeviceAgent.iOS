@@ -15,6 +15,17 @@ Then(/^I can ask for the server version$/) do
   expect(actual["bundle_short_version"]).to be_truthy
 end
 
+And(/^I can ask about the build attributes of the DeviceAgent$/) do
+  actual = server_version
+
+  expect(RunLoop::Version.new(actual["platform_version"])).to(
+    be >= RunLoop::Version.new("10.0"))
+  expect(RunLoop::Version.new(actual["xcode_version"])).to(
+    be >= RunLoop::Version.new("7.3.1"))
+  expect(RunLoop::Version.new(actual["minimum_os_version"])).to(
+    be >= RunLoop::Version.new("8.0"))
+end
+
 Then(/^I can ask for the session identifier$/) do
   identifier = session_identifier
 

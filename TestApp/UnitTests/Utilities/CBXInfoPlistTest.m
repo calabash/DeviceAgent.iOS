@@ -122,12 +122,52 @@ describe(@"CBXInfoPlist", ^{
                 [[[infoMock expect] andReturn:mockedPlist] infoDictionary];
                 expect([infoMock bundleShortVersion]).to.equal(@"foo");
             });
-            
+
             it(@"value does not exist", ^{
                 [[[infoMock expect] andReturn:@{}] infoDictionary];
                 expect([infoMock bundleShortVersion]).to.beEmpty();
             });
         });
+
+        describe(@"DTPlatformVersion", ^{
+            it(@"value exists", ^{
+                mockedPlist = @{@"DTPlatformVersion" : @"foo"};
+                [[[infoMock expect] andReturn:mockedPlist] infoDictionary];
+                expect([infoMock platformVersion]).to.equal(@"foo");
+            });
+
+            it(@"value does not exist", ^{
+                [[[infoMock expect] andReturn:@{}] infoDictionary];
+                expect([infoMock platformVersion]).to.beEmpty();
+            });
+        });
+
+        describe(@"DTXcode", ^{
+            it(@"value exists", ^{
+                mockedPlist = @{@"DTXcode" : @"foo"};
+                [[[infoMock expect] andReturn:mockedPlist] infoDictionary];
+                expect([infoMock xcodeVersion]).to.equal(@"foo");
+            });
+
+            it(@"value does not exist", ^{
+                [[[infoMock expect] andReturn:@{}] infoDictionary];
+                expect([infoMock xcodeVersion]).to.beEmpty();
+            });
+        });
+
+        describe(@"MinimumOSVersion", ^{
+            it(@"value exists", ^{
+                mockedPlist = @{@"MinimumOSVersion" : @"foo"};
+                [[[infoMock expect] andReturn:mockedPlist] infoDictionary];
+                expect([infoMock minimumOSVersion]).to.equal(@"foo");
+            });
+
+            it(@"value does not exist", ^{
+                [[[infoMock expect] andReturn:@{}] infoDictionary];
+                expect([infoMock minimumOSVersion]).to.beEmpty();
+            });
+        });
+
     });
 
     describe(@"versionInfo", ^{
@@ -137,6 +177,9 @@ describe(@"CBXInfoPlist", ^{
             OCMExpect([mockPlist bundleShortVersion]).andReturn(@"1.0.0");
             OCMExpect([mockPlist bundleName]).andReturn(@"CBX");
             OCMExpect([mockPlist bundleIdentifier]).andReturn(@"com.example.CBX");
+            OCMExpect([mockPlist platformVersion]).andReturn(@"10.3");
+            OCMExpect([mockPlist xcodeVersion]).andReturn(@"8.3");
+            OCMExpect([mockPlist minimumOSVersion]).andReturn(@"9.1");
 
             NSDictionary *expected =
             @{
@@ -144,6 +187,9 @@ describe(@"CBXInfoPlist", ^{
               @"bundle_short_version" : @"1.0.0",
               @"bundle_name" : @"CBX",
               @"bundle_identifier" : @"com.example.CBX",
+              @"platform_version" : @"10.3",
+              @"xcode_version" : @"8.3",
+              @"minimum_os_version" : @"9.1"
               };
 
             expect([mockPlist versionInfo]).to.equal(expected);
