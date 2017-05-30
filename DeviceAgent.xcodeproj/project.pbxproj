@@ -335,6 +335,7 @@
 		F549E1A61D5472B900C4FA36 /* CBXInfoPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = F549E1A31D54723300C4FA36 /* CBXInfoPlist.m */; };
 		F549E1A71D5472BA00C4FA36 /* CBXInfoPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = F549E1A31D54723300C4FA36 /* CBXInfoPlist.m */; };
 		F54B07651DEDB26200C88A8E /* EnvironmentTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = F54B07641DEDB26200C88A8E /* EnvironmentTableController.m */; };
+		F54E689F1ECACE5400D7409E /* SafariController.m in Sources */ = {isa = PBXBuildFile; fileRef = F54E689E1ECACE5400D7409E /* SafariController.m */; };
 		F5536CEE1D737611006B4EA4 /* AlertFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5536CED1D737611006B4EA4 /* AlertFactory.m */; };
 		F5538B711E28AC7B003EC5F3 /* CocoaLumberjack.h in Headers */ = {isa = PBXBuildFile; fileRef = F5538B601E28AC7B003EC5F3 /* CocoaLumberjack.h */; };
 		F5538B721E28AC7B003EC5F3 /* DDAbstractDatabaseLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = F5538B611E28AC7B003EC5F3 /* DDAbstractDatabaseLogger.h */; };
@@ -903,6 +904,8 @@
 		F549E1A31D54723300C4FA36 /* CBXInfoPlist.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = CBXInfoPlist.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F54B07631DEDB26200C88A8E /* EnvironmentTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnvironmentTableController.h; sourceTree = "<group>"; };
 		F54B07641DEDB26200C88A8E /* EnvironmentTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnvironmentTableController.m; sourceTree = "<group>"; };
+		F54E689D1ECACE5400D7409E /* SafariController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafariController.h; sourceTree = "<group>"; };
+		F54E689E1ECACE5400D7409E /* SafariController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafariController.m; sourceTree = "<group>"; };
 		F5536CEC1D737611006B4EA4 /* AlertFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = AlertFactory.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F5536CED1D737611006B4EA4 /* AlertFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = AlertFactory.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F5538B601E28AC7B003EC5F3 /* CocoaLumberjack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaLumberjack.h; sourceTree = "<group>"; };
@@ -1422,6 +1425,8 @@
 				F54064001EBB410600C80B4E /* XamUIWebViewController.m */,
 				F54064011EBB410600C80B4E /* XamWKWebViewController.h */,
 				F54064021EBB410600C80B4E /* XamWKWebViewController.m */,
+				F54E689D1ECACE5400D7409E /* SafariController.h */,
+				F54E689E1ECACE5400D7409E /* SafariController.m */,
 			);
 			path = WebView;
 			sourceTree = "<group>";
@@ -3037,6 +3042,7 @@
 				F54063F61EBB344200C80B4E /* WKWebView+FLWKWebView.m in Sources */,
 				F52BA3491CEDE1C400475D5A /* MBFingerTipWindow.m in Sources */,
 				F54064061EBB410600C80B4E /* XamUIWebViewController.m in Sources */,
+				F54E689F1ECACE5400D7409E /* SafariController.m in Sources */,
 				F5BCAB111D5BC15500ED6EE3 /* DragDropController.m in Sources */,
 				F54064071EBB410600C80B4E /* XamWKWebViewController.m in Sources */,
 			);
