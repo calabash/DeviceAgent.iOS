@@ -110,6 +110,10 @@
     return self.wdRect[@"origin"];
 }
 
+- (BOOL)isWDSelected
+{
+    return self.isSelected;
+}
 
 - (BOOL)wdHasFocus {
     return self.hasFocus;
