@@ -48,12 +48,10 @@ Then(/^I query for Same as views by mark using id and use an index to find the B
   elements = query({marked: "same as", :type => "Button"})
   expect(elements.count).to be == 1
   expected = elements[0]
-  expected["test_id"] = nil
 
   elements = query({marked: "same as", :index => 5})
   expect(elements.count).to be == 1
   actual = elements[0]
-  actual["test_id"] = nil
 
   expect(actual).to be == expected
 end

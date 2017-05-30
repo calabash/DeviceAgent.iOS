@@ -1,31 +1,22 @@
-//
-//  CBApplication.m
-//  xcuitest-server
-//
 
 #import "ElementNotFoundException.h"
-#import "XCUICoordinate.h"
 #import "Application.h"
 #import "Testmanagerd.h"
-#import "XCUIElement.h"
 #import "ThreadUtils.h"
 #import "CBXWaiter.h"
 #import "CBXMachClock.h"
 
 @interface Application ()
 @property (nonatomic, strong) XCUIApplication *app;
-@property (nonatomic, strong) NSMutableDictionary <NSNumber *, XCUIElement *> *elementCache;
 @end
 
 @implementation Application
 static Application *currentApplication;
-static NSInteger currentElementIndex = 0;
 
 + (void)load {
     static dispatch_once_t oncet;
     dispatch_once(&oncet, ^{
         currentApplication = [self new];
-        currentApplication.elementCache = [NSMutableDictionary new];
     });
 }
 
@@ -35,23 +26,6 @@ static NSInteger currentElementIndex = 0;
 
 + (XCUIApplication *)currentApplication {
     return currentApplication.app;
-}
-
-+ (NSNumber *)cacheElement:(XCUIElement  * _Nonnull)el {
-    currentApplication.elementCache[@(currentElementIndex)] = el;
-    return @(currentElementIndex++);
-}
-
-+ (XCUIElement *)cachedElement:(NSNumber *_Nonnull)index {
-    return currentApplication.elementCache[index];
-}
-
-+ (XCUIElement *)cachedElementOrThrow:(NSNumber *)index {
-    XCUIElement *el = [self cachedElement:index];
-    if (el == nil) {
-        @throw [ElementNotFoundException withMessage:[NSString stringWithFormat:@"No element found with test_id %@", index]];
-    }
-    return el;
 }
 
 - (BOOL)hasSession {
