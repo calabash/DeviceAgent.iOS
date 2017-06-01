@@ -50,11 +50,9 @@ info "Prepared install directory ${INSTALL_DIR}"
 BUILD_PRODUCTS_DIR="${XC_BUILD_DIR}/Build/Products/${XC_CONFIG}-iphoneos"
 BUILD_PRODUCTS_APP="${BUILD_PRODUCTS_DIR}/${APP}"
 BUILD_PRODUCTS_DSYM="${BUILD_PRODUCTS_DIR}/${DSYM}"
-BUILD_PRODUCTS_RUNNER="${BUILD_PRODUCTS_DIR}/${RUNNER}"
 
 rm -rf "${BUILD_PRODUCTS_APP}"
 rm -rf "${BUILD_PRODUCTS_DSYM}"
-rm -rf "${BUILD_PRODUCTS_RUNNER}"
 mkdir -p "${BUILD_PRODUCTS_DIR}"
 
 info "Prepared archive directory"
@@ -99,6 +97,10 @@ xcrun ditto -ck --rsrc --sequesterRsrc --keepParent \
   "${INSTALLED_IPA}"
 
 info "Installed ${INSTALLED_IPA}"
+
+ditto_or_exit "${BUILD_PRODUCTS_DSYM}" "${INSTALLED_DSYM}"
+
+info "Installed ${INSTALLED_DSYM}"
 
 banner "IPA Code Signing Details"
 
