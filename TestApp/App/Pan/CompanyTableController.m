@@ -26,6 +26,7 @@
 @interface UITableView (TestAppAdditions)
 
 - (void)clearSearchBarDelegateMethodCalls;
+- (NSString *)JSONSearchBarDelegateMethodCalls;
 
 @property (nonatomic, strong) NSMutableArray *searchBarDelegateMethodCalls;
 
@@ -47,6 +48,13 @@
     // key is a convenience.
     return (NSMutableArray *)objc_getAssociatedObject(self,
                                                       @selector(searchBarDelegateMethodCalls));
+}
+
+- (NSString *)JSONSearchBarDelegateMethodCalls {
+    NSData *data = [NSJSONSerialization dataWithJSONObject:self.searchBarDelegateMethodCalls
+                                                       options:0
+                                                         error:nil];
+    return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 
 - (void)clearSearchBarDelegateMethodCalls {
