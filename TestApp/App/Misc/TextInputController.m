@@ -23,6 +23,9 @@
 @property(weak, nonatomic) IBOutlet UIButton *clearKeyInputButton;
 - (IBAction)clearKeyInputButtonTouched:(id)sender;
 
+- (void)handleTextFieldTextChangedNotification:(NSNotification *)notification;
+- (void)handleTextViewTextChangedNotification:(NSNotification *)notification;
+
 @end
 
 static NSString *const kCaVa = @"Ça va?";
@@ -137,6 +140,16 @@ static NSString *const kCaVa = @"Ça va?";
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(handleTextFieldTextChangedNotification:)
+     name:UITextFieldTextDidChangeNotification object:nil];
+
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(handleTextViewTextChangedNotification:)
+     name:UITextViewTextDidChangeNotification object:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -145,6 +158,11 @@ static NSString *const kCaVa = @"Ça va?";
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Text Field Delegate
@@ -231,6 +249,12 @@ replacementText:(NSString *)text {
 
 - (IBAction)clearKeyInputButtonTouched:(id)sender {
     self.keyInputView.text = @"";
+}
+
+- (void)handleTextViewTextChangedNotification:(NSNotification *)notification {
+    if (!self.textView.text || self.textView.text.length == 0) {
+        self.keyInputView.text = @"TextView: GET /clearText generated notification";
+    }
 }
 
 @end
