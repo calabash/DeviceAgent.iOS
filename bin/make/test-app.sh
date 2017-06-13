@@ -83,6 +83,11 @@ banner "Installing ${APP}"
 ditto_or_exit "${BUILD_PRODUCTS_APP}" "${INSTALLED_APP}"
 info "Installed ${INSTALLED_APP}"
 
+xcrun ditto -ck --rsrc --sequesterRsrc --keepParent \
+  "${INSTALLED_APP}" \
+  "${INSTALLED_APP}.zip"
+info "Installed ${INSTALLED_APP}.zip"
+
 ditto_or_exit "${BUILD_PRODUCTS_DSYM}" "${INSTALLED_DSYM}"
 info "Installed ${INSTALLED_DSYM}"
 
