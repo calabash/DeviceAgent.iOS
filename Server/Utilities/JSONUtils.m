@@ -184,7 +184,7 @@ static NSDictionary *typeStringToElementType;
                                 @(XCUIElementTypeTimeline) : @"TimeLine",
                                 @(XCUIElementTypeRatingIndicator) : @"RatingIndicator",
                                 @(XCUIElementTypeValueIndicator) : @"ValueIndicator",
-                                @(XCUIElementTypeSplitGroup) : @"SplitGroupe",
+                                @(XCUIElementTypeSplitGroup) : @"SplitGroup",
                                 @(XCUIElementTypeSplitter) : @"Splitter",
                                 @(XCUIElementTypeRelevanceIndicator) : @"RelevanceIndicator",
                                 @(XCUIElementTypeColorWell) : @"ColorWell",
