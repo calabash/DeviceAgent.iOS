@@ -4,7 +4,7 @@
 /**
  Wait until true block
  */
-typedef BOOL (^CBXWaitUntilTrueBlock)();
+typedef BOOL (^CBXWaitUntilTrueBlock)(void);
 
 /**
  Convenient methods for waiting.
