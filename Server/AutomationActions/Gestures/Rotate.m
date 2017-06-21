@@ -109,8 +109,8 @@ float dtor(float degrees) { return degrees * (M_PI / 180); }
 - (CBXTouchEvent *)cbxEventWithCoordinates:(NSArray<Coordinate *> *)coordinates {
     NSArray<NSArray<Coordinate *> *> *circleCoords = [self setup:coordinates];
     
-    long long orientation = [[Application currentApplication]
-                             longLongInterfaceOrientation];
+    UIInterfaceOrientation orientation = [[Application currentApplication]
+                                          interfaceOrientation];
 
     CBXTouchEvent *event = [CBXTouchEvent new];
 
