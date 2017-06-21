@@ -181,7 +181,6 @@ end
 # TODO:  Feature: SpringBoard views
 # TODO:  Feature: Locale
 # TODO:  Feature: Location
-# TODO:  Feature: WebViews
 
 After("@keyboard") do |scenario|
   if keyboard_visible?

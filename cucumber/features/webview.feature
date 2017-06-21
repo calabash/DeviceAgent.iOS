@@ -30,5 +30,7 @@ Then I clear my first name using the clear text route
 Scenario:  Interacting with SafariWebController
 Given I am looking at the SafariWebController
 And I scroll down to the first and last name text fields
-Then I type my first name
+When I touch the first name text field
+Then the first name text field has keyboard focus
+And I can type my first name
 Then I clear my first name using the clear text route
