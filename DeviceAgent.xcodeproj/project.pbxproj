@@ -451,7 +451,6 @@
 		F58D27CC1D4F913B000FF6C0 /* libExpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F58D27B51D4F913B000FF6C0 /* libExpecta.a */; };
 		F58D27CD1D4F913C000FF6C0 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F58D27B71D4F913B000FF6C0 /* libOCMock.a */; };
 		F58D27CE1D4F913C000FF6C0 /* libSpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F58D27C41D4F913B000FF6C0 /* libSpecta.a */; };
-		F58D27FD1D4F947F000FF6C0 /* XCUIApplication+DeviceAgentAdditionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27D51D4F947F000FF6C0 /* XCUIApplication+DeviceAgentAdditionsTest.m */; };
 		F58D27FE1D4F947F000FF6C0 /* ActionConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27D81D4F947F000FF6C0 /* ActionConfigurationTests.m */; };
 		F58D27FF1D4F947F000FF6C0 /* CoordinateQueryConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27DA1D4F947F000FF6C0 /* CoordinateQueryConfigurationTests.m */; };
 		F58D28001D4F947F000FF6C0 /* QueryConfigurationFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27DC1D4F947F000FF6C0 /* QueryConfigurationFactoryTests.m */; };
@@ -482,9 +481,6 @@
 		F5963EC61D5DEA9A002F9304 /* UIView+Positioning.m in Sources */ = {isa = PBXBuildFile; fileRef = F5963EC51D5DEA9A002F9304 /* UIView+Positioning.m */; };
 		F5963ECC1D5F3F0C002F9304 /* JSONUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F5963ECA1D5F335F002F9304 /* JSONUtilsTest.m */; };
 		F5988E831D67508D00049DE4 /* UIView+Positioning.LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5988E811D67507E00049DE4 /* UIView+Positioning.LICENSE */; };
-		F59E94751D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F59E94731D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.h */; };
-		F59E94761D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F59E94741D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m */; };
-		F59E94771D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F59E94741D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m */; };
 		F5A14DE51E02CF84001A0037 /* CBLSApplicationWorkspace.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A14DE31E02CF84001A0037 /* CBLSApplicationWorkspace.h */; };
 		F5A14DE61E02CF84001A0037 /* CBLSApplicationWorkspace.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A14DE41E02CF84001A0037 /* CBLSApplicationWorkspace.m */; };
 		F5A14DE71E02CF84001A0037 /* CBLSApplicationWorkspace.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A14DE41E02CF84001A0037 /* CBLSApplicationWorkspace.m */; };
@@ -1085,7 +1081,6 @@
 		F58D27C91D4F913B000FF6C0 /* SPTSharedExampleGroups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTSharedExampleGroups.h; sourceTree = "<group>"; };
 		F58D27CA1D4F913B000FF6C0 /* SPTSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTSpec.h; sourceTree = "<group>"; };
 		F58D27CB1D4F913B000FF6C0 /* XCTestCase+Specta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+Specta.h"; sourceTree = "<group>"; };
-		F58D27D51D4F947F000FF6C0 /* XCUIApplication+DeviceAgentAdditionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = "XCUIApplication+DeviceAgentAdditionsTest.m"; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F58D27D81D4F947F000FF6C0 /* ActionConfigurationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = ActionConfigurationTests.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F58D27DA1D4F947F000FF6C0 /* CoordinateQueryConfigurationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinateQueryConfigurationTests.m; sourceTree = "<group>"; };
 		F58D27DC1D4F947F000FF6C0 /* QueryConfigurationFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = QueryConfigurationFactoryTests.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
@@ -1122,8 +1117,6 @@
 		F5963EC51D5DEA9A002F9304 /* UIView+Positioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Positioning.m"; path = "Vendor/UIView+Positioning/UIView+Positioning.m"; sourceTree = SOURCE_ROOT; };
 		F5963ECA1D5F335F002F9304 /* JSONUtilsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONUtilsTest.m; sourceTree = "<group>"; };
 		F5988E811D67507E00049DE4 /* UIView+Positioning.LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UIView+Positioning.LICENSE"; sourceTree = "<group>"; };
-		F59E94731D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIApplication+DeviceAgentAdditions.h"; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
-		F59E94741D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCUIApplication+DeviceAgentAdditions.m"; sourceTree = "<group>"; };
 		F5A14DE31E02CF84001A0037 /* CBLSApplicationWorkspace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBLSApplicationWorkspace.h; sourceTree = "<group>"; };
 		F5A14DE41E02CF84001A0037 /* CBLSApplicationWorkspace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBLSApplicationWorkspace.m; sourceTree = "<group>"; };
 		F5AC714B1CEB816E00DE059A /* TaoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaoController.h; sourceTree = "<group>"; };
@@ -1785,8 +1778,6 @@
 				F5E6631F1D74946000068CE9 /* SpringBoard.m */,
 				F55F83BA1C6DDF1300A945C8 /* Application+Queries.h */,
 				F55F83BB1C6DDF1300A945C8 /* Application+Queries.m */,
-				F59E94731D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.h */,
-				F59E94741D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m */,
 				F5A14DE31E02CF84001A0037 /* CBLSApplicationWorkspace.h */,
 				F5A14DE41E02CF84001A0037 /* CBLSApplicationWorkspace.m */,
 				F5CE18E01E8BBA61001116A5 /* CBLSApplicationProxy.h */,
@@ -2048,7 +2039,6 @@
 		F58D27D31D4F947F000FF6C0 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				F58D27D51D4F947F000FF6C0 /* XCUIApplication+DeviceAgentAdditionsTest.m */,
 				F5E68C6A1E8424FC00E7922C /* CBLSApplicationWorkspaceTest.m */,
 			);
 			path = Application;
@@ -2371,7 +2361,6 @@
 				F55F82541C6DD07500A945C8 /* RouteResponse.h in Headers */,
 				F55F81A51C6DD07500A945C8 /* HTTPRedirectResponse.h in Headers */,
 				899696E51CB46C0100BB42E2 /* CoordinateQueryConfiguration.h in Headers */,
-				F59E94751D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.h in Headers */,
 				F519115D1E4CC50000BB6D92 /* XCKeyboardKeyMap.h in Headers */,
 				F55F824E1C6DD07500A945C8 /* HTTPResponseProxy.h in Headers */,
 				F519119A1E4CC50000BB6D92 /* XCTTestRunSessionDelegate-Protocol.h in Headers */,
@@ -2978,7 +2967,6 @@
 				F5870B431CF0BEFF00B3376C /* TouchPath.m in Sources */,
 				89512BDC1C9EEC3C0027D61E /* Drag.m in Sources */,
 				F55F81A61C6DD07500A945C8 /* HTTPRedirectResponse.m in Sources */,
-				F59E94761D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m in Sources */,
 				F55F84171C6E438800A945C8 /* Application+Queries.m in Sources */,
 				F5CE18E31E8BBA61001116A5 /* CBLSApplicationProxy.m in Sources */,
 				F55F840B1C6E437100A945C8 /* HealthRoutes.m in Sources */,
@@ -3130,7 +3118,6 @@
 				F5B0A1D21CAD4E8A00E056CE /* HTTPDataResponse.m in Sources */,
 				899696CB1CB356BF00BB42E2 /* QueryConfiguration.m in Sources */,
 				F5B0A1BC1CAD4E3A00E056CE /* InvalidArgumentException.m in Sources */,
-				F58D27FD1D4F947F000FF6C0 /* XCUIApplication+DeviceAgentAdditionsTest.m in Sources */,
 				F5B0A1D01CAD4E7F00E056CE /* MultipartMessageHeaderField.m in Sources */,
 				F5B0A1E31CAD4EA700E056CE /* RoutingConnection.m in Sources */,
 				F58D28131D4F947F000FF6C0 /* RouteResponseTest.m in Sources */,
@@ -3168,7 +3155,6 @@
 				F5B0A1B61CAD4E2F00E056CE /* Testmanagerd.m in Sources */,
 				F5B0A1D41CAD4E8A00E056CE /* HTTPErrorResponse.m in Sources */,
 				F5963ECC1D5F3F0C002F9304 /* JSONUtilsTest.m in Sources */,
-				F59E94771D153ECF00A873C1 /* XCUIApplication+DeviceAgentAdditions.m in Sources */,
 				F5B0A1AE1CAD4E2700E056CE /* QuerySpecifier.m in Sources */,
 				F5041F4B1E092D2A000B3E3E /* XCUIElement+FBIsVisible.m in Sources */,
 				F5E68C6B1E8424FC00E7922C /* CBLSApplicationWorkspaceTest.m in Sources */,
