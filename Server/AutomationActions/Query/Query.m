@@ -30,9 +30,8 @@
 }
 
 - (NSArray<XCUIElement *> *)execute {
-    //TODO throw exception if count == 0
-    if (_queryConfiguration.selectors.count == 0) {
-        return nil;
+    if (self.queryConfiguration.selectors.count == 0) {
+        @throw [CBXException withMessage:@"Query must have at least one specifier"];
     }
 
     if ([Application currentApplication] == nil) {
