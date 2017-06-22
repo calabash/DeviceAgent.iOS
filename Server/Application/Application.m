@@ -66,7 +66,7 @@ static Application *currentApplication;
     XCUIApplication *application = [[XCUIApplication alloc] initPrivateWithPath:nil
                                                                        bundleID:bundleIdentifier];
 
-    if (application.state == CBXCApplicationStateNotRunning) {
+    if (application.state == XCUIApplicationStateNotRunning) {
         DDLogDebug(@"Application %@ is not running", bundleIdentifier);
         return;
     }
@@ -89,13 +89,13 @@ static Application *currentApplication;
     } else {
         [CBXWaiter waitWithTimeout:10
                          untilTrue:^BOOL{
-                           return application.state == CBXCApplicationStateNotRunning;
+                             return application.state == XCUIApplicationStateNotRunning;
                          }];
     }
 
     NSTimeInterval elapsed = [[CBXMachClock sharedClock] absoluteTime] - startTime;
 
-    if (application.state != CBXCApplicationStateNotRunning) {
+    if (application.state != XCUIApplicationStateNotRunning) {
         DDLogDebug(@"Application did not terminate after %@ seconds", @(elapsed));
     } else {
         DDLogDebug(@"Application did terminate after %@ seconds", @(elapsed));
