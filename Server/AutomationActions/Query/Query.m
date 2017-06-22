@@ -34,15 +34,11 @@
         @throw [CBXException withMessage:@"Query must have at least one specifier"];
     }
 
-    if ([Application currentApplication] == nil) {
-        @throw [CBXException withMessage:@"Can not perform queries until application has been launched!"];
+    if (![Application currentApplication]) {
+        @throw [CBXException withMessage:@"Cannot perform queries until application has been launched!"];
     }
 
-    /*
-     Building the XCUIElementQuery
-     */
-
-    if ([[Application currentApplication] lastSnapshot] == nil) {
+    if (![[Application currentApplication] lastSnapshot]) {
         [[[Application currentApplication] applicationQuery] elementBoundByIndex:0];
         [[Application currentApplication] resolve];
     }
