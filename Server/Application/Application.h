@@ -1,7 +1,6 @@
 
 #import <Foundation/Foundation.h>
 #import "XCUIApplication.h"
-#import "XCUIApplication+DeviceAgentAdditions.h"
 
 /**
  DeviceAgent wrapper class for XCUIApplication
