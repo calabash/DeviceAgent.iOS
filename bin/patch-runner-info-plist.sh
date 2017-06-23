@@ -129,6 +129,17 @@ if [ "${EXIT_STATUS}" != "0" ]; then
     --timestamp=none \
     "${RUNNER}/Frameworks/XCTest.framework"
 
+  AUTOMATION_FRAMEWORK="${RUNNER}/Frameworks/XCTAutomationSupport.framework"
+
+  if [ -e "${AUTOMATION_FRAMEWORK}" ]; then
+  xcrun codesign \
+    --sign - \
+    --force \
+    --deep \
+    --timestamp=none \
+    "${AUTOMATION_FRAMEWORK}"
+  fi
+
   xcrun codesign \
     --sign - \
     --force \
@@ -153,6 +164,16 @@ else
       --force \
       --deep \
       "${RUNNER}/Frameworks/XCTest.framework"
+
+    AUTOMATION_FRAMEWORK="${RUNNER}/Frameworks/XCTAutomationSupport.framework"
+
+    if [ -e "${AUTOMATION_FRAMEWORK}" ]; then
+      xcrun codesign \
+        --sign "${IDENTITY}" \
+        --force \
+        --deep \
+        "${AUTOMATION_FRAMEWORK}"
+    fi
 
     xcrun codesign \
       --sign "${IDENTITY}" \
