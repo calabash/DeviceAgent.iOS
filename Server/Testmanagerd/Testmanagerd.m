@@ -1,11 +1,13 @@
 
 #import "Testmanagerd.h"
 #import "XCTestDriver.h"
-#import "NSXPCConnection.h"
 #import "XCTRunnerDaemonSession.h"
 #import <objc/runtime.h>
 #import "CBXException.h"
 
+#ifndef __IPHONE_11_0
+#import "NSXPCConnection.h"
+#endif
 
 @interface Testmanagerd()
 @end
