@@ -12,6 +12,7 @@
 #import "XCTestPrivateSymbols.h"
 #import "XCElementSnapshot-Hitpoint.h"
 #import "XCUIApplication.h"
+#import "XCApplicationQuery.h"
 
 @implementation XCUIElement (FBIsVisible)
 
@@ -62,6 +63,7 @@
    */
   XCUIApplication *application = [self application];
   if (!application.lastSnapshot) {
+      [[application applicationQuery] elementBoundByIndex:0];
       [application resolve];
   }
   CGRect appFrame = application.lastSnapshot.frame;
