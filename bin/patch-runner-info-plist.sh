@@ -4,6 +4,7 @@ set -e
 
 source bin/log_functions.sh
 source bin/plist-buddy.sh
+source bin/xcode.sh
 
 if [ $# == 0 ]; then
   echo ""
@@ -85,8 +86,14 @@ plist_set_key "${DEVICE_AGENT_PLIST}" "CFBundleShortVersionString" "${SHORT_VERS
 
 banner "Resigning"
 
+if [ "$(xcode_gte_9)" = "true" ]; then
+  RUNNER_BIN="${RUNNER}/DeviceAgent-Runner"
+else
+  RUNNER_BIN="${RUNNER}/XCTRunner"
+fi
+
 set +e
-ARCHINFO=`xcrun lipo -info "${RUNNER}/XCTRunner"`
+ARCHINFO=`xcrun lipo -info "${RUNNER_BIN}"`
 IGNORED=`echo ${ARCHINFO} | egrep -o "arm"`
 EXIT_STATUS=$?
 set -e
