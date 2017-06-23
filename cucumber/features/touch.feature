@@ -4,6 +4,7 @@ Feature: Touch
 Background: App has launched
 Given the app has launched
 
+@smoke
 Scenario: Single finger touch
 And I am looking at the Touch tab
 Then I can tap the screen by coordinate
