@@ -39,6 +39,7 @@ app-agent:
 #
 # Warnings are treated as errors. GCC_TREAT_WARNINGS_AS_ERRORS=YES
 unit-tests:
+	bundle update
 	bundle exec bin/make/unit-tests.rb
 
 # Makes the TestApp.app
