@@ -24,8 +24,8 @@ else
   XC_PIPE='cat'
 fi
 
-XC_TARGET="DeviceAgent"
-XC_PROJECT="DeviceAgent.xcodeproj"
+XC_WORKSPACE="DeviceAgent.xcworkspace"
+XC_SCHEME="DeviceAgent"
 XC_CONFIG=Debug
 
 XC_BUILD_DIR="build/ipa/DeviceAgent"
@@ -64,19 +64,17 @@ info "Prepared archive directory"
 banner "Building ${IPA}"
 
 COMMAND_LINE_BUILD=1 xcrun xcodebuild \
+  -scheme "${XC_SCHEME}" \
+  -workspace "${XC_WORKSPACE}" \
   -SYMROOT="${XC_BUILD_DIR}" \
-  BUILT_PRODUCTS_DIR="${BUILD_PRODUCTS_DIR}" \
-  TARGET_BUILD_DIR="${BUILD_PRODUCTS_DIR}" \
-  DWARF_DSYM_FOLDER_PATH="${BUILD_PRODUCTS_DIR}" \
-  -project "${XC_PROJECT}" \
-  -target "${XC_TARGET}" \
+  -derivedDataPath "${XC_BUILD_DIR}" \
   -configuration "${XC_CONFIG}" \
   -sdk iphoneos \
   ARCHS="armv7 armv7s arm64" \
   VALID_ARCHS="armv7 armv7s arm64" \
   ONLY_ACTIVE_ARCH=NO \
   GCC_TREAT_WARNINGS_AS_ERRORS=YES \
-  build | $XC_PIPE
+  build-for-testing | $XC_PIPE
 
 EXIT_CODE=${PIPESTATUS[0]}
 

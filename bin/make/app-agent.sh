@@ -9,6 +9,7 @@ set -e
 source bin/log_functions.sh
 source bin/copy-with-ditto.sh
 source bin/plist-buddy.sh
+source bin/xcode.sh
 
 banner "Preparing"
 
@@ -81,6 +82,22 @@ if [ $EXIT_CODE != 0 ]; then
   exit $EXIT_CODE
 else
   info "Building app succeeded."
+fi
+
+if [ "$(xcode_gte_9)" = "true" ]; then
+  banner "Patching for Xcode 9"
+
+  XCTEST_BUNDLE="${XC_TARGET}.xctest"
+  BUILD_PRODUCTS_XCTEST="${BUILD_PRODUCTS_DIR}/${XCTEST_BUNDLE}"
+  RUNNER_PLUGINS="${BUILD_PRODUCTS_RUNNER}/PlugIns"
+  mkdir -p "${RUNNER_PLUGINS}"
+
+  ditto_or_exit "${BUILD_PRODUCTS_XCTEST}" "${RUNNER_PLUGINS}/${XCTEST_BUNDLE}"
+
+  XCTEST_DSYM="${XCTEST_BUNDLE}.dSYM"
+  BUILD_PRODUCTS_XCTEST_DSYM="${BUILD_PRODUCTS_DIR}/${XCTEST_DSYM}"
+
+  ditto_or_exit "${BUILD_PRODUCTS_XCTEST_DSYM}" "${RUNNER_PLUGINS}/${XCTEST_DSYM}"
 fi
 
 bin/patch-runner-info-plist.sh "${BUILD_PRODUCTS_APP}" "${BUILD_PRODUCTS_RUNNER}"
