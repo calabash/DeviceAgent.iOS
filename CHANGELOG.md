@@ -1,3 +1,14 @@
+### 1.1.2
+
+* Server: add pt-BR alert definition for APNS #233
+* Perform app query before resolving the application when checking
+  visibility #232
+* Server: GET /version returns DeviceAgent build info #227
+* Server: add selected key to element JSON #223
+* Server: add focus information to element JSON #222
+* POST /session can terminate AUT if it is running #220
+* SpringBoard: add French 'no SIM card installed' localization #216
+
 ### 1.1.1
 
 DeviceAgent 1.1.0 was never released because of iOSDeviceManager
