@@ -2,6 +2,7 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <Foundation/Foundation.h>
 #import "XCPointerEventPath.h"
+#import <UIKit/UIKit.h>
 
 /**
  Wrapper class for `XCTouchPath` and `XCPointerEventPath` which
@@ -9,7 +10,7 @@
  testmanagerd.
  */
 @interface TouchPath : NSObject
-@property (nonatomic, readonly) long long orientation;
+@property (nonatomic, readonly) UIInterfaceOrientation orientation;
 
 /**
  Static initializer. Note that the event **does not** perform any actual touches
@@ -21,7 +22,7 @@
  @return A new TouchPath instance.
  */
 + (instancetype)withFirstTouchPoint:(CGPoint)firstTouchPoint
-                        orientation:(long long)orientation;
+                        orientation:(UIInterfaceOrientation)orientation;
 
 /**
  Static initializer. Note that the event **does not** perform any actual touches
@@ -35,7 +36,7 @@
  @return A new TouchPath instance.
  */
 + (instancetype)withFirstTouchPoint:(CGPoint)firstTouchPoint
-                        orientation:(long long)orientation
+                        orientation:(UIInterfaceOrientation)orientation
                              offset:(float)seconds;
 
 /**
@@ -62,4 +63,5 @@
  @return The XCPointerEventPath created as a result of the touch points added
  */
 - (XCPointerEventPath *)eventPath;
+
 @end

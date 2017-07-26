@@ -19,7 +19,8 @@
     float duration = [self duration];
     float amount = [self pinchAmount];
     NSString *direction = [self pinchDirection];
-    long long orientation = [[Application currentApplication] longLongInterfaceOrientation];
+    UIInterfaceOrientation orientation = [[Application currentApplication]
+                                          interfaceOrientation];
     
     CGPoint p1 = center,
     p2 = center;

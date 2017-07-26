@@ -28,6 +28,9 @@ static NSDictionary *typeStringToElementType;
     json[CBX_RECT_KEY] = [self rectToJSON:snapshotOrElement.wdFrame];
     json[CBX_IDENTIFIER_KEY] = snapshotOrElement.wdName;
     json[CBX_ENABLED_KEY] = @(snapshotOrElement.wdEnabled);
+    json[CBX_SELECTED_KEY] = @(snapshotOrElement.wdSelected);
+    json[CBX_HAS_FOCUS_KEY] = @(snapshotOrElement.wdHasFocus);
+    json[CBX_HAS_KEYBOARD_FOCUS_KEY] = @(snapshotOrElement.wdHasKeyboardFocus);
 
     BOOL visible;
     CGPoint hitPoint;
@@ -181,7 +184,7 @@ static NSDictionary *typeStringToElementType;
                                 @(XCUIElementTypeTimeline) : @"TimeLine",
                                 @(XCUIElementTypeRatingIndicator) : @"RatingIndicator",
                                 @(XCUIElementTypeValueIndicator) : @"ValueIndicator",
-                                @(XCUIElementTypeSplitGroup) : @"SplitGroupe",
+                                @(XCUIElementTypeSplitGroup) : @"SplitGroup",
                                 @(XCUIElementTypeSplitter) : @"Splitter",
                                 @(XCUIElementTypeRelevanceIndicator) : @"RelevanceIndicator",
                                 @(XCUIElementTypeColorWell) : @"ColorWell",

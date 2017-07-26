@@ -48,12 +48,10 @@ Then(/^I query for Same as views by mark using id and use an index to find the B
   elements = query({marked: "same as", :type => "Button"})
   expect(elements.count).to be == 1
   expected = elements[0]
-  expected["test_id"] = nil
 
   elements = query({marked: "same as", :index => 5})
   expect(elements.count).to be == 1
   actual = elements[0]
-  actual["test_id"] = nil
 
   expect(actual).to be == expected
 end
@@ -143,29 +141,27 @@ Then(/^I can query for Japanese$/) do
   expect(elements.count).to be == 1
 end
 
-# TODO: move the range into the step name
-Then(/^I query for all visible elements using an empty hash$/) do
+Then(/^an empty hash query returns between (\d+) and (\d+) elements$/) do |lower, upper|
   elements = query_for_automatable_elements({})
   # Results vary per iOS and across simulator and devices.
   # If the @wildcard or @query Scenarios are in isolation, the element count
   # is different than if the the entire test suite is run.
-  expect(elements.count).to be >= 21
-  expect(elements.count).to be <= 25
+  expect(elements.count).to be >= lower.to_i
+  expect(elements.count).to be <= upper.to_i
 end
 
-# TODO: move the range into the step name
-Then(/^I query for all elements using all$/) do
+And(/^an empty hash query with :all returns between (\d+) and (\d+) elements$/) do |lower, upper|
   elements = query_for_automatable_elements({all: true})
   # Results vary per iOS and across simulator and devices.
   # If the @wildcard or @query Scenarios are in isolation, the element count
   # is different than if the the entire test suite is run.
-  expect(elements.count).to be >= 23
-  expect(elements.count).to be <= 28
+  expect(elements.count).to be >= lower.to_i
+  expect(elements.count).to be <= upper.to_i
 end
 
 Then(/^I ask for the tree representation of the view hierarchy$/) do
   elements = tree
-  expect(elements.count).to be == 8
+  expect(elements.count).to be == 11
 end
 
 Then(/^I time how long it takes to make a bunch of queries$/) do

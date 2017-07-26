@@ -13,6 +13,7 @@ Then a keyboard-not-visible error is raised
 Scenario: Entering text triggers UITextInput delegates
 When I touch the text field
 Then the keyboard is visible
+And the text field has keyboard focus
 When I type "Bien"
 Then what I typed appears in the red box
 
@@ -40,6 +41,7 @@ Then I should see an empty text field
 @text_view
 Scenario: Typing in a TextView
 Given I touched the Text View
+Then the text view has keyboard focus
 Then I can clear the Text View
 Then I can type a lot of text
 And I can dismiss the Text View keyboard
@@ -55,3 +57,13 @@ Then I see an authentication alert
 And I enter my name for authentication
 And I enter my password for authentication
 Then I submit my credentials for authentication
+
+@key_input
+Scenario: Typing in a UIKeyInput view
+Given I touched the UIKeyInput view
+Then the UIKeyInput view does _not_ have keyboard focus
+When I try to use the clear text gesture on the UIKeyInput view
+Then an error is raised because DeviceAgent cannot find a first responder
+Then I type some text in the UIKeyInput view
+Then I can delete text in the UIKeyInput view by tapping the keyboard delete key
+And I dismiss the UIKeyInput keyboard by tapping the return button

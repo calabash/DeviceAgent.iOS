@@ -6,6 +6,44 @@
 
 #import <XCTest/XCUIApplication.h>
 
+#ifndef __IPHONE_11_0
+typedef NS_ENUM(NSUInteger, XCUIApplicationState) {
+    XCUIApplicationStateUnknown = 0,
+    XCUIApplicationStateNotRunning = 1,
+#if !TARGET_OS_OSX
+    XCUIApplicationStateRunningBackgroundSuspended = 2,
+#endif
+    XCUIApplicationStateRunningBackground = 3,
+    XCUIApplicationStateRunningForeground = 4
+};
+#endif
+
+/*
+
+ Before Xcode 9, XCUIApplicationState was not a public enum.
+
+ XCApplicationState was a private enum.
+
+ $ xcrun strings DeviceAgent-Runner.app/Frameworks/XCTest.framework/XCTest | grep XCApplicationState
+
+ This error message gives us a clue about ordering.
+ UI Testing Failure - App state for <XCUIApplicationProcess: 0x7ff661528a50 (null) (6798)> is
+ XCApplicationStateRunningActive (3), still not XCApplicationStateNotRunning (1)
+
+ We used that error information and some testing to create our own enum.
+
+ typedef enum : NSUInteger {
+     CBXCApplicationStateUnknown = 0,
+     CBXCApplicationStateNotRunning = 1,
+     CBXCApplicationStateRunningInactive,
+     CBXCApplicationStateRunningActive,
+ } CBXCApplicationState;
+
+ Our enum is no longer necessary.
+
+ */
+
+
 @class NSArray, NSDictionary, NSString, XCAccessibilityElement, XCApplicationQuery, XCUIApplicationImpl;
 
 @interface XCUIApplication ()
@@ -34,7 +72,7 @@
 @property(readonly, nonatomic) UIInterfaceOrientation interfaceOrientation; //TODO tvos
 @property(readonly, nonatomic) BOOL running;
 @property(nonatomic) pid_t processID; // @synthesize processID=_processID;
-@property unsigned long long state; // @synthesize state=_state;
+@property XCUIApplicationState state; // @synthesize state=_state;
 @property(readonly) XCAccessibilityElement *accessibilityElement;
 
 + (instancetype)appWithPID:(pid_t)processID;

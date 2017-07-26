@@ -1,11 +1,6 @@
-//
-//  CBApplication.h
-//  xcuitest-server
-//
 
 #import <Foundation/Foundation.h>
 #import "XCUIApplication.h"
-#import "XCUIApplication+DeviceAgentAdditions.h"
 
 /**
  DeviceAgent wrapper class for XCUIApplication
@@ -25,33 +20,17 @@
 
  @param launchArgs Arguments to pass to the application upon launch.
  @param environment Key-value dict of environment variables to pass to the app upon launch.
+ @param terminateIfRunning If true and the application with bundle id is running,
+   then DeviceAgent will terminate the app before relaunching.
  */
 + (void)launchBundlePath:(NSString *_Nullable)bundlePath
                 bundleID:(NSString *_Nonnull)bundleID
               launchArgs:(NSArray *_Nullable)launchArgs
-                     env:(NSDictionary *_Nullable)environment;
+                     env:(NSDictionary *_Nullable)environment
+      terminateIfRunning:(BOOL)terminateIfRunning;
 
 /**A reference to the currently running application. */
 + (XCUIApplication *_Nonnull)currentApplication;
-
-/**
- Caches an XCUIElement in a static dictionary such that it is quick to reference later
- (indexed by an incrementing `test_id` key).
- @param el XCUIElement to cache
-
- ### TODO: deprecate? Remove? Document? Talk to Moody & Karl...
- */
-+ (NSNumber *_Nonnull)cacheElement:(XCUIElement  * _Nonnull)el;
-
-/**
- Returns a cached element
- @param index `test_id` of the element to find
- @exception ElementNotFoundException If the `test_id` isn't present in the cache,
- you will see an exception raised. `test_id`s are _not_ stable between sessions -
- make sure you are only querying for `test_id`s that you have discovered during
- the current testing session.
- */
-+ (XCUIElement *_Nullable)cachedElementOrThrow:(NSNumber *_Nonnull)index;
 
 /**
  Attempt to kill the current application.

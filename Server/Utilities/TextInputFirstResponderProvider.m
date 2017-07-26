@@ -26,6 +26,7 @@
         _elementTypes = @[@(XCUIElementTypeTextField),
                           @(XCUIElementTypeTextView),
                           @(XCUIElementTypeSecureTextField),
+                          @(XCUIElementTypeSearchField),
                           @(XCUIElementTypeOther)];
     }
     return self;

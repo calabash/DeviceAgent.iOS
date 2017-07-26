@@ -6,7 +6,7 @@
 @property (nonatomic) CGPoint lastPoint;
 
 - (instancetype)initWithFirstTouchPoint:(CGPoint)firstTouchPoint
-                            orientation:(long long)orientation
+                            orientation:(UIInterfaceOrientation)orientation
                                  offset:(float)seconds;
 
 + (XCPointerEventPath *)eventPathForFirstTouchPoint:(CGPoint)point
@@ -18,7 +18,7 @@
 
 // private
 - (instancetype)initWithFirstTouchPoint:(CGPoint)firstTouchPoint
-                            orientation:(long long)orientation
+                            orientation:(UIInterfaceOrientation)orientation
                                  offset:(float)seconds {
     self = [super init];
     if (self) {
@@ -34,7 +34,7 @@
 
 // public
 + (instancetype)withFirstTouchPoint:(CGPoint)firstTouchPoint
-                        orientation:(long long)orientation {
+                        orientation:(UIInterfaceOrientation)orientation {
     return [[TouchPath alloc] initWithFirstTouchPoint:firstTouchPoint
                                           orientation:orientation
                                                offset:0.0];
@@ -42,7 +42,7 @@
 
 // public
 + (instancetype)withFirstTouchPoint:(CGPoint)firstTouchPoint
-                        orientation:(long long)orientation
+                        orientation:(UIInterfaceOrientation)orientation
                              offset:(float)seconds {
     return [[TouchPath alloc] initWithFirstTouchPoint:firstTouchPoint
                                           orientation:orientation

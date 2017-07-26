@@ -134,6 +134,20 @@ Then(/^the keyboard is visible$/) do
   wait_for_keyboard
 end
 
+And(/^the text (field|view) has keyboard focus$/) do |type|
+  if type == "field"
+    text_field = query({marked: "text field"}).first
+  else
+    text_field = query({marked: "text view"}).first
+  end
+  expect(text_field["has_keyboard_focus"]).to be == true
+end
+
+Then(/^the UIKeyInput view does _not_ have keyboard focus$/) do
+  input_field = query({marked: "key input"}).first
+  expect(input_field["has_keyboard_focus"]).to be == false
+end
+
 When(/^I type "([^\"]*)"$/) do |text|
   enter_text(text)
   @last_text_entered = text
@@ -151,7 +165,7 @@ Given(/^I typed "([^\"]*)"$/) do |text|
 end
 
 And(/^I decide I should be more formal$/) do
-  # nop
+  # documentation step
 end
 
 Given(/^I replace "([^\"]*)" with "([^\"]*)" by sending backspace$/) do |to_replace, replacement|
@@ -162,7 +176,7 @@ Given(/^I replace "([^\"]*)" with "([^\"]*)" by sending backspace$/) do |to_repl
 end
 
 And(/^I decide I want to be more emphatic$/) do
-  # nop
+  # documention step
 end
 
 Then(/^I replace "([^\"]*)" with "([^\"]*)" using the delete key$/) do |to_replace, replacement|
@@ -217,6 +231,7 @@ And(/^I can select all the text in the Text View$/) do
   touch({marked: "text view"}, {duration: 1.0})
   query = {marked: "Select All" }
   wait_for_view(query)
+  2.times { wait_for_animations }
   touch(query)
   2.times { wait_for_animations }
 end
@@ -267,4 +282,45 @@ Then(/^I submit my credentials for authentication$/) do
   wait_for_animations
 
   wait_for_text_in_view("clever-user pa$$w0rd", {marked: "text delegate"})
+end
+
+Given(/^I touched the UIKeyInput view$/) do
+  touch({marked: "key input"})
+  wait_for_keyboard
+  wait_for_animations
+end
+
+When(/^I try to use the clear text gesture on the UIKeyInput view$/) do
+  # documentation step
+end
+
+Then(/^an error is raised because DeviceAgent cannot find a first responder$/) do
+  expect do
+    clear_text
+  end.to raise_error(RuntimeError, /Can not clear text: no element has focus/)
+end
+
+Then(/^I type some text in the UIKeyInput view$/) do
+  touch({marked: "clear key input button"})
+  wait_for_text_in_view("", {marked: "key input"})
+
+  string = "This is a UIKeyInput view"
+  enter_text(string)
+  wait_for_text_in_view(string, {marked: "key input"})
+end
+
+Then(/^I can delete text in the UIKeyInput view by tapping the keyboard delete key$/) do
+  result = wait_for_view({marked: "key input"})
+  string = result["label"] || result["value"]
+  string.each_char do |_|
+    touch_keyboard_delete_key
+    sleep(0.1)
+  end
+
+  wait_for_text_in_view("", {marked: "key input"})
+end
+
+And(/^I dismiss the UIKeyInput keyboard by tapping the return button$/) do
+  enter_text("\n")
+  wait_for_no_keyboard
 end

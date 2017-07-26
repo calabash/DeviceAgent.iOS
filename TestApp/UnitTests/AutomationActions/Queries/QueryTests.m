@@ -46,11 +46,11 @@
 }
 
 - (void)testExecuteWithNoSpecifiers {
-    Query *query = [QueryFactory queryWithQueryConfiguration:_emptyQueryConfig];
-    id XCUIElementQueryMock = OCMClassMock([XCUIElementQuery class]);
-    OCMStub([XCUIElementQueryMock allElementsBoundByIndex]).andReturn(@[[XCUIElement new]]);
 
-    expect([query execute]).to.equal(nil);
+    Query *query = [QueryFactory queryWithQueryConfiguration:_emptyQueryConfig];
+    expect(^{
+        [query execute];
+    }).to.raise(@"CBXException");
 }
 
 //FIXME

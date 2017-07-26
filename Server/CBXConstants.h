@@ -1,7 +1,3 @@
-//
-//  CBXConstants.h
-//  xcuitest-server
-//
 
 #import <Foundation/Foundation.h>
 #import "CocoaLumberjack.h"
@@ -14,6 +10,7 @@ static NSString *const CBX_BUNDLE_PATH_KEY = @"bundlePath";
 static NSString *const CBX_BUNDLE_ID_KEY = @"bundleID";
 static NSString *const CBX_LAUNCH_ARGS_KEY = @"launchArgs";
 static NSString *const CBX_ENVIRONMENT_KEY = @"environment";
+static NSString *const CBX_TERMINATE_AUT_IF_RUNNING_KEY = @"terminate_aut_if_running";
 
 static NSString *const CBX_X_KEY = @"x";
 static NSString *const CBX_Y_KEY = @"y";
@@ -55,6 +52,9 @@ static NSString *const CBX_IDENTIFIER_KEY = @"id";
 static NSString *const CBX_IDENTIFIER1_KEY = @"id1";
 static NSString *const CBX_IDENTIFIER2_KEY = @"id2";
 static NSString *const CBX_ENABLED_KEY = @"enabled";
+static NSString *const CBX_SELECTED_KEY = @"selected";
+static NSString *const CBX_HAS_FOCUS_KEY = @"has_focus";
+static NSString *const CBX_HAS_KEYBOARD_FOCUS_KEY = @"has_keyboard_focus";
 static NSString *const CBX_HITABLE_KEY = @"hitable";
 static NSString *const CBX_HIT_POINT_KEY = @"hit_point";
 static NSString *const CBX_INDEX_KEY = @"index";

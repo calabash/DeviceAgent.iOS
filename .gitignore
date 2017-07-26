@@ -7,9 +7,6 @@ documentation
 (.*/)?\#[^/]*\#$
 *.swp
 
-# Python
-*.pyc
-
 # Ruby
 .ruby-version
 cucumber/Gemfile.lock

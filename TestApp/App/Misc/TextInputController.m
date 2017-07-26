@@ -1,18 +1,30 @@
 
 #import "TextInputController.h"
+#import "CalTextField.h"
 
 @interface TextInputController ()
+
 @property (weak, nonatomic) IBOutlet UILabel *textDelegateMessage;
 @property (weak, nonatomic) IBOutlet UILabel *howGoesItLabel;
-@property (strong, nonatomic) IBOutlet UITextField *textField;
-@property (weak, nonatomic) IBOutlet UITextView *textView;
 
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIButton *clearTextFieldButton;
 - (IBAction)clearTextFieldButtonTouched:(id)sender;
-@property (weak, nonatomic) IBOutlet UIButton *clearTextView;
+
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UIButton *clearTextViewButton;
 - (IBAction)clearTextViewButtonTouched:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *dismissTextViewKeyboardButton;
 - (IBAction)dismissTextViewKeyboardButtonTouched:(id)sender;
+
+@property (weak, nonatomic) IBOutlet CalTextField *keyInputView;
+@property(weak, nonatomic) IBOutlet UIButton *dismissKeyInputKeyboardButton;
+- (IBAction)dismissKeyInputKeyboardButtonTouched:(id)sender;
+@property(weak, nonatomic) IBOutlet UIButton *clearKeyInputButton;
+- (IBAction)clearKeyInputButtonTouched:(id)sender;
+
+- (void)handleTextFieldTextChangedNotification:(NSNotification *)notification;
+- (void)handleTextViewTextChangedNotification:(NSNotification *)notification;
 
 @end
 
@@ -38,7 +50,7 @@ static NSString *const kCaVa = @"Ça va?";
     __block UIAlertController *alert;
     alert = [UIAlertController alertControllerWithTitle:@"Authorize"
                                                 message:@"Enter your credentials."
-                                                preferredStyle:UIAlertControllerStyleAlert];
+                                         preferredStyle:UIAlertControllerStyleAlert];
 
     UIAlertAction *cancel, *submit;
     cancel = [UIAlertAction actionWithTitle:@"Cancel"
@@ -49,7 +61,7 @@ static NSString *const kCaVa = @"Ça va?";
     [alert addAction:cancel];
 
     submit = [UIAlertAction
-    actionWithTitle:@"Submit"
+              actionWithTitle:@"Submit"
               style:UIAlertActionStyleDefault
               handler:^(UIAlertAction * _Nonnull action) {
                   NSArray <UITextField *>*textFields = [alert textFields];
@@ -83,7 +95,7 @@ static NSString *const kCaVa = @"Ça va?";
     _textField.returnKeyType = UIReturnKeyDone;
     _textField.clearButtonMode = UITextFieldViewModeAlways;
 
-  _textView.delegate = self;
+    _textView.delegate = self;
 
     UITapGestureRecognizer *recognizer;
     recognizer = [[UITapGestureRecognizer alloc]
@@ -128,6 +140,16 @@ static NSString *const kCaVa = @"Ça va?";
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(handleTextFieldTextChangedNotification:)
+     name:UITextFieldTextDidChangeNotification object:nil];
+
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(handleTextViewTextChangedNotification:)
+     name:UITextViewTextDidChangeNotification object:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -136,6 +158,11 @@ static NSString *const kCaVa = @"Ça va?";
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Text Field Delegate
@@ -161,9 +188,9 @@ static NSString *const kCaVa = @"Ça va?";
     self.textDelegateMessage.text = @"textFieldDidEndEditing:";
 }
 
-- (BOOL)textField:(UITextField *)textField
- shouldChangeCharactersInRange:(NSRange)range
-replacementString:(NSString *)string  {
+- (BOOL)            textField:(UITextField *)textField
+shouldChangeCharactersInRange:(NSRange)range
+            replacementString:(NSString *)string  {
     self.textDelegateMessage.text = @"textField:shouldChangeCharactersInRange:replacementString:";
 
     return YES;
@@ -183,35 +210,57 @@ replacementString:(NSString *)string  {
     return YES;
 }
 
+- (void)handleTextFieldTextChangedNotification:(NSNotification *)notification {
+    if (!self.textField.text || self.textField.text.length == 0) {
+        self.keyInputView.text = @"TextField: GET /clearText generated notification";
+    }
+}
+
 #pragma mark - Text View Delegate
 
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
-   self.textDelegateMessage.text = @"textViewShouldBeginEditing:";
-   return YES;
+    self.textDelegateMessage.text = @"textViewShouldBeginEditing:";
+    return YES;
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView {
-   self.textDelegateMessage.text = @"textViewDidBeginEditing";
+    self.textDelegateMessage.text = @"textViewDidBeginEditing";
 }
 
 - (BOOL)textViewShouldEndEditing:(UITextView *)textView {
-  self.textDelegateMessage.text = @"textViewShouldEndEditing";
-  return YES;
+    self.textDelegateMessage.text = @"textViewShouldEndEditing";
+    return YES;
 }
 
 - (void)textViewDidEndEditing:(UITextView *)textView {
-  self.textDelegateMessage.text = @"textViewDidEndEditing:";
+    self.textDelegateMessage.text = @"textViewDidEndEditing:";
 }
 
-- (BOOL)textView:(UITextView *)textView
+- (BOOL)       textView:(UITextView *)textView
 shouldChangeTextInRange:(NSRange)range
-replacementText:(NSString *)text {
-  self.textDelegateMessage.text = @"textView:shouldChangeTextInRange:replacementText:";
-  return YES;
+        replacementText:(NSString *)text {
+    self.textDelegateMessage.text = @"textView:shouldChangeTextInRange:replacementText:";
+    return YES;
 }
 
 - (void)textViewDidChange:(UITextView *)textView {
-   self.textDelegateMessage.text = @"textViewDidChange:";
+    self.textDelegateMessage.text = @"textViewDidChange:";
+}
+
+- (IBAction)dismissKeyInputKeyboardButtonTouched:(id)sender {
+    if ([self.keyInputView isFirstResponder]) {
+        [self.keyInputView resignFirstResponder];
+    }
+}
+
+- (IBAction)clearKeyInputButtonTouched:(id)sender {
+    self.keyInputView.text = @"";
+}
+
+- (void)handleTextViewTextChangedNotification:(NSNotification *)notification {
+    if (!self.textView.text || self.textView.text.length == 0) {
+        self.keyInputView.text = @"TextView: GET /clearText generated notification";
+    }
 }
 
 @end
