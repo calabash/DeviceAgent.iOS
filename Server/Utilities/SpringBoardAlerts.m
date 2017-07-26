@@ -275,6 +275,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"OK", YES, @"Deseja Ter Acesso às Suas Atividades de Movimento e Preparo Físico"),
              alert(@"OK", YES, @"Deseja Ter Acesso às Contas do Twitter"),
              alert(@"OK", YES, @"Deseja enviar-lhe notificações"),
+             alert(@"Permitir", YES, @"Deseja Enviar Notificações"),
              alert(@"Abrir", YES, @"Abrir com")
              ];
 }
