@@ -2,7 +2,7 @@
 
 set -e
 
-source bin/log_functions.sh
+source bin/log.sh
 source bin/plist-buddy.sh
 source bin/xcode.sh
 
