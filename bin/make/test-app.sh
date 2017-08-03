@@ -80,16 +80,13 @@ fi
 
 banner "Installing ${APP}"
 
-ditto_or_exit "${BUILD_PRODUCTS_APP}" "${INSTALLED_APP}"
-info "Installed ${INSTALLED_APP}"
+install_with_ditto "${BUILD_PRODUCTS_APP}" "${INSTALLED_APP}"
 
-xcrun ditto -ck --rsrc --sequesterRsrc --keepParent \
-  "${INSTALLED_APP}" \
-  "${INSTALLED_APP}.zip"
-info "Installed ${INSTALLED_APP}.zip"
+ditto_to_zip "${INSTALLED_APP}" "${INSTALL_DIR}/DeviceAgent-sim.app.zip"
 
-ditto_or_exit "${BUILD_PRODUCTS_DSYM}" "${INSTALLED_DSYM}"
-info "Installed ${INSTALLED_DSYM}"
+install_with_ditto "${BUILD_PRODUCTS_DSYM}" "${INSTALLED_DSYM}"
+install_with_ditto "${BUILD_PRODUCTS_DSYM}" \
+  "${INSTALL_DIR}/DeviceAgent-sim.app.dSYM"
 
 CAL_VERSION=`xcrun strings "${INSTALLED_APP}/${XC_TARGET}" | grep -E 'CALABASH VERSION'`
 info "${CAL_VERSION}"
@@ -97,4 +94,3 @@ info "${CAL_VERSION}"
 echo ""
 
 info "Done!"
-

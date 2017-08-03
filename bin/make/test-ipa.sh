@@ -83,27 +83,20 @@ fi
 
 banner "Installing ipa"
 
-ditto_or_exit "${BUILD_PRODUCTS_APP}" "${INSTALLED_APP}"
-info "Installed ${INSTALLED_APP}"
+install_with_ditto "${BUILD_PRODUCTS_APP}" "${INSTALLED_APP}"
 
 PAYLOAD_DIR="${INSTALL_DIR}/tmp/app/Payload"
 mkdir -p "${PAYLOAD_DIR}"
 
 ditto_or_exit "${INSTALLED_APP}" "${PAYLOAD_DIR}/${APP}"
 
-xcrun ditto -ck --rsrc --sequesterRsrc --keepParent \
-  "${PAYLOAD_DIR}" \
-  "${INSTALLED_IPA}"
-info "Installed ${INSTALLED_IPA}"
+ditto_to_zip "${PAYLOAD_DIR}" "${INSTALLED_IPA}"
+install_with_ditto "${INSTALLED_IPA}" "${INSTALL_DIR}/DeviceAgent-device.ipa"
+ditto_to_zip "${INSTALLED_APP}" "${INSTALL_DIR}/DeviceAgent-device.app.zip"
 
-xcrun ditto -ck --rsrc --sequesterRsrc --keepParent \
-  "${INSTALLED_APP}" \
-  "${INSTALLED_APP}.zip"
-info "Installed ${INSTALLED_APP}.zip"
-
-ditto_or_exit "${BUILD_PRODUCTS_DSYM}" "${INSTALLED_DSYM}"
-
-info "Installed ${INSTALLED_DSYM}"
+install_with_ditto "${BUILD_PRODUCTS_DSYM}" "${INSTALLED_DSYM}"
+install_with_ditto "${BUILD_PRODUCTS_DSYM}" \
+  "${INSTALL_DIR}/DeviceAgent-device.app.dSYM"
 
 banner "IPA Code Signing Details"
 

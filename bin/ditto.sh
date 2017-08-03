@@ -27,4 +27,5 @@ function ditto_to_zip {
   -ck --rsrc --sequesterRsrc --keepParent \
   "${1}" \
   "${2}"
+  info "Installed ${2}"
 }
