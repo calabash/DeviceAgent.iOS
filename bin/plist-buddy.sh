@@ -1,5 +1,6 @@
+#!/usr/bin/env bash
 
-source bin/log_functions.sh
+source bin/log.sh
 
 # $1 Plist
 # $2 Key

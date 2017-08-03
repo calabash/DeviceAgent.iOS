@@ -6,7 +6,7 @@ xcrun simctl help >/dev/null 2>&1
 
 set -e
 
-source bin/log_functions.sh
+source bin/log.sh
 source bin/ditto.sh
 
 banner "Preparing"

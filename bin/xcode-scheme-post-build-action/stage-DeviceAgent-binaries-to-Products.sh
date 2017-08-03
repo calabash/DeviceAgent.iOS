@@ -5,7 +5,7 @@
 
 set -e
 
-source "${BASH_SOURCE%/*}/../log_functions.sh"
+source "${BASH_SOURCE%/*}/../log.sh"
 source "${BASH_SOURCE%/*}/../ditto.sh"
 
 # Command line builds already stage binaries to Products/
