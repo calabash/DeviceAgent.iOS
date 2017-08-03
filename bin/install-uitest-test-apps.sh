@@ -38,7 +38,7 @@ install_with_ditto \
 
 install_with_ditto \
   "Products/ipa/TestApp/DeviceAgent-device.app.zip" \
-  "${INSTALL_DIR}/CalWebView-device.app.zip"
+  "${INSTALL_DIR}/DeviceAgent-device.app.zip"
 
 install_with_ditto \
   "Products/ipa/TestApp/DeviceAgent-device.ipa" \
