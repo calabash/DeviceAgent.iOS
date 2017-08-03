@@ -8,7 +8,7 @@ set -e
 
 source bin/log_functions.sh
 source bin/plist-buddy.sh
-source bin/copy-with-ditto.sh
+source bin/ditto.sh
 
 banner "Preparing"
 
