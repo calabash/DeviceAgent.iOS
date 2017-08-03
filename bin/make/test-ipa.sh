@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 
-xcrun simctl help >/dev/null 2>&1
-xcrun simctl help >/dev/null 2>&1
-xcrun simctl help >/dev/null 2>&1
-
-set -e
-
 source bin/log.sh
 source bin/ditto.sh
+source bin/simctl.sh
+
+ensure_valid_core_sim_service
+
+set -e
 
 banner "Preparing"
 
