@@ -304,55 +304,6 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
               @"iPad3,4",
               @"iPad3,5",
               @"iPad3,6"
-              ],
-
-      @"arm64" : @[
-
-              // iPhone 7/7+
-              @"iPhone9,1",
-              @"iPhone9,3",
-              @"iPhone9,2",
-              @"iPhone9,4",
-
-              // iPhone 6/6s
-              @"iPhone7,2",
-              @"iPhone8,1",
-
-              // iPhone 6+
-              @"iPhone7,1",
-              @"iPhone8,2",
-
-              // iPad Pro 13in
-              @"iPad6,7",
-              @"iPad6,8",
-
-              // iPad Pro 9in
-              @"iPad6,3",
-              @"iPad6,4",
-
-              // iPhone 6se
-              @"iPhone8,4",
-
-              // iPod 6 and 7
-              @"iPod6,1",
-              @"iPod7,1",
-
-              // iPhone 5s
-              @"iPhone6,1",
-              @"iPhone6,2",
-              @"iPhone6,3",
-              @"iPhone6,4",
-
-              // iPad Air, Air2, mini Retina
-              @"iPad4,1",
-              @"iPad4,2",
-              @"iPad4,4",
-              @"iPad4,5",
-              @"iPad4,6",
-              @"iPad5,1",
-              @"iPad5,2",
-              @"iPad5,3",
-              @"iPad5,4"
               ]
       };
 
@@ -376,7 +327,7 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
     if (match) {
         _armVersion = match;
     } else {
-        _armVersion = @"unknown";
+        _armVersion = @"arm64";
     }
     return _armVersion;
 }
