@@ -20,13 +20,13 @@
                  BOOL terminateIfRunning = [terminateNumber boolValue];
 
                  NSAssert(bundleID, @"Must specify \"bundleID\"");
-
                  if (!bundlePath || [bundlePath isEqual:[NSNull null]]) {
                      bundlePath = nil;
-                     if (![CBLSApplicationWorkspace applicationIsInstalled:bundleID]) {
+
+                     if (![Application applicationIsInstalled:bundleID]) {
                          NSString *errorMsg;
                          errorMsg = [NSString stringWithFormat:@"Application with identifier: %@ is not installed.",
-                                                               bundleID];
+                                     bundleID];
                          @throw [CBXException withMessage:errorMsg userInfo:nil];
                      }
                  } else {
