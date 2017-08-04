@@ -2,6 +2,10 @@
 
 /**
  * A wrapper around private LSApplicationProxy class.
+ * This class is for debugging.
+ *
+ * Starting in Xcode 9/iOS 11, interacting with LS private classes has been
+ * unsatisifying.
  */
 @interface CBLSApplicationProxy : NSObject
 
