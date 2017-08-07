@@ -29,6 +29,8 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
 - (NSArray<SpringBoardAlert *> *)RussianAlerts;
 - (NSArray<SpringBoardAlert *> *)PTBrazilAlerts;
 - (NSArray<SpringBoardAlert *> *)KoreanAlerts;
+- (NSArray<SpringBoardAlert *> *)ItalianAlerts;
+- (NSArray<SpringBoardAlert *> *)HebrewAlerts;
 
 @end
 
@@ -55,7 +57,9 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
                                             [self FrenchAlerts],
                                             [self RussianAlerts],
                                             [self PTBrazilAlerts],
-                                            [self KoreanAlerts]
+                                            [self KoreanAlerts],
+                                            [self ItalianAlerts],
+                                            [self HebrewAlerts]
                                             ]];
     }
     return self;
@@ -281,20 +285,57 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
 }
 
 - (NSArray<SpringBoardAlert *> *)KoreanAlerts {
-    return @[
-             alert(@"허용", YES, @"에서 사용자의 위치에 접근하도록 허용하겠습니까"),
-             alert(@"허용", YES, @"을(를) 사용하지 않을 때에도 해당 앱이 사용자의 위치에 접근하도록 허용하곘습니까"),
-             alert(@"승인", YES, @"이(가) 사용자의 연락처에 접근하려고 합니다"),
-             alert(@"승인", YES, @"이(가) 사용자의 캘린더에 접근하려고 합니다"),
-             alert(@"승인", YES, @"이(가) 사용자의 미리 알림에 접근하려고 합니다"),
-             alert(@"승인", YES, @"이(가) 사용자의 사진에 접근하려고 합니다"),
-             alert(@"승인", YES, @"이(가) 카메라에 접근하려고 합니다"),
-             alert(@"승인", YES, @"에서 Twitter 계정에 접근하려고 합니다"),
-             alert(@"승인", YES, @"이(가) 마이크에 접근하려고 합니다"),
-             alert(@"승인", YES, @"이(가) 사용자의 동작 및 피트니스 활동에 접근하려고 합니다"),
-             alert(@"허용", YES, @"에서 알림을 보내고자 합니다"),
-             alert(@"열기", YES, @"에서 열겠습니까?")
-             ];
+  return @[
+      alert(@"허용", YES, @"에서 사용자의 위치에 접근하도록 허용하겠습니까"),
+      alert(@"허용", YES, @"을(를) 사용하지 않을 때에도 해당 앱이 사용자의 위치에 접근하도록 허용하곘습니까"),
+      alert(@"승인", YES, @"이(가) 사용자의 연락처에 접근하려고 합니다"),
+      alert(@"승인", YES, @"이(가) 사용자의 캘린더에 접근하려고 합니다"),
+      alert(@"승인", YES, @"이(가) 사용자의 미리 알림에 접근하려고 합니다"),
+      alert(@"승인", YES, @"이(가) 사용자의 사진에 접근하려고 합니다"),
+      alert(@"승인", YES, @"이(가) 카메라에 접근하려고 합니다"),
+      alert(@"승인", YES, @"에서 Twitter 계정에 접근하려고 합니다"),
+      alert(@"승인", YES, @"이(가) 마이크에 접근하려고 합니다"),
+      alert(@"승인", YES, @"이(가) 사용자의 동작 및 피트니스 활동에 접근하려고 합니다"),
+      alert(@"허용", YES, @"에서 알림을 보내고자 합니다"),
+      alert(@"열기", YES, @"에서 열겠습니까?")
+  ];
+}
+
+- (NSArray<SpringBoardAlert *> *)ItalianAlerts {
+  return @[
+    alert(@"Consenti", YES, @"di accedere ai dati relativi alla tua posizione quando stai usando l'app"),
+    alert(@"Consenti", YES, @"di accedere anche ai dati relativi alla tua posizione quando l'app non è in uso"),
+    alert(@"OK", YES, @"vorrebbe accedere alla fotocamera"),
+    alert(@"OK", YES, @"vorrebbe accedere al microfono"),
+    alert(@"OK", YES, @"vorrebbe accedere alle tue Foto"),
+    alert(@"OK", YES, @"vorrebbe accedere ai tuoi Contatti"),
+    alert(@"OK", YES, @"vorrebbe accedere al tuo Calendario"),
+    alert(@"OK", YES, @"vorrebbe accedere ai tuoi Promemoria"),
+    alert(@"OK", YES, @"vorrebbe rendere disponibili i dati ai dispositivi Bluetooth nelle vicinanze anche quando non è in uso"),
+    alert(@"OK", YES, @"vorrebbe inviarti delle notifiche"),
+    alert(@"OK", YES, @"desodera accedere all'opzione di riconoscimento vocale"),
+    alert(@"OK", YES, @"desidera accedere ai dati di “Movimento e fitness”"),
+    alert(@"OK", YES, @"vorrebbe accedere agli account Twitter")
+  ];
+}
+
+- (NSArray<SpringBoardAlert *> *)HebrewAlerts {
+  return @[
+    alert(@"אפשר", YES, @"ת לפרטי מיקומך בעת שימושך בייש"),
+    alert(@"אפשר", YES, @"לפרטי מיקומך גם כשאינך משתמש/ת בייש"),
+    alert(@"אפשר", YES, @"ת לפרטי מיקומך אפילו כשאינך משתמש/ת בייש"),
+    alert(@"אפשר", YES, @"לגשת לפרטי מיקומך גם כשאינך משתמש/ת בייש"),
+    alert(@"אישור", YES, @"קש לגשת לאנשי הקשר ש"),
+    alert(@"אישור", YES, @"וניין לגשת ללוח השנה ש"),
+    alert(@"אישור", YES, @"וניין לגשת למשימות ש"),
+    alert(@"אישור", YES, @"וניין לגשת לתמונות ש"),
+    alert(@"אישור", YES, @"וניין לגשת אל פעילות התנועה והכושר ש"),
+    alert(@"אישור", YES, @"מבקש להשתמש במצל"),
+    alert(@"אישור", YES, @"מבקש לגשת לחשבונ"),
+    alert(@"אישור", YES, @"מעוניין לאפשר להתקני Bluetooth קרובים לקבל גישה לנתונים אפילו כשאינך משתמש/ת ביישום"),
+    alert(@"אישור", YES, @"מעוניין לשלוח לך עדכונים"),
+    alert(@"אישור", YES, @"מעוניין לגשת אל זיהוי הדיבור ש")
+  ];
 }
 
 @end
