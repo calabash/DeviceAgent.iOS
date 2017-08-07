@@ -84,6 +84,11 @@ extern NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY;
 - (BOOL)isIPhone5Like;
 
 /**
+ @return True if the device has an iPad 10.5" form factor.
+ */
+- (BOOL) isIPadPro10point5inch;
+
+/**
  @return True if the device is arm64
  */
 - (BOOL)isArm64;
