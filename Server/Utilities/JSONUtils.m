@@ -4,6 +4,7 @@
 #import "InvalidArgumentException.h"
 #import "Application.h"
 #import "CBXConstants.h"
+#import "CBXDecimalRounder.h"
 
 @implementation JSONUtils
 
@@ -40,6 +41,23 @@ static NSDictionary *typeStringToElementType;
     json[CBX_HIT_POINT_KEY] = @{@"x" : @(hitPoint.x), @"y" : @(hitPoint.y)};
 
     return json;
+}
+
++ (NSNumber *)normalizeFloat:(CGFloat) x {
+    if (isinf(x)) {
+        return (x == INFINITY ? @(INT32_MAX) : @(INT32_MIN));
+    } else if (x == CGFLOAT_MIN) {
+        return @(INT32_MIN);
+    } else if (x == CGFLOAT_MAX) {
+        return @(INT32_MAX);
+    } else if (x > (1.0 * INT32_MAX)) {
+        return @(INT32_MAX);
+    } else if (x < (1.0 * INT32_MIN)) {
+        return @(INT32_MIN);
+    } else {
+        CBXDecimalRounder *rounder = [CBXDecimalRounder new];
+        return @([rounder integerByRounding:x]);
+    }
 }
 
 + (NSMutableDictionary *)elementToJSON:(XCUIElement *)element {
