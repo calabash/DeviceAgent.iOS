@@ -4,6 +4,7 @@
 #import "InvalidArgumentException.h"
 #import "Application.h"
 #import "CBXConstants.h"
+#import "CBXDecimalRounder.h"
 
 @implementation JSONUtils
 
@@ -37,9 +38,27 @@ static NSDictionary *typeStringToElementType;
     [snapshotOrElement getHitPoint:&hitPoint visibility:&visible];
 
     json[CBX_HITABLE_KEY] = @(visible);
-    json[CBX_HIT_POINT_KEY] = @{@"x" : @(hitPoint.x), @"y" : @(hitPoint.y)};
+    json[CBX_HIT_POINT_KEY] = @{@"x" : [JSONUtils normalizeFloat:hitPoint.x],
+                                @"y" : [JSONUtils normalizeFloat:hitPoint.y]};
 
     return json;
+}
+
++ (NSNumber *)normalizeFloat:(CGFloat) x {
+    if (isinf(x)) {
+        return (x == INFINITY ? @(INT32_MAX) : @(INT32_MIN));
+    } else if (x == CGFLOAT_MIN) {
+        return @(INT32_MIN);
+    } else if (x == CGFLOAT_MAX) {
+        return @(INT32_MAX);
+    } else if (x > (1.0 * INT32_MAX)) {
+        return @(INT32_MAX);
+    } else if (x < (1.0 * INT32_MIN)) {
+        return @(INT32_MIN);
+    } else {
+        CBXDecimalRounder *rounder = [CBXDecimalRounder new];
+        return @([rounder integerByRounding:x]);
+    }
 }
 
 + (NSMutableDictionary *)elementToJSON:(XCUIElement *)element {
@@ -48,10 +67,10 @@ static NSDictionary *typeStringToElementType;
 
 + (NSDictionary *)rectToJSON:(CGRect)rect {
     return @{
-             CBX_X_KEY : @(rect.origin.x),
-             CBX_Y_KEY : @(rect.origin.y),
-             CBX_HEIGHT_KEY : @(rect.size.height),
-             CBX_WIDTH_KEY : @(rect.size.width)
+             CBX_X_KEY : [JSONUtils normalizeFloat:rect.origin.x],
+             CBX_Y_KEY : [JSONUtils normalizeFloat:rect.origin.y],
+             CBX_HEIGHT_KEY :  [JSONUtils normalizeFloat:rect.size.height],
+             CBX_WIDTH_KEY :  [JSONUtils normalizeFloat:rect.size.width]
              };
 }
 

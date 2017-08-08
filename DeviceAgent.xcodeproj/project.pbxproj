@@ -300,6 +300,9 @@
 		F52BA3461CED23F700475D5A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA1B1CC53EC800D87200 /* CFNetwork.framework */; };
 		F52BA3491CEDE1C400475D5A /* MBFingerTipWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F52BA3481CEDE1C400475D5A /* MBFingerTipWindow.m */; };
 		F52C9D871DA7E60300DAFC75 /* DragTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F52C9D861DA7E60300DAFC75 /* DragTest.m */; };
+		F53349661F39E490004138C7 /* CBXDecimalRounder.m in Sources */ = {isa = PBXBuildFile; fileRef = F53349641F39E475004138C7 /* CBXDecimalRounder.m */; };
+		F53349671F39E493004138C7 /* CBXDecimalRounder.m in Sources */ = {isa = PBXBuildFile; fileRef = F53349641F39E475004138C7 /* CBXDecimalRounder.m */; };
+		F53349691F39E536004138C7 /* CBXDecimalRounderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F53349681F39E536004138C7 /* CBXDecimalRounderTest.m */; };
 		F5366D9E1DE6CC2900E7C765 /* TextInputFirstResponderProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = F5366D9C1DE6CC2900E7C765 /* TextInputFirstResponderProvider.h */; };
 		F5366D9F1DE6CC2900E7C765 /* TextInputFirstResponderProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F5366D9D1DE6CC2900E7C765 /* TextInputFirstResponderProvider.m */; };
 		F5366DA01DE6CC2900E7C765 /* TextInputFirstResponderProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F5366D9D1DE6CC2900E7C765 /* TextInputFirstResponderProvider.m */; };
@@ -869,6 +872,9 @@
 		F52BA3471CEDE1C400475D5A /* MBFingerTipWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBFingerTipWindow.h; path = Vendor/Fingertips/MBFingerTipWindow.h; sourceTree = SOURCE_ROOT; };
 		F52BA3481CEDE1C400475D5A /* MBFingerTipWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBFingerTipWindow.m; path = Vendor/Fingertips/MBFingerTipWindow.m; sourceTree = SOURCE_ROOT; };
 		F52C9D861DA7E60300DAFC75 /* DragTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragTest.m; sourceTree = "<group>"; };
+		F53349631F39E475004138C7 /* CBXDecimalRounder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXDecimalRounder.h; sourceTree = "<group>"; };
+		F53349641F39E475004138C7 /* CBXDecimalRounder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXDecimalRounder.m; sourceTree = "<group>"; };
+		F53349681F39E536004138C7 /* CBXDecimalRounderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXDecimalRounderTest.m; sourceTree = "<group>"; };
 		F5366D9C1DE6CC2900E7C765 /* TextInputFirstResponderProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextInputFirstResponderProvider.h; sourceTree = "<group>"; };
 		F5366D9D1DE6CC2900E7C765 /* TextInputFirstResponderProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextInputFirstResponderProvider.m; sourceTree = "<group>"; };
 		F536799F1D7C324E009956D0 /* QuerySpecifierByMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySpecifierByMark.h; sourceTree = "<group>"; };
@@ -1825,6 +1831,8 @@
 		F55F83D61C6DDF1300A945C8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F53349631F39E475004138C7 /* CBXDecimalRounder.h */,
+				F53349641F39E475004138C7 /* CBXDecimalRounder.m */,
 				F55F83DA1C6DDF1300A945C8 /* JSONUtils.h */,
 				F55F83DB1C6DDF1300A945C8 /* JSONUtils.m */,
 				899696E81CB5857C00BB42E2 /* JSONKeyValidator.h */,
@@ -2152,6 +2160,7 @@
 		F58D27F61D4F947F000FF6C0 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F53349681F39E536004138C7 /* CBXDecimalRounderTest.m */,
 				F5963ECA1D5F335F002F9304 /* JSONUtilsTest.m */,
 				F58D27F81D4F947F000FF6C0 /* CBXDeviceTest.m */,
 				F549E1A01D5471EC00C4FA36 /* CBXInfoPlistTest.m */,
@@ -2891,6 +2900,7 @@
 				89D538091CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.m in Sources */,
 				F55F81861C6DD07500A945C8 /* DDData.m in Sources */,
 				8965867D1CEB961300E8329C /* QueryConfigurationFactory.m in Sources */,
+				F53349661F39E490004138C7 /* CBXDecimalRounder.m in Sources */,
 				F547EEB31E437976000FC160 /* CBXWaiter.m in Sources */,
 				F55F840F1C6E437100A945C8 /* UndefinedRoutes.m in Sources */,
 				F5538B791E28AC7B003EC5F3 /* DDASLLogger.m in Sources */,
@@ -3059,6 +3069,7 @@
 				89331D231CC10559003C2E59 /* QuerySpecifierById.m in Sources */,
 				899696FC1CB5BA4600BB42E2 /* CoordinateQuery.m in Sources */,
 				F58D28041D4F947F000FF6C0 /* CBXTouchEventTests.m in Sources */,
+				F53349691F39E536004138C7 /* CBXDecimalRounderTest.m in Sources */,
 				F5DED0411D7634AB00563648 /* SpringBoardAlert.m in Sources */,
 				F5B0A1AB1CAD4E2700E056CE /* DoubleTap.m in Sources */,
 				F5B0A1B41CAD4E2700E056CE /* QuerySpecifierByProperty.m in Sources */,
@@ -3074,6 +3085,7 @@
 				F58D28061D4F947F000FF6C0 /* GestureFactoryTests.m in Sources */,
 				F5B0A1CA1CAD4E6F00E056CE /* HTTPAuthenticationRequest.m in Sources */,
 				896C7C791D19AE990017CE08 /* ClearText.m in Sources */,
+				F53349671F39E493004138C7 /* CBXDecimalRounder.m in Sources */,
 				F5B0A1D31CAD4E8A00E056CE /* HTTPDynamicFileResponse.m in Sources */,
 				F58D28031D4F947F000FF6C0 /* Gestures+OptionsTests.m in Sources */,
 				F5A14DE71E02CF84001A0037 /* CBLSApplicationWorkspace.m in Sources */,
