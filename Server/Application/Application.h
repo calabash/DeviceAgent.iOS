@@ -42,15 +42,4 @@
  */
 + (BOOL)hasSession;
 
-/**
- Uses the XCUIApplication#exists class method to check if an app is installed.
-
- Previously we used LSApplicationWorkspace, but starting in Xcode 9 this
- strategy stopped working.
-
- @param bundleIdentifier The application to search for
- @return True if the application with bundle identifier is installed
- */
-+ (BOOL)applicationIsInstalled:(NSString *_Nonnull)bundleIdentifier;
-
 @end

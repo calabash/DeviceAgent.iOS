@@ -20,12 +20,6 @@ static Application *currentApplication;
     });
 }
 
-+ (BOOL)applicationIsInstalled:(NSString *)bundleIdentifier {
-    XCUIApplication *app = [[XCUIApplication alloc] initPrivateWithPath:nil
-                                                               bundleID:bundleIdentifier];
-    return [app exists];
-}
-
 + (BOOL)hasSession {
     return [currentApplication hasSession];
 }
