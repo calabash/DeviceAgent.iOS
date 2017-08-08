@@ -3,8 +3,9 @@
 
 @implementation QuerySpecifierByText
 static NSArray <NSString *> *textProperties;
+
 + (void)load {
-    textProperties = @[@"wdLabel", @"wdTitle", @"wdValue", @"wdPlaceholderValue"];
+    textProperties = @[@"label", @"title", @"value", @"placeholderValue"];
 }
 
 + (NSArray <NSString *> *)textProperties {
