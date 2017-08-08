@@ -16,7 +16,7 @@ And I can type my first name
 Then I clear my first name using the clear text route
 
 @keyboard
-@uiwebview
+@wkwebview
 Scenario: Interacting with WKWebView text field
 Given I am looking at the WKWebView
 And I scroll down to the first and last name text fields

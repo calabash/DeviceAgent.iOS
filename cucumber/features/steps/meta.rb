@@ -1,4 +1,32 @@
 
+module TestApp
+  module Meta
+
+   def xcode_version
+     # "0833"
+     # "0900"
+     version = server_version["xcode_version"]
+     chars = version.chars
+     if chars[0] == "0"
+       major = "#{chars[1]}"
+     else
+       # Xcode 10 or higher
+       major = "#{chars[0]}#{chars[1]}"
+     end
+
+     minor = chars[2]
+     patch = chars[3]
+     RunLoop::Version.new("#{major}.#{minor}.#{patch}")
+   end
+
+   def xcode_gte_9?
+     xcode_version >= RunLoop::Version.new("9.0.0")
+   end
+  end
+end
+
+World(TestApp::Meta)
+
 Then(/^I can ask for the server version$/) do
   expected =
     {
