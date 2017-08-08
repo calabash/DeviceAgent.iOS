@@ -8,7 +8,8 @@ Given(/^I am looking at the (UIWebView|WKWebView|SafariWebController)$/) do |typ
     touch({marked: "safari web controller row"})
     @safari_controller = true
   end
-  wait_for_view({marked: "H1 Header!"})
+
+  wait_for_view({id: "H1 Header!"})
 end
 
 And(/^I scroll down to the first and last name text fields$/) do
