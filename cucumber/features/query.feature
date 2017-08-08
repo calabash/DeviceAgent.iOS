@@ -48,14 +48,15 @@ Then I can query for Japanese
 @wildcard
 Scenario: Query supports "*"
 Then I am looking at the Touch tab
-Then an empty hash query returns between 21 and 26 elements
-And an empty hash query with :all returns between 23 and 28 elements
+Then an empty hash query returns between 21 and 28 elements
+And an empty hash query with :all returns between 23 and 30 elements
 
 @tree
 Scenario: Can ask for a tree representation
 And I am looking at the Query page
 Then I ask for the tree representation of the view hierarchy
 
+@timed
 Scenario: Time queries
 And I am looking at the Query page
 Then I time how long it takes to make a bunch of queries
