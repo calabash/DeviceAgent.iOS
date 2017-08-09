@@ -1,7 +1,3 @@
-//
-//  QueryRoutes.h
-//  xcuitest-server
-//
 
 #import <Foundation/Foundation.h>
 #import "CBXProtocols.h"
@@ -20,19 +16,12 @@
  
  The JSON body should contain QuerySpecifier key-value pairs. See QuerySpecifier. 
  This also corresponds to the `specifiers` field in a Gesture. See GestureRoutes.
- 
- ## POST @"/query/marked/:text"
- **Deprecated**
- Don't do it.
- 
- ## POST @"/query/id/:id"
- **Deprecated**
- Don't do it.
- 
- ## POST @"/query/type/:type"
- **Deprecated**
- Don't do it.
- 
+
+ ## GET @"/springboard-alert"
+
+ Responds with a JSON representation of any visible SpringBoard alert. Responds
+ with an empty dictionary if there is no SpringBoard alert.
+
  */
 @interface QueryRoutes : NSObject<CBRouteProvider>
 
