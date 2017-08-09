@@ -6,9 +6,8 @@
 #import "XCUIDevice.h"
 #import "CBXConstants.h"
 
-NSString *const LPDeviceSimKeyModelIdentifier = @"SIMULATOR_MODEL_IDENTIFIER";
-NSString *const LPDeviceSimKeyVersionInfo = @"SIMULATOR_VERSION_INFO";
-NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_DEVICE";
+NSString *const CBXDeviceSimKeyModelIdentifier = @"SIMULATOR_MODEL_IDENTIFIER";
+NSString *const CBXDeviceSimKeyVersionInfo = @"SIMULATOR_VERSION_INFO";
 
 @interface CBXDevice ()
 
@@ -339,11 +338,11 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
 }
 
 - (NSString *)simulatorModelIdentifier {
-    return [self.processEnvironment objectForKey:LPDeviceSimKeyModelIdentifier];
+    return [self.processEnvironment objectForKey:CBXDeviceSimKeyModelIdentifier];
 }
 
 - (NSString *)simulatorVersionInfo {
-    return [self.processEnvironment objectForKey:LPDeviceSimKeyVersionInfo];
+    return [self.processEnvironment objectForKey:CBXDeviceSimKeyVersionInfo];
 }
 
 - (NSString *)physicalDeviceModelIdentifier {

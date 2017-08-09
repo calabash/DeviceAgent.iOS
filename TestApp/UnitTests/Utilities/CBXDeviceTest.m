@@ -104,7 +104,7 @@ static NSString *const LPiPhone5sSimVersionInfo = @"CoreSimulator 110.4 - Device
 }
 
 - (void)testSimulatorModelIdentifierKeyFound {
-    NSDictionary *env = @{LPDeviceSimKeyModelIdentifier : @"apples"};
+    NSDictionary *env = @{CBXDeviceSimKeyModelIdentifier : @"apples"};
     id mock = OCMPartialMock(self.device);
     [[[mock expect] andReturn:env] processEnvironment];
 
@@ -124,7 +124,7 @@ static NSString *const LPiPhone5sSimVersionInfo = @"CoreSimulator 110.4 - Device
 }
 
 - (void)testSimulatorVersionInfoKeyFound {
-    NSDictionary *env = @{LPDeviceSimKeyVersionInfo : @"oranges"};
+    NSDictionary *env = @{CBXDeviceSimKeyVersionInfo : @"oranges"};
     id mock = OCMPartialMock(self.device);
     [[[mock expect] andReturn:env] processEnvironment];
 

@@ -3,7 +3,7 @@
 #import <sys/utsname.h>
 #import <UIKit/UIKit.h>
 
-static NSString *const LPDeviceSimKeyModelIdentifier = @"SIMULATOR_MODEL_IDENTIFIER";
+static NSString *const CBXDeviceSimKeyModelIdentifier = @"SIMULATOR_MODEL_IDENTIFIER";
 
 @interface AlertFactory ()
 
@@ -24,7 +24,7 @@ static NSString *const LPDeviceSimKeyModelIdentifier = @"SIMULATOR_MODEL_IDENTIF
 
 - (NSString *)simulatorVersionInfo {
     NSDictionary *env = [[NSProcessInfo processInfo] environment];
-    return env[LPDeviceSimKeyModelIdentifier];
+    return env[CBXDeviceSimKeyModelIdentifier];
 }
 
 - (NSString *)physicalDeviceModelIdentifier {

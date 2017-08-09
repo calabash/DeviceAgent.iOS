@@ -1,8 +1,7 @@
 #import <UIKit/UIKit.h>
 
-extern NSString *const LPDeviceSimKeyModelIdentifier;
-extern NSString *const LPDeviceSimKeyVersionInfo;
-extern NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY;
+extern NSString *const CBXDeviceSimKeyModelIdentifier;
+extern NSString *const CBXDeviceSimKeyVersionInfo;
 
 /**
  Runtime information about the device under test.
