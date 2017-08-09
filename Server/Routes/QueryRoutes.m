@@ -74,19 +74,7 @@
                  }
 
                  [response respondWithJSON:results];
-             }],
-
-             [CBXRoute get:endpoint(@"/query/id/:id", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
-                 NSString *identifier = request.params[CBX_IDENTIFIER_KEY];
-                 [response respondWithJSON:[Application jsonForElementsWithID:identifier]];
-             }],
-
-             [CBXRoute get:endpoint(@"/query/type/:type", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
-                 NSString *type = request.params[CBX_TYPE_KEY];
-                 [response respondWithJSON:[Application jsonForElementsWithType:type]];
-             }],
-
-
+             }]
              ];
 }
 @end
