@@ -1,8 +1,7 @@
+
 #import "CBXDevice.h"
 #import "JSONUtils.h"
 #import <sys/utsname.h>
-#import <arpa/inet.h>
-#import <ifaddrs.h>
 #import "XCUIDevice.h"
 #import "CBXConstants.h"
 
