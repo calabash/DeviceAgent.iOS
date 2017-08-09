@@ -93,16 +93,7 @@ static NSString *serverName = @"CalabashXCUITestServer";
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"DisableScreenshots"];
 
     while ([self.server isRunning] && !self.isFinishedTesting) {
-
-         CFRunLoopRunInMode(kCFRunLoopDefaultMode, CBX_RUNLOOP_INTERVAL, false);
-
-        // Turning this behavior off because it has some unpleasant side effects.
-        //
-        // Your tests have completed on a device and the DeviceAgent is still
-        // running.  You open Twitter and DeviceAgent auto-allows Twitter access
-        // to your Contacts.
-        //
-        // [self handleSpringBoardAlert];
+        CFRunLoopRunInMode(kCFRunLoopDefaultMode, CBX_RUNLOOP_INTERVAL, false);
     }
 }
 
