@@ -49,7 +49,7 @@ Then I can query for Japanese
 Scenario: Query supports "*"
 Then I am looking at the Touch tab
 Then an empty hash query returns between 21 and 28 elements
-And an empty hash query with :all returns between 23 and 30 elements
+And an empty hash query with :all returns between 23 and 31 elements
 
 @tree
 Scenario: Can ask for a tree representation
