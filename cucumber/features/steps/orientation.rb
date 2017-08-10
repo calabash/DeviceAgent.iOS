@@ -65,3 +65,7 @@ And(/^the server can report device and app orientations$/) do
   expect(hash["XCUIDevice"]).to be_truthy
 end
 
+Then(/^the app is in portrait after it is launched by DeviceAgent$/) do
+  expect(orientations["AUT"][1]).to be == "portrait"
+end
+
