@@ -100,8 +100,15 @@ static float const CBX_MAX_ROTATION_START = 360;    //degrees
 // determined empirically with UILongPressGestureRecognizer
 static float const CBX_MIN_LONG_PRESS_DURATION = 0.5;
 
-// determined by observing testmanagerd logs for XCUIElement#tap gestures.
-static float const CBX_DEFAULT_DURATION = 0.2;
+// In iOS 10, we observed that the default duration was 0.2 by inspecting
+// testmanagerd logs for XCUIElement#tap gestures.
+//
+// In iOS 11, a touch of 0.2 is too long for some controls, for example,
+// UISegmentedControl.
+//
+// If 0.1 is too short for some control on iOS < 11, we will have to branch
+// on iOS version at runtime.
+static float const CBX_DEFAULT_DURATION = 0.1;
 static BOOL const CBX_DEFAULT_ALLOW_INERTIA_IN_DRAG = YES;
 
 // determined by observing testmanagerd logs for XCUIElement double tap gestures.

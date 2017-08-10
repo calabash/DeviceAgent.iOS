@@ -32,6 +32,12 @@
 //                   [@(interfaceOrientation) integerValue]);
 }
 
+
+- (void)testSegmentedControl {
+    [XCUIDevice sharedDevice].orientation = UIDeviceOrientationPortrait;
+    [self.aut.segmentedControls[@"segmented"].buttons[@"Second"] tap];
+}
+
 - (void)testTextEntry {
     [XCUIDevice sharedDevice].orientation = UIDeviceOrientationPortrait;
 
