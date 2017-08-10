@@ -7,6 +7,7 @@
 #import "JSONUtils.h"
 #import "Query.h"
 #import "SpringBoard.h"
+#import "CBXOrientation.h"
 
 @implementation QueryRoutes
 + (NSArray <CBXRoute *> *)getRoutes {
@@ -76,6 +77,12 @@
           }
 
           [response respondWithJSON:results];
+      }],
+
+      [CBXRoute get:endpoint(@"/orientations", 1.0) withBlock:^(RouteRequest *request,
+                                                                NSDictionary *data,
+                                                                RouteResponse *response) {
+          [response respondWithJSON:[CBXOrientation orientations]];
       }]
       ];
 }

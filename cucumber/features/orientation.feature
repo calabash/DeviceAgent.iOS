@@ -10,4 +10,4 @@ Then I rotate the device so the home button is on the top
 Then I rotate the device so the home button is on the left
 Then I rotate the device so the home button is on the right
 Then I rotate the device so the home button is on the bottom
-
+And the server can report device and app orientations
