@@ -17,6 +17,7 @@ And(/^I scroll down to the first and last name text fields$/) do
     start_point = point_for_full_pan_start(:up, {type: "WebView"})
     end_point = point_for_full_pan_end(:up, {type: "WebView"})
     pan_between_coordinates(start_point, end_point)
+    sleep(2.0)
   else
     scroll_to(:up, "landing page", "Last name:", 5, true)
   end
