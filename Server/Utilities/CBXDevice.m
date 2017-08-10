@@ -4,6 +4,7 @@
 #import <sys/utsname.h>
 #import "XCUIDevice.h"
 #import "CBXConstants.h"
+#import "CBXOrientation.h"
 
 NSString *const CBXDeviceSimKeyModelIdentifier = @"SIMULATOR_MODEL_IDENTIFIER";
 NSString *const CBXDeviceSimKeyVersionInfo = @"SIMULATOR_VERSION_INFO";
@@ -448,21 +449,9 @@ NSString *const CBXDeviceSimKeyVersionInfo = @"SIMULATOR_VERSION_INFO";
     return [self.armVersion containsString:@"arm64"];
 }
 
-- (NSString *)stringRepresentationOfOrientation:(UIDeviceOrientation)orientation {
-    switch (orientation) {
-        case UIDeviceOrientationPortrait: { return @"portrait"; }
-        case UIDeviceOrientationPortraitUpsideDown: { return @"upside_down"; }
-        case UIDeviceOrientationLandscapeLeft: { return @"landscape_left"; }
-        case UIDeviceOrientationLandscapeRight: { return @"landscape_right"; }
-        case UIDeviceOrientationFaceUp: { return @"face_up"; }
-        case UIDeviceOrientationFaceDown: { return @"face_down"; }
-        default: { return @"unknown"; }
-    }
-}
-
 - (NSDictionary *)dictionaryRepresentation {
-    UIDeviceOrientation orientation = [[XCUIDevice sharedDevice] orientation];
-    return
+  UIDeviceOrientation orientation = [CBXOrientation XCUIDeviceOrientation];
+  return
     @{
       @"simulator" : @([self isSimulator]),
       @"physical_device" : @([self isPhysicalDevice]),
@@ -483,8 +472,8 @@ NSString *const CBXDeviceSimKeyVersionInfo = @"SIMULATOR_VERSION_INFO";
       @"physical_device_model_identifier" : [self physicalDeviceModelIdentifier],
       @"arm_version" : [self armVersion],
       @"orientation_numeric" : @(orientation),
-      @"orientation_string" : [self stringRepresentationOfOrientation:orientation]
-      };
+      @"orientation_string" : [CBXOrientation stringForOrientation:orientation]
+    };
 }
 
 - (NSString *)JSONRepresentation {

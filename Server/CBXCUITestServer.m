@@ -8,6 +8,7 @@
 #import "CBXConstants.h"
 #import "Application+Queries.h"
 #import "CBXLogging.h"
+#import "CBXOrientation.h"
 
 @interface CBXCUITestServer ()
 @property (atomic, strong) RoutingHTTPServer *server;
@@ -69,6 +70,9 @@ static NSString *serverName = @"CalabashXCUITestServer";
 
     DDLogDebug(@"%@ built at %s %s", serverName, __DATE__, __TIME__);
     [[CBXCUITestServer sharedServer] start];
+
+    [CBXOrientation setOrientation:UIDeviceOrientationPortrait
+               secondsToSleepAfter:1.0];
 }
 
 - (void)start {

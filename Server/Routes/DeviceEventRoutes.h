@@ -14,7 +14,11 @@
  ## POST @"/volume"
  Touch the volume controls
 
- ## POST @"/rotate_home_button_to"
+ ## POST @"/rotate-home-button-to"
+ {
+ orientation: UIDeviceOrientation
+ seconds_to_sleep_after: how long to sleep after performing the rotation
+ }
  Change the device orientation
 
  */

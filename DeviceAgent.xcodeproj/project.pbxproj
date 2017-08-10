@@ -303,6 +303,10 @@
 		F53349661F39E490004138C7 /* CBXDecimalRounder.m in Sources */ = {isa = PBXBuildFile; fileRef = F53349641F39E475004138C7 /* CBXDecimalRounder.m */; };
 		F53349671F39E493004138C7 /* CBXDecimalRounder.m in Sources */ = {isa = PBXBuildFile; fileRef = F53349641F39E475004138C7 /* CBXDecimalRounder.m */; };
 		F53349691F39E536004138C7 /* CBXDecimalRounderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F53349681F39E536004138C7 /* CBXDecimalRounderTest.m */; };
+		F533496C1F3AFED7004138C7 /* CBXOrientation.h in Headers */ = {isa = PBXBuildFile; fileRef = F533496A1F3AFED7004138C7 /* CBXOrientation.h */; };
+		F533496D1F3AFED7004138C7 /* CBXOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = F533496B1F3AFED7004138C7 /* CBXOrientation.m */; };
+		F533496E1F3AFED7004138C7 /* CBXOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = F533496B1F3AFED7004138C7 /* CBXOrientation.m */; };
+		F53349701F3AFF97004138C7 /* CBXOrientationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F533496F1F3AFF97004138C7 /* CBXOrientationTest.m */; };
 		F5366D9E1DE6CC2900E7C765 /* TextInputFirstResponderProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = F5366D9C1DE6CC2900E7C765 /* TextInputFirstResponderProvider.h */; };
 		F5366D9F1DE6CC2900E7C765 /* TextInputFirstResponderProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F5366D9D1DE6CC2900E7C765 /* TextInputFirstResponderProvider.m */; };
 		F5366DA01DE6CC2900E7C765 /* TextInputFirstResponderProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F5366D9D1DE6CC2900E7C765 /* TextInputFirstResponderProvider.m */; };
@@ -875,6 +879,9 @@
 		F53349631F39E475004138C7 /* CBXDecimalRounder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXDecimalRounder.h; sourceTree = "<group>"; };
 		F53349641F39E475004138C7 /* CBXDecimalRounder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXDecimalRounder.m; sourceTree = "<group>"; };
 		F53349681F39E536004138C7 /* CBXDecimalRounderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXDecimalRounderTest.m; sourceTree = "<group>"; };
+		F533496A1F3AFED7004138C7 /* CBXOrientation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBXOrientation.h; sourceTree = "<group>"; };
+		F533496B1F3AFED7004138C7 /* CBXOrientation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBXOrientation.m; sourceTree = "<group>"; };
+		F533496F1F3AFF97004138C7 /* CBXOrientationTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBXOrientationTest.m; sourceTree = "<group>"; };
 		F5366D9C1DE6CC2900E7C765 /* TextInputFirstResponderProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextInputFirstResponderProvider.h; sourceTree = "<group>"; };
 		F5366D9D1DE6CC2900E7C765 /* TextInputFirstResponderProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextInputFirstResponderProvider.m; sourceTree = "<group>"; };
 		F536799F1D7C324E009956D0 /* QuerySpecifierByMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySpecifierByMark.h; sourceTree = "<group>"; };
@@ -1859,6 +1866,8 @@
 				F547EEAB1E437910000FC160 /* CBXMachClock.m */,
 				F547EEB01E43796A000FC160 /* CBXWaiter.h */,
 				F547EEB11E43796A000FC160 /* CBXWaiter.m */,
+				F533496A1F3AFED7004138C7 /* CBXOrientation.h */,
+				F533496B1F3AFED7004138C7 /* CBXOrientation.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -2166,6 +2175,7 @@
 				F549E1A01D5471EC00C4FA36 /* CBXInfoPlistTest.m */,
 				F5DED0421D76368000563648 /* SpringBoardAlertTest.m */,
 				63424E46759C6B27C2BEC337 /* SpringBoardAlertsTest.m */,
+				F533496F1F3AFF97004138C7 /* CBXOrientationTest.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -2359,6 +2369,7 @@
 				F5538B8A1E28BEB9003EC5F3 /* CBXLogging.h in Headers */,
 				F51911451E4CC50000BB6D92 /* _XCTWaiterImpl.h in Headers */,
 				F55F82541C6DD07500A945C8 /* RouteResponse.h in Headers */,
+				F533496C1F3AFED7004138C7 /* CBXOrientation.h in Headers */,
 				F55F81A51C6DD07500A945C8 /* HTTPRedirectResponse.h in Headers */,
 				899696E51CB46C0100BB42E2 /* CoordinateQueryConfiguration.h in Headers */,
 				F519115D1E4CC50000BB6D92 /* XCKeyboardKeyMap.h in Headers */,
@@ -2911,6 +2922,7 @@
 				89D5380D1CA32AE900F62E09 /* FBElement.m in Sources */,
 				F5A14DE61E02CF84001A0037 /* CBLSApplicationWorkspace.m in Sources */,
 				F55F82591C6DD07500A945C8 /* RoutingHTTPServer.m in Sources */,
+				F533496D1F3AFED7004138C7 /* CBXOrientation.m in Sources */,
 				89C5F3701C9E32440093A018 /* DoubleTap.m in Sources */,
 				89D538001CA2090500F62E09 /* QuerySpecifierFactory.m in Sources */,
 				896C7C731D18AA800017CE08 /* ClearTextIn.m in Sources */,
@@ -3107,6 +3119,7 @@
 				F5B0A1CD1CAD4E7500E056CE /* HTTPServer.m in Sources */,
 				F5B0A1CC1CAD4E7500E056CE /* HTTPMessage.m in Sources */,
 				F5B0A1C21CAD4E4600E056CE /* SessionRoutes.m in Sources */,
+				F53349701F3AFF97004138C7 /* CBXOrientationTest.m in Sources */,
 				896586841CEB9B9800E8329C /* QueryFactory.m in Sources */,
 				F58D280C1D4F947F000FF6C0 /* QueryTests.m in Sources */,
 				F5B0A1B11CAD4E2700E056CE /* QuerySpecifierByText.m in Sources */,
@@ -3167,6 +3180,7 @@
 				F5B0A1E01CAD4EA700E056CE /* Route.m in Sources */,
 				F5B0A1E11CAD4EA700E056CE /* RouteRequest.m in Sources */,
 				F5538B7A1E28AC7B003EC5F3 /* DDASLLogger.m in Sources */,
+				F533496E1F3AFED7004138C7 /* CBXOrientation.m in Sources */,
 				F5B0A1C91CAD4E6B00E056CE /* DDRange.m in Sources */,
 				F5B0A1C51CAD4E4B00E056CE /* JSONUtils.m in Sources */,
 				F5B0A1AA1CAD4E2700E056CE /* Touch.m in Sources */,

@@ -58,3 +58,14 @@ Then(/^I rotate the device so the home button is on the (top|bottom|left|right)$
   rotate_and_expect(position)
 end
 
+And(/^the server can report device and app orientations$/) do
+  hash = orientations
+  expect(hash["AUT"]).to be_truthy
+  expect(hash["UIDevice"]).to be_truthy
+  expect(hash["XCUIDevice"]).to be_truthy
+end
+
+Then(/^the app is in portrait after it is launched by DeviceAgent$/) do
+  expect(orientations["AUT"][1]).to be == "portrait"
+end
+
