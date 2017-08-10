@@ -5,11 +5,8 @@
 #import "Testmanagerd.h"
 #import "CBXConstants.h"
 #import "CBXMacros.h"
-#import "ThreadUtils.h"
-#import "Application.h"
-#import "XCTest/XCUIApplication.h"
-#import "XCTest/XCUIDevice.h"
 #import "CBXException.h"
+#import "CBXOrientation.h"
 
 /*
  TODO:
@@ -93,12 +90,27 @@
       [CBXRoute post:endpoint(@"/rotate_home_button_to", 1.0) withBlock:^(RouteRequest *request,
                                                                           NSDictionary *data,
                                                                           RouteResponse *response) {
-          [XCUIDevice sharedDevice].orientation = (UIDeviceOrientation)[data[@"orientation"] longLongValue];
+          NSNumber *number;
+          number = data[@"orientation"];
+          UIDeviceOrientation orientation = (UIDeviceOrientation)[number longLongValue];
+
+          NSTimeInterval secondsToSleepAfter = 1.0;
+          number = data[@"seconds_to_sleep_after"];
+
+          if (number) {
+              secondsToSleepAfter = [number doubleValue];
+          }
+
+          [CBXOrientation setOrientation:orientation
+                     secondsToSleepAfter:secondsToSleepAfter];
+
           [response respondWithJSON:@{
                                       @"status" : @"success",
-                                      @"orientation" : @([XCUIDevice sharedDevice].orientation)
+                                      @"orientation" : @([CBXOrientation AUTOrientation]),
+                                      @"orientations" : [CBXOrientation orientations]
                                       }];
       }]
       ];
 }
+
 @end
