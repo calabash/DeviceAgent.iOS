@@ -34,6 +34,10 @@ module DeviceAgent
       Automator.client.rotate_home_button_to(position)["orientation"]
     end
 
+    def orientations
+      Automator.client.orientations
+    end
+
     def touch(uiquery, options={})
       Automator.client.touch(uiquery, options)
     end

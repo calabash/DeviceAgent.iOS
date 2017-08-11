@@ -1,14 +1,13 @@
+
 #import "CBXDevice.h"
 #import "JSONUtils.h"
 #import <sys/utsname.h>
-#import <arpa/inet.h>
-#import <ifaddrs.h>
 #import "XCUIDevice.h"
 #import "CBXConstants.h"
+#import "CBXOrientation.h"
 
-NSString *const LPDeviceSimKeyModelIdentifier = @"SIMULATOR_MODEL_IDENTIFIER";
-NSString *const LPDeviceSimKeyVersionInfo = @"SIMULATOR_VERSION_INFO";
-NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_DEVICE";
+NSString *const CBXDeviceSimKeyModelIdentifier = @"SIMULATOR_MODEL_IDENTIFIER";
+NSString *const CBXDeviceSimKeyVersionInfo = @"SIMULATOR_VERSION_INFO";
 
 @interface CBXDevice ()
 
@@ -95,7 +94,7 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
     return [[self mainScreen] bounds].size.height;
 }
 
-#pragma mark - iPhone 6 and 6 Plus Support
+#pragma mark - Sample Factor
 
 // http://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions
 // Thanks for the inspiration for iPhone 6 form factor sample.
@@ -114,8 +113,16 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
         nativeScale = screen.nativeScale;
     }
 
+    // Never used, but we should keep this magic number around because at one
+    // point we thought it was useful (see the Paint Code URL above).
+    // CGFloat iphone6p_zoom_sample = 0.96;
+
     CGFloat iphone6_zoom_sample = 1.171875;
-    CGFloat iphone6p_zoom_sample = 0.96;
+    // This was derived by trial and error.
+    // This is sufficient for touching a 2x2 pixel button.
+    CGFloat iphone6p_legacy_app_sample = 1.296917;
+
+    CGFloat ipad_pro_10dot5_sample = 1.0859375;
 
     UIScreenMode *screenMode = [screen currentMode];
     CGSize screenSizeForMode = screenMode.size;
@@ -130,23 +137,45 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
     DDLogDebug(@"Pixel Aspect Ratio: %@", @(pixelAspectRatio));
 
     if ([self isIPhone6PlusLike]) {
-        if (screenHeight == 568.0 && nativeScale > scale) { // native => 2.88
-            DDLogDebug(@"iPhone 6 Plus: Zoom display mode and app is not optimized for screen size - adjusting sampleFactor");
-            _sampleFactor = iphone6p_zoom_sample;
-        } else if (screenHeight == 667.0 && nativeScale <= scale) { // native => ???
-            DDLogDebug(@"iPhone 6 Plus: Zoomed display mode - sampleFactor remains the same");
-        } else if (screenHeight == 736 && nativeScale < scale) { // native => 2.61
-            DDLogDebug(@"iPhone 6 Plus: Standard Display and app is not optimized for screen size - sampleFactor remains the same");
+        if (screenHeight == 568.0) {
+            if (nativeScale > scale) {
+                DDLogDebug(@"iPhone 6 Plus: Zoom display and app is not optimized for screen size - adjusting sampleFactor");
+                // native => 2.88
+                // Displayed with iPhone _6_ zoom sample
+                _sampleFactor = iphone6_zoom_sample;
+            } else {
+                DDLogDebug(@"iPhone 6 Plus: Standard display and app is not optimized for screen size - adjusting sampleFactor");
+                // native == scale == 3.0
+                _sampleFactor = iphone6p_legacy_app_sample;
+            }
+        } else if (screenHeight == 667.0 && nativeScale <= scale) {
+            // native => ???
+            DDLogDebug(@"iPhone 6 Plus: Zoomed display - sampleFactor remains the same");
+        } else if (screenHeight == 736 && nativeScale < scale) {
+            // native => 2.61
+            DDLogDebug(@"iPhone 6 Plus: Standard display and app is not optimized for screen size - sampleFactor remains the same");
+        } else {
+            DDLogDebug(@"iPhone 6 Plus: Standard display and app is optimized for screen size");
         }
     } else if ([self isIPhone6Like]) {
         if (screenHeight == 568.0 && nativeScale <= scale) {
-            DDLogDebug(@"iPhone 6: application not optimized for screen size - adjusting sampleFactor");
+            DDLogDebug(@"iPhone 6: Standard display and app not optimized for screen size - adjusting sampleFactor");
             _sampleFactor = iphone6_zoom_sample;
         } else if (screenHeight == 568.0 && nativeScale > scale) {
             DDLogDebug(@"iPhone 6: Zoomed display mode - sampleFactor remains the same");
+        } else {
+            DDLogDebug(@"iPhone 6: Standard display and app optimized for screen size - sampleFactor remains the same");
+        }
+    } else if ([self isIPadPro10point5inch]) {
+        if (screenHeight == 1024) {
+            DDLogDebug(@"iPad 10.5 inch: app is not optimized for screen size - adjusting sampleFactor");
+            _sampleFactor = ipad_pro_10dot5_sample;
+        } else {
+            DDLogDebug(@"iPad 10.5 inch: app is optimized for screen size");
         }
     }
 
+    DDLogDebug(@"sampleFactor = %@", @(_sampleFactor));
     return _sampleFactor;
 }
 
@@ -201,12 +230,12 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
       @"iPod6,1"   : @"iphone 4in",
       @"iPhone8,4" : @"iphone 4in",
 
-      // iPhone 6/6s
+      // iPhone 6/6+ - pattern looks wrong, but it is correct
       @"iPhone7,2" : @"iphone 6",
-      @"iPhone8,1" : @"iphone 6",
-
-      // iPhone 6+
       @"iPhone7,1" : @"iphone 6+",
+
+      // iPhone 6s/6s+
+      @"iPhone8,1" : @"iphone 6",
       @"iPhone8,2" : @"iphone 6+",
 
       // iPhone 7/7+
@@ -221,7 +250,15 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
 
       // iPad Pro 9in
       @"iPad6,3" : @"ipad pro",
-      @"iPad6,4" : @"ipad pro"
+      @"iPad6,4" : @"ipad pro",
+      @"iPad6,11" : @"ipad pro",
+      @"iPad6,12" : @"ipad pro",
+
+      // iPad Pro 10.5in
+      @"iPad7,4" : @"ipad pro",
+      @"iPad7,3" : @"ipad pro",
+      @"iPad7,2" : @"ipad pro",
+      @"iPad7,1" : @"ipad pro"
 
       };
 
@@ -266,55 +303,6 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
               @"iPad3,4",
               @"iPad3,5",
               @"iPad3,6"
-              ],
-
-      @"arm64" : @[
-
-              // iPhone 7/7+
-              @"iPhone9,1",
-              @"iPhone9,3",
-              @"iPhone9,2",
-              @"iPhone9,4",
-
-              // iPhone 6/6s
-              @"iPhone7,2",
-              @"iPhone8,1",
-
-              // iPhone 6+
-              @"iPhone7,1",
-              @"iPhone8,2",
-
-              // iPad Pro 13in
-              @"iPad6,7",
-              @"iPad6,8",
-
-              // iPad Pro 9in
-              @"iPad6,3",
-              @"iPad6,4",
-
-              // iPhone 6se
-              @"iPhone8,4",
-
-              // iPod 6 and 7
-              @"iPod6,1",
-              @"iPod7,1",
-
-              // iPhone 5s
-              @"iPhone6,1",
-              @"iPhone6,2",
-              @"iPhone6,3",
-              @"iPhone6,4",
-
-              // iPad Air, Air2, mini Retina
-              @"iPad4,1",
-              @"iPad4,2",
-              @"iPad4,4",
-              @"iPad4,5",
-              @"iPad4,6",
-              @"iPad5,1",
-              @"iPad5,2",
-              @"iPad5,3",
-              @"iPad5,4"
               ]
       };
 
@@ -338,7 +326,7 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
     if (match) {
         _armVersion = match;
     } else {
-        _armVersion = @"unknown";
+        _armVersion = @"arm64";
     }
     return _armVersion;
 }
@@ -350,11 +338,11 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
 }
 
 - (NSString *)simulatorModelIdentifier {
-    return [self.processEnvironment objectForKey:LPDeviceSimKeyModelIdentifier];
+    return [self.processEnvironment objectForKey:CBXDeviceSimKeyModelIdentifier];
 }
 
 - (NSString *)simulatorVersionInfo {
-    return [self.processEnvironment objectForKey:LPDeviceSimKeyVersionInfo];
+    return [self.processEnvironment objectForKey:CBXDeviceSimKeyVersionInfo];
 }
 
 - (NSString *)physicalDeviceModelIdentifier {
@@ -453,25 +441,17 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
     }
 }
 
+- (BOOL) isIPadPro10point5inch {
+    return [[self modelIdentifier] containsString:@"iPad7"];
+}
+
 - (BOOL)isArm64 {
     return [self.armVersion containsString:@"arm64"];
 }
 
-- (NSString *)stringRepresentationOfOrientation:(UIDeviceOrientation)orientation {
-    switch (orientation) {
-        case UIDeviceOrientationPortrait: { return @"portrait"; }
-        case UIDeviceOrientationPortraitUpsideDown: { return @"upside_down"; }
-        case UIDeviceOrientationLandscapeLeft: { return @"landscape_left"; }
-        case UIDeviceOrientationLandscapeRight: { return @"landscape_right"; }
-        case UIDeviceOrientationFaceUp: { return @"face_up"; }
-        case UIDeviceOrientationFaceDown: { return @"face_down"; }
-        default: { return @"unknown"; }
-    }
-}
-
 - (NSDictionary *)dictionaryRepresentation {
-    UIDeviceOrientation orientation = [[XCUIDevice sharedDevice] orientation];
-    return
+  UIDeviceOrientation orientation = [CBXOrientation XCUIDeviceOrientation];
+  return
     @{
       @"simulator" : @([self isSimulator]),
       @"physical_device" : @([self isPhysicalDevice]),
@@ -492,8 +472,8 @@ NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY = @"IPHONE_SIMULATOR_
       @"physical_device_model_identifier" : [self physicalDeviceModelIdentifier],
       @"arm_version" : [self armVersion],
       @"orientation_numeric" : @(orientation),
-      @"orientation_string" : [self stringRepresentationOfOrientation:orientation]
-      };
+      @"orientation_string" : [CBXOrientation stringForOrientation:orientation]
+    };
 }
 
 - (NSString *)JSONRepresentation {

@@ -17,6 +17,9 @@ default_sim_name = RunLoop::Core.default_simulator
 default_sim = RunLoop::Device.device_with_identifier(default_sim_name)
 
 RunLoop::CoreSimulator.quit_simulator
+
+RunLoop::CoreSimulator.erase(default_sim)
+
 core_sim = RunLoop::CoreSimulator.new(default_sim, nil, {:xcode => xcode})
 core_sim.launch_simulator
 
@@ -45,6 +48,9 @@ Dir.chdir(working_dir) do
 
   on_retry = Proc.new do |_, try, elapsed_time, next_interval|
     Luffa.log_fail "XCTest: attempt #{try} failed in "#{elapsed_time}"; will retry in "#{next_interval}""
+
+    RunLoop::CoreSimulator.erase(default_sim)
+
     RunLoop::CoreSimulator.quit_simulator
     core_sim.launch_simulator
   end

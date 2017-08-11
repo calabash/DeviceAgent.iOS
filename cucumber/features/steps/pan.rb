@@ -55,6 +55,12 @@ module TestApp
         sleep(1.5)
 
         view = query({marked: view_mark}).first
+
+        # OR"d queries are not working in Xcode 9 with WebKit and Safari
+        if !view && xcode_gte_9?
+          view = query({id: view_mark}).first
+        end
+
         if view
           hit_point = view["hit_point"]
           element_center = element_center(view)

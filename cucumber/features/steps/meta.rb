@@ -1,16 +1,49 @@
 
+module TestApp
+  module Meta
+
+   def xcode_version
+     # "0833"
+     # "0900"
+     version = server_version["xcode_version"]
+     chars = version.chars
+     if chars[0] == "0"
+       major = "#{chars[1]}"
+     else
+       # Xcode 10 or higher
+       major = "#{chars[0]}#{chars[1]}"
+     end
+
+     minor = chars[2]
+     patch = chars[3]
+     RunLoop::Version.new("#{major}.#{minor}.#{patch}")
+   end
+
+   def xcode_gte_9?
+     xcode_version >= RunLoop::Version.new("9.0.0")
+   end
+  end
+end
+
+World(TestApp::Meta)
+
 Then(/^I can ask for the server version$/) do
   expected =
     {
       "bundle_version" => "1",
       "bundle_identifier" => "com.apple.test.DeviceAgent-Runner",
       "bundle_short_version" => "1.0",
-      "bundle_name" => "DeviceAgent"
   }
 
   actual = server_version
   expect(actual["bundle_identifier"]).to be == expected["bundle_identifier"]
-  expect(actual["bundle_name"]).to be == expected["bundle_name"]
+
+  if xcode_gte_9?
+    expect(actual["bundle_name"]).to be == "DeviceAgent-Runner"
+  else
+    expect(actual["bundle_name"]).to be == "DeviceAgent"
+  end
+
   expect(actual["bundle_version"]).to be_truthy
   expect(actual["bundle_short_version"]).to be_truthy
 end

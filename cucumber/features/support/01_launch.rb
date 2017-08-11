@@ -210,6 +210,10 @@ After("@search_bar") do |scenario|
   end
 end
 
+After("@shutdown_after") do |scenario|
+  DeviceAgent::Automator.shutdown
+end
+
 After do |scenario|
 
   # See bin/test/jmoody scripts.

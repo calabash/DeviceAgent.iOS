@@ -8,6 +8,7 @@
 #import "CBXConstants.h"
 #import "Application+Queries.h"
 #import "CBXLogging.h"
+#import "CBXOrientation.h"
 
 @interface CBXCUITestServer ()
 @property (atomic, strong) RoutingHTTPServer *server;
@@ -69,6 +70,9 @@ static NSString *serverName = @"CalabashXCUITestServer";
 
     DDLogDebug(@"%@ built at %s %s", serverName, __DATE__, __TIME__);
     [[CBXCUITestServer sharedServer] start];
+
+    [CBXOrientation setOrientation:UIDeviceOrientationPortrait
+               secondsToSleepAfter:1.0];
 }
 
 - (void)start {
@@ -93,16 +97,7 @@ static NSString *serverName = @"CalabashXCUITestServer";
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"DisableScreenshots"];
 
     while ([self.server isRunning] && !self.isFinishedTesting) {
-
-         CFRunLoopRunInMode(kCFRunLoopDefaultMode, CBX_RUNLOOP_INTERVAL, false);
-
-        // Turning this behavior off because it has some unpleasant side effects.
-        //
-        // Your tests have completed on a device and the DeviceAgent is still
-        // running.  You open Twitter and DeviceAgent auto-allows Twitter access
-        // to your Contacts.
-        //
-        // [self handleSpringBoardAlert];
+        CFRunLoopRunInMode(kCFRunLoopDefaultMode, CBX_RUNLOOP_INTERVAL, false);
     }
 }
 

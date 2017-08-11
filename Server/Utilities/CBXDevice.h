@@ -1,8 +1,7 @@
 #import <UIKit/UIKit.h>
 
-extern NSString *const LPDeviceSimKeyModelIdentifier;
-extern NSString *const LPDeviceSimKeyVersionInfo;
-extern NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY;
+extern NSString *const CBXDeviceSimKeyModelIdentifier;
+extern NSString *const CBXDeviceSimKeyVersionInfo;
 
 /**
  Runtime information about the device under test.
@@ -82,6 +81,11 @@ extern NSString *const LPDeviceSimKeyIphoneSimulatorDevice_LEGACY;
  @return True if the device is an iPhone 5, 5c, 5s, or 6se.
  */
 - (BOOL)isIPhone5Like;
+
+/**
+ @return True if the device has an iPad 10.5" form factor.
+ */
+- (BOOL) isIPadPro10point5inch;
 
 /**
  @return True if the device is arm64

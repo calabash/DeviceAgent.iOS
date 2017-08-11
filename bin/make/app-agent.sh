@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
 
-xcrun simctl help >/dev/null 2>&1
-xcrun simctl help >/dev/null 2>&1
-xcrun simctl help >/dev/null 2>&1
+source bin/log.sh
+source bin/ditto.sh
+source bin/plist-buddy.sh
+source bin/simctl.sh
+source bin/xcode.sh
+
+ensure_valid_core_sim_service
 
 set -e
-
-source bin/log_functions.sh
-source bin/copy-with-ditto.sh
-source bin/plist-buddy.sh
-source bin/xcode.sh
 
 banner "Preparing"
 

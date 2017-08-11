@@ -19,16 +19,11 @@
                  NSNumber *terminateNumber = json[CBX_TERMINATE_AUT_IF_RUNNING_KEY] ?: @(NO);
                  BOOL terminateIfRunning = [terminateNumber boolValue];
 
-                 NSAssert(bundleID, @"Must specify \"bundleID\"");
-
                  if (!bundlePath || [bundlePath isEqual:[NSNull null]]) {
                      bundlePath = nil;
-                     if (![CBLSApplicationWorkspace applicationIsInstalled:bundleID]) {
-                         NSString *errorMsg;
-                         errorMsg = [NSString stringWithFormat:@"Application with identifier: %@ is not installed.",
-                                                               bundleID];
-                         @throw [CBXException withMessage:errorMsg userInfo:nil];
-                     }
+                     // Starting in Xcode 9, we can no longer check if the
+                     // if the AUT is installed using the LSApplication* private
+                     // methods or an XCUIApplication#exists query.
                  } else {
                      // Passing bundle paths is supported, but not well understood.
                      // See the docs in Application.h

@@ -295,12 +295,18 @@
 		F519E0FF1D79E336003A84B0 /* FBFailureProofTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F519E0F91D79E336003A84B0 /* FBFailureProofTestCase.m */; };
 		F52802181DED9F280085D4CB /* ArgumentsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = F52802171DED9F280085D4CB /* ArgumentsTableController.m */; };
 		F52975BF1D4FB1FA009094D5 /* CBXUITestServerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F52975BE1D4FB1FA009094D5 /* CBXUITestServerTest.m */; };
-		F52BA3411CED1F9C00475D5A /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52BA33F1CED1F6A00475D5A /* Reveal.framework */; };
 		F52BA3431CED23E400475D5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA201CC53F6400D87200 /* CoreGraphics.framework */; };
 		F52BA3451CED23EC00475D5A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F52BA3441CED23EC00475D5A /* libz.tbd */; };
 		F52BA3461CED23F700475D5A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA1B1CC53EC800D87200 /* CFNetwork.framework */; };
 		F52BA3491CEDE1C400475D5A /* MBFingerTipWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F52BA3481CEDE1C400475D5A /* MBFingerTipWindow.m */; };
 		F52C9D871DA7E60300DAFC75 /* DragTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F52C9D861DA7E60300DAFC75 /* DragTest.m */; };
+		F53349661F39E490004138C7 /* CBXDecimalRounder.m in Sources */ = {isa = PBXBuildFile; fileRef = F53349641F39E475004138C7 /* CBXDecimalRounder.m */; };
+		F53349671F39E493004138C7 /* CBXDecimalRounder.m in Sources */ = {isa = PBXBuildFile; fileRef = F53349641F39E475004138C7 /* CBXDecimalRounder.m */; };
+		F53349691F39E536004138C7 /* CBXDecimalRounderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F53349681F39E536004138C7 /* CBXDecimalRounderTest.m */; };
+		F533496C1F3AFED7004138C7 /* CBXOrientation.h in Headers */ = {isa = PBXBuildFile; fileRef = F533496A1F3AFED7004138C7 /* CBXOrientation.h */; };
+		F533496D1F3AFED7004138C7 /* CBXOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = F533496B1F3AFED7004138C7 /* CBXOrientation.m */; };
+		F533496E1F3AFED7004138C7 /* CBXOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = F533496B1F3AFED7004138C7 /* CBXOrientation.m */; };
+		F53349701F3AFF97004138C7 /* CBXOrientationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F533496F1F3AFF97004138C7 /* CBXOrientationTest.m */; };
 		F5366D9E1DE6CC2900E7C765 /* TextInputFirstResponderProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = F5366D9C1DE6CC2900E7C765 /* TextInputFirstResponderProvider.h */; };
 		F5366D9F1DE6CC2900E7C765 /* TextInputFirstResponderProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F5366D9D1DE6CC2900E7C765 /* TextInputFirstResponderProvider.m */; };
 		F5366DA01DE6CC2900E7C765 /* TextInputFirstResponderProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F5366D9D1DE6CC2900E7C765 /* TextInputFirstResponderProvider.m */; };
@@ -548,6 +554,7 @@
 		F5CE18E21E8BBA61001116A5 /* CBLSApplicationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = F5CE18E01E8BBA61001116A5 /* CBLSApplicationProxy.h */; };
 		F5CE18E31E8BBA61001116A5 /* CBLSApplicationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE18E11E8BBA61001116A5 /* CBLSApplicationProxy.m */; };
 		F5CE18E41E8BBA61001116A5 /* CBLSApplicationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE18E11E8BBA61001116A5 /* CBLSApplicationProxy.m */; };
+		F5D086A41F38C96B008B894C /* RevealServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D086A31F38C96B008B894C /* RevealServer.framework */; };
 		F5D42A191D40E3150041105C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D42A181D40E3150041105C /* AVFoundation.framework */; };
 		F5DED03F1D7634AB00563648 /* SpringBoardAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = F5DED03D1D7634AB00563648 /* SpringBoardAlert.h */; };
 		F5DED0401D7634AB00563648 /* SpringBoardAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DED03E1D7634AB00563648 /* SpringBoardAlert.m */; };
@@ -558,7 +565,6 @@
 		F5E1D8931DEC8EDE00B72A8E /* VolumeController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E1D8901DEC8EDE00B72A8E /* VolumeController.m */; };
 		F5E663211D74958200068CE9 /* SpringBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E6631F1D74946000068CE9 /* SpringBoard.m */; };
 		F5E663221D74958300068CE9 /* SpringBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E6631F1D74946000068CE9 /* SpringBoard.m */; };
-		F5E68C6B1E8424FC00E7922C /* CBLSApplicationWorkspaceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E68C6A1E8424FC00E7922C /* CBLSApplicationWorkspaceTest.m */; };
 		F5F718411D63A4B300E402EE /* ScrollplicationsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F718401D63A4B300E402EE /* ScrollplicationsController.m */; };
 		F5FEA0B51D7478CF00B5EF42 /* SpringBoardAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 634244EC948D56732C2565E5 /* SpringBoardAlerts.m */; };
 		F5FEA0B81D747CCD00B5EF42 /* UIDevice+Wifi_IP.h in Headers */ = {isa = PBXBuildFile; fileRef = F5FEA0B61D747CCD00B5EF42 /* UIDevice+Wifi_IP.h */; };
@@ -870,6 +876,12 @@
 		F52BA3471CEDE1C400475D5A /* MBFingerTipWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBFingerTipWindow.h; path = Vendor/Fingertips/MBFingerTipWindow.h; sourceTree = SOURCE_ROOT; };
 		F52BA3481CEDE1C400475D5A /* MBFingerTipWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBFingerTipWindow.m; path = Vendor/Fingertips/MBFingerTipWindow.m; sourceTree = SOURCE_ROOT; };
 		F52C9D861DA7E60300DAFC75 /* DragTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragTest.m; sourceTree = "<group>"; };
+		F53349631F39E475004138C7 /* CBXDecimalRounder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXDecimalRounder.h; sourceTree = "<group>"; };
+		F53349641F39E475004138C7 /* CBXDecimalRounder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXDecimalRounder.m; sourceTree = "<group>"; };
+		F53349681F39E536004138C7 /* CBXDecimalRounderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXDecimalRounderTest.m; sourceTree = "<group>"; };
+		F533496A1F3AFED7004138C7 /* CBXOrientation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBXOrientation.h; sourceTree = "<group>"; };
+		F533496B1F3AFED7004138C7 /* CBXOrientation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBXOrientation.m; sourceTree = "<group>"; };
+		F533496F1F3AFF97004138C7 /* CBXOrientationTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBXOrientationTest.m; sourceTree = "<group>"; };
 		F5366D9C1DE6CC2900E7C765 /* TextInputFirstResponderProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextInputFirstResponderProvider.h; sourceTree = "<group>"; };
 		F5366D9D1DE6CC2900E7C765 /* TextInputFirstResponderProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextInputFirstResponderProvider.m; sourceTree = "<group>"; };
 		F536799F1D7C324E009956D0 /* QuerySpecifierByMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySpecifierByMark.h; sourceTree = "<group>"; };
@@ -1135,6 +1147,7 @@
 		F5BCAB101D5BC15500ED6EE3 /* DragDropController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = DragDropController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F5CE18E01E8BBA61001116A5 /* CBLSApplicationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBLSApplicationProxy.h; sourceTree = "<group>"; };
 		F5CE18E11E8BBA61001116A5 /* CBLSApplicationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBLSApplicationProxy.m; sourceTree = "<group>"; };
+		F5D086A31F38C96B008B894C /* RevealServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RevealServer.framework; path = Vendor/RevealServer.framework; sourceTree = "<group>"; };
 		F5D42A181D40E3150041105C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F5DED03D1D7634AB00563648 /* SpringBoardAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringBoardAlert.h; sourceTree = "<group>"; };
 		F5DED03E1D7634AB00563648 /* SpringBoardAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoardAlert.m; sourceTree = "<group>"; };
@@ -1147,7 +1160,6 @@
 		F5E1D8901DEC8EDE00B72A8E /* VolumeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolumeController.m; sourceTree = "<group>"; };
 		F5E6631E1D74946000068CE9 /* SpringBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringBoard.h; sourceTree = "<group>"; };
 		F5E6631F1D74946000068CE9 /* SpringBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoard.m; sourceTree = "<group>"; };
-		F5E68C6A1E8424FC00E7922C /* CBLSApplicationWorkspaceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBLSApplicationWorkspaceTest.m; sourceTree = "<group>"; };
 		F5F7183F1D63A4B300E402EE /* ScrollplicationsController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = ScrollplicationsController.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F5F718401D63A4B300E402EE /* ScrollplicationsController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollplicationsController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F5FEA0B61D747CCD00B5EF42 /* UIDevice+Wifi_IP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Wifi_IP.h"; sourceTree = "<group>"; };
@@ -1209,8 +1221,8 @@
 				F52BA3451CED23EC00475D5A /* libz.tbd in Frameworks */,
 				F52BA3431CED23E400475D5A /* CoreGraphics.framework in Frameworks */,
 				F542EA191CC536AF00D87200 /* QuartzCore.framework in Frameworks */,
+				F5D086A41F38C96B008B894C /* RevealServer.framework in Frameworks */,
 				F542EA151CC5368000D87200 /* UIKit.framework in Frameworks */,
-				F52BA3411CED1F9C00475D5A /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1432,6 +1444,7 @@
 		F542EA1A1CC53DD000D87200 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F5D086A31F38C96B008B894C /* RevealServer.framework */,
 				F594B3851D7449450035A5CA /* Contacts.framework */,
 				F56F44941D733A8200E58B0D /* HealthKit.framework */,
 				F5D42A181D40E3150041105C /* AVFoundation.framework */,
@@ -1825,6 +1838,8 @@
 		F55F83D61C6DDF1300A945C8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F53349631F39E475004138C7 /* CBXDecimalRounder.h */,
+				F53349641F39E475004138C7 /* CBXDecimalRounder.m */,
 				F55F83DA1C6DDF1300A945C8 /* JSONUtils.h */,
 				F55F83DB1C6DDF1300A945C8 /* JSONUtils.m */,
 				899696E81CB5857C00BB42E2 /* JSONKeyValidator.h */,
@@ -1851,6 +1866,8 @@
 				F547EEAB1E437910000FC160 /* CBXMachClock.m */,
 				F547EEB01E43796A000FC160 /* CBXWaiter.h */,
 				F547EEB11E43796A000FC160 /* CBXWaiter.m */,
+				F533496A1F3AFED7004138C7 /* CBXOrientation.h */,
+				F533496B1F3AFED7004138C7 /* CBXOrientation.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -2023,7 +2040,6 @@
 		F58D27D21D4F947F000FF6C0 /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				F58D27D31D4F947F000FF6C0 /* Application */,
 				F58D27D61D4F947F000FF6C0 /* AutomationActions */,
 				F58D27F01D4F947F000FF6C0 /* CBXiOSVersionInlinesTest.m */,
 				F58D27F11D4F947F000FF6C0 /* CBXTestToolsStandup.m */,
@@ -2034,14 +2050,6 @@
 				F58D27F91D4F947F000FF6C0 /* Vendor */,
 			);
 			path = UnitTests;
-			sourceTree = "<group>";
-		};
-		F58D27D31D4F947F000FF6C0 /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				F5E68C6A1E8424FC00E7922C /* CBLSApplicationWorkspaceTest.m */,
-			);
-			path = Application;
 			sourceTree = "<group>";
 		};
 		F58D27D61D4F947F000FF6C0 /* AutomationActions */ = {
@@ -2161,11 +2169,13 @@
 		F58D27F61D4F947F000FF6C0 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F53349681F39E536004138C7 /* CBXDecimalRounderTest.m */,
 				F5963ECA1D5F335F002F9304 /* JSONUtilsTest.m */,
 				F58D27F81D4F947F000FF6C0 /* CBXDeviceTest.m */,
 				F549E1A01D5471EC00C4FA36 /* CBXInfoPlistTest.m */,
 				F5DED0421D76368000563648 /* SpringBoardAlertTest.m */,
 				63424E46759C6B27C2BEC337 /* SpringBoardAlertsTest.m */,
+				F533496F1F3AFF97004138C7 /* CBXOrientationTest.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -2359,6 +2369,7 @@
 				F5538B8A1E28BEB9003EC5F3 /* CBXLogging.h in Headers */,
 				F51911451E4CC50000BB6D92 /* _XCTWaiterImpl.h in Headers */,
 				F55F82541C6DD07500A945C8 /* RouteResponse.h in Headers */,
+				F533496C1F3AFED7004138C7 /* CBXOrientation.h in Headers */,
 				F55F81A51C6DD07500A945C8 /* HTTPRedirectResponse.h in Headers */,
 				899696E51CB46C0100BB42E2 /* CoordinateQueryConfiguration.h in Headers */,
 				F519115D1E4CC50000BB6D92 /* XCKeyboardKeyMap.h in Headers */,
@@ -2613,6 +2624,7 @@
 				F5954E021CBD2E1200117745 /* Frameworks */,
 				F5954E031CBD2E1200117745 /* Resources */,
 				F5A252C21CBFFE2700C05F1F /* Run Script stage to ./Products */,
+				F5D086A51F38C99A008B894C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -2861,6 +2873,20 @@
 			shellScript = "bin/xcode-build-phase/stage-testapp-to-Products.sh";
 			showEnvVarsInLog = 0;
 		};
+		F5D086A51F38C99A008B894C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bin/xcode-build-phase/integrate-RevealServer.sh \"${SRCROOT}\" \"${CONFIGURATION}\"";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -2885,6 +2911,7 @@
 				89D538091CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.m in Sources */,
 				F55F81861C6DD07500A945C8 /* DDData.m in Sources */,
 				8965867D1CEB961300E8329C /* QueryConfigurationFactory.m in Sources */,
+				F53349661F39E490004138C7 /* CBXDecimalRounder.m in Sources */,
 				F547EEB31E437976000FC160 /* CBXWaiter.m in Sources */,
 				F55F840F1C6E437100A945C8 /* UndefinedRoutes.m in Sources */,
 				F5538B791E28AC7B003EC5F3 /* DDASLLogger.m in Sources */,
@@ -2895,6 +2922,7 @@
 				89D5380D1CA32AE900F62E09 /* FBElement.m in Sources */,
 				F5A14DE61E02CF84001A0037 /* CBLSApplicationWorkspace.m in Sources */,
 				F55F82591C6DD07500A945C8 /* RoutingHTTPServer.m in Sources */,
+				F533496D1F3AFED7004138C7 /* CBXOrientation.m in Sources */,
 				89C5F3701C9E32440093A018 /* DoubleTap.m in Sources */,
 				89D538001CA2090500F62E09 /* QuerySpecifierFactory.m in Sources */,
 				896C7C731D18AA800017CE08 /* ClearTextIn.m in Sources */,
@@ -3053,6 +3081,7 @@
 				89331D231CC10559003C2E59 /* QuerySpecifierById.m in Sources */,
 				899696FC1CB5BA4600BB42E2 /* CoordinateQuery.m in Sources */,
 				F58D28041D4F947F000FF6C0 /* CBXTouchEventTests.m in Sources */,
+				F53349691F39E536004138C7 /* CBXDecimalRounderTest.m in Sources */,
 				F5DED0411D7634AB00563648 /* SpringBoardAlert.m in Sources */,
 				F5B0A1AB1CAD4E2700E056CE /* DoubleTap.m in Sources */,
 				F5B0A1B41CAD4E2700E056CE /* QuerySpecifierByProperty.m in Sources */,
@@ -3068,6 +3097,7 @@
 				F58D28061D4F947F000FF6C0 /* GestureFactoryTests.m in Sources */,
 				F5B0A1CA1CAD4E6F00E056CE /* HTTPAuthenticationRequest.m in Sources */,
 				896C7C791D19AE990017CE08 /* ClearText.m in Sources */,
+				F53349671F39E493004138C7 /* CBXDecimalRounder.m in Sources */,
 				F5B0A1D31CAD4E8A00E056CE /* HTTPDynamicFileResponse.m in Sources */,
 				F58D28031D4F947F000FF6C0 /* Gestures+OptionsTests.m in Sources */,
 				F5A14DE71E02CF84001A0037 /* CBLSApplicationWorkspace.m in Sources */,
@@ -3089,6 +3119,7 @@
 				F5B0A1CD1CAD4E7500E056CE /* HTTPServer.m in Sources */,
 				F5B0A1CC1CAD4E7500E056CE /* HTTPMessage.m in Sources */,
 				F5B0A1C21CAD4E4600E056CE /* SessionRoutes.m in Sources */,
+				F53349701F3AFF97004138C7 /* CBXOrientationTest.m in Sources */,
 				896586841CEB9B9800E8329C /* QueryFactory.m in Sources */,
 				F58D280C1D4F947F000FF6C0 /* QueryTests.m in Sources */,
 				F5B0A1B11CAD4E2700E056CE /* QuerySpecifierByText.m in Sources */,
@@ -3149,6 +3180,7 @@
 				F5B0A1E01CAD4EA700E056CE /* Route.m in Sources */,
 				F5B0A1E11CAD4EA700E056CE /* RouteRequest.m in Sources */,
 				F5538B7A1E28AC7B003EC5F3 /* DDASLLogger.m in Sources */,
+				F533496E1F3AFED7004138C7 /* CBXOrientation.m in Sources */,
 				F5B0A1C91CAD4E6B00E056CE /* DDRange.m in Sources */,
 				F5B0A1C51CAD4E4B00E056CE /* JSONUtils.m in Sources */,
 				F5B0A1AA1CAD4E2700E056CE /* Touch.m in Sources */,
@@ -3157,7 +3189,6 @@
 				F5963ECC1D5F3F0C002F9304 /* JSONUtilsTest.m in Sources */,
 				F5B0A1AE1CAD4E2700E056CE /* QuerySpecifier.m in Sources */,
 				F5041F4B1E092D2A000B3E3E /* XCUIElement+FBIsVisible.m in Sources */,
-				F5E68C6B1E8424FC00E7922C /* CBLSApplicationWorkspaceTest.m in Sources */,
 				F5E663221D74958300068CE9 /* SpringBoard.m in Sources */,
 				899696DB1CB45FFC00BB42E2 /* ActionConfiguration.m in Sources */,
 				F5B0A1C11CAD4E4600E056CE /* QueryRoutes.m in Sources */,
@@ -3636,7 +3667,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(PROJECT_DIR)/Vendor\"",
+					"\"$(PROJECT_DIR)/Vendor\"/**",
 				);
 				INFOPLIST_FILE = TestApp/App/Info.plist;
 				INFOPLIST_PREFIX_HEADER = TestApp/App/InfoPlist.h;
@@ -3647,8 +3678,8 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lz",
-					"-framework",
-					Reveal,
+					"-weak_framework",
+					RevealServer,
 					"-force_load",
 					"\"$(PROJECT_DIR)/Vendor/calabash.framework/calabash\"",
 				);
@@ -3670,7 +3701,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(PROJECT_DIR)/Vendor\"",
+					"\"$(PROJECT_DIR)/Vendor\"/**",
 				);
 				INFOPLIST_FILE = TestApp/App/Info.plist;
 				INFOPLIST_PREFIX_HEADER = TestApp/App/InfoPlist.h;
@@ -3680,8 +3711,8 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lz",
-					"-framework",
-					Reveal,
+					"-weak_framework",
+					RevealServer,
 					"-force_load",
 					"\"$(PROJECT_DIR)/Vendor/calabash.framework/calabash\"",
 				);

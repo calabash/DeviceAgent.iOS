@@ -5,8 +5,8 @@
 
 set -e
 
-source "${BASH_SOURCE%/*}/../log_functions.sh"
-source "${BASH_SOURCE%/*}/../copy-with-ditto.sh"
+source "${BASH_SOURCE%/*}/../log.sh"
+source "${BASH_SOURCE%/*}/../ditto.sh"
 
 # Command line builds already stage binaries to Products/
 if [ ! -z $COMMAND_LINE_BUILD ]; then

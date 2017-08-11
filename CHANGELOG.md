@@ -1,3 +1,22 @@
+### 1.1.3
+
+Premilinary support for Xcode 9/iOS 11 testing against physical devices.
+
+Most gestures are failing on iOS Simulators.
+
+* Server: decrease default touch time to 0.1 #244
+* Update device rotation gesture and orientation reporting for iOS 11 #243
+* Server: revert pull request #237 - remove pre-launch is-installed
+  check; does not work on iOS 11 #242
+* Xcode 9: text queries not forwarding to WebDriver attributes #241
+* Server: handle infinite and CGFloat max/min floating point values #240
+* Server: OR predicates not evaling correctly on web views - updated
+  tests; issue is not resolved #239
+* SB: add Hebrew and Italian SpringBoard alerts #238
+* Use XCUIApplication to check if application is installed before launch #237
+* Update CBXDevice for iPad Pro 10.5 and arm64 devices #236
+* Update build scripts to publish TestApp to test-cloud-test-apps #235
+
 ### 1.1.2
 
 * Server: add pt-BR alert definition for APNS #233

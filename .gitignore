@@ -13,6 +13,7 @@ cucumber/Gemfile.lock
 .irb-history
 .pry-history
 cucumber/reports
+Gemfile.lock
 
 # JetBrains
 .idea
