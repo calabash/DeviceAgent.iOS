@@ -14,11 +14,4 @@
  */
 - (XCUIElement *)firstResponder;
 
-/**
- * Queries the AUT for the TextField, TextView, SecureTextField, or Other element type
- * for the XCUIElement that has keyboard focus.
- * @return the XCUIElement with keyboard focus or the XCUIApplication reference to the AUT
- */
-- (XCUIElement *)firstResponderOrApplication;
-
 @end
