@@ -11,7 +11,7 @@
     if (!_window) {
         MBFingerTipWindow *ftWindow = [[MBFingerTipWindow alloc]
                                        initWithFrame:[[UIScreen mainScreen] bounds]];
-        ftWindow.alwaysShowTouches = YES;
+        ftWindow.alwaysShowTouches = NO;
         _window = ftWindow;
     }
     return _window;
