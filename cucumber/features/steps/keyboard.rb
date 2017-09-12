@@ -250,6 +250,7 @@ But(/^I can clear the Text View after selecting all using the delete key or Cut$
   end
 
   wait_for_text_in_view(nil, {marked: "text view"})
+  sleep 1.0
 end
 
 Given(/^I touch the Alert nav bar button$/) do
