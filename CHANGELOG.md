@@ -1,3 +1,11 @@
+### 1.2.0
+
+Support for Xcode 9/iOS 11 testing against physical devices and
+simulators.
+
+* Xcode 9: redirect simulator logs to ~/Library/CoreSimulator/<UDID>/system.log #247
+* Server: XCUIApplication cannot be first responder #246
+
 ### 1.1.3
 
 Premilinary support for Xcode 9/iOS 11 testing against physical devices.

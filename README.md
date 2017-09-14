@@ -1,30 +1,19 @@
 | master  | develop | [versioning](VERSIONING.md) | [license](LICENSE) | [contributing](CONTRIBUTING.md)|
 |---------|---------|-----------------------------|--------------------|--------------------------------|
-|[![Build Status](https://travis-ci.com/calabash/DeviceAgent.iOS.svg?token=fsyxqhAht7X7tLURqAAp&branch=master)](https://travis-ci.com/calabash/DeviceAgent.iOS) | [![Build Status](https://travis-ci.com/calabash/DeviceAgent.iOS.svg?token=fsyxqhAht7X7tLURqAAp&branch=develop)](https://travis-ci.com/calabash/DeviceAgent.iOS)| [![Version](https://img.shields.io/badge/version-0.0.0-green.svg)](https://img.shields.io/badge/version-0.0.0-green.svg) |[![License](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](LICENSE) | [![Contributing](https://img.shields.io/badge/contrib-gitflow-orange.svg)](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow/)|
+|[![Build Status](https://travis-ci.com/calabash/DeviceAgent.iOS.svg?token=fsyxqhAht7X7tLURqAAp&branch=master)](https://travis-ci.com/calabash/DeviceAgent.iOS) | [![Build Status](https://travis-ci.com/calabash/DeviceAgent.iOS.svg?token=fsyxqhAht7X7tLURqAAp&branch=develop)](https://travis-ci.com/calabash/DeviceAgent.iOS)| [![Version](https://img.shields.io/badge/version-1.2.0-green.svg)](https://img.shields.io/badge/version-1.2.0-green.svg) |[![License](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](LICENSE) | [![Contributing](https://img.shields.io/badge/contrib-gitflow-orange.svg)](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow/)|
 
-## iOS DeviceAgent
+## DeviceAgent.iOS
 
 ### Docs
 
-DeviceAgent is fully documented! But the docs are not published publicly.
-
-To generate the docset,
-
 ```
 $ make docs
+$ open documentation/html/hierarchy.html
 ```
 
-Currently, this will generate appledocs for any header file under the
-`Server` directory. If any headers contain no documentation, a warning
-will be generated. However, *no warning will be generated for undocumented
-symbols*, so please be diligent when adding new methods/properties!
-
-Docs will be output in html in a new `documentation` directory at the
-root of the project. You can open the `html/index.html` file in any
-browser and have a go.
-
-It will also install the docs into your Xcode, so you can option-click
-any symbol from the repo and see the docs.
+Generates appledocs for any header file under the `Server` directory. If any
+headers contain no documentation, a warning will be generated. Which will
+cause CI to fail.  You have been warned.
 
 ### Building
 
@@ -38,11 +27,11 @@ Enjoy.
 
 #### Xcode
 
-To build the CBXRunner from Xcode, select the XCUITestDriver scheme and
-Build for Testing (Shift + Command + U).  Rinse and repeat for simulator
-or device targets.  This will generate binaries for distribution in the
-./Products directory.  The post-build staging is done in the
-XCUITestDriver Scheme's Build Post Action Script.
+To build the DeviceAgent-Runner.app from Xcode, select the DeviceAgent
+scheme and Build for Testing (Shift + Command + U).  Rinse and repeat
+for simulator or device targets.  This will generate binaries for
+distribution in the ./Products directory.  The post-build staging is done
+in the DeviceAgent scheme's Build Post Action Script.
 
 The logs for this script can be found here:
 
@@ -58,7 +47,7 @@ You should never have to build the UnitTest target for distribution.
 
 #### Command line
 
-Requires Xcode 7 and iOS 9 or higher.
+Requires Xcode 8.3.3 and iOS 9 or higher.
 
 Requires ruby >= 2.0.  The latest ruby release is preferred.
 
@@ -140,6 +129,6 @@ $ XCPRETTY=0 make ipa-agent
 
 ### Licenses
 
-DeviceAgent uses several third-party sources.  You can find the licenses for these
-sources in the third-party-licenses directory.
+DeviceAgent uses several third-party sources.  You can find the licenses for
+these sources in the Licenses directory.
 
