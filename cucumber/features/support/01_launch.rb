@@ -117,14 +117,19 @@ end
 
 Before do |scenario|
   launcher = Calabash::Launcher.instance
+
+  args = ["-AppleLanguages", "(da)", "-AppleLocale", "da", "CALABUS_DRIVER"]
+
+  if !RunLoop::Environment.xtc?
+    args.push("FINGERTIPS")
+  end
+
   options = {
     :device => launcher.device.udid,
     :xcode => launcher.xcode,
     :simctl => launcher.simctl,
     :instruments => launcher.instruments,
-    :args => ["-AppleLanguages", "(da)",
-              "-AppleLocale", "da",
-              "CALABUS_DRIVER"],
+    :args => args,
     :env => {
       "APPLE" => true,
       "ANDROID" => false

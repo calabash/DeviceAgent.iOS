@@ -55,12 +55,4 @@
     return firstResponder;
 }
 
-- (XCUIElement *)firstResponderOrApplication {
-    XCUIElement *firstResponder = [self firstResponder];
-    if (!firstResponder) {
-        firstResponder = [Application currentApplication];
-    }
-    return firstResponder;
-}
-
 @end

@@ -44,7 +44,7 @@ And(/^the next query does not dismiss the alert$/) do
 end
 
 And(/^the next gesture dismisses the alert$/) do
-  touch({marked: "Misc Menu"})
+  touch({marked: "Misc"})
   wait_for_animations
   wait_for_no_springboard_alert
   wait_for_view({marked: "misc page"})
