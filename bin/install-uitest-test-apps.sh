@@ -7,6 +7,7 @@ if [ ! -x "$(command -v greadlink)" ]; then
   error "This script requires greadlink which can be installed with homebrew"
   error "$ brew update"
   error "$ brew install coreutils"
+  exit 1
 fi
 
 INSTALL_DIR="$(greadlink -f ../../xtc/test-cloud-test-apps/uitest-test-apps/iOS)"
