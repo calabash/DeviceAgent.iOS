@@ -1,3 +1,7 @@
+### 1.2.1
+
+* Server: handle 3 button SpringBoard location alert #249
+
 ### 1.2.0
 
 Support for Xcode 9/iOS 11 testing against physical devices and
