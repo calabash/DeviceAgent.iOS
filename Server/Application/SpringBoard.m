@@ -219,7 +219,33 @@ typedef enum : NSUInteger {
         }
 
         if (springBoardAlert.shouldAccept) {
-            button = buttons.lastObject;
+            switch ([buttons count]) {
+
+                case 1: {
+                    // Single button alert
+                    button = buttons[0];
+                    break;
+                }
+                case 2: {
+                    // Two button alert
+                    button = buttons[1];
+                    break;
+                }
+                case 3: {
+                    // Three button alert
+                    // Allow Location Always notification started popping this
+                    // alert in iOS 11.
+                    button = buttons[1];
+                    break;
+                }
+
+                default: {
+                    button = buttons.lastObject;
+                    break;
+                }
+
+            }
+
         } else {
             button = buttons.firstObject;
         }
