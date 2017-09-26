@@ -244,6 +244,14 @@ NSString *const CBXDeviceSimKeyVersionInfo = @"SIMULATOR_VERSION_INFO";
       @"iPhone9,2" : @"iphone 6+",
       @"iPhone9,4" : @"iphone 6+",
 
+      // iPhone 8/8+/X - derived from Simulator
+      @"iPhone10,1" : @"iphone 6",
+      @"iPhone10,4" : @"iphone 6",
+      @"iPhone10,5" : @"iphone 6+",
+      @"iPhone10,2" : @"iphone 6+",
+      @"iPhone10,3" : @"iphone 10",
+      @"iPhone10,6" : @"iphone 10",
+
       // iPad Pro 13in
       @"iPad6,7" : @"ipad pro",
       @"iPad6,8" : @"ipad pro",
@@ -443,6 +451,10 @@ NSString *const CBXDeviceSimKeyVersionInfo = @"SIMULATOR_VERSION_INFO";
 
 - (BOOL) isIPadPro10point5inch {
     return [[self modelIdentifier] containsString:@"iPad7"];
+}
+
+- (BOOL) isIPhone10Like {
+    return [[self formFactor] isEqualToString:@"iphone 10"];
 }
 
 - (BOOL)isArm64 {
