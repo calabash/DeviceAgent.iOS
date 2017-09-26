@@ -88,6 +88,11 @@ extern NSString *const CBXDeviceSimKeyVersionInfo;
 - (BOOL) isIPadPro10point5inch;
 
 /**
+ @return True if the device has an iPhone X form factor.
+ */
+- (BOOL) isIPhone10Like;
+
+/**
  @return True if the device is arm64
  */
 - (BOOL)isArm64;
