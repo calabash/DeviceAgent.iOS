@@ -207,6 +207,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"Erlauben", YES, @"möchte auf Twitter-Accounts zugreifen"),
              alert(@"Ja", YES, @"auf das Mikrofon zugreifen"),
              alert(@"Ja", YES, @"möchte auf Ihre Bewegungs- und Fitnessdaten zugreifen"),
+             alert(@"OK", YES, @"möchte auf deine Kamera zugreifen"),
              alert(@"Ja", YES, @"auf Ihre Kamera zugreifen"),
              alert(@"OK", YES, @"Ihnen Mitteilungen senden"),
              alert(@"OK", YES, @"Keine SIM-Karte eingelegt"),
