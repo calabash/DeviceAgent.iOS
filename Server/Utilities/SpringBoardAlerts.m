@@ -103,6 +103,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"Allow", YES, @"access your location"),
              alert(@"OK", YES, @"Health Access"),
              alert(@"OK", YES, @"Would Like to Access Your Photos"),
+             alert(@"OK", YES, @"Would like to Add to your Photos"),
              alert(@"OK", YES, @"Would Like to Access Your Contacts"),
              alert(@"OK", YES, @"Access the Microphone"),
              alert(@"OK", YES, @"Would Like to Access Your Calendar"),
