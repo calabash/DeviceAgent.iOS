@@ -82,10 +82,15 @@ static Application *currentApplication;
     }];
 
     if (outerError) {
-        NSString *message;
-        message = [NSString stringWithFormat:@"Could not terminate application with bundle identifier: %@\n%@",
-                                             bundleIdentifier, outerError.localizedDescription];
-        @throw [CBXException withMessage:message userInfo:nil];
+        if (application.state != XCUIApplicationStateNotRunning) {
+            NSString *message;
+            message = [NSString stringWithFormat:@"Could not terminate application with bundle identifier: %@\n%@",
+                       bundleIdentifier, outerError.localizedDescription];
+            @throw [CBXException withMessage:message userInfo:nil];
+        } else {
+            DDLogDebug(@"Error was raised, but application has terminated");
+            DDLogDebug(@"Ignoring error: %@", [outerError localizedDescription]);
+        }
     } else {
         [CBXWaiter waitWithTimeout:10
                          untilTrue:^BOOL{
