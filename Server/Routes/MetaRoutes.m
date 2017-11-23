@@ -8,6 +8,7 @@
 #import "CBXInfoPlist.h"
 #import "SpringBoard.h"
 #import "InvalidArgumentException.h"
+#import "CBXConstants.h"
 
 @implementation MetaRoutes
 + (NSArray <CBXRoute *> *)getRoutes {
@@ -22,6 +23,17 @@
                      [response respondWithJSON:@{@"sessionId" : [NSNull null]}];
                  }
              }],
+
+             [CBXRoute post:endpoint(@"/terminate", 1.0)
+                  withBlock:^(RouteRequest *request,
+                              NSDictionary *data,
+                              RouteResponse *response) {
+                      NSString *bundleIdentifier = data[CBX_BUNDLE_ID_KEY];
+                      XCUIApplicationState state;
+                      state = [Application terminateApplicationWithIdentifier:bundleIdentifier];
+                      [response respondWithJSON:@{@"state" : @(state)}];
+                  }],
+
 
              [CBXRoute get:endpoint(@"/pid", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
                  NSString *pidString = [NSString stringWithFormat:@"%d",
