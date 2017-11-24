@@ -23,6 +23,7 @@ static NSDictionary *typeStringToElementType;
 
     // Occasionally XCUIElement with type 'Any' are not responding to the
     // WebDriverAgent methods.
+    // See https://github.com/calabash/DeviceAgent.iOS/pull/255 for analysis
     @try {
         json[CBX_TYPE_KEY] = snapshotOrElement.wdType;
         json[CBX_LABEL_KEY] = snapshotOrElement.wdLabel;
