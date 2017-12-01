@@ -21,25 +21,36 @@ static NSDictionary *typeStringToElementType;
         }
     }
 
-    json[CBX_TYPE_KEY] = snapshotOrElement.wdType;
-    json[CBX_LABEL_KEY] = snapshotOrElement.wdLabel;
-    json[CBX_TITLE_KEY] = snapshotOrElement.wdTitle;
-    json[CBX_VALUE_KEY] = snapshotOrElement.wdValue;
-    json[CBX_PLACEHOLDER_KEY] = snapshotOrElement.wdPlaceholderValue;
-    json[CBX_RECT_KEY] = [self rectToJSON:snapshotOrElement.wdFrame];
-    json[CBX_IDENTIFIER_KEY] = snapshotOrElement.wdName;
-    json[CBX_ENABLED_KEY] = @(snapshotOrElement.wdEnabled);
-    json[CBX_SELECTED_KEY] = @(snapshotOrElement.wdSelected);
-    json[CBX_HAS_FOCUS_KEY] = @(snapshotOrElement.wdHasFocus);
-    json[CBX_HAS_KEYBOARD_FOCUS_KEY] = @(snapshotOrElement.wdHasKeyboardFocus);
+    // Occasionally XCUIElement with type 'Any' are not responding to the
+    // WebDriverAgent methods.
+    // See https://github.com/calabash/DeviceAgent.iOS/pull/255 for analysis
+    @try {
+        json[CBX_TYPE_KEY] = snapshotOrElement.wdType;
+        json[CBX_LABEL_KEY] = snapshotOrElement.wdLabel;
+        json[CBX_TITLE_KEY] = snapshotOrElement.wdTitle;
+        json[CBX_VALUE_KEY] = snapshotOrElement.wdValue;
+        json[CBX_PLACEHOLDER_KEY] = snapshotOrElement.wdPlaceholderValue;
+        json[CBX_RECT_KEY] = [self rectToJSON:snapshotOrElement.wdFrame];
+        json[CBX_IDENTIFIER_KEY] = snapshotOrElement.wdName;
+        json[CBX_ENABLED_KEY] = @(snapshotOrElement.wdEnabled);
+        json[CBX_SELECTED_KEY] = @(snapshotOrElement.wdSelected);
+        json[CBX_HAS_FOCUS_KEY] = @(snapshotOrElement.wdHasFocus);
+        json[CBX_HAS_KEYBOARD_FOCUS_KEY] = @(snapshotOrElement.wdHasKeyboardFocus);
 
-    BOOL visible;
-    CGPoint hitPoint;
-    [snapshotOrElement getHitPoint:&hitPoint visibility:&visible];
+        BOOL visible;
+        CGPoint hitPoint;
+        [snapshotOrElement getHitPoint:&hitPoint visibility:&visible];
 
-    json[CBX_HITABLE_KEY] = @(visible);
-    json[CBX_HIT_POINT_KEY] = @{@"x" : [JSONUtils normalizeFloat:hitPoint.x],
-                                @"y" : [JSONUtils normalizeFloat:hitPoint.y]};
+        json[CBX_HITABLE_KEY] = @(visible);
+        json[CBX_HIT_POINT_KEY] = @{@"x" : [JSONUtils normalizeFloat:hitPoint.x],
+                                    @"y" : [JSONUtils normalizeFloat:hitPoint.y]};
+    } @catch (NSException *exception) {
+        DDLogError(@"Caught an exception converting '%@' with class '%@' to JSON:\n%@",
+                   snapshotOrElement, [snapshotOrElement class], [exception reason]);
+        DDLogError(@"returning an empty dictionary after converting this much of the"
+                   "instance to JSON:\n%@", json);
+        json = [NSMutableDictionary dictionary];
+    }
 
     return json;
 }

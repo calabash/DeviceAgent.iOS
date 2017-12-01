@@ -3,7 +3,7 @@ module DeviceAgent
 
     @@app_ready = nil
 
-    def wait_for_app
+    def wait_for_app(option=nil)
       return true if DeviceAgent::Shared.class_variable_get(:@@app_ready)
 
       if device_info["simulator"]
@@ -18,23 +18,25 @@ module DeviceAgent
         wait_for_view({marked: mark}, wait_options)
       end
 
-      RunLoop.log_debug("Waiting for app to start responding to touches")
+      if option != :skip_touch_check
+        RunLoop.log_debug("Waiting for app to start responding to touches")
 
-      start = Time.now
+        start = Time.now
 
-      timeout = 30
-      message = %Q[Waited #{timeout} second for the app to start responding to touches.]
-      query = {:text => "That was touching."}
-      touch_count = 0
-      wait_for(message, timeout: timeout) do
-        touch({marked: "gesture performed"})
-        touch_count = touch_count + 1
-        !query(query).empty?
-        sleep(0.4)
+        timeout = 30
+        message = %Q[Waited #{timeout} second for the app to start responding to touches.]
+        query = {:text => "That was touching."}
+        touch_count = 0
+        wait_for(message, timeout: timeout) do
+          touch({marked: "gesture performed"})
+          touch_count = touch_count + 1
+          !query(query).empty?
+          sleep(0.4)
+        end
+
+        RunLoop.log_debug("Waited #{Time.now - start} seconds for the app to respond to touches")
+        RunLoop.log_debug("Performed #{touch_count} touches while waiting")
       end
-
-      RunLoop.log_debug("Waited #{Time.now - start} seconds for the app to respond to touches")
-      RunLoop.log_debug("Performed #{touch_count} touches while waiting")
 
       DeviceAgent::Shared.class_variable_set(:@@app_ready, true)
     end

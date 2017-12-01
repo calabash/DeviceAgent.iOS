@@ -8,6 +8,7 @@
 #import "CBXInfoPlist.h"
 #import "SpringBoard.h"
 #import "InvalidArgumentException.h"
+#import "CBXConstants.h"
 
 @implementation MetaRoutes
 + (NSArray <CBXRoute *> *)getRoutes {
@@ -23,10 +24,38 @@
                  }
              }],
 
-             [CBXRoute get:endpoint(@"/pid", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
-                 NSString *pidString = [NSString stringWithFormat:@"%d",
-                                        [Application currentApplication].processID];
-                 [response respondWithJSON:@{@"pid" : pidString}];
+             [CBXRoute post:endpoint(@"/terminate", 1.0)
+                  withBlock:^(RouteRequest *request,
+                              NSDictionary *data,
+                              RouteResponse *response) {
+                      NSString *bundleIdentifier = data[CBX_BUNDLE_ID_KEY];
+                      XCUIApplicationState state;
+                      state = [Application terminateApplicationWithIdentifier:bundleIdentifier];
+                      [response respondWithJSON:@{@"state" : @(state)}];
+                  }],
+
+             [CBXRoute post:endpoint(@"/pid", 1.0) withBlock:^(RouteRequest *request,
+                                                               NSDictionary *data,
+                                                               RouteResponse *response) {
+                 NSString *identifier = data[CBX_BUNDLE_ID_KEY];
+
+                 if (!identifier) {
+                     @throw [CBXException withFormat:@"Missing required key '%@' in"
+                             "request body: %@",
+                             CBX_BUNDLE_ID_KEY, data];
+                 }
+
+                 XCUIApplication *application;
+                 application = [[XCUIApplication alloc] initPrivateWithPath:nil
+                                                                   bundleID:identifier];
+                 NSString *pid;
+                 if (application) {
+                     pid = [NSString stringWithFormat:@"%@", @(application.processID)];
+                 } else {
+                     pid = [NSString stringWithFormat:@"%@", @(-1)];
+                 }
+
+                 [response respondWithJSON:@{@"pid" : pid}];
              }],
 
              [CBXRoute get:endpoint(@"/device", 1.0) withBlock:^(RouteRequest *request,

@@ -5,6 +5,9 @@
 #import "ThreadUtils.h"
 #import "CBXWaiter.h"
 #import "CBXMachClock.h"
+#import "XCUIApplication.h"
+#import "XCUIApplicationImpl.h"
+#import "XCUIApplicationProcess.h"
 
 @interface Application ()
 @property (nonatomic, strong) XCUIApplication *app;
@@ -54,45 +57,29 @@ static Application *currentApplication;
     }
 }
 
-+ (void)killCurrentApplication {
-   if (!currentApplication.app) {
-       DDLogDebug(@"There is no current application");
-   } else {
-       [Application killApplicationWithBundleIdentifier:[currentApplication.app bundleID]];
-   }
++ (XCUIApplicationState)terminateCurrentApplication {
+    XCUIApplication *app = currentApplication.app;
+    if (!app) {
+        DDLogDebug(@"There is no current application");
+        return XCUIApplicationStateNotRunning;
+    } else {
+        return [Application terminateApplication:app];
+    }
 }
 
-+ (void)killApplicationWithBundleIdentifier:(NSString *)bundleIdentifier {
-    XCUIApplication *application = [[XCUIApplication alloc] initPrivateWithPath:nil
-                                                                       bundleID:bundleIdentifier];
-
-    if (application.state == XCUIApplicationStateNotRunning) {
-        DDLogDebug(@"Application %@ is not running", bundleIdentifier);
-        return;
-    }
-
++ (XCUIApplicationState)terminateApplication:(XCUIApplication *)application {
     NSTimeInterval startTime = [[CBXMachClock sharedClock] absoluteTime];
-    __block NSError *outerError = nil;
-    [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
-      [[Testmanagerd get] _XCT_terminateApplicationWithBundleID:bundleIdentifier
-                                                     completion:^(NSError *innerError) {
-                                                       outerError = innerError;
-                                                       *setToTrueWhenDone = YES;
-                                                     }];
-    }];
-
-    if (outerError) {
-        NSString *message;
-        message = [NSString stringWithFormat:@"Could not terminate application with bundle identifier: %@\n%@",
-                                             bundleIdentifier, outerError.localizedDescription];
-        @throw [CBXException withMessage:message userInfo:nil];
-    } else {
-        [CBXWaiter waitWithTimeout:10
-                         untilTrue:^BOOL{
-                             return application.state == XCUIApplicationStateNotRunning;
-                         }];
+    if (application.state == XCUIApplicationStateNotRunning) {
+        DDLogDebug(@"Application %@ is not running", application.identifier);
+        return XCUIApplicationStateNotRunning;
     }
 
+    [application terminate];
+
+    [CBXWaiter waitWithTimeout:10
+                     untilTrue:^BOOL{
+                         return application.state == XCUIApplicationStateNotRunning;
+                     }];
     NSTimeInterval elapsed = [[CBXMachClock sharedClock] absoluteTime] - startTime;
 
     if (application.state != XCUIApplicationStateNotRunning) {
@@ -100,6 +87,16 @@ static Application *currentApplication;
     } else {
         DDLogDebug(@"Application did terminate after %@ seconds", @(elapsed));
     }
+
+    return application.state;
+}
+
++ (XCUIApplicationState)terminateApplicationWithIdentifier:(NSString *)bundleIdentifier {
+    XCUIApplication *application;
+    application = [[XCUIApplication alloc] initPrivateWithPath:nil
+                                                      bundleID:bundleIdentifier];
+
+    return [Application terminateApplication:application];
 }
 
 + (void)launchBundlePath:(NSString *)bundlePath
@@ -108,12 +105,13 @@ static Application *currentApplication;
                      env:(NSDictionary *)environment
       terminateIfRunning:(BOOL)terminateIfRunning {
 
-    if (terminateIfRunning) {
-        [Application killApplicationWithBundleIdentifier:bundleID];
-    }
-
     XCUIApplication *application = [[XCUIApplication alloc] initPrivateWithPath:bundlePath
                                                                        bundleID:bundleID];
+
+    if (terminateIfRunning) {
+        [Application terminateApplication:application];
+    }
+
 
     application.launchArguments = launchArgs ?: @[];
     application.launchEnvironment = environment ?: @{};
