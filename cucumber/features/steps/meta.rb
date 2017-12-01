@@ -142,6 +142,7 @@ When(/^I POST \/terminate$/) do
 end
 
 When(/^I DELETE \/session$/) do
+  DeviceAgent::Shared.class_variable_set(:@@app_ready, nil)
   hash = session_delete
   expect(hash["state"]).to be == 1
 end
