@@ -1,3 +1,12 @@
+### 1.2.2
+
+* Use XCUIApplication#terminate to terminate applications #256
+* Server: XCUIElement with type Any may or may not respond to WebDriver
+  methods #255
+* Add iOS 11 'would like to add to your photos' SpringBoard alert #254
+* SB: add camera alert for iOS 11 de #252
+* Server: update CBXDevice with iPhone 8 and 10 models #251
+
 ### 1.2.1
 
 * Server: handle 3 button SpringBoard location alert #249
