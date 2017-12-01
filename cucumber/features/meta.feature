@@ -42,3 +42,11 @@ Given the app has launched
 And I make a note of the AUT pid and session id
 When I POST /terminate
 Then the AUT pid is zero
+
+@term
+@not_xtc
+Scenario: DELETE /session
+Given the app has launched
+And I make a note of the AUT pid and session id
+When I DELETE /session
+Then the AUT pid is zero

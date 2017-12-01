@@ -141,6 +141,11 @@ When(/^I POST \/terminate$/) do
   expect(hash["state"]).to be == 1
 end
 
+When(/^I DELETE \/session$/) do
+  hash = session_delete
+  expect(hash["state"]).to be == 1
+end
+
 Then(/^the AUT pid is zero$/) do
   aut_pid = process_pid("sh.calaba.TestApp")
   expect(aut_pid).not_to be == 0

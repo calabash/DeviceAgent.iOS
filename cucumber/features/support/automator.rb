@@ -100,6 +100,10 @@ module DeviceAgent
       Automator.client.send(:session_identifier)
     end
 
+    def session_delete
+      Automator.client.send(:session_delete)
+    end
+
     def device_info
       Automator.client.device_info
     end
