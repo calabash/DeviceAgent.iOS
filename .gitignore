@@ -15,6 +15,10 @@ cucumber/Gemfile.lock
 cucumber/reports
 Gemfile.lock
 
+# Test Cloud
+bin/xtc.sh
+xtc-submit
+
 # JetBrains
 .idea
 

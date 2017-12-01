@@ -1,0 +1,13 @@
+not_xtc:     --tags ~@not_xtc
+
+tags:        -p not_xtc
+args:        --expand --backtrace --no-multiline
+common:      -p tags -p args --tags ~@simulator
+
+default:     -p common
+
+wip:         -p common --tags @wip
+flicker:     -p common --tags @flickering
+pending:     -p common --tags @pending
+term:        -p common --tags @term
+meta:        -p common --tags @meta
