@@ -1,31 +1,51 @@
 
 module TestApp
   module Meta
+    def xcode_version
+      # "0833"
+      # "0900"
+      version = server_version["xcode_version"]
+      chars = version.chars
+      if chars[0] == "0"
+        major = "#{chars[1]}"
+      else
+        # Xcode 10 or higher
+        major = "#{chars[0]}#{chars[1]}"
+      end
 
-   def xcode_version
-     # "0833"
-     # "0900"
-     version = server_version["xcode_version"]
-     chars = version.chars
-     if chars[0] == "0"
-       major = "#{chars[1]}"
-     else
-       # Xcode 10 or higher
-       major = "#{chars[0]}#{chars[1]}"
-     end
+      minor = chars[2]
+      patch = chars[3]
+      RunLoop::Version.new("#{major}.#{minor}.#{patch}")
+    end
 
-     minor = chars[2]
-     patch = chars[3]
-     RunLoop::Version.new("#{major}.#{minor}.#{patch}")
-   end
+    def xcode_gte_9?
+      xcode_version >= RunLoop::Version.new("9.0.0")
+    end
 
-   def xcode_gte_9?
-     xcode_version >= RunLoop::Version.new("9.0.0")
-   end
+    def launch_aut_with_term_aut(true_or_false)
+      DeviceAgent::Shared.class_variable_set(:@@app_ready, nil)
+      client = DeviceAgent::Automator.client
+      options = client.send(:launcher_options)
+      original_value = options[:terminate_aut_before_test]
+      options[:terminate_aut_before_test] = true_or_false
+      client.send(:launcher_options!, options.dup)
+
+      begin
+        DeviceAgent::Automator.client.send(:launch_aut)
+        wait_for_app(:skip_touch_check)
+      rescue
+        options[:terminate_aut_before_test] = original_value
+      end
+    end
   end
 end
 
 World(TestApp::Meta)
+
+And(/^I make a note of the AUT pid and session id$/) do
+  @aut_pid = process_pid("sh.calaba.TestApp")
+  @session_id = session_identifier
+end
 
 Then(/^I can ask for the server version$/) do
   expected =
@@ -70,10 +90,10 @@ Then(/^I can ask for information about the device under test$/) do
   expect(device_info.empty?).to be_falsey
 end
 
-Then(/^I can ask for the pid of the server$/) do
-  pid = server_pid
+Then(/^I can ask for the pid of the AUT$/) do
+  pid = process_pid("sh.calaba.TestApp")
   expect(pid).not_to be == nil
-  expect(pid.count).not_to be == 0
+  expect(pid).not_to be == 0
 end
 
 Then(/^I can tell DeviceAgent not to automatically dismiss SpringBoard alerts$/) do
@@ -84,9 +104,12 @@ Then(/^I can tell DeviceAgent to automatically dismiss SpringBoard alerts$/) do
   expect(set_dismiss_springboard_alerts_automatically(true)).to be_truthy
 end
 
-When(/^I POST \/session again$/) do
-  DeviceAgent::Shared.class_variable_set(:@@app_ready, nil)
-  DeviceAgent::Automator.client.send(:launch_aut)
+When(/^I POST \/session again with term-on-launch (true|false)$/) do |true_or_false|
+  if true_or_false == "true"
+    launch_aut_with_term_aut(true)
+  else
+    launch_aut_with_term_aut(false)
+  end
 end
 
 Then(/^I can tell the AUT has quit because I see the Touch tab$/) do
@@ -95,4 +118,30 @@ end
 
 Then(/^I can tell the AUT was not quit because I see the Misc tab$/) do
   wait_for_view({marked: "Misc Menu"})
+end
+
+And(/^I can tell the AUT has quit because the pid is different$/) do
+  aut_pid = process_pid("sh.calaba.TestApp")
+  expect(aut_pid).not_to be == @aut_pid
+end
+
+And(/^I can tell the AUT has not quit because the pid is the same$/) do
+  aut_pid = process_pid("sh.calaba.TestApp")
+  expect(aut_pid).to be == @aut_pid
+end
+
+And(/^I can tell there is a new session because the identifier changed$/) do
+  identifier = session_identifier
+  expect(identifier).not_to be == @session_identifier
+end
+
+When(/^I POST \/terminate$/) do
+  expect(app_running?("sh.calaba.TestApp")).to be_truthy
+  hash = terminate("sh.calaba.TestApp")
+  expect(hash["state"]).to be == 1
+end
+
+Then(/^the AUT pid is zero$/) do
+  aut_pid = process_pid("sh.calaba.TestApp")
+  expect(aut_pid).not_to be == 0
 end

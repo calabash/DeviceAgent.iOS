@@ -104,8 +104,16 @@ module DeviceAgent
       Automator.client.device_info
     end
 
-    def server_pid
-      Automator.client.send(:server_pid)
+    def process_pid(bundle_identifier)
+      Automator.client.send(:process_pid, bundle_identifier)
+    end
+
+    def terminate(bundle_identifier)
+      Automator.client.send(:terminate_app, bundle_identifier)
+    end
+
+    def app_running?(bundle_identifier)
+      Automator.client.send(:app_running?, bundle_identifier)
     end
 
     def running?
@@ -144,7 +152,7 @@ module DeviceAgent
 
 #{JSON.pretty_generate(new_rect)}
 
-                        ])
+])
       {:x => touchx, :y => touchy}
     end
 

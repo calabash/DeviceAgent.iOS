@@ -16,19 +16,6 @@ module Calabash
       device_agent.running?
     end
 
-    def terminate_aut_before_test?(scenario)
-      # For these tests we want to default to _always_ shutting down the
-      # AUT when POST /session is called. This is the opposite of the
-      # default behavior of run-loop.
-      if scenario.tags.detect { |tag| tag.name == "@keep_app_running" }
-        # The default value in run-loop
-        false
-      else
-        # Kill the AUT when POST /session is called
-        true
-      end
-    end
-
     def xcode
       @xcode ||= RunLoop::Xcode.new
     end
@@ -156,7 +143,7 @@ Before do |scenario|
     # This test suite does not use calabash at all.  The default
     # behavior for this test suite is always shutdown a running
     # AUT so every test starts with the app freshly launched.
-    :terminate_aut_before_test => launcher.terminate_aut_before_test?(scenario)
+    :terminate_aut_before_test => true
   }
 
   if launcher.first_launch
@@ -200,11 +187,6 @@ After("@keyboard") do |scenario|
     end
     wait_for_animations
   end
-end
-
-After("@keep_app_running") do |scenario|
-  # Force RunLoop.run options to re-eval'd
-  Calabash::Launcher.instance.first_launch = true
 end
 
 After("@search_bar") do |scenario|
