@@ -1,7 +1,5 @@
 module DeviceAgent
   class Wait
-
-    require "run_loop"
     attr_accessor :device_agent
 
     def initialize(device_agent)
@@ -9,13 +7,12 @@ module DeviceAgent
     end
 
     DEFAULTS = {
-        timeout: RunLoop::Environment.ci? ? 16 : 8,
+        timeout: ENV["XAMARIN_TEST_CLOUD"] ? 24 : 8,
         retry_frequency: 0.1,
         # The default is to only return visible (hitable) views
         all: false,
         exception_class: Timeout::Error
      }
-
   end
 end
 
