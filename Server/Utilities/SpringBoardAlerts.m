@@ -211,6 +211,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"OK", YES, @"möchte auf deine Kamera zugreifen"),
              alert(@"Ja", YES, @"auf Ihre Kamera zugreifen"),
              alert(@"OK", YES, @"Ihnen Mitteilungen senden"),
+             alert(@"OK", YES, @"dir Mitteilungen senden"),
              alert(@"OK", YES, @"Keine SIM-Karte eingelegt"),
              alert(@"Öffnen", YES, @"öffnen?")
              ];
