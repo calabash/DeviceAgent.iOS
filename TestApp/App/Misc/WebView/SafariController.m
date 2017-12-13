@@ -30,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    NSString *page = @"https://calabash-ci.macminicolo.net/CalWebViewApp/page.html";
+    NSString *page = @"https://calabash-ci.xyz/CalWebViewApp/page.html";
     NSURL *url = [NSURL URLWithString:page];
     SFSafariViewController *controller;
     controller = [[SFSafariViewController alloc]
