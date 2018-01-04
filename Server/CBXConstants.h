@@ -32,6 +32,7 @@ static NSString *const CBX_ROTATION_DIRECTION_KEY = @"rotation_direction";
 static NSString *const CBX_RADIUS_KEY = @"radius";
 static NSString *const CBX_DURATION_KEY = @"duration";
 static NSString *const CBX_ALLOW_INERTIA_DRAG_KEY = @"allow_inertia";
+static NSString *const CBX_FIRST_TOUCH_HOLD_DURATION_DRAG_KEY = @"first_touch_hold_duration";
 static NSString *const CBX_CLOCKWISE_KEY = @"clockwise";
 static NSString *const CBX_COUNTERCLOCKWISE_KEY = @"counterclockwise";
 static NSString *const CBX_COORDINATE_KEY = @"coordinate";

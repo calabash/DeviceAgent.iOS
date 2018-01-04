@@ -4,7 +4,7 @@
 /**
  Drag between any number of coordinates with up to 5 fingers.
 
-Currently, the positions of the fingers beyond the first are determined by 
+ The positions of the fingers beyond the first are determined by
  +[GeometryUtils fingerOffsetForFingerIndex:] 
  
  You can repeat the gesture any number of times by using the `repetitions` key.
@@ -25,6 +25,7 @@ Currently, the positions of the fingers beyond the first are determined by
  -  CBX_DURATION_KEY
  -  CBX_NUM_FINGERS_KEY
  -  CBX_HOLD_DURATION_KEY
+ -  CBX_FIRST_TOUCH_HOLD_DURATION_DRAG_KEY
  
  */
 @interface Drag : Gesture<Gesture>

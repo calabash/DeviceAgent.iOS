@@ -8,8 +8,14 @@
 
 + (NSArray <NSString *> *)optionalKeys {
     return @[CBX_ALLOW_INERTIA_DRAG_KEY,
+             // How long the first touch needs to activate or grab the element.
+             CBX_FIRST_TOUCH_HOLD_DURATION_DRAG_KEY,
+             // The duration of the gesture - how long is this drag?
+             // This does not include any time spent holding the element before
+             // panning. See above.
              CBX_DURATION_KEY,
-             CBX_NUM_FINGERS_KEY];
+             CBX_NUM_FINGERS_KEY
+             ];
 }
 
 - (void)validate {
@@ -38,7 +44,7 @@
 
     UIInterfaceOrientation orientation = [[Application currentApplication]
                                           interfaceOrientation];
-    
+
     for (int fingerIndex = 0; fingerIndex < [self numFingers]; fingerIndex++ ) {
         CGPoint fingerOffset = [GeometryUtils fingerOffsetForFingerIndex:fingerIndex];
         CGPoint point = coordinates[0].cgpoint;
@@ -53,7 +59,15 @@
             TouchPath *path = [TouchPath withFirstTouchPoint:point orientation:orientation];
 
             for (Coordinate *coordinate in coordinates) {
-                if (coordinate == coordinates.firstObject) { continue; }
+                if (coordinate == coordinates.firstObject) {
+                    if ([self dragFirstTouchHoldDuration] > 0.0) {
+                        // Allow the element to be grabbed.
+                        offset = offset + [self dragFirstTouchHoldDuration];
+                    } else {
+                        continue;
+                    }
+                }
+
                 offset += duration;
 
                 // Add an additional point to halt inertia.

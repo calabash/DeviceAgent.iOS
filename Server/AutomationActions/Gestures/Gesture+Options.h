@@ -32,6 +32,12 @@ Extension to Gesture with convenience methods for attempting to get a value or, 
 - (float)duration;
 
 /**
+ How long the first touch should hold the element before the pan starts.
+ @returns the value passed in the configuration or the default value (0)
+ */
+- (float)dragFirstTouchHoldDuration;
+
+/**
  Defines whether drag gestures are performed in such a way as to avoid inertia being
  performed within scrollable elements.  When NO, the last part of a drag gestures
  is performed 2 pixels longer than requested and is follwed by a 2 pixel 100 ms drag

@@ -176,7 +176,8 @@
                 @"options" : @{
                         @"duration" : @0.1,
                         @"num_fingers" : @1,
-                        @"allow_inertia" : @YES
+                        @"allow_inertia" : @YES,
+                        @"first_touch_hold_duration" : @0.0
                         }
                 };
     [self expectGestureWithJSON:json gestureClass:[Drag class]];
