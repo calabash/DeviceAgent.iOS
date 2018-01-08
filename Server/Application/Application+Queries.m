@@ -34,7 +34,8 @@ static NSArray <NSString *> *identifierProperties;
 }
 
 + (XCElementSnapshot *)elementAtCoordinates:(float)x :(float)y {
-    XCElementSnapshot *appSnap = (XCElementSnapshot *)[[[self currentApplication] lastSnapshot] hitTest:CGPointMake(x, y)];
+    XCElementSnapshot *appSnap = (XCElementSnapshot *)[[[self currentApplication] lastSnapshot]
+                                                       hitTest:CGPointMake(x, y)];
     return appSnap;
 }
 
