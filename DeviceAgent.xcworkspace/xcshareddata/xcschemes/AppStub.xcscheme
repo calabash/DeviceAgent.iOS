@@ -39,6 +39,16 @@
                ReferencedContainer = "container:DeviceAgent.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F5DD368A20036D7200308564"
+               BuildableName = "StandAloneUITests.xctest"
+               BlueprintName = "StandAloneUITests"
+               ReferencedContainer = "container:DeviceAgent.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
