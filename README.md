@@ -98,6 +98,9 @@ then you must either:
 
 Maintainers should be using the Calabash.keychain (calabash/calabash-codesign).
 
+Ambiguous matches usually mean that the certs are contained in both your login.keychain
+and the Calabash.keychain.  Delete the certs in your login.keychain.
+
 ### Contributing
 
 * The Calabash iOS Toolchain uses git-flow.
