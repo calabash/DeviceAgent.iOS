@@ -21,8 +21,6 @@ source bin/ditto.sh
 source bin/simctl.sh
 source bin/instruments.sh
 
-ensure_valid_core_sim_service
-
 banner "Preparing"
 
 APP="${1}"

@@ -4,8 +4,6 @@ source bin/log.sh
 source bin/ditto.sh
 source bin/simctl.sh
 
-ensure_valid_core_sim_service
-
 set -e
 
 banner "Preparing"

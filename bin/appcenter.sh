@@ -75,10 +75,6 @@ INJECT="inject=${LIB_BEETS};${LIB_CABBAGE};${LIB_CUCUMBER}"
 
 APP_ENV="app_env=ARG_FROM_UPLOADER_FOR_AUT=From-the-CLI-uploader!"
 
-# Required for Test Cloud Scenarios to pass.
-# Parameters always needs to include these!
-PARAMETERS="${APP_ENV} ${INJECT}"
-
 XTC_ENDPOINT="${ENDPOINT}" \
 appcenter test run calabash \
   --debug \
