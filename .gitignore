@@ -16,7 +16,7 @@ cucumber/reports
 Gemfile.lock
 
 # Test Cloud
-bin/xtc.sh
+.xtc-credentials
 xtc-submit
 
 # JetBrains

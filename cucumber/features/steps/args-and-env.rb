@@ -20,9 +20,14 @@ Then(/^I see the app was launched with the correct arguments$/) do
 end
 
 Then(/^I see the app was launched with the correct environment$/) do
+
+  # ENV declared in launch options
   wait_for_view({marked: "android row"})
   wait_for_text_in_view("0", {marked: "android row details"})
   wait_for_view({marked: "apple row"})
   wait_for_text_in_view("1", {marked: "apple row details"})
-end
 
+  # ENV passed as arguments to uploader
+  wait_for_view({marked: "ARG_FROM_UPLOADER_FOR_AUT"})
+  wait_for_view({marked: "From-the-CLI-uploader!"})
+end
