@@ -97,11 +97,6 @@ Before("@reset_device") do |scenario|
   end
 end
 
-Before("@keep_app_running") do |scenario|
-  # Force RunLoop.run options to re-eval'd
-  Calabash::Launcher.instance.first_launch = true
-end
-
 Before do |scenario|
   launcher = Calabash::Launcher.instance
 
@@ -199,6 +194,10 @@ end
 
 After("@shutdown_after") do |scenario|
   DeviceAgent::Automator.shutdown
+end
+
+After("@term") do |scenario|
+  Calabash::Launcher.instance.first_launch = true
 end
 
 After do |scenario|

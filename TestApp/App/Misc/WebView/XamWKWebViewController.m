@@ -219,12 +219,11 @@ typedef enum : NSUInteger {
         UIView<FLWebViewProvider> *webView = self.webView;
         [self.view addSubview:webView];
 
-        NSString *page = @"https://calabash-ci.macminicolo.net/CalWebViewApp/page.html";
+        NSString *page = @"https://calabash-ci.xyz/CalWebViewApp/page.html";
         NSURL *url = [NSURL URLWithString:page];
 
         [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
     }
-    
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
