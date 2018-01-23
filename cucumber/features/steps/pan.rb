@@ -287,7 +287,13 @@ Then(/^I move the Android row above the Apple row$/) do
 
   from_point = {x: android_center[:x], y: android_center[:y]}
   to_point = {x: apple_center[:x], y: apple_center[:y]}
-  pan_between_coordinates(from_point, to_point)
+
+  pan_between_coordinates(from_point, to_point, {:first_touch_hold_duration => 1.0})
   sleep(0.4)
+
   touch({marked: "Done"})
+  wait_for_no_view({marked: "Done"})
+
+  cells = query({type: "Cell"})
+  expect(cells[1]["id"]).to be == "android row"
 end

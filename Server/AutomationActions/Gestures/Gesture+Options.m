@@ -15,6 +15,10 @@
     return [self getFloat:CBX_DURATION_KEY default:CBX_DEFAULT_DURATION];
 }
 
+- (float)dragFirstTouchHoldDuration {
+    return [self getFloat:CBX_FIRST_TOUCH_HOLD_DURATION_DRAG_KEY default:0.0];
+}
+
 - (BOOL)allowDragToHaveInertia {
     return [self boolForKey:CBX_ALLOW_INERTIA_DRAG_KEY
                     default:CBX_DEFAULT_ALLOW_INERTIA_IN_DRAG];
