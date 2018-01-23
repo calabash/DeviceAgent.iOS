@@ -1,3 +1,9 @@
+### 1.2.3
+
+* Xcode: target + script for running XCUITests against arbitrary .app #260
+* Server: drag-n-drop can start with a touch-and-hold #259
+* TestApp: update URLs to calabash-ci.xyz domain #258
+
 ### 1.2.2
 
 * Use XCUIApplication#terminate to terminate applications #256
