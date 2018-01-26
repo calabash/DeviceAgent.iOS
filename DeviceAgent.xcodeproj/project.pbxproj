@@ -587,6 +587,7 @@
 		F5FEA52C201A2D9200CEF56A /* CBXCurcubits.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FEA52A201A2D9200CEF56A /* CBXCurcubits.m */; };
 		F5FEA53D201A35DE00CEF56A /* CBXBrassica.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FEA53C201A35DE00CEF56A /* CBXBrassica.m */; };
 		F5FEA54E201A36A500CEF56A /* CBXBetaVulgaris.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FEA54C201A36A500CEF56A /* CBXBetaVulgaris.m */; };
+		F5FEA56B201B41DB00CEF56A /* GemuseBoucheController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FEA56A201B41DB00CEF56A /* GemuseBoucheController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1251,6 +1252,8 @@
 		F5FEA542201A368600CEF56A /* libBetaVulgaris.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBetaVulgaris.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5FEA54C201A36A500CEF56A /* CBXBetaVulgaris.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CBXBetaVulgaris.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F5FEA54D201A36A500CEF56A /* CBXBetaVulgaris.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CBXBetaVulgaris.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		F5FEA569201B41DB00CEF56A /* GemuseBoucheController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GemuseBoucheController.h; sourceTree = "<group>"; };
+		F5FEA56A201B41DB00CEF56A /* GemuseBoucheController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GemuseBoucheController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2422,6 +2425,8 @@
 				F5BA9ED61E48B462008CFE64 /* AlertsAndSheetsTableController.h */,
 				F5BA9ED71E48B462008CFE64 /* AlertsAndSheetsTableController.m */,
 				F54063FB1EBB410600C80B4E /* WebView */,
+				F5FEA569201B41DB00CEF56A /* GemuseBoucheController.h */,
+				F5FEA56A201B41DB00CEF56A /* GemuseBoucheController.m */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -3338,6 +3343,7 @@
 				F5954E0F1CBD2E1200117745 /* GestureRecognizerViewController.m in Sources */,
 				F5F718411D63A4B300E402EE /* ScrollplicationsController.m in Sources */,
 				F5954E091CBD2E1200117745 /* main.m in Sources */,
+				F5FEA56B201B41DB00CEF56A /* GemuseBoucheController.m in Sources */,
 				F54063F61EBB344200C80B4E /* WKWebView+FLWKWebView.m in Sources */,
 				F52BA3491CEDE1C400475D5A /* MBFingerTipWindow.m in Sources */,
 				F54064061EBB410600C80B4E /* XamUIWebViewController.m in Sources */,
