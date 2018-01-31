@@ -29,6 +29,19 @@
 			name = AppStubBuildNumber;
 			productName = AppStubBuildNumber;
 		};
+		F5FEA54F201B1F7D00CEF56A /* GemuseBouche */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F5FEA550201B1F7D00CEF56A /* Build configuration list for PBXAggregateTarget "GemuseBouche" */;
+			buildPhases = (
+			);
+			dependencies = (
+				F5FEA558201B1F9500CEF56A /* PBXTargetDependency */,
+				F5FEA556201B1F9100CEF56A /* PBXTargetDependency */,
+				F5FEA554201B1F8C00CEF56A /* PBXTargetDependency */,
+			);
+			name = GemuseBouche;
+			productName = GemuseBouche;
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
@@ -571,6 +584,10 @@
 		F5FEA0B81D747CCD00B5EF42 /* UIDevice+Wifi_IP.h in Headers */ = {isa = PBXBuildFile; fileRef = F5FEA0B61D747CCD00B5EF42 /* UIDevice+Wifi_IP.h */; };
 		F5FEA0B91D747CCD00B5EF42 /* UIDevice+Wifi_IP.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FEA0B71D747CCD00B5EF42 /* UIDevice+Wifi_IP.m */; };
 		F5FEA0BA1D747CCD00B5EF42 /* UIDevice+Wifi_IP.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FEA0B71D747CCD00B5EF42 /* UIDevice+Wifi_IP.m */; };
+		F5FEA52C201A2D9200CEF56A /* CBXCurcubits.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FEA52A201A2D9200CEF56A /* CBXCurcubits.m */; };
+		F5FEA53D201A35DE00CEF56A /* CBXBrassica.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FEA53C201A35DE00CEF56A /* CBXBrassica.m */; };
+		F5FEA54E201A36A500CEF56A /* CBXBetaVulgaris.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FEA54C201A36A500CEF56A /* CBXBetaVulgaris.m */; };
+		F5FEA56B201B41DB00CEF56A /* GemuseBoucheController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FEA56A201B41DB00CEF56A /* GemuseBoucheController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -630,7 +647,58 @@
 			remoteGlobalIDString = 898743BB1C5847B30084FD93;
 			remoteInfo = AppStub;
 		};
+		F5FEA553201B1F8C00CEF56A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 898743B41C5847B30084FD93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5FEA51D201A2AEA00CEF56A;
+			remoteInfo = libCucurbits;
+		};
+		F5FEA555201B1F9100CEF56A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 898743B41C5847B30084FD93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5FEA530201A359500CEF56A;
+			remoteInfo = libBrassica;
+		};
+		F5FEA557201B1F9500CEF56A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 898743B41C5847B30084FD93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5FEA541201A368600CEF56A;
+			remoteInfo = libBetaVulgaris;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F5FEA51C201A2AEA00CEF56A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5FEA52F201A359500CEF56A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5FEA540201A368600CEF56A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		634244EC948D56732C2565E5 /* SpringBoardAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoardAlerts.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
@@ -1175,6 +1243,17 @@
 		F5F718401D63A4B300E402EE /* ScrollplicationsController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollplicationsController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F5FEA0B61D747CCD00B5EF42 /* UIDevice+Wifi_IP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Wifi_IP.h"; sourceTree = "<group>"; };
 		F5FEA0B71D747CCD00B5EF42 /* UIDevice+Wifi_IP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Wifi_IP.m"; sourceTree = "<group>"; };
+		F5FEA51E201A2AEA00CEF56A /* libCucurbits.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCucurbits.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5FEA529201A2D9200CEF56A /* CBXCurcubits.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CBXCurcubits.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		F5FEA52A201A2D9200CEF56A /* CBXCurcubits.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CBXCurcubits.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		F5FEA531201A359500CEF56A /* libBrassica.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBrassica.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5FEA53B201A35DE00CEF56A /* CBXBrassica.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CBXBrassica.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		F5FEA53C201A35DE00CEF56A /* CBXBrassica.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CBXBrassica.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		F5FEA542201A368600CEF56A /* libBetaVulgaris.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBetaVulgaris.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5FEA54C201A36A500CEF56A /* CBXBetaVulgaris.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CBXBetaVulgaris.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		F5FEA54D201A36A500CEF56A /* CBXBetaVulgaris.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CBXBetaVulgaris.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		F5FEA569201B41DB00CEF56A /* GemuseBoucheController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GemuseBoucheController.h; sourceTree = "<group>"; };
+		F5FEA56A201B41DB00CEF56A /* GemuseBoucheController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GemuseBoucheController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1256,6 +1335,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5FEA51B201A2AEA00CEF56A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5FEA52E201A359500CEF56A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5FEA53F201A368600CEF56A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -1271,6 +1371,7 @@
 				F5169D0E1CFE06B700252F52 /* Licenses */,
 				F50BB27C1D73392100264915 /* Permissions */,
 				F5DD368C20036D7200308564 /* StandAloneUITests */,
+				F5FEA527201A2D9200CEF56A /* GemuseBouche */,
 				F542EA1A1CC53DD000D87200 /* Frameworks */,
 				898743BD1C5847B30084FD93 /* Products */,
 			);
@@ -1290,6 +1391,9 @@
 				F50BB27B1D73392100264915 /* Permissions.app */,
 				F50BB2931D73392200264915 /* Dismiss.xctest */,
 				F5DD368B20036D7200308564 /* StandAloneUITests.xctest */,
+				F5FEA51E201A2AEA00CEF56A /* libCucurbits.dylib */,
+				F5FEA531201A359500CEF56A /* libBrassica.dylib */,
+				F5FEA542201A368600CEF56A /* libBetaVulgaris.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2321,8 +2425,47 @@
 				F5BA9ED61E48B462008CFE64 /* AlertsAndSheetsTableController.h */,
 				F5BA9ED71E48B462008CFE64 /* AlertsAndSheetsTableController.m */,
 				F54063FB1EBB410600C80B4E /* WebView */,
+				F5FEA569201B41DB00CEF56A /* GemuseBoucheController.h */,
+				F5FEA56A201B41DB00CEF56A /* GemuseBoucheController.m */,
 			);
 			path = Misc;
+			sourceTree = "<group>";
+		};
+		F5FEA527201A2D9200CEF56A /* GemuseBouche */ = {
+			isa = PBXGroup;
+			children = (
+				F5FEA54B201A36A500CEF56A /* libBetaVulgaris */,
+				F5FEA53A201A35DE00CEF56A /* libBrassica */,
+				F5FEA528201A2D9200CEF56A /* libCucurbits */,
+			);
+			path = GemuseBouche;
+			sourceTree = "<group>";
+		};
+		F5FEA528201A2D9200CEF56A /* libCucurbits */ = {
+			isa = PBXGroup;
+			children = (
+				F5FEA529201A2D9200CEF56A /* CBXCurcubits.h */,
+				F5FEA52A201A2D9200CEF56A /* CBXCurcubits.m */,
+			);
+			path = libCucurbits;
+			sourceTree = "<group>";
+		};
+		F5FEA53A201A35DE00CEF56A /* libBrassica */ = {
+			isa = PBXGroup;
+			children = (
+				F5FEA53B201A35DE00CEF56A /* CBXBrassica.h */,
+				F5FEA53C201A35DE00CEF56A /* CBXBrassica.m */,
+			);
+			path = libBrassica;
+			sourceTree = "<group>";
+		};
+		F5FEA54B201A36A500CEF56A /* libBetaVulgaris */ = {
+			isa = PBXGroup;
+			children = (
+				F5FEA54D201A36A500CEF56A /* CBXBetaVulgaris.h */,
+				F5FEA54C201A36A500CEF56A /* CBXBetaVulgaris.m */,
+			);
+			path = libBetaVulgaris;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2702,6 +2845,57 @@
 			productReference = F5DD368B20036D7200308564 /* StandAloneUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		F5FEA51D201A2AEA00CEF56A /* libCucurbits */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5FEA526201A2AEA00CEF56A /* Build configuration list for PBXNativeTarget "libCucurbits" */;
+			buildPhases = (
+				F5FEA51A201A2AEA00CEF56A /* Sources */,
+				F5FEA51B201A2AEA00CEF56A /* Frameworks */,
+				F5FEA51C201A2AEA00CEF56A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libCucurbits;
+			productName = libCurcubits;
+			productReference = F5FEA51E201A2AEA00CEF56A /* libCucurbits.dylib */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F5FEA530201A359500CEF56A /* libBrassica */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5FEA537201A359500CEF56A /* Build configuration list for PBXNativeTarget "libBrassica" */;
+			buildPhases = (
+				F5FEA52D201A359500CEF56A /* Sources */,
+				F5FEA52E201A359500CEF56A /* Frameworks */,
+				F5FEA52F201A359500CEF56A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libBrassica;
+			productName = libBrassica;
+			productReference = F5FEA531201A359500CEF56A /* libBrassica.dylib */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F5FEA541201A368600CEF56A /* libBetaVulgaris */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5FEA548201A368700CEF56A /* Build configuration list for PBXNativeTarget "libBetaVulgaris" */;
+			buildPhases = (
+				F5FEA53E201A368600CEF56A /* Sources */,
+				F5FEA53F201A368600CEF56A /* Frameworks */,
+				F5FEA540201A368600CEF56A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libBetaVulgaris;
+			productName = libBetaVulgaris;
+			productReference = F5FEA542201A368600CEF56A /* libBetaVulgaris.dylib */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -2770,6 +2964,26 @@
 						ProvisioningStyle = Manual;
 						TestTargetID = 898743BB1C5847B30084FD93;
 					};
+					F5FEA51D201A2AEA00CEF56A = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = FYD86LA7RE;
+						ProvisioningStyle = Automatic;
+					};
+					F5FEA530201A359500CEF56A = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = FYD86LA7RE;
+						ProvisioningStyle = Automatic;
+					};
+					F5FEA541201A368600CEF56A = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = FYD86LA7RE;
+						ProvisioningStyle = Automatic;
+					};
+					F5FEA54F201B1F7D00CEF56A = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = FYD86LA7RE;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 898743B71C5847B30084FD93 /* Build configuration list for PBXProject "DeviceAgent" */;
@@ -2796,6 +3010,10 @@
 				F50BB27A1D73392100264915 /* Permissions */,
 				F50BB2921D73392200264915 /* Dismiss */,
 				F5DD368A20036D7200308564 /* StandAloneUITests */,
+				F5FEA54F201B1F7D00CEF56A /* GemuseBouche */,
+				F5FEA51D201A2AEA00CEF56A /* libCucurbits */,
+				F5FEA530201A359500CEF56A /* libBrassica */,
+				F5FEA541201A368600CEF56A /* libBetaVulgaris */,
 			);
 		};
 /* End PBXProject section */
@@ -3125,6 +3343,7 @@
 				F5954E0F1CBD2E1200117745 /* GestureRecognizerViewController.m in Sources */,
 				F5F718411D63A4B300E402EE /* ScrollplicationsController.m in Sources */,
 				F5954E091CBD2E1200117745 /* main.m in Sources */,
+				F5FEA56B201B41DB00CEF56A /* GemuseBoucheController.m in Sources */,
 				F54063F61EBB344200C80B4E /* WKWebView+FLWKWebView.m in Sources */,
 				F52BA3491CEDE1C400475D5A /* MBFingerTipWindow.m in Sources */,
 				F54064061EBB410600C80B4E /* XamUIWebViewController.m in Sources */,
@@ -3276,6 +3495,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5FEA51A201A2AEA00CEF56A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5FEA52C201A2D9200CEF56A /* CBXCurcubits.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5FEA52D201A359500CEF56A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5FEA53D201A35DE00CEF56A /* CBXBrassica.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5FEA53E201A368600CEF56A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5FEA54E201A36A500CEF56A /* CBXBetaVulgaris.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -3318,6 +3561,21 @@
 			isa = PBXTargetDependency;
 			target = 898743BB1C5847B30084FD93 /* AppStub */;
 			targetProxy = F5DD369020036D7200308564 /* PBXContainerItemProxy */;
+		};
+		F5FEA554201B1F8C00CEF56A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5FEA51D201A2AEA00CEF56A /* libCucurbits */;
+			targetProxy = F5FEA553201B1F8C00CEF56A /* PBXContainerItemProxy */;
+		};
+		F5FEA556201B1F9100CEF56A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5FEA530201A359500CEF56A /* libBrassica */;
+			targetProxy = F5FEA555201B1F9100CEF56A /* PBXContainerItemProxy */;
+		};
+		F5FEA558201B1F9500CEF56A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5FEA541201A368600CEF56A /* libBetaVulgaris */;
+			targetProxy = F5FEA557201B1F9500CEF56A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -3924,6 +4182,174 @@
 			};
 			name = Release;
 		};
+		F5FEA524201A2AEA00CEF56A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FYD86LA7RE;
+				EXECUTABLE_EXTENSION = dylib;
+				EXECUTABLE_PREFIX = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5FEA525201A2AEA00CEF56A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FYD86LA7RE;
+				EXECUTABLE_EXTENSION = dylib;
+				EXECUTABLE_PREFIX = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F5FEA538201A359500CEF56A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FYD86LA7RE;
+				EXECUTABLE_EXTENSION = dylib;
+				EXECUTABLE_PREFIX = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5FEA539201A359500CEF56A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FYD86LA7RE;
+				EXECUTABLE_EXTENSION = dylib;
+				EXECUTABLE_PREFIX = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F5FEA549201A368700CEF56A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FYD86LA7RE;
+				EXECUTABLE_EXTENSION = dylib;
+				EXECUTABLE_PREFIX = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5FEA54A201A368700CEF56A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FYD86LA7RE;
+				EXECUTABLE_EXTENSION = dylib;
+				EXECUTABLE_PREFIX = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F5FEA551201B1F7D00CEF56A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FYD86LA7RE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F5FEA552201B1F7D00CEF56A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FYD86LA7RE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -4022,6 +4448,42 @@
 			buildConfigurations = (
 				F5DD369220036D7200308564 /* Debug */,
 				F5DD369320036D7200308564 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F5FEA526201A2AEA00CEF56A /* Build configuration list for PBXNativeTarget "libCucurbits" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5FEA524201A2AEA00CEF56A /* Debug */,
+				F5FEA525201A2AEA00CEF56A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F5FEA537201A359500CEF56A /* Build configuration list for PBXNativeTarget "libBrassica" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5FEA538201A359500CEF56A /* Debug */,
+				F5FEA539201A359500CEF56A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F5FEA548201A368700CEF56A /* Build configuration list for PBXNativeTarget "libBetaVulgaris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5FEA549201A368700CEF56A /* Debug */,
+				F5FEA54A201A368700CEF56A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F5FEA550201B1F7D00CEF56A /* Build configuration list for PBXAggregateTarget "GemuseBouche" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5FEA551201B1F7D00CEF56A /* Debug */,
+				F5FEA552201B1F7D00CEF56A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

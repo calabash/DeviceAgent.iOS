@@ -88,15 +88,21 @@ else
   info "Uploading to Staging"
 fi
 
-
 # To submit to a pipeline branch, replace <branch> and append to
 # PARAMETERS
 PIPELINE="pipeline:<branch>"
 
-# Required for Test Cloud Scenarios to pass; parameters always
-# needs to include these!
+S3_ROOT="https://s3-eu-west-1.amazonaws.com/calabash-files/dylibs/to-test-injection"
+LIB_BEETS="${S3_ROOT}/libBetaVulgaris.dylib"
+LIB_CABBAGE="${S3_ROOT}/libBrassica.dylib"
+LIB_CUCUMBER="${S3_ROOT}/libCucurbits.dylib"
+INJECT="inject:${LIB_BEETS};${LIB_CABBAGE};${LIB_CUCUMBER}"
+
 APP_ENV="app_env:ARG_FROM_UPLOADER_FOR_AUT=From-the-CLI-uploader!"
-PARAMETERS="${APP_ENV}"
+
+# Required for Test Cloud Scenarios to pass.
+# Parameters always needs to include these!
+PARAMETERS="${APP_ENV} ${INJECT}"
 
 XTC_ENDPOINT="${ENDPOINT}" \
 bundle exec test-cloud submit \
