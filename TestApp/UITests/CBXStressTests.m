@@ -1,43 +1,38 @@
-#import <XCTest/XCTest.h>
 
-@interface UITest : XCTestCase
+#import <XCTest/XCTest.h>
+#import <AppCenterXCUITestExtensions/AppCenterXCUITestExtensions.h>
+
+@interface CBXStressTests : XCTestCase
 
 @property(strong) XCUIApplication *aut;
 
 @end
 
-@implementation UITest
+@implementation CBXStressTests
 
 - (void)setUp {
     [super setUp];
 
     self.continueAfterFailure = NO;
-    self.aut = [[XCUIApplication alloc] init];
-    [self.aut launch];
 }
 
 - (void)tearDown {
     [super tearDown];
 }
 
-- (void)testRotate {
-//    [XCUIDevice sharedDevice].orientation = UIInterfaceOrientationLandscapeLeft;
-//    UIDeviceOrientation deviceOrientation = [XCUIDevice sharedDevice].orientation;
-//    NSLog(@"device orientation = %@", @(deviceOrientation));
-//
-//    UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
-//    NSLog(@"interface orientation = %@", @(interfaceOrientation));
-//
-//    XCTAssertEqual([@(deviceOrientation) integerValue],
-//                   [@(interfaceOrientation) integerValue]);
+- (void)testThatAlwaysPasses {
+    XCTAssertTrue(YES);
 }
 
+/*
+ These tests take a long time to run and we don't want to run them all the time.
 
-- (void)testSegmentedControl {
-    [XCUIDevice sharedDevice].orientation = UIDeviceOrientationPortrait;
-    [self.aut.segmentedControls[@"segmented"].buttons[@"Second"] tap];
-}
+ Until App Center can filter XCUITest, we will need to comment and uncomment
+ whenever we want to run these tests.
+ */
 
+/*
+ * Try to reproduce "Timed out waiting for key event" bug.
 - (void)testTextEntry {
     [XCUIDevice sharedDevice].orientation = UIDeviceOrientationPortrait;
 
@@ -88,6 +83,10 @@
     NSLog(@"char per second = %@", @(charPerSecond));
 }
 
+*/
+
+/*
+ * Entering long text occassionally fails with DeviceAgent
 - (void)testLongTextEntry {
     [XCUIDevice sharedDevice].orientation = UIDeviceOrientationPortrait;
 
@@ -98,8 +97,6 @@
     NSString *text = @"Grünliche Dämmerung, nach oben zu lichter, nach unten zu dunkler. "
     "Die Höhe ist von wogendem Gewässer erfüllt, das rastlos von rechts nach links zu "
     "strömt. Nach der Tiefe zu lösen die Fluten sich in einen immer feineren feuchten\n";
-
-
 
     for (NSUInteger try = 0; try < 100; try++) {
         [self.aut.tables[@"misc page"].cells[@"text input row"] tap];
@@ -131,7 +128,11 @@
     NSLog(@"char per second = %@", @(charPerSecond));
 }
 
-- (void)testDoubleTap {
+ */
+
+/*
+ * The time between taps change change per Xcode version.
+- (void)testDoubleTapTimings {
 
     NSMutableArray *times = [NSMutableArray arrayWithCapacity:100];
 
@@ -173,5 +174,6 @@
     NSLog(@" max = %@", @(max));
     NSLog(@" min = %@", @(min));
 }
+ */
 
 @end
