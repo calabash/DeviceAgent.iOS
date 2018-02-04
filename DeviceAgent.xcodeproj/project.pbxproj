@@ -308,8 +308,10 @@
 		F519E0FF1D79E336003A84B0 /* FBFailureProofTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F519E0F91D79E336003A84B0 /* FBFailureProofTestCase.m */; };
 		F52802181DED9F280085D4CB /* ArgumentsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = F52802171DED9F280085D4CB /* ArgumentsTableController.m */; };
 		F52975BF1D4FB1FA009094D5 /* CBXUITestServerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F52975BE1D4FB1FA009094D5 /* CBXUITestServerTest.m */; };
-		F52A4C68202461140052F27F /* AppCenterXCUITestExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52A4C67202461140052F27F /* AppCenterXCUITestExtensions.framework */; };
 		F52A4C692024616D0052F27F /* RevealServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D086A31F38C96B008B894C /* RevealServer.framework */; };
+		F52A4C6B20246C910052F27F /* CBXDylibInjectionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F52A4C6A20246C910052F27F /* CBXDylibInjectionTest.m */; };
+		F52A4C6C20248CC90052F27F /* AppCenterXCUITestExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52A4C67202461140052F27F /* AppCenterXCUITestExtensions.framework */; };
+		F52A4C6E20248EBB0052F27F /* AppCenterXCUITestExtensions.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F52A4C67202461140052F27F /* AppCenterXCUITestExtensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F52BA3431CED23E400475D5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA201CC53F6400D87200 /* CoreGraphics.framework */; };
 		F52BA3451CED23EC00475D5A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F52BA3441CED23EC00475D5A /* libz.tbd */; };
 		F52BA3461CED23F700475D5A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA1B1CC53EC800D87200 /* CFNetwork.framework */; };
@@ -671,6 +673,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		F52A4C6D20248EA20052F27F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F52A4C6E20248EBB0052F27F /* AppCenterXCUITestExtensions.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F5FEA51C201A2AEA00CEF56A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -948,6 +960,7 @@
 		F52802171DED9F280085D4CB /* ArgumentsTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArgumentsTableController.m; sourceTree = "<group>"; };
 		F52975BE1D4FB1FA009094D5 /* CBXUITestServerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXUITestServerTest.m; sourceTree = "<group>"; };
 		F52A4C67202461140052F27F /* AppCenterXCUITestExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterXCUITestExtensions.framework; path = Carthage/Build/iOS/AppCenterXCUITestExtensions.framework; sourceTree = SOURCE_ROOT; };
+		F52A4C6A20246C910052F27F /* CBXDylibInjectionTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBXDylibInjectionTest.m; sourceTree = "<group>"; };
 		F52BA3441CED23EC00475D5A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F52BA3471CEDE1C400475D5A /* MBFingerTipWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBFingerTipWindow.h; path = Vendor/Fingertips/MBFingerTipWindow.h; sourceTree = SOURCE_ROOT; };
 		F52BA3481CEDE1C400475D5A /* MBFingerTipWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBFingerTipWindow.m; path = Vendor/Fingertips/MBFingerTipWindow.m; sourceTree = SOURCE_ROOT; };
@@ -1296,7 +1309,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F52A4C68202461140052F27F /* AppCenterXCUITestExtensions.framework in Frameworks */,
+				F52A4C6C20248CC90052F27F /* AppCenterXCUITestExtensions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2324,6 +2337,7 @@
 			isa = PBXGroup;
 			children = (
 				F58D28291D4F96BD000FF6C0 /* CBXStressTests.m */,
+				F52A4C6A20246C910052F27F /* CBXDylibInjectionTest.m */,
 			);
 			path = UITests;
 			sourceTree = "<group>";
@@ -2777,6 +2791,7 @@
 				F58D28141D4F964D000FF6C0 /* Sources */,
 				F58D28151D4F964D000FF6C0 /* Frameworks */,
 				F58D28161D4F964D000FF6C0 /* Resources */,
+				F52A4C6D20248EA20052F27F /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -3317,6 +3332,7 @@
 			files = (
 				F58D282B1D4F96BD000FF6C0 /* CBXStressTests.m in Sources */,
 				F547EEAF1E43793D000FC160 /* CBXMachClock.m in Sources */,
+				F52A4C6B20246C910052F27F /* CBXDylibInjectionTest.m in Sources */,
 				F547EEB51E43797E000FC160 /* CBXWaiter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4008,7 +4024,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(PROJECT_DIR)/Vendor\"/**",
-					"$(PROJECT_DIR)/Vendor",
 				);
 				INFOPLIST_FILE = TestApp/App/Info.plist;
 				INFOPLIST_PREFIX_HEADER = TestApp/App/InfoPlist.h;
@@ -4043,7 +4058,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(PROJECT_DIR)/Vendor\"/**",
-					"$(PROJECT_DIR)/Vendor",
 				);
 				INFOPLIST_FILE = TestApp/App/Info.plist;
 				INFOPLIST_PREFIX_HEADER = TestApp/App/InfoPlist.h;

@@ -19,3 +19,15 @@ When(/^running locally the Gemuse Bouche libs are not loaded$/) do
     wait_for_view({marked: "I am not Gemüsed"})
   end
 end
+
+When(/^running in App Center the entitlement injector is loaded$/) do
+  if RunLoop::Environment.xtc?
+    wait_for_view({marked: "Tomato: promoted to vegetable"})
+  end
+end
+
+When(/^running locally the entitlement injector is not loaded$/) do
+  if !RunLoop::Environment.xtc?
+    wait_for_view({marked: "Tomato: still a fruit"})
+  end
+end

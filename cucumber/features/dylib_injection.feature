@@ -9,3 +9,5 @@ Scenario: Inject dylibs on App Center
 And I am looking at the Gemuse Me page
 When running in App Center the Gemuse Bouche libs are loaded
 When running locally the Gemuse Bouche libs are not loaded
+When running in App Center the entitlement injector is loaded
+When running locally the entitlement injector is not loaded
