@@ -78,15 +78,17 @@
     }
 
     if ([mutable count] == 0) {
-        _rowDetails =
-        @{
-          @"I am not Gemüsed" : @"The GemüseBouche dylibs did not load"
-          };
-        return _rowDetails;
-    } else {
-        _rowDetails = [NSDictionary dictionaryWithDictionary:mutable];
-        return _rowDetails;
+        mutable[@"I am not Gemüsed"] = @"The GemüseBouche dylibs did not load";
     }
+
+    if ([self classAvailable:@"EntitlementInjector"]) {
+        mutable[@"Tomato: promoted to vegetable"] = @"EntitlementInjector.dylib was loaded";
+    } else {
+        mutable[@"Tomato: still a fruit"] = @"EntitlementInjector.dylib was not loaded";
+    }
+
+    _rowDetails = [NSDictionary dictionaryWithDictionary:mutable];
+    return _rowDetails;
 }
 
 - (NSString *)keyForIndexPath:(NSIndexPath *)indexPath {
