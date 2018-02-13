@@ -30,10 +30,8 @@
 
 - (BOOL)executingOnAppCenter {
     NSDictionary *runnerEnv = [[NSProcessInfo processInfo] environment];
-    // A little brittle; depends on XTC implementation.
-    //
-    // This suggests a way of passing information to the -Runner.  At least
-    // until we support uploading .xctestrun files.
+    // A little brittle; depends on XTC implementation.  If the of the XTC
+    // configuration files changes, this test will break.
     return [runnerEnv[@"XCTestConfigurationFilePath"]
             containsString:@"XTC.xctestconfiguration"];
 }
@@ -62,11 +60,9 @@
     } else {
         NSLog(@"Executing tests on AppCenter.");
 
-        NSLog(@"Skipping libGemuseBouche libraries - uploader is not parsing URLs correctly");
+        XCTAssert(self.app.cells[@"tomato: promoted to vegetable row"].exists,
+                  @"Expected a 'tomato: protomted to vegetable row' when running on AppCenter");
 
-        XCTAssert(self.app.cells[@"i am not gemüsed row"].exists,
-                  @"Expected an 'I am not gemüsed row' when running locally");
-        /*
         XCTAssert(self.app.staticTexts[@"Beta Vulgaris"].exists,
                   @"Expect a Beta Vulgaris row because libBetaVulgaris.dylib was injected");
 
@@ -75,11 +71,6 @@
 
         XCTAssert(self.app.staticTexts[@"Curcubits"].exists,
                   @"Expect a Curcubits row because libCurcubits.dylib was injected.");
-         */
-
-        XCTAssert(self.app.cells[@"tomato: promoted to vegetable row"].exists,
-                  @"Expected a 'tomato: protomted to vegetable row' when running on AppCenter");
-
     }
 }
 
