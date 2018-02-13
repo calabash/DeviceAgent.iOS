@@ -22,6 +22,10 @@ bin/test-cloud-uploader
 
 # JetBrains
 .idea
+*.iml
+
+# Appium
+target/
 
 # MacOS
 .DS_Store
