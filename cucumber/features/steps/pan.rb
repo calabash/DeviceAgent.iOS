@@ -160,13 +160,8 @@ And(/^I can pan with (\d+) fingers?$/) do |fingers|
     :duration => 0.5
   }
 
-  if fingers.to_i > 3
-    from_point = {:x => 160, :y => 80}
-    to_point = {:x => 160, :y => 460}
-  else
-    from_point = {:x => 20, :y => 80}
-    to_point = {:x => 300, :y => 460}
-  end
+  from_point = {:x => 160, :y => 100}
+  to_point = {:x => 160, :y => 460}
 
   pan_between_coordinates(from_point, to_point, options)
 
@@ -202,7 +197,7 @@ And(/^I can pan (quickly|slowly)$/) do |speed|
     :duration => duration
   }
 
-  from_point = {:x => 160, :y => 80}
+  from_point = {:x => 160, :y => 100}
   to_point = {:x => 160, :y => 460}
   pan_between_coordinates(from_point, to_point, options)
 

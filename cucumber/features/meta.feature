@@ -36,7 +36,6 @@ Then I can tell the AUT was not quit because I see the Misc tab
 And I can tell the AUT has not quit because the pid is the same
 And I can tell there is a new session because the identifier changed
 
-@wip
 @term
 Scenario: Terminating the AUT with POST /terminate
 Given the app has launched
