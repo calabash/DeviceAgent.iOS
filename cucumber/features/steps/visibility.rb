@@ -33,12 +33,24 @@ Then(/^the tab bar is visible and hitable$/) do
   # expect(element["hitable"]).to be == true
 end
 
-Then(/^the status bar is visible, but not hitable$/) do
-  element = query({type: "StatusBar", all: true}).first
-  expect(element).to be_truthy
-  # Just print for now; we need more information.
-  log_inline("TabBar hitable: #{element["hitable"]}")
-  # expect(element["hitable"]).to be == true
+Then(/^the status bar is visible and sometimes hitable$/) do
+  if iphone_x? && !device_info["simulator"]
+    # The StatusBar may or may not be visible on iPhone 10.
+    # This is _not_ a timing issue; waiting does not change the outcome.
+    element = query({type: "StatusBar", all: true})
+    log_inline("StatusBar on iPhone X devices may or may not be visible")
+    if element && element["hitable"]
+      log_inline("This status bar is hitable")
+    else
+      log_inline("This status bar is not hitable")
+    end
+  else
+    element = wait_for_view({type: "StatusBar", all: true})
+    expect(element).to be_truthy
+    # Just print for now; we need more information.
+    log_inline("StatusBar hitable: #{element["hitable"]}")
+    # expect(element["hitable"]).to be == true
+  end
 end
 
 And(/^the disabled button is visible, hitable, but not enabled$/) do

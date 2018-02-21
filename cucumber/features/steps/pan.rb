@@ -274,7 +274,13 @@ And(/^I can swipe to delete the Windows row$/) do
 end
 
 And(/^I have scrolled to the top of the Companies table$/) do
-  element = wait_for_view({type: "StatusBar", :all => true})
+  # There is no status bar "center" on iPhone X
+  if iphone_x?
+    element = wait_for_view({marked: "SSID", :all => true})
+  else
+    element = wait_for_view({type: "StatusBar", :all => true})
+  end
+
   center = element_center(element)
   touch_coordinate(center)
   sleep(0.4)

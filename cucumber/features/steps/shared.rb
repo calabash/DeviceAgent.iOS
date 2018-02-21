@@ -86,6 +86,10 @@ module DeviceAgent
     def device_agent_built_with_xcode_gte_93?
       xcodebuild_version >= RunLoop::Version.new("9.3.0")
     end
+
+    def iphone_x?
+      device_info["form_factor"] == "iphone 10"
+    end
   end
 end
 
