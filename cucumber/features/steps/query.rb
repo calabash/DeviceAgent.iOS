@@ -1,4 +1,16 @@
 
+module TestApp
+  module Query
+
+    # Starting in Xcode 9.3 for iOS >= 11.3
+    def newlines_in_queries_supported?
+      device_agent_built_with_xcode_gte_93? && ios_gte?("11.3")
+    end
+  end
+end
+
+World(TestApp::Query)
+
 And(/^I am looking at the Query page$/) do
   touch_tab("Misc")
   touch({marked: "query row"})
@@ -120,15 +132,32 @@ Then(/^I query for the label with the TAB without escaping the tab char$/) do
   expect(elements.count).to be == 1
 end
 
-Then(/^I query for newlines using backslashes$/) do
+And(/^querying for text with newlines works for Xcode 9\.3 and above$/) do
   elements = query({marked: "Here\nthere be\nnewlines"})
-  expect(elements.count).to be == 0
+  if newlines_in_queries_supported?
+    expect(elements.count).to be == 1
+  else
+    expect(elements.count).to be == 0
+  end
 
   string = %Q[Here
 there be
 newlines]
   elements = query({marked: string})
-  expect(elements.count).to be == 0
+
+  if newlines_in_queries_supported?
+    expect(elements.count).to be == 1
+  else
+    expect(elements.count).to be == 0
+  end
+
+  elements = query({text: string})
+
+  if newlines_in_queries_supported?
+    expect(elements.count).to be == 1
+  else
+    expect(elements.count).to be == 0
+  end
 end
 
 Then(/^I can query for Japanese$/) do
@@ -230,7 +259,12 @@ Then(/^I time how long it takes to make a bunch of queries$/) do
     expect(elements.count).to be == 1
 
     elements = query({marked: "Here\nthere be\nnewlines"})
-    expect(elements.count).to be == 0
+
+    if newlines_in_queries_supported?
+      expect(elements.count).to be == 1
+    else
+      expect(elements.count).to be == 0
+    end
   end
 
   elapsed = Time.now - start

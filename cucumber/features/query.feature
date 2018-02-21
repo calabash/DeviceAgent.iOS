@@ -25,8 +25,7 @@ Then I query for Same as views by mark using id and use an index to find the But
 # Single quotes can be handled with \ or without
 # Double quotes can be handled with \ or without
 # Tabs can be handle with \t or without
-# Querying for newlines is a WIP.  It looks like XCUITest strips newlines from
-# labels and text.
+# Querying for marks with newlines works in Xcode >= 9.3.
 @escaping
 Scenario: Queries with special characters
 And I am looking at the Query page
@@ -38,7 +37,7 @@ Then I query for the text in quotes using backslashes
 Then I query for the text in quotes without using backslashes
 Then I query for the label with the TAB by escaping the tab char
 Then I query for the label with the TAB without escaping the tab char
-Then I query for newlines using backslashes
+And querying for text with newlines works for Xcode 9.3 and above
 
 @utf8
 Scenario: Query supports multiple languages
