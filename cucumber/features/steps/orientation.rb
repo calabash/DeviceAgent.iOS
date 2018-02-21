@@ -4,7 +4,7 @@ module UnitTestApp
 
     def upside_down_supported?
       hash = device_info
-      if hash["iphone6"] || hash["iphone6+"]
+      if hash["iphone6"] || hash["iphone6+"] || iphone_x?
         false
       else
         true
