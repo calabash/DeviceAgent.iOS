@@ -177,6 +177,8 @@ After("@keyboard") do |scenario|
       touch({marked: "dismiss text view keyboard"})
     elsif !query({marked: "Search", type: "Button"}).empty?
       touch({marked: "Search", type: "Button"})
+    elsif !query({marked: "Hide keyboard", type: "Button"}).empty?
+      touch({marked: "Hide keyboard", type: "Button"}).empty?
     else
       raise "Keyboard is showing, but there is no way to dismiss it"
     end

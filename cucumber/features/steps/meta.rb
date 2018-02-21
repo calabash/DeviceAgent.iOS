@@ -1,27 +1,6 @@
 
 module TestApp
   module Meta
-    def xcode_version
-      # "0833"
-      # "0900"
-      version = server_version["xcode_version"]
-      chars = version.chars
-      if chars[0] == "0"
-        major = "#{chars[1]}"
-      else
-        # Xcode 10 or higher
-        major = "#{chars[0]}#{chars[1]}"
-      end
-
-      minor = chars[2]
-      patch = chars[3]
-      RunLoop::Version.new("#{major}.#{minor}.#{patch}")
-    end
-
-    def xcode_gte_9?
-      xcode_version >= RunLoop::Version.new("9.0.0")
-    end
-
     def launch_aut_with_term_aut(true_or_false)
       DeviceAgent::Shared.class_variable_set(:@@app_ready, nil)
       client = DeviceAgent::Automator.client
@@ -58,7 +37,7 @@ Then(/^I can ask for the server version$/) do
   actual = server_version
   expect(actual["bundle_identifier"]).to be == expected["bundle_identifier"]
 
-  if xcode_gte_9?
+  if device_agent_built_with_xcode_gte_9?
     expect(actual["bundle_name"]).to be == "DeviceAgent-Runner"
   else
     expect(actual["bundle_name"]).to be == "DeviceAgent"

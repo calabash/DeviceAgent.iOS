@@ -57,14 +57,25 @@ module TestApp
         view = query({marked: view_mark}).first
 
         # OR"d queries are not working in Xcode 9 with WebKit and Safari
-        if !view && xcode_gte_9?
-          view = query({id: view_mark}).first
+        #
+        # In Xcode >= 9.3, queries on WebKit and Safari and returning _not_
+        # hitable - use all: true
+        if !view && device_agent_built_with_xcode_gte_9?
+          view = query({id: view_mark, all: true}).first
         end
 
+        # Ensure the _center_ of the view is visible
         if view
           hit_point = view["hit_point"]
-          element_center = element_center(view)
-          found = hit_point_same_as_element_center(hit_point, element_center)
+
+          if hit_point["x"] == -1 && hit_point["y"] == -1
+            # Starting in Xcode 9.3, the hit point is {-1, -1} for WebKit and
+            # Safari web views, so we cannot ensure the view center is visible
+            found = true
+          else
+            element_center = element_center(view)
+            found = hit_point_same_as_element_center(hit_point, element_center)
+          end
         end
 
         break if found

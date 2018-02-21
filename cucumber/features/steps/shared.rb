@@ -82,6 +82,10 @@ module DeviceAgent
     def device_agent_built_with_xcode_gte_9?
       xcodebuild_version >= RunLoop::Version.new("9.0.0")
     end
+
+    def device_agent_built_with_xcode_gte_93?
+      xcodebuild_version >= RunLoop::Version.new("9.3.0")
+    end
   end
 end
 
