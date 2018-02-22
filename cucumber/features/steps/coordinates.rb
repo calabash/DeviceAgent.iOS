@@ -240,6 +240,88 @@ module TestApp
       end
     end
 
+    def top_small_pan_point(uiquery, wait_options={})
+      element = wait_for_view(uiquery, wait_options)
+      element_center = element_center(element)
+
+      highest_possible = status_bar_height + nav_bar_height + 10
+      element_top_mid = element_center[:y] - (element["rect"]["height"]/6.0)
+      {
+        x: element_center[:x],
+        y: [highest_possible, element_top_mid].max
+      }
+    end
+
+    def bottom_small_pan_point(uiquery, wait_options={})
+      element = wait_for_view(uiquery, wait_options)
+      element_center = element_center(element)
+
+      lowest_possible = window_size[:height] - (tab_bar_height + tool_bar_height + 10)
+      element_bottom_mid = element_center[:y] + (element["rect"]["height"]/6.0)
+      {
+        x: element_center[:x],
+        y: [lowest_possible, element_bottom_mid].min
+      }
+    end
+
+    # Half-way between the middle of the view and the left of the view
+    def left_small_pan_point(uiquery, wait_options={})
+      element = wait_for_view(uiquery, wait_options)
+      element_center = element_center(element)
+
+      lowest_possible = 10
+      view_left_mid = element_center[:x] - (element["rect"]["width"]/6.0)
+
+      {
+        x: [lowest_possible, view_left_mid].max,
+        y: element_center[:y]
+      }
+    end
+
+    def right_small_pan_point(uiquery, wait_options={})
+      element = wait_for_view(uiquery, wait_options)
+      element_center = element_center(element)
+
+      highest_possible = window_size[:width] - 10
+      view_right_mid = element_center[:x] + (element["rect"]["width"]/6.0)
+
+      {
+        x: [highest_possible, view_right_mid].min,
+        y: element_center[:y]
+      }
+    end
+
+    def point_for_small_pan_start(direction, uiquery, wait_options={})
+      case direction
+        when :left
+          right_small_pan_point(uiquery, wait_options)
+        when :right
+          left_small_pan_point(uiquery, wait_options)
+        when :up
+          bottom_small_pan_point(uiquery, wait_options)
+        when :down
+          top_small_pan_point(uiquery, wait_options)
+        else
+          raise ArgumentError,
+                "Direction #{direction} is not supported; use :left, :right, :top, :bottom"
+      end
+    end
+
+    def point_for_small_pan_end(direction, uiquery, wait_options={})
+      case direction
+        when :left
+          left_small_pan_point(uiquery, wait_options)
+        when :right
+          right_small_pan_point(uiquery, wait_options)
+        when :up
+          top_small_pan_point(uiquery, wait_options)
+        when :down
+          bottom_small_pan_point(uiquery, wait_options)
+        else
+          raise ArgumentError,
+                "Direction #{direction} is not supported; use :left, :right, :top, :bottom"
+      end
+    end
     def hit_point_same_as_element_center(hit_point, element_center, delta=20)
       x_diff = (hit_point["x"].to_i - element_center[:x].to_i).abs.to_i
       y_diff = (hit_point["y"].to_i - element_center[:y].to_i).abs.to_i
