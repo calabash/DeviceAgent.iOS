@@ -97,7 +97,12 @@ module TestApp
       element = wait_for_view(uiquery, wait_options)
       element_center = element_center(element)
 
-      highest_possible = status_bar_height + nav_bar_height + 10
+      if iphone_x?
+        highest_possible = status_bar_height + nav_bar_height + 30
+      else
+        highest_possible = status_bar_height + nav_bar_height + 10
+      end
+
       element_highest = element["rect"]["y"]
       {
         x: element_center[:x],
