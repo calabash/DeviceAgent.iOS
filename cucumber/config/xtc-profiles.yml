@@ -1,7 +1,7 @@
 not_xtc:     --tags ~@not_xtc
 
 tags:        -p not_xtc
-args:        --expand --backtrace --no-multiline
+args:        --expand
 common:      -p tags -p args --tags ~@simulator
 
 default:     -p common
