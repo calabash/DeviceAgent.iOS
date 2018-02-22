@@ -204,7 +204,8 @@ end
 Then(/^I time how long it takes to make a bunch of queries$/) do
   start = Time.now
 
-  10.times do
+  iterations = RunLoop::Environment.xtc? ? 2 : 10
+  iterations.times do
     elements = query({marked: "hidden button", all: false})
     expect(elements.count).to be == 0
 
