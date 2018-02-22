@@ -3,7 +3,9 @@ module TestApp
   module Pan
 
     def clear_pan_action_label
+      sleep(0.5)
       touch({marked: "pan action"})
+      sleep(0.5)
       wait_for_pan_action_text("CLEARED")
     end
 
