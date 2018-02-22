@@ -111,7 +111,7 @@ Then(/^the animated button is not visible after the (touch|tap), but it is hitab
 
   # The query must happen before the second animation starts.
   elapsed = Time.now - @animation_start
-  expect(elapsed).to be < 4.0
+  expect(elapsed).to be < 6.0
 
   element = query({marked: identifier}).first
   expect(element).to be_truthy
