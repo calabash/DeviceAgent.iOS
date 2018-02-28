@@ -177,6 +177,8 @@ After("@keyboard") do |scenario|
       touch({marked: "dismiss text view keyboard"})
     elsif !query({marked: "Search", type: "Button"}).empty?
       touch({marked: "Search", type: "Button"})
+    elsif !query({marked: "Hide keyboard", type: "Button"}).empty?
+      touch({marked: "Hide keyboard", type: "Button"}).empty?
     else
       raise "Keyboard is showing, but there is no way to dismiss it"
     end
@@ -215,6 +217,20 @@ After do |scenario|
       # Restart the app if a Scenario fails
       if scenario.failed?
         Calabash::Launcher.instance.first_launch = true
+        begin
+          client = DeviceAgent::Automator.client
+          if client && client.send(:app_running?, "sh.calaba.TestApp")
+            client.send(:terminate_app, "sh.calaba.TestApp")
+            sleep(1.0)
+          end
+        rescue => e
+          RunLoop.log_error("#{e}")
+          if !RunLoop::Environment.xtc?
+            exit!(1)
+          else
+            raise e
+          end
+        end
       end
     when :shutdown
       begin

@@ -42,6 +42,10 @@ Given the app has launched
 And I make a note of the AUT pid and session id
 When I POST /terminate
 Then the AUT pid is zero
+When I POST /session again with term-on-launch false
+Then I can tell the AUT has quit because I see the Touch tab
+And I can tell the AUT has quit because the pid is different
+And I can tell there is a new session because the identifier changed
 
 @term
 @not_xtc

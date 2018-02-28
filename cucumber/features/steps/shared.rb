@@ -58,6 +58,38 @@ module DeviceAgent
       mark = "#{tabname.downcase} page"
       wait_for_view({marked: mark})
     end
+
+    def ios_version
+      RunLoop::Version.new(device_info["ios_version"])
+    end
+
+    def ios_gte?(version)
+      right_hand_side = version
+      if version.is_a?(String)
+        right_hand_side = RunLoop::Version.new(version)
+      end
+      ios_version >= right_hand_side
+    end
+
+    def xcodebuild_version
+      version = server_version["xcode_version"]
+      major = version[0,2]
+      minor = version[2]
+      patch = version[3]
+      RunLoop::Version.new("#{major}.#{minor}.#{patch}")
+    end
+
+    def device_agent_built_with_xcode_gte_9?
+      xcodebuild_version >= RunLoop::Version.new("9.0.0")
+    end
+
+    def device_agent_built_with_xcode_gte_93?
+      xcodebuild_version >= RunLoop::Version.new("9.3.0")
+    end
+
+    def iphone_x?
+      device_info["form_factor"] == "iphone 10"
+    end
   end
 end
 

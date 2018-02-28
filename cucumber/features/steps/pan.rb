@@ -3,7 +3,9 @@ module TestApp
   module Pan
 
     def clear_pan_action_label
+      sleep(0.5)
       touch({marked: "pan action"})
+      sleep(0.5)
       wait_for_pan_action_text("CLEARED")
     end
 
@@ -57,14 +59,25 @@ module TestApp
         view = query({marked: view_mark}).first
 
         # OR"d queries are not working in Xcode 9 with WebKit and Safari
-        if !view && xcode_gte_9?
-          view = query({id: view_mark}).first
+        #
+        # In Xcode >= 9.3, queries on WebKit and Safari and returning _not_
+        # hitable - use all: true
+        if !view && device_agent_built_with_xcode_gte_9?
+          view = query({id: view_mark, all: true}).first
         end
 
+        # Ensure the _center_ of the view is visible
         if view
           hit_point = view["hit_point"]
-          element_center = element_center(view)
-          found = hit_point_same_as_element_center(hit_point, element_center)
+
+          if hit_point["x"] == -1 && hit_point["y"] == -1
+            # Starting in Xcode 9.3, the hit point is {-1, -1} for WebKit and
+            # Safari web views, so we cannot ensure the view center is visible
+            found = true
+          else
+            element_center = element_center(view)
+            found = hit_point_same_as_element_center(hit_point, element_center)
+          end
         end
 
         break if found
@@ -149,13 +162,8 @@ And(/^I can pan with (\d+) fingers?$/) do |fingers|
     :duration => 0.5
   }
 
-  if fingers.to_i > 3
-    from_point = {:x => 160, :y => 80}
-    to_point = {:x => 160, :y => 460}
-  else
-    from_point = {:x => 20, :y => 80}
-    to_point = {:x => 300, :y => 460}
-  end
+  from_point = {:x => 160, :y => 100}
+  to_point = {:x => 160, :y => 460}
 
   pan_between_coordinates(from_point, to_point, options)
 
@@ -191,7 +199,7 @@ And(/^I can pan (quickly|slowly)$/) do |speed|
     :duration => duration
   }
 
-  from_point = {:x => 160, :y => 80}
+  from_point = {:x => 160, :y => 100}
   to_point = {:x => 160, :y => 460}
   pan_between_coordinates(from_point, to_point, options)
 
@@ -268,7 +276,13 @@ And(/^I can swipe to delete the Windows row$/) do
 end
 
 And(/^I have scrolled to the top of the Companies table$/) do
-  element = wait_for_view({type: "StatusBar", :all => true})
+  # There is no status bar "center" on iPhone X
+  if iphone_x?
+    element = wait_for_view({marked: "SSID", :all => true})
+  else
+    element = wait_for_view({type: "StatusBar", :all => true})
+  end
+
   center = element_center(element)
   touch_coordinate(center)
   sleep(0.4)
