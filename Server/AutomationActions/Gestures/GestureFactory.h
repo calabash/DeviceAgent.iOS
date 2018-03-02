@@ -1,6 +1,8 @@
 
 #import <Foundation/Foundation.h>
-#import "Gesture.h"
+#import "CBXTypedefs.h"
+
+@class Gesture;
 
 /**
  Factory class for creating gestures from raw JSON input.

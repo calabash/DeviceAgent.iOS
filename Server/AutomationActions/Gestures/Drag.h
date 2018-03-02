@@ -1,5 +1,6 @@
 
-#import "Gesture+Options.h"
+#import <Foundation/Foundation.h>
+#import "Gesture.h"
 
 /**
  Drag between any number of coordinates with up to 5 fingers.

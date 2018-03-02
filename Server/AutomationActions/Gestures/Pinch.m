@@ -1,5 +1,13 @@
 
 #import "Pinch.h"
+#import "CBX-XCTest-Umbrella.h"
+#import "XCTest+CBXAdditions.h"
+#import "CBXConstants.h"
+#import "CBXTouchEvent.h"
+#import "Coordinate.h"
+#import "Application.h"
+#import "TouchPath.h"
+#import "Gesture+Options.h"
 
 @implementation Pinch
 + (NSString *)name { return @"pinch"; }

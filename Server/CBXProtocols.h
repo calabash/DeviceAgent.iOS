@@ -1,10 +1,8 @@
-//
-//  CBXProtocols.h
-//  xcuitest-server
-//
 
+#import <Foundation/Foundation.h>
 
-#import "CBXRoute.h"
+@class CBXRoute;
+
 /**
  Protocol to denote that a class will define a set of CBXRoute instances
  to be added to the server.

@@ -1,13 +1,16 @@
 
+#import "QueryRoutes.h"
+#import "CBX-XCTest-Umbrella.h"
 #import "QueryConfigurationFactory.h"
 #import "Application+Queries.h"
 #import "CBXConstants.h"
 #import "QueryFactory.h"
-#import "QueryRoutes.h"
 #import "JSONUtils.h"
 #import "Query.h"
 #import "SpringBoard.h"
 #import "CBXOrientation.h"
+#import "CBXMacros.h"
+#import "CBXRoute.h"
 
 @implementation QueryRoutes
 + (NSArray <CBXRoute *> *)getRoutes {

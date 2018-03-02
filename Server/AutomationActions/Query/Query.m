@@ -1,12 +1,13 @@
 
+#import "Query.h"
+#import "CBX-XCTest-Umbrella.h"
+#import "XCTest+CBXAdditions.h"
+#import "Application.h"
 #import "CoordinateQueryConfiguration.h"
 #import "QuerySpecifierFactory.h"
 #import "CoordinateQuery.h"
 #import "CBXException.h"
-#import "Application.h"
 #import "JSONUtils.h"
-#import "Query.h"
-#import "XCApplicationQuery.h"
 
 @implementation Query
 

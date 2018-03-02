@@ -2,6 +2,7 @@
 #import "CoordinateQueryConfiguration.h"
 #import "CoordinateQuery.h"
 #import "Coordinate.h"
+#import "InvalidArgumentException.h"
 
 @implementation CoordinateQuery
 

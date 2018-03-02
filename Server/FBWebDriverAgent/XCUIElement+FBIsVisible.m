@@ -7,12 +7,16 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
+#import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
+#import "CBX-XCTest-Umbrella.h"
+#import "XCTest+CBXAdditions.h"
 #import "XCUIElement+FBIsVisible.h"
-#import "XCAXClient_iOS.h"
 #import "XCTestPrivateSymbols.h"
-#import "XCElementSnapshot-Hitpoint.h"
-#import "XCUIApplication.h"
-#import "XCApplicationQuery.h"
+#import "XCElementSnapshot.h"
+#import "XCAXClient_iOS.h"
+#import "XCUIHitPointResult.h"
+#import "CBXConstants.h"
 
 @implementation XCUIElement (FBIsVisible)
 

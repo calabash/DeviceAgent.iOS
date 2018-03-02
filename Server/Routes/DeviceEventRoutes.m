@@ -7,6 +7,7 @@
 #import "CBXMacros.h"
 #import "CBXException.h"
 #import "CBXOrientation.h"
+#import "CBXRoute.h"
 
 /*
  TODO:

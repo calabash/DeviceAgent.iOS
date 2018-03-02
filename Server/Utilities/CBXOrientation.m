@@ -1,7 +1,8 @@
 
 #import "CBXOrientation.h"
+#import "CBX-XCTest-Umbrella.h"
+#import "XCTest+CBXAdditions.h"
 #import "Application.h"
-#import "XCUIDevice.h"
 #import "SpringBoard.h"
 
 @implementation CBXOrientation

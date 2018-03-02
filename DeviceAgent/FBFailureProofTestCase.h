@@ -16,9 +16,18 @@
  */
  
 #import <Foundation/Foundation.h>
-#import "XCTestCase.h"
+#import <XCTest/XCTestCase.h>
+
+@class _XCTestCaseImplementation;
 
 NS_ASSUME_NONNULL_BEGIN
+
+@interface XCTestCase (CBXAdditions)
+
+- (_XCTestCaseImplementation *)internalImplementation;
+- (void)setInternalImplementation:(_XCTestCaseImplementation *)implementation;
+
+@end
 
 /**
  Test Case that will never fail or stop from running in case of failure

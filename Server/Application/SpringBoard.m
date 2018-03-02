@@ -8,16 +8,17 @@
  */
 
 #import "SpringBoard.h"
+#import "CBX-XCTest-Umbrella.h"
+#import "XCTest+CBXAdditions.h"
+#import "Application.h"
 #import "SpringBoardAlert.h"
 #import "SpringBoardAlerts.h"
-#import "XCUIElement.h"
 #import "XCElementSnapshot.h"
 #import "GestureFactory.h"
-#import "XCUICoordinate.h"
 #import "XCUIElement+WebDriverAttributes.h"
 #import "CBXException.h"
 #import <UIKit/UIKit.h>
-#import "XCApplicationQuery.h"
+#import "CBXConstants.h"
 
 typedef enum : NSUInteger {
     SpringBoardAlertHandlerIgnoringAlerts = 0,

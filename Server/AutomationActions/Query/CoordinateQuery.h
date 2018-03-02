@@ -1,6 +1,8 @@
 
-#import "Coordinate.h"
+#import <Foundation/Foundation.h>
 #import "Query.h"
+
+@class Coordinate;
 
 /**
 A special case of Query where coordinates are explicitly specified. 

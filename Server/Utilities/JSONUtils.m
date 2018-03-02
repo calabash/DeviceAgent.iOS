@@ -2,7 +2,6 @@
 #import "JSONUtils.h"
 #import "XCElementSnapshot-Hitpoint.h"
 #import "InvalidArgumentException.h"
-#import "Application.h"
 #import "CBXConstants.h"
 #import "CBXDecimalRounder.h"
 

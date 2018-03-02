@@ -1,5 +1,6 @@
 
 #import "QuerySpecifierById.h"
+#import "CBX-XCTest-Umbrella.h"
 
 @implementation QuerySpecifierById
 

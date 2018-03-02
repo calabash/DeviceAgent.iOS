@@ -1,6 +1,5 @@
 
 #import "Testmanagerd.h"
-#import "XCTestDriver.h"
 #import "XCTRunnerDaemonSession.h"
 #import <objc/runtime.h>
 #import "CBXException.h"
@@ -24,9 +23,6 @@
             // Xcode >= 8.3
             XCTRunnerDaemonSession *session = [xctRunnerDaemonSessionClass sharedSession];
             managerInterface = [session daemonProxy];
-        } else if ([[XCTestDriver sharedTestDriver] respondsToSelector:@selector(managerProxy)]) {
-            // Xcode < 8.3
-            managerInterface = [[XCTestDriver sharedTestDriver] managerProxy];
         } else {
             @throw [CBXException withMessage:@"Could not obtain a reference to XCTestManager."];
         }

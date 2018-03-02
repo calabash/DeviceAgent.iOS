@@ -1,5 +1,6 @@
 
 #import "QuerySpecifierByPropertyLike.h"
+#import "CBX-XCTest-Umbrella.h"
 
 @implementation QuerySpecifierByPropertyLike
 + (NSString *)name { return @"property_like"; }

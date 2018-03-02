@@ -1,13 +1,13 @@
 
-#import "ElementNotFoundException.h"
 #import "Application.h"
+#import "CBX-XCTest-Umbrella.h"
+#import "XCTest+CBXAdditions.h"
 #import "Testmanagerd.h"
 #import "ThreadUtils.h"
 #import "CBXWaiter.h"
 #import "CBXMachClock.h"
-#import "XCUIApplication.h"
-#import "XCUIApplicationImpl.h"
-#import "XCUIApplicationProcess.h"
+#import "CBXConstants.h"
+#import "CBXException.h"
 
 @interface Application ()
 @property (nonatomic, strong) XCUIApplication *app;

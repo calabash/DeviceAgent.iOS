@@ -1,6 +1,6 @@
 
 #import "QuerySpecifierByMark.h"
-#import "XCUIElementQuery.h"
+#import "CBX-XCTest-Umbrella.h"
 
 @implementation QuerySpecifierByMark
 

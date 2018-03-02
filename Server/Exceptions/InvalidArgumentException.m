@@ -1,5 +1,6 @@
 
 #import "InvalidArgumentException.h"
+#import "CBXConstants.h"
 
 @implementation InvalidArgumentException
 + (instancetype)withMessage:(NSString *)message {

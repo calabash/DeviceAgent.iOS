@@ -1,5 +1,6 @@
 
 #import "QuerySpecifierByTextLike.h"
+#import "CBX-XCTest-Umbrella.h"
 
 @implementation QuerySpecifierByTextLike
 

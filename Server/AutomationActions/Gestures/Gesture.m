@@ -2,11 +2,19 @@
 #import "CoordinateQuery.h"
 #import "ThreadUtils.h"
 #import "Gesture.h"
+#import "XCUIElement+WebDriverAttributes.h"
+#import "Testmanagerd.h"
+#import "CBXTouchEvent.h"
+#import "CBXException.h"
+#import "JSONKeyValidator.h"
+#import "Coordinate.h"
+#import "CBXConstants.h"
 
 @implementation Gesture
 
 + (NSString *)name {
-    _must_override_exception;
+    @throw [CBXException overrideMethodInSubclassExceptionWithClass:self.class
+                                                           selector:_cmd];
 }
 
 + (NSArray <NSString *> *)optionalKeys { return @[ CBX_DURATION_KEY ]; }
@@ -37,15 +45,14 @@
 }
 
 - (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<Coordinate *> *)coordinates {
-    _must_override_exception;
-}
+    @throw [CBXException overrideMethodInSubclassExceptionWithClass:self.class
+                                                           selector:_cmd];
 
-- (XCTouchGesture *)gestureWithCoordinates:(NSArray<Coordinate *> *)coordinates {
-    _must_override_exception;
 }
 
 - (CBXTouchEvent *)cbxEventWithCoordinates:(NSArray<Coordinate *> *)coordinates {
-    _must_override_exception;
+    @throw [CBXException overrideMethodInSubclassExceptionWithClass:self.class
+                                                           selector:_cmd];
 }
 
 - (void)validate {

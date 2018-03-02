@@ -1,6 +1,7 @@
 
 #import "MetaRoutes.h"
-#import "XCTestDriver.h"
+#import "CBX-XCTest-Umbrella.h"
+#import "XCTest+CBXAdditions.h"
 #import "XCTestConfiguration.h"
 #import "Application.h"
 #import "CBXMacros.h"
@@ -9,6 +10,7 @@
 #import "SpringBoard.h"
 #import "InvalidArgumentException.h"
 #import "CBXConstants.h"
+#import "CBXRoute.h"
 
 @implementation MetaRoutes
 + (NSArray <CBXRoute *> *)getRoutes {

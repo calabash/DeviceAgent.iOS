@@ -1,8 +1,9 @@
 
-#import <CoreGraphics/CoreGraphics.h>
 #import <Foundation/Foundation.h>
-#import "XCPointerEventPath.h"
-#import <UIKit/UIKit.h>
+#import <CoreGraphics/CoreGraphics.h>
+#import <UIKit/UIApplication.h>
+
+@class XCPointerEventPath;
 
 /**
  Wrapper class for `XCTouchPath` and `XCPointerEventPath` which

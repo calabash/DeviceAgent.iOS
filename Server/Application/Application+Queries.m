@@ -1,16 +1,10 @@
-//
-//  CBApplication+Queries.m
-//  xcuitest-server
-//
 
-#import "XCElementSnapshot-Hitpoint.h"
 #import "Application+Queries.h"
+#import "CBX-XCTest-Umbrella.h"
+#import "XCTest+CBXAdditions.h"
 #import "XCElementSnapshot.h"
-#import "XCUIElementQuery.h"
-#import "XCAXClient_iOS.h"
-#import "XCUIElement.h"
+#import "XCElementSnapshot-Hitpoint.h"
 #import "JSONUtils.h"
-#import "XCApplicationQuery.h"
 
 @implementation Application (Queries)
 static NSArray <NSString *> *identifierProperties;
