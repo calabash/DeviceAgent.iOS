@@ -1,7 +1,11 @@
 
+#import <XCTest/XCTest.h>
+#import "QueryConfiguration.h"
+#import "GestureConfiguration.h"
+#import "JSONKeyValidator.h"
+#import "CBXConstants.h"
 #import "QueryConfigurationFactory.h"
 #import "Gesture+Options.h"
-#import <XCTest/XCTest.h>
 #import "QueryFactory.h"
 #import "EnterTextIn.h"
 #import "EnterText.h"

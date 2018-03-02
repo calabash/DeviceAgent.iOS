@@ -1,10 +1,10 @@
 
+#import <XCTest/XCTest.h>
 #import "QueryConfigurationFactory.h"
 #import "CoordinateQueryConfiguration.h"
 #import "QueryFactory.h"
-#import "Application.h"
 #import "JSONUtils.h"
-#import <XCTest/XCTest.h>
+
 
 @interface QueryTests : XCTestCase
 @property (nonatomic, strong) QueryConfiguration *validQueryConfig;
@@ -53,30 +53,9 @@
     }).to.raise(@"CBXException");
 }
 
-//FIXME
-//- (void)testExecuteWithSpecifiers {
-//    id results = @[];
-//    
-//    Query *query = [QueryFactory queryWithQueryConfiguration:_validQueryConfig];
-//    
-//    OCMStub([OCMClassMock([Application class]) currentApplication])
-//    .andReturn([[XCUIApplication alloc] initPrivateWithPath:nil
-//                                                   bundleID:@"com.apple.banana"]);
-//
-//    
-//    expect([query execute]).to.equal(results);
-    //TODO: Pair with Moody
-//    id mock = OCMPartialMock([XCUIElementQuery new]);
-//    OCMStub([mock allElementsBoundByIndex]).andReturn(@"banana");
-//    id selectorMock = OCMPartialMock([QuerySelectorId new]);
-//    OCMStub([selectorMock applyToQuery:[OCMArg any]]).andReturn(mock);
-//    OCMVerify([mock allElementsBoundByIndex]);
-//}
-
 - (void)testToJSONString {
     Query *query = [QueryFactory queryWithQueryConfiguration:_validQueryConfig];
     expect([query toJSONString]).to.equal([JSONUtils objToJSONString:_validQueryConfig.raw]);
 }
-
 
 @end

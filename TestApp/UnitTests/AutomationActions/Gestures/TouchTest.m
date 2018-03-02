@@ -1,8 +1,9 @@
+
 #import <XCTest/XCTest.h>
 #import "Touch.h"
 #import "Coordinate.h"
 #import "GestureFactory.h"
-
+#import "CBXConstants.h"
 
 @interface Touch (CBXTESTS)
 
