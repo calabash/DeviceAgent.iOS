@@ -33,15 +33,32 @@
     NSString *page = @"https://calabash-ci.xyz/CalWebViewApp/page.html";
     NSURL *url = [NSURL URLWithString:page];
     SFSafariViewController *controller;
+
+#ifdef __IPHONE_11_0
+    if (@available(iOS 11.0, *)) {
+        SFSafariViewControllerConfiguration *config = [SFSafariViewControllerConfiguration new];
+        controller = [[SFSafariViewController alloc]
+                      initWithURL:url
+                      configuration:config];
+    } else {
+        controller = [[SFSafariViewController alloc]
+                      initWithURL:url entersReaderIfAvailable:NO];
+    }
+#else
     controller = [[SFSafariViewController alloc]
-                  initWithURL:url
-                  entersReaderIfAvailable:YES];
+                  initWithURL:url entersReaderIfAvailable:NO];
+#endif
+
     controller.delegate = self;
-    [self presentViewController:controller
-                       animated:NO
-                     completion:^{
-                         NSLog(@"Presenting SafariViewController");
-                     }];
+
+    UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+    [keyWindow makeKeyWindow];
+    UIViewController *root = [keyWindow rootViewController];
+    [root presentViewController:controller
+     animated:NO
+     completion:^{
+         NSLog(@"Presenting SafariViewController");
+     }];
 }
 
 - (void) viewWillLayoutSubviews {
