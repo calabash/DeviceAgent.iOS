@@ -432,10 +432,6 @@
 		F5538B801E28AC7B003EC5F3 /* DDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = F5538B6B1E28AC7B003EC5F3 /* DDLog.h */; };
 		F5538B811E28AC7B003EC5F3 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = F5538B6C1E28AC7B003EC5F3 /* DDLog.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
 		F5538B821E28AC7B003EC5F3 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = F5538B6C1E28AC7B003EC5F3 /* DDLog.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
-		F5538B761E28AC7B003EC5F3 /* DDASLLogCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = F5538B641E28AC7B003EC5F3 /* DDASLLogCapture.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
-		F5538B791E28AC7B003EC5F3 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F5538B661E28AC7B003EC5F3 /* DDASLLogger.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
-		F5538B7D1E28AC7B003EC5F3 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F5538B691E28AC7B003EC5F3 /* DDFileLogger.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
-		F5538B811E28AC7B003EC5F3 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = F5538B6C1E28AC7B003EC5F3 /* DDLog.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
 		F5538B861E28AC7B003EC5F3 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F5538B701E28AC7B003EC5F3 /* DDTTYLogger.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
 		F5538B871E28AC7B003EC5F3 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F5538B701E28AC7B003EC5F3 /* DDTTYLogger.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
 		F5538B8A1E28BEB9003EC5F3 /* CBXLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = F5538B881E28BEB9003EC5F3 /* CBXLogging.h */; };
@@ -3626,7 +3622,6 @@
 				899696D51CB44D9B00BB42E2 /* GestureConfiguration.m in Sources */,
 				F5CE18E41E8BBA61001116A5 /* CBLSApplicationProxy.m in Sources */,
 				F5FEA0BA1D747CCD00B5EF42 /* UIDevice+Wifi_IP.m in Sources */,
-				F5538B741E28AC7B003EC5F3 /* DDAbstractDatabaseLogger.m in Sources */,
 				F5B0A1D11CAD4E8A00E056CE /* HTTPAsyncFileResponse.m in Sources */,
 				899696BC1CADF85B00BB42E2 /* EnterText.m in Sources */,
 				F52C9D871DA7E60300DAFC75 /* DragTest.m in Sources */,
