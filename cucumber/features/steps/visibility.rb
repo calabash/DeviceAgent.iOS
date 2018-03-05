@@ -37,7 +37,7 @@ Then(/^the status bar is visible and sometimes hitable$/) do
   if iphone_x? && !device_info["simulator"]
     # The StatusBar may or may not be visible on iPhone 10.
     # This is _not_ a timing issue; waiting does not change the outcome.
-    element = query({type: "StatusBar", all: true})
+    element = query({type: "StatusBar", all: true}).first
     log_inline("StatusBar on iPhone X devices may or may not be visible")
     if element && element["hitable"]
       log_inline("This status bar is hitable")
