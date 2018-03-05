@@ -48,7 +48,7 @@
     expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
 
-    alertTitle = @"запрашивает разрешение на использование Ващей текущей пгеопозиции";
+    alertTitle = @"запрашивает разрешение на использование Вашей текущей геопозиции";
     expectedButton = @"OK";
     expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
