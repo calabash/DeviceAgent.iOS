@@ -1,15 +1,12 @@
-//
-//  GestureRotues.m
-//  xcuitest-server
-//
 
 #import "GestureFactory.h"
 #import "GestureRoutes.h"
 #import "CBXConstants.h"
-#import "Application.h"
 #import "JSONUtils.h"
 #import "CBXMacros.h"
 #import "SpringBoard.h"
+#import "InvalidArgumentException.h"
+#import "CBXRoute.h"
 
 @implementation GestureRoutes
 + (NSArray<CBXRoute *> *)getRoutes {

@@ -7,12 +7,16 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
+#import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
+#import "CBX-XCTest-Umbrella.h"
+#import "XCTest+CBXAdditions.h"
 #import "XCUIElement+FBIsVisible.h"
-#import "XCAXClient_iOS.h"
 #import "XCTestPrivateSymbols.h"
-#import "XCElementSnapshot-Hitpoint.h"
-#import "XCUIApplication.h"
-#import "XCApplicationQuery.h"
+#import "XCElementSnapshot.h"
+#import "XCAXClient_iOS.h"
+#import "XCUIHitPointResult.h"
+#import "CBXConstants.h"
 
 @implementation XCUIElement (FBIsVisible)
 
@@ -25,17 +29,20 @@
 }
 
 - (void)getHitPoint:(CGPoint *)point visibility:(BOOL *)visible {
-  BOOL isVisible = self.fb_isVisible;
+  BOOL isVisible = self.isHittable;
   *visible = isVisible;
 
   if (!isVisible) {
-    *point = CGPointMake(-1, -1);
+      *point = CGPointMake(-1, -1);
   } else {
-    *point = self.lastSnapshot.hitPoint;
-  }
+      XCUICoordinate *coordinate = self.hitPointCoordinate;
+      *point = coordinate.screenPoint;
+    }
 }
 
 @end
+
+#pragma mark - XCElementSnapshot
 
 @implementation XCElementSnapshot (FBIsVisible)
 
@@ -62,10 +69,8 @@
    * "Failure fetching attributes for element" failures.
    */
   XCUIApplication *application = [self application];
-  if (!application.lastSnapshot) {
-      [[application applicationQuery] elementBoundByIndex:0];
-      [application resolve];
-  }
+  [XCUIApplication cbxResolveSnapshot:application];
+
   CGRect appFrame = application.lastSnapshot.frame;
 
   if (!CGRectIntersectsRect(appFrame, self.frame)) {
@@ -84,14 +89,27 @@
 }
 
 - (void)getHitPoint:(CGPoint *)point visibility:(BOOL *)visible {
-  BOOL isVisible = self.fb_isVisible;
-  *visible = isVisible;
+  // r26 = *(int8_t *)__XCShouldUseHostedViewConversion.shouldUseHostedViewConversion | r9;
+  CGPoint intermediate;
+  int8_t flag;
+  XCUIHitPointResult *result = [self hitPoint:&flag];
 
-  if (!isVisible) {
-    *point = CGPointMake(-1, -1);
+  *visible = result.isHittable;
+  if (result.isHittable) {
+    intermediate = result.hitPoint;
   } else {
-    *point = self.hitPoint;
+    intermediate = CGPointMake(-1, -1);
   }
+
+  *point = intermediate;
+
+  DDLogDebug(@"Finding hit point for XCElementSnapshot: %@\n"
+             "hitpoint: %@\n"
+             "visible: %@\n"
+             "hosted conversion flag: %@",
+             self,
+             [NSString stringWithFormat:@"(%@, %@)", @(intermediate.x), @(intermediate.y)],
+             result.isHittable ? @"YES" : @"NO", @(flag));
 }
 
 @end

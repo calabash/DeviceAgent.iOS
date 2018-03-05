@@ -1,8 +1,10 @@
 #import "CBXCUITestServer.h"
+#import "CBX-XCTest-Umbrella.h"
 #import "Application.h"
 #import "SessionRoutes.h"
 #import "CBXConstants.h"
 #import "CBXMacros.h"
+#import "CBXRoute.h"
 
 @implementation SessionRoutes
 

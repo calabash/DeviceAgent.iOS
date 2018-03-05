@@ -14,8 +14,8 @@ typedef void (^CompletionBlock)(NSError *e);
 typedef void (^Block)(void);
 
 /**
-    A block intended to be used in an async context. 
-    The BOOL * param should be set to YES when the async 
+    A block intended to be used in an async context.
+    The BOOL * param should be set to YES when the async
     functionality is complete (or whenever it's "done enough").
  */
 typedef void (^AsyncBlock)(BOOL *setToTrueWhenDone);

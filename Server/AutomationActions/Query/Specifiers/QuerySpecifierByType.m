@@ -2,6 +2,7 @@
 
 #import "QuerySpecifierByType.h"
 #import "JSONUtils.h"
+#import "CBX-XCTest-Umbrella.h"
 
 @implementation QuerySpecifierByType
 + (NSString *)name { return @"type"; }

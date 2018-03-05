@@ -1,7 +1,18 @@
 
+#import "Drag.h"
+#import "CBX-XCTest-Umbrella.h"
+#import "XCTest+CBXAdditions.h"
+#import "Application.h"
 #import "CoordinateQueryConfiguration.h"
 #import "GeometryUtils.h"
-#import "Drag.h"
+#import "Query.h"
+#import "QueryConfiguration.h"
+#import "CBXTouchEvent.h"
+#import "CBXConstants.h"
+#import "InvalidArgumentException.h"
+#import "Coordinate.h"
+#import "TouchPath.h"
+#import "Gesture+Options.h"
 
 @implementation Drag
 + (NSString *)name { return @"drag"; }

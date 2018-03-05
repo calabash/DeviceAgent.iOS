@@ -1,8 +1,8 @@
 
 #import "CBXDevice.h"
+#import "CBX-XCTest-Umbrella.h"
 #import "JSONUtils.h"
 #import <sys/utsname.h>
-#import "XCUIDevice.h"
 #import "CBXConstants.h"
 #import "CBXOrientation.h"
 

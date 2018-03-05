@@ -1,6 +1,9 @@
 
 #import "CoordinateQueryConfiguration.h"
 #import "JSONUtils.h"
+#import "CBXConstants.h"
+#import "InvalidArgumentException.h"
+#import "Coordinate.h"
 
 @implementation CoordinateQueryConfiguration
 

@@ -1,10 +1,8 @@
-//
-//  CBApplication+Queries.h
-//  xcuitest-server
-//
 
 #import "Application.h"
-#import "XCElementSnapshot.h"
+
+@class XCUIElement;
+@class XCElementSnapshot;
 
 @interface Application (Queries)
 + (NSDictionary *)tree;

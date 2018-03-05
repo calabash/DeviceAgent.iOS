@@ -1,9 +1,7 @@
 
-#import "InvalidArgumentException.h"
 #import <Foundation/Foundation.h>
-#import "XCUIElementQuery.h"
-#import "XCUIElement.h"
-#import "CBXMacros.h"
+
+@class XCUIElementQuery;
 
 /**
     An enum describing the relative execution priority of a specifier.

@@ -8,8 +8,8 @@
  */
 
 #import "FBElement.h"
+#import "CBX-XCTest-Umbrella.h"
 #import "XCElementSnapshot.h"
-#import "XCUIElement.h"
 
 @interface XCUIElement (WebDriverAttributes) <FBElement>
 

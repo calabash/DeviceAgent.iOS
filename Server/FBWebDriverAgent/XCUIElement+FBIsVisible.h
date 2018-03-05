@@ -8,7 +8,8 @@
  */
 
 #import "XCElementSnapshot.h"
-#import "XCUIElement.h"
+
+@class XCUIElement;
 
 NS_ASSUME_NONNULL_BEGIN
 

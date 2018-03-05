@@ -65,5 +65,14 @@ end
 Then(/^I clear my first name using the clear text route$/) do
   clear_text
   wait_for_text_in_view(nil, {type: "TextField", index: 0, all: true})
-end
+  sleep(0.4)
 
+  if device_info["ipad"]
+    touch({marked: "Hide keyboard", type: "Button"})
+  else
+    touch({marked:"Done", type: "Button"})
+  end
+
+  wait_for_no_keyboard
+  wait_for_animations
+end

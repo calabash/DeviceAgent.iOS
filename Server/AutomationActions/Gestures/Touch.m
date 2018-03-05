@@ -1,7 +1,17 @@
 
+#import "Touch.h"
+#import "CBX-XCTest-Umbrella.h"
+#import "XCTest+CBXAdditions.h"
 #import "CoordinateQueryConfiguration.h"
 #import "Coordinate.h"
-#import "Touch.h"
+#import "Query.h"
+#import "QueryConfiguration.h"
+#import "Application.h"
+#import "CBXTouchEvent.h"
+#import "InvalidArgumentException.h"
+#import "TouchPath.h"
+#import "Gesture+Options.h"
+#import "CBXConstants.h"
 
 @interface Touch ()
 

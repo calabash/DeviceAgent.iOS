@@ -3,6 +3,12 @@
 #import "ThreadUtils.h"
 #import "JSONUtils.h"
 #import "Touch.h"
+#import "InvalidArgumentException.h"
+#import "CBXConstants.h"
+#import "GestureConfiguration.h"
+#import "Testmanagerd.h"
+#import "Query.h"
+#import "Gesture+Options.h"
 
 @implementation EnterTextIn
 + (NSString *)name { return @"enter_text_in"; }

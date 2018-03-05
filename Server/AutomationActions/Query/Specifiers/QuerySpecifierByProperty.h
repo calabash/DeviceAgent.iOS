@@ -1,6 +1,6 @@
 
+#import <Foundation/Foundation.h>
 #import "QuerySpecifier.h"
-#import "JSONUtils.h"
 
 /**
  Specify elements by property value.

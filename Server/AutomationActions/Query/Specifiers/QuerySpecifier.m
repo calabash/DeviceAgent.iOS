@@ -1,8 +1,9 @@
 
-#import <XCTest/XCUIElementQuery.h>
-#import "XCUIApplication.h"
-#import "Application.h"
 #import "QuerySpecifier.h"
+#import "CBX-XCTest-Umbrella.h"
+#import "XCTest+CBXAdditions.h"
+#import "CBXMacros.h"
+#import "CBXException.h"
 
 static NSDictionary<NSString *, NSString *> *escapeMap;
 
@@ -63,8 +64,10 @@ static NSDictionary<NSString *, NSString *> *escapeMap;
 }
 
 - (XCUIElementQuery *)applyInternal:(XCUIElementQuery *)query {
-    _must_override_exception;
+    @throw [CBXException overrideMethodInSubclassExceptionWithClass:self.class
+                                                           selector:_cmd];
 }
+
 - (XCUIElementQuery *)applyToQuery:(XCUIElementQuery *)query {
     return [self applyInternal:query];
 }

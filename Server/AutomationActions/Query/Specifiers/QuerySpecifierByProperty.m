@@ -1,5 +1,8 @@
 
 #import "QuerySpecifierByProperty.h"
+#import "CBX-XCTest-Umbrella.h"
+#import "InvalidArgumentException.h"
+#import "CBXConstants.h"
 
 @implementation QuerySpecifierByProperty
 + (NSDictionary <NSString *, id> *)parseValue:(id)value {

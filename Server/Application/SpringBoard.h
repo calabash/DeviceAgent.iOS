@@ -7,7 +7,7 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import "XCUIApplication.h"
+#import "CBX-XCTest-Umbrella.h"
 
 // Experimental
 // This enum describes the success or failure of the

@@ -1,13 +1,10 @@
 
 #import <Foundation/Foundation.h>
-#import "QueryConfiguration.h"
 #import "AutomationAction.h"
-#import "QuerySpecifier.h"
-#import "CBXProtocols.h"
-#import "CBXConstants.h"
-#import "XCUIElement.h"
 
+@class QueryConfiguration;
 @class CoordinateQuery;
+@class XCUIElement;
 
 /**
  Encapsulates the notion of a query for a particular element(s).

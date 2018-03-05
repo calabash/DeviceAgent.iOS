@@ -1,6 +1,14 @@
-#import "ThreadUtils.h"
+
 #import "ClearTextIn.h"
+#import "CBX-XCTest-Umbrella.h"
+#import "Testmanagerd.h"
+#import "ThreadUtils.h"
 #import "Touch.h"
+#import "CBXException.h"
+#import "JSONUtils.h"
+#import "GestureConfiguration.h"
+#import "Query.h"
+#import "CBXConstants.h"
 
 @implementation ClearTextIn
 + (NSString *)name { return @"clear_text_in"; }

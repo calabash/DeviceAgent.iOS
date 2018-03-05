@@ -1,6 +1,6 @@
 
 #import "QueryConfigurationFactory.h"
-
+#import "CBXConstants.h"
 #import "QueryConfiguration.h"
 #import "CoordinateQueryConfiguration.h"
 

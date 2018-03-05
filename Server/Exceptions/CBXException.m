@@ -1,5 +1,6 @@
 
 #import "CBXException.h"
+#import "CBXConstants.h"
 
 @implementation CBXException
 
@@ -28,5 +29,13 @@
     CBXException *e = [[self alloc] initWithName:name reason:message userInfo:userInfo];
     e.HTTPErrorStatusCode = code;
     return e;
+}
+
++ (CBXException *)overrideMethodInSubclassExceptionWithClass:(Class) klass
+                                          selector:(SEL) selector {
+    NSString *msg = [NSString stringWithFormat:@"Must override [%@ %@]",
+                     NSStringFromClass(klass),
+                     NSStringFromSelector(selector)];
+    return [CBXException withMessage:msg];
 }
 @end

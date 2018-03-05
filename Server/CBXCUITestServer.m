@@ -9,6 +9,7 @@
 #import "Application+Queries.h"
 #import "CBXLogging.h"
 #import "CBXOrientation.h"
+#import "CBXRoute.h"
 
 @interface CBXCUITestServer ()
 @property (atomic, strong) RoutingHTTPServer *server;

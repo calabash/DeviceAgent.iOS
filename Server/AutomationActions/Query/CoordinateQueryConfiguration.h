@@ -1,6 +1,7 @@
 
 #import "QueryConfiguration.h"
-#import "Coordinate.h"
+
+@class Coordinate;
 
 /**
  A special case of QueryConfiguration where the element

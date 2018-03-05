@@ -1,7 +1,5 @@
 #import "TextInputFirstResponderProvider.h"
-#import "XCUIElement.h"
-#import "XCUIElementQuery.h"
-#import "XCUIApplication.h"
+#import "CBX-XCTest-Umbrella.h"
 #import "Application.h"
 #import "JSONUtils.h"
 #import "CBXConstants.h"

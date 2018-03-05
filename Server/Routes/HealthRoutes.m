@@ -2,6 +2,7 @@
 #import "CBXMacros.h"
 #import "Testmanagerd.h"
 #import "HealthRoutes.h"
+#import "CBXRoute.h"
 
 @implementation HealthRoutes
 + (NSArray<CBXRoute *> *)getRoutes {

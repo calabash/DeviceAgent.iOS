@@ -1,5 +1,6 @@
 
-#import "Gesture+Options.h"
+#import <Foundation/Foundation.h>
+#import "Gesture.h"
 
 /**
  Touch an element for any length of time. 

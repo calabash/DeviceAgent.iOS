@@ -1,5 +1,12 @@
 
 #import "QuerySpecifierByIndex.h"
+#import "CBX-XCTest-Umbrella.h"
+
+@interface XCUIElement (CBXAddtions)
+
+- (XCUIElementQuery *)query;
+
+@end
 
 @implementation QuerySpecifierByIndex
 
@@ -10,7 +17,8 @@
 + (NSString *)name { return @"index"; }
 
 - (XCUIElementQuery *)applyInternal:(XCUIElementQuery *)query {
-    return [query elementBoundByIndex:[self.value integerValue] /* returns an XCUIElement */ ].query;
+    XCUIElement *element = [query elementBoundByIndex:[self.value integerValue]];
+    return element.query;
 }
-@end
 
+@end

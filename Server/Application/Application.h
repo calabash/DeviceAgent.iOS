@@ -1,6 +1,9 @@
 
 #import <Foundation/Foundation.h>
-#import "XCUIApplication.h"
+#import <UIKit/UIApplication.h>
+#import "XCUIApplicationStateTypedef.h"
+
+@class XCUIApplication;
 
 /**
  DeviceAgent wrapper class for XCUIApplication

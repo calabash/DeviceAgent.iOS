@@ -1,6 +1,8 @@
 
 #import <Foundation/Foundation.h>
-#import "CoordinateQueryConfiguration.h"
+
+@class QueryConfiguration;
+@class JSONKeyValidator;
 
 /**
  Simple factory class for creating QueryConfiguration objects.
