@@ -20,11 +20,9 @@ static NSArray <NSString *> *identifierProperties;
  * Tree
  */
 + (NSDictionary *)tree {
-    if ([[self currentApplication] lastSnapshot] == nil) {
-        [[[self currentApplication] applicationQuery] elementBoundByIndex:0];
-        [[self currentApplication] resolve];
-    }
-    return [self snapshotTree:[[self currentApplication] lastSnapshot]];
+    XCUIApplication *app = [Application currentApplication];
+    [XCUIApplication cbxResolveSnapshot:app];
+    return [Application snapshotTree:[app lastSnapshot]];
 }
 
 + (XCElementSnapshot *)elementAtCoordinates:(float)x :(float)y {

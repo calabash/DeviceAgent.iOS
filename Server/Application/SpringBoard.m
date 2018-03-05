@@ -19,6 +19,7 @@
 #import "CBXException.h"
 #import <UIKit/UIKit.h>
 #import "CBXConstants.h"
+#import "XCTest+CBXAdditions.h"
 
 typedef enum : NSUInteger {
     SpringBoardAlertHandlerIgnoringAlerts = 0,
@@ -55,8 +56,8 @@ typedef enum : NSUInteger {
         _springBoard = [[SpringBoard alloc]
                         initPrivateWithPath:nil
                         bundleID:@"com.apple.springboard"];
-        [[_springBoard applicationQuery] elementBoundByIndex:0];
-        [_springBoard resolve];
+
+        [XCUIApplication cbxResolveSnapshot:_springBoard];
     });
     return _springBoard;
 }

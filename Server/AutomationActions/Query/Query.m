@@ -8,6 +8,7 @@
 #import "CoordinateQuery.h"
 #import "CBXException.h"
 #import "JSONUtils.h"
+#import "XCTest+CBXAdditions.h"
 
 @implementation Query
 
@@ -39,12 +40,10 @@
         @throw [CBXException withMessage:@"Cannot perform queries until application has been launched!"];
     }
 
-    if (![[Application currentApplication] lastSnapshot]) {
-        [[[Application currentApplication] applicationQuery] elementBoundByIndex:0];
-        [[Application currentApplication] resolve];
-    }
+    XCUIApplication *app = [Application currentApplication];
+    [XCUIApplication cbxResolveSnapshot:app];
+    XCUIElementQuery *query = [[app query] descendantsMatchingType:XCUIElementTypeAny];
 
-    XCUIElementQuery *query = [[Application currentApplication].query descendantsMatchingType:XCUIElementTypeAny];;
     for (QuerySpecifier *specifier in self.queryConfiguration.selectors) {
         query = [specifier applyToQuery:query];
     }

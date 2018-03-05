@@ -34,6 +34,8 @@
 - (NSString *_Nonnull)bundleID;
 - (id _Nullable)query;
 
++ (void)cbxResolveSnapshot:(XCUIApplication *_Nonnull)xcuiApplication;
+
 @end
 
 @interface XCUIElement (CBXAdditions)
