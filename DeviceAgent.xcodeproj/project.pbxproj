@@ -61,18 +61,12 @@
 		896586821CEB9B9800E8329C /* QueryFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 896586801CEB9B9800E8329C /* QueryFactory.h */; };
 		896586831CEB9B9800E8329C /* QueryFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 896586811CEB9B9800E8329C /* QueryFactory.m */; };
 		896586841CEB9B9800E8329C /* QueryFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 896586811CEB9B9800E8329C /* QueryFactory.m */; };
-		896C7C721D18AA800017CE08 /* ClearTextIn.h in Headers */ = {isa = PBXBuildFile; fileRef = 896C7C701D18AA800017CE08 /* ClearTextIn.h */; };
-		896C7C731D18AA800017CE08 /* ClearTextIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 896C7C711D18AA800017CE08 /* ClearTextIn.m */; };
-		896C7C741D18AA800017CE08 /* ClearTextIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 896C7C711D18AA800017CE08 /* ClearTextIn.m */; };
 		896C7C771D19AE990017CE08 /* ClearText.h in Headers */ = {isa = PBXBuildFile; fileRef = 896C7C751D19AE990017CE08 /* ClearText.h */; };
 		896C7C781D19AE990017CE08 /* ClearText.m in Sources */ = {isa = PBXBuildFile; fileRef = 896C7C761D19AE990017CE08 /* ClearText.m */; };
 		896C7C791D19AE990017CE08 /* ClearText.m in Sources */ = {isa = PBXBuildFile; fileRef = 896C7C761D19AE990017CE08 /* ClearText.m */; };
 		899696BA1CADF84B00BB42E2 /* EnterText.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696B81CADF84B00BB42E2 /* EnterText.h */; };
 		899696BB1CADF84B00BB42E2 /* EnterText.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696B91CADF84B00BB42E2 /* EnterText.m */; };
 		899696BC1CADF85B00BB42E2 /* EnterText.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696B91CADF84B00BB42E2 /* EnterText.m */; };
-		899696BF1CB2F22000BB42E2 /* EnterTextIn.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696BD1CB2F22000BB42E2 /* EnterTextIn.h */; };
-		899696C01CB2F22000BB42E2 /* EnterTextIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696BE1CB2F22000BB42E2 /* EnterTextIn.m */; };
-		899696C11CB2F22000BB42E2 /* EnterTextIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696BE1CB2F22000BB42E2 /* EnterTextIn.m */; };
 		899696C41CB3360900BB42E2 /* Pinch.h in Headers */ = {isa = PBXBuildFile; fileRef = 899696C21CB3360900BB42E2 /* Pinch.h */; };
 		899696C51CB3360900BB42E2 /* Pinch.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696C31CB3360900BB42E2 /* Pinch.m */; };
 		899696C61CB3360900BB42E2 /* Pinch.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696C31CB3360900BB42E2 /* Pinch.m */; };
@@ -781,16 +775,12 @@
 		8965867B1CEB961000E8329C /* QueryConfigurationFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryConfigurationFactory.m; sourceTree = "<group>"; };
 		896586801CEB9B9800E8329C /* QueryFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryFactory.h; sourceTree = "<group>"; };
 		896586811CEB9B9800E8329C /* QueryFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryFactory.m; sourceTree = "<group>"; };
-		896C7C701D18AA800017CE08 /* ClearTextIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClearTextIn.h; path = AutomationActions/Gestures/ClearTextIn.h; sourceTree = "<group>"; };
-		896C7C711D18AA800017CE08 /* ClearTextIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClearTextIn.m; path = AutomationActions/Gestures/ClearTextIn.m; sourceTree = "<group>"; };
 		896C7C751D19AE990017CE08 /* ClearText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClearText.h; path = AutomationActions/Gestures/ClearText.h; sourceTree = "<group>"; };
 		896C7C761D19AE990017CE08 /* ClearText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClearText.m; path = AutomationActions/Gestures/ClearText.m; sourceTree = "<group>"; };
 		898743BC1C5847B30084FD93 /* AppStub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898743D51C5847B30084FD93 /* DeviceAgent.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceAgent.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		899696B81CADF84B00BB42E2 /* EnterText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnterText.h; path = AutomationActions/Gestures/EnterText.h; sourceTree = "<group>"; };
 		899696B91CADF84B00BB42E2 /* EnterText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnterText.m; path = AutomationActions/Gestures/EnterText.m; sourceTree = "<group>"; };
-		899696BD1CB2F22000BB42E2 /* EnterTextIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnterTextIn.h; path = AutomationActions/Gestures/EnterTextIn.h; sourceTree = "<group>"; };
-		899696BE1CB2F22000BB42E2 /* EnterTextIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnterTextIn.m; path = AutomationActions/Gestures/EnterTextIn.m; sourceTree = "<group>"; };
 		899696C21CB3360900BB42E2 /* Pinch.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = Pinch.h; path = AutomationActions/Gestures/Pinch.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		899696C31CB3360900BB42E2 /* Pinch.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Pinch.m; path = AutomationActions/Gestures/Pinch.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		899696C71CB356BF00BB42E2 /* QueryConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryConfiguration.h; sourceTree = "<group>"; };
@@ -1581,10 +1571,6 @@
 				89C5F3591C9B9C850093A018 /* Gesture.m */,
 				899696B81CADF84B00BB42E2 /* EnterText.h */,
 				899696B91CADF84B00BB42E2 /* EnterText.m */,
-				899696BD1CB2F22000BB42E2 /* EnterTextIn.h */,
-				899696BE1CB2F22000BB42E2 /* EnterTextIn.m */,
-				896C7C701D18AA800017CE08 /* ClearTextIn.h */,
-				896C7C711D18AA800017CE08 /* ClearTextIn.m */,
 				896C7C751D19AE990017CE08 /* ClearText.h */,
 				896C7C761D19AE990017CE08 /* ClearText.m */,
 				89C5F36D1C9E32440093A018 /* DoubleTap.h */,
@@ -2695,7 +2681,6 @@
 				F54C028C2043F0EF00FD8DDE /* XCTUIApplicationMonitor-Protocol.h in Headers */,
 				F54C02B22043F0EF00FD8DDE /* XCTElementQueryResults.h in Headers */,
 				F5CE18E21E8BBA61001116A5 /* CBLSApplicationProxy.h in Headers */,
-				899696BF1CB2F22000BB42E2 /* EnterTextIn.h in Headers */,
 				F54C021F2043F0EF00FD8DDE /* XCTestConfiguration.h in Headers */,
 				F55F81A31C6DD07500A945C8 /* HTTPFileResponse.h in Headers */,
 				F54C028E2043F0EF00FD8DDE /* XCTestWaiter.h in Headers */,
@@ -2815,7 +2800,6 @@
 				F54C02852043F0EF00FD8DDE /* XCUITestContext.h in Headers */,
 				F54C029B2043F0EF00FD8DDE /* XCDeviceEvent.h in Headers */,
 				F54C026B2043F0EF00FD8DDE /* _XCTestObservationCenterImplementation.h in Headers */,
-				896C7C721D18AA800017CE08 /* ClearTextIn.h in Headers */,
 				F5538B7C1E28AC7B003EC5F3 /* DDFileLogger.h in Headers */,
 				F54C02662043F0EF00FD8DDE /* _XCTContextImplementation.h in Headers */,
 				89D538031CA20DB800F62E09 /* QuerySpecifierByText.h in Headers */,
@@ -3466,7 +3450,6 @@
 				F533496D1F3AFED7004138C7 /* CBXOrientation.m in Sources */,
 				89C5F3701C9E32440093A018 /* DoubleTap.m in Sources */,
 				89D538001CA2090500F62E09 /* QuerySpecifierFactory.m in Sources */,
-				896C7C731D18AA800017CE08 /* ClearTextIn.m in Sources */,
 				899696DA1CB45FFC00BB42E2 /* ActionConfiguration.m in Sources */,
 				899696F11CB5880F00BB42E2 /* AutomationAction.m in Sources */,
 				F55F81A81C6DD07500A945C8 /* WebSocket.m in Sources */,
@@ -3544,7 +3527,6 @@
 				89B951A21CF5B297007FD0AB /* QuerySpecifierByType.m in Sources */,
 				F5870B401CF0BEFF00B3376C /* CBXTouchEvent.m in Sources */,
 				F549E1A61D5472B900C4FA36 /* CBXInfoPlist.m in Sources */,
-				899696C01CB2F22000BB42E2 /* EnterTextIn.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3681,7 +3663,6 @@
 				F5870B411CF0BEFF00B3376C /* CBXTouchEvent.m in Sources */,
 				F5B0A1BD1CAD4E4600E056CE /* CBXRoute.m in Sources */,
 				F5538B821E28AC7B003EC5F3 /* DDLog.m in Sources */,
-				899696C11CB2F22000BB42E2 /* EnterTextIn.m in Sources */,
 				F5B0A1BA1CAD4E3A00E056CE /* ElementNotFoundException.m in Sources */,
 				899696F71CB5B8C300BB42E2 /* Coordinate.m in Sources */,
 				F5B0A1D21CAD4E8A00E056CE /* HTTPDataResponse.m in Sources */,
@@ -3702,7 +3683,6 @@
 				F547EEAE1E437937000FC160 /* CBXMachClock.m in Sources */,
 				F58D28091D4F947F000FF6C0 /* CoordinateQueryTests.m in Sources */,
 				F5B0A1E21CAD4EA700E056CE /* RouteResponse.m in Sources */,
-				896C7C741D18AA800017CE08 /* ClearTextIn.m in Sources */,
 				F54514131CF624C900A0BB14 /* CBXDevice.m in Sources */,
 				F5B0A1BE1CAD4E4600E056CE /* GestureRoutes.m in Sources */,
 				899697071CB5D5CF00BB42E2 /* Gesture+Options.m in Sources */,

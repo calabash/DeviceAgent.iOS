@@ -7,7 +7,6 @@
 #import "QueryConfigurationFactory.h"
 #import "Gesture+Options.h"
 #import "QueryFactory.h"
-#import "EnterTextIn.h"
 #import "EnterText.h"
 #import "DoubleTap.h"
 #import "Rotate.h"
