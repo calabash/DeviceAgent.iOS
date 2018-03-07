@@ -2,6 +2,8 @@
 #import "Application.h"
 #import "CBX-XCTest-Umbrella.h"
 #import "XCTest+CBXAdditions.h"
+#import "XCElementSnapshot.h"
+#import "XCElementSnapshot-Hitpoint.h"
 #import "Testmanagerd.h"
 #import "ThreadUtils.h"
 #import "CBXWaiter.h"
@@ -9,6 +11,7 @@
 #import "CBXConstants.h"
 #import "CBXException.h"
 #import "CBXMachClock.h"
+#import "JSONUtils.h"
 
 @interface Application ()
 @property (nonatomic, strong) XCUIApplication *app;
@@ -176,6 +179,25 @@ static Application *currentApplication;
     NSTimeInterval end = [[CBXMachClock sharedClock] absoluteTime];
     NSTimeInterval elapsed = end - start;
     DDLogDebug(@"Took %@ seconds to resolve application snapshot", @(elapsed));
+}
+
++ (NSDictionary *)tree {
+    XCUIApplication *app = [Application currentApplication];
+    [XCUIApplication cbxResolveSnapshot:app];
+    return [Application snapshotTree:[app lastSnapshot]];
+}
+
++ (NSDictionary *)snapshotTree:(XCElementSnapshot *)snapshot {
+    NSMutableDictionary *json = [JSONUtils snapshotOrElementToJSON:snapshot];
+
+    if (snapshot.children.count) {
+        NSMutableArray *children = [NSMutableArray array];
+        for (XCElementSnapshot *child in snapshot.children) {
+            [children addObject:[self snapshotTree:child]];
+        }
+        json[@"children"] = children;
+    }
+    return json;
 }
 
 @end

@@ -62,4 +62,11 @@
  */
 + (BOOL)hasSession;
 
+/**
+ Returns a tree representation of the application view hierarchy.
+
+ @return a dictionary of views.
+ */
++ (NSDictionary *_Nonnull)tree;
+
 @end

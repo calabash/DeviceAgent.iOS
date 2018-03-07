@@ -2,7 +2,7 @@
 #import "QueryRoutes.h"
 #import "CBX-XCTest-Umbrella.h"
 #import "QueryConfigurationFactory.h"
-#import "Application+Queries.h"
+#import "Application.h"
 #import "CBXConstants.h"
 #import "QueryFactory.h"
 #import "JSONUtils.h"
