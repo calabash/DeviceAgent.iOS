@@ -125,9 +125,9 @@ static Application *currentApplication;
 }
 
 + (NSDictionary *)tree {
-    XCUIApplication *app = [Application currentApplication];
-    [XCUIApplication cbxResolveSnapshot:app];
-    return [Application snapshotTree:[app lastSnapshot]];
+    XCUIApplication *application = [Application currentApplication];
+    XCElementSnapshot *snapshot = [application cbxXCElementSnapshot];
+    return [Application snapshotTree:snapshot];
 }
 
 + (NSDictionary *)snapshotTree:(XCElementSnapshot *)snapshot {
