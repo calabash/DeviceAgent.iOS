@@ -69,7 +69,7 @@
    * "Failure fetching attributes for element" failures.
    */
   XCUIApplication *application = [self application];
-  [XCUIApplication cbxResolveSnapshot:application];
+  [XCUIApplication cbxResolveApplication:application];
 
   CGRect appFrame = application.lastSnapshot.frame;
 

@@ -26,13 +26,7 @@
     return applicationQuery;
 }
 
-+ (void)cbxResolveSnapshot:(XCUIApplication *)xcuiApplication {
-    if ([xcuiApplication lastSnapshot]) {
-        DDLogDebug(@"Resolving application snapshot: already has a 'last snapshot'; nothing to do");
-        return;
-    }
-
-    DDLogDebug(@"Resolving application snapshot: 'last snapshot' does not exist");
++ (void)cbxResolveApplication:(XCUIApplication *_Nonnull)xcuiApplication {
     NSTimeInterval start = [[CBXMachClock sharedClock] absoluteTime];
 
     id applicationQuery = [XCUIApplication cbxApplicationQuery:xcuiApplication];

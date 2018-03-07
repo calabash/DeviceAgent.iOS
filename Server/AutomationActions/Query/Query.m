@@ -41,7 +41,7 @@
     }
 
     XCUIApplication *app = [Application currentApplication];
-    [XCUIApplication cbxResolveSnapshot:app];
+    [XCUIApplication cbxResolveApplication:app];
     XCUIElementQuery *query = [[app query] descendantsMatchingType:XCUIElementTypeAny];
 
     for (QuerySpecifier *specifier in self.queryConfiguration.selectors) {

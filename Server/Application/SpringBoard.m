@@ -57,7 +57,7 @@ typedef enum : NSUInteger {
                         initPrivateWithPath:nil
                         bundleID:@"com.apple.springboard"];
 
-        [XCUIApplication cbxResolveSnapshot:_springBoard];
+        [XCUIApplication cbxResolveApplication:_springBoard];
     });
     return _springBoard;
 }
