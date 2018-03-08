@@ -12,7 +12,7 @@ module TestApp
       begin
         DeviceAgent::Automator.client.send(:launch_aut)
         wait_for_app(:skip_touch_check)
-      rescue
+      ensure
         options[:terminate_aut_before_test] = original_value
       end
     end
