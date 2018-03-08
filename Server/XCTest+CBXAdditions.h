@@ -28,14 +28,23 @@
 - (instancetype _Nonnull)initWithBundleIdentifier:(NSString *_Nonnull)arg1;
 - (NSInteger)processID;
 - (XCElementSnapshot *_Nullable)lastSnapshot;
-- (XCApplicationQuery *_Nullable)applicationQuery;
 - (void)resolve;
 - (NSString *_Nonnull)bundleID;
+
+// As of Xcode 9.3 beta 4 applicationQuery is nil until query is called.
+//
+// After query is called, applicationQuery == query (object equal)
+//
+// When POST /terminate is called, applicationQuery becomes nil
+// until query is called.
+//
+// Before Xcode 9.3 beta 4, DeviceAgent used applicationQuery.
+// After Xcode 9.3 beta 4, applicationQuery calls are replaced with query.
 - (XCApplicationQuery *_Nullable)query;
++ (id _Nullable)cbxQuery:(XCUIApplication *_Nonnull)xcuiApplication;
 
 - (XCUIElementQuery *_Nonnull)cbxQueryForDescendantsOfAnyType;
 - (XCElementSnapshot *_Nullable)cbxXCElementSnapshot;
-
 + (void)cbxResolveApplication:(XCUIApplication *_Nonnull)xcuiApplication;
 
 @end

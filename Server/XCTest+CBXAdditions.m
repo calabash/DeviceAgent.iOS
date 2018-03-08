@@ -6,8 +6,8 @@
 
 @implementation XCUIApplication (CBXAddtions)
 
-+ (id _Nullable)cbxApplicationQuery:(XCUIApplication *)xcuiApplication {
-    SEL selector = NSSelectorFromString(@"applicationQuery");
++ (id _Nullable)cbxQuery:(XCUIApplication *)xcuiApplication {
+    SEL selector = NSSelectorFromString(@"query");
 
     NSMethodSignature *signature;
     Class klass = NSClassFromString(@"XCUIApplication");
@@ -18,16 +18,16 @@
     invocation.target = xcuiApplication;
     invocation.selector = selector;
 
-    id applicationQuery = nil;
-    void *buffer;
+    id query = nil;
+    void *buffer = nil;
     [invocation invoke];
     [invocation getReturnValue:&buffer];
-    applicationQuery = (__bridge id)buffer;
-    return applicationQuery;
+    query = (__bridge id)buffer;
+    return query;
 }
 
 + (void)cbxResolveApplication:(XCUIApplication *_Nonnull)xcuiApplication {
-    id applicationQuery = [XCUIApplication cbxApplicationQuery:xcuiApplication];
+    id applicationQuery = [XCUIApplication cbxQuery:xcuiApplication];
     [XCUIApplication cbxResolveApplication:xcuiApplication
                           applicationQuery:applicationQuery];
 }
@@ -49,7 +49,7 @@
     [invocation setArgument:&index atIndex:2];
 
     XCUIElement *element = nil;
-    void *buffer;
+    void *buffer = nil;
     [invocation invoke];
     [invocation getReturnValue:&buffer];
     element = (__bridge XCUIElement *)buffer;
@@ -58,7 +58,7 @@
 }
 
 - (XCElementSnapshot *_Nullable)cbxXCElementSnapshot {
-    id applicationQuery = [XCUIApplication cbxApplicationQuery:self];
+    id applicationQuery = [XCUIApplication cbxQuery:self];
 
     Class klass = NSClassFromString(@"XCApplicationQuery");
     SEL selector = NSSelectorFromString(@"elementSnapshotForDebugDescription");
@@ -72,7 +72,7 @@
     invocation.selector = selector;
 
     XCElementSnapshot *snapshot = nil;
-    void *buffer;
+    void *buffer = nil;
     [invocation invoke];
     [invocation getReturnValue:&buffer];
     snapshot = (__bridge XCElementSnapshot *)buffer;
@@ -80,7 +80,7 @@
 }
 
 - (XCUIElementQuery *_Nonnull)cbxQueryForDescendantsOfAnyType {
-    id applicationQuery = [XCUIApplication cbxApplicationQuery:self];
+    id applicationQuery = [XCUIApplication cbxQuery:self];
 
     [XCUIApplication cbxResolveApplication:self
                           applicationQuery:applicationQuery];
@@ -100,7 +100,7 @@
     [invocation setArgument:&elementType atIndex:2];
 
     XCUIElementQuery *query = nil;
-    void *buffer;
+    void *buffer = nil;
     [invocation invoke];
     [invocation getReturnValue:&buffer];
     query = (__bridge XCUIElementQuery *)buffer;
