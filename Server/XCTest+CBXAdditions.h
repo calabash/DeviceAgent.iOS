@@ -32,7 +32,10 @@
 - (XCApplicationQuery *_Nullable)applicationQuery;
 - (void)resolve;
 - (NSString *_Nonnull)bundleID;
-- (id _Nullable)query;
+- (XCApplicationQuery *_Nullable)query;
+
+- (XCUIElementQuery *_Nonnull)cbxQueryForDescendantsOfAnyType;
+- (XCElementSnapshot *_Nullable)cbxXCElementSnapshot;
 
 + (void)cbxResolveApplication:(XCUIApplication *_Nonnull)xcuiApplication;
 

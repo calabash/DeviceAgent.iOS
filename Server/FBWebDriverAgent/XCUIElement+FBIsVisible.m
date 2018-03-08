@@ -71,7 +71,7 @@
   XCUIApplication *application = [self application];
   [XCUIApplication cbxResolveApplication:application];
 
-  CGRect appFrame = application.lastSnapshot.frame;
+  CGRect appFrame = [[application cbxXCElementSnapshot] frame];
 
   if (!CGRectIntersectsRect(appFrame, self.frame)) {
       return NO;
