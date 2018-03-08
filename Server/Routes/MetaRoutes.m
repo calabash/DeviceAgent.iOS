@@ -18,12 +18,12 @@
              [CBXRoute get:endpoint(@"/sessionIdentifier", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
 
                  NSUUID *testUUID = [[XCTestConfiguration activeTestConfiguration] sessionIdentifier];
+                 NSDictionary *body = @
+                 {
+                     @"sessionId" : testUUID ? [testUUID UUIDString] : [NSNull null]
+                 };
 
-                 if (testUUID) {
-                     [response respondWithJSON:@{@"sessionId" : [testUUID UUIDString]}];
-                 } else {
-                     [response respondWithJSON:@{@"sessionId" : [NSNull null]}];
-                 }
+                 [response respondWithJSON:body];
              }],
 
              [CBXRoute post:endpoint(@"/terminate", 1.0)
@@ -34,7 +34,8 @@
                       XCUIApplicationState state;
                       state = [Application terminateApplicationWithIdentifier:bundleIdentifier];
                       [response respondWithJSON:@{@"state" : @(state)}];
-                  }],
+                  }
+              ],
 
              [CBXRoute post:endpoint(@"/pid", 1.0) withBlock:^(RouteRequest *request,
                                                                NSDictionary *data,
