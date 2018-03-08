@@ -27,16 +27,8 @@ static Application *currentApplication;
     });
 }
 
-+ (BOOL)hasSession {
-    return [currentApplication hasSession];
-}
-
 + (XCUIApplication *)currentApplication {
     return currentApplication.app;
-}
-
-- (BOOL)hasSession {
-    return self.app.exists;
 }
 
 - (void)startSession {

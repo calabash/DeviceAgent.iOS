@@ -58,11 +58,6 @@
 + (XCUIApplicationState)terminateApplication:(XCUIApplication *_Nullable)application;
 
 /**
- Returns true if the current application has a session.
- */
-+ (BOOL)hasSession;
-
-/**
  Returns a tree representation of the application view hierarchy.
 
  @return a dictionary of views.
