@@ -48,8 +48,7 @@
                  }
 
                  XCUIApplication *application;
-                 application = [[XCUIApplication alloc] initPrivateWithPath:nil
-                                                                   bundleID:identifier];
+                 application = [[XCUIApplication alloc] initWithBundleIdentifier:identifier];
                  NSString *pid;
                  if (application) {
                      pid = [NSString stringWithFormat:@"%@", @(application.processID)];

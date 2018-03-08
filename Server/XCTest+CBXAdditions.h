@@ -25,8 +25,7 @@
 @interface XCUIApplication (CBXAdditions)
 
 - (UIInterfaceOrientation)interfaceOrientation;
-- (instancetype _Nonnull)initPrivateWithPath:(NSString *_Nullable)path
-                                    bundleID:(NSString *_Nullable)identifier;
+- (instancetype _Nonnull)initWithBundleIdentifier:(NSString *_Nonnull)arg1;
 - (NSInteger)processID;
 - (XCElementSnapshot *_Nullable)lastSnapshot;
 - (XCApplicationQuery *_Nullable)applicationQuery;

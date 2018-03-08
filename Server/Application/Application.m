@@ -2,15 +2,12 @@
 #import "Application.h"
 #import "CBX-XCTest-Umbrella.h"
 #import "XCTest+CBXAdditions.h"
-#import "XCElementSnapshot.h"
-#import "XCElementSnapshot-Hitpoint.h"
 #import "Testmanagerd.h"
 #import "ThreadUtils.h"
 #import "CBXWaiter.h"
 #import "CBXMachClock.h"
 #import "CBXConstants.h"
 #import "CBXException.h"
-#import "CBXMachClock.h"
 #import "JSONUtils.h"
 
 @interface Application ()
@@ -89,25 +86,21 @@ static Application *currentApplication;
 
 + (XCUIApplicationState)terminateApplicationWithIdentifier:(NSString *)bundleIdentifier {
     XCUIApplication *application;
-    application = [[XCUIApplication alloc] initPrivateWithPath:nil
-                                                      bundleID:bundleIdentifier];
-
+    application = [[XCUIApplication alloc] initWithBundleIdentifier:bundleIdentifier];
     return [Application terminateApplication:application];
 }
 
-+ (void)launchBundlePath:(NSString *)bundlePath
-                bundleID:(NSString *)bundleID
-              launchArgs:(NSArray *)launchArgs
-                     env:(NSDictionary *)environment
-      terminateIfRunning:(BOOL)terminateIfRunning {
++ (void)launchAppWithBundleId:(NSString *_Nullable)bundleId
+                   launchArgs:(NSArray *_Nullable)launchArgs
+                    launchEnv:(NSDictionary *_Nullable)environment
+           terminateIfRunning:(BOOL)terminateIfRunning {
 
-    XCUIApplication *application = [[XCUIApplication alloc] initPrivateWithPath:bundlePath
-                                                                       bundleID:bundleID];
+    XCUIApplication *application = [[XCUIApplication alloc]
+                                    initWithBundleIdentifier:bundleId];
 
     if (terminateIfRunning) {
         [Application terminateApplication:application];
     }
-
 
     application.launchArguments = launchArgs ?: @[];
     application.launchEnvironment = environment ?: @{};
