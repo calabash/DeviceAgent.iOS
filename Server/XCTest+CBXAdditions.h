@@ -54,6 +54,7 @@
 - (XCElementSnapshot *_Nullable)lastSnapshot;
 - (void)resolve;
 - (XCUICoordinate *_Nonnull)hitPointCoordinate;
+- (XCUIElementQuery *_Nonnull)query;
 
 @end
 
