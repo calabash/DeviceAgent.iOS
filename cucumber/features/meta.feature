@@ -11,6 +11,7 @@ And I can ask about the build attributes of the DeviceAgent
 
 @springboard
 @springboard_alerts
+@not_local_devices
 Scenario: SpringBoard alerts
 Given the app has launched
 Then I can tell DeviceAgent not to automatically dismiss SpringBoard alerts
