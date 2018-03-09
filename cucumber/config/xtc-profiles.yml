@@ -4,7 +4,7 @@ tags:        -p not_xtc
 args:        --expand
 common:      -p tags -p args --tags ~@simulator
 
-default:     -p common
+default:     -p common --tags ~@dylib_injection
 
 wip:         -p common --tags @wip
 flicker:     -p common --tags @flickering
