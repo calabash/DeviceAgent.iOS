@@ -10,6 +10,7 @@
 #import "XCApplicationQuery.h"
 #import "XCUIElement.h"
 #import "XCUIHitPointResult.h"
+#import "XCUIDevice.h"
 #endif
 
 // Defined in XCTAutomationSupport framework, so it is safe to import
