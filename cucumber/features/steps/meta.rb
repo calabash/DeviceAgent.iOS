@@ -34,9 +34,9 @@ end
 
 World(TestApp::Meta)
 
-And(/^I make a note of the AUT pid and session id$/) do
+And(/^I make a note of the AUT pid and test-session identifier$/) do
   @aut_pid = process_pid("sh.calaba.TestApp")
-  @session_id = session_identifier
+  @session_identifier = session_identifier["sessionId"]
 end
 
 Then(/^I can ask for the server version$/) do
@@ -71,11 +71,12 @@ And(/^I can ask about the build attributes of the DeviceAgent$/) do
     be >= RunLoop::Version.new("8.0"))
 end
 
-Then(/^I can ask for the session identifier$/) do
-  identifier = session_identifier
+Then(/^I can ask for the test-session identifier$/) do
+  hash = session_identifier
 
-  expect(identifier).not_to be == nil
-  expect(identifier.count).not_to be == 0
+  expect(hash).not_to be == nil
+  expect(hash.count).not_to be == 0
+  expect(hash["sessionId"]).not_to be == nil
 end
 
 Then(/^I can ask for information about the device under test$/) do
@@ -128,8 +129,13 @@ And(/^I can tell the AUT has not quit because the pid is the same$/) do
 end
 
 And(/^I can tell there is a new session because the identifier changed$/) do
-  identifier = session_identifier
+  identifier = session_identifier["sessionId"]
   expect(identifier).not_to be == @session_identifier
+end
+
+And(/^the DeviceAgent test-session has not changed$/) do
+  identifier = session_identifier["sessionId"]
+  expect(identifier).to be == @session_identifier
 end
 
 When(/^I POST \/terminate$/) do
