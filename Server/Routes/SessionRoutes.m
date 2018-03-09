@@ -1,7 +1,8 @@
+
+#import "SessionRoutes.h"
 #import "CBXCUITestServer.h"
 #import "CBX-XCTest-Umbrella.h"
 #import "Application.h"
-#import "SessionRoutes.h"
 #import "CBXConstants.h"
 #import "CBXMacros.h"
 #import "CBXRoute.h"
@@ -10,12 +11,13 @@
 
 + (NSArray <CBXRoute *> *)getRoutes {
     return @[
-             [CBXRoute post:endpoint(@"/session", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
-                 NSDictionary *json = DATA_TO_JSON(request.body);
-                 NSString *bundleId = json[CBX_BUNDLE_ID_KEY] ?: json[@"bundleId"] ?: json[@"bundle_id"];
-                 NSArray *launchArgs = json[CBX_LAUNCH_ARGS_KEY] ?: @[];
-                 NSDictionary *environment = json[CBX_ENVIRONMENT_KEY] ?: @{};
-                 NSNumber *terminateNumber = json[CBX_TERMINATE_AUT_IF_RUNNING_KEY] ?: @(NO);
+             [CBXRoute post:endpoint(@"/session", 1.0) withBlock:^(RouteRequest *request,
+                                                                   NSDictionary *data,
+                                                                   RouteResponse *response) {
+                 NSString *bundleId = data[CBX_BUNDLE_ID_KEY] ?: data[@"bundleId"] ?: data[@"bundle_id"];
+                 NSArray *launchArgs = data[CBX_LAUNCH_ARGS_KEY] ?: @[];
+                 NSDictionary *environment = data[CBX_ENVIRONMENT_KEY] ?: @{};
+                 NSNumber *terminateNumber = data[CBX_TERMINATE_AUT_IF_RUNNING_KEY] ?: @(NO);
                  BOOL terminateIfRunning = [terminateNumber boolValue];
 
                  // Starting in Xcode 9, we can no longer check if the

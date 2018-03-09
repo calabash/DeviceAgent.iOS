@@ -1,6 +1,5 @@
 #import "RoutingHTTPServer.h"
 #import "RoutingConnection.h"
-#import "CBXMacros.h"
 #import "CBXRoute.h"
 #import "CBXConstants.h"
 
@@ -145,7 +144,10 @@
 
 - (void)handleRoute:(Route *)route withRequest:(RouteRequest *)request response:(RouteResponse *)response {
 	if (route.handler) {
-		route.handler(request, DATA_TO_JSON(request.body), response);
+        NSDictionary *body = [NSJSONSerialization JSONObjectWithData:request.body
+                                                             options:0
+                                                               error:NULL];
+		route.handler(request, body, response);
 	} else {
 		#pragma clang diagnostic push
 		#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
@@ -215,7 +217,11 @@
                     if ([route isKindOfClass:[CBXRoute class]]) {
                         path = ((CBXRoute *)route).path;
                     }
-                    DDLogDebug(@"%@ %@ %@", request.method, path, DATA_TO_JSON(request.body) ?: @"");
+
+                    NSDictionary *body = [NSJSONSerialization JSONObjectWithData:request.body
+                                                                         options:0
+                                                                           error:NULL];
+                    DDLogDebug(@"%@ %@ %@", request.method, path, body ?: @"");
 					[self handleRoute:route withRequest:request response:response];
 				}
 			});
