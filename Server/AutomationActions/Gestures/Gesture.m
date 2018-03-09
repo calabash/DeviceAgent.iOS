@@ -73,21 +73,10 @@
             [coords addObjectsFromArray:cq.coordinates];
         }
     } else {
-        NSArray <XCUIElement *> *elements = [self.query execute];
-        if (elements.count == 0) {
-            @throw [CBXException withMessage:@"Error performing gesture: No elements match query."];
-        }
-        for (XCUIElement *el in elements) {
-            /*
-                TODO: discussion of 'visibility'
-            */
-            CGRect frame = el.wdFrame;
-            CGPoint center = CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame));
-            [coords addObject:[Coordinate fromRaw:center]];
-        }
+        @throw [CBXException withMessage:@"Only gestures with coordinates are supported"];
     }
     
-    //Testmanagerd calls are async, but the http server is sync so we need to synchronize it.
+    // Testmanagerd calls are async
     __block NSError *err;
     [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
 
