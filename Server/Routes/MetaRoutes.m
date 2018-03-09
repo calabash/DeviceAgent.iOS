@@ -11,6 +11,7 @@
 #import "InvalidArgumentException.h"
 #import "CBXConstants.h"
 #import "CBXRoute.h"
+#import "XCTest+CBXAdditions.h"
 
 @implementation MetaRoutes
 + (NSArray <CBXRoute *> *)getRoutes {
@@ -33,7 +34,10 @@
                       NSString *bundleIdentifier = data[CBX_BUNDLE_ID_KEY];
                       XCUIApplicationState state;
                       state = [Application terminateApplicationWithIdentifier:bundleIdentifier];
-                      [response respondWithJSON:@{@"state" : @(state)}];
+                      NSString *stateString;
+                      stateString = [XCUIApplication cbxStringForApplicationState:state];
+                      [response respondWithJSON:@{@"state" : @(state),
+                                                  @"state_string" : stateString}];
                   }
               ],
 
@@ -57,7 +61,18 @@
                      pid = [NSString stringWithFormat:@"%@", @(-1)];
                  }
 
-                 [response respondWithJSON:@{@"pid" : pid}];
+                 XCUIApplicationState state = [application state];
+                 NSString *stateString;
+                 stateString = [XCUIApplication cbxStringForApplicationState:state];
+
+                 NSDictionary *json =
+                 @{
+                   @"pid" : pid,
+                   @"state" : @(state),
+                   @"state_string" : stateString
+                   };
+
+                 [response respondWithJSON:json];
              }],
 
              [CBXRoute get:endpoint(@"/device", 1.0) withBlock:^(RouteRequest *request,

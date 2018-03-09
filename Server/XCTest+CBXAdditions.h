@@ -11,6 +11,7 @@
 #import "XCUIElement.h"
 #import "XCUIHitPointResult.h"
 #import "XCUIDevice.h"
+#import "XCUIApplicationStateTypedef.h"
 #endif
 
 // Defined in XCTAutomationSupport framework, so it is safe to import
@@ -31,6 +32,9 @@
 - (XCElementSnapshot *_Nullable)lastSnapshot;
 - (void)resolve;
 - (NSString *_Nonnull)bundleID;
+- (XCUIApplicationState)state;
+- (void)setState:(XCUIApplicationState)newState;
++ (NSString *_Nonnull)cbxStringForApplicationState:(XCUIApplicationState)state;
 
 // As of Xcode 9.3 beta 4 applicationQuery is nil until query is called.
 //

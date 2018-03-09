@@ -1,10 +1,30 @@
 
 #import "XCTest+CBXAdditions.h"
 #import "CBX-XCTest-Umbrella.h"
-#import "CBXConstants.h"
-#import "CBXMachClock.h"
+#import "CBXException.h"
 
-@implementation XCUIApplication (CBXAddtions)
+// This implementation does not implement all the methods in the category
+// interface.  This is by design - the category is used to expose private
+// methods.  It is safe to ignore these warnings.
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wincomplete-implementation"
+@implementation XCUIApplication (CBXAdditions)
+
++ (NSString *_Nonnull)cbxStringForApplicationState:(XCUIApplicationState)state {
+    switch (state) {
+        case XCUIApplicationStateUnknown: { return @"unknown"; }
+        case XCUIApplicationStateNotRunning: { return @"not running"; }
+        case XCUIApplicationStateRunningBackgroundSuspended: {
+            return @"background suspended";
+        }
+        case XCUIApplicationStateRunningBackground: { return @"background"; }
+        case XCUIApplicationStateRunningForeground: { return @"foreground"; }
+        default: {
+            @throw [CBXException withFormat:@"Cannot find string for "
+                    "application state: %@", @(state)];
+        }
+    }
+}
 
 + (id _Nullable)cbxQuery:(XCUIApplication *)xcuiApplication {
     SEL selector = NSSelectorFromString(@"query");
@@ -108,3 +128,4 @@
 }
 
 @end
+#pragma clang diagnostic pop
