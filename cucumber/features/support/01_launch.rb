@@ -221,7 +221,7 @@ After do |scenario|
           client = DeviceAgent::Automator.client
           if client && client.send(:app_running?, "sh.calaba.TestApp")
             client.send(:terminate_app, "sh.calaba.TestApp")
-            sleep(1.0)
+            sleep(2.0)
           end
         rescue => e
           RunLoop.log_error("#{e}")
