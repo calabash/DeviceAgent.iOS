@@ -230,6 +230,8 @@ static NSDictionary *typeStringToElementType;
                                 @(XCUIElementTypeHandle) : @"Handle",
                                 @(XCUIElementTypeStepper) : @"Stepper",
                                 @(XCUIElementTypeTab) : @"Tab",
+                                @(XCUIElementTypeQueryProvider) : @"QueryProvider",
+                                @(XCUIElementTypeTouchBar) : @"TouchBar",
                                 };
         NSMutableDictionary *_typeStringToElementType = [NSMutableDictionary dictionaryWithCapacity:elementTypeToString.count];
         for (NSNumber *type in elementTypeToString) {
