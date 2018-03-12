@@ -71,7 +71,7 @@ Then(/^the (alpha|zero) button is not visible and not hitable$/) do |mark|
 
   options = {
     :retry_frequency => 0.1,
-    :timeout => 2
+    :timeout => 4
   }
 
   message = "Waited for #{options[:timeout]} seconds for #{mark} button to disappear"
@@ -111,7 +111,7 @@ Then(/^the animated button is not visible after the (touch|tap), but it is hitab
 
   # The query must happen before the second animation starts.
   elapsed = Time.now - @animation_start
-  expect(elapsed).to be < 6.0
+  expect(elapsed).to be < 12.0
 
   element = query({marked: identifier}).first
   expect(element).to be_truthy
