@@ -35,8 +35,8 @@ end
 World(TestApp::Meta)
 
 And(/^I make a note of the AUT pid and test-session identifier$/) do
-  @aut_pid = process_pid("sh.calaba.TestApp")
-  @session_identifier = session_identifier["sessionId"]
+  @@aut_pid = process_pid("sh.calaba.TestApp")
+  @@session_identifier = session_identifier["sessionId"]
 end
 
 Then(/^I can ask for the server version$/) do
@@ -120,22 +120,22 @@ end
 
 And(/^I can tell the AUT has quit because the pid is different$/) do
   aut_pid = process_pid("sh.calaba.TestApp")
-  expect(aut_pid).not_to be == @aut_pid
+  expect(aut_pid).not_to be == @@aut_pid
 end
 
 And(/^I can tell the AUT has not quit because the pid is the same$/) do
   aut_pid = process_pid("sh.calaba.TestApp")
-  expect(aut_pid).to be == @aut_pid
+  expect(aut_pid).to be == @@aut_pid
 end
 
 And(/^I can tell there is a new session because the identifier changed$/) do
   identifier = session_identifier["sessionId"]
-  expect(identifier).not_to be == @session_identifier
+  expect(identifier).not_to be == @@session_identifier
 end
 
 And(/^the DeviceAgent test-session has not changed$/) do
   identifier = session_identifier["sessionId"]
-  expect(identifier).to be == @session_identifier
+  expect(identifier).to be == @@session_identifier
 end
 
 When(/^I POST \/terminate$/) do
