@@ -7,6 +7,11 @@
  */
 @interface JSONUtils : NSObject
 /**
+ @return List of supported XCUIElementType's
+*/
++ (NSArray *) elementTypes;
+
+/**
  Convert an object conforming to the FBElement protocol into JSON
  that can be returned to the client.
 

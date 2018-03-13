@@ -26,6 +26,11 @@
 
  Responds with information about device and application orientations.
 
+ ## GET @"/element-types"
+
+ Responds with a JSON list of XCTest.framework element types as human-readable
+ strings.
+
  */
 @interface QueryRoutes : NSObject<CBRouteProvider>
 

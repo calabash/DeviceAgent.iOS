@@ -10,6 +10,10 @@
 static NSDictionary *elementTypeToString;
 static NSDictionary *typeStringToElementType;
 
++ (NSArray *)elementTypes {
+    return [[typeStringToElementType allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+}
+
 + (NSMutableDictionary *)snapshotOrElementToJSON:(NSObject<FBElement> *)snapshotOrElement {
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
 
@@ -230,7 +234,6 @@ static NSDictionary *typeStringToElementType;
                                 @(XCUIElementTypeHandle) : @"Handle",
                                 @(XCUIElementTypeStepper) : @"Stepper",
                                 @(XCUIElementTypeTab) : @"Tab",
-                                @(XCUIElementTypeQueryProvider) : @"QueryProvider",
                                 @(XCUIElementTypeTouchBar) : @"TouchBar",
                                 };
         NSMutableDictionary *_typeStringToElementType = [NSMutableDictionary dictionaryWithCapacity:elementTypeToString.count];
