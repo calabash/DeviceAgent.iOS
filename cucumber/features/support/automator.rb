@@ -236,6 +236,10 @@ module DeviceAgent
     def fail(*several_variants)
       Automator.client.fail(*several_variants)
     end
+
+    def element_types
+      Automator.client.element_types
+    end
   end
 end
 

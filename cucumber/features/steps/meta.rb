@@ -16,6 +16,19 @@ module TestApp
         options[:terminate_aut_before_test] = original_value
       end
     end
+
+    def get_xcode_element_types
+      xct_path = Dir.glob("#{RunLoop::Xcode.new.developer_dir}/**/XCTest")
+                    .detect { |f| f.include? "iPhoneOS" }
+      args = ["xcrun", "strings", xct_path]
+      hash = RunLoop::Shell.run_shell_command(args)
+      types = hash[:out].split("\n")
+                        .select { |line| /^XCUIElementType\w/.match line }
+                        .map { |line| line.gsub("XCUIElementType", "").downcase }
+                        .sort
+      # We don't need XCUIElementTypeQueryProvider
+      types - ["queryprovider"]
+    end
   end
 end
 
@@ -81,6 +94,11 @@ end
 
 Then(/^I can tell DeviceAgent to automatically dismiss SpringBoard alerts$/) do
   expect(set_dismiss_springboard_alerts_automatically(true)).to be_truthy
+end
+
+Then(/^I can compare Xcode element types with DeviceAgent supported element types$/) do
+  xcode_types = get_xcode_element_types
+  expect(xcode_types - element_types).to be_empty
 end
 
 When(/^I POST \/session again with term-on-launch (true|false)$/) do |true_or_false|

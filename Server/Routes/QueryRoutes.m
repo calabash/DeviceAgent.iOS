@@ -86,6 +86,12 @@
                                                                 NSDictionary *data,
                                                                 RouteResponse *response) {
           [response respondWithJSON:[CBXOrientation orientations]];
+      }],
+
+      [CBXRoute get:endpoint(@"/element-types", 1.0) withBlock:^(RouteRequest *request,
+                                                                 NSDictionary *data,
+                                                                 RouteResponse *response) {
+          [response respondWithJSON:@{ @"types": [JSONUtils elementTypes] }];
       }]
       ];
 }
