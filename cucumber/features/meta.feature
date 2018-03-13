@@ -16,6 +16,10 @@ Given the app has launched
 Then I can tell DeviceAgent not to automatically dismiss SpringBoard alerts
 Then I can tell DeviceAgent to automatically dismiss SpringBoard alerts
 
+Scenario: XCUIElement types
+Given the app has launched
+Then I can compare Xcode element types with DeviceAgent supported element types
+
 @term
 Scenario: Terminating the AUT on POST /session
 Given the app has launched
