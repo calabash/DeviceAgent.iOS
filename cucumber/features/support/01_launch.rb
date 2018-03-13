@@ -16,6 +16,12 @@ module Calabash
       device_agent.running?
     end
 
+    def shutdown_running_device_agent?(scenario)
+      return false if RunLoop::Environment.xtc?
+      names = scenario.tags.map { |tag| tag.name }
+      !names.include?("@keep_device_agent_running")
+    end
+
     def xcode
       @xcode ||= RunLoop::Xcode.new
     end
@@ -130,7 +136,13 @@ Before do |scenario|
     # See the guard below: RunLoop.run(options) is
     # only called on first launch or when the
     # DeviceAgent is not running.
-    :shutdown_device_agent_before_launch => true,
+    #
+    # On Test Cloud, shutdown will raise an error.
+    #
+    # If you need to keep DeviceAgent running regardless,
+    # tag Scenario with @keep_device_agent_running
+    shutdown_device_agent_before_launch:
+    launcher.shutdown_running_device_agent?(scenario),
 
     # The default in run-loop is keep the AUT running if it
     # is already running.  UITest and Calabash users can call
@@ -200,10 +212,10 @@ end
 
 After("@term") do |scenario|
   Calabash::Launcher.instance.first_launch = true
+  DeviceAgent::Shared.class_variable_set(:@@app_ready, nil)
 end
 
 After do |scenario|
-
   # See bin/test/jmoody scripts.
   on_scenario_failure = ENV["ON_SCENARIO_FAILURE"]
   if on_scenario_failure
@@ -217,18 +229,13 @@ After do |scenario|
       # Restart the app if a Scenario fails
       if scenario.failed?
         Calabash::Launcher.instance.first_launch = true
-        begin
-          client = DeviceAgent::Automator.client
-          if client && client.send(:app_running?, "sh.calaba.TestApp")
-            client.send(:terminate_app, "sh.calaba.TestApp")
-            sleep(2.0)
-          end
-        rescue => e
-          RunLoop.log_error("#{e}")
-          if !RunLoop::Environment.xtc?
-            exit!(1)
-          else
-            raise e
+        DeviceAgent::Shared.class_variable_set(:@@app_ready, nil)
+        client = DeviceAgent::Automator.client
+        if client && client.send(:app_running?, "sh.calaba.TestApp")
+          client.send(:terminate_app, "sh.calaba.TestApp")
+          sleep(1.0)
+          if client.send(:app_running?, "sh.calaba.TestApp")
+            raise "sh.calaba.TestApp is running!?!"
           end
         end
       end
@@ -253,8 +260,10 @@ After do |scenario|
 end
 
 at_exit do
-  # See bin/test/jmoody scripts.
-  if ENV["QUIT_AUT_AFTER_CUCUMBER"] == "1"
-    DeviceAgent::Automator.shutdown
+  if !RunLoop::Environment.xtc?
+    # See bin/test/jmoody scripts.
+    if ENV["QUIT_AUT_AFTER_CUCUMBER"] == "1"
+      DeviceAgent::Automator.shutdown
+    end
   end
 end
