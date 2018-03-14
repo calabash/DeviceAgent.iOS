@@ -12,6 +12,25 @@ Bundler.with_clean_env do
     system("bundle update")
 
     require "run_loop"
+    require "fileutils"
+
+    hash = RunLoop::Shell.run_shell_command(["bundle", "show", "run_loop"],
+                                            {log_cmd: true})
+
+    target = File.join(hash[:out].strip,
+                       "lib", "run_loop", "device_agent",
+                       "app", "DeviceAgent-Runner.app")
+    source = File.join("..", "Products", "app", "DeviceAgent",
+                       "DeviceAgent-Runner.app")
+
+    FileUtils.rm_rf(target)
+    FileUtils.cp_r(source, target)
+
+    target = "#{target}.zip"
+    source = "#{source}.zip"
+
+    FileUtils.rm_rf(target)
+    FileUtils.cp(source, target)
 
     FileUtils.rm_rf("reports")
     FileUtils.mkdir_p("reports")
@@ -31,4 +50,3 @@ Bundler.with_clean_env do
     system(env, *cmd)
   end
 end
-
