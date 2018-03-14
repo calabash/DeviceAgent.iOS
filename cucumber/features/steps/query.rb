@@ -197,7 +197,7 @@ end
 
 Then(/^I ask for the tree representation of the view hierarchy$/) do
   elements = tree
-  expect(elements.count).to be >= 11
+  expect(elements.count).to be >= 7
   expect(elements.count).to be <= 13
 end
 

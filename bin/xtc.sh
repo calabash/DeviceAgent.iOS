@@ -27,7 +27,7 @@ SKIP_IPA_BUILD: iff 1, then skip re-building the ipa.
                 'make test-ipa' will still be called, so changes in the
                 features/ directory will be staged and sent to Test Cloud.
 BUILD_RUN_LOOP: iff 1, then rebuild run-loop gem before uploading.
-BUILD_RUN_LOOP: iff 1, then rebuild Calabash iOS gem before uploading.
+BUILD_CALABASH: iff 1, then rebuild Calabash iOS gem before uploading.
 
 "
 
@@ -81,10 +81,12 @@ fi
 if [ -z $XTC_ENDPOINT ]; then
   API_TOKEN="${XTC_PRODUCTION_API_TOKEN}"
   ENDPOINT="${XTC_PRODUCTION_ENDPOINT}"
+  XTC_USER="${XTC_PRODUCTION_USER}"
   info "Uploading to Production"
 else
   API_TOKEN="${XTC_STAGING_API_TOKEN}"
   ENDPOINT="${XTC_STAGING_ENDPOINT}"
+  XTC_USER="${XTC_STAGING_USER}"
   info "Uploading to Staging"
 fi
 

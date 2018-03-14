@@ -502,7 +502,6 @@
 		F55F84121C6E438200A945C8 /* CBXException.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C41C6DDF1300A945C8 /* CBXException.m */; };
 		F55F84131C6E438200A945C8 /* ElementNotFoundException.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C21C6DDF1300A945C8 /* ElementNotFoundException.m */; };
 		F55F84151C6E438800A945C8 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BD1C6DDF1300A945C8 /* Application.m */; };
-		F55F84171C6E438800A945C8 /* Application+Queries.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BB1C6DDF1300A945C8 /* Application+Queries.m */; };
 		F55F84181C6E438E00A945C8 /* CBXCUITestServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BF1C6DDF1300A945C8 /* CBXCUITestServer.m */; };
 		F56F44951D733A8200E58B0D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56F44941D733A8200E58B0D /* HealthKit.framework */; };
 		F57287491D747E0800C65208 /* AppStub.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F57287481D747E0800C65208 /* AppStub.xcassets */; };
@@ -572,7 +571,6 @@
 		F5B0A1B51CAD4E2700E056CE /* QuerySpecifierByPropertyLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5381C1CA359B200F62E09 /* QuerySpecifierByPropertyLike.m */; };
 		F5B0A1B61CAD4E2F00E056CE /* Testmanagerd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F34F1C9A60E70093A018 /* Testmanagerd.m */; };
 		F5B0A1B71CAD4E3300E056CE /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BD1C6DDF1300A945C8 /* Application.m */; };
-		F5B0A1B81CAD4E3300E056CE /* Application+Queries.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BB1C6DDF1300A945C8 /* Application+Queries.m */; };
 		F5B0A1B91CAD4E3A00E056CE /* CBXException.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C41C6DDF1300A945C8 /* CBXException.m */; };
 		F5B0A1BA1CAD4E3A00E056CE /* ElementNotFoundException.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C21C6DDF1300A945C8 /* ElementNotFoundException.m */; };
 		F5B0A1BC1CAD4E3A00E056CE /* InvalidArgumentException.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F3661C9C5BC20093A018 /* InvalidArgumentException.m */; };
@@ -1183,8 +1181,6 @@
 		F55F81221C6DD07500A945C8 /* RoutingHTTPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutingHTTPServer.m; sourceTree = "<group>"; };
 		F55F83551C6DD99900A945C8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F55F83561C6DD99900A945C8 /* TestRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = TestRunner.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
-		F55F83BA1C6DDF1300A945C8 /* Application+Queries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Application+Queries.h"; sourceTree = "<group>"; };
-		F55F83BB1C6DDF1300A945C8 /* Application+Queries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Application+Queries.m"; sourceTree = "<group>"; };
 		F55F83BC1C6DDF1300A945C8 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		F55F83BD1C6DDF1300A945C8 /* Application.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Application.m; sourceTree = "<group>"; };
 		F55F83BE1C6DDF1300A945C8 /* CBXCUITestServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXCUITestServer.h; sourceTree = "<group>"; };
@@ -2101,8 +2097,6 @@
 				F55F83BD1C6DDF1300A945C8 /* Application.m */,
 				F5E6631E1D74946000068CE9 /* SpringBoard.h */,
 				F5E6631F1D74946000068CE9 /* SpringBoard.m */,
-				F55F83BA1C6DDF1300A945C8 /* Application+Queries.h */,
-				F55F83BB1C6DDF1300A945C8 /* Application+Queries.m */,
 				F5A14DE31E02CF84001A0037 /* CBLSApplicationWorkspace.h */,
 				F5A14DE41E02CF84001A0037 /* CBLSApplicationWorkspace.m */,
 				F5CE18E01E8BBA61001116A5 /* CBLSApplicationProxy.h */,
@@ -3514,7 +3508,6 @@
 				F5870B431CF0BEFF00B3376C /* TouchPath.m in Sources */,
 				89512BDC1C9EEC3C0027D61E /* Drag.m in Sources */,
 				F55F81A61C6DD07500A945C8 /* HTTPRedirectResponse.m in Sources */,
-				F55F84171C6E438800A945C8 /* Application+Queries.m in Sources */,
 				F5CE18E31E8BBA61001116A5 /* CBLSApplicationProxy.m in Sources */,
 				F55F840B1C6E437100A945C8 /* HealthRoutes.m in Sources */,
 				F5538B731E28AC7B003EC5F3 /* DDAbstractDatabaseLogger.m in Sources */,
@@ -3652,7 +3645,6 @@
 				F549E1A51D5472B100C4FA36 /* CBXInfoPlistTest.m in Sources */,
 				899696E71CB46C0100BB42E2 /* CoordinateQueryConfiguration.m in Sources */,
 				F5B0A1DF1CAD4EA700E056CE /* HTTPResponseProxy.m in Sources */,
-				F5B0A1B81CAD4E3300E056CE /* Application+Queries.m in Sources */,
 				F58D280D1D4F947F000FF6C0 /* CBXiOSVersionInlinesTest.m in Sources */,
 				F5B0A1B71CAD4E3300E056CE /* Application.m in Sources */,
 				F58D27FE1D4F947F000FF6C0 /* ActionConfigurationTests.m in Sources */,

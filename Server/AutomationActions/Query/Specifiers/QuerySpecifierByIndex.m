@@ -1,12 +1,7 @@
 
 #import "QuerySpecifierByIndex.h"
 #import "CBX-XCTest-Umbrella.h"
-
-@interface XCUIElement (CBXAddtions)
-
-- (XCUIElementQuery *)query;
-
-@end
+#import "XCTest+CBXAdditions.h"
 
 @implementation QuerySpecifierByIndex
 

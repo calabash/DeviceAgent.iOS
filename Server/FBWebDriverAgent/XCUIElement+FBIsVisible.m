@@ -69,9 +69,9 @@
    * "Failure fetching attributes for element" failures.
    */
   XCUIApplication *application = [self application];
-  [XCUIApplication cbxResolveSnapshot:application];
+  [XCUIApplication cbxResolveApplication:application];
 
-  CGRect appFrame = application.lastSnapshot.frame;
+  CGRect appFrame = [[application cbxXCElementSnapshot] frame];
 
   if (!CGRectIntersectsRect(appFrame, self.frame)) {
       return NO;

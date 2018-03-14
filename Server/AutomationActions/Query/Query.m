@@ -33,16 +33,17 @@
 
 - (NSArray<XCUIElement *> *)execute {
     if (self.queryConfiguration.selectors.count == 0) {
-        @throw [CBXException withMessage:@"Query must have at least one specifier"];
+        @throw [CBXException withMessage:@"Query must have at least one "
+                "specifier"];
     }
 
     if (![Application currentApplication]) {
-        @throw [CBXException withMessage:@"Cannot perform queries until application has been launched!"];
+        @throw [CBXException withMessage:@"Current application is nil. Cannot "
+                "perform queries until POST /session route is called"];
     }
 
-    XCUIApplication *app = [Application currentApplication];
-    [XCUIApplication cbxResolveSnapshot:app];
-    XCUIElementQuery *query = [[app query] descendantsMatchingType:XCUIElementTypeAny];
+    XCUIApplication *application = [Application currentApplication];
+    XCUIElementQuery *query = [application cbxQueryForDescendantsOfAnyType];
 
     for (QuerySpecifier *specifier in self.queryConfiguration.selectors) {
         query = [specifier applyToQuery:query];

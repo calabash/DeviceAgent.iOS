@@ -41,8 +41,8 @@ typedef enum : NSUInteger {
 
 @implementation SpringBoard
 
-- (instancetype)initPrivateWithPath:(id)arg1 bundleID:(id)arg2 {
-    self = [super initPrivateWithPath:arg1 bundleID:arg2];
+- (instancetype)initWithBundleIdentifier:(NSString *)bundleIdentifier {
+    self = [super initWithBundleIdentifier:bundleIdentifier];
     if (self) {
         _shouldDismissAlertsAutomatically = YES;
     }
@@ -54,10 +54,9 @@ typedef enum : NSUInteger {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _springBoard = [[SpringBoard alloc]
-                        initPrivateWithPath:nil
-                        bundleID:@"com.apple.springboard"];
+                        initWithBundleIdentifier:@"com.apple.springboard"];
 
-        [XCUIApplication cbxResolveSnapshot:_springBoard];
+        [XCUIApplication cbxResolveApplication:_springBoard];
     });
     return _springBoard;
 }

@@ -1,6 +1,6 @@
 
-#import "XCTest/XCUIApplication.h"
 #import "DeviceEventRoutes.h"
+#import "CBX-XCTest-Umbrella.h"
 #import "XCDeviceEvent.h"
 #import "Testmanagerd.h"
 #import "CBXConstants.h"
@@ -8,6 +8,9 @@
 #import "CBXException.h"
 #import "CBXOrientation.h"
 #import "CBXRoute.h"
+#import "Application.h"
+#import "XCTest+CBXAdditions.h"
+#import "CBXMachClock.h"
 
 /*
  TODO:
@@ -31,36 +34,40 @@
       [CBXRoute post:endpoint(@"/home", 1.0) withBlock:^(RouteRequest *request,
                                                          NSDictionary *data,
                                                          RouteResponse *response) {
-          int page = HOME_BUTTON_PAGE;
-          int usage = PRESS;
-          int duration = 1;
 
-          id event = [NSClassFromString(@"XCDeviceEvent") deviceEventWithPage:page
-                                                                        usage:usage
-                                                                     duration:duration];
+          // This will cause the current app to go into the background.
+          // To show Siri, touch for longer.
+          NSTimeInterval duration = 0.001;
+          if (data[CBX_DURATION_KEY]) {
+              duration = [data[CBX_DURATION_KEY] doubleValue];
+          }
 
-          [[Testmanagerd get] _XCT_performDeviceEvent:event completion:^(NSError *e) {
-              if (e) {
-                  DDLogDebug(@"%@", e);
-              }
-          }];
+          NSUInteger page = HOME_BUTTON_PAGE;
+          NSUInteger usage = PRESS;
+
+          id event = [NSClassFromString(@"XCDeviceEvent")
+                      deviceEventWithPage:page
+                      usage:usage
+                      duration:duration];
+
+          DDLogDebug(@"Will touch home button for %@ seconds", @(duration));
+
+          __block NSError *outerError = nil;
+          [[Testmanagerd get] _XCT_performDeviceEvent:event
+                                           completion:^(NSError *innerError) {
+                                               outerError = innerError;
+
+                                           }
+           ];
+
+          if (outerError) {
+              @throw [CBXException withFormat:@"Error touching home button:\n%@",
+                      [outerError localizedDescription]];
+          } else {
+              [response respondWithJSON:@{}];
+          }
       }],
-      [CBXRoute post:endpoint(@"/siri", 1.0) withBlock:^(RouteRequest *request,
-                                                         NSDictionary *data,
-                                                         RouteResponse *response) {
-          int page = HOME_BUTTON_PAGE;
-          int usage = PRESS;
-          int duration = 5;
-          id event = [NSClassFromString(@"XCDeviceEvent") deviceEventWithPage:page
-                                                                        usage:usage
-                                                                     duration:duration];
 
-          [[Testmanagerd get] _XCT_performDeviceEvent:event completion:^(NSError *e) {
-              if (e) {
-                  DDLogDebug(@"%@", e);
-              }
-          }];
-      }],
       [CBXRoute post:endpoint(@"/volume", 1.0) withBlock:^(RouteRequest *request,
                                                            NSDictionary *body,
                                                            RouteResponse *response) {

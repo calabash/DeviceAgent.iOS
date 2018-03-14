@@ -30,8 +30,8 @@ module TestApp
       end
 
       pan_between_coordinates(from_point, to_point,
-                                        {duration: duration,
-                                        allow_inertia: allow_inertia})
+                              {duration: duration,
+                               allow_inertia: allow_inertia})
     end
 
     def scroll(direction, mark, allow_inertia, wait_options={})
@@ -166,6 +166,8 @@ And(/^I can pan with (\d+) fingers?$/) do |fingers|
   to_point = {:x => 160, :y => 460}
 
   pan_between_coordinates(from_point, to_point, options)
+
+  sleep(0.5)
 
   wait_for_pan_action_text("Pan")
   clear_pan_action_label

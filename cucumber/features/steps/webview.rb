@@ -13,7 +13,7 @@ Given(/^I am looking at the (UIWebView|WKWebView|SafariWebController)$/) do |typ
 
   if @safari_controller
     if RunLoop::Environment.xtc?
-      sleep(10.0)
+      sleep(20.0)
     else
       sleep(4.0)
     end

@@ -42,11 +42,21 @@ module DeviceAgent
     end
 
     def touch_tab(tabname)
-      # Dismiss the keyboard if it is showing
       if keyboard_visible?
-        touch({marked:"Done"})
-        wait_for_animations
+        if !query({marked: "Done", type: "Button"}).empty?
+          touch({marked:"Done", type: "Button"})
+        elsif !query({marked: "dismiss text view keyboard"}).empty?
+          touch({marked: "dismiss text view keyboard"})
+        elsif !query({marked: "Search", type: "Button"}).empty?
+          touch({marked: "Search", type: "Button"})
+        elsif !query({marked: "Hide keyboard", type: "Button"}).empty?
+          touch({marked: "Hide keyboard", type: "Button"}).empty?
+        else
+          raise "Keyboard is showing, but there is no way to dismiss it"
+        end
       end
+
+      wait_for_animations
 
       touch({marked: tabname})
       wait_for_animations

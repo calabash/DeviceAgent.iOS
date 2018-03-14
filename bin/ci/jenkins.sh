@@ -4,9 +4,9 @@ source bin/simctl.sh
 source bin/xcode.sh
 source bin/log.sh
 
-ensure_valid_core_sim_service
-
 export DEVELOPER_DIR="/Xcode/9.2/Xcode.app/Contents/Developer"
+
+ensure_valid_core_sim_service
 
 set -e
 

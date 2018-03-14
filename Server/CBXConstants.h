@@ -6,7 +6,6 @@ static const NSUInteger ddLogLevel = DDLogLevelDebug;
 
 static NSUInteger const CBX_DEFAULT_SERVER_PORT = 27753;
 static NSString *const CBXWebServerErrorDomain = @"sh.calaba.xcuitest-server";
-static NSString *const CBX_BUNDLE_PATH_KEY = @"bundlePath";
 static NSString *const CBX_BUNDLE_ID_KEY = @"bundleID";
 static NSString *const CBX_LAUNCH_ARGS_KEY = @"launchArgs";
 static NSString *const CBX_ENVIRONMENT_KEY = @"environment";

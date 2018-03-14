@@ -10,6 +10,8 @@
 #import "XCApplicationQuery.h"
 #import "XCUIElement.h"
 #import "XCUIHitPointResult.h"
+#import "XCUIDevice.h"
+#import "XCUIApplicationStateTypedef.h"
 #endif
 
 // Defined in XCTAutomationSupport framework, so it is safe to import
@@ -25,16 +27,30 @@
 @interface XCUIApplication (CBXAdditions)
 
 - (UIInterfaceOrientation)interfaceOrientation;
-- (instancetype _Nonnull)initPrivateWithPath:(NSString *_Nullable)path
-                                    bundleID:(NSString *_Nullable)identifier;
+- (instancetype _Nonnull)initWithBundleIdentifier:(NSString *_Nonnull)arg1;
 - (NSInteger)processID;
 - (XCElementSnapshot *_Nullable)lastSnapshot;
-- (XCApplicationQuery *_Nullable)applicationQuery;
 - (void)resolve;
 - (NSString *_Nonnull)bundleID;
-- (id _Nullable)query;
+- (XCUIApplicationState)state;
+- (void)setState:(XCUIApplicationState)newState;
++ (NSString *_Nonnull)cbxStringForApplicationState:(XCUIApplicationState)state;
 
-+ (void)cbxResolveSnapshot:(XCUIApplication *_Nonnull)xcuiApplication;
+// As of Xcode 9.3 beta 4 applicationQuery is nil until query is called.
+//
+// After query is called, applicationQuery == query (object equal)
+//
+// When POST /terminate is called, applicationQuery becomes nil
+// until query is called.
+//
+// Before Xcode 9.3 beta 4, DeviceAgent used applicationQuery.
+// After Xcode 9.3 beta 4, applicationQuery calls are replaced with query.
+- (XCApplicationQuery *_Nullable)query;
++ (id _Nullable)cbxQuery:(XCUIApplication *_Nonnull)xcuiApplication;
+
+- (XCUIElementQuery *_Nonnull)cbxQueryForDescendantsOfAnyType;
+- (XCElementSnapshot *_Nullable)cbxXCElementSnapshot;
++ (void)cbxResolveApplication:(XCUIApplication *_Nonnull)xcuiApplication;
 
 @end
 
@@ -43,6 +59,7 @@
 - (XCElementSnapshot *_Nullable)lastSnapshot;
 - (void)resolve;
 - (XCUICoordinate *_Nonnull)hitPointCoordinate;
+- (XCUIElementQuery *_Nonnull)query;
 
 @end
 
