@@ -33,11 +33,16 @@
   *visible = isVisible;
 
   if (!isVisible) {
-      *point = CGPointMake(-1, -1);
+    *point = CGPointMake(-1, -1);
   } else {
+    // Starting in Xcode 9.3
+    if ([self respondsToSelector:@selector(hitPointCoordinate)]) {
       XCUICoordinate *coordinate = self.hitPointCoordinate;
       *point = coordinate.screenPoint;
+    } else {
+      [self.lastSnapshot getHitPoint:point visibility:visible];
     }
+  }
 }
 
 @end
@@ -74,7 +79,7 @@
   CGRect appFrame = [[application cbxXCElementSnapshot] frame];
 
   if (!CGRectIntersectsRect(appFrame, self.frame)) {
-      return NO;
+    return NO;
   }
 
   return [(NSNumber *)[self fb_attributeValue:FB_XCAXAIsVisibleAttribute] boolValue];
@@ -82,34 +87,69 @@
 
 - (id)fb_attributeValue:(NSNumber *)attribute
 {
-    NSDictionary *attributesResult = [[XCAXClient_iOS sharedClient]
-                                      attributesForElementSnapshot:self
-                                      attributeList:@[attribute]];
-    return (id __nonnull)attributesResult[attribute];
+  NSDictionary *attributesResult = [[XCAXClient_iOS sharedClient]
+                                    attributesForElementSnapshot:self
+                                    attributeList:@[attribute]];
+  return (id __nonnull)attributesResult[attribute];
 }
 
 - (void)getHitPoint:(CGPoint *)point visibility:(BOOL *)visible {
-  // r26 = *(int8_t *)__XCShouldUseHostedViewConversion.shouldUseHostedViewConversion | r9;
-  CGPoint intermediate;
-  int8_t flag;
-  XCUIHitPointResult *result = [self hitPoint:&flag];
+  // Starting in Xcode 9.3
+  if ([self respondsToSelector:@selector(hitPoint:)]) {
+    // r26 = *(int8_t *)__XCShouldUseHostedViewConversion.shouldUseHostedViewConversion | r9;
+    int8_t flag;
+    CGPoint intermediate;
 
-  *visible = result.isHittable;
-  if (result.isHittable) {
-    intermediate = result.hitPoint;
+    XCUIHitPointResult *result = [self hitPoint:&flag];
+
+    *visible = result.isHittable;
+    if (result.isHittable) {
+      intermediate = result.hitPoint;
+    } else {
+      intermediate = CGPointMake(-1, -1);
+    }
+
+    *point = intermediate;
+
+    DDLogDebug(@"Finding hit point for XCElementSnapshot: %@\n"
+    "hitpoint: %@\n"
+    "visible: %@\n"
+    "hosted conversion flag: %@",
+    self,
+    [NSString stringWithFormat:@"(%@, %@)", @(intermediate.x), @(intermediate.y)],
+    result.isHittable ? @"YES" : @"NO", @(flag));
   } else {
-    intermediate = CGPointMake(-1, -1);
+    *point = [XCElementSnapshot cbxHitPointFromLastSnapshot:self];
+    BOOL isVisible = self.fb_isVisible;
+    *visible = isVisible;
+
+    if (!isVisible) {
+      *point = CGPointMake(-1, -1);
+    } else {
+      *point = [XCElementSnapshot cbxHitPointFromLastSnapshot:self];
+    }
   }
+}
 
-  *point = intermediate;
++ (CGPoint)cbxHitPointFromLastSnapshot:(XCElementSnapshot *)snapshot {
 
-  DDLogDebug(@"Finding hit point for XCElementSnapshot: %@\n"
-             "hitpoint: %@\n"
-             "visible: %@\n"
-             "hosted conversion flag: %@",
-             self,
-             [NSString stringWithFormat:@"(%@, %@)", @(intermediate.x), @(intermediate.y)],
-             result.isHittable ? @"YES" : @"NO", @(flag));
+  SEL selector = @selector(hitPoint);
+  Class klass = [snapshot class];
+
+  NSMethodSignature *signature;
+  signature = [klass instanceMethodSignatureForSelector:selector];
+  NSInvocation *invocation;
+
+  invocation = [NSInvocation invocationWithMethodSignature:signature];
+  invocation.target = snapshot;
+  invocation.selector = selector;
+
+  [invocation invoke];
+
+  CGPoint point = CGPointMake(-1, -1);
+  [invocation getReturnValue:(void **) &point];
+
+  return point;
 }
 
 @end
