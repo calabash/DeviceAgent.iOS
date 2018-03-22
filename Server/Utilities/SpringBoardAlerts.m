@@ -118,6 +118,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"OK", YES, @"No SIM Card Installed"),
              alert(@"Not Now", NO, @"Carrier Settings Update"),
              alert(@"Not Now", NO, @"Enable Dictation?"),
+             alert(@"Dismiss", NO, @"iPhone is not Activated"),
              alert(@"Cancel", NO, @"Sign In to iTunes Store"),
              alert(@"OK", YES, @"Would Like to Access Apple Music And Your Media Library"),
              alert(@"Allow", YES, @"Would Like to Add VPN Configurations"),
