@@ -159,6 +159,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"OK", YES, @"wil toegang tot uw bewegings- en fitnessactiviteit"),
              alert(@"OK", YES, @"wil toegang tot de camera"),
              alert(@"OK", YES, @"wil u berichten sturen"),
+             alert(@"Negeer", YES, @"is niet geactiveerd"),
              alert(@"Open", YES, @"Openen met")
              ];
 }
