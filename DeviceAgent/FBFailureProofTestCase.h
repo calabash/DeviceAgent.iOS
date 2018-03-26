@@ -14,6 +14,9 @@
  * The license for this source code can be found in the root directory of this
  * source tree under Licenses/.
  */
+
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
  
 #import <Foundation/Foundation.h>
 #import <XCTest/XCTestCase.h>

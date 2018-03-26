@@ -1,4 +1,7 @@
 
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
 #ifndef XCT_UI_TESTING_AVAILABLE
 typedef NS_ENUM(NSUInteger, XCUIApplicationState) {
     XCUIApplicationStateUnknown = 0,

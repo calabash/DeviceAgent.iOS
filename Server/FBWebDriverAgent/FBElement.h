@@ -7,6 +7,9 @@
  *  at the root of this project.
  */
 
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
 #import <CoreGraphics/CoreGraphics.h>
 #import <Foundation/Foundation.h>
 
