@@ -11,7 +11,7 @@ if [ $# == 0 ]; then
   echo "1. Removes the leading new line from the DeviceAgent-Runner.app/Info.plist."
   echo "2. Syncs the DeviceAgent-Runner.app/Info.plist and DeviceAgent.xctest/Info.plist"
   echo "   CFBundleShortVersionString and CFBundleVersion with the AppStub."
-  echo "3. Resigns if the DeviceAgent-Runner was build for physical devices."
+  echo "3. Resigns if the DeviceAgent-Runner."
   echo ""
   echo "This script is suitable for xcode-build-phase Run Scripts and"
   echo "the make ipa-agent rule."
