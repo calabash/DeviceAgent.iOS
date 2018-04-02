@@ -1,4 +1,3 @@
-@simulator
 @springboard_alerts
 Feature: Interacting with SpringBoard Alerts
 

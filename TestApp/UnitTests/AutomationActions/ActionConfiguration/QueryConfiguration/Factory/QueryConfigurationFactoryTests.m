@@ -1,6 +1,8 @@
 
-#import "QueryConfigurationFactory.h"
 #import <XCTest/XCTest.h>
+#import "QueryConfigurationFactory.h"
+#import "QueryConfiguration.h"
+#import "CoordinateQueryConfiguration.h"
 
 @interface QueryConfigurationFactoryTests : XCTestCase
 

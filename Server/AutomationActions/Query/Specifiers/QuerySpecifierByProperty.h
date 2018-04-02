@@ -1,6 +1,9 @@
 
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
+#import <Foundation/Foundation.h>
 #import "QuerySpecifier.h"
-#import "JSONUtils.h"
 
 /**
  Specify elements by property value.

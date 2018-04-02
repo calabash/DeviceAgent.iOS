@@ -1,6 +1,18 @@
 
-#import "CoordinateQueryConfiguration.h"
 #import "DoubleTap.h"
+#import "CBX-XCTest-Umbrella.h"
+#import "XCTest+CBXAdditions.h"
+#import "CoordinateQueryConfiguration.h"
+#import "QueryConfiguration.h"
+#import "Query.h"
+#import "CBXTouchEvent.h"
+#import "Application.h"
+#import "InvalidArgumentException.h"
+#import "Coordinate.h"
+#import "TouchPath.h"
+#import "Gesture+Options.h"
+#import "CBXConstants.h"
+
 
 @implementation DoubleTap
 

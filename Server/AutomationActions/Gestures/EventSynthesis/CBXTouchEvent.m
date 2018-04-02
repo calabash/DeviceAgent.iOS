@@ -1,10 +1,12 @@
 
 #import "CBXTouchEvent.h"
+#import "XCSynthesizedEventRecord.h"
+#import "TouchPath.h"
+#import <UIKit/UIApplication.h>
 
 @interface CBXTouchEvent ()
 
 @property (nonatomic, strong) XCSynthesizedEventRecord *event;
-//@property (nonatomic, strong) XCTouchGesture *gesture;
 @property (nonatomic) UIInterfaceOrientation orientation;
 
 + (XCSynthesizedEventRecord *)eventRecordWithOrientation:(UIInterfaceOrientation)orientation;

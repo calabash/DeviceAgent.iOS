@@ -1,6 +1,11 @@
 
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
 #import <Foundation/Foundation.h>
-#import "CoordinateQueryConfiguration.h"
+
+@class QueryConfiguration;
+@class JSONKeyValidator;
 
 /**
  Simple factory class for creating QueryConfiguration objects.

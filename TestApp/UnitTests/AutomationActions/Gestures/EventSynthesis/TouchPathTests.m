@@ -1,9 +1,4 @@
 
-// required if we import XCPointerEvent
-#ifndef CDUnknownBlockType
-typedef void (^CDUnknownBlockType)(void);
-#endif
-
 #import <XCTest/XCTest.h>
 #import "TouchPath.h"
 #import "XCPointerEventPath.h"

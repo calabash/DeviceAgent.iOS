@@ -4,6 +4,7 @@
 #import "QuerySpecifierFactory.h"
 #import "QueryConfiguration.h"
 #import "JSONUtils.h"
+#import "CBXConstants.h"
 
 @interface QueryConfiguration ()
 @property (nonatomic, strong) JSONKeyValidator *validator;

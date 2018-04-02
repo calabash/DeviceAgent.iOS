@@ -1,6 +1,12 @@
 
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
+#import <Foundation/Foundation.h>
 #import "ActionConfiguration.h"
-#import "QuerySpecifier.h"
+
+@class CoordinateQueryConfiguration;
+@class QuerySpecifier;
 
 /**
  A wrapper for the JSON passed to a query.
@@ -15,8 +21,6 @@
  
  See also CoordinateQueryConfiguration
  */
-
-@class CoordinateQueryConfiguration;
 @interface QueryConfiguration : ActionConfiguration
 
 /**

@@ -1,3 +1,19 @@
+### 1.2.4
+
+Provides support for Xcode 9.3 and prepares for OSS release.
+
+* Xcode: Gemüse Bouche dylib libraries and testable UI in TestApp #265
+* Scripts to submit XCUITest target for TestApp to Test Cloud #266
+* Appium JUnit: can submit an example to App Center/Test Cloud #267
+* Xcode 9.3 beta 2 support #268
+* Xcode 9.3 beta 3 support #269
+* Server: remove EnterTextIn and ClearTextIn; unused gestures #270
+* added Russian SpringBoard alerts localizations (DeviceAgent) #271
+* Xcode 9.3 beta 4 support #272
+* Add test for XCUIElementType's #273
+* Fix visibility for elements on macOS sierra running Xcode < 9.3 #274
+* OSS: changes for MSFT open source review #275
+
 ### 1.2.3
 
 * Xcode: target + script for running XCUITests against arbitrary .app #260

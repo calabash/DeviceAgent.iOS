@@ -59,10 +59,14 @@ docs:
 # Installs DeviceAgent onto your machine
 #
 # Builds DeviceAgent for Sim and Device, installs to
-# ~/.calabash/DeviceAgent/simulator and 
+# ~/.calabash/DeviceAgent/simulator and
 # ~/.calabash/DeviceAgent/device
 install:
 	bin/install/device_agent.sh
+
+# dylibs for testing dylib injection
+gemuse:
+	bin/make/gemuse-libs.sh
 
 # Below this line are rules that have been renamed.
 app-unit:
@@ -76,4 +80,3 @@ ipa-unit:
 unit:
 	echo "Replaced with 'make unit-tests'"
 	exit 1
-

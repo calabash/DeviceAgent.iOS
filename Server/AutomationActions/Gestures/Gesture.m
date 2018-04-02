@@ -2,11 +2,19 @@
 #import "CoordinateQuery.h"
 #import "ThreadUtils.h"
 #import "Gesture.h"
+#import "XCUIElement+WebDriverAttributes.h"
+#import "Testmanagerd.h"
+#import "CBXTouchEvent.h"
+#import "CBXException.h"
+#import "JSONKeyValidator.h"
+#import "Coordinate.h"
+#import "CBXConstants.h"
 
 @implementation Gesture
 
 + (NSString *)name {
-    _must_override_exception;
+    @throw [CBXException overrideMethodInSubclassExceptionWithClass:self.class
+                                                           selector:_cmd];
 }
 
 + (NSArray <NSString *> *)optionalKeys { return @[ CBX_DURATION_KEY ]; }
@@ -37,15 +45,14 @@
 }
 
 - (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray<Coordinate *> *)coordinates {
-    _must_override_exception;
-}
+    @throw [CBXException overrideMethodInSubclassExceptionWithClass:self.class
+                                                           selector:_cmd];
 
-- (XCTouchGesture *)gestureWithCoordinates:(NSArray<Coordinate *> *)coordinates {
-    _must_override_exception;
 }
 
 - (CBXTouchEvent *)cbxEventWithCoordinates:(NSArray<Coordinate *> *)coordinates {
-    _must_override_exception;
+    @throw [CBXException overrideMethodInSubclassExceptionWithClass:self.class
+                                                           selector:_cmd];
 }
 
 - (void)validate {
@@ -66,21 +73,10 @@
             [coords addObjectsFromArray:cq.coordinates];
         }
     } else {
-        NSArray <XCUIElement *> *elements = [self.query execute];
-        if (elements.count == 0) {
-            @throw [CBXException withMessage:@"Error performing gesture: No elements match query."];
-        }
-        for (XCUIElement *el in elements) {
-            /*
-                TODO: discussion of 'visibility'
-            */
-            CGRect frame = el.wdFrame;
-            CGPoint center = CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame));
-            [coords addObject:[Coordinate fromRaw:center]];
-        }
+        @throw [CBXException withMessage:@"Only gestures with coordinates are supported"];
     }
     
-    //Testmanagerd calls are async, but the http server is sync so we need to synchronize it.
+    // Testmanagerd calls are async
     __block NSError *err;
     [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
 

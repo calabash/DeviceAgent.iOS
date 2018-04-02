@@ -7,8 +7,12 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
 #import "XCElementSnapshot.h"
-#import "XCUIElement.h"
+
+@class XCUIElement;
 
 NS_ASSUME_NONNULL_BEGIN
 

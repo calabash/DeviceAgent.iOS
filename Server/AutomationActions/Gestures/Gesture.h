@@ -1,27 +1,11 @@
 
-/*
- *  Lots of extra imports here so that all subclasses have them.
- */
-#import "InvalidArgumentException.h"
-#import "CBXTouchEvent.h"
-#import "TouchPath.h"
-#import "XCSynthesizedEventRecord.h"
-#import "GestureConfiguration.h"
-#import "XCPointerEventPath.h"
-#import "JSONKeyValidator.h"
-#import "XCTouchGesture.h"
-#import "XCTestDriver.h"
-#import "Testmanagerd.h"
-#import "XCTouchPath.h"
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
+#import <Foundation/Foundation.h>
 #import "CBXProtocols.h"
-#import "CBXConstants.h"
-#import "Coordinate.h"
+#import "AutomationAction.h"
 #import "CBXTypedefs.h"
-#import "JSONUtils.h"
-#import "CBXMacros.h"
-#import "Query.h"
-#import "Application.h"
-#import "XCUIApplication.h"
 
 /**
  Convenience protocol describing functionality of a Gesture class.
@@ -31,6 +15,12 @@
  */
 
 @class Gesture;
+@class Coordinate;
+@class XCSynthesizedEventRecord;
+@class CBXTouchEvent;
+@class GestureConfiguration;
+@class Query;
+
 @protocol Gesture <NSObject, JSONKeyValidatorProvider>
 @required
 
@@ -55,19 +45,9 @@
 - (XCSynthesizedEventRecord *)eventWithCoordinates:(NSArray <Coordinate *> *)coordinates;
 
 /**
- Used if `testmanagerd.protocolVerison == 0x0`.
- Results will be sent via _XCT_performTouchGesture:completion:
-
- @param coordinates An array containing all coordinates from the CoordinateQueryConfiguration
- **Should contain identical logic to eventWithCoordinates:**
- */
-- (XCTouchGesture *)gestureWithCoordinates:(NSArray <Coordinate *> *)coordinates;
-
-/**
  WIP: This method will eventually replace:
 
  * eventWithCoordinates:
- * gestureWithCoordinates:
 
  @param coordinates An array containing all coordinates from the CoordinateQueryConfiguration
  */

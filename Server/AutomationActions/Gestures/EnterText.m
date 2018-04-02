@@ -4,6 +4,7 @@
 #import "ThreadUtils.h"
 #import "EnterText.h"
 #import "CBXConstants.h"
+#import "GestureConfiguration.h"
 
 @implementation EnterText
 

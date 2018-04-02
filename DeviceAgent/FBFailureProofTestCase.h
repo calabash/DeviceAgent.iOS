@@ -14,11 +14,23 @@
  * The license for this source code can be found in the root directory of this
  * source tree under Licenses/.
  */
+
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
  
 #import <Foundation/Foundation.h>
-#import "XCTestCase.h"
+#import <XCTest/XCTestCase.h>
+
+@class _XCTestCaseImplementation;
 
 NS_ASSUME_NONNULL_BEGIN
+
+@interface XCTestCase (CBXAdditions)
+
+- (_XCTestCaseImplementation *)internalImplementation;
+- (void)setInternalImplementation:(_XCTestCaseImplementation *)implementation;
+
+@end
 
 /**
  Test Case that will never fail or stop from running in case of failure

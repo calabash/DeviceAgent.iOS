@@ -1,6 +1,11 @@
 
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
 #import <Foundation/Foundation.h>
-#import "Gesture.h"
+#import "CBXTypedefs.h"
+
+@class Gesture;
 
 /**
  Factory class for creating gestures from raw JSON input.

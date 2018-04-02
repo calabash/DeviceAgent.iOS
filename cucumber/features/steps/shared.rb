@@ -42,11 +42,21 @@ module DeviceAgent
     end
 
     def touch_tab(tabname)
-      # Dismiss the keyboard if it is showing
       if keyboard_visible?
-        touch({marked:"Done"})
-        wait_for_animations
+        if !query({marked: "Done", type: "Button"}).empty?
+          touch({marked:"Done", type: "Button"})
+        elsif !query({marked: "dismiss text view keyboard"}).empty?
+          touch({marked: "dismiss text view keyboard"})
+        elsif !query({marked: "Search", type: "Button"}).empty?
+          touch({marked: "Search", type: "Button"})
+        elsif !query({marked: "Hide keyboard", type: "Button"}).empty?
+          touch({marked: "Hide keyboard", type: "Button"}).empty?
+        else
+          raise "Keyboard is showing, but there is no way to dismiss it"
+        end
       end
+
+      wait_for_animations
 
       touch({marked: tabname})
       wait_for_animations
@@ -57,6 +67,38 @@ module DeviceAgent
       end
       mark = "#{tabname.downcase} page"
       wait_for_view({marked: mark})
+    end
+
+    def ios_version
+      RunLoop::Version.new(device_info["ios_version"])
+    end
+
+    def ios_gte?(version)
+      right_hand_side = version
+      if version.is_a?(String)
+        right_hand_side = RunLoop::Version.new(version)
+      end
+      ios_version >= right_hand_side
+    end
+
+    def xcodebuild_version
+      version = server_version["xcode_version"]
+      major = version[0,2]
+      minor = version[2]
+      patch = version[3]
+      RunLoop::Version.new("#{major}.#{minor}.#{patch}")
+    end
+
+    def device_agent_built_with_xcode_gte_9?
+      xcodebuild_version >= RunLoop::Version.new("9.0.0")
+    end
+
+    def device_agent_built_with_xcode_gte_93?
+      xcodebuild_version >= RunLoop::Version.new("9.3.0")
+    end
+
+    def iphone_x?
+      device_info["form_factor"] == "iphone 10"
     end
   end
 end

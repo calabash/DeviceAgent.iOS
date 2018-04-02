@@ -192,3 +192,10 @@ motd=["Let's get this done!", "Ready to rumble.", "Enjoy.", "Remember to breathe
       "Your wish is my command.", "This console session was created just for you."]
 puts "#{motd.sample()}"
 
+RunLoop.log_error(%Q{
+
+The .irbrc file is out of date and probably does not work as expected.
+
+Feel free to update the .irbrc so it works for your needs.
+
+})

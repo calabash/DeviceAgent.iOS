@@ -1,5 +1,9 @@
 
-#import "Gesture+Options.h"
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
+#import <Foundation/Foundation.h>
+#import "Gesture.h"
 
 /**
  Tap an element with two fingers

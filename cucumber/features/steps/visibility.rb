@@ -33,12 +33,24 @@ Then(/^the tab bar is visible and hitable$/) do
   # expect(element["hitable"]).to be == true
 end
 
-Then(/^the status bar is visible, but not hitable$/) do
-  element = query({type: "StatusBar", all: true}).first
-  expect(element).to be_truthy
-  # Just print for now; we need more information.
-  log_inline("TabBar hitable: #{element["hitable"]}")
-  # expect(element["hitable"]).to be == true
+Then(/^the status bar is visible and sometimes hitable$/) do
+  if iphone_x? && !device_info["simulator"]
+    # The StatusBar may or may not be visible on iPhone 10.
+    # This is _not_ a timing issue; waiting does not change the outcome.
+    element = query({type: "StatusBar", all: true}).first
+    log_inline("StatusBar on iPhone X devices may or may not be visible")
+    if element && element["hitable"]
+      log_inline("This status bar is hitable")
+    else
+      log_inline("This status bar is not hitable")
+    end
+  else
+    element = wait_for_view({type: "StatusBar", all: true})
+    expect(element).to be_truthy
+    # Just print for now; we need more information.
+    log_inline("StatusBar hitable: #{element["hitable"]}")
+    # expect(element["hitable"]).to be == true
+  end
 end
 
 And(/^the disabled button is visible, hitable, but not enabled$/) do
@@ -59,7 +71,7 @@ Then(/^the (alpha|zero) button is not visible and not hitable$/) do |mark|
 
   options = {
     :retry_frequency => 0.1,
-    :timeout => 2
+    :timeout => 4
   }
 
   message = "Waited for #{options[:timeout]} seconds for #{mark} button to disappear"
@@ -99,7 +111,7 @@ Then(/^the animated button is not visible after the (touch|tap), but it is hitab
 
   # The query must happen before the second animation starts.
   elapsed = Time.now - @animation_start
-  expect(elapsed).to be < 4.0
+  expect(elapsed).to be < 12.0
 
   element = query({marked: identifier}).first
   expect(element).to be_truthy

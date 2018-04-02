@@ -14,6 +14,14 @@ function info {
   fi
 }
 
+function warn {
+  if [ "${TERM}" = "dumb" ]; then
+    echo "WARN: $1"
+  else
+    echo "$(tput setaf 3)WARN: $1$(tput sgr0)"
+  fi
+}
+
 function error {
   if [ "${TERM}" = "dumb" ]; then
     echo "ERROR: $1"

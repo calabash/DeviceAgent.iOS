@@ -1,8 +1,12 @@
 
-#import <CoreGraphics/CoreGraphics.h>
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
 #import <Foundation/Foundation.h>
-#import "XCPointerEventPath.h"
-#import <UIKit/UIKit.h>
+#import <CoreGraphics/CoreGraphics.h>
+#import <UIKit/UIApplication.h>
+
+@class XCPointerEventPath;
 
 /**
  Wrapper class for `XCTouchPath` and `XCPointerEventPath` which

@@ -1,8 +1,16 @@
 
 #import "TwoFingerTap.h"
+#import "CBX-XCTest-Umbrella.h"
+#import "XCTest+CBXAdditions.h"
+#import "Application.h"
 #import "CBXConstants.h"
 #import "CoordinateQueryConfiguration.h"
 #import "Coordinate.h"
+#import "Query.h"
+#import "CBXTouchEvent.h"
+#import "InvalidArgumentException.h"
+#import "TouchPath.h"
+#import "Gesture+Options.h"
 
 @implementation TwoFingerTap
 

@@ -1,13 +1,18 @@
 
+#import "QueryRoutes.h"
+#import "CBX-XCTest-Umbrella.h"
+#import "XCTest+CBXAdditions.h"
 #import "QueryConfigurationFactory.h"
-#import "Application+Queries.h"
+#import "Application.h"
 #import "CBXConstants.h"
 #import "QueryFactory.h"
-#import "QueryRoutes.h"
 #import "JSONUtils.h"
 #import "Query.h"
 #import "SpringBoard.h"
 #import "CBXOrientation.h"
+#import "CBXMacros.h"
+#import "CBXRoute.h"
+#import "CBXException.h"
 
 @implementation QueryRoutes
 + (NSArray <CBXRoute *> *)getRoutes {
@@ -83,6 +88,12 @@
                                                                 NSDictionary *data,
                                                                 RouteResponse *response) {
           [response respondWithJSON:[CBXOrientation orientations]];
+      }],
+
+      [CBXRoute get:endpoint(@"/element-types", 1.0) withBlock:^(RouteRequest *request,
+                                                                 NSDictionary *data,
+                                                                 RouteResponse *response) {
+          [response respondWithJSON:@{ @"types": [JSONUtils elementTypes] }];
       }]
       ];
 }

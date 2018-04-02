@@ -4,16 +4,10 @@
 
 ## DeviceAgent.iOS
 
-### Docs
+### Requirements
 
-```
-$ make docs
-$ open documentation/html/hierarchy.html
-```
-
-Generates appledocs for any header file under the `Server` directory. If any
-headers contain no documentation, a warning will be generated. Which will
-cause CI to fail.  You have been warned.
+* Xcode 9.2.
+* ruby 2.3.x - ruby > 2.3 is not supported.
 
 ### Building
 
@@ -22,8 +16,6 @@ Details are below.
 
 All build products are staged to the ./Products directory - even when
 building from Xcode.
-
-Enjoy.
 
 #### Xcode
 
@@ -46,10 +38,6 @@ The application targets can be built as usual (Command + B).
 You should never have to build the UnitTest target for distribution.
 
 #### Command line
-
-Requires Xcode 8.3.3 and iOS 9 or higher.
-
-Requires ruby >= 2.0.  The latest ruby release is preferred.
 
 ```
 $ git clone git@github.com:calabash/DeviceAgent.iOS.git ios-device-agent
@@ -100,6 +88,14 @@ Maintainers should be using the Calabash.keychain (calabash/calabash-codesign).
 
 Ambiguous matches usually mean that the certs are contained in both your login.keychain
 and the Calabash.keychain.  Delete the certs in your login.keychain.
+
+### Docs
+
+```
+# appledoc is not available for Xcode 9.3
+$ make docs
+$ open documentation/html/hierarchy.html
+```
 
 ### Contributing
 

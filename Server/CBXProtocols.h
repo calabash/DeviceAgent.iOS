@@ -1,10 +1,11 @@
-//
-//  CBXProtocols.h
-//  xcuitest-server
-//
 
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
 
-#import "CBXRoute.h"
+#import <Foundation/Foundation.h>
+
+@class CBXRoute;
+
 /**
  Protocol to denote that a class will define a set of CBXRoute instances
  to be added to the server.

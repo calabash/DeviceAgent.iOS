@@ -2,7 +2,6 @@
 #import "JSONUtils.h"
 #import "XCElementSnapshot-Hitpoint.h"
 #import "InvalidArgumentException.h"
-#import "Application.h"
 #import "CBXConstants.h"
 #import "CBXDecimalRounder.h"
 
@@ -10,6 +9,10 @@
 
 static NSDictionary *elementTypeToString;
 static NSDictionary *typeStringToElementType;
+
++ (NSArray *)elementTypes {
+    return [[typeStringToElementType allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+}
 
 + (NSMutableDictionary *)snapshotOrElementToJSON:(NSObject<FBElement> *)snapshotOrElement {
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
@@ -231,6 +234,7 @@ static NSDictionary *typeStringToElementType;
                                 @(XCUIElementTypeHandle) : @"Handle",
                                 @(XCUIElementTypeStepper) : @"Stepper",
                                 @(XCUIElementTypeTab) : @"Tab",
+                                @(XCUIElementTypeTouchBar) : @"TouchBar",
                                 };
         NSMutableDictionary *_typeStringToElementType = [NSMutableDictionary dictionaryWithCapacity:elementTypeToString.count];
         for (NSNumber *type in elementTypeToString) {

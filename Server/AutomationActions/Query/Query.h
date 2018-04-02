@@ -1,13 +1,13 @@
 
-#import <Foundation/Foundation.h>
-#import "QueryConfiguration.h"
-#import "AutomationAction.h"
-#import "QuerySpecifier.h"
-#import "CBXProtocols.h"
-#import "CBXConstants.h"
-#import "XCUIElement.h"
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
 
+#import <Foundation/Foundation.h>
+#import "AutomationAction.h"
+
+@class QueryConfiguration;
 @class CoordinateQuery;
+@class XCUIElement;
 
 /**
  Encapsulates the notion of a query for a particular element(s).

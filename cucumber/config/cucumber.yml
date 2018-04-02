@@ -7,3 +7,4 @@ require "run_loop"
 formatter: -f pretty
 default: CBXWS=../DeviceAgent.xcworkspace -p formatter
 verbose: DEBUG=1
+device: -p formatter --tag ~@simulator --tag ~@not_local_device

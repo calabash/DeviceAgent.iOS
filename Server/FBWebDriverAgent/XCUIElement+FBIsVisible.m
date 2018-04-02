@@ -7,12 +7,16 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
+#import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
+#import "CBX-XCTest-Umbrella.h"
+#import "XCTest+CBXAdditions.h"
 #import "XCUIElement+FBIsVisible.h"
-#import "XCAXClient_iOS.h"
 #import "XCTestPrivateSymbols.h"
-#import "XCElementSnapshot-Hitpoint.h"
-#import "XCUIApplication.h"
-#import "XCApplicationQuery.h"
+#import "XCElementSnapshot.h"
+#import "XCAXClient_iOS.h"
+#import "XCUIHitPointResult.h"
+#import "CBXConstants.h"
 
 @implementation XCUIElement (FBIsVisible)
 
@@ -25,17 +29,25 @@
 }
 
 - (void)getHitPoint:(CGPoint *)point visibility:(BOOL *)visible {
-  BOOL isVisible = self.fb_isVisible;
+  BOOL isVisible = self.isHittable;
   *visible = isVisible;
 
   if (!isVisible) {
     *point = CGPointMake(-1, -1);
   } else {
-    *point = self.lastSnapshot.hitPoint;
+    // Starting in Xcode 9.3
+    if ([self respondsToSelector:@selector(hitPointCoordinate)]) {
+      XCUICoordinate *coordinate = self.hitPointCoordinate;
+      *point = coordinate.screenPoint;
+    } else {
+      [self.lastSnapshot getHitPoint:point visibility:visible];
+    }
   }
 }
 
 @end
+
+#pragma mark - XCElementSnapshot
 
 @implementation XCElementSnapshot (FBIsVisible)
 
@@ -62,14 +74,12 @@
    * "Failure fetching attributes for element" failures.
    */
   XCUIApplication *application = [self application];
-  if (!application.lastSnapshot) {
-      [[application applicationQuery] elementBoundByIndex:0];
-      [application resolve];
-  }
-  CGRect appFrame = application.lastSnapshot.frame;
+  [XCUIApplication cbxResolveApplication:application];
+
+  CGRect appFrame = [[application cbxXCElementSnapshot] frame];
 
   if (!CGRectIntersectsRect(appFrame, self.frame)) {
-      return NO;
+    return NO;
   }
 
   return [(NSNumber *)[self fb_attributeValue:FB_XCAXAIsVisibleAttribute] boolValue];
@@ -77,21 +87,69 @@
 
 - (id)fb_attributeValue:(NSNumber *)attribute
 {
-    NSDictionary *attributesResult = [[XCAXClient_iOS sharedClient]
-                                      attributesForElementSnapshot:self
-                                      attributeList:@[attribute]];
-    return (id __nonnull)attributesResult[attribute];
+  NSDictionary *attributesResult = [[XCAXClient_iOS sharedClient]
+                                    attributesForElementSnapshot:self
+                                    attributeList:@[attribute]];
+  return (id __nonnull)attributesResult[attribute];
 }
 
 - (void)getHitPoint:(CGPoint *)point visibility:(BOOL *)visible {
-  BOOL isVisible = self.fb_isVisible;
-  *visible = isVisible;
+  // Starting in Xcode 9.3
+  if ([self respondsToSelector:@selector(hitPoint:)]) {
+    // r26 = *(int8_t *)__XCShouldUseHostedViewConversion.shouldUseHostedViewConversion | r9;
+    int8_t flag;
+    CGPoint intermediate;
 
-  if (!isVisible) {
-    *point = CGPointMake(-1, -1);
+    XCUIHitPointResult *result = [self hitPoint:&flag];
+
+    *visible = result.isHittable;
+    if (result.isHittable) {
+      intermediate = result.hitPoint;
+    } else {
+      intermediate = CGPointMake(-1, -1);
+    }
+
+    *point = intermediate;
+
+    DDLogDebug(@"Finding hit point for XCElementSnapshot: %@\n"
+    "hitpoint: %@\n"
+    "visible: %@\n"
+    "hosted conversion flag: %@",
+    self,
+    [NSString stringWithFormat:@"(%@, %@)", @(intermediate.x), @(intermediate.y)],
+    result.isHittable ? @"YES" : @"NO", @(flag));
   } else {
-    *point = self.hitPoint;
+    *point = [XCElementSnapshot cbxHitPointFromLastSnapshot:self];
+    BOOL isVisible = self.fb_isVisible;
+    *visible = isVisible;
+
+    if (!isVisible) {
+      *point = CGPointMake(-1, -1);
+    } else {
+      *point = [XCElementSnapshot cbxHitPointFromLastSnapshot:self];
+    }
   }
+}
+
++ (CGPoint)cbxHitPointFromLastSnapshot:(XCElementSnapshot *)snapshot {
+
+  SEL selector = @selector(hitPoint);
+  Class klass = [snapshot class];
+
+  NSMethodSignature *signature;
+  signature = [klass instanceMethodSignatureForSelector:selector];
+  NSInvocation *invocation;
+
+  invocation = [NSInvocation invocationWithMethodSignature:signature];
+  invocation.target = snapshot;
+  invocation.selector = selector;
+
+  [invocation invoke];
+
+  CGPoint point = CGPointMake(-1, -1);
+  [invocation getReturnValue:(void **) &point];
+
+  return point;
 }
 
 @end

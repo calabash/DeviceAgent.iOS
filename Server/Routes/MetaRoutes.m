@@ -1,6 +1,7 @@
 
 #import "MetaRoutes.h"
-#import "XCTestDriver.h"
+#import "CBX-XCTest-Umbrella.h"
+#import "XCTest+CBXAdditions.h"
 #import "XCTestConfiguration.h"
 #import "Application.h"
 #import "CBXMacros.h"
@@ -9,6 +10,8 @@
 #import "SpringBoard.h"
 #import "InvalidArgumentException.h"
 #import "CBXConstants.h"
+#import "CBXRoute.h"
+#import "XCTest+CBXAdditions.h"
 
 @implementation MetaRoutes
 + (NSArray <CBXRoute *> *)getRoutes {
@@ -16,12 +19,12 @@
              [CBXRoute get:endpoint(@"/sessionIdentifier", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
 
                  NSUUID *testUUID = [[XCTestConfiguration activeTestConfiguration] sessionIdentifier];
+                 NSDictionary *body = @
+                 {
+                     @"sessionId" : testUUID ? [testUUID UUIDString] : [NSNull null]
+                 };
 
-                 if (testUUID) {
-                     [response respondWithJSON:@{@"sessionId" : [testUUID UUIDString]}];
-                 } else {
-                     [response respondWithJSON:@{@"sessionId" : [NSNull null]}];
-                 }
+                 [response respondWithJSON:body];
              }],
 
              [CBXRoute post:endpoint(@"/terminate", 1.0)
@@ -31,8 +34,12 @@
                       NSString *bundleIdentifier = data[CBX_BUNDLE_ID_KEY];
                       XCUIApplicationState state;
                       state = [Application terminateApplicationWithIdentifier:bundleIdentifier];
-                      [response respondWithJSON:@{@"state" : @(state)}];
-                  }],
+                      NSString *stateString;
+                      stateString = [XCUIApplication cbxStringForApplicationState:state];
+                      [response respondWithJSON:@{@"state" : @(state),
+                                                  @"state_string" : stateString}];
+                  }
+              ],
 
              [CBXRoute post:endpoint(@"/pid", 1.0) withBlock:^(RouteRequest *request,
                                                                NSDictionary *data,
@@ -46,8 +53,7 @@
                  }
 
                  XCUIApplication *application;
-                 application = [[XCUIApplication alloc] initPrivateWithPath:nil
-                                                                   bundleID:identifier];
+                 application = [[XCUIApplication alloc] initWithBundleIdentifier:identifier];
                  NSString *pid;
                  if (application) {
                      pid = [NSString stringWithFormat:@"%@", @(application.processID)];
@@ -55,7 +61,18 @@
                      pid = [NSString stringWithFormat:@"%@", @(-1)];
                  }
 
-                 [response respondWithJSON:@{@"pid" : pid}];
+                 XCUIApplicationState state = [application state];
+                 NSString *stateString;
+                 stateString = [XCUIApplication cbxStringForApplicationState:state];
+
+                 NSDictionary *json =
+                 @{
+                   @"pid" : pid,
+                   @"state" : @(state),
+                   @"state_string" : stateString
+                   };
+
+                 [response respondWithJSON:json];
              }],
 
              [CBXRoute get:endpoint(@"/device", 1.0) withBlock:^(RouteRequest *request,

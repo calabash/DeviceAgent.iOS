@@ -8,16 +8,18 @@
  */
 
 #import "SpringBoard.h"
+#import "CBX-XCTest-Umbrella.h"
+#import "XCTest+CBXAdditions.h"
+#import "Application.h"
 #import "SpringBoardAlert.h"
 #import "SpringBoardAlerts.h"
-#import "XCUIElement.h"
 #import "XCElementSnapshot.h"
 #import "GestureFactory.h"
-#import "XCUICoordinate.h"
 #import "XCUIElement+WebDriverAttributes.h"
 #import "CBXException.h"
 #import <UIKit/UIKit.h>
-#import "XCApplicationQuery.h"
+#import "CBXConstants.h"
+#import "XCTest+CBXAdditions.h"
 
 typedef enum : NSUInteger {
     SpringBoardAlertHandlerIgnoringAlerts = 0,
@@ -39,8 +41,8 @@ typedef enum : NSUInteger {
 
 @implementation SpringBoard
 
-- (instancetype)initPrivateWithPath:(id)arg1 bundleID:(id)arg2 {
-    self = [super initPrivateWithPath:arg1 bundleID:arg2];
+- (instancetype)initWithBundleIdentifier:(NSString *)bundleIdentifier {
+    self = [super initWithBundleIdentifier:bundleIdentifier];
     if (self) {
         _shouldDismissAlertsAutomatically = YES;
     }
@@ -52,10 +54,9 @@ typedef enum : NSUInteger {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _springBoard = [[SpringBoard alloc]
-                        initPrivateWithPath:nil
-                        bundleID:@"com.apple.springboard"];
-        [[_springBoard applicationQuery] elementBoundByIndex:0];
-        [_springBoard resolve];
+                        initWithBundleIdentifier:@"com.apple.springboard"];
+
+        [XCUIApplication cbxResolveApplication:_springBoard];
     });
     return _springBoard;
 }

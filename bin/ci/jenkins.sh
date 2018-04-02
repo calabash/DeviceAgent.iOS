@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 
-xcrun simctl help >/dev/null 2>&1
-xcrun simctl help >/dev/null 2>&1
-xcrun simctl help >/dev/null 2>&1
+source bin/simctl.sh
+source bin/xcode.sh
+source bin/log.sh
+
+export DEVELOPER_DIR="/Xcode/9.2/Xcode.app/Contents/Developer"
+
+ensure_valid_core_sim_service
 
 set -e
 
@@ -17,4 +21,3 @@ make test-ipa
 # TestApp is required for Cucumber tests.
 make test-app
 bundle exec bin/ci/cucumber.rb
-

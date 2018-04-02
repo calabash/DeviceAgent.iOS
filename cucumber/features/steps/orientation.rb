@@ -2,13 +2,10 @@
 module UnitTestApp
   module Orientation
 
+    # Fewer and fewer iPhone form-factors / iOS version support
+    # upside-down.
     def upside_down_supported?
-      hash = device_info
-      if hash["iphone6"] || hash["iphone6+"]
-        false
-      else
-        true
-      end
+      device_info["ipad"]
     end
 
     def rotate_and_expect(position)
@@ -16,7 +13,10 @@ module UnitTestApp
       orientation = rotate_home_button_to(symbol)
 
       if [:top, :up].include?(symbol) && !upside_down_supported?
-        log_inline("Upside down orientation is not supported iPhone 6*")
+        info = device_info
+        form = info["form_factor"]
+        version = info["ios_version"]
+        log_inline("Upside down orientation is probably not supported on #{form}/#{version}")
       else
         expected = expected_position(position)
         expect(orientation).to be == expected

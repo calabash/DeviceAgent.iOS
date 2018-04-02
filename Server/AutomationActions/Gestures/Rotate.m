@@ -1,6 +1,14 @@
 
-#import "CBXTouchEvent.h"
 #import "Rotate.h"
+#import "CBX-XCTest-Umbrella.h"
+#import "XCTest+CBXAdditions.h"
+#import "Application.h"
+#import "CBXTouchEvent.h"
+#import "InvalidArgumentException.h"
+#import "CBXConstants.h"
+#import "Coordinate.h"
+#import "TouchPath.h"
+#import "Gesture+Options.h"
 
 typedef NS_ENUM(short, ClockDirection) {
     kClockDirectionClockwise = 1,

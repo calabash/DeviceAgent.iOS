@@ -1,3 +1,7 @@
+
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
 NS_INLINE NSString* cbx_sys_version() {
   static dispatch_once_t onceToken;
   static NSString *shared  = nil;

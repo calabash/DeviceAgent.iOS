@@ -1,27 +1,6 @@
 
 module TestApp
   module Meta
-    def xcode_version
-      # "0833"
-      # "0900"
-      version = server_version["xcode_version"]
-      chars = version.chars
-      if chars[0] == "0"
-        major = "#{chars[1]}"
-      else
-        # Xcode 10 or higher
-        major = "#{chars[0]}#{chars[1]}"
-      end
-
-      minor = chars[2]
-      patch = chars[3]
-      RunLoop::Version.new("#{major}.#{minor}.#{patch}")
-    end
-
-    def xcode_gte_9?
-      xcode_version >= RunLoop::Version.new("9.0.0")
-    end
-
     def launch_aut_with_term_aut(true_or_false)
       DeviceAgent::Shared.class_variable_set(:@@app_ready, nil)
       client = DeviceAgent::Automator.client
@@ -33,18 +12,31 @@ module TestApp
       begin
         DeviceAgent::Automator.client.send(:launch_aut)
         wait_for_app(:skip_touch_check)
-      rescue
+      ensure
         options[:terminate_aut_before_test] = original_value
       end
+    end
+
+    def get_xcode_element_types
+      xct_path = Dir.glob("#{RunLoop::Xcode.new.developer_dir}/**/XCTest")
+                    .detect { |f| f.include? "iPhoneOS" }
+      args = ["xcrun", "strings", xct_path]
+      hash = RunLoop::Shell.run_shell_command(args)
+      types = hash[:out].split("\n")
+                        .select { |line| /^XCUIElementType\w/.match line }
+                        .map { |line| line.gsub("XCUIElementType", "").downcase }
+                        .sort
+      # We don't need XCUIElementTypeQueryProvider
+      types - ["queryprovider"]
     end
   end
 end
 
 World(TestApp::Meta)
 
-And(/^I make a note of the AUT pid and session id$/) do
-  @aut_pid = process_pid("sh.calaba.TestApp")
-  @session_id = session_identifier
+And(/^I make a note of the AUT pid and test-session identifier$/) do
+  @@aut_pid = process_pid("sh.calaba.TestApp")
+  @@session_identifier = session_identifier["sessionId"]
 end
 
 Then(/^I can ask for the server version$/) do
@@ -58,7 +50,7 @@ Then(/^I can ask for the server version$/) do
   actual = server_version
   expect(actual["bundle_identifier"]).to be == expected["bundle_identifier"]
 
-  if xcode_gte_9?
+  if device_agent_built_with_xcode_gte_9?
     expect(actual["bundle_name"]).to be == "DeviceAgent-Runner"
   else
     expect(actual["bundle_name"]).to be == "DeviceAgent"
@@ -79,11 +71,12 @@ And(/^I can ask about the build attributes of the DeviceAgent$/) do
     be >= RunLoop::Version.new("8.0"))
 end
 
-Then(/^I can ask for the session identifier$/) do
-  identifier = session_identifier
+Then(/^I can ask for the test-session identifier$/) do
+  hash = session_identifier
 
-  expect(identifier).not_to be == nil
-  expect(identifier.count).not_to be == 0
+  expect(hash).not_to be == nil
+  expect(hash.count).not_to be == 0
+  expect(hash["sessionId"]).not_to be == nil
 end
 
 Then(/^I can ask for information about the device under test$/) do
@@ -104,6 +97,11 @@ Then(/^I can tell DeviceAgent to automatically dismiss SpringBoard alerts$/) do
   expect(set_dismiss_springboard_alerts_automatically(true)).to be_truthy
 end
 
+Then(/^I can compare Xcode element types with DeviceAgent supported element types$/) do
+  xcode_types = get_xcode_element_types
+  expect(xcode_types - element_types).to be_empty
+end
+
 When(/^I POST \/session again with term-on-launch (true|false)$/) do |true_or_false|
   if true_or_false == "true"
     launch_aut_with_term_aut(true)
@@ -122,17 +120,22 @@ end
 
 And(/^I can tell the AUT has quit because the pid is different$/) do
   aut_pid = process_pid("sh.calaba.TestApp")
-  expect(aut_pid).not_to be == @aut_pid
+  expect(aut_pid).not_to be == @@aut_pid
 end
 
 And(/^I can tell the AUT has not quit because the pid is the same$/) do
   aut_pid = process_pid("sh.calaba.TestApp")
-  expect(aut_pid).to be == @aut_pid
+  expect(aut_pid).to be == @@aut_pid
 end
 
 And(/^I can tell there is a new session because the identifier changed$/) do
-  identifier = session_identifier
-  expect(identifier).not_to be == @session_identifier
+  identifier = session_identifier["sessionId"]
+  expect(identifier).not_to be == @@session_identifier
+end
+
+And(/^the DeviceAgent test-session has not changed$/) do
+  identifier = session_identifier["sessionId"]
+  expect(identifier).to be == @@session_identifier
 end
 
 When(/^I POST \/terminate$/) do

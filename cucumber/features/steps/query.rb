@@ -1,4 +1,16 @@
 
+module TestApp
+  module Query
+
+    # Starting in Xcode 9.3 for iOS >= 11.3
+    def newlines_in_queries_supported?
+      device_agent_built_with_xcode_gte_93? && ios_gte?("11.3")
+    end
+  end
+end
+
+World(TestApp::Query)
+
 And(/^I am looking at the Query page$/) do
   touch_tab("Misc")
   touch({marked: "query row"})
@@ -120,15 +132,32 @@ Then(/^I query for the label with the TAB without escaping the tab char$/) do
   expect(elements.count).to be == 1
 end
 
-Then(/^I query for newlines using backslashes$/) do
+And(/^querying for text with newlines works for Xcode 9\.3 and above$/) do
   elements = query({marked: "Here\nthere be\nnewlines"})
-  expect(elements.count).to be == 0
+  if newlines_in_queries_supported?
+    expect(elements.count).to be == 1
+  else
+    expect(elements.count).to be == 0
+  end
 
   string = %Q[Here
 there be
 newlines]
   elements = query({marked: string})
-  expect(elements.count).to be == 0
+
+  if newlines_in_queries_supported?
+    expect(elements.count).to be == 1
+  else
+    expect(elements.count).to be == 0
+  end
+
+  elements = query({text: string})
+
+  if newlines_in_queries_supported?
+    expect(elements.count).to be == 1
+  else
+    expect(elements.count).to be == 0
+  end
 end
 
 Then(/^I can query for Japanese$/) do
@@ -156,18 +185,27 @@ And(/^an empty hash query with :all returns between (\d+) and (\d+) elements$/) 
   # If the @wildcard or @query Scenarios are in isolation, the element count
   # is different than if the the entire test suite is run.
   expect(elements.count).to be >= lower.to_i
-  expect(elements.count).to be <= upper.to_i
+
+  if iphone_x? && !device_info["simulator"]
+    # Skip this test because there are thousands of views
+    # Then an empty hash query returns between 11 and 29 elements
+    # RSpec::Expectations::ExpectationNotMetError - expected: <= 32 got: 2112
+  else
+    expect(elements.count).to be <= upper.to_i
+  end
 end
 
 Then(/^I ask for the tree representation of the view hierarchy$/) do
   elements = tree
-  expect(elements.count).to be == 11
+  expect(elements.count).to be >= 7
+  expect(elements.count).to be <= 13
 end
 
 Then(/^I time how long it takes to make a bunch of queries$/) do
   start = Time.now
 
-  10.times do
+  iterations = RunLoop::Environment.xtc? ? 2 : 10
+  iterations.times do
     elements = query({marked: "hidden button", all: false})
     expect(elements.count).to be == 0
 
@@ -230,7 +268,12 @@ Then(/^I time how long it takes to make a bunch of queries$/) do
     expect(elements.count).to be == 1
 
     elements = query({marked: "Here\nthere be\nnewlines"})
-    expect(elements.count).to be == 0
+
+    if newlines_in_queries_supported?
+      expect(elements.count).to be == 1
+    else
+      expect(elements.count).to be == 0
+    end
   end
 
   elapsed = Time.now - start

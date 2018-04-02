@@ -120,6 +120,14 @@ module DeviceAgent
       Automator.client.send(:app_running?, bundle_identifier)
     end
 
+    def send_app_to_background(bundle_identifier)
+      Automator.client.send(:send_app_to_background, bundle_identifier)
+    end
+
+    def app_state(bundle_identifier)
+      Automator.client.send(:app_state, bundle_identifier)
+    end
+
     def running?
       Automator.client.running?
     end
@@ -235,6 +243,10 @@ module DeviceAgent
 
     def fail(*several_variants)
       Automator.client.fail(*several_variants)
+    end
+
+    def element_types
+      Automator.client.element_types
     end
   end
 end

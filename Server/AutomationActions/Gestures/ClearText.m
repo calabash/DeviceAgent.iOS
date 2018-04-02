@@ -1,12 +1,18 @@
 
 #import "ClearText.h"
-#import "TextInputFirstResponderProvider.h"
-#import "Testmanagerd.h"
-#import "ThreadUtils.h"
-#import "XCUIElement.h"
-#import "XCElementSnapshot.h"
+#import "CBX-XCTest-Umbrella.h"
+#import "XCTest+CBXAdditions.h"
 #import "XCUIElement+WebDriverAttributes.h"
+#import <UIKit/UIGeometry.h>
+#import "XCElementSnapshot.h"
+#import "Testmanagerd.h"
+#import "TextInputFirstResponderProvider.h"
+#import "ThreadUtils.h"
 #import "GestureFactory.h"
+#import "CBXConstants.h"
+#import "JSONUtils.h"
+#import "Gesture+Options.h"
+#import "Application.h"
 
 @interface ClearText ()
 

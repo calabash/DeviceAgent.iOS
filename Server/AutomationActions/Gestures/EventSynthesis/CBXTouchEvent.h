@@ -1,8 +1,11 @@
 
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
 #import <Foundation/Foundation.h>
-#import <CoreGraphics/CoreGraphics.h>
-#import "XCSynthesizedEventRecord.h"
-#import "TouchPath.h"
+
+@class XCSynthesizedEventRecord;
+@class TouchPath;
 
 /**
  Wrapper class to abstract XCTouchGesture and XCSynthesizedEventRecord, since they 

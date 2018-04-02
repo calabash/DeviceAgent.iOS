@@ -1,5 +1,6 @@
 
 #import "ElementNotFoundException.h"
+#import "CBXConstants.h"
 
 @implementation ElementNotFoundException
 + (instancetype)withMessage:(NSString *)message {

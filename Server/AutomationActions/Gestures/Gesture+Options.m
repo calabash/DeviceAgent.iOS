@@ -1,5 +1,7 @@
 
 #import "Gesture+Options.h"
+#import "CBXConstants.h"
+#import "GestureConfiguration.h"
 
 @implementation Gesture (Options)
 

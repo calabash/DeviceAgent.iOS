@@ -18,17 +18,26 @@ Gemfile.lock
 # Test Cloud
 .xtc-credentials
 xtc-submit
+bin/test-cloud-uploader
 
 # JetBrains
 .idea
+*.iml
+
+# Appium
+target/
 
 # MacOS
 .DS_Store
 
 ## Build generated
-build/
+build/*
+Checkouts
 tmp
 Products
+Carthage/Build/**/*.version
+Carthage/Build/**/*.bcsymbolmap
+!Carthage/Build/iOS/*.framework*
 
 # Info.plist preprocessor files
 TestApp/App/InfoPlist.h

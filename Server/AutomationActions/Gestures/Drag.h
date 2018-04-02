@@ -1,5 +1,9 @@
 
-#import "Gesture+Options.h"
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
+#import <Foundation/Foundation.h>
+#import "Gesture.h"
 
 /**
  Drag between any number of coordinates with up to 5 fingers.

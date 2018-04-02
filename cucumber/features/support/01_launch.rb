@@ -16,6 +16,12 @@ module Calabash
       device_agent.running?
     end
 
+    def shutdown_running_device_agent?(scenario)
+      return false if RunLoop::Environment.xtc?
+      names = scenario.tags.map { |tag| tag.name }
+      !names.include?("@keep_device_agent_running")
+    end
+
     def xcode
       @xcode ||= RunLoop::Xcode.new
     end
@@ -37,41 +43,19 @@ module Calabash
 
     def app
       @app ||= lambda do
-        if ENV["APP"].nil? || ENV["APP"] == ""
-          dir = File.expand_path(File.dirname(__FILE__))
-          path = File.expand_path(File.join(dir, "..", "..", "..",
-                                            "Products", "app",
-                                            "TestApp", "TestApp.app"))
-          if File.exist?(path)
-            path
-          else
-            $stderr.puts "APP is not defined and could not find app at:"
-            $stderr.puts ""
-            $stderr.puts "  #{path}"
-            $stderr.puts ""
-            $stderr.puts "You have some options:"
-            $stderr.puts ""
-            $stderr.puts " 1. Run against the TestApp"
-            $stderr.puts "   $ (cd .. && make test-app)"
-            $stderr.puts "   $ be cucumber"
-            $stderr.puts ""
-            $stderr.puts "2. Run against another app on the simulator."
-            $stderr.puts "   $ APP=/path/to/My.app be cucumber"
-            $stderr.puts ""
-            $stderr.puts "3. Run against an app installed on the simulator."
-            $stderr.puts "   $ APP=com.example.MyApp be cucumber"
-            $stderr.puts ""
-            $stderr.puts "4. Run against an app install on a device. The device target can be"
-            $stderr.puts "   a UDID or the name of the device."
-            $stderr.puts "   $ APP=com.example.MyApp DEVICE_TARGET=< udid or name> be cucumber"
-            $stderr.puts ""
-            $stderr.puts "Exiting...Goodbye."
-            $stderr.flush
-            exit 1
+        dir = File.expand_path(File.dirname(__FILE__))
+        path = File.expand_path(File.join(dir, "..", "..", "..",
+                                          "Products", "app",
+                                          "TestApp", "TestApp.app"))
+        if !File.exist?(path)
+          $stderr.puts "Will build TestApp"
+          Bundler.with_clean_env do
+            Dir.chdir("..") do
+              system("make test-app")
+            end
           end
-        else
-          ENV["APP"]
         end
+        path
       end.call
     end
   end
@@ -130,7 +114,13 @@ Before do |scenario|
     # See the guard below: RunLoop.run(options) is
     # only called on first launch or when the
     # DeviceAgent is not running.
-    :shutdown_device_agent_before_launch => true,
+    #
+    # On Test Cloud, shutdown will raise an error.
+    #
+    # If you need to keep DeviceAgent running regardless,
+    # tag Scenario with @keep_device_agent_running
+    shutdown_device_agent_before_launch:
+    launcher.shutdown_running_device_agent?(scenario),
 
     # The default in run-loop is keep the AUT running if it
     # is already running.  UITest and Calabash users can call
@@ -177,6 +167,8 @@ After("@keyboard") do |scenario|
       touch({marked: "dismiss text view keyboard"})
     elsif !query({marked: "Search", type: "Button"}).empty?
       touch({marked: "Search", type: "Button"})
+    elsif !query({marked: "Hide keyboard", type: "Button"}).empty?
+      touch({marked: "Hide keyboard", type: "Button"}).empty?
     else
       raise "Keyboard is showing, but there is no way to dismiss it"
     end
@@ -198,10 +190,10 @@ end
 
 After("@term") do |scenario|
   Calabash::Launcher.instance.first_launch = true
+  DeviceAgent::Shared.class_variable_set(:@@app_ready, nil)
 end
 
 After do |scenario|
-
   # See bin/test/jmoody scripts.
   on_scenario_failure = ENV["ON_SCENARIO_FAILURE"]
   if on_scenario_failure
@@ -215,6 +207,15 @@ After do |scenario|
       # Restart the app if a Scenario fails
       if scenario.failed?
         Calabash::Launcher.instance.first_launch = true
+        DeviceAgent::Shared.class_variable_set(:@@app_ready, nil)
+        client = DeviceAgent::Automator.client
+        if client && client.send(:app_running?, "sh.calaba.TestApp")
+          client.send(:terminate_app, "sh.calaba.TestApp")
+          sleep(1.0)
+          if client.send(:app_running?, "sh.calaba.TestApp")
+            raise "sh.calaba.TestApp is running!?!"
+          end
+        end
       end
     when :shutdown
       begin
@@ -237,8 +238,10 @@ After do |scenario|
 end
 
 at_exit do
-  # See bin/test/jmoody scripts.
-  if ENV["QUIT_AUT_AFTER_CUCUMBER"] == "1"
-    DeviceAgent::Automator.shutdown
+  if !RunLoop::Environment.xtc?
+    # See bin/test/jmoody scripts.
+    if ENV["QUIT_AUT_AFTER_CUCUMBER"] == "1"
+      DeviceAgent::Automator.shutdown
+    end
   end
 end

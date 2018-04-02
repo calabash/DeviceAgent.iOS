@@ -1,4 +1,7 @@
 
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
 #import <Foundation/Foundation.h>
 #import "CBXProtocols.h"
 
@@ -25,6 +28,11 @@
  ## GET @"/orientations"
 
  Responds with information about device and application orientations.
+
+ ## GET @"/element-types"
+
+ Responds with a JSON list of XCTest.framework element types as human-readable
+ strings.
 
  */
 @interface QueryRoutes : NSObject<CBRouteProvider>

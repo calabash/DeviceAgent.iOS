@@ -1,5 +1,6 @@
 
 #import "TouchPath.h"
+#import "XCPointerEventPath.h"
 
 @interface TouchPath ()
 @property (nonatomic, strong) XCPointerEventPath *eventPath;

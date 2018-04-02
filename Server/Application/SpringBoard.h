@@ -1,3 +1,7 @@
+
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  * All rights reserved.
@@ -7,7 +11,7 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import "XCUIApplication.h"
+#import "CBX-XCTest-Umbrella.h"
 
 // Experimental
 // This enum describes the success or failure of the

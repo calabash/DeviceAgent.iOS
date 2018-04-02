@@ -1,9 +1,12 @@
 
+#import "GestureFactory.h"
 #import "QueryConfigurationFactory.h"
 #import "InvalidArgumentException.h"
 #import "QueryFactory.h"
-#import "GestureFactory.h"
+#import "GestureConfiguration.h"
 #import <objc/runtime.h>
+#import "Gesture.h"
+#import "CBXConstants.h"
 
 @implementation GestureFactory
 static NSMutableSet <Class> *gestureClasses;

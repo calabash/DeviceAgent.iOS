@@ -17,7 +17,7 @@ And I am looking at the Touch tab
 # Views that have size 0,0 are not hitable.
 Scenario: What is hitable?
 Then the tab bar is visible and hitable
-And the status bar is visible, but not hitable
+And the status bar is visible and sometimes hitable
 And the disabled button is visible, hitable, but not enabled
 When I touch the alpha button its alpha goes to zero
 Then the alpha button is not visible and not hitable

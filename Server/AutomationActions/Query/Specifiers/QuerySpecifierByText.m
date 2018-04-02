@@ -1,5 +1,6 @@
 
 #import "QuerySpecifierByText.h"
+#import "CBX-XCTest-Umbrella.h"
 
 @implementation QuerySpecifierByText
 static NSArray <NSString *> *textProperties;

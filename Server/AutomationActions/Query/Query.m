@@ -1,12 +1,14 @@
 
+#import "Query.h"
+#import "CBX-XCTest-Umbrella.h"
+#import "XCTest+CBXAdditions.h"
+#import "Application.h"
 #import "CoordinateQueryConfiguration.h"
 #import "QuerySpecifierFactory.h"
 #import "CoordinateQuery.h"
 #import "CBXException.h"
-#import "Application.h"
 #import "JSONUtils.h"
-#import "Query.h"
-#import "XCApplicationQuery.h"
+#import "XCTest+CBXAdditions.h"
 
 @implementation Query
 
@@ -31,19 +33,18 @@
 
 - (NSArray<XCUIElement *> *)execute {
     if (self.queryConfiguration.selectors.count == 0) {
-        @throw [CBXException withMessage:@"Query must have at least one specifier"];
+        @throw [CBXException withMessage:@"Query must have at least one "
+                "specifier"];
     }
 
     if (![Application currentApplication]) {
-        @throw [CBXException withMessage:@"Cannot perform queries until application has been launched!"];
+        @throw [CBXException withMessage:@"Current application is nil. Cannot "
+                "perform queries until POST /session route is called"];
     }
 
-    if (![[Application currentApplication] lastSnapshot]) {
-        [[[Application currentApplication] applicationQuery] elementBoundByIndex:0];
-        [[Application currentApplication] resolve];
-    }
+    XCUIApplication *application = [Application currentApplication];
+    XCUIElementQuery *query = [application cbxQueryForDescendantsOfAnyType];
 
-    XCUIElementQuery *query = [[Application currentApplication].query descendantsMatchingType:XCUIElementTypeAny];;
     for (QuerySpecifier *specifier in self.queryConfiguration.selectors) {
         query = [specifier applyToQuery:query];
     }

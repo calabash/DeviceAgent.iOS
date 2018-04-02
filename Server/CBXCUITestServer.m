@@ -6,9 +6,9 @@
 #import <objc/runtime.h>
 #import "CBXProtocols.h"
 #import "CBXConstants.h"
-#import "Application+Queries.h"
 #import "CBXLogging.h"
 #import "CBXOrientation.h"
+#import "CBXRoute.h"
 
 @interface CBXCUITestServer ()
 @property (atomic, strong) RoutingHTTPServer *server;

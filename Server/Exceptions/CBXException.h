@@ -1,6 +1,8 @@
 
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
 #import <Foundation/Foundation.h>
-#import "CBXConstants.h"
 
 /**
  Custom NSException subclass for dealing with DeviceAgent exceptions.
@@ -63,4 +65,13 @@
  @param userInfo Additional info to return to the user, to be merged with the `message` param.
  */
 + (instancetype)withMessage:(NSString *)message statusCode:(NSInteger)code userInfo:(NSDictionary *)userInfo;
+
+/**
+ Return a must-override-in-subclass exception.
+ @param klass The super class
+ @param selector The method which needs to be implemented by subclass
+ */
++ (CBXException *)overrideMethodInSubclassExceptionWithClass:(Class) klass
+                                                    selector:(SEL) selector;
+
 @end

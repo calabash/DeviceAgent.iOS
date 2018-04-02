@@ -1,6 +1,10 @@
 
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
 #import "QueryConfiguration.h"
-#import "Coordinate.h"
+
+@class Coordinate;
 
 /**
  A special case of QueryConfiguration where the element

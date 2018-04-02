@@ -118,6 +118,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"OK", YES, @"No SIM Card Installed"),
              alert(@"Not Now", NO, @"Carrier Settings Update"),
              alert(@"Not Now", NO, @"Enable Dictation?"),
+             alert(@"Dismiss", NO, @"iPhone is not Activated"),
              alert(@"Cancel", NO, @"Sign In to iTunes Store"),
              alert(@"OK", YES, @"Would Like to Access Apple Music And Your Media Library"),
              alert(@"Allow", YES, @"Would Like to Add VPN Configurations"),
@@ -158,6 +159,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"OK", YES, @"wil toegang tot uw bewegings- en fitnessactiviteit"),
              alert(@"OK", YES, @"wil toegang tot de camera"),
              alert(@"OK", YES, @"wil u berichten sturen"),
+             alert(@"Negeer", YES, @"is niet geactiveerd"),
              alert(@"Open", YES, @"Openen met")
              ];
 }
@@ -263,9 +265,21 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
 
 - (NSArray<SpringBoardAlert *> *)RussianAlerts {
     return @[
-             // Location
-             alert(@"OK", YES, @"запрашивает разрешение на использование Ващей текущей пгеопозиции"),
-             alert(@"Открыть", YES, @"Открыть в программе")
+             alert(@"OK", YES, @"запрашивает разрешение на использование Вашей текущей геопозиции"),
+             alert(@"OK", YES, @"запрашивает разрешение на доступ к учетным записям Twitter"),
+             alert(@"Открыть", YES, @"Открыть в программе"),
+             alert(@"Разрешить", YES, @"запрашивает доступ к «Камере»."),
+             alert(@"Разрешить", YES, @"запрашивает доступ к «Фото»."),
+             alert(@"Разрешить", YES, @"запрашивает доступ к микрофону."),
+             alert(@"Разрешить", YES, @"доступ к Вашим геоданным"),
+             alert(@"Разрешить", YES, @"доступ к Вашей геопозиции, даже когда Вы не работаете с этой программой?"),
+             alert(@"Разрешить", YES, @"доступ к Вашей геопозиции, пока Вы работаете с этой программой?"),
+             alert(@"Разрешить", YES, @"запрашивает доступ к «Контактам»."),
+             alert(@"Разрешить", YES, @"запрашивает доступ к «Напоминаниям»."),
+             alert(@"Разрешать всегда", YES, @"доступ к Вашей геопозиции?"),
+             alert(@"Разрешить", YES, @"запрашивает доступ к «Календарю»."),
+             alert(@"Разрешить", YES, @"запрашивает доступ к Вашим данным движения и фитнеса"),
+             alert(@"Разрешить", YES, @"запрашивает разрешение на отправку Вам уведомлений.")
              ];
 }
 

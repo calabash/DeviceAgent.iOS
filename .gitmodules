@@ -1,6 +1,0 @@
-[submodule "CocoaHTTPServer"]
-	path = CocoaHTTPServer
-	url = https://github.com/robbiehanson/CocoaHTTPServer.git
-[submodule "RoutingHTTPServer"]
-	path = RoutingHTTPServer
-	url = https://github.com/mattstevens/RoutingHTTPServer.git

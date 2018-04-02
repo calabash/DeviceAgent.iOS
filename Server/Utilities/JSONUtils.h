@@ -1,4 +1,7 @@
 
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
 #import <Foundation/Foundation.h>
 #import "XCUIElement+WebDriverAttributes.h"
 
@@ -6,6 +9,11 @@
  Utilities involving json manipulation, particularly with XCUIElements.
  */
 @interface JSONUtils : NSObject
+/**
+ @return List of supported XCUIElementType's
+*/
++ (NSArray *) elementTypes;
+
 /**
  Convert an object conforming to the FBElement protocol into JSON
  that can be returned to the client.

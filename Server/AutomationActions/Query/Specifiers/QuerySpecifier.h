@@ -1,9 +1,10 @@
 
-#import "InvalidArgumentException.h"
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
 #import <Foundation/Foundation.h>
-#import "XCUIElementQuery.h"
-#import "XCUIElement.h"
-#import "CBXMacros.h"
+
+@class XCUIElementQuery;
 
 /**
     An enum describing the relative execution priority of a specifier.

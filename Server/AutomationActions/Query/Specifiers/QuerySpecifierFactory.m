@@ -1,6 +1,8 @@
 
 #import "QuerySpecifierFactory.h"
+#import "InvalidArgumentException.h"
 #import <objc/runtime.h>
+#import "CBXConstants.h"
 
 @implementation QuerySpecifierFactory
 static NSMutableDictionary <NSString *, Class> *selectorClasses;

@@ -1,6 +1,11 @@
 
-#import "Coordinate.h"
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
+#import <Foundation/Foundation.h>
 #import "Query.h"
+
+@class Coordinate;
 
 /**
 A special case of Query where coordinates are explicitly specified. 
