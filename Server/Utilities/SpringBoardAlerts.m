@@ -122,7 +122,8 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"Cancel", NO, @"Sign In to iTunes Store"),
              alert(@"OK", YES, @"Would Like to Access Apple Music And Your Media Library"),
              alert(@"Allow", YES, @"Would Like to Add VPN Configurations"),
-             alert(@"Open", YES, @"Open in")
+             alert(@"Open", YES, @"Open in"),
+             alert(@"OK", YES, @"access Apple Music")
              ];
 }
 
@@ -279,7 +280,8 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"Разрешать всегда", YES, @"доступ к Вашей геопозиции?"),
              alert(@"Разрешить", YES, @"запрашивает доступ к «Календарю»."),
              alert(@"Разрешить", YES, @"запрашивает доступ к Вашим данным движения и фитнеса"),
-             alert(@"Разрешить", YES, @"запрашивает разрешение на отправку Вам уведомлений.")
+             alert(@"Разрешить", YES, @"запрашивает разрешение на отправку Вам уведомлений."),
+             alert(@"Разрешить", YES, @"доступ к Apple Music")
              ];
 }
 
