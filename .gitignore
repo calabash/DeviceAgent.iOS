@@ -17,7 +17,7 @@ Gemfile.lock
 
 # Test Cloud
 .xtc-credentials
-.testcloud-credentials
+.appcenter-credentials
 testcloud-submit
 bin/test-cloud-uploader
 
