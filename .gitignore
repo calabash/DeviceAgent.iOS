@@ -17,7 +17,8 @@ Gemfile.lock
 
 # Test Cloud
 .xtc-credentials
-xtc-submit
+.appcenter-credentials
+testcloud-submit
 bin/test-cloud-uploader
 
 # JetBrains

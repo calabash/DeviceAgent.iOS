@@ -17,6 +17,7 @@ Given the app has launched
 Then I can tell DeviceAgent not to automatically dismiss SpringBoard alerts
 Then I can tell DeviceAgent to automatically dismiss SpringBoard alerts
 
+@not_xtc
 Scenario: XCUIElement types
 Given the app has launched
 Then I can compare Xcode element types with DeviceAgent supported element types
