@@ -18,40 +18,43 @@ else
 fi
 set -e
 
-CAL_CODESIGN="${HOME}/.calabash/calabash-codesign"
-if [ -e "${CAL_CODESIGN}" ]; then
-  AC_TOKEN=$("${CAL_CODESIGN}/apple/find-appcenter-credential.sh" api-token)
-else
-  if [ "${AC_TOKEN}" = "" ]; then
-    error "Expected calabash-codesign to be installed to:"
-    error "  ${CAL_CODESIGN}"
-    error "or AC_TOKEN environment variable to be defined."
-    error ""
-    error "Need an AppCenter API Token to proceed"
-    exit 1
-  fi
+KEYCHAIN="${HOME}/.calabash/Calabash.keychain"
+
+if [ ! -e "${KEYCHAIN}" ]; then
+  echo "Cannot find S3 credentials: there is no Calabash.keychain"
+  echo "  ${KEYCHAIN}"
+  exit 1
 fi
 
-info "Will use token: ${AC_TOKEN}"
+if [ ! -e "${HOME}/.calabash/find-keychain-credential.sh" ]; then
+  echo "Cannot find S3 credentials: no find-keychain-credential.sh script"
+  echo "  ${HOME}/.calabash/find-keychain-credential.sh"
+  exit 1
+fi
 
-# Requires S3 credentials
-#IPA=Products/ipa/DeviceAgent/DeviceAgent-Runner.ipa
-#SHA=$(/usr/bin/shasum "${IPA}" | awk '{print $1}')
-#info "Will use DeviceAgent.iOS: ${SHA}"
-#
-#URL="s3://calabash-files/ios-device-agent/${SHA}/DeviceAgent-Runner.ipa"
-#EXISTS=$(aws s3 ls "${URL}")
-#if [ "${EXISTS}" = "" ]; then
-#  aws s3 cp "${IPA}" "${URL}"
-#else
-#  info "DeviceAgent-Runner.ipa already exists on S3 at"
-#  info "  ${URL}"
-#fi
+export AWS_ACCESS_KEY_ID=$(
+"${HOME}/.calabash/find-keychain-credential.sh" s3-access-key
+)
+export AWS_SECRET_ACCESS_KEY=$(
+"${HOME}/.calabash/find-keychain-credential.sh" s3-secret
+)
+
+if [ "${AC_TOKEN}" = "" ]; then
+  AC_TOKEN=$("${HOME}/.calabash/find-keychain-credential.sh" api-token)
+fi
+
+IPA=Products/ipa/DeviceAgent/DeviceAgent-Runner.ipa
+SHA=$(/usr/bin/shasum "${IPA}" | awk '{print $1}')
+info "Will use DeviceAgent.iOS: ${SHA}"
+
+# Push will succeed even if file already exists
+URL="s3://calabash-files/ios-device-agent/${SHA}/DeviceAgent-Runner.ipa"
+aws s3 cp "${IPA}" "${URL}"
 
 rm -rf testcloud-submit/.xtc
 mkdir -p testcloud-submit/.xtc
 
-#echo "${SHA}" > testcloud-submit/.xtc/device-agent-sha
+echo "${SHA}" > testcloud-submit/.xtc/device-agent-sha
 
 S3_ROOT="https://s3-eu-west-1.amazonaws.com/calabash-files/dylibs/to-test-injection"
 LIB_BEETS="${S3_ROOT}/libBetaVulgaris.dylib"
