@@ -12,18 +12,15 @@ use_xcpretty = ENV["XCPRETTY"] != "0"
 RunLoop::Simctl.new
 
 xcode = RunLoop::Xcode.new
-
 default_sim_name = RunLoop::Core.default_simulator
 default_sim = RunLoop::Device.device_with_identifier(default_sim_name)
+sim_udid = default_sim.udid
 
 RunLoop::CoreSimulator.quit_simulator
-
 RunLoop::CoreSimulator.erase(default_sim)
 
 core_sim = RunLoop::CoreSimulator.new(default_sim, nil, {:xcode => xcode})
 core_sim.launch_simulator
-
-sim_udid = default_sim.udid
 
 args =
       [
@@ -81,7 +78,11 @@ Dir.chdir(working_dir) do
         raise XCTestFailedError, "XCTest failed."
       end
     else
-      exit(exit_code)
+      if exit_code
+        exit(exit_code)
+      else
+        exit(1)
+      end
     end
   end
 end

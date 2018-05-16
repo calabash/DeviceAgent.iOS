@@ -6,8 +6,6 @@ source bin/plist-buddy.sh
 source bin/simctl.sh
 source bin/xcode.sh
 
-ensure_valid_core_sim_service
-
 set -e
 
 banner "Preparing"

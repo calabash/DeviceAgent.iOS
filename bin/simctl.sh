@@ -4,8 +4,6 @@ set +e
 
 source bin/log.sh
 
-# Force Xcode 8 CoreSimulator env to be loaded so xcodebuild does not fail.
-
 function ensure_valid_core_sim_service {
   info "Ensuring there is a valid CoreSimulatorService"
 	for try in {1..4}; do
@@ -34,3 +32,5 @@ function valid_core_sim_service {
     echo -n "true"
   fi
 }
+
+ensure_valid_core_sim_service

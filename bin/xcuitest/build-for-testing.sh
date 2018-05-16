@@ -7,8 +7,6 @@ source bin/xcode.sh
 
 banner "Preparing"
 
-ensure_valid_core_sim_service
-
 hash xcpretty 2>/dev/null
 if [ $? -eq 0 ] && [ "${XCPRETTY}" != "0" ]; then
   XC_PIPE='xcpretty -c'
