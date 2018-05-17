@@ -249,6 +249,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
     return @[
              alert(@"OK", YES, @"vous envoyer des notifications"),
              alert(@"Autoriser", YES, @"à accéder à vos données de localisation lorsque vous utilisez l’app"),
+             alert(@"Toujours autoriser", YES, @"à accéder à votre position"),
              alert(@"Autoriser", YES, @"à accéder à vos données de localisation même lorsque vous n’utilisez pas l’app"),
              alert(@"Autoriser", YES, @"à accéder aussi à vos données de localisation lorsque vous n’utilisez pas l’app"),
              alert(@"OK", YES, @"souhaite accéder à vos contacts"),
