@@ -1,3 +1,10 @@
+### 1.2.5
+
+Provides support for Xcode 9.4.
+
+* Server: add French localization for 3-button location alert #280
+* Server: add Apple Music en and ru alerts #277
+
 ### 1.2.4
 
 Provides support for Xcode 9.3 and prepares for OSS release.
