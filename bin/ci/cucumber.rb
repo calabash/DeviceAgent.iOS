@@ -43,10 +43,16 @@ Bundler.with_clean_env do
        "DEVELOPER_DIR" => RunLoop::Xcode.new.developer_dir
     }
 
-    cmd = "bundle exec cucumber -p default --format json -o reports/cucumber.json"
+    args = [
+     "bundle", "exec",
+     "cucumber", "-p", "default",
+     "-f", "json", "-o", "reports/cucumber.json",
+     "-f", "junit", "-o", "reports/junit",
+     "-f", "pretty"
+		]
 
-    RunLoop.log_unix_cmd(cmd)
-    cmd = cmd.split(" ")
-    system(env, *cmd)
+
+    RunLoop.log_unix_cmd(args.join(" "))
+    system(env, *args)
   end
 end

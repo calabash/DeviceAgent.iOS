@@ -4,8 +4,6 @@ source bin/log.sh
 source bin/ditto.sh
 source bin/simctl.sh
 
-ensure_valid_core_sim_service
-
 set -e
 
 banner "Preparing"
@@ -49,7 +47,7 @@ mkdir -p "${BUILD_PRODUCTS_DIR}"
 
 info "Prepared archive directory"
 
-if [ "${PREPARE_XTC_ONLY}" != "1" ]; then
+if [ "${PREPARE_TC_ONLY}" != "1" ]; then
   rm -rf "${INSTALL_DIR}"
   mkdir -p "${INSTALL_DIR}"
 
@@ -112,21 +110,21 @@ if [ "${PREPARE_XTC_ONLY}" != "1" ]; then
 fi
 banner "Preparing for XTC Submit"
 
-XTC_DIR="xtc-submit"
-rm -rf "${XTC_DIR}"
-mkdir -p "${XTC_DIR}"
+TC_DIR="testcloud-submit"
+rm -rf "${TC_DIR}"
+mkdir -p "${TC_DIR}"
 
-install_with_ditto cucumber/features "${XTC_DIR}/features"
-install_with_ditto cucumber/config/xtc-profiles.yml "${XTC_DIR}/cucumber.yml"
+install_with_ditto cucumber/features "${TC_DIR}/features"
+install_with_ditto cucumber/config/xtc-profiles.yml "${TC_DIR}/cucumber.yml"
 install_with_ditto cucumber/config/xtc-hooks.rb \
-  "${XTC_DIR}/features/support/01_launch.rb"
-install_with_ditto "${INSTALLED_IPA}" "${XTC_DIR}/"
-install_with_ditto "${INSTALLED_DSYM}" "${XTC_DIR}/${DSYM}"
-mkdir -p "${XTC_DIR}/.xtc"
+  "${TC_DIR}/features/support/01_launch.rb"
+install_with_ditto "${INSTALLED_IPA}" "${TC_DIR}/"
+install_with_ditto "${INSTALLED_DSYM}" "${TC_DIR}/${DSYM}"
+mkdir -p "${TC_DIR}/.xtc"
 
-rm -rf "${XTC_DIR}/features/.idea"
+rm -rf "${TC_DIR}/features/.idea"
 
-cat >"${XTC_DIR}/Gemfile" <<EOF
+cat >"${TC_DIR}/Gemfile" <<EOF
 source "https://rubygems.org"
 
 gem "calabash-cucumber"
@@ -135,7 +133,7 @@ gem "rspec", "~> 3.0"
 gem "xamarin-test-cloud"
 EOF
 
-info "Wrote ${XTC_DIR}/Gemfile with contents"
-cat "${XTC_DIR}/Gemfile"
+info "Wrote ${TC_DIR}/Gemfile with contents"
+cat "${TC_DIR}/Gemfile"
 
 info "Done!"
