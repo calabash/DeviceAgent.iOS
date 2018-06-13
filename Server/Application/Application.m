@@ -103,7 +103,17 @@ static Application *currentApplication;
     }
 
     application.launchArguments = launchArgs ?: @[];
-    application.launchEnvironment = environment ?: @{};
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.3) {
+        if (environment != nil && [environment objectForKey:@"DYLD_INSERT_LIBRARIES"] != nil) {
+            NSMutableDictionary *environmentCopy = [environment mutableCopy];
+            NSString *dynLibs = [[environment objectForKey:@"DYLD_INSERT_LIBRARIES"]
+                                              stringByAppendingString:@":/Developer/usr/lib/libXCTTargetBootstrapInject.dylib"];
+            [environmentCopy setObject:dynLibs forKey:@"DYLD_INSERT_LIBRARIES"];
+            application.launchEnvironment = environmentCopy;
+        }
+    } else {
+        application.launchEnvironment = environment ?: @{};
+    }
 
     currentApplication.app = application;
     [currentApplication startSession];
