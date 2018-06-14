@@ -104,13 +104,20 @@ static Application *currentApplication;
 
     application.launchArguments = launchArgs ?: @[];
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.3) {
-        if (environment != nil && [environment objectForKey:@"DYLD_INSERT_LIBRARIES"] != nil) {
-            NSMutableDictionary *environmentCopy = [environment mutableCopy];
-            NSString *dynLibs = [[environment objectForKey:@"DYLD_INSERT_LIBRARIES"]
-                                              stringByAppendingString:@":/Developer/usr/lib/libXCTTargetBootstrapInject.dylib"];
-            [environmentCopy setObject:dynLibs forKey:@"DYLD_INSERT_LIBRARIES"];
-            application.launchEnvironment = environmentCopy;
+        NSString *bootstrapDylibPath = @"/Developer/usr/lib/libXCTTargetBootstrapInject.dylib";
+        NSString *dyldInsertLibraries = [environment objectForKey:@"DYLD_INSERT_LIBRARIES"];
+        NSMutableDictionary *environmentCopy = [environment mutableCopy] ?: [[NSMutableDictionary alloc] init];
+
+        if (dyldInsertLibraries != nil) {
+            if ([dyldInsertLibraries rangeOfString:bootstrapDylibPath].location == NSNotFound){
+                NSString *dynLibs = [NSString stringWithFormat:@"%@:%@",
+                                     dyldInsertLibraries, bootstrapDylibPath];
+                [environmentCopy setObject:dynLibs forKey:@"DYLD_INSERT_LIBRARIES"];
+            }
+        } else {
+            [environmentCopy setObject:bootstrapDylibPath forKey:@"DYLD_INSERT_LIBRARIES"];
         }
+        application.launchEnvironment = environmentCopy;
     } else {
         application.launchEnvironment = environment ?: @{};
     }
