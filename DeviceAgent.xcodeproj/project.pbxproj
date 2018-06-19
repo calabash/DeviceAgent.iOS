@@ -435,6 +435,7 @@
 		F5538B8C1E28BEB9003EC5F3 /* CBXLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = F5538B891E28BEB9003EC5F3 /* CBXLogging.m */; };
 		F55B31C61CBE6EEA00DFB13C /* TwoFingerTap.m in Sources */ = {isa = PBXBuildFile; fileRef = F55B31C41CBE6E3800DFB13C /* TwoFingerTap.m */; };
 		F55B31C71CBE6EEF00DFB13C /* TwoFingerTap.m in Sources */ = {isa = PBXBuildFile; fileRef = F55B31C41CBE6E3800DFB13C /* TwoFingerTap.m */; };
+		F55D226C20D8B75100E0732B /* ApplicationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F55D226B20D8B75100E0732B /* ApplicationTest.m */; };
 		F55F81801C6DD07500A945C8 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F55F7FED1C6DD07500A945C8 /* GCDAsyncSocket.h */; };
 		F55F81811C6DD07500A945C8 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FEE1C6DD07500A945C8 /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
 		F55F81851C6DD07500A945C8 /* DDData.h in Headers */ = {isa = PBXBuildFile; fileRef = F55F7FF51C6DD07500A945C8 /* DDData.h */; };
@@ -1129,6 +1130,7 @@
 		F5538B891E28BEB9003EC5F3 /* CBXLogging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXLogging.m; sourceTree = "<group>"; };
 		F55B31C31CBE6E3800DFB13C /* TwoFingerTap.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TwoFingerTap.h; path = AutomationActions/Gestures/TwoFingerTap.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F55B31C41CBE6E3800DFB13C /* TwoFingerTap.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TwoFingerTap.m; path = AutomationActions/Gestures/TwoFingerTap.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		F55D226B20D8B75100E0732B /* ApplicationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationTest.m; sourceTree = "<group>"; };
 		F55F7FED1C6DD07500A945C8 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		F55F7FEE1C6DD07500A945C8 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		F55F7FF51C6DD07500A945C8 /* DDData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDData.h; sourceTree = "<group>"; };
@@ -1896,6 +1898,14 @@
 			path = XCTAutomationSupport;
 			sourceTree = "<group>";
 		};
+		F55D226A20D8B75100E0732B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F55D226B20D8B75100E0732B /* ApplicationTest.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		F55F7FEA1C6DD07500A945C8 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
@@ -2346,6 +2356,7 @@
 		F58D27D21D4F947F000FF6C0 /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				F55D226A20D8B75100E0732B /* Application */,
 				F58D27D61D4F947F000FF6C0 /* AutomationActions */,
 				F58D27F01D4F947F000FF6C0 /* CBXiOSVersionInlinesTest.m */,
 				F58D27F11D4F947F000FF6C0 /* CBXTestToolsStandup.m */,
@@ -3627,6 +3638,7 @@
 				F5B0A1CF1CAD4E7F00E056CE /* MultipartMessageHeader.m in Sources */,
 				89331D331CC50447003C2E59 /* ThreadUtils.m in Sources */,
 				F58D280E1D4F947F000FF6C0 /* CBXTestToolsStandup.m in Sources */,
+				F55D226C20D8B75100E0732B /* ApplicationTest.m in Sources */,
 				F5B0A1A81CAD4E2700E056CE /* Gesture.m in Sources */,
 				F547175120496A210024AA0B /* XCTest+CBXAdditions.m in Sources */,
 				F5B0A1CD1CAD4E7500E056CE /* HTTPServer.m in Sources */,

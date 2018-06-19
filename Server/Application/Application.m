@@ -9,6 +9,7 @@
 #import "CBXConstants.h"
 #import "CBXException.h"
 #import "JSONUtils.h"
+#import "CBXDevice.h"
 
 @interface Application ()
 @property (nonatomic, strong) XCUIApplication *app;
@@ -90,6 +91,43 @@ static Application *currentApplication;
     return [Application terminateApplication:application];
 }
 
++ (BOOL)iOSVersionIsAtLeast103 {
+    NSString *version = [[CBXDevice sharedDevice] iOSVersion];
+    NSDecimalNumber *iOSVersion = [NSDecimalNumber decimalNumberWithString:version];
+    NSDecimalNumber *tenDotThree = [NSDecimalNumber decimalNumberWithString:@"10.3"];
+    return [iOSVersion compare:tenDotThree] != NSOrderedAscending;
+}
+
++ (NSDictionary *)launchEnvironmentWithEnvArg:(NSDictionary *)environmentArg {
+    static NSString *bootstrapDylib = @"/Developer/usr/lib/libXCTTargetBootstrapInject.dylib";
+    static NSString *key = @"DYLD_INSERT_LIBRARIES";
+
+    if ([Application iOSVersionIsAtLeast103]) {
+        if (!environmentArg || environmentArg.count == 0) {
+            return @{key : bootstrapDylib};
+        } else {
+            if (!environmentArg[key]) {
+                NSMutableDictionary *mutable;
+                mutable = [NSMutableDictionary dictionaryWithDictionary:environmentArg];
+                mutable[key] = bootstrapDylib;
+                return [NSDictionary dictionaryWithDictionary:mutable];
+            } else {
+                NSString *value = environmentArg[key];
+                if ([value containsString:bootstrapDylib]) {
+                    return environmentArg;
+                } else {
+                    NSMutableDictionary *mutable;
+                    mutable = [NSMutableDictionary dictionaryWithDictionary:environmentArg];
+                    mutable[key] = [value stringByAppendingFormat:@":%@", bootstrapDylib];
+                    return [NSDictionary dictionaryWithDictionary:mutable];
+                }
+            }
+        }
+    } else {
+        return environmentArg ?: @{};
+    }
+}
+
 + (void)launchAppWithBundleId:(NSString *_Nullable)bundleId
                    launchArgs:(NSArray *_Nullable)launchArgs
                     launchEnv:(NSDictionary *_Nullable)environment
@@ -103,25 +141,7 @@ static Application *currentApplication;
     }
 
     application.launchArguments = launchArgs ?: @[];
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.3) {
-        NSString *bootstrapDylibPath = @"/Developer/usr/lib/libXCTTargetBootstrapInject.dylib";
-        NSString *dyldInsertLibraries = [environment objectForKey:@"DYLD_INSERT_LIBRARIES"];
-        NSMutableDictionary *environmentCopy = [environment mutableCopy] ?: [[NSMutableDictionary alloc] init];
-
-        if (dyldInsertLibraries != nil) {
-            if ([dyldInsertLibraries rangeOfString:bootstrapDylibPath].location == NSNotFound){
-                NSString *dynLibs = [NSString stringWithFormat:@"%@:%@",
-                                     dyldInsertLibraries, bootstrapDylibPath];
-                [environmentCopy setObject:dynLibs forKey:@"DYLD_INSERT_LIBRARIES"];
-            }
-        } else {
-            [environmentCopy setObject:bootstrapDylibPath forKey:@"DYLD_INSERT_LIBRARIES"];
-        }
-        application.launchEnvironment = environmentCopy;
-    } else {
-        application.launchEnvironment = environment ?: @{};
-    }
-
+    application.launchEnvironment = [Application launchEnvironmentWithEnvArg:environment];
     currentApplication.app = application;
     [currentApplication startSession];
 }

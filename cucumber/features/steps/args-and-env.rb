@@ -33,13 +33,22 @@ Then(/^I see the app was launched with the correct environment$/) do
     wait_for_view({marked: "From-the-CLI-uploader!"})
     # Starting from iOS 10.3 we're appending DYLD_INSERT_LIBRARIES
     # with libXCTTargetBootstrapInject.dylib path
-    if ios_version.major > 10 || (ios_version.major == 10 && ios_version.minor >= 3)
+    if ios_version >= RunLoop::Version.new("10.3")
       wait_for_view({marked: "DYLD_INSERT_LIBRARIES"})
-      q = query({id: "dyld_insert_libraries row details"})
-      raise %Q[
-        Error: expected '/Developer/usr/lib/libXCTTargetBootstrapInject.dylib'
-        in DYLD_INSERT_LIBRARIES environment variable
-      ] unless q[0]["label"].include?("/Developer/usr/lib/libXCTTargetBootstrapInject.dylib")
+      result = query({id: "dyld_insert_libraries row details"})
+
+      bootstrap = "/Developer/usr/lib/libXCTTargetBootstrapInject.dylib"
+      if result.nil? || result.empty?
+        raise %Q[
+Expected DYLD_INSERT_LIBRARIES not to be empty when iOS >= 10.3
+]
+      elsif result[0].include?(bootstrap)
+        raise %Q[
+Expected DYLD_INSERT_LIBRARIES to include bootstrap dylib when iOS >= 10.3
+
+Result: #{result}
+]
+      end
     end
   end
 end
