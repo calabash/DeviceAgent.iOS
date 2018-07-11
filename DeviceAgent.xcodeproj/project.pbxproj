@@ -149,6 +149,8 @@
 		F5041F4C1E092D30000B3E3E /* XCTestPrivateSymbols.m in Sources */ = {isa = PBXBuildFile; fileRef = F5041F451E092BAC000B3E3E /* XCTestPrivateSymbols.m */; };
 		F5041F4D1E092D32000B3E3E /* XCTestPrivateSymbols.m in Sources */ = {isa = PBXBuildFile; fileRef = F5041F451E092BAC000B3E3E /* XCTestPrivateSymbols.m */; };
 		F50940FB1CC6069C00E559E3 /* GeometryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BF8F1CBEB5AD0088269C /* GeometryUtils.m */; };
+		F50AF0A020F60D6600CF1250 /* CBXURLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F50AF09F20F60D6600CF1250 /* CBXURLHelper.m */; };
+		F50AF0A120F60D6600CF1250 /* CBXURLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F50AF09F20F60D6600CF1250 /* CBXURLHelper.m */; };
 		F50BB27F1D73392100264915 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F50BB27E1D73392100264915 /* main.m */; };
 		F50BB2821D73392100264915 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F50BB2811D73392100264915 /* AppDelegate.m */; };
 		F50BB2851D73392100264915 /* PermissionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F50BB2841D73392100264915 /* PermissionsController.m */; };
@@ -848,6 +850,8 @@
 		F5041F451E092BAC000B3E3E /* XCTestPrivateSymbols.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCTestPrivateSymbols.m; sourceTree = "<group>"; };
 		F5041F471E092D1C000B3E3E /* XCUIElement+FBIsVisible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIElement+FBIsVisible.h"; sourceTree = "<group>"; };
 		F5041F481E092D1C000B3E3E /* XCUIElement+FBIsVisible.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "XCUIElement+FBIsVisible.m"; sourceTree = "<group>"; tabWidth = 2; };
+		F50AF09E20F60D6600CF1250 /* CBXURLHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBXURLHelper.h; sourceTree = "<group>"; };
+		F50AF09F20F60D6600CF1250 /* CBXURLHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBXURLHelper.m; sourceTree = "<group>"; };
 		F50BB27B1D73392100264915 /* Permissions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Permissions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50BB27E1D73392100264915 /* main.m */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		F50BB2801D73392100264915 /* AppDelegate.h */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
@@ -1671,6 +1675,8 @@
 				F54064021EBB410600C80B4E /* XamWKWebViewController.m */,
 				F54E689D1ECACE5400D7409E /* SafariController.h */,
 				F54E689E1ECACE5400D7409E /* SafariController.m */,
+				F50AF09E20F60D6600CF1250 /* CBXURLHelper.h */,
+				F50AF09F20F60D6600CF1250 /* CBXURLHelper.m */,
 			);
 			path = WebView;
 			sourceTree = "<group>";
@@ -3582,6 +3588,7 @@
 				F54B07651DEDB26200C88A8E /* EnvironmentTableController.m in Sources */,
 				F5E1D8931DEC8EDE00B72A8E /* VolumeController.m in Sources */,
 				F5BA9ED81E48B462008CFE64 /* AlertsAndSheetsTableController.m in Sources */,
+				F50AF0A020F60D6600CF1250 /* CBXURLHelper.m in Sources */,
 				F5BC7ABA1D5CF38F00D9AC8E /* CompanyTableController.m in Sources */,
 				F52802181DED9F280085D4CB /* ArgumentsTableController.m in Sources */,
 				F5954E0F1CBD2E1200117745 /* GestureRecognizerViewController.m in Sources */,
@@ -3650,6 +3657,7 @@
 				F5B0A1B11CAD4E2700E056CE /* QuerySpecifierByText.m in Sources */,
 				F5366DA01DE6CC2900E7C765 /* TextInputFirstResponderProvider.m in Sources */,
 				F5B0A1A31CAD4DE800E056CE /* FBElement.m in Sources */,
+				F50AF0A120F60D6600CF1250 /* CBXURLHelper.m in Sources */,
 				F5B0A1A71CAD4E2700E056CE /* GestureFactory.m in Sources */,
 				F5B0A1B91CAD4E3A00E056CE /* CBXException.m in Sources */,
 				F5538B7E1E28AC7B003EC5F3 /* DDFileLogger.m in Sources */,
