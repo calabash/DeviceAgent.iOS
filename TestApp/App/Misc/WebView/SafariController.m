@@ -1,5 +1,6 @@
 
 #import "SafariController.h"
+#import "CBXURLHelper.h"
 #import <SafariServices/SafariServices.h>
 
 @interface SafariController () <SFSafariViewControllerDelegate>
@@ -30,8 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    NSString *page = @"https://calabash-ci.xyz/CalWebViewApp/page.html";
-    NSURL *url = [NSURL URLWithString:page];
+    NSURL *url = [CBXURLHelper URLForTestPage];
     SFSafariViewController *controller;
 
 #ifdef __IPHONE_11_0
