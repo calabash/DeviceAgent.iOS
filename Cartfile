@@ -1,5 +1,4 @@
 
-github "Microsoft/AppCenter-Test-XCUITest-Extensions"
 github "specta/expecta" "master"
 github "jmoody/specta" "feature/do-not-create-sharedExampleGroup-instances-in-initialize"
 github "erikdoe/ocmock" "master"
