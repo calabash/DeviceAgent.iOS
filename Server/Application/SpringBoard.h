@@ -11,7 +11,9 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
+#import <Foundation/Foundation.h>
 #import "CBX-XCTest-Umbrella.h"
+#import "XCTest+CBXAdditions.h"
 
 // Experimental
 // This enum describes the success or failure of the

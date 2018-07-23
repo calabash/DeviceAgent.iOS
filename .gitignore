@@ -36,9 +36,15 @@ build/*
 Checkouts
 tmp
 Products
+Carthage/Checkouts
+Carthage/Build/tvOS
+Carthage/Build/watchOS
+Carthage/Build/Mac
 Carthage/Build/**/*.version
 Carthage/Build/**/*.bcsymbolmap
-!Carthage/Build/iOS/*.framework*
+!Carthage/Build/iOS/Expecta.framework*
+!Carthage/Build/iOS/Specta.framework*
+!Carthage/Build/iOS/OCMock.framework*
 
 # Info.plist preprocessor files
 TestApp/App/InfoPlist.h

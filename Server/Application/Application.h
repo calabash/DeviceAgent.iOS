@@ -4,7 +4,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIApplication.h>
-#import "XCUIApplicationStateTypedef.h"
+#import "XCTest+CBXAdditions.h"
 
 @class XCUIApplication;
 
