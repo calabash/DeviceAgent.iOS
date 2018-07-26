@@ -1,5 +1,6 @@
 
 #import "QuerySpecifierByProperty.h"
+#import "XCTest+CBXAdditions.h"
 #import "CBX-XCTest-Umbrella.h"
 #import "InvalidArgumentException.h"
 #import "CBXConstants.h"

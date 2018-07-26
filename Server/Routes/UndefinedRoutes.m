@@ -1,7 +1,3 @@
-//
-//  UndefinedRoutes.m
-//  xcuitest-server
-//
 
 #import "UndefinedRoutes.h"
 #import "CBXMacros.h"

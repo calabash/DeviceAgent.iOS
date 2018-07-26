@@ -1,7 +1,3 @@
-//
-//  CBRoute.m
-//  xcuitest-server
-//
 
 #import "CBXConstants.h"
 #import "CBXException.h"

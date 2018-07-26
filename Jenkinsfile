@@ -56,7 +56,7 @@ pipeline {
         }
         stage('appcenter-cli') {
           steps {
-            sh 'npm install -g appcenter-cli'
+            sh 'npm install -g appcenter-cli@1.0.17'
           }
         }
         stage('cucumber; bundle install') {

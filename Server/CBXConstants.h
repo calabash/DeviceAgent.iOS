@@ -3,7 +3,7 @@
 // Licensed under the MIT license.
 
 #import <Foundation/Foundation.h>
-#import "CocoaLumberjack.h"
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
 static const NSUInteger ddLogLevel = DDLogLevelDebug;
 

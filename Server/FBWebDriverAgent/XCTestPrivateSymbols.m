@@ -16,7 +16,7 @@ NSNumber *FB_XCAXAIsElementAttribute;
 
 void *FBRetrieveSymbolFromBinary(const char *binary, const char *name);
 void (*XCSetDebugLogger)(id <XCDebugLogDelegate>);
-id<XCDebugLogDelegate> (*XCDebugLogger)();
+id<XCDebugLogDelegate> (*XCDebugLogger)(void);
 
 
 void *FBRetrieveSymbolFromBinary(const char *binary, const char *name)
