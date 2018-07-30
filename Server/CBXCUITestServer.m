@@ -65,7 +65,6 @@ static NSString *serverName = @"CalabashXCUITestServer";
     return shared;
 }
 
-
 + (void)start {
     [CBXLogging startLumberjackLogging];
 
