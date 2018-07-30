@@ -1,6 +1,0 @@
-framework module AppCenterXCUITestExtensions {
-  umbrella header "AppCenterXCUITestExtensions.h"
-
-  export *
-  module * { export * }
-}

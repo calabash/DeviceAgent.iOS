@@ -1,1 +1,5 @@
+github "CocoaLumberjack/CocoaLumberjack" "3.4.2"
 github "Microsoft/AppCenter-Test-XCUITest-Extensions" "1.0.0"
+github "erikdoe/ocmock" "c4be5d9d9238fcd10449424f651fba2b7aff87c0"
+github "jmoody/specta" "d539c58fe4bc3326282e4e8496e14a0ab1265992"
+github "specta/expecta" "fa55aaf12fc82d0d2dd689ecce2db44ad6869582"

@@ -1,6 +1,6 @@
 
 #import "CBXLogging.h"
-#import "CocoaLumberjack.h"
+#import <CocoaLumberjack/CocoaLumberjack.h>
 #import <libkern/OSAtomic.h>
 
 #pragma mark - CBXLogFileManager
