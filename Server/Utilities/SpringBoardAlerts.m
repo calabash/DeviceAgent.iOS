@@ -323,7 +323,9 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
 
 - (NSArray<SpringBoardAlert *> *)ItalianAlerts {
   return @[
+    alert(@"Consenti sempre", YES, @"di accedere alla tua posizione"),
     alert(@"Consenti", YES, @"di accedere ai dati relativi alla tua posizione quando stai usando l'app"),
+    alert(@"Consenti", YES, @"di accedere ai dati relativi alla tua posizione mentre utilizzi l'app"),
     alert(@"Consenti", YES, @"di accedere anche ai dati relativi alla tua posizione quando l'app non è in uso"),
     alert(@"OK", YES, @"vorrebbe accedere alla fotocamera"),
     alert(@"OK", YES, @"vorrebbe accedere al microfono"),
@@ -333,6 +335,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
     alert(@"OK", YES, @"vorrebbe accedere ai tuoi Promemoria"),
     alert(@"OK", YES, @"vorrebbe rendere disponibili i dati ai dispositivi Bluetooth nelle vicinanze anche quando non è in uso"),
     alert(@"OK", YES, @"vorrebbe inviarti delle notifiche"),
+    alert(@"OK", YES, @"vorrebbe inviarti notifiche"),
     alert(@"OK", YES, @"desodera accedere all'opzione di riconoscimento vocale"),
     alert(@"OK", YES, @"desidera accedere ai dati di “Movimento e fitness”"),
     alert(@"OK", YES, @"vorrebbe accedere agli account Twitter")
