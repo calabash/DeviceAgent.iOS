@@ -14,15 +14,17 @@
 
 #import <objc/NSObject.h>
 
-@interface XCTActivityAggregationRecord : NSObject
+@class DTXConnection;
+
+@interface XCTRunnerDTServiceHubSession : NSObject
 {
-    double _totalTime;
-    double _timeMinusSubactivities;
+    DTXConnection *_dtxConnection;
 }
 
-@property double timeMinusSubactivities;
-@property double totalTime;
+@property(readonly) DTXConnection *dtxConnection;
 
++ (id)sharedSession;
+- (id)initWithConnection:(id)arg1;
 
 @end
 
