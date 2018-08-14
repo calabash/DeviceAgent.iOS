@@ -54,7 +54,6 @@
 + (void)setSharedSession:(id)arg1;
 + (id)sharedSession;
 + (id)sharedSessionQueue;
-+ (id)transportForLocalPath:(id)arg1 error:(id *)arg2;
 - (id)_IDE_executeTestIdentifiers:(id)arg1 skippingTestIdentifiers:(id)arg2;
 - (id)_IDE_fetchDiscoveredTestClasses;
 - (id)_IDE_processWithBundleID:(id)arg1 path:(id)arg2 pid:(id)arg3 crashedUnderSymbol:(id)arg4;

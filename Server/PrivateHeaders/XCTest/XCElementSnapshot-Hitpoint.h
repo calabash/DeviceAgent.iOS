@@ -28,5 +28,6 @@
 - (id)hitTest:(CGPoint)arg1;
 - (id)hostingAndOrientationTransformedPoint:(CGPoint)arg1 error:(id *)arg2;
 - (id)hostingAndOrientationTransformedRect:(CGRect)arg1 error:(id *)arg2;
+- (id)reparentedOrphanElementMatchingAccessibilityElement:(id)arg1 inconsistentRelationshipDescriptions:(id *)arg2 error:(id *)arg3;
 @end
 

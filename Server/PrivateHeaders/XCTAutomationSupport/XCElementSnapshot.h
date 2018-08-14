@@ -108,9 +108,12 @@
 + (id)axAttributesForElementSnapshotKeyPaths:(id)arg1;
 + (id)axAttributesForSnapshotAttributes:(id)arg1;
 + (id)elementWithAccessibilityElement:(id)arg1;
++ (id)requiredAXAttributesForElementSnapshotHierarchy;
++ (id)sanitizedElementSnapshotHierarchyAttributesForAttributes:(id)arg1 isMacOS:(BOOL)arg2;
 - (id)_allDescendants;
 - (void)_assertForFaultsInContext:(CDUnknownBlockType)arg1;
 - (id)_childMatchingElement:(id)arg1;
+- (void)_compensateForInsufficientElementTypeData;
 - (NSInteger)_faultingBitForKey:(id)arg1;
 - (BOOL)_fetchBoolForKey:(id)arg1;
 - (id)_fetchSimpleValueForKey:(id)arg1;
@@ -120,6 +123,7 @@
 - (BOOL)_isDescendantOfElement:(id)arg1;
 - (BOOL)_isFaultedIn:(NSInteger)arg1;
 - (BOOL)_matchesElement:(id)arg1;
+- (void)_recursivelyResetElementType;
 - (void)_recursivelySetFaultedBits:(NSInteger)arg1;
 - (void)_setIsFaultedIn:(NSInteger)arg1;
 - (BOOL)_shouldAttemptFaultForBit:(NSInteger)arg1;
