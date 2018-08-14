@@ -53,7 +53,6 @@
 - (id)initWithElement:(id)arg1 attributes:(id)arg2 parameters:(id)arg3;
 - (id)initWithElement:(id)arg1 rawAttributes:(id)arg2 parameters:(id)arg3;
 - (BOOL)loadSnapshotAndReturnError:(id *)arg1;
-- (id)safeAttributesForAttributes:(id)arg1;
 - (id)safeParametersForParameters:(id)arg1;
 
 @end

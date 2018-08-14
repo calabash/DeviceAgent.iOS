@@ -22,7 +22,7 @@
     NSMutableArray *_handlers;
 }
 
-@property(retain) NSMutableArray *handlers;
+@property(readonly, copy) NSMutableArray *handlers;
 @property(readonly) XCUITestContextScope *parentScope;
 
 - (id)initWithParentScope:(id)arg1;

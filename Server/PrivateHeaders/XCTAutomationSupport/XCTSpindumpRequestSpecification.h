@@ -35,6 +35,7 @@
 @property(readonly) NSString *signature;
 @property(readonly) NSUInteger spindumpFlags;
 
+- (id)initWithProcessID:(NSInteger)arg1;
 - (id)initWithProcessID:(NSInteger)arg1 durationMilliseconds:(NSUInteger)arg2 intervalMicroseconds:(NSUInteger)arg3 spindumpFlags:(NSUInteger)arg4 reason:(id)arg5 signature:(id)arg6 filename:(id)arg7;
 
 @end

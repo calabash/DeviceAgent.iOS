@@ -121,6 +121,7 @@
 - (NSUInteger)numberOfTestIterationsForTestWithSelector:(SEL)arg1;
 - (id)performFailableBlock:(CDUnknownBlockType)arg1 testCaseRun:(id)arg2 shouldInterruptTest:(BOOL *)arg3;
 - (void)performTest:(id)arg1;
+- (void)recordActivityWithFormat:(id)arg1;
 - (void)recordFailureWithDescription:(id)arg1 inFile:(id)arg2 atLine:(NSUInteger)arg3 expected:(BOOL)arg4;
 - (void)registerDefaultMetrics;
 - (void)registerMetricID:(id)arg1 name:(id)arg2 unit:(id)arg3;
