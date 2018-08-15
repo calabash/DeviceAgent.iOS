@@ -1,6 +1,8 @@
 
 #import "JSONUtils.h"
 #import "XCElementSnapshot-Hitpoint.h"
+#import "XCUIElement+WebDriverAttributes.h"
+#import "XCUIElement+FBIsVisible.h"
 #import "InvalidArgumentException.h"
 #import "CBXConstants.h"
 #import "CBXDecimalRounder.h"
@@ -40,13 +42,11 @@ static NSDictionary *typeStringToElementType;
         json[CBX_HAS_FOCUS_KEY] = @(snapshotOrElement.wdHasFocus);
         json[CBX_HAS_KEYBOARD_FOCUS_KEY] = @(snapshotOrElement.wdHasKeyboardFocus);
 
-        BOOL visible;
-        CGPoint hitPoint;
-        [snapshotOrElement getHitPoint:&hitPoint visibility:&visible];
+        CBXVisibilityResult *result = [snapshotOrElement visibilityResult];
 
-        json[CBX_HITABLE_KEY] = @(visible);
-        json[CBX_HIT_POINT_KEY] = @{@"x" : [JSONUtils normalizeFloat:hitPoint.x],
-                                    @"y" : [JSONUtils normalizeFloat:hitPoint.y]};
+        json[CBX_HITABLE_KEY] = @(result.isVisible);
+        json[CBX_HIT_POINT_KEY] = @{@"x" : [JSONUtils normalizeFloat:result.point.x],
+                                    @"y" : [JSONUtils normalizeFloat:result.point.y]};
     } @catch (NSException *exception) {
         DDLogError(@"Caught an exception converting '%@' with class '%@' to JSON:\n%@",
                    snapshotOrElement, [snapshotOrElement class], [exception reason]);
