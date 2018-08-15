@@ -18,6 +18,10 @@
 #import "XCUIHitPointResult.h"
 #import "CBXConstants.h"
 
+@implementation CBXVisibilityResult
+
+@end
+
 @implementation XCUIElement (FBIsVisible)
 
 - (BOOL)fb_isVisible
@@ -28,21 +32,23 @@
   return self.lastSnapshot.fb_isVisible;
 }
 
-- (void)getHitPoint:(CGPoint *)point visibility:(BOOL *)visible {
+- (CBXVisibilityResult *)visibilityResult {
   BOOL isVisible = self.isHittable;
-  *visible = isVisible;
+  CBXVisibilityResult *result = [CBXVisibilityResult new];
 
   if (!isVisible) {
-    *point = CGPointMake(-1, -1);
+    result.point = CGPointMake(-1, -1);
   } else {
     // Starting in Xcode 9.3
     if ([self respondsToSelector:@selector(hitPointCoordinate)]) {
       XCUICoordinate *coordinate = self.hitPointCoordinate;
-      *point = coordinate.screenPoint;
+      result.point = coordinate.screenPoint;
     } else {
-      [self.lastSnapshot getHitPoint:point visibility:visible];
+      return [self.lastSnapshot visibilityResult];
     }
   }
+  
+  return result;
 }
 
 @end
@@ -93,23 +99,23 @@
   return (id __nonnull)attributesResult[attribute];
 }
 
-- (void)getHitPoint:(CGPoint *)point visibility:(BOOL *)visible {
+- (CBXVisibilityResult *)visibilityResult {
+  CBXVisibilityResult *cbxResult = [CBXVisibilityResult new];
   // Starting in Xcode 9.3
   if ([self respondsToSelector:@selector(hitPoint:)]) {
     // r26 = *(int8_t *)__XCShouldUseHostedViewConversion.shouldUseHostedViewConversion | r9;
     int8_t flag;
     CGPoint intermediate;
-
     XCUIHitPointResult *result = [self hitPoint:&flag];
 
-    *visible = result.isHittable;
+    cbxResult.isVisible = result.isHittable;
     if (result.isHittable) {
       intermediate = result.hitPoint;
     } else {
       intermediate = CGPointMake(-1, -1);
     }
 
-    *point = intermediate;
+    cbxResult.point = intermediate;
 
     DDLogDebug(@"Finding hit point for XCElementSnapshot: %@\n"
     "hitpoint: %@\n"
@@ -119,16 +125,17 @@
     [NSString stringWithFormat:@"(%@, %@)", @(intermediate.x), @(intermediate.y)],
     result.isHittable ? @"YES" : @"NO", @(flag));
   } else {
-    *point = [XCElementSnapshot cbxHitPointFromLastSnapshot:self];
-    BOOL isVisible = self.fb_isVisible;
-    *visible = isVisible;
+    cbxResult.point = [XCElementSnapshot cbxHitPointFromLastSnapshot:self];
+    cbxResult.isVisible = self.fb_isVisible;
 
-    if (!isVisible) {
-      *point = CGPointMake(-1, -1);
+    if (!cbxResult.isVisible) {
+      cbxResult.point = CGPointMake(-1, -1);
     } else {
-      *point = [XCElementSnapshot cbxHitPointFromLastSnapshot:self];
+      cbxResult.point = [XCElementSnapshot cbxHitPointFromLastSnapshot:self];
     }
   }
+  
+  return cbxResult;
 }
 
 + (CGPoint)cbxHitPointFromLastSnapshot:(XCElementSnapshot *)snapshot {
