@@ -35,6 +35,7 @@
 - (CBXVisibilityResult *)visibilityResult {
   BOOL isVisible = self.isHittable;
   CBXVisibilityResult *result = [CBXVisibilityResult new];
+  result.isVisible = isVisible;
 
   if (!isVisible) {
     result.point = CGPointMake(-1, -1);
