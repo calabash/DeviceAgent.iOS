@@ -179,6 +179,7 @@ static NSDictionary *typeStringToElementType;
                                 @(XCUIElementTypeTabGroup) : @"TabGroup",
                                 @(XCUIElementTypeToolbar) : @"Toolbar",
                                 @(XCUIElementTypeStatusBar) : @"StatusBar",
+                                @(XCUIElementTypeStatusItem) : @"StatusItem",
                                 @(XCUIElementTypeTable) : @"Table",
                                 @(XCUIElementTypeTableRow) : @"TableRow",
                                 @(XCUIElementTypeTableColumn) : @"TableColumn",
