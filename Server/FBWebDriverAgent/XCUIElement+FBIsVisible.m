@@ -105,11 +105,13 @@
   // Starting in Xcode 9.3
   if ([self respondsToSelector:@selector(hitPoint:)]) {
     // r26 = *(int8_t *)__XCShouldUseHostedViewConversion.shouldUseHostedViewConversion | r9;
-    int8_t flag;
+    // This flag isn't important
+    // int8_t flag;
     CGPoint intermediate;
-    XCUIHitPointResult *result = [self hitPoint:&flag];
+    XCUIHitPointResult *result = [self hitPoint:NULL];
 
     cbxResult.isVisible = result.isHittable;
+
     if (result.isHittable) {
       intermediate = result.hitPoint;
     } else {
@@ -120,11 +122,10 @@
 
     DDLogDebug(@"Finding hit point for XCElementSnapshot: %@\n"
     "hitpoint: %@\n"
-    "visible: %@\n"
-    "hosted conversion flag: %@",
+    "visible: %@\n",
     self,
     [NSString stringWithFormat:@"(%@, %@)", @(intermediate.x), @(intermediate.y)],
-    result.isHittable ? @"YES" : @"NO", @(flag));
+    result.isHittable ? @"YES" : @"NO");
   } else {
     cbxResult.point = [XCElementSnapshot cbxHitPointFromLastSnapshot:self];
     cbxResult.isVisible = self.fb_isVisible;
