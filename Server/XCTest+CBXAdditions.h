@@ -8,7 +8,7 @@
 // These are defined in XCTest.
 // To avoid duplicate symbol warnings and errors, don't import
 // these if XCTest is available  - for example, when running unit tests.
-#ifndef XCT_UI_TESTING_AVAILABLE
+#if LOAD_XCTEST_PRIVATE_HEADERS
 #import "XCUIApplication.h"
 #import "XCApplicationQuery.h"
 #import "XCUIElement.h"
@@ -16,6 +16,8 @@
 #import "XCUIDevice.h"
 #import "XCUIApplicationStateTypedef.h"
 #endif
+
+
 
 // Defined in XCTAutomationSupport framework, so it is safe to import
 // in any context.

@@ -9,6 +9,7 @@
 #import "CBXConstants.h"
 #import "CBXException.h"
 #import "JSONUtils.h"
+#import "CBXDevice.h"
 
 @interface Application ()
 @property (nonatomic, strong) XCUIApplication *app;
@@ -90,6 +91,43 @@ static Application *currentApplication;
     return [Application terminateApplication:application];
 }
 
++ (BOOL)iOSVersionIsAtLeast103 {
+    NSString *version = [[CBXDevice sharedDevice] iOSVersion];
+    NSDecimalNumber *iOSVersion = [NSDecimalNumber decimalNumberWithString:version];
+    NSDecimalNumber *tenDotThree = [NSDecimalNumber decimalNumberWithString:@"10.3"];
+    return [iOSVersion compare:tenDotThree] != NSOrderedAscending;
+}
+
++ (NSDictionary *)launchEnvironmentWithEnvArg:(NSDictionary *)environmentArg {
+    static NSString *bootstrapDylib = @"/Developer/usr/lib/libXCTTargetBootstrapInject.dylib";
+    static NSString *key = @"DYLD_INSERT_LIBRARIES";
+
+    if ([Application iOSVersionIsAtLeast103]) {
+        if (!environmentArg || environmentArg.count == 0) {
+            return @{key : bootstrapDylib};
+        } else {
+            if (!environmentArg[key]) {
+                NSMutableDictionary *mutable;
+                mutable = [NSMutableDictionary dictionaryWithDictionary:environmentArg];
+                mutable[key] = bootstrapDylib;
+                return [NSDictionary dictionaryWithDictionary:mutable];
+            } else {
+                NSString *value = environmentArg[key];
+                if ([value containsString:bootstrapDylib]) {
+                    return environmentArg;
+                } else {
+                    NSMutableDictionary *mutable;
+                    mutable = [NSMutableDictionary dictionaryWithDictionary:environmentArg];
+                    mutable[key] = [value stringByAppendingFormat:@":%@", bootstrapDylib];
+                    return [NSDictionary dictionaryWithDictionary:mutable];
+                }
+            }
+        }
+    } else {
+        return environmentArg ?: @{};
+    }
+}
+
 + (void)launchAppWithBundleId:(NSString *_Nullable)bundleId
                    launchArgs:(NSArray *_Nullable)launchArgs
                     launchEnv:(NSDictionary *_Nullable)environment
@@ -103,8 +141,7 @@ static Application *currentApplication;
     }
 
     application.launchArguments = launchArgs ?: @[];
-    application.launchEnvironment = environment ?: @{};
-
+    application.launchEnvironment = [Application launchEnvironmentWithEnvArg:environment];
     currentApplication.app = application;
     [currentApplication startSession];
 }

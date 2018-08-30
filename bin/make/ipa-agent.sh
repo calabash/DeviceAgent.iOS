@@ -9,13 +9,7 @@ set -e
 
 banner "Preparing"
 
-if [ "${XCPRETTY}" = "0" ]; then
-  USE_XCPRETTY=
-else
-  USE_XCPRETTY=`which xcpretty | tr -d '\n'`
-fi
-
-if [ ! -z ${USE_XCPRETTY} ]; then
+if [ $(gem list -i xcpretty) = "true" ] && [ "${XCPRETTY}" != "0" ]; then
   XC_PIPE='xcpretty -c'
 else
   XC_PIPE='cat'
@@ -67,8 +61,8 @@ COMMAND_LINE_BUILD=1 xcrun xcodebuild \
   -derivedDataPath "${XC_BUILD_DIR}" \
   -configuration "${XC_CONFIG}" \
   -sdk iphoneos \
-  ARCHS="armv7 armv7s arm64" \
-  VALID_ARCHS="armv7 armv7s arm64" \
+  ARCHS="armv7 arm64" \
+  VALID_ARCHS="armv7 arm64" \
   ONLY_ACTIVE_ARCH=NO \
   GCC_TREAT_WARNINGS_AS_ERRORS=YES \
   build-for-testing | $XC_PIPE

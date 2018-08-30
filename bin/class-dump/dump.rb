@@ -26,9 +26,6 @@ FRAMEWORKS.each do |framework|
   FRAMEWORKS_MAP[framework] = output_path
 end
 
-SOURCE_DIR = File.join("Products", "ipa", "DeviceAgent",
-                       "DeviceAgent-Runner.app", "Frameworks")
-
 FRAMEWORKS_MAP.each do |framework, output_path|
   developer_dir = RunLoop::Xcode.new.developer_dir
   library = File.join(developer_dir, "Platforms", "iPhoneOS.platform",
@@ -133,7 +130,9 @@ MISSING_PROTOCOLS = [
   "XCTestManager_ManagerInterface",
   "XCTTestRunSessionDelegate",
   "XCTWaiterDelegate",
-  "XCTestManager_IDEInterface"
+  "XCTestManager_IDEInterface",
+  "XCTRunnerIDESessionDelegate",
+  "XCTTestWorker"
 ]
 
 FRAMEWORKS_MAP.each do |_, output_path|
@@ -143,6 +142,7 @@ FRAMEWORKS_MAP.each do |_, output_path|
    "NSCopying-Protocol.h",
    "NSObject-Protocol.h",
    "NSSecureCoding-Protocol.h",
+   "DTXProxyChannel-XCTestAdditions.h",
    "__ARCLiteKeyedSubscripting__-Protocol.h"].each do |header|
     FileUtils.rm_f(File.join(output_path, header))
   end
@@ -217,6 +217,9 @@ FRAMEWORKS_MAP.each do |_, output_path|
         line.gsub!("id <XCTestManager_IDEInterface><NSObject>",
                    "id <XCTestManager_IDEInterface>")
 
+        line.gsub!("XCTestManager_IDEInterface><NSObject",
+                   "XCTestManager_IDEInterface")
+
         line.gsub!("_Bool", "BOOL")
         line.gsub!("struct CGRect", "CGRect")
         line.gsub!("struct CGPoint", "CGPoint")
@@ -241,8 +244,10 @@ FRAMEWORKS_MAP.each do |_, output_path|
         if line[/@property/]
           properties = properties + line
         else
-          # Skip all "#import NS*.h"
-          if !line[/#import "NS.+\.h/]
+          if line[/#import "NS.+\.h/] ||
+             line[/#import <Foundation\/.*\.h>/]
+            puts "skipping line: #{line}"
+          else
             lines << line
           end
         end

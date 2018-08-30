@@ -16,6 +16,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@interface CBXVisibilityResult : NSObject
+
+@property (nonatomic, assign) BOOL isVisible;
+@property (nonatomic, assign) CGPoint point;
+
+@end
+
 @interface XCUIElement (FBIsVisible)
 
 /*! Whether or not the element is visible */
@@ -30,10 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
  *     UserInfo={NSLocalizedDescription=Error copying attributes -25202} <unknown> 0 1
  *
  * and asking if an element is visible is expensive.
- * @param point reference to a CGPoint
- * @param visible reference to a BOOL
  */
-- (void)getHitPoint:(CGPoint *)point visibility:(BOOL *)visible;
+- (CBXVisibilityResult *)visibilityResult;
 
 @end
 
@@ -51,10 +56,8 @@ NS_ASSUME_NONNULL_BEGIN
  *     UserInfo={NSLocalizedDescription=Error copying attributes -25202} <unknown> 0 1
  *
  * and asking if an element is visible is expensive.
- * @param point reference to a CGPoint
- * @param visible reference to a BOOL
  */
-- (void)getHitPoint:(CGPoint *)point visibility:(BOOL *)visible;
+- (CBXVisibilityResult *)visibilityResult;
 
 @end
 

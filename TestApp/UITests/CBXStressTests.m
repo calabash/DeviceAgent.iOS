@@ -2,6 +2,12 @@
 #import <XCTest/XCTest.h>
 #import <AppCenterXCUITestExtensions/AppCenterXCUITestExtensions.h>
 
+@interface XCUIApplication (TEST)
+
+- (UIInterfaceOrientation)interfaceOrientation;
+
+@end
+
 @interface CBXStressTests : XCTestCase
 
 @property(strong) XCUIApplication *aut;
@@ -10,14 +16,140 @@
 
 @implementation CBXStressTests
 
+#pragma mark - Rotate
+
+- (NSString *)stringForDeviceOrientation:(UIDeviceOrientation)orientation {
+    switch (orientation) {
+        case UIDeviceOrientationUnknown: { return @"Unknown"; }
+        case UIDeviceOrientationPortrait: { return @"Portrait"; }
+        case UIDeviceOrientationPortraitUpsideDown: { return @"Upside Down"; }
+        case UIDeviceOrientationLandscapeLeft: { return @"Landscape Left"; }
+        case UIDeviceOrientationLandscapeRight: { return @"Landscape Right"; }
+        case UIDeviceOrientationFaceUp: { return @"Face Up"; }
+        case UIDeviceOrientationFaceDown: { return @"Face Down"; }
+    }
+}
+
+- (NSString *)stringForInterfaceOrientation:(UIInterfaceOrientation)orientation {
+    switch (orientation) {
+        case UIDeviceOrientationUnknown: { return @"Unknown"; }
+        case UIDeviceOrientationPortrait: { return @"Portrait"; }
+        case UIDeviceOrientationPortraitUpsideDown: { return @"Upside Down"; }
+        case UIDeviceOrientationLandscapeLeft: { return @"Landscape Left"; }
+        case UIDeviceOrientationLandscapeRight: { return @"Landscape Right"; }
+    }
+}
+
+- (UIInterfaceOrientation)interfaceOrientionForDeviceOrientation:(UIDeviceOrientation)orientation {
+    switch (orientation) {
+        case UIDeviceOrientationPortrait: { return UIInterfaceOrientationPortrait; }
+        case UIDeviceOrientationPortraitUpsideDown: { return UIInterfaceOrientationPortraitUpsideDown; }
+        case UIDeviceOrientationLandscapeLeft: { return UIInterfaceOrientationLandscapeRight; }
+        case UIDeviceOrientationLandscapeRight: { return UIInterfaceOrientationLandscapeLeft; }
+        default: { return UIInterfaceOrientationUnknown; }
+    }
+}
+
+- (XCUIApplication *)springBoard {
+    return [[XCUIApplication alloc]
+            initWithBundleIdentifier:@"com.apple.SpringBoard"];
+}
+
+- (NSDictionary *)springBoardOrientation {
+    return [self interfaceOrientation:[self springBoard]];
+}
+
+- (NSDictionary *)autOrientation {
+    return [self interfaceOrientation:self.aut];
+}
+
+- (NSDictionary *)interfaceOrientation:(XCUIApplication *)application {
+    UIInterfaceOrientation orientation = [application interfaceOrientation];
+    return @{@"enum" : @(orientation),
+             @"string" : [self stringForInterfaceOrientation:orientation]};
+}
+
+
+- (NSDictionary *)deviceOrientation {
+    UIDeviceOrientation orientation = [[XCUIDevice sharedDevice] orientation];
+    return @{@"enum" : @(orientation),
+             @"string" : [self stringForDeviceOrientation:orientation]};
+}
+
+- (void)rotateDeviceToOrientation:(UIDeviceOrientation)orientation {
+    [[XCUIDevice sharedDevice] setOrientation:orientation];
+    CFRunLoopRunInMode(kCFRunLoopDefaultMode, 2.0, false);
+    act_label(@"Did ask device to rotate to orientation: %@ (%@) - screenshot after 2 seconds",
+              [self stringForDeviceOrientation:orientation], @(orientation));
+
+    UIInterfaceOrientation interfaceOrientation;
+    interfaceOrientation = [self interfaceOrientionForDeviceOrientation:orientation];
+    [self waitForSpringBoardToRotateTo:interfaceOrientation timeout:5];
+}
+
+- (void)waitForSpringBoardToRotateTo:(UIInterfaceOrientation)orientation
+                             timeout:(NSTimeInterval)timeout {
+    NSPredicate *predicate;
+    predicate = [NSPredicate predicateWithFormat:@"interfaceOrientation == %d",
+                 orientation];
+
+    XCTestExpectation *expectation;
+    expectation = [self expectationForPredicate:predicate
+                            evaluatedWithObject:[self springBoard]
+                                        handler:nil];
+
+    XCTWaiterResult waitResult;
+    waitResult = [XCTWaiter waitForExpectations:@[expectation] timeout:timeout];
+    NSDictionary *deviceOrientation, *interfaceOrientation, *autOrientation;
+
+
+    if (waitResult == XCTWaiterResultCompleted) {
+        CFRunLoopRunInMode(kCFRunLoopDefaultMode, 2.0, false);
+
+        deviceOrientation = [self deviceOrientation];
+
+        NSLog(@"Device has orientation: %@ (%@)",
+              deviceOrientation[@"string"], deviceOrientation[@"enum"]);
+
+        interfaceOrientation = [self springBoardOrientation];
+        NSLog(@"SpringBoard has orientation: %@ (%@)",
+              interfaceOrientation[@"string"], interfaceOrientation[@"enum"]);
+
+        autOrientation = [self autOrientation];
+        NSLog(@"AUT has orientation: %@ (%@)",
+              autOrientation[@"string"], autOrientation[@"enum"]);
+    } else {
+        interfaceOrientation = [self springBoardOrientation];
+        deviceOrientation = [self deviceOrientation];
+        autOrientation = [self autOrientation];
+
+        XCTFail(@"Expected SpringBoard to rotate to orientation after %@ seconds.\n"
+                "   Expected interface orientation: %@ (%@)\n"
+                "      Found interface orientation: %@ (%@)\n"
+                "\n"
+                "Device has orientation: %@ (%@)"
+                "AUT has orientation: %@ (%@)",
+                @(timeout),
+                [self stringForInterfaceOrientation:orientation], @(orientation),
+                interfaceOrientation[@"string"], interfaceOrientation[@"enum"],
+                deviceOrientation[@"string"], deviceOrientation[@"enum"],
+                autOrientation[@"string"], autOrientation[@"enum"]);
+    }
+}
+
+#pragma mark - Tests
+
 - (void)setUp {
     [super setUp];
-
     self.continueAfterFailure = NO;
+    self.aut = [XCUIApplication new];
+    [self.aut launch];
+    [self rotateDeviceToOrientation:UIDeviceOrientationPortrait];
 }
 
 - (void)tearDown {
     [super tearDown];
+    self.aut = nil;
 }
 
 - (void)testThatAlwaysPasses {
@@ -33,6 +165,7 @@
 
 /*
  * Try to reproduce "Timed out waiting for key event" bug.
+ */
 - (void)testTextEntry {
     [XCUIDevice sharedDevice].orientation = UIDeviceOrientationPortrait;
 
@@ -83,7 +216,6 @@
     NSLog(@"char per second = %@", @(charPerSecond));
 }
 
-*/
 
 /*
  * Entering long text occassionally fails with DeviceAgent

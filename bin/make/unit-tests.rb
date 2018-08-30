@@ -28,7 +28,7 @@ args =
             "-SYMROOT=build/unit-test",
             "-derivedDataPath build/unit-test",
             "-workspace DeviceAgent.xcworkspace",
-            "-scheme UnitTest",
+            "-scheme DeviceAgentUnitTests",
             "-destination id=#{sim_udid}",
             "-sdk iphonesimulator",
             "-configuration Debug",

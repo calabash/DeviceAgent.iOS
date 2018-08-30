@@ -33,6 +33,6 @@ NSString *wdAttributeNameForAttributeName(NSString *name);
 @property (readonly, assign) BOOL wdHasKeyboardFocus;
 
 - (id)valueForWDAttributeName:(NSString *)name;
-- (void)getHitPoint:(CGPoint *)point visibility:(BOOL *)visible;
+- (id)visibilityResult;
 
 @end
