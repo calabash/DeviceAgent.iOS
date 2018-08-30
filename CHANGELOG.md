@@ -1,3 +1,12 @@
+### 1.2.6
+
+Provide support for Xcode 10 beta 6.
+
+* Improve query speed by loading BootstrapInject.dylib into AUT #282
+* remove simulator log redirect #285 @AlexWellsHS
+* SpringBoard: update Italian localizations #287
+* Support for Xcode 10 beta 6 #291
+
 ### 1.2.5
 
 Provides support for Xcode 9.4.
