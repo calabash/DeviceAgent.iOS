@@ -6,13 +6,17 @@
 
 ### Requirements
 
-* Xcode 9.2.
-* ruby 2.3.x - ruby > 2.3 is not supported.
+* Xcode >= 9.4.1
+* ruby 2.3.x - ruby > 2.4 is not supported.
+
+### Code Signing
+
+Project maintainers must clone the [codesign](https://github.com/xamarinhq/calabash-codesign)
+repo and install the certs and profiles. Talk to a maintainer for details.
+
+Contributors need to touch the Xcode project file with valid credentials.
 
 ### Building
-
-Maintainers must install the calabash/calabash-codesign private repo.
-Details are below.
 
 All build products are staged to the ./Products directory - even when
 building from Xcode.
@@ -40,8 +44,7 @@ You should never have to build the UnitTest target for distribution.
 #### Command line
 
 ```
-$ git clone git@github.com:calabash/DeviceAgent.iOS.git ios-device-agent
-$ cd ios-device-agent
+$ cd DeviceAgent.iOS
 $ bundle install
 
 # Make the agent ipa and app
@@ -61,41 +64,20 @@ $ be cucumber
 To build with an alternative Xcode:
 
 ```
-$ DEVELOPER_DIR=/Xcode/7.3/Xcode-beta.app make < rule >
+$ DEVELOPER_DIR=/Xcode/10.0/Xcode-beta.app make < rule >
 ```
 
 If you have build errors, see the xcpretty section below.
 
 ### Code Signing
 
-If you are a maintainer, you _must_ install the codesign tool.
-
-* https://github.com/calabash/calabash-codesign
-
-If see messages like this:
-
 ```
 iPhone Developer: ambiguous matches
 ```
 
-then you must either:
-
-1. `$ CODE_SIGN_IDENTITY="< cert name >" make ipa-cal` (preferred)
-2. Update the Xcode project with a specific Code Signing entity.  **DO
-   NOT CHECK THESE CHANGES INTO GIT.**
-
-Maintainers should be using the Calabash.keychain (calabash/calabash-codesign).
-
-Ambiguous matches usually mean that the certs are contained in both your login.keychain
-and the Calabash.keychain.  Delete the certs in your login.keychain.
-
-### Docs
-
-```
-# appledoc is not available for Xcode 9.3
-$ make docs
-$ open documentation/html/hierarchy.html
-```
+Ambiguous matches usually mean that the certs are contained in both your
+login.keychain and the Calabash.keychain.  Delete the certs in your
+login.keychain.
 
 ### Contributing
 
