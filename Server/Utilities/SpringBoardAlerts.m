@@ -123,7 +123,8 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"OK", YES, @"Would Like to Access Apple Music And Your Media Library"),
              alert(@"Allow", YES, @"Would Like to Add VPN Configurations"),
              alert(@"Open", YES, @"Open in"),
-             alert(@"OK", YES, @"access Apple Music")
+             alert(@"OK", YES, @"access Apple Music"),
+             alert(@"OK", YES, @"Access Speech Recognition")
              ];
 }
 
@@ -141,7 +142,9 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"OK", YES, @"vil bruge din fysiske aktivitet og din træningsaktivitet"),
              alert(@"OK", YES, @"vil bruge kameraet"),
              alert(@"OK", YES, @"vil gerne sende dig meddelelser"),
-             alert(@"Åbn", YES, @"Åbn i")
+             alert(@"Åbn", YES, @"Åbn i"),
+             alert(@"OK", YES, @"desuden Apple med at forbedre"),
+             alert(@"OK", YES, @"vil bruge talegenkendelse")
              ];
 }
 
@@ -161,7 +164,8 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"OK", YES, @"wil toegang tot de camera"),
              alert(@"OK", YES, @"wil u berichten sturen"),
              alert(@"Negeer", YES, @"is niet geactiveerd"),
-             alert(@"Open", YES, @"Openen met")
+             alert(@"Open", YES, @"Openen met"),
+             alert(@"OK", YES, @"wil toegang tot spraakherkenning")
              ];
 }
 
@@ -194,7 +198,8 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"OK", YES, @"begär åtkomst till din rörelse- och träningsaktivitet"),
              alert(@"OK", YES, @"begär åtkomst till kameran"),
              alert(@"Tillåt", YES, @"vill skicka notiser till dig"),
-             alert(@"Öppna", YES, @"Öppna i")
+             alert(@"Öppna", YES, @"Öppna i"),
+             alert(@"OK", YES, @"begär åtkomst till röstigenkänning")
              ];
 }
 - (NSArray<SpringBoardAlert *> *)GermanAlerts {
@@ -216,7 +221,10 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"OK", YES, @"Ihnen Mitteilungen senden"),
              alert(@"OK", YES, @"dir Mitteilungen senden"),
              alert(@"OK", YES, @"Keine SIM-Karte eingelegt"),
-             alert(@"Öffnen", YES, @"öffnen?")
+             alert(@"Öffnen", YES, @"öffnen?"),
+             alert(@"Erlauben", YES, @"auf deinen Standort zugreifen, wenn du die App verwendest"),
+             alert(@"Immer erlauben", YES, @"auf deinen Standort zugreifen"),
+             alert(@"OK", YES, @"Spracherkennung zugreifen")
              ];
 }
 
@@ -233,7 +241,8 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"OK", YES, @"desea acceder a tu actividad física y deportiva"),
              alert(@"OK", YES, @"quiere acceder a la cámara"),
              alert(@"OK", YES, @"quiere enviarte notificaciones"),
-             alert(@"Abrir", YES, @"¿Abrir en")
+             alert(@"Abrir", YES, @"¿Abrir en"),
+             alert(@"Permitir", YES, @"quiere acceder al reconocimiento de voz")
              ];
 }
 
@@ -261,7 +270,8 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"OK", YES, @"souhaite accéder aux comptes Twitter"),
              alert(@"OK", YES, @"souhaite accéder au micro"),
              alert(@"Ouvrir", YES, @"Ouvrir dans"),
-             alert(@"OK", YES, @"Aucune carte SIM")
+             alert(@"OK", YES, @"Aucune carte SIM"),
+             alert(@"OK", YES, @"souhaite accéder à la reconnaissance vocale")
              ];
 }
 
@@ -282,7 +292,8 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"Разрешить", YES, @"запрашивает доступ к «Календарю»."),
              alert(@"Разрешить", YES, @"запрашивает доступ к Вашим данным движения и фитнеса"),
              alert(@"Разрешить", YES, @"запрашивает разрешение на отправку Вам уведомлений."),
-             alert(@"Разрешить", YES, @"доступ к Apple Music")
+             alert(@"Разрешить", YES, @"доступ к Apple Music"),
+             alert(@"Разрешить", YES, @"запрашивает доступ к «Распознаванию речи»")
              ];
 }
 
@@ -300,7 +311,8 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"OK", YES, @"Deseja Ter Acesso às Contas do Twitter"),
              alert(@"OK", YES, @"Deseja enviar-lhe notificações"),
              alert(@"Permitir", YES, @"Deseja Enviar Notificações"),
-             alert(@"Abrir", YES, @"Abrir com")
+             alert(@"Abrir", YES, @"Abrir com"),
+             alert(@"OK", YES, @"Deseja Ter Acesso ao Reconhecimento de Voz")
              ];
 }
 
@@ -317,7 +329,8 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
       alert(@"승인", YES, @"이(가) 마이크에 접근하려고 합니다"),
       alert(@"승인", YES, @"이(가) 사용자의 동작 및 피트니스 활동에 접근하려고 합니다"),
       alert(@"허용", YES, @"에서 알림을 보내고자 합니다"),
-      alert(@"열기", YES, @"에서 열겠습니까?")
+      alert(@"열기", YES, @"에서 열겠습니까?"),
+      alert(@"승인", YES, @"이(가) 음성 인식에 접근하려고 합니다")
   ];
 }
 
@@ -338,7 +351,8 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
     alert(@"OK", YES, @"vorrebbe inviarti notifiche"),
     alert(@"OK", YES, @"desodera accedere all'opzione di riconoscimento vocale"),
     alert(@"OK", YES, @"desidera accedere ai dati di “Movimento e fitness”"),
-    alert(@"OK", YES, @"vorrebbe accedere agli account Twitter")
+    alert(@"OK", YES, @"vorrebbe accedere agli account Twitter"),
+    alert(@"OK", YES, @"desidera accedere all'opzione di riconoscimento vocale")
   ];
 }
 
