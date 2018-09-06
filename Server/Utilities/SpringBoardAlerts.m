@@ -31,6 +31,9 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
 - (NSArray<SpringBoardAlert *> *)KoreanAlerts;
 - (NSArray<SpringBoardAlert *> *)ItalianAlerts;
 - (NSArray<SpringBoardAlert *> *)HebrewAlerts;
+- (NSArray<SpringBoardAlert *> *)HungarianAlerts;
+- (NSArray<SpringBoardAlert *> *)GreekAlerts;
+- (NSArray<SpringBoardAlert *> *)CzechAlerts;
 
 @end
 
@@ -59,7 +62,10 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
                                             [self PTBrazilAlerts],
                                             [self KoreanAlerts],
                                             [self ItalianAlerts],
-                                            [self HebrewAlerts]
+                                            [self HebrewAlerts],
+                                            [self GreekAlerts],
+                                            [self HungarianAlerts],
+                                            [self CzechAlerts]
                                             ]];
     }
     return self;
@@ -375,4 +381,26 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
   ];
 }
 
+- (NSArray<SpringBoardAlert *> *)GreekAlerts {
+  return @[
+    alert(@"Να επιτρέπεται", YES, @"η πρόσβαση στην τοποθεσία σας"),
+    alert(@"Ναι", YES, @"για να σας στέλνει γνωστοποιήσεις")
+  ];
+}
+
+- (NSArray<SpringBoardAlert *> *)HungarianAlerts {
+  return @[
+    alert(@"Engedélyezés", YES, @"hozzáférjen az Ön helyzetéhez az alkalmazás használatakor"),
+    alert(@"Engedélyezés", YES, @"értesítéseket szeretne Önnek küldeni"),
+    alert(@"Engedélyezés mindig", YES, @"számára, hogy hozzáférjen az Ön helyzetéhez")
+  ];
+}
+
+- (NSArray<SpringBoardAlert *> *)CzechAlerts {
+  return @[
+    alert(@"Povolit", YES, @"povolit přístup k polohovým údajům v čase, kdy ji používáte"),
+	alert(@"Povolit vždy", YES, @"využívat vaše polohové údaje"),
+	alert(@"Povolit", YES, @"vám chce zasílat oznámení")
+  ];
+}
 @end
