@@ -1,3 +1,8 @@
+### 1.3.0
+
+* Server: add speech recognition alert texts #293
+* Server: add new localizations for SB alerts #294
+
 ### 1.2.6
 
 Provide support for Xcode 10 beta 6.
