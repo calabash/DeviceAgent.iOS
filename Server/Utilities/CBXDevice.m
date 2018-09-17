@@ -244,7 +244,7 @@ NSString *const CBXDeviceSimKeyVersionInfo = @"SIMULATOR_VERSION_INFO";
       @"iPhone9,2" : @"iphone 6+",
       @"iPhone9,4" : @"iphone 6+",
 
-      // iPhone 8/8+/X - derived from Simulator
+      // iPhone 8/8+/X
       @"iPhone10,1" : @"iphone 6",
       @"iPhone10,4" : @"iphone 6",
       @"iPhone10,5" : @"iphone 6+",
