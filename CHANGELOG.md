@@ -1,3 +1,7 @@
+### 1.3.1
+
+* Add new iPhone 10S, 10S Max, and 10R model numbers #296
+
 ### 1.3.0
 
 * Server: add speech recognition alert texts #293
