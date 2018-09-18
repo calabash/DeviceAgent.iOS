@@ -1,10 +1,9 @@
 #!/usr/bin/env ruby
 
-require "luffa"
-require "bundler"
-
 this_dir = File.expand_path(File.dirname(__FILE__))
 working_directory = File.expand_path(File.join(this_dir, "..", "..", "cucumber"))
+
+require "bundler"
 
 Bundler.with_clean_env do
   Dir.chdir(working_directory) do
@@ -53,6 +52,6 @@ Bundler.with_clean_env do
 
 
     RunLoop.log_unix_cmd(args.join(" "))
-    system(env, *args)
+    Process.exec(env, *args)
   end
 end

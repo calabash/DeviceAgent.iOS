@@ -73,7 +73,7 @@ pipeline {
         stage('unit + cucumber') {
           steps {
             sh 'gtimeout --foreground --signal SIGKILL 60m make unit-tests'
-            sh 'bundle exec bin/ci/cucumber.rb'
+            sh 'gtimeout --foreground --signal SIGKILL 60m bin/ci/cucumber.rb'
           }
         }
         stage('appcenter') {
