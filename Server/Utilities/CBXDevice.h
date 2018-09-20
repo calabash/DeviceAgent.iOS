@@ -102,6 +102,11 @@ extern NSString *const CBXDeviceSimKeyVersionInfo;
 - (BOOL)isArm64;
 
 /**
+ @return A string with a path for saved screenshot
+ */
+- (NSString *)saveScreenshotAtPath:(NSString *)path;
+
+/**
  @return A dictionary describing the attributes of this device.
  */
 - (NSDictionary *)dictionaryRepresentation;

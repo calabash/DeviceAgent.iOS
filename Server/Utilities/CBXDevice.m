@@ -466,6 +466,58 @@ NSString *const CBXDeviceSimKeyVersionInfo = @"SIMULATOR_VERSION_INFO";
     return [self.armVersion containsString:@"arm64"];
 }
 
+- (NSString *)saveScreenshotAtPath:(NSString *)filename {
+    NSString *filePath;
+    NSError *error;
+
+    if (filename != nil) {
+        NSString *pattern = @"^\\/|\\.\\/|\\.\\.\\/|~\\/(.+?)$";
+        NSRegularExpression *expression = [NSRegularExpression regularExpressionWithPattern:pattern
+                                                                                    options:NSRegularExpressionCaseInsensitive
+                                                                                      error:&error];
+        if (error) {
+            @throw [NSError errorWithDomain:error.domain code:error.code userInfo:error.userInfo];
+        }
+        filePath = [expression stringByReplacingMatchesInString:filename
+                                                        options:0
+                                                          range:NSMakeRange(0, filename.length)
+                                                   withTemplate:@"$1"];
+
+    }
+
+    XCUIScreenshot *screenshot = [[XCUIScreen mainScreen] screenshot];
+
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsPath = [paths objectAtIndex:0];
+    NSString *pathToSave = [[[documentsPath stringByAppendingPathComponent:@"DeviceAgent"]
+                             stringByAppendingPathComponent:filePath]
+                            stringByDeletingLastPathComponent];
+    BOOL isDirectory = NO;
+    [[NSFileManager defaultManager] fileExistsAtPath:pathToSave isDirectory:&isDirectory];
+    if (!isDirectory) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:pathToSave
+                                  withIntermediateDirectories:YES
+                                                   attributes:nil
+                                                        error:&error];
+        if (error) {
+            @throw [NSError errorWithDomain:error.domain code:error.code userInfo:error.userInfo];
+        }
+    }
+
+    if (filePath.length == 0) {
+        filePath = [[[NSUUID UUID] UUIDString] stringByAppendingString:@".png"];
+    }
+    NSString *resultFileName = [filePath lastPathComponent];
+    NSString *resultPath = [pathToSave stringByAppendingPathComponent:resultFileName];
+
+    [screenshot.PNGRepresentation writeToFile:resultPath options:NSDataWritingAtomic error:&error];
+    if (error) {
+        @throw [NSError errorWithDomain:error.domain code:error.code userInfo:error.userInfo];
+    }
+
+    return resultPath;
+}
+
 - (NSDictionary *)dictionaryRepresentation {
   UIDeviceOrientation orientation = [CBXOrientation XCUIDeviceOrientation];
   return
