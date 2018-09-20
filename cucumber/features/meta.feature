@@ -17,6 +17,11 @@ Given the app has launched
 Then I can tell DeviceAgent not to automatically dismiss SpringBoard alerts
 Then I can tell DeviceAgent to automatically dismiss SpringBoard alerts
 
+@screenshot
+Scenario: Making screenshots
+Given the app has launched
+Then I can make a screenshot
+
 @not_xtc
 Scenario: XCUIElement types
 Given the app has launched
