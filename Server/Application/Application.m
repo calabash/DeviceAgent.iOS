@@ -153,7 +153,7 @@ static Application *currentApplication;
 }
 
 + (NSDictionary *)snapshotTree:(XCElementSnapshot *)snapshot {
-    NSMutableDictionary *json = [JSONUtils snapshotOrElementToJSON:snapshot];
+    NSMutableDictionary *json = [[JSONUtils snapshotOrElementToJSON:snapshot] mutableCopy];
 
     if (snapshot.children.count) {
         NSMutableArray *children = [NSMutableArray array];

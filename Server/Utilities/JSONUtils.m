@@ -16,46 +16,98 @@ static NSDictionary *typeStringToElementType;
     return [[typeStringToElementType allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 }
 
-+ (NSMutableDictionary *)snapshotOrElementToJSON:(NSObject<FBElement> *)snapshotOrElement {
-    NSMutableDictionary *json = [NSMutableDictionary dictionary];
++ (NSString *)stringByInvokingSelector:(SEL)selector
+                              onTarget:(id)target {
+  NSMethodSignature *signature;
+  Class klass = [target class];
+  signature = [klass instanceMethodSignatureForSelector:selector];
+  NSInvocation *invocation;
+  invocation = [NSInvocation invocationWithMethodSignature:signature];
+  invocation.target = target;
+  invocation.selector = selector;
 
-    if ([snapshotOrElement isKindOfClass:[XCUIElement class]]) {
-        XCUIElement *element = (XCUIElement *)snapshotOrElement;
-        if (![element exists]) {
-            return [@{} mutableCopy];
+  NSString *string = nil;
+  void *buffer;
+  [invocation invoke];
+  [invocation getReturnValue:&buffer];
+  string = (__bridge NSString *)buffer;
+  return string;
+}
+
+
+
+// we want the most information
+// [snapshot performSelector:]
+// or NSInvocation
++ (NSString *)labelForElement:(id)element
+                     snapshot:(id)snapshot {
+  SEL selector = @selector(label);
+  NSString *snapshotLabel = [JSONUtils stringByInvokingSelector:selector onTarget:element];
+  NSString *elementLabel = [JSONUtils stringByInvokingSelector:selector onTarget:snapshot];
+
+  if (!element || elementLabel.length != 0) {
+    return elementLabel;
+  } else {
+    return snapshotLabel;
+  }
+}
+
++ (NSString * ) titleForElement:(id)element
+                       snapshot:(id)snapshot {
+  SEL selector = @selector(title);
+  NSString *snapshotTitle = [JSONUtils stringByInvokingSelector:selector onTarget:element];
+  NSString *elementTitle = [JSONUtils stringByInvokingSelector:selector onTarget:element];
+
+  if (!element || elementTitle.length != 0) {
+   return elementTitle;
+  } else {
+   return snapshotTitle;
+  }
+}
+
++ (NSDictionary *)snapshotOrElementToJSON:(id)element {
+    NSMutableDictionary *json = [NSMutableDictionary dictionary];
+    XCElementSnapshot *snapshot;
+    if ([element isKindOfClass:[XCElementSnapshot class]]) {
+        snapshot = element;
+    } else {
+        if (![(XCUIElement *)element lastSnapshot]) {
+            [(XCUIElement *)element resolve];
         }
+        snapshot = [(XCUIElement *)element lastSnapshot];
     }
+
 
     // Occasionally XCUIElement with type 'Any' are not responding to the
     // WebDriverAgent methods.
     // See https://github.com/calabash/DeviceAgent.iOS/pull/255 for analysis
     @try {
-        json[CBX_TYPE_KEY] = snapshotOrElement.wdType;
-        json[CBX_LABEL_KEY] = snapshotOrElement.wdLabel;
-        json[CBX_TITLE_KEY] = snapshotOrElement.wdTitle;
-        json[CBX_VALUE_KEY] = snapshotOrElement.wdValue;
-        json[CBX_PLACEHOLDER_KEY] = snapshotOrElement.wdPlaceholderValue;
-        json[CBX_RECT_KEY] = [self rectToJSON:snapshotOrElement.wdFrame];
-        json[CBX_IDENTIFIER_KEY] = snapshotOrElement.wdName;
-        json[CBX_ENABLED_KEY] = @(snapshotOrElement.wdEnabled);
-        json[CBX_SELECTED_KEY] = @(snapshotOrElement.wdSelected);
-        json[CBX_HAS_FOCUS_KEY] = @(snapshotOrElement.wdHasFocus);
-        json[CBX_HAS_KEYBOARD_FOCUS_KEY] = @(snapshotOrElement.wdHasKeyboardFocus);
+        json[CBX_TYPE_KEY] = elementTypeToString[@(snapshot.elementType)];
+        json[CBX_LABEL_KEY] = snapshot.label;
+        json[CBX_TITLE_KEY] = snapshot.title;
+        json[CBX_VALUE_KEY] = snapshot.value;
+        json[CBX_PLACEHOLDER_KEY] = snapshot.placeholderValue;
+        json[CBX_RECT_KEY] = [self rectToJSON:snapshot.frame];
+        json[CBX_IDENTIFIER_KEY] = snapshot.identifier;
+        json[CBX_ENABLED_KEY] = @(snapshot.isEnabled);
+        json[CBX_SELECTED_KEY] = @(snapshot.isSelected);
+        json[CBX_HAS_FOCUS_KEY] = @(NO);
+        json[CBX_HAS_KEYBOARD_FOCUS_KEY] = @(snapshot.hasKeyboardFocus);
 
-        CBXVisibilityResult *result = [snapshotOrElement visibilityResult];
+        CBXVisibilityResult *result = [snapshot visibilityResult];
 
         json[CBX_HITABLE_KEY] = @(result.isVisible);
         json[CBX_HIT_POINT_KEY] = @{@"x" : [JSONUtils normalizeFloat:result.point.x],
                                     @"y" : [JSONUtils normalizeFloat:result.point.y]};
     } @catch (NSException *exception) {
         DDLogError(@"Caught an exception converting '%@' with class '%@' to JSON:\n%@",
-                   snapshotOrElement, [snapshotOrElement class], [exception reason]);
+                   snapshot, [snapshot class], [exception reason]);
         DDLogError(@"returning an empty dictionary after converting this much of the"
                    "instance to JSON:\n%@", json);
-        json = [NSMutableDictionary dictionary];
+        return [NSDictionary dictionary];
     }
 
-    return json;
+    return [NSDictionary dictionaryWithDictionary:json];
 }
 
 + (NSNumber *)normalizeFloat:(CGFloat) x {
@@ -73,10 +125,6 @@ static NSDictionary *typeStringToElementType;
         CBXDecimalRounder *rounder = [CBXDecimalRounder new];
         return @([rounder integerByRounding:x]);
     }
-}
-
-+ (NSMutableDictionary *)elementToJSON:(XCUIElement *)element {
-    return [self snapshotOrElementToJSON:element];
 }
 
 + (NSDictionary *)rectToJSON:(CGRect)rect {

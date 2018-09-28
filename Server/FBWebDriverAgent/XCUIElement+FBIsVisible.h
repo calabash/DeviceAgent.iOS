@@ -25,9 +25,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XCUIElement (FBIsVisible)
 
-/*! Whether or not the element is visible */
-@property (atomic, readonly) BOOL fb_isVisible;
-
 /*! Get hitpoint and visibility information.  Asking for the hitpoint of an element that
  * is not visible can lead to:
  *
@@ -43,9 +40,6 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface XCElementSnapshot (FBIsVisible)
-
-/*! Whether or not the element is visible */
-@property (atomic, readonly) BOOL fb_isVisible;
 
 /*! Get hitpoint and visibility information.  Asking for the hitpoint of an element that
  * is not visible can lead to:

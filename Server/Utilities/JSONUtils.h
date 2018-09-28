@@ -37,16 +37,9 @@
         "test_id" : Number
     }
 
- @param snapshotOrElement XCUIElement or XCElementSnapshot to convert to JSON
+ @param element XCUIElement to convert to JSON
  */
-+ (NSMutableDictionary *)snapshotOrElementToJSON:(NSObject<FBElement> *)snapshotOrElement;
-
-/**
- Convenience wrapper for snapshotOrElementToJSON:
- @param element XCUIElement to convert to JSON.
- See snapshotOrElementToJSON:
- */
-+ (NSMutableDictionary *)elementToJSON:(XCUIElement *)element;
++ (NSDictionary *)snapshotOrElementToJSON:(id)element;
 
 /**
  Mapping of a string to an XCUIElementType enum value. E.g.,
