@@ -34,37 +34,6 @@ static NSDictionary *typeStringToElementType;
   return string;
 }
 
-
-
-// we want the most information
-// [snapshot performSelector:]
-// or NSInvocation
-+ (NSString *)labelForElement:(id)element
-                     snapshot:(id)snapshot {
-  SEL selector = @selector(label);
-  NSString *snapshotLabel = [JSONUtils stringByInvokingSelector:selector onTarget:element];
-  NSString *elementLabel = [JSONUtils stringByInvokingSelector:selector onTarget:snapshot];
-
-  if (!element || elementLabel.length != 0) {
-    return elementLabel;
-  } else {
-    return snapshotLabel;
-  }
-}
-
-+ (NSString * ) titleForElement:(id)element
-                       snapshot:(id)snapshot {
-  SEL selector = @selector(title);
-  NSString *snapshotTitle = [JSONUtils stringByInvokingSelector:selector onTarget:element];
-  NSString *elementTitle = [JSONUtils stringByInvokingSelector:selector onTarget:element];
-
-  if (!element || elementTitle.length != 0) {
-   return elementTitle;
-  } else {
-   return snapshotTitle;
-  }
-}
-
 + (NSDictionary *)snapshotOrElementToJSON:(id)element {
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
     XCElementSnapshot *snapshot;
