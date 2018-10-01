@@ -1,11 +1,12 @@
 
 #import "JSONUtils.h"
 #import "XCElementSnapshot-Hitpoint.h"
-#import "XCUIElement+WebDriverAttributes.h"
-#import "XCUIElement+FBIsVisible.h"
+#import "XCUIElement+VisibilityResult.h"
 #import "InvalidArgumentException.h"
 #import "CBXConstants.h"
 #import "CBXDecimalRounder.h"
+
+#define TransferEmptyStringToNil(value) ([value isEqual:@""] ? nil : value)
 
 @implementation JSONUtils
 
@@ -14,24 +15,6 @@ static NSDictionary *typeStringToElementType;
 
 + (NSArray *)elementTypes {
     return [[typeStringToElementType allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
-}
-
-+ (NSString *)stringByInvokingSelector:(SEL)selector
-                              onTarget:(id)target {
-  NSMethodSignature *signature;
-  Class klass = [target class];
-  signature = [klass instanceMethodSignatureForSelector:selector];
-  NSInvocation *invocation;
-  invocation = [NSInvocation invocationWithMethodSignature:signature];
-  invocation.target = target;
-  invocation.selector = selector;
-
-  NSString *string = nil;
-  void *buffer;
-  [invocation invoke];
-  [invocation getReturnValue:&buffer];
-  string = (__bridge NSString *)buffer;
-  return string;
 }
 
 + (NSDictionary *)snapshotOrElementToJSON:(id)element {
@@ -52,10 +35,10 @@ static NSDictionary *typeStringToElementType;
     // See https://github.com/calabash/DeviceAgent.iOS/pull/255 for analysis
     @try {
         json[CBX_TYPE_KEY] = elementTypeToString[@(snapshot.elementType)];
-        json[CBX_LABEL_KEY] = snapshot.label;
-        json[CBX_TITLE_KEY] = snapshot.title;
-        json[CBX_VALUE_KEY] = snapshot.value;
-        json[CBX_PLACEHOLDER_KEY] = snapshot.placeholderValue;
+        json[CBX_LABEL_KEY] = TransferEmptyStringToNil(snapshot.label);
+        json[CBX_TITLE_KEY] = TransferEmptyStringToNil(snapshot.title);
+        json[CBX_VALUE_KEY] = TransferEmptyStringToNil(snapshot.value);
+        json[CBX_PLACEHOLDER_KEY] = TransferEmptyStringToNil(snapshot.placeholderValue);
         json[CBX_RECT_KEY] = [self rectToJSON:snapshot.frame];
         json[CBX_IDENTIFIER_KEY] = snapshot.identifier;
         json[CBX_ENABLED_KEY] = @(snapshot.isEnabled);

@@ -1,12 +1,3 @@
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- */
-
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 
@@ -23,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface XCUIElement (FBIsVisible)
+@interface XCUIElement (VisibilityResult)
 
 /*! Get hitpoint and visibility information.  Asking for the hitpoint of an element that
  * is not visible can lead to:
@@ -39,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface XCElementSnapshot (FBIsVisible)
+@interface XCElementSnapshot (VisibilityResult)
 
 /*! Get hitpoint and visibility information.  Asking for the hitpoint of an element that
  * is not visible can lead to:

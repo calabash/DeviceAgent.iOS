@@ -1,28 +1,19 @@
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- */
-
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import "CBX-XCTest-Umbrella.h"
 #import "XCTest+CBXAdditions.h"
-#import "XCUIElement+FBIsVisible.h"
 #import "XCTestPrivateSymbols.h"
 #import "XCElementSnapshot.h"
 #import "XCAXClient_iOS.h"
 #import "XCUIHitPointResult.h"
 #import "CBXConstants.h"
+#import "XCUIElement+VisibilityResult.h"
 
 @implementation CBXVisibilityResult
 
 @end
 
-@implementation XCUIElement (FBIsVisible)
+@implementation XCUIElement (VisibilityResult)
 
 - (CBXVisibilityResult *)visibilityResult {
   BOOL isVisible = self.isHittable;
@@ -48,7 +39,7 @@
 
 #pragma mark - XCElementSnapshot
 
-@implementation XCElementSnapshot (FBIsVisible)
+@implementation XCElementSnapshot (VisibilityResult)
 
 - (id)fb_attributeValue:(NSNumber *)attribute
 {
@@ -60,9 +51,6 @@
 
 - (CBXVisibilityResult *)visibilityResult {
   CBXVisibilityResult *cbxResult = [CBXVisibilityResult new];
-  // r26 = *(int8_t *)__XCShouldUseHostedViewConversion.shouldUseHostedViewConversion | r9;
-  // This flag isn't important
-  // int8_t flag;
   CGPoint intermediate;
   XCUIHitPointResult *result = [self hitPoint:NULL];
 

@@ -3,7 +3,7 @@
 // Licensed under the MIT license.
 
 #import <Foundation/Foundation.h>
-#import "XCUIElement+WebDriverAttributes.h"
+#import "XCUIElement.h"
 
 /**
  Utilities involving json manipulation, particularly with XCUIElements.
