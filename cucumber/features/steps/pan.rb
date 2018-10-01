@@ -272,9 +272,22 @@ And(/^I can swipe to delete the Windows row$/) do
   wait_for_view({marked: identifier})
 
   swipe(:left, identifier)
-  touch({marked: "Delete"})
+  wait_for_animations
+
+  # The rect of this button is so large that the center
+  # is outside of the view port.  Touching the device will
+  # touch the far right edge of the screen which does not
+  # touch the button.  Until run-loop is updated to choose
+  # between the reported (XCUITest) hit point and the center
+  # point of the object, we need to have a work around.
+  button = wait_for_view({marked: "Delete"})
+
+  touch_coordinate({x: button["rect"]["x"] + 10,
+                    y: button["rect"]["y"] + 10})
+  wait_for_animations
 
   wait_for_no_view({marked: "Delete"})
+  wait_for_no_view({marked: identifier})
 end
 
 And(/^I have scrolled to the top of the Companies table$/) do
