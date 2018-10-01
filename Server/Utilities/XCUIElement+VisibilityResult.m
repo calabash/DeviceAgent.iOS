@@ -1,13 +1,12 @@
+
+#import "XCUIElement+VisibilityResult.h"
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import "CBX-XCTest-Umbrella.h"
-#import "XCTest+CBXAdditions.h"
-#import "XCTestPrivateSymbols.h"
 #import "XCElementSnapshot.h"
 #import "XCAXClient_iOS.h"
 #import "XCUIHitPointResult.h"
 #import "CBXConstants.h"
-#import "XCUIElement+VisibilityResult.h"
 
 @implementation CBXVisibilityResult
 
@@ -40,14 +39,6 @@
 #pragma mark - XCElementSnapshot
 
 @implementation XCElementSnapshot (VisibilityResult)
-
-- (id)fb_attributeValue:(NSNumber *)attribute
-{
-  NSDictionary *attributesResult = [[XCAXClient_iOS sharedClient]
-                                    attributesForElementSnapshot:self
-                                    attributeList:@[attribute]];
-  return (id __nonnull)attributesResult[attribute];
-}
 
 - (CBXVisibilityResult *)visibilityResult {
   CBXVisibilityResult *cbxResult = [CBXVisibilityResult new];

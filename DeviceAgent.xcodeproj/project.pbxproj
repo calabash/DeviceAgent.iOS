@@ -120,7 +120,6 @@
 		89F6BF901CBEB5AD0088269C /* GeometryUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 89F6BF8E1CBEB5AD0088269C /* GeometryUtils.h */; };
 		B9A81FD5215E429A0067AE63 /* XCUIElement+VisibilityResult.h in Headers */ = {isa = PBXBuildFile; fileRef = B9A81FD3215E429A0067AE63 /* XCUIElement+VisibilityResult.h */; };
 		B9A81FD6215E429A0067AE63 /* XCUIElement+VisibilityResult.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A81FD4215E429A0067AE63 /* XCUIElement+VisibilityResult.m */; };
-		F5041F4C1E092D30000B3E3E /* XCTestPrivateSymbols.m in Sources */ = {isa = PBXBuildFile; fileRef = F5041F451E092BAC000B3E3E /* XCTestPrivateSymbols.m */; };
 		F50940FB1CC6069C00E559E3 /* GeometryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BF8F1CBEB5AD0088269C /* GeometryUtils.m */; };
 		F50AF0A020F60D6600CF1250 /* CBXURLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F50AF09F20F60D6600CF1250 /* CBXURLHelper.m */; };
 		F50AF0A120F60D6600CF1250 /* CBXURLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F50AF09F20F60D6600CF1250 /* CBXURLHelper.m */; };
@@ -709,8 +708,6 @@
 		89F6BF8F1CBEB5AD0088269C /* GeometryUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeometryUtils.m; sourceTree = "<group>"; };
 		B9A81FD3215E429A0067AE63 /* XCUIElement+VisibilityResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIElement+VisibilityResult.h"; sourceTree = "<group>"; };
 		B9A81FD4215E429A0067AE63 /* XCUIElement+VisibilityResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCUIElement+VisibilityResult.m"; sourceTree = "<group>"; };
-		F5041F441E092BAC000B3E3E /* XCTestPrivateSymbols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTestPrivateSymbols.h; sourceTree = "<group>"; };
-		F5041F451E092BAC000B3E3E /* XCTestPrivateSymbols.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCTestPrivateSymbols.m; sourceTree = "<group>"; };
 		F50AF09E20F60D6600CF1250 /* CBXURLHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBXURLHelper.h; sourceTree = "<group>"; };
 		F50AF09F20F60D6600CF1250 /* CBXURLHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBXURLHelper.m; sourceTree = "<group>"; };
 		F50BB27B1D73392100264915 /* Permissions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Permissions.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1396,8 +1393,6 @@
 		89D538051CA32A3A00F62E09 /* FBWebDriverAgent */ = {
 			isa = PBXGroup;
 			children = (
-				F5041F441E092BAC000B3E3E /* XCTestPrivateSymbols.h */,
-				F5041F451E092BAC000B3E3E /* XCTestPrivateSymbols.m */,
 				F5DBC09C2101EEE900A4C274 /* UIDevice+Wifi_IP.h */,
 				F5DBC09D2101EEE900A4C274 /* UIDevice+Wifi_IP.m */,
 			);
@@ -1859,8 +1854,6 @@
 		F55F83B61C6DDF1300A945C8 /* Server */ = {
 			isa = PBXGroup;
 			children = (
-				B9A81FD3215E429A0067AE63 /* XCUIElement+VisibilityResult.h */,
-				B9A81FD4215E429A0067AE63 /* XCUIElement+VisibilityResult.m */,
 				F53BECCC210211420016C035 /* XCUIApplicationStateTypedef.h */,
 				F547174D204939DA0024AA0B /* XCTest+CBXAdditions.h */,
 				F547174F20496A200024AA0B /* XCTest+CBXAdditions.m */,
@@ -1938,6 +1931,8 @@
 		F55F83D61C6DDF1300A945C8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B9A81FD3215E429A0067AE63 /* XCUIElement+VisibilityResult.h */,
+				B9A81FD4215E429A0067AE63 /* XCUIElement+VisibilityResult.m */,
 				F53349631F39E475004138C7 /* CBXDecimalRounder.h */,
 				F53349641F39E475004138C7 /* CBXDecimalRounder.m */,
 				F55F83DA1C6DDF1300A945C8 /* JSONUtils.h */,
@@ -3124,7 +3119,6 @@
 				F55F840A1C6E437100A945C8 /* GestureRoutes.m in Sources */,
 				89C5F3511C9A60E70093A018 /* Testmanagerd.m in Sources */,
 				F55F840C1C6E437100A945C8 /* MetaRoutes.m in Sources */,
-				F5041F4C1E092D30000B3E3E /* XCTestPrivateSymbols.m in Sources */,
 				F55F818E1C6DD07500A945C8 /* HTTPConnection.m in Sources */,
 				89D538111CA34CBE00F62E09 /* QuerySpecifierByTextLike.m in Sources */,
 				B9A81FD6215E429A0067AE63 /* XCUIElement+VisibilityResult.m in Sources */,
