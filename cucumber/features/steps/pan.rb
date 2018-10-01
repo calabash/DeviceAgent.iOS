@@ -291,15 +291,12 @@ And(/^I can swipe to delete the Windows row$/) do
 end
 
 And(/^I have scrolled to the top of the Companies table$/) do
-  # There is no status bar "center" on iPhone X
-  if iphone_x?
-    element = wait_for_view({marked: "SSID", :all => true})
-  else
-    element = wait_for_view({type: "StatusBar", :all => true})
-  end
+  wait_for_view({type: "StatusBar", :all => true})
 
-  center = element_center(element)
-  touch_coordinate(center)
+  # touching the center of the status bar on iPhone 10 devices is
+  # not possible because of the notch.  Let's just touch the top
+  # left of the status bar.
+  touch_coordinate({x: 44, y: 10})
   sleep(0.4)
 end
 
