@@ -4,7 +4,6 @@ pipeline {
   agent { label 'master' }
   environment {
     DEVELOPER_DIR = '/Xcode/9.4.1/Xcode.app/Contents/Developer'
-    XCPRETTY=0
 
     SLACK_COLOR_DANGER  = '#E01563'
     SLACK_COLOR_INFO    = '#6ECADC'
@@ -22,8 +21,7 @@ pipeline {
     stage('announce') {
       steps {
         slackSend(color: "${env.SLACK_COLOR_INFO}",
-            message: "${env.PROJECT_NAME} [${env.GIT_BRANCH}] #${env.BUILD_NUMBER} *Started* (<${env.BUILD_URL}|Open>)")
-      }
+            message: "${env.PROJECT_NAME} [${env.GIT_BRANCH}] #${env.BUILD_NUMBER} *Started* (<${env.BUILD_URL}|Open>)") }
     }
     stage('build') {
       parallel {
@@ -72,8 +70,8 @@ pipeline {
       parallel {
         stage('unit + cucumber') {
           steps {
-            sh 'gtimeout --foreground --signal SIGKILL 60m make unit-tests'
-            sh 'gtimeout --foreground --signal SIGKILL 60m bin/ci/cucumber.rb'
+            sh 'make unit-tests'
+            sh 'bin/ci/cucumber.rb'
           }
         }
         stage('appcenter') {

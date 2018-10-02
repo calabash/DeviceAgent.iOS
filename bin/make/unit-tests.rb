@@ -1,12 +1,8 @@
 #!/usr/bin/env ruby
 
 require "run_loop"
-require "retriable"
-require "luffa"
 
 working_dir = File.expand_path(File.join(File.dirname(__FILE__), "..", ".."))
-
-use_xcpretty = ENV["XCPRETTY"] != "0"
 
 # Load the correct CoreSimulatorService
 RunLoop::Simctl.new
@@ -24,66 +20,20 @@ core_sim.launch_simulator
 
 args =
       [
-            "test",
-            "-SYMROOT=build/unit-test",
-            "-derivedDataPath build/unit-test",
-            "-workspace DeviceAgent.xcworkspace",
-            "-scheme DeviceAgentUnitTests",
-            "-destination id=#{sim_udid}",
-            "-sdk iphonesimulator",
-            "-configuration Debug",
-            "GCC_TREAT_WARNINGS_AS_ERRORS=YES",
-            use_xcpretty ? "| xcpretty -c --report junit && exit ${PIPESTATUS[0]}" : ""
+        "xcrun",
+        "xcodebuild",
+        "test",
+        "-SYMROOT=build/unit-test",
+        "-derivedDataPath", "build/unit-test",
+        "-workspace", "DeviceAgent.xcworkspace",
+        "-scheme", "DeviceAgentUnitTests",
+        "-destination", "id=#{sim_udid}",
+        "-sdk", "iphonesimulator",
+        "-configuration", "Debug",
+        "GCC_TREAT_WARNINGS_AS_ERRORS=YES"
       ]
 
-Dir.chdir(working_dir) do
+env = { "COMMAND_LINE_BUILD" => "1",
+        "DEVELOPER_DIR" => xcode.developer_dir }
 
-  cmd = "xcrun xcodebuild #{args.join(" ")}"
-
-  tries = Luffa::Environment.travis_ci? ? 3 : 1
-  interval = 5
-
-  on_retry = Proc.new do |_, try, elapsed_time, next_interval|
-    Luffa.log_fail "XCTest: attempt #{try} failed in "#{elapsed_time}"; will retry in "#{next_interval}""
-
-    RunLoop::CoreSimulator.erase(default_sim)
-
-    RunLoop::CoreSimulator.quit_simulator
-    core_sim.launch_simulator
-  end
-
-  class XCTestFailedError < StandardError
-
-  end
-
-  options =
-  {
-      :intervals => Array.new(tries, interval),
-      :on_retry => on_retry,
-      :on => [XCTestFailedError]
-  }
-
-  env = { "COMMAND_LINE_BUILD" => "1",
-          "DEVELOPER_DIR" => xcode.developer_dir }
-
-  Retriable.retriable(options) do
-    exit_code = Luffa.unix_command(cmd,
-                                   {:pass_msg => "XCTests passed",
-                                    :fail_msg => "XCTests failed",
-                                    :env_vars => env,
-                                    :exit_on_nonzero_status => false})
-    if Luffa::Environment.travis_ci?
-      if exit_code != 0
-        Luffa.log_fail "XCTest exited '#{exit_code}' - did a test fail or did the tests not start?"
-        raise XCTestFailedError, "XCTest failed."
-      end
-    else
-      if exit_code
-        exit(exit_code)
-      else
-        exit(1)
-      end
-    end
-  end
-end
-
+Process.exec(env, *args)
