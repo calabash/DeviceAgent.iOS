@@ -1,18 +1,8 @@
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- */
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 
-#import "XCElementSnapshot.h"
-
-@class XCUIElement;
+#import "XCTest+CBXAdditions.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,10 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface XCUIElement (FBIsVisible)
-
-/*! Whether or not the element is visible */
-@property (atomic, readonly) BOOL fb_isVisible;
+@interface XCUIElement (VisibilityResult)
 
 /*! Get hitpoint and visibility information.  Asking for the hitpoint of an element that
  * is not visible can lead to:
@@ -42,10 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface XCElementSnapshot (FBIsVisible)
-
-/*! Whether or not the element is visible */
-@property (atomic, readonly) BOOL fb_isVisible;
+@interface XCElementSnapshot (VisibilityResult)
 
 /*! Get hitpoint and visibility information.  Asking for the hitpoint of an element that
  * is not visible can lead to:

@@ -71,7 +71,7 @@
 
               NSArray *alertButtonTitles = [NSArray arrayWithArray:mutable];
               NSMutableDictionary *alertJSON;
-              alertJSON = [NSMutableDictionary dictionaryWithDictionary:[JSONUtils elementToJSON:alert]];
+              alertJSON = [NSMutableDictionary dictionaryWithDictionary:[JSONUtils snapshotOrElementToJSON:alert]];
               alertJSON[@"is_springboard_alert"] = @(YES);
               alertJSON[@"button_titles"] = alertButtonTitles;
               alertJSON[@"alert_title" ] = alertTitle;

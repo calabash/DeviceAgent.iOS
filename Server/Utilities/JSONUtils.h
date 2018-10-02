@@ -3,7 +3,7 @@
 // Licensed under the MIT license.
 
 #import <Foundation/Foundation.h>
-#import "XCUIElement+WebDriverAttributes.h"
+#import "XCUIElement.h"
 
 /**
  Utilities involving json manipulation, particularly with XCUIElements.
@@ -37,16 +37,9 @@
         "test_id" : Number
     }
 
- @param snapshotOrElement XCUIElement or XCElementSnapshot to convert to JSON
+ @param element XCUIElement to convert to JSON
  */
-+ (NSMutableDictionary *)snapshotOrElementToJSON:(NSObject<FBElement> *)snapshotOrElement;
-
-/**
- Convenience wrapper for snapshotOrElementToJSON:
- @param element XCUIElement to convert to JSON.
- See snapshotOrElementToJSON:
- */
-+ (NSMutableDictionary *)elementToJSON:(XCUIElement *)element;
++ (NSDictionary *)snapshotOrElementToJSON:(id)element;
 
 /**
  Mapping of a string to an XCUIElementType enum value. E.g.,

@@ -2,7 +2,6 @@
 #import "ClearText.h"
 #import "CBX-XCTest-Umbrella.h"
 #import "XCTest+CBXAdditions.h"
-#import "XCUIElement+WebDriverAttributes.h"
 #import <UIKit/UIGeometry.h>
 #import "XCElementSnapshot.h"
 #import "Testmanagerd.h"
@@ -92,11 +91,7 @@
     DDLogDebug(@"Clearing text with by tapping the delete key");
 
     CGRect frame;
-    if (![deleteKey respondsToSelector:@selector(wdFrame)]) {
-        frame = [deleteKey frame];
-    } else {
-        frame = [deleteKey wdFrame];
-    }
+    frame = [deleteKey frame];
 
     // There are cases where we cannot find a hit point.
     if (frame.origin.x <= 0.0 || frame.origin.y <= 0.0) {

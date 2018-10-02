@@ -2,7 +2,6 @@
 #import "CoordinateQuery.h"
 #import "ThreadUtils.h"
 #import "Gesture.h"
-#import "XCUIElement+WebDriverAttributes.h"
 #import "Testmanagerd.h"
 #import "CBXTouchEvent.h"
 #import "CBXException.h"
