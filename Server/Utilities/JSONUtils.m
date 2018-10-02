@@ -6,15 +6,36 @@
 #import "CBXConstants.h"
 #import "CBXDecimalRounder.h"
 
-#define TransferEmptyStringToNil(value) ([value isEqual:@""] ? nil : value)
-
 @implementation JSONUtils
 
 static NSDictionary *elementTypeToString;
 static NSDictionary *typeStringToElementType;
 
++ (void)setObject:(id)instance
+           forKey:(NSString *)key
+     inDictionary:(NSMutableDictionary *)dictionary {
+
+    if (!instance) {
+        dictionary[key] = [NSNull null];
+        return;
+    }
+
+    if ([instance isKindOfClass:[NSString class]]) {
+        NSString *string = (NSString *)instance;
+        if (string.length == 0) {
+            dictionary[key] = [NSNull null];
+        } else {
+            dictionary[key] = string;
+        }
+        return;
+    }
+
+    dictionary[key] = instance;
+}
+
 + (NSArray *)elementTypes {
-    return [[typeStringToElementType allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    return [[typeStringToElementType allKeys]
+            sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 }
 
 + (NSDictionary *)snapshotOrElementToJSON:(id)element {
@@ -35,12 +56,23 @@ static NSDictionary *typeStringToElementType;
     // See https://github.com/calabash/DeviceAgent.iOS/pull/255 for analysis
     @try {
         json[CBX_TYPE_KEY] = elementTypeToString[@(snapshot.elementType)];
-        json[CBX_LABEL_KEY] = TransferEmptyStringToNil(snapshot.label);
-        json[CBX_TITLE_KEY] = TransferEmptyStringToNil(snapshot.title);
-        json[CBX_VALUE_KEY] = TransferEmptyStringToNil(snapshot.value);
-        json[CBX_PLACEHOLDER_KEY] = TransferEmptyStringToNil(snapshot.placeholderValue);
-        json[CBX_RECT_KEY] = [self rectToJSON:snapshot.frame];
-        json[CBX_IDENTIFIER_KEY] = snapshot.identifier;
+        [JSONUtils setObject:snapshot.label
+                      forKey:CBX_LABEL_KEY
+                inDictionary:json];
+        [JSONUtils setObject:snapshot.title
+                      forKey:CBX_TITLE_KEY
+                inDictionary:json];
+        [JSONUtils setObject:snapshot.value
+                      forKey:CBX_VALUE_KEY
+                inDictionary:json];
+        [JSONUtils setObject:snapshot.placeholderValue
+                      forKey:CBX_PLACEHOLDER_KEY
+                inDictionary:json];
+        [JSONUtils setObject:snapshot.identifier
+                      forKey:CBX_IDENTIFIER_KEY
+                inDictionary:json];
+
+        json[CBX_RECT_KEY] = [JSONUtils rectToJSON:snapshot.frame];
         json[CBX_ENABLED_KEY] = @(snapshot.isEnabled);
         json[CBX_SELECTED_KEY] = @(snapshot.isSelected);
         json[CBX_HAS_FOCUS_KEY] = @(NO);

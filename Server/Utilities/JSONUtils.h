@@ -3,7 +3,7 @@
 // Licensed under the MIT license.
 
 #import <Foundation/Foundation.h>
-#import "XCUIElement.h"
+#import "XCTest+CBXAdditions.h"
 
 /**
  Utilities involving json manipulation, particularly with XCUIElements.
