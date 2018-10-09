@@ -12,11 +12,17 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-#import "XCUIEventGenerator.h"
+#import <objc/NSObject.h>
 
-@interface XCEventGenerator : XCUIEventGenerator
+#import "XCTestObservation-Protocol.h"
+
+
+@interface TestObserver : NSObject <XCTestObservation>
 {
 }
+
+- (void)testCaseDidFinish:(id)arg1;
+
 
 @end
 

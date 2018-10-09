@@ -12,11 +12,16 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-#import "XCUIEventGenerator.h"
+#import "XCTestCase.h"
 
-@interface XCEventGenerator : XCUIEventGenerator
+@interface Test_XCTestObservation : XCTestCase
 {
 }
+
++ (void)load;
++ (void)tearDown;
+- (void)testA;
+- (void)testCustomObservers;
 
 @end
 
