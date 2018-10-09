@@ -107,10 +107,6 @@
 		89D538001CA2090500F62E09 /* QuerySpecifierFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537FE1CA2090500F62E09 /* QuerySpecifierFactory.m */; };
 		89D538031CA20DB800F62E09 /* QuerySpecifierByText.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D538011CA20DB800F62E09 /* QuerySpecifierByText.h */; };
 		89D538041CA20DB800F62E09 /* QuerySpecifierByText.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538021CA20DB800F62E09 /* QuerySpecifierByText.m */; };
-		89D538081CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D538061CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.h */; };
-		89D538091CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538071CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.m */; };
-		89D5380C1CA32AE900F62E09 /* FBElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D5380A1CA32AE900F62E09 /* FBElement.h */; };
-		89D5380D1CA32AE900F62E09 /* FBElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5380B1CA32AE900F62E09 /* FBElement.m */; };
 		89D538101CA34CBE00F62E09 /* QuerySpecifierByTextLike.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D5380E1CA34CBE00F62E09 /* QuerySpecifierByTextLike.h */; };
 		89D538111CA34CBE00F62E09 /* QuerySpecifierByTextLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5380F1CA34CBE00F62E09 /* QuerySpecifierByTextLike.m */; };
 		89D538151CA351F400F62E09 /* QuerySpecifierByIndex.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D538131CA351F400F62E09 /* QuerySpecifierByIndex.h */; };
@@ -122,11 +118,129 @@
 		89F6BF8B1CBC4BDD0088269C /* Rotate.h in Headers */ = {isa = PBXBuildFile; fileRef = 89F6BF891CBC4BDD0088269C /* Rotate.h */; };
 		89F6BF8C1CBC4BDD0088269C /* Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BF8A1CBC4BDD0088269C /* Rotate.m */; };
 		89F6BF901CBEB5AD0088269C /* GeometryUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 89F6BF8E1CBEB5AD0088269C /* GeometryUtils.h */; };
-		F5041F4A1E092D27000B3E3E /* XCUIElement+FBIsVisible.m in Sources */ = {isa = PBXBuildFile; fileRef = F5041F481E092D1C000B3E3E /* XCUIElement+FBIsVisible.m */; };
-		F5041F4C1E092D30000B3E3E /* XCTestPrivateSymbols.m in Sources */ = {isa = PBXBuildFile; fileRef = F5041F451E092BAC000B3E3E /* XCTestPrivateSymbols.m */; };
+		B9A81FD5215E429A0067AE63 /* XCUIElement+VisibilityResult.h in Headers */ = {isa = PBXBuildFile; fileRef = B9A81FD3215E429A0067AE63 /* XCUIElement+VisibilityResult.h */; };
+		B9A81FD6215E429A0067AE63 /* XCUIElement+VisibilityResult.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A81FD4215E429A0067AE63 /* XCUIElement+VisibilityResult.m */; };
+		F5061A3B2153B0FF00B85792 /* CBXiOSVersionInlinesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27F01D4F947F000FF6C0 /* CBXiOSVersionInlinesTest.m */; };
+		F5061A3C2153B0FF00B85792 /* CBXTestToolsStandup.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27F11D4F947F000FF6C0 /* CBXTestToolsStandup.m */; };
+		F5061A3D2153B0FF00B85792 /* CBXUITestServerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F52975BE1D4FB1FA009094D5 /* CBXUITestServerTest.m */; };
+		F5061A3E2153B0FF00B85792 /* ApplicationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F55D226B20D8B75100E0732B /* ApplicationTest.m */; };
+		F5061A3F2153B0FF00B85792 /* ActionConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27D81D4F947F000FF6C0 /* ActionConfigurationTests.m */; };
+		F5061A402153B0FF00B85792 /* QueryConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27DD1D4F947F000FF6C0 /* QueryConfigurationTests.m */; };
+		F5061A412153B0FF00B85792 /* CoordinateQueryConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27DA1D4F947F000FF6C0 /* CoordinateQueryConfigurationTests.m */; };
+		F5061A422153B0FF00B85792 /* QueryConfigurationFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27DC1D4F947F000FF6C0 /* QueryConfigurationFactoryTests.m */; };
+		F5061A432153B0FF00B85792 /* Gestures+OptionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27E11D4F947F000FF6C0 /* Gestures+OptionsTests.m */; };
+		F5061A442153B0FF00B85792 /* CBXTouchEventTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27E31D4F947F000FF6C0 /* CBXTouchEventTests.m */; };
+		F5061A452153B0FF00B85792 /* TouchPathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27E41D4F947F000FF6C0 /* TouchPathTests.m */; };
+		F5061A462153B0FF00B85792 /* GestureFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27E61D4F947F000FF6C0 /* GestureFactoryTests.m */; };
+		F5061A472153B0FF00B85792 /* TouchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27E71D4F947F000FF6C0 /* TouchTest.m */; };
+		F5061A482153B0FF00B85792 /* DragTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F52C9D861DA7E60300DAFC75 /* DragTest.m */; };
+		F5061A492153B0FF00B85792 /* CoordinateQueryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27EA1D4F947F000FF6C0 /* CoordinateQueryTests.m */; };
+		F5061A4A2153B0FF00B85792 /* QueryFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27EC1D4F947F000FF6C0 /* QueryFactoryTests.m */; };
+		F5061A4B2153B0FF00B85792 /* QueryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27EF1D4F947F000FF6C0 /* QueryTests.m */; };
+		F5061A4C2153B0FF00B85792 /* CBXDecimalRounderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F53349681F39E536004138C7 /* CBXDecimalRounderTest.m */; };
+		F5061A4D2153B0FF00B85792 /* JSONUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F5963ECA1D5F335F002F9304 /* JSONUtilsTest.m */; };
+		F5061A4E2153B0FF00B85792 /* CBXDeviceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27F81D4F947F000FF6C0 /* CBXDeviceTest.m */; };
+		F5061A4F2153B0FF00B85792 /* CBXInfoPlistTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F549E1A01D5471EC00C4FA36 /* CBXInfoPlistTest.m */; };
+		F5061A502153B0FF00B85792 /* SpringBoardAlertTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DED0421D76368000563648 /* SpringBoardAlertTest.m */; };
+		F5061A512153B0FF00B85792 /* SpringBoardAlertsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 63424E46759C6B27C2BEC337 /* SpringBoardAlertsTest.m */; };
+		F5061A522153B0FF00B85792 /* CBXOrientationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F533496F1F3AFF97004138C7 /* CBXOrientationTest.m */; };
+		F5061A532153B0FF00B85792 /* RouteResponseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27FB1D4F947F000FF6C0 /* RouteResponseTest.m */; };
+		F5061A542153B14400B85792 /* CBXDecimalRounder.m in Sources */ = {isa = PBXBuildFile; fileRef = F53349641F39E475004138C7 /* CBXDecimalRounder.m */; };
+		F5061A552153B14400B85792 /* JSONUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83DB1C6DDF1300A945C8 /* JSONUtils.m */; };
+		F5061A562153B14400B85792 /* JSONKeyValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696E91CB5857C00BB42E2 /* JSONKeyValidator.m */; };
+		F5061A572153B14400B85792 /* Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696F41CB5B8C300BB42E2 /* Coordinate.m */; };
+		F5061A582153B14400B85792 /* GeometryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BF8F1CBEB5AD0088269C /* GeometryUtils.m */; };
+		F5061A592153B14400B85792 /* ThreadUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D2F1CC50447003C2E59 /* ThreadUtils.m */; };
+		F5061A5A2153B14400B85792 /* CBXDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = F54514101CF624C900A0BB14 /* CBXDevice.m */; };
+		F5061A5B2153B14400B85792 /* CBXInfoPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = F549E1A31D54723300C4FA36 /* CBXInfoPlist.m */; };
+		F5061A5C2153B14400B85792 /* SpringBoardAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DED03E1D7634AB00563648 /* SpringBoardAlert.m */; };
+		F5061A5D2153B14400B85792 /* SpringBoardAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 634244EC948D56732C2565E5 /* SpringBoardAlerts.m */; };
+		F5061A5E2153B14400B85792 /* TextInputFirstResponderProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F5366D9D1DE6CC2900E7C765 /* TextInputFirstResponderProvider.m */; };
+		F5061A5F2153B14400B85792 /* CBXLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = F5538B891E28BEB9003EC5F3 /* CBXLogging.m */; };
+		F5061A602153B14400B85792 /* CBXMachClock.m in Sources */ = {isa = PBXBuildFile; fileRef = F547EEAB1E437910000FC160 /* CBXMachClock.m */; };
+		F5061A612153B14400B85792 /* CBXWaiter.m in Sources */ = {isa = PBXBuildFile; fileRef = F547EEB11E43796A000FC160 /* CBXWaiter.m */; };
+		F5061A622153B14400B85792 /* CBXOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = F533496B1F3AFED7004138C7 /* CBXOrientation.m */; };
+		F5061A632153B15E00B85792 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BD1C6DDF1300A945C8 /* Application.m */; };
+		F5061A642153B15E00B85792 /* SpringBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E6631F1D74946000068CE9 /* SpringBoard.m */; };
+		F5061A652153B15E00B85792 /* CBLSApplicationWorkspace.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A14DE41E02CF84001A0037 /* CBLSApplicationWorkspace.m */; };
+		F5061A662153B15E00B85792 /* CBLSApplicationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE18E11E8BBA61001116A5 /* CBLSApplicationProxy.m */; };
+		F5061A672153B15E00B85792 /* CBXException.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C41C6DDF1300A945C8 /* CBXException.m */; };
+		F5061A682153B15E00B85792 /* ElementNotFoundException.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C21C6DDF1300A945C8 /* ElementNotFoundException.m */; };
+		F5061A692153B15E00B85792 /* InvalidArgumentException.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F3661C9C5BC20093A018 /* InvalidArgumentException.m */; };
+		F5061A6A2153B15E00B85792 /* CBXRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C91C6DDF1300A945C8 /* CBXRoute.m */; };
+		F5061A6B2153B15E00B85792 /* GestureRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83CB1C6DDF1300A945C8 /* GestureRoutes.m */; };
+		F5061A6C2153B15E00B85792 /* HealthRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83CD1C6DDF1300A945C8 /* HealthRoutes.m */; };
+		F5061A6D2153B15E00B85792 /* MetaRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83CF1C6DDF1300A945C8 /* MetaRoutes.m */; };
+		F5061A6E2153B15E00B85792 /* QueryRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83D11C6DDF1300A945C8 /* QueryRoutes.m */; };
+		F5061A6F2153B15E00B85792 /* SessionRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83D31C6DDF1300A945C8 /* SessionRoutes.m */; };
+		F5061A702153B15E00B85792 /* UndefinedRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83D51C6DDF1300A945C8 /* UndefinedRoutes.m */; };
+		F5061A712153B15E00B85792 /* DeviceEventRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 89512BDE1CA095D20027D61E /* DeviceEventRoutes.m */; };
+		F5061A722153B19900B85792 /* XCTest+CBXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F547174F20496A200024AA0B /* XCTest+CBXAdditions.m */; };
+		F5061A732153B19900B85792 /* CBXCUITestServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BF1C6DDF1300A945C8 /* CBXCUITestServer.m */; };
+		F5061A742153B19900B85792 /* Testmanagerd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F34F1C9A60E70093A018 /* Testmanagerd.m */; };
+		F5061A752153B19900B85792 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		F5061A772153B19900B85792 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		F5061A782153B19900B85792 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		F5061A792153B19900B85792 /* UIDevice+Wifi_IP.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBC09D2101EEE900A4C274 /* UIDevice+Wifi_IP.m */; };
+		F5061A7A2153B19900B85792 /* AutomationAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696EF1CB5880F00BB42E2 /* AutomationAction.m */; };
+		F5061A7B2153B19900B85792 /* ActionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696D81CB45FFC00BB42E2 /* ActionConfiguration.m */; };
+		F5061A7C2153B19900B85792 /* QuerySpecifierFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537FE1CA2090500F62E09 /* QuerySpecifierFactory.m */; };
+		F5061A7D2153B19900B85792 /* QuerySpecifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537F61CA1DF8500F62E09 /* QuerySpecifier.m */; };
+		F5061A7E2153B19900B85792 /* QuerySpecifierById.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537FA1CA2020700F62E09 /* QuerySpecifierById.m */; };
+		F5061A7F2153B19900B85792 /* QuerySpecifierByIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538141CA351F400F62E09 /* QuerySpecifierByIndex.m */; };
+		F5061A802153B19900B85792 /* QuerySpecifierByProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538181CA3551600F62E09 /* QuerySpecifierByProperty.m */; };
+		F5061A812153B19900B85792 /* QuerySpecifierByPropertyLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5381C1CA359B200F62E09 /* QuerySpecifierByPropertyLike.m */; };
+		F5061A822153B19900B85792 /* QuerySpecifierByText.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538021CA20DB800F62E09 /* QuerySpecifierByText.m */; };
+		F5061A832153B19900B85792 /* QuerySpecifierByTextLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5380F1CA34CBE00F62E09 /* QuerySpecifierByTextLike.m */; };
+		F5061A842153B19900B85792 /* QuerySpecifierByCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696FE1CB5C93400BB42E2 /* QuerySpecifierByCoordinate.m */; };
+		F5061A852153B19900B85792 /* QuerySpecifierByType.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B951A01CF5B297007FD0AB /* QuerySpecifierByType.m */; };
+		F5061A862153B19900B85792 /* QuerySpecifierByMark.m in Sources */ = {isa = PBXBuildFile; fileRef = F53679A01D7C324E009956D0 /* QuerySpecifierByMark.m */; };
+		F5061A872153B19900B85792 /* Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F35D1C9C51680093A018 /* Query.m */; };
+		F5061A882153B19900B85792 /* QueryFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 896586811CEB9B9800E8329C /* QueryFactory.m */; };
+		F5061A892153B19900B85792 /* QueryConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696C81CB356BF00BB42E2 /* QueryConfiguration.m */; };
+		F5061A8A2153B19900B85792 /* QueryConfigurationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8965867B1CEB961000E8329C /* QueryConfigurationFactory.m */; };
+		F5061A8B2153B19900B85792 /* CoordinateQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696F91CB5BA4600BB42E2 /* CoordinateQuery.m */; };
+		F5061A8C2153B19900B85792 /* CoordinateQueryConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696E41CB46C0100BB42E2 /* CoordinateQueryConfiguration.m */; };
+		F5061A8D2153B19900B85792 /* CBXTouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F5870B3C1CF0BEFF00B3376C /* CBXTouchEvent.m */; };
+		F5061A8E2153B19900B85792 /* TouchPath.m in Sources */ = {isa = PBXBuildFile; fileRef = F5870B3E1CF0BEFF00B3376C /* TouchPath.m */; };
+		F5061A8F2153B19900B85792 /* GestureConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696D21CB44D9B00BB42E2 /* GestureConfiguration.m */; };
+		F5061A902153B19900B85792 /* GestureFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F36A1C9C912F0093A018 /* GestureFactory.m */; };
+		F5061A912153B19900B85792 /* Gesture+Options.m in Sources */ = {isa = PBXBuildFile; fileRef = 899697041CB5D5CF00BB42E2 /* Gesture+Options.m */; };
+		F5061A922153B19900B85792 /* Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F3591C9B9C850093A018 /* Gesture.m */; };
+		F5061A932153B19900B85792 /* EnterText.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696B91CADF84B00BB42E2 /* EnterText.m */; };
+		F5061A942153B19900B85792 /* ClearText.m in Sources */ = {isa = PBXBuildFile; fileRef = 896C7C761D19AE990017CE08 /* ClearText.m */; };
+		F5061A952153B19900B85792 /* DoubleTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F36E1C9E32440093A018 /* DoubleTap.m */; };
+		F5061A962153B19900B85792 /* TwoFingerTap.m in Sources */ = {isa = PBXBuildFile; fileRef = F55B31C41CBE6E3800DFB13C /* TwoFingerTap.m */; };
+		F5061A972153B19900B85792 /* Touch.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F3621C9C58BD0093A018 /* Touch.m */; };
+		F5061A982153B19900B85792 /* Drag.m in Sources */ = {isa = PBXBuildFile; fileRef = 89512BDA1C9EEC3C0027D61E /* Drag.m */; };
+		F5061A992153B19900B85792 /* Pinch.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696C31CB3360900BB42E2 /* Pinch.m */; };
+		F5061A9A2153B19A00B85792 /* Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BF8A1CBC4BDD0088269C /* Rotate.m */; };
+		F5061A9B2153B4EF00B85792 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FEE1C6DD07500A945C8 /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
+		F5061A9C2153B4EF00B85792 /* HTTPAuthenticationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FFC1C6DD07500A945C8 /* HTTPAuthenticationRequest.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
+		F5061A9D2153B4EF00B85792 /* HTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FFE1C6DD07500A945C8 /* HTTPConnection.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
+		F5061A9E2153B4EF00B85792 /* HTTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80011C6DD07500A945C8 /* HTTPMessage.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
+		F5061A9F2153B4EF00B85792 /* HTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80041C6DD07500A945C8 /* HTTPServer.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
+		F5061AA02153B4EF00B85792 /* MultipartFormDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80071C6DD07500A945C8 /* MultipartFormDataParser.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
+		F5061AA12153B4EF00B85792 /* MultipartMessageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80091C6DD07500A945C8 /* MultipartMessageHeader.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
+		F5061AA22153B4EF00B85792 /* MultipartMessageHeaderField.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F800B1C6DD07500A945C8 /* MultipartMessageHeaderField.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
+		F5061AA32153B4EF00B85792 /* HTTPAsyncFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F800E1C6DD07500A945C8 /* HTTPAsyncFileResponse.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
+		F5061AA42153B4EF00B85792 /* HTTPDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80101C6DD07500A945C8 /* HTTPDataResponse.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
+		F5061AA52153B4EF00B85792 /* HTTPDynamicFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80121C6DD07500A945C8 /* HTTPDynamicFileResponse.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
+		F5061AA62153B4EF00B85792 /* HTTPErrorResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80141C6DD07500A945C8 /* HTTPErrorResponse.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
+		F5061AA72153B4EF00B85792 /* HTTPFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80161C6DD07500A945C8 /* HTTPFileResponse.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
+		F5061AA82153B4EF00B85792 /* HTTPRedirectResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80181C6DD07500A945C8 /* HTTPRedirectResponse.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
+		F5061AA92153B4EF00B85792 /* WebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F801A1C6DD07500A945C8 /* WebSocket.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
+		F5061AAA2153B4EF00B85792 /* HTTPResponseProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F81181C6DD07500A945C8 /* HTTPResponseProxy.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
+		F5061AAB2153B4EF00B85792 /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F811A1C6DD07500A945C8 /* Route.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
+		F5061AAC2153B4EF00B85792 /* RouteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F811C1C6DD07500A945C8 /* RouteRequest.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
+		F5061AAD2153B4EF00B85792 /* RouteResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F811E1C6DD07500A945C8 /* RouteResponse.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
+		F5061AAE2153B4EF00B85792 /* RoutingConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F81201C6DD07500A945C8 /* RoutingConnection.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
+		F5061AAF2153B4EF00B85792 /* RoutingHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F81221C6DD07500A945C8 /* RoutingHTTPServer.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
+		F5061AB02153B52800B85792 /* DDData.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FF61C6DD07500A945C8 /* DDData.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
+		F5061AB12153B52800B85792 /* DDNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FF81C6DD07500A945C8 /* DDNumber.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
+		F5061AB22153B52800B85792 /* DDRange.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FFA1C6DD07500A945C8 /* DDRange.m */; settings = {COMPILER_FLAGS = "-Wno-implicit-retain-self"; }; };
 		F50940FB1CC6069C00E559E3 /* GeometryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BF8F1CBEB5AD0088269C /* GeometryUtils.m */; };
 		F50AF0A020F60D6600CF1250 /* CBXURLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F50AF09F20F60D6600CF1250 /* CBXURLHelper.m */; };
-		F50AF0A120F60D6600CF1250 /* CBXURLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F50AF09F20F60D6600CF1250 /* CBXURLHelper.m */; };
 		F50BB27F1D73392100264915 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F50BB27E1D73392100264915 /* main.m */; };
 		F50BB2821D73392100264915 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F50BB2811D73392100264915 /* AppDelegate.m */; };
 		F50BB2851D73392100264915 /* PermissionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F50BB2841D73392100264915 /* PermissionsController.m */; };
@@ -459,6 +573,7 @@
 		F5AC714D1CEB816E00DE059A /* TaoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5AC714C1CEB816E00DE059A /* TaoController.m */; };
 		F5B0B5C52101CA30004030B5 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B0B5BE2101C9F7004030B5 /* CocoaLumberjack.framework */; };
 		F5B0B5C72101CA47004030B5 /* CocoaLumberjack.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5B0B5BE2101C9F7004030B5 /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F5B8C9192163444700EB3A67 /* XCUIElement+VisibilityResult.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A81FD4215E429A0067AE63 /* XCUIElement+VisibilityResult.m */; };
 		F5BA9ED81E48B462008CFE64 /* AlertsAndSheetsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BA9ED71E48B462008CFE64 /* AlertsAndSheetsTableController.m */; };
 		F5BA9ED91E48CBE8008CFE64 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F594B3851D7449450035A5CA /* Contacts.framework */; };
 		F5BC7ABA1D5CF38F00D9AC8E /* CompanyTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BC7AB91D5CF38F00D9AC8E /* CompanyTableController.m */; };
@@ -698,10 +813,6 @@
 		89D537FE1CA2090500F62E09 /* QuerySpecifierFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySpecifierFactory.m; sourceTree = "<group>"; };
 		89D538011CA20DB800F62E09 /* QuerySpecifierByText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySpecifierByText.h; sourceTree = "<group>"; };
 		89D538021CA20DB800F62E09 /* QuerySpecifierByText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySpecifierByText.m; sourceTree = "<group>"; };
-		89D538061CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIElement+WebDriverAttributes.h"; sourceTree = "<group>"; };
-		89D538071CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCUIElement+WebDriverAttributes.m"; sourceTree = "<group>"; };
-		89D5380A1CA32AE900F62E09 /* FBElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBElement.h; sourceTree = "<group>"; };
-		89D5380B1CA32AE900F62E09 /* FBElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBElement.m; sourceTree = "<group>"; };
 		89D5380E1CA34CBE00F62E09 /* QuerySpecifierByTextLike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySpecifierByTextLike.h; sourceTree = "<group>"; };
 		89D5380F1CA34CBE00F62E09 /* QuerySpecifierByTextLike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySpecifierByTextLike.m; sourceTree = "<group>"; };
 		89D538131CA351F400F62E09 /* QuerySpecifierByIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySpecifierByIndex.h; sourceTree = "<group>"; };
@@ -714,10 +825,8 @@
 		89F6BF8A1CBC4BDD0088269C /* Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Rotate.m; path = AutomationActions/Gestures/Rotate.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		89F6BF8E1CBEB5AD0088269C /* GeometryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeometryUtils.h; sourceTree = "<group>"; };
 		89F6BF8F1CBEB5AD0088269C /* GeometryUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeometryUtils.m; sourceTree = "<group>"; };
-		F5041F441E092BAC000B3E3E /* XCTestPrivateSymbols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTestPrivateSymbols.h; sourceTree = "<group>"; };
-		F5041F451E092BAC000B3E3E /* XCTestPrivateSymbols.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCTestPrivateSymbols.m; sourceTree = "<group>"; };
-		F5041F471E092D1C000B3E3E /* XCUIElement+FBIsVisible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIElement+FBIsVisible.h"; sourceTree = "<group>"; };
-		F5041F481E092D1C000B3E3E /* XCUIElement+FBIsVisible.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "XCUIElement+FBIsVisible.m"; sourceTree = "<group>"; tabWidth = 2; };
+		B9A81FD3215E429A0067AE63 /* XCUIElement+VisibilityResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIElement+VisibilityResult.h"; sourceTree = "<group>"; };
+		B9A81FD4215E429A0067AE63 /* XCUIElement+VisibilityResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCUIElement+VisibilityResult.m"; sourceTree = "<group>"; };
 		F50AF09E20F60D6600CF1250 /* CBXURLHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBXURLHelper.h; sourceTree = "<group>"; };
 		F50AF09F20F60D6600CF1250 /* CBXURLHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBXURLHelper.m; sourceTree = "<group>"; };
 		F50BB27B1D73392100264915 /* Permissions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Permissions.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1403,14 +1512,6 @@
 		89D538051CA32A3A00F62E09 /* FBWebDriverAgent */ = {
 			isa = PBXGroup;
 			children = (
-				F5041F471E092D1C000B3E3E /* XCUIElement+FBIsVisible.h */,
-				F5041F481E092D1C000B3E3E /* XCUIElement+FBIsVisible.m */,
-				F5041F441E092BAC000B3E3E /* XCTestPrivateSymbols.h */,
-				F5041F451E092BAC000B3E3E /* XCTestPrivateSymbols.m */,
-				89D5380A1CA32AE900F62E09 /* FBElement.h */,
-				89D5380B1CA32AE900F62E09 /* FBElement.m */,
-				89D538061CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.h */,
-				89D538071CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.m */,
 				F5DBC09C2101EEE900A4C274 /* UIDevice+Wifi_IP.h */,
 				F5DBC09D2101EEE900A4C274 /* UIDevice+Wifi_IP.m */,
 			);
@@ -1949,6 +2050,8 @@
 		F55F83D61C6DDF1300A945C8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B9A81FD3215E429A0067AE63 /* XCUIElement+VisibilityResult.h */,
+				B9A81FD4215E429A0067AE63 /* XCUIElement+VisibilityResult.m */,
 				F53349631F39E475004138C7 /* CBXDecimalRounder.h */,
 				F53349641F39E475004138C7 /* CBXDecimalRounder.m */,
 				F55F83DA1C6DDF1300A945C8 /* JSONUtils.h */,
@@ -2535,7 +2638,6 @@
 				F55F81891C6DD07500A945C8 /* DDRange.h in Headers */,
 				F54C02582043F0EF00FD8DDE /* UILongPressGestureRecognizer-RecordingAdditions.h in Headers */,
 				89D5381D1CA359B200F62E09 /* QuerySpecifierByPropertyLike.h in Headers */,
-				89D5380C1CA32AE900F62E09 /* FBElement.h in Headers */,
 				F54C025D2043F0EF00FD8DDE /* XCTContext.h in Headers */,
 				F54C029A2043F0EF00FD8DDE /* XCTIndexingTransformerIterator.h in Headers */,
 				F54C02782043F0EF00FD8DDE /* XCTestRun.h in Headers */,
@@ -2570,6 +2672,7 @@
 				F54C02622043F0EF00FD8DDE /* XCTWaiterDelegate-Protocol.h in Headers */,
 				F5DED03F1D7634AB00563648 /* SpringBoardAlert.h in Headers */,
 				F54C02282043F0EF00FD8DDE /* XCUIApplicationProcessTracker-Protocol.h in Headers */,
+				B9A81FD5215E429A0067AE63 /* XCUIElement+VisibilityResult.h in Headers */,
 				F55F82521C6DD07500A945C8 /* RouteRequest.h in Headers */,
 				F54C02482043F0EF00FD8DDE /* XCUIApplicationImpl.h in Headers */,
 				F54C02882043F0EF00FD8DDE /* XCTestCaseRun.h in Headers */,
@@ -2581,7 +2684,6 @@
 				F54C02A62043F0EF00FD8DDE /* XCTMatchingElementIterator.h in Headers */,
 				F54C02612043F0EF00FD8DDE /* XCTestLog.h in Headers */,
 				F54C02432043F0EF00FD8DDE /* XCSymbolicationRecord.h in Headers */,
-				89D538081CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.h in Headers */,
 				89F6BF8B1CBC4BDD0088269C /* Rotate.h in Headers */,
 				F54C02112043F0EF00FD8DDE /* _XCTNSNotificationExpectationImplementation.h in Headers */,
 				F54C02B62043F0EF00FD8DDE /* XCTAccessibilitySnapshot_iOS.h in Headers */,
@@ -2741,6 +2843,7 @@
 				F5DBC0A12101F18A00A4C274 /* Sources */,
 				F5DBC0A22101F18A00A4C274 /* Frameworks */,
 				F5DBC0A32101F18A00A4C274 /* Resources */,
+				F58A891C2153D85F00C63C31 /* Run Script - Copy XCTAutomationSupport.framework to .xctest bundle */,
 				F5DBC0B62101F24500A4C274 /* CopyFiles */,
 			);
 			buildRules = (
@@ -3060,6 +3163,24 @@
 			shellScript = "bin/xcode-build-phase/increment-build-number.sh\n";
 			showEnvVarsInLog = 0;
 		};
+		F58A891C2153D85F00C63C31 /* Run Script - Copy XCTAutomationSupport.framework to .xctest bundle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - Copy XCTAutomationSupport.framework to .xctest bundle";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bin/xcode-build-phase/install-XCTAutomationSuppport-framework-in-unit-test-bundle.sh\n";
+		};
 		F5A252C21CBFFE2700C05F1F /* Run Script stage to ./Products */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -3110,7 +3231,6 @@
 				F55F840D1C6E437100A945C8 /* QueryRoutes.m in Sources */,
 				89D537FC1CA2020700F62E09 /* QuerySpecifierById.m in Sources */,
 				F55F82551C6DD07500A945C8 /* RouteResponse.m in Sources */,
-				89D538091CA32AB000F62E09 /* XCUIElement+WebDriverAttributes.m in Sources */,
 				8965867D1CEB961300E8329C /* QueryConfigurationFactory.m in Sources */,
 				F53349661F39E490004138C7 /* CBXDecimalRounder.m in Sources */,
 				F55F81861C6DD07500A945C8 /* DDData.m in Sources */,
@@ -3122,7 +3242,6 @@
 				899696BB1CADF84B00BB42E2 /* EnterText.m in Sources */,
 				F55F824F1C6DD07500A945C8 /* HTTPResponseProxy.m in Sources */,
 				F55F840E1C6E437100A945C8 /* SessionRoutes.m in Sources */,
-				89D5380D1CA32AE900F62E09 /* FBElement.m in Sources */,
 				F5A14DE61E02CF84001A0037 /* CBLSApplicationWorkspace.m in Sources */,
 				F55F82591C6DD07500A945C8 /* RoutingHTTPServer.m in Sources */,
 				F533496D1F3AFED7004138C7 /* CBXOrientation.m in Sources */,
@@ -3138,9 +3257,9 @@
 				F55F840A1C6E437100A945C8 /* GestureRoutes.m in Sources */,
 				89C5F3511C9A60E70093A018 /* Testmanagerd.m in Sources */,
 				F55F840C1C6E437100A945C8 /* MetaRoutes.m in Sources */,
-				F5041F4C1E092D30000B3E3E /* XCTestPrivateSymbols.m in Sources */,
 				F55F818E1C6DD07500A945C8 /* HTTPConnection.m in Sources */,
 				89D538111CA34CBE00F62E09 /* QuerySpecifierByTextLike.m in Sources */,
+				B9A81FD6215E429A0067AE63 /* XCUIElement+VisibilityResult.m in Sources */,
 				F519E0FF1D79E336003A84B0 /* FBFailureProofTestCase.m in Sources */,
 				89331D321CC50447003C2E59 /* ThreadUtils.m in Sources */,
 				89D5381A1CA3551600F62E09 /* QuerySpecifierByProperty.m in Sources */,
@@ -3165,7 +3284,6 @@
 				899696D41CB44D9B00BB42E2 /* GestureConfiguration.m in Sources */,
 				899696EB1CB5857C00BB42E2 /* JSONKeyValidator.m in Sources */,
 				F55F81981C6DD07500A945C8 /* MultipartMessageHeader.m in Sources */,
-				F5041F4A1E092D27000B3E3E /* XCUIElement+FBIsVisible.m in Sources */,
 				F5538B8B1E28BEB9003EC5F3 /* CBXLogging.m in Sources */,
 				899697061CB5D5CF00BB42E2 /* Gesture+Options.m in Sources */,
 				89C5F35F1C9C51680093A018 /* Query.m in Sources */,
@@ -3274,7 +3392,126 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F50AF0A120F60D6600CF1250 /* CBXURLHelper.m in Sources */,
+				F5061A8A2153B19900B85792 /* QueryConfigurationFactory.m in Sources */,
+				F5061A742153B19900B85792 /* Testmanagerd.m in Sources */,
+				F5061A512153B0FF00B85792 /* SpringBoardAlertsTest.m in Sources */,
+				F5061A9C2153B4EF00B85792 /* HTTPAuthenticationRequest.m in Sources */,
+				F5061A722153B19900B85792 /* XCTest+CBXAdditions.m in Sources */,
+				F5061A8C2153B19900B85792 /* CoordinateQueryConfiguration.m in Sources */,
+				F5061A922153B19900B85792 /* Gesture.m in Sources */,
+				F5061A5A2153B14400B85792 /* CBXDevice.m in Sources */,
+				F5061A712153B15E00B85792 /* DeviceEventRoutes.m in Sources */,
+				F5061AA42153B4EF00B85792 /* HTTPDataResponse.m in Sources */,
+				F5061A862153B19900B85792 /* QuerySpecifierByMark.m in Sources */,
+				F5061A872153B19900B85792 /* Query.m in Sources */,
+				F5061AAD2153B4EF00B85792 /* RouteResponse.m in Sources */,
+				F5061A842153B19900B85792 /* QuerySpecifierByCoordinate.m in Sources */,
+				F5061A8E2153B19900B85792 /* TouchPath.m in Sources */,
+				F5061A5C2153B14400B85792 /* SpringBoardAlert.m in Sources */,
+				F5061A4F2153B0FF00B85792 /* CBXInfoPlistTest.m in Sources */,
+				F5061A4B2153B0FF00B85792 /* QueryTests.m in Sources */,
+				F5061A432153B0FF00B85792 /* Gestures+OptionsTests.m in Sources */,
+				F5061AA72153B4EF00B85792 /* HTTPFileResponse.m in Sources */,
+				F5061AA62153B4EF00B85792 /* HTTPErrorResponse.m in Sources */,
+				F5061A6C2153B15E00B85792 /* HealthRoutes.m in Sources */,
+				F5061AB02153B52800B85792 /* DDData.m in Sources */,
+				F5061A612153B14400B85792 /* CBXWaiter.m in Sources */,
+				F5061A772153B19900B85792 /* (null) in Sources */,
+				F5061A792153B19900B85792 /* UIDevice+Wifi_IP.m in Sources */,
+				F5061AAC2153B4EF00B85792 /* RouteRequest.m in Sources */,
+				F5061A682153B15E00B85792 /* ElementNotFoundException.m in Sources */,
+				F5061A4C2153B0FF00B85792 /* CBXDecimalRounderTest.m in Sources */,
+				F5061A642153B15E00B85792 /* SpringBoard.m in Sources */,
+				F5061A4E2153B0FF00B85792 /* CBXDeviceTest.m in Sources */,
+				F5061A522153B0FF00B85792 /* CBXOrientationTest.m in Sources */,
+				F5061A6F2153B15E00B85792 /* SessionRoutes.m in Sources */,
+				F5061A6B2153B15E00B85792 /* GestureRoutes.m in Sources */,
+				F5061A852153B19900B85792 /* QuerySpecifierByType.m in Sources */,
+				F5061A542153B14400B85792 /* CBXDecimalRounder.m in Sources */,
+				F5061A882153B19900B85792 /* QueryFactory.m in Sources */,
+				F5061AB12153B52800B85792 /* DDNumber.m in Sources */,
+				F5061A752153B19900B85792 /* (null) in Sources */,
+				F5061A692153B15E00B85792 /* InvalidArgumentException.m in Sources */,
+				F5061A492153B0FF00B85792 /* CoordinateQueryTests.m in Sources */,
+				F5061A5D2153B14400B85792 /* SpringBoardAlerts.m in Sources */,
+				F5061AAB2153B4EF00B85792 /* Route.m in Sources */,
+				F5061A8B2153B19900B85792 /* CoordinateQuery.m in Sources */,
+				F5061A7B2153B19900B85792 /* ActionConfiguration.m in Sources */,
+				F5061A442153B0FF00B85792 /* CBXTouchEventTests.m in Sources */,
+				F5061A9D2153B4EF00B85792 /* HTTPConnection.m in Sources */,
+				F5061A5E2153B14400B85792 /* TextInputFirstResponderProvider.m in Sources */,
+				F5061A972153B19900B85792 /* Touch.m in Sources */,
+				F5061AA92153B4EF00B85792 /* WebSocket.m in Sources */,
+				F5061A9F2153B4EF00B85792 /* HTTPServer.m in Sources */,
+				F5061AA22153B4EF00B85792 /* MultipartMessageHeaderField.m in Sources */,
+				F5061AA12153B4EF00B85792 /* MultipartMessageHeader.m in Sources */,
+				F5061A9B2153B4EF00B85792 /* GCDAsyncSocket.m in Sources */,
+				F5061A3C2153B0FF00B85792 /* CBXTestToolsStandup.m in Sources */,
+				F5061AAA2153B4EF00B85792 /* HTTPResponseProxy.m in Sources */,
+				F5061AA82153B4EF00B85792 /* HTTPRedirectResponse.m in Sources */,
+				F5061A902153B19900B85792 /* GestureFactory.m in Sources */,
+				F5061A3E2153B0FF00B85792 /* ApplicationTest.m in Sources */,
+				F5061A8D2153B19900B85792 /* CBXTouchEvent.m in Sources */,
+				F5061A572153B14400B85792 /* Coordinate.m in Sources */,
+				F5061A7A2153B19900B85792 /* AutomationAction.m in Sources */,
+				F5061A532153B0FF00B85792 /* RouteResponseTest.m in Sources */,
+				F5061A942153B19900B85792 /* ClearText.m in Sources */,
+				F5061A472153B0FF00B85792 /* TouchTest.m in Sources */,
+				F5061A3D2153B0FF00B85792 /* CBXUITestServerTest.m in Sources */,
+				F5061A932153B19900B85792 /* EnterText.m in Sources */,
+				F5061A7F2153B19900B85792 /* QuerySpecifierByIndex.m in Sources */,
+				F5061A812153B19900B85792 /* QuerySpecifierByPropertyLike.m in Sources */,
+				F5061A592153B14400B85792 /* ThreadUtils.m in Sources */,
+				F5061A422153B0FF00B85792 /* QueryConfigurationFactoryTests.m in Sources */,
+				F5061A502153B0FF00B85792 /* SpringBoardAlertTest.m in Sources */,
+				F5061A582153B14400B85792 /* GeometryUtils.m in Sources */,
+				F5061A782153B19900B85792 /* (null) in Sources */,
+				F5061A662153B15E00B85792 /* CBLSApplicationProxy.m in Sources */,
+				F5061A3F2153B0FF00B85792 /* ActionConfigurationTests.m in Sources */,
+				F5061A672153B15E00B85792 /* CBXException.m in Sources */,
+				F5061A602153B14400B85792 /* CBXMachClock.m in Sources */,
+				F5B8C9192163444700EB3A67 /* XCUIElement+VisibilityResult.m in Sources */,
+				F5061AB22153B52800B85792 /* DDRange.m in Sources */,
+				F5061A482153B0FF00B85792 /* DragTest.m in Sources */,
+				F5061A562153B14400B85792 /* JSONKeyValidator.m in Sources */,
+				F5061A982153B19900B85792 /* Drag.m in Sources */,
+				F5061A6A2153B15E00B85792 /* CBXRoute.m in Sources */,
+				F5061A7C2153B19900B85792 /* QuerySpecifierFactory.m in Sources */,
+				F5061AA02153B4EF00B85792 /* MultipartFormDataParser.m in Sources */,
+				F5061A962153B19900B85792 /* TwoFingerTap.m in Sources */,
+				F5061A632153B15E00B85792 /* Application.m in Sources */,
+				F5061A4A2153B0FF00B85792 /* QueryFactoryTests.m in Sources */,
+				F5061A3B2153B0FF00B85792 /* CBXiOSVersionInlinesTest.m in Sources */,
+				F5061AA52153B4EF00B85792 /* HTTPDynamicFileResponse.m in Sources */,
+				F5061A9E2153B4EF00B85792 /* HTTPMessage.m in Sources */,
+				F5061A732153B19900B85792 /* CBXCUITestServer.m in Sources */,
+				F5061A892153B19900B85792 /* QueryConfiguration.m in Sources */,
+				F5061A832153B19900B85792 /* QuerySpecifierByTextLike.m in Sources */,
+				F5061A462153B0FF00B85792 /* GestureFactoryTests.m in Sources */,
+				F5061A622153B14400B85792 /* CBXOrientation.m in Sources */,
+				F5061A702153B15E00B85792 /* UndefinedRoutes.m in Sources */,
+				F5061A802153B19900B85792 /* QuerySpecifierByProperty.m in Sources */,
+				F5061A652153B15E00B85792 /* CBLSApplicationWorkspace.m in Sources */,
+				F5061A5B2153B14400B85792 /* CBXInfoPlist.m in Sources */,
+				F5061A952153B19900B85792 /* DoubleTap.m in Sources */,
+				F5061A402153B0FF00B85792 /* QueryConfigurationTests.m in Sources */,
+				F5061A4D2153B0FF00B85792 /* JSONUtilsTest.m in Sources */,
+				F5061A992153B19900B85792 /* Pinch.m in Sources */,
+				F5061A9A2153B19A00B85792 /* Rotate.m in Sources */,
+				F5061A7E2153B19900B85792 /* QuerySpecifierById.m in Sources */,
+				F5061A552153B14400B85792 /* JSONUtils.m in Sources */,
+				F5061A6E2153B15E00B85792 /* QueryRoutes.m in Sources */,
+				F5061A822153B19900B85792 /* QuerySpecifierByText.m in Sources */,
+				F5061A6D2153B15E00B85792 /* MetaRoutes.m in Sources */,
+				F5061AAF2153B4EF00B85792 /* RoutingHTTPServer.m in Sources */,
+				F5061A912153B19900B85792 /* Gesture+Options.m in Sources */,
+				F5061AAE2153B4EF00B85792 /* RoutingConnection.m in Sources */,
+				F5061A452153B0FF00B85792 /* TouchPathTests.m in Sources */,
+				F5061AA32153B4EF00B85792 /* HTTPAsyncFileResponse.m in Sources */,
+				F5061A8F2153B19900B85792 /* GestureConfiguration.m in Sources */,
+				F5061A412153B0FF00B85792 /* CoordinateQueryConfigurationTests.m in Sources */,
+				F5061A5F2153B14400B85792 /* CBXLogging.m in Sources */,
+				F5061A7D2153B19900B85792 /* QuerySpecifier.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3570,6 +3807,7 @@
 		898743E21C5847B30084FD93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_CODE_COVERAGE = NO;
 				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Karl Krukow (YTTN6Y2QS9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Karl Krukow (YTTN6Y2QS9)";
@@ -3605,6 +3843,7 @@
 		898743E31C5847B30084FD93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_CODE_COVERAGE = NO;
 				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Karl Krukow (YTTN6Y2QS9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Karl Krukow (YTTN6Y2QS9)";
@@ -3781,6 +4020,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_CODE_COVERAGE = NO;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3799,6 +4039,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_CODE_COVERAGE = NO;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3890,6 +4131,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_CODE_COVERAGE = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -3901,6 +4143,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PLATFORM_DIR)/Developer/Library/PrivateFrameworks",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -3911,6 +4154,10 @@
 				INFOPLIST_FILE = TestApp/DeviceAgentUnitTestsInfo.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					XCTAutomationSupport,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.microsoft.ServerUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3925,6 +4172,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_CODE_COVERAGE = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -3936,6 +4184,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PLATFORM_DIR)/Developer/Library/PrivateFrameworks",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PREPROCESSOR_DEFINITIONS = "LOAD_XCTEST_PRIVATE_HEADERS=0";
@@ -3943,6 +4192,10 @@
 				INFOPLIST_FILE = TestApp/DeviceAgentUnitTestsInfo.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					XCTAutomationSupport,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.microsoft.ServerUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

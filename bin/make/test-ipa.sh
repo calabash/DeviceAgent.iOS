@@ -122,9 +122,9 @@ cat >"${TC_DIR}/Gemfile" <<EOF
 source "https://rubygems.org"
 
 gem "calabash-cucumber"
-gem "cucumber", "2.4.0"
+gem "cucumber", "2.99.0"
+gem "json", "1.8.6"
 gem "rspec", "~> 3.0"
-gem "xamarin-test-cloud"
 EOF
 
 info "Wrote ${TC_DIR}/Gemfile with contents"

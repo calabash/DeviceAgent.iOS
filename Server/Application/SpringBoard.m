@@ -15,7 +15,6 @@
 #import "SpringBoardAlerts.h"
 #import "XCElementSnapshot.h"
 #import "GestureFactory.h"
-#import "XCUIElement+WebDriverAttributes.h"
 #import "CBXException.h"
 #import <UIKit/UIKit.h>
 #import "CBXConstants.h"

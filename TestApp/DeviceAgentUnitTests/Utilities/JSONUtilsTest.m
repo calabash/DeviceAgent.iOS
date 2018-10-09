@@ -5,6 +5,10 @@
 @interface JSONUtils (CBXTEST)
 
 + (NSNumber *)normalizeFloat:(CGFloat)cgFloat;
++ (void)setObject:(id)instance
+           forKey:(NSString *)key
+     inDictionary:(NSMutableDictionary *)dictionary;
+
 
 @end
 
@@ -13,6 +17,27 @@
 @end
 
 @implementation JSONUtilsTest
+
+- (void)testAddingObjectsToDictionary {
+    NSMutableDictionary *dict = [@{@"key" : @"value"} mutableCopy];
+
+    [JSONUtils setObject:nil forKey:@"key" inDictionary:dict];
+    expect(dict[@"key"]).to.equal([NSNull null]);
+
+    [JSONUtils setObject:@"value" forKey:@"key" inDictionary:dict];
+    expect(dict[@"key"]).to.equal(@"value");
+
+    [JSONUtils setObject:[@"value" mutableCopy]
+                  forKey:@"key"
+            inDictionary:dict];
+    expect(dict[@"key"]).to.equal(@"value");
+
+    [JSONUtils setObject:@"" forKey:@"key" inDictionary:dict];
+    expect(dict[@"key"]).to.equal([NSNull null]);
+
+    [JSONUtils setObject:[@"" mutableCopy] forKey:@"key" inDictionary:dict];
+    expect(dict[@"key"]).to.equal([NSNull null]);
+}
 
 @end
 

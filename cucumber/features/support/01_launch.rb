@@ -213,7 +213,8 @@ After do |scenario|
           client.send(:terminate_app, "sh.calaba.TestApp")
           sleep(1.0)
           if client.send(:app_running?, "sh.calaba.TestApp")
-            raise "sh.calaba.TestApp is running!?!"
+            $stdout.puts "WARNING: sh.calaba.TestApp is running after #terminate_app is called"
+            $stdout.flush
           end
         end
       end

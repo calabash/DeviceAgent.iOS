@@ -1,3 +1,9 @@
+### 1.3.2
+
+* Added new Korean alert for location from iOS 12 #303
+* Improve performance of element JSON serialization and simplify
+  visibility heuristic #300
+
 ### 1.3.1
 
 * Add new iPhone 10S, 10S Max, and 10R model numbers #296

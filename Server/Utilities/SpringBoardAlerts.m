@@ -326,6 +326,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
   return @[
       alert(@"허용", YES, @"에서 사용자의 위치에 접근하도록 허용하겠습니까"),
       alert(@"허용", YES, @"을(를) 사용하지 않을 때에도 해당 앱이 사용자의 위치에 접근하도록 허용하곘습니까"),
+      alert(@"허용", YES, @"을(를) 사용하는 동안 해당 앱이 사용자의 위치에 접근하도록 허용하겠습니까"),
       alert(@"승인", YES, @"이(가) 사용자의 연락처에 접근하려고 합니다"),
       alert(@"승인", YES, @"이(가) 사용자의 캘린더에 접근하려고 합니다"),
       alert(@"승인", YES, @"이(가) 사용자의 미리 알림에 접근하려고 합니다"),

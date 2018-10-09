@@ -272,21 +272,37 @@ And(/^I can swipe to delete the Windows row$/) do
   wait_for_view({marked: identifier})
 
   swipe(:left, identifier)
-  touch({marked: "Delete"})
+  wait_for_animations
+
+  # The rect of this button is so large that the center
+  # is outside of the view port.  Touching the device will
+  # touch the far right edge of the screen which does not
+  # touch the button.  Until run-loop is updated to choose
+  # between the reported (XCUITest) hit point and the center
+  # point of the object, we need to have a work around.
+  button = wait_for_view({marked: "Delete"})
+
+  touch_coordinate({x: button["rect"]["x"] + 10,
+                    y: button["rect"]["y"] + 10})
+  wait_for_animations
 
   wait_for_no_view({marked: "Delete"})
+  wait_for_no_view({marked: identifier})
 end
 
 And(/^I have scrolled to the top of the Companies table$/) do
-  # There is no status bar "center" on iPhone X
-  if iphone_x?
-    element = wait_for_view({marked: "SSID", :all => true})
+  element = wait_for_view({type: "StatusBar", :all => true})
+
+  # touching the center of the status bar on iPhone 10 devices is
+  # not possible because of the notch.  Let's just touch the top
+  # left of the status bar.
+  hitpoint = element["hit_point"]
+  if hitpoint["x"] != -1
+    touch_coordinate({x: hitpoint["x"], y: hitpoint["y"]})
   else
-    element = wait_for_view({type: "StatusBar", :all => true})
+    touch_coordinate({x: 4, y: 4})
   end
 
-  center = element_center(element)
-  touch_coordinate(center)
   sleep(0.4)
 end
 

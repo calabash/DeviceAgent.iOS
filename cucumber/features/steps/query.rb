@@ -198,7 +198,7 @@ end
 Then(/^I ask for the tree representation of the view hierarchy$/) do
   elements = tree
   expect(elements.count).to be >= 7
-  expect(elements.count).to be <= 13
+  expect(elements.count).to be <= 14
 end
 
 Then(/^I time how long it takes to make a bunch of queries$/) do
