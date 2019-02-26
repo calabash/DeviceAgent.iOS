@@ -26,7 +26,6 @@ And(/^I scroll down to the first and last name text fields$/) do
     start_point = point_for_full_pan_start(:up, {type: "WebView", all: true})
     end_point = point_for_full_pan_end(:up, {type: "WebView", all: true})
 
-    # Scroll the less 100 pixels of screen for iPhone XR and XS Max
     if ["iphone 10r", "iphone 10s max"].include?(device_info["form_factor"])
       end_point[:y] = end_point[:y] + 100
     end
