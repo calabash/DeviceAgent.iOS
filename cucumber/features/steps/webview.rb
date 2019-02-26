@@ -25,6 +25,12 @@ And(/^I scroll down to the first and last name text fields$/) do
   if @safari_controller
     start_point = point_for_full_pan_start(:up, {type: "WebView", all: true})
     end_point = point_for_full_pan_end(:up, {type: "WebView", all: true})
+
+    # Scroll the less 100 pixels of screen for iPhone XR and XS Max
+    if ["iphone 10r", "iphone 10s max"].include?(device_info["form_factor"])
+      end_point[:y] = end_point[:y] + 100
+    end
+
     pan_between_coordinates(start_point, end_point)
   else
     scroll_to(:up, "landing page", "Last name:", 5, true)
