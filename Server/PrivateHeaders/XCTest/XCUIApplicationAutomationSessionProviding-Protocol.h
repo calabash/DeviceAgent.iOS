@@ -5,7 +5,7 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-
+@protocol XCTRunnerAutomationSession;
 
 @protocol XCUIApplicationAutomationSessionProviding <NSObject>
 - (void)requestAutomationSessionForTestTargetWithPID:(NSInteger)arg1 preferredBackendPath:(NSString *)arg2 isBridged:(BOOL)arg3 reply:(void (^)(id <XCTRunnerAutomationSession>, NSError *))arg4;
