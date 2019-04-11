@@ -22,6 +22,7 @@
 #import "XCUIScreenshotProviding-Protocol.h"
 
 @class NSString, XCElementSnapshot, XCTLocalizableStringInfo, XCUIApplication, XCUICoordinate, XCUIElementQuery;
+@protocol XCUIDevice;
 
 @interface XCUIElement : NSObject <XCUIScreenshotProviding, XCUIElementSnapshotProviding, XCTNSPredicateExpectationObject, XCUIElementAttributesPrivate, XCUIElementAttributes, XCUIElementTypeQueryProvider>
 {
@@ -42,10 +43,13 @@
 @property(readonly, copy) XCUIElementQuery *comboBoxes;
 @property(readonly, copy) XCUIElementQuery *datePickers;
 @property(readonly, copy) XCUIElementQuery *decrementArrows;
+@property(readonly) id <XCUIDevice> device;
 @property(readonly, copy) XCUIElementQuery *dialogs;
+@property(readonly, copy) XCUIElementQuery *disclosedChildRows;
 @property(readonly, copy) XCUIElementQuery *disclosureTriangles;
 @property(readonly, copy) XCUIElementQuery *dockItems;
 @property(readonly, copy) XCUIElementQuery *drawers;
+@property(readonly, copy) XCUIElement *elementBoundByAccessibilityElement;
 @property(readonly) NSUInteger elementType;
 @property(readonly) BOOL exists;
 @property(readonly) XCUIElement *firstMatch;
@@ -137,16 +141,15 @@
 @property(readonly, copy) XCUIElementQuery *webViews;
 @property(readonly, copy) XCUIElementQuery *windows;
 
-+ (BOOL)_dispatchEvent:(CDUnknownBlockType)arg1 inContext:(id)arg2 withSnapshot:(id)arg3 applicationSnapshot:(id)arg4 process:(id)arg5 error:(id *)arg6;
++ (BOOL)_dispatchEventWithEventBuilder:(CDUnknownBlockType)arg1 eventSynthesizer:(id)arg2 inContext:(id)arg3 withSnapshot:(id)arg4 applicationSnapshot:(id)arg5 process:(id)arg6 error:(id *)arg7;
 + (BOOL)_isInvalidEventDuration:(double)arg1;
 + (id)standardAttributeNames;
 - (id)_debugDescriptionWithSnapshot:(id)arg1;
-- (void)_dispatchEvent:(id)arg1 block:(CDUnknownBlockType)arg2;
-- (BOOL)_dispatchEvent:(CDUnknownBlockType)arg1 error:(id *)arg2;
+- (void)_dispatchEvent:(id)arg1 eventBuilder:(CDUnknownBlockType)arg2;
+- (BOOL)_dispatchEventWithEventBuilder:(CDUnknownBlockType)arg1 error:(id *)arg2;
 - (id)_highestNonWindowAncestorOfElement:(id)arg1 notSharedWithElement:(id)arg2;
 - (id)_hitPointByAttemptingToScrollToVisibleSnapshot:(id)arg1 error:(id *)arg2;
 - (id)_pointsInFrame:(CGRect)arg1 numberOfTouches:(NSUInteger)arg2;
-- (id)_screen;
 - (BOOL)_shouldDispatchEvent:(id *)arg1;
 - (void)_swipe:(NSUInteger)arg1;
 - (void)_tapWithNumberOfTaps:(NSUInteger)arg1 numberOfTouches:(NSUInteger)arg2 activityTitle:(id)arg3;
@@ -157,7 +160,6 @@
 - (id)coordinateWithNormalizedOffset:(CGVector)arg1;
 - (id)descendantsMatchingType:(NSUInteger)arg1;
 - (void)doubleTap;
-- (id)elementBoundByAccessibilityElement;
 - (BOOL)evaluatePredicateForExpectation:(id)arg1 debugMessage:(id *)arg2;
 - (void)forcePress;
 - (id)initWithElementQuery:(id)arg1;

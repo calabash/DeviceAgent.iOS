@@ -12,17 +12,11 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-#import <objc/NSObject.h>
+#import "XCUIDevice-Protocol.h"
 
-#import "XCTestObservation-Protocol.h"
+@class XCDeviceEvent, XCUISiriService;
 
-
-@interface TestObserver : NSObject <XCTestObservation>
-{
-}
-
-- (void)testCaseDidFinish:(id)arg1;
-
-
+@protocol XCUIIPhoneOSDevice <XCUIDevice>
+- (BOOL)performDeviceEvent:(XCDeviceEvent *)arg1 error:(id *)arg2;
 @end
 

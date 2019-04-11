@@ -50,6 +50,7 @@
     XCAccessibilityElement *_parentAccessibilityElement;
     XCElementSnapshot *_parent;
     XCTLocalizableStringInfo *_localizableStringInfo;
+    NSSet *_disclosedChildRowAXElements;
     CGRect _frame;
 }
 
@@ -66,6 +67,8 @@
 @property __weak id <XCTElementSnapshotAttributeDataSource> dataSource;
 @property(readonly) NSUInteger depth;
 @property(readonly, copy) NSEnumerator *descendantEnumerator;
+@property(copy) NSSet *disclosedChildRowAXElements;
+@property(readonly) NSArray *disclosedChildRows;
 @property NSUInteger elementType;
 @property CGRect frame;
 @property(nonatomic) NSUInteger generation;
@@ -87,6 +90,7 @@
 @property(copy) XCTLocalizableStringInfo *localizableStringInfo;
 @property(readonly) XCElementSnapshot *menu;
 @property(readonly) XCElementSnapshot *menuItem;
+@property(readonly) XCElementSnapshot *outline;
 @property XCElementSnapshot *parent;
 @property(retain) XCAccessibilityElement *parentAccessibilityElement;
 @property(readonly, copy) NSString *pathDescription;
@@ -107,10 +111,10 @@
 @property(readonly) NSSet *uniqueDescendantSubframes;
 @property(readonly) CGRect visibleFrame;
 
-+ (id)axAttributesForElementSnapshotKeyPaths:(id)arg1;
-+ (id)axAttributesForSnapshotAttributes:(id)arg1;
++ (id)axAttributesForElementSnapshotKeyPaths:(id)arg1 isMacOS:(BOOL)arg2;
++ (id)axAttributesForSnapshotAttributes:(id)arg1 isMacOS:(BOOL)arg2;
 + (id)elementWithAccessibilityElement:(id)arg1;
-+ (id)requiredAXAttributesForElementSnapshotHierarchy;
++ (id)requiredAXAttributesForElementSnapshotHierarchyOnMacOS:(BOOL)arg1;
 + (id)sanitizedElementSnapshotHierarchyAttributesForAttributes:(id)arg1 isMacOS:(BOOL)arg2;
 - (id)_allDescendants;
 - (void)_assertForFaultsInContext:(CDUnknownBlockType)arg1;

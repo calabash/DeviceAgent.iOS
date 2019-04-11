@@ -14,7 +14,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSDictionary, NSInvocation, NSMutableArray, NSMutableDictionary, NSMutableSet, NSSet, NSString, NSThread, XCTAttachmentManager, XCTWaiter, XCTestCaseRun, XCUITestContext;
+@class NSArray, NSDictionary, NSInvocation, NSMutableArray, NSMutableDictionary, NSMutableSet, NSString, NSThread, XCTAttachmentManager, XCTWaiter, XCTestCaseRun;
 
 @interface _XCTestCaseImplementation : NSObject
 {
@@ -46,7 +46,6 @@
     BOOL _hasAttemptedToCaptureScreenshotOnFailure;
     XCTAttachmentManager *_attachmentManager;
     NSDictionary *_activityAggregateStatistics;
-    XCUITestContext *_testContext;
 }
 
 @property(copy) NSArray *activePerformanceMetricIDs;
@@ -77,8 +76,6 @@
 @property NSUInteger startWallClockTime;
 @property(retain) XCTestCaseRun *testCaseRun;
 @property(readonly) NSMutableArray *teardownBlocks;
-@property(readonly) XCUITestContext *testContext;
-@property(readonly) NSSet *waitedOnExpectations;
 
 - (void)addExpectation:(id)arg1;
 - (void)resetExpectations;

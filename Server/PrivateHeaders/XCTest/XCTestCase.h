@@ -18,7 +18,7 @@
 #import "XCTMemoryCheckerDelegate-Protocol.h"
 #import "XCTWaiterDelegate-Protocol.h"
 
-@class NSDictionary, NSInvocation, NSString, XCTMemoryChecker, XCTestCaseRun, XCUITestContext, _XCTestCaseImplementation;
+@class NSDictionary, NSInvocation, NSString, XCTMemoryChecker, XCTestCaseRun, _XCTestCaseImplementation;
 
 @interface XCTestCase : XCTest <XCTWaiterDelegate, XCTMemoryCheckerDelegate, XCTActivity>
 {
@@ -36,7 +36,6 @@
 @property(nonatomic) BOOL shouldHaltWhenReceivesControl;
 @property(nonatomic) BOOL shouldSetShouldHaltWhenReceivesControl;
 @property(retain) XCTestCaseRun *testCaseRun;
-@property(readonly) XCUITestContext *testContext;
 
 + (id)_allSubclasses;
 + (void)_allTestMethodInvocations:(id)arg1;
@@ -100,11 +99,14 @@
 - (void)assertNoLeaksInScope:(CDUnknownBlockType)arg1;
 - (void)assertObjectsOfType:(id)arg1 inApplication:(id)arg2 invalidAfterScope:(CDUnknownBlockType)arg3;
 - (void)assertObjectsOfType:(id)arg1 invalidAfterScope:(CDUnknownBlockType)arg2;
+- (void)assertObjectsOfTypes:(id)arg1 inApplication:(id)arg2 invalidAfterScope:(CDUnknownBlockType)arg3;
+- (void)assertObjectsOfTypes:(id)arg1 invalidAfterScope:(CDUnknownBlockType)arg2;
 - (id)baselinesDictionaryForTest;
 - (void)beforeTestIteration:(NSUInteger)arg1 selector:(SEL)arg2;
 - (id)bundle;
 - (NSInteger)defaultExecutionOrderCompare:(id)arg1;
 - (id)expectationForNotification:(id)arg1 object:(id)arg2 handler:(CDUnknownBlockType)arg3;
+- (id)expectationForNotification:(id)arg1 object:(id)arg2 notificationCenter:(id)arg3 handler:(CDUnknownBlockType)arg4;
 - (id)expectationForPredicate:(id)arg1 evaluatedWithObject:(id)arg2 handler:(CDUnknownBlockType)arg3;
 - (id)expectationWithDescription:(id)arg1;
 - (id)initWithInvocation:(id)arg1;

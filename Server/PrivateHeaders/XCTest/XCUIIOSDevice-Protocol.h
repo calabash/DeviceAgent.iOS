@@ -12,16 +12,11 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-#import "XCTestCase.h"
+#import "XCUIIPhoneOSDevice-Protocol.h"
 
-@interface Test_XCTestObservation : XCTestCase
-{
-}
-
-+ (void)load;
-+ (void)tearDown;
-- (void)testA;
-- (void)testCustomObservers;
-
+@protocol XCUIIOSDevice <XCUIIPhoneOSDevice>
+- (void)holdHomeButtonForDuration:(double)arg1;
+- (void)pressButton:(NSInteger)arg1;
+- (void)pressLockButton;
 @end
 

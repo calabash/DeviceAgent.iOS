@@ -17,16 +17,15 @@
 #import "XCUIAccessibilityInterface-Protocol.h"
 
 @class NSMutableDictionary, NSString;
-@protocol OS_dispatch_queue, XCUIApplicationProcessTracker, XCUIRemoteAXInterface;
+@protocol OS_dispatch_queue, XCUIApplicationProcessTracker, XCUIRemoteAccessibilityInterface;
 
 
 @protocol XCUIApplicationProcessTracker;
-@protocol XCUIRemoteAXInterface;
 
 @interface XCAXClient_iOS : NSObject <XCUIAccessibilityInterface>
 {
     id <XCUIApplicationProcessTracker> _applicationProcessTracker;
-    id <XCUIRemoteAXInterface> _remoteAXInterface;
+    id <XCUIRemoteAccessibilityInterface> _remoteAccessibilityInterface;
     NSObject<OS_dispatch_queue> *_queue;
     NSMutableDictionary *_userTestingNotificationHandlers;
     NSMutableDictionary *_cachedAccessibilityLoadedValuesForPIDs;
@@ -38,29 +37,26 @@
 @property(readonly) BOOL axNotificationsIncludeElement;
 @property(retain) NSMutableDictionary *cachedAccessibilityLoadedValuesForPIDs;
 @property(retain) NSObject<OS_dispatch_queue> *queue;
-@property(readonly) id <XCUIRemoteAXInterface> remoteAXInterface;
+@property(readonly) id <XCUIRemoteAccessibilityInterface> remoteAccessibilityInterface;
 @property(retain) NSMutableDictionary *userTestingNotificationHandlers;
 @property(readonly) BOOL supportsAnimationsInactiveNotifications;
 @property(readonly) BOOL supportsHostedViewCoordinateTransformations;
 @property(readonly) BOOL usePointTransformationsForFrameConversions;
 
-+ (id)sharedClient;
 - (BOOL)_loadAccessibility:(id *)arg1;
 - (BOOL)_registerForAXNotification:(NSInteger)arg1 error:(id *)arg2;
 - (BOOL)_setAXTimeout:(double)arg1 error:(id *)arg2;
 - (id)accessibilityElementForElementAtPoint:(CGPoint)arg1 error:(id *)arg2;
 - (id)activeApplications;
 - (id)addObserverForAXNotification:(id)arg1 handler:(CDUnknownBlockType)arg2;
-- (id)attributesForElement:(id)arg1 attributes:(id)arg2;
 - (id)attributesForElement:(id)arg1 attributes:(id)arg2 error:(id *)arg3;
-- (id)attributesForElementSnapshot:(id)arg1 attributeList:(id)arg2;
 - (BOOL)cachedAccessibilityLoadedValueForPID:(NSInteger)arg1;
 - (id)defaultParameters;
 - (BOOL)enableFauxCollectionViewCells:(id *)arg1;
 - (void)handleAccessibilityNotification:(NSInteger)arg1 fromElement:(id)arg2 payload:(id)arg3;
 - (void)handleUserTestingNotification:(id)arg1;
 - (id)hitTestElement:(id)arg1 withPoint:(CGPoint)arg2 error:(id *)arg3;
-- (id)initWithApplicationProcessTracker:(id)arg1 remoteAXInterface:(id)arg2;
+- (id)initWithApplicationProcessTracker:(id)arg1 remoteAccessibilityInterface:(id)arg2;
 - (id)interruptingUIElementsAffectingSnapshot:(id)arg1;
 - (BOOL)loadAccessibility:(id *)arg1;
 - (id)localizableStringsDataForActiveApplications;
