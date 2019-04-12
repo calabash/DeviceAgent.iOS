@@ -73,11 +73,12 @@ pipeline {
             sh 'bin/ci/cucumber.rb'
           }
         }
-        stage('appcenter') {
-          steps {
-            sh 'bin/ci/appcenter.sh'
-          }
-        }
+// Broken at the moment because the gem requires bundler 1.3
+//        stage('appcenter') {
+//          steps {
+//            sh 'bin/ci/appcenter.sh'
+//          }
+//        }
       }
     }
   }
