@@ -99,7 +99,8 @@ IMPORT_PROTOCOLS = [
   "XCUIApplicationProcessTracker.h",
   "XCTTestRunSessionDelegate.h",
   "XCTestDriverInterface.h",
-  "XCUIXcodeApplicationManaging.h"
+  "XCUIXcodeApplicationManaging.h",
+  "XCTRunnerAutomationSession.h"
 ]
 
 # If there are lines with id <Protocol> variableName, add @protocol to header
