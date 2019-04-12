@@ -99,8 +99,7 @@ IMPORT_PROTOCOLS = [
   "XCUIApplicationProcessTracker.h",
   "XCTTestRunSessionDelegate.h",
   "XCTestDriverInterface.h",
-  "XCUIXcodeApplicationManaging.h",
-  "XCTRunnerAutomationSession.h"
+  "XCUIXcodeApplicationManaging.h"
 ]
 
 # If there are lines with id <Protocol> variableName, add @protocol to header
@@ -152,7 +151,6 @@ FRAMEWORKS_MAP.each do |_, output_path|
       if !LINES_TO_REMOVE.include?(line.chomp)
 
         if line[/<(XCTAutomationSupport|XCTest)\/.+.h>/]
-        #if line[/<XCTAutomationSupport\/.+.h>/]
           filename = File.basename(line[/\/.+\.h/])
           line = %Q[#import "#{filename}"#{$-0}]
         end
@@ -235,7 +233,8 @@ FRAMEWORKS_MAP.each do |_, output_path|
           properties = properties + line
         else
           if line[/#import "NS.+\.h/] ||
-             line[/#import <Foundation\/.*\.h>/]
+             line[/#import <Foundation\/.*\.h>/] ||
+             line[/struct atomic_flag _promiseFulfilled;/]
             puts "skipping line: #{line}"
           else
             lines << line
@@ -303,6 +302,14 @@ FRAMEWORKS_MAP.each do |_, output_path|
             if File.basename(file) == "XCUIDevice.h"
               if !class_fixes[file] && line[/@class/]
                 file.puts("#import <UIKit/UIDevice.h>")
+                file.puts("")
+                class_fixes[file] = true
+              end
+            end
+
+            if File.basename(file) == "XCUIApplicationAutomationSessionProviding-Protocol.h"
+              if !class_fixes[file] && line[/@protocol/]
+                file.puts("@protocol XCTRunnerAutomationSession;")
                 file.puts("")
                 class_fixes[file] = true
               end

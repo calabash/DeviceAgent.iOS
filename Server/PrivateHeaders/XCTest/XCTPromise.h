@@ -18,7 +18,6 @@
 
 @interface XCTPromise : NSObject
 {
-    struct atomic_flag _promiseFulfilled;
     NSError *_error;
     id _value;
     XCTestExpectation *_expectation;
