@@ -3,18 +3,6 @@
 require "fileutils"
 require "run_loop"
 
-hash = RunLoop::Shell.run_shell_command(["hash", "class-dump"], {log_cmd: true})
-if hash[:exit_status] != 0
-  raise %Q[
-
-This script requires 'class-dump' to be in your PATH.
-
-http://stevenygard.com/projects/class-dump/
-https://github.com/nygard/class-dump
-
-]
-end
-
 FRAMEWORKS=["XCTest", "XCTAutomationSupport"]
 FileUtils.rm_rf(File.join("tmp", "class-dump"))
 
@@ -38,8 +26,9 @@ FRAMEWORKS_MAP.each do |framework, output_path|
                             "XCTest.framework", framework)
   end
 
-  hash = RunLoop::Shell.run_shell_command(["class-dump", "-s", "-S", "-H",
-                                           "-o", output_path, binary_path],
+  hash = RunLoop::Shell.run_shell_command([File.join(__dir__, "class-dump"),
+                                           "-s", "-S", "-H", "-o", output_path,
+                                           binary_path],
                                           {log_cmd: true})
   if hash[:exit_status] != 0
     raise %Q[
