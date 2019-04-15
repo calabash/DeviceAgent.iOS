@@ -1,3 +1,10 @@
+### 1.3.3
+
+* Add new Spring 2019 iPad models #312
+* Update private headers for Xcode 10.2 #311
+* SafariWebController test fails for iPhone XR and XS Max. #308
+* Update private headers for Xcode 10.2 #306
+
 ### 1.3.2
 
 * Added new Korean alert for location from iOS 12 #303
