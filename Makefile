@@ -59,8 +59,8 @@ docs:
 # Installs DeviceAgent onto your machine
 #
 # Builds DeviceAgent for Sim and Device, installs to
-# ~/.calabash/DeviceAgent/simulator and
-# ~/.calabash/DeviceAgent/device
+# ~/.test-cloud-dev/DeviceAgent/simulator and
+# ~/.test-cloud-dev/DeviceAgent/device
 install:
 	bin/install/device_agent.sh
 

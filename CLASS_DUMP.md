@@ -15,7 +15,7 @@ This script requires 'class-dump' to be in your PATH.
 * http://stevenygard.com/projects/class-dump/
 * https://github.com/nygard/class-dump
 
-Remember that maintainers need to use the Calabash.keychain.
+Remember that maintainers need to use the TestCloudDev.keychain.
 Non-maintainers will need to update the code signing attributes from the
 Xcode UI.
 

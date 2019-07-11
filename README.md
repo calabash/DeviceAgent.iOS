@@ -76,7 +76,7 @@ iPhone Developer: ambiguous matches
 ```
 
 Ambiguous matches usually mean that the certs are contained in both your
-login.keychain and the Calabash.keychain.  Delete the certs in your
+login.keychain and the TestCloudDev.keychain.  Delete the certs in your
 login.keychain.
 
 ### Contributing
