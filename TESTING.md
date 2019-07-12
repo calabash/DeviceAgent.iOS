@@ -20,7 +20,7 @@ $ tree -L 2 -d
 
 ### TODO
 
-1. pull git@github.com:calabash/calabash-codesign.git to ~/.test-cloud-dev/test-cloud-dev-ios-keychain
+1. pull git@github.com:calabash/calabash-codesign.git
 2. pull git@github.com:calabash/iOSDeviceManager.git and checkout develop
 3. pull git@github.com:calabash/DeviceAgent.iOS.git and checkout develop
 4. pull git@github.com:calabash/run_loop.git and checkout develop
@@ -31,7 +31,7 @@ $ tree -L 2 -d
 This is required to build the Xcode project which have hard-wired code signing requirements.
 
 ```
-$ ~/.test-cloud-dev/test-cloud-dev-ios-keychain/apple/create-keychain.sh
+$ <calabash-codesign-repo>/apple/create-keychain.sh
 ```
 
 Output like this is normal:
@@ -112,7 +112,7 @@ Edit `cucumber/features/support/01_launch.rb`:
 
 When running with `xcodebuild` you will need to manually update the
 DeviceAgent.iOS Xcode code signing settings for the AppStub target
- _if_ your device is not in `test-cloud-dev-ios-keychain` provisioning profiles.
+ _if_ your device is not in `calabash-codesign` provisioning profiles.
 
 ### Log Files
 
@@ -121,7 +121,7 @@ DeviceAgent.iOS Xcode code signing settings for the AppStub target
 $ run-loop simctl tail
 
 # Available after first iOSDeviceManager command is run.
-$ tail -F ~/.test-cloud-dev/iOSDeviceManager/logs/current.log
+$ tail -F ~/.calabash/iOSDeviceManager/logs/current.log
 
 # Available after first `xcodebuild` cucumber run.
 $ tail -F ~/.run-loop/xcuitest/xcodebuild.log

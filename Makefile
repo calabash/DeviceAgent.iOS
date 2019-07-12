@@ -57,10 +57,6 @@ docs:
 	bin/make/docs.sh
 
 # Installs DeviceAgent onto your machine
-#
-# Builds DeviceAgent for Sim and Device, installs to
-# ~/.test-cloud-dev/DeviceAgent/simulator and
-# ~/.test-cloud-dev/DeviceAgent/device
 install:
 	bin/install/device_agent.sh
 

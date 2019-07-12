@@ -18,7 +18,7 @@ else
 fi
 set -e
 
-KEYCHAIN="${HOME}/.test-cloud-dev/TestCloudDev.keychain"
+KEYCHAIN="${HOME}/Library/Keychains/test-cloud-dev/TestCloudDev.keychain-db"
 
 if [ ! -e "${KEYCHAIN}" ]; then
   echo "Cannot find S3 credentials: there is no TestCloudDev.keychain"
@@ -26,21 +26,21 @@ if [ ! -e "${KEYCHAIN}" ]; then
   exit 1
 fi
 
-if [ ! -e "${HOME}/.test-cloud-dev/find-keychain-credential.sh" ]; then
+if [ ! -e "${HOME}/Library/Keychains/test-cloud-dev/find-keychain-credential.sh" ]; then
   echo "Cannot find S3 credentials: no find-keychain-credential.sh script"
-  echo "  ${HOME}/.test-cloud-dev/find-keychain-credential.sh"
+  echo "  ${HOME}/Library/Keychains/test-cloud-dev/find-keychain-credential.sh"
   exit 1
 fi
 
 export AWS_ACCESS_KEY_ID=$(
-"${HOME}/.test-cloud-dev/find-keychain-credential.sh" s3-access-key
+"${HOME}/Library/Keychains/test-cloud-dev/find-keychain-credential.sh" s3-access-key
 )
 export AWS_SECRET_ACCESS_KEY=$(
-"${HOME}/.test-cloud-dev/find-keychain-credential.sh" s3-secret
+"${HOME}/Library/Keychains/test-cloud-dev/find-keychain-credential.sh" s3-secret
 )
 
 if [ "${AC_TOKEN}" = "" ]; then
-  AC_TOKEN=$("${HOME}/.test-cloud-dev/find-keychain-credential.sh" api-token)
+  AC_TOKEN=$("${HOME}/Library/Keychains/test-cloud-dev/find-keychain-credential.sh" api-token)
 fi
 
 IPA=Products/ipa/DeviceAgent/DeviceAgent-Runner.ipa

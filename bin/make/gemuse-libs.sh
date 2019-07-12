@@ -73,7 +73,7 @@ function fat_lib_with_lipo {
   xcrun lipo -create "${arm_lib}" "${sim_lib}" \
     -output "${fat_lib}"
 
-  "${HOME}/.test-cloud-dev/test-cloud-dev-ios-keychain/apple/resign-dylib.sh" \
+  "${HOME}/.calabash/calabash-codesign/apple/resign-dylib.sh" \
     "${fat_lib}"
 
   local version=$(xcrun strings "${fat_lib}" | \
