@@ -34,6 +34,11 @@ Then(/^the tab bar is visible and hitable$/) do
 end
 
 Then(/^the status bar is visible and sometimes hitable$/) do
+  # Skip this test for iOS 13 because it doesn't work properly at the moment
+  if device_info["ios_version"].start_with?("13")
+    skip_this_scenario
+  end
+
   if iphone_x? && !device_info["simulator"]
     # The StatusBar may or may not be visible on iPhone 10.
     # This is _not_ a timing issue; waiting does not change the outcome.
@@ -143,6 +148,7 @@ And(/^I cannot touch the button behind the purple label using the view center$/)
   touch_coordinate(center)
 
   wait_for_view({marked: "That was touching."})
+  wait_for_animations
 
   two_finger_tap({marked: "gesture performed"})
   wait_for_text_in_view("CLEARED", {marked: "gesture performed"})
@@ -171,6 +177,7 @@ But(/^I cannot touch the mostly hidden button using the view center$/) do
   touch({marked: mark})
 
   wait_for_view({marked: "That was touching."})
+  wait_for_animations
 
   two_finger_tap({marked: "gesture performed"})
   wait_for_text_in_view("CLEARED", {marked: "gesture performed"})

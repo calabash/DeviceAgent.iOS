@@ -1,13 +1,13 @@
 | develop | [versioning](VERSIONING.md) | [license](LICENSE) | [contributing](CONTRIBUTING.md)|
 |---------|-----------------------------|--------------------|--------------------------------|
-|[![Build Status](https://calabash-ci.xyz/buildStatus/icon?job=DeviceAgent.iOS/develop)](https://calabash-ci.xyz/job/DeviceAgent.iOS/develop) | [![Version](https://img.shields.io/badge/version-1.3.2-green.svg)](https://img.shields.io/badge/version-1.3.2-green.svg) |[![License](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](LICENSE) | [![Contributing](https://img.shields.io/badge/contrib-gitflow-orange.svg)](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow/)|
+|[![Build Status](https://calabash-ci.xyz/buildStatus/icon?job=DeviceAgent.iOS/develop)](https://calabash-ci.xyz/job/DeviceAgent.iOS/develop) | [![Version](https://img.shields.io/badge/version-1.3.3-green.svg)](https://img.shields.io/badge/version-1.3.3-green.svg) |[![License](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](LICENSE) | [![Contributing](https://img.shields.io/badge/contrib-gitflow-orange.svg)](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow/)|
 
 ## DeviceAgent.iOS
 
 ### Requirements
 
-* Xcode >= 9.4.1
-* ruby 2.3.x.  ruby > 2.4 is not supported.
+* Xcode >= 10.2.1
+* ruby >= 2.3
 
 ### Code Signing
 

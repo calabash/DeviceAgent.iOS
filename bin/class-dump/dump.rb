@@ -3,18 +3,6 @@
 require "fileutils"
 require "run_loop"
 
-hash = RunLoop::Shell.run_shell_command(["hash", "class-dump"], {log_cmd: true})
-if hash[:exit_status] != 0
-  raise %Q[
-
-This script requires 'class-dump' to be in your PATH.
-
-http://stevenygard.com/projects/class-dump/
-https://github.com/nygard/class-dump
-
-]
-end
-
 FRAMEWORKS=["XCTest", "XCTAutomationSupport"]
 FileUtils.rm_rf(File.join("tmp", "class-dump"))
 
@@ -38,8 +26,9 @@ FRAMEWORKS_MAP.each do |framework, output_path|
                             "XCTest.framework", framework)
   end
 
-  hash = RunLoop::Shell.run_shell_command(["class-dump", "-s", "-S", "-H",
-                                           "-o", output_path, binary_path],
+  hash = RunLoop::Shell.run_shell_command([File.join(__dir__, "class-dump"),
+                                           "-s", "-S", "-H", "-o", output_path,
+                                           binary_path],
                                           {log_cmd: true})
   if hash[:exit_status] != 0
     raise %Q[
@@ -162,7 +151,6 @@ FRAMEWORKS_MAP.each do |_, output_path|
       if !LINES_TO_REMOVE.include?(line.chomp)
 
         if line[/<(XCTAutomationSupport|XCTest)\/.+.h>/]
-        #if line[/<XCTAutomationSupport\/.+.h>/]
           filename = File.basename(line[/\/.+\.h/])
           line = %Q[#import "#{filename}"#{$-0}]
         end
@@ -245,7 +233,8 @@ FRAMEWORKS_MAP.each do |_, output_path|
           properties = properties + line
         else
           if line[/#import "NS.+\.h/] ||
-             line[/#import <Foundation\/.*\.h>/]
+             line[/#import <Foundation\/.*\.h>/] ||
+             line[/struct atomic_flag _promiseFulfilled;/]
             puts "skipping line: #{line}"
           else
             lines << line
@@ -313,6 +302,14 @@ FRAMEWORKS_MAP.each do |_, output_path|
             if File.basename(file) == "XCUIDevice.h"
               if !class_fixes[file] && line[/@class/]
                 file.puts("#import <UIKit/UIDevice.h>")
+                file.puts("")
+                class_fixes[file] = true
+              end
+            end
+
+            if File.basename(file) == "XCUIApplicationAutomationSessionProviding-Protocol.h"
+              if !class_fixes[file] && line[/@protocol/]
+                file.puts("@protocol XCTRunnerAutomationSession;")
                 file.puts("")
                 class_fixes[file] = true
               end

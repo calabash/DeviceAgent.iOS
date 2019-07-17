@@ -1,6 +1,5 @@
 
 #import "JSONUtils.h"
-#import "XCElementSnapshot-Hitpoint.h"
 #import "XCUIElement+VisibilityResult.h"
 #import "InvalidArgumentException.h"
 #import "CBXConstants.h"
@@ -45,7 +44,11 @@ static NSDictionary *typeStringToElementType;
         snapshot = element;
     } else {
         if (![(XCUIElement *)element lastSnapshot]) {
-            [(XCUIElement *)element resolve];
+            if ([(XCUIElement *)element respondsToSelector:@selector(resolve)]) {
+                [(XCUIElement *)element resolve];
+            } else {
+                [(XCUIElement *)element resolveOrRaiseTestFailure];
+            }
         }
         snapshot = [(XCUIElement *)element lastSnapshot];
     }

@@ -1,6 +1,7 @@
 module UnitTestApp
   module TouchGestures
     def wait_for_gesture_text(text, mark="gesture performed")
+      wait_for_animations
       result = wait_for_view({marked: mark})
 
       candidates = [result["value"],

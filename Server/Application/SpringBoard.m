@@ -196,7 +196,11 @@ typedef enum : NSUInteger {
 
     button = alert.buttons[mark];
     // Resolve before asking if the button exists.
-    [button resolve];
+    if ([button respondsToSelector:@selector(resolve)]) {
+        [button resolve];
+    } else {
+        [button resolveOrRaiseTestFailure];
+    }
 
     // A button with the expected title does not exist.
     // It probably changed after an iOS update.
@@ -252,7 +256,11 @@ typedef enum : NSUInteger {
     }
 
     // Resolve before asking if the button exists.
-    [button resolve];
+    if ([button respondsToSelector:@selector(resolve)]) {
+        [button resolve];
+    } else {
+        [button resolveOrRaiseTestFailure];
+    }
 
     if (!button || !button.exists) {
         return SpringBoardAlertHandlerNoAlert;
@@ -275,7 +283,11 @@ typedef enum : NSUInteger {
             return SpringBoardDismissAlertNoAlert;
         } else {
             XCUIElement *button = alert.buttons[title];
-            [button resolve];
+            if ([button respondsToSelector:@selector(resolve)]) {
+                [button resolve];
+            } else {
+                [button resolveOrRaiseTestFailure];
+            }
 
             if (!button || !button.exists) {
                 return SpringBoardDismissAlertNoMatchingButton;
@@ -297,7 +309,11 @@ typedef enum : NSUInteger {
 
 - (BOOL)tapAlertButton:(XCUIElement *)alertButton {
     @synchronized (self) {
-        [alertButton resolve];
+        if ([alertButton respondsToSelector:@selector(resolve)]) {
+            [alertButton resolve];
+        } else {
+            [alertButton resolveOrRaiseTestFailure];
+        }
         CGPoint hitPoint = [self hitPointForAlertButton:alertButton];
 
         if (hitPoint.x < 0 || hitPoint.y < 0) {
@@ -364,7 +380,11 @@ typedef enum : NSUInteger {
 }
 
 - (CGPoint)hitPointForAlertButton:(XCUIElement *)alertButton {
-    [alertButton resolve];
+    if ([alertButton respondsToSelector:@selector(resolve)]) {
+        [alertButton resolve];
+    } else {
+        [alertButton resolveOrRaiseTestFailure];
+    }
 
     XCElementSnapshot *snapshot = alertButton.lastSnapshot;
 

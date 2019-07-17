@@ -74,22 +74,32 @@
     [invocation getReturnValue:&buffer];
     element = (__bridge XCUIElement *)buffer;
 
-    [element resolve];
+    if ([element respondsToSelector:@selector(resolve)]) {
+        [element resolve];
+    } else {
+        [element resolveOrRaiseTestFailure];
+    }
 }
 
 - (XCElementSnapshot *_Nullable)cbxXCElementSnapshot {
     id applicationQuery = [XCUIApplication cbxQuery:self];
 
     Class klass = NSClassFromString(@"XCApplicationQuery");
-    SEL selector = NSSelectorFromString(@"elementSnapshotForDebugDescription");
-
-    NSMethodSignature *signature;
-    signature = [klass instanceMethodSignatureForSelector:selector];
+    SEL selectorUpdated = NSSelectorFromString(@"elementSnapshotForDebugDescriptionWithNoMatchesMessage:");
+    SEL selectorLegacy = NSSelectorFromString(@"elementSnapshotForDebugDescription"); // before Xcode 11
+    SEL validSelector;
+    NSMethodSignature *signature = [klass instanceMethodSignatureForSelector:selectorUpdated];
+    if (signature != nil) {
+        validSelector = selectorUpdated;
+    } else {
+        signature = [klass instanceMethodSignatureForSelector:selectorLegacy];
+        validSelector = selectorLegacy;
+    }
+    
     NSInvocation *invocation;
-
     invocation = [NSInvocation invocationWithMethodSignature:signature];
     invocation.target = applicationQuery;
-    invocation.selector = selector;
+    invocation.selector = validSelector;
 
     XCElementSnapshot *snapshot = nil;
     void *buffer = nil;

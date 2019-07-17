@@ -17,7 +17,8 @@ module DeviceAgent
 
     def text_from_text_field
       result = wait_for_view({marked: "text field"})
-      result["value"]
+      return result["value"] if result["value"] != result["placeholder"]
+      nil
     end
 
     def wait_for_text_field_reset
@@ -228,7 +229,8 @@ And(/^I can dismiss the Text View keyboard$/) do
 end
 
 And(/^I can select all the text in the Text View$/) do
-  touch({marked: "text view"}, {duration: 1.0})
+  touch({marked: "text view"}, {duration: 0.1})
+  touch({marked: "text view"}, {duration: 0.1})
   query = {marked: "Select All" }
   wait_for_view(query)
   2.times { wait_for_animations }
