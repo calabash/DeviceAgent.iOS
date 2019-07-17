@@ -1,3 +1,10 @@
+### 1.3.4
+
+No changes the DeviceAgent.iOS project.
+
+Removed appium-junit directory from the project to satisfy a security
+requirement in Xamarin.UITest (which has DeviceAgent as a dependency).
+
 ### 1.3.3
 
 * Add new Spring 2019 iPad models #312
