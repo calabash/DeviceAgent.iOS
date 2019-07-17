@@ -23,6 +23,10 @@ end
 And(/^I scroll down to the first and last name text fields$/) do
   # Failing on iPhone 10 in Test Cloud.
   if @safari_controller
+    if device_info["ios_version"].start_with?("13")
+      skip_this_scenario
+    end
+
     start_point = point_for_full_pan_start(:up, {type: "WebView", all: true})
     end_point = point_for_full_pan_end(:up, {type: "WebView", all: true})
 
