@@ -30,6 +30,9 @@
 @property(readonly) XCUIApplication *siriApplication;
 
 - (void)_assertSiriEnabled;
+- (NSUInteger)_expectedStateForActivate;
+- (id)_siriBundleIdentifier;
+- (BOOL)_usesLegacySiriViewService;
 - (void)_waitForActivation;
 - (void)activateWithVoiceRecognitionText:(id)arg1;
 - (id)forwardingTargetForSelector:(SEL)arg1;

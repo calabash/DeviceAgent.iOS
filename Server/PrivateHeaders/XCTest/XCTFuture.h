@@ -18,28 +18,33 @@
 
 @interface XCTFuture : NSObject
 {
+    BOOL _canceled;
     BOOL _hasWaited;
     BOOL _hasFinished;
+    id _value;
+    NSError *_error;
+    double _executionTime;
+    double _startTime;
     double _deadline;
     XCTPromise *_promise;
     XCTWaiter *_waiter;
     NSMutableSet *_cancelationExpectations;
-    id _value;
-    NSError *_error;
 }
 
 @property(readonly) NSMutableSet *cancelationExpectations;
 @property(readonly) double deadline;
-@property(retain) NSError *error;
+@property(readonly) NSError *error;
+@property(readonly) double executionTime;
 @property BOOL hasFinished;
 @property BOOL hasWaited;
+@property(readonly, getter=isCanceled) BOOL canceled;
 @property(readonly) XCTPromise *promise;
-@property(retain) id value;
+@property(readonly) double startTime;
+@property(readonly) id value;
 @property(readonly) XCTWaiter *waiter;
 
 + (id)futureWithDescription:(id)arg1 block:(CDUnknownBlockType)arg2;
 + (id)futureWithTimeout:(double)arg1 description:(id)arg2 block:(CDUnknownBlockType)arg3;
-+ (BOOL)isCancelationOrInterruptionError:(id)arg1;
 - (void)_waitForFulfillment;
 - (void)addCancelationExpectation:(id)arg1;
 - (id)initWithTimeout:(double)arg1 promise:(id)arg2;

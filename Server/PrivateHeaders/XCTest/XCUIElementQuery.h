@@ -17,7 +17,7 @@
 #import "XCTElementSnapshotProvider-Protocol.h"
 #import "XCUIElementTypeQueryProvider-Protocol.h"
 
-@class NSArray, NSOrderedSet, NSString, XCElementSnapshot, XCTElementQuery, XCUIApplication, XCUIElement;
+@class NSArray, NSOrderedSet, NSSet, NSString, XCElementSnapshot, XCUIApplication, XCUIElement;
 @protocol XCTElementSetTransformer, XCTElementSnapshotAttributeDataSource;
 
 
@@ -28,9 +28,8 @@
 {
     BOOL _changesScope;
     BOOL _stopsOnFirstMatch;
-    BOOL _useRootElementSnapshot;
     XCUIElementQuery *_inputQuery;
-    NSUInteger _expressedType;
+    NSSet *_expressedTypes;
     NSArray *_expressedIdentifiers;
     NSOrderedSet *_lastInput;
     NSOrderedSet *_lastOutput;
@@ -44,7 +43,6 @@
 @property(readonly, copy) NSArray *allElementsBoundByAccessibilityElement;
 @property(readonly, copy) NSArray *allElementsBoundByIndex;
 @property(readonly) XCUIApplication *application;
-@property(readonly, copy) XCTElementQuery *backingQuery;
 @property(readonly, copy) XCUIElementQuery *browsers;
 @property(readonly, copy) XCUIElementQuery *buttons;
 @property(readonly, copy) XCUIElementQuery *cells;
@@ -64,9 +62,8 @@
 @property(readonly) XCUIElement *element;
 @property(readonly, copy) NSString *elementDescription;
 @property(readonly) id <XCTElementSnapshotAttributeDataSource> elementSnapshotAttributeDataSource;
-@property(readonly, copy) XCElementSnapshot *elementSnapshotForDebugDescription;
 @property(copy) NSArray *expressedIdentifiers;
-@property NSUInteger expressedType;
+@property(copy) NSSet *expressedTypes;
 @property(readonly) XCUIElement *firstMatch;
 @property(readonly, copy) XCUIElementQuery *grids;
 @property(readonly, copy) XCUIElementQuery *groups;
@@ -116,7 +113,6 @@
 @property(readonly, copy) XCUIElementQuery *segmentedControls;
 @property BOOL stopsOnFirstMatch;
 @property(retain) id <XCTElementSetTransformer> transformer;
-@property BOOL useRootElementSnapshot;
 @property(readonly, copy) XCUIElementQuery *sheets;
 @property(readonly, copy) XCUIElementQuery *sliders;
 @property(readonly, copy) XCUIElementQuery *splitGroups;
@@ -143,19 +139,24 @@
 @property(readonly, copy) XCUIElementQuery *webViews;
 @property(readonly, copy) XCUIElementQuery *windows;
 
-+ (BOOL)_isNoMatchesError:(id)arg1;
+- (id)_childrenMatchingTypes:(id)arg1;
 - (id)_containingPredicate:(id)arg1 queryDescription:(id)arg2;
 - (id)_debugDescriptionWithIndent:(id *)arg1 rootElementSnapshot:(id)arg2;
 - (id)_derivedExpressedIdentifiers;
-- (NSUInteger)_derivedExpressedType;
+- (id)_derivedExpressedTypes;
 - (id)_descendantMatchingAccessibilityElement:(id)arg1;
+- (id)_descendantsMatchingTypes:(id)arg1;
 - (id)_elementMatchingAccessibilityElementOfSnapshot:(id)arg1;
+- (id)_executeWithError:(id *)arg1;
+- (id)_matchingSnapshotsForLocallyEvaluatedQuery:(id)arg1 error:(id *)arg2;
+- (id)_matchingSnapshotsForRemotelyEvaluatedQuery:(id)arg1 error:(id *)arg2;
 - (id)_predicateWithType:(NSUInteger)arg1 identifier:(id)arg2;
 - (id)_queryWithPredicate:(id)arg1;
 - (id)_queryWithPredicate:(id)arg1 description:(id)arg2;
-- (BOOL)_resolveRemoteElements:(id)arg1 inSnapshot:(id)arg2 containsBridgedElements:(BOOL *)arg3 error:(id *)arg4;
+- (BOOL)_resolveRemoteElements:(id)arg1 inSnapshot:(id)arg2 runtimeIssues:(id *)arg3 error:(id *)arg4;
+- (id)allMatchingSnapshotsWithError:(id *)arg1;
 - (id)ascending:(NSUInteger)arg1;
-- (id)backingQueryWithRootElement:(id)arg1;
+- (id)backingQueryWithError:(id *)arg1;
 - (id)childrenMatchingType:(NSUInteger)arg1;
 - (id)containingPredicate:(id)arg1;
 - (id)containingType:(NSUInteger)arg1 identifier:(id)arg2;
@@ -166,6 +167,7 @@
 - (id)elementBoundByIndex:(NSUInteger)arg1;
 - (id)elementMatchingPredicate:(id)arg1;
 - (id)elementMatchingType:(NSUInteger)arg1 identifier:(id)arg2;
+- (id)elementSnapshotForDebugDescriptionWithNoMatchesMessage:(id *)arg1;
 - (id)elementWithIdentifier:(id)arg1;
 - (id)elementWithLabel:(id)arg1;
 - (id)elementWithPlaceholderValue:(id)arg1;
@@ -175,13 +177,11 @@
 - (id)initWithInputQuery:(id)arg1 queryDescription:(id)arg2 transformer:(id)arg3;
 - (id)matchingIdentifier:(id)arg1;
 - (id)matchingPredicate:(id)arg1;
-- (id)matchingSnapshotsForLocallyEvaluatedQuery:(id)arg1 error:(id *)arg2;
-- (id)matchingSnapshotsHandleUIInterruption:(BOOL)arg1 withError:(id *)arg2;
-- (id)matchingSnapshotsWithError:(id *)arg1;
 - (id)matchingType:(NSUInteger)arg1 identifier:(id)arg2;
 - (id)objectForKeyedSubscript:(id)arg1;
-- (id)snapshotForElement:(id)arg1 attributes:(id)arg2 parameters:(id)arg3 error:(id *)arg4;
+- (id)snapshotForElement:(id)arg1 attributes:(id)arg2 parameters:(id)arg3 timeoutControls:(id)arg4 error:(id *)arg5;
 - (id)sorted:(CDUnknownBlockType)arg1;
+- (id)uniqueMatchingSnapshotWithError:(id *)arg1;
 
 
 @end

@@ -25,6 +25,7 @@
 @property(retain) XCTIndexingTransformerIterator *currentIterator;
 @property(readonly) NSUInteger elementIndex;
 
+- (BOOL)canBeRemotelyEvaluatedWithCapabilities:(id)arg1;
 - (id)initWithElementIndex:(NSUInteger)arg1;
 - (id)iteratorForInput:(id)arg1;
 - (id)requiredKeyPathsOrError:(id *)arg1;

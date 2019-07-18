@@ -22,7 +22,7 @@
 #import "XCUIRemoteAccessibilityInterface-Protocol.h"
 #import "XCUIRemoteSiriInterface-Protocol.h"
 
-@class NSMutableDictionary, NSString, NSXPCConnection;
+@class NSMutableDictionary, NSString, NSXPCConnection, XCTCapabilities;
 @protocol OS_dispatch_queue, XCTestManager_ManagerInterface, XCUIAXNotificationHandling, XCUIApplicationPlatformServicesProviderDelegate;
 
 
@@ -31,22 +31,23 @@
 
 @interface XCTRunnerDaemonSession : NSObject <XCUIRemoteSiriInterface, XCUIDeviceEventAndStateInterface, XCUIPlatformApplicationServicesProviding, XCUIApplicationAutomationSessionProviding, XCTestManager_TestsInterface, XCUIRemoteAccessibilityInterface, XCUIEventSynthesizing>
 {
-    NSObject<OS_dispatch_queue> *_queue;
+    NSXPCConnection *_connection;
+    XCTCapabilities *_remoteInterfaceCapabilities;
     id <XCUIApplicationPlatformServicesProviderDelegate> _platformApplicationServicesProviderDelegate;
     id <XCUIAXNotificationHandling> _axNotificationHandler;
-    NSXPCConnection *_connection;
-    NSUInteger _daemonProtocolVersion;
+    NSObject<OS_dispatch_queue> *_queue;
     NSMutableDictionary *_invalidationHandlers;
 }
 
+@property(readonly) NSInteger applicationAutomationSessionSupport;
 @property __weak id <XCUIAXNotificationHandling> axNotificationHandler;
 @property(readonly) BOOL axNotificationsIncludeElement;
 @property(readonly) NSXPCConnection *connection;
-@property NSUInteger daemonProtocolVersion;
 @property(readonly) id <XCTestManager_ManagerInterface> daemonProxy;
 @property(retain) NSMutableDictionary *invalidationHandlers;
 @property __weak id <XCUIApplicationPlatformServicesProviderDelegate> platformApplicationServicesProviderDelegate;
-@property(retain) NSObject<OS_dispatch_queue> *queue;
+@property(readonly) NSObject<OS_dispatch_queue> *queue;
+@property(readonly) XCTCapabilities *remoteInterfaceCapabilities;
 @property(readonly) BOOL supportsInjectingVoiceRecognitionAudioInputPaths;
 @property(readonly) BOOL supportsStartingSiriUIRequestWithAudioFileURL;
 @property(readonly) BOOL useLegacyEventCoordinateTransformationPath;
@@ -54,6 +55,10 @@
 @property(readonly) BOOL useLegacySnapshotPath;
 @property(readonly) BOOL usePointTransformationsForFrameConversions;
 
++ (id)automationSessionBlacklist;
++ (id)capabilities;
++ (id)capabilitiesForDaemonConnection:(id)arg1 error:(id *)arg2;
++ (id)daemonCapabilitiesForProtocolVersion:(NSUInteger)arg1 platform:(NSUInteger)arg2 error:(id *)arg3;
 + (id)sharedSession;
 - (void)_XCT_applicationWithBundleID:(id)arg1 didUpdatePID:(NSInteger)arg2 andState:(NSUInteger)arg3;
 - (void)_XCT_receivedAccessibilityNotification:(NSInteger)arg1 fromElement:(id)arg2 payload:(id)arg3;
@@ -64,28 +69,29 @@
 - (void)fetchAttributes:(id)arg1 forElement:(id)arg2 reply:(CDUnknownBlockType)arg3;
 - (void)fetchAttributesForElement:(id)arg1 attributes:(id)arg2 reply:(CDUnknownBlockType)arg3;
 - (void)fetchParameterizedAttribute:(id)arg1 forElement:(id)arg2 parameter:(id)arg3 reply:(CDUnknownBlockType)arg4;
+- (void)fetchSnapshotForElement:(id)arg1 attributes:(id)arg2 parameters:(id)arg3 reply:(CDUnknownBlockType)arg4;
 - (void)getDeviceOrientationWithCompletion:(CDUnknownBlockType)arg1;
-- (id)initWithConnection:(id)arg1;
+- (id)initWithConnection:(id)arg1 remoteInterfaceCapabilities:(id)arg2;
 - (void)injectAssistantRecognitionStrings:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)injectVoiceRecognitionAudioInputPaths:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)launchApplicationWithPath:(id)arg1 bundleID:(id)arg2 arguments:(id)arg3 environment:(id)arg4 completion:(CDUnknownBlockType)arg5;
 - (void)loadAccessibilityWithTimeout:(double)arg1 reply:(CDUnknownBlockType)arg2;
-- (void)performAccessibilityAction:(NSInteger)arg1 onElement:(id)arg2 value:(id)arg3 reply:(CDUnknownBlockType)arg4;
+- (void)performAccessibilityAction:(id)arg1 onElement:(id)arg2 value:(id)arg3 reply:(CDUnknownBlockType)arg4;
 - (void)performDeviceEvent:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)registerForAccessibilityNotification:(NSInteger)arg1 reply:(CDUnknownBlockType)arg2;
 - (id)registerInvalidationHandler:(CDUnknownBlockType)arg1;
 - (void)requestApplicationSpecifierForPID:(NSInteger)arg1 reply:(CDUnknownBlockType)arg2;
-- (void)requestAutomationSessionForTestTargetWithPID:(NSInteger)arg1 preferredBackendPath:(id)arg2 isBridged:(BOOL)arg3 reply:(CDUnknownBlockType)arg4;
+- (void)requestAutomationSessionBlacklist:(CDUnknownBlockType)arg1;
+- (void)requestAutomationSessionForTestTargetWithPID:(NSInteger)arg1 preferredBackendPath:(id)arg2 reply:(CDUnknownBlockType)arg3;
 - (void)requestBackgroundAssertionForPID:(NSInteger)arg1 reply:(CDUnknownBlockType)arg2;
 - (void)requestDTServiceHubConnectionWithReply:(CDUnknownBlockType)arg1;
 - (void)requestElementAtPoint:(CGPoint)arg1 reply:(CDUnknownBlockType)arg2;
 - (void)requestIDEConnectionTransportForSessionIdentifier:(id)arg1 reply:(CDUnknownBlockType)arg2;
+- (BOOL)requestPressureEventsSupportedOrError:(id *)arg1;
 - (void)requestScreenshotOfScreenWithID:(NSInteger)arg1 withRect:(CGRect)arg2 formatUTI:(id)arg3 compressionQuality:(double)arg4 withReply:(CDUnknownBlockType)arg5;
-- (void)requestScreenshotWithReply:(CDUnknownBlockType)arg1;
 - (void)requestSiriEnabledStatus:(CDUnknownBlockType)arg1;
 - (void)requestSnapshotForElement:(id)arg1 attributes:(id)arg2 parameters:(id)arg3 reply:(CDUnknownBlockType)arg4;
 - (void)requestSpindumpWithSpecification:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)sendString:(id)arg1 maximumFrequency:(NSUInteger)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)setAXTimeout:(double)arg1 reply:(CDUnknownBlockType)arg2;
 - (void)setAttribute:(id)arg1 value:(id)arg2 element:(id)arg3 reply:(CDUnknownBlockType)arg4;
 - (void)setLocalizableStringsDataGatheringEnabled:(BOOL)arg1 reply:(CDUnknownBlockType)arg2;

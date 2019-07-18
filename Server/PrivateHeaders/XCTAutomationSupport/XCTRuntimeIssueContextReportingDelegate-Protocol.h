@@ -13,9 +13,10 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@class NSDictionary, NSString;
-@protocol XCUICapabilities;
+@class XCTRuntimeIssueContext;
+@protocol XCTRuntimeIssue;
 
-@protocol XCUICapabilities <NSObject>
+@protocol XCTRuntimeIssueContextReportingDelegate <NSObject>
++ (BOOL)shouldRuntimeIssueContext:(XCTRuntimeIssueContext *)arg1 reportIssue:(id <XCTRuntimeIssue>)arg2;
 @end
 

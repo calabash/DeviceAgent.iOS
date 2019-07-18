@@ -13,10 +13,11 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@class NSOrderedSet, NSSet, NSString, XCElementSnapshot;
+@class NSOrderedSet, NSSet, NSString, XCElementSnapshot, XCTCapabilities;
 @protocol XCTMatchingElementIterator;
 
-@protocol XCTElementSetTransformer <NSObject>
+@protocol XCTElementSetTransformer <NSObject, NSCopying>
+- (BOOL)canBeRemotelyEvaluatedWithCapabilities:(XCTCapabilities *)arg1;
 - (id <XCTMatchingElementIterator>)iteratorForInput:(XCElementSnapshot *)arg1;
 - (NSSet *)requiredKeyPathsOrError:(id *)arg1;
 - (NSOrderedSet *)transform:(NSOrderedSet *)arg1 relatedElements:(id *)arg2;

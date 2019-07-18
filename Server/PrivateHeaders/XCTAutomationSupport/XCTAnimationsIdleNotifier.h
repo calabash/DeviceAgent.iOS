@@ -14,7 +14,10 @@
 
 #import <objc/NSObject.h>
 
-@interface XCTAnimationsIdleNotifier : NSObject
+#import "XCTCapabilitiesProviding-Protocol.h"
+
+
+@interface XCTAnimationsIdleNotifier : NSObject <XCTCapabilitiesProviding>
 {
 }
 
@@ -23,8 +26,11 @@
 + (void)animationDidStop;
 + (void)handleAnimationsIdle;
 + (BOOL)isAnimationInProgress;
++ (void)provideCapabilitiesToBuilder:(id)arg1;
++ (BOOL)supportsAnimationsIdleNotification;
 + (BOOL)swizzleUIViewAnimationStateMethodsWithError:(id *)arg1;
 - (void)notifyWhenIdle:(CDUnknownBlockType)arg1;
+
 
 @end
 

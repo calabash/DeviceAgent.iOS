@@ -10,6 +10,7 @@
 @protocol XCTRunnerAutomationSession;
 
 @protocol XCUIApplicationAutomationSessionProviding <NSObject>
-- (void)requestAutomationSessionForTestTargetWithPID:(NSInteger)arg1 preferredBackendPath:(NSString *)arg2 isBridged:(BOOL)arg3 reply:(void (^)(id <XCTRunnerAutomationSession>, NSError *))arg4;
+- (void)requestAutomationSessionBlacklist:(void (^)(NSSet *, NSError *))arg1;
+- (void)requestAutomationSessionForTestTargetWithPID:(NSInteger)arg1 preferredBackendPath:(NSString *)arg2 reply:(void (^)(id <XCTRunnerAutomationSession>, NSError *))arg3;
 @end
 

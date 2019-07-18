@@ -14,13 +14,16 @@
 
 #import <objc/NSObject.h>
 
+#import "XCUIApplicationProcessDelegate-Protocol.h"
+
 @class NSString, XCAccessibilityElement, XCUIApplicationProcess;
 @protocol XCUIDevice;
 
-@interface XCUIApplicationImpl : NSObject
+@interface XCUIApplicationImpl : NSObject <XCUIApplicationProcessDelegate>
 {
     BOOL _codeCoverageEnabled;
     BOOL _hasValidAlertCount;
+    BOOL _previousOnDemandAutomationSessionRequestFailed;
     NSString *_path;
     NSString *_bundleID;
     XCUIApplicationProcess *_currentProcess;
@@ -31,8 +34,6 @@
 @property(readonly) BOOL activated;
 @property(readonly) NSUInteger alertCount;
 @property(readonly) BOOL background;
-@property(readonly) XCAccessibilityElement *bridgedProcessAccessibilityElement;
-@property(readonly) NSInteger bridgedProcessID;
 @property(readonly, copy) NSString *bundleID;
 @property BOOL codeCoverageEnabled;
 @property(retain, nonatomic) XCUIApplicationProcess *currentProcess;
@@ -40,6 +41,7 @@
 @property(readonly) BOOL foreground;
 @property BOOL hasValidAlertCount;
 @property(readonly, copy) NSString *path;
+@property BOOL previousOnDemandAutomationSessionRequestFailed;
 @property(nonatomic) NSInteger processID;
 @property(readonly) BOOL running;
 @property(nonatomic) NSUInteger state;
@@ -52,7 +54,6 @@
 + (id)keyPathsForValuesAffectingRunning;
 + (id)keyPathsForValuesAffectingState;
 + (id)keyPathsForValuesAffectingSuspended;
-+ (BOOL)shouldWaitForAutomationSessionWhenUsingPlatformLauncher:(BOOL)arg1;
 - (void)_activate;
 - (void)_activateForPlatform;
 - (id)_activationExpectation;
@@ -63,16 +64,20 @@
 - (void)_waitForLaunchProgressWithToken:(id)arg1;
 - (void)_waitForValidPID;
 - (void)_waitOnActivationExpectation:(id)arg1;
+- (void)applicationProcessAutomationSessionRequestFailed:(id)arg1;
+- (BOOL)applicationProcessShouldRequestAutomationSession:(id)arg1;
 - (void)handleCrashUnderSymbol:(id)arg1;
 - (BOOL)hasCurrentProcess;
 - (id)initWithPath:(id)arg1 bundleID:(id)arg2;
 - (id)initWithPath:(id)arg1 bundleID:(id)arg2 device:(id)arg3;
 - (void)resetAlertCount;
 - (void)serviceOpenRequest:(id)arg1;
+- (BOOL)shouldWaitForAutomationSessionWhenUsingPlatformLauncher:(BOOL)arg1;
 - (void)terminate;
 - (void)waitForAccessibilityActive;
 - (BOOL)waitForState:(NSUInteger)arg1 timeout:(double)arg2;
 - (BOOL)waitForViewControllerViewDidDisappearWithTimeout:(double)arg1 error:(id *)arg2;
+
 
 @end
 

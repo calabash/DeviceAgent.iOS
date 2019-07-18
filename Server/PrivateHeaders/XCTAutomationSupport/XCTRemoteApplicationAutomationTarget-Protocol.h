@@ -12,10 +12,11 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@class NSArray, XCAccessibilityElement, XCTElementQuery;
+@class NSArray, XCAccessibilityElement, XCTCapabilities, XCTElementQuery;
 
 @protocol XCTRemoteApplicationAutomationTarget
 - (id)_XCT_attributesForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2;
+- (id)_XCT_exchangeCapabilities:(XCTCapabilities *)arg1;
 - (id)_XCT_fetchMatchesForQuery:(XCTElementQuery *)arg1;
 - (id)_XCT_notifyWhenAnimationsAreIdle;
 - (id)_XCT_notifyWhenMainRunLoopIsIdle;

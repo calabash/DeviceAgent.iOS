@@ -16,8 +16,8 @@
 
 #import "XCTElementSnapshotAttributeDataSource-Protocol.h"
 
-@class NSString, XCAccessibilityElement, XCElementSnapshot;
-@protocol OS_dispatch_queue, XCTRunnerAutomationSession, XCUIDevice;
+@class NSString, XCAccessibilityElement, XCElementSnapshot, XCTFuture;
+@protocol OS_dispatch_queue, XCTRunnerAutomationSession, XCUIApplicationProcessDelegate, XCUIDevice;
 
 
 @protocol XCTRunnerAutomationSession;
@@ -34,13 +34,13 @@
     BOOL _animationsHaveFinished;
     BOOL _hasExitCode;
     BOOL _hasCrashReport;
-    BOOL _bridged;
     NSUInteger _alertCount;
-    NSString *_bundleID;
     id <XCTRunnerAutomationSession> _automationSession;
+    XCTFuture *_automationSessionFuture;
+    NSString *_bundleID;
     XCElementSnapshot *_lastSnapshot;
-    XCUIApplicationProcess *_bridgedProcess;
     id <XCUIDevice> _device;
+    id <XCUIApplicationProcessDelegate> _delegate;
 }
 
 @property(nonatomic) BOOL accessibilityActive;
@@ -49,19 +49,18 @@
 @property(readonly) BOOL allowsRemoteAccess;
 @property BOOL animationsHaveFinished;
 @property(nonatomic) NSUInteger applicationState;
-@property(retain) id <XCTRunnerAutomationSession> automationSession;
+@property(retain, nonatomic) id <XCTRunnerAutomationSession> automationSession;
+@property(readonly) XCTFuture *automationSessionFuture;
 @property(readonly) BOOL background;
-@property(retain, nonatomic) XCUIApplicationProcess *bridgedProcess;
 @property(readonly, copy, nonatomic) NSString *bundleID;
+@property(readonly) id <XCUIApplicationProcessDelegate> delegate;
 @property(readonly) id <XCUIDevice> device;
 @property BOOL eventLoopHasIdled;
 @property NSInteger exitCode;
 @property(readonly) BOOL foreground;
 @property BOOL hasCrashReport;
 @property BOOL hasExitCode;
-@property(getter=isBridged) BOOL bridged;
 @property(readonly, getter=isProcessIDValid) BOOL processIDValid;
-@property(readonly, getter=isQuiescent) BOOL quiescent;
 @property(retain) XCElementSnapshot *lastSnapshot;
 @property(nonatomic) NSInteger processID;
 @property(readonly) BOOL running;
@@ -74,7 +73,6 @@
 + (BOOL)automaticallyNotifiesObserversForKey:(id)arg1;
 + (id)keyPathsForValuesAffectingBackground;
 + (id)keyPathsForValuesAffectingForeground;
-+ (id)keyPathsForValuesAffectingHasBridgedProcess;
 + (id)keyPathsForValuesAffectingIsApplicationStateKnown;
 + (id)keyPathsForValuesAffectingIsProcessIDValid;
 + (id)keyPathsForValuesAffectingIsQuiescent;
@@ -85,21 +83,20 @@
 - (id)_makeQuiescenceExpectation;
 - (void)_notifyWhenAnimationsAreIdle:(CDUnknownBlockType)arg1;
 - (void)_notifyWhenMainRunLoopIsIdle:(CDUnknownBlockType)arg1;
+- (id)_queue_automationSessionFuture;
 - (id)_queue_description;
 - (BOOL)_supportsAnimationsIdleNotifications;
 - (id)_underlyingDataSourceForElement:(id)arg1;
 - (void)acquireBackgroundAssertion;
 - (id)attributesForElement:(id)arg1 attributes:(id)arg2 error:(id *)arg3;
-- (id)futureAutomationSession;
-- (BOOL)hasBridgedProcess;
 - (void)incrementAlertCount;
-- (id)initWithBundleID:(id)arg1 device:(id)arg2;
+- (id)initWithBundleID:(id)arg1 device:(id)arg2 delegate:(id)arg3;
 - (BOOL)isApplicationStateKnown;
+- (BOOL)isQuiescent;
 - (id)parameterizedAttribute:(id)arg1 forElement:(id)arg2 parameter:(id)arg3 error:(id *)arg4;
 - (void)resetAlertCount;
 - (BOOL)terminate:(id *)arg1;
 - (void)waitForAutomationSession;
-- (void)waitForFutureAutomationSession:(id)arg1;
 - (void)waitForQuiescenceIncludingAnimationsIdle:(BOOL)arg1;
 - (BOOL)waitForViewControllerViewDidDisappearWithTimeout:(double)arg1 error:(id *)arg2;
 

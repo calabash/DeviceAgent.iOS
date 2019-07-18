@@ -30,7 +30,6 @@
     BOOL _hasFocus;
     BOOL _hasKeyboardFocus;
     BOOL _isTruncatedValue;
-    NSInteger _bridgedProcessID;
     XCUIApplication *_application;
     NSUInteger _generation;
     id <XCTElementSnapshotAttributeDataSource> _dataSource;
@@ -46,18 +45,17 @@
     NSArray *_children;
     NSDictionary *_additionalAttributes;
     NSArray *_userTestingAttributes;
+    NSSet *_disclosedChildRowAXElements;
     XCAccessibilityElement *_accessibilityElement;
     XCAccessibilityElement *_parentAccessibilityElement;
     XCElementSnapshot *_parent;
     XCTLocalizableStringInfo *_localizableStringInfo;
-    NSSet *_disclosedChildRowAXElements;
     CGRect _frame;
 }
 
 @property(readonly, copy, nonatomic) XCAccessibilityElement *accessibilityElement;
 @property(copy) NSDictionary *additionalAttributes;
 @property(nonatomic) XCUIApplication *application;
-@property NSInteger bridgedProcessID;
 @property(readonly) CGPoint center;
 @property(readonly) double centerX;
 @property(readonly) double centerY;
@@ -78,8 +76,8 @@
 @property(copy) NSString *identifier;
 @property(readonly, copy) NSArray *identifiers;
 @property(readonly, copy) NSIndexPath *indexPath;
-@property(readonly, getter=isBridged) BOOL bridged;
 @property(getter=isEnabled) BOOL enabled;
+@property(readonly) BOOL isInRootMenu;
 @property(readonly) BOOL isMacOS;
 @property BOOL isMainWindow;
 @property(getter=isSelected) BOOL selected;
@@ -113,6 +111,8 @@
 
 + (id)axAttributesForElementSnapshotKeyPaths:(id)arg1 isMacOS:(BOOL)arg2;
 + (id)axAttributesForSnapshotAttributes:(id)arg1 isMacOS:(BOOL)arg2;
++ (NSUInteger)elementTypeForAccessibilityElement:(id)arg1 usingAXAttributes_iOS:(id)arg2 useLegacyElementType:(BOOL)arg3;
++ (NSUInteger)elementTypeForAccessibilityElement:(id)arg1 usingAXAttributes_macOS:(id)arg2 useLegacyElementType:(BOOL)arg3;
 + (id)elementWithAccessibilityElement:(id)arg1;
 + (id)requiredAXAttributesForElementSnapshotHierarchyOnMacOS:(BOOL)arg1;
 + (id)sanitizedElementSnapshotHierarchyAttributesForAttributes:(id)arg1 isMacOS:(BOOL)arg2;

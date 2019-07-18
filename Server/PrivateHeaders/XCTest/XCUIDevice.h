@@ -14,18 +14,16 @@
 
 #import <objc/NSObject.h>
 
-#import "XCUIIOSDevice-Protocol.h"
-
 #import <UIKit/UIDevice.h>
 
-@class NSArray, NSString, XCUIScreen, XCUISiriService, XCUITestContext;
+@class NSString, XCUIRemote, XCUISiriService, XCUITestContext;
 @protocol XCUIAccessibilityInterface, XCUIApplicationAutomationSessionProviding, XCUIApplicationManaging, XCUIApplicationMonitor, XCUIDeviceEventAndStateInterface, XCUIEventSynthesizing, XCUIScreenDataSource, XCUIXcodeApplicationManaging;
 
 
 @protocol XCUIAccessibilityInterface;
 @protocol XCUIXcodeApplicationManaging;
 
-@interface XCUIDevice : NSObject <XCUIIOSDevice>
+@interface XCUIDevice : NSObject
 {
     BOOL _isLocal;
     BOOL _isSimulatorDevice;
@@ -41,39 +39,42 @@
     id <XCUIScreenDataSource> _screenDataSource;
     NSString *_uniqueIdentifier;
     XCUITestContext *_testContext;
+    XCUIRemote *_remote;
 }
 
-@property(readonly) id <XCUIAccessibilityInterface> accessibilityInterface;
-@property(readonly) id <XCUIApplicationAutomationSessionProviding> applicationAutomationSessionProvider;
-@property(readonly) id <XCUIApplicationMonitor> applicationMonitor;
-@property(readonly) id <XCUIDeviceEventAndStateInterface> deviceEventAndStateInterface;
-@property(readonly) id <XCUIEventSynthesizing> eventSynthesizer;
-@property(readonly) BOOL isLocal;
-@property(readonly) BOOL isSimulatorDevice;
-@property(readonly) XCUIScreen *mainScreen;
 @property(nonatomic) UIDeviceOrientation orientation;
-@property(readonly) NSInteger platform;
-@property(readonly) id <XCUIApplicationManaging> platformApplicationManager;
-@property(readonly) id <XCUIScreenDataSource> screenDataSource;
-@property(readonly, copy) NSArray *screens;
 @property(readonly) XCUISiriService *siriService;
-@property(readonly) XCUITestContext *testContext;
-@property(readonly) NSString *uniqueIdentifier;
-@property(readonly) id <XCUIXcodeApplicationManaging> xcodeApplicationManager;
 
 + (id)localDevice;
 + (XCUIDevice *)sharedDevice;
 - (void)_setOrientation:(NSInteger)arg1;
 - (void)_silentPressButton:(NSInteger)arg1;
+- (id)accessibilityInterface;
+- (id)applicationAutomationSessionProvider;
+- (id)applicationMonitor;
+- (id)deviceEventAndStateInterface;
+- (id)eventSynthesizer;
 - (void)holdHomeButtonForDuration:(double)arg1;
 - (id)initLocalDeviceWithPlatform:(NSInteger)arg1;
+- (BOOL)isLocal;
+- (BOOL)isSimulatorDevice;
+- (id)mainScreen;
 - (id)mainScreenOrError:(id *)arg1;
 - (BOOL)performDeviceEvent:(id)arg1 error:(id *)arg2;
+- (NSInteger)platform;
+- (id)platformApplicationManager;
 - (void)pressButton:(NSInteger)arg1;
 - (void)pressLockButton;
+- (id)remote;
+- (void)remoteAutomationSessionDidDisconnect:(id)arg1;
 - (void)rotateDigitalCrown:(double)arg1 velocity:(double)arg2;
+- (id)screenDataSource;
+- (id)screens;
 - (id)screensOrError:(id *)arg1;
-
+- (BOOL)supportsPressureInteraction;
+- (id)testContext;
+- (id)uniqueIdentifier;
+- (id)xcodeApplicationManager;
 
 @end
 

@@ -12,13 +12,21 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-#import "XCElementSnapshot.h"
+#import <objc/NSObject.h>
 
-#import "XCUIElementSnapshot-Protocol.h"
+@interface XCUIAccessibilityAction : NSObject
+{
+    NSInteger _actionNumber;
+}
 
-@class NSArray, NSDictionary, NSString;
+@property(readonly) NSInteger actionNumber;
 
-@interface XCElementSnapshot (XCUIElementSnapshot) <XCUIElementSnapshot>
++ (id)beginMonitoringIdleRunLoopAction;
++ (id)decrementActionForPlatform:(NSInteger)arg1;
++ (id)detectAnimationsNonActiveAction;
++ (id)incrementActionForPlatform:(NSInteger)arg1;
++ (id)scrollToVisibleAction;
+- (id)initWithAXAction:(NSInteger)arg1;
 
 @end
 

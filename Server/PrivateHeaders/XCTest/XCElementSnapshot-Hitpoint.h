@@ -14,7 +14,12 @@
 
 #import "XCElementSnapshot.h"
 
-@interface XCElementSnapshot (Hitpoint)
+#import "XCUIElementAttributes-Protocol.h"
+#import "XCUIElementSnapshot-Protocol.h"
+
+@class NSArray, NSDictionary, NSString;
+
+@interface XCElementSnapshot (Hitpoint) <XCUIElementAttributes, XCUIElementSnapshot>
 - (BOOL)_canTransformPoint:(CGPoint)arg1;
 - (id)_hitPointTransformationRequestOrError:(id *)arg1;
 - (id)_snapshotForAccessibilityElement:(id)arg1 error:(id *)arg2;
@@ -29,5 +34,6 @@
 - (id)hostingAndOrientationTransformedPoint:(CGPoint)arg1 error:(id *)arg2;
 - (id)hostingAndOrientationTransformedRect:(CGRect)arg1 error:(id *)arg2;
 - (id)reparentedOrphanElementMatchingAccessibilityElement:(id)arg1 inconsistentRelationshipDescriptions:(id *)arg2 error:(id *)arg3;
+
 @end
 

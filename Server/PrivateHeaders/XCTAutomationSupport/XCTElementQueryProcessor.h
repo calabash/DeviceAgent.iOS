@@ -17,6 +17,7 @@
 #import "XCTElementSnapshotAttributeDataSource-Protocol.h"
 #import "XCTElementSnapshotProvider-Protocol.h"
 
+@class NSString, XCTCapabilities;
 @protocol XCTElementSnapshotProvider;
 
 
@@ -25,17 +26,19 @@
 @interface XCTElementQueryProcessor : NSObject <XCTElementSnapshotProvider, XCTElementSnapshotAttributeDataSource>
 {
     id <XCTElementSnapshotProvider> _snapshotProvider;
+    XCTCapabilities *_remoteInterfaceCapabilities;
 }
 
 @property(readonly) BOOL allowsRemoteAccess;
+@property(retain) XCTCapabilities *remoteInterfaceCapabilities;
 @property __weak id <XCTElementSnapshotProvider> snapshotProvider;
 @property(readonly) BOOL supportsHostedViewCoordinateTransformations;
 @property(readonly) BOOL usePointTransformationsForFrameConversions;
 
 - (id)attributesForElement:(id)arg1 attributes:(id)arg2 error:(id *)arg3;
-- (void)fetchMatchesForQuery:(id)arg1 reply:(CDUnknownBlockType)arg2;
+- (void)fetchMatchesForQuery:(id)arg1 clientCapabilities:(id)arg2 reply:(CDUnknownBlockType)arg3;
 - (id)parameterizedAttribute:(id)arg1 forElement:(id)arg2 parameter:(id)arg3 error:(id *)arg4;
-- (id)snapshotForElement:(id)arg1 attributes:(id)arg2 parameters:(id)arg3 error:(id *)arg4;
+- (id)snapshotForElement:(id)arg1 attributes:(id)arg2 parameters:(id)arg3 timeoutControls:(id)arg4 error:(id *)arg5;
 
 
 @end

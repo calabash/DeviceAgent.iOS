@@ -16,7 +16,7 @@
 
 @class NSArray, NSDictionary, NSString;
 
-@interface XCTMetric : NSObject
+@interface XCTMeasurement : NSObject
 {
     NSString *_identifier;
     NSString *_name;
