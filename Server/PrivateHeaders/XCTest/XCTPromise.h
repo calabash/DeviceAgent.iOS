@@ -26,15 +26,13 @@
 @property(retain) NSError *error;
 @property(readonly) XCTestExpectation *expectation;
 @property(readonly, copy) NSString *promiseDescription;
+@property(readonly) struct atomic_flag promiseFulfilled;
 @property(retain) id value;
 
 - (void)fulfillWithError:(id)arg1;
 - (void)fulfillWithValue:(id)arg1;
 - (void)fulfillWithValue:(id)arg1 error:(id)arg2;
 - (id)initWithDescription:(id)arg1;
-// Error parsing type for property promiseFulfilled:
-// Property attributes: T{atomic_flag=AB},R,V_promiseFulfilled
-
 
 @end
 

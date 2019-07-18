@@ -35,6 +35,5 @@
 - (id)transform:(id)arg1 relatedElements:(id *)arg2;
 - (id)transformationDescription;
 
-
 @end
 

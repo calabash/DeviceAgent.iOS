@@ -132,6 +132,7 @@
 #import "XCTest/XCUIApplicationRegistryRecord.h"
 #import "XCTest/XCUIApplicationSpecifier.h"
 #import "XCTest/XCUICoordinate.h"
+#import "XCTest/XCUIDevice-Protocol.h"
 #import "XCTest/XCUIDevice.h"
 #import "XCTest/XCUIDeviceEventAndStateInterface-Protocol.h"
 #import "XCTest/XCUIElement.h"

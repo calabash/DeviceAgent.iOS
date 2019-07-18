@@ -15,6 +15,7 @@
 #import "XCUIEventSynthesizing-Protocol.h"
 #import "XCUIApplicationManaging-Protocol.h"
 #import "XCUIDeviceEventAndStateInterface-Protocol.h"
+#import "XCUIScreen.h"
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
@@ -22,6 +23,9 @@
 
 @class NSString, XCUIRemote, XCUISiriService, XCUITestContext;
 
+
+@protocol XCUIAccessibilityInterface;
+@protocol XCUIXcodeApplicationManaging;
 
 @protocol XCUIAccessibilityInterface;
 @protocol XCUIXcodeApplicationManaging;
@@ -45,8 +49,23 @@
     XCUIRemote *_remote;
 }
 
+@property(readonly) id <XCUIAccessibilityInterface> accessibilityInterface;
+@property(readonly) id <XCUIApplicationAutomationSessionProviding> applicationAutomationSessionProvider;
+@property(readonly) id <XCUIApplicationMonitor> applicationMonitor;
+@property(readonly) id <XCUIDeviceEventAndStateInterface> deviceEventAndStateInterface;
+@property(readonly) id <XCUIEventSynthesizing> eventSynthesizer;
+@property(readonly) BOOL isLocal;
+@property(readonly) BOOL isSimulatorDevice;
+@property(readonly) XCUIScreen *mainScreen;
 @property(nonatomic) UIDeviceOrientation orientation;
+@property(readonly) NSInteger platform;
+@property(readonly) id <XCUIApplicationManaging> platformApplicationManager;
+@property(readonly) id <XCUIScreenDataSource> screenDataSource;
+@property(readonly, copy) NSArray *screens;
 @property(readonly) XCUISiriService *siriService;
+@property(readonly) XCUITestContext *testContext;
+@property(readonly) NSString *uniqueIdentifier;
+@property(readonly) id <XCUIXcodeApplicationManaging> xcodeApplicationManager;
 
 + (id)localDevice;
 + (XCUIDevice *)sharedDevice;
