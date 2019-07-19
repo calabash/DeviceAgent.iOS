@@ -207,7 +207,11 @@
     XCUIElement *deleteKey = elements[0];
 
     if (!deleteKey.lastSnapshot) {
-        [deleteKey resolve];
+        if ([deleteKey respondsToSelector:@selector(resolve)]) {
+            [deleteKey resolve];
+        } else {
+            [deleteKey resolveOrRaiseTestFailure];
+        }
     }
 
     return deleteKey;
