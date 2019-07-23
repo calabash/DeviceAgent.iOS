@@ -99,9 +99,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="ySD-iS-omE" firstAttribute="top" secondItem="N1v-YP-Pj5" secondAttribute="bottom" constant="8" id="0rU-R7-TUt"/>
-                                    <constraint firstItem="6xi-u4-e9s" firstAttribute="top" secondItem="N1v-YP-Pj5" secondAttribute="bottom" constant="8" id="3mV-bm-kfc"/>
                                     <constraint firstAttribute="width" constant="238" id="7EY-8a-cky"/>
-                                    <constraint firstItem="6xi-u4-e9s" firstAttribute="leading" secondItem="ySD-iS-omE" secondAttribute="trailing" constant="12" id="ImN-Dz-dgX"/>
                                     <constraint firstItem="Inb-f1-nFB" firstAttribute="leading" secondItem="6xi-u4-e9s" secondAttribute="trailing" constant="10" id="M8B-Hm-ozg"/>
                                     <constraint firstAttribute="trailing" secondItem="Inb-f1-nFB" secondAttribute="trailing" constant="8" id="XuN-G4-Ceg"/>
                                     <constraint firstItem="OhG-EI-aLB" firstAttribute="centerX" secondItem="7sx-D5-q7V" secondAttribute="centerX" id="col-4V-cOa"/>
@@ -113,7 +111,6 @@
                                     <constraint firstItem="Inb-f1-nFB" firstAttribute="top" secondItem="N1v-YP-Pj5" secondAttribute="bottom" constant="8" id="eNL-gy-td2"/>
                                     <constraint firstAttribute="height" constant="142" id="gvl-Je-fPl"/>
                                     <constraint firstItem="N1v-YP-Pj5" firstAttribute="top" secondItem="7sx-D5-q7V" secondAttribute="top" constant="8" id="nwo-fZ-EnS"/>
-                                    <constraint firstItem="6xi-u4-e9s" firstAttribute="leading" secondItem="ySD-iS-omE" secondAttribute="trailing" constant="12" id="oYY-Jh-W5N"/>
                                     <constraint firstItem="ySD-iS-omE" firstAttribute="leading" secondItem="7sx-D5-q7V" secondAttribute="leading" constant="8" id="q7x-xJ-FV8"/>
                                 </constraints>
                                 <variation key="default">
