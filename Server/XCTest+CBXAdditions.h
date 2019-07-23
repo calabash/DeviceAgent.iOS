@@ -63,7 +63,7 @@
 
 - (XCElementSnapshot *_Nullable)lastSnapshot;
 - (void)resolveOrRaiseTestFailure;
-- (BOOL)resolveOrRaiseTestFailure:(BOOL)arg1 error:(id *)arg2;
+- (BOOL)resolveOrRaiseTestFailure:(BOOL)arg1 error:(id _Nonnull *_Nonnull)arg2;
 - (XCUICoordinate *_Nonnull)hitPointCoordinate;
 - (XCUIElementQuery *_Nonnull)query;
 
