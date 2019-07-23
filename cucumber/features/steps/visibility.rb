@@ -34,7 +34,7 @@ Then(/^the tab bar is visible and hitable$/) do
 end
 
 Then(/^the status bar is visible and sometimes hitable$/) do
-  # The StatusBar was deprecated on iOS 13+
+  # Skip this step since StatusBar was deprecated on iOS 13+
   next if ios_gte?("13.0")
 
   if iphone_x? && !device_info["simulator"]
