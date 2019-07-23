@@ -14,13 +14,17 @@
 
 #import "XCTElementSetCodableTransformer.h"
 
+#import "XCTCapabilitiesProviding-Protocol.h"
 
-@interface XCTElementDisclosedChildRowsTransformer : XCTElementSetCodableTransformer
+
+@interface XCTElementDisclosedChildRowsTransformer : XCTElementSetCodableTransformer <XCTCapabilitiesProviding>
 {
     BOOL _stopsOnFirstMatch;
     NSString *_transformationDescription;
 }
 
++ (void)provideCapabilitiesToBuilder:(id)arg1;
+- (BOOL)canBeRemotelyEvaluatedWithCapabilities:(id)arg1;
 - (id)iteratorForInput:(id)arg1;
 - (id)requiredKeyPathsOrError:(id *)arg1;
 - (void)setStopsOnFirstMatch:(BOOL)arg1;
@@ -30,6 +34,7 @@
 - (BOOL)supportsRemoteEvaluation;
 - (id)transform:(id)arg1 relatedElements:(id *)arg2;
 - (id)transformationDescription;
+
 
 @end
 

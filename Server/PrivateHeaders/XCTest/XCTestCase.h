@@ -49,6 +49,8 @@
 + (id)allSubclassesOutsideXCTest;
 + (id)allTestMethodInvocations;
 + (id)bundle;
++ (id)defaultMeasureOptions;
++ (id)defaultMetrics;
 + (id)defaultPerformanceMetrics;
 + (id)defaultTestSuite;
 + (BOOL)isInheritingTestCases;
@@ -69,8 +71,9 @@
 - (BOOL)_didMeasureMetrics;
 - (BOOL)_didStartMeasuring;
 - (BOOL)_didStopMeasuring;
-- (void)_enqueueFailureWithDescription:(id)arg1 inFile:(id)arg2 atLine:(NSUInteger)arg3 expected:(BOOL)arg4 breakWhenDequeued:(BOOL)arg5;
+- (void)_enqueueFailureWithDescription:(id)arg1 inFile:(id)arg2 atLine:(NSUInteger)arg3 expected:(BOOL)arg4 interruptTest:(BOOL)arg5 breakWhenDequeued:(BOOL)arg6;
 - (id)_expectationForDarwinNotification:(id)arg1;
+- (id)_expectationForDistributedNotification:(id)arg1 object:(id)arg2 handler:(CDUnknownBlockType)arg3;
 - (void)_interruptTest;
 - (BOOL)_isMeasuringMetrics;
 - (void)_logAndReportPerformanceMetrics:(id)arg1 perfMetricResultsForIDs:(id)arg2 withBaselinesForTest:(id)arg3;
@@ -118,6 +121,9 @@
 - (void)markInvalid:(id)arg1;
 - (void)measureBlock:(CDUnknownBlockType)arg1;
 - (void)measureMetrics:(id)arg1 automaticallyStartMeasuring:(BOOL)arg2 forBlock:(CDUnknownBlockType)arg3;
+- (void)measureWithMetrics:(id)arg1 block:(CDUnknownBlockType)arg2;
+- (void)measureWithMetrics:(id)arg1 options:(id)arg2 block:(CDUnknownBlockType)arg3;
+- (void)measureWithOptions:(id)arg1 block:(CDUnknownBlockType)arg2;
 - (void)memoryChecker:(id)arg1 didFailWithMessages:(id)arg2 serializedMemoryGraph:(id)arg3;
 - (id)nameForLegacyLogging;
 - (void)nestedWaiter:(id)arg1 wasInterruptedByTimedOutWaiter:(id)arg2;

@@ -5,6 +5,7 @@
 //  Copyright (C) 1997-2019 Steve Nygard.
 //
 
+
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <XCTest/XCUIElementTypes.h>
@@ -12,12 +13,16 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-#import "XCElementSnapshot.h"
+@class NSDate, NSDictionary;
 
-#import "XCUIElementAttributes-Protocol.h"
+@protocol MXMInstrumental <NSCopying>
+- (BOOL)harvestData:(id *)arg1 error:(id *)arg2;
 
-
-@interface XCElementSnapshot (XCUIElementAttributes) <XCUIElementAttributes>
-
+@optional
+- (void)didStartAtTime:(NSUInteger)arg1 startDate:(NSDate *)arg2;
+- (void)didStopAtTime:(NSUInteger)arg1 stopDate:(NSDate *)arg2;
+- (BOOL)prepareWithOptions:(NSDictionary *)arg1 error:(id *)arg2;
+- (void)willStartAtEstimatedTime:(NSUInteger)arg1;
+- (void)willStop;
 @end
 

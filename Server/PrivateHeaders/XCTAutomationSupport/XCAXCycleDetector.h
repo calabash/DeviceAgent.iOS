@@ -14,7 +14,20 @@
 
 #import <objc/NSObject.h>
 
-@interface NSObject (ClassDescription_Extras)
-- (id)className;
+@class NSArray, NSMutableOrderedSet;
+
+@interface XCAXCycleDetector : NSObject
+{
+    NSMutableOrderedSet *_elementStack;
+}
+
+@property(readonly) NSArray *currentElementPath;
+
++ (id)_cycleDescriptionForElementStack:(id)arg1;
+- (id)_cycleDescriptionForElementWithCurrentStack:(id)arg1;
+- (id)_cycleErrorForElement:(id)arg1;
+- (BOOL)trackElement:(id)arg1 error:(id *)arg2;
+- (void)untrackElement:(id)arg1;
+
 @end
 

@@ -16,14 +16,16 @@
 
 #import "XCUIApplicationMonitor-Protocol.h"
 
-@class NSMutableDictionary, NSMutableSet, NSString, XCUIApplicationImplDepot, XCUIApplicationRegistry;
+@class NSMutableDictionary, NSMutableSet, NSSet, NSString, XCTestConfiguration, XCUIApplicationImplDepot, XCUIApplicationRegistry;
 @protocol OS_dispatch_queue, XCUIDevice, XCUIPlatformApplicationServicesProviding;
 
 @interface XCUIApplicationMonitor : NSObject <XCUIApplicationMonitor>
 {
     XCUIApplicationRegistry *_applicationRegistry;
+    NSSet *_automationSessionBlacklist;
     id <XCUIDevice> _device;
     id <XCUIPlatformApplicationServicesProviding> _platformServicesProvider;
+    XCTestConfiguration *_testConfiguration;
     NSObject<OS_dispatch_queue> *_queue;
     XCUIApplicationImplDepot *_applicationImplDepot;
     NSMutableSet *_trackedBundleIDs;
@@ -36,10 +38,12 @@
 @property(readonly, copy) NSMutableDictionary *applicationProcessesForPID;
 @property(readonly, copy) NSMutableDictionary *applicationProcessesForToken;
 @property(retain) XCUIApplicationRegistry *applicationRegistry;
+@property(readonly) NSSet *automationSessionBlacklist;
 @property(readonly) __weak id <XCUIDevice> device;
 @property(readonly, copy) NSMutableSet *launchedApplications;
 @property(readonly) id <XCUIPlatformApplicationServicesProviding> platformServicesProvider;
 @property(retain) NSObject<OS_dispatch_queue> *queue;
+@property(readonly) XCTestConfiguration *testConfiguration;
 @property(readonly, copy) NSMutableSet *trackedBundleIDs;
 
 - (id)_appFromSet:(id)arg1 thatTransitionedToNotRunningDuringTimeInterval:(double)arg2;
@@ -53,6 +57,7 @@
 - (id)applicationProcessWithToken:(id)arg1;
 - (void)crashInProcessWithBundleID:(id)arg1 path:(id)arg2 pid:(NSInteger)arg3 symbol:(id)arg4;
 - (id)initWithDevice:(id)arg1 platformServicesProvider:(id)arg2;
+- (id)initWithDevice:(id)arg1 platformServicesProvider:(id)arg2 testConfiguration:(id)arg3;
 - (void)launchRequestedForApplicationProcess:(id)arg1;
 - (id)monitoredApplicationWithProcessIdentifier:(NSInteger)arg1;
 - (void)processWithToken:(id)arg1 exitedWithStatus:(NSInteger)arg2;

@@ -5,6 +5,7 @@
 //  Copyright (C) 1997-2019 Steve Nygard.
 //
 
+
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <XCTest/XCUIElementTypes.h>
@@ -12,11 +13,10 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-#import "XCUIDevice-Protocol.h"
+@class XCUIApplicationProcess;
 
-@class XCDeviceEvent, XCUISiriService;
-
-@protocol XCUIIPhoneOSDevice <XCUIDevice>
-- (BOOL)performDeviceEvent:(XCDeviceEvent *)arg1 error:(id *)arg2;
+@protocol XCUIApplicationProcessDelegate <NSObject>
+- (void)applicationProcessAutomationSessionRequestFailed:(XCUIApplicationProcess *)arg1;
+- (BOOL)applicationProcessShouldRequestAutomationSession:(XCUIApplicationProcess *)arg1;
 @end
 

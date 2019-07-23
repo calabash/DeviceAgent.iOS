@@ -33,8 +33,9 @@
 
     XCPointerEventPath *eventPath = touchPath.eventPath;
     expect(eventPath.pointerEvents.count).to.equal(1);
-    expect([eventPath.pointerEvents[0] coordinate]).to.equal(point);
-    expect([eventPath.pointerEvents[0] offset]).to.equal(seconds);
+    XCPointerEvent *event = eventPath.pointerEvents[0];
+    expect(event.coordinate).to.equal(point);
+    expect(event.offset).to.equal(seconds);
 }
 
 - (void)testInitWithFirstTouchPointOrientationAndOffset {

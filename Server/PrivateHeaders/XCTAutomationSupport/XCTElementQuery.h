@@ -14,56 +14,60 @@
 
 #import <objc/NSObject.h>
 
+#import "XCTCapabilitiesProviding-Protocol.h"
 
-@class NSArray, XCAccessibilityElement, XCElementSnapshot;
+@class NSArray, NSString, XCAccessibilityElement, XCElementSnapshot, XCTTimeoutControls;
 @protocol XCTElementSnapshotAttributeDataSource, XCTElementSnapshotProvider;
 
 
 @protocol XCTElementSnapshotProvider;
 @protocol XCTElementSnapshotAttributeDataSource;
 
-@interface XCTElementQuery : NSObject <NSSecureCoding>
+@interface XCTElementQuery : NSObject <NSSecureCoding, XCTCapabilitiesProviding>
 {
-    BOOL _suppressAttributeKeyPathAnalysis;
     BOOL _isMacOS;
+    BOOL _suppressAttributeKeyPathAnalysis;
+    BOOL _useLegacyElementType;
+    XCAccessibilityElement *_rootElement;
+    NSUInteger _options;
+    XCTTimeoutControls *_timeoutControls;
     id <XCTElementSnapshotProvider> _snapshotProvider;
     id <XCTElementSnapshotAttributeDataSource> _elementSnapshotAttributeDataSource;
-    NSUInteger _options;
     XCElementSnapshot *_rootElementSnapshot;
     CDUnknownBlockType _evaluationContext;
-    double _responsivenessTimeout;
-    double _executionTimeout;
-    XCAccessibilityElement *_rootElement;
     NSArray *_transformers;
 }
 
 @property __weak id <XCTElementSnapshotAttributeDataSource> elementSnapshotAttributeDataSource;
 @property(copy, nonatomic) CDUnknownBlockType evaluationContext;
-@property double executionTimeout;
 @property(readonly) BOOL isMacOS;
 @property(readonly) NSUInteger options;
-@property double responsivenessTimeout;
 @property(readonly, copy) XCAccessibilityElement *rootElement;
 @property(retain) XCElementSnapshot *rootElementSnapshot;
 @property(retain) id <XCTElementSnapshotProvider> snapshotProvider;
 @property BOOL suppressAttributeKeyPathAnalysis;
+@property(retain) XCTTimeoutControls *timeoutControls;
+@property BOOL useLegacyElementType;
 @property(readonly) BOOL supportsAttributeKeyPathAnalysis;
 @property(readonly) BOOL supportsRemoteEvaluation;
 @property(readonly, copy) NSArray *transformers;
 
 + (id)_firstMatchTransformerSubarraysFromArray:(id)arg1 trailingMatchAllTransformers:(id *)arg2;
-- (id)_allMatchingSnapshotsForInput:(id)arg1 transformers:(id)arg2 relatedElements:(id *)arg3 error:(id *)arg4;
-- (id)_firstMatchingSnapshotForInput:(id)arg1 transformers:(id)arg2 relatedElements:(id *)arg3 error:(id *)arg4;
-- (id)_firstMatchingSnapshotForInput:(id)arg1 transformersSubarrays:(id)arg2 relatedElements:(id *)arg3 error:(id *)arg4;
++ (void)provideCapabilitiesToBuilder:(id)arg1;
+- (id)_allMatchingSnapshotsForInput:(id)arg1 transformers:(id)arg2 relatedElements:(id *)arg3 noMatchesMessage:(id *)arg4 error:(id *)arg5;
+- (id)_firstMatchingSnapshotForInput:(id)arg1 transformers:(id)arg2 relatedElements:(id *)arg3 noMatchesMessage:(id *)arg4 error:(id *)arg5;
+- (id)_firstMatchingSnapshotForInput:(id)arg1 transformersSubarrays:(id)arg2 relatedElements:(id *)arg3 noMatchesMessage:(id *)arg4 error:(id *)arg5;
 - (id)_rootElementSnapshot:(id *)arg1;
 - (id)_snapshotAttributesOrError:(id *)arg1;
 - (id)_snapshotForElement:(id)arg1 error:(id *)arg2;
+- (BOOL)canBeRemotelyEvaluatedWithCapabilities:(id)arg1;
 - (BOOL)hasTransformerWithStopsOnFirstMatch;
 - (id)initWithRootElement:(id)arg1 transformers:(id)arg2;
 - (id)initWithRootElement:(id)arg1 transformers:(id)arg2 options:(NSUInteger)arg3;
 - (id)initWithRootElement:(id)arg1 transformers:(id)arg2 options:(NSUInteger)arg3 isMacOS:(BOOL)arg4;
-- (id)matchingSnapshotsWithError:(id *)arg1;
-- (id)matchingSnapshotsWithRelatedElements:(id *)arg1 error:(id *)arg2;
+- (id)initWithRootElement:(id)arg1 transformers:(id)arg2 options:(NSUInteger)arg3 isMacOS:(BOOL)arg4 timeoutControls:(id)arg5;
+- (id)matchingSnapshotsWithRelatedElements:(id *)arg1 noMatchesMessage:(id *)arg2 error:(id *)arg3;
+
 
 @end
 

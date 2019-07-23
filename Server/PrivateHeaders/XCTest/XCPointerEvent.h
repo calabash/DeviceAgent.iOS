@@ -22,6 +22,7 @@
     NSUInteger _eventType;
     NSUInteger _buttonType;
     double _pressure;
+    NSUInteger _gestureStage;
     double _offset;
     double _duration;
     NSInteger _verticalLineScroll;
@@ -32,6 +33,8 @@
     NSUInteger _typingSpeed;
     NSUInteger _keyCode;
     NSUInteger _keyPhase;
+    NSUInteger _gesturePhase;
+    NSUInteger _deviceID;
     CGPoint _coordinate;
     CGPoint _destination;
     CGVector _deltaVector;
@@ -42,8 +45,11 @@
 @property CGPoint coordinate;
 @property CGVector deltaVector;
 @property CGPoint destination;
+@property NSUInteger deviceID;
 @property double duration;
 @property NSUInteger eventType;
+@property NSUInteger gesturePhase;
+@property NSUInteger gestureStage;
 @property(copy) NSString *key;
 @property NSUInteger keyCode;
 @property NSUInteger keyModifierFlags;
@@ -58,8 +64,10 @@
 + (id)dragEventWithCoordinate:(CGPoint)arg1 destination:(CGPoint)arg2 offset:(double)arg3 duration:(double)arg4;
 + (id)eventWithType:(NSUInteger)arg1 buttonType:(NSUInteger)arg2 coordinate:(CGPoint)arg3 offset:(double)arg4 clickCount:(NSUInteger)arg5;
 + (id)eventWithType:(NSUInteger)arg1 buttonType:(NSUInteger)arg2 coordinate:(CGPoint)arg3 offset:(double)arg4 duration:(double)arg5 clickCount:(NSUInteger)arg6;
++ (id)eventWithType:(NSUInteger)arg1 buttonType:(NSUInteger)arg2 coordinate:(CGPoint)arg3 pressure:(double)arg4 gestureStage:(double)arg5 offset:(double)arg6 duration:(double)arg7 clickCount:(NSUInteger)arg8 gesturePhase:(NSUInteger)arg9;
 + (id)eventWithType:(NSUInteger)arg1 buttonType:(NSUInteger)arg2 coordinate:(CGPoint)arg3 pressure:(double)arg4 offset:(double)arg5 duration:(double)arg6 clickCount:(NSUInteger)arg7;
 + (id)keyboardEventForKeyCode:(NSUInteger)arg1 keyPhase:(NSUInteger)arg2 modifierFlags:(NSUInteger)arg3 offset:(double)arg4;
++ (id)moveEventWithStartPoint:(CGPoint)arg1 destination:(CGPoint)arg2 offset:(double)arg3 duration:(double)arg4;
 + (CDUnknownBlockType)offsetComparator;
 + (id)scrollEventAtPoint:(CGPoint)arg1 lines:(NSInteger)arg2 offset:(double)arg3;
 + (id)scrollEventWithDeltaVector:(CGVector)arg1 offset:(double)arg2 duration:(double)arg3;

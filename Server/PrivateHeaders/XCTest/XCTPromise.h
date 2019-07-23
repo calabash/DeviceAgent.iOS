@@ -18,10 +18,10 @@
 
 @interface XCTPromise : NSObject
 {
-    NSError *_error;
-    id _value;
-    XCTestExpectation *_expectation;
     NSString *_promiseDescription;
+    id _value;
+    NSError *_error;
+    XCTestExpectation *_expectation;
 }
 
 @property(retain) NSError *error;
