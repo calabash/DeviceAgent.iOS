@@ -5,8 +5,7 @@ jobs:
     vmImage: 'macOS-10.14'
   
   steps:
-    continueOnError: true
-
+  
   - script: ls -al /Applications/
     displayName: "Contents of /Applications"
 
