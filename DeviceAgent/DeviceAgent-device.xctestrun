@@ -9,7 +9,7 @@
 		<key>TestBundleDestinationRelativePath</key>
 		<string>__TESTHOST__/PlugIns/DeviceAgent.xctest</string>
 		<key>TestHostBundleIdentifier</key>
-		<string>com.apple.test.DeviceAgent-Runner</string>
+		<string>sh.calaba.DeviceAgent.xctrunner</string>
 		<key>TestingEnvironmentVariables</key>
 		<dict>
 			<key>DYLD_FRAMEWORK_PATH</key>
