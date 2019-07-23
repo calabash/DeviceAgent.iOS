@@ -45,6 +45,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		4166C9AF22E7009800C8BEBF /* TestAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4166C9AE22E7009800C8BEBF /* TestAppUITests.m */; };
 		89331CCE1CC00E82003C2E59 /* RotatePinchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */; };
 		89331D301CC50447003C2E59 /* ThreadUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 89331D2E1CC50447003C2E59 /* ThreadUtils.h */; };
 		89331D321CC50447003C2E59 /* ThreadUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D2F1CC50447003C2E59 /* ThreadUtils.m */; };
@@ -612,6 +613,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4166C9B122E7009800C8BEBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 898743B41C5847B30084FD93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5954E041CBD2E1200117745;
+			remoteInfo = TestApp;
+		};
 		898743D61C5847B30084FD93 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 898743B41C5847B30084FD93 /* Project object */;
@@ -745,6 +753,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4166C9AC22E7009800C8BEBF /* TestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4166C9AE22E7009800C8BEBF /* TestAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAppUITests.m; sourceTree = "<group>"; };
+		4166C9B022E7009800C8BEBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		634244EC948D56732C2565E5 /* SpringBoardAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoardAlerts.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		6342494C7C23506565D2B802 /* SpringBoardAlerts.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = SpringBoardAlerts.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		63424E46759C6B27C2BEC337 /* SpringBoardAlertsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SpringBoardAlertsTest.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
@@ -1294,6 +1305,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4166C9A922E7009800C8BEBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		898743B91C5847B30084FD93 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1398,6 +1416,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4166C9AD22E7009800C8BEBF /* TestAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4166C9AE22E7009800C8BEBF /* TestAppUITests.m */,
+				4166C9B022E7009800C8BEBF /* Info.plist */,
+			);
+			path = TestAppUITests;
+			sourceTree = "<group>";
+		};
 		898743B31C5847B30084FD93 = {
 			isa = PBXGroup;
 			children = (
@@ -1411,6 +1438,7 @@
 				F50BB27C1D73392100264915 /* Permissions */,
 				F5DD368C20036D7200308564 /* StandAloneUITests */,
 				F5FEA527201A2D9200CEF56A /* GemuseBouche */,
+				4166C9AD22E7009800C8BEBF /* TestAppUITests */,
 				F542EA1A1CC53DD000D87200 /* Frameworks */,
 				898743BD1C5847B30084FD93 /* Products */,
 			);
@@ -1433,6 +1461,7 @@
 				F5FEA531201A359500CEF56A /* libBrassica.dylib */,
 				F5FEA542201A368600CEF56A /* libBetaVulgaris.dylib */,
 				F5DBC0A52101F18A00A4C274 /* DeviceAgentUnitTests.xctest */,
+				4166C9AC22E7009800C8BEBF /* TestAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2730,6 +2759,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		4166C9AB22E7009800C8BEBF /* TestAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4166C9B522E7009900C8BEBF /* Build configuration list for PBXNativeTarget "TestAppUITests" */;
+			buildPhases = (
+				4166C9A822E7009800C8BEBF /* Sources */,
+				4166C9A922E7009800C8BEBF /* Frameworks */,
+				4166C9AA22E7009800C8BEBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4166C9B222E7009800C8BEBF /* PBXTargetDependency */,
+			);
+			name = TestAppUITests;
+			productName = TestAppUITests;
+			productReference = 4166C9AC22E7009800C8BEBF /* TestAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		898743BB1C5847B30084FD93 /* AppStub */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 898743DE1C5847B30084FD93 /* Build configuration list for PBXNativeTarget "AppStub" */;
@@ -2940,6 +2987,11 @@
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = Calabash;
 				TargetAttributes = {
+					4166C9AB22E7009800C8BEBF = {
+						CreatedOnToolsVersion = 11.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F5954E041CBD2E1200117745;
+					};
 					898743BB1C5847B30084FD93 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = FYD86LA7RE;
@@ -3050,11 +3102,19 @@
 				F5FEA51D201A2AEA00CEF56A /* libCucurbits */,
 				F5FEA530201A359500CEF56A /* libBrassica */,
 				F5FEA541201A368600CEF56A /* libBetaVulgaris */,
+				4166C9AB22E7009800C8BEBF /* TestAppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4166C9AA22E7009800C8BEBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		898743BA1C5847B30084FD93 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3217,6 +3277,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4166C9A822E7009800C8BEBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4166C9AF22E7009800C8BEBF /* TestAppUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		898743B81C5847B30084FD93 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3555,6 +3623,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4166C9B222E7009800C8BEBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5954E041CBD2E1200117745 /* TestApp */;
+			targetProxy = 4166C9B122E7009800C8BEBF /* PBXContainerItemProxy */;
+		};
 		898743D71C5847B30084FD93 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 898743BB1C5847B30084FD93 /* AppStub */;
@@ -3656,6 +3729,59 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4166C9B322E7009800C8BEBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 285W24646W;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TestAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = akvelon.sedoli.TestAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5f9752ef-87bc-4cd7-9c7e-5c2478f07391";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TestApp;
+			};
+			name = Debug;
+		};
+		4166C9B422E7009800C8BEBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 285W24646W;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TestAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = akvelon.sedoli.TestAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5f9752ef-87bc-4cd7-9c7e-5c2478f07391";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TestApp;
+			};
+			name = Release;
+		};
 		898743DC1C5847B30084FD93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -4489,6 +4615,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4166C9B522E7009900C8BEBF /* Build configuration list for PBXNativeTarget "TestAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4166C9B322E7009800C8BEBF /* Debug */,
+				4166C9B422E7009800C8BEBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		898743B71C5847B30084FD93 /* Build configuration list for PBXProject "DeviceAgent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
