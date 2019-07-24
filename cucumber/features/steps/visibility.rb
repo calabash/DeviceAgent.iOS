@@ -34,10 +34,10 @@ Then(/^the tab bar is visible and hitable$/) do
 end
 
 Then(/^the status bar is visible and sometimes hitable$/) do
-  # Skip this step since StatusBar was deprecated on iOS 13+
-  next if ios_gte?("13.0")
-
-  if iphone_x? && !device_info["simulator"]
+  if ios_gte?("13.0")
+    log_inline("StatusBar was deprecated on iOS 13+")
+    wait_for_no_view({type: "StatusBar", all: true})
+  elsif iphone_x? && !device_info["simulator"]
     # The StatusBar may or may not be visible on iPhone 10.
     # This is _not_ a timing issue; waiting does not change the outcome.
     element = query({type: "StatusBar", all: true}).first
