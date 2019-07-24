@@ -77,7 +77,11 @@
     if ([element respondsToSelector:@selector(resolve)]) {
         [element resolve];
     } else {
-        [element resolveOrRaiseTestFailure];
+        NSError *error = nil;
+        if (![element resolveOrRaiseTestFailure:NO error:&error]) {
+            DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
+                    element, [error localizedDescription]);
+        }
     }
 }
 

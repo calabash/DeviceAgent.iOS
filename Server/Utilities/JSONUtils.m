@@ -47,7 +47,11 @@ static NSDictionary *typeStringToElementType;
             if ([(XCUIElement *)element respondsToSelector:@selector(resolve)]) {
                 [(XCUIElement *)element resolve];
             } else {
-                [(XCUIElement *)element resolveOrRaiseTestFailure];
+                NSError *error = nil;
+                if (![(XCUIElement *)element resolveOrRaiseTestFailure:NO error:&error]) {
+                    DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
+                            (XCUIElement *)element, [error localizedDescription]);
+                }
             }
         }
         snapshot = [(XCUIElement *)element lastSnapshot];

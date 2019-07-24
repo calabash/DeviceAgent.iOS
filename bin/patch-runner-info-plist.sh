@@ -84,6 +84,13 @@ info "Syncing $(basename ${DEVICE_AGENT}) version"
 plist_set_key "${DEVICE_AGENT_PLIST}" "CFBundleVersion" "${BUNDLE_VERSION}"
 plist_set_key "${DEVICE_AGENT_PLIST}" "CFBundleShortVersionString" "${SHORT_VERSION}"
 
+if [ "$(xcode_gte_11)" = "false" ]; then
+  banner "Patching DeviceAgent-device.xctestrun"
+  DEVICE_AGENT_XCTESTRUN="${DEVICE_AGENT}/DeviceAgent-device.xctestrun"
+  info "${DEVICE_AGENT_XCTESTRUN}"
+  plist_set_key "${DEVICE_AGENT_XCTESTRUN}" "TestTargetName:TestHostBundleIdentifier" "com.apple.test.DeviceAgent-Runner"
+fi
+
 banner "Resigning"
 
 if [ "$(xcode_gte_9)" = "true" ]; then

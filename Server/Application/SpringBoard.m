@@ -199,7 +199,11 @@ typedef enum : NSUInteger {
     if ([button respondsToSelector:@selector(resolve)]) {
         [button resolve];
     } else {
-        [button resolveOrRaiseTestFailure];
+        NSError *error = nil;
+        if (![button resolveOrRaiseTestFailure:NO error:&error]) {
+            DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
+                      button, [error localizedDescription]);
+        }
     }
 
     // A button with the expected title does not exist.
@@ -259,7 +263,11 @@ typedef enum : NSUInteger {
     if ([button respondsToSelector:@selector(resolve)]) {
         [button resolve];
     } else {
-        [button resolveOrRaiseTestFailure];
+        NSError *error = nil;
+        if (![button resolveOrRaiseTestFailure:NO error:&error]) {
+            DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
+                      button, [error localizedDescription]);
+        }
     }
 
     if (!button || !button.exists) {
@@ -286,7 +294,11 @@ typedef enum : NSUInteger {
             if ([button respondsToSelector:@selector(resolve)]) {
                 [button resolve];
             } else {
-                [button resolveOrRaiseTestFailure];
+                NSError *error = nil;
+                if (![button resolveOrRaiseTestFailure:NO error:&error]) {
+                    DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
+                            button, [error localizedDescription]);
+                }
             }
 
             if (!button || !button.exists) {
@@ -312,7 +324,11 @@ typedef enum : NSUInteger {
         if ([alertButton respondsToSelector:@selector(resolve)]) {
             [alertButton resolve];
         } else {
-            [alertButton resolveOrRaiseTestFailure];
+            NSError *error = nil;
+            if (![alertButton resolveOrRaiseTestFailure:NO error:&error]) {
+                DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
+                        alertButton, [error localizedDescription]);
+            }
         }
         CGPoint hitPoint = [self hitPointForAlertButton:alertButton];
 
@@ -383,7 +399,11 @@ typedef enum : NSUInteger {
     if ([alertButton respondsToSelector:@selector(resolve)]) {
         [alertButton resolve];
     } else {
-        [alertButton resolveOrRaiseTestFailure];
+        NSError *error = nil;
+        if (![alertButton resolveOrRaiseTestFailure:NO error:&error]) {
+            DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
+                    alertButton, [error localizedDescription]);
+        }
     }
 
     XCElementSnapshot *snapshot = alertButton.lastSnapshot;
