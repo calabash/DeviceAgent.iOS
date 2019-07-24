@@ -43,6 +43,5 @@ And I can swipe to delete the Windows row
 
 Scenario: Reorder table view row
 And I am looking at the Everything's On the Table page
-And I have scrolled to the top of the Companies table
 When I touch the Edit button, the table is in Edit mode
 Then I move the Android row above the Apple row
