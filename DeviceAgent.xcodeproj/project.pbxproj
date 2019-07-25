@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -266,6 +266,7 @@
 		F52BA3451CED23EC00475D5A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F52BA3441CED23EC00475D5A /* libz.tbd */; };
 		F52BA3461CED23F700475D5A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA1B1CC53EC800D87200 /* CFNetwork.framework */; };
 		F52BA3491CEDE1C400475D5A /* MBFingerTipWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F52BA3481CEDE1C400475D5A /* MBFingerTipWindow.m */; };
+		F52E0D8022E96D3700DD06B8 /* Screenshotter.m in Sources */ = {isa = PBXBuildFile; fileRef = F52E0D7E22E96D3600DD06B8 /* Screenshotter.m */; };
 		F53349661F39E490004138C7 /* CBXDecimalRounder.m in Sources */ = {isa = PBXBuildFile; fileRef = F53349641F39E475004138C7 /* CBXDecimalRounder.m */; };
 		F533496C1F3AFED7004138C7 /* CBXOrientation.h in Headers */ = {isa = PBXBuildFile; fileRef = F533496A1F3AFED7004138C7 /* CBXOrientation.h */; };
 		F533496D1F3AFED7004138C7 /* CBXOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = F533496B1F3AFED7004138C7 /* CBXOrientation.m */; };
@@ -860,6 +861,8 @@
 		F52BA3471CEDE1C400475D5A /* MBFingerTipWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBFingerTipWindow.h; path = Vendor/Fingertips/MBFingerTipWindow.h; sourceTree = SOURCE_ROOT; };
 		F52BA3481CEDE1C400475D5A /* MBFingerTipWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBFingerTipWindow.m; path = Vendor/Fingertips/MBFingerTipWindow.m; sourceTree = SOURCE_ROOT; };
 		F52C9D861DA7E60300DAFC75 /* DragTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DragTest.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		F52E0D7E22E96D3600DD06B8 /* Screenshotter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Screenshotter.m; sourceTree = "<group>"; };
+		F52E0D7F22E96D3700DD06B8 /* Screenshotter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Screenshotter.h; sourceTree = "<group>"; };
 		F53349631F39E475004138C7 /* CBXDecimalRounder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXDecimalRounder.h; sourceTree = "<group>"; };
 		F53349641F39E475004138C7 /* CBXDecimalRounder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXDecimalRounder.m; sourceTree = "<group>"; };
 		F53349681F39E536004138C7 /* CBXDecimalRounderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CBXDecimalRounderTest.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
@@ -2315,6 +2318,8 @@
 		F58D28271D4F96BD000FF6C0 /* UITests */ = {
 			isa = PBXGroup;
 			children = (
+				F52E0D7F22E96D3700DD06B8 /* Screenshotter.h */,
+				F52E0D7E22E96D3600DD06B8 /* Screenshotter.m */,
 				F58D28291D4F96BD000FF6C0 /* CBXStressTests.m */,
 				F52A4C6A20246C910052F27F /* CBXDylibInjectionTest.m */,
 			);
@@ -2932,7 +2937,7 @@
 		898743B41C5847B30084FD93 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = Calabash;
 				TargetAttributes = {
 					898743BB1C5847B30084FD93 = {
@@ -3019,13 +3024,12 @@
 				};
 			};
 			buildConfigurationList = 898743B71C5847B30084FD93 /* Build configuration list for PBXProject "DeviceAgent" */;
-			compatibilityVersion = "Xcode 8.0";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
-				English,
 			);
 			mainGroup = 898743B31C5847B30084FD93;
 			productRefGroup = 898743BD1C5847B30084FD93 /* Products */;
@@ -3351,6 +3355,7 @@
 				F58D282B1D4F96BD000FF6C0 /* CBXStressTests.m in Sources */,
 				F547EEAF1E43793D000FC160 /* CBXMachClock.m in Sources */,
 				F52A4C6B20246C910052F27F /* CBXDylibInjectionTest.m in Sources */,
+				F52E0D8022E96D3700DD06B8 /* Screenshotter.m in Sources */,
 				F547EEB51E43797E000FC160 /* CBXWaiter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3773,7 +3778,10 @@
 				INFOPLIST_PREFIX_HEADER = AppStub/InfoPlist.h;
 				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.apple.test.AppStub;
 				PRODUCT_NAME = AppStub;
@@ -3796,7 +3804,10 @@
 				INFOPLIST_PREFIX_HEADER = AppStub/InfoPlist.h;
 				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.apple.test.AppStub;
 				PRODUCT_NAME = AppStub;
 				PROVISIONING_PROFILE = "fb4b8ed8-fb70-4b90-8f51-33e10f8f670e";
@@ -3826,7 +3837,11 @@
 				INFOPLIST_FILE = DeviceAgent/Info.plist;
 				INFOPLIST_PREFIX_HEADER = "";
 				INFOPLIST_PREPROCESS = NO;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -3859,7 +3874,11 @@
 				INFOPLIST_FILE = DeviceAgent/Info.plist;
 				INFOPLIST_PREFIX_HEADER = "";
 				INFOPLIST_PREPROCESS = NO;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"-framework",
 					XCTAutomationSupport,
@@ -3890,7 +3909,10 @@
 				);
 				INFOPLIST_FILE = Permissions/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lz",
@@ -3924,7 +3946,10 @@
 				);
 				INFOPLIST_FILE = Permissions/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lz",
@@ -3950,7 +3975,11 @@
 				DEVELOPMENT_TEAM = FYD86LA7RE;
 				INFOPLIST_FILE = Permissions/UITest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Calabash.PermissionsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "49fc8ecd-d772-432c-adc3-25e7db53b847";
@@ -3969,7 +3998,11 @@
 				DEVELOPMENT_TEAM = FYD86LA7RE;
 				INFOPLIST_FILE = Permissions/UITest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Calabash.PermissionsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "49fc8ecd-d772-432c-adc3-25e7db53b847";
@@ -4028,7 +4061,11 @@
 				);
 				INFOPLIST_FILE = TestApp/UITestInfo.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calab.UITest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = TestApp;
@@ -4047,7 +4084,11 @@
 				);
 				INFOPLIST_FILE = TestApp/UITestInfo.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calab.UITest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = TestApp;
@@ -4073,7 +4114,10 @@
 				INFOPLIST_PREFIX_HEADER = TestApp/App/InfoPlist.h;
 				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -4108,7 +4152,10 @@
 				INFOPLIST_PREFIX_HEADER = TestApp/App/InfoPlist.h;
 				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lz",
@@ -4153,7 +4200,11 @@
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "LOAD_XCTEST_PRIVATE_HEADERS=0";
 				INFOPLIST_FILE = TestApp/DeviceAgentUnitTestsInfo.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"-framework",
 					XCTAutomationSupport,
@@ -4191,7 +4242,11 @@
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "LOAD_XCTEST_PRIVATE_HEADERS=0";
 				INFOPLIST_FILE = TestApp/DeviceAgentUnitTestsInfo.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"-framework",
 					XCTAutomationSupport,
@@ -4219,7 +4274,11 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = StandAloneUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.StandAloneUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "35102a64-7ce2-4d50-86cb-3270f637174c";
@@ -4245,7 +4304,11 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = StandAloneUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.StandAloneUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "35102a64-7ce2-4d50-86cb-3270f637174c";

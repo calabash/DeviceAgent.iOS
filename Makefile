@@ -50,33 +50,6 @@ test-app:
 test-ipa:
 	bin/make/test-ipa.sh
 
-# Generate appledocs.
-#
-# Requires appledoc, which can be installed with homebrew.
-docs:
-	bin/make/docs.sh
-
-# Installs DeviceAgent onto your machine
-#
-# Builds DeviceAgent for Sim and Device, installs to
-# ~/.calabash/DeviceAgent/simulator and
-# ~/.calabash/DeviceAgent/device
-install:
-	bin/install/device_agent.sh
-
 # dylibs for testing dylib injection
 gemuse:
 	bin/make/gemuse-libs.sh
-
-# Below this line are rules that have been renamed.
-app-unit:
-	echo "Replaced with 'make test-app'"
-	exit 1
-
-ipa-unit:
-	echo "Replaced with 'make test-ipa'"
-	exit 1
-
-unit:
-	echo "Replaced with 'make unit-tests'"
-	exit 1
