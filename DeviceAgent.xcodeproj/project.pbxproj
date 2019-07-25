@@ -266,6 +266,7 @@
 		F52BA3451CED23EC00475D5A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F52BA3441CED23EC00475D5A /* libz.tbd */; };
 		F52BA3461CED23F700475D5A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA1B1CC53EC800D87200 /* CFNetwork.framework */; };
 		F52BA3491CEDE1C400475D5A /* MBFingerTipWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F52BA3481CEDE1C400475D5A /* MBFingerTipWindow.m */; };
+		F52E0D8022E96D3700DD06B8 /* Screenshotter.m in Sources */ = {isa = PBXBuildFile; fileRef = F52E0D7E22E96D3600DD06B8 /* Screenshotter.m */; };
 		F53349661F39E490004138C7 /* CBXDecimalRounder.m in Sources */ = {isa = PBXBuildFile; fileRef = F53349641F39E475004138C7 /* CBXDecimalRounder.m */; };
 		F533496C1F3AFED7004138C7 /* CBXOrientation.h in Headers */ = {isa = PBXBuildFile; fileRef = F533496A1F3AFED7004138C7 /* CBXOrientation.h */; };
 		F533496D1F3AFED7004138C7 /* CBXOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = F533496B1F3AFED7004138C7 /* CBXOrientation.m */; };
@@ -860,6 +861,8 @@
 		F52BA3471CEDE1C400475D5A /* MBFingerTipWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBFingerTipWindow.h; path = Vendor/Fingertips/MBFingerTipWindow.h; sourceTree = SOURCE_ROOT; };
 		F52BA3481CEDE1C400475D5A /* MBFingerTipWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBFingerTipWindow.m; path = Vendor/Fingertips/MBFingerTipWindow.m; sourceTree = SOURCE_ROOT; };
 		F52C9D861DA7E60300DAFC75 /* DragTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DragTest.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		F52E0D7E22E96D3600DD06B8 /* Screenshotter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Screenshotter.m; sourceTree = "<group>"; };
+		F52E0D7F22E96D3700DD06B8 /* Screenshotter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Screenshotter.h; sourceTree = "<group>"; };
 		F53349631F39E475004138C7 /* CBXDecimalRounder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXDecimalRounder.h; sourceTree = "<group>"; };
 		F53349641F39E475004138C7 /* CBXDecimalRounder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBXDecimalRounder.m; sourceTree = "<group>"; };
 		F53349681F39E536004138C7 /* CBXDecimalRounderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CBXDecimalRounderTest.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
@@ -2315,6 +2318,8 @@
 		F58D28271D4F96BD000FF6C0 /* UITests */ = {
 			isa = PBXGroup;
 			children = (
+				F52E0D7F22E96D3700DD06B8 /* Screenshotter.h */,
+				F52E0D7E22E96D3600DD06B8 /* Screenshotter.m */,
 				F58D28291D4F96BD000FF6C0 /* CBXStressTests.m */,
 				F52A4C6A20246C910052F27F /* CBXDylibInjectionTest.m */,
 			);
@@ -3350,6 +3355,7 @@
 				F58D282B1D4F96BD000FF6C0 /* CBXStressTests.m in Sources */,
 				F547EEAF1E43793D000FC160 /* CBXMachClock.m in Sources */,
 				F52A4C6B20246C910052F27F /* CBXDylibInjectionTest.m in Sources */,
+				F52E0D8022E96D3700DD06B8 /* Screenshotter.m in Sources */,
 				F547EEB51E43797E000FC160 /* CBXWaiter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,6 +1,6 @@
 
 #import <XCTest/XCTest.h>
-#import <AppCenterXCUITestExtensions/AppCenterXCUITestExtensions.h>
+#import "Screenshotter.h"
 
 @interface XCUIApplication (TEST)
 
@@ -79,8 +79,9 @@
 - (void)rotateDeviceToOrientation:(UIDeviceOrientation)orientation {
     [[XCUIDevice sharedDevice] setOrientation:orientation];
     CFRunLoopRunInMode(kCFRunLoopDefaultMode, 2.0, false);
-    act_label(@"Did ask device to rotate to orientation: %@ (%@) - screenshot after 2 seconds",
-              [self stringForDeviceOrientation:orientation], @(orientation));
+    [Screenshotter screenshotWithTitle:@"Did ask device to rotate to orientation: "
+     "%@ (%@) - screenshot after 2 seconds",
+     [self stringForDeviceOrientation:orientation], @(orientation)];
 
     UIInterfaceOrientation interfaceOrientation;
     interfaceOrientation = [self interfaceOrientionForDeviceOrientation:orientation];
