@@ -1,15 +1,15 @@
 //
-//  TestAppUITests.m
-//  TestAppUITests
+//  XCWebViews.m
+//  XCWebViews
 //
 
 #import <XCTest/XCTest.h>
 
-@interface TestAppUITests : XCTestCase
+@interface XCWebViews : XCTestCase
 
 @end
 
-@implementation TestAppUITests
+@implementation XCWebViews
 
 - (void)setUp {
     self.continueAfterFailure = YES;
