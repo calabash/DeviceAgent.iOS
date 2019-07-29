@@ -1,7 +1,3 @@
-//
-//  XCWebViews.m
-//  XCWebViews
-//
 
 #import <XCTest/XCTest.h>
 
