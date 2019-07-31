@@ -1,26 +1,34 @@
 jobs:
 
 - job:
+  strategy:
+    matrix:
+      HighSierra-Xcode-10.1:
+        IMAGE_POOL: 'macOS-10.13'
+        XCODE_VERSION: '10.1'
+      Mojave-Xcode-10.0:
+        IMAGE_POOL: 'macOS-10.14'
+        XCODE_VERSION: '10'
+      Mojave-Xcode-10.1:
+        IMAGE_POOL: 'macOS-10.14'
+        XCODE_VERSION: '10.1'
+      Mojave-Xcode-10.2.1:
+        IMAGE_POOL: 'macOS-10.14'
+        XCODE_VERSION: '10.2.1'
+      Mojave-Xcode-11.0:
+        IMAGE_POOL: 'macOS-10.14'
+        XCODE_VERSION: '11'
   pool:
-    vmImage: 'macOS-10.14'
+    vmImage: $(IMAGE_POOL)
   
   steps:
-  
-  - script: ls -al /Applications/
-    displayName: "Contents of /Applications"
 
   - script: |
-      sudo xcode-select --switch "/Applications/Xcode_10.2.1.app/Contents/Developer"
-    displayName: "Select Xcode 10.2.1"
-
-  - script: xcodebuild -version
-    displayName: "Version of xcodebuild"
+      sudo xcode-select --switch "/Applications/Xcode_$(XCODE_VERSION).app/Contents/Developer"
+    displayName: "Select Xcode"
   
   - script: |
       git clone https://$(GitHubAccessToken)@github.com/xamarinhq/calabash-codesign.git ../calabash-codesign
-    displayName: "Clone calabash-codesign repo"
-
-  - script: |
       ../calabash-codesign/apple/create-keychain.sh
     displayName: "Run keychain"
 
