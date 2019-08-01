@@ -42,6 +42,7 @@ jobs:
     displayName: "Make unit-tests"
 
   - script: |
+      set -e
       cd cucumber
       bundle install
       bundle exec cucumber
