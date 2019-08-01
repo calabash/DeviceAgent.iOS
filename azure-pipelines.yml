@@ -23,30 +23,31 @@ jobs:
       calabash-codesign/apple/create-keychain.sh
     displayName: "Download and install keychain"
 
-  - script: bundle install
-    displayName: "Bundle install"
+  - script: make app-agent
+    displayName: "Make app-agent"
 
   - script: make ipa-agent
     displayName: "Make ipa-agent"
-
-  - script: make app-agent
-    displayName: "Make app-agent"
+  
+  - script: make test-ipa
+    displayName: "Make test-ipa"
 
   - script: make test-app
     displayName: "Make test-app"
 
-  - script: make test-ipa
-    displayName: "Make test-ipa"
+  - script: bundle install
+    displayName: "Bundle install"
+
+  - script: |
+      cd cucumber 
+      bundle install
+    displayName: "cd cucumber and bundle install"
 
   - script: make unit-tests
     displayName: "Make unit-tests"
 
-  - script: |
-      set -e
-      cd cucumber
-      bundle install
-      bundle exec cucumber
-    displayName: "Exec cucumber"
+  - script: bundle exec bin/ci/cucumber.rb
+    displayName: "exec cucmber"
 
   - task: PublishTestResults@2
     displayName: 'Publish Test Results'
@@ -54,6 +55,3 @@ jobs:
       testResultsFiles: 'cucumber/reports/junit/*.xml'
       failTaskOnFailedTests: true
     condition: always()
-
-
-    
