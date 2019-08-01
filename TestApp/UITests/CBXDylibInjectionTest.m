@@ -1,6 +1,6 @@
 
 #import <XCTest/XCTest.h>
-#import <AppCenterXCUITestExtensions/AppCenterXCUITestExtensions.h>
+#import "Screenshotter.h"
 
 @interface CBXDylibInjectionTest : XCTestCase
 
@@ -13,15 +13,15 @@
 - (void)setUp {
     [super setUp];
 
-    [XCUIDevice sharedDevice].orientation = UIInterfaceOrientationPortrait;
+    [XCUIDevice sharedDevice].orientation = UIDeviceOrientationPortrait;
     CFRunLoopRunInMode(kCFRunLoopDefaultMode, 2.0, false);
 
-    self.app = [[XCUIApplication alloc] init];
-    [ACTLaunch launchApplication:self.app];
+    self.app = [XCUIApplication new];
+    [self.app launch];
 }
 
 - (void)tearDown {
-    [XCUIDevice sharedDevice].orientation = UIInterfaceOrientationPortrait;
+    [XCUIDevice sharedDevice].orientation = UIDeviceOrientationPortrait;
     CFRunLoopRunInMode(kCFRunLoopDefaultMode, 2.0, false);
 
     self.app = nil;
@@ -39,11 +39,11 @@
 - (void)testDylibsWereInjected {
     [self.app.tabBars.buttons[@"Misc"] tap];
     CFRunLoopRunInMode(kCFRunLoopDefaultMode, 2.0, false);
-    act_label(@"Looking at the Misc page");
+    [Screenshotter screenshotWithTitle:@"Looking at the Misc page"];
 
     [self.app.cells[@"gemuse me row"] tap];
     CFRunLoopRunInMode(kCFRunLoopDefaultMode, 2.0, false);
-    act_label(@"Looking at the Gemüse Me page");
+    [Screenshotter screenshotWithTitle:@"Looking at the Gemüse Me page"];
 
     NSLog(@"process arguments: %@", [[NSProcessInfo processInfo] arguments]);
     NSLog(@"process environment: %@", [[NSProcessInfo processInfo] environment]);

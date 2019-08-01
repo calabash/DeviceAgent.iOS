@@ -26,6 +26,7 @@
 @property(readonly) NSInteger scope;
 
 - (id)_scopedExpansionOfInput:(id)arg1;
+- (BOOL)canBeRemotelyEvaluatedWithCapabilities:(id)arg1;
 - (id)initWithScope:(NSInteger)arg1 predicate:(id)arg2;
 - (id)iteratorForInput:(id)arg1;
 - (id)requiredKeyPathsOrError:(id *)arg1;

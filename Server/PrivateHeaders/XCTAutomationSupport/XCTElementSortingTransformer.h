@@ -14,21 +14,26 @@
 
 #import "XCTElementSetCodableTransformer.h"
 
-@class NSArray;
+#import "XCTCapabilitiesProviding-Protocol.h"
 
-@interface XCTElementSortingTransformer : XCTElementSetCodableTransformer
+@class NSArray, NSString;
+
+@interface XCTElementSortingTransformer : XCTElementSetCodableTransformer <XCTCapabilitiesProviding>
 {
     NSArray *_sortDescriptors;
 }
 
 @property(readonly, copy) NSArray *sortDescriptors;
 
++ (void)provideCapabilitiesToBuilder:(id)arg1;
+- (BOOL)canBeRemotelyEvaluatedWithCapabilities:(id)arg1;
 - (id)initWithSortDescriptors:(id)arg1;
 - (id)iteratorForInput:(id)arg1;
 - (id)requiredKeyPathsOrError:(id *)arg1;
 - (BOOL)supportsAttributeKeyPathAnalysis;
 - (BOOL)supportsRemoteEvaluation;
 - (id)transform:(id)arg1 relatedElements:(id *)arg2;
+
 
 @end
 

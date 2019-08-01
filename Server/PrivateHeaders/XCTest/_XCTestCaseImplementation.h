@@ -14,7 +14,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSDictionary, NSInvocation, NSMutableArray, NSMutableDictionary, NSMutableSet, NSString, NSThread, XCTAttachmentManager, XCTWaiter, XCTestCaseRun;
+@class MXMInstrument, NSArray, NSDictionary, NSInvocation, NSMutableArray, NSMutableDictionary, NSString, NSThread, XCTAttachmentManager, XCTWaiter, XCTestCaseRun;
 
 @interface _XCTestCaseImplementation : NSObject
 {
@@ -22,7 +22,7 @@
     NSThread *_primaryThread;
     XCTestCaseRun *_testCaseRun;
     BOOL _continueAfterFailure;
-    NSMutableSet *_expectations;
+    NSMutableArray *_expectations;
     NSArray *_activePerformanceMetricIDs;
     NSMutableDictionary *_perfMetricsForID;
     NSUInteger _startWallClockTime;
@@ -33,6 +33,7 @@
     BOOL _didMeasureMetrics;
     BOOL _didStartMeasuring;
     BOOL _didStopMeasuring;
+    MXMInstrument *_instrument;
     NSString *_filePathForNestedFailure;
     NSUInteger _lineNumberForNestedFailure;
     NSInteger _runLoopNestingCount;
@@ -56,11 +57,12 @@
 @property BOOL didMeasureMetrics;
 @property BOOL didStartMeasuring;
 @property BOOL didStopMeasuring;
-@property(retain, nonatomic) NSMutableSet *expectations;
+@property(retain, nonatomic) NSMutableArray *expectations;
 @property(retain, nonatomic) NSMutableArray *failureRecords;
 @property(copy) NSString *filePathForNestedFailure;
 @property BOOL hasAttemptedToCaptureScreenshotOnFailure;
 @property BOOL hasDequeuedTeardownBlocks;
+@property(retain) MXMInstrument *instrument;
 @property(retain) NSInvocation *invocation;
 @property BOOL isMeasuringMetrics;
 @property NSUInteger lineNumberForNestedFailure;

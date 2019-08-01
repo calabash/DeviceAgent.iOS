@@ -207,7 +207,15 @@
     XCUIElement *deleteKey = elements[0];
 
     if (!deleteKey.lastSnapshot) {
-        [deleteKey resolve];
+        if ([deleteKey respondsToSelector:@selector(resolve)]) {
+            [deleteKey resolve];
+        } else {
+            NSError *error = nil;
+            if (![deleteKey resolveOrRaiseTestFailure:NO error:&error]) {
+                DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
+                        deleteKey, [error localizedDescription]);
+            }
+        }
     }
 
     return deleteKey;

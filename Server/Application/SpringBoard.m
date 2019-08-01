@@ -196,7 +196,15 @@ typedef enum : NSUInteger {
 
     button = alert.buttons[mark];
     // Resolve before asking if the button exists.
-    [button resolve];
+    if ([button respondsToSelector:@selector(resolve)]) {
+        [button resolve];
+    } else {
+        NSError *error = nil;
+        if (![button resolveOrRaiseTestFailure:NO error:&error]) {
+            DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
+                      button, [error localizedDescription]);
+        }
+    }
 
     // A button with the expected title does not exist.
     // It probably changed after an iOS update.
@@ -252,7 +260,15 @@ typedef enum : NSUInteger {
     }
 
     // Resolve before asking if the button exists.
-    [button resolve];
+    if ([button respondsToSelector:@selector(resolve)]) {
+        [button resolve];
+    } else {
+        NSError *error = nil;
+        if (![button resolveOrRaiseTestFailure:NO error:&error]) {
+            DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
+                      button, [error localizedDescription]);
+        }
+    }
 
     if (!button || !button.exists) {
         return SpringBoardAlertHandlerNoAlert;
@@ -275,7 +291,15 @@ typedef enum : NSUInteger {
             return SpringBoardDismissAlertNoAlert;
         } else {
             XCUIElement *button = alert.buttons[title];
-            [button resolve];
+            if ([button respondsToSelector:@selector(resolve)]) {
+                [button resolve];
+            } else {
+                NSError *error = nil;
+                if (![button resolveOrRaiseTestFailure:NO error:&error]) {
+                    DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
+                            button, [error localizedDescription]);
+                }
+            }
 
             if (!button || !button.exists) {
                 return SpringBoardDismissAlertNoMatchingButton;
@@ -297,7 +321,15 @@ typedef enum : NSUInteger {
 
 - (BOOL)tapAlertButton:(XCUIElement *)alertButton {
     @synchronized (self) {
-        [alertButton resolve];
+        if ([alertButton respondsToSelector:@selector(resolve)]) {
+            [alertButton resolve];
+        } else {
+            NSError *error = nil;
+            if (![alertButton resolveOrRaiseTestFailure:NO error:&error]) {
+                DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
+                        alertButton, [error localizedDescription]);
+            }
+        }
         CGPoint hitPoint = [self hitPointForAlertButton:alertButton];
 
         if (hitPoint.x < 0 || hitPoint.y < 0) {
@@ -364,7 +396,15 @@ typedef enum : NSUInteger {
 }
 
 - (CGPoint)hitPointForAlertButton:(XCUIElement *)alertButton {
-    [alertButton resolve];
+    if ([alertButton respondsToSelector:@selector(resolve)]) {
+        [alertButton resolve];
+    } else {
+        NSError *error = nil;
+        if (![alertButton resolveOrRaiseTestFailure:NO error:&error]) {
+            DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
+                    alertButton, [error localizedDescription]);
+        }
+    }
 
     XCElementSnapshot *snapshot = alertButton.lastSnapshot;
 

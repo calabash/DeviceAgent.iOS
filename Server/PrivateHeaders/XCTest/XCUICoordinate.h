@@ -32,13 +32,17 @@
 @property(readonly) XCUIElement *referencedElement;
 @property(readonly) CGPoint screenPoint;
 
+- (void)_pressWithPressure:(double)arg1 pressDuration:(double)arg2 holdDuration:(double)arg3 releaseDuration:(double)arg4 activityTitle:(id)arg5;
 - (CGPoint)_untransformedScreenPoint;
 - (id)coordinateWithOffset:(CGVector)arg1;
+- (id)device;
 - (void)doubleTap;
+- (void)forcePress;
 - (id)initWithCoordinate:(id)arg1 pointsOffset:(CGVector)arg2;
 - (id)initWithElement:(id)arg1 normalizedOffset:(CGVector)arg2;
 - (void)pressForDuration:(double)arg1;
 - (void)pressForDuration:(double)arg1 thenDragToCoordinate:(id)arg2;
+- (void)pressWithPressure:(double)arg1 duration:(double)arg2;
 - (void)tap;
 
 @end

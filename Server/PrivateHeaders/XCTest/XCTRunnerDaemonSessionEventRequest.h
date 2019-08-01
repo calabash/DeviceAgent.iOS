@@ -27,8 +27,8 @@
 @property(readonly) XCSynthesizedEventRecord *event;
 @property double upperBoundOnDuration;
 
-- (void)cancel;
 - (id)initWithEvent:(id)arg1;
+- (void)invalidate;
 
 
 @end

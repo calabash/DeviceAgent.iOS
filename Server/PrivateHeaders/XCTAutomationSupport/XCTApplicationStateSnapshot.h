@@ -19,7 +19,6 @@
 @interface XCTApplicationStateSnapshot : NSObject <NSSecureCoding>
 {
     NSInteger _processID;
-    NSInteger _bridgedProcessID;
     NSString *_bundleID;
     NSString *_path;
     NSUInteger _runState;
@@ -28,7 +27,6 @@
 }
 
 @property(readonly) NSUInteger activationPolicy;
-@property(readonly) NSInteger bridgedProcessID;
 @property(readonly, copy) NSString *bundleID;
 @property(readonly) NSUInteger eventID;
 @property(readonly, copy) NSString *path;
@@ -36,7 +34,6 @@
 @property(readonly) NSUInteger runState;
 
 - (id)initWithBundleID:(id)arg1 path:(id)arg2 runState:(NSUInteger)arg3 processID:(NSInteger)arg4 activationPolicy:(NSUInteger)arg5 eventID:(NSUInteger)arg6;
-- (id)initWithBundleID:(id)arg1 path:(id)arg2 runState:(NSUInteger)arg3 processID:(NSInteger)arg4 bridgedProcessID:(NSInteger)arg5 activationPolicy:(NSUInteger)arg6 eventID:(NSUInteger)arg7;
 
 @end
 

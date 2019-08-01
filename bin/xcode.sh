@@ -31,6 +31,16 @@ function xcode_gte_93 {
   fi
 }
 
+function xcode_gte_11 {
+  local version=$(xcode_version)
+  local major=$(echo $version | cut -d. -f1)
+  if (( ${major} >= 11 )); then
+    echo -n "true"
+  else
+    echo -n "false"
+  fi
+}
+
 function simulator_app_path {
   if [ "${DEVELOPER_DIR}" = "" ]; then
     local dev_dir=$(xcode-select --print-path)

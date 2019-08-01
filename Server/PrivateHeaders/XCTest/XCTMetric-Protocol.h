@@ -5,6 +5,7 @@
 //  Copyright (C) 1997-2019 Steve Nygard.
 //
 
+
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <XCTest/XCUIElementTypes.h>
@@ -12,11 +13,13 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-#import "XCUIIPhoneOSDevice-Protocol.h"
+@class NSArray, XCTPerformanceMeasurementTimestamp;
 
-@protocol XCUIIOSDevice <XCUIIPhoneOSDevice>
-- (void)holdHomeButtonForDuration:(double)arg1;
-- (void)pressButton:(NSInteger)arg1;
-- (void)pressLockButton;
+@protocol XCTMetric <NSCopying, NSObject>
+- (NSArray *)reportMeasurementsFromStartTime:(XCTPerformanceMeasurementTimestamp *)arg1 toEndTime:(XCTPerformanceMeasurementTimestamp *)arg2 error:(id *)arg3;
+
+@optional
+- (void)didStopMeasuring;
+- (void)willBeginMeasuring;
 @end
 

@@ -15,6 +15,7 @@
 
 @class NSMutableArray;
 
+__attribute__((visibility("hidden")))
 @interface XCTElementSnapshotDescendantsEnumerator : NSEnumerator
 {
     NSEnumerator *_innerEnumerator;
