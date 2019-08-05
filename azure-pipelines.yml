@@ -11,12 +11,25 @@ jobs:
         XCODE_VERSION: '11'
   pool:
     vmImage: $(IMAGE_POOL)
-  
+
   steps:
 
-  - script: sudo xcode-select --switch "/Applications/Xcode_$(XCODE_VERSION).app/Contents/Developer"
+  - script: |
+      set -e
+      sudo xcode-select --switch "/Applications/Xcode_$(XCODE_VERSION).app/Contents/Developer"
+      echo "Xcode version: $(xcrun xcodebuild -version)"
+      echo "Xcode path: $(xcrun -f xcodebuild)"
+      echo "Xcode select path: $(xcode-select --print-path)"
     displayName: "Select Xcode $(XCODE_VERSION)"
-  
+
+
+  - script: |
+      set -e
+      bundle install
+      ruby -v
+      echo "install: --no-document --env-shebang\nupdate:  --no-document --env-shebang" > ~/.gemrc
+    displayName: "Prepare Ruby Environment"
+
   - script: |
       set -e
       git clone https://$(GitHubAccessToken)@github.com/xamarinhq/calabash-codesign.git
@@ -28,20 +41,12 @@ jobs:
 
   - script: make ipa-agent
     displayName: "Make ipa-agent"
-  
+
   - script: make test-ipa
     displayName: "Make test-ipa"
 
   - script: make test-app
     displayName: "Make test-app"
-
-  - script: bundle install
-    displayName: "Bundle install"
-
-  - script: |
-      cd cucumber 
-      bundle install
-    displayName: "cd cucumber and bundle install"
 
   - script: make unit-tests
     displayName: "Make unit-tests"
