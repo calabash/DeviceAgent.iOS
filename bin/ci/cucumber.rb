@@ -48,7 +48,7 @@ Bundler.with_clean_env do
      "-f", "json", "-o", "reports/cucumber.json",
      "-f", "junit", "-o", "reports/junit",
      "-f", "pretty"
-		]
+    ]
 
 
     RunLoop.log_unix_cmd(args.join(" "))
