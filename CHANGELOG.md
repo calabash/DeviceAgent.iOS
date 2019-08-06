@@ -1,3 +1,8 @@
+### 1.4.0
+
+* Add Xcode 11 support #317 #318 #319 #320 #321 #322
+* Cleanup #324
+
 ### 1.3.4
 
 No changes the DeviceAgent.iOS project.
