@@ -73,7 +73,7 @@ module DeviceAgent
         sleep(0.5)
         count -= 1
 
-      end while count > 0 && query(tabname).empty?
+      end while count > 0 && query({marked: tabname}).empty?
     end
 
     def ios_version
