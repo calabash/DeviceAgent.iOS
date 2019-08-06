@@ -14,7 +14,7 @@
 
 #import "XCTElementSnapshotAttributeDataSource-Protocol.h"
 
-@class XCTElementQuery, XCTElementQueryResults;
+@class XCTCapabilities, XCTElementQuery, XCTElementQueryResults;
 
 @protocol XCTRunnerAutomationSession <XCTElementSnapshotAttributeDataSource>
 - (XCTElementQueryResults *)matchesForQuery:(XCTElementQuery *)arg1 error:(id *)arg2;

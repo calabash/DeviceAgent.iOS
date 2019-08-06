@@ -18,7 +18,7 @@
 #import "XCTConnectionAccepting-Protocol.h"
 #import "XCTRemoteApplicationAutomationTarget-Protocol.h"
 
-@class DTXConnection, DTXProxyChannel, NSMutableArray, NSString, XCTAnimationsIdleNotifier, XCTElementQueryProcessor, XCTMainRunLoopIdleNotifier;
+@class DTXConnection, DTXProxyChannel, NSMutableArray, NSString, XCTAnimationsIdleNotifier, XCTCapabilities, XCTElementQueryProcessor, XCTMainRunLoopIdleNotifier;
 @protocol OS_dispatch_queue;
 
 @interface XCTAutomationSession : NSObject <XCTRemoteApplicationAutomationTarget, XCTConnectionAccepting, XCTAutomationTarget>
@@ -30,6 +30,7 @@
     XCTAnimationsIdleNotifier *_animationIdleNotifier;
     DTXConnection *_dtxConnection;
     DTXProxyChannel *_proxyChannel;
+    XCTCapabilities *_remoteInterfaceCapabilities;
 }
 
 @property(readonly) XCTAnimationsIdleNotifier *animationIdleNotifier;
@@ -38,14 +39,18 @@
 @property(readonly) DTXProxyChannel *proxyChannel;
 @property(readonly) XCTElementQueryProcessor *queryProcessor;
 @property(readonly) NSObject<OS_dispatch_queue> *queue;
+@property(retain) XCTCapabilities *remoteInterfaceCapabilities;
 @property(readonly) XCTMainRunLoopIdleNotifier *runLoopIdleMonitor;
 
++ (id)capabilitiesBuilder;
 - (id)_XCT_attributesForElement:(id)arg1 attributes:(id)arg2;
+- (id)_XCT_exchangeCapabilities:(id)arg1;
 - (id)_XCT_fetchMatchesForQuery:(id)arg1;
 - (id)_XCT_notifyWhenAnimationsAreIdle;
 - (id)_XCT_notifyWhenMainRunLoopIsIdle;
 - (BOOL)acceptNewConnection:(id)arg1;
 - (void)attributesForElement:(id)arg1 attributes:(id)arg2 reply:(CDUnknownBlockType)arg3;
+- (void)exchangeCapabilities:(id)arg1 reply:(CDUnknownBlockType)arg2;
 - (void)fetchMatchesForQuery:(id)arg1 reply:(CDUnknownBlockType)arg2;
 - (void)listenForRemoteConnectionViaSerializedTransportWrapper:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)notifyWhenAnimationsAreIdle:(CDUnknownBlockType)arg1;

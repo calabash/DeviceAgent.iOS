@@ -15,7 +15,7 @@
 #import "XCUIApplicationPlatformServicesProviderDelegate-Protocol.h"
 #import "XCUIApplicationProcessTracker-Protocol.h"
 
-@class NSNumber, NSString, XCUIApplicationImpl, XCUIApplicationProcess, XCUIApplicationRegistry;
+@class NSNumber, NSSet, NSString, XCUIApplicationImpl, XCUIApplicationProcess, XCUIApplicationRegistry;
 
 @protocol XCUIApplicationMonitor <NSObject, XCUIApplicationProcessTracker, XCUIApplicationPlatformServicesProviderDelegate>
 - (void)acquireBackgroundAssertionForPID:(NSInteger)arg1 reply:(void (^)(BOOL))arg2;

@@ -45,9 +45,6 @@
 @property(readonly) id <XCTRunnerAutomationSession> automationSession;
 @property(readonly) BOOL background;
 @property(readonly) BOOL backgroundInteractionAllowed;
-@property(readonly) XCAccessibilityElement *bridgedProcessAccessibilityElement;
-@property(readonly) id <XCTRunnerAutomationSession> bridgedProcessAutomationSession;
-@property(readonly) NSInteger bridgedProcessID;
 @property(readonly) NSString *bundleID;
 @property NSUInteger currentInteractionOptions;
 @property(readonly) id <XCUIDevice> device;
@@ -100,7 +97,7 @@
 - (void)launch;
 - (id)query;
 - (void)resetAlertCount;
-- (void)resolveHandleUIInterruption:(BOOL)arg1;
+- (BOOL)resolveOrRaiseTestFailure:(BOOL)arg1 error:(id *)arg2;
 - (BOOL)setFauxCollectionViewCellsEnabled:(BOOL)arg1 error:(id *)arg2;
 - (void)terminate;
 - (BOOL)waitForState:(NSUInteger)arg1 timeout:(double)arg2;

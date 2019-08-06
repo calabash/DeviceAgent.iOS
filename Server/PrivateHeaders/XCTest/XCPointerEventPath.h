@@ -23,10 +23,14 @@
     BOOL _immutable;
     NSUInteger _pathType;
     NSUInteger _index;
+    NSUInteger _deviceID;
+    CGPoint _initialMouseLocation;
 }
 
+@property NSUInteger deviceID;
 @property BOOL immutable;
 @property NSUInteger index;
+@property(readonly) CGPoint initialMouseLocation;
 @property(readonly) NSUInteger pathType;
 @property(readonly) NSArray *pointerEvents;
 
@@ -34,15 +38,19 @@
 - (void)dragWithButton:(NSUInteger)arg1 toPoint:(CGPoint)arg2 atOffset:(double)arg3 duration:(double)arg4;
 - (id)firstEventAfterOffset:(double)arg1;
 - (id)initForMouseEvents;
+- (id)initForMouseEventsAtLocation:(CGPoint)arg1;
+- (id)initForMouseEventsWithDeviceID:(NSUInteger)arg1 atLocation:(CGPoint)arg2;
 - (id)initForTextInput;
 - (id)initForTouchAtPoint:(CGPoint)arg1 offset:(double)arg2;
 - (id)initForTouchBarAtPoint:(CGPoint)arg1 offset:(double)arg2;
 - (id)lastEventBeforeOffset:(double)arg1;
 - (void)liftUpAtOffset:(double)arg1;
+- (void)moveMouseToPoint:(CGPoint)arg1 atOffset:(double)arg2 duration:(double)arg3;
 - (void)moveToPoint:(CGPoint)arg1 atOffset:(double)arg2;
 - (void)pressButton:(NSUInteger)arg1 atOffset:(double)arg2 clickCount:(NSUInteger)arg3;
 - (void)pressDownAtOffset:(double)arg1;
 - (void)pressDownWithPressure:(double)arg1 atOffset:(double)arg2;
+- (void)pressDownWithPressure:(double)arg1 stage:(NSUInteger)arg2 phase:(NSUInteger)arg3 atOffset:(double)arg4;
 - (void)releaseButton:(NSUInteger)arg1 atOffset:(double)arg2 clickCount:(NSUInteger)arg3;
 - (void)scrollAtPoint:(CGPoint)arg1 byLines:(NSInteger)arg2 atOffset:(double)arg3;
 - (void)scrollWithDeltaVector:(CGVector)arg1 atOffset:(double)arg2 duration:(double)arg3;

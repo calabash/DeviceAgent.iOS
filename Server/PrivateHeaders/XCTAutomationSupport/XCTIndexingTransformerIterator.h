@@ -19,6 +19,7 @@
 @class NSSet, NSString, XCElementSnapshot, XCTElementIndexingTransformer;
 @protocol XCTElementSetTransformer;
 
+__attribute__((visibility("hidden")))
 
 @protocol XCTElementSetTransformer;
 

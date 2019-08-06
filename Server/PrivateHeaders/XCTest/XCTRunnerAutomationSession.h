@@ -16,28 +16,30 @@
 
 #import "XCTRunnerAutomationSession-Protocol.h"
 
-@class NSString, NSXPCConnection;
-@protocol XCUICapabilities;
+@class NSString, NSXPCConnection, XCTCapabilities;
 
 @interface XCTRunnerAutomationSession : NSObject <XCTRunnerAutomationSession>
 {
     NSInteger _connectionPid;
     NSXPCConnection *_connection;
-    id <XCUICapabilities> _capabilities;
+    XCTCapabilities *_remoteInterfaceCapabilities;
 }
 
 @property(readonly) BOOL allowsRemoteAccess;
-@property(readonly) id <XCUICapabilities> capabilities;
 @property(readonly) NSXPCConnection *connection;
 @property(readonly) NSInteger connectionPid;
+@property(retain) XCTCapabilities *remoteInterfaceCapabilities;
 @property(readonly) BOOL supportsAnimationsIdleNotifications;
 @property(readonly) BOOL supportsFetchingAttributesForElement;
 @property(readonly) BOOL supportsHostedViewCoordinateTransformations;
 @property(readonly) BOOL supportsMainRunLoopIdleNotifications;
 @property(readonly) BOOL usePointTransformationsForFrameConversions;
 
++ (id)exportedCapabilities;
++ (id)legacyCapabilitiesForOSVersion:(CDStruct_2ec95fd7)arg1 platform:(NSUInteger)arg2 error:(id *)arg3;
++ (void)requestSessionWithEndpoint:(id)arg1 pid:(NSInteger)arg2 completion:(CDUnknownBlockType)arg3;
 - (id)attributesForElement:(id)arg1 attributes:(id)arg2 error:(id *)arg3;
-- (id)initWithEndpoint:(id)arg1 pid:(NSInteger)arg2 capabilities:(id)arg3;
+- (id)initWithConnection:(id)arg1 pid:(NSInteger)arg2 remoteInterfaceCapabilities:(id)arg3;
 - (id)matchesForQuery:(id)arg1 error:(id *)arg2;
 - (void)notifyWhenAnimationsAreIdle:(CDUnknownBlockType)arg1;
 - (void)notifyWhenMainRunLoopIsIdle:(CDUnknownBlockType)arg1;

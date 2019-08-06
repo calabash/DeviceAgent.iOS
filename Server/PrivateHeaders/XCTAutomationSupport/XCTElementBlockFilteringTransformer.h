@@ -30,6 +30,7 @@
 @property(readonly) BOOL supportsAttributeKeyPathAnalysis;
 @property(readonly) BOOL supportsRemoteEvaluation;
 
+- (BOOL)canBeRemotelyEvaluatedWithCapabilities:(id)arg1;
 - (id)initWithBlockFilter:(CDUnknownBlockType)arg1;
 - (id)iteratorForInput:(id)arg1;
 - (id)requiredKeyPathsOrError:(id *)arg1;

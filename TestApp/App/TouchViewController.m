@@ -24,6 +24,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *zeroButton;
 - (IBAction)zeroButtonTouched:(id)sender;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *zeroButtonHeightConstraint;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *zeroButtonWidthConstraint;
+
 @property (weak, nonatomic) IBOutlet UIButton *animatedButton;
 - (IBAction)animatedButtonTouched:(id)sender;
 
@@ -144,16 +148,17 @@
 }
 
 - (IBAction)zeroButtonTouched:(id)sender {
-    __weak UIButton *button = self.zeroButton;
-
-    CGSize originalSize = button.size;
-    button.size = CGSizeZero;
+    CGSize originalSize = CGSizeMake(self.zeroButtonWidthConstraint.constant, self.zeroButtonHeightConstraint.constant);
+    self.zeroButtonWidthConstraint.constant = 0;
+    self.zeroButtonHeightConstraint.constant = 0;
 
     // If we use an animation, the button remains hittable!
     dispatch_time_t when = dispatch_time(DISPATCH_TIME_NOW,
                                          4.0 * NSEC_PER_SEC);
     dispatch_after(when, dispatch_get_main_queue(), ^{
-        button.size = originalSize;
+        self.zeroButtonWidthConstraint.constant = originalSize.width;
+        self.zeroButtonHeightConstraint.constant = originalSize.height;
+        
     });
 }
 

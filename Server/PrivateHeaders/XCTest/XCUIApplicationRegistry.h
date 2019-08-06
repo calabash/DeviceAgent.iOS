@@ -15,13 +15,16 @@
 #import <objc/NSObject.h>
 
 @class NSDictionary;
+@protocol XCUIApplicationRegistryProvider;
 
 @interface XCUIApplicationRegistry : NSObject
 {
     NSDictionary *_testDependencies;
     NSDictionary *_userOverrides;
+    id <XCUIApplicationRegistryProvider> _platformProvider;
 }
 
+@property(retain) id <XCUIApplicationRegistryProvider> platformProvider;
 @property(copy) NSDictionary *testDependencies;
 @property(copy) NSDictionary *userOverrides;
 

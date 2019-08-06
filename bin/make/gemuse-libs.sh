@@ -73,8 +73,9 @@ function fat_lib_with_lipo {
   xcrun lipo -create "${arm_lib}" "${sim_lib}" \
     -output "${fat_lib}"
 
-  "${HOME}/.calabash/calabash-codesign/apple/resign-dylib.sh" \
-    "${fat_lib}"
+  xcrun codesign --verbose --force \
+    --sign "iPhone Developer: Karl Krukow (YTTN6Y2QS9)" \
+    --keychain "${HOME}/.calabash/Calabash.keychain" "${fat_lib}"
 
   local version=$(xcrun strings "${fat_lib}" | \
     grep -E 'kCBXLibVersion' |  head -n1 | cut -f2- -d":")

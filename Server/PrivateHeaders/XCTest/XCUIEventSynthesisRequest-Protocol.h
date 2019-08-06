@@ -16,6 +16,6 @@
 @class XCSynthesizedEventRecord;
 
 @protocol XCUIEventSynthesisRequest <NSObject>
-- (void)cancel;
+- (void)invalidate;
 @end
 

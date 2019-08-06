@@ -14,6 +14,7 @@
 @protocol OS_xpc_object;
 
 @interface NSValue (XCTestAdditions)
++ (id)xct_valueWithCGRect:(CGRect)arg1;
 - (id)xct_contentDescription;
 @end
 

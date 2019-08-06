@@ -17,7 +17,7 @@
 #import "XCUIApplicationStateTypedef.h"
 #endif
 
-
+#import "CBXConstants.h"
 
 // Defined in XCTAutomationSupport framework, so it is safe to import
 // in any context.
@@ -62,10 +62,13 @@
 @interface XCUIElement (CBXAdditions)
 
 - (XCElementSnapshot *_Nullable)lastSnapshot;
-- (void)resolve;
+- (void)resolveOrRaiseTestFailure;
+- (BOOL)resolveOrRaiseTestFailure:(BOOL)arg1 error:(id _Nonnull *_Nonnull)arg2;
 - (XCUICoordinate *_Nonnull)hitPointCoordinate;
 - (XCUIElementQuery *_Nonnull)query;
 
+// Removed in Xcode 11.0
+- (void)resolve;
 @end
 
 @interface XCElementSnapshot (CBXAdditions)

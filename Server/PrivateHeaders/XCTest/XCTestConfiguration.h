@@ -45,7 +45,6 @@
     NSArray *_targetApplicationArguments;
     XCTAggregateSuiteRunStatistics *_aggregateStatisticsBeforeCrash;
     NSString *_automationFrameworkPath;
-    NSString *_bridgedProcessAutomationFrameworkPath;
     NSInteger _systemAttachmentLifetime;
     NSInteger _userAttachmentLifetime;
     NSInteger _testExecutionOrdering;
@@ -57,7 +56,6 @@
 @property(copy) NSString *automationFrameworkPath;
 @property(copy) NSString *baselineFileRelativePath;
 @property(copy, nonatomic) NSURL *baselineFileURL;
-@property(copy) NSString *bridgedProcessAutomationFrameworkPath;
 @property BOOL disablePerformanceMetrics;
 @property BOOL emitOSLogs;
 @property BOOL gatherLocalizableStringsData;

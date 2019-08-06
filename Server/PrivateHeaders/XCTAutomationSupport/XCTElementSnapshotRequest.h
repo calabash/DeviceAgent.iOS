@@ -14,7 +14,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSDictionary, NSError, XCAccessibilityElement, XCElementSnapshot, XCTAccessibilitySnapshot_iOS;
+@class NSArray, NSDictionary, NSError, XCAXCycleDetector, XCAccessibilityElement, XCElementSnapshot, XCTAccessibilitySnapshot_iOS, XCTTimeoutControls;
 @protocol NSCopying, OS_dispatch_queue;
 
 @interface XCTElementSnapshotRequest : NSObject
@@ -26,8 +26,8 @@
     NSDictionary *_parameters;
     XCElementSnapshot *_elementSnapshot;
     id <NSCopying> _accessibilitySnapshot;
-    double _mainThreadResponsivenessTolerance;
-    double _snapshotDurationTolerance;
+    XCTTimeoutControls *_timeoutControls;
+    XCAXCycleDetector *_cycleDetector;
     NSObject<OS_dispatch_queue> *_queue;
     NSError *_loadError;
 }
@@ -35,15 +35,15 @@
 @property(copy) id <NSCopying> accessibilitySnapshot;
 @property(readonly) XCTAccessibilitySnapshot_iOS *accessibilitySnapshot_iOS;
 @property(readonly) NSArray *attributes;
+@property(retain) XCAXCycleDetector *cycleDetector;
 @property(readonly) XCAccessibilityElement *element;
 @property(retain) XCElementSnapshot *elementSnapshot;
 @property BOOL hasLoaded;
 @property(retain) NSError *loadError;
 @property BOOL loadResult;
-@property double mainThreadResponsivenessTolerance;
 @property(copy) NSDictionary *parameters;
 @property(readonly) NSObject<OS_dispatch_queue> *queue;
-@property double snapshotDurationTolerance;
+@property(readonly) XCTTimeoutControls *timeoutControls;
 
 - (id)_childrenOfElement:(id)arg1 userTestingSnapshot:(id)arg2 frameTransformer:(CDUnknownBlockType)arg3 outError:(id *)arg4;
 - (id)_snapshotFromRemoteElementUserTestingSnapshot:(id)arg1 parentElement:(id)arg2 error:(id *)arg3;
@@ -51,7 +51,7 @@
 - (id)accessibilitySnapshotOrError:(id *)arg1;
 - (id)elementSnapshotOrError:(id *)arg1;
 - (id)initWithElement:(id)arg1 attributes:(id)arg2 parameters:(id)arg3;
-- (id)initWithElement:(id)arg1 rawAttributes:(id)arg2 parameters:(id)arg3;
+- (id)initWithElement:(id)arg1 attributes:(id)arg2 parameters:(id)arg3 timeoutControls:(id)arg4;
 - (BOOL)loadSnapshotAndReturnError:(id *)arg1;
 - (id)safeParametersForParameters:(id)arg1;
 
