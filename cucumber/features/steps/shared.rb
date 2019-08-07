@@ -42,38 +42,31 @@ module DeviceAgent
     end
 
     def touch_tab(tabname)
-      count = 1000
-      begin
-        if keyboard_visible?
-          if !query({marked: "Done", type: "Button"}).empty?
-            touch({marked:"Done", type: "Button"})
-          elsif !query({marked: "dismiss text view keyboard"}).empty?
-            touch({marked: "dismiss text view keyboard"})
-          elsif !query({marked: "Search", type: "Button"}).empty?
-            touch({marked: "Search", type: "Button"})
-          elsif !query({marked: "Hide keyboard", type: "Button"}).empty?
-            touch({marked: "Hide keyboard", type: "Button"}).empty?
-          else
-            raise "Keyboard is showing, but there is no way to dismiss it"
-          end
+      if keyboard_visible?
+        if !query({marked: "Done", type: "Button"}).empty?
+          touch({marked:"Done", type: "Button"})
+        elsif !query({marked: "dismiss text view keyboard"}).empty?
+          touch({marked: "dismiss text view keyboard"})
+        elsif !query({marked: "Search", type: "Button"}).empty?
+          touch({marked: "Search", type: "Button"})
+        elsif !query({marked: "Hide keyboard", type: "Button"}).empty?
+          touch({marked: "Hide keyboard", type: "Button"}).empty?
+        else
+          raise "Keyboard is showing, but there is no way to dismiss it"
         end
+      end
 
-        wait_for_animations
+      wait_for_animations
 
+      touch({marked: tabname})
+      wait_for_animations
+      # Get back to the root view controller of the tab.
+      if tabname == "Pan" || tabname == "Misc"
         touch({marked: tabname})
         wait_for_animations
-        # Get back to the root view controller of the tab.
-        if tabname == "Pan" || tabname == "Misc"
-          touch({marked: tabname})
-          wait_for_animations
-        end
-        mark = "#{tabname.downcase} page"
-        wait_for_view({marked: mark})
-
-        sleep(0.5)
-        count -= 1
-
-      end while count > 0 && query({marked: tabname}).empty?
+      end
+      mark = "#{tabname.downcase} page"
+      wait_for_view({marked: mark})
     end
 
     def ios_version
