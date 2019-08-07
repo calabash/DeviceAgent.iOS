@@ -1,3 +1,4 @@
+# `SkipCucumberJob` variable points to the matrix case that will skip performing of cucumber tests
 variables:
   SkipCucumberJob: 'Mojave-Xcode-11.0'
 
