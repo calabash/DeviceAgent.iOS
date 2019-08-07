@@ -1,7 +1,3 @@
-# `SkipCucumberJob` variable points to the matrix case that will skip performing of cucumber tests
-variables:
-  SkipCucumberJob: 'Mojave-Xcode-11.0'
-
 jobs:
 
 - job:
@@ -57,7 +53,9 @@ jobs:
 
   - script: bundle exec bin/ci/cucumber.rb
     displayName: "exec cucmber"
-    condition: and(succeeded(), ne(variables['Agent.JobName'], variables['SkipCucumberJob']))
+    # We have to skip cucmber tests for Xcode 11 due to its instability.
+    # This tests will be enabled for the stable Xcode 11 release
+    condition: and(succeeded(), ne(variables['XCODE_VERSION'], '11'))
 
   - task: PublishTestResults@2
     displayName: 'Publish Test Results'
