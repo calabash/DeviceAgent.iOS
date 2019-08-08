@@ -57,6 +57,16 @@ jobs:
     # This tests will be enabled for the stable Xcode 11 release
     condition: and(succeeded(), ne(variables['XCODE_VERSION'], '11'))
 
+  # azureStorage* env vars are defined in the pipeline UI as secret variables
+  - bash: "./bin/ci/az-publish.sh"
+    env:
+      AZURE_STORAGE_ACCOUNT: $(azureStorageAccount)
+      AZURE_STORAGE_KEY: $(azureStorageKey)
+      AZURE_STORAGE_CONNECTION_STRING: $(azureStorageConnectionString)
+      SOURCE_BRANCH: $(Build.SourceBranch)
+    displayName: "Publish to Azure Blob Storage"
+    condition: and(succeeded(), eq(variables['XCODE_VERSION'], '10.2.1'))
+
   - task: PublishTestResults@2
     displayName: 'Publish Test Results'
     inputs:
