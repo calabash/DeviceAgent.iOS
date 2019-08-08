@@ -7,11 +7,10 @@ set -eo pipefail
 # $1 => SOURCE PATH
 # $2 => TARGET NAME
 function azupload {
-  echo "Dry run: ${1} published with name: ${2}"
-# az storage blob upload \
-#   --container-name ios-device-agent \
-#   --file "${1}" \
-#   --name "${2}"
+  az storage blob upload \
+    --container-name ios-device-agent \
+    --file "${1}" \
+    --name "${2}"
   echo "${1} artifact uploaded with name ${2}"
 }
 
