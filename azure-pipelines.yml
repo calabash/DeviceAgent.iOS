@@ -71,7 +71,7 @@ jobs:
     displayName: "Make unit-tests"
 
   - script: bundle exec bin/ci/cucumber.rb
-    displayName: "exec cucmber"
+    displayName: "exec cucumber"
     # We have to skip cucmber tests for Xcode 11 due to its instability.
     # This tests will be enabled for the stable Xcode 11 release
     condition: and(succeeded(), ne(variables['XCODE_VERSION'], '11'))
