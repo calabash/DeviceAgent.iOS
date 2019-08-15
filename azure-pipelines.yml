@@ -22,9 +22,9 @@ jobs:
 - job:
   strategy:
     matrix:
-      Mojave-Xcode-10.2.1:
+      Mojave-Xcode-10.3:
         IMAGE_POOL: 'macOS-10.14'
-        XCODE_VERSION: '10.2.1'
+        XCODE_VERSION: '10.3'
       Mojave-Xcode-11.0:
         IMAGE_POOL: 'macOS-10.14'
         XCODE_VERSION: '11'
@@ -71,7 +71,7 @@ jobs:
     displayName: "Make unit-tests"
 
   - script: bundle exec bin/ci/cucumber.rb
-    displayName: "exec cucmber"
+    displayName: "exec cucumber"
     # We have to skip cucmber tests for Xcode 11 due to its instability.
     # This tests will be enabled for the stable Xcode 11 release
     condition: and(succeeded(), ne(variables['XCODE_VERSION'], '11'))
