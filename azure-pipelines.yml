@@ -30,6 +30,8 @@ jobs:
         XCODE_VERSION: '11'
   pool:
     vmImage: $(IMAGE_POOL)
+  variables:
+  - group: XTCRunTimeArtifactsCI
 
   steps:
 
@@ -51,7 +53,7 @@ jobs:
 
   - script: |
       set -e
-      git clone https://$(GitHubAccessToken)@github.com/xamarinhq/calabash-codesign.git
+      git clone https://$(CalabashKeychainGitHubAccessToken)@github.com/xamarinhq/calabash-codesign.git
       calabash-codesign/apple/create-keychain.sh
     displayName: "Download and install keychain"
 
@@ -79,9 +81,9 @@ jobs:
   # azureStorage* env vars are defined in the pipeline UI as secret variables
   - bash: "./bin/ci/az-publish.sh"
     env:
-      AZURE_STORAGE_ACCOUNT: $(azureStorageAccount)
-      AZURE_STORAGE_KEY: $(azureStorageKey)
-      AZURE_STORAGE_CONNECTION_STRING: $(azureStorageConnectionString)
+      AZURE_STORAGE_ACCOUNT: $(AzureStorageAccount)
+      AZURE_STORAGE_KEY: $(AzureStorageKey)
+      AZURE_STORAGE_CONNECTION_STRING: $(AzureStorageConnectionString)
       SOURCE_BRANCH: $(Build.SourceBranch)
     displayName: "Publish to Azure Blob Storage"
     condition: and(succeeded(), eq(variables['Agent.JobName'], variables['mainJob']), startsWith(variables['Build.SourceBranch'], 'refs/tags/'))
