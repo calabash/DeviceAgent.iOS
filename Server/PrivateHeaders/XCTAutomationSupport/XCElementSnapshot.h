@@ -15,8 +15,8 @@
 #import <objc/NSObject.h>
 
 
-@class NSArray, NSDictionary, NSEnumerator, NSIndexPath, NSSet, NSString, XCAccessibilityElement, XCTLocalizableStringInfo, XCUIApplication;
-@protocol XCTElementSnapshotAttributeDataSource;
+@class NSArray, NSDictionary, NSEnumerator, NSIndexPath, NSSet, NSString, XCAccessibilityElement, XCTLocalizableStringInfo;
+@protocol XCTElementSnapshotAttributeDataSource, XCUIElementSnapshotApplication;
 
 
 @protocol XCTElementSnapshotAttributeDataSource;
@@ -30,7 +30,7 @@
     BOOL _hasFocus;
     BOOL _hasKeyboardFocus;
     BOOL _isTruncatedValue;
-    XCUIApplication *_application;
+    id <XCUIElementSnapshotApplication> _application;
     NSUInteger _generation;
     id <XCTElementSnapshotAttributeDataSource> _dataSource;
     NSString *_title;
@@ -55,7 +55,7 @@
 
 @property(readonly, copy, nonatomic) XCAccessibilityElement *accessibilityElement;
 @property(copy) NSDictionary *additionalAttributes;
-@property(nonatomic) XCUIApplication *application;
+@property(nonatomic) __weak id <XCUIElementSnapshotApplication> application;
 @property(readonly) CGPoint center;
 @property(readonly) double centerX;
 @property(readonly) double centerY;

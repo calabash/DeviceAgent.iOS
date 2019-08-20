@@ -65,6 +65,7 @@
 @property(readonly, copy) XCUIElementQuery *icons;
 @property(readonly) NSString *identifier;
 @property(readonly, copy) XCUIElementQuery *images;
+@property(readonly, copy) XCUIElement *includingNonModalElements;
 @property(readonly, copy) XCUIElementQuery *incrementArrows;
 @property(readonly, nonatomic) NSInteger interfaceOrientation;
 @property(readonly, getter=isEnabled) BOOL enabled;
