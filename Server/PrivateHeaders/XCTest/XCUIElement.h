@@ -41,6 +41,7 @@
 @property(readonly, copy) XCUIElementQuery *collectionViews;
 @property(readonly, copy) XCUIElementQuery *colorWells;
 @property(readonly, copy) XCUIElementQuery *comboBoxes;
+@property(readonly, copy) NSString *compactDescription;
 @property(readonly, copy) XCUIElementQuery *datePickers;
 @property(readonly, copy) XCUIElementQuery *decrementArrows;
 @property(readonly) id <XCUIDevice> device;

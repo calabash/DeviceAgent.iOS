@@ -80,6 +80,7 @@
 @property(readonly) BOOL isInRootMenu;
 @property(readonly) BOOL isMacOS;
 @property BOOL isMainWindow;
+@property(readonly) BOOL isRemote;
 @property(getter=isSelected) BOOL selected;
 @property(readonly) BOOL isTopLevelTouchBarElement;
 @property(readonly) BOOL isTouchBarElement;
@@ -145,7 +146,6 @@
 - (void)enumerateDescendantsUsingBlock:(CDUnknownBlockType)arg1;
 - (BOOL)hasDescendantMatchingFilter:(CDUnknownBlockType)arg1;
 - (id)initWithAccessibilityElement:(id)arg1;
-- (BOOL)isRemote;
 - (id)localizableStringsDataIncludingChildren;
 - (void)markAsFaultedInPropertiesDerivedFromSnapshotAttributes:(id)arg1;
 - (BOOL)matchesTreeWithRoot:(id)arg1;
