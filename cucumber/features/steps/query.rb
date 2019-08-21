@@ -25,9 +25,22 @@ Then(/^I query for the Silly Alpha button by mark using id$/) do
 end
 
 Then(/^I query for the Silly Zero button by mark using the title$/) do
-  elements = query({marked: "Alpha"})
-  expect(elements.count).to be == 1
-  expect(elements[0]["id"]).to be == "alpha button"
+  label = "Zero"
+  expected_id = "zero button"
+  elements = query({marked: label})
+  # `Button` have `StaticText` element as a children in order to visualize its text content starting from iOS 13.
+  # Properties `label` of these elements are equals between each other.
+  if ios_gte?("13.0")
+    expect(elements.count).to be == 2
+    button = elements.detect {|e| e["type"] == "Button"}
+    expect(button["id"]).to be == expected_id
+    static_text = elements.detect {|e| e["type"] == "StaticText"}
+    expect(static_text).not_to be nil
+    expect(static_text["label"]).to be == label
+  else
+    expect(elements.count).to be == 1
+    expect(elements[0]["id"]).to be == expected_id
+  end
 end
 
 Then(/^I find the button behind the purple label using marked and :all$/) do

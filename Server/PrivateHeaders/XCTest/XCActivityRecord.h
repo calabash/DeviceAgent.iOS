@@ -30,6 +30,7 @@
     BOOL _useLegacySerializationFormat;
     NSString *_aggregationIdentifier;
     double _subactivitiesDuration;
+    BOOL _isTopLevel;
 }
 
 @property(copy) NSString *activityType;
@@ -37,6 +38,7 @@
 @property(readonly, copy) NSArray *attachments;
 @property(readonly) double duration;
 @property(copy) NSDate *finish;
+@property BOOL isTopLevel;
 @property(readonly, getter=isValid) BOOL valid;
 @property(readonly, copy) NSString *name;
 @property(copy) NSDate *start;
@@ -59,7 +61,6 @@
 - (void)addSnapshot:(id)arg1;
 - (void)addSynthesizedEvent:(id)arg1;
 - (void)attachAutomaticScreenshotForDevice:(id)arg1;
-- (void)attachDiagnosticsForDevice:(id)arg1 includeLocalizableStringsData:(BOOL)arg2;
 - (id)attachmentForName:(id)arg1;
 - (void)invalidate;
 - (void)removeAttachmentsWithName:(id)arg1;

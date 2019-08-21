@@ -85,6 +85,7 @@
 - (id)application;
 - (void)clearQuery;
 - (void)commonInitWithApplicationSpecifier:(id)arg1 device:(id)arg2;
+- (id)currentProcess;
 - (void)dismissKeyboard;
 - (NSUInteger)elementType;
 - (BOOL)exists;

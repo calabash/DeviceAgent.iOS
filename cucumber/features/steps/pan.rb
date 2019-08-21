@@ -290,22 +290,6 @@ And(/^I can swipe to delete the Windows row$/) do
   wait_for_no_view({marked: identifier})
 end
 
-And(/^I have scrolled to the top of the Companies table$/) do
-  element = wait_for_view({type: "StatusBar", :all => true})
-
-  # touching the center of the status bar on iPhone 10 devices is
-  # not possible because of the notch.  Let's just touch the top
-  # left of the status bar.
-  hitpoint = element["hit_point"]
-  if hitpoint["x"] != -1
-    touch_coordinate({x: hitpoint["x"], y: hitpoint["y"]})
-  else
-    touch_coordinate({x: 4, y: 4})
-  end
-
-  sleep(0.4)
-end
-
 When(/^I touch the Edit button, the table is in Edit mode$/) do
   touch({marked: "Edit"})
   wait_for_view({marked: "Done"})

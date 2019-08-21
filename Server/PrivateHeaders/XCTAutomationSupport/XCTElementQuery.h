@@ -16,7 +16,7 @@
 
 #import "XCTCapabilitiesProviding-Protocol.h"
 
-@class NSArray, NSString, XCAccessibilityElement, XCElementSnapshot, XCTTimeoutControls;
+@class NSArray, NSDictionary, NSString, XCAccessibilityElement, XCElementSnapshot, XCTTimeoutControls;
 @protocol XCTElementSnapshotAttributeDataSource, XCTElementSnapshotProvider;
 
 
@@ -48,6 +48,8 @@
 @property BOOL suppressAttributeKeyPathAnalysis;
 @property(retain) XCTTimeoutControls *timeoutControls;
 @property BOOL useLegacyElementType;
+@property(readonly, copy) NSArray *snapshotAttributes;
+@property(readonly, copy) NSDictionary *snapshotParameters;
 @property(readonly) BOOL supportsAttributeKeyPathAnalysis;
 @property(readonly) BOOL supportsRemoteEvaluation;
 @property(readonly, copy) NSArray *transformers;
@@ -58,7 +60,6 @@
 - (id)_firstMatchingSnapshotForInput:(id)arg1 transformers:(id)arg2 relatedElements:(id *)arg3 noMatchesMessage:(id *)arg4 error:(id *)arg5;
 - (id)_firstMatchingSnapshotForInput:(id)arg1 transformersSubarrays:(id)arg2 relatedElements:(id *)arg3 noMatchesMessage:(id *)arg4 error:(id *)arg5;
 - (id)_rootElementSnapshot:(id *)arg1;
-- (id)_snapshotAttributesOrError:(id *)arg1;
 - (id)_snapshotForElement:(id)arg1 error:(id *)arg2;
 - (BOOL)canBeRemotelyEvaluatedWithCapabilities:(id)arg1;
 - (BOOL)hasTransformerWithStopsOnFirstMatch;
