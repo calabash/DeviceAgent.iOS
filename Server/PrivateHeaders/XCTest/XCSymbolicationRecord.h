@@ -23,14 +23,15 @@
     NSString *_symbolOwner;
 }
 
-@property(copy) NSString *filePath;
-@property NSUInteger lineNumber;
-@property(copy) NSString *symbolName;
-@property(copy) NSString *symbolOwner;
+@property(readonly, copy) NSString *filePath;
+@property(readonly) NSUInteger lineNumber;
+@property(readonly, copy) NSString *symbolName;
+@property(readonly, copy) NSString *symbolOwner;
 
 + (id)failureRecord;
 + (id)symbolicationRecordForAddress:(NSUInteger)arg1;
 + (struct _CSTypeRef)symbolicator;
+- (id)initWithFilePath:(id)arg1 lineNumber:(NSUInteger)arg2 symbolName:(id)arg3 symbolOwner:(id)arg4;
 
 @end
 
