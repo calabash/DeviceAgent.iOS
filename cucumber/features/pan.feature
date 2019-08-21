@@ -8,7 +8,7 @@ Background: Navigate to Pan page
 Given the app has launched
 And I am looking at the Pan tab
 
-@pan_fingers
+@skip_ios_13
 Scenario: Visual confirmation of drag
 And I am looking at the Pan Palette page
 Then I can pan with 1 finger

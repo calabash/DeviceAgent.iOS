@@ -56,7 +56,7 @@ When the home button is on the top, I can two-finger tap
 When the home button is on the right, I can two-finger tap
 When the home button is on the bottom, I can two-finger tap
 
-@three_tap
+@skip_ios_13
 Scenario: Three finger tap in any orientation
 Given I am looking at the Tao tab
 When the home button is on the right, I can three-finger tap
@@ -64,7 +64,7 @@ When the home button is on the bottom, I can three-finger tap
 When the home button is on the top, I can three-finger tap
 When the home button is on the left, I can three-finger tap
 
-@four_tap
+@skip_ios_13
 Scenario: Four finger tap in any orientation
 Given I am looking at the Tao tab
 When the home button is on the top, I can four-finger tap

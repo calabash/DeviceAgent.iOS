@@ -69,19 +69,19 @@ Before("@simulator") do |scenario|
   end
 end
 
-Before("@three_tap") do |scenario|
+Before("@skip_ios_13") do |scenario|
   if ios_gte?("13.0")
     skip_this_scenario
   end
 end
 
-Before("@four_tap") do |scenario|
+Before("@skip_ios_13") do |scenario|
   if ios_gte?("13.0")
     skip_this_scenario
   end
 end
 
-Before("@pan_fingers") do |scenario|
+Before("@skip_ios_13") do |scenario|
   if ios_gte?("13.0")
     skip_this_scenario
   end

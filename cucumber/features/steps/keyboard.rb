@@ -17,9 +17,6 @@ module DeviceAgent
 
     def text_from_text_field
       result = wait_for_view({marked: "text field"})
-      if result["value"] == result["placeholder"]
-        result["value"] = nil
-      end
       result["value"]
     end
 
@@ -231,13 +228,6 @@ And(/^I can dismiss the Text View keyboard$/) do
 end
 
 And(/^I can select all the text in the Text View$/) do
-  text_field = query({marked: "text view"}).first
-  if text_field["has_keyboard_focus"] == false
-    query = {marked: "text view"}
-    wait_for_view(query)
-    touch(query)
-    wait_for_keyboard
-  end
   touch({marked: "text view"}, {duration: 1.0})
   query = {marked: "Select All" }
   wait_for_view(query)
