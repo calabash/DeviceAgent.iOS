@@ -155,6 +155,10 @@ Given(/^I am looking at the Everything's On the Table page$/) do
 end
 
 And(/^I can pan with (\d+) fingers?$/) do |fingers|
+  # it is system actions and right now we cant override system behavior
+  # so we should skip them
+  next if ios_gte?("13.0") && fingers>2
+
   clear_pan_action_label
 
   options = {
