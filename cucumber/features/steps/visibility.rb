@@ -154,7 +154,7 @@ end
 
 And(/^I cannot touch the button behind the purple label using the hit point$/) do
   element = wait_for_view({marked: "hidden button", all: true})
-  
+
   hit_point = element["hit_point"]
 
   touch_coordinate(hit_point)
