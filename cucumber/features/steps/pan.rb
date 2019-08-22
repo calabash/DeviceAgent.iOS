@@ -155,8 +155,8 @@ Given(/^I am looking at the Everything's On the Table page$/) do
 end
 
 And(/^I can pan with (\d+) fingers?$/) do |fingers|
-  # it is system actions and right now we cant override system behavior
-  # so we should skip them
+  # 3+ finger taps are system actions in iOS 13 and it is not possible to override system behavior
+  # so we should skip them now for iOS 13
   next if ios_gte?("13.0") && fingers.to_i > 2
 
   clear_pan_action_label

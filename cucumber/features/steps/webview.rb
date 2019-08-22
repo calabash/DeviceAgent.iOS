@@ -1,5 +1,10 @@
 
 Given(/^I am looking at the (UIWebView|WKWebView|SafariWebController)$/) do |type|
+  if ios_gte?("13.0")
+    log_inline("Skip #{type} test since it doesn't work properly on iOS 13. It doesn't allow to get the content of TextField")
+    skip_this_scenario
+  end
+
   if type == "UIWebView"
     touch({marked: "uiwebview row"})
   elsif type == "WKWebView"
