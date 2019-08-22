@@ -173,6 +173,7 @@ end
 But(/^I cannot touch the mostly hidden button using the view center$/) do
   mark = "mostly hidden button"
   touch({marked: mark})
+
   wait_for_animations
   wait_for_view({marked: "That was touching."})
 
