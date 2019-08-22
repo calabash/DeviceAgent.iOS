@@ -232,6 +232,7 @@ end
 And(/^I can select all the text in the Text View$/) do
   if ios_gte?("13.0")
     touch({marked: "text view"}, {duration: 0.1})
+    wait_for_animations
     touch({marked: "text view"}, {duration: 0.1})
   else
     touch({marked: "text view"}, {duration: 1.0})
