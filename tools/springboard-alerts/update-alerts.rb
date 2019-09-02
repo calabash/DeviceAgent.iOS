@@ -3,7 +3,6 @@ require 'awesome_print'
 require 'pry'
 require 'run_loop'
 require_relative 'helpers'
-require_relative 'strings_parser'
 require_relative 'localization_storage'
 
 xcode = RunLoop::Xcode.new
@@ -12,7 +11,7 @@ private_frameworks_dir = xcode.core_simulator_dir + '/Profiles/Runtimes/iOS.simr
 def collect_localization_dictionary(dir_path)
     dict = {}
     Dir.glob("#{dir_path}/*.strings") do |file_path|
-        pairs = PlistParser.parse(file_path)
+        pairs = read_strings(file_path)
         dict.merge!(pairs)
     end
 
