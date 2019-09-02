@@ -8,13 +8,30 @@ require_relative 'localization_storage'
 
 xcode = RunLoop::Xcode.new
 
+core_simulator_dir = xcode.developer_dir + '/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator'
+
+def search_strings_constants(dir_path)
+    langs = ['en', 'ru']
+    for lang in langs
+        out_array = []
+        Dir.glob("#{dir_path}/**/#{lang}.lproj/*.strings") do |file_path|
+            elem = read_strings(file_path)
+            elem['path'] = file_path
+            out_array.push(elem)
+        end
+        report_path = "reports/test.#{lang}.json"
+        save_to_json_file(report_path, out_array)
+    end
+end
+
+search_strings_constants(core_simulator_dir)
+
 def collect_localization_dictionary(dir_path)
     dict = {}
     Dir.glob("#{dir_path}/*.strings") do |file_path|
         pairs = read_strings(file_path)
         dict.merge!(pairs)
     end
-
     dict
 end
 
