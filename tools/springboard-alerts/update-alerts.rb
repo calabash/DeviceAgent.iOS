@@ -22,7 +22,7 @@ def find_framework(root_path, framework_name)
     found = Dir.glob("#{root_path}/**/#{framework_name}")
     return nil if found.empty?
 
-    raise "More than 1 occurrence of '#{framework_name}' is found" if found.length > 1
+    raise "More than 1 occurrence of '#{framework_name}' is found; unexpected behavior" if found.length > 1
 
     found[0]
 end
@@ -42,7 +42,7 @@ target_frameworks.each do |framework|
 
     puts "Found on path '#{framework_path}'"
 
-    available_languages = languages.select { |language| Dir.exist?(File.join(framework_path, language))}
+    available_languages = languages.select { |language| Dir.exist?(File.join(framework_path, language)) }
     skipped_languages = languages - available_languages
     puts "Available languages: #{available_languages}"
     puts "Skipped languages: #{skipped_languages}".yellow unless skipped_languages.empty?
@@ -59,19 +59,17 @@ target_frameworks.each do |framework|
             title = item['title']
             button = item['button']
 
-            puts "Unknown button constant '#{button}'".yellow if button && !dict[button]
-
             if dict[title]
                 storage.add_entry(language, dict[title], dict[button])
             else
-                puts "Unknown alert constant '#{title}'".red
+                puts "Unknown alert constant '#{title}' for framework '#{framework['name']}'".red
             end
         end
 
         # debug info
         if ENV['DEBUG']
             report_path = "reports/#{framework['name']}.#{language}.json"
-            save_to_json_file(report_path, dict)
+            save_json(report_path, dict)
         end
     end
 end

@@ -43,6 +43,6 @@ class LocalizationStorage
 
     # Saves database to the file
     def save
-        save_to_json_file(@file_path, @storage)
+        save_json(@file_path, @storage)
     end
 end

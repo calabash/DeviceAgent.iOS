@@ -14,7 +14,7 @@ def read_strings(file_path)
     JSON.parse(content)
 end
 
-def save_to_json_file(file_path, content)
+def save_json(file_path, content)
     # create directory if doesn't exist
     dirname = File.dirname(file_path)
     Dir.mkdir(dirname) unless Dir.exist?(dirname)
