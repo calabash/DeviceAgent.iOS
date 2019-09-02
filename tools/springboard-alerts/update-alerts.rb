@@ -7,7 +7,6 @@ require_relative 'strings_parser'
 require_relative 'localization_storage'
 
 xcode = RunLoop::Xcode.new
-binding.pry
 core_simulator_dir = xcode.developer_dir + '/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator'
 private_frameworks_dir = core_simulator_dir + '/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/'
 
