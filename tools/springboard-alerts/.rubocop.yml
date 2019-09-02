@@ -1,0 +1,8 @@
+Layout/IndentationWidth:
+  Width: 4
+Layout/IndentFirstHashElement:
+  Enabled: false
+Metrics/LineLength:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
