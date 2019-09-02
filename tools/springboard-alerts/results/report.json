@@ -46,7 +46,7 @@
       "shouldAccept": true
     },
     {
-      "title": "يرغب \"%@\" في الوصول إلى Apple Music، ونشاط الموسيقى والفيديو لديك، وكذلك مكتبة الوسائط الخاصة بك.",
+      "title": "يرغب \"%@\" في الوصول إلى Apple Music، ونشاط الموسيقى والفيديو لديك، وكذلك مكتبة الوسائط الخاصة بك",
       "button": "موافق",
       "shouldAccept": true
     },
@@ -71,7 +71,7 @@
       "shouldAccept": true
     },
     {
-      "title": "يرغب \"%@\" في إتاحة البيانات إلى أجهزة Bluetooth القريبة حتى عند عدم استخدامك للتطبيق.",
+      "title": "يرغب \"%@\" في إتاحة البيانات إلى أجهزة Bluetooth القريبة حتى عند عدم استخدامك للتطبيق",
       "button": "موافق",
       "shouldAccept": true
     },
@@ -128,7 +128,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” vol accedir a l’Apple Music, a la teva activitat de música i vídeo i a la teva biblioteca de contingut.",
+      "title": "“%@” vol accedir a l’Apple Music, a la teva activitat relacionada amb la música i els vídeos i a la biblioteca multimèdia",
       "button": "OK",
       "shouldAccept": true
     },
@@ -143,7 +143,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” vol accedir a les teves dades domèstiques",
+      "title": "“%@” vol accedir a les teves dades domèstiques ",
       "button": "OK",
       "shouldAccept": true
     },
@@ -153,7 +153,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” vol posar les dades a disposició dels dispositius Bluetooth propers fins i tot quan no utilitzis l’app.",
+      "title": "\"%@\" vol posar les dades a disposició dels dispositius Bluetooth propers fins i tot quan no utilitzis l’app",
       "button": "OK",
       "shouldAccept": true
     },
@@ -210,7 +210,7 @@
       "shouldAccept": true
     },
     {
-      "title": "Aplikace „%@“ žádá o přístup k Apple Music, informacím o přehrávání hudby a videí a vaší knihovně médií.",
+      "title": "Aplikace „%@“ žádá o přístup k Apple Music, informacím o přehrávání hudby a videí a vaší knihovně médií",
       "button": "OK",
       "shouldAccept": true
     },
@@ -235,7 +235,7 @@
       "shouldAccept": true
     },
     {
-      "title": "Aplikace„%@“ žádá o povolení ke zpřístupnění dat blízkým Bluetooth zařízením i v čase, kdy ji právě nepoužíváte.",
+      "title": "Aplikace„%@“ žádá o povolení k sdílení dat s Bluetooth zařízeními v okolí i v čase, kdy ji právě nepoužíváte",
       "button": "OK",
       "shouldAccept": true
     },
@@ -292,7 +292,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” vil have adgang til Apple Music, din musik- og videoaktivitet og dit musikbibliotek.",
+      "title": "“%@“ vil have adgang til Apple Music, din musik- og videoaktivitet og dit mediebibliotek",
       "button": "OK",
       "shouldAccept": true
     },
@@ -317,7 +317,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” vil gøre data tilgængelige for Bluetooth-enheder i nærheden, også når du ikke bruger appen.",
+      "title": "“%@“ vil gøre data tilgængelige for Bluetooth-enheder i nærheden, også når du ikke bruger appen",
       "button": "OK",
       "shouldAccept": true
     },
@@ -374,7 +374,7 @@
       "shouldAccept": true
     },
     {
-      "title": "„%@“ möchte auf Apple Music, deine Musik- und Videoaktivitäten und auf deine Mediathek zugreifen.",
+      "title": "„%@“ möchte auf Apple Music, deine Musik- und Videoaktivitäten und auf deine Mediathek zugreifen",
       "button": "OK",
       "shouldAccept": true
     },
@@ -399,7 +399,7 @@
       "shouldAccept": true
     },
     {
-      "title": "„%@“ möchte Daten mit Bluetooth-Geräten in der Nähe teilen, auch wenn die App nicht benutzt wird.",
+      "title": "„%@“ möchte Daten mit Bluetooth-Geräten in der Nähe teilen, auch wenn die App nicht benutzt wird",
       "button": "OK",
       "shouldAccept": true
     },
@@ -456,7 +456,7 @@
       "shouldAccept": true
     },
     {
-      "title": "Αίτημα από «%@» για πρόσβαση στο Apple Music, στη δραστηριότητα μουσικής και βίντεο, και στη βιβλιοθήκη πολυμέσων σας.",
+      "title": "Αίτημα από «%@» για πρόσβαση στο Apple Music, στη δραστηριότητα μουσικής και βίντεο, και στη βιβλιοθήκη πολυμέσων σας",
       "button": "OK",
       "shouldAccept": true
     },
@@ -471,7 +471,7 @@
       "shouldAccept": true
     },
     {
-      "title": "Αίτημα από «%@» για πρόσβαση στα Οικιακά δεδομένα σας",
+      "title": "Αίτημα από «%@» για πρόσβαση στα οικιακά δεδομένα σας",
       "button": "OK",
       "shouldAccept": true
     },
@@ -481,7 +481,7 @@
       "shouldAccept": true
     },
     {
-      "title": "Αίτημα από «%@» για να καθιστά δεδομένα διαθέσιμα σε κοντινές συσκευές Bluetooth ακόμη κι όταν δεν χρησιμοποιείτε την εφαρμογή.",
+      "title": "Αίτημα από «%@» για να καθιστά δεδομένα διαθέσιμα σε κοντινές συσκευές Bluetooth ακόμη κι όταν δεν χρησιμοποιείτε την εφαρμογή",
       "button": "OK",
       "shouldAccept": true
     },
@@ -538,7 +538,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” would like to access Apple Music, your music and video activity, and your media library.",
+      "title": "“%@” would like to access Apple Music, your music and video activity, and your media library",
       "button": "OK",
       "shouldAccept": true
     },
@@ -563,7 +563,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” would like to make data available to nearby Bluetooth devices even when you’re not using the app.",
+      "title": "“%@” would like to make data available to nearby Bluetooth devices even when you’re not using the app",
       "button": "OK",
       "shouldAccept": true
     },
@@ -620,7 +620,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” would like to access Apple Music, your music and video activity and your media library.",
+      "title": "“%@” would like to access Apple Music, your music and video activity, and your media library",
       "button": "OK",
       "shouldAccept": true
     },
@@ -645,7 +645,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” would like to make data available to nearby Bluetooth devices even when you’re not using the app.",
+      "title": "“%@” would like to make data available to nearby Bluetooth devices even when you’re not using the app",
       "button": "OK",
       "shouldAccept": true
     },
@@ -702,7 +702,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” would like to access Apple Music, your music and video activity, and your media library.",
+      "title": "“%@” would like to access Apple Music, your music and video activity, and your media library",
       "button": "OK",
       "shouldAccept": true
     },
@@ -727,7 +727,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” would like to make data available to nearby Bluetooth devices even when you’re not using the app.",
+      "title": "“%@” would like to make data available to nearby Bluetooth devices even when you’re not using the app",
       "button": "OK",
       "shouldAccept": true
     },
@@ -784,7 +784,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” quiere acceder a Apple Music, tu actividad relacionada con la música y los vídeos y tu biblioteca multimedia.",
+      "title": "“%@” quiere acceder a Apple Music, tu actividad relacionada con la música y los vídeos y tu biblioteca multimedia",
       "button": "Permitir",
       "shouldAccept": true
     },
@@ -809,7 +809,7 @@
       "shouldAccept": true
     },
     {
-      "title": "%@ quiere que los datos estén disponibles para los dispositivos Bluetooth cercanos aunque no estés utilizando la app.",
+      "title": "%@ quiere que los datos estén disponibles para los dispositivos Bluetooth cercanos aunque no estés utilizando la app",
       "button": "Permitir",
       "shouldAccept": true
     },
@@ -861,12 +861,12 @@
       "shouldAccept": true
     },
     {
-      "title": "¿Quieres poder utilizar \"%@\" con Siri?",
+      "title": "¿Quieres usar \"%@\" con Siri?",
       "button": "OK",
       "shouldAccept": true
     },
     {
-      "title": "“%@” quiere acceder a Apple Music, tu actividad musical y tu biblioteca de contenidos multimedia.",
+      "title": "“%@” quiere acceder a Apple Music, tu actividad musical y de videos, y tu biblioteca de contenidos multimedia",
       "button": "OK",
       "shouldAccept": true
     },
@@ -891,7 +891,7 @@
       "shouldAccept": true
     },
     {
-      "title": "%@ solicita que los datos estén disponibles para los dispositivos Bluetooth cercanos aunque no estés utilizando la app.",
+      "title": "%@ solicita que los datos estén disponibles para los dispositivos Bluetooth cercanos aunque no estés utilizando la app",
       "button": "OK",
       "shouldAccept": true
     },
@@ -948,7 +948,7 @@
       "shouldAccept": true
     },
     {
-      "title": "%@ haluaa käyttää Apple Musicia, musiikki- ja videotoimintaasi sekä mediakirjastoasi.",
+      "title": "%@ haluaa käyttää Applen Musiikkia, musiikki- ja videotoimintaasi sekä mediakirjastoasi",
       "button": "OK",
       "shouldAccept": true
     },
@@ -973,7 +973,7 @@
       "shouldAccept": true
     },
     {
-      "title": "%@ haluaa antaa dataa lähellä oleville Bluetooth-laitteille, vaikka et käyttäisikään appia.",
+      "title": "%@ haluaa antaa dataa lähellä oleville Bluetooth-laitteille, vaikka et käyttäisikään appia",
       "button": "OK",
       "shouldAccept": true
     },
@@ -1030,7 +1030,7 @@
       "shouldAccept": true
     },
     {
-      "title": "« %@ » aimerait accéder à Apple Music, à votre activité musicale et vidéo, ainsi qu’à votre bibliothèque multimédia.",
+      "title": "« %@ » souhaite accéder à Apple Music, à votre activité musicale et vidéo, ainsi qu’à votre bibliothèque multimédia",
       "button": "OK",
       "shouldAccept": true
     },
@@ -1055,7 +1055,7 @@
       "shouldAccept": true
     },
     {
-      "title": "« %@ » voudrait rendre des données disponibles aux appareils Bluetooth proches lorsque vous n’utilisez pas cette app.",
+      "title": "« %@ » souhaite permettre aux appareils Bluetooth à proximité d’accéder à des données lorsque vous n’utilisez pas l’app",
       "button": "OK",
       "shouldAccept": true
     },
@@ -1127,7 +1127,7 @@
       "shouldAccept": true
     },
     {
-      "title": "« %@ » souhaite accéder aux données locales",
+      "title": "« %@ » souhaite accéder aux données de Domicile.",
       "button": "OK",
       "shouldAccept": true
     },
@@ -1184,7 +1184,7 @@
       "shouldAccept": true
     },
     {
-      "title": "״%@״ מעוניין לגשת למשימות שלך",
+      "title": "״%@״ מבקש לגשת לתזכורות שלך",
       "button": "אישור",
       "shouldAccept": true
     },
@@ -1194,7 +1194,7 @@
       "shouldAccept": true
     },
     {
-      "title": "‏״%@״ מעוניין לגשת ל-Apple Music, לפעילות המוסיקה והווידאו שלך, ולספריית המדיה שלך.",
+      "title": "‏״%@״ מעוניין לגשת ל-Apple Music, לפעילות המוסיקה והווידאו שלך, ולספריית המדיה שלך",
       "button": "אישור",
       "shouldAccept": true
     },
@@ -1219,7 +1219,7 @@
       "shouldAccept": true
     },
     {
-      "title": "״%@״ מעוניין לאפשר להתקני Bluetooth קרובים לקבל גישה לנתונים אפילו כשאינך משתמש/ת ביישום.",
+      "title": "״%@״ מעוניין לאפשר להתקני Bluetooth קרובים לקבל גישה לנתונים גם לא בעת השימוש ביישום",
       "button": "אישור",
       "shouldAccept": true
     },
@@ -1231,7 +1231,7 @@
   ],
   "hi.lproj": [
     {
-      "title": "आपके अनुरोधों को पूरा करने के लिए आपके %@ का कुछ डेटा Apple को भेजा जाएगा।",
+      "title": "आपके अनुरोधों को प्रोसेस करने के लिए आपके %@ का कुछ डेटा Apple को भेजा जाएगा।",
       "button": "ठीक",
       "shouldAccept": true
     },
@@ -1251,7 +1251,7 @@
       "shouldAccept": true
     },
     {
-      "title": "आपके अनुरोधों को पूरा करने के लिए इस ऐप से बोली डेटा Apple को भेजा जाएगा। इससे Apple को अपनी बोली पहचान तकनीक को बेहतर बनाने में भी मदद मिलेगी।",
+      "title": "आपके अनुरोधों को प्रोसेस करने के लिए इस ऐप से बोली डेटा Apple को भेजा जाएगा। इससे Apple को अपनी बोली पहचान तकनीक को बेहतर बनाने में भी मदद मिलेगी।",
       "button": "ठीक",
       "shouldAccept": true
     },
@@ -1261,7 +1261,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” कैमरा का ऐक्सेस चाहता है",
+      "title": "“%@” कैमरे का ऐक्सेस चाहता है",
       "button": "ठीक",
       "shouldAccept": true
     },
@@ -1276,7 +1276,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” Apple Music, आपकी संगीत और वीडियो गतिविधि और आपकी मीडिया लाइब्रेरी का ऐक्सेस चाहता है।",
+      "title": "\"%@\" Apple Music, आपकी संगीत और वीडियो गतिविधि और आपकी मीडिया लाइब्रेरी का ऐक्सेस चाहता है",
       "button": "ठीक",
       "shouldAccept": true
     },
@@ -1291,7 +1291,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” आपके होम डेटा का ऐक्सेस चाहता है",
+      "title": "“%@” आपके घर डेटा का ऐक्सेस चाहता है",
       "button": "ठीक",
       "shouldAccept": true
     },
@@ -1301,7 +1301,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” आस-पास के Bluetooth डिवाइस पर डेटा उपलब्ध कराना चाहता है, भले ही आप ऐप का उपयोग न कर रहे हों।",
+      "title": "\"%@\" आस-पास के Bluetooth डिवाइस पर डेटा उपलब्ध कराना चाहता है, भले ही आप ऐप का उपयोग न कर रहे हों",
       "button": "ठीक",
       "shouldAccept": true
     },
@@ -1358,7 +1358,7 @@
       "shouldAccept": true
     },
     {
-      "title": "\"%@\" želi pristupiti Apple Musicu, vašim aktivnostima povezanim s glazbom i videozapisima, te vašoj medijateci.",
+      "title": "“%@” želi pristupiti Apple Musicu, vašim aktivnostima povezanim s glazbom i videozapisima, te vašoj medijateci",
       "button": "OK",
       "shouldAccept": true
     },
@@ -1383,7 +1383,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” želi učiniti podatke dostupnima obližnjim Bluetooth uređajima, čak i kad ne koristite aplikaciju.",
+      "title": "“%@” želi učiniti podatke dostupnima obližnjim Bluetooth uređajima, čak i kad ne koristite aplikaciju",
       "button": "OK",
       "shouldAccept": true
     },
@@ -1440,7 +1440,7 @@
       "shouldAccept": true
     },
     {
-      "title": "A(z) „%@” hozzá szeretne férni az Apple Musichoz, az Ön zene- és videotevékenységeihez, valamint a médiakönyvtárához.",
+      "title": "A(z) „%@” hozzá szeretne férni az Apple Musichoz, az Ön zene- és videotevékenységeihez, valamint a médiakönyvtárához",
       "button": "OK",
       "shouldAccept": true
     },
@@ -1465,7 +1465,7 @@
       "shouldAccept": true
     },
     {
-      "title": "A(z) „%@” adatokat akar elérhetővé tenni közeli Bluetooth-eszközök számára akkor is, amikor Ön nem használja az alkalmazást.",
+      "title": "A(z) „%@” adatokat akar elérhetővé tenni közeli Bluetooth-eszközök számára akkor is, amikor Ön nem használja az alkalmazást",
       "button": "OK",
       "shouldAccept": true
     },
@@ -1522,7 +1522,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” ingin mengakses Apple Music, aktivitas musik dan video, serta perpustakaan media Anda.",
+      "title": "“%@” ingin mengakses Apple Music, aktivitas musik dan video, serta perpustakaan media Anda",
       "button": "OKE",
       "shouldAccept": true
     },
@@ -1547,7 +1547,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” ingin membuat data tersedia untuk perangkat Bluetooth di sekitar saat Anda sedang tidak menggunakan app.",
+      "title": "“%@” ingin membuat data tersedia untuk perangkat Bluetooth di sekitar saat Anda sedang tidak menggunakan app",
       "button": "OKE",
       "shouldAccept": true
     },
@@ -1604,7 +1604,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” desidera accedere ai contenuti di Apple Music, alla tua cronologia di riproduzione di brani e video e alla tua libreria multimediale.",
+      "title": "“%@” desidera accedere ai contenuti di Apple Music, alla tua cronologia di riproduzione di brani e video e alla tua libreria multimediale",
       "button": "OK",
       "shouldAccept": true
     },
@@ -1629,7 +1629,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” vorrebbe rendere disponibili i dati ai dispositivi Bluetooth nelle vicinanze anche quando non è in uso.",
+      "title": "“%@” desidera rendere disponibili i dati ai dispositivi Bluetooth nelle vicinanze anche quando l'app non è in uso",
       "button": "OK",
       "shouldAccept": true
     },
@@ -1686,7 +1686,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@”がApple Music、ミュージックとビデオの履歴、およびメディアライブラリにアクセスを求めています。",
+      "title": "“%@”がApple Music、ミュージックとビデオの履歴、およびメディアライブラリにアクセスを求めています",
       "button": "OK",
       "shouldAccept": true
     },
@@ -1711,7 +1711,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@”が近隣のBluetoothデバイスに、Appを使用していないときでもデータ通信することを求めています。",
+      "title": "“%@”が近隣のBluetoothデバイスに、Appを使用していないときでもデータ通信することを求めています",
       "button": "OK",
       "shouldAccept": true
     },
@@ -1724,82 +1724,82 @@
   "ko.lproj": [
     {
       "title": "사용자의 요청을 처리하기 위해 사용자의 %@ 데이터 일부가 Apple에 전송됩니다.",
-      "button": "승인",
+      "button": "확인",
       "shouldAccept": true
     },
     {
       "title": "‘%@’이(가) 마이크에 접근하려고 합니다.",
-      "button": "승인",
+      "button": "확인",
       "shouldAccept": true
     },
     {
       "title": "‘%@’이(가) 사용자의 사진에 추가하려고 합니다",
-      "button": "승인",
+      "button": "확인",
       "shouldAccept": true
     },
     {
       "title": "‘%@’이(가) 사용자의 캘린더에 접근하려고 합니다",
-      "button": "승인",
+      "button": "확인",
       "shouldAccept": true
     },
     {
       "title": "사용자의 요청을 처리하기 위해 이 앱의 음성 데이터가 Apple에 전송됩니다. 이는 Apple의 음성 인식 기술 향상에도 도움이 됩니다.",
-      "button": "승인",
+      "button": "확인",
       "shouldAccept": true
     },
     {
       "title": "‘%@’이(가) 사용자의 동작 및 피트니스 활동에 접근하려고 합니다",
-      "button": "승인",
+      "button": "확인",
       "shouldAccept": true
     },
     {
       "title": "‘%@’이(가) 카메라에 접근하려고 합니다",
-      "button": "승인",
+      "button": "확인",
       "shouldAccept": true
     },
     {
       "title": "‘%@’이(가) 사용자의 미리 알림에 접근하려고 합니다",
-      "button": "승인",
+      "button": "확인",
       "shouldAccept": true
     },
     {
       "title": "Siri를 ‘%@’에 사용하겠습니까?",
-      "button": "승인",
+      "button": "확인",
       "shouldAccept": true
     },
     {
-      "title": "‘%@’이(가) Apple Music, 사용자의 음악 및 비디오 관련 활동 및 사용자의 미디어 보관함에 접근하려고 합니다.",
-      "button": "승인",
+      "title": "‘%@’이(가) Apple Music, 사용자의 음악 및 비디오 관련 활동 및 사용자의 미디어 보관함에 접근하려고 합니다",
+      "button": "확인",
       "shouldAccept": true
     },
     {
       "title": "‘%@’이(가) 사용자의 연락처에 접근하려고 합니다",
-      "button": "승인",
+      "button": "확인",
       "shouldAccept": true
     },
     {
       "title": "‘%@’이(가) 사용자의 사진에 접근하려고 합니다",
-      "button": "승인",
+      "button": "확인",
       "shouldAccept": true
     },
     {
       "title": "‘%@’이(가) 사용자의 홈 데이터에 접근하려고 합니다",
-      "button": "승인",
+      "button": "확인",
       "shouldAccept": true
     },
     {
       "title": "‘%@’이(가) 백그라운드에서 VoIP 통화를 수신하려고 합니다.",
-      "button": "승인",
+      "button": "확인",
       "shouldAccept": true
     },
     {
-      "title": "사용자가 해당 앱을 사용하고 있지 않을 때에도 ‘%@’이(가) Bluetooth 기기 근처에서 데이터를 사용하려고 합니다.",
-      "button": "승인",
+      "title": "사용자가 해당 앱을 사용하고 있지 않을 때에도 ‘%@’이(가) Bluetooth 기기 근처에서 데이터를 사용하려고 합니다",
+      "button": "확인",
       "shouldAccept": true
     },
     {
       "title": "‘%@’이(가) 음성 인식에 접근하려고 합니다",
-      "button": "승인",
+      "button": "확인",
       "shouldAccept": true
     }
   ],
@@ -1850,7 +1850,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” mahu mengakses Apple Music, aktiviti muzik dan video anda dan pustaka media anda.",
+      "title": "“%@” mahu mengakses Apple Music, aktiviti muzik dan video anda serta pustaka media anda",
       "button": "OK",
       "shouldAccept": true
     },
@@ -1875,7 +1875,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” mahu menyediakan data kepada peranti Bluetooth berdekatan walaupun anda tidak menggunakan app.",
+      "title": "“%@” mahu menyediakan data kepada peranti Bluetooth berdekatan walaupun anda tidak menggunakan app",
       "button": "OK",
       "shouldAccept": true
     },
@@ -1932,7 +1932,7 @@
       "shouldAccept": true
     },
     {
-      "title": "%@ wil toegang tot Apple Music, je muziek- en videoactiviteit en je mediabibliotheek.",
+      "title": "%@ wil toegang tot Apple Music, je muziek- en videoactiviteit en je mediabibliotheek",
       "button": "OK",
       "shouldAccept": true
     },
@@ -1957,7 +1957,7 @@
       "shouldAccept": true
     },
     {
-      "title": "%@ wil gegevens beschikbaar stellen voor Bluetooth-apparaten in de buurt, ook als je de app niet gebruikt.",
+      "title": "%@ wil gegevens beschikbaar stellen voor Bluetooth-apparaten in de buurt, ook als je de app niet gebruikt",
       "button": "OK",
       "shouldAccept": true
     },
@@ -2014,7 +2014,7 @@
       "shouldAccept": true
     },
     {
-      "title": "%@ vil ha tilgang til Apple Music, musikk- og videobruken din og mediebiblioteket ditt.",
+      "title": "%@ vil ha tilgang til Apple Music, musikk- og videobruken din og mediebiblioteket ditt",
       "button": "OK",
       "shouldAccept": true
     },
@@ -2039,7 +2039,7 @@
       "shouldAccept": true
     },
     {
-      "title": "%@ ønsker å gjøre data tilgjengelig for Bluetooth-enheter i nærheten selv om appen ikke er i bruk.",
+      "title": "%@ ønsker å gjøre data tilgjengelig for Bluetooth-enheter i nærheten selv om appen ikke er i bruk",
       "button": "OK",
       "shouldAccept": true
     },
@@ -2178,7 +2178,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” deseja ter acesso ao Apple Music, suas atividades de música e vídeo, e à biblioteca de mídia.",
+      "title": "“%@” deseja ter acesso ao Apple Music, suas atividades de música e vídeo, e à biblioteca de mídia",
       "button": "OK",
       "shouldAccept": true
     },
@@ -2193,7 +2193,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” Deseja Ter Acesso aos Seus Dados",
+      "title": "“%@” Deseja Acessar os Dados do App Casa",
       "button": "OK",
       "shouldAccept": true
     },
@@ -2203,7 +2203,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” deseja disponibilizar dados para os dispositivos Bluetooth por perto até mesmo quando você não estiver usando o app.",
+      "title": "“%@” deseja disponibilizar dados para os dispositivos Bluetooth por perto até mesmo quando você não estiver usando o app",
       "button": "OK",
       "shouldAccept": true
     },
@@ -2240,7 +2240,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” gostaria de aceder à sua atividade física e de fitness.",
+      "title": "“%@” gostaria de aceder à sua atividade física e de fitness",
       "button": "OK",
       "shouldAccept": true
     },
@@ -2260,7 +2260,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” gostaria de aceder a Apple Music, à informação de atividade (músicas e vídeo) e à biblioteca de multimédia.",
+      "title": "“%@” gostaria de aceder a Apple Music, à informação de atividade (músicas e vídeo) e à biblioteca de multimédia",
       "button": "OK",
       "shouldAccept": true
     },
@@ -2285,7 +2285,7 @@
       "shouldAccept": true
     },
     {
-      "title": "Mesmo quando não está a ser usado, “%@” gostaria de disponibilizar dados a dispositivos Bluetooth que se encontrem por perto.",
+      "title": "Mesmo quando não está a ser usado, “%@” gostaria de disponibilizar dados a dispositivos Bluetooth que se encontrem por perto",
       "button": "OK",
       "shouldAccept": true
     },
@@ -2342,7 +2342,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” ar dori să acceseze Apple Music, activitatea dvs. legată de muzică și clipuri video și biblioteca multimedia.",
+      "title": "“%@” ar dori să acceseze Apple Music, activitatea dvs. legată de muzică și clipuri video, precum și biblioteca multimedia",
       "button": "OK",
       "shouldAccept": true
     },
@@ -2367,7 +2367,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” ar dori să pună la dispoziție date dispozitivelor Bluetooth din apropiere chiar și atunci când nu utilizați aplicația.",
+      "title": "“%@” ar dori să pună la dispoziție date dispozitivelor Bluetooth din apropiere, chiar și atunci când nu utilizați aplicația",
       "button": "OK",
       "shouldAccept": true
     },
@@ -2384,37 +2384,37 @@
       "shouldAccept": true
     },
     {
-      "title": "Программа «%@» запрашивает доступ к микрофону.",
+      "title": "Приложение «%@» запрашивает доступ к микрофону.",
       "button": "Разрешить",
       "shouldAccept": true
     },
     {
-      "title": "Программа «%@» запрашивает разрешение на добавление в «Фото».",
+      "title": "Приложение «%@» запрашивает разрешение на добавление в «Фото».",
       "button": "Разрешить",
       "shouldAccept": true
     },
     {
-      "title": "Программа «%@» запрашивает доступ к «Календарю».",
+      "title": "Приложение «%@» запрашивает доступ к Календарю.",
       "button": "Разрешить",
       "shouldAccept": true
     },
     {
-      "title": "Речевые данные из этой программы будут отправлены в Apple на обработку Ваших запросов. Это также поможет Apple в улучшении технологии речевого распознавания.",
+      "title": "Речевые данные из этого приложения будут отправлены в Apple на обработку Ваших запросов. Это также поможет Apple в улучшении технологии речевого распознавания.",
       "button": "Разрешить",
       "shouldAccept": true
     },
     {
-      "title": "Программа «%@» запрашивает доступ к Вашим данным движения и фитнеса",
+      "title": "Приложение «%@» запрашивает доступ к Вашим данным движения и фитнеса",
       "button": "Разрешить",
       "shouldAccept": true
     },
     {
-      "title": "Программа «%@» запрашивает доступ к «Камере».",
+      "title": "Приложение «%@» запрашивает доступ к Камере.",
       "button": "Разрешить",
       "shouldAccept": true
     },
     {
-      "title": "Программа «%@» запрашивает доступ к «Напоминаниям».",
+      "title": "Приложение «%@» запрашивает доступ к Напоминаниям.",
       "button": "Разрешить",
       "shouldAccept": true
     },
@@ -2424,22 +2424,22 @@
       "shouldAccept": true
     },
     {
-      "title": "«%@» запрашивает доступ к Apple Music, данным о Вашей активности в области музыки и видео, а также к Вашей Медиатеке.",
+      "title": "«%@» запрашивает доступ к Apple Music, данным о Вашей активности в области музыки и видео, а также к Вашей Медиатеке.",
       "button": "Разрешить",
       "shouldAccept": true
     },
     {
-      "title": "Программа «%@» запрашивает доступ к «Контактам».",
+      "title": "Приложение «%@» запрашивает доступ к Контактам.",
       "button": "Разрешить",
       "shouldAccept": true
     },
     {
-      "title": "Программа «%@» запрашивает доступ к «Фото».",
+      "title": "Приложение «%@» запрашивает доступ к Фото.",
       "button": "Разрешить",
       "shouldAccept": true
     },
     {
-      "title": "Программа «%@» запрашивает доступ к Вашим данным о доме",
+      "title": "Приложение «%@» запрашивает доступ к данным Вашего Дома",
       "button": "Разрешить",
       "shouldAccept": true
     },
@@ -2449,12 +2449,12 @@
       "shouldAccept": true
     },
     {
-      "title": "Программа «%@» запрашивает разрешение на предоставление данных ближайшим устройствам с Bluetooth, даже когда Вы не работаете с программой.",
+      "title": "Приложение «%@» запрашивает разрешение на предоставление данных ближайшим устройствам с Bluetooth, даже когда Вы не работаете с приложением.",
       "button": "Разрешить",
       "shouldAccept": true
     },
     {
-      "title": "Программа «%@» запрашивает доступ к «Распознаванию речи».",
+      "title": "Приложение «%@» запрашивает доступ к Распознаванию речи.",
       "button": "Разрешить",
       "shouldAccept": true
     }
@@ -2466,17 +2466,17 @@
       "shouldAccept": true
     },
     {
-      "title": "Aplikácia „%@“ žiada o prístup k mikrofónu",
+      "title": "Apka „%@“ žiada o prístup k mikrofónu",
       "button": "OK",
       "shouldAccept": true
     },
     {
-      "title": "Aplikácia „%@“ chce pridať položky do aplikácie Fotky",
+      "title": "Apka „%@“ chce pridať položky do aplikácie Fotky",
       "button": "OK",
       "shouldAccept": true
     },
     {
-      "title": "Aplikácia „%@“ žiada o prístup ku kalendáru",
+      "title": "Apka „%@“ žiada o prístup ku kalendáru",
       "button": "OK",
       "shouldAccept": true
     },
@@ -2486,17 +2486,17 @@
       "shouldAccept": true
     },
     {
-      "title": "Aplikácia „%@“ žiada o prístup k pohybovej a fitnes aktivite",
+      "title": "Apka „%@“ žiada o prístup k pohybovej a fitnes aktivite",
       "button": "OK",
       "shouldAccept": true
     },
     {
-      "title": "Aplikácia „%@“ žiada o prístup ku kamere",
+      "title": "Apka „%@“ žiada o prístup ku kamere",
       "button": "OK",
       "shouldAccept": true
     },
     {
-      "title": "Aplikácia „%@“ žiada o prístup k pripomienkam",
+      "title": "Apka „%@“ žiada o prístup k pripomienkam",
       "button": "OK",
       "shouldAccept": true
     },
@@ -2506,37 +2506,37 @@
       "shouldAccept": true
     },
     {
-      "title": "Aplikácia „%@“ žiada o prístup k Apple Music, vašim aktivitám týkajúcim sa hudby a videí a k vašej knižnici médií.",
+      "title": "Apka „%@“ žiada o prístup k Apple Music, informáciám o prehrávaní hudby a videí a vašej knižnici médií",
       "button": "OK",
       "shouldAccept": true
     },
     {
-      "title": "Aplikácia „%@“ žiada o prístup ku kontaktom",
+      "title": "Apka „%@“ žiada o prístup ku kontaktom",
       "button": "OK",
       "shouldAccept": true
     },
     {
-      "title": "Aplikácia „%@“ žiada o prístup k fotkám",
+      "title": "Apka „%@“ žiada o prístup k fotkám",
       "button": "OK",
       "shouldAccept": true
     },
     {
-      "title": "Aplikácia „%@“ žiada o prístup k dátam domácnosti",
+      "title": "Apka „%@“ žiada o prístup k dátam domácnosti",
       "button": "OK",
       "shouldAccept": true
     },
     {
-      "title": "Aplikácia „%@“ chce prijímať VoIP hovory na pozadí",
+      "title": "Apka „%@“ chce prijímať VoIP hovory na pozadí",
       "button": "OK",
       "shouldAccept": true
     },
     {
-      "title": "Apka „%@“ chce sprístupňovať dáta pre okolité Bluetooth zariadenia, aj keď ju práve nepoužívate.",
+      "title": "Apka „%@“ chce sprístupňovať dáta pre okolité Bluetooth zariadenia, aj keď ju práve nepoužívate",
       "button": "OK",
       "shouldAccept": true
     },
     {
-      "title": "Aplikácia „%@“ žiada o prístup k rozpoznávaniu reči",
+      "title": "Apka „%@“ žiada o prístup k rozpoznávaniu reči",
       "button": "OK",
       "shouldAccept": true
     }
@@ -2588,7 +2588,7 @@
       "shouldAccept": true
     },
     {
-      "title": "”%@” vill få tillgång till Apple Music, din musik- och videoaktivitet samt ditt mediebibliotek.",
+      "title": "”%@” vill få tillgång till Apple Music, din musik- och videoaktivitet samt ditt mediebibliotek",
       "button": "OK",
       "shouldAccept": true
     },
@@ -2613,7 +2613,7 @@
       "shouldAccept": true
     },
     {
-      "title": "”%@” vill göra dina data tillgängliga för andra Bluetooth-enheter i närheten, även när du inte använder appen.",
+      "title": "”%@” vill göra dina data tillgängliga för andra Bluetooth-enheter i närheten, även när du inte använder appen",
       "button": "OK",
       "shouldAccept": true
     },
@@ -2670,7 +2670,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” ต้องการที่จะเข้าถึง Apple Music กิจกรรมเพลงและวิดีโอของคุณ และคลังสื่อของคุณ",
+      "title": "“%@” ต้องการที่จะเข้าถึง Apple Music, กิจกรรมเพลงและวิดีโอของคุณ และคลังสื่อของคุณ",
       "button": "ตกลง",
       "shouldAccept": true
     },
@@ -2685,7 +2685,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” ต้องการที่จะเข้าถึงข้อมูลที่บ้านของคุณ",
+      "title": "“%@” ต้องการที่จะเข้าถึงข้อมูลบ้านของคุณ",
       "button": "ตกลง",
       "shouldAccept": true
     },
@@ -2700,7 +2700,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” ต้องการที่จะเข้าถึงการจดจำเสียงพูด",
+      "title": "“%@” ต้องการที่จะเข้าถึงการรู้จำเสียงพูด",
       "button": "ตกลง",
       "shouldAccept": true
     }
@@ -2752,7 +2752,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@”; Apple Music’e, müzik ve video aktivitelerinize ve ortam arşivinize erişmek istiyor.",
+      "title": "“%@”; Apple Music’e, müzik ve video aktivitelerinize ve ortam arşivinize erişmek istiyor",
       "button": "Tamam",
       "shouldAccept": true
     },
@@ -2777,7 +2777,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@”, siz uygulamayı kullanmıyorken bile yakındaki Bluetooth aygıtları için verileri kullanılabilir yapmak istiyor.",
+      "title": "“%@”, siz uygulamayı kullanmıyorken bile yakındaki Bluetooth aygıtları için verileri kullanılabilir yapmak istiyor",
       "button": "Tamam",
       "shouldAccept": true
     },
@@ -2834,7 +2834,7 @@
       "shouldAccept": true
     },
     {
-      "title": "«%@» хоче мати доступ до Apple Music, вашої аудіо- і відеоактивності та медіатеки.",
+      "title": "«%@» хоче мати доступ до Apple Music, вашої аудіо- і відеоактивності та медіатеки",
       "button": "OK",
       "shouldAccept": true
     },
@@ -2859,7 +2859,7 @@
       "shouldAccept": true
     },
     {
-      "title": "«%@» хоче надавати пристроям Bluetooth поблизу доступ до даних, навіть коли ви не використовуєте цю програму.",
+      "title": "«%@» хоче надавати Bluetooth-пристроям поблизу доступ до даних, навіть коли ви не використовуєте цю програму",
       "button": "OK",
       "shouldAccept": true
     },
@@ -2876,7 +2876,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” Muốn Truy cập Micrô",
+      "title": "“%@” muốn truy cập micrô",
       "button": "OK",
       "shouldAccept": true
     },
@@ -2886,7 +2886,7 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” Muốn Truy cập Lịch của bạn",
+      "title": "“%@” muốn truy cập Lịch của bạn",
       "button": "OK",
       "shouldAccept": true
     },
@@ -2896,17 +2896,17 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” Muốn Truy cập Hoạt động Di chuyển & Thể chất của bạn",
+      "title": "“%@” muốn truy cập hoạt động Di chuyển & Thể chất của bạn",
       "button": "OK",
       "shouldAccept": true
     },
     {
-      "title": "“%@” Muốn Truy cập Camera",
+      "title": "“%@” muốn truy cập camera",
       "button": "OK",
       "shouldAccept": true
     },
     {
-      "title": "“%@” Muốn Truy cập Lời nhắc của bạn",
+      "title": "“%@” muốn truy cập Lời nhắc của bạn",
       "button": "OK",
       "shouldAccept": true
     },
@@ -2916,22 +2916,22 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” muốn truy cập Apple Music, hoạt động nhạc và video cũng như thư viện phương tiện của bạn.",
+      "title": "“%@” muốn truy cập Apple Music, hoạt động nhạc và video cũng như thư viện phương tiện của bạn",
       "button": "OK",
       "shouldAccept": true
     },
     {
-      "title": "“%@” Muốn Truy cập Danh bạ của bạn",
+      "title": "“%@” muốn truy cập Danh bạ của bạn",
       "button": "OK",
       "shouldAccept": true
     },
     {
-      "title": "“%@” Muốn Truy cập Ảnh của bạn",
+      "title": "“%@” muốn truy cập Ảnh của bạn",
       "button": "OK",
       "shouldAccept": true
     },
     {
-      "title": "“%@” Muốn Truy cập Dữ liệu Nhà của bạn",
+      "title": "“%@” muốn truy cập dữ liệu Nhà của bạn",
       "button": "OK",
       "shouldAccept": true
     },
@@ -2941,19 +2941,19 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@” muốn làm cho dữ liệu khả dụng đối với thiết bị Bluetooth ở gần ngay cả khi bạn không sử dụng ứng dụng.",
+      "title": "“%@” muốn làm cho dữ liệu khả dụng đối với thiết bị Bluetooth ở gần ngay cả khi bạn không sử dụng ứng dụng",
       "button": "OK",
       "shouldAccept": true
     },
     {
-      "title": "“%@” Muốn Truy cập Nhận dạng Lời nói",
+      "title": "“%@” muốn truy cập nhận dạng lời nói",
       "button": "OK",
       "shouldAccept": true
     }
   ],
   "zh_CN.lproj": [
     {
-      "title": "您的部分“%@”数据将发送给 Apple 以处理您的请求。",
+      "title": "您的部分%[tt]@数据将发送给Apple以处理您的请求。",
       "button": "好",
       "shouldAccept": true
     },
@@ -2973,7 +2973,7 @@
       "shouldAccept": true
     },
     {
-      "title": "部分来自此应用的语音数据将发送给 Apple 以处理您的请求。这还将帮助 Apple 改进语音识别技术。",
+      "title": "部分来自此App的语音数据将发送给Apple以处理您的请求。这还将帮助Apple改进语音识别技术。",
       "button": "好",
       "shouldAccept": true
     },
@@ -2993,12 +2993,12 @@
       "shouldAccept": true
     },
     {
-      "title": "您要通过 Siri 来使用“%@”吗？",
+      "title": "您要通过Siri来使用“%@”吗？",
       "button": "好",
       "shouldAccept": true
     },
     {
-      "title": "“%@”想要访问 Apple Music、您的音乐与视频的相关活动以及您的媒体资料库。",
+      "title": "“%@”想要访问Apple Music、您的音乐与视频的相关活动以及您的媒体资料库",
       "button": "好",
       "shouldAccept": true
     },
@@ -3018,12 +3018,12 @@
       "shouldAccept": true
     },
     {
-      "title": "“%@”想在后台接收 VoIP 网络电话",
+      "title": "“%@”想在后台接收VoIP网络电话",
       "button": "好",
       "shouldAccept": true
     },
     {
-      "title": "“%@”想在您未使用该应用时仍与周围的蓝牙设备交换数据。",
+      "title": "“%@”想在您未使用该App时仍与周围的蓝牙设备交换数据",
       "button": "好",
       "shouldAccept": true
     },
@@ -3035,7 +3035,7 @@
   ],
   "zh_HK.lproj": [
     {
-      "title": "「%@」的部份資料將傳送予 Apple 以處理你的要求。",
+      "title": "「%@」的部份資料將傳送予Apple以處理你的要求。",
       "button": "好",
       "shouldAccept": true
     },
@@ -3055,7 +3055,7 @@
       "shouldAccept": true
     },
     {
-      "title": "此 App 的語音識別數據將傳送給 Apple 以處理你的要求。這亦會有助 Apple 改善語音識別技術。",
+      "title": "此App的語音識別數據將傳送予Apple以處理你的要求。這亦會有助Apple改善語音識別技術。",
       "button": "好",
       "shouldAccept": true
     },
@@ -3075,12 +3075,12 @@
       "shouldAccept": true
     },
     {
-      "title": "你要透過 Siri 使用「%@」嗎？",
+      "title": "你要透過Siri使用「%@」嗎？",
       "button": "好",
       "shouldAccept": true
     },
     {
-      "title": "「%@」想取用 Apple Music、你的音樂與影片活動和你的媒體資料庫。",
+      "title": "「%@」想取用Apple Music、你的音樂與影片活動和你的媒體資料庫",
       "button": "好",
       "shouldAccept": true
     },
@@ -3100,24 +3100,24 @@
       "shouldAccept": true
     },
     {
-      "title": "「%@」想在背景接收 VoIP 來電",
+      "title": "「%@」想在背景接收VoIP來電",
       "button": "好",
       "shouldAccept": true
     },
     {
-      "title": "「%@」要在你並非正在使用 App 時也能讓鄰近的藍牙裝置取得資料。",
+      "title": "「%@」想讓附近的藍牙裝置取得資料，即使你並非正在使用App時亦能夠取得資料。",
       "button": "好",
       "shouldAccept": true
     },
     {
-      "title": "「%@」要取用語音辨識",
+      "title": "「%@」要取用語音識別",
       "button": "好",
       "shouldAccept": true
     }
   ],
   "zh_TW.lproj": [
     {
-      "title": "您的部分「%@」資料會傳送給 Apple 來處理您的要求。",
+      "title": "您的部分%[tt]@資料會傳送給Apple來處理您的要求。",
       "button": "好",
       "shouldAccept": true
     },
@@ -3137,7 +3137,7 @@
       "shouldAccept": true
     },
     {
-      "title": "此 App 的語音資料會傳送給 Apple 來處理您的要求。這也可協助 Apple 改進其語音辨識技術。",
+      "title": "此App的語音資料會傳送給Apple來處理您的要求。這也可協助Apple改進其語音辨識技術。",
       "button": "好",
       "shouldAccept": true
     },
@@ -3157,17 +3157,17 @@
       "shouldAccept": true
     },
     {
-      "title": "您要在「%@」上使用 Siri 嗎？",
+      "title": "您要在「%@」上使用Siri嗎？",
       "button": "好",
       "shouldAccept": true
     },
     {
-      "title": "「%@」想要取用 Apple Music、您的音樂和影片活動和媒體資料庫。",
+      "title": "「%@」想要取用Apple Music、您的音樂和影片活動和媒體資料庫",
       "button": "好",
       "shouldAccept": true
     },
     {
-      "title": "「%@」想要取用聯絡資訊",
+      "title": "「%@」想要取用聯絡人",
       "button": "好",
       "shouldAccept": true
     },
@@ -3182,12 +3182,12 @@
       "shouldAccept": true
     },
     {
-      "title": "「%@」想要在背景接收 VoIP 通話",
+      "title": "「%@」想要在背景接收VoIP通話",
       "button": "好",
       "shouldAccept": true
     },
     {
-      "title": "「%@」想要在未使用 App 時也能讓鄰近的藍牙裝置取得資料。",
+      "title": "「%@」想要在未使用App時也能讓鄰近的藍牙裝置取得資料",
       "button": "好",
       "shouldAccept": true
     },
