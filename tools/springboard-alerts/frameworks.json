@@ -2,11 +2,11 @@
     {
         "name": "CoreLocation.framework",
         "values": [
-            { "title": "LOCATION_CLIENT_PERMISSION", "button": "???" },
-            { "title": "LOCATION_CLIENT_PERMISSION_ALWAYS", "button": "???" },
-            { "title": "LOCATION_CLIENT_PERMISSION_WHENINUSE", "button": "???" },
-            { "title": "LOCATION_CLIENT_PERMISSION_UPGRADE_WHENINUSE_ALWAYS", "button": "???" },
-            { "title": "LOCATION_CLIENT_PERMISSION_REPROMPT", "button": "???" }
+            { "title": "LOCATION_CLIENT_PERMISSION", "button": "LOCATION_CLIENT_PERMISSION_OK" },
+            { "title": "LOCATION_CLIENT_PERMISSION_ALWAYS", "button": "LOCATION_CLIENT_PERMISSION_OK" },
+            { "title": "LOCATION_CLIENT_PERMISSION_WHENINUSE", "button": "LOCATION_CLIENT_PERMISSION_OK" },
+            { "title": "LOCATION_CLIENT_PERMISSION_UPGRADE_WHENINUSE_ALWAYS", "button": "LOCATION_CLIENT_PERMISSION_OK" },
+            { "title": "LOCATION_CLIENT_PERMISSION_REPROMPT", "button": "LOCATION_CLIENT_PERMISSION_OK" }
         ]
     },
     {
@@ -34,20 +34,22 @@
     {
         "name": "CoreTelephony.framework",
         "values": [
-            { "title": "CBMessageBody", "button": "???" }
+            { "title": "CBMessageBody", "button": "CBMessageDeclineButton" },
+            { "title": "CBMessageTitle", "button": "CBMessageDeclineButton"},
+            { "title": "NO_SIM_CARD_INSTALLED", "button": "OK" }
         ]
     },
     {
         "name": "NetworkExtension.framework",
         "values": [
-            { "title": "APP_WARNING_HEADER_VPN", "button": "???" },
-            { "title": "APP_WARNING_HEADER_FILTER", "button": "???" }
+            { "title": "APP_WARNING_HEADER_VPN", "button": "ALLOW_BUTTON" },
+            { "title": "APP_WARNING_HEADER_FILTER", "button": "ALLOW_BUTTON" }
         ]
     },
     {
         "name": "SpringBoard.app",
         "values": [
-            { "title": "ACTIVATION_FAILED_TITLE", "button": "???" }
+            { "title": "ACTIVATION_FAILED_TITLE", "button": "ACTIVATION_FAILED_IGNORE_BUTTON" }
         ]
     },
     {
@@ -61,11 +63,11 @@
     {
         "name": "MobileSafari.app",
         "values": [
-            { "title": "Open in “%@”", "button": "???" },
-            { "title": "Open in “%@”?", "button": "???" },
-            { "title": "Search %@ (Quick Website Search)", "button": "???" },
-            { "title": "Open this page in “%@”?", "button": "???" },
-            { "title": "Open in the %@ app", "button": "???" }
+            { "title": "Open in “%@”", "button": "Open" },
+            { "title": "Open in “%@”?", "button": "Open" },
+            { "title": "Search %@ (Quick Website Search)", "button": "Open" },
+            { "title": "Open this page in “%@”?", "button": "Open" },
+            { "title": "Open in the %@ app", "button": "Open" }
         ]
     },
     {
@@ -82,8 +84,8 @@
     {
         "name": "UserNotificationsServer.framework",
         "values": [
-            { "title": "CRITICAL_ALERT_PERMISSION_ALERT_TITLE", "button": "???" },
-            { "title": "USER_NOTIFICATION_PERMISSION_ALERT_TITLE", "button": "???" }
+            { "title": "CRITICAL_ALERT_PERMISSION_ALERT_TITLE", "button": "PERMISSION_ALERT_ALLOW" },
+            { "title": "USER_NOTIFICATION_PERMISSION_ALERT_TITLE", "button": "PERMISSION_ALERT_ALLOW" }
         ]
     }
     

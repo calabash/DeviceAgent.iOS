@@ -15,29 +15,30 @@ class LocalizationStorage
 
     # Adds new alert with specific language and title to the database
     def add_entry(language, title, button)
-        if (entry = find_entry(language, title))
-            if entry['button'] != button
-                # Usually, it means that there are a few alerts with the identical title but different button text
-                # Just report about such issues for now. Probably, we want to handle it in future
-                raise 'Localization storage already contains alert with the identical title but other button text.'
-            end
-
-            return
-        end
-
         @storage[language] ||= []
-        @storage[language].push({
-            'title' => title,
-            'button' => button,
-            'shouldAccept' => true
-        })
+
+        alert_entry = add_alert(language, title)
+        add_button_to_alert(alert_entry, button) if button
     end
 
-    # Finds alert with specific language and title in the database
-    def find_entry(language, title)
-        return nil unless @storage[language]
+    # Adds new alert if it doesn't exist yet
+    def add_alert(language, title)
+        alert_entry = @storage[language].find { |item| item['title'] == title }
+        return alert_entry if alert_entry
 
-        @storage[language].find { |item| item['title'] == title }
+        alert_entry = {
+            'title' => title,
+            'buttons' => [],
+            'shouldAccept' => true
+        }
+        @storage[language].push(alert_entry)
+        alert_entry
+    end
+
+    # Adds button to the existing alert if it doesn't contain it
+    def add_button_to_alert(alert_entry, button)
+        button_entry = alert_entry['buttons'].find { |v| v == button }
+        alert_entry['buttons'].push(button) if button_entry.nil?
     end
 
     # Saves database to the file

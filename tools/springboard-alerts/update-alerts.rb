@@ -1,15 +1,12 @@
 #!/usr/bin/env ruby
 require 'awesome_print'
+require 'colorize'
 require 'pry'
 require 'run_loop'
 require_relative 'helpers'
 require_relative 'localization_storage'
 
 xcode = RunLoop::Xcode.new
-
-core_simulator_dir = xcode.developer_dir + '/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator'
-private_frameworks_dir = xcode.core_simulator_dir + '/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/'
-
 
 def collect_localization_dictionary(dir_path)
     dict = {}
@@ -23,7 +20,7 @@ end
 
 def find_framework(root_path, framework_name)
     found = Dir.glob("#{root_path}/**/#{framework_name}")
-    return nil if found.length == 0
+    return nil if found.empty?
 
     raise "More than 1 occurrence of '#{framework_name}' is found" if found.length > 1
 
@@ -35,31 +32,25 @@ target_frameworks = read_json('frameworks.json')
 languages = read_json('languages.json')
 
 target_frameworks.each do |framework|
-    puts "Scan framework '#{framework['name']}'"
+    puts "Scan framework '#{framework['name']}'".green
     framework_path = find_framework(xcode.core_simulator_dir, framework['name'])
 
     unless framework_path && Dir.exist?(framework_path)
-        puts "Skip '#{framework['name']}' since directory doesn't exist on path '#{framework_path}'"
+        puts "Skip '#{framework['name']}' since it was not found".red
         next
     end
 
     puts "Found on path '#{framework_path}'"
 
-    skipped_languages = []
+    available_languages = languages.select { |language| Dir.exist?(File.join(framework_path, language))}
+    skipped_languages = languages - available_languages
+    puts "Available languages: #{available_languages}"
+    puts "Skipped languages: #{skipped_languages}".yellow unless skipped_languages.empty?
 
-    languages.each do |language|
+    available_languages.each do |language|
         # for debug purpose
         # next unless language.start_with? 'ru'
-
         language_path = File.join(framework_path, language)
-
-        unless Dir.exist?(language_path)
-            # puts "Skip '#{language}' language. It is not found for framework '#{framework['name']}'"
-            skipped_languages.push(language)
-            next
-        end
-
-        puts "Scan '#{framework['name']}' -> #{language}"
 
         dict = collect_localization_dictionary(language_path)
 
@@ -68,12 +59,12 @@ target_frameworks.each do |framework|
             title = item['title']
             button = item['button']
 
-            puts "Unknown button constant '#{button}'" if button && !dict[button]
+            puts "Unknown button constant '#{button}'".yellow if button && !dict[button]
 
             if dict[title]
                 storage.add_entry(language, dict[title], dict[button])
             else
-                puts "Unknown alert constant '#{title}'"
+                puts "Unknown alert constant '#{title}'".red
             end
         end
 
@@ -82,11 +73,6 @@ target_frameworks.each do |framework|
             report_path = "reports/#{framework['name']}.#{language}.json"
             save_to_json_file(report_path, dict)
         end
-    end
-
-    if skipped_languages.length > 0
-        skipped_languages_str = skipped_languages.join(',')
-        puts "Skip '#{skipped_languages_str}' languages. They are not found for framework '#{framework['name']}'"
     end
 end
 

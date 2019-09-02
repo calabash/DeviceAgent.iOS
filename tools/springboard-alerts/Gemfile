@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'awesome_print'
+gem 'colorize'
 gem 'pry', '~> 0.12.2'
 gem 'pry-nav'
 gem 'rubocop'
