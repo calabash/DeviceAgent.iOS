@@ -45,6 +45,8 @@ Carthage/Build/**/*.bcsymbolmap
 !Carthage/Build/iOS/Expecta.framework*
 !Carthage/Build/iOS/Specta.framework*
 !Carthage/Build/iOS/OCMock.framework*
+tools/springboard-alerts/results
+tools/springboard-alerts/reports
 
 # Info.plist preprocessor files
 TestApp/App/InfoPlist.h

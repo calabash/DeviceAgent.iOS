@@ -2,12 +2,17 @@
     {
         "name": "CoreLocation.framework",
         "values": [
-            
+            { "title": "LOCATION_CLIENT_PERMISSION", "button": "???" },
+            { "title": "LOCATION_CLIENT_PERMISSION_ALWAYS", "button": "???" },
+            { "title": "LOCATION_CLIENT_PERMISSION_WHENINUSE", "button": "???" },
+            { "title": "LOCATION_CLIENT_PERMISSION_UPGRADE_WHENINUSE_ALWAYS", "button": "???" },
+            { "title": "LOCATION_CLIENT_PERMISSION_REPROMPT", "button": "???" }
         ]
     },
     {
         "name": "TCC.framework",
         "values": [
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceFaceID", "button": "REQUEST_ACCESS_ALLOW" },
             { "title": "REQUEST_ACCESS_INFO_SERVICE_kTCCServiceSiri", "button": "REQUEST_ACCESS_ALLOW" },
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceMicrophone", "button": "REQUEST_ACCESS_ALLOW" },
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServicePhotosAdd", "button": "REQUEST_ACCESS_ALLOW" },
@@ -29,6 +34,56 @@
     {
         "name": "CoreTelephony.framework",
         "values": [
+            { "title": "CBMessageBody", "button": "???" }
+        ]
+    },
+    {
+        "name": "NetworkExtension.framework",
+        "values": [
+            { "title": "APP_WARNING_HEADER_VPN", "button": "???" },
+            { "title": "APP_WARNING_HEADER_FILTER", "button": "???" }
+        ]
+    },
+    {
+        "name": "SpringBoard.app",
+        "values": [
+            { "title": "ACTIVATION_FAILED_TITLE", "button": "???" }
+        ]
+    },
+    {
+        "name": "TextInput.framework",
+        "values": [
+            { "title": "DICTATION_OPT_IN_TITLE", "button": "DICTATION_OPT_IN_NOT_NOW" },
+            { "title": "DICTATION_OPT_IN_ENABLE", "button": "DICTATION_OPT_IN_NOT_NOW" },
+            { "title": "EXTENSION_OPT_IN_TITLE", "button": "DICTATION_OPT_IN_NOT_NOW" }
+        ]
+    },
+    {
+        "name": "MobileSafari.app",
+        "values": [
+            { "title": "Open in “%@”", "button": "???" },
+            { "title": "Open in “%@”?", "button": "???" },
+            { "title": "Search %@ (Quick Website Search)", "button": "???" },
+            { "title": "Open this page in “%@”?", "button": "???" },
+            { "title": "Open in the %@ app", "button": "???" }
+        ]
+    },
+    {
+        "name": "AuthKit.framework",
+        "values": [
+            { "title": "INLINE_PASSWORD_ALERT_TITLE_SERVICE_APP_STORE", "button": "INLINE_PASSWORD_ALERT_CANCEL_BUTTON" },
+            { "title": "INLINE_PASSWORD_ALERT_TITLE_SERVICE_GAME_CENTER", "button": "INLINE_PASSWORD_ALERT_CANCEL_BUTTON" },
+            { "title": "INLINE_PASSWORD_ALERT_TITLE_SERVICE_ITUNES", "button": "INLINE_PASSWORD_ALERT_CANCEL_BUTTON" },
+            { "title": "INLINE_PASSWORD_ALERT_TITLE_SERVICE_IMESSAGE", "button": "INLINE_PASSWORD_ALERT_CANCEL_BUTTON" },
+            { "title": "INLINE_PASSWORD_ALERT_TITLE_SERVICE_FACETIME", "button": "INLINE_PASSWORD_ALERT_CANCEL_BUTTON" },
+            { "title": "INLINE_PASSWORD_ALERT_TITLE_SERVICE_ICLOUD", "button": "INLINE_PASSWORD_ALERT_CANCEL_BUTTON" }
+        ]
+    },
+    {
+        "name": "UserNotificationsServer.framework",
+        "values": [
+            { "title": "CRITICAL_ALERT_PERMISSION_ALERT_TITLE", "button": "???" },
+            { "title": "USER_NOTIFICATION_PERMISSION_ALERT_TITLE", "button": "???" }
         ]
     }
     
