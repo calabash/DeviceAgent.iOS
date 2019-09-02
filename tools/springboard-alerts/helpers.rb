@@ -16,8 +16,6 @@ def read_strings(file_path)
     args = ['plutil', '-convert', 'json', '-o', '"-"', "\"#{file_path}\""].join(' ')
     content = `#{args}`
     content_dict = JSON.parse(content)
-    puts content_array
-    content_array
 end
     
 
