@@ -18,25 +18,6 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
 @property(strong) NSArray<SpringBoardAlert *> *alerts;
 
 - (instancetype)init_private;
-- (NSArray<SpringBoardAlert *> *)concatenateArrays:(NSArray<NSArray *> *)arrays;
-- (NSArray<SpringBoardAlert *> *)USEnglishAlerts;
-- (NSArray<SpringBoardAlert *> *)DanishAlerts;
-- (NSArray<SpringBoardAlert *> *)DutchAlerts;
-- (NSArray<SpringBoardAlert *> *)DutchAlerts_BE;
-- (NSArray<SpringBoardAlert *> *)SwedishAlerts;
-- (NSArray<SpringBoardAlert *> *)GermanAlerts;
-- (NSArray<SpringBoardAlert *> *)EUSpanishAlerts;
-- (NSArray<SpringBoardAlert *> *)ES419SpanishAlerts;
-- (NSArray<SpringBoardAlert *> *)FrenchAlerts;
-- (NSArray<SpringBoardAlert *> *)RussianAlerts;
-- (NSArray<SpringBoardAlert *> *)PTBrazilAlerts;
-- (NSArray<SpringBoardAlert *> *)KoreanAlerts;
-- (NSArray<SpringBoardAlert *> *)ItalianAlerts;
-- (NSArray<SpringBoardAlert *> *)HebrewAlerts;
-- (NSArray<SpringBoardAlert *> *)HungarianAlerts;
-- (NSArray<SpringBoardAlert *> *)GreekAlerts;
-- (NSArray<SpringBoardAlert *> *)CzechAlerts;
-
 @end
 
 @implementation SpringBoardAlerts
