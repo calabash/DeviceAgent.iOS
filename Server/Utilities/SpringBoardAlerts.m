@@ -1,4 +1,6 @@
 
+#import <UIKit/UIKit.h>
+
 #import "SpringBoardAlerts.h"
 #import "SpringBoardAlert.h"
 
@@ -102,7 +104,30 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
     return final;
 }
 
+/*
+ Expected json format:
+ 
+ [
+ {"button": "OK", "accept": "YES", "title": "Would Like to Use Your Current Location"},
+ {"button": "Allow", "accept": "NO", "title": "access your location"},
+ {"button": "Not Now", "title": "Enable Dictation?"},
+ ]
+ */
+
 - (NSArray<SpringBoardAlert *> *)USEnglishAlerts {
+    NSDataAsset *asset = [[NSDataAsset alloc] initWithName:@"alerts"];
+    NSArray * rows = [NSJSONSerialization JSONObjectWithData:[asset data] options:kNilOptions error:nil];
+    NSMutableArray<SpringBoardAlert *> * alerts = [NSMutableArray<SpringBoardAlert *> array];
+    for (int i=0; i < rows.count; i++) {
+        NSDictionary* row = rows[i];
+        // by defalut shouldAccept = "YES"
+        BOOL shouldAccept = row[@"accept"] == nil ? YES : [row[@"accept"]  isEqual: @"YES"];
+        [alerts addObject: alert(row[@"button"], shouldAccept, row[@"title"])];
+    }
+    return [NSArray<SpringBoardAlert *> arrayWithArray: alerts];
+    
+    
+/*
     return @[
              alert(@"OK", YES, @"Would Like to Use Your Current Location"),
              alert(@"OK", YES, @"Location Accuracy"),
@@ -132,6 +157,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"OK", YES, @"access Apple Music"),
              alert(@"OK", YES, @"Access Speech Recognition")
              ];
+ */
 }
 
 - (NSArray<SpringBoardAlert *> *)DanishAlerts {
