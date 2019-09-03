@@ -1,13 +1,13 @@
-# Reads and parse JSON object from local file
+# Reads and parses JSON object from local file
 def read_json(file_path)
     raise "The file '#{file_path}' is not found" unless File.exist?(file_path)
 
     input_file = File.read(file_path)
-    input_data = JSON.parse(input_file)
-    input_data
+    JSON.parse(input_file)
 end
 
-# Reads and parse *.strings file and returns the list of key-value pairs
+# Reads and parses *.strings file
+# returns the list of key-value pairs
 def read_strings(file_path)
     raise "The file '#{file_path}' is not found" unless File.exist?(file_path)
 
@@ -16,7 +16,7 @@ def read_strings(file_path)
     JSON.parse(content)
 end
 
-# Put JSON object to the local file
+# Puts JSON object to the local file
 def save_json(file_path, content)
     # create directory if doesn't exist
     dirname = File.dirname(file_path)

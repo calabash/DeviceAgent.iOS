@@ -5,7 +5,7 @@ require_relative 'helpers'
 class LocalizationStorage
     def initialize(storage_path, languages)
         @storage_path = storage_path
-        @languages = languages
+        @languages = languages.map { |lang| lang['name'] }
         load
     end
 

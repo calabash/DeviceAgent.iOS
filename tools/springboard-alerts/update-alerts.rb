@@ -1,16 +1,26 @@
 #!/usr/bin/env ruby
-require 'awesome_print'
 require 'colorize'
 require 'pry'
 require 'run_loop'
 require_relative 'helpers'
 require_relative 'localization_storage'
 
+# Init with current Xcode
 xcode = RunLoop::Xcode.new
 
+# Try to find specific framework under CoreSimulators directory
+def find_framework(root_path, framework_name)
+    found = Dir.glob("#{root_path}/**/#{framework_name}")
+    return nil if found.empty?
+
+    raise "More than 1 occurrence of '#{framework_name}' is found; unexpected behavior" if found.length > 1
+
+    found[0]
+end
+
 # Gets valid language path
-# some languages have a few aliases like 'en.lproj' and 'English.lproj', we should check all options
-def get_language_path(framework_path, language)
+# Some languages have a few aliases like 'en.lproj' and 'English.lproj', we should check all options
+def find_language(framework_path, language)
     language['filenames'].find do |lang_alias|
         language_path = File.join(framework_path, lang_alias)
         return language_path if Dir.exist?(language_path)
@@ -50,20 +60,9 @@ def pick_required_values(found_values_dict, target_framework, localization_stora
     end
 end
 
-# Try to find specific framework under CoreSimulators directory
-def find_framework(root_path, framework_name)
-    found = Dir.glob("#{root_path}/**/#{framework_name}")
-    return nil if found.empty?
-
-    raise "More than 1 occurrence of '#{framework_name}' is found; unexpected behavior" if found.length > 1
-
-    found[0]
-end
-
 target_frameworks = read_json('frameworks.json')
 languages = read_json('languages.json')
-language_names = languages.map { |lang| lang['name'] }
-localization_storage = LocalizationStorage.new('results', language_names)
+localization_storage = LocalizationStorage.new('results', languages)
 
 target_frameworks.each do |framework|
     puts "Scan framework '#{framework['name']}'".green
@@ -76,14 +75,14 @@ target_frameworks.each do |framework|
 
     puts "Found on path '#{framework_path}'"
 
-    available_languages = languages.select { |language| get_language_path(framework_path, language) }
+    available_languages = languages.select { |language| find_language(framework_path, language) }
     skipped_languages = languages - available_languages
     # puts "Available languages: #{available_languages.map { |lang| lang['name'] }}"
     puts "Skipped languages: #{skipped_languages.map { |lang| lang['name'] }}".yellow unless skipped_languages.empty?
 
     available_languages.each do |language|
         language_name = language['name']
-        language_path = get_language_path(framework_path, language)
+        language_path = find_language(framework_path, language)
 
         found_values_dict = collect_localization_dictionary(language_path)
         pick_required_values(found_values_dict, framework, localization_storage, language_name)
