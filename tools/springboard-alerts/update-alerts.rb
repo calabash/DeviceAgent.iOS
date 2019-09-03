@@ -78,7 +78,7 @@ target_frameworks.each do |framework|
 
     available_languages = languages.select { |language| get_language_path(framework_path, language) }
     skipped_languages = languages - available_languages
-    puts "Available languages: #{available_languages.map { |lang| lang['name'] }}"
+    # puts "Available languages: #{available_languages.map { |lang| lang['name'] }}"
     puts "Skipped languages: #{skipped_languages.map { |lang| lang['name'] }}".yellow unless skipped_languages.empty?
 
     available_languages.each do |language|

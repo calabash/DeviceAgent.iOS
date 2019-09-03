@@ -243,5 +243,89 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf deinen Standort zugreifen?",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf deinen Standort zugreifen, selbst wenn du die App nicht benutzt?",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf deinen Standort zugreifen, wenn du die App verwendest?",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auch auf deinen Standort zugreifen, wenn du die App nicht benutzt?",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ hat deinen Standort im Hintergrund verwendet. Ist dies weiterhin erlaubt?",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Es sind neue Einstellungen verfügbar. Sollen sie jetzt aktualisiert werden?",
+    "buttons": [
+      "Später"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Update der Netzbetreiber-Einstellungen",
+    "buttons": [
+      "Später"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Keine SIM-Karte eingelegt",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Diktierfunktion aktivieren?",
+    "buttons": [
+      "Später"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Diktierfunktion aktivieren",
+    "buttons": [
+      "Später"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Drittanbietertastatur hinzufügen?",
+    "buttons": [
+      "Später"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%1$@“ möchte auf %2$@-Accounts zugreifen",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
   }
 ]

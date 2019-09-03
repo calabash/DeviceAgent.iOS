@@ -250,5 +250,89 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir a %@ acceder a tu ubicación?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir a %@ acceder a tu ubicación aunque no estés utilizando la app?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir a %@ acceder a tu ubicación mientras utilizas la app?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir a %@ acceder también a tu ubicación aunque no estés utilizando la app?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ ha estado utilizando tu ubicación en segundo plano. ¿Quieres seguir permitiéndolo?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Hay nuevos ajustes disponibles. ¿Quieres actualizarlos ahora?",
+    "buttons": [
+      "Ahora no"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Actualización de ajustes de operador",
+    "buttons": [
+      "Ahora no"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "No hay tarjeta SIM",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Activar Dictado?",
+    "buttons": [
+      "Ahora no"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Activar Dictado",
+    "buttons": [
+      "Ahora no"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Añadir teclado de terceros?",
+    "buttons": [
+      "Ahora no"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%1$@” quiere obtener acceso a cuentas %2$@",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -250,5 +250,89 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Vuoi consentire a “%@” di accedere alla tua posizione?",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Consenti a “%@” di accedere ai dati relativi alla tua posizione anche quando non stai usando l'app?",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vuoi consentire a “%@” di accedere ai dati relativi alla tua posizione mentre utilizzi l'app?",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Consenti a “%@” di accedere anche ai dati relativi alla tua posizione quando l'app non è in uso?",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” sta usando la tua posizione in background. Vuoi che continui a usarla?",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Sono disponibili nuove impostazioni. Desideri aggiornarle ora?",
+    "buttons": [
+      "Non ora"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aggiornamento impostazioni gestore",
+    "buttons": [
+      "Non ora"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Nessuna SIM inserita",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vuoi abilitare Dettatura?",
+    "buttons": [
+      "Non ora"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Abilita Dettatura",
+    "buttons": [
+      "Non ora"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vuoi aggiungere la tastiera di terze parti?",
+    "buttons": [
+      "Non ora"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%1$@” vorrebbe accedere agli account %2$@",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

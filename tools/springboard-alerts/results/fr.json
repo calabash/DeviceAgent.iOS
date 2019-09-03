@@ -250,5 +250,89 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Autoriser « %@ » à accéder à votre position ?",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Autoriser « %@ » à accéder à vos données de localisation même lorsque vous n’utilisez pas l’app ?",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Autoriser « %@ » à accéder à vos données de localisation lorsque vous utilisez l’app ?",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Autoriser « %@ » à accéder aussi à vos données de localisation lorsque vous n’utilisez pas l’app ?",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » utilise vos données de localisation en arrière-plan. Confirmez-vous que vous donnez votre accord ?",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "De nouveaux réglages sont disponibles. Souhaitez-vous les mettre à jour maintenant ?",
+    "buttons": [
+      "Plus tard"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Mise à jour des réglages de l’opérateur",
+    "buttons": [
+      "Plus tard"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aucune carte SIM installée",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Activer Dictée ?",
+    "buttons": [
+      "Plus tard"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Activer Dictée",
+    "buttons": [
+      "Plus tard"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Ajouter un clavier de tierce partie ?",
+    "buttons": [
+      "Plus tard"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %1$@ » souhaite accéder aux comptes %2$@.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

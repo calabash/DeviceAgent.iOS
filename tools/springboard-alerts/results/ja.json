@@ -250,5 +250,82 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@”に位置情報の利用を許可しますか?",
+    "buttons": [
+      "許可"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”を使用していないときでも位置情報の利用を許可しますか?",
+    "buttons": [
+      "許可"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”の使用中に位置情報の利用を許可しますか?",
+    "buttons": [
+      "許可"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”はバックグラウンドで位置情報を利用しています。位置情報の利用を許可したままにしますか?",
+    "buttons": [
+      "許可"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "新しい設定が利用可能です。今すぐアップデートしますか?",
+    "buttons": [
+      "今はしない"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "キャリア設定アップデート",
+    "buttons": [
+      "今はしない"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "SIMカードが挿入されていません",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "音声入力を有効にしますか?",
+    "buttons": [
+      "今はしない"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "音声入力を有効にする",
+    "buttons": [
+      "今はしない"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "他社製キーボードを追加しますか?",
+    "buttons": [
+      "今はしない"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%1$@”は%2$@アカウントへのアクセスを求めています",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

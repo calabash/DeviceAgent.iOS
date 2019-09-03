@@ -26,7 +26,8 @@
     {
         "name": "de",
         "filenames": [
-            "de.lproj"
+            "de.lproj",
+            "German.lproj"
         ]
     },
     {
@@ -38,7 +39,8 @@
     {
         "name": "en",
         "filenames": [
-            "en.lproj"
+            "en.lproj",
+            "English.lproj"
         ]
     },
     {
@@ -56,7 +58,8 @@
     {
         "name": "es",
         "filenames": [
-            "es.lproj"
+            "es.lproj",
+            "Spanish.lproj"
         ]
     },
     {
@@ -74,7 +77,8 @@
     {
         "name": "fr",
         "filenames": [
-            "fr.lproj"
+            "fr.lproj",
+            "French.lproj"
         ]
     },
     {
@@ -116,13 +120,15 @@
     {
         "name": "it",
         "filenames": [
-            "it.lproj"
+            "it.lproj",
+            "Italian.lproj"
         ]
     },
     {
         "name": "ja",
         "filenames": [
-            "ja.lproj"
+            "ja.lproj",
+            "Japanese.lproj"
         ]
     },
     {
@@ -140,7 +146,8 @@
     {
         "name": "nl",
         "filenames": [
-            "nl.lproj"
+            "nl.lproj",
+            "Dutch.lproj"
         ]
     },
     {

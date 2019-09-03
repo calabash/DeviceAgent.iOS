@@ -264,5 +264,89 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Allow “%@” to access your location?",
+    "buttons": [
+      "Allow"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Allow “%@” to access your location even when you are not using the app?",
+    "buttons": [
+      "Allow"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Allow “%@” to access your location while you are using the app?",
+    "buttons": [
+      "Allow"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Allow “%@” to also access your location even when you are not using the app?",
+    "buttons": [
+      "Allow"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” has been using your location in the background. Do you want to continue allowing this?",
+    "buttons": [
+      "Allow"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "New settings are available. Would you like to update them now?",
+    "buttons": [
+      "Not Now"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Carrier Settings Update",
+    "buttons": [
+      "Not Now"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "No SIM Card Installed",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Enable Dictation?",
+    "buttons": [
+      "Not Now"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Enable Dictation",
+    "buttons": [
+      "Not Now"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Add Third-Party Keyboard?",
+    "buttons": [
+      "Not Now"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%1$@” Would Like Access to %2$@ Accounts",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]
