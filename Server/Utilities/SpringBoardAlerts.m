@@ -4,7 +4,22 @@
 #import "SpringBoardAlerts.h"
 #import "SpringBoardAlert.h"
 
-NSString * languages[] = {@"cs", @"da",@"de", @"el", @"en", @"es_419", @"fr",@"he", @"hu", @"it", @"ko", @"nl", @"pt_PT", @"ru", @"sv"};
+NSString * languages[] = {
+    @"springboard-alerts-cs",
+    @"springboard-alerts-da",
+    @"springboard-alerts-de",
+    @"springboard-alerts-el",
+    @"springboard-alerts-en",
+    @"springboard-alerts-es_419",
+    @"springboard-alerts-fr",
+    @"springboard-alerts-he",
+    @"springboard-alerts-hu",
+    @"springboard-alerts-it",
+    @"springboard-alerts-ko",
+    @"springboard-alerts-nl",
+    @"springboard-alerts-pt_PT",
+    @"springboard-alerts-ru",
+    @"springboard-alerts-sv"};
 
 // Convenience method for creating alerts from the regular expressions found in run_loop
 // scripts/lib/on_alert.js
