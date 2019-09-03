@@ -23,6 +23,7 @@
   {
     "title": "“%@” Would Like to Add to your Photos",
     "buttons": [
+      "OK"
     ],
     "shouldAccept": true
   },
@@ -247,6 +248,20 @@
     "title": "Currently connected accessories will be disconnected and other accessories will not connect.\n\nBluetooth will continue to be available for Apple Watch, Apple Pencil, Personal Hotspot, and Handoff.",
     "buttons": [
 
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Would Like to Access Your Reminders",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Would You Like to Use “%@” with Siri?",
+    "buttons": [
+      "OK"
     ],
     "shouldAccept": true
   }
