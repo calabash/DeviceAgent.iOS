@@ -45,7 +45,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		4107F8FD231D7262003961AF /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107F8FC231D7262003961AF /* Resources.xcassets */; };
 		4107F8FE231D7298003961AF /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107F8FC231D7262003961AF /* Resources.xcassets */; };
 		41188FEA22E9958D0012886A /* XCWebViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 4166C9AE22E7009800C8BEBF /* XCWebViews.m */; };
 		419BE54B231E46D800DF0ABD /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107F8FC231D7262003961AF /* Resources.xcassets */; };
@@ -616,13 +615,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		898743D61C5847B30084FD93 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 898743B41C5847B30084FD93 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 898743BB1C5847B30084FD93;
-			remoteInfo = "xcuitest-server";
-		};
 		F50BB2941D73392200264915 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 898743B41C5847B30084FD93 /* Project object */;
@@ -2769,7 +2761,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				898743D71C5847B30084FD93 /* PBXTargetDependency */,
 			);
 			name = DeviceAgent;
 			productName = "xcuitest-serverUITests";
@@ -3067,7 +3058,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4107F8FD231D7262003961AF /* Resources.xcassets in Resources */,
 				F55F84011C6DE50C00A945C8 /* Main.storyboard in Resources */,
 				F5169D231CFE07FD00252F52 /* LICENSE in Resources */,
 				F55F84001C6DE50C00A945C8 /* LaunchScreen.storyboard in Resources */,
@@ -3567,11 +3557,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		898743D71C5847B30084FD93 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 898743BB1C5847B30084FD93 /* AppStub */;
-			targetProxy = 898743D61C5847B30084FD93 /* PBXContainerItemProxy */;
-		};
 		F50BB2951D73392200264915 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F50BB27A1D73392100264915 /* Permissions */;
