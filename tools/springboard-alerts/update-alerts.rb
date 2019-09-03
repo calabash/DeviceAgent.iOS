@@ -5,26 +5,13 @@ require 'pry'
 require 'run_loop'
 require_relative 'helpers'
 require_relative 'localization_storage'
+require_relative 'frameworks-parser'
 
 xcode = RunLoop::Xcode.new
+parser = FrameworksParser.new(['en', 'ru'])
 
 core_simulator_dir = xcode.developer_dir + '/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator'
-
-def search_strings_constants(dir_path)
-    langs = ['en', 'ru']
-    for lang in langs
-        out_array = []
-        Dir.glob("#{dir_path}/**/#{lang}.lproj/*.strings") do |file_path|
-            elem = read_strings(file_path)
-            elem['path'] = file_path
-            out_array.push(elem)
-        end
-        report_path = "reports/test.#{lang}.json"
-        save_to_json_file(report_path, out_array)
-    end
-end
-
-search_strings_constants(core_simulator_dir)
+parser.parse_constants(core_simulator_dir)
 
 def collect_localization_dictionary(dir_path)
     dict = {}

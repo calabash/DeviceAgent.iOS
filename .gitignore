@@ -47,6 +47,7 @@ Carthage/Build/**/*.bcsymbolmap
 !Carthage/Build/iOS/OCMock.framework*
 tools/springboard-alerts/results
 tools/springboard-alerts/reports
+tools/springboard-alerts/constants
 
 # Info.plist preprocessor files
 TestApp/App/InfoPlist.h
