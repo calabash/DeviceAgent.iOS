@@ -6,3 +6,5 @@ Metrics/LineLength:
   Enabled: false
 Style/FrozenStringLiteralComment:
   Enabled: false
+Layout/EndOfLine:
+  EnforcedStyle: crlf

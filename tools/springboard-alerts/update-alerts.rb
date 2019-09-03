@@ -8,6 +8,7 @@ require_relative 'localization_storage'
 
 xcode = RunLoop::Xcode.new
 
+# Reads and parse all *.strings files in specific directory
 def collect_localization_dictionary(dir_path)
     dict = {}
     Dir.glob("#{dir_path}/*.strings") do |file_path|
@@ -18,6 +19,20 @@ def collect_localization_dictionary(dir_path)
     dict
 end
 
+def pick_required_values(found_values_dict, required_values, localization_storage, language)
+    required_values.each do |item|
+        title = item['title']
+        button = item['button']
+
+        if found_values_dict[title]
+            localization_storage.add_entry(language, found_values_dict[title], found_values_dict[button])
+        else
+            puts "Unknown alert constant '#{title}' for framework '#{framework['name']}'".red
+        end
+    end
+end
+
+# Try to find specific framework under CoreSimulators directory
 def find_framework(root_path, framework_name)
     found = Dir.glob("#{root_path}/**/#{framework_name}")
     return nil if found.empty?
@@ -27,9 +42,9 @@ def find_framework(root_path, framework_name)
     found[0]
 end
 
-storage = LocalizationStorage.new('results/report.json')
 target_frameworks = read_json('frameworks.json')
 languages = read_json('languages.json')
+localization_storage = LocalizationStorage.new('results', languages)
 
 target_frameworks.each do |framework|
     puts "Scan framework '#{framework['name']}'".green
@@ -42,37 +57,24 @@ target_frameworks.each do |framework|
 
     puts "Found on path '#{framework_path}'"
 
-    available_languages = languages.select { |language| Dir.exist?(File.join(framework_path, language)) }
+    available_languages = languages.select { |language| Dir.exist?(File.join(framework_path, language + '.lproj')) }
     skipped_languages = languages - available_languages
     puts "Available languages: #{available_languages}"
     puts "Skipped languages: #{skipped_languages}".yellow unless skipped_languages.empty?
 
     available_languages.each do |language|
-        # for debug purpose
-        # next unless language.start_with? 'ru'
-        language_path = File.join(framework_path, language)
+        language_path = File.join(framework_path, language + '.lproj')
 
-        dict = collect_localization_dictionary(language_path)
-
-        # pick the necessary constants
-        framework['values'].each do |item|
-            title = item['title']
-            button = item['button']
-
-            if dict[title]
-                storage.add_entry(language, dict[title], dict[button])
-            else
-                puts "Unknown alert constant '#{title}' for framework '#{framework['name']}'".red
-            end
-        end
+        found_values_dict = collect_localization_dictionary(language_path)
+        pick_required_values(found_values_dict, framework['values'], localization_storage, language)
 
         # debug info
-        if ENV['DEBUG']
+        if ENV['DEBUG'] && language == 'en'
             report_path = "reports/#{framework['name']}.#{language}.json"
-            save_json(report_path, dict)
+            save_json(report_path, found_values_dict)
         end
     end
 end
 
 # save updated database to the local file
-storage.save
+localization_storage.save

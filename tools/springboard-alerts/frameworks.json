@@ -87,6 +87,26 @@
             { "title": "CRITICAL_ALERT_PERMISSION_ALERT_TITLE", "button": "PERMISSION_ALERT_ALLOW" },
             { "title": "USER_NOTIFICATION_PERMISSION_ALERT_TITLE", "button": "PERMISSION_ALERT_ALLOW" }
         ]
+    },
+    {
+        "name": "HealthUI.framework",
+        "values": [
+            { "title": "ALLOW_DEVICE_DATA_UPDATES", "button": "OD_ALERT_OK"},
+            { "title": "AUTHORIZATION_DONT_ALLOW_ALERT_TITLE", "button": "OD_ALERT_OK"}
+        ]
+    },
+    {
+        "name": "Accounts.framework",
+        "values": [
+            { "title": "ACCOUNT_ACCESS_MESSAGE", "button": "OK"}
+        ]
+    },
+    {
+        "name": "ConnectivityModule.bundle",
+        "values": [
+            { "title": "CONTROL_CENTER_WIFI_BEHAVIOR_ALERT_MESSAGE", "button": "OK" },
+            { "title": "CONTROL_CENTER_WLAN_BEHAVIOR_ALERT_MESSAGE", "button": "OK" },
+            { "title": "CONTROL_CENTER_BLUETOOTH_BEHAVIOR_ALERT_MESSAGE", "button": "OK" }
+        ]
     }
-    
 ]
