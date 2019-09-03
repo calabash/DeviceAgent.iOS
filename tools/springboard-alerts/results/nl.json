@@ -233,21 +233,21 @@
   {
     "title": "Het huidige wifinetwerk en andere netwerken in de buurt worden tot morgen losgekoppeld. Wifi blijft beschikbaar voor AirDrop, 'Persoonlijke hotspot' en de nauwkeurigheid van de locatie.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Het huidige WLAN-netwerk en andere netwerken in de buurt worden tot morgen losgekoppeld. WLAN blijft beschikbaar voor AirDrop, 'Persoonlijke hotspot' en de nauwkeurigheid van de locatie.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Gekoppelde accessoires worden losgekoppeld en andere accessoires worden niet gekoppeld.\n\nBluetooth blijft beschikbaar voor Apple Watch, Apple Pencil, 'Persoonlijke hotspot' en Handoff.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   }

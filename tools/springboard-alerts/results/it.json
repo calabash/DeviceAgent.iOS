@@ -233,21 +233,21 @@
   {
     "title": "La connessione alla rete Wi-Fi attuale e ad altre reti nelle vicinanze rimarrà inattiva fino a domani.\n\nLa connessione Wi-Fi continuerà a essere disponibile per AirDrop, per l'hotspot personale e per garantire l'esattezza della posizione.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "La connessione alla rete WLAN attuale e ad altre reti nelle vicinanze rimarrà inattiva fino a domani.\n\nLa connessione WLAN continuerà a essere disponibile per AirDrop, per l'hotspot personale e per garantire l'esattezza della posizione.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Gli accessori attualmente connessi verranno disconnessi e non sarà possibile connetterne altri.\n\nLa connessione Bluetooth continuerà a essere disponibile per Apple Watch, Apple Pencil, Handoff e per l'hotspot personale.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   }

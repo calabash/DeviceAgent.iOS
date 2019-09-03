@@ -317,21 +317,21 @@
   {
     "title": "Mạng Wi-Fi hiện tại và các mạng khác gần bạn sẽ bị ngắt kết nối cho đến ngày mai.\n\nWi-Fi sẽ tiếp tục khả dụng cho AirDrop, Điểm truy cập cá nhân và độ chính xác về vị trí.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Mạng WLAN hiện tại và các mạng khác gần bạn sẽ bị ngắt kết nối cho đến ngày mai.\n\nWLAN sẽ tiếp tục khả dụng cho AirDrop, Điểm truy cập cá nhân và độ chính xác về vị trí.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Các phụ kiện hiện đang được kết nối sẽ bị ngắt kết nối và các phụ kiện khác sẽ không kết nối.\n\nBluetooth sẽ tiếp tục khả dụng cho Apple Watch, Apple Pencil, Điểm truy cập cá nhân và Handoff.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   }

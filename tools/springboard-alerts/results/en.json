@@ -233,21 +233,21 @@
   {
     "title": "The current Wi-Fi network and others nearby will be disconnected until tomorrow.\n\nWi-Fi will continue to be available for AirDrop, Personal Hotspot, and location accuracy.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "The current WLAN network and others nearby will be disconnected until tomorrow.\n\nWLAN will continue to be available for AirDrop, Personal Hotspot, and location accuracy.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Currently connected accessories will be disconnected and other accessories will not connect.\n\nBluetooth will continue to be available for Apple Watch, Apple Pencil, Personal Hotspot, and Handoff.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },

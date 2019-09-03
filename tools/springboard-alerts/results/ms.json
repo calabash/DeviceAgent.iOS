@@ -317,21 +317,21 @@
   {
     "title": "Rangkaian Wi-Fi semasa dan rangkaian lain yang berdekatan akan diputuskan sambungan sehingga esok.\n\nWi-Fi akan terus tersedia untuk AirDrop, Hotspot Peribadi dan ketepatan lokasi.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Rangkaian WLAN semasa dan rangkaian lain yang berdekatan akan diputuskan sambungan sehingga esok.\n\nWLAN akan terus tersedia untuk AirDrop, Hotspot Peribadi dan ketepatan lokasi.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Aksesori yang disambungkan pada masa ini akan diputuskan sambungan dan aksesori lain tidak akan bersambung.\n\nBluetooth akan terus tersedia untuk Apple Watch, Apple Pencil, Hotspot Peribadi dan Handoff.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   }

@@ -317,21 +317,21 @@
   {
     "title": "Şu anki Wi-Fi ağının ve yakınlardaki diğerlerinin bağlantısı yarına kadar kesilecektir.\n\nWi-Fi; AirDrop, Kişisel Erişim Noktası ve konum doğruluğu için kullanılmaya devam edecektir.",
     "buttons": [
-
+      "Tamam"
     ],
     "shouldAccept": true
   },
   {
     "title": "Şu anki WLAN ağının ve yakınlardaki diğerlerinin bağlantısı yarına kadar kesilecektir.\n\nWLAN; AirDrop, Kişisel Erişim Noktası ve konum doğruluğu için kullanılmaya devam edecektir.",
     "buttons": [
-
+      "Tamam"
     ],
     "shouldAccept": true
   },
   {
     "title": "Şu an için bağlı aksesuarların bağlantısı kesilecek ve diğer aksesuarlar bağlanmayacak.\n\nBluetooth; Apple Watch, Apple Pencil, Kişisel Erişim Noktası ve Handoff için kullanılmaya devam edecektir.",
     "buttons": [
-
+      "Tamam"
     ],
     "shouldAccept": true
   }

@@ -317,21 +317,21 @@
   {
     "title": "A rede Wi‑Fi atual e outras próximas serão desligadas até amanhã.\n\nA ligação Wi‑Fi continuará a estar disponível para AirDrop, hotspot pessoal e precisão da localização.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "A rede WLAN atual e outras próximas serão desligadas até amanhã.\n\nA ligação WLAN continuará a estar disponível para AirDrop, hotspot pessoal e precisão da localização.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Os acessórios ligados serão desligados e outros acessórios não poderão estabelecer ligação.\n\nO Bluetooth continuará a estar disponível para usar com o Apple Watch, Apple Pencil, hotspot pessoal e Handoff.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   }

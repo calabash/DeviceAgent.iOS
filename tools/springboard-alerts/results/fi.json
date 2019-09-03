@@ -310,21 +310,21 @@
   {
     "title": "Yhteys nykyisiin ja muihin lähellä oleviin Wi-Fi-verkkoihin katkaistaan huomiseen saakka.\n\nWi-Fi toimii edelleen AirDropille, omalle yhteyspisteelle ja sijainnin tarkkuudelle.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Yhteys nykyisiin ja muihin lähellä oleviin WLAN-verkkoihin katkaistaan huomiseen saakka.\n\nWLAN toimii edelleen AirDropille, omalle yhteyspisteelle ja sijainnin tarkkuudelle.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Yhdistettyjen lisälaitteiden yhteydet katkaistaan ja muita lisälaitteita ei voida yhdistää.\n\nBluetooth toimii edelleen Apple Watchin, Apple Pencilin, oman yhteyspisteen ja Handoffin kanssa.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   }

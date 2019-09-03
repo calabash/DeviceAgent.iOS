@@ -317,21 +317,21 @@
   {
     "title": "Det aktuelle Wi-Fi-netværk og andre i nærheden afbrydes indtil i morgen.\n\nWi-Fi vil stadig være tilgængeligt for AirDrop, Internetdeling og lokaliteternøjagtighed.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Det aktuelle WLAN-netværk og andre i nærheden afbrydes indtil i morgen.\n\nWLAN vil stadig være tilgængeligt for AirDrop, Internetdeling og lokaliteternøjagtighed.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Tilbehør, der er forbundet nu, vil få afbrudt forbindelsen, og andet tilbehør vil ikke oprette forbindelse.\n\nBluetooth vil stadig være tilgængeligt for Apple Watch, Apple Pencil, Internetdeling og Handoff.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   }

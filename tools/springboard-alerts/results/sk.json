@@ -317,21 +317,21 @@
   {
     "title": "Aktuálna Wi-Fi sieť a ostatné okolité siete budú odpojené do zajtrajšieho dňa.\n\nWi-Fi bude aj naďalej k dispozícii pre AirDrop, Zdieľanie internetu a vylepšovanie presnosti polohy.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Aktuálna WLAN sieť a ostatné okolité siete budú odpojené do zajtrajšieho dňa.\n\nWLAN bude aj naďalej k dispozícii pre AirDrop, Zdieľanie internetu a vylepšovanie presnosti polohy.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Aktuálne pripojené príslušenstvá budú odpojené a ďalšie príslušenstvá sa nepripoja.\n\nBluetooth bude aj naďalej k dispozícii pre Apple Watch, Apple Pencil, Zdieľanie internetu a Handoff.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   }

@@ -310,21 +310,21 @@
   {
     "title": "A jelenlegi Wi-Fi-hálózat és más közeli hálózatok holnapig le lesznek választva.\n\nA Wi-Fi továbbra is rendelkezésre áll az AirDrophoz, a Személyes Hotspothoz és a helymeghatározás pontossága érdekében.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "A jelenlegi WLAN-hálózat és más közeli hálózatok holnapig le lesznek választva.\n\nA WLAN továbbra is rendelkezésre áll az AirDrophoz, a Személyes Hotspothoz és a helymeghatározás pontossága érdekében.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "A jelenleg csatlakoztatott tartozékok le lesznek választva, és más tartozékok nem fognak kapcsolódni.\n\nA Bluetooth továbbra is rendelkezésre áll az Apple Watchhoz, az Apple Pencilhez, a Személyes Hotspothoz és a Handoffhoz.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   }

@@ -233,21 +233,21 @@
   {
     "title": "現在のWi-Fiネットワークおよびほかの近くのネットワークは明日まで接続を解除されます。\n\nWi-Fiは引き続きAirDrop、インターネット共有、および位置情報の精度の向上で利用可能です。",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "現在のWLANネットワークおよびほかの近くのネットワークは明日まで接続を解除されます。\n\nWLANは引き続きAirDrop、インターネット共有、および位置情報の精度の向上で利用可能です。",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "現在接続されているアクセサリは接続を解除され、ほかのアクセサリは接続しません。\n\nBluetoothは引き続きApple Watch、Apple Pencil、インターネット共有、およびHandoffで利用可能です。",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   }

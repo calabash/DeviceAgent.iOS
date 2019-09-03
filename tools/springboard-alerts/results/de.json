@@ -233,14 +233,14 @@
   {
     "title": "Das aktuelle WLAN und andere nahegelegene drahtlose Netzwerke werden bis morgen getrennt.\n\nWLAN ist weiterhin für AirDrop, den persönlichen Hotspot und zur Standortgenauigkeit verfügbar.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Die Verbindung zu aktuell verbundenem Zubehör wird getrennt und anderes Zubehör kann nicht verbunden werden.\n\nBluetooth ist weiterhin für Apple Watch, Apple Pencil, den persönlichen Hotspot und Handoff verfügbar.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   }

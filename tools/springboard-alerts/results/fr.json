@@ -233,21 +233,21 @@
   {
     "title": "Le réseau Wi-Fi actuel et les autres réseaux à proximité seront déconnectés jusqu’à demain.\n\nLa connexion Wi-Fi restera disponible pour AirDrop, le partage de connexion et la précision de votre localisation.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Le réseau WLAN actuel et les autres réseaux à proximité seront déconnectés jusqu’à demain.\n\nLa connexion WLAN restera disponible pour AirDrop, le partage de connexion et la précision de votre localisation.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Les accessoires actuellement connectés seront déconnectés et il ne sera pas possible de connecter d’autres accessoires.\n\nLa connexion Bluetooth restera disponible pour l’Apple Watch, l’Apple Pencil, le partage de connexion et Handoff.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   }

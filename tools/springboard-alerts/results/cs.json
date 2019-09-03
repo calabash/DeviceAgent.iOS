@@ -310,21 +310,21 @@
   {
     "title": "Aktuální Wi‑Fi síť a jiné sítě v okolí budou pro zbytek dne odpojeny.\n\nWi‑Fi bude nadále k dispozici pro AirDrop, Osobní hotspot a přesné určování polohy.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Aktuální WLAN a jiné sítě v okolí budou pro zbytek dne odpojeny.\n\nWLAN bude nadále k dispozici pro AirDrop, Osobní hotspot a přesné určování polohy.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Připojené příslušenství bude odpojeno a nebude možné připojit ani jiné příslušenství.\n\nRozhraní Bluetooth bude nadále dostupné pro Apple Watch, Apple Pencil, Osobní hotspot a Handoff.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   }

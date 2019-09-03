@@ -317,21 +317,21 @@
   {
     "title": "Trenutačna Wi-Fi mreža i druge u blizini bit će odspojene do sutra.\n\nWi-Fi će i dalje biti dostupan za AirDrop, Osobni hotspot i točnost lokacije.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Trenutačna WLAN mreža i druge u blizini bit će odspojene do sutra.\n\nWLAN će i dalje biti dostupan za AirDrop, Osobni hotspot i točnost lokacije.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Odspojit će se trenutačno spojeni pribori i drugi pribori neće se moći spojiti.\n\nBluetooth će i dalje biti dostupan za Apple Watch, Apple Pencil, Osobni hotspot i Handoff.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   }

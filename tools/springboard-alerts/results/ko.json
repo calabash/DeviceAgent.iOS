@@ -310,21 +310,21 @@
   {
     "title": "현재 Wi‑Fi 네트워크 및 기타 주변 네트워크는 내일까지 연결이 해제됩니다.\n\nAirDrop, 개인용 핫스팟 및 위치 정확도 기능에는 Wi‑Fi가 계속 사용됩니다.",
     "buttons": [
-
+      "확인"
     ],
     "shouldAccept": true
   },
   {
     "title": "현재 WLAN 네트워크 및 기타 주변 네트워크는 내일까지 연결이 해제됩니다.\n\nAirDrop, 개인용 핫스팟 및 위치 정확도 기능에는 WLAN이 계속 사용됩니다.",
     "buttons": [
-
+      "확인"
     ],
     "shouldAccept": true
   },
   {
     "title": "현재 연결된 액세서리는 연결 해제되며 다른 액세서리는 연결되지 않습니다.\n\nApple Watch, Apple Pencil, 개인용 핫스팟 및 Handoff에서는 Bluetooth를 계속 사용할 수 있습니다.",
     "buttons": [
-
+      "확인"
     ],
     "shouldAccept": true
   }

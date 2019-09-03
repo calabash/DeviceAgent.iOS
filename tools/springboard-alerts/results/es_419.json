@@ -317,21 +317,21 @@
   {
     "title": "Se desconectarán la red Wi-Fi actual y otras cercanas hasta mañana.\n\nWi-Fi seguirá estando disponible para AirDrop, compartir Internet y la precisión de la ubicación.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Se desconectarán la red WLAN actual y otras cercanas hasta mañana.\n\nWLAN seguirá estando disponible para AirDrop, compartir Internet y la precisión de la ubicación.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Se desconectarán los accesorios que están conectados y no se podrán conectar otros.\n\nBluetooth seguirá disponible para Apple Watch, Apple Pencil, compartir Internet y Handoff.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   }

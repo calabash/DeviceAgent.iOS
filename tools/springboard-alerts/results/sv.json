@@ -317,21 +317,21 @@
   {
     "title": "Det aktuella Wi-Fi-nätverket och andra i närheten kopplas från tills imorgon.\n\nWi-Fi är fortfarande tillgängligt för AirDrop, Internetdelning och noggrannhet vid platsbestämning.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Det aktuella WLAN-nätverket och andra i närheten kopplas från tills imorgon.\n\nWLAN är fortfarande tillgängligt för AirDrop, Internetdelning och noggrannhet vid platsbestämning.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "Tillbehör som är anslutna just nu kopplas från och andra tillbehör ansluter inte.\n\nBluetooth är fortfarande tillgängligt för Apple Watch, Apple Pencil, Internetdelning och Handoff.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   }

@@ -8,10 +8,21 @@ require_relative 'localization_storage'
 
 xcode = RunLoop::Xcode.new
 
+# Gets valid language path
+# some languages have a few aliases like 'en.lproj' and 'English.lproj', we should check all options
+def get_language_path(framework_path, language)
+    language['filenames'].find do |lang_alias|
+        language_path = File.join(framework_path, lang_alias)
+        return language_path if Dir.exist?(language_path)
+    end
+
+    nil
+end
+
 # Reads and parse all *.strings files in specific directory
-def collect_localization_dictionary(dir_path)
+def collect_localization_dictionary(language_dir_path)
     dict = {}
-    Dir.glob("#{dir_path}/*.strings") do |file_path|
+    Dir.glob("#{language_dir_path}/*.strings") do |file_path|
         pairs = read_strings(file_path)
         dict.merge!(pairs)
     end
@@ -19,6 +30,8 @@ def collect_localization_dictionary(dir_path)
     dict
 end
 
+# Iterate through required values for framework and try to get values from dict
+# Add found values to localization storage
 def pick_required_values(found_values_dict, target_framework, localization_storage, language)
     framework_name = target_framework['name']
     target_framework['values'].each do |item|
@@ -49,7 +62,8 @@ end
 
 target_frameworks = read_json('frameworks.json')
 languages = read_json('languages.json')
-localization_storage = LocalizationStorage.new('results', languages)
+language_names = languages.map { |lang| lang['name'] }
+localization_storage = LocalizationStorage.new('results', language_names)
 
 target_frameworks.each do |framework|
     puts "Scan framework '#{framework['name']}'".green
@@ -62,20 +76,21 @@ target_frameworks.each do |framework|
 
     puts "Found on path '#{framework_path}'"
 
-    available_languages = languages.select { |language| Dir.exist?(File.join(framework_path, language + '.lproj')) }
+    available_languages = languages.select { |language| get_language_path(framework_path, language) }
     skipped_languages = languages - available_languages
-    puts "Available languages: #{available_languages}"
-    puts "Skipped languages: #{skipped_languages}".yellow unless skipped_languages.empty?
+    puts "Available languages: #{available_languages.map { |lang| lang['name'] }}"
+    puts "Skipped languages: #{skipped_languages.map { |lang| lang['name'] }}".yellow unless skipped_languages.empty?
 
     available_languages.each do |language|
-        language_path = File.join(framework_path, language + '.lproj')
+        language_name = language['name']
+        language_path = get_language_path(framework_path, language)
 
         found_values_dict = collect_localization_dictionary(language_path)
-        pick_required_values(found_values_dict, framework, localization_storage, language)
+        pick_required_values(found_values_dict, framework, localization_storage, language_name)
 
         # debug info
-        if ENV['DEBUG'] && language == 'en'
-            report_path = "reports/#{framework['name']}.#{language}.json"
+        if ENV['DEBUG'] && language_name == 'en'
+            report_path = "reports/#{framework['name']}.#{language_name}.json"
             save_json(report_path, found_values_dict)
         end
     end
