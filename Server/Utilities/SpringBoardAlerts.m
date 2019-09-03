@@ -32,7 +32,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
 - (instancetype)init_private {
     self = [super init];
     if (self) {
-        NSDataAsset *asset = [[NSDataAsset alloc] initWithName:@"alerts"];
+        NSDataAsset *asset = [[NSDataAsset alloc] initWithName:@"springboard-alerts"];
         NSDictionary * languages = [NSJSONSerialization JSONObjectWithData:[asset data] options:kNilOptions error:nil];
         
         NSMutableArray<SpringBoardAlert *> * result = [NSMutableArray<SpringBoardAlert *> array];
