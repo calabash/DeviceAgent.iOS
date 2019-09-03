@@ -21,6 +21,8 @@ NSString * languages[] = {
     @"springboard-alerts-ru",
     @"springboard-alerts-sv"};
 
+int LANGUAGES_COUNT = sizeof(languages)/sizeof(languages[0]);
+
 // Convenience method for creating alerts from the regular expressions found in run_loop
 // scripts/lib/on_alert.js
 static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSString *title) {
@@ -49,32 +51,73 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
     self = [super init];
     if (self) {
         NSBundle * bundle = [NSBundle bundleForClass:[self class]];
-        NSMutableArray<SpringBoardAlert *> * result = [NSMutableArray<SpringBoardAlert *> array];
-
-        for (int languagei = 0; languagei < sizeof(languages)/sizeof(languages[0]); languagei++) {
+        NSMutableArray<SpringBoardAlert *> * result =
+        [NSMutableArray<SpringBoardAlert *> array];
+        
+        for (int languagei = 0; languagei < LANGUAGES_COUNT; languagei++) {
             NSString * language = languages[languagei];
-            NSDataAsset *asset = [[NSDataAsset alloc] initWithName:language bundle:bundle];
-        
-        
-            NSArray * alerts = [NSJSONSerialization JSONObjectWithData:[asset data] options:kNilOptions error:nil];
+            NSDataAsset *asset = [[NSDataAsset alloc]
+                                  initWithName:language
+                                  bundle:bundle];
+            
+            NSArray * alerts = [NSJSONSerialization
+                                JSONObjectWithData:[asset data]
+                                options:kNilOptions
+                                error:nil];
             for (int i=0; i < alerts.count; i++) {
                 NSDictionary* alertDict = alerts[i];
                 NSString * title = [alertDict objectForKey:@"title"];
                 NSArray * buttons = [alertDict objectForKey:@"buttons"];
                 id shouldAccept = [alertDict objectForKey: @"shouldAccept"];
                 if (title == nil) {
-                    @throw [NSException exceptionWithName:@"Bad springboard-alerts JSON" reason: @"No title" userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"language", language, @"row", i, nil]];
+                    @throw [NSException
+                            exceptionWithName:@"Bad springboard-alerts JSON"
+                            reason: @"No title"
+                            userInfo:[[NSDictionary alloc]
+                                      initWithObjectsAndKeys:
+                                      @"language",
+                                      language,
+                                      @"alert",
+                                      i,
+                                      nil]];
                 }
                 if (buttons == nil) {
-                    @throw [NSException exceptionWithName:@"Bad springboard-alerts JSON" reason: @"No buttons" userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"language", language, @"row", i, nil]];
+                    @throw [NSException
+                            exceptionWithName:@"Bad springboard-alerts JSON"
+                            reason: @"No buttons"
+                            userInfo:[[NSDictionary alloc]
+                                      initWithObjectsAndKeys:
+                                      @"language",
+                                      language,
+                                      @"alert",
+                                      i,
+                                      nil]];
                 }
                 if (buttons.count == 0) {
-                    @throw [NSException exceptionWithName:@"Bad springboard-alerts JSON" reason: @"Zero size buttons array" userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"language", language, @"row", i, nil]];
+                    @throw [NSException
+                            exceptionWithName:@"Bad springboard-alerts JSON"
+                            reason: @"Zero size buttons array"
+                            userInfo:[[NSDictionary alloc]
+                                      initWithObjectsAndKeys:
+                                      @"language",
+                                      language,
+                                      @"alert",
+                                      i,
+                                      nil]];
                 }
                 if (shouldAccept == nil) {
-                    @throw [NSException exceptionWithName:@"Bad springboard-alerts JSON" reason: @"No shouldAccept" userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"language", language, @"row", i, nil]];
+                    @throw [NSException
+                            exceptionWithName:@"Bad springboard-alerts JSON"
+                            reason: @"No shouldAccept"
+                            userInfo:[[NSDictionary alloc]
+                                      initWithObjectsAndKeys:@"language",
+                                      language,
+                                      @"alert",
+                                      i,
+                                      nil]];
                 }
-                [result addObject: alert(buttons[0], [shouldAccept boolValue], title)];
+                [result
+                 addObject: alert(buttons[0], [shouldAccept boolValue], title)];
             }
         }
         _alerts =  [NSArray<SpringBoardAlert *> arrayWithArray: result];
@@ -93,7 +136,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
 
 
 - (SpringBoardAlert *)alertMatchingTitle:(NSString *)alertTitle {
-
+    
     __block SpringBoardAlert *match = nil;
     [self.alerts enumerateObjectsUsingBlock:^(SpringBoardAlert *alert, NSUInteger idx, BOOL *stop) {
         if ([alert matchesAlertTitle:alertTitle]) {
@@ -101,7 +144,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
             *stop = YES;
         }
     }];
-
+    
     return match;
 }
 
