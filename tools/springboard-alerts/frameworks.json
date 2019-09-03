@@ -104,9 +104,9 @@
     {
         "name": "ConnectivityModule.bundle",
         "values": [
-            { "title": "CONTROL_CENTER_WIFI_BEHAVIOR_ALERT_MESSAGE", "button": "OK" },
-            { "title": "CONTROL_CENTER_WLAN_BEHAVIOR_ALERT_MESSAGE", "button": "OK" },
-            { "title": "CONTROL_CENTER_BLUETOOTH_BEHAVIOR_ALERT_MESSAGE", "button": "OK" }
+            { "title": "CONTROL_CENTER_WIFI_BEHAVIOR_ALERT_MESSAGE", "button": "CONTROL_CENTER_ALERT_OK" },
+            { "title": "CONTROL_CENTER_WLAN_BEHAVIOR_ALERT_MESSAGE", "button": "CONTROL_CENTER_ALERT_OK" },
+            { "title": "CONTROL_CENTER_BLUETOOTH_BEHAVIOR_ALERT_MESSAGE", "button": "CONTROL_CENTER_ALERT_OK" }
         ]
     }
 ]

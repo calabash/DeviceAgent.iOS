@@ -19,15 +19,20 @@ def collect_localization_dictionary(dir_path)
     dict
 end
 
-def pick_required_values(found_values_dict, required_values, localization_storage, language)
-    required_values.each do |item|
+def pick_required_values(found_values_dict, target_framework, localization_storage, language)
+    framework_name = target_framework['name']
+    target_framework['values'].each do |item|
         title = item['title']
         button = item['button']
+        title_value = found_values_dict[title]
+        button_value = found_values_dict[button]
 
-        if found_values_dict[title]
-            localization_storage.add_entry(language, found_values_dict[title], found_values_dict[button])
+        puts "Unknown button constant '#{button}' for framework '#{framework_name}'".yellow if button && !button_value
+
+        if title_value
+            localization_storage.add_entry(language, title_value, button_value)
         else
-            puts "Unknown alert constant '#{title}' for framework '#{framework['name']}'".red
+            puts "Unknown alert constant '#{title}' for framework '#{framework_name}'".red
         end
     end
 end
@@ -66,7 +71,7 @@ target_frameworks.each do |framework|
         language_path = File.join(framework_path, language + '.lproj')
 
         found_values_dict = collect_localization_dictionary(language_path)
-        pick_required_values(found_values_dict, framework['values'], localization_storage, language)
+        pick_required_values(found_values_dict, framework, localization_storage, language)
 
         # debug info
         if ENV['DEBUG'] && language == 'en'
