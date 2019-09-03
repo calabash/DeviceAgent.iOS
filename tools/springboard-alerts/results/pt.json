@@ -1,0 +1,338 @@
+[
+  {
+    "title": "Permitir que “%@” acesse sua localização?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” tenha acesso à sua localização mesmo quando você não estiver usando o app?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” tenha acesso à sua localização enquanto você estiver usando o app?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” também tenha acesso à sua localização mesmo quando você não estiver usando o app?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” esteve usando sua localização em segundo plano. Deseja continuar permitindo isso?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Deseja permitir que “%@” use o Face ID?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Alguns dos seus dados de %@ serão enviados à Apple para processar as solicitações.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso ao Microfone",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Adicionar às Suas Fotos",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso ao Seu Calendário",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dados de fala deste app serão enviados à Apple para processar as solicitações. Isso também ajudará a Apple a melhorar sua tecnologia de reconhecimento de fala.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso às Suas Atividades de Movimento e Preparo Físico",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso à Câmera",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso aos Seus Lembretes",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Deseja Usar “%@” com a Siri?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” deseja ter acesso ao Apple Music, suas atividades de música e vídeo, e à biblioteca de mídia.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso aos Seus Contatos",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso às Suas Fotos",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso aos Seus Dados",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Receber Ligações de VoIP em Segundo Plano",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” deseja disponibilizar dados para os dispositivos Bluetooth por perto até mesmo quando você não estiver usando o app.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso ao Reconhecimento de Voz",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Há novos ajustes disponíveis. Deseja atualizá-los agora?",
+    "buttons": [
+      "Agora Não"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Atualização dos Ajustes da Operadora",
+    "buttons": [
+      "Agora Não"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Nenhum Cartão SIM Instalado",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Adicionar Configurações de VPN",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Filtrar Conteúdo da Rede",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "O iPhone não está Ativado",
+    "buttons": [
+      "Ignorar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Ativar Ditado?",
+    "buttons": [
+      "Agora Não"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Ativar Ditado",
+    "buttons": [
+      "Agora Não"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Adicionar Teclado de Terceiro?",
+    "buttons": [
+      "Agora Não"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Abrir no “%@”",
+    "buttons": [
+      "Abrir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Abrir no “%@”?",
+    "buttons": [
+      "Abrir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Buscar em %@",
+    "buttons": [
+      "Abrir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Abrir esta página no “%@”?",
+    "buttons": [
+      "Abrir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Abrir no app %@",
+    "buttons": [
+      "Abrir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Inicie a Sessão na App Store",
+    "buttons": [
+      "Cancelar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Inicie a Sessão no Game Center",
+    "buttons": [
+      "Cancelar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Inicie a Sessão na iTunes Store",
+    "buttons": [
+      "Cancelar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Inicie a Sessão no iMessage",
+    "buttons": [
+      "Cancelar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Inicie a Sessão no FaceTime",
+    "buttons": [
+      "Cancelar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Inicie a Sessão no iCloud",
+    "buttons": [
+      "Cancelar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” atualize seus dados de saúde.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Acesso a Saúde",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%1$@” Deseja Ter Acesso às Contas do %2$@",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A rede Wi-Fi atual e outras redes por perto serão desconectadas até amanhã.\n\nO Wi-Fi continuará disponível para o AirDrop, Acesso Pessoal e precisão da localização.",
+    "buttons": [
+
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A rede WLAN atual e outras redes por perto serão desconectadas até amanhã.\n\nO WLAN continuará disponível para o AirDrop, Acesso Pessoal e precisão da localização.",
+    "buttons": [
+
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Os acessórios conectados atualmente serão desconectados e outros acessórios não se conectarão.\n\nO Bluetooth continuará disponível para o Apple Watch, Apple Pencil, Acesso Pessoal e Handoff.",
+    "buttons": [
+
+    ],
+    "shouldAccept": true
+  }
+]

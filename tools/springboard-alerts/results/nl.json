@@ -1,0 +1,254 @@
+[
+  {
+    "title": "Wil je toestaan dat %@ Face ID gebruikt?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Enkele gegevens van %@ worden naar Apple verstuurd om je verzoeken te verwerken.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil toegang tot de microfoon",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil foto's toevoegen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil toegang tot je agenda",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Spraakgegevens uit deze app worden naar Apple verstuurd om je verzoeken te verwerken. Deze gegevens worden ook gebruikt om de spraakherkenningstechnologie van Apple te verbeteren.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil toegang tot je bewegings- en fitnessactiviteit",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil toegang tot de camera",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil toegang tot je herinneringen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Wil je %@ gebruiken met Siri?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil toegang tot Apple Music, je muziek- en videoactiviteit en je mediabibliotheek.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil toegang tot je contacten",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil toegang tot je foto's",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "'%@' wil toegang tot je woninggegevens",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "'%@' wil VoIP-gesprekken op de achtergrond ontvangen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil gegevens beschikbaar stellen voor Bluetooth-apparaten in de buurt, ook als je de app niet gebruikt.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil toegang tot spraakherkenning",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil VPN-configuraties toevoegen",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil je netwerkinhoud filteren",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iPhone is niet geactiveerd",
+    "buttons": [
+      "Negeer"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Open met %@",
+    "buttons": [
+      "Open"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Openen met %@?",
+    "buttons": [
+      "Open"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Zoek met %@",
+    "buttons": [
+      "Open"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Deze pagina openen met %@?",
+    "buttons": [
+      "Open"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Open met de app %@",
+    "buttons": [
+      "Open"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Log in bij de App Store",
+    "buttons": [
+      "Annuleer"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Log in bij Game Center",
+    "buttons": [
+      "Annuleer"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Log in bij de iTunes Store",
+    "buttons": [
+      "Annuleer"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Log in bij iMessage",
+    "buttons": [
+      "Annuleer"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Log in bij FaceTime",
+    "buttons": [
+      "Annuleer"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Log in bij iCloud",
+    "buttons": [
+      "Annuleer"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Sta toe dat %@ je gezondheidsgegevens bijwerkt.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Toegang gezondheid",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Het huidige wifinetwerk en andere netwerken in de buurt worden tot morgen losgekoppeld. Wifi blijft beschikbaar voor AirDrop, 'Persoonlijke hotspot' en de nauwkeurigheid van de locatie.",
+    "buttons": [
+
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Het huidige WLAN-netwerk en andere netwerken in de buurt worden tot morgen losgekoppeld. WLAN blijft beschikbaar voor AirDrop, 'Persoonlijke hotspot' en de nauwkeurigheid van de locatie.",
+    "buttons": [
+
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Gekoppelde accessoires worden losgekoppeld en andere accessoires worden niet gekoppeld.\n\nBluetooth blijft beschikbaar voor Apple Watch, Apple Pencil, 'Persoonlijke hotspot' en Handoff.",
+    "buttons": [
+
+    ],
+    "shouldAccept": true
+  }
+]

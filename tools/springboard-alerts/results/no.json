@@ -1,0 +1,338 @@
+[
+  {
+    "title": "Vil du gi %@ tilgang til posisjonen din?",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vil du gi %@ tilgang til posisjonen din også når du ikke bruker appen?",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vil du gi %@ tilgang til posisjonen din når du bruker appen?",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vil du også gi «%@» tilgang til posisjonen din selv når du ikke bruker appen?",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%@» har brukt posisjonen din i bakgrunnen. Vil du fortsatt tillate dette?",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vil du tillate at %@ bruker Face ID?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Noen av dataene fra %@ blir sendt til Apple for å behandle forespørslene dine.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vil ha tilgang til mikrofonen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vil legge til bilder i biblioteket",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vil ha tilgang til kalenderen din",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Taledata fra denne appen vil bli sendt til Apple for å behandle forespørslene dine. Dette vil også hjelpe Apple med å forbedre talegjenkjenningsteknologien.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vil ha tilgang til bevegelses- og treningsaktiviteten din",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vil ha tilgang til kameraet",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vil ha tilgang til påminnelsene dine",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vil du bruke %@ med Siri?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vil ha tilgang til Apple Music, musikk- og videobruken din og mediebiblioteket ditt.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vil ha tilgang til kontaktene dine",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vil ha tilgang til bildene dine",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vil ha tilgang til Hjem-dataene dine",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vil motta VoIP-anrop i bakgrunnen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ ønsker å gjøre data tilgjengelig for Bluetooth-enheter i nærheten selv om appen ikke er i bruk.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vil ha tilgang til talegjenkjenning",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Nye innstillinger er tilgjengelig. Vil du oppdatere nå?",
+    "buttons": [
+      "Ikke nå"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Oppdatering av operatørinnstillinger",
+    "buttons": [
+      "Ikke nå"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "SIM-kort mangler",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%@» vil legge til VPN-konfigurasjoner",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%@» vil filtrere nettverksinnhold",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iPhone er ikke aktivert",
+    "buttons": [
+      "Ignorer"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aktiver diktering?",
+    "buttons": [
+      "Ikke nå"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aktiver diktering",
+    "buttons": [
+      "Ikke nå"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Legge til tredjepartstastatur?",
+    "buttons": [
+      "Ikke nå"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Åpne i «%@»",
+    "buttons": [
+      "Åpne"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Åpne i «%@»?",
+    "buttons": [
+      "Åpne"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Søk på %@",
+    "buttons": [
+      "Åpne"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Åpne siden i «%@»?",
+    "buttons": [
+      "Åpne"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Åpne i %@-appen",
+    "buttons": [
+      "Åpne"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Logg på App Store",
+    "buttons": [
+      "Avbryt"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Logg på Game Center",
+    "buttons": [
+      "Avbryt"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Logg på iTunes Store",
+    "buttons": [
+      "Avbryt"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Logg på iMessage",
+    "buttons": [
+      "Avbryt"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Logg på FaceTime",
+    "buttons": [
+      "Avbryt"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Logg på iCloud",
+    "buttons": [
+      "Avbryt"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Gi «%@» tillatelse til å oppdatere helsedataene dine.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Helsetilgang",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%1$@» ønsker tilgang til %2$@-kontoene.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Det gjeldende Wi-Fi-nettverket og andre nettverk i nærheten vil være frakoblet til i morgen.\n\nWi-Fi vil fortsatt være tilgjengelig for AirDrop, Delt Internett og stedsnøyaktighet.",
+    "buttons": [
+
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Det gjeldende WLAN-nettverket og andre nettverk i nærheten vil være frakoblet til i morgen.\n\nWLAN vil fortsatt være tilgjengelig for AirDrop, Delt Internett og stedsnøyaktighet.",
+    "buttons": [
+
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Alt tilkoblet tilbehør vil bli koblet fra, og annet tilbehør vil ikke kunne koble til.\n\nBluetooth vil fortsatt være tilgjengelig for Apple Watch, Apple Pencil, Delt Internett og Handoff.",
+    "buttons": [
+
+    ],
+    "shouldAccept": true
+  }
+]

@@ -1,0 +1,338 @@
+[
+  {
+    "title": "Izinkan “%@” untuk mengakses lokasi Anda?",
+    "buttons": [
+      "Izinkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Izinkan “%@” untuk mengakses lokasi Anda bahkan saat Anda tidak menggunakan app?",
+    "buttons": [
+      "Izinkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Izinkan “%@” untuk mengakses lokasi Anda saat Anda menggunakan app?",
+    "buttons": [
+      "Izinkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Izinkan juga “%@” untuk mengakses lokasi Anda bahkan saat Anda tidak menggunakan app?",
+    "buttons": [
+      "Izinkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” telah menggunakan lokasi Anda di latar belakang. Apakah Anda ingin lanjut mengizinkan ini?",
+    "buttons": [
+      "Izinkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apakah Anda ingin mengizinkan “%@” untuk menggunakan Face ID?",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Sebagian data %@ Anda akan dikirimkan ke Apple untuk memproses permintaan Anda.",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Mengakses Mikrofon",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Menambahkan ke Foto Anda",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Mengakses Kalender Anda",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Data ucapan dari app ini akan dikirimkan ke Apple untuk memproses permintaan Anda. Ini juga akan membantu Apple meningkatkan teknologi pengenalan ucapannya.",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Mengakses Aktivitas Gerakan & Kebugaran Anda",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Mengakses Kamera",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Mengakses Pengingat Anda",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apakah Anda Ingin Menggunakan “%@” dengan Siri?",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” ingin mengakses Apple Music, aktivitas musik dan video, serta perpustakaan media Anda.",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Mengakses Kontak Anda",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Mengakses Foto Anda",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Mengakses Data Rumah Anda",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Menerima Panggilan VoIP di Latar Belakang",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” ingin membuat data tersedia untuk perangkat Bluetooth di sekitar saat Anda sedang tidak menggunakan app.",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Mengakses Pengenalan Ucapan",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Pengaturan baru tersedia. Ingin memperbaruinya sekarang?",
+    "buttons": [
+      "Nanti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Pembaruan Pengaturan Operator",
+    "buttons": [
+      "Nanti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Tak Ada SIM Terpasang",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Menambah Konfigurasi VPN",
+    "buttons": [
+      "Izinkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Memfilter Konten Jaringan",
+    "buttons": [
+      "Izinkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iPhone tidak Diaktifkan",
+    "buttons": [
+      "Abaikan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aktifkan Dikte?",
+    "buttons": [
+      "Nanti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aktifkan Dikte",
+    "buttons": [
+      "Nanti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Tambahkan Papan Ketik Pihak Ketiga?",
+    "buttons": [
+      "Nanti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Buka di “%@”",
+    "buttons": [
+      "Buka"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Buka di “%@”?",
+    "buttons": [
+      "Buka"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Cari di %@",
+    "buttons": [
+      "Buka"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Buka halaman ini di “%@”?",
+    "buttons": [
+      "Buka"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Buka di app %@",
+    "buttons": [
+      "Buka"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Masuk ke App Store",
+    "buttons": [
+      "Batalkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Masuk ke Game Center",
+    "buttons": [
+      "Batalkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Masuk ke iTunes Store",
+    "buttons": [
+      "Batalkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Masuk ke iMessage",
+    "buttons": [
+      "Batalkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Masuk ke FaceTime",
+    "buttons": [
+      "Batalkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Masuk ke iCloud",
+    "buttons": [
+      "Batalkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Izinkan “%@” untuk memperbarui data kesehatan Anda.",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Akses Kesehatan",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%1$@” Menginginkan Akses ke Akun %2$@",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Jaringan Wi-Fi saat ini dan jaringan terdekat lainnya akan diputuskan hingga besok.\n\nWi-Fi akan lanjut tersedia untuk AirDrop, Hotspot Pribadi, dan akurasi lokasi.",
+    "buttons": [
+
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Jaringan WLAN saat ini dan jaringan terdekat lainnya akan diputuskan hingga besok.\n\nWLAN akan lanjut tersedia untuk AirDrop, Hotspot Pribadi, dan akurasi lokasi.",
+    "buttons": [
+
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aksesori yang saat ini terhubung akan diputuskan dan aksesori lainnya tidak akan terhubung.\n\nBluetooth akan lanjut tersedia untuk Apple Watch, Apple Pencil, Hotspot Pribadi, dan Handoff.",
+    "buttons": [
+
+    ],
+    "shouldAccept": true
+  }
+]
