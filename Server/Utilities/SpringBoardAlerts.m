@@ -4,6 +4,7 @@
 #import "SpringBoardAlerts.h"
 #import "SpringBoardAlert.h"
 
+NSString * languages[] = {@"cs", @"da",@"de", @"el", @"en", @"es_419", @"fr",@"he", @"hu", @"it", @"ko", @"nl", @"pt_PT", @"ru", @"sv"};
 
 // Convenience method for creating alerts from the regular expressions found in run_loop
 // scripts/lib/on_alert.js
@@ -32,15 +33,15 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
 - (instancetype)init_private {
     self = [super init];
     if (self) {
-        NSDataAsset *asset = [[NSDataAsset alloc] initWithName:@"springboard-alerts" bundle: [NSBundle bundleForClass:[self class]]];
-        NSDictionary * languages = [NSJSONSerialization JSONObjectWithData:[asset data] options:kNilOptions error:nil];
-        
+        NSBundle * bundle = [NSBundle bundleForClass:[self class]];
         NSMutableArray<SpringBoardAlert *> * result = [NSMutableArray<SpringBoardAlert *> array];
-        NSEnumerator * languagesEnumerator = [languages keyEnumerator];
-        id language;
+
+        for (int languagei = 0; languagei < sizeof(languages)/sizeof(languages[0]); languagei++) {
+            NSString * language = languages[languagei];
+            NSDataAsset *asset = [[NSDataAsset alloc] initWithName:language bundle:bundle];
         
-        while ((language = [languagesEnumerator nextObject])) {
-            NSArray * alerts = [languages objectForKey: language];
+        
+            NSArray * alerts = [NSJSONSerialization JSONObjectWithData:[asset data] options:kNilOptions error:nil];
             for (int i=0; i < alerts.count; i++) {
                 NSDictionary* alertDict = alerts[i];
                 NSString * title = [alertDict objectForKey:@"title"];
