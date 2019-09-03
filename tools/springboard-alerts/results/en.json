@@ -23,7 +23,6 @@
   {
     "title": "“%@” Would Like to Add to your Photos",
     "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },
@@ -50,20 +49,6 @@
   },
   {
     "title": "“%@” Would Like to Access the Camera",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "“%@” Would Like to Access Your Reminders",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Would You Like to Use “%@” with Siri?",
     "buttons": [
       "OK"
     ],

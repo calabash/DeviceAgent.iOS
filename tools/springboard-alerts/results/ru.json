@@ -133,16 +133,8 @@
     "shouldAccept": true
   },
   {
-    "title": "Программа «%@» запрашивает разрешение на предоставление данных ближайшим устройствам с Bluetooth, даже когда Вы не работаете с программой.",
-    "buttons": [
-      "Разрешить"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Программа «%@» запрашивает доступ к «Распознаванию речи».",
     "buttons": [
-      "Разрешить"
     ],
     "shouldAccept": true
   },
@@ -163,7 +155,6 @@
   {
     "title": "SIM‑карта не вставлена",
     "buttons": [
-      "ОК"
     ],
     "shouldAccept": true
   },
@@ -280,20 +271,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Вход в iCloud",
-    "buttons": [
-      "Отменить"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Разрешить «%@» обновлять Ваши медданные.",
-    "buttons": [
-      "ОК"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Доступ (Здоровье)",
     "buttons": [
       "ОК"
@@ -321,11 +298,4 @@
     ],
     "shouldAccept": true
   },
-  {
-    "title": "Подключенные в настоящий момент аксессуары будут отключены, а другие аксессуары подключаться не будут.\n\nBluetooth будет по-прежнему доступен для Apple Watch, Apple Pencil, функции Handoff и режима модема.",
-    "buttons": [
-
-    ],
-    "shouldAccept": true
-  }
 ]
