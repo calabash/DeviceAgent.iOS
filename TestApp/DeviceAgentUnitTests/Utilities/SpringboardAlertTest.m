@@ -70,6 +70,36 @@
                                                     shouldAccept:YES];
     actual = [alert matchesAlertTitle:@"Found a MATCH"];
     expect(actual).to.equal(YES);
+    
+}
+
+- (void)testMatchesAlertTitleWithRegex {
+    SpringBoardAlert *alert;
+    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"this is the %@ test"
+                                              dismissButtonTitle:@"OK"
+                                                    shouldAccept:YES];
+    BOOL actual = [alert matchesAlertTitle:@"this is the regex test"];
+    expect(actual).to.equal(YES);
+    
+    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"this is the %@ test"
+                                              dismissButtonTitle:@"OK"
+                                                    shouldAccept:YES];
+    actual = [alert matchesAlertTitle:@"this is the REGEX test"];
+    expect(actual).to.equal(YES);
+    
+    // matching is done with digits and dashes
+    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"this is %@ test"
+                                              dismissButtonTitle:@"OK"
+                                                    shouldAccept:YES];
+    actual = [alert matchesAlertTitle:@"this is Regex-5 test"];
+    expect(actual).to.equal(YES);
+    
+    // matching is failed with anyone symbol else chars, digits and dashes
+    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"this is %@ test"
+                                              dismissButtonTitle:@"OK"
+                                                    shouldAccept:YES];
+    actual = [alert matchesAlertTitle:@"this is regex? test"];
+    expect(actual).to.equal(NO);
 }
 
 @end
