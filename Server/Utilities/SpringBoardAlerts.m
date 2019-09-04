@@ -109,9 +109,11 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
                                             ofLanguage:language
                                            andPosition:i];
                 [result
-                 addObject: alert(alertDict[@"title"],
-                                  alertDict[@"buttons"],
-                                  alertDict[@"shouldAccept"])];
+                 addObject: alert(
+                                  alertDict[@"buttons"][0],
+                                  [alertDict[@"shouldAccept"] boolValue],
+                                  alertDict[@"title"]
+                                  )];
             }
         }
         _alerts =  [NSArray<SpringBoardAlert *> arrayWithArray: result];
