@@ -21,7 +21,7 @@
 
     self = [super init];
     if (self) {
-        _alertTitleFragment = alertTitleFragment;
+        _alertTitleFragment = [NSString stringWithFormat: alertTitleFragment, @"[a-z0-9-]*", @"[a-z0-9-]*"];;
         _defaultDismissButtonMark = dismissButtonTitle;
         _shouldAccept = shouldAccept;
     }
@@ -29,8 +29,7 @@
 }
 
 - (BOOL)matchesAlertTitle:(NSString *)alertTitle {
-    NSString *regExPattern = [NSString stringWithFormat: self.alertTitleFragment, @"[a-z0-9-]*", @"[a-z0-9-]*"];
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regExPattern
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:self.alertTitleFragment
                                                                            options:NSRegularExpressionCaseInsensitive
                                                                              error:nil];
                                                                              
