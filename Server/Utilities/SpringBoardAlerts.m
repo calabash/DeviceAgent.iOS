@@ -4,24 +4,6 @@
 #import "SpringBoardAlerts.h"
 #import "SpringBoardAlert.h"
 
-NSString * languages[] = {
-    @"springboard-alerts-cs",
-    @"springboard-alerts-da",
-    @"springboard-alerts-de",
-    @"springboard-alerts-el",
-    @"springboard-alerts-en",
-    @"springboard-alerts-es_419",
-    @"springboard-alerts-fr",
-    @"springboard-alerts-he",
-    @"springboard-alerts-hu",
-    @"springboard-alerts-it",
-    @"springboard-alerts-ko",
-    @"springboard-alerts-nl",
-    @"springboard-alerts-pt_PT",
-    @"springboard-alerts-ru",
-    @"springboard-alerts-sv"};
-
-int LANGUAGES_COUNT = sizeof(languages)/sizeof(languages[0]);
 
 // Convenience method for creating alerts from the regular expressions found in run_loop
 // scripts/lib/on_alert.js
@@ -54,7 +36,25 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
         NSMutableArray<SpringBoardAlert *> * result =
         [NSMutableArray<SpringBoardAlert *> array];
         
-        for (int languagei = 0; languagei < LANGUAGES_COUNT; languagei++) {
+        
+        NSArray<NSString*> * languages = @[
+            @"springboard-alerts-cs",
+            @"springboard-alerts-da",
+            @"springboard-alerts-de",
+            @"springboard-alerts-el",
+            @"springboard-alerts-en",
+            @"springboard-alerts-es_419",
+            @"springboard-alerts-fr",
+            @"springboard-alerts-he",
+            @"springboard-alerts-hu",
+            @"springboard-alerts-it",
+            @"springboard-alerts-ko",
+            @"springboard-alerts-nl",
+            @"springboard-alerts-pt_PT",
+            @"springboard-alerts-ru",
+            @"springboard-alerts-sv"];
+        
+        for (int languagei = 0; languagei < languages.count; languagei++) {
             NSString * language = languages[languagei];
             NSDataAsset *asset = [[NSDataAsset alloc]
                                   initWithName:language
