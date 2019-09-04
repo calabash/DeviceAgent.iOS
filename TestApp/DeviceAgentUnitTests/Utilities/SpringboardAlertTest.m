@@ -94,11 +94,11 @@
     actual = [alert matchesAlertTitle:@"this is the Regex-5 test"];
     expect(actual).to.equal(YES);
     
-    // matching is failed with anyone symbol else chars, digits and dashes
+    // matching is failed with whitespace in program name
     alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"this is the %@ test"
                                               dismissButtonTitle:@"OK"
                                                     shouldAccept:YES];
-    actual = [alert matchesAlertTitle:@"this is the regex? test"];
+    actual = [alert matchesAlertTitle:@"this is the white space test"];
     expect(actual).to.equal(NO);
 }
 
@@ -120,6 +120,21 @@
                                               dismissButtonTitle:@"OK"
                                                     shouldAccept:YES];
     actual = [alert matchesAlertTitle:@"this is the -regex- test with 2 arguments"];
+    expect(actual).to.equal(YES);
+}
+
+- (void)testMatchesAlertTitleWithLang {
+    SpringBoardAlert *alert;
+    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"это %1$@ тест"
+                                              dismissButtonTitle:@"OK"
+                                                    shouldAccept:YES];
+    BOOL actual = [alert matchesAlertTitle:@"это временный тест"];
+    expect(actual).to.equal(YES);
+    
+    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"souhaite %1$@ à vos %2$@"
+                                              dismissButtonTitle:@"OK"
+                                                    shouldAccept:YES];
+    actual = [alert matchesAlertTitle:@"souhaite accéder à vos rappels"];
     expect(actual).to.equal(YES);
 }
 
