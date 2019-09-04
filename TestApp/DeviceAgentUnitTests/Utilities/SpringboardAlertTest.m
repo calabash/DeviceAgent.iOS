@@ -88,18 +88,39 @@
     expect(actual).to.equal(YES);
     
     // matching is done with digits and dashes
-    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"this is %@ test"
+    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"this is the %@ test"
                                               dismissButtonTitle:@"OK"
                                                     shouldAccept:YES];
-    actual = [alert matchesAlertTitle:@"this is Regex-5 test"];
+    actual = [alert matchesAlertTitle:@"this is the Regex-5 test"];
     expect(actual).to.equal(YES);
     
     // matching is failed with anyone symbol else chars, digits and dashes
-    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"this is %@ test"
+    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"this is the %@ test"
                                               dismissButtonTitle:@"OK"
                                                     shouldAccept:YES];
-    actual = [alert matchesAlertTitle:@"this is regex? test"];
+    actual = [alert matchesAlertTitle:@"this is the regex? test"];
     expect(actual).to.equal(NO);
+}
+
+- (void)testMatchesAlertTitleWithTwoArguments {
+    SpringBoardAlert *alert;
+    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"this is the %1$@ test"
+                                              dismissButtonTitle:@"OK"
+                                                    shouldAccept:YES];
+    BOOL actual = [alert matchesAlertTitle:@"this is the regex test"];
+    expect(actual).to.equal(YES);
+    
+    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"this is the %1$@ test with %2$@ arguments"
+                                              dismissButtonTitle:@"OK"
+                                                    shouldAccept:YES];
+    actual = [alert matchesAlertTitle:@"this is the Regex test with two arguments"];
+    expect(actual).to.equal(YES);
+    
+    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"this is the %1$@ test with %2$@ arguments"
+                                              dismissButtonTitle:@"OK"
+                                                    shouldAccept:YES];
+    actual = [alert matchesAlertTitle:@"this is the -regex- test with 2 arguments"];
+    expect(actual).to.equal(YES);
 }
 
 @end

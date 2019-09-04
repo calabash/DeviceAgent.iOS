@@ -29,7 +29,7 @@
 }
 
 - (BOOL)matchesAlertTitle:(NSString *)alertTitle {
-    NSString *regExPattern = [NSString stringWithFormat: self.alertTitleFragment, @"[a-z0-9-]*"];
+    NSString *regExPattern = [NSString stringWithFormat: self.alertTitleFragment, @"[a-z0-9-]*", @"[a-z0-9-]*"];
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regExPattern
                                                                            options:NSRegularExpressionCaseInsensitive
                                                                              error:nil];
