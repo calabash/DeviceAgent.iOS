@@ -4,7 +4,7 @@ require_relative 'helpers'
 # Use json format to store database
 class LocalizationStorage
     def initialize(storage_path, languages)
-        @storage_path = storage_path
+        @storage_path = File.expand_path(storage_path)
         @languages = languages.map { |lang| lang['name'] }
         load
     end
@@ -20,7 +20,7 @@ class LocalizationStorage
     # Saves database to the local disk
     def save
         @languages.each do |lang|
-            language_path = File.join(@storage_path, lang + '.json')
+            language_path = get_local_language_path(lang)
             save_json(language_path, @storage[lang])
         end
     end
@@ -47,11 +47,17 @@ class LocalizationStorage
         alert_entry['buttons'].push(button) if button_entry.nil?
     end
 
+    # Returns local disk path for specific language
+    def get_local_language_path(language)
+        # DeviceAgent.iOS/Server/Resources.xcassets/springboard-alerts/springboard-alerts-en.dataset/alerts.json
+        File.join(@storage_path, "springboard-alerts-#{language}.dataset/alerts.json")
+    end
+
     # Loads database from the local disk
     def load
         @storage = {}
         @languages.each do |lang|
-            language_path = File.join(@storage_path, lang + '.json')
+            language_path = get_local_language_path(lang)
             @storage[lang] ||= []
             @storage[lang] = read_json(language_path) if File.exist?(language_path)
         end

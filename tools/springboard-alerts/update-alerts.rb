@@ -62,7 +62,7 @@ end
 
 target_frameworks = read_json('frameworks.json')
 languages = read_json('languages.json')
-localization_storage = LocalizationStorage.new('results', languages)
+localization_storage = LocalizationStorage.new('../../Server/Resources.xcassets/springboard-alerts', languages)
 
 target_frameworks.each do |framework|
     puts "Scan framework '#{framework['name']}'".green

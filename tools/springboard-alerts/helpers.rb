@@ -20,7 +20,7 @@ end
 def save_json(file_path, content)
     # create directory if doesn't exist
     dirname = File.dirname(file_path)
-    Dir.mkdir(dirname) unless Dir.exist?(dirname)
+    FileUtils.mkdir_p(dirname) unless Dir.exist?(dirname)
 
     File.open(file_path, mode: 'w') do |file|
         file.write(JSON.pretty_generate(content))
