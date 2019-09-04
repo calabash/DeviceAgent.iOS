@@ -73,48 +73,29 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
                     @throw [NSException
                             exceptionWithName:@"Bad springboard-alerts JSON"
                             reason: @"No title"
-                            userInfo:[[NSDictionary alloc]
-                                      initWithObjectsAndKeys:
-                                      @"language",
-                                      language,
-                                      @"alert",
-                                      i,
-                                      nil]];
+                            userInfo:@{@"language":language,
+                                       @"alert":[NSNumber numberWithInt:i]}];
                 }
                 if (buttons == nil) {
                     @throw [NSException
                             exceptionWithName:@"Bad springboard-alerts JSON"
                             reason: @"No buttons"
-                            userInfo:[[NSDictionary alloc]
-                                      initWithObjectsAndKeys:
-                                      @"language",
-                                      language,
-                                      @"alert",
-                                      i,
-                                      nil]];
+                            userInfo:@{@"language":language,
+                                       @"alert":[NSNumber numberWithInt:i]}];
                 }
                 if (buttons.count == 0) {
                     @throw [NSException
                             exceptionWithName:@"Bad springboard-alerts JSON"
                             reason: @"Zero size buttons array"
-                            userInfo:[[NSDictionary alloc]
-                                      initWithObjectsAndKeys:
-                                      @"language",
-                                      language,
-                                      @"alert",
-                                      i,
-                                      nil]];
+                            userInfo:@{@"language":language,
+                                       @"alert":[NSNumber numberWithInt:i]}];
                 }
                 if (shouldAccept == nil) {
                     @throw [NSException
                             exceptionWithName:@"Bad springboard-alerts JSON"
                             reason: @"No shouldAccept"
-                            userInfo:[[NSDictionary alloc]
-                                      initWithObjectsAndKeys:@"language",
-                                      language,
-                                      @"alert",
-                                      i,
-                                      nil]];
+                            userInfo:@{@"language":language,
+                                       @"alert":[NSNumber numberWithInt:i]}];
                 }
                 [result
                  addObject: alert(buttons[0], [shouldAccept boolValue], title)];
