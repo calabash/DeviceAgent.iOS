@@ -1,9 +1,9 @@
-
 #import <UIKit/UIKit.h>
 
+#import "CBXConstants.h"
+#import "CBXMachClock.h"
 #import "SpringBoardAlerts.h"
 #import "SpringBoardAlert.h"
-
 
 // Convenience method for creating alerts from the regular expressions found in run_loop
 // scripts/lib/on_alert.js
@@ -16,9 +16,10 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
 @interface SpringBoardAlerts ()
 
 @property(strong) NSArray<SpringBoardAlert *> *alerts;
-
++ (void)raiseIfInvalidAlert:(NSDictionary *)alertDict
+                 ofLanguage:(NSString*)language
+                andPosition:(NSInteger)position;
 - (instancetype)init_private;
-
 @end
 
 @implementation SpringBoardAlerts
@@ -29,9 +30,47 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
                                  userInfo:nil];
 }
 
++ (void)raiseIfInvalidAlert:(NSDictionary *)alertDict
+                 ofLanguage:(NSString*)language
+                andPosition:(NSInteger)position {
+    if (!alertDict[@"title"]) {
+        @throw [NSException
+                exceptionWithName:@"Bad springboard-alerts JSON"
+                reason: @"No title"
+                userInfo:@{@"language":language,
+                           @"alert": alertDict,
+                           @"position":@(position)}];
+    }
+    if (!alertDict[@"buttons"]) {
+        @throw [NSException
+                exceptionWithName:@"Bad springboard-alerts JSON"
+                reason: @"No buttons"
+                userInfo:@{@"language":language,
+                           @"alert": alertDict,
+                           @"position":@(position)}];
+    }
+    if (((NSArray *)alertDict[@"buttons"]).count == 0) {
+        @throw [NSException
+                exceptionWithName:@"Bad springboard-alerts JSON"
+                reason: @"Zero size buttons array"
+                userInfo:@{@"language":language,
+                           @"alert": alertDict,
+                           @"position":@(position)}];
+    }
+    if (!alertDict[@"shouldAccept"]) {
+        @throw [NSException
+                exceptionWithName:@"Bad springboard-alerts JSON"
+                reason: @"No shouldAccept"
+                userInfo:@{@"language":language,
+                           @"alert": alertDict,
+                           @"position":@(position)}];
+    }
+}
+
 - (instancetype)init_private {
     self = [super init];
     if (self) {
+        NSTimeInterval startTime = [[CBXMachClock sharedClock] absoluteTime];
         NSBundle * bundle = [NSBundle bundleForClass:[self class]];
         NSMutableArray<SpringBoardAlert *> * result =
         [NSMutableArray<SpringBoardAlert *> array];
@@ -54,7 +93,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
             @"springboard-alerts-ru",
             @"springboard-alerts-sv"];
         
-        for (int languagei = 0; languagei < languages.count; languagei++) {
+        for (NSUInteger languagei = 0; languagei < languages.count; languagei++) {
             NSString * language = languages[languagei];
             NSDataAsset *asset = [[NSDataAsset alloc]
                                   initWithName:language
@@ -64,44 +103,22 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
                                 JSONObjectWithData:[asset data]
                                 options:kNilOptions
                                 error:nil];
-            for (int i=0; i < alerts.count; i++) {
+            for (NSUInteger i=0; i < alerts.count; i++) {
                 NSDictionary* alertDict = alerts[i];
-                NSString * title = [alertDict objectForKey:@"title"];
-                NSArray * buttons = [alertDict objectForKey:@"buttons"];
-                id shouldAccept = [alertDict objectForKey: @"shouldAccept"];
-                if (title == nil) {
-                    @throw [NSException
-                            exceptionWithName:@"Bad springboard-alerts JSON"
-                            reason: @"No title"
-                            userInfo:@{@"language":language,
-                                       @"alert":[NSNumber numberWithInt:i]}];
-                }
-                if (buttons == nil) {
-                    @throw [NSException
-                            exceptionWithName:@"Bad springboard-alerts JSON"
-                            reason: @"No buttons"
-                            userInfo:@{@"language":language,
-                                       @"alert":[NSNumber numberWithInt:i]}];
-                }
-                if (buttons.count == 0) {
-                    @throw [NSException
-                            exceptionWithName:@"Bad springboard-alerts JSON"
-                            reason: @"Zero size buttons array"
-                            userInfo:@{@"language":language,
-                                       @"alert":[NSNumber numberWithInt:i]}];
-                }
-                if (shouldAccept == nil) {
-                    @throw [NSException
-                            exceptionWithName:@"Bad springboard-alerts JSON"
-                            reason: @"No shouldAccept"
-                            userInfo:@{@"language":language,
-                                       @"alert":[NSNumber numberWithInt:i]}];
-                }
+                [SpringBoardAlerts raiseIfInvalidAlert:alertDict
+                                            ofLanguage:language
+                                           andPosition:i];
                 [result
-                 addObject: alert(buttons[0], [shouldAccept boolValue], title)];
+                 addObject: alert(alertDict[@"title"],
+                                  alertDict[@"buttons"],
+                                  alertDict[@"shouldAccept"])];
             }
         }
         _alerts =  [NSArray<SpringBoardAlert *> arrayWithArray: result];
+        NSTimeInterval elapsedSeconds =
+        [[CBXMachClock sharedClock] absoluteTime] - startTime;
+        DDLogDebug(@"SpringBoardAlerts.init_private took %@ seconds",
+                   @(elapsedSeconds));
     }
     return self;
 }
