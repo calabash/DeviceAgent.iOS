@@ -1,0 +1,8 @@
+source 'https://rubygems.org'
+
+gem 'colorize'
+gem 'pry'
+gem 'pry-nav'
+gem 'rubocop'
+gem 'run_loop', github: 'calabash/run_loop', branch: 'develop'
+gem 'solargraph'

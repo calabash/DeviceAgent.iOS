@@ -53,3 +53,9 @@ test-ipa:
 # dylibs for testing dylib injection
 gemuse:
 	bin/make/gemuse-libs.sh
+
+# update springboard alerts
+update-alerts:
+	cd tools/springboard-alerts && \
+	bundle install && \
+	bundle exec ruby update-alerts.rb
