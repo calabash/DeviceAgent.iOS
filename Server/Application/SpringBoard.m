@@ -187,23 +187,31 @@ typedef enum : NSUInteger {
     }
 
     XCUIElement *button = nil;
-    NSString *mark = springBoardAlert.defaultDismissButtonMark;
+    NSArray *marks = springBoardAlert.defaultDismissButtonMarks;
 
     // Alert is now gone? It can happen...
     if (!alert.exists) {
         return SpringBoardAlertHandlerNoAlert;
     }
-
-    button = alert.buttons[mark];
-    // Resolve before asking if the button exists.
-    if ([button respondsToSelector:@selector(resolve)]) {
-        [button resolve];
-    } else {
-        NSError *error = nil;
-        if (![button resolveOrRaiseTestFailure:NO error:&error]) {
-            DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
-                      button, [error localizedDescription]);
+        
+    for (NSString *mark in marks) {
+        button = alert.buttons[mark];
+        
+        if (!button) {
+            continue;
         }
+        
+        // Resolve before asking if the button exists.
+        if ([button respondsToSelector:@selector(resolve)]) {
+            [button resolve];
+        } else {
+            NSError *error = nil;
+            if (![button resolveOrRaiseTestFailure:NO error:&error]) {
+                DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
+                          button, [error localizedDescription]);
+            }
+        }
+        break;
     }
 
     // A button with the expected title does not exist.

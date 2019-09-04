@@ -13,9 +13,9 @@
 @interface SpringBoardAlert : NSObject
 
 /**
- * The mark of the button that should be used to dismiss the alert.
+ * The array of marks of the button that should be used to dismiss the alert.
  */
-@property(copy, readonly) NSString *defaultDismissButtonMark;
+@property(copy, readonly) NSArray *defaultDismissButtonMarks;
 
 /**
  Should this alert be dismissed by accept or declining? Sometimes, the default
@@ -29,7 +29,7 @@
 
  @param alertTitleFragment A portion of an alert title that can be used to
  match against an alert title.
- @param dismissButtonTitle The title of the button that should be touched to
+ @param dismissButtonTitles The array of titles of the button that should be touched to
  dismiss the alert.
  @param shouldAccept Should this alert be dismissed by accepting or
  declining?  This is used when the default dismiss button title is not
@@ -38,7 +38,7 @@
  @return SpringBoardAlert instance
  */
 - (instancetype)initWithAlertTitleFragment:(NSString *)alertTitleFragment
-                        dismissButtonTitle:(NSString *)dismissButtonTitle
+                        dismissButtonTitles:(NSArray *)dismissButtonTitles
                               shouldAccept:(BOOL)shouldAccept;
 
 /**
