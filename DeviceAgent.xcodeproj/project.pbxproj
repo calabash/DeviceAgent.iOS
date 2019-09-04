@@ -615,6 +615,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4114005C231F86C300CA4CC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 898743B41C5847B30084FD93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 898743BB1C5847B30084FD93;
+			remoteInfo = AppStub;
+		};
 		F50BB2941D73392200264915 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 898743B41C5847B30084FD93 /* Project object */;
@@ -2761,6 +2768,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4114005D231F86C300CA4CC1 /* PBXTargetDependency */,
 			);
 			name = DeviceAgent;
 			productName = "xcuitest-serverUITests";
@@ -3557,6 +3565,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4114005D231F86C300CA4CC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 898743BB1C5847B30084FD93 /* AppStub */;
+			targetProxy = 4114005C231F86C300CA4CC1 /* PBXContainerItemProxy */;
+		};
 		F50BB2951D73392200264915 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F50BB27A1D73392100264915 /* Permissions */;
