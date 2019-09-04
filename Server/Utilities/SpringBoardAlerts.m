@@ -299,7 +299,8 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
              alert(@"Разрешить", YES, @"запрашивает доступ к Вашим данным движения и фитнеса"),
              alert(@"Разрешить", YES, @"запрашивает разрешение на отправку Вам уведомлений."),
              alert(@"Разрешить", YES, @"доступ к Apple Music"),
-             alert(@"Разрешить", YES, @"запрашивает доступ к «Распознаванию речи»")
+             alert(@"Разрешить", YES, @"запрашивает доступ к «Распознаванию речи»"),
+             alert(@"Разрешить", YES, @"Разрешить ресурсу %@ доступ к Вашей жизни")
              ];
 }
 
@@ -337,7 +338,8 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
       alert(@"승인", YES, @"이(가) 사용자의 동작 및 피트니스 활동에 접근하려고 합니다"),
       alert(@"허용", YES, @"에서 알림을 보내고자 합니다"),
       alert(@"열기", YES, @"에서 열겠습니까?"),
-      alert(@"승인", YES, @"이(가) 음성 인식에 접근하려고 합니다")
+      alert(@"승인", YES, @"이(가) 음성 인식에 접근하려고 합니다"),
+      alert(@"승인", YES, @"이(가) 음성 인식에 %@ 합니다")
   ];
 }
 

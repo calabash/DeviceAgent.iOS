@@ -82,4 +82,26 @@
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
 }
 
+- (void)testAlertForTitleWithRegex {
+    NSString *alertTitle, *expectedButton;
+    BOOL expectedShouldAccept;
+    SpringBoardAlert *actual;
+
+    alertTitle = @"Разрешить ресурсу КакойТоРесурс доступ к Вашей жизни";
+    expectedButton = @"Разрешить";
+    expectedShouldAccept = YES;
+    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
+
+    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.shouldAccept).to.equal(expectedShouldAccept);
+    
+    alertTitle = @"이(가) 음성 인식에 사용자의 합니다";
+    expectedButton = @"승인";
+    expectedShouldAccept = YES;
+    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
+
+    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.shouldAccept).to.equal(expectedShouldAccept);
+}
+
 @end

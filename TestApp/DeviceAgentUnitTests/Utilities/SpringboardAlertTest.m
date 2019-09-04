@@ -138,4 +138,14 @@
     expect(actual).to.equal(YES);
 }
 
+// - (void)testMatchesAlertTitleWithSpecialChar {
+//     SpringBoardAlert *alert;
+//     alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"thi*s is? t[h]e %1$@ te+st."
+//                                               dismissButtonTitle:@"OK"
+//                                                     shouldAccept:YES];
+//     BOOL actual = [alert matchesAlertTitle:@"thi*s is? t[h]e special-char te+st."];
+//     expect(actual).to.equal(YES);
+    
+// }
+
 @end
