@@ -5,6 +5,17 @@
 #import "SpringBoardAlerts.h"
 #import "SpringBoardAlert.h"
 
+@interface CUICommonAssetStorage : NSObject
+
+-(NSArray *)allAssetKeys;
+-(NSArray *)allRenditionNames;
+
+-(id)initWithPath:(NSString *)p;
+
+-(NSString *)versionString;
+
+@end
+
 // Convenience method for creating alerts from the regular expressions found in run_loop
 // scripts/lib/on_alert.js
 static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSString *title) {
@@ -67,39 +78,41 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
     }
 }
 
++ (NSArray<NSString*> *) getLanguagesFromBundle:(NSBundle*) bundle {
+    NSString *path = [NSString
+                      stringWithFormat: @"%@/Assets.car",
+                      [bundle bundlePath]];
+    CUICommonAssetStorage *storage = [[NSClassFromString(@"CUICommonAssetStorage") alloc] initWithPath:path];
+    NSArray *assetNames = [storage allRenditionNames];
+    if (!assetNames) return @[];
+    if (assetNames.count == 0) return @[];
+    NSMutableArray<NSString *> *result = [[NSMutableArray alloc] initWithCapacity:assetNames.count];
+    for (NSInteger i = 0;i < assetNames.count; i++){
+        NSString *name = assetNames[i];
+        if ([name hasPrefix: @"springboard-alerts-"]) {
+            [result addObject:assetNames[i]];
+        }
+    };
+    return result;
+}
+
 - (instancetype)init_private {
     self = [super init];
     if (self) {
         NSTimeInterval startTime = [[CBXMachClock sharedClock] absoluteTime];
-        NSBundle * bundle = [NSBundle bundleForClass:[self class]];
-        NSMutableArray<SpringBoardAlert *> * result =
+        NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+        NSMutableArray<SpringBoardAlert *> *result =
         [NSMutableArray<SpringBoardAlert *> array];
         
-        
-        NSArray<NSString*> * languages = @[
-            @"springboard-alerts-cs",
-            @"springboard-alerts-da",
-            @"springboard-alerts-de",
-            @"springboard-alerts-el",
-            @"springboard-alerts-en",
-            @"springboard-alerts-es_419",
-            @"springboard-alerts-fr",
-            @"springboard-alerts-he",
-            @"springboard-alerts-hu",
-            @"springboard-alerts-it",
-            @"springboard-alerts-ko",
-            @"springboard-alerts-nl",
-            @"springboard-alerts-pt_PT",
-            @"springboard-alerts-ru",
-            @"springboard-alerts-sv"];
+        NSArray<NSString*> *languages = [SpringBoardAlerts getLanguagesFromBundle: bundle];
         
         for (NSUInteger languagei = 0; languagei < languages.count; languagei++) {
-            NSString * language = languages[languagei];
+            NSString *language = languages[languagei];
             NSDataAsset *asset = [[NSDataAsset alloc]
                                   initWithName:language
                                   bundle:bundle];
             
-            NSArray * alerts = [NSJSONSerialization
+            NSArray *alerts = [NSJSONSerialization
                                 JSONObjectWithData:[asset data]
                                 options:kNilOptions
                                 error:nil];
