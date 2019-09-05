@@ -21,13 +21,14 @@
 
     self = [super init];
     if (self) {
-        // insert regex in pattern 
-        // escape special symbols in alert title (with regex)
-        // then add start line and end line symbols in pattern
-        // and replace escaped regex with normal regex
+        // replace "%@", "%1$@", "%2$@" by ".+"
         NSString *tempPattern = [NSString stringWithFormat: alertTitleFragment, @".+", @".+"];
+        // escape string for regex, it is necessary because alert title can contain "+", "*", ".", "?" and etc
         tempPattern = [NSRegularExpression escapedPatternForString:(NSString *) tempPattern];
+        // apply "^" + string + "$", it needs to match only full alert name
+        // allow to avoid issues when one alert is substring of other alert
         tempPattern = [NSString stringWithFormat:@"%@%@%@", @"^", tempPattern, @"$"];
+        // fix ".+" after invocation "escapedPatternForString"
         _alertTitleFragment = [tempPattern stringByReplacingOccurrencesOfString: @"\\.\\+"
                                                                              withString:@".+"];
         _defaultDismissButtonMark = dismissButtonTitle;
