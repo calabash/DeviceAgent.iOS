@@ -1,0 +1,23 @@
+[
+  {
+    "title": "acceda a tu ubicación mientras la app está en uso",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "acceda a tu ubicación incluso cuando la app no está en uso",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "quiere acceder a tu condición y actividad física",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  }
+]
