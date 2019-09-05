@@ -85,7 +85,7 @@
 }
 
 - (void)testAlertValidation {
-    NSDictionary* alertWithoutTitle = @{
+    NSDictionary *alertWithoutTitle = @{
                                         @"buttons": @[[NSObject alloc]],
                                         @"shouldAccept": @(YES)
                                         };
@@ -99,7 +99,7 @@
         [SpringBoardAlerts raiseIfInvalidAlert:alertWithoutTitle
                                     ofLanguage:@"foo"
                                    andPosition:-1];
-    } @catch (NSException * e) {
+    } @catch (NSException *e) {
         expect(e.reason).to.equal(@"No title");
         expect(e.userInfo[@"language"]).to.equal(@"foo");
         expect(e.userInfo[@"position"]).to.equal(-1);
@@ -120,7 +120,7 @@
         [SpringBoardAlerts raiseIfInvalidAlert:alertWithoutButtons
                                     ofLanguage:@"foo"
                                    andPosition:-1];
-    } @catch (NSException * e) {
+    } @catch (NSException *e) {
         expect(e.reason).to.equal(@"No buttons");
         expect(e.userInfo[@"language"]).to.equal(@"foo");
         expect(e.userInfo[@"position"]).to.equal(-1);
@@ -142,7 +142,7 @@
         [SpringBoardAlerts raiseIfInvalidAlert:alertWithZeroButtons
                                     ofLanguage:@"foo"
                                    andPosition:-1];
-    } @catch (NSException * e) {
+    } @catch (NSException *e) {
         expect(e.reason).to.equal(@"Zero size buttons array");
         expect(e.userInfo[@"language"]).to.equal(@"foo");
         expect(e.userInfo[@"position"]).to.equal(-1);
@@ -163,7 +163,7 @@
         [SpringBoardAlerts raiseIfInvalidAlert:alertWithoutShouldAccept
                                     ofLanguage:@"foo"
                                    andPosition:-1];
-    } @catch (NSException * e) {
+    } @catch (NSException *e) {
         expect(e.reason).to.equal(@"No shouldAccept");
         expect(e.userInfo[@"language"]).to.equal(@"foo");
         expect(e.userInfo[@"position"]).to.equal(-1);
