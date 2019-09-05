@@ -37,49 +37,49 @@
     NSString *alertTitle, *expectedButton;
     BOOL expectedShouldAccept;
     SpringBoardAlert *actual;
-    
+
     alertTitle = @"Some alert generated SpringBoard that we cannot handle";
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
-    
+
     expect(actual).to.equal(nil);
-    
+
     alertTitle = @"souhaite accéder à vos rappels";
     expectedButton = @"OK";
     expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
-    
+
     expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
-    
+
     alertTitle = @"запрашивает разрешение на использование Вашей текущей геопозиции";
     expectedButton = @"OK";
     expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
-    
+
     expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
-    
+
     alertTitle = @"No SIM Card Installed";
     expectedButton = @"OK";
     expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
-    
+
     expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
-    
+
     alertTitle = @"Carrier Settings Update";
     expectedButton = @"Not Now";
     expectedShouldAccept = NO;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
-    
+
     expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
-    
+
     alertTitle = @"acesso à sua localização";
     expectedButton = @"Permitir";
     expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
-    
+
     expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
 }
@@ -94,7 +94,7 @@
                                     ofLanguage:@"foo"
                                    andPosition:-1];
     }).to.raise(@"Bad springboard-alerts JSON");
-    
+
     @try {
         [SpringBoardAlerts raiseIfInvalidAlert:alertWithoutTitle
                                     ofLanguage:@"foo"
@@ -105,7 +105,7 @@
         expect(e.userInfo[@"position"]).to.equal(-1);
         expect(e.userInfo[@"alert"]).to.equal(alertWithoutTitle);
     }
-    
+
     NSDictionary* alertWithoutButtons = @{
                                           @"title": @"some",
                                           @"shouldAccept": @(YES)
@@ -115,7 +115,7 @@
                                     ofLanguage:@"foo"
                                    andPosition:-1];
     }).to.raise(@"Bad springboard-alerts JSON");
-    
+
     @try {
         [SpringBoardAlerts raiseIfInvalidAlert:alertWithoutButtons
                                     ofLanguage:@"foo"
@@ -126,7 +126,7 @@
         expect(e.userInfo[@"position"]).to.equal(-1);
         expect(e.userInfo[@"alert"]).to.equal(alertWithoutButtons);
     }
-    
+
     NSDictionary* alertWithZeroButtons = @{
                                            @"title": @"some",
                                            @"buttons": @[],
@@ -137,7 +137,7 @@
                                     ofLanguage:@"foo"
                                    andPosition:-1];
     }).to.raise(@"Bad springboard-alerts JSON");
-    
+
     @try {
         [SpringBoardAlerts raiseIfInvalidAlert:alertWithZeroButtons
                                     ofLanguage:@"foo"
@@ -148,7 +148,7 @@
         expect(e.userInfo[@"position"]).to.equal(-1);
         expect(e.userInfo[@"alert"]).to.equal(alertWithZeroButtons);
     }
-    
+
     NSDictionary* alertWithoutShouldAccept = @{
                                                @"title": @"some",
                                                @"buttons": @[[NSObject alloc]]
@@ -158,7 +158,7 @@
                                     ofLanguage:@"foo"
                                    andPosition:-1];
     }).to.raise(@"Bad springboard-alerts JSON");
-    
+
     @try {
         [SpringBoardAlerts raiseIfInvalidAlert:alertWithoutShouldAccept
                                     ofLanguage:@"foo"

@@ -149,7 +149,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
 
 
 - (SpringBoardAlert *)alertMatchingTitle:(NSString *)alertTitle {
-    
+
     __block SpringBoardAlert *match = nil;
     [self.alerts enumerateObjectsUsingBlock:^(SpringBoardAlert *alert, NSUInteger idx, BOOL *stop) {
         if ([alert matchesAlertTitle:alertTitle]) {
@@ -157,7 +157,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
             *stop = YES;
         }
     }];
-    
+
     return match;
 }
 
