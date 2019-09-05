@@ -341,5 +341,124 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Apka „%@“ žiada o prístup k mikrofónu",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka „%@“ chce pridať položky do aplikácie Fotky",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka „%@“ žiada o prístup ku kalendáru",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka „%@“ žiada o prístup k pohybovej a fitnes aktivite",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka „%@“ žiada o prístup ku kamere",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka „%@“ žiada o prístup k pripomienkam",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka „%@“ žiada o prístup k Apple Music, informáciám o prehrávaní hudby a videí a vašej knižnici médií",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka „%@“ žiada o prístup ku kontaktom",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka „%@“ žiada o prístup k fotkám",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka „%@“ žiada o prístup k dátam domácnosti",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka „%@“ chce prijímať VoIP hovory na pozadí",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka „%@“ chce sprístupňovať dáta pre okolité Bluetooth zariadenia, aj keď ju práve nepoužívate",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka „%@“ žiada o prístup k rozpoznávaniu reči",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Prihláste sa použitím Apple ID",
+    "buttons": [
+      "Zrušiť"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aktuálna Wi-Fi sieť a ostatné okolité siete budú odpojené do zajtrajšieho dňa.\n\nWi-Fi bude aj naďalej k dispozícii pre AirDrop, Osobný hotspot a vylepšovanie presnosti polohy.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aktuálna WLAN sieť a ostatné okolité siete budú odpojené do zajtrajšieho dňa.\n\nWLAN bude aj naďalej k dispozícii pre AirDrop, Osobný hotspot a vylepšovanie presnosti polohy.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aktuálne pripojené príslušenstvá budú odpojené a ďalšie príslušenstvá sa nepripoja.\n\nBluetooth bude aj naďalej k dispozícii pre Apple Watch, Apple Pencil, Osobný hotspot a Handoff.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

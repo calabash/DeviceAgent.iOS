@@ -341,5 +341,89 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn truy cập micrô",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn truy cập Lịch của bạn",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn truy cập hoạt động Di chuyển & Thể chất của bạn",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn truy cập camera",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn truy cập Lời nhắc của bạn",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn truy cập Apple Music, hoạt động nhạc và video cũng như thư viện phương tiện của bạn",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn truy cập Danh bạ của bạn",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn truy cập Ảnh của bạn",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn truy cập dữ liệu Nhà của bạn",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn làm cho dữ liệu khả dụng đối với thiết bị Bluetooth ở gần ngay cả khi bạn không sử dụng ứng dụng",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn truy cập nhận dạng lời nói",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Đăng nhập bằng ID Apple",
+    "buttons": [
+      "Hủy"
+    ],
+    "shouldAccept": true
   }
 ]

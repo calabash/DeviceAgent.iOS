@@ -346,5 +346,33 @@
       "אישור"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "״%@״ מבקש לגשת לתזכורות שלך",
+    "buttons": [
+      "אישור"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "‏״%@״ מעוניין לגשת ל-Apple Music, לפעילות המוסיקה והווידאו שלך, ולספריית המדיה שלך",
+    "buttons": [
+      "אישור"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "״%@״ מעוניין לאפשר להתקני Bluetooth קרובים לקבל גישה לנתונים גם לא בעת השימוש ביישום",
+    "buttons": [
+      "אישור"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "התחברות באמצעות Apple ID",
+    "buttons": [
+      "ביטול"
+    ],
+    "shouldAccept": true
   }
 ]

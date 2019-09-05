@@ -355,5 +355,159 @@
       "好"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "允許「%@」取用你的位置嗎（即使你並非正在使用App時亦會取用）？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "也允許「%@」取用你的位置嗎（即使你並非正在使用App時亦會取用）？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "你允許「%@」使用Face ID嗎？",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」的部份資料將傳送予Apple以處理你的要求。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "此App的語音識別數據將傳送予Apple以處理你的要求。這亦會有助Apple改善語音識別技術。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "你要透過Siri使用「%@」嗎？",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想取用Apple Music、你的音樂與影片活動和你的媒體資料庫",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想在背景接收VoIP來電",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想讓附近的藍牙裝置取得資料，即使你並非正在使用App時亦能夠取得資料。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要取用語音識別",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "尚未安裝SIM卡",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@想加入VPN設定",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iPhone尚未啟用",
+    "buttons": [
+      "忽略"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "用「%@」App開啟",
+    "buttons": [
+      "開啟"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登入Game Center",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "使用Apple ID登入",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登入iMessage",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登入FaceTime",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登入iCloud",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%1$@」要連接%2$@帳户",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "將會中斷目前的Wi-Fi網絡和附近其他網絡直至明天為止。\n\nWi-Fi仍可繼續用於AirDrop、「個人熱點」和定位準確度。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "將會中斷目前的WLAN網絡和附近其他網絡直至明天為止。\n\nWLAN仍可繼續用於AirDrop、「個人熱點」和定位準確度。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
   }
 ]
