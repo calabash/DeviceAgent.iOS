@@ -1,0 +1,93 @@
+[
+  {
+    "title": "acesso à sua localização",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Deseja Ter Acesso às Suas Fotos",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Deseja Ter Acesso aos Seus Contatos",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Acesso ao Seu Calendário",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Deseja Ter Acesso aos Seus Lembretes",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Would Like to Access Your Motion Activity",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Deseja Ter Acesso à Câmera",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Deseja Ter Acesso às Suas Atividades de Movimento e Preparo Físico",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Deseja Ter Acesso às Contas do Twitter",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Deseja enviar-lhe notificações",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Deseja Enviar Notificações",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Abrir com",
+    "buttons": [
+      "Abrir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Deseja Ter Acesso ao Reconhecimento de Voz",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  }
+]
