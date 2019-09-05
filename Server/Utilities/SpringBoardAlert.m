@@ -21,6 +21,10 @@
 
     self = [super init];
     if (self) {
+        // insert regex in pattern 
+        // escape special symbols in alert title (with regex)
+        // then add start line and end line symbols in pattern
+        // and replace escaped regex with normal regex
         NSString *tempPattern = [NSString stringWithFormat: alertTitleFragment, @".+", @".+"];
         tempPattern = [NSRegularExpression escapedPatternForString:(NSString *) tempPattern];
         tempPattern = [NSString stringWithFormat:@"%@%@%@", @"^", tempPattern, @"$"];
