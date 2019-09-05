@@ -341,5 +341,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” VoIP-hívásokat szeretne fogadni a háttérben",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Nincs behelyezve SIM-kártya",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -425,5 +425,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "”%@” vill ta emot VoIP-samtal i bakgrunden",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Inget SIM-kort installerat",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

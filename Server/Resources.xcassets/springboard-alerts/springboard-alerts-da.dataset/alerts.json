@@ -432,5 +432,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” vil modtage VoIP‑opkald i baggrunden",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Intet SIM-kort installeret",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -327,5 +327,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol rebre trucades VoIP en segon pla",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Cap SIM instal·lada",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

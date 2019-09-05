@@ -327,5 +327,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Aplikácia „%@“ chce prijímať VoIP hovory na pozadí",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Nie je nainštalovaná SIM karta",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -341,5 +341,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "„%@“ žádá o povolení k příjmu VoIP hovorů na pozadí",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Žádná SIM karta",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -439,5 +439,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "« %@ » souhaite recevoir des appels VoIP à l’arrière-plan.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aucune carte SIM installée",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

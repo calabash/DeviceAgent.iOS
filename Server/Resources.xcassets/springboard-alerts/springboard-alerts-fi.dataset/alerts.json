@@ -320,5 +320,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "%@ haluaa vastaanottaa VoIP-puheluja taustalla",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "SIM-korttia ei ole asennettu",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]
