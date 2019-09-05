@@ -1,41 +1,158 @@
 [
-    "ar.lproj",
-    "ca.lproj",
-    "cs.lproj",
-    "da.lproj",
-    "de.lproj",
-    "el.lproj",
-    "en.lproj",
-    "en_AU.lproj",
-    "en_GB.lproj",
-    "es.lproj",
-    "es_419.lproj",
-    "fi.lproj",
-    "fr.lproj",
-    "fr_CA.lproj",
-    "he.lproj",
-    "hi.lproj",
-    "hr.lproj",
-    "hu.lproj",
-    "id.lproj",
-    "it.lproj",
-    "ja.lproj",
-    "ko.lproj",
-    "ms.lproj",
-    "nl.lproj",
-    "no.lproj",
-    "pl.lproj",
-    "pt.lproj",
-    "pt_PT.lproj",
-    "ro.lproj",
-    "ru.lproj",
-    "sk.lproj",
-    "sv.lproj",
-    "th.lproj",
-    "tr.lproj",
-    "uk.lproj",
-    "vi.lproj",
-    "zh_CN.lproj",
-    "zh_HK.lproj",
-    "zh_TW.lproj"
+    {
+        "name": "ar",
+        "filenames": ["ar.lproj"]
+    },
+    {
+        "name": "ca",
+        "filenames": ["ca.lproj"]
+    },
+    {
+        "name": "cs",
+        "filenames": ["cs.lproj"]
+    },
+    {
+        "name": "da",
+        "filenames": ["da.lproj"]
+    },
+    {
+        "name": "de",
+        "filenames": ["de.lproj", "German.lproj"]
+    },
+    {
+        "name": "el",
+        "filenames": ["el.lproj"]
+    },
+    {
+        "name": "en",
+        "filenames": ["en.lproj", "English.lproj"]
+    },
+    {
+        "name": "en_AU",
+        "filenames": ["en_AU.lproj"]
+    },
+    {
+        "name": "en_GB",
+        "filenames": ["en_GB.lproj"]
+    },
+    {
+        "name": "es",
+        "filenames": ["es.lproj", "Spanish.lproj"]
+    },
+    {
+        "name": "es_419",
+        "filenames": ["es_419.lproj"]
+    },
+    {
+        "name": "fi",
+        "filenames": ["fi.lproj"]
+    },
+    {
+        "name": "fr",
+        "filenames": ["fr.lproj", "French.lproj"]
+    },
+    {
+        "name": "fr_CA",
+        "filenames": ["fr_CA.lproj"]
+    },
+    {
+        "name": "he",
+        "filenames": ["he.lproj"]
+    },
+    {
+        "name": "hi",
+        "filenames": ["hi.lproj"]
+    },
+    {
+        "name": "hr",
+        "filenames": ["hr.lproj"]
+    },
+    {
+        "name": "hu",
+        "filenames": ["hu.lproj"]
+    },
+    {
+        "name": "id",
+        "filenames": ["id.lproj"]
+    },
+    {
+        "name": "it",
+        "filenames": ["it.lproj", "Italian.lproj"]
+    },
+    {
+        "name": "ja",
+        "filenames": ["ja.lproj", "Japanese.lproj"]
+    },
+    {
+        "name": "ko",
+        "filenames": ["ko.lproj"]
+    },
+    {
+        "name": "ms",
+        "filenames": ["ms.lproj"]
+    },
+    {
+        "name": "nl",
+        "filenames": ["nl.lproj", "Dutch.lproj"]
+    },
+    {
+        "name": "no",
+        "filenames": ["no.lproj"]
+    },
+    {
+        "name": "pl",
+        "filenames": ["pl.lproj"]
+    },
+    {
+        "name": "pt",
+        "filenames": ["pt.lproj"]
+    },
+    {
+        "name": "pt_PT",
+        "filenames": ["pt_PT.lproj"]
+    },
+    {
+        "name": "ro",
+        "filenames": ["ro.lproj"]
+    },
+    {
+        "name": "ru",
+        "filenames": ["ru.lproj"]
+    },
+    {
+        "name": "sk",
+        "filenames": ["sk.lproj"]
+    },
+    {
+        "name": "sv",
+        "filenames": ["sv.lproj"]
+    },
+    {
+        "name": "th",
+        "filenames": ["th.lproj"]
+    },
+    {
+        "name": "tr",
+        "filenames": ["tr.lproj"]
+    },
+    {
+        "name": "uk",
+        "filenames": ["uk.lproj"]
+    },
+    {
+        "name": "vi",
+        "filenames": ["vi.lproj"]
+    },
+    {
+        "name": "zh_CN",
+        "filenames": ["zh_CN.lproj"]
+    },
+    {
+        "name": "zh_HK",
+        "filenames": ["zh_HK.lproj"]
+    },
+    {
+        "name": "zh_TW",
+        "filenames": ["zh_TW.lproj"]
+    }
 ]

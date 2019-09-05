@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'awesome_print'
 gem 'colorize'
-gem 'pry', '~> 0.12.2'
+gem 'pry'
 gem 'pry-nav'
 gem 'rubocop'
 gem 'run_loop', github: 'calabash/run_loop', branch: 'develop'
