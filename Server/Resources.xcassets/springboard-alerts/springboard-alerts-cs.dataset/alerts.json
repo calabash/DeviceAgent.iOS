@@ -1,0 +1,23 @@
+[
+  {
+    "title": "povolit přístup k polohovým údajům v čase, kdy ji používáte",
+    "buttons": [
+      "Povolit"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "využívat vaše polohové údaje",
+    "buttons": [
+      "Povolit vždy"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "vám chce zasílat oznámení",
+    "buttons": [
+      "Povolit"
+    ],
+    "shouldAccept": true
+  }
+]

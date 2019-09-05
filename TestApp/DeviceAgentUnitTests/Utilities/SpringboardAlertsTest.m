@@ -6,7 +6,9 @@
 #pragma mark - PrivacyAlerts
 
 @interface SpringBoardAlerts(TEST)
-
++ (void)raiseIfInvalidAlert:(NSDictionary *)alertDict
+                 ofLanguage:(NSString*)language
+                andPosition:(NSInteger)position;
 - (NSMutableArray<SpringBoardAlert *> *)alerts;
 
 @end
@@ -82,26 +84,91 @@
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
 }
 
-- (void)testAlertForTitleWithRegex {
-    NSString *alertTitle, *expectedButton;
-    BOOL expectedShouldAccept;
-    SpringBoardAlert *actual;
+- (void)testAlertValidation {
+    NSDictionary *alertWithoutTitle = @{
+                                        @"buttons": @[[NSObject alloc]],
+                                        @"shouldAccept": @(YES)
+                                        };
+    expect(^{
+        [SpringBoardAlerts raiseIfInvalidAlert:alertWithoutTitle
+                                    ofLanguage:@"foo"
+                                   andPosition:-1];
+    }).to.raise(@"Bad springboard-alerts JSON");
 
-    alertTitle = @"Разрешить ресурсу КакойТоРесурс доступ к Вашей геопозиции?";
-    expectedButton = @"Разрешить";
-    expectedShouldAccept = YES;
-    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
+    @try {
+        [SpringBoardAlerts raiseIfInvalidAlert:alertWithoutTitle
+                                    ofLanguage:@"foo"
+                                   andPosition:-1];
+    } @catch (NSException *e) {
+        expect(e.reason).to.equal(@"No title");
+        expect(e.userInfo[@"language"]).to.equal(@"foo");
+        expect(e.userInfo[@"position"]).to.equal(-1);
+        expect(e.userInfo[@"alert"]).to.equal(alertWithoutTitle);
+    }
 
-    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
-    expect(actual.shouldAccept).to.equal(expectedShouldAccept);
-    
-    alertTitle = @"이(가) 음성 인식에 사용자의 합니다";
-    expectedButton = @"승인";
-    expectedShouldAccept = YES;
-    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
+    NSDictionary* alertWithoutButtons = @{
+                                          @"title": @"some",
+                                          @"shouldAccept": @(YES)
+                                          };
+    expect(^{
+        [SpringBoardAlerts raiseIfInvalidAlert:alertWithoutButtons
+                                    ofLanguage:@"foo"
+                                   andPosition:-1];
+    }).to.raise(@"Bad springboard-alerts JSON");
 
-    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
-    expect(actual.shouldAccept).to.equal(expectedShouldAccept);
+    @try {
+        [SpringBoardAlerts raiseIfInvalidAlert:alertWithoutButtons
+                                    ofLanguage:@"foo"
+                                   andPosition:-1];
+    } @catch (NSException *e) {
+        expect(e.reason).to.equal(@"No buttons");
+        expect(e.userInfo[@"language"]).to.equal(@"foo");
+        expect(e.userInfo[@"position"]).to.equal(-1);
+        expect(e.userInfo[@"alert"]).to.equal(alertWithoutButtons);
+    }
+
+    NSDictionary* alertWithZeroButtons = @{
+                                           @"title": @"some",
+                                           @"buttons": @[],
+                                           @"shouldAccept": @(YES)
+                                           };
+    expect(^{
+        [SpringBoardAlerts raiseIfInvalidAlert:alertWithZeroButtons
+                                    ofLanguage:@"foo"
+                                   andPosition:-1];
+    }).to.raise(@"Bad springboard-alerts JSON");
+
+    @try {
+        [SpringBoardAlerts raiseIfInvalidAlert:alertWithZeroButtons
+                                    ofLanguage:@"foo"
+                                   andPosition:-1];
+    } @catch (NSException *e) {
+        expect(e.reason).to.equal(@"Zero size buttons array");
+        expect(e.userInfo[@"language"]).to.equal(@"foo");
+        expect(e.userInfo[@"position"]).to.equal(-1);
+        expect(e.userInfo[@"alert"]).to.equal(alertWithZeroButtons);
+    }
+
+    NSDictionary* alertWithoutShouldAccept = @{
+                                               @"title": @"some",
+                                               @"buttons": @[[NSObject alloc]]
+                                               };
+    expect(^{
+        [SpringBoardAlerts raiseIfInvalidAlert:alertWithoutShouldAccept
+                                    ofLanguage:@"foo"
+                                   andPosition:-1];
+    }).to.raise(@"Bad springboard-alerts JSON");
+
+    @try {
+        [SpringBoardAlerts raiseIfInvalidAlert:alertWithoutShouldAccept
+                                    ofLanguage:@"foo"
+                                   andPosition:-1];
+    } @catch (NSException *e) {
+        expect(e.reason).to.equal(@"No shouldAccept");
+        expect(e.userInfo[@"language"]).to.equal(@"foo");
+        expect(e.userInfo[@"position"]).to.equal(-1);
+        expect(e.userInfo[@"alert"]).to.equal(alertWithoutShouldAccept);
+    }
 }
 
 @end

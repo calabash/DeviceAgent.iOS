@@ -1,0 +1,107 @@
+[
+  {
+    "title": "bruge din lokalitet, når du bruger appen",
+    "buttons": [
+      "Tillad"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "også når du ikke bruger appen",
+    "buttons": [
+      "Tillad"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "vil bruge din aktuelle placering",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "vil bruge dine kontakter",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "vil bruge mikrofonen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "vil bruge din kalender",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "vil bruge dine påmindelser",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "vil bruge dine fotos",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "ønsker adgang til Twitter-konti",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "vil bruge din fysiske aktivitet og din træningsaktivitet",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "vil bruge kameraet",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "vil gerne sende dig meddelelser",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Åbn i",
+    "buttons": [
+      "Åbn"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "desuden Apple med at forbedre",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "vil bruge talegenkendelse",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  }
+]
