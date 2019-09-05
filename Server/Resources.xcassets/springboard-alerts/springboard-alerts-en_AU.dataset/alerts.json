@@ -327,5 +327,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” Would Like to Receive VoIP Calls in the Background",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "No SIM Card Installed",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

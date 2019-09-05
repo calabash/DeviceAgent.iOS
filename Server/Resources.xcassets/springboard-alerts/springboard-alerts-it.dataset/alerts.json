@@ -446,5 +446,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” desidera ricevere chiamate VoIP in background",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Nessuna SIM inserita",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

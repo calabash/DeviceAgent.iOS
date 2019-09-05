@@ -327,5 +327,19 @@
       "Tamam"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” Arka Planda VoIP Araması Kabul Etmek İstiyor",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "SIM Kartı Takılı Değil",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
   }
 ]

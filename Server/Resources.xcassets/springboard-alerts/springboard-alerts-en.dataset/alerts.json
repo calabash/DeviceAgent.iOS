@@ -451,7 +451,7 @@
   {
     "title": "“%@” Would Like to Send You Notifications",
     "buttons": [
-
+      "Allow"
     ],
     "shouldAccept": true
   },
@@ -487,6 +487,20 @@
     "title": "Currently connected accessories will be disconnected and other accessories will not connect.\n\nBluetooth will continue to be available for Apple Watch, Apple Pencil, Personal Hotspot, and Handoff.",
     "buttons": [
       "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Would Like to Receive VoIP Calls in the Background",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Would Like to Send You Critical Alerts",
+    "buttons": [
+      "Allow"
     ],
     "shouldAccept": true
   }

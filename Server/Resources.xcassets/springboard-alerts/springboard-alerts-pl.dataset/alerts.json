@@ -313,5 +313,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce odbierać połączenia VoIP w tle",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Brak karty SIM",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

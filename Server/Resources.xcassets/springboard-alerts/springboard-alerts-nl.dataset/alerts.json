@@ -495,5 +495,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "'%@' wil VoIP-gesprekken op de achtergrond ontvangen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Geen simkaart geïnstalleerd",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]
