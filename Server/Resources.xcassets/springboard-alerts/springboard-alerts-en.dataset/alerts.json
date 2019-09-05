@@ -1,0 +1,191 @@
+[
+  {
+    "title": "Would Like to Use Your Current Location",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Location Accuracy",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "access your location",
+    "buttons": [
+      "Allow"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Health Access",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Would Like to Access Your Photos",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Would like to Add to your Photos",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Would Like to Access Your Contacts",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Access the Microphone",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Would Like to Access Your Calendar",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Would Like to Access Your Reminders",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Would Like to Access Your Motion Activity",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Would Like to Access the Camera",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Would Like to Access Your Motion & Fitness Activity",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Would Like Access to Twitter Accounts",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "data available to nearby bluetooth devices",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Would Like to Send You Push Notifications",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Would Like to Send You Notifications",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "No SIM Card Installed",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Carrier Settings Update",
+    "buttons": [
+      "Not Now"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "Enable Dictation?",
+    "buttons": [
+      "Not Now"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "iPhone is not Activated",
+    "buttons": [
+      "Dismiss"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "Sign In to iTunes Store",
+    "buttons": [
+      "Cancel"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "Would Like to Access Apple Music And Your Media Library",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Would Like to Add VPN Configurations",
+    "buttons": [
+      "Allow"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Open in",
+    "buttons": [
+      "Open"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "access Apple Music",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Access Speech Recognition",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  }
+]
