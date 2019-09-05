@@ -320,40 +320,5 @@
       "OK"
     ],
     "shouldAccept": true
-  },
-  {
-    "title": "“%@”がバックグラウンドでVoIP通話の受信を求めています",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "SIMカードが挿入されていません",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "“%@”がApple Music、ミュージックとビデオの履歴、およびメディアライブラリにアクセスを求めています",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "“%@”が近隣のBluetoothデバイスに、Appを使用していないときでもデータ通信することを求めています",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Apple IDでサインイン",
-    "buttons": [
-      "キャンセル"
-    ],
-    "shouldAccept": true
   }
 ]

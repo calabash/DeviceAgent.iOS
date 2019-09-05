@@ -1,103 +1,5 @@
 [
   {
-    "title": "ת לפרטי מיקומך בעת שימושך בייש",
-    "buttons": [
-      "אפשר"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "לפרטי מיקומך גם כשאינך משתמש/ת בייש",
-    "buttons": [
-      "אפשר"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "ת לפרטי מיקומך אפילו כשאינך משתמש/ת בייש",
-    "buttons": [
-      "אפשר"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "לגשת לפרטי מיקומך גם כשאינך משתמש/ת בייש",
-    "buttons": [
-      "אפשר"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "קש לגשת לאנשי הקשר ש",
-    "buttons": [
-      "אישור"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "וניין לגשת ללוח השנה ש",
-    "buttons": [
-      "אישור"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "וניין לגשת למשימות ש",
-    "buttons": [
-      "אישור"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "וניין לגשת לתמונות ש",
-    "buttons": [
-      "אישור"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "וניין לגשת אל פעילות התנועה והכושר ש",
-    "buttons": [
-      "אישור"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "מבקש להשתמש במצל",
-    "buttons": [
-      "אישור"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "מבקש לגשת לחשבונ",
-    "buttons": [
-      "אישור"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "מעוניין לאפשר להתקני Bluetooth קרובים לקבל גישה לנתונים אפילו כשאינך משתמש/ת ביישום",
-    "buttons": [
-      "אישור"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "מעוניין לשלוח לך עדכונים",
-    "buttons": [
-      "אישור"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "מעוניין לגשת אל זיהוי הדיבור ש",
-    "buttons": [
-      "אישור"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "לאפשר ל-״%@״ לגשת למיקום שלך?",
     "buttons": [
       "אפשר"
@@ -310,40 +212,35 @@
   {
     "title": "פתח ב-״%@״",
     "buttons": [
-      "פתיחה",
-      "פתח"
+      "פתיחה"
     ],
     "shouldAccept": true
   },
   {
     "title": "לפתוח ב-״%@״”?",
     "buttons": [
-      "פתיחה",
-      "פתח"
+      "פתיחה"
     ],
     "shouldAccept": true
   },
   {
     "title": "חפש/י ב-%@",
     "buttons": [
-      "פתיחה",
-      "פתח"
+      "פתיחה"
     ],
     "shouldAccept": true
   },
   {
     "title": "לפתוח עמוד זה ב-״%@״?",
     "buttons": [
-      "פתיחה",
-      "פתח"
+      "פתיחה"
     ],
     "shouldAccept": true
   },
   {
     "title": "פתח ביישום %@",
     "buttons": [
-      "פתיחה",
-      "פתח"
+      "פתיחה"
     ],
     "shouldAccept": true
   },
@@ -428,48 +325,6 @@
     "title": "אביזרים המחוברים כעת ינותקו, ואביזרים אחרים לא יחוברו.\n\n‏Bluetooth ימשיך להיות זמין עבור Apple Watch,‏ Apple Pencil, נקודת גישה אישית ו-Handoff.",
     "buttons": [
       "אישור"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "״%@״ רוצה לקבל שיחות VoIP ברקע",
-    "buttons": [
-      "אישור"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "אין כרטיס SIM",
-    "buttons": [
-      "אישור"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "״%@״ מבקש לגשת לתזכורות שלך",
-    "buttons": [
-      "אישור"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "‏״%@״ מעוניין לגשת ל-Apple Music, לפעילות המוסיקה והווידאו שלך, ולספריית המדיה שלך",
-    "buttons": [
-      "אישור"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "״%@״ מעוניין לאפשר להתקני Bluetooth קרובים לקבל גישה לנתונים גם לא בעת השימוש ביישום",
-    "buttons": [
-      "אישור"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "התחברות באמצעות Apple ID",
-    "buttons": [
-      "ביטול"
     ],
     "shouldAccept": true
   }

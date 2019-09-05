@@ -1,26 +1,5 @@
 [
   {
-    "title": "acceda a tu ubicación mientras la app está en uso",
-    "buttons": [
-      "Permitir"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "acceda a tu ubicación incluso cuando la app no está en uso",
-    "buttons": [
-      "Permitir"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "quiere acceder a tu condición y actividad física",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "¿Permitir que “%@” acceda a tu ubicación?",
     "buttons": [
       "Permitir"
@@ -346,48 +325,6 @@
     "title": "Se desconectarán los accesorios que están conectados y no se podrán conectar otros.\n\nBluetooth seguirá disponible para Apple Watch, Apple Pencil, compartir Internet y Handoff.",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "“%@” quiere recibir llamadas VoIP en segundo plano",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "No hay ninguna tarjeta SIM",
-    "buttons": [
-      "Aceptar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "¿Quieres usar \"%@\" con Siri?",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "“%@” quiere acceder a Apple Music, tu actividad musical y de videos, y tu biblioteca de contenidos multimedia",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "%@ solicita que los datos estén disponibles para los dispositivos Bluetooth cercanos aunque no estés utilizando la app",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicia sesión con tu Apple ID",
-    "buttons": [
-      "Cancelar"
     ],
     "shouldAccept": true
   }

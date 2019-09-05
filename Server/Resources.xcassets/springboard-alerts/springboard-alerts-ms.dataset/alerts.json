@@ -156,16 +156,14 @@
   {
     "title": "Seting baru tersedia. Adakah anda mahu mengemas kininya sekarang?",
     "buttons": [
-      "Nanti",
-      "Bukan Sekarang"
+      "Nanti"
     ],
     "shouldAccept": true
   },
   {
     "title": "Kemas Kini Seting Pembawa",
     "buttons": [
-      "Nanti",
-      "Bukan Sekarang"
+      "Nanti"
     ],
     "shouldAccept": true
   },
@@ -327,48 +325,6 @@
     "title": "Aksesori yang disambungkan pada masa ini akan diputuskan sambungan dan aksesori lain tidak akan bersambung.\n\nBluetooth akan terus tersedia untuk Apple Watch, Apple Pencil, Hotspot Peribadi dan Handoff.",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "“%@” Mahu Menerima Panggilan VoIP di Latar Belakang",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Tiada Kad SIM Dipasang",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Buka halaman ini dalam “%@”?",
-    "buttons": [
-      "Buka"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "“%@” mahu mengakses Apple Music, aktiviti muzik dan video anda serta pustaka media anda",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "“%@” mahu menyediakan data kepada peranti Bluetooth berdekatan walaupun anda tidak menggunakan app",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Daftar Masuk dengan Apple ID",
-    "buttons": [
-      "Batal"
     ],
     "shouldAccept": true
   }

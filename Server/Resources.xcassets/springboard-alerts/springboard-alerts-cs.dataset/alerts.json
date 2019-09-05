@@ -1,26 +1,5 @@
 [
   {
-    "title": "povolit přístup k polohovým údajům v čase, kdy ji používáte",
-    "buttons": [
-      "Povolit"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "využívat vaše polohové údaje",
-    "buttons": [
-      "Povolit vždy"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "vám chce zasílat oznámení",
-    "buttons": [
-      "Povolit"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Smí aplikace %@ využívat vaše polohové údaje?",
     "buttons": [
       "Povolit"
@@ -339,48 +318,6 @@
     "title": "Připojené příslušenství bude odpojeno a nebude možné připojit ani jiné příslušenství.\n\nRozhraní Bluetooth bude nadále dostupné pro Apple Watch, Apple Pencil, Osobní hotspot a Handoff.",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "„%@“ žádá o povolení k příjmu VoIP hovorů na pozadí",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Žádná SIM karta",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Chcete aplikaci %@ povolit přístup k polohovým údajům?",
-    "buttons": [
-      "Povolit"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Aplikace „%@“ žádá o přístup k Apple Music, informacím o přehrávání hudby a videí a vaší knihovně médií",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Aplikace„%@“ žádá o povolení k sdílení dat s Bluetooth zařízeními v okolí i v čase, kdy ji právě nepoužíváte",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Přihlaste se pomocí Apple ID",
-    "buttons": [
-      "Zrušit"
     ],
     "shouldAccept": true
   }

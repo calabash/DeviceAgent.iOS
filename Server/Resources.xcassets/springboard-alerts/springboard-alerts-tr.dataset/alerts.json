@@ -327,54 +327,5 @@
       "Tamam"
     ],
     "shouldAccept": true
-  },
-  {
-    "title": "“%@” Arka Planda VoIP Araması Kabul Etmek İstiyor",
-    "buttons": [
-      "Tamam"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "SIM Kartı Takılı Değil",
-    "buttons": [
-      "Tamam"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "“%@”; Apple Music’e, müzik ve video aktivitelerinize ve ortam arşivinize erişmek istiyor",
-    "buttons": [
-      "Tamam"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "“%@”, siz uygulamayı kullanmıyorken bile yakındaki Bluetooth aygıtları için verileri kullanılabilir yapmak istiyor",
-    "buttons": [
-      "Tamam"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "SIM Kart Takılı Değil",
-    "buttons": [
-      "Tamam"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "IPHONE ETKİNLEŞTİRİLEMEDİ",
-    "buttons": [
-      "Yok Say"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Apple Kimliğiyle Giriş Yapın",
-    "buttons": [
-      "Vazgeç"
-    ],
-    "shouldAccept": true
   }
 ]

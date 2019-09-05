@@ -327,47 +327,5 @@
       "OK"
     ],
     "shouldAccept": true
-  },
-  {
-    "title": "“%@” Deseja Receber Ligações de VoIP em Segundo Plano",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Nenhum Cartão SIM Instalado",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "“%@” deseja ter acesso ao Apple Music, suas atividades de música e vídeo, e à biblioteca de mídia",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "“%@” Deseja Acessar os Dados do App Casa",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "“%@” deseja disponibilizar dados para os dispositivos Bluetooth por perto até mesmo quando você não estiver usando o app",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicie a Sessão com o ID Apple",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
   }
 ]

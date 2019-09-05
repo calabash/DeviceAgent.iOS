@@ -1,26 +1,5 @@
 [
   {
-    "title": "hozzáférjen az Ön helyzetéhez az alkalmazás használatakor",
-    "buttons": [
-      "Engedélyezés"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "értesítéseket szeretne Önnek küldeni",
-    "buttons": [
-      "Engedélyezés"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "számára, hogy hozzáférjen az Ön helyzetéhez",
-    "buttons": [
-      "Engedélyezés mindig"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Engedélyezi a(z) „%@” számára, hogy hozzáférjen az Ön helyzetéhez?",
     "buttons": [
       "Engedélyezés"
@@ -339,41 +318,6 @@
     "title": "A jelenleg csatlakoztatott tartozékok le lesznek választva, és más tartozékok nem fognak kapcsolódni.\n\nA Bluetooth továbbra is rendelkezésre áll az Apple Watchhoz, az Apple Pencilhez, a Személyes Hotspothoz és a Handoffhoz.",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "A(z) „%@” VoIP-hívásokat szeretne fogadni a háttérben",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Nincs behelyezve SIM-kártya",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "A(z) „%@” hozzá szeretne férni az Apple Musichoz, az Ön zene- és videotevékenységeihez, valamint a médiakönyvtárához",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "A(z) „%@” adatokat akar elérhetővé tenni közeli Bluetooth-eszközök számára akkor is, amikor Ön nem használja az alkalmazást",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Jelentkezzen be Apple ID-val",
-    "buttons": [
-      "Mégsem"
     ],
     "shouldAccept": true
   }

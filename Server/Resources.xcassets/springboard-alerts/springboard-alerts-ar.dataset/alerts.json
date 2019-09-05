@@ -327,40 +327,5 @@
       "موافق"
     ],
     "shouldAccept": true
-  },
-  {
-    "title": "يرغب \"%@\" في استلام مكالمات VoIP في الخلفية",
-    "buttons": [
-      "موافق"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "لا توجد بطاقة SIM مثبتة",
-    "buttons": [
-      "موافق"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "يرغب \"%@\" في الوصول إلى Apple Music، ونشاط الموسيقى والفيديو لديك، وكذلك مكتبة الوسائط الخاصة بك",
-    "buttons": [
-      "موافق"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "يرغب \"%@\" في إتاحة البيانات إلى أجهزة Bluetooth القريبة حتى عند عدم استخدامك للتطبيق",
-    "buttons": [
-      "موافق"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "تسجيل الدخول باستخدام Apple ID",
-    "buttons": [
-      "إلغاء"
-    ],
-    "shouldAccept": true
   }
 ]

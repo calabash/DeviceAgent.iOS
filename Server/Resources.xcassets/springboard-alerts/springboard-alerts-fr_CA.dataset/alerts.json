@@ -327,33 +327,5 @@
       "OK"
     ],
     "shouldAccept": true
-  },
-  {
-    "title": "« %@ » souhaite recevoir des appels VoIP en arrière-plan",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Aucune carte SIM installée",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "« %@ » souhaite accéder aux données de Domicile.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Connexion avec l’identifiant Apple",
-    "buttons": [
-      "Annuler"
-    ],
-    "shouldAccept": true
   }
 ]

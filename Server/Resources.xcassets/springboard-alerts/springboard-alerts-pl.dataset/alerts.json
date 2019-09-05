@@ -313,33 +313,5 @@
       "OK"
     ],
     "shouldAccept": true
-  },
-  {
-    "title": "„%@” chce odbierać połączenia VoIP w tle",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Brak karty SIM",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Zaloguj się, podając Apple ID",
-    "buttons": [
-      "Anuluj"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Pozwala aplikacji „%@” uaktualniać Twoje dane zdrowotne.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
   }
 ]
