@@ -87,7 +87,7 @@
     BOOL expectedShouldAccept;
     SpringBoardAlert *actual;
 
-    alertTitle = @"Разрешить ресурсу КакойТоРесурс доступ к Вашей жизни";
+    alertTitle = @"Разрешить ресурсу КакойТоРесурс доступ к Вашей геопозиции?";
     expectedButton = @"Разрешить";
     expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];

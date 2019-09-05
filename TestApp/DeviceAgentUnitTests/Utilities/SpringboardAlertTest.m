@@ -34,21 +34,21 @@
                                               dismissButtonTitle:@"OK"
                                                     shouldAccept:YES];
 
-    expect(alert.alertTitleFragment).to.equal(@"match");
+    expect(alert.alertTitleFragment).to.equal(@"^match$");
     expect(alert.defaultDismissButtonMark).to.equal(@"OK");
     expect(alert.shouldAccept).to.equal(YES);
 
     alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"match"
                                               dismissButtonTitle:@"Dismiss"
                                                     shouldAccept:NO];
-    expect(alert.alertTitleFragment).to.equal(@"match");
+    expect(alert.alertTitleFragment).to.equal(@"^match$");
     expect(alert.defaultDismissButtonMark).to.equal(@"Dismiss");
     expect(alert.shouldAccept).to.equal(NO);
 }
 
 - (void)testMatchesAlertTitle {
     SpringBoardAlert *alert;
-    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"match"
+    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"Found a match"
                                               dismissButtonTitle:@"OK"
                                                     shouldAccept:YES];
 
@@ -59,13 +59,13 @@
     expect(actual).to.equal(NO);
 
     // matching is done with lowercase strings
-    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"MATCH"
+    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"FOUND A MATCH"
                                               dismissButtonTitle:@"OK"
                                                     shouldAccept:YES];
     actual = [alert matchesAlertTitle:@"Found a match"];
     expect(actual).to.equal(YES);
 
-    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"match"
+    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"FOUND a match"
                                               dismissButtonTitle:@"OK"
                                                     shouldAccept:YES];
     actual = [alert matchesAlertTitle:@"Found a MATCH"];
@@ -94,12 +94,12 @@
     actual = [alert matchesAlertTitle:@"this is the Regex-5 test"];
     expect(actual).to.equal(YES);
     
-    // matching is failed with whitespace in program name
+    // matching is done with whitespace in program name
     alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"this is the %@ test"
                                               dismissButtonTitle:@"OK"
                                                     shouldAccept:YES];
     actual = [alert matchesAlertTitle:@"this is the white space test"];
-    expect(actual).to.equal(NO);
+    expect(actual).to.equal(YES);
 }
 
 - (void)testMatchesAlertTitleWithTwoArguments {
@@ -138,14 +138,14 @@
     expect(actual).to.equal(YES);
 }
 
-// - (void)testMatchesAlertTitleWithSpecialChar {
-//     SpringBoardAlert *alert;
-//     alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"thi*s is? t[h]e %1$@ te+st."
-//                                               dismissButtonTitle:@"OK"
-//                                                     shouldAccept:YES];
-//     BOOL actual = [alert matchesAlertTitle:@"thi*s is? t[h]e special-char te+st."];
-//     expect(actual).to.equal(YES);
+- (void)testMatchesAlertTitleWithSpecialChar {
+    SpringBoardAlert *alert;
+    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"thi*s is? t[h]e %@ te+st."
+                                              dismissButtonTitle:@"OK"
+                                                    shouldAccept:YES];
+    BOOL actual = [alert matchesAlertTitle:@"thi*s is? t[h]e special-symbol te+st."];
+    expect(actual).to.equal(YES);
     
-// }
+}
 
 @end
