@@ -106,6 +106,14 @@
 
     expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
+    
+    alertTitle = @"«Прiложение» хоче фільтрувати мережевий контент";
+    expectedButton = @"Дозволити";
+    expectedShouldAccept = YES;
+    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
+
+    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.shouldAccept).to.equal(expectedShouldAccept);
 }
 
 - (void)testAlertValidation {
