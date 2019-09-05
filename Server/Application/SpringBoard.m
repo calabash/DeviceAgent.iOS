@@ -196,11 +196,7 @@ typedef enum : NSUInteger {
         
     for (NSString *mark in marks) {
         button = alert.buttons[mark];
-        
-        if (!button) {
-            continue;
-        }
-        
+
         // Resolve before asking if the button exists.
         if ([button respondsToSelector:@selector(resolve)]) {
             [button resolve];
@@ -211,7 +207,10 @@ typedef enum : NSUInteger {
                           button, [error localizedDescription]);
             }
         }
-        break;
+
+        if (button && button.exists) {
+            break;
+        }
     }
 
     // A button with the expected title does not exist.
