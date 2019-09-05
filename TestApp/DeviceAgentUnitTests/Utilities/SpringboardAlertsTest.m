@@ -171,4 +171,34 @@
     }
 }
 
+- (void)testAlertForTitleWithDifLang {
+    NSString *alertTitle, *expectedButton;
+    BOOL expectedShouldAccept;
+    SpringBoardAlert *actual;
+
+    alertTitle = @"Разрешить ресурсу «ФСБ и Пятерочка» доступ к Вашей геопозиции?";
+    expectedButton = @"Разрешить";
+    expectedShouldAccept = true;
+    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
+
+    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.shouldAccept).to.equal(expectedShouldAccept);
+    
+    alertTitle = @"“AppName” Would Like Access to Twitter Accounts";
+    expectedButton = @"OK";
+    expectedShouldAccept = true;
+    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
+
+    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.shouldAccept).to.equal(expectedShouldAccept);
+    
+    // alertTitle = @"‘합니다’에서 네트워크 콘텐츠를 필터링하려고 합니다.";
+    // expectedButton = @"허용";
+    // expectedShouldAccept = true;
+    // actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
+
+    // expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    // expect(actual.shouldAccept).to.equal(expectedShouldAccept);
+}
+
 @end
