@@ -432,5 +432,47 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” gostaria de aceder à sua atividade física e de fitness",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” gostaria de aceder a Apple Music, à informação de atividade (músicas e vídeo) e à biblioteca de multimédia",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Mesmo quando não está a ser usado, “%@” gostaria de disponibilizar dados a dispositivos Bluetooth que se encontrem por perto",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Atualização das definições da operadora",
+    "buttons": [
+      "Agora não"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Inicie sessão com o ID Apple",
+    "buttons": [
+      "Cancelar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Inicie sessão em iMessage",
+    "buttons": [
+      "Cancelar"
+    ],
+    "shouldAccept": true
   }
 ]

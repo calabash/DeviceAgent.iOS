@@ -474,5 +474,26 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte auf Apple Music, deine Musik- und Videoaktivitäten und auf deine Mediathek zugreifen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte Daten mit Bluetooth-Geräten in der Nähe teilen, auch wenn die App nicht benutzt wird",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Mit Apple‑ID anmelden",
+    "buttons": [
+      "Abbrechen"
+    ],
+    "shouldAccept": true
   }
 ]

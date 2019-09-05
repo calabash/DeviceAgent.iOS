@@ -341,5 +341,26 @@
       "OKE"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” ingin mengakses Apple Music, aktivitas musik dan video, serta perpustakaan media Anda",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” ingin membuat data tersedia untuk perangkat Bluetooth di sekitar saat Anda sedang tidak menggunakan app",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Masuk dengan ID Apple",
+    "buttons": [
+      "Batalkan"
+    ],
+    "shouldAccept": true
   }
 ]

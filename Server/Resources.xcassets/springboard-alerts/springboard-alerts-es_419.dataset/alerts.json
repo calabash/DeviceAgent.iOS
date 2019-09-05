@@ -362,5 +362,33 @@
       "Aceptar"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "¿Quieres usar \"%@\" con Siri?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere acceder a Apple Music, tu actividad musical y de videos, y tu biblioteca de contenidos multimedia",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ solicita que los datos estén disponibles para los dispositivos Bluetooth cercanos aunque no estés utilizando la app",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Inicia sesión con tu Apple ID",
+    "buttons": [
+      "Cancelar"
+    ],
+    "shouldAccept": true
   }
 ]

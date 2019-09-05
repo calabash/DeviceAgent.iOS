@@ -446,5 +446,26 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@“ vil have adgang til Apple Music, din musik- og videoaktivitet og dit mediebibliotek",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@“ vil gøre data tilgængelige for Bluetooth-enheder i nærheden, også når du ikke bruger appen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Log ind med Apple-id",
+    "buttons": [
+      "Annuller"
+    ],
+    "shouldAccept": true
   }
 ]
