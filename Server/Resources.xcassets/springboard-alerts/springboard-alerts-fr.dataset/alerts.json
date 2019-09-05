@@ -453,5 +453,26 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "« %@ » souhaite accéder à Apple Music, à votre activité musicale et vidéo, ainsi qu’à votre bibliothèque multimédia",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » souhaite permettre aux appareils Bluetooth à proximité d’accéder à des données lorsque vous n’utilisez pas l’app",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Se connecter",
+    "buttons": [
+      "Annuler"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -341,5 +341,54 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Vil du også gi %@ tilgang til posisjonen din selv når du ikke bruker appen?",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vil ha tilgang til Apple Music, musikk- og videobruken din og mediebiblioteket ditt",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ ønsker å gjøre data tilgjengelig for Bluetooth-enheter i nærheten selv om appen ikke er i bruk",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Logg på med Apple‑ID",
+    "buttons": [
+      "Avbryt"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Det gjeldende Wi-Fi-nettverket og andre nettverk i nærheten vil være frakoblet til i morgen.\n\nWi-Fi vil fortsatt være tilgjengelig for AirDrop, Delt internett og stedsnøyaktighet.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Det gjeldende WLAN-nettverket og andre nettverk i nærheten vil være frakoblet til i morgen.\n\nWLAN vil fortsatt være tilgjengelig for AirDrop, Delt internett og stedsnøyaktighet.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Alt tilkoblet tilbehør vil bli koblet fra, og annet tilbehør vil ikke kunne koble til.\n\nBluetooth vil fortsatt være tilgjengelig for Apple Watch, Apple Pencil, Delt internett og Handoff.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

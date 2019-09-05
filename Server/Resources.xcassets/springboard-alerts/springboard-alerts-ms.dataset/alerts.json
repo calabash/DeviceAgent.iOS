@@ -156,14 +156,16 @@
   {
     "title": "Seting baru tersedia. Adakah anda mahu mengemas kininya sekarang?",
     "buttons": [
-      "Nanti"
+      "Nanti",
+      "Bukan Sekarang"
     ],
     "shouldAccept": true
   },
   {
     "title": "Kemas Kini Seting Pembawa",
     "buttons": [
-      "Nanti"
+      "Nanti",
+      "Bukan Sekarang"
     ],
     "shouldAccept": true
   },
@@ -346,6 +348,27 @@
     "title": "Buka halaman ini dalam “%@”?",
     "buttons": [
       "Buka"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” mahu mengakses Apple Music, aktiviti muzik dan video anda serta pustaka media anda",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” mahu menyediakan data kepada peranti Bluetooth berdekatan walaupun anda tidak menggunakan app",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Daftar Masuk dengan Apple ID",
+    "buttons": [
+      "Batal"
     ],
     "shouldAccept": true
   }

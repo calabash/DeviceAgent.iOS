@@ -341,5 +341,54 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” ar dori să acceseze Apple Music, activitatea dvs. legată de muzică și clipuri video, precum și biblioteca multimedia",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” ar dori să pună la dispoziție date dispozitivelor Bluetooth din apropiere, chiar și atunci când nu utilizați aplicația",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Autentificați‑vă în Game Center",
+    "buttons": [
+      "Anulați"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Autentificați‑vă cu ID‑ul Apple",
+    "buttons": [
+      "Anulați"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Autentificați‑vă la iMessage",
+    "buttons": [
+      "Anulați"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Autentificați‑vă la FaceTime",
+    "buttons": [
+      "Anulați"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Autentificați‑vă pe iCloud",
+    "buttons": [
+      "Anulați"
+    ],
+    "shouldAccept": true
   }
 ]

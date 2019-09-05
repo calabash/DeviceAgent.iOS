@@ -460,5 +460,26 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” desidera accedere ai contenuti di Apple Music, alla tua cronologia di riproduzione di brani e video e alla tua libreria multimediale",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” desidera rendere disponibili i dati ai dispositivi Bluetooth nelle vicinanze anche quando l'app non è in uso",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Accedi con il tuo ID Apple",
+    "buttons": [
+      "Annulla"
+    ],
+    "shouldAccept": true
   }
 ]
