@@ -327,5 +327,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "«%@» хоче отримувати VoIP-виклики на другому плані",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Немає SIM-карти",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

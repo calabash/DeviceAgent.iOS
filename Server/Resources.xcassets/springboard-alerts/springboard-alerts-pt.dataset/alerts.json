@@ -327,5 +327,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Receber Ligações de VoIP em Segundo Plano",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Nenhum Cartão SIM Instalado",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

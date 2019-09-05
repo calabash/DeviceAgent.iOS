@@ -327,5 +327,26 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Menerima Panggilan VoIP di Latar Belakang",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Tiada Kad SIM Dipasang",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Buka halaman ini dalam “%@”?",
+    "buttons": [
+      "Buka"
+    ],
+    "shouldAccept": true
   }
 ]

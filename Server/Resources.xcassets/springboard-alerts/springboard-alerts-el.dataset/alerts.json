@@ -327,5 +327,19 @@
       "ΟΚ"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Αίτημα από «%@» για λήψη κλήσεων VoIP στο παρασκήνιο",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Δεν έχει εγκατασταθεί κάρτα SIM",
+    "buttons": [
+      "ΟΚ"
+    ],
+    "shouldAccept": true
   }
 ]
