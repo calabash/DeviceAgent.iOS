@@ -140,12 +140,6 @@
     actual = [alert matchesAlertTitle:@"Regex this is the test with arguments two"];
     expect(actual).to.equal(YES);
 
-    alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"%1$@ this is the test with arguments %2$@"
-                                              dismissButtonTitle:@"OK"
-                                                    shouldAccept:YES];
-    actual = [alert matchesAlertTitle:@"Regex this is the test with arguments two"];
-    expect(actual).to.equal(YES);
-
     alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"this is the %1$@ test with arguments %2$@"
                                               dismissButtonTitle:@"OK"
                                                     shouldAccept:YES];
