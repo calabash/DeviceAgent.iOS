@@ -78,15 +78,17 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
     }
 }
 
-+ (NSArray<NSString*> *) getLanguagesFromBundle:(NSBundle*) bundle {
++ (NSArray<NSString*> *) languagesFromBundle:(NSBundle*) bundle {
     NSString *path = [NSString
                       stringWithFormat: @"%@/Assets.car",
                       [bundle bundlePath]];
-    CUICommonAssetStorage *storage = [[NSClassFromString(@"CUICommonAssetStorage") alloc] initWithPath:path];
+    CUICommonAssetStorage *storage =
+    [[NSClassFromString(@"CUICommonAssetStorage") alloc] initWithPath:path];
     NSArray *assetNames = [storage allRenditionNames];
     if (!assetNames) return @[];
     if (assetNames.count == 0) return @[];
-    NSMutableArray<NSString *> *result = [[NSMutableArray alloc] initWithCapacity:assetNames.count];
+    NSMutableArray<NSString *> *result =
+    [[NSMutableArray alloc] initWithCapacity:assetNames.count];
     for (NSInteger i = 0;i < assetNames.count; i++){
         NSString *name = assetNames[i];
         if ([name hasPrefix: @"springboard-alerts-"]) {
@@ -104,7 +106,8 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
         NSMutableArray<SpringBoardAlert *> *result =
         [NSMutableArray<SpringBoardAlert *> array];
         
-        NSArray<NSString*> *languages = [SpringBoardAlerts getLanguagesFromBundle: bundle];
+        NSArray<NSString*> *languages =
+        [SpringBoardAlerts languagesFromBundle: bundle];
         
         for (NSUInteger languagei = 0; languagei < languages.count; languagei++) {
             NSString *language = languages[languagei];
