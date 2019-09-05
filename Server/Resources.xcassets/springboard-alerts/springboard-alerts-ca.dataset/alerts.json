@@ -1,0 +1,331 @@
+[
+  {
+    "title": "Permets que “%@” accedeixi a la teva ubicació?",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permets que “%@” accedeixi a la teva ubicació encara que no estiguis utilitzant l’app?",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permets que “%@” accedeixi a la teva ubicació mentre estàs utilitzant l’app?",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permets que “%@” també accedeixi a la teva ubicació encara que no estiguis utilitzant l’app?",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” ha estat fent servir la teva ubicació en segon pla. Vols continuar-ho permetent?",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vols permetre que “%@” utilitzi el Face ID?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Algunes dades de %@ s’enviaran a Apple per processar les teves peticions.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol accedir al micròfon",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol afegir fotos a la teva fototeca",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol accedir al teu calendari",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Les dades de veu d’aquesta app s’enviaran a Apple per processar les teves peticions i perquè Apple pugui millorar la tecnologia de reconeixement de veu.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol accedir a la teva activitat física",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol accedir a la càmera",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol accedir als teus recordatoris",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vols utilitzar “%@” amb Siri?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol accedir a l’Apple Music, a la teva activitat de música i vídeo i a la teva biblioteca de contingut.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol accedir als teus contactes",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol accedir a les teves fotos",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol accedir a les teves dades domèstiques ",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol oferir‑te una experiència nativa de trucada",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol posar les dades a disposició dels dispositius Bluetooth propers fins i tot quan no utilitzis l’app.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol accedir al reconeixement de veu",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Hi ha una nova configuració disponible. Vols actualitzar‑la ara?",
+    "buttons": [
+      "Ara no"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Actualització de la configuració de l’operador",
+    "buttons": [
+      "Ara no"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol afegir configuracions de VPN",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol filtrar el contingut de la xarxa",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "L’iPhone no s’ha activat",
+    "buttons": [
+      "Ignorar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Activar el dictat?",
+    "buttons": [
+      "Ara no"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Activar el dictat",
+    "buttons": [
+      "Ara no"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Afegir teclat de tercers?",
+    "buttons": [
+      "Ara no"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Obrir a “%@”",
+    "buttons": [
+      "Obrir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Obrir-ho amb %@?",
+    "buttons": [
+      "Obrir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Buscar a %@",
+    "buttons": [
+      "Obrir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vols obrir aquesta pàgina en “%@”?",
+    "buttons": [
+      "Obrir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Obrir-ho a l’app %@",
+    "buttons": [
+      "Obrir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Inicia sessió a l’App Store",
+    "buttons": [
+      "Cancel·lar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Inicia sessió al Game Center",
+    "buttons": [
+      "Cancel·lar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Inicia sessió a l’iTunes Store",
+    "buttons": [
+      "Cancel·lar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Inicia sessió a l’iMessage",
+    "buttons": [
+      "Cancel·lar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Inicia sessió al FaceTime",
+    "buttons": [
+      "Cancel·lar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Inicia sessió a l’iCloud",
+    "buttons": [
+      "Cancel·lar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permetre que “%@” actualitzi la teva informació mèdica.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Accés a Salut",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%1$@” vol accedir als comptes de %2$@",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "La xarxa Wi‑Fi actual i la resta de xarxes properes es desconnectaran fins demà.\n\nLes xarxes Wi‑Fi continuaran estant disponibles per a l’AirDrop, “Compartir Internet” i per millorar la precisió de la ubicació.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "La xarxa WLAN actual i la resta de xarxes properes es desconnectaran fins demà.\n\nLes xarxes WLAN continuaran estant disponibles per a l’AirDrop, “Compartir Internet” i per millorar la precisió de la ubicació.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Es desconnectaran els accessoris que en aquest moment estiguin connectats i no es connectarà cap altre accessori.\n\nEl Bluetooth continuarà estant disponible per a l’Apple Watch, l’Apple Pencil, “Compartir Internet” i el Handoff.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  }
+]
