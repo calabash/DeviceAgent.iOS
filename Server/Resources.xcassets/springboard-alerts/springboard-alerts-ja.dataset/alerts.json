@@ -1,0 +1,324 @@
+[
+  {
+    "title": "“%@”に位置情報の利用を許可しますか?",
+    "buttons": [
+      "許可"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”を使用していないときでも位置情報の利用を許可しますか?",
+    "buttons": [
+      "許可"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”の使用中に位置情報の利用を許可しますか?",
+    "buttons": [
+      "許可"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”はバックグラウンドで位置情報を利用しています。位置情報の利用を許可したままにしますか?",
+    "buttons": [
+      "許可"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”にFace IDの使用を許可しますか?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@データの一部は、リクエストを処理するためにAppleに送信されます。",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”がマイクへのアクセスを求めています",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”が写真をライブラリに追加しようとしています",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”がカレンダーへのアクセスを求めています",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "このAppからの音声データはリクエストを処理するためにAppleに送信されます。また、音声認識技術の向上にも役立てられます。",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”がモーションとフィットネスのアクティビティへのアクセスを求めています",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”がカメラへのアクセスを求めています",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”がリマインダーへのアクセスを求めています",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”をSiriで使用しますか?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”がApple Music、ミュージックとビデオの履歴、およびメディアライブラリにアクセスを求めています。",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”が連絡先へのアクセスを求めています",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”が写真へのアクセスを求めています",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”がホームデータへのアクセスを求めています",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”はネイティブな着信機能を提供しようとしています。",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”が近隣のBluetoothデバイスに、Appを使用していないときでもデータ通信することを求めています。",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”が音声認識へのアクセスを求めています",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "新しい設定が利用可能です。今すぐアップデートしますか?",
+    "buttons": [
+      "今はしない"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "キャリア設定アップデート",
+    "buttons": [
+      "今はしない"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”がVPN構成の追加を求めています",
+    "buttons": [
+      "許可"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”がネットワークコンテンツのフィルタリングを求めています",
+    "buttons": [
+      "許可"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iPhoneはアクティベートされていません",
+    "buttons": [
+      "無視"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "音声入力を有効にしますか?",
+    "buttons": [
+      "今はしない"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "音声入力を有効にする",
+    "buttons": [
+      "今はしない"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "他社製キーボードを追加しますか?",
+    "buttons": [
+      "今はしない"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”で開く",
+    "buttons": [
+      "開く"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”で開きますか?",
+    "buttons": [
+      "開く"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@を検索",
+    "buttons": [
+      "開く"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "このページを“%@”で開きますか?",
+    "buttons": [
+      "開く"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Appで開く",
+    "buttons": [
+      "開く"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "App Storeにサインイン",
+    "buttons": [
+      "キャンセル"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Game Centerにサインイン",
+    "buttons": [
+      "キャンセル"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iTunes Storeにサインイン",
+    "buttons": [
+      "キャンセル"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iMessageにサインイン",
+    "buttons": [
+      "キャンセル"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "FaceTimeにサインイン",
+    "buttons": [
+      "キャンセル"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iCloudにサインイン",
+    "buttons": [
+      "キャンセル"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”にヘルスケアデータのアップデートを許可します。",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "ヘルスケアデータのアクセス",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%1$@”は%2$@アカウントへのアクセスを求めています",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "現在のWi-Fiネットワークおよびほかの近くのネットワークは明日まで接続を解除されます。\n\nWi-Fiは引き続きAirDrop、インターネット共有、および位置情報の精度の向上で利用可能です。",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "現在のWLANネットワークおよびほかの近くのネットワークは明日まで接続を解除されます。\n\nWLANは引き続きAirDrop、インターネット共有、および位置情報の精度の向上で利用可能です。",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "現在接続されているアクセサリは接続を解除され、ほかのアクセサリは接続しません。\n\nBluetoothは引き続きApple Watch、Apple Pencil、インターネット共有、およびHandoffで利用可能です。",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  }
+]
