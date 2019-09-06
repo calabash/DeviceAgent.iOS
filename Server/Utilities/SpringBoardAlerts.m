@@ -78,67 +78,70 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
     }
 }
 
-+ (NSArray<NSString*> *) languagesFromBundle:(NSBundle*) bundle {
-    NSString *path = [NSString
-                      stringWithFormat: @"%@/Assets.car",
-                      [bundle bundlePath]];
-    CUICommonAssetStorage *storage =
-    [[NSClassFromString(@"CUICommonAssetStorage") alloc] initWithPath:path];
-    NSArray *assetNames = [storage allRenditionNames];
-    if (!assetNames) return @[];
-    if (assetNames.count == 0) return @[];
-    NSMutableArray<NSString *> *result =
-    [[NSMutableArray alloc] initWithCapacity:assetNames.count];
-    for (NSInteger i = 0;i < assetNames.count; i++){
-        NSString *name = assetNames[i];
-        if ([name hasPrefix: @"springboard-alerts-"]) {
-            [result addObject:assetNames[i]];
-        }
-    };
-    return result;
-}
-
 - (instancetype)init_private {
     self = [super init];
     if (self) {
         NSTimeInterval startTime = [[CBXMachClock sharedClock] absoluteTime];
-        NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-        NSMutableArray<SpringBoardAlert *> *result =
+
+        NSMutableArray<SpringBoardAlert *> *resultArray =
         [NSMutableArray<SpringBoardAlert *> array];
-        
-        NSArray<NSString*> *languages =
-        [SpringBoardAlerts languagesFromBundle: bundle];
-        
-        for (NSUInteger languagei = 0; languagei < languages.count; languagei++) {
-            NSString *language = languages[languagei];
-            NSDataAsset *asset = [[NSDataAsset alloc]
-                                  initWithName:language
-                                  bundle:bundle];
-            
-            NSArray *alerts = [NSJSONSerialization
-                                JSONObjectWithData:[asset data]
-                                options:kNilOptions
-                                error:nil];
-            for (NSUInteger i=0; i < alerts.count; i++) {
-                NSDictionary* alertDict = alerts[i];
-                [SpringBoardAlerts raiseIfInvalidAlert:alertDict
-                                            ofLanguage:language
-                                           andPosition:i];
-                [result
-                 addObject: alert(
-                                  alertDict[@"buttons"][0],
-                                  [alertDict[@"shouldAccept"] boolValue],
-                                  alertDict[@"title"]
-                                  )];
-            }
+
+        //NSString * preferredLanguage = [[NSLocale preferredLanguages] firstObject];
+        NSString * preferredLanguage = @"fr-CA";
+
+        // load full name, it can be "en-GB" or "en"
+        [self loadLanguageIfExists:preferredLanguage, resultArray];
+
+        // if preferredLanguage is long-term like "en-GB", load "en" too
+        if ([preferredLanguage containsString:@"-"]) {
+            NSString * shortLanguageName = [preferredLanguage componentsSeparatedByString:@"-"][0];
+            [self loadLanguageIfExists:shortLanguageName, resultArray];
         }
-        _alerts =  [NSArray<SpringBoardAlert *> arrayWithArray: result];
+
+        // load "en" just in case
+        if (![preferredLanguage hasPrefix:@"en"]) {
+            [self loadLanguageIfExists:@"en", resultArray];
+        }
+
+        _alerts =  [NSArray<SpringBoardAlert *> arrayWithArray: resultArray];
         NSTimeInterval elapsedSeconds =
         [[CBXMachClock sharedClock] absoluteTime] - startTime;
         DDLogDebug(@"SpringBoardAlerts.init_private took %@ seconds",
                    @(elapsedSeconds));
     }
     return self;
+}
+
+- (void)loadLanguageIfExists:(NSString *)languageName,
+                           NSMutableArray<SpringBoardAlert *> * resultArray {
+    NSString * languagePath = [NSString stringWithFormat:@"springboard-alerts-%@", languageName];
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    NSDataAsset *asset = [[NSDataAsset alloc]
+                          initWithName:languagePath
+                          bundle:bundle];
+
+   if (asset == nil) {
+       // language is not found
+       return;
+   }
+
+    NSArray *alerts = [NSJSONSerialization
+                       JSONObjectWithData:[asset data]
+                       options:kNilOptions
+                       error:nil];
+
+    for (NSUInteger i = 0; i < alerts.count; i++) {
+        NSDictionary* alertDict = alerts[i];
+        [SpringBoardAlerts raiseIfInvalidAlert:alertDict
+                                    ofLanguage:languageName
+                                   andPosition:i];
+        [resultArray
+         addObject: alert(
+                          alertDict[@"buttons"][0],
+                          [alertDict[@"shouldAccept"] boolValue],
+                          alertDict[@"title"]
+                          )];
+    }
 }
 
 + (SpringBoardAlerts *)shared {
