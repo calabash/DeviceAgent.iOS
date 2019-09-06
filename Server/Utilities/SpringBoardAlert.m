@@ -38,9 +38,15 @@
 }
 
 - (BOOL)matchesAlertTitle:(NSString *)alertTitle {
-    return [[alertTitle lowercaseString]
-            containsString:[self.alertTitleFragment
-                            lowercaseString]];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:self.alertTitleFragment
+                                                                           options:NSRegularExpressionCaseInsensitive
+                                                                             error:nil];
+                         
+    NSUInteger numberOfMatches = [regex numberOfMatchesInString:alertTitle
+                                                        options:0
+                                                          range:NSMakeRange(0, [alertTitle length])];
+
+    return numberOfMatches == 1;
 }
 
 @end
