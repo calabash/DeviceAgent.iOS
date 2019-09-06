@@ -320,5 +320,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@”がバックグラウンドでVoIP通話の受信を求めています",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "SIMカードが挿入されていません",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

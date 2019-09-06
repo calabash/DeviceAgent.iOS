@@ -320,5 +320,19 @@
       "好"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@”想在后台接收 VoIP 网络电话",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "未安装 SIM 卡",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
   }
 ]

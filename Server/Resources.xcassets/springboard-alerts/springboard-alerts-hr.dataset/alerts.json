@@ -327,5 +327,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” želi primati VoIP pozive u pozadini",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "SIM kartica nije instalirana",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

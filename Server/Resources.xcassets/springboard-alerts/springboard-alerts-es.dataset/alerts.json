@@ -327,5 +327,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere recibir llamadas VoIP en segundo plano",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "No hay tarjeta SIM",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

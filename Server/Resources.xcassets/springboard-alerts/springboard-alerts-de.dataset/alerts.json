@@ -320,5 +320,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte VoIP-Anrufe im Hintergrund empfangen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Keine SIM-Karte eingelegt",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

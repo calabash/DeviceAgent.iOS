@@ -327,5 +327,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn nhận cuộc gọi VoIP trong nền",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Chưa lắp thẻ SIM",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -327,5 +327,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "%@ vil motta VoIP-anrop i bakgrunnen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "SIM-kort mangler",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

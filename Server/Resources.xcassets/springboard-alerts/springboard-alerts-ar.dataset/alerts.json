@@ -327,5 +327,19 @@
       "موافق"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "يرغب \"%@\" في استلام مكالمات VoIP في الخلفية",
+    "buttons": [
+      "موافق"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "لا توجد بطاقة SIM مثبتة",
+    "buttons": [
+      "موافق"
+    ],
+    "shouldAccept": true
   }
 ]
