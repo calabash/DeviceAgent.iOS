@@ -86,16 +86,19 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
         NSMutableArray<SpringBoardAlert *> *resultArray =
         [NSMutableArray<SpringBoardAlert *> array];
 
-        //NSString * preferredLanguage = [[NSLocale preferredLanguages] firstObject];
-        NSString * preferredLanguage = @"fr-CA";
-
-        // load full name, it can be "en-GB" or "en"
-        [self loadLanguageIfExists:preferredLanguage, resultArray];
-
-        // if preferredLanguage is long-term like "en-GB", load "en" too
+        NSString * preferredLanguage = [[NSLocale preferredLanguages] firstObject];
+        
         if ([preferredLanguage containsString:@"-"]) {
-            NSString * shortLanguageName = [preferredLanguage componentsSeparatedByString:@"-"][0];
+            // fix mismatching language name for Norwegian and Chinese languages
+            preferredLanguage = [self fixLanguageName:preferredLanguage];
+            NSString *fullLanguageName = [preferredLanguage stringByReplacingOccurrencesOfString:@"-" withString:@"_"];
+            // load full name, it can be "en_GB"
+            [self loadLanguageIfExists:fullLanguageName, resultArray];
+            NSString *shortLanguageName = [preferredLanguage componentsSeparatedByString:@"-"][0];
+            // if preferredLanguage is long-term like "en_GB", load "en" too
             [self loadLanguageIfExists:shortLanguageName, resultArray];
+        } else {
+            [self loadLanguageIfExists:preferredLanguage, resultArray];
         }
 
         // load "en" just in case
@@ -110,6 +113,20 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
                    @(elapsedSeconds));
     }
     return self;
+}
+
+- (NSString *)fixLanguageName:(NSString *)languageName {
+    if ([languageName isEqualToString: @"zh-Hans-US"]) {
+        return @"zh-CN";
+    } else if ([languageName isEqualToString: @"zh-Hant-US"]) {
+        return @"zh-TW";
+    } else if ([languageName isEqualToString: @"zh-Hant-HK"]) {
+        return @"zh-HK";
+    } else if ([languageName isEqualToString: @"nb-US"]) {
+        return @"no-US";
+    } else {
+        return languageName;
+    }
 }
 
 - (void)loadLanguageIfExists:(NSString *)languageName,
