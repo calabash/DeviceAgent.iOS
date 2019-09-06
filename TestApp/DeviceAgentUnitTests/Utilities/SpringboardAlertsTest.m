@@ -43,7 +43,7 @@
 
     expect(actual).to.equal(nil);
 
-    alertTitle = @"souhaite accéder à vos rappels";
+    alertTitle = @"« l'application » souhaite accéder à vos rappels.";
     expectedButton = @"OK";
     expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
@@ -51,8 +51,8 @@
     expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
 
-    alertTitle = @"запрашивает разрешение на использование Вашей текущей геопозиции";
-    expectedButton = @"OK";
+    alertTitle = @"Разрешить ресурсу «ФСБ и Пятерочка» доступ к Вашей геопозиции?";
+    expectedButton = @"Разрешить";
     expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
@@ -69,14 +69,46 @@
 
     alertTitle = @"Carrier Settings Update";
     expectedButton = @"Not Now";
-    expectedShouldAccept = NO;
+    expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
     expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
 
-    alertTitle = @"acesso à sua localização";
+    alertTitle = @"Permitir que “la aplicación” tenha acesso à sua localização mesmo quando você não estiver usando o app?";
     expectedButton = @"Permitir";
+    expectedShouldAccept = YES;
+    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
+
+    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.shouldAccept).to.equal(expectedShouldAccept);
+
+    alertTitle = @"Open in “Internet Explorer 6”?";
+    expectedButton = @"Open";
+    expectedShouldAccept = YES;
+    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
+
+    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.shouldAccept).to.equal(expectedShouldAccept);
+    
+    alertTitle = @"“AppName” Would Like Access to Twitter Accounts";
+    expectedButton = @"OK";
+    expectedShouldAccept = YES;
+    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
+
+    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.shouldAccept).to.equal(expectedShouldAccept);
+    
+    alertTitle = @"‘합니다’에서 네트워크 콘텐츠를 필터링하려고 합니다.";
+    expectedButton = @"허용";
+    expectedShouldAccept = YES;
+    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
+
+    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.shouldAccept).to.equal(expectedShouldAccept);
+    
+    alertTitle = @"«Прiложение» хоче фільтрувати мережевий контент";
+    expectedButton = @"Дозволити";
     expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
