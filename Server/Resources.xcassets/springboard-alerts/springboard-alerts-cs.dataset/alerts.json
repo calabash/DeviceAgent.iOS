@@ -334,5 +334,33 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Chcete aplikaci %@ povolit přístup k polohovým údajům?",
+    "buttons": [
+      "Povolit"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikace „%@“ žádá o přístup k Apple Music, informacím o přehrávání hudby a videí a vaší knihovně médií",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikace„%@“ žádá o povolení k sdílení dat s Bluetooth zařízeními v okolí i v čase, kdy ji právě nepoužíváte",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Přihlaste se pomocí Apple ID",
+    "buttons": [
+      "Zrušit"
+    ],
+    "shouldAccept": true
   }
 ]

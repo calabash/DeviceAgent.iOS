@@ -355,5 +355,26 @@
       "Allow"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” would like to access Apple Music, your music and video activity, and your media library",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” would like to make data available to nearby Bluetooth devices even when you’re not using the app",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Sign In with Apple ID",
+    "buttons": [
+      "Cancel"
+    ],
+    "shouldAccept": true
   }
 ]

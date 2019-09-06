@@ -334,5 +334,26 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@”がApple Music、ミュージックとビデオの履歴、およびメディアライブラリにアクセスを求めています",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”が近隣のBluetoothデバイスに、Appを使用していないときでもデータ通信することを求めています",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apple IDでサインイン",
+    "buttons": [
+      "キャンセル"
+    ],
+    "shouldAccept": true
   }
 ]

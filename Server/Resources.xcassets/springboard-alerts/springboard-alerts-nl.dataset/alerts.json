@@ -341,5 +341,26 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "%@ wil toegang tot Apple Music, je muziek- en videoactiviteit en je mediabibliotheek",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil gegevens beschikbaar stellen voor Bluetooth-apparaten in de buurt, ook als je de app niet gebruikt",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Log in met Apple ID",
+    "buttons": [
+      "Annuleer"
+    ],
+    "shouldAccept": true
   }
 ]
