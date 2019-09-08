@@ -481,5 +481,12 @@
       "Cho phép"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn sử dụng vị trí hiện tại của bạn",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

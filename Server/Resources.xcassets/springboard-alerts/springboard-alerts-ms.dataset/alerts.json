@@ -427,5 +427,12 @@
       "Benarkan"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Menggunakan Lokasi Semasa Anda",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

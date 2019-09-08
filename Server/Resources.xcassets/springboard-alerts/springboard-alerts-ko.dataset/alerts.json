@@ -491,5 +491,12 @@
       "허용"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "‘%@’에서 현재 위치 정보를 사용하고자 합니다",
+    "buttons": [
+      "확인"
+    ],
+    "shouldAccept": true
   }
 ]

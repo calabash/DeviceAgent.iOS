@@ -432,5 +432,12 @@
       "Salli"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "%@ haluaa käyttää nykyistä sijaintiasi",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -418,5 +418,12 @@
       "Izinkan"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Menggunakan Lokasi Anda Saat Ini",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
   }
 ]

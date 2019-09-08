@@ -418,5 +418,12 @@
       "Consenti"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” desidera usare la tua posizione attuale",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

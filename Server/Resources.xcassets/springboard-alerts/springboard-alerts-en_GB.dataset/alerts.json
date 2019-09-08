@@ -425,5 +425,12 @@
       "Allow"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” Would Like To Use Your Current Location",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -565,5 +565,12 @@
       "允許"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "「%@」要使用你現時的位置",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
   }
 ]

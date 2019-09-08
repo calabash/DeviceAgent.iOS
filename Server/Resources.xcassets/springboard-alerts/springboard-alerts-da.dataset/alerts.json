@@ -418,5 +418,12 @@
       "Tillad"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” vil bruge din aktuelle lokalitet",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

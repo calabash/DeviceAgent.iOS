@@ -116,5 +116,11 @@
             { "title": "CONTROL_CENTER_WLAN_BEHAVIOR_ALERT_MESSAGE", "button": "CONTROL_CENTER_ALERT_OK" },
             { "title": "CONTROL_CENTER_BLUETOOTH_BEHAVIOR_ALERT_MESSAGE", "button": "CONTROL_CENTER_ALERT_OK" }
         ]
+    },
+    {
+        "name": "UIKitCore.framework",
+        "values": [
+            { "title": "“%@” Would Like To Use Your Current Location", "button": "OK" }
+        ]
     }
 ]

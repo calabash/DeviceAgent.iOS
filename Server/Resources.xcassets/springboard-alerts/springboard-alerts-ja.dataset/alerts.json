@@ -411,5 +411,12 @@
       "許可"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@”が現在の位置情報を利用します。よろしいですか?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -418,5 +418,12 @@
       "السماح"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "يود\n\"%@\" استخدام موقعك الحالي",
+    "buttons": [
+      "موافق"
+    ],
+    "shouldAccept": true
   }
 ]

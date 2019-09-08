@@ -439,5 +439,12 @@
       "Dozvoli"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” želi koristiti vašu trenutačnu lokaciju",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

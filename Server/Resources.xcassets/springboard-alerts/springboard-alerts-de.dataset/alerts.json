@@ -411,5 +411,12 @@
       "Erlauben"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte deinen aktuellen Ort verwenden",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

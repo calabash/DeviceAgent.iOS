@@ -446,5 +446,12 @@
       "Permiteți"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” ar dori să utilizeze localizarea dvs. curentă",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

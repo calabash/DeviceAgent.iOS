@@ -418,5 +418,12 @@
       "Povolit"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "„%@“ chce použít vaši současnou polohu",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

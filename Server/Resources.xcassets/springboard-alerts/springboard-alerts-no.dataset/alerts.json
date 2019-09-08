@@ -446,5 +446,12 @@
       "Tillat"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "«%@» ber om å bruke stedet der du er nå",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

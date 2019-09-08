@@ -411,5 +411,12 @@
       "Engedélyezés"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” használni szeretné a jelenlegi helyzetét",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

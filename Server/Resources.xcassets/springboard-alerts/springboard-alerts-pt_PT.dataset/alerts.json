@@ -439,5 +439,12 @@
       "Permitir"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” gostaria de usar a sua localização atual.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

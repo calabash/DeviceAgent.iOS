@@ -50,7 +50,7 @@ def pick_required_values(found_values_dict, target_framework, localization_stora
     title_value = found_values_dict[title]
     button_value = found_values_dict[button]
 
-    puts "Unknown button constant '#{button}' for framework '#{framework_name}'".yellow if button && !button_value
+    puts "Unknown button constant '#{button}' for framework '#{framework_name}'(#{language})".yellow if button && !button_value
 
     if title_value
       localization_storage.add_entry(language, title_value, button_value)

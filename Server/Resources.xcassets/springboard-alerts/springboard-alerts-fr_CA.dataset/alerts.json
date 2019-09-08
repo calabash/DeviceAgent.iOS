@@ -411,5 +411,12 @@
       "Autoriser"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Autorisez-vous « %@ » à utiliser vos données de localisation?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

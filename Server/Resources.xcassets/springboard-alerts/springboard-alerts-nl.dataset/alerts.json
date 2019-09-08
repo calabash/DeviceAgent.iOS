@@ -418,5 +418,12 @@
       "Sta toe"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "%@ wil je huidige locatie gebruiken",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

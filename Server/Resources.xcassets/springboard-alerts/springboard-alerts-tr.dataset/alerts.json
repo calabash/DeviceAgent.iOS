@@ -432,5 +432,12 @@
       "İzin Ver"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” Şu Anki Konumunuzu Kullanmak İstiyor",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
   }
 ]

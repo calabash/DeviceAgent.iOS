@@ -439,5 +439,12 @@
       "Дозволити"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "«%@» хоче використовувати ваше поточне місце",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

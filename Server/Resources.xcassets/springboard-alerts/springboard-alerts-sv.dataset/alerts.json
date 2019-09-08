@@ -418,5 +418,12 @@
       "Tillåt"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "”%@” vill använda din nuvarande plats",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

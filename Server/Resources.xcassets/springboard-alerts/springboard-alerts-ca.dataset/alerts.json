@@ -446,5 +446,12 @@
       "Permetre"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol fer servir la teva ubicació actual",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

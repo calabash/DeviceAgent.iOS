@@ -397,5 +397,12 @@
       "Pozwól"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce użyć informacji o Twoim położeniu",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

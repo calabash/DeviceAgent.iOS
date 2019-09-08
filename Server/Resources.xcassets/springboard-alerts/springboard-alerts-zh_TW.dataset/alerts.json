@@ -544,5 +544,12 @@
       "允許"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要使用您的目前位置",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
   }
 ]

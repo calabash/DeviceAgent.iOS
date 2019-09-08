@@ -516,5 +516,12 @@
       "Povoliť"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Webová stránka „%@“ chce zistiť vašu aktuálnu polohu",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]
