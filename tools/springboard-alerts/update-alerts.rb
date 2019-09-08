@@ -5,6 +5,24 @@ require 'run_loop'
 require_relative 'helpers'
 require_relative 'localization_storage'
 
+language_mapping = {
+  'Danish' => 'da',
+  'Dutch' => 'de',
+  'English' => 'en',
+  'French' => 'fr',
+  'German' => 'de',
+  'Italian' => 'it',
+  'Japanese' => 'ja',
+  'Portuguese' => 'pt',
+  'Russian' => 'ru',
+  'Spanish' => 'es',
+  'Swedish' => 'se'
+}
+
+language_to_ignore = [
+  'Base'
+]
+
 # Init with current Xcode
 xcode = RunLoop::Xcode.new
 
@@ -18,15 +36,16 @@ def find_framework(root_path, framework_name)
   found[0]
 end
 
-# Gets valid language path
-# Some languages have a few aliases like 'en.lproj' and 'English.lproj', we should check all options
-def find_language(framework_path, language)
-  language['filenames'].find do |lang_alias|
-    language_path = File.join(framework_path, lang_alias)
-    return language_path if Dir.exist?(language_path)
-  end
+# Gets all languages for framework
+def find_languages(framework_path)
+  Dir.glob("#{framework_path}/*.lproj")
+end
 
-  nil
+def get_language_name(language_dir, language_mapping)
+  lang_name = File.basename(language_dir, '.lproj')
+  return language_mapping[lang_name] if language_mapping.key?(lang_name)
+
+  lang_name
 end
 
 # Reads and parse all *.strings files in specific directory
@@ -55,14 +74,13 @@ def pick_required_values(found_values_dict, target_framework, localization_stora
     if title_value
       localization_storage.add_entry(language, title_value, button_value)
     else
-      puts "Unknown alert constant '#{title}' for framework '#{framework_name}'".red
+      puts "Unknown alert constant '#{title}' for framework '#{framework_name}'(#{language})".red
     end
   end
 end
 
 target_frameworks = read_json('frameworks.json')
-languages = read_json('languages.json')
-localization_storage = LocalizationStorage.new('../../Server/Resources.xcassets/springboard-alerts', languages)
+localization_storage = LocalizationStorage.new('../../Server/Resources.xcassets/springboard-alerts')
 
 target_frameworks.each do |framework|
   puts "Scan framework '#{framework['name']}'".green
@@ -75,14 +93,9 @@ target_frameworks.each do |framework|
 
   puts "Found on path '#{framework_path}'"
 
-  available_languages = languages.select { |language| find_language(framework_path, language) }
-  skipped_languages = languages - available_languages
-  # puts "Available languages: #{available_languages.map { |lang| lang['name'] }}"
-  puts "Skipped languages: #{skipped_languages.map { |lang| lang['name'] }}".yellow unless skipped_languages.empty?
-
-  available_languages.each do |language|
-    language_name = language['name']
-    language_path = find_language(framework_path, language)
+  find_languages(framework_path).each do |language_path|
+    language_name = get_language_name(language_path, language_mapping)
+    next if language_to_ignore.include?(language_name)
 
     found_values_dict = collect_localization_dictionary(language_path)
     pick_required_values(found_values_dict, framework, localization_storage, language_name)
