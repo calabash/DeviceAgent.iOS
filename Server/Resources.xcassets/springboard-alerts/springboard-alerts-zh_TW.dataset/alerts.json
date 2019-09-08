@@ -551,5 +551,12 @@
       "好"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "新的設定現已可供下載。是否要立即更新？",
+    "buttons": [
+      "稍後再說"
+    ],
+    "shouldAccept": true
   }
 ]

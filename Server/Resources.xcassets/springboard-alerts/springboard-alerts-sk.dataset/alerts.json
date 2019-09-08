@@ -523,5 +523,61 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Chcete povoliť aplikácii „%@“ pristupovať k vašej polohe v čase, keď ju nepoužívate?",
+    "buttons": [
+      "Povoliť"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Chcete povoliť aplikácii „%@“ pristupovať k vašej polohe v čase, keď ju používate?",
+    "buttons": [
+      "Povoliť"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Chcete povoliť aplikácii „%@“ pristupovať k vašej polohe aj v čase, keď ju nepoužívate?",
+    "buttons": [
+      "Povoliť"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Rečové dáta z tejto aplikácie budú kvôli spracovaniu vašich žiadostí odoslané do Apple a použité aj na vylepšovanie technológie rozpoznávania reči spoločnosti Apple.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikácia „%@“ chce sprístupňovať dáta pre okolité Bluetooth zariadenia, aj keď ju práve nepoužívate.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Sú dostupné nové nastavenia. Chcete ich teraz aktualizovať?",
+    "buttons": [
+      "Teraz nie"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Prihláste sa do App Store",
+    "buttons": [
+      "Zrušiť"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Prihláste sa do iTunes Store",
+    "buttons": [
+      "Zrušiť"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -152,5 +152,54 @@
       "好"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "您的部分“%@”数据将发送给 Apple 以处理您的请求。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "部分来自此应用的语音数据将发送给 Apple 以处理您的请求。这还将帮助 Apple 改进语音识别技术。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "您要通过 Siri 来使用“%@”吗？",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想要访问 Apple Music、您的音乐与视频的相关活动以及您的媒体资料库。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您的住宅数据",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想提供原生通话体验",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想在您未使用该应用时仍与周围的蓝牙设备交换数据。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
   }
 ]

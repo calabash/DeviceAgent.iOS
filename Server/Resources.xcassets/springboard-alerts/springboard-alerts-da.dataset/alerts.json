@@ -425,5 +425,26 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” vil gerne gøre data tilgængelige for Bluetooth-enheder i nærheden, også når du ikke bruger appen.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Slå diktering til?",
+    "buttons": [
+      "Ikke nu"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Slå diktering til",
+    "buttons": [
+      "Ikke nu"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -453,5 +453,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Sunt disponibile noi configurări.  Doriți să le actualizați acum?",
+    "buttons": [
+      "Nu acum"
+    ],
+    "shouldAccept": true
   }
 ]

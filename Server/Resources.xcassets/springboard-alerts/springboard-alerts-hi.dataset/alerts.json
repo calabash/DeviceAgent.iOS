@@ -586,5 +586,61 @@
       "ठीक"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” स्थानीय इन-कॉल अनुभव प्रदान करना चाहेगा",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” आस-पास के ब्लूटूथ उपकरणों पर डेटा उपलब्ध कराना चाहता है, भले ही आप ऐप का उपयोग न कर रहे हों।",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "नई सेटिंग्ज़ उपलब्ध हैं।  क्या आप उन्हें अभी अपडेट करना चाहेंगे?",
+    "buttons": [
+      "अभी नहीं"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "App Store पर साइन इन करें",
+    "buttons": [
+      "रद्द करें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Game Center पर साइन इन करें",
+    "buttons": [
+      "रद्द करें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iTunes Store पर साइन इन करें",
+    "buttons": [
+      "रद्द करें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iMessage पर साइन इन करें",
+    "buttons": [
+      "रद्द करें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "FaceTime पर साइन इन करें",
+    "buttons": [
+      "रद्द करें"
+    ],
+    "shouldAccept": true
   }
 ]

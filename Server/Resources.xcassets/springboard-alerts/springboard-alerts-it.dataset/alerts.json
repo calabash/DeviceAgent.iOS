@@ -425,5 +425,47 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Consenti a “%@” di accedere ai dati relativi alla tua posizione quando stai usando l'app?",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe accedere al tuo Calendario",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe accedere ai tuoi Promemoria",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe accedere ai tuoi Contatti",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe accedere alle tue Foto",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aprire la pagina in “%@”?",
+    "buttons": [
+      "Apri"
+    ],
+    "shouldAccept": true
   }
 ]

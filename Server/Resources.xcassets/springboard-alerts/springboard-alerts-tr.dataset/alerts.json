@@ -439,5 +439,26 @@
       "Tamam"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@”, uygulamayı kullanırken konumunuza erişebilsin mi?",
+    "buttons": [
+      "İzin Ver"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”, Özgün Çağrı İçi Deneyimi Sağlamak İstiyor",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Yeni ayarlar var.  Onları şimdi güncellemek ister misiniz?",
+    "buttons": [
+      "Şimdi Değil"
+    ],
+    "shouldAccept": true
   }
 ]

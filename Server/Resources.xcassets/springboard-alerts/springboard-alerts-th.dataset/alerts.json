@@ -446,5 +446,33 @@
       "ตกลง"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "อนุญาตให้ “%@” เข้าถึงตำแหน่งที่ตั้งของคุณระหว่างที่คุณใช้แอพหรือไม่",
+    "buttons": [
+      "อนุญาต"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "ลงชื่อเข้าใช้ iMessage",
+    "buttons": [
+      "ยกเลิก"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "ลงชื่อเข้าใช้ FaceTime",
+    "buttons": [
+      "ยกเลิก"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "อนุญาต “%@” ให้อัพเดทข้อมูลสุขภาพของคุณ",
+    "buttons": [
+      "ตกลง"
+    ],
+    "shouldAccept": true
   }
 ]

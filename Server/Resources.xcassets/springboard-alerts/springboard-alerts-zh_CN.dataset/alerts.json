@@ -537,5 +537,33 @@
       "好"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您的住宅数据",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "已有新的设置可供下载。您想现在更新设置吗？",
+    "buttons": [
+      "以后"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登录 iMessage",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登录 FaceTime",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
   }
 ]

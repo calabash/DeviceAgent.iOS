@@ -404,5 +404,61 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Udostępniać programowi „%@” Twoje położenie także, gdy go nie używasz?",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Udostępniać programowi „%@” Twoje położenie, gdy go używasz?",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Część danych programu %@ zostanie wysłana do Apple w celu przetworzenia żądań.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce uzyskać dostęp do Apple Music, danych Twojej aktywności dotyczącej muzyki i wiedeo oraz do Twojej biblioteki multimediów.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Program „%@” chce udostępniać dane pobliskim urządzeniom Bluetooth, także gdy go nie używasz.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Otwórz w „%@”",
+    "buttons": [
+      "Otwórz"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Otworzyć w „%@“?",
+    "buttons": [
+      "Otwórz"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Otwórz w programie %@",
+    "buttons": [
+      "Otwórz"
+    ],
+    "shouldAccept": true
   }
 ]

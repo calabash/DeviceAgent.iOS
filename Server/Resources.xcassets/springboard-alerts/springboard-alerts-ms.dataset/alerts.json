@@ -434,5 +434,54 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Benarkan “%@” mengakses lokasi anda walaupun anda tidak menggunakan aplikasi?",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Benarkan “%@” mengakses lokasi anda semasa anda menggunakan aplikasi?",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Benarkan “%@” turut mengakses lokasi anda walaupun anda tidak menggunakan aplikasi?",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Data pertuturan daripada aplikasi ini akan dihantar kepada Apple untuk memproses permintaan anda. Ini turut akan membantu Apple meningkatkan teknologi pengecaman pertuturannya.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” mahu menyediakan data kepada peranti Bluetooth berdekatan walaupun anda tidak menggunakan aplikasi.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Seting baru tersedia.  Adakah anda mahu kemas kininya sekarang?",
+    "buttons": [
+      "Nanti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Buka dalam aplikasi %@",
+    "buttons": [
+      "Buka"
+    ],
+    "shouldAccept": true
   }
 ]

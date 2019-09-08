@@ -163,7 +163,8 @@
   {
     "title": "Cập nhật Cài đặt Nhà cung cấp",
     "buttons": [
-      "Để sau"
+      "Để sau",
+      "Để Sau"
     ],
     "shouldAccept": true
   },
@@ -191,21 +192,24 @@
   {
     "title": "Bật Đọc chính tả?",
     "buttons": [
-      "Để sau"
+      "Để sau",
+      "Để Sau"
     ],
     "shouldAccept": true
   },
   {
     "title": "Bật Đọc chính tả",
     "buttons": [
-      "Để sau"
+      "Để sau",
+      "Để Sau"
     ],
     "shouldAccept": true
   },
   {
     "title": "Thêm Bàn phím Bên Thứ ba?",
     "buttons": [
-      "Để sau"
+      "Để sau",
+      "Để Sau"
     ],
     "shouldAccept": true
   },
@@ -484,6 +488,27 @@
   },
   {
     "title": "“%@” muốn sử dụng vị trí hiện tại của bạn",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Cho phép “%@” truy cập vị trí của bạn khi bạn dùng ứng dụng?",
+    "buttons": [
+      "Cho phép"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Đã có cài đặt mới.  Bạn muốn cập nhật ngay không?",
+    "buttons": [
+      "Để Sau"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%1$@” Muốn Truy cập các Tài khoản %2$@ của bạn",
     "buttons": [
       "OK"
     ],

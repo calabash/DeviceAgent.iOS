@@ -418,5 +418,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "利用できる新しい設定があります。\n今すぐアップデートしますか?",
+    "buttons": [
+      "今はしない"
+    ],
+    "shouldAccept": true
   }
 ]

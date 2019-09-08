@@ -446,5 +446,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Dostupne su nove postavke.  Želite li ih odmah ažurirati?",
+    "buttons": [
+      "Ne sad"
+    ],
+    "shouldAccept": true
   }
 ]

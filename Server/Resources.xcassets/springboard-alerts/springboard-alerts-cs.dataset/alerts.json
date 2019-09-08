@@ -425,5 +425,40 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "„%@“ žádá o přístup k Apple Music, informacím o přehrávání hudby a videí a vaší knihovně médií.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ žádá o povolení k poskytování nativních hovorů",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikace %@ žádá o povolení ke zpřístupnění dat blízkým Bluetooth zařízením i v čase, kdy ji právě nepoužíváte.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ žádá o přístup k rozpoznávání řeči",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Jsou k dispozici nová nastavení operátora. Chcete je nyní aktualizovat?",
+    "buttons": [
+      "Teď ne"
+    ],
+    "shouldAccept": true
   }
 ]

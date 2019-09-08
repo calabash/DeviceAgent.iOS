@@ -163,7 +163,8 @@
   {
     "title": "Pembaruan Pengaturan Operator",
     "buttons": [
-      "Nanti"
+      "Nanti",
+      "Tidak Sekarang"
     ],
     "shouldAccept": true
   },
@@ -191,21 +192,24 @@
   {
     "title": "Aktifkan Dikte?",
     "buttons": [
-      "Nanti"
+      "Nanti",
+      "Jangan Sekarang"
     ],
     "shouldAccept": true
   },
   {
     "title": "Aktifkan Dikte",
     "buttons": [
-      "Nanti"
+      "Nanti",
+      "Jangan Sekarang"
     ],
     "shouldAccept": true
   },
   {
     "title": "Tambahkan Papan Ketik Pihak Ketiga?",
     "buttons": [
-      "Nanti"
+      "Nanti",
+      "Jangan Sekarang"
     ],
     "shouldAccept": true
   },
@@ -423,6 +427,13 @@
     "title": "“%@” Ingin Menggunakan Lokasi Anda Saat Ini",
     "buttons": [
       "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Pengaturan baru tersedia.  Ingin memperbaruinya sekarang?",
+    "buttons": [
+      "Tidak Sekarang"
     ],
     "shouldAccept": true
   }

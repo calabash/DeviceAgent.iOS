@@ -418,5 +418,40 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” hozzáférhet a helyzetéhez az alkalmazás használatakor?",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Új beállítások érhetők el. Kívánja most frissíteni azokat?",
+    "buttons": [
+      "Ne most"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” VPN-konfigurációt kíván hozzáadni",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Az iPhone készülék nincs aktiválva.",
+    "buttons": [
+      "Kihagyás"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%1$@” meg kívánja nyitni a(z) %2$@ fiókjait",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

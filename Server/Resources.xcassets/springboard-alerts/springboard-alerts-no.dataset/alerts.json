@@ -453,5 +453,124 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Vil du gi «%@» tilgang til plasseringen din også når du ikke bruker appen?",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vil du gi «%@» tilgang til plasseringen din når du bruker appen?",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vil du også gi «%@» tilgang til plasseringen din selv når du ikke bruker appen?",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%@» har brukt plasseringen din i bakgrunnen. Vil du fortsatt tillate dette?",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%@» vil ha tilgang til mikrofonen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%@» vil ha tilgang til kalenderen din",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%@» vil ha tilgang til bevegelses- og treningsaktiviteten din",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%@» vil ha tilgang til kameraet",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%@» vil ha tilgang til påminnelsene dine",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%@» vil ha tilgang til Apple Music, musikk- og videobruken din og mediebiblioteket ditt.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%@» vil ha tilgang til kontaktene dine",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%@» vil ha tilgang til bildene dine",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%@» vil ha tilgang til hjemmedataene dine",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%@» vil bruke den innebygde samtalefunksjonen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%@» ønsker å gjøre data tilgjengelig for Bluetooth-enheter i nærheten selv om appen ikke er i bruk.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%@» vil ha tilgang til talegjenkjenning",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Det er nye innstillinger tilgjengelig. Vil du oppdatere nå?",
+    "buttons": [
+      "Ikke nå"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -572,5 +572,26 @@
       "好"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "要允許「%@」在你正在使用 App 時取用你的位置嗎？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ 的部分資料將傳送給 Apple 以處理你的請求。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "此 App 的語音識別數據將傳送給 Apple 以處理你的請求。這亦會有助 Apple 改善語音識別技術。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
   }
 ]

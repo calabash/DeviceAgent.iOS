@@ -432,5 +432,47 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” tenha acesso à sua localização mesmo quando você não estiver usando o aplicativo?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” tenha acesso à sua localização enquanto você usa o aplicativo?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” também tenha acesso à sua localização mesmo quando você não estiver usando o aplicativo?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dados de fala deste aplicativo serão enviados à Apple para processar as solicitações. Isso também ajudará a Apple a melhorar sua tecnologia de reconhecimento de fala.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” deseja disponibilizar dados para os dispositivos Bluetooth por perto até mesmo quando você não estiver usando o aplicativo.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Abrir no aplicativo %@",
+    "buttons": [
+      "Abrir"
+    ],
+    "shouldAccept": true
   }
 ]

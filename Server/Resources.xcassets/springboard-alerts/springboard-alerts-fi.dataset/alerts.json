@@ -439,5 +439,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Sallitko, että %@ käyttää sijaintiasi myös silloin, kun et käytä appia?",
+    "buttons": [
+      "Salli"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Sallitko, että %@ käyttää sijaintiasi silloin, kun käytät appia?",
+    "buttons": [
+      "Salli"
+    ],
+    "shouldAccept": true
   }
 ]
