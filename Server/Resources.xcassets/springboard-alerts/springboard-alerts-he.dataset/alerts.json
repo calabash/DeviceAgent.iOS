@@ -212,35 +212,40 @@
   {
     "title": "פתח ב-״%@״",
     "buttons": [
-      "פתיחה"
+      "פתיחה",
+      "פתח"
     ],
     "shouldAccept": true
   },
   {
     "title": "לפתוח ב-״%@״”?",
     "buttons": [
-      "פתיחה"
+      "פתיחה",
+      "פתח"
     ],
     "shouldAccept": true
   },
   {
     "title": "חפש/י ב-%@",
     "buttons": [
-      "פתיחה"
+      "פתיחה",
+      "פתח"
     ],
     "shouldAccept": true
   },
   {
     "title": "לפתוח עמוד זה ב-״%@״?",
     "buttons": [
-      "פתיחה"
+      "פתיחה",
+      "פתח"
     ],
     "shouldAccept": true
   },
   {
     "title": "פתח ביישום %@",
     "buttons": [
-      "פתיחה"
+      "פתיחה",
+      "פתח"
     ],
     "shouldAccept": true
   },
@@ -323,6 +328,20 @@
   },
   {
     "title": "אביזרים המחוברים כעת ינותקו, ואביזרים אחרים לא יחוברו.\n\n‏Bluetooth ימשיך להיות זמין עבור Apple Watch,‏ Apple Pencil, נקודת גישה אישית ו-Handoff.",
+    "buttons": [
+      "אישור"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "״%@״ רוצה לקבל שיחות VoIP ברקע",
+    "buttons": [
+      "אישור"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "אין כרטיס SIM",
     "buttons": [
       "אישור"
     ],

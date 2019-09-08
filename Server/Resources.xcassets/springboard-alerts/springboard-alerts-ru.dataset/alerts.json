@@ -320,5 +320,19 @@
       "ОК"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Ресурс «%@» запрашивает разрешение на получение вызовов VoIP в фоновом режиме.",
+    "buttons": [
+      "Разрешить"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "SIM‑карта не вставлена",
+    "buttons": [
+      "ОК"
+    ],
+    "shouldAccept": true
   }
 ]

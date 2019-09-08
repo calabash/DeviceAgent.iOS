@@ -320,5 +320,26 @@
       "好"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要在背景接收 VoIP 通話",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "尚未安裝 SIM 卡",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "將中斷目前已連接的配件連線，且不會連接其他配件。\n\nApple Watch、Apple Pencil、「個人熱點」和「接力」仍可使用藍牙。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
   }
 ]
