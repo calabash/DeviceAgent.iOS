@@ -341,5 +341,145 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn truy cập micrô",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn truy cập Lịch của bạn",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn truy cập hoạt động Di chuyển & Thể chất của bạn",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn truy cập camera",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn truy cập Lời nhắc của bạn",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn truy cập Apple Music, hoạt động nhạc và video cũng như thư viện phương tiện của bạn",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn truy cập Danh bạ của bạn",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn truy cập Ảnh của bạn",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn truy cập dữ liệu Nhà của bạn",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn làm cho dữ liệu khả dụng đối với thiết bị Bluetooth ở gần ngay cả khi bạn không sử dụng ứng dụng",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn truy cập nhận dạng lời nói",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Đăng nhập bằng ID Apple",
+    "buttons": [
+      "Hủy"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” đã sử dụng vị trí của bạn trong nền trong 3 ngày qua. Bạn có muốn tiếp tục cho phép sử dụng vị trí trong nền không?",
+    "buttons": [
+      "Cho phép"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” đã sử dụng vị trí của bạn một lần trong nền trong 3 ngày qua. Bạn có muốn tiếp tục cho phép sử dụng vị trí trong nền không?",
+    "buttons": [
+      "Cho phép"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn truy cập thông tin cơ bản trong Danh bạ của bạn",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn truy cập tất cả thông tin trong Danh bạ của bạn",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn sử dụng Bluetooth trong khi ứng dụng được mở",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn sử dụng Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Việc này sẽ cho phép “%@” tìm và kết nối với các thiết bị Bluetooth. Ứng dụng này cũng có thể sử dụng Bluetooth để biết khi bạn ở gần.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn thêm cấu hình proxy DNS",
+    "buttons": [
+      "Cho phép"
+    ],
+    "shouldAccept": true
   }
 ]

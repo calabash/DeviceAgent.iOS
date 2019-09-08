@@ -346,5 +346,89 @@
       "אישור"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "״%@״ מבקש לגשת לתזכורות שלך",
+    "buttons": [
+      "אישור"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "‏״%@״ מעוניין לגשת ל-Apple Music, לפעילות המוסיקה והווידאו שלך, ולספריית המדיה שלך",
+    "buttons": [
+      "אישור"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "״%@״ מעוניין לאפשר להתקני Bluetooth קרובים לקבל גישה לנתונים גם לא בעת השימוש ביישום",
+    "buttons": [
+      "אישור"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "התחברות באמצעות Apple ID",
+    "buttons": [
+      "ביטול"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "‏״%@״ השתמש במיקום שלך ברקע במהלך שלושת הימים האחרונים. האם להמשיך לאפשר שימוש במיקום ברקע?",
+    "buttons": [
+      "אפשר"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "‏״%@״ השתמש במיקום שלך פעם אחת ברקע במהלך שלושת הימים האחרונים. האם להמשיך לאפשר שימוש במיקום ברקע?",
+    "buttons": [
+      "אפשר"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "״%@״ מבקש גישה אל המידע הבסיסי של אנשי הקשר שלך",
+    "buttons": [
+      "אישור"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "״%@״ מבקש גישה אל כל נתוני אנשי הקשר שלך",
+    "buttons": [
+      "אישור"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "‏״%@״ מבקש להשתמש ב-Bluetooth בעת הפעלת היישום",
+    "buttons": [
+      "אישור"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "‏״%@״ מבקש להשתמש ב-Bluetooth",
+    "buttons": [
+      "אישור"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "יאפשר ל-״%@״ למצוא אביזרי Bluetooth ולהתחבר אליהם. יתכן שיישום זה ישתמש ב-Bluetooth כדי לבדוק אם הינך בסביבה.",
+    "buttons": [
+      "אישור"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "‏״%@״ מעוניין להוסיף תצורות DNS Proxy",
+    "buttons": [
+      "אפשר"
+    ],
+    "shouldAccept": true
   }
 ]

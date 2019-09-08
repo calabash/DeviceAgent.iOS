@@ -341,5 +341,82 @@
       "OKE"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” ingin mengakses Apple Music, aktivitas musik dan video, serta perpustakaan media Anda",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” ingin membuat data tersedia untuk perangkat Bluetooth di sekitar saat Anda sedang tidak menggunakan app",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Masuk dengan ID Apple",
+    "buttons": [
+      "Batalkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” telah menggunakan lokasi Anda di latar belakang selama 3 hari terakhir. Apakah Anda ingin terus mengizinkan penggunaan lokasi di latar belakang?",
+    "buttons": [
+      "Izinkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” telah menggunakan lokasi Anda sekali di latar belakang selama 3 hari terakhir. Apakah Anda ingin terus mengizinkan penggunaan lokasi di latar belakang?",
+    "buttons": [
+      "Izinkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Mengakses Informasi Dasar Kontak Anda",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Mengakses Semua Informasi Kontak Anda",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” ingin menggunakan Bluetooth saat sedang digunakan",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Menggunakan Bluetooth",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Ini akan mengizinkan “%@” untuk menemukan dan terhubung ke aksesori Bluetooth. App ini juga dapat menggunakan Bluetooth untuk mencari tahu apakah Anda berada di sekitar.",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Menambah Konfigurasi Proxy DNS",
+    "buttons": [
+      "Izinkan"
+    ],
+    "shouldAccept": true
   }
 ]

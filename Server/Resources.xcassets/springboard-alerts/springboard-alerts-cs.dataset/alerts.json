@@ -334,5 +334,89 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Chcete aplikaci %@ povolit přístup k polohovým údajům?",
+    "buttons": [
+      "Povolit"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikace „%@“ žádá o přístup k Apple Music, informacím o přehrávání hudby a videí a vaší knihovně médií",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikace„%@“ žádá o povolení k sdílení dat s Bluetooth zařízeními v okolí i v čase, kdy ji právě nepoužíváte",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Přihlaste se pomocí Apple ID",
+    "buttons": [
+      "Zrušit"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikace „%@“ používala během posledních 3 dní vaše polohové údaje na pozadí. Chcete jí to umožňovat i nadále?",
+    "buttons": [
+      "Povolit"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikace „%@“ během posledních 3 dní jednou použila vaše polohové údaje na pozadí. Chcete jí to umožňovat i nadále?",
+    "buttons": [
+      "Povolit"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ žádá o přístup k základním kontaktním údajům",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ žádá o přístup k veškerým kontaktním údajům",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikace %@ žádá o přístup k rozhraní Bluetooth v čase, kdy ji budete používat",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikace %@ žádá o přístup k rozhraní Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ bude moct vyhledávat Bluetooth zařízení a připojovat se k nim. Také bude moct přes Bluetooth zjišťovat, zda jste nablízku.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikace „%@“ chce přidat konfigurace DNS proxy",
+    "buttons": [
+      "Povolit"
+    ],
+    "shouldAccept": true
   }
 ]

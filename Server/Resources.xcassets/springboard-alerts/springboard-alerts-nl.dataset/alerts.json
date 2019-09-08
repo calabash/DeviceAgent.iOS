@@ -341,5 +341,82 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "%@ wil toegang tot Apple Music, je muziek- en videoactiviteit en je mediabibliotheek",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil gegevens beschikbaar stellen voor Bluetooth-apparaten in de buurt, ook als je de app niet gebruikt",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Log in met Apple ID",
+    "buttons": [
+      "Annuleer"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "'%@' heeft de afgelopen 3 dagen je locatie op de achtergrond gebruikt. Wil je blijven toestaan dat je locatie op de achtergrond wordt gebruikt?",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "'%@' heeft de afgelopen 3 dagen je locatie één keer op de achtergrond gebruikt. Wil je blijven toestaan dat je locatie op de achtergrond wordt gebruikt?",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil toegang tot basisinformatie over je contacten",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil toegang tot alle informatie over je contacten",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil toegang tot Bluetooth terwijl de app in gebruik is",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "'%@' wil toegang tot Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Hiermee kan '%@' je Bluetooth-accessoires vinden en er verbinding mee maken. Deze app kan Bluetooth ook gebruiken om te bepalen of je in de buurt bent.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil DNS-proxyconfiguraties toevoegen",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
   }
 ]

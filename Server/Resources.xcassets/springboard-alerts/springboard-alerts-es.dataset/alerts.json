@@ -341,5 +341,103 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere acceder a Apple Music, tu actividad relacionada con la música y los vídeos y tu biblioteca multimedia",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere que los datos estén disponibles para los dispositivos Bluetooth cercanos aunque no estés utilizando la app",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Inicia sesión con ID de Apple",
+    "buttons": [
+      "Cancelar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "La red Wi-Fi actual y otras cercanas se desconectarán hasta mañana.\n\nLa red Wi-Fi seguirá estando disponible para AirDrop, para el punto de acceso personal y para mejorar la precisión de la localización.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "La red WLAN actual y otras cercanas se desconectarán hasta mañana.\n\nLa red WLAN seguirá estando disponible para AirDrop, para el punto de acceso personal y para mejorar la precisión de la localización.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Los accesorios conectados se desconectarán y no se conectarán otros accesorios.\n\nBluetooth seguirá estando disponible para el Apple Watch, el Apple Pencil, el punto de acceso personal y Handoff.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ ha estado usando tu ubicación en segundo plano durante los últimos 3 días. ¿Quieres seguir permitiendo el uso en segundo plano?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” ha usado tu ubicación una vez en segundo plano durante los últimos 3 días. ¿Quieres seguir permitiendo el uso de la ubicación en segundo plano?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere acceder a la información básica de tus contactos",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere acceder a la información de todos tus contactos",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere usar Bluetooth mientras esté en uso",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere usar Bluetooth",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Esto permitirá que %@ encuentre los accesorios Bluetooth y se conecte a ellos. Esta app también podrá usar Bluetooth para saber cuándo estás cerca.",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere añadir configuraciones de proxy DNS",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -341,5 +341,75 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "« %@ » souhaite accéder aux données de Domicile.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Connexion avec l’identifiant Apple",
+    "buttons": [
+      "Annuler"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » utilise votre position en arrière-plan depuis les 3 derniers jours. Voulez-vous continuer à autoriser l’utilisation de la position en arrière-plan?",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » a utilisé votre position une fois en arrière-plan au cours des 3 derniers jours. Voulez-vous continuer à autoriser l’utilisation de la position en arrière-plan?",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » souhaite accéder aux informations de base de vos contacts.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » souhaite accéder à l’ensemble des informations de vos contacts.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "L’app « %@ » souhaite utiliser Bluetooth lorsqu’elle est active.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » souhaite utiliser Bluetooth.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » pourra alors rechercher les accessoires Bluetooth et s’y connecter. Cette app peut également utiliser Bluetooth pour détecter lorsque vous êtes à proximité.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » souhaite ajouter des configurations de serveur mandataire DNS",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
   }
 ]

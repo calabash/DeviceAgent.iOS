@@ -341,5 +341,89 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” deseja ter acesso ao Apple Music, suas atividades de música e vídeo, e à biblioteca de mídia",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Acessar os Dados do App Casa",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” deseja disponibilizar dados para os dispositivos Bluetooth por perto até mesmo quando você não estiver usando o app",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Inicie a Sessão com o ID Apple",
+    "buttons": [
+      "Cancelar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” tem usado a sua localização em segundo plano nos últimos 3 dias. Deseja continuar permitindo o uso da localização em segundo plano?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” usou a sua localização uma vez em segundo plano nos últimos 3 dias. Deseja continuar permitindo o uso da localização em segundo plano?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso às Informações Básicas dos Seus Contatos",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso a Todas as Informações dos Seus Contatos",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” deseja usar Bluetooth enquanto estiver em uso",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Usar Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Isso permitirá que “%@” busque e conecte-se a acessórios Bluetooth. Este app também pode usar Bluetooth para saber quando você estiver por perto.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Adicionar Configurações de Proxy DNS",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
   }
 ]

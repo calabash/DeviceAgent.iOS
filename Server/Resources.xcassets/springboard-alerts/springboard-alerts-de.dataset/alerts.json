@@ -334,5 +334,82 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte auf Apple Music, deine Musik- und Videoaktivitäten und auf deine Mediathek zugreifen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte Daten mit Bluetooth-Geräten in der Nähe teilen, auch wenn die App nicht benutzt wird",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Mit Apple‑ID anmelden",
+    "buttons": [
+      "Abbrechen"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ hat deinen Standort in den letzten 3 Tagen im Hintergrund verwendet. Möchtest du die Benutzung des Standorts im Hintergrund weiterhin erlauben?",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ hat deinen Standort in den letzten 3 Tagen einmal im Hintergrund verwendet. Möchtest du die Benutzung des Standorts im Hintergrund weiterhin erlauben?",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte Zugriff auf deine grundlegenden Kontaktinformationen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte Zugriff auf all deine Kontaktinformationen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte beim Verwenden auf Bluetooth zugreifen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte Bluetooth verwenden",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Hiermit kann „%@“ Bluetooth-Zubehör finden und sich damit verbinden. Diese App kann Bluetooth ebenfalls verwenden, um zu erkennen, wenn du in der Nähe bist.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte DNS-Proxy-Konfigurationen hinzufügen",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
   }
 ]

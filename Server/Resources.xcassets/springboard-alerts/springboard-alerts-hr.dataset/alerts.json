@@ -341,5 +341,103 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Dozvoliti aplikaciji “%@“ pristup vašoj lokaciji?",
+    "buttons": [
+      "Dozvoli"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dozvoliti aplikaciji “%@” pristup vašoj lokaciji čak i kad je ne koristite?",
+    "buttons": [
+      "Dozvoli"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” želi pristupiti Apple Musicu, vašim aktivnostima povezanim s glazbom i videozapisima, te vašoj medijateci",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” želi učiniti podatke dostupnima obližnjim Bluetooth uređajima, čak i kad ne koristite aplikaciju",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Pretraži: %@",
+    "buttons": [
+      "Otvori"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Prijavite se koristeći Apple ID",
+    "buttons": [
+      "Poništi"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikacija “%@” koristila je vašu lokaciju u pozadini tijekom posljednja 3 dana. Želite li nastaviti dozvoliti uporabu lokacije u pozadini?",
+    "buttons": [
+      "Dozvoli"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikacija “%@” jedanput je koristila vašu lokaciju u pozadini tijekom posljednja 3 dana. Želite li nastaviti dozvoliti uporabu lokacije u pozadini?",
+    "buttons": [
+      "Dozvoli"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” želi pristupiti vašim osnovnim kontaktnim informacijama",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” želi pristupiti svim vašim kontaktnim informacijama",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikacija “%@” želi koristiti Bluetooth dok se koristi",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” želi koristiti Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Ovime će se aplikaciji “%@” omogućiti pronalaženje i spajanje na Bluetooth pribore. Ova aplikacija također može koristiti Bluetooth kako bi detektirala kad ste u blizini.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” želi dodati DNS Proxy konfiguracije",
+    "buttons": [
+      "Dozvoli"
+    ],
+    "shouldAccept": true
   }
 ]

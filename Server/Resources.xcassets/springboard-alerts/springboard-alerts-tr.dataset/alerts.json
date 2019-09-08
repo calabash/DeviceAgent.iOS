@@ -341,5 +341,96 @@
       "Tamam"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@”; Apple Music’e, müzik ve video aktivitelerinize ve ortam arşivinize erişmek istiyor",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”, siz uygulamayı kullanmıyorken bile yakındaki Bluetooth aygıtları için verileri kullanılabilir yapmak istiyor",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "SIM Kart Takılı Değil",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "IPHONE ETKİNLEŞTİRİLEMEDİ",
+    "buttons": [
+      "Yok Say"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apple Kimliğiyle Giriş Yapın",
+    "buttons": [
+      "Vazgeç"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” son 3 gündür arka planda konumunuzu kullanıyor. Arka planda konumun kullanılmasına izin vermeyi sürdürmek istiyor musunuz?",
+    "buttons": [
+      "İzin Ver"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” son 3 gündür arka planda bir kez konumunuzu kullandı. Arka planda konumun kullanılmasına izin vermeyi sürdürmek istiyor musunuz?",
+    "buttons": [
+      "İzin Ver"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Kişiler’inizdeki Temel Bilgilere Erişmek İstiyor",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Kişiler’inizdeki Bütün Bilgilere Erişmek İstiyor",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” kullanılırken Bluetooth’u kullanmak istiyor",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Bluetooth’u Kullanmak İstiyor",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Bu, “%@” uygulamasının Bluetooth aksesuarlarını bulmasına ve onlara bağlanmasına izin verir. Bu uygulama ayrıca ne zaman yakınlarda olduğunuzu bilmek için de Bluetooth kullanır.",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” DNS Proxy Konfigürasyonları Eklemek İstiyor",
+    "buttons": [
+      "İzin Ver"
+    ],
+    "shouldAccept": true
   }
 ]

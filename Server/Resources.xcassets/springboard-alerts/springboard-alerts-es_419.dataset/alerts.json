@@ -341,5 +341,89 @@
       "Aceptar"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "¿Quieres usar \"%@\" con Siri?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere acceder a Apple Music, tu actividad musical y de videos, y tu biblioteca de contenidos multimedia",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ solicita que los datos estén disponibles para los dispositivos Bluetooth cercanos aunque no estés utilizando la app",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Inicia sesión con tu Apple ID",
+    "buttons": [
+      "Cancelar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ estuvo usando tu ubicación en segundo plano durante los últimos tres días. ¿Quieres seguir permitiéndoselo?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” ha estado usando tu ubicación una vez en segundo plano durante los últimos tres días. ¿Quieres seguir permitiéndoselo?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere acceder a la información básica de tus contactos",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere acceder a toda la información de tus contactos",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere acceder a Bluetooth mientras está en uso",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere acceder a Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Esto permitirá que %@ encuentre y se conecte a accesorios Bluetooth. Esta app también podría usar Bluetooth para saber cuándo estás cerca.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere agregar configuraciones de proxy DNS",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
   }
 ]

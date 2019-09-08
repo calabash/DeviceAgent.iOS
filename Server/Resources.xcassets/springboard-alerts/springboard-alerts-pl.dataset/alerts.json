@@ -327,5 +327,75 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Zaloguj się, podając Apple ID",
+    "buttons": [
+      "Anuluj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Pozwala aplikacji „%@” uaktualniać Twoje dane zdrowotne.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikacja „%@” używała Twojego położenia w tle w ciągu ostatnich 3 dni. Czy nadal chcesz pozwalać jej na używanie Twojego położenia w tle?",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikacja „%@” używała Twojego położenia w tle jeden raz w ciągu ostatnich 3 dni. Czy nadal chcesz pozwalać jej na używanie Twojego położenia w tle?",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce uzyskać dostęp do podstawowych danych kontaktów",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce uzyskać dostęp do wszystkich danych kontaktów",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce używać Bluetooth, gdy jest w użyciu",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce używać Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dzięki temu „%@” uzyska możliwość znajdowania akcesoriów Bluetooth i łączenia się z nimi. Ta aplikacja może także używać Bluetooth do określania, kiedy jesteś w pobliżu.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce dodać konfiguracje proxy DNS",
+    "buttons": [
+      "Pozwól"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -341,5 +341,82 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@“ vil have adgang til Apple Music, din musik- og videoaktivitet og dit mediebibliotek",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@“ vil gøre data tilgængelige for Bluetooth-enheder i nærheden, også når du ikke bruger appen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Log ind med Apple-id",
+    "buttons": [
+      "Annuller"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” har brugt din lokalitet i baggrunden over de sidste 3 dage. Vil du blive ved med at tillade brug af lokalitet i baggrunden?",
+    "buttons": [
+      "Tillad"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” har brugt din lokalitet i baggrunden 1 gang over de sidste 3 dage. Vil du blive ved med at tillade brug af lokalitet i baggrunden?",
+    "buttons": [
+      "Tillad"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vil bruge dine grundlæggende oplysninger om kontakter",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vil bruge alle dine oplysninger om kontakter",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@“ vil bruge Bluetooth, mens den er i brug",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vil bruge Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Det gør det muligt for “%@” at finde og oprette forbindelse til Bluetooth-tilbehør. Denne app bruger muligvis også Bluetooth, til at registrere når du er i nærheden.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vil gerne tilføje DNS-proxykonfigurationer",
+    "buttons": [
+      "Tillad"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -341,5 +341,103 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” gostaria de aceder à sua atividade física e de fitness",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” gostaria de aceder a Apple Music, à informação de atividade (músicas e vídeo) e à biblioteca de multimédia",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Mesmo quando não está a ser usado, “%@” gostaria de disponibilizar dados a dispositivos Bluetooth que se encontrem por perto",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Atualização das definições da operadora",
+    "buttons": [
+      "Agora não"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Inicie sessão com o ID Apple",
+    "buttons": [
+      "Cancelar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Inicie sessão em iMessage",
+    "buttons": [
+      "Cancelar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” tem estado a usar a sua localização em segundo plano nos últimos 3 dias. Deseja continuar a permitir o uso em segundo plano?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” usou a sua localização uma vez em segundo plano nos últimos 3 dias. Deseja continuar a permitir o uso em segundo plano?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” gostaria de aceder à informação básica relativa aos seus contactos",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” gostaria de aceder a toda a informação relativa aos seus contactos",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” gostaria de usar o Bluetooth enquanto estiver aberta",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” gostaria de usar Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” poderá encontrar e estabelecer ligação a acessórios Bluetooth. Esta aplicação pode igualmente usar Bluetooth para saber quando se encontra por perto.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” gostaria de adicionar configurações de proxy de DNS",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
   }
 ]
