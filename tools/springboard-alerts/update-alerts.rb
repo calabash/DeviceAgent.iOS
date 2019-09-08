@@ -89,7 +89,7 @@ target_frameworks.each do |framework|
 
     # debug info
     if ENV['DEBUG'] && language_name == 'en'
-      report_path = "reports/#{framework['name']}.#{language_name}.json"
+      report_path = "reports/#{framework['name']}/#{xcode.version}.#{language_name}.json"
       save_json(report_path, found_values_dict)
     end
   end
