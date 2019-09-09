@@ -23,8 +23,6 @@
 
 - (void)setUp {
     [super setUp];
-    
-    
 }
 
 - (void)tearDown {
@@ -53,10 +51,8 @@
 }
 
 - (void)testLanguage {
-    NSArray<NSString *> * arrayLanguages = [NSArray arrayWithObjects:@"data available to nearby bluetooth devices", @"souhaite accéder à vos mouvements et vos activités physiques", @"Deseja Ter Acesso às Suas Fotos", @"доступ к Вашим геоданным",nil];
-    BOOL resFinal = NO;
     id localeMock = OCMClassMock([NSLocale class]);
-    NSArray<NSString *> * array = [NSArray arrayWithObject:@"fr-Pytin"];
+    NSArray<NSString *> * array = [NSArray arrayWithObject:@"fr-Any"];
     OCMStub([localeMock preferredLanguages]).andReturn(array);
     SpringBoardAlerts *obj = [[SpringBoardAlerts alloc] init_private];
     
@@ -65,33 +61,29 @@
     localeMock = OCMClassMock([NSLocale class]);
     OCMStub([localeMock preferredLanguages]).andReturn(array);
     obj = [[SpringBoardAlerts alloc] init_private];
-    resFinal = [self containsLnaguage:arrayLanguages[1]:obj];
     
-    expect(resFinal).to.equal(YES);
+    expect([self containsLnaguage:@"souhaite accéder à vos mouvements et vos activités physiques":obj]).to.beTruthy();
     
     localeMock = OCMClassMock([NSLocale class]);
     array = [NSArray arrayWithObject:@"en-US"];
     OCMStub([localeMock preferredLanguages]).andReturn(array);
     obj = [[SpringBoardAlerts alloc] init_private];
-    resFinal = [self containsLnaguage:arrayLanguages[0]:obj];
     
-    expect(resFinal).to.equal(YES);
+    expect([self containsLnaguage:@"data available to nearby bluetooth devices":obj]).to.beTruthy();
 
     localeMock = OCMClassMock([NSLocale class]);
     array = [NSArray arrayWithObject:@"pt-PT"];
     OCMStub([localeMock preferredLanguages]).andReturn(array);
     obj = [[SpringBoardAlerts alloc] init_private];
-    resFinal = [self containsLnaguage:arrayLanguages[2]:obj];
     
-    expect(resFinal).to.equal(YES);
+    expect([self containsLnaguage:@"Deseja Ter Acesso às Suas Fotos":obj]).to.beTruthy();
     
     localeMock = OCMClassMock([NSLocale class]);
     array = [NSArray arrayWithObject:@"ru"];
     OCMStub([localeMock preferredLanguages]).andReturn(array);
     obj = [[SpringBoardAlerts alloc] init_private];
-    resFinal = [self containsLnaguage:arrayLanguages[3]:obj];
     
-    expect(resFinal).to.equal(YES);
+    expect([self containsLnaguage:@"доступ к Вашим геоданным":obj]).to.beTruthy();
 
     [localeMock stopMocking];
 }

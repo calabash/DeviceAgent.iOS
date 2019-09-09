@@ -30,7 +30,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
 + (void)raiseIfInvalidAlert:(NSDictionary *)alertDict
                  ofLanguage:(NSString*)language
                 andPosition:(NSInteger)position;
-- (id)init_private;
+- (instancetype)init_private;
 @end
 
 @implementation SpringBoardAlerts
@@ -78,7 +78,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
     }
 }
 
-- (id)init_private {
+- (instancetype)init_private {
     self = [super init];
     if (self) {
         NSTimeInterval startTime = [[CBXMachClock sharedClock] absoluteTime];
