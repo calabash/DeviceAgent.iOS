@@ -459,18 +459,21 @@
     "title": "“%@” Would Like to Send You Push Notifications",
     "buttons": [
       "OK"
-    ]
+    ],
+    "shouldAccept": true
   },
   {
     "title": "“%@” Would Like to Access Your Motion Activity",
     "buttons": [
       "OK"
-    ]
+    ],
+    "shouldAccept": true
   },
   {
     "title": "“%@” Would Like to Access Apple Music And Your Media Library",
     "buttons": [
       "OK"
-    ]
+    ],
+    "shouldAccept": true
   }
 ]
