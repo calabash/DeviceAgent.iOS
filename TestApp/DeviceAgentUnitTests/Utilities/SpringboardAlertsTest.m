@@ -48,7 +48,7 @@
     expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
-    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
 
     alertTitle = @"запрашивает разрешение на использование Вашей текущей геопозиции";
@@ -56,7 +56,7 @@
     expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
-    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
 
     alertTitle = @"No SIM Card Installed";
@@ -64,7 +64,7 @@
     expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
-    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
 
     alertTitle = @"Carrier Settings Update";
@@ -72,7 +72,7 @@
     expectedShouldAccept = NO;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
-    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
 
     alertTitle = @"acesso à sua localização";
@@ -80,7 +80,7 @@
     expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
-    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
 }
 
