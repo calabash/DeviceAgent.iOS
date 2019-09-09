@@ -349,6 +349,7 @@
     "title": "Dozvoliti aplikaciji “%@“ pristup vašoj lokaciji?",
     "buttons": [
       "Dozvoli",
+      "Uvijek dozvoli",
       "Dozvoli tijekom uporabe aplikacije"
     ],
     "shouldAccept": true
