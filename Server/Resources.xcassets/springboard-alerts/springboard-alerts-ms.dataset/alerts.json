@@ -2,7 +2,8 @@
   {
     "title": "Benarkan “%@” mengakses lokasi anda?",
     "buttons": [
-      "Benarkan"
+      "Benarkan",
+      "Benarkan Semasa Menggunakan App"
     ],
     "shouldAccept": true
   },

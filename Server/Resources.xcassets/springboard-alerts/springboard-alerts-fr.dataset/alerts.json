@@ -2,7 +2,8 @@
   {
     "title": "Autoriser « %@ » à accéder à votre position ?",
     "buttons": [
-      "Autoriser"
+      "Autoriser",
+      "Autoriser lorsque l’app est active"
     ],
     "shouldAccept": true
   },

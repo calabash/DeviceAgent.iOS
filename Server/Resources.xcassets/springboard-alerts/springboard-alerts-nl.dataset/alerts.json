@@ -2,7 +2,8 @@
   {
     "title": "Wil je %@ toegang tot je locatie toestaan?",
     "buttons": [
-      "Sta toe"
+      "Sta toe",
+      "Bij gebruik van app"
     ],
     "shouldAccept": true
   },

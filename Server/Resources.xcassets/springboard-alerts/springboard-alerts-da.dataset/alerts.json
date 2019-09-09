@@ -2,7 +2,8 @@
   {
     "title": "Må “%@” bruge din lokalitet?",
     "buttons": [
-      "Tillad"
+      "Tillad",
+      "Tillad, mens du bruger app"
     ],
     "shouldAccept": true
   },

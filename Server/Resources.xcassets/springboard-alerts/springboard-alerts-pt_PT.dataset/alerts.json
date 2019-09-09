@@ -2,7 +2,8 @@
   {
     "title": "Permitir que “%@” aceda à sua localização?",
     "buttons": [
-      "Permitir"
+      "Permitir",
+      "Permitir durante utilização"
     ],
     "shouldAccept": true
   },

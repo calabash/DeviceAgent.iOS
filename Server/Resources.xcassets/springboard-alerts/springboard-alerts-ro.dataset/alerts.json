@@ -2,7 +2,8 @@
   {
     "title": "Permiteți ca aplicația “%@” să acceseze localizarea dvs.?",
     "buttons": [
-      "Permiteți"
+      "Permiteți",
+      "Permiteți în timpul utilizării aplicației"
     ],
     "shouldAccept": true
   },

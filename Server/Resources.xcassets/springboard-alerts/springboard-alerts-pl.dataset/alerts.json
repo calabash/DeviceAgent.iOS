@@ -2,7 +2,8 @@
   {
     "title": "Udostępniać aplikacji „%@” Twoje położenie?",
     "buttons": [
-      "Pozwalaj"
+      "Pozwalaj",
+      "Pozwalaj, gdy używam aplikacji"
     ],
     "shouldAccept": true
   },

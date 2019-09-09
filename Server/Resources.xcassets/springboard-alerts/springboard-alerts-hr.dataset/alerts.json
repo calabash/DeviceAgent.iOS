@@ -345,7 +345,8 @@
   {
     "title": "Dozvoliti aplikaciji “%@“ pristup vašoj lokaciji?",
     "buttons": [
-      "Dozvoli"
+      "Dozvoli",
+      "Dozvoli tijekom uporabe aplikacije"
     ],
     "shouldAccept": true
   },

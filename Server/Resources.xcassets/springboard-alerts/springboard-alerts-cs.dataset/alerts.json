@@ -338,7 +338,8 @@
   {
     "title": "Chcete aplikaci %@ povolit přístup k polohovým údajům?",
     "buttons": [
-      "Povolit"
+      "Povolit",
+      "Povolit jen při používání aplikace"
     ],
     "shouldAccept": true
   },

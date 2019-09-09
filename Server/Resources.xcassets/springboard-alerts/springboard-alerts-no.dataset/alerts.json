@@ -2,7 +2,8 @@
   {
     "title": "Vil du gi %@ tilgang til posisjonen din?",
     "buttons": [
-      "Tillat"
+      "Tillat",
+      "Tillat mens appen er i bruk"
     ],
     "shouldAccept": true
   },

@@ -2,7 +2,8 @@
   {
     "title": "¿Permitir a %@ acceder a tu ubicación?",
     "buttons": [
-      "Permitir"
+      "Permitir",
+      "Permitir al usarse la app"
     ],
     "shouldAccept": true
   },

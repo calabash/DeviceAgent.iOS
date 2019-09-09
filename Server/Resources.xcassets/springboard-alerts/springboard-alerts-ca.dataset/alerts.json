@@ -2,7 +2,8 @@
   {
     "title": "Permets que “%@” accedeixi a la teva ubicació?",
     "buttons": [
-      "Permetre"
+      "Permetre",
+      "Permetre amb l’app en ús"
     ],
     "shouldAccept": true
   },

@@ -2,7 +2,8 @@
   {
     "title": "Allow “%@” to access your location?",
     "buttons": [
-      "Allow"
+      "Allow",
+      "Allow While Using App"
     ],
     "shouldAccept": true
   },

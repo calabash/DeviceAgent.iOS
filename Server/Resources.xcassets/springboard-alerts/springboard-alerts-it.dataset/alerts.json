@@ -2,7 +2,8 @@
   {
     "title": "Vuoi consentire a “%@” di accedere alla tua posizione?",
     "buttons": [
-      "Consenti"
+      "Consenti",
+      "Consenti quando utilizzi l'app"
     ],
     "shouldAccept": true
   },

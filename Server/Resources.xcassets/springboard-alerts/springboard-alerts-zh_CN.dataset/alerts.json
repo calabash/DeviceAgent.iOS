@@ -2,7 +2,8 @@
   {
     "title": "允许“%@”访问您的位置？",
     "buttons": [
-      "允许"
+      "允许",
+      "使用App时允许"
     ],
     "shouldAccept": true
   },

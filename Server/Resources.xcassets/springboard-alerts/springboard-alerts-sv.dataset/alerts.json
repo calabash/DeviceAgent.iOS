@@ -2,7 +2,8 @@
   {
     "title": "Tillåter du att ”%@” får tillgång till din platsinformation?",
     "buttons": [
-      "Tillåt"
+      "Tillåt",
+      "Tillåt medan appen används"
     ],
     "shouldAccept": true
   },

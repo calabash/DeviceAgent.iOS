@@ -2,7 +2,8 @@
   {
     "title": "Chcete povoliť aplikácii „%@“ pristupovať k vašej polohe?",
     "buttons": [
-      "Povoliť"
+      "Povoliť",
+      "Povoliť len pri používaní apky"
     ],
     "shouldAccept": true
   },

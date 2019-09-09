@@ -2,7 +2,8 @@
   {
     "title": "Engedélyezi a(z) „%@” számára, hogy hozzáférjen az Ön helyzetéhez?",
     "buttons": [
-      "Engedélyezés"
+      "Engedélyezés",
+      "Az alkalmazás használata közben"
     ],
     "shouldAccept": true
   },

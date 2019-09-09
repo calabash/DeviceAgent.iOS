@@ -2,7 +2,8 @@
   {
     "title": "允許「%@」取用你的位置嗎？",
     "buttons": [
-      "允許"
+      "允許",
+      "使用App時允許"
     ],
     "shouldAccept": true
   },

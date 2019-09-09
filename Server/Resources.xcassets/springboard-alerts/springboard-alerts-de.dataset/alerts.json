@@ -2,7 +2,8 @@
   {
     "title": "Darf „%@“ auf deinen Standort zugreifen?",
     "buttons": [
-      "Erlauben"
+      "Erlauben",
+      "Beim Verwenden der App erlauben"
     ],
     "shouldAccept": true
   },

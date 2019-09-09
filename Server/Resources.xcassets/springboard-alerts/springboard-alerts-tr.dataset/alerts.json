@@ -2,7 +2,8 @@
   {
     "title": "“%@”, konumunuza erişebilsin mi?",
     "buttons": [
-      "İzin Ver"
+      "İzin Ver",
+      "Uygulamayı Kullanırken İzin Ver"
     ],
     "shouldAccept": true
   },
