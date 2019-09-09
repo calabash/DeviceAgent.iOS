@@ -6,7 +6,9 @@
             { "title": "LOCATION_CLIENT_PERMISSION_ALWAYS", "button": "LOCATION_CLIENT_PERMISSION_OK" },
             { "title": "LOCATION_CLIENT_PERMISSION_WHENINUSE", "button": "LOCATION_CLIENT_PERMISSION_OK" },
             { "title": "LOCATION_CLIENT_PERMISSION_UPGRADE_WHENINUSE_ALWAYS", "button": "LOCATION_CLIENT_PERMISSION_OK" },
-            { "title": "LOCATION_CLIENT_PERMISSION_REPROMPT", "button": "LOCATION_CLIENT_PERMISSION_OK" }
+            { "title": "LOCATION_CLIENT_PERMISSION_REPROMPT", "button": "LOCATION_CLIENT_PERMISSION_OK" },
+            { "title": "LOCATION_CLIENT_PERMISSION_REPROMPT_ZERO", "button": "LOCATION_CLIENT_PERMISSION_OK" },
+            { "title": "LOCATION_CLIENT_PERMISSION_REPROMPT_ONE", "button": "LOCATION_CLIENT_PERMISSION_OK" }
         ]
     },
     {
@@ -24,10 +26,15 @@
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceSiri", "button": "REQUEST_ACCESS_ALLOW" },
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceMediaLibrary", "button": "REQUEST_ACCESS_ALLOW" },
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceAddressBook", "button": "REQUEST_ACCESS_ALLOW" },
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceContactsLimited", "button": "REQUEST_ACCESS_ALLOW"},
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceContactsFull", "button": "REQUEST_ACCESS_ALLOW"},
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServicePhotos", "button": "REQUEST_ACCESS_ALLOW" },
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceWillow", "button": "REQUEST_ACCESS_ALLOW" },
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceCalls", "button": "REQUEST_ACCESS_ALLOW" },
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceBluetoothPeripheral", "button": "REQUEST_ACCESS_ALLOW" },
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceBluetoothWhileInUse", "button": "REQUEST_ACCESS_ALLOW"},
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceBluetoothAlways", "button": "REQUEST_ACCESS_ALLOW"},
+            { "title": "REQUEST_DEFAULT_PURPOSE_STRING_SERVICE_kTCCServiceBluetoothAlways", "button": "REQUEST_ACCESS_ALLOW"},
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceSpeechRecognition", "button": "REQUEST_ACCESS_ALLOW" }
         ]
     },
@@ -43,7 +50,8 @@
         "name": "NetworkExtension.framework",
         "values": [
             { "title": "APP_WARNING_HEADER_VPN", "button": "ALLOW_BUTTON" },
-            { "title": "APP_WARNING_HEADER_FILTER", "button": "ALLOW_BUTTON" }
+            { "title": "APP_WARNING_HEADER_FILTER", "button": "ALLOW_BUTTON" },
+            { "title": "APP_WARNING_HEADER_DNS_PROXY", "button": "ALLOW_BUTTON" }
         ]
     },
     {
@@ -107,6 +115,12 @@
             { "title": "CONTROL_CENTER_WIFI_BEHAVIOR_ALERT_MESSAGE", "button": "CONTROL_CENTER_ALERT_OK" },
             { "title": "CONTROL_CENTER_WLAN_BEHAVIOR_ALERT_MESSAGE", "button": "CONTROL_CENTER_ALERT_OK" },
             { "title": "CONTROL_CENTER_BLUETOOTH_BEHAVIOR_ALERT_MESSAGE", "button": "CONTROL_CENTER_ALERT_OK" }
+        ]
+    },
+    {
+        "name": "UIKitCore.framework",
+        "values": [
+            { "title": "“%@” Would Like To Use Your Current Location", "button": "OK" }
         ]
     }
 ]

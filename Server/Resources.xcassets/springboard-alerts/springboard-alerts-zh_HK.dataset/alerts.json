@@ -509,5 +509,89 @@
       "好"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "「%@」過去3日在背景使用了你的位置。要繼續允許在背景使用位置嗎？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」過去3日在背景使用了你的位置1次。要繼續允許在背景使用位置嗎？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要取用通訊錄的基本資料",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要取用通訊錄的所有資料",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想在使用期間使用藍牙",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想使用藍牙",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "這將會允許「%@」尋找並連接藍牙配件。此App亦可能會使用藍牙以確認你在附近。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想加入DNS代理設定",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要使用你現時的位置",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "要允許「%@」在你正在使用 App 時取用你的位置嗎？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ 的部分資料將傳送給 Apple 以處理你的請求。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "此 App 的語音識別數據將傳送給 Apple 以處理你的請求。這亦會有助 Apple 改善語音識別技術。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
   }
 ]

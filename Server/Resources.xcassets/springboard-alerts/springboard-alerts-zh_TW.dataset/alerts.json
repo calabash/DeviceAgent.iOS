@@ -488,5 +488,75 @@
       "好"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "「%@」在過去三天已在背景使用了您的位置。要繼續允許在背景使用位置嗎？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」在過去三天已在背景使用了您的位置一次。要繼續允許在背景使用位置嗎？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要取用您聯絡人的基本資訊",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要取用您聯絡人的所有資訊",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要在使用期間使用藍牙",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要使用藍牙",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "這將可允許「%@」尋找並連接藍牙配件。此App可能會使用藍牙以確認您在附近。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要加入DNS代理伺服器設定",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要使用您的目前位置",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "新的設定現已可供下載。是否要立即更新？",
+    "buttons": [
+      "稍後再說"
+    ],
+    "shouldAccept": true
   }
 ]

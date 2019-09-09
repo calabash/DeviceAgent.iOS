@@ -51,7 +51,8 @@
   {
     "title": "“%@” quiere acceder al micrófono",
     "buttons": [
-      "Permitir"
+      "Permitir",
+      "OK"
     ],
     "shouldAccept": true
   },
@@ -65,7 +66,8 @@
   {
     "title": "“%@” quiere acceder a tu calendario",
     "buttons": [
-      "Permitir"
+      "Permitir",
+      "OK"
     ],
     "shouldAccept": true
   },
@@ -86,14 +88,16 @@
   {
     "title": "“%@” quiere acceder a la cámara",
     "buttons": [
-      "Permitir"
+      "Permitir",
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” quiere acceder a tus recordatorios",
     "buttons": [
-      "Permitir"
+      "Permitir",
+      "OK"
     ],
     "shouldAccept": true
   },
@@ -114,14 +118,16 @@
   {
     "title": "“%@” quiere acceder a tus contactos",
     "buttons": [
-      "Permitir"
+      "Permitir",
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” quiere acceder a tus fotos",
     "buttons": [
-      "Permitir"
+      "Permitir",
+      "OK"
     ],
     "shouldAccept": true
   },
@@ -381,6 +387,118 @@
     "title": "Los accesorios conectados se desconectarán y no se conectarán otros accesorios.\n\nBluetooth seguirá estando disponible para el Apple Watch, el Apple Pencil, el punto de acceso personal y Handoff.",
     "buttons": [
       "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ ha estado usando tu ubicación en segundo plano durante los últimos 3 días. ¿Quieres seguir permitiendo el uso en segundo plano?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” ha usado tu ubicación una vez en segundo plano durante los últimos 3 días. ¿Quieres seguir permitiendo el uso de la ubicación en segundo plano?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere acceder a la información básica de tus contactos",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere acceder a la información de todos tus contactos",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere usar Bluetooth mientras esté en uso",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere usar Bluetooth",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Esto permitirá que %@ encuentre los accesorios Bluetooth y se conecte a ellos. Esta app también podrá usar Bluetooth para saber cuándo estás cerca.",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere añadir configuraciones de proxy DNS",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere utilizar tu ubicación actual",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir a %@ acceder a tu ubicación aunque no estés utilizando la aplicación?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir a %@ acceder a tu ubicación mientras utilizas la aplicación?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir a %@ acceder también a tu ubicación aunque no estés utilizando la aplicación?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Los datos de voz de esta aplicación se enviarán a Apple para procesar tus solicitudes. Estos datos también ayudan a Apple a mejorar su tecnología de reconocimiento de voz.",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” desea acceder a tu actividad física y deportiva",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere que los datos estén disponibles para los dispositivos Bluetooth cercanos aunque no estés utilizando la aplicación.",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Abrir en la aplicación %@",
+    "buttons": [
+      "Abrir"
     ],
     "shouldAccept": true
   }

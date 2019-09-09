@@ -355,5 +355,103 @@
       "Mégsem"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” 3 három napja használja az Ön helyzetét a háttérben. Szeretné továbbra is engedélyezni a helyzet háttérben történő használatát?",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” egyszer használta az Ön helyzetét a háttérben az elmúlt 3 napban. Szeretné továbbra is engedélyezni a helyzet háttérben történő használatát?",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” hozzá szeretne férni a kontaktok alapvető információihoz",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” hozzá szeretne férni a kontaktok összes információjához",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” Bluetooth-t szeretné használni, miközben az használatban van",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” a Bluetooth-t szeretné használni",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Ez lehetővé teszi, hogy a(z) „%@” megkeresse és csatlakozzon a Bluetooth-kiegészítőkhöz. Előfordulhat, hogy ez az alkalmazás Bluetooth-t is használ annak megállapításához, hogy Ön a közelben tartózkodik-e.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” DNS-proxykonfigurációkat szeretne hozzáadni",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” használni szeretné a jelenlegi helyzetét",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” hozzáférhet a helyzetéhez az alkalmazás használatakor?",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Új beállítások érhetők el. Kívánja most frissíteni azokat?",
+    "buttons": [
+      "Ne most"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” VPN-konfigurációt kíván hozzáadni",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Az iPhone készülék nincs aktiválva.",
+    "buttons": [
+      "Kihagyás"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%1$@” meg kívánja nyitni a(z) %2$@ fiókjait",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

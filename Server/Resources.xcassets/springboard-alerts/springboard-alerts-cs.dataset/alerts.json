@@ -362,5 +362,103 @@
       "Zrušit"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Aplikace „%@“ používala během posledních 3 dní vaše polohové údaje na pozadí. Chcete jí to umožňovat i nadále?",
+    "buttons": [
+      "Povolit"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikace „%@“ během posledních 3 dní jednou použila vaše polohové údaje na pozadí. Chcete jí to umožňovat i nadále?",
+    "buttons": [
+      "Povolit"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ žádá o přístup k základním kontaktním údajům",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ žádá o přístup k veškerým kontaktním údajům",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikace %@ žádá o přístup k rozhraní Bluetooth v čase, kdy ji budete používat",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikace %@ žádá o přístup k rozhraní Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ bude moct vyhledávat Bluetooth zařízení a připojovat se k nim. Také bude moct přes Bluetooth zjišťovat, zda jste nablízku.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikace „%@“ chce přidat konfigurace DNS proxy",
+    "buttons": [
+      "Povolit"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ chce použít vaši současnou polohu",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ žádá o přístup k Apple Music, informacím o přehrávání hudby a videí a vaší knihovně médií.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ žádá o povolení k poskytování nativních hovorů",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikace %@ žádá o povolení ke zpřístupnění dat blízkým Bluetooth zařízením i v čase, kdy ji právě nepoužíváte.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ žádá o přístup k rozpoznávání řeči",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Jsou k dispozici nová nastavení operátora. Chcete je nyní aktualizovat?",
+    "buttons": [
+      "Teď ne"
+    ],
+    "shouldAccept": true
   }
 ]

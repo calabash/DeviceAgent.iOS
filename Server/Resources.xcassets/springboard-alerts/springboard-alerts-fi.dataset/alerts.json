@@ -376,5 +376,82 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "%@ on käyttänyt sijaintiasi taustalla viimeisen 3 päivän aikana. Sallitaanko sijainnin käyttö taustalla edelleen?",
+    "buttons": [
+      "Salli"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ on käyttänyt sijaintiasi kerran taustalla viimeisen 3 päivän aikana. Sallitaanko sijainnin käyttö taustalla edelleen?",
+    "buttons": [
+      "Salli"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ haluaa käyttää yhteystietojesi perustietoja",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ haluaa käyttää yhteystietojesi kaikkia tietoja",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ haluaa käyttää Bluetoothia, kun se on käytössä",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ haluaa käyttää Bluetoothia",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Tämän avulla %@ voi etsiä Bluetooth-lisälaitteita ja yhdistää niihin. Tämä appi voi myös käyttää Bluetoothia ymmärtämään milloin olet lähellä.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ haluaa lisätä DNS-välipalvelinmäärityksiä",
+    "buttons": [
+      "Salli"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ haluaa käyttää nykyistä sijaintiasi",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Sallitko, että %@ käyttää sijaintiasi myös silloin, kun et käytä appia?",
+    "buttons": [
+      "Salli"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Sallitko, että %@ käyttää sijaintiasi silloin, kun käytät appia?",
+    "buttons": [
+      "Salli"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -362,5 +362,110 @@
       "Annulla"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” ha utilizzato in background la tua posizione negli ultimi 3 giorni. Vuoi continuare a consentire l'utilizzo della posizione in background?",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” ha utilizzato in background la tua posizione una volta negli ultimi 3 giorni. Vuoi continuare a consentire l'utilizzo della posizione in background?",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe accedere alle informazioni di base dei tuoi contatti",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe accedere a tutte le informazioni dei tuoi contatti",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” desidera utilizzare il Bluetooth mentre è in uso",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” desidera utilizzare il Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Selezionando questa opzione, “%@” sarà in grado di trovare gli accessori Bluetooth e di effettuare una connessione. L'app potrebbe usare il Bluetooth anche per rilevare la tua presenza, quando ti trovi nelle vicinanze.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” desidera aggiungere delle configurazioni proxy DNS",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” desidera usare la tua posizione attuale",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Consenti a “%@” di accedere ai dati relativi alla tua posizione quando stai usando l'app?",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe accedere al tuo Calendario",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe accedere ai tuoi Promemoria",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe accedere ai tuoi Contatti",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe accedere alle tue Foto",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aprire la pagina in “%@”?",
+    "buttons": [
+      "Apri"
+    ],
+    "shouldAccept": true
   }
 ]

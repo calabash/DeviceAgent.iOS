@@ -70,6 +70,13 @@
     "shouldAccept": true
   },
   {
+    "title": "%@ wil toegang tot uw agenda",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
     "title": "Spraakgegevens uit deze app worden naar Apple verstuurd om je verzoeken te verwerken. Deze gegevens worden ook gebruikt om de spraakherkenningstechnologie van Apple te verbeteren.",
     "buttons": [
       "OK"
@@ -84,6 +91,13 @@
     "shouldAccept": true
   },
   {
+    "title": "%@ wil toegang tot uw bewegings- en fitnessactiviteit",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
     "title": "%@ wil toegang tot de camera",
     "buttons": [
       "OK"
@@ -92,6 +106,13 @@
   },
   {
     "title": "%@ wil toegang tot je herinneringen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil toegang tot uw herinneringen",
     "buttons": [
       "OK"
     ],
@@ -119,7 +140,21 @@
     "shouldAccept": true
   },
   {
+    "title": "%@ wil toegang tot uw contacten",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
     "title": "%@ wil toegang tot je foto's",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil toegang tot uw foto's",
     "buttons": [
       "OK"
     ],
@@ -360,6 +395,69 @@
     "title": "Log in met Apple ID",
     "buttons": [
       "Annuleer"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "'%@' heeft de afgelopen 3 dagen je locatie op de achtergrond gebruikt. Wil je blijven toestaan dat je locatie op de achtergrond wordt gebruikt?",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "'%@' heeft de afgelopen 3 dagen je locatie één keer op de achtergrond gebruikt. Wil je blijven toestaan dat je locatie op de achtergrond wordt gebruikt?",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil toegang tot basisinformatie over je contacten",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil toegang tot alle informatie over je contacten",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil toegang tot Bluetooth terwijl de app in gebruik is",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "'%@' wil toegang tot Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Hiermee kan '%@' je Bluetooth-accessoires vinden en er verbinding mee maken. Deze app kan Bluetooth ook gebruiken om te bepalen of je in de buurt bent.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil DNS-proxyconfiguraties toevoegen",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil je huidige locatie gebruiken",
+    "buttons": [
+      "OK"
     ],
     "shouldAccept": true
   }

@@ -390,5 +390,117 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” ha estat fent servir la teva ubicació en segon pla durant els últims 3 dies. Vols continuar permetent que utilitzi la teva ubicació en segon pla?",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” ha fet servir la teva ubicació una vegada en segon pla durant els últims 3 dies. Vols continuar permetent que utilitzi la teva ubicació en segon pla?",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol accedir a la informació bàsica dels teus contactes",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol accedir a tota la informació dels teus contactes",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol fer servir el Bluetooth mentre l’utilitzis",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol fer servir el Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "D’aquesta manera, %@ podrà detectar i connectar‑se als accessoris Bluetooth. Aquesta app també pot utilitzar el Bluetooth per saber quan ets a prop.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol afegir configuracions de proxy DNS",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol fer servir la teva ubicació actual",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permets que “%@” accedeixi a la teva ubicació encara que no estiguis utilitzant l’aplicació?",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permets que “%@” accedeixi a la teva ubicació mentre utilitzes l’aplicació?",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permets que “%@” també accedeixi a la teva ubicació encara que no estiguis utilitzant l’aplicació?",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Les dades de veu d’aquesta aplicació s’enviaran a Apple per processar les teves peticions i perquè Apple pugui millorar la tecnologia de reconeixement de veu.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol posar les dades a disposició dels dispositius Bluetooth propers fins i tot quan no utilitzis l’aplicació.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Hi ha una nova configuració disponible. Vols actualitzar-la ara?",
+    "buttons": [
+      "Ara no"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Obrir-ho a l’aplicació %@",
+    "buttons": [
+      "Obrir"
+    ],
+    "shouldAccept": true
   }
 ]

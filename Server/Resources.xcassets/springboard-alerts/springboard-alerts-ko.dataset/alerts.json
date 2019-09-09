@@ -435,5 +435,96 @@
       "취소"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "‘%@’이(가) 지난 3일간 백그라운드에서 사용자의 위치를 사용했습니다. 백그라운드에서의 위치 사용을 계속 허용하겠습니까?",
+    "buttons": [
+      "허용"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "‘%@’이(가) 지난 3일간 백그라운드에서 사용자의 위치를 1번 사용했습니다. 백그라운드에서의 위치 사용을 계속 허용하겠습니까?",
+    "buttons": [
+      "허용"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "‘%@’이(가) 사용자의 기본 연락처 정보에 접근하려고 합니다",
+    "buttons": [
+      "확인"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "‘%@’이(가) 사용자의 모든 연락처 정보에 접근하려고 합니다",
+    "buttons": [
+      "확인"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "’%@’을(를) 사용 중일 때 이 앱에서 Bluetooth를 사용하려고 합니다",
+    "buttons": [
+      "확인"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "’%@’에서 Bluetooth를 사용하려고 합니다",
+    "buttons": [
+      "확인"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "‘%@’이(가) Bluetooth 액세서리를 찾고 연결할 수 있도록 합니다.  이 앱은 사용자가 근처에 있음을 알 때 Bluetooth를 사용할 수 있습니다.",
+    "buttons": [
+      "확인"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "‘%@’에서 DNS 프록시 구성을 추가하려고 합니다.",
+    "buttons": [
+      "허용"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "‘%@’에서 현재 위치 정보를 사용하고자 합니다",
+    "buttons": [
+      "확인"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "이 앱을 사용하지 않을 때에도 ‘%@’이(가) 사용자의 위치에 접근하도록 허용하겠습니까?",
+    "buttons": [
+      "허용"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "앱을 사용하는 동안 ‘%@’에서 사용자의 위치에 접근하도록 허용하겠습니까?",
+    "buttons": [
+      "허용"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "‘%@’을(를) 사용하지 않을 때에도 해당 앱이 사용자의 위치에 접근하도록 허용하곘습니까?",
+    "buttons": [
+      "허용"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "사용 가능한 새로운 설정이 있습니다.  지금 업데이트하겠습니까?",
+    "buttons": [
+      "지금 안 함"
+    ],
+    "shouldAccept": true
   }
 ]

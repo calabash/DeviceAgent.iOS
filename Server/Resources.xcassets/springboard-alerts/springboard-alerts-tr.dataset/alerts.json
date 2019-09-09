@@ -376,5 +376,89 @@
       "Vazgeç"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” son 3 gündür arka planda konumunuzu kullanıyor. Arka planda konumun kullanılmasına izin vermeyi sürdürmek istiyor musunuz?",
+    "buttons": [
+      "İzin Ver"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” son 3 gündür arka planda bir kez konumunuzu kullandı. Arka planda konumun kullanılmasına izin vermeyi sürdürmek istiyor musunuz?",
+    "buttons": [
+      "İzin Ver"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Kişiler’inizdeki Temel Bilgilere Erişmek İstiyor",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Kişiler’inizdeki Bütün Bilgilere Erişmek İstiyor",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” kullanılırken Bluetooth’u kullanmak istiyor",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Bluetooth’u Kullanmak İstiyor",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Bu, “%@” uygulamasının Bluetooth aksesuarlarını bulmasına ve onlara bağlanmasına izin verir. Bu uygulama ayrıca ne zaman yakınlarda olduğunuzu bilmek için de Bluetooth kullanır.",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” DNS Proxy Konfigürasyonları Eklemek İstiyor",
+    "buttons": [
+      "İzin Ver"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Şu Anki Konumunuzu Kullanmak İstiyor",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”, uygulamayı kullanırken konumunuza erişebilsin mi?",
+    "buttons": [
+      "İzin Ver"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”, Özgün Çağrı İçi Deneyimi Sağlamak İstiyor",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Yeni ayarlar var.  Onları şimdi güncellemek ister misiniz?",
+    "buttons": [
+      "Şimdi Değil"
+    ],
+    "shouldAccept": true
   }
 ]

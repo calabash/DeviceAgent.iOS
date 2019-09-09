@@ -362,5 +362,68 @@
       "Annuler"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "« %@ » a utilisé votre position en arrière-plan au cours des 3 derniers jours. L’autorisez-vous à continuer à utiliser votre position en arrière-plan ?",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » a utilisé votre position une fois en arrière-plan au cours des 3 derniers jours. L’autorisez-vous à continuer à utiliser votre position en arrière-plan ?",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » souhaite accéder aux informations de base de vos contacts",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » souhaite accéder à toutes les informations de vos contacts",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » souhaite utiliser le Bluetooth pendant son utilisation",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » souhaite utiliser le Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Cela permettra à « %@ » de rechercher des accessoires Bluetooth et de s’y connecter. Cette app peut également utiliser le Bluetooth pour savoir si vous êtes à proximité.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » aimerait ajouter des configurations de proxy DNS",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Autorisez-vous « %@ » à utiliser vos données de localisation ?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

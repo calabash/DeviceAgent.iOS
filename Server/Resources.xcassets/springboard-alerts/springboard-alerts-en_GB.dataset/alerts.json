@@ -184,7 +184,8 @@
   {
     "title": "iPhone is not Activated",
     "buttons": [
-      "Ignore"
+      "Ignore",
+      "Dismiss"
     ],
     "shouldAccept": true
   },
@@ -367,6 +368,83 @@
     "title": "Sign In with Apple ID",
     "buttons": [
       "Cancel"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” has been using your location in the background over the past 3 days. Do you want to continue to allow background location use?",
+    "buttons": [
+      "Allow"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” has used your location once in the background over the past 3 days. Do you want to continue to allow background location use?",
+    "buttons": [
+      "Allow"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Would Like to Access Your Contacts Basic Information",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Would Like to Access All Your Contacts Information",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” would like to use Bluetooth while it is in use",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Would Like to Use Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "This will allow “%@” to find and connect to Bluetooth accessories. This app may also use Bluetooth to know when you’re nearby.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Would Like to Add DNS Proxy Configurations",
+    "buttons": [
+      "Allow"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Would Like To Use Your Current Location",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Allow “%@” to access your location while you use the app?",
+    "buttons": [
+      "Allow"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "New settings are available.  Would you like to update them now?",
+    "buttons": [
+      "Not Now"
     ],
     "shouldAccept": true
   }

@@ -390,5 +390,75 @@
       "Anulați"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” v‑a utilizat localizarea în fundal pe parcursul ultimelor 3 zile. Doriți să permiteți în continuare utilizarea localizării în fundal?",
+    "buttons": [
+      "Permiteți"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” v‑a utilizat localizarea în fundal o dată pe parcursul ultimelor 3 zile. Doriți să permiteți în continuare utilizarea localizării în fundal?",
+    "buttons": [
+      "Permiteți"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” ar dori să acceseze informațiile de bază ale contactelor dvs.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” ar dori să acceseze toate informațiile contactelor dvs.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” ar dori să folosească Bluetooth în timpul utilizării",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” ar dori să folosească Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aceasta va permite ca aplicația “%@” să găsească și să se conecteze la accesorii Bluetooth. De asemenea, această aplicație poate utiliza Bluetooth pentru a ști când sunteți în apropiere.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” ar dori să adauge configurații proxy DNS",
+    "buttons": [
+      "Permiteți"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” ar dori să utilizeze localizarea dvs. curentă",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Sunt disponibile noi configurări.  Doriți să le actualizați acum?",
+    "buttons": [
+      "Nu acum"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -355,5 +355,187 @@
       "Abbrechen"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "„%@“ hat deinen Standort in den letzten 3 Tagen im Hintergrund verwendet. Möchtest du die Benutzung des Standorts im Hintergrund weiterhin erlauben?",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ hat deinen Standort in den letzten 3 Tagen einmal im Hintergrund verwendet. Möchtest du die Benutzung des Standorts im Hintergrund weiterhin erlauben?",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte Zugriff auf deine grundlegenden Kontaktinformationen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte Zugriff auf all deine Kontaktinformationen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte beim Verwenden auf Bluetooth zugreifen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte Bluetooth verwenden",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Hiermit kann „%@“ Bluetooth-Zubehör finden und sich damit verbinden. Diese App kann Bluetooth ebenfalls verwenden, um zu erkennen, wenn du in der Nähe bist.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte DNS-Proxy-Konfigurationen hinzufügen",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte deinen aktuellen Ort verwenden",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil je huidige locatie gebruiken",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Wil je %@ toegang tot je locatie toestaan, zelfs als je de app niet gebruikt?",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Wil je %@ toegang tot je locatie toestaan terwijl je de app gebruikt?",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Wil je %@ zelfs toegang tot je locatie toestaan als je de app niet gebruikt?",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ heeft op de achtergrond je locatie gebruikt. Geef je toestemming om daarmee door te gaan?",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf deinen Standort zugreifen, wenn du die App benutzt?",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Er zijn nieuwe instellingen beschikbaar. Wil je ze nu bijwerken?",
+    "buttons": [
+      "Nu niet"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Update voor aanbiederinstellingen",
+    "buttons": [
+      "Nu niet"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dicteren inschakelen?",
+    "buttons": [
+      "Niet nu"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Schakel dicteren in",
+    "buttons": [
+      "Niet nu"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Toetsenbord van derden toevoegen?",
+    "buttons": [
+      "Niet nu"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Open met %@",
+    "buttons": [
+      "Open"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Openen met %@?",
+    "buttons": [
+      "Open"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Zoek met %@",
+    "buttons": [
+      "Open"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Deze pagina openen met %@?",
+    "buttons": [
+      "Open"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Open met de app %@",
+    "buttons": [
+      "Open"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%1$@ wil toegang tot %2$@-accounts",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

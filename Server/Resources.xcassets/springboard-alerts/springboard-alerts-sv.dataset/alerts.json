@@ -362,5 +362,68 @@
       "Avbryt"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "”%@” har använt din platsinformation i bakgrunden under de senaste 3 dagarna. Vill du fortsätta att tillåta användning av platsinformation i bakgrunden?",
+    "buttons": [
+      "Tillåt"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "”%@” har använt din platsinformation en gång i bakgrunden under de senaste 3 dagarna. Vill du fortsätta att tillåta användning av platsinformation i bakgrunden?",
+    "buttons": [
+      "Tillåt"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "”%@” begär åtkomst till standardinformation för dina kontakter.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "”%@” begär åtkomst till all information för dina kontakter.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "”%@” vill använda Bluetooth medan appen används",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "”%@” vill använda Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Detta låter ”%@” hitta och ansluta till Bluetooth-tillbehör. Appen kan även använda Bluetooth till att få reda på om du är i närheten.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "”%@” vill lägga till DNS-proxykonfigurationer",
+    "buttons": [
+      "Tillåt"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "”%@” vill använda din nuvarande plats",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -460,5 +460,124 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Apka „%@“ počas posledných 3 dní používala vašu polohu na pozadí. Chcete, aby aj naďalej mohla používať vašu polohu na pozadí?",
+    "buttons": [
+      "Povoliť"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka „%@“ počas posledných 3 dní 1-krát použila vašu polohu na pozadí. Chcete, aby aj naďalej mohla používať vašu polohu na pozadí?",
+    "buttons": [
+      "Povoliť"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka „%@“ žiada o prístup k vašim základným kontaktným údajom",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka „%@“ žiada o prístup ku všetkým vašim kontaktným údajom",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka „%@“ chce používať Bluetooth v čase, keď ju používate",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka „%@“ chce používať Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka „%@“ bude môcť vyhľadávať Bluetooth príslušenstvo a pripájať sa k nemu. Zároveň bude môcť zistiť cez Bluetooth, či ste nablízku.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikácia „%@“ chce pridať nastavenia konfigurácie DNS proxy servera",
+    "buttons": [
+      "Povoliť"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Webová stránka „%@“ chce zistiť vašu aktuálnu polohu",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Chcete povoliť aplikácii „%@“ pristupovať k vašej polohe v čase, keď ju nepoužívate?",
+    "buttons": [
+      "Povoliť"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Chcete povoliť aplikácii „%@“ pristupovať k vašej polohe v čase, keď ju používate?",
+    "buttons": [
+      "Povoliť"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Chcete povoliť aplikácii „%@“ pristupovať k vašej polohe aj v čase, keď ju nepoužívate?",
+    "buttons": [
+      "Povoliť"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Rečové dáta z tejto aplikácie budú kvôli spracovaniu vašich žiadostí odoslané do Apple a použité aj na vylepšovanie technológie rozpoznávania reči spoločnosti Apple.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikácia „%@“ chce sprístupňovať dáta pre okolité Bluetooth zariadenia, aj keď ju práve nepoužívate.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Sú dostupné nové nastavenia. Chcete ich teraz aktualizovať?",
+    "buttons": [
+      "Teraz nie"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Prihláste sa do App Store",
+    "buttons": [
+      "Zrušiť"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Prihláste sa do iTunes Store",
+    "buttons": [
+      "Zrušiť"
+    ],
+    "shouldAccept": true
   }
 ]

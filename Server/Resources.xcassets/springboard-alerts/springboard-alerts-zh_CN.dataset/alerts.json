@@ -474,5 +474,96 @@
       "好"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@”在过去3天中一直在后台使用您的位置。您要继续允许后台位置使用吗？",
+    "buttons": [
+      "允许"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”在过去3天中已在后台使用了您的位置1次。您要继续允许后台位置使用吗？",
+    "buttons": [
+      "允许"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您通讯录的基本信息",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您通讯录的所有信息",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”在使用期间想要使用蓝牙",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想要使用蓝牙",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "这将允许“%@”查找并连接蓝牙配件。此App还可能使用蓝牙来确认您在附近。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想添加DNS Proxy配置",
+    "buttons": [
+      "允许"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想使用您当前的位置",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您的住宅数据",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "已有新的设置可供下载。您想现在更新设置吗？",
+    "buttons": [
+      "以后"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登录 iMessage",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登录 FaceTime",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
   }
 ]

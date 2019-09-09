@@ -369,5 +369,110 @@
       "Cancelar"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” tem usado a sua localização em segundo plano nos últimos 3 dias. Deseja continuar permitindo o uso da localização em segundo plano?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” usou a sua localização uma vez em segundo plano nos últimos 3 dias. Deseja continuar permitindo o uso da localização em segundo plano?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso às Informações Básicas dos Seus Contatos",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso a Todas as Informações dos Seus Contatos",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” deseja usar Bluetooth enquanto estiver em uso",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Usar Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Isso permitirá que “%@” busque e conecte-se a acessórios Bluetooth. Este app também pode usar Bluetooth para saber quando você estiver por perto.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Adicionar Configurações de Proxy DNS",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Usar a Sua Localização Atual",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” tenha acesso à sua localização mesmo quando você não estiver usando o aplicativo?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” tenha acesso à sua localização enquanto você usa o aplicativo?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” também tenha acesso à sua localização mesmo quando você não estiver usando o aplicativo?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dados de fala deste aplicativo serão enviados à Apple para processar as solicitações. Isso também ajudará a Apple a melhorar sua tecnologia de reconhecimento de fala.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” deseja disponibilizar dados para os dispositivos Bluetooth por perto até mesmo quando você não estiver usando o aplicativo.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Abrir no aplicativo %@",
+    "buttons": [
+      "Abrir"
+    ],
+    "shouldAccept": true
   }
 ]

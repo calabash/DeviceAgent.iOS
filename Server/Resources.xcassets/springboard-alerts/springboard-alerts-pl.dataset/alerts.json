@@ -341,5 +341,124 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Aplikacja „%@” używała Twojego położenia w tle w ciągu ostatnich 3 dni. Czy nadal chcesz pozwalać jej na używanie Twojego położenia w tle?",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikacja „%@” używała Twojego położenia w tle jeden raz w ciągu ostatnich 3 dni. Czy nadal chcesz pozwalać jej na używanie Twojego położenia w tle?",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce uzyskać dostęp do podstawowych danych kontaktów",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce uzyskać dostęp do wszystkich danych kontaktów",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce używać Bluetooth, gdy jest w użyciu",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce używać Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dzięki temu „%@” uzyska możliwość znajdowania akcesoriów Bluetooth i łączenia się z nimi. Ta aplikacja może także używać Bluetooth do określania, kiedy jesteś w pobliżu.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce dodać konfiguracje proxy DNS",
+    "buttons": [
+      "Pozwól"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce użyć informacji o Twoim położeniu",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Udostępniać programowi „%@” Twoje położenie także, gdy go nie używasz?",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Udostępniać programowi „%@” Twoje położenie, gdy go używasz?",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Część danych programu %@ zostanie wysłana do Apple w celu przetworzenia żądań.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce uzyskać dostęp do Apple Music, danych Twojej aktywności dotyczącej muzyki i wiedeo oraz do Twojej biblioteki multimediów.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Program „%@” chce udostępniać dane pobliskim urządzeniom Bluetooth, także gdy go nie używasz.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Otwórz w „%@”",
+    "buttons": [
+      "Otwórz"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Otworzyć w „%@“?",
+    "buttons": [
+      "Otwórz"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Otwórz w programie %@",
+    "buttons": [
+      "Otwórz"
+    ],
+    "shouldAccept": true
   }
 ]
