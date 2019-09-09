@@ -5,6 +5,7 @@ require 'run_loop'
 require_relative 'helpers'
 require_relative 'localization_storage'
 
+# some languages have two spellings: "en" vs "English"
 language_mapping = {
   'Danish' => 'da',
   'Dutch' => 'de',
