@@ -2,7 +2,10 @@
   {
     "title": "Permitir que “%@” aceda à sua localização?",
     "buttons": [
-      "Permitir"
+      "Permitir",
+      "Permitir sempre",
+      "Permitir durante utilização",
+      "Só ao usar a aplicação"
     ],
     "shouldAccept": true
   },
@@ -16,7 +19,8 @@
   {
     "title": "Permitir que “%@” aceda à sua localização enquanto usa a aplicação?",
     "buttons": [
-      "Permitir"
+      "Permitir",
+      "Só ao usar a aplicação"
     ],
     "shouldAccept": true
   },

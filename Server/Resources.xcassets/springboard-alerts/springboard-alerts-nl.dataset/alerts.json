@@ -2,7 +2,10 @@
   {
     "title": "Wil je %@ toegang tot je locatie toestaan?",
     "buttons": [
-      "Sta toe"
+      "Sta toe",
+      "Sta altijd toe",
+      "Bij gebruik van app",
+      "Alleen bij gebruik van app"
     ],
     "shouldAccept": true
   },
@@ -16,7 +19,8 @@
   {
     "title": "Wil je %@ toegang tot je locatie toestaan terwijl je de app gebruikt?",
     "buttons": [
-      "Sta toe"
+      "Sta toe",
+      "Alleen bij gebruik van app"
     ],
     "shouldAccept": true
   },

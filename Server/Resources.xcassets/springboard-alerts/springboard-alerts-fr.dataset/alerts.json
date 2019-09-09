@@ -2,7 +2,10 @@
   {
     "title": "Autoriser « %@ » à accéder à votre position ?",
     "buttons": [
-      "Autoriser"
+      "Autoriser",
+      "Toujours autoriser",
+      "Autoriser lorsque l’app est active",
+      "Quand l’app est active"
     ],
     "shouldAccept": true
   },
@@ -16,7 +19,8 @@
   {
     "title": "Autoriser « %@ » à accéder à vos données de localisation lorsque vous utilisez l’app ?",
     "buttons": [
-      "Autoriser"
+      "Autoriser",
+      "Quand l’app est active"
     ],
     "shouldAccept": true
   },

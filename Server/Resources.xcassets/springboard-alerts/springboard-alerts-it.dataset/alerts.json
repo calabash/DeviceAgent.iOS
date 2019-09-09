@@ -2,7 +2,10 @@
   {
     "title": "Vuoi consentire a “%@” di accedere alla tua posizione?",
     "buttons": [
-      "Consenti"
+      "Consenti",
+      "Consenti sempre",
+      "Consenti quando utilizzi l'app",
+      "Solo mentre utilizzi l’app"
     ],
     "shouldAccept": true
   },
@@ -16,7 +19,8 @@
   {
     "title": "Vuoi consentire a “%@” di accedere ai dati relativi alla tua posizione mentre utilizzi l'app?",
     "buttons": [
-      "Consenti"
+      "Consenti",
+      "Solo mentre utilizzi l’app"
     ],
     "shouldAccept": true
   },

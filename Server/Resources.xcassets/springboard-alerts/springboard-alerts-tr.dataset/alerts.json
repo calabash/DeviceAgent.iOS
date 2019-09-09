@@ -2,7 +2,10 @@
   {
     "title": "“%@”, konumunuza erişebilsin mi?",
     "buttons": [
-      "İzin Ver"
+      "İzin Ver",
+      "Her Zaman İzin Ver",
+      "Uygulamayı Kullanırken İzin Ver",
+      "Uygulamayı Kullanırken"
     ],
     "shouldAccept": true
   },
@@ -16,7 +19,8 @@
   {
     "title": "“%@”, uygulamayı kullanırken konumunuza erişebilsin mi?",
     "buttons": [
-      "İzin Ver"
+      "İzin Ver",
+      "Uygulamayı Kullanırken"
     ],
     "shouldAccept": true
   },

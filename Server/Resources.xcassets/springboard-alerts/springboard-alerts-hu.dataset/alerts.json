@@ -2,7 +2,10 @@
   {
     "title": "Engedélyezi a(z) „%@” számára, hogy hozzáférjen az Ön helyzetéhez?",
     "buttons": [
-      "Engedélyezés"
+      "Engedélyezés",
+      "Engedélyezés mindig",
+      "Az alkalmazás használata közben",
+      "Csak az alk. használatakor"
     ],
     "shouldAccept": true
   },
@@ -16,7 +19,8 @@
   {
     "title": "Engedélyezi, hogy a(z) „%@” hozzáférjen az Ön helyzetéhez az alkalmazás használatakor?",
     "buttons": [
-      "Engedélyezés"
+      "Engedélyezés",
+      "Csak az alk. használatakor"
     ],
     "shouldAccept": true
   },
