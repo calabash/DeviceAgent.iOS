@@ -128,8 +128,8 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
     }
 }
 
-- (void)loadLanguageIfExists:(NSString *)languageName:
-                           (NSMutableArray<SpringBoardAlert *> *) resultArray {
+- (void)loadLanguageIfExists:(NSString *)languageName
+                            :(NSMutableArray<SpringBoardAlert *> *) resultArray {
     NSString * languagePath = [NSString stringWithFormat:@"springboard-alerts-%@", languageName];
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
     NSDataAsset *asset = [[NSDataAsset alloc]
