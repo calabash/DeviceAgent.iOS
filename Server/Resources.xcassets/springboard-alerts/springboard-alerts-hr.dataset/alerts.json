@@ -2,7 +2,9 @@
   {
     "title": "Dozvoliti \"%@\" da pristupi vašoj lokaciji?",
     "buttons": [
-      "Dozvoli"
+      "Dozvoli",
+      "Uvijek dozvoli",
+      "Tijekom uporabe aplikacije"
     ],
     "shouldAccept": true
   },
@@ -16,7 +18,8 @@
   {
     "title": "Dozvoliti aplikaciji “%@” pristup vašoj lokaciji dok koristite aplikaciju?",
     "buttons": [
-      "Dozvoli"
+      "Dozvoli",
+      "Tijekom uporabe aplikacije"
     ],
     "shouldAccept": true
   },

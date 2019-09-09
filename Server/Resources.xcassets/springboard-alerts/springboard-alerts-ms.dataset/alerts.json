@@ -3,7 +3,9 @@
     "title": "Benarkan “%@” mengakses lokasi anda?",
     "buttons": [
       "Benarkan",
-      "Benarkan Semasa Menggunakan App"
+      "Sentiasa Benarkan",
+      "Benarkan Semasa Menggunakan App",
+      "Hanya Semasa Menggunakan App"
     ],
     "shouldAccept": true
   },
@@ -17,7 +19,8 @@
   {
     "title": "Benarkan “%@” mengakses lokasi anda semasa anda menggunakan app?",
     "buttons": [
-      "Benarkan"
+      "Benarkan",
+      "Hanya Semasa Menggunakan App"
     ],
     "shouldAccept": true
   },

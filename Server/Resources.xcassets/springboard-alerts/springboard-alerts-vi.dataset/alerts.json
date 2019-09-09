@@ -3,7 +3,9 @@
     "title": "Cho phép “%@” truy cập vị trí của bạn?",
     "buttons": [
       "Cho phép",
-      "Cho phép khi dùng ứng dụng"
+      "Luôn cho phép",
+      "Cho phép khi dùng ứng dụng",
+      "Chỉ khi dùng ứng dụng"
     ],
     "shouldAccept": true
   },
@@ -17,7 +19,8 @@
   {
     "title": "Cho phép “%@” truy cập vị trí của bạn khi bạn đang dùng ứng dụng?",
     "buttons": [
-      "Cho phép"
+      "Cho phép",
+      "Chỉ khi dùng ứng dụng"
     ],
     "shouldAccept": true
   },

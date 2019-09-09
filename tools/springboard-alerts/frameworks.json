@@ -3,6 +3,7 @@
         "name": "CoreLocation.framework",
         "values": [
             { "title": "LOCATION_CLIENT_PERMISSION", "button": "LOCATION_CLIENT_PERMISSION_WHENINUSE_BUTTON" },
+            { "title": "LOCATION_CLIENT_PERMISSION", "button": "LOCATION_CLIENT_PERMISSION_ALWAYS_BUTTON" },
             { "title": "LOCATION_CLIENT_PERMISSION", "button": "LOCATION_CLIENT_PERMISSION_OK" },
             { "title": "LOCATION_CLIENT_PERMISSION_ALWAYS", "button": "LOCATION_CLIENT_PERMISSION_OK" },
             { "title": "LOCATION_CLIENT_PERMISSION_WHENINUSE", "button": "LOCATION_CLIENT_PERMISSION_WHENINUSE_BUTTON" },

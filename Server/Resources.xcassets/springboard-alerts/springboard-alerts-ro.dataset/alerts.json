@@ -3,7 +3,9 @@
     "title": "Permiteți ca aplicația “%@” să acceseze localizarea dvs.?",
     "buttons": [
       "Permiteți",
-      "Permiteți în timpul utilizării aplicației"
+      "Permiteți întotdeauna",
+      "Permiteți în timpul utilizării aplicației",
+      "La utilizarea aplicației"
     ],
     "shouldAccept": true
   },
@@ -17,7 +19,8 @@
   {
     "title": "Permiteți ca aplicația “%@” să acceseze localizarea dvs. în timp ce o utilizați?",
     "buttons": [
-      "Permiteți"
+      "Permiteți",
+      "La utilizarea aplicației"
     ],
     "shouldAccept": true
   },

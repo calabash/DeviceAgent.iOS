@@ -3,7 +3,9 @@
     "title": "Permets que “%@” accedeixi a la teva ubicació?",
     "buttons": [
       "Permetre",
-      "Permetre amb l’app en ús"
+      "Permetre sempre",
+      "Permetre amb l’app en ús",
+      "Només amb l’app en ús"
     ],
     "shouldAccept": true
   },
@@ -17,7 +19,8 @@
   {
     "title": "Permets que “%@” accedeixi a la teva ubicació mentre estàs utilitzant l’app?",
     "buttons": [
-      "Permetre"
+      "Permetre",
+      "Només amb l’app en ús"
     ],
     "shouldAccept": true
   },

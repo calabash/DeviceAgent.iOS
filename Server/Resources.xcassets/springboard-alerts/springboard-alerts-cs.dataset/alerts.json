@@ -2,7 +2,9 @@
   {
     "title": "Smí aplikace %@ využívat vaše polohové údaje?",
     "buttons": [
-      "Povolit"
+      "Povolit",
+      "Povolit vždy",
+      "Jen při používání aplikace"
     ],
     "shouldAccept": true
   },
@@ -16,7 +18,8 @@
   {
     "title": "Chcete aplikaci %@ povolit přístup k polohovým údajům v čase, kdy ji používáte?",
     "buttons": [
-      "Povolit"
+      "Povolit",
+      "Jen při používání aplikace"
     ],
     "shouldAccept": true
   },

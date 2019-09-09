@@ -3,7 +3,9 @@
     "title": "要允許「%@」取用您的位置嗎？",
     "buttons": [
       "允許",
-      "使用App期間允許"
+      "永遠允許",
+      "使用App期間允許",
+      "只在使用 App 期間"
     ],
     "shouldAccept": true
   },
@@ -17,7 +19,8 @@
   {
     "title": "要允許「%@」在您使用 App 時取用您的位置嗎？",
     "buttons": [
-      "允許"
+      "允許",
+      "只在使用 App 期間"
     ],
     "shouldAccept": true
   },

@@ -3,7 +3,9 @@
     "title": "Izinkan “%@” untuk mengakses lokasi Anda?",
     "buttons": [
       "Izinkan",
-      "Izinkan Saat Menggunakan App"
+      "Selalu Izinkan",
+      "Izinkan Saat Menggunakan App",
+      "Hanya Saat Menggunakan App"
     ],
     "shouldAccept": true
   },
@@ -17,7 +19,8 @@
   {
     "title": "Izinkan “%@” untuk mengakses lokasi Anda saat Anda menggunakan app?",
     "buttons": [
-      "Izinkan"
+      "Izinkan",
+      "Hanya Saat Menggunakan App"
     ],
     "shouldAccept": true
   },
