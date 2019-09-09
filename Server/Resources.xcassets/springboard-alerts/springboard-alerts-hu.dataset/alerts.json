@@ -1,0 +1,23 @@
+[
+  {
+    "title": "hozzáférjen az Ön helyzetéhez az alkalmazás használatakor",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "értesítéseket szeretne Önnek küldeni",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "számára, hogy hozzáférjen az Ön helyzetéhez",
+    "buttons": [
+      "Engedélyezés mindig"
+    ],
+    "shouldAccept": true
+  }
+]

@@ -1,0 +1,93 @@
+[
+  {
+    "title": "acceder a tu ubicación mientras utilizas la aplicación",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "acceder a tu ubicación aunque no estés utilizando la aplicación",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "quiere acceder a tus contactos",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "quiere acceder a tu calendario",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "quiere acceder a tus recordatorios",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "quiere acceder a tus fotos",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "quiere obtener acceso a cuentas Twitter",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "quiere acceder al micrófono",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "desea acceder a tu actividad física y deportiva",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "quiere acceder a la cámara",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "quiere enviarte notificaciones",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Abrir en",
+    "buttons": [
+      "Abrir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "quiere acceder al reconocimiento de voz",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  }
+]

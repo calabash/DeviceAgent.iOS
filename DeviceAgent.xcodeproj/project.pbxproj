@@ -45,7 +45,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		4107F8FE231D7298003961AF /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107F8FC231D7262003961AF /* Resources.xcassets */; };
 		41188FEA22E9958D0012886A /* XCWebViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 4166C9AE22E7009800C8BEBF /* XCWebViews.m */; };
+		419BE54B231E46D800DF0ABD /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107F8FC231D7262003961AF /* Resources.xcassets */; };
 		89331CCE1CC00E82003C2E59 /* RotatePinchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */; };
 		89331D301CC50447003C2E59 /* ThreadUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 89331D2E1CC50447003C2E59 /* ThreadUtils.h */; };
 		89331D321CC50447003C2E59 /* ThreadUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D2F1CC50447003C2E59 /* ThreadUtils.m */; };
@@ -613,12 +615,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		898743D61C5847B30084FD93 /* PBXContainerItemProxy */ = {
+		4114005C231F86C300CA4CC1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 898743B41C5847B30084FD93 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 898743BB1C5847B30084FD93;
-			remoteInfo = "xcuitest-server";
+			remoteInfo = AppStub;
 		};
 		F50BB2941D73392200264915 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -746,6 +748,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4107F8FC231D7262003961AF /* Resources.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources.xcassets; sourceTree = "<group>"; };
 		4166C9AE22E7009800C8BEBF /* XCWebViews.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCWebViews.m; sourceTree = "<group>"; };
 		634244EC948D56732C2565E5 /* SpringBoardAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoardAlerts.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		6342494C7C23506565D2B802 /* SpringBoardAlerts.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = SpringBoardAlerts.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
@@ -1997,6 +2000,7 @@
 				F55F83C01C6DDF1300A945C8 /* Exceptions */,
 				F55F83C71C6DDF1300A945C8 /* Routes */,
 				F55F83D61C6DDF1300A945C8 /* Utilities */,
+				4107F8FC231D7262003961AF /* Resources.xcassets */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -2764,7 +2768,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				898743D71C5847B30084FD93 /* PBXTargetDependency */,
+				4114005D231F86C300CA4CC1 /* PBXTargetDependency */,
 			);
 			name = DeviceAgent;
 			productName = "xcuitest-serverUITests";
@@ -3073,6 +3077,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4107F8FE231D7298003961AF /* Resources.xcassets in Resources */,
 				F5169D171CFE06B700252F52 /* CocoaLumberjack.LICENSE in Resources */,
 				F5169D151CFE06B700252F52 /* CocoaAsyncSocket.LICENSE in Resources */,
 				F5169D221CFE07F500252F52 /* LICENSE in Resources */,
@@ -3129,6 +3134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				419BE54B231E46D800DF0ABD /* Resources.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3559,10 +3565,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		898743D71C5847B30084FD93 /* PBXTargetDependency */ = {
+		4114005D231F86C300CA4CC1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 898743BB1C5847B30084FD93 /* AppStub */;
-			targetProxy = 898743D61C5847B30084FD93 /* PBXContainerItemProxy */;
+			targetProxy = 4114005C231F86C300CA4CC1 /* PBXContainerItemProxy */;
 		};
 		F50BB2951D73392200264915 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
