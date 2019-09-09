@@ -30,7 +30,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
 + (void)raiseIfInvalidAlert:(NSDictionary *)alertDict
                  ofLanguage:(NSString*)language
                 andPosition:(NSInteger)position;
-- (instancetype)init_private;
+- (id)init_private;
 @end
 
 @implementation SpringBoardAlerts
@@ -78,7 +78,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
     }
 }
 
-- (instancetype)init_private {
+- (id)init_private {
     self = [super init];
     if (self) {
         NSTimeInterval startTime = [[CBXMachClock sharedClock] absoluteTime];
@@ -90,11 +90,11 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
         
         if ([preferredLanguage containsString:@"-"]) {
             // fix mismatching language name for Norwegian and Chinese languages
-            preferredLanguage = [self fixLanguageName:preferredLanguage];
-            NSString *fullLanguageName = [preferredLanguage stringByReplacingOccurrencesOfString:@"-" withString:@"_"];
+            NSString *validPreferredLanguage = [self fixLanguageName:preferredLanguage];
+            NSString *fullLanguageName = [validPreferredLanguage stringByReplacingOccurrencesOfString:@"-" withString:@"_"];
             // load full name, it can be "en_GB"
             [self loadLanguageIfExists:fullLanguageName, resultArray];
-            NSString *shortLanguageName = [preferredLanguage componentsSeparatedByString:@"-"][0];
+            NSString *shortLanguageName = [validPreferredLanguage componentsSeparatedByString:@"-"][0];
             // if preferredLanguage is long-term like "en_GB", load "en" too
             [self loadLanguageIfExists:shortLanguageName, resultArray];
         } else {
@@ -105,7 +105,6 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
         if (![preferredLanguage hasPrefix:@"en"]) {
             [self loadLanguageIfExists:@"en", resultArray];
         }
-
         _alerts =  [NSArray<SpringBoardAlert *> arrayWithArray: resultArray];
         NSTimeInterval elapsedSeconds =
         [[CBXMachClock sharedClock] absoluteTime] - startTime;
@@ -136,6 +135,8 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
     NSDataAsset *asset = [[NSDataAsset alloc]
                           initWithName:languagePath
                           bundle:bundle];
+                               
+                               NSDataAsset *asset1 = [NSDataAsset alloc ];
 
    if (asset == nil) {
        // language is not found
