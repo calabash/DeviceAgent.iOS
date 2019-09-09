@@ -35,55 +35,50 @@
     expect(actual.count > 0).to.beTruthy();
 }
 
-- (BOOL)containsLnaguage:(NSString*)preferredLanguage:(SpringBoardAlerts*)obj {
-    BOOL resEn = NO;
-    BOOL resPreferred = NO;
-    NSString *englishAlert = @"No SIM Card Installed";
-    for(SpringBoardAlert *alert in obj.alerts){
+- (BOOL)containsLanguage:(NSString*)preferredLanguage:(SpringBoardAlerts*)alertsArray {
+    for(SpringBoardAlert *alert in alertsArray.alerts){
         if([alert matchesAlertTitle: preferredLanguage]){
-            resPreferred = YES;
-        }
-        if([alert matchesAlertTitle: englishAlert]){
-            resEn = YES;
+            return YES;
         }
     }
-    return resEn && resPreferred;
+    return NO;
 }
 
 - (void)testLanguage {
     id localeMock = OCMClassMock([NSLocale class]);
     NSArray<NSString *> * array = [NSArray arrayWithObject:@"fr-Any"];
     OCMStub([localeMock preferredLanguages]).andReturn(array);
-    SpringBoardAlerts *obj = [[SpringBoardAlerts alloc] init_private];
+    SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
     
-    expect(obj).toNot.equal(NULL);
-    
-    localeMock = OCMClassMock([NSLocale class]);
-    OCMStub([localeMock preferredLanguages]).andReturn(array);
-    obj = [[SpringBoardAlerts alloc] init_private];
-    
-    expect([self containsLnaguage:@"souhaite accéder à vos mouvements et vos activités physiques":obj]).to.beTruthy();
+    expect(alertsArray).toNot.equal(NULL);
+    expect([self containsLanguage:@"souhaite accéder à vos mouvements et vos activités physiques":alertsArray]).to.beTruthy();
     
     localeMock = OCMClassMock([NSLocale class]);
     array = [NSArray arrayWithObject:@"en-US"];
     OCMStub([localeMock preferredLanguages]).andReturn(array);
-    obj = [[SpringBoardAlerts alloc] init_private];
+    alertsArray = [[SpringBoardAlerts alloc] init_private];
     
-    expect([self containsLnaguage:@"data available to nearby bluetooth devices":obj]).to.beTruthy();
+    expect([self containsLanguage:@"data available to nearby bluetooth devices":alertsArray]).to.beTruthy();
+    expect([self containsLanguage:@"No SIM Card Installed":alertsArray]).to.beTruthy();
+    expect([self containsLanguage:@"запрашивает доступ к «Напоминаниям».":alertsArray]).to.beFalsy();
 
     localeMock = OCMClassMock([NSLocale class]);
     array = [NSArray arrayWithObject:@"pt-PT"];
     OCMStub([localeMock preferredLanguages]).andReturn(array);
-    obj = [[SpringBoardAlerts alloc] init_private];
+    alertsArray = [[SpringBoardAlerts alloc] init_private];
     
-    expect([self containsLnaguage:@"Deseja Ter Acesso às Suas Fotos":obj]).to.beTruthy();
-    
+    expect([self containsLanguage:@"Deseja Ter Acesso aos Seus Contatos": alertsArray]).to.beTruthy();
+    expect([self containsLanguage:@"Would Like to Send You Push Notifications":alertsArray]).to.beTruthy();
+    expect([self containsLanguage:@"запрашивает доступ к «Напоминаниям».":alertsArray]).to.beFalsy();
+
     localeMock = OCMClassMock([NSLocale class]);
     array = [NSArray arrayWithObject:@"ru"];
     OCMStub([localeMock preferredLanguages]).andReturn(array);
-    obj = [[SpringBoardAlerts alloc] init_private];
+    alertsArray = [[SpringBoardAlerts alloc] init_private];
     
-    expect([self containsLnaguage:@"доступ к Вашим геоданным":obj]).to.beTruthy();
+    expect([self containsLanguage:@"запрашивает доступ к «Контактам».": alertsArray]).to.beTruthy();
+    expect([self containsLanguage:@"Sign In to iTunes Store":alertsArray]).to.beTruthy();
+    expect([self containsLanguage:@"souhaite accéder à vos mouvements et vos activités physiques":alertsArray]).to.beFalsy();
 
     [localeMock stopMocking];
 }

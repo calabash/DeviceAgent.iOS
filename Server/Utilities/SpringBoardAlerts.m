@@ -93,17 +93,17 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
             NSString *validPreferredLanguage = [self fixLanguageName:preferredLanguage];
             NSString *fullLanguageName = [validPreferredLanguage stringByReplacingOccurrencesOfString:@"-" withString:@"_"];
             // load full name, it can be "en_GB"
-            [self loadLanguageIfExists:fullLanguageName, resultArray];
+            [self loadLanguageIfExists:fullLanguageName:resultArray];
             NSString *shortLanguageName = [validPreferredLanguage componentsSeparatedByString:@"-"][0];
             // if preferredLanguage is long-term like "en_GB", load "en" too
-            [self loadLanguageIfExists:shortLanguageName, resultArray];
+            [self loadLanguageIfExists:shortLanguageName:resultArray];
         } else {
-            [self loadLanguageIfExists:preferredLanguage, resultArray];
+            [self loadLanguageIfExists:preferredLanguage:resultArray];
         }
 
         // load "en" just in case
         if (![preferredLanguage hasPrefix:@"en"]) {
-            [self loadLanguageIfExists:@"en", resultArray];
+            [self loadLanguageIfExists:@"en": resultArray];
         }
         _alerts =  [NSArray<SpringBoardAlert *> arrayWithArray: resultArray];
         NSTimeInterval elapsedSeconds =
@@ -128,15 +128,14 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
     }
 }
 
-- (void)loadLanguageIfExists:(NSString *)languageName,
-                           NSMutableArray<SpringBoardAlert *> * resultArray {
+- (void)loadLanguageIfExists:(NSString *)languageName:
+                           (NSMutableArray<SpringBoardAlert *> *) resultArray {
     NSString * languagePath = [NSString stringWithFormat:@"springboard-alerts-%@", languageName];
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
     NSDataAsset *asset = [[NSDataAsset alloc]
                           initWithName:languagePath
                           bundle:bundle];
                                
-                               NSDataAsset *asset1 = [NSDataAsset alloc ];
 
    if (asset == nil) {
        // language is not found
