@@ -45,6 +45,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0AA3924F23279A68000E799B /* SpringBoardAlertsCurrentLanguageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA3924D23279A68000E799B /* SpringBoardAlertsCurrentLanguageTests.m */; };
 		4107F8FE231D7298003961AF /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107F8FC231D7262003961AF /* Resources.xcassets */; };
 		41188FEA22E9958D0012886A /* XCWebViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 4166C9AE22E7009800C8BEBF /* XCWebViews.m */; };
 		419BE54B231E46D800DF0ABD /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107F8FC231D7262003961AF /* Resources.xcassets */; };
@@ -748,6 +749,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0AA3924D23279A68000E799B /* SpringBoardAlertsCurrentLanguageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SpringBoardAlertsCurrentLanguageTests.m; sourceTree = "<group>"; };
 		4107F8FC231D7262003961AF /* Resources.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources.xcassets; sourceTree = "<group>"; };
 		4166C9AE22E7009800C8BEBF /* XCWebViews.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCWebViews.m; sourceTree = "<group>"; };
 		634244EC948D56732C2565E5 /* SpringBoardAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoardAlerts.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
@@ -2301,6 +2303,7 @@
 				F5DED0421D76368000563648 /* SpringBoardAlertTest.m */,
 				63424E46759C6B27C2BEC337 /* SpringBoardAlertsTest.m */,
 				F533496F1F3AFF97004138C7 /* CBXOrientationTest.m */,
+				0AA3924D23279A68000E799B /* SpringBoardAlertsCurrentLanguageTests.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -3494,6 +3497,7 @@
 				F5061A7C2153B19900B85792 /* QuerySpecifierFactory.m in Sources */,
 				F5061AA02153B4EF00B85792 /* MultipartFormDataParser.m in Sources */,
 				F5061A962153B19900B85792 /* TwoFingerTap.m in Sources */,
+				0AA3924F23279A68000E799B /* SpringBoardAlertsCurrentLanguageTests.m in Sources */,
 				F5061A632153B15E00B85792 /* Application.m in Sources */,
 				F5061A4A2153B0FF00B85792 /* QueryFactoryTests.m in Sources */,
 				F5061A3B2153B0FF00B85792 /* CBXiOSVersionInlinesTest.m in Sources */,

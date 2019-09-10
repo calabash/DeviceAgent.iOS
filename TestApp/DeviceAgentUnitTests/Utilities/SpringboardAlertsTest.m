@@ -15,7 +15,6 @@
 @end
 
 @interface SpringBoardAlertsTest : XCTestCase
-@property(nonatomic, strong) SpringBoardAlerts *testSpringBoardAlerts;
 
 @end
 
@@ -33,54 +32,6 @@
     NSArray<SpringBoardAlert *> *actual;
     actual = [[SpringBoardAlerts shared] alerts];
     expect(actual.count > 0).to.beTruthy();
-}
-
-- (BOOL)containsLanguage:(NSString*)preferredLanguage:(SpringBoardAlerts*)alertsArray {
-    for(SpringBoardAlert *alert in alertsArray.alerts){
-        if([alert matchesAlertTitle: preferredLanguage]){
-            return YES;
-        }
-    }
-    return NO;
-}
-
-- (void)testLanguage {
-    id localeMock = OCMClassMock([NSLocale class]);
-    NSArray<NSString *> * array = [NSArray arrayWithObject:@"fr-Any"];
-    OCMStub([localeMock preferredLanguages]).andReturn(array);
-    SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
-    
-    expect(alertsArray).toNot.equal(NULL);
-    expect([self containsLanguage:@"souhaite accéder à vos mouvements et vos activités physiques":alertsArray]).to.beTruthy();
-    
-    localeMock = OCMClassMock([NSLocale class]);
-    array = [NSArray arrayWithObject:@"en-US"];
-    OCMStub([localeMock preferredLanguages]).andReturn(array);
-    alertsArray = [[SpringBoardAlerts alloc] init_private];
-    
-    expect([self containsLanguage:@"data available to nearby bluetooth devices":alertsArray]).to.beTruthy();
-    expect([self containsLanguage:@"No SIM Card Installed":alertsArray]).to.beTruthy();
-    expect([self containsLanguage:@"запрашивает доступ к «Напоминаниям».":alertsArray]).to.beFalsy();
-
-    localeMock = OCMClassMock([NSLocale class]);
-    array = [NSArray arrayWithObject:@"pt-PT"];
-    OCMStub([localeMock preferredLanguages]).andReturn(array);
-    alertsArray = [[SpringBoardAlerts alloc] init_private];
-    
-    expect([self containsLanguage:@"Deseja Ter Acesso aos Seus Contatos": alertsArray]).to.beTruthy();
-    expect([self containsLanguage:@"Would Like to Send You Push Notifications":alertsArray]).to.beTruthy();
-    expect([self containsLanguage:@"запрашивает доступ к «Напоминаниям».":alertsArray]).to.beFalsy();
-
-    localeMock = OCMClassMock([NSLocale class]);
-    array = [NSArray arrayWithObject:@"ru"];
-    OCMStub([localeMock preferredLanguages]).andReturn(array);
-    alertsArray = [[SpringBoardAlerts alloc] init_private];
-    
-    expect([self containsLanguage:@"запрашивает доступ к «Контактам».": alertsArray]).to.beTruthy();
-    expect([self containsLanguage:@"Sign In to iTunes Store":alertsArray]).to.beTruthy();
-    expect([self containsLanguage:@"souhaite accéder à vos mouvements et vos activités physiques":alertsArray]).to.beFalsy();
-
-    [localeMock stopMocking];
 }
 
 - (void)testAlertForTitle {

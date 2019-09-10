@@ -77,7 +77,10 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
                            @"position":@(position)}];
     }
 }
-
+// The rules how iOS decides which language to choose:
+// 1. If preferred language (like Pt-PT) exists / supports, so it will be loaded, short name (pt) and english
+// 2. If preferred language dialect doesn't exist, short form will be loaded (Pt-518 we will take Pt) and english
+// 3. If preferred language can't be found - only english will be loaded
 - (instancetype)init_private {
     self = [super init];
     if (self) {
@@ -113,7 +116,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
     }
     return self;
 }
-
+// if preferred language is Chinese so we get zn-Hans-US and others. Function should transform them for the alerts
 - (NSString *)fixLanguageName:(NSString *)languageName {
     if ([languageName isEqualToString: @"zh-Hans-US"]) {
         return @"zh-CN";
