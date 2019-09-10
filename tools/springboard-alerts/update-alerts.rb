@@ -17,7 +17,11 @@ language_mapping = {
   'Portuguese' => 'pt',
   'Russian' => 'ru',
   'Spanish' => 'es',
-  'Swedish' => 'se'
+  'Swedish' => 'se',
+  'zh-Hans-US' => 'zh_CN',
+  'zh-Hant-US' => 'zh_TW',
+  'zh-Hant-HK' => 'zh-HK',
+  # Norwegian, it is the same language: preferredLanguage returns 'nb' but translation folder is named as 'no'
   'nb' => 'no' 
 }
 
