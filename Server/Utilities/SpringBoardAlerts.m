@@ -18,9 +18,9 @@
 
 // Convenience method for creating alerts from the regular expressions found in run_loop
 // scripts/lib/on_alert.js
-static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSString *title) {
+static SpringBoardAlert *alert(NSArray *buttonTitles, BOOL shouldAccept, NSString *title) {
     return [[SpringBoardAlert alloc] initWithAlertTitleFragment:title
-                                             dismissButtonTitle:buttonTitle
+                                             dismissButtonTitles:buttonTitles
                                                    shouldAccept:shouldAccept];
 }
 
@@ -126,7 +126,7 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
                                            andPosition:i];
                 [result
                  addObject: alert(
-                                  alertDict[@"buttons"][0],
+                                  alertDict[@"buttons"],
                                   [alertDict[@"shouldAccept"] boolValue],
                                   alertDict[@"title"]
                                   )];
@@ -163,6 +163,4 @@ static SpringBoardAlert *alert(NSString *buttonTitle, BOOL shouldAccept, NSStrin
 
     return match;
 }
-
-
 @end

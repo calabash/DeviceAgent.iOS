@@ -26,3 +26,7 @@ File `frameworks.json` is used to configure the list of frameworks that will be 
     - `title` is contant of alert message
     - `button` is constant of button that should be clicked to dismiss alert
 
+### Utility script "collect-all-alerts.rb"
+There is a utility tool `collect-all-alerts.rb` that reads all `*.strings` files under `CoreSimulator` dir for current Xcode and create alert dictionary.  
+It is useful to find the source framework for some alert.  
+**Note:** Scanning can take much time (~30 minutes)

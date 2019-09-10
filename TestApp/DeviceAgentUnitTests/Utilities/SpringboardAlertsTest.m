@@ -48,7 +48,7 @@
     expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
-    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
 
     alertTitle = @"Разрешить ресурсу «Ресурс» доступ к Вашей геопозиции?";
@@ -56,7 +56,7 @@
     expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
-    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
 
     alertTitle = @"No SIM Card Installed";
@@ -64,7 +64,7 @@
     expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
-    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
 
     alertTitle = @"Carrier Settings Update";
@@ -72,7 +72,7 @@
     expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
-    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
 
     alertTitle = @"Permitir que “la aplicación” tenha acesso à sua localização mesmo quando você não estiver usando o app?";
@@ -80,7 +80,7 @@
     expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
-    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
 
     alertTitle = @"Open in “Internet Explorer 6”?";
@@ -88,7 +88,7 @@
     expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
-    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
     
     alertTitle = @"“AppName” Would Like Access to Twitter Accounts";
@@ -96,7 +96,7 @@
     expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
-    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
     
     alertTitle = @"‘합니다’에서 네트워크 콘텐츠를 필터링하려고 합니다.";
@@ -104,7 +104,7 @@
     expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
-    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
     
     alertTitle = @"«Прiложение» хоче фільтрувати мережевий контент";
@@ -112,7 +112,7 @@
     expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
-    expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
+    expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
 }
 

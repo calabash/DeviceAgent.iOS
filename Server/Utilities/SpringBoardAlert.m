@@ -4,7 +4,7 @@
 @interface SpringBoardAlert ()
 
 - (instancetype)initWithAlertTitleFragment:(NSString *)alertTitleFragment
-                        dismissButtonTitle:(NSString *)acceptButtonTitle
+                        dismissButtonTitles:(NSArray *)acceptButtonTitles
                               shouldAccept:(BOOL)shouldAccept;
 
 - (BOOL)matchesAlertTitle:(NSString *)alertTitle;
@@ -16,7 +16,7 @@
 @implementation SpringBoardAlert
 
 - (instancetype)initWithAlertTitleFragment:(NSString *)alertTitleFragment
-                        dismissButtonTitle:(NSString *)dismissButtonTitle
+                        dismissButtonTitles:(NSArray *)dismissButtonTitles
                               shouldAccept:(BOOL)shouldAccept {
 
     self = [super init];
@@ -31,7 +31,7 @@
         // fix ".+" after invocation "escapedPatternForString"
         _alertTitleFragment = [tempPattern stringByReplacingOccurrencesOfString: @"\\.\\+"
                                                                              withString:@".+"];
-        _defaultDismissButtonMark = dismissButtonTitle;
+        _defaultDismissButtonMarks = dismissButtonTitles;
         _shouldAccept = shouldAccept;
     }
     return self;
