@@ -164,6 +164,26 @@ typedef enum : NSUInteger {
     }
 }
 
+- (XCUIElement *)findDismissButtonOnAlert: (XCUIElement *) alert marks: (NSArray *) marks {
+    XCUIElement *button = nil;
+    for (NSString *mark in marks) {
+        button = alert.buttons[mark];
+
+        // Resolve before asking if the button exists.
+        if ([button respondsToSelector:@selector(resolve)]) {
+            [button resolve];
+        } else {
+            [button resolveOrRaiseTestFailure];
+        }
+
+        if (button && button.exists) {
+            return button;
+        }
+    }
+    
+    return button;
+}
+
 // If something goes wrong, SpringBoardAlertHandlerNoAlert is returned.
 // This method is not protected by a lock!  It should only be called by
 // handleAlertsOrThrow
@@ -194,24 +214,7 @@ typedef enum : NSUInteger {
         return SpringBoardAlertHandlerNoAlert;
     }
         
-    for (NSString *mark in marks) {
-        button = alert.buttons[mark];
-
-        // Resolve before asking if the button exists.
-        if ([button respondsToSelector:@selector(resolve)]) {
-            [button resolve];
-        } else {
-            NSError *error = nil;
-            if (![button resolveOrRaiseTestFailure:NO error:&error]) {
-                DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
-                          button, [error localizedDescription]);
-            }
-        }
-
-        if (button && button.exists) {
-            break;
-        }
-    }
+    button = [self findDismissButtonOnAlert: alert marks: marks];
 
     // A button with the expected title does not exist.
     // It probably changed after an iOS update.
