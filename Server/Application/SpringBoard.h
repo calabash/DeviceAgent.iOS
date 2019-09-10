@@ -85,4 +85,6 @@ typedef enum : NSUInteger {
  */
 - (SpringBoardDismissAlertResult)dismissAlertByTappingButtonWithTitle:(NSString *)title;
 
+- (XCUIElement *)findDismissButtonOnAlert:(XCUIElement *)alert marks: (NSArray *)marks;
+
 @end
