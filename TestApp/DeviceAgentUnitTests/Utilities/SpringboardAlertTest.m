@@ -30,18 +30,22 @@
 
 - (void)testInit {
     SpringBoardAlert *alert;
+    NSRegularExpression * regex;
     alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"match"
                                               dismissButtonTitles:[NSArray arrayWithObjects: @"OK", nil]
                                                     shouldAccept:YES];
+    regex = [NSRegularExpression regularExpressionWithPattern:@"^match$"
+                                                      options:NSRegularExpressionCaseInsensitive
+                                                        error:nil];
 
-    expect(alert.alertTitleFragment).to.equal(@"^match$");
+    expect(alert.alertTitleFragment).to.equal(regex);
     expect(alert.defaultDismissButtonMarks).to.contain(@"OK");
     expect(alert.shouldAccept).to.equal(YES);
 
     alert = [[SpringBoardAlert alloc] initWithAlertTitleFragment:@"match"
                                               dismissButtonTitles:[NSArray arrayWithObjects: @"Dismiss", nil]
                                                     shouldAccept:NO];
-    expect(alert.alertTitleFragment).to.equal(@"^match$");
+    expect(alert.alertTitleFragment).to.equal(regex);
     expect(alert.defaultDismissButtonMarks).to.contain(@"Dismiss");
     expect(alert.shouldAccept).to.equal(NO);
 }

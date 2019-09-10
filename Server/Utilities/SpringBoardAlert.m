@@ -9,7 +9,7 @@
 
 - (BOOL)matchesAlertTitle:(NSString *)alertTitle;
 
-@property(copy, readonly) NSString *alertTitleFragment;
+@property(copy, readonly) NSRegularExpression *alertTitleFragment;
 
 @end
 
@@ -29,20 +29,19 @@
         // allow to avoid issues when one alert is substring of other alert
         tempPattern = [NSString stringWithFormat:@"%@%@%@", @"^", tempPattern, @"$"];
         // fix ".+" after invocation "escapedPatternForString"
-        _alertTitleFragment = [tempPattern stringByReplacingOccurrencesOfString: @"\\.\\+"
+        tempPattern = [tempPattern stringByReplacingOccurrencesOfString: @"\\.\\+"
                                                                              withString:@".+"];
+        _alertTitleFragment = [NSRegularExpression regularExpressionWithPattern:tempPattern
+                                                                        options:NSRegularExpressionCaseInsensitive
+                                                                          error:nil];
         _defaultDismissButtonMarks = dismissButtonTitles;
         _shouldAccept = shouldAccept;
     }
     return self;
 }
 
-- (BOOL)matchesAlertTitle:(NSString *)alertTitle {
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:self.alertTitleFragment
-                                                                           options:NSRegularExpressionCaseInsensitive
-                                                                             error:nil];
-                         
-    NSUInteger numberOfMatches = [regex numberOfMatchesInString:alertTitle
+- (BOOL)matchesAlertTitle:(NSString *)alertTitle {                
+    NSUInteger numberOfMatches = [self.alertTitleFragment numberOfMatchesInString:alertTitle
                                                         options:0
                                                           range:NSMakeRange(0, [alertTitle length])];
 
