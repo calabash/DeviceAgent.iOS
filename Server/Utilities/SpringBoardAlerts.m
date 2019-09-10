@@ -77,10 +77,11 @@ static SpringBoardAlert *alert(NSArray *buttonTitles, BOOL shouldAccept, NSStrin
                            @"position":@(position)}];
     }
 }
-// The rules how iOS decides which language to choose:
-// 1. If preferred language (like Pt-PT) exists / supports, so it will be loaded, short name (pt) and english
-// 2. If preferred language dialect doesn't exist, short form will be loaded (Pt-518 we will take Pt) and english
-// 3. If preferred language can't be found - only english will be loaded
+
+// [NSLocale preferredLanguages] returns language in format 'country-region' (like 'pt-PT')
+// some particular frameworks / apps might not contain localization for particular language
+// in this case the following chain will be used: 'pt_PT' -> 'pt' -> 'en'
+// so we need to import languages via the same chain
 - (instancetype)init_private {
     self = [super init];
     if (self) {
@@ -94,20 +95,23 @@ static SpringBoardAlert *alert(NSArray *buttonTitles, BOOL shouldAccept, NSStrin
         if ([preferredLanguage containsString:@"-"]) {
             // fix mismatching language name for Norwegian and Chinese languages
             NSString *validPreferredLanguage = [self fixLanguageName:preferredLanguage];
+            // '.lproj' files uses '_' as separator. 'preferredLanguages' uses '-' as separator, need to convert
             NSString *fullLanguageName = [validPreferredLanguage stringByReplacingOccurrencesOfString:@"-" withString:@"_"];
-            // load full name, it can be "en_GB"
+            // load exact name like "pt_PT"
             [self loadLanguageIfExists:fullLanguageName:resultArray];
+            // load short name like "pt"
             NSString *shortLanguageName = [validPreferredLanguage componentsSeparatedByString:@"-"][0];
-            // if preferredLanguage is long-term like "en_GB", load "en" too
             [self loadLanguageIfExists:shortLanguageName:resultArray];
         } else {
+            // if preferredLanguage is short name, just load it
             [self loadLanguageIfExists:preferredLanguage:resultArray];
         }
 
-        // load "en" just in case
+        // load "en" lang
         if (![preferredLanguage hasPrefix:@"en"]) {
             [self loadLanguageIfExists:@"en": resultArray];
         }
+
         _alerts =  [NSArray<SpringBoardAlert *> arrayWithArray: resultArray];
         NSTimeInterval elapsedSeconds =
         [[CBXMachClock sharedClock] absoluteTime] - startTime;
@@ -116,7 +120,9 @@ static SpringBoardAlert *alert(NSArray *buttonTitles, BOOL shouldAccept, NSStrin
     }
     return self;
 }
-// if preferred language is Chinese so we get zn-Hans-US and others. Function should transform them for the alerts
+
+// Some language names can be different in different Xcode versions
+// function maps language names to make sure that all xcode versions will work
 - (NSString *)fixLanguageName:(NSString *)languageName {
     if ([languageName isEqualToString: @"zh-Hans-US"]) {
         return @"zh-CN";

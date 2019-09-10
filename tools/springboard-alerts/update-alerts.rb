@@ -18,6 +18,7 @@ language_mapping = {
   'Russian' => 'ru',
   'Spanish' => 'es',
   'Swedish' => 'se'
+  'nb' => 'no' 
 }
 
 language_to_ignore = [
