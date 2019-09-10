@@ -51,7 +51,7 @@
     expect(actual.defaultDismissButtonMark).to.equal(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
 
-    alertTitle = @"Разрешить ресурсу «ФСБ и Пятерочка» доступ к Вашей геопозиции?";
+    alertTitle = @"Разрешить ресурсу «Ресурс» доступ к Вашей геопозиции?";
     expectedButton = @"Разрешить";
     expectedShouldAccept = YES;
     actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
