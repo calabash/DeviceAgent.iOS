@@ -91,20 +91,21 @@ static SpringBoardAlert *alert(NSArray *buttonTitles, BOOL shouldAccept, NSStrin
         [NSMutableArray<SpringBoardAlert *> array];
 
         NSString * preferredLanguage = [[NSLocale preferredLanguages] firstObject];
+        NSString *fixedPreferredLanguage = [self fixLanguageName:preferredLanguage];
         
         if ([preferredLanguage containsString:@"-"]) {
             // fix mismatching language name for Norwegian and Chinese languages
-            NSString *validPreferredLanguage = [self fixLanguageName:preferredLanguage];
+
             // '.lproj' files uses '_' as separator. 'preferredLanguages' uses '-' as separator, need to convert
-            NSString *fullLanguageName = [validPreferredLanguage stringByReplacingOccurrencesOfString:@"-" withString:@"_"];
+            NSString *fullLanguageName = [fixedPreferredLanguage stringByReplacingOccurrencesOfString:@"-" withString:@"_"];
             // load exact name like "pt_PT"
             [self loadLanguageIfExists:fullLanguageName:resultArray];
             // load short name like "pt"
-            NSString *shortLanguageName = [validPreferredLanguage componentsSeparatedByString:@"-"][0];
+            NSString *shortLanguageName = [fixedPreferredLanguage componentsSeparatedByString:@"-"][0];
             [self loadLanguageIfExists:shortLanguageName:resultArray];
         } else {
             // if preferredLanguage is short name, just load it
-            [self loadLanguageIfExists:preferredLanguage:resultArray];
+            [self loadLanguageIfExists:fixedPreferredLanguage:resultArray];
         }
 
         // load "en" lang
@@ -130,8 +131,10 @@ static SpringBoardAlert *alert(NSArray *buttonTitles, BOOL shouldAccept, NSStrin
         return @"zh-TW";
     } else if ([languageName isEqualToString: @"zh-Hant-HK"]) {
         return @"zh-HK";
-    } else if ([languageName isEqualToString: @"nb-US"]) {
-        return @"no-US";
+    } else if ([languageName isEqualToString: @"nb"]) {
+        return @"no";
+    } else if ([languageName hasPrefix: @"nb-"]) {
+        return [languageName stringByReplacingOccurrencesOfString: @"nb-" withString: @"no-"];
     } else {
         return languageName;
     }
