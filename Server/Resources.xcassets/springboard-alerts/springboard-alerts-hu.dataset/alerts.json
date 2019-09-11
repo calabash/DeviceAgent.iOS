@@ -457,5 +457,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” a következőt szeretné használni a bejelentkezéshez: „%@”",
+    "buttons": [
+      "Folytatás"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Kapcsolja be a Bluetooth-ot, hogy a(z) „%@” számára engedélyezze a kiegészítőkhöz való csatlakozást",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

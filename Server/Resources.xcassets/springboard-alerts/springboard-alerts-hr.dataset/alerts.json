@@ -458,5 +458,19 @@
       "Ne sad"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@“ želi upotrijebiti “%@“ za prijavu",
+    "buttons": [
+      "Nastavi"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Uključite Bluetooth kako bi se “%@” mogao spojiti na dodatni pribor",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

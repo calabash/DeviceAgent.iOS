@@ -464,5 +464,19 @@
       "Şimdi Değil"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” Giriş Yapmak için “%@” Kullanmak İstiyor",
+    "buttons": [
+      "Sürdür"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Öğesinin Aksesuarlara Bağlanmasına İzin Vermek için Bluetooth’u Açın",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
   }
 ]

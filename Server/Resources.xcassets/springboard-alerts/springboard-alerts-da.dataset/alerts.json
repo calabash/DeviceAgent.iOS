@@ -450,5 +450,19 @@
       "Ikke nu"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” vil bruge “%@” til at logge ind",
+    "buttons": [
+      "Fortsæt"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Slå Bluetooth til for at tillade “%@” at oprette forbindelse til Tilbehør",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

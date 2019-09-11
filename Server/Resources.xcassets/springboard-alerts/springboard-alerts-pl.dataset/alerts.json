@@ -464,5 +464,19 @@
       "Otwórz"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce użyć „%@” do zalogowania się",
+    "buttons": [
+      "Dalej"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aby używać akcesoriów z „%@”, włącz Bluetooth.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

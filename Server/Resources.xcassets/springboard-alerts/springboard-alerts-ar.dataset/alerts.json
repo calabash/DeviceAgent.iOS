@@ -443,5 +443,19 @@
       "ليس الآن"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "يرغب “%@” في استخدام “%@” لتسجيل الدخول",
+    "buttons": [
+      "متابعة"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "تشغيل الـ Bluetooth يسمح \"%@\" بالاتصال بالملحقات",
+    "buttons": [
+      "موافق"
+    ],
+    "shouldAccept": true
   }
 ]

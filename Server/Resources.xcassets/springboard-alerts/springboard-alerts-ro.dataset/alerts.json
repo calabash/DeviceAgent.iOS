@@ -464,5 +464,19 @@
       "Nu acum"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” vrea să utilizeze “%@” pentru autentificare",
+    "buttons": [
+      "Continuați"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Activați Bluetooth pentru a permite conectarea “%@” la accesorii",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

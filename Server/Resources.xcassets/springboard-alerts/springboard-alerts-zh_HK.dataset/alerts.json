@@ -597,5 +597,19 @@
       "好"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "「%@」想使用「%@」登入",
+    "buttons": [
+      "繼續"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "請開啟藍牙以允許「%@」連接配件",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
   }
 ]

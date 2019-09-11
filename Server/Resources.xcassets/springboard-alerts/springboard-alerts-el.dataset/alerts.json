@@ -464,5 +464,19 @@
       "ΟΚ"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Η εφαρμογή «%@» θέλει να χρησιμοποιήσει το «%@» για σύνδεση",
+    "buttons": [
+      "Συνέχεια"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Ενεργοποίηση Bluetooth για σύνδεση του «%@» με αξεσουάρ",
+    "buttons": [
+      "ΟΚ"
+    ],
+    "shouldAccept": true
   }
 ]

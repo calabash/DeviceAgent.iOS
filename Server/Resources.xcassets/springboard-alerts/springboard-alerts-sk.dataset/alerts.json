@@ -583,5 +583,26 @@
       "Zrušiť"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "„%@“ chce na prihlásenie použiť „%@“",
+    "buttons": [
+      "Pokračovať"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Ak chcete povoliť aplikácii „%@“ pripojiť sa k príslušenstvu, zapnite Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Webová stránka „%@“ chce použiť vašu aktuálnu polohu",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

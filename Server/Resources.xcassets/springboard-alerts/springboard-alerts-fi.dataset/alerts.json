@@ -457,5 +457,19 @@
       "Salli"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "%@ haluaa käyttää kohdetta %@ sisäänkirjautumiseen",
+    "buttons": [
+      "Jatka"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Laita Bluetooth päälle, jos sallit, että %@ voi yhdistää lisälaitteisiin",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

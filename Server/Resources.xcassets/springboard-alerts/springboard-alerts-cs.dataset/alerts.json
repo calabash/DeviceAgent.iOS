@@ -465,5 +465,19 @@
       "Teď ne"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "„%@“ chce použít k přihlášení „%@“",
+    "buttons": [
+      "Pokračovat"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Chcete‑li aplikaci „%@“ povolit připojení k příslušenstvím, zapněte Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]
