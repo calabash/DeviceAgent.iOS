@@ -530,5 +530,19 @@
       "지금 안 함"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "‘%@’이(가) ‘%@’을(를) 사용하여 로그인하려고 합니다.",
+    "buttons": [
+      "계속"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "‘%@’에서 액세서리에 연결하도록 허용하려면 Bluetooth를 켜십시오.",
+    "buttons": [
+      "승인"
+    ],
+    "shouldAccept": true
   }
 ]

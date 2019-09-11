@@ -569,5 +569,19 @@
       "取消"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@”想要使用“%@”登录",
+    "buttons": [
+      "继续"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "打开蓝牙来允许“%@”连接到配件",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
   }
 ]

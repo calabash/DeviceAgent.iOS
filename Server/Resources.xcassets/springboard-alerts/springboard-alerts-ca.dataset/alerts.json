@@ -507,5 +507,19 @@
       "Obrir"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol utilitzar “%@” per iniciar sessió",
+    "buttons": [
+      "Continuar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Activar Bluetooth per permetre que “%@” es connecti als accessoris",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

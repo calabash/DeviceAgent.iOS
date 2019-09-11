@@ -450,5 +450,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” gostaria de usar “%@” para iniciar sessão",
+    "buttons": [
+      "Continuar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Ative Bluetooth para permitir que “%@” estabeleça ligação com os acessórios.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

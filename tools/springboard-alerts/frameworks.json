@@ -81,6 +81,18 @@
         ]
     },
     {
+        "name": "SafariServices.framework",
+        "values": [
+            { "title": "“%@” Wants to Use “%@” to Sign In", "button": "Continue" }
+        ]
+    },
+    {
+        "name": "MobileBluetooth.framework",
+        "values": [
+            { "title": "LE_POWER_OFF_HEADER", "button": "OK"}
+        ]
+    },
+    {
         "name": "AuthKit.framework",
         "values": [
             { "title": "INLINE_PASSWORD_ALERT_TITLE_SERVICE_APP_STORE", "button": "INLINE_PASSWORD_ALERT_CANCEL_BUTTON" },

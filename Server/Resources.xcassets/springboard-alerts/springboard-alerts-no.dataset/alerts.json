@@ -576,5 +576,19 @@
       "Ikke nå"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "%@ vil bruke %@ for å logge på",
+    "buttons": [
+      "Fortsett"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Slå på Bluetooth for å tillate at «%@» kobler til Tilbehør",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

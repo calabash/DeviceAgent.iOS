@@ -440,5 +440,19 @@
       "Tidak Sekarang"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Menggunakan “%@” untuk Masuk",
+    "buttons": [
+      "Lanjutkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Nyalakan Bluetooth untuk Mengizinkan “%@” Terhubung ke Aksesori",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -429,5 +429,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "”%@” vill logga in med hjälp av ”%@”",
+    "buttons": [
+      "Fortsätt"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Slå på Bluetooth om du vill låta ”%@” ansluta till tillbehör",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

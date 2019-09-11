@@ -584,5 +584,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "«%@» хоче застосувати «%@» для входу",
+    "buttons": [
+      "Далі"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Увімкніть Bluetooth, щоб дати «%@» змогу підключатися до приладів",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

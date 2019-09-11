@@ -464,5 +464,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "'%@' wil '%@' gebruiken om in te loggen",
+    "buttons": [
+      "Ga door"
+    ],
+    "shouldAccept": true
   }
 ]

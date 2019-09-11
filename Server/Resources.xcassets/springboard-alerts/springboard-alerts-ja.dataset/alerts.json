@@ -429,5 +429,19 @@
       "今はしない"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@”がサインインのために“%@”を使用しようとしています。",
+    "buttons": [
+      "続ける"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”がアクセサリに接続できるようにするには、Bluetoothをオンにしてください。",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

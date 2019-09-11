@@ -455,5 +455,19 @@
       "לא כעת"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "‏״%@״ מבקש להשתמש ב-״%@״ כדי להתחבר",
+    "buttons": [
+      "המשך"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "הפעל/י את Bluetooth על-מנת לאפשר ל-״%@״ להתחבר לאביזרים",
+    "buttons": [
+      "אישור"
+    ],
+    "shouldAccept": true
   }
 ]

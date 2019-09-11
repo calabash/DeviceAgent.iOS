@@ -487,5 +487,19 @@
       "Buka"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Menggunakan “%@” untuk Mendaftar Masuk",
+    "buttons": [
+      "Teruskan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aktifkan Bluetooth untuk Membenarkan “%@” Bersambung ke Aksesori",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

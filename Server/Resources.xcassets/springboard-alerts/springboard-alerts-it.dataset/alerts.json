@@ -471,5 +471,19 @@
       "Apri"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” desidera utilizzare “%@” per eseguire l’accesso",
+    "buttons": [
+      "Continua"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Attiva Bluetooth per consentire a “%@” di connettersi agli accessori",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

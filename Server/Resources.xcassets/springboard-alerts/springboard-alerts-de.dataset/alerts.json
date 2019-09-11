@@ -541,5 +541,40 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Wil je %@ toegang tot je locatie toestaan?",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Geen simkaart geïnstalleerd",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte zum Anmelden „%@“ verwenden",
+    "buttons": [
+      "Fortfahren"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Schakel Bluetooth in om '%@' verbinding te laten maken met accessoires",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Bluetooth aktivieren, damit „%@“ die Verbindung zum Zubehör herstellen kann",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

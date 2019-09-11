@@ -451,5 +451,19 @@
       "Not Now"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” Wants to Use “%@” to Sign In",
+    "buttons": [
+      "Continue"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Turn On Bluetooth to Allow “%@” to Connect to Accessories",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]
