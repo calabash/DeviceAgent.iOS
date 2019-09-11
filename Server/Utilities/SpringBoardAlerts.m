@@ -163,7 +163,7 @@ static SpringBoardAlert *alert(NSArray *buttonTitles, BOOL shouldAccept, NSStrin
                                    andPosition:i];
         [resultArray
          addObject: alert(
-                          alertDict[@"buttons"][0],
+                          alertDict[@"buttons"],
                           [alertDict[@"shouldAccept"] boolValue],
                           alertDict[@"title"]
                           )];

@@ -10,7 +10,7 @@
                  ofLanguage:(NSString*)language
                 andPosition:(NSInteger)position;
 - (NSMutableArray<SpringBoardAlert *> *)alerts;
-
+- (instancetype)init_private;
 @end
 
 @interface SpringBoardAlertsTest : XCTestCase
@@ -33,87 +33,143 @@
     expect(actual.count > 0).to.beTruthy();
 }
 
-- (void)testAlertForTitle {
-    NSString *alertTitle, *expectedButton;
-    BOOL expectedShouldAccept;
-    SpringBoardAlert *actual;
-
-    alertTitle = @"Some alert generated SpringBoard that we cannot handle";
-    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
+- (void)testAlertTitleNil {
+    NSString *alertTitle = @"Some alert generated SpringBoard that we cannot handle";
+    SpringBoardAlert *actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
     expect(actual).to.equal(nil);
+}
 
-    alertTitle = @"« l'application » souhaite accéder à vos rappels.";
-    expectedButton = @"OK";
-    expectedShouldAccept = YES;
-    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
-
-    expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
-    expect(actual.shouldAccept).to.equal(expectedShouldAccept);
-
-    alertTitle = @"Разрешить ресурсу «Ресурс» доступ к Вашей геопозиции?";
-    expectedButton = @"Разрешить";
-    expectedShouldAccept = YES;
-    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
-
-    expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
-    expect(actual.shouldAccept).to.equal(expectedShouldAccept);
-
-    alertTitle = @"No SIM Card Installed";
-    expectedButton = @"OK";
-    expectedShouldAccept = YES;
-    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
-
-    expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
-    expect(actual.shouldAccept).to.equal(expectedShouldAccept);
-
-    alertTitle = @"Carrier Settings Update";
-    expectedButton = @"Not Now";
-    expectedShouldAccept = YES;
-    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
-
-    expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
-    expect(actual.shouldAccept).to.equal(expectedShouldAccept);
-
-    alertTitle = @"Permitir que “la aplicación” tenha acesso à sua localização mesmo quando você não estiver usando o app?";
-    expectedButton = @"Permitir";
-    expectedShouldAccept = YES;
-    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
-
-    expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
-    expect(actual.shouldAccept).to.equal(expectedShouldAccept);
-
-    alertTitle = @"Open in “Internet Explorer 6”?";
-    expectedButton = @"Open";
-    expectedShouldAccept = YES;
-    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
+- (void)testAlertTitleFr_Ca {
+    id localeMock = OCMClassMock([NSLocale class]);
+    NSArray<NSString *> * array = [NSArray arrayWithObject:@"fr-CA"];
+    OCMStub([localeMock preferredLanguages]).andReturn(array);
+    SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
+    
+    NSString *alertTitle = @"« l'application » souhaite accéder à vos rappels.";
+    NSString *expectedButton = @"OK";
+    BOOL expectedShouldAccept = YES;
+    SpringBoardAlert *actual = [alertsArray alertMatchingTitle:alertTitle];
 
     expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
     
-    alertTitle = @"“AppName” Would Like Access to Twitter Accounts";
-    expectedButton = @"OK";
-    expectedShouldAccept = YES;
-    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
+    [localeMock stopMocking];
+}
+
+- (void)testAlertTitleRu {
+    id localeMock = OCMClassMock([NSLocale class]);
+    NSArray<NSString *> * array = [NSArray arrayWithObject:@"ru"];
+    OCMStub([localeMock preferredLanguages]).andReturn(array);
+    SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
+
+    NSString *alertTitle = @"Разрешить ресурсу «Ресурс» доступ к Вашей геопозиции?";
+    NSString *expectedButton = @"Разрешить";
+    BOOL expectedShouldAccept = YES;
+    SpringBoardAlert *actual = [alertsArray alertMatchingTitle:alertTitle];
 
     expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
     
-    alertTitle = @"‘합니다’에서 네트워크 콘텐츠를 필터링하려고 합니다.";
-    expectedButton = @"허용";
-    expectedShouldAccept = YES;
-    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
+    [localeMock stopMocking];
+}
+
+- (void)testAlertTitleEn {
+    id localeMock = OCMClassMock([NSLocale class]);
+    NSArray<NSString *> * array = [NSArray arrayWithObject:@"en"];
+    OCMStub([localeMock preferredLanguages]).andReturn(array);
+    
+    NSString *alertTitle = @"No SIM Card Installed";
+    NSString *expectedButton = @"OK";
+    BOOL expectedShouldAccept = YES;
+    SpringBoardAlert *actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
     expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
     
-    alertTitle = @"«Прiложение» хоче фільтрувати мережевий контент";
-    expectedButton = @"Дозволити";
-    expectedShouldAccept = YES;
-    actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
+    [localeMock stopMocking];
+}
+
+- (void)testAlertTitleEn_Au {
+    id localeMock = OCMClassMock([NSLocale class]);
+    NSArray<NSString *> * array = [NSArray arrayWithObject:@"en-AU"];
+    OCMStub([localeMock preferredLanguages]).andReturn(array);
+    
+    NSString *alertTitle = @"Carrier Settings Update";
+    NSString *expectedButton = @"Not Now";
+    BOOL expectedShouldAccept = YES;
+    SpringBoardAlert *actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
     expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
     expect(actual.shouldAccept).to.equal(expectedShouldAccept);
+    
+    [localeMock stopMocking];
+}
+
+- (void)testAlertTitlePt {
+    id localeMock = OCMClassMock([NSLocale class]);
+    NSArray<NSString *> * array = [NSArray arrayWithObject:@"pt"];
+    OCMStub([localeMock preferredLanguages]).andReturn(array);
+    SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
+
+    NSString *alertTitle = @"Permitir que “la aplicación” tenha acesso à sua localização mesmo quando você não estiver usando o app?";
+    NSString *expectedButton = @"Permitir";
+    BOOL expectedShouldAccept = YES;
+    SpringBoardAlert *actual = [alertsArray alertMatchingTitle:alertTitle];
+
+    expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
+    expect(actual.shouldAccept).to.equal(expectedShouldAccept);
+    
+    [localeMock stopMocking];
+}
+
+- (void)testAlertTitleEn_Au_with_Regex {
+    id localeMock = OCMClassMock([NSLocale class]);
+    NSArray<NSString *> * array = [NSArray arrayWithObject:@"en-AU"];
+    OCMStub([localeMock preferredLanguages]).andReturn(array);
+    
+    NSString *alertTitle = @"Open in “Internet Explorer 6”?";
+    NSString *expectedButton = @"Open";
+    BOOL expectedShouldAccept = YES;
+    SpringBoardAlert *actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
+
+    expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
+    expect(actual.shouldAccept).to.equal(expectedShouldAccept);
+    
+    [localeMock stopMocking];
+}
+- (void)testAlertTitleKo {
+    id localeMock = OCMClassMock([NSLocale class]);
+    NSArray<NSString *> * array = [NSArray arrayWithObject:@"ko"];
+    OCMStub([localeMock preferredLanguages]).andReturn(array);
+    SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
+
+    NSString *alertTitle = @"‘합니다’에서 네트워크 콘텐츠를 필터링하려고 합니다.";
+    NSString *expectedButton = @"허용";
+    BOOL expectedShouldAccept = YES;
+    SpringBoardAlert *actual = [alertsArray alertMatchingTitle:alertTitle];
+
+    expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
+    expect(actual.shouldAccept).to.equal(expectedShouldAccept);
+    
+    [localeMock stopMocking];
+}
+
+- (void)testAlertTitleUk {
+    id localeMock = OCMClassMock([NSLocale class]);
+    NSArray<NSString *> * array = [NSArray arrayWithObject:@"uk"];
+    OCMStub([localeMock preferredLanguages]).andReturn(array);
+    SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
+
+    NSString *alertTitle = @"«Прiложение» хоче фільтрувати мережевий контент";
+    NSString *expectedButton = @"Дозволити";
+    BOOL expectedShouldAccept = YES;
+    SpringBoardAlert *actual = [alertsArray alertMatchingTitle:alertTitle];
+
+    expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
+    expect(actual.shouldAccept).to.equal(expectedShouldAccept);
+    
+    [localeMock stopMocking];
 }
 
 - (void)testAlertValidation {
