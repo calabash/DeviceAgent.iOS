@@ -70,7 +70,7 @@ def pick_required_values(found_values_dict, target_framework, localization_stora
     title_value = found_values_dict[title]
     button_value = found_values_dict[button]
 
-    puts "Unknown button constant '#{button}' for framework '#{framework_name}'".yellow if button && !button_value
+    puts "Unknown button constant '#{button}' for framework '#{framework_name}'(#{language})".yellow if button && !button_value
 
     if title_value
       localization_storage.add_entry(language, title_value, button_value)
@@ -103,7 +103,7 @@ target_frameworks.each do |framework|
 
     # debug info
     if ENV['DEBUG'] && language_name == 'en'
-      report_path = "reports/#{framework['name']}.#{language_name}.json"
+      report_path = "reports/#{framework['name']}/#{xcode.version}.#{language_name}.json"
       save_json(report_path, found_values_dict)
     end
   end
