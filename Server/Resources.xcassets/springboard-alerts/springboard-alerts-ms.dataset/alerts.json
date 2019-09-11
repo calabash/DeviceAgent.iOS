@@ -1,0 +1,491 @@
+[
+  {
+    "title": "Benarkan “%@” mengakses lokasi anda?",
+    "buttons": [
+      "Benarkan",
+      "Sentiasa Benarkan",
+      "Benarkan Semasa Menggunakan App",
+      "Hanya Semasa Menggunakan App"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Benarkan “%@” mengakses lokasi anda walaupun anda tidak menggunakan app?",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Benarkan “%@” mengakses lokasi anda semasa anda menggunakan app?",
+    "buttons": [
+      "Benarkan",
+      "Hanya Semasa Menggunakan App"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Benarkan “%@” turut mengakses lokasi anda walaupun anda tidak menggunakan app?",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” sedang menggunakan lokasi anda di latar belakang. Adakah anda mahu terus membenarkannya?",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Adakah anda mahu membenarkan “%@” menggunakan Face ID?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Sesetengah data %@ anda akan dihantar kepada Apple untuk memproses permintaan anda.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Mengakses Mikrofon",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Menambahkan pada Foto anda",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Mengakses Kalendar Anda",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Data pertuturan daripada app ini akan dihantar kepada Apple untuk memproses permintaan anda. Ini turut akan membantu Apple meningkatkan teknologi pengecaman pertuturan.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Mengakses Aktiviti Pergerakan & Kecergasan Anda",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Mengakses Kamera",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Mengakses Peringatan Anda",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Adakah Anda Mahu Menggunakan “%@” dengan Siri?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” mahu mengakses Apple Music, aktiviti muzik dan video anda dan pustaka media anda.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Mengakses Kenalan Anda",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Mengakses Foto Anda",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Mengakses Data Rumah Anda",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Menyediakan Pengalaman Dalam Panggilan Asli",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” mahu menyediakan data kepada peranti Bluetooth berdekatan walaupun anda tidak menggunakan app.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Mengakses Pengecaman Pertuturan",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Seting baru tersedia. Adakah anda mahu mengemas kininya sekarang?",
+    "buttons": [
+      "Nanti",
+      "Bukan Sekarang"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Kemas Kini Seting Pembawa",
+    "buttons": [
+      "Nanti",
+      "Bukan Sekarang"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Menambah Konfigurasi VPN",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Menapis Kandungan Rangkaian",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iPhone tidak Diaktifkan",
+    "buttons": [
+      "Abaikan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dayakan Perencanaan?",
+    "buttons": [
+      "Bukan Sekarang"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dayakan Perencanaan",
+    "buttons": [
+      "Bukan Sekarang"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Tambah Papan Kekunci Pihak Ketiga?",
+    "buttons": [
+      "Bukan Sekarang"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Buka dalam “%@”",
+    "buttons": [
+      "Buka"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Buka dalam “%@”?",
+    "buttons": [
+      "Buka"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Cari di %@",
+    "buttons": [
+      "Buka"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Buka halaman ini “%@”?",
+    "buttons": [
+      "Buka"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Buka dalam app %@",
+    "buttons": [
+      "Buka"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Daftar Masuk ke App Store",
+    "buttons": [
+      "Batal"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Daftar Masuk ke Game Center",
+    "buttons": [
+      "Batal"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Daftar Masuk ke iTunes Store",
+    "buttons": [
+      "Batal"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Daftar Masuk ke iMessage",
+    "buttons": [
+      "Batal"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Daftar Masuk ke FaceTime",
+    "buttons": [
+      "Batal"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Daftar Masuk ke iCloud",
+    "buttons": [
+      "Batal"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Benarkan “%@” untuk mengemas kini data kesihatan anda.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Akses Kesihatan",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%1$@” Mahu Mendapatkan Akses kepada Akaun %2$@",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Rangkaian Wi-Fi semasa dan rangkaian lain yang berdekatan akan diputuskan sambungan sehingga esok.\n\nWi-Fi akan terus tersedia untuk AirDrop, Hotspot Peribadi dan ketepatan lokasi.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Rangkaian WLAN semasa dan rangkaian lain yang berdekatan akan diputuskan sambungan sehingga esok.\n\nWLAN akan terus tersedia untuk AirDrop, Hotspot Peribadi dan ketepatan lokasi.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aksesori yang disambungkan pada masa ini akan diputuskan sambungan dan aksesori lain tidak akan bersambung.\n\nBluetooth akan terus tersedia untuk Apple Watch, Apple Pencil, Hotspot Peribadi dan Handoff.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Menerima Panggilan VoIP di Latar Belakang",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Tiada Kad SIM Dipasang",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Buka halaman ini dalam “%@”?",
+    "buttons": [
+      "Buka"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” mahu mengakses Apple Music, aktiviti muzik dan video anda serta pustaka media anda",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” mahu menyediakan data kepada peranti Bluetooth berdekatan walaupun anda tidak menggunakan app",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Daftar Masuk dengan Apple ID",
+    "buttons": [
+      "Batal"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” sedang menggunakan lokasi anda di latar belakang sepanjang 3 hari lalu. Adakah anda mahu terus membenarkan penggunaan lokasi latar belakang?",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” telah menggunakan lokasi anda sekali di latar belakang sepanjang 3 hari lalu. Adakah anda mahu terus membenarkan penggunaan lokasi latar belakang?",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Mengakses Maklumat Asas Hubungan Anda",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Mengakses Semua Maklumat Hubungan Anda",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” mahu menggunakan Bluetooth semasa ia dalam penggunaan",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Menggunakan Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Ini akan membenarkan “%@” mencari dan bersambung ke aksesori Bluetooth. App ini juga mungkin menggunakan Bluetooth untuk mengetahui apabila anda berada berdekatan.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Menambah Konfigurasi Proksi DNS",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Menggunakan Lokasi Semasa Anda",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Benarkan “%@” mengakses lokasi anda walaupun anda tidak menggunakan aplikasi?",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Benarkan “%@” mengakses lokasi anda semasa anda menggunakan aplikasi?",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Benarkan “%@” turut mengakses lokasi anda walaupun anda tidak menggunakan aplikasi?",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Data pertuturan daripada aplikasi ini akan dihantar kepada Apple untuk memproses permintaan anda. Ini turut akan membantu Apple meningkatkan teknologi pengecaman pertuturannya.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” mahu menyediakan data kepada peranti Bluetooth berdekatan walaupun anda tidak menggunakan aplikasi.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Seting baru tersedia.  Adakah anda mahu kemas kininya sekarang?",
+    "buttons": [
+      "Nanti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Buka dalam aplikasi %@",
+    "buttons": [
+      "Buka"
+    ],
+    "shouldAccept": true
+  }
+]

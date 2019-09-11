@@ -1,0 +1,601 @@
+[
+  {
+    "title": "允許「%@」取用你的位置嗎？",
+    "buttons": [
+      "允許",
+      "總是允許",
+      "使用App時允許",
+      "只在使用 App 時"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "要允許「%@」在你並非使用 App 時也能取用你的位置嗎？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "允許「%@」在你使用 App 時取用你的位置嗎？",
+    "buttons": [
+      "允許",
+      "只在使用 App 時"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」已在背景使用了你的位置。要繼續允許嗎？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "你允許「%@」使用 Face ID 嗎？",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」的部分資料將傳送予 Apple 以處理你的要求。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要取用咪高風",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想加入你的「相片」",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要取用你的日曆",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "此 App 的語音識別數據將傳送給 Apple 以處理你的要求。這亦會有助 Apple 改善語音識別技術。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要取用你的「運動與健身」的「健身記錄」",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要取用相機",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要取用你的提醒事項",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "你要透過 Siri 使用「%@」嗎？",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想取用 Apple Music、你的音樂與影片活動和你的媒體資料庫。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要取用通訊錄",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要取用你的相片",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要取用你的家居資料",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要提供整合式來電體驗",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要在你並非正在使用 App 時也能讓鄰近的藍牙裝置取得資料。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要取用語音辨識",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "新的設定檔現已可供下載。是否要立即更新？",
+    "buttons": [
+      "稍後決定"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "電訊商設定更新",
+    "buttons": [
+      "稍後決定"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想加入 VPN 設定",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要過濾網絡內容",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iPhone 尚未啟用",
+    "buttons": [
+      "忽略"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "要啟用聽寫嗎？",
+    "buttons": [
+      "稍後決定"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "啟用聽寫",
+    "buttons": [
+      "稍後決定"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "要加入第三方鍵盤嗎？",
+    "buttons": [
+      "稍後決定"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "用「%@」開啟",
+    "buttons": [
+      "開啟"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "用「%@」開啟？",
+    "buttons": [
+      "開啟"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "搜尋「%@」",
+    "buttons": [
+      "開啟"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "要在「%@」裏開啟此網頁嗎？",
+    "buttons": [
+      "開啟"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "用「%@」App 開啟",
+    "buttons": [
+      "開啟"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登入 App Store",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登入 Game Center",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登入 iTunes Store",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登入 iMessage",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登入 FaceTime",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登入 iCloud",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "允許「%@」更新你的「健康」資料。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「健康」存取",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%1$@」要連接 %2$@ 帳户",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "將會中斷目前的 Wi-Fi 網絡和附近其他網直至明天為止。\n\nWi-Fi 仍可繼續用於 AirDrop、「個人熱點」和定位準確度。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "將會中斷目前的 WLAN 網絡和附近其他網直至明天為止。\n\nWLAN 仍可繼續用於 AirDrop、「個人熱點」和定位準確度。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "將中斷目前已連接的配件連線，並且不會連接其他配件。\n\nApple Watch、Apple Pencil、「個人熱點」和 Handoff 仍可繼續使用藍牙。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」的部份資料將傳送予 Apple 以處理你的要求。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要取用你的運動與健身記錄",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想在背景接收 VoIP 來電",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "尚未安裝 SIM 卡",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "將中斷目前已連接的配件連線，並且不會連接其他配件。\n\nApple Watch、Apple Pencil、「個人熱點」和「接手」仍可繼續使用藍牙。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "允許「%@」取用你的位置嗎（即使你並非正在使用App時亦會取用）？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "也允許「%@」取用你的位置嗎（即使你並非正在使用App時亦會取用）？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "你允許「%@」使用Face ID嗎？",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」的部份資料將傳送予Apple以處理你的要求。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "此App的語音識別數據將傳送予Apple以處理你的要求。這亦會有助Apple改善語音識別技術。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "你要透過Siri使用「%@」嗎？",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想取用Apple Music、你的音樂與影片活動和你的媒體資料庫",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想在背景接收VoIP來電",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想讓附近的藍牙裝置取得資料，即使你並非正在使用App時亦能夠取得資料。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要取用語音識別",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "尚未安裝SIM卡",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@想加入VPN設定",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iPhone尚未啟用",
+    "buttons": [
+      "忽略"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "用「%@」App開啟",
+    "buttons": [
+      "開啟"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登入Game Center",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "使用Apple ID登入",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登入iMessage",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登入FaceTime",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登入iCloud",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%1$@」要連接%2$@帳户",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "將會中斷目前的Wi-Fi網絡和附近其他網絡直至明天為止。\n\nWi-Fi仍可繼續用於AirDrop、「個人熱點」和定位準確度。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "將會中斷目前的WLAN網絡和附近其他網絡直至明天為止。\n\nWLAN仍可繼續用於AirDrop、「個人熱點」和定位準確度。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」過去3日在背景使用了你的位置。要繼續允許在背景使用位置嗎？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」過去3日在背景使用了你的位置1次。要繼續允許在背景使用位置嗎？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要取用通訊錄的基本資料",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要取用通訊錄的所有資料",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想在使用期間使用藍牙",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想使用藍牙",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "這將會允許「%@」尋找並連接藍牙配件。此App亦可能會使用藍牙以確認你在附近。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想加入DNS代理設定",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要使用你現時的位置",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "要允許「%@」在你正在使用 App 時取用你的位置嗎？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ 的部分資料將傳送給 Apple 以處理你的請求。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "此 App 的語音識別數據將傳送給 Apple 以處理你的請求。這亦會有助 Apple 改善語音識別技術。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  }
+]
