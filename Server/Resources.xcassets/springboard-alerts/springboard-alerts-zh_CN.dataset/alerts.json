@@ -1,0 +1,587 @@
+[
+  {
+    "title": "允许“%@”访问您的位置？",
+    "buttons": [
+      "允许",
+      "始终允许",
+      "使用App时允许",
+      "仅在使用应用期间"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "允许“%@”在您并未使用该应用时访问您的位置吗？",
+    "buttons": [
+      "允许"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "允许“%@”在您使用该应用时访问您的位置吗？",
+    "buttons": [
+      "允许",
+      "仅在使用应用期间"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”一直在后台使用您的位置。您要继续允许吗？",
+    "buttons": [
+      "允许"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "您要允许“%@”使用面容 ID 吗？",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "您的部分“%@”数据将发送给 Apple 以处理您的请求。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您的麦克风",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想要加入您的“照片”",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您的日历",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "部分来自此应用的语音数据将发送给 Apple 以处理您的请求。这还将帮助 Apple 改进语音识别技术。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您的活动与体能训练记录",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您的相机",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您的提醒事项",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "您要通过 Siri 来使用“%@”吗？",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想要访问 Apple Music、您的音乐与视频的相关活动以及您的媒体资料库。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您的通讯录",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您的照片",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您的家庭数据",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想提供原生通话体验",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想在您未使用该应用时仍与周围的蓝牙设备交换数据。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问语音识别",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "有新的设置可供下载。您想现在更新吗？",
+    "buttons": [
+      "以后"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "运营商设置更新",
+    "buttons": [
+      "以后"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想添加 VPN 配置",
+    "buttons": [
+      "允许"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想要过滤网络内容",
+    "buttons": [
+      "允许"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iPhone 尚未激活",
+    "buttons": [
+      "忽略"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "启用听写？",
+    "buttons": [
+      "以后"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "启用听写",
+    "buttons": [
+      "以后"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "添加第三方键盘？",
+    "buttons": [
+      "以后"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "在“%@”中打开",
+    "buttons": [
+      "打开"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "在“%@”中打开？",
+    "buttons": [
+      "打开"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "搜索“%@”",
+    "buttons": [
+      "打开"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "在“%@”中打开链接吗？",
+    "buttons": [
+      "打开"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "在“%@”应用中打开",
+    "buttons": [
+      "打开"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登录 App Store",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登录 Game Center",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登录 iTunes Store",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登录 iMessage 信息",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登录 FaceTime 通话",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登录 iCloud",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "允许“%@”更新您的健康数据。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "访问健康数据",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%1$@”想访问 %2$@ 帐户",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "当前 Wi-Fi 网络及附近其他网络会在明天之前保持断开状态。\n\nWi-Fi 仍可用于“隔空投送”、“个人热点”和定位准确性。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "当前无线局域网络及附近其他网络会在明天之前保持断开状态。\n\n无线局域网仍可用于“隔空投送”、“个人热点”和定位准确性。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "当前已连接的配件将断开连接，且其他配件不会连接。\n\n蓝牙仍可用于 Apple Watch、Apple Pencil、“个人热点”和“接力”。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想在后台接收 VoIP 网络电话",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "未安装 SIM 卡",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "允许“%@”在您并未使用该App时访问您的位置吗？",
+    "buttons": [
+      "允许"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "您要允许“%@”使用面容ID吗？",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "您的部分%[tt]@数据将发送给Apple以处理您的请求。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "部分来自此App的语音数据将发送给Apple以处理您的请求。这还将帮助Apple改进语音识别技术。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "您要通过Siri来使用“%@”吗？",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想要访问Apple Music、您的音乐与视频的相关活动以及您的媒体资料库",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想在后台接收VoIP网络电话",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想在您未使用该App时仍与周围的蓝牙设备交换数据",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "未安装SIM卡",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想添加VPN配置",
+    "buttons": [
+      "允许"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iPhone尚未激活",
+    "buttons": [
+      "忽略"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "在“%@”App中打开",
+    "buttons": [
+      "打开"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登录Game Center",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "通过Apple ID登录",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登录iMessage信息",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登录FaceTime通话",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登录iCloud",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%1$@”想访问%2$@帐户",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "当前Wi-Fi网络及附近其他网络会在明天之前保持断开状态。\n\nWi-Fi仍可用于“隔空投送”、“个人热点”和定位准确性。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "当前已连接的配件将断开连接，且其他配件不会连接。\n\n蓝牙仍可用于Apple Watch、Apple Pencil、“个人热点”和“接力”。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”在过去3天中一直在后台使用您的位置。您要继续允许后台位置使用吗？",
+    "buttons": [
+      "允许"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”在过去3天中已在后台使用了您的位置1次。您要继续允许后台位置使用吗？",
+    "buttons": [
+      "允许"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您通讯录的基本信息",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您通讯录的所有信息",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”在使用期间想要使用蓝牙",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想要使用蓝牙",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "这将允许“%@”查找并连接蓝牙配件。此App还可能使用蓝牙来确认您在附近。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想添加DNS Proxy配置",
+    "buttons": [
+      "允许"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想使用您当前的位置",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您的住宅数据",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "已有新的设置可供下载。您想现在更新设置吗？",
+    "buttons": [
+      "以后"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登录 iMessage",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "登录 FaceTime",
+    "buttons": [
+      "取消"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想要使用“%@”登录",
+    "buttons": [
+      "继续"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "打开蓝牙来允许“%@”连接到配件",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  }
+]

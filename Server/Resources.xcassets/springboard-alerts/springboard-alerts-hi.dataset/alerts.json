@@ -1,0 +1,665 @@
+[
+  {
+    "title": "“%@” को अपने स्थान की पहुँच लेने की अनुमति दें?",
+    "buttons": [
+      "अनुमति दें",
+      "हमेशा अनुमति दें",
+      "केवल ऐप के उपयोग के समय"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "ऐप के न उपयोग होने के दौरान भी “%@” को अपने वर्तमान स्थान का उपयोग करने दें?",
+    "buttons": [
+      "अनुमति दें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "ऐप के उपयोग होने के दौरान “%@” को अपने वर्तमान स्थान का उपयोग करने दें?",
+    "buttons": [
+      "अनुमति दें",
+      "केवल ऐप के उपयोग के समय"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "ऐप के उपयोग में न होने के दौरान भी “%@” को अपने स्थान का उपयोग करने की अनुमति दें?",
+    "buttons": [
+      "अनुमति दें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” पृष्ठभूमि में आपके स्थान का उपयोग कर रहा है। क्या आप इसे जारी रहने देना चाहते हैं?",
+    "buttons": [
+      "अनुमति दें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "क्या आप “%@” को Face ID का उपयोग करने की अनुमति देना चाहते हैं?",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "आपके अनुरोधों को पूरा करने के लिए आपके %@ का कुछ डेटा Apple को भेजा जाएगा।",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” माइक्रोफ़ोन तक पहुँचना चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” आपकी ”तस्वीरें” में जोड़ना चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” आपके कैलेंडर तक पहुँचना चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "आपके अनुरोधों को पूरा करने के लिए इस ऐप से बोली डेटा Apple को भेजा जाएगा। इससे Apple को अपनी बोली पहचान तकनीक को बेहतर बनाने में भी मदद मिलेगी।",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” आपकी चाल और तंदुरुस्ती गतिविधि तक पहुँचना चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” कैमरा तक पहुँचना चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” आपके रिमाइंडरों तक पहुँचना चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "क्या आप “%@” को Siri के साथ उपयोग करना चाहेंगे?",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Apple Music, आपकी संगीत और वीडियो गतिविधि और आपकी मीडिया लाइब्रेरी तक पहुँचना चाहता है।",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” आपके संपर्कों तक पहुँचना चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” आपकी तस्वीरों तक पहुँचना चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” आपके होम डेटा तक पहुँचना चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” स्थानीय इन-कॉल अनुभव प्रदान करना चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” आस-पास के Bluetooth उपकरणों पर डेटा उपलब्ध कराना चाहता है, भले ही आप ऐप का उपयोग न कर रहे हों।",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” बोली पहचान तक पहुँचना चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "नई सेटिंग्ज़ उपलब्ध हैं। क्या आप उन्हें अभी अपडेट करना चाहेंगे?",
+    "buttons": [
+      "अभी नहीं"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "कैरियर सेटिंग्ज़ अपडेट",
+    "buttons": [
+      "अभी नहीं"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” की इच्छा VPN कॉन्फ़िगरेशन जोड़ने की है",
+    "buttons": [
+      "अनुमति दें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” नेटवर्क कॉन्टेंट को फ़िल्टर करना चाहता है",
+    "buttons": [
+      "अनुमति दें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iPhone सक्रिय नहीं है",
+    "buttons": [
+      "नज़रअंदाज़ करें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "श्रुतलेखन सक्षम करें?",
+    "buttons": [
+      "अभी नहीं"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "श्रुतलेखन सक्षम करें",
+    "buttons": [
+      "अभी नहीं"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "तृतीय पक्ष कीबोर्ड जोड़ें?",
+    "buttons": [
+      "अभी नहीं"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” में खोलें",
+    "buttons": [
+      "खोलें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” में खोलें”?",
+    "buttons": [
+      "खोलें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ में खोजें",
+    "buttons": [
+      "खोलें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” में इस पृष्ठ को खोलें?",
+    "buttons": [
+      "खोलें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ ऐप में खोलें",
+    "buttons": [
+      "खोलें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "App Store में साइन इन करें",
+    "buttons": [
+      "रद्द करें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Game Center में साइन इन करें",
+    "buttons": [
+      "रद्द करें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iTunes Store में साइन इन करें",
+    "buttons": [
+      "रद्द करें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iMessage में साइन इन करें",
+    "buttons": [
+      "रद्द करें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "FaceTime में साइन इन करें",
+    "buttons": [
+      "रद्द करें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iCloud में साइन इन करें",
+    "buttons": [
+      "रद्द करें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” को अपना स्वास्थ्य डेटा अपडेट करने की अनुमति दें।",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "स्वास्थ्य पहुँच",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%1$@” %2$@ खातों तक पहुँच प्राप्त करना चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "वर्तमान वाई-फ़ाई नेटवर्क और आस-पास के अन्य नेटवर्क कल तक डिस्कनेक्ट रहेंगे।\n\nAirDrop, निजी हॉटस्पॉट और स्थान सटीकता के लिए वाई-फ़ाई की उपलब्धता बनी रहेगी।",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "वर्तमान WLAN नेटवर्क और आस-पास के अन्य नेटवर्क कल तक डिस्कनेक्ट रहेंगे।\n\nAirDrop, निजी हॉटस्पॉट और स्थान सटीकता के लिए WLAN की उपलब्धता बनी रहेगी।",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "वर्तमान में कनेक्टेड सहायक उपकरण डिस्कनेक्ट हो जाएँगे और अन्य सहायक उपकरण कनेक्ट नहीं होंगे।\n\nApple Watch, Apple Pencil, निजी हॉटस्पॉट और Handoff के लिए Bluetooth उपलब्ध रहेगा।",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” माइक्रोफ़ोन का ऐक्सेस चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” आपकी तस्वीर में जोड़ना चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” आपके कैलेंडर का ऐक्सेस चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” आपकी चाल और तंदुरुस्ती ऐक्टिविटी का ऐक्सेस चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” कैमरा का ऐक्सेस चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” आपके रिमाइंडर का ऐक्सेस चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Apple Music, आपकी संगीत और वीडियो गतिविधि और आपकी मीडिया लाइब्रेरी का ऐक्सेस चाहता है।",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” आपके संपर्कों का ऐक्सेस चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” आपकी तस्वीरों का ऐक्सेस चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” आपके होम डेटा का ऐक्सेस चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” पृष्ठभूमि में VoIP कॉल लेना चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” आस-पास के Bluetooth डिवाइस पर डेटा उपलब्ध कराना चाहता है, भले ही आप ऐप का उपयोग न कर रहे हों।",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” बोली पहचान का ऐक्सेस चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "SIM कार्ड नहीं डला हुआ है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "डिक्टेशन सक्षम करें?",
+    "buttons": [
+      "अभी नहीं"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "डिक्टेशन सक्षम करें",
+    "buttons": [
+      "अभी नहीं"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” को अपना सेहत डेटा अपडेट करने की अनुमति दें।",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "सेहत ऐक्सेस",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%1$@” %2$@ खाते ऐक्सेस करना चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "वर्तमान में कनेक्टेड ऐक्सेसरी डिस्कनेक्ट हो जाएँगे और अन्य ऐक्सेसरी कनेक्ट नहीं होंगे।\n\nApple Watch, Apple Pencil, निजी हॉटस्पॉट और Handoff के लिए Bluetooth उपलब्ध रहेगा।",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” को अपना स्थान ऐक्सेस करने की अनुमति दें?",
+    "buttons": [
+      "अनुमति दें",
+      "हमेशा अनुमति दें",
+      "ऐप उपयोग के दौरान अनुमति दें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "आपके अनुरोधों को प्रोसेस करने के लिए आपके %@ का कुछ डेटा Apple को भेजा जाएगा।",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "आपके अनुरोधों को प्रोसेस करने के लिए इस ऐप से बोली डेटा Apple को भेजा जाएगा। इससे Apple को अपनी बोली पहचान तकनीक को बेहतर बनाने में भी मदद मिलेगी।",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” कैमरे का ऐक्सेस चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "\"%@\" Apple Music, आपकी संगीत और वीडियो गतिविधि और आपकी मीडिया लाइब्रेरी का ऐक्सेस चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” आपके घर डेटा का ऐक्सेस चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "\"%@\" आस-पास के Bluetooth डिवाइस पर डेटा उपलब्ध कराना चाहता है, भले ही आप ऐप का उपयोग न कर रहे हों",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apple ID से साइन इन करें",
+    "buttons": [
+      "रद्द करें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” के द्वारा पिछले 3 दिनों के दौरान पृष्ठभूमि में आपके स्थान का उपयोग किया जा रहा है। क्या आप पृष्ठभूमि स्थान उपयोग की अनुमति जारी रखना चाहते हैं?",
+    "buttons": [
+      "अनुमति दें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” के द्वारा पिछले 3 दिनों के दौरान आपके स्थान का एक बार पृष्ठभूमि में उपयोग किया गया है। क्या आप पृष्ठभूमि स्थान उपयोग की अनुमति जारी रखना चाहते हैं?",
+    "buttons": [
+      "अनुमति दें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” आपके संपर्कों की मूलभूत जानकारी ऐक्सेस करना चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” आपकी सभी संपर्क जानकारी ऐक्सेस करना चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "\"%@\" Bluetooth का उपयोग करना चाहता है जब इसका उपयोग किया जा रहा हो",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Bluetooth का उपयोग करना चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "यह “%@” को Bluetooth ऐक्सेसरी को ढूँढने और उनसे कनेक्ट करने की अनुमति देगा। हो सकता है कि यह ऐप Bluetooth का इस्तेमाल आपकी स्थिति जानने के लिए करें जब आप आस-पास हों।",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” DNS प्रॉक्सी कॉन्फ़िगरेशन जोड़ना चाहता है।",
+    "buttons": [
+      "अनुमति दें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” को आपके वर्तमान स्थान का उपयोग करने की इच्छा है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” स्थानीय इन-कॉल अनुभव प्रदान करना चाहेगा",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” आस-पास के ब्लूटूथ उपकरणों पर डेटा उपलब्ध कराना चाहता है, भले ही आप ऐप का उपयोग न कर रहे हों।",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "नई सेटिंग्ज़ उपलब्ध हैं।  क्या आप उन्हें अभी अपडेट करना चाहेंगे?",
+    "buttons": [
+      "अभी नहीं"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "App Store पर साइन इन करें",
+    "buttons": [
+      "रद्द करें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Game Center पर साइन इन करें",
+    "buttons": [
+      "रद्द करें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iTunes Store पर साइन इन करें",
+    "buttons": [
+      "रद्द करें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iMessage पर साइन इन करें",
+    "buttons": [
+      "रद्द करें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "FaceTime पर साइन इन करें",
+    "buttons": [
+      "रद्द करें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "साइन इन करने के लिए “%@” “%@” का उपयोग करना चाहता है",
+    "buttons": [
+      "जारी रखें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” को ऐक्सेसरी से कनेक्ट होने की अनुमति देने के लिए Bluetooth चालू करें",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  }
+]

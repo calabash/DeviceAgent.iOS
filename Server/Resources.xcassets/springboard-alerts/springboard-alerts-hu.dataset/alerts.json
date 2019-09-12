@@ -1,22 +1,474 @@
 [
   {
-    "title": "hozzáférjen az Ön helyzetéhez az alkalmazás használatakor",
+    "title": "Engedélyezi a(z) „%@” számára, hogy hozzáférjen az Ön helyzetéhez?",
+    "buttons": [
+      "Engedélyezés",
+      "Engedélyezés mindig",
+      "Az alkalmazás használata közben",
+      "Csak az alk. használatakor"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Engedélyezi, hogy a(z) „%@” hozzáférjen az Ön helyzetéhez akkor is, ha nem használja az alkalmazást?",
     "buttons": [
       "Engedélyezés"
     ],
     "shouldAccept": true
   },
   {
-    "title": "értesítéseket szeretne Önnek küldeni",
+    "title": "Engedélyezi, hogy a(z) „%@” hozzáférjen az Ön helyzetéhez az alkalmazás használatakor?",
+    "buttons": [
+      "Engedélyezés",
+      "Csak az alk. használatakor"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” a háttérben használja az Ön helyzetét. Továbbra is engedélyezi ezt?",
     "buttons": [
       "Engedélyezés"
     ],
     "shouldAccept": true
   },
   {
-    "title": "számára, hogy hozzáférjen az Ön helyzetéhez",
+    "title": "Szeretné engedélyezni a(z) „%@” számára a Face ID használatát?",
     "buttons": [
-      "Engedélyezés mindig"
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) %@ adatai közül néhány el lesz küldve az Apple-nek az Ön kérelme feldolgozásához.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” hozzá szeretne férni az Ön mikrofonjához.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” hozzá szeretne adni az Ön fotóihoz",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” hozzá szeretne férni az Ön naptárjához.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A beszédadatok el lesznek küldve az alkalmazásból az Apple-nek a kérelme feldolgozásához. Ez segít az Apple-nek a beszédfelismerési technológiájának fejlesztésében is.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” hozzá szeretne férni az Ön mozgási és fitnesztevékenységéhez",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” hozzá szeretne férni az Ön kamerájához.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” hozzá szeretne férni az Ön emlékeztetőihez.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Szeretné a következőt a Sirivel használni: „%@”?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” hozzá szeretne férni az Apple Musichoz, az Ön zene- és videotevékenységeihez, valamint a médiakönyvtárához.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” hozzá szeretne férni az Ön kontaktjaihoz.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” hozzá szeretne férni az Ön fotóihoz.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” hozzá szeretne férni az Ön Otthon-adataihoz",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” híváson belüli funkciót szeretne nyújtani",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” adatokat akar elérhetővé tenni közeli Bluetooth-eszközök számára akkor is, amikor Ön nem használja az alkalmazást.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” hozzá szeretne férni a beszédfelismeréshez",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Új beállítások állnak rendelkezésre. Szeretne most frissíteni?",
+    "buttons": [
+      "Ne most"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Szolgáltatói beállítások frissítése",
+    "buttons": [
+      "Ne most"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” VPN-konfigurációt szeretne hozzáadni",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” szűrni akarja a hálózati tartalmat",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Az iPhone nincs aktiválva.",
+    "buttons": [
+      "Kihagyás"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Engedélyezi a Diktálást?",
+    "buttons": [
+      "Később"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Diktálás engedélyezése",
+    "buttons": [
+      "Később"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Hozzáadja más gyártó billentyűzetét?",
+    "buttons": [
+      "Később"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Megnyitás: „%@”",
+    "buttons": [
+      "Megnyitás"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Megnyitja a következővel: „%@“?",
+    "buttons": [
+      "Megnyitás"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Keresés: %@",
+    "buttons": [
+      "Megnyitás"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Megnyitja ezt az oldalt a következőben: \"%@\"?",
+    "buttons": [
+      "Megnyitás"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Megnyitás a(z) %@ alkalmazásban",
+    "buttons": [
+      "Megnyitás"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Bejelentkezés az App Store-ba",
+    "buttons": [
+      "Mégsem"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Bejelentkezés a Game Centerbe",
+    "buttons": [
+      "Mégsem"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Bejelentkezés az iTunes Store-ba",
+    "buttons": [
+      "Mégsem"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Bejelentkezés az iMessage-be",
+    "buttons": [
+      "Mégsem"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Bejelentkezés a FaceTime-ba",
+    "buttons": [
+      "Mégsem"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Bejelentkezés az iCloudba",
+    "buttons": [
+      "Mégsem"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Az egészségügyi adatok frissítésének engedélyezése a(z) „%@” számára.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Egészségügyi hozzáférés",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%1$@” meg szeretné nyitni a(z) %2$@ fiókjait",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A jelenlegi Wi-Fi-hálózat és más közeli hálózatok holnapig le lesznek választva.\n\nA Wi-Fi továbbra is rendelkezésre áll az AirDrophoz, a Személyes Hotspothoz és a helymeghatározás pontossága érdekében.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A jelenlegi WLAN-hálózat és más közeli hálózatok holnapig le lesznek választva.\n\nA WLAN továbbra is rendelkezésre áll az AirDrophoz, a Személyes Hotspothoz és a helymeghatározás pontossága érdekében.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A jelenleg csatlakoztatott tartozékok le lesznek választva, és más tartozékok nem fognak kapcsolódni.\n\nA Bluetooth továbbra is rendelkezésre áll az Apple Watchhoz, az Apple Pencilhez, a Személyes Hotspothoz és a Handoffhoz.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” VoIP-hívásokat szeretne fogadni a háttérben",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Nincs behelyezve SIM-kártya",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” hozzá szeretne férni az Apple Musichoz, az Ön zene- és videotevékenységeihez, valamint a médiakönyvtárához",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” adatokat akar elérhetővé tenni közeli Bluetooth-eszközök számára akkor is, amikor Ön nem használja az alkalmazást",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Jelentkezzen be Apple ID-val",
+    "buttons": [
+      "Mégsem"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” 3 három napja használja az Ön helyzetét a háttérben. Szeretné továbbra is engedélyezni a helyzet háttérben történő használatát?",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” egyszer használta az Ön helyzetét a háttérben az elmúlt 3 napban. Szeretné továbbra is engedélyezni a helyzet háttérben történő használatát?",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” hozzá szeretne férni a kontaktok alapvető információihoz",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” hozzá szeretne férni a kontaktok összes információjához",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” Bluetooth-t szeretné használni, miközben az használatban van",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” a Bluetooth-t szeretné használni",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Ez lehetővé teszi, hogy a(z) „%@” megkeresse és csatlakozzon a Bluetooth-kiegészítőkhöz. Előfordulhat, hogy ez az alkalmazás Bluetooth-t is használ annak megállapításához, hogy Ön a közelben tartózkodik-e.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” DNS-proxykonfigurációkat szeretne hozzáadni",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” használni szeretné a jelenlegi helyzetét",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” hozzáférhet a helyzetéhez az alkalmazás használatakor?",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Új beállítások érhetők el. Kívánja most frissíteni azokat?",
+    "buttons": [
+      "Ne most"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” VPN-konfigurációt kíván hozzáadni",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Az iPhone készülék nincs aktiválva.",
+    "buttons": [
+      "Kihagyás"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%1$@” meg kívánja nyitni a(z) %2$@ fiókjait",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” a következőt szeretné használni a bejelentkezéshez: „%@”",
+    "buttons": [
+      "Folytatás"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Kapcsolja be a Bluetooth-ot, hogy a(z) „%@” számára engedélyezze a kiegészítőkhöz való csatlakozást",
+    "buttons": [
+      "OK"
     ],
     "shouldAccept": true
   }
