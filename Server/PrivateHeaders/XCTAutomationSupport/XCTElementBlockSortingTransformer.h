@@ -30,6 +30,7 @@
 @property(readonly) BOOL supportsAttributeKeyPathAnalysis;
 @property(readonly) BOOL supportsRemoteEvaluation;
 
++ (void)provideCapabilitiesToBuilder:(id)arg1;
 - (BOOL)canBeRemotelyEvaluatedWithCapabilities:(id)arg1;
 - (id)initWithComparator:(CDUnknownBlockType)arg1;
 - (id)iteratorForInput:(id)arg1;
