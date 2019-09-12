@@ -63,6 +63,7 @@
 @property(readonly) XCUIElement *element;
 @property(readonly, copy) NSString *elementDescription;
 @property(readonly) id <XCTElementSnapshotAttributeDataSource> elementSnapshotAttributeDataSource;
+@property(readonly, copy) XCUIElementQuery *excludingNonModalElements;
 @property(copy) NSArray *expressedIdentifiers;
 @property(copy) NSSet *expressedTypes;
 @property(readonly) XCUIElement *firstMatch;
