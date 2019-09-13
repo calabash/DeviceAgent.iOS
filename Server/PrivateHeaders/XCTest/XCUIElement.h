@@ -52,6 +52,7 @@
 @property(readonly, copy) XCUIElementQuery *drawers;
 @property(readonly, copy) XCUIElement *elementBoundByAccessibilityElement;
 @property(readonly) NSUInteger elementType;
+@property(readonly, copy) XCUIElement *excludingNonModalElements;
 @property(readonly) BOOL exists;
 @property(readonly) XCUIElement *firstMatch;
 @property(readonly) CGRect frame;
