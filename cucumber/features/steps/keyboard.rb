@@ -192,7 +192,9 @@ end
 
 Then(/^I should see an empty text field$/) do
   actual_text = text_from_text_field
-  expect_text(nil, actual_text, "Error clearing text")
+  # Xcode 11 returns `placeholder` if `value` is empty
+  expected_text = (device_agent_built_with_xcode_gte_11? ? "Schreib!" : nil)
+  expect_text(expected_text, actual_text, "Error clearing text")
 end
 
 Given(/^I touched the Text View$/) do
@@ -228,7 +230,13 @@ And(/^I can dismiss the Text View keyboard$/) do
 end
 
 And(/^I can select all the text in the Text View$/) do
-  touch({marked: "text view"}, {duration: 1.0})
+  if ios_gte?("13.0")
+    touch({marked: "text view"}, {duration: 0.1})
+    wait_for_animations
+    touch({marked: "text view"}, {duration: 0.1})
+  else
+    touch({marked: "text view"}, {duration: 1.0})
+  end
   query = {marked: "Select All" }
   wait_for_view(query)
   2.times { wait_for_animations }
