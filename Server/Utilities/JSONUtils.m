@@ -39,7 +39,7 @@ static NSDictionary *typeStringToElementType;
 
 + (NSDictionary *)snapshotOrElementToJSON:(id)element {
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
-    XCElementSnapshot *snapshot;
+    /*XCElementSnapshot *snapshot;
     if ([element isKindOfClass:[XCElementSnapshot class]]) {
         snapshot = element;
     } else {
@@ -55,6 +55,14 @@ static NSDictionary *typeStringToElementType;
             }
         }
         snapshot = [(XCUIElement *)element lastSnapshot];
+    }*/
+    XCElementSnapshot *snapshot = nil;
+    XCUIElement *el = (XCUIElement *) element;
+    XCUIElementQuery *query = el.query;
+    if ([query respondsToSelector:@selector(elementSnapshotForDebugDescription)]) {
+        snapshot = [query elementSnapshotForDebugDescription];
+    } else {
+        snapshot = [query elementSnapshotForDebugDescriptionWithNoMatchesMessage:nil];
     }
 
 

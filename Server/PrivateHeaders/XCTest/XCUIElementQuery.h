@@ -171,7 +171,6 @@
 - (id)elementBoundByIndex:(NSUInteger)arg1;
 - (id)elementMatchingPredicate:(id)arg1;
 - (id)elementMatchingType:(NSUInteger)arg1 identifier:(id)arg2;
-- (id)elementSnapshotForDebugDescriptionWithNoMatchesMessage:(id *)arg1;
 - (id)elementWithIdentifier:(id)arg1;
 - (id)elementWithLabel:(id)arg1;
 - (id)elementWithPlaceholderValue:(id)arg1;
@@ -186,6 +185,11 @@
 - (id)snapshotForElement:(id)arg1 attributes:(id)arg2 parameters:(id)arg3 timeoutControls:(id)arg4 error:(id *)arg5;
 - (id)sorted:(CDUnknownBlockType)arg1;
 - (id)uniqueMatchingSnapshotWithError:(id *)arg1;
+
+// Deprecated since Xcode 11.0
+- (XCElementSnapshot *)elementSnapshotForDebugDescription;
+// Added since Xcode 11.0
+- (XCElementSnapshot *)elementSnapshotForDebugDescriptionWithNoMatchesMessage:(id *)arg1;
 
 
 @end
