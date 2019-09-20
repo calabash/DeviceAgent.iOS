@@ -1,6 +1,7 @@
 
 #import "JSONUtils.h"
 #import "XCUIElement+VisibilityResult.h"
+#import "XcodeCompatibility.h"
 #import "InvalidArgumentException.h"
 #import "CBXConstants.h"
 #import "CBXDecimalRounder.h"
@@ -39,30 +40,13 @@ static NSDictionary *typeStringToElementType;
 
 + (NSDictionary *)snapshotOrElementToJSON:(id)element {
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
-    /*XCElementSnapshot *snapshot;
+
+    XCElementSnapshot *snapshot;
     if ([element isKindOfClass:[XCElementSnapshot class]]) {
         snapshot = element;
     } else {
-        if (![(XCUIElement *)element lastSnapshot]) {
-            if ([(XCUIElement *)element respondsToSelector:@selector(resolve)]) {
-                [(XCUIElement *)element resolve];
-            } else {
-                NSError *error = nil;
-                if (![(XCUIElement *)element resolveOrRaiseTestFailure:NO error:&error]) {
-                    DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
-                            (XCUIElement *)element, [error localizedDescription]);
-                }
-            }
-        }
-        snapshot = [(XCUIElement *)element lastSnapshot];
-    }*/
-    XCElementSnapshot *snapshot = nil;
-    XCUIElement *el = (XCUIElement *) element;
-    XCUIElementQuery *query = el.query;
-    if ([query respondsToSelector:@selector(elementSnapshotForDebugDescription)]) {
-        snapshot = [query elementSnapshotForDebugDescription];
-    } else {
-        snapshot = [query elementSnapshotForDebugDescriptionWithNoMatchesMessage:nil];
+        XCUIElementQuery *elementQuery = ((XCUIElement *)element).query;
+        snapshot = [elementQuery fb_elementSnapshotForDebugDescription];
     }
 
 

@@ -85,35 +85,6 @@
     }
 }
 
-- (XCElementSnapshot *_Nullable)cbxXCElementSnapshot {
-    id applicationQuery = [XCUIApplication cbxQuery:self];
-
-    Class klass = NSClassFromString(@"XCApplicationQuery");
-    SEL selectorUpdated = NSSelectorFromString(@"elementSnapshotForDebugDescriptionWithNoMatchesMessage:");
-    SEL selectorLegacy = NSSelectorFromString(@"elementSnapshotForDebugDescription"); // before Xcode 11
-    SEL validSelector;
-    NSMethodSignature *signature = [klass instanceMethodSignatureForSelector:selectorUpdated];
-    if (signature != nil) {
-        validSelector = selectorUpdated;
-    } else {
-        signature = [klass instanceMethodSignatureForSelector:selectorLegacy];
-        validSelector = selectorLegacy;
-    }
-
-    NSInvocation *invocation;
-
-    invocation = [NSInvocation invocationWithMethodSignature:signature];
-    invocation.target = applicationQuery;
-    invocation.selector = validSelector;
-
-    XCElementSnapshot *snapshot = nil;
-    void *buffer = nil;
-    [invocation invoke];
-    [invocation getReturnValue:&buffer];
-    snapshot = (__bridge XCElementSnapshot *)buffer;
-    return snapshot;
-}
-
 - (XCUIElementQuery *_Nonnull)cbxQueryForDescendantsOfAnyType {
     id applicationQuery = [XCUIApplication cbxQuery:self];
 
