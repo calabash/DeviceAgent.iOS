@@ -1,6 +1,4 @@
-#import "XCUIElementQuery.h"
-
-NS_ASSUME_NONNULL_BEGIN
+#import "XCTest+CBXAdditions.h"
 
 @interface XCUIElementQuery (FBCompatibility)
 /**
@@ -11,5 +9,3 @@ NS_ASSUME_NONNULL_BEGIN
 - (XCElementSnapshot *)fb_elementSnapshotForDebugDescription;
 
 @end
-
-NS_ASSUME_NONNULL_END

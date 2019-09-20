@@ -48,6 +48,7 @@
 		0AA3924F23279A68000E799B /* SpringBoardAlertsCurrentLanguageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA3924D23279A68000E799B /* SpringBoardAlertsCurrentLanguageTests.m */; };
 		1A33187D233521140077A32C /* XcodeCompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A331879233514740077A32C /* XcodeCompatibility.h */; };
 		1A33187E233521870077A32C /* XcodeCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A33187A233514DA0077A32C /* XcodeCompatibility.m */; };
+		1A33188123354C5F0077A32C /* XcodeCompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A331879233514740077A32C /* XcodeCompatibility.h */; };
 		4107F8FE231D7298003961AF /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107F8FC231D7262003961AF /* Resources.xcassets */; };
 		41188FEA22E9958D0012886A /* XCWebViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 4166C9AE22E7009800C8BEBF /* XCWebViews.m */; };
 		419BE54B231E46D800DF0ABD /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107F8FC231D7262003961AF /* Resources.xcassets */; };
@@ -2484,6 +2485,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		1A33188023354C4F0077A32C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A33188123354C5F0077A32C /* XcodeCompatibility.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		894ECF591C5BDDC0004B2555 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2862,6 +2871,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5DBC0AC2101F18A00A4C274 /* Build configuration list for PBXNativeTarget "DeviceAgentUnitTests" */;
 			buildPhases = (
+				1A33188023354C4F0077A32C /* Headers */,
 				F5DBC0A12101F18A00A4C274 /* Sources */,
 				F5DBC0A22101F18A00A4C274 /* Frameworks */,
 				F5DBC0A32101F18A00A4C274 /* Resources */,
