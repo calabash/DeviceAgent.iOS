@@ -85,7 +85,7 @@ Retrieves the snapshot for the given element
 
 @returns The resolved snapshot
 */
-- (XCElementSnapshot *)compatibility_elementSnapshotForDebugDescription;
+- (XCElementSnapshot *)cbx_elementSnapshotForDebugDescription;
 
 @end
 

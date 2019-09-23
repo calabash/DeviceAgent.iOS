@@ -118,7 +118,7 @@
 
 @implementation XCUIElementQuery (CBXAdditions)
 
-- (XCElementSnapshot *)compatibility_elementSnapshotForDebugDescription
+- (XCElementSnapshot *)cbx_elementSnapshotForDebugDescription
 {
   if ([self respondsToSelector:@selector(elementSnapshotForDebugDescription)]) {
     return [self elementSnapshotForDebugDescription];

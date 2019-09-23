@@ -2478,13 +2478,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1A33188023354C4F0077A32C /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		894ECF591C5BDDC0004B2555 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2862,7 +2855,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5DBC0AC2101F18A00A4C274 /* Build configuration list for PBXNativeTarget "DeviceAgentUnitTests" */;
 			buildPhases = (
-				1A33188023354C4F0077A32C /* Headers */,
 				F5DBC0A12101F18A00A4C274 /* Sources */,
 				F5DBC0A22101F18A00A4C274 /* Frameworks */,
 				F5DBC0A32101F18A00A4C274 /* Resources */,
