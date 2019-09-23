@@ -2,7 +2,6 @@
 #import "XCTest+CBXAdditions.h"
 #import "CBX-XCTest-Umbrella.h"
 #import "CBXException.h"
-#import "XCUIElementQuery.h"
 
 // This implementation does not implement all the methods in the category
 // interface.  This is by design - the category is used to expose private
@@ -115,7 +114,6 @@
 }
 
 @end
-#pragma clang diagnostic pop
 
 @implementation XCUIElementQuery (CBXAdditions)
 
@@ -132,3 +130,5 @@
 }
 
 @end
+
+#pragma clang diagnostic pop

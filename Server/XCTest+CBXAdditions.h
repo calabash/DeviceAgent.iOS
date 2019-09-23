@@ -78,16 +78,18 @@
 
 @end
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface XCUIElementQuery (CBXAdditions)
+
+// Deprecated since Xcode 11.0
+- (XCElementSnapshot *_Nonnull)elementSnapshotForDebugDescription;
+// Added since Xcode 11.0
+- (XCElementSnapshot *_Nonnull)elementSnapshotForDebugDescriptionWithNoMatchesMessage:(id _Nullable *_Nullable)arg1;
+
 /**
 Retrieves the snapshot for the given element
 
 @returns The resolved snapshot
 */
-- (XCElementSnapshot *)cbx_elementSnapshotForDebugDescription;
+- (XCElementSnapshot *_Nonnull)cbx_elementSnapshotForDebugDescription;
 
 @end
-
-NS_ASSUME_NONNULL_END

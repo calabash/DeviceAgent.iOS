@@ -186,11 +186,6 @@
 - (id)sorted:(CDUnknownBlockType)arg1;
 - (id)uniqueMatchingSnapshotWithError:(id *)arg1;
 
-// Deprecated since Xcode 11.0
-- (XCElementSnapshot *)elementSnapshotForDebugDescription;
-// Added since Xcode 11.0
-- (XCElementSnapshot *)elementSnapshotForDebugDescriptionWithNoMatchesMessage:(id *)arg1;
-
 
 @end
 
