@@ -7,6 +7,19 @@ I want a query API
 Background: App has launched
 Given the app has launched
 
+Scenario: Query return right ui element's value
+And I am looking at the Text Input with placeholder
+# Then I get empty Text Field by 'type' query and check value
+# Then I get empty Text Field by 'marked' query and check value
+# Then I get empty Text Field by 'id' query and check value
+# Then I get empty Text Field by 'text' query and check value
+And I enter text 'Hello!'
+Then I get Text Field by 'type' query and check value
+Then I get Text Field by 'marked' query and check value
+Then I get Text Field by 'id' query and check value
+Then I get Text Field by 'text' query and check value
+Then I get Text Field by 'marked' query with search for entered text
+
 @marked
 Scenario: Querying by mark
 And I am looking at the Touch tab
@@ -59,3 +72,4 @@ Then I ask for the tree representation of the view hierarchy
 Scenario: Time queries
 And I am looking at the Query page
 Then I time how long it takes to make a bunch of queries
+
