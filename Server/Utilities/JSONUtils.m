@@ -45,7 +45,7 @@ static NSDictionary *typeStringToElementType;
         snapshot = element;
     } else {
         XCUIElementQuery *elementQuery = ((XCUIElement *)element).query;
-        snapshot = [elementQuery compatibility_elementSnapshotForDebugDescription];
+        snapshot = [elementQuery cbx_elementSnapshotForDebugDescription];
     }
 
 

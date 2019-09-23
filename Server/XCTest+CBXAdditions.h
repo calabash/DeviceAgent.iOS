@@ -28,6 +28,7 @@
 @class XCUIElement;
 @class XCUIHitPointResult;
 @class XCElementSnapshot;
+@class XCUIElementQuery;
 
 @interface XCUIApplication (CBXAdditions)
 
