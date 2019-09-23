@@ -76,3 +76,17 @@
 - (XCUIHitPointResult *_Nullable)hitPoint:(int8_t *_Nullable)arg1;
 
 @end
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface XCUIElementQuery (CBXAdditions)
+/**
+Retrieves the snapshot for the given element
+
+@returns The resolved snapshot
+*/
+- (XCElementSnapshot *)compatibility_elementSnapshotForDebugDescription;
+
+@end
+
+NS_ASSUME_NONNULL_END

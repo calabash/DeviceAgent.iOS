@@ -115,3 +115,19 @@
 
 @end
 #pragma clang diagnostic pop
+
+@implementation XCUIElementQuery (CBXAdditions)
+
+- (XCElementSnapshot *)compatibility_elementSnapshotForDebugDescription
+{
+  if ([self respondsToSelector:@selector(elementSnapshotForDebugDescription)]) {
+    return [self elementSnapshotForDebugDescription];
+  }
+  if ([self respondsToSelector:@selector(elementSnapshotForDebugDescriptionWithNoMatchesMessage:)]) {
+    return [self elementSnapshotForDebugDescriptionWithNoMatchesMessage:nil];
+  }
+  @throw [CBXException withFormat:@"Cannot retrieve element snapshot"];
+  return nil;
+}
+
+@end

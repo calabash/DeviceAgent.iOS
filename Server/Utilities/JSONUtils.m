@@ -1,7 +1,6 @@
 
 #import "JSONUtils.h"
 #import "XCUIElement+VisibilityResult.h"
-#import "XcodeCompatibility.h"
 #import "InvalidArgumentException.h"
 #import "CBXConstants.h"
 #import "CBXDecimalRounder.h"
@@ -46,7 +45,7 @@ static NSDictionary *typeStringToElementType;
         snapshot = element;
     } else {
         XCUIElementQuery *elementQuery = ((XCUIElement *)element).query;
-        snapshot = [elementQuery fb_elementSnapshotForDebugDescription];
+        snapshot = [elementQuery compatibility_elementSnapshotForDebugDescription];
     }
 
 

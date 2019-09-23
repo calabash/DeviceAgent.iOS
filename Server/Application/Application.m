@@ -10,7 +10,6 @@
 #import "CBXException.h"
 #import "JSONUtils.h"
 #import "CBXDevice.h"
-#import "XcodeCompatibility.h"
 
 @interface Application ()
 @property (nonatomic, strong) XCUIApplication *app;
@@ -150,7 +149,7 @@ static Application *currentApplication;
 + (NSDictionary *)tree {
     XCUIApplication *application = [Application currentApplication];
     XCUIElementQuery *applicationQuery = [XCUIApplication cbxQuery:application];
-    XCElementSnapshot *applicationSnaphot = [applicationQuery fb_elementSnapshotForDebugDescription];
+    XCElementSnapshot *applicationSnaphot = [applicationQuery compatibility_elementSnapshotForDebugDescription];
     return [Application snapshotTree:applicationSnaphot];
 }
 
