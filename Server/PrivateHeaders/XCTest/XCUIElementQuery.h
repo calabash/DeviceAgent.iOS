@@ -171,6 +171,7 @@
 - (id)elementBoundByIndex:(NSUInteger)arg1;
 - (id)elementMatchingPredicate:(id)arg1;
 - (id)elementMatchingType:(NSUInteger)arg1 identifier:(id)arg2;
+- (id)elementSnapshotForDebugDescriptionWithNoMatchesMessage:(id *)arg1;
 - (id)elementWithIdentifier:(id)arg1;
 - (id)elementWithLabel:(id)arg1;
 - (id)elementWithPlaceholderValue:(id)arg1;
