@@ -7,19 +7,6 @@ I want a query API
 Background: App has launched
 Given the app has launched
 
-Scenario: Query return right ui element's value
-And I am looking at the Text Input with placeholder
-# Then I get empty Text Field by 'type' query and check value
-# Then I get empty Text Field by 'marked' query and check value
-# Then I get empty Text Field by 'id' query and check value
-# Then I get empty Text Field by 'text' query and check value
-And I enter text 'Hello!'
-Then I get Text Field by 'type' query and check value
-Then I get Text Field by 'marked' query and check value
-Then I get Text Field by 'id' query and check value
-Then I get Text Field by 'text' query and check value
-Then I get Text Field by 'marked' query with search for entered text
-
 @marked
 Scenario: Querying by mark
 And I am looking at the Touch tab
@@ -73,3 +60,20 @@ Scenario: Time queries
 And I am looking at the Query page
 Then I time how long it takes to make a bunch of queries
 
+Scenario: Query return right ui element's value
+And I am looking at the Text Input with placeholder
+Then I get Text Field by "type" query with string "TextField" and check value "Schreib!"
+Then I get Text Field by "id" query with string "text field" and check value "Schreib!"
+Then I get Text Field by "marked" query with string "text field" and check value "Schreib!"
+Then I get Text Field by "marked" query with string "Schreib!" and check value "Schreib!"
+Then I get Text Field by "text" query with string "Schreib!" and check value "Schreib!"
+Then I get Text Field by "property" query and check value "Schreib!"
+And I enter text "Hello!"
+Then I get Text Field by "type" query with string "TextField" and check value "Hello!"
+Then I get Text Field by "id" query with string "text field" and check value "Hello!"
+Then I get Text Field by "marked" query with string "text field" and check value "Hello!"
+Then I get Text Field by "marked" query with string "Schreib!" and check value "Hello!"
+Then I get Text Field by "marked" query with string "Hello!" and check value "Hello!"
+Then I get Text Field by "text" query with string "Schreib!" and check value "Hello!"
+Then I get Text Field by "text" query with string "Hello!" and check value "Hello!"
+Then I get Text Field by "property" query and check value "Hello!"

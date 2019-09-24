@@ -302,75 +302,21 @@ And(/^I am looking at the Text Input with placeholder$/) do
   wait_for_animations
 end
 
-Then(/^I get empty Text Field by 'type' query and check value$/) do
-  expected_placeholder = "Schreib!"
-  actual = wait_for_view({type: "TextField"})
+Then(/^I get Text Field by \"(.+)\" query with string \"(.+)\" and check value \"(.+)\"$/) do |type_query, string_query, value|
+  case type_query
+  when "type"
+    actual = wait_for_view({type: string_query})
+  when "marked"
+    actual = wait_for_view({marked: string_query})
+  when "id"
+    actual = wait_for_view({id: string_query})
+  when "text"
+    actual = wait_for_view({text: string_query})
 
-  expect(actual["placeholder"]).to be == expected_placeholder
-  expect(actual["value"]).to be == expected_placeholder
+  expect(actual["value"]).to be == value
 end
 
-Then(/^I get empty Text Field by 'marked' query and check value$/) do
-  expected_placeholder = "Schreib!"
-  actual = wait_for_view({marked: "text field"})
-
-  expect(actual["placeholder"]).to be == expected_placeholder
-  expect(actual["value"]).to be == expected_placeholder
-end
-
-Then(/^I get empty Text Field by 'id' query and check value$/) do
-  expected_placeholder = "Schreib!"
-  actual = wait_for_view({id: "text field"})
-
-  expect(actual["placeholder"]).to be == expected_placeholder
-  expect(actual["value"]).to be == expected_placeholder
-end
-
-Then(/^I get empty Text Field by 'text' query and check value$/) do
-  expected_placeholder = "Schreib!"
-  actual = wait_for_view({text: expected_placeholder})
-
-  expect(actual["value"]).to be == expected_placeholder
-end
-
-And (/^I enter text 'Hello!'$/) do
+And (/^I enter text "Hello!"$/) do
   touch({marked: "text field"})
   enter_text("Hello!")
-end
-
-Then(/^I get Text Field by 'type' query and check value$/) do
-  expected_text = "Hello!"
-  actual = wait_for_view({type: "TextField"})
-
-  expect(actual["value"]).to be == expected_text
-end
-
-Then(/^I get Text Field by 'marked' query and check value$/) do
-  expected_text = "Hello!"
-  actual = wait_for_view({marked: "text field"})
-
-  expect(actual["value"]).to be == expected_text
-end
-
-Then(/^I get Text Field by 'id' query and check value$/) do
-  expected_text = "Hello!"
-  actual = wait_for_view({id: "text field"})
-
-  expect(actual["value"]).to be == expected_text
-end
-
-Then(/^I get Text Field by 'text' query and check value$/) do
-  expected_text = "Hello!"
-  actual = wait_for_view({text: "Hello!"})
-
-  expect(actual["value"]).to be == expected_text
-end
-
-Then(/^I get Text Field by 'marked' query with search for entered text$/) do
-  entered_text = "Hello!"
-  expected_id = "text field"
-  actual = wait_for_view({marked: entered_text})
-
-  expect(actual["id"]).to be == expected_id
-  expect(actual["value"]).to be == entered_text
 end
