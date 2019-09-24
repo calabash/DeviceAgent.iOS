@@ -192,8 +192,7 @@ end
 
 Then(/^I should see an empty text field$/) do
   actual_text = text_from_text_field
-  # Xcode 11 returns `placeholder` if `value` is empty
-  expected_text = (device_agent_built_with_xcode_gte_11? ? "Schreib!" : nil)
+  expected_text = "Schreib!"
   expect_text(expected_text, actual_text, "Error clearing text")
 end
 

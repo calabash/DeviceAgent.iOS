@@ -39,22 +39,13 @@ static NSDictionary *typeStringToElementType;
 
 + (NSDictionary *)snapshotOrElementToJSON:(id)element {
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
+
     XCElementSnapshot *snapshot;
     if ([element isKindOfClass:[XCElementSnapshot class]]) {
         snapshot = element;
     } else {
-        if (![(XCUIElement *)element lastSnapshot]) {
-            if ([(XCUIElement *)element respondsToSelector:@selector(resolve)]) {
-                [(XCUIElement *)element resolve];
-            } else {
-                NSError *error = nil;
-                if (![(XCUIElement *)element resolveOrRaiseTestFailure:NO error:&error]) {
-                    DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
-                            (XCUIElement *)element, [error localizedDescription]);
-                }
-            }
-        }
-        snapshot = [(XCUIElement *)element lastSnapshot];
+        XCUIElementQuery *elementQuery = ((XCUIElement *)element).query;
+        snapshot = [elementQuery cbx_elementSnapshotForDebugDescription];
     }
 
 

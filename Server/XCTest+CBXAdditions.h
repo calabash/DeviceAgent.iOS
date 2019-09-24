@@ -28,6 +28,7 @@
 @class XCUIElement;
 @class XCUIHitPointResult;
 @class XCElementSnapshot;
+@class XCUIElementQuery;
 
 @interface XCUIApplication (CBXAdditions)
 
@@ -74,5 +75,21 @@
 @interface XCElementSnapshot (CBXAdditions)
 
 - (XCUIHitPointResult *_Nullable)hitPoint:(int8_t *_Nullable)arg1;
+
+@end
+
+@interface XCUIElementQuery (CBXAdditions)
+
+// Deprecated since Xcode 11.0
+- (XCElementSnapshot *_Nonnull)elementSnapshotForDebugDescription;
+// Added since Xcode 11.0
+- (XCElementSnapshot *_Nonnull)elementSnapshotForDebugDescriptionWithNoMatchesMessage:(id _Nullable *_Nullable)arg1;
+
+/**
+Retrieves the snapshot for the given element
+
+@returns The resolved snapshot
+*/
+- (XCElementSnapshot *_Nonnull)cbx_elementSnapshotForDebugDescription;
 
 @end

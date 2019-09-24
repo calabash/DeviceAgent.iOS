@@ -148,8 +148,9 @@ static Application *currentApplication;
 
 + (NSDictionary *)tree {
     XCUIApplication *application = [Application currentApplication];
-    XCElementSnapshot *snapshot = [application cbxXCElementSnapshot];
-    return [Application snapshotTree:snapshot];
+    XCUIElementQuery *applicationQuery = [XCUIApplication cbxQuery:application];
+    XCElementSnapshot *applicationSnaphot = [applicationQuery cbx_elementSnapshotForDebugDescription];
+    return [Application snapshotTree:applicationSnaphot];
 }
 
 + (NSDictionary *)snapshotTree:(XCElementSnapshot *)snapshot {
