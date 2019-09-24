@@ -59,3 +59,19 @@ Then I ask for the tree representation of the view hierarchy
 Scenario: Time queries
 And I am looking at the Query page
 Then I time how long it takes to make a bunch of queries
+
+Scenario: Query return right ui element's value
+And I am looking at the Text Input with placeholder
+Then I get Text Field by "type" query with string "TextField" and check value "Schreib!"
+Then I get Text Field by "id" query with string "text field" and check value "Schreib!"
+Then I get Text Field by "marked" query with string "text field" and check value "Schreib!"
+Then I get Text Field by "marked" query with string "Schreib!" and check value "Schreib!"
+Then I get Text Field by "text" query with string "Schreib!" and check value "Schreib!"
+And I enter text "Hello!"
+Then I get Text Field by "type" query with string "TextField" and check value "Hello!"
+Then I get Text Field by "id" query with string "text field" and check value "Hello!"
+Then I get Text Field by "marked" query with string "text field" and check value "Hello!"
+Then I get Text Field by "marked" query with string "Schreib!" and check value "Hello!"
+Then I get Text Field by "marked" query with string "Hello!" and check value "Hello!"
+Then I get Text Field by "text" query with string "Schreib!" and check value "Hello!"
+Then I get Text Field by "text" query with string "Hello!" and check value "Hello!"
