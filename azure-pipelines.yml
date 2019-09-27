@@ -1,7 +1,13 @@
 variables:
-  # `mainJob` variable points to the matrix case that will be the main case
-  # it will publish artifacts to the Azure Blob
-  mainJob: 'Mojave-Xcode-10.2.1'
+  # When Agent.JobName matches this value (and the git ref is a tag), then
+  # built artifacts will be published to Azure Blob Storage.
+  #
+  # We cannot build with Xcode 11 because of this bug:
+  # REGRESSION: Xcode 11 (xcodebuild) fails to perform gestures during UI
+  #             Tests on iPhones/iPads with iOS versions 11.0.x - 11.3.x -
+  #             "unable to fetch parameterized attribute"
+  # FB7315854
+  AzurePublishWhen: "Mojave-Xcode-10.3"
 
 trigger:
   tags:
@@ -83,7 +89,7 @@ jobs:
       AZURE_STORAGE_CONNECTION_STRING: $(AzureStorageConnectionString)
       SOURCE_BRANCH: $(Build.SourceBranch)
     displayName: "Publish to Azure Blob Storage"
-    condition: and(succeeded(), eq(variables['Agent.JobName'], variables['mainJob']), startsWith(variables['Build.SourceBranch'], 'refs/tags/'))
+    condition: and(succeeded(), eq(variables['Agent.JobName'], variables['AzurePublishWhen']), startsWith(variables['Build.SourceBranch'], 'refs/tags/'))
 
   - task: PublishTestResults@2
     displayName: 'Publish Test Results'
