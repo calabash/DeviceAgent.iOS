@@ -13,12 +13,13 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@class NSNumber, XCUIApplication, XCUIApplicationProcess;
+@class NSNumber, XCUIApplicationProcess;
+@protocol XCUIElementSnapshotApplication;
 
 @protocol XCUIApplicationProcessTracker <NSObject>
 - (XCUIApplicationProcess *)applicationProcessWithPID:(NSInteger)arg1;
 - (XCUIApplicationProcess *)applicationProcessWithToken:(NSNumber *)arg1;
-- (XCUIApplication *)monitoredApplicationWithProcessIdentifier:(NSInteger)arg1;
+- (id <XCUIElementSnapshotApplication>)monitoredApplicationWithProcessIdentifier:(NSInteger)arg1;
 - (void)setApplicationProcess:(XCUIApplicationProcess *)arg1 forPID:(NSInteger)arg2;
 - (void)setApplicationProcess:(XCUIApplicationProcess *)arg1 forToken:(NSNumber *)arg2;
 @end

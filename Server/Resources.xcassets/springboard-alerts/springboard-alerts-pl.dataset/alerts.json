@@ -1,0 +1,482 @@
+[
+  {
+    "title": "Udostępniać aplikacji „%@” Twoje położenie?",
+    "buttons": [
+      "Pozwalaj",
+      "Zawsze pozwalaj",
+      "Pozwalaj, gdy używam aplikacji",
+      "Gdy używam aplikacji"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Udostępniać aplikacji „%@” Twoje położenie także, gdy jej nie używasz?",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Udostępniać aplikacji „%@” Twoje położenie, gdy jej używasz?",
+    "buttons": [
+      "Pozwalaj",
+      "Gdy używam aplikacji"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” używa Twojego położenia w tle. Czy chcesz nadal na to pozwalać?",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Czy chcesz pozwolić „%@” używać Face ID?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Część danych aplikacji %@ zostanie wysłana do Apple w celu przetworzenia żądań.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce uzyskać dostęp do mikrofonu",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce dodać coś do Zdjęć",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce uzyskać dostęp do Kalendarza",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dane mowy zostaną wysłane do Apple w celu przetworzenia żądań. Pomoże to Apple w udoskonalaniu technologii rozpoznawania mowy.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce uzyskać dostęp do danych o Twoim ruchu i ćwiczeniach",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce uzyskać dostęp do Aparatu",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce uzyskać dostęp do Przypomnień",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Czy chcesz używać „%@” z Siri?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce uzyskać dostęp do Apple Music, danych Twojej aktywności dotyczącej muzyki i wideo oraz do Twojej biblioteki multimediów.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce uzyskać dostęp do Kontaktów",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce uzyskać dostęp do Zdjęć",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce uzyskać dostęp do danych domu",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce oferować natywny interfejs połączenia",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikacja „%@” chce udostępniać dane pobliskim urządzeniom Bluetooth, także gdy jej nie używasz.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce uzyskać dostęp do rozpoznawania mowy",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dostępne są nowe ustawienia. Czy chcesz je uaktualnić?",
+    "buttons": [
+      "Nie teraz"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Uaktualnienie ustawień operatora",
+    "buttons": [
+      "Nie teraz"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce dodać konfiguracje VPN",
+    "buttons": [
+      "Pozwól"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce filtrować treści w sieci",
+    "buttons": [
+      "Pozwól"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iPhone nie został aktywowany",
+    "buttons": [
+      "Ignoruj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Włączyć dyktowanie?",
+    "buttons": [
+      "Nie teraz"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Włącz dyktowanie",
+    "buttons": [
+      "Nie teraz"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dodać klawiaturę innej firmy?",
+    "buttons": [
+      "Nie teraz"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Otwórz w „%@”",
+    "buttons": [
+      "Otwórz"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Otworzyć w „%@”?",
+    "buttons": [
+      "Otwórz"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Szukaj w %@",
+    "buttons": [
+      "Otwórz"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Otworzyć tę stronę w „%@”?",
+    "buttons": [
+      "Otwórz"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Zaloguj się do App Store",
+    "buttons": [
+      "Anuluj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Zaloguj się do Game Center",
+    "buttons": [
+      "Anuluj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Zaloguj się do iTunes Store",
+    "buttons": [
+      "Anuluj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Zaloguj się do iMessage",
+    "buttons": [
+      "Anuluj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Zaloguj się do FaceTime",
+    "buttons": [
+      "Anuluj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Zaloguj się do iCloud",
+    "buttons": [
+      "Anuluj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Pozwala „%@” uaktualniać Twoje dane zdrowotne.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dostęp do danych Zdrowia",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%1$@” chce mieć dostęp do kont (%2$@)",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Urządzenie pozostanie rozłączone z bieżącą siecią Wi-Fi oraz pobliskimi sieciami do jutra.\n\nSieć Wi-Fi będzie nadal dostępna na potrzeby funkcji AirDrop i Hotspot osobisty oraz będzie używana w celu dokładniejszego ustalania położenia.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Urządzenie pozostanie rozłączone z bieżącą siecią WLAN oraz pobliskimi sieciami do jutra.\n\nSieć WLAN będzie nadal dostępna na potrzeby funkcji AirDrop i Hotspot osobisty oraz będzie używana w celu dokładniejszego ustalania położenia.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Połączone obecnie akcesoria zostaną rozłączone, a łączenie z nowymi nie będzie możliwe.\n\nBluetooth będzie nadal dostępny na potrzeby łączenia z Apple Watch i Apple Pencil oraz funkcji Hotspot osobisty i Handoff.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce odbierać połączenia VoIP w tle",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Brak karty SIM",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Zaloguj się, podając Apple ID",
+    "buttons": [
+      "Anuluj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Pozwala aplikacji „%@” uaktualniać Twoje dane zdrowotne.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikacja „%@” używała Twojego położenia w tle w ciągu ostatnich 3 dni. Czy nadal chcesz pozwalać jej na używanie Twojego położenia w tle?",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikacja „%@” używała Twojego położenia w tle jeden raz w ciągu ostatnich 3 dni. Czy nadal chcesz pozwalać jej na używanie Twojego położenia w tle?",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce uzyskać dostęp do podstawowych danych kontaktów",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce uzyskać dostęp do wszystkich danych kontaktów",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce używać Bluetooth, gdy jest w użyciu",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce używać Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dzięki temu „%@” uzyska możliwość znajdowania akcesoriów Bluetooth i łączenia się z nimi. Ta aplikacja może także używać Bluetooth do określania, kiedy jesteś w pobliżu.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce dodać konfiguracje proxy DNS",
+    "buttons": [
+      "Pozwól"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce użyć informacji o Twoim położeniu",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Udostępniać programowi „%@” Twoje położenie także, gdy go nie używasz?",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Udostępniać programowi „%@” Twoje położenie, gdy go używasz?",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Część danych programu %@ zostanie wysłana do Apple w celu przetworzenia żądań.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce uzyskać dostęp do Apple Music, danych Twojej aktywności dotyczącej muzyki i wiedeo oraz do Twojej biblioteki multimediów.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Program „%@” chce udostępniać dane pobliskim urządzeniom Bluetooth, także gdy go nie używasz.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Otwórz w „%@”",
+    "buttons": [
+      "Otwórz"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Otworzyć w „%@“?",
+    "buttons": [
+      "Otwórz"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Otwórz w programie %@",
+    "buttons": [
+      "Otwórz"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce użyć „%@” do zalogowania się",
+    "buttons": [
+      "Dalej"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aby używać akcesoriów z „%@”, włącz Bluetooth.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  }
+]

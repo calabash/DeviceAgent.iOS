@@ -41,6 +41,7 @@
 @property(readonly, copy) XCUIElementQuery *collectionViews;
 @property(readonly, copy) XCUIElementQuery *colorWells;
 @property(readonly, copy) XCUIElementQuery *comboBoxes;
+@property(readonly, copy) NSString *compactDescription;
 @property(readonly, copy) XCUIElementQuery *datePickers;
 @property(readonly, copy) XCUIElementQuery *decrementArrows;
 @property(readonly) id <XCUIDevice> device;
@@ -51,6 +52,7 @@
 @property(readonly, copy) XCUIElementQuery *drawers;
 @property(readonly, copy) XCUIElement *elementBoundByAccessibilityElement;
 @property(readonly) NSUInteger elementType;
+@property(readonly, copy) XCUIElement *excludingNonModalElements;
 @property(readonly) BOOL exists;
 @property(readonly) XCUIElement *firstMatch;
 @property(readonly) CGRect frame;
@@ -64,6 +66,7 @@
 @property(readonly, copy) XCUIElementQuery *icons;
 @property(readonly) NSString *identifier;
 @property(readonly, copy) XCUIElementQuery *images;
+@property(readonly, copy) XCUIElement *includingNonModalElements;
 @property(readonly, copy) XCUIElementQuery *incrementArrows;
 @property(readonly, nonatomic) NSInteger interfaceOrientation;
 @property(readonly, getter=isEnabled) BOOL enabled;

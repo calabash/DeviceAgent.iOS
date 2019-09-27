@@ -69,6 +69,12 @@ Before("@simulator") do |scenario|
   end
 end
 
+Before("@skip_ios_13") do |scenario|
+  if ios_gte?("13.0")
+    skip_this_scenario
+  end
+end
+
 Before("@reset_device") do |scenario|
   device = Calabash::Launcher.instance.device
   if device.simulator?

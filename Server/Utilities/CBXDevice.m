@@ -258,6 +258,11 @@ NSString *const CBXDeviceSimKeyVersionInfo = @"SIMULATOR_VERSION_INFO";
       @"iPhone11,6" : @"iphone 10s max",
       @"iPhone11,8" : @"iphone 10r",
 
+      // iPhone 11/11 Pro/11 Pro Max
+      @"iPhone12,1" : @"iphone 10r",
+      @"iPhone12,3" : @"iphone 10",
+      @"iPhone12,5" : @"iphone 10s max",
+
       // iPad Pro 13in
       @"iPad6,7" : @"ipad pro",
       @"iPad6,8" : @"ipad pro",
@@ -286,7 +291,15 @@ NSString *const CBXDeviceSimKeyVersionInfo = @"SIMULATOR_VERSION_INFO";
       @"iPad8,5" : @"ipad pro",
       @"iPad8,6" : @"ipad pro",
       @"iPad8,7" : @"ipad pro",
-      @"iPad8,8" : @"ipad pro"
+      @"iPad8,8" : @"ipad pro",
+
+      // iPad mini 7,9in
+      @"iPad11,1" : @"ipad mini",
+      @"iPad11,2" : @"ipad mini",
+
+      // iPad Air 10.5in
+      @"iPad11,3" : @"ipad air",
+      @"iPad11,4" : @"ipad air",
       };
 
     return _formFactorMap;

@@ -11,7 +11,8 @@
 #import "CDStructures.h"
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
-@protocol XCUIElementAttributes;
+
+#import "XCUIElementAttributes-Protocol.h"
 
 @class NSArray, NSDictionary;
 

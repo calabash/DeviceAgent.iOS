@@ -28,6 +28,7 @@
 {
     BOOL _changesScope;
     BOOL _stopsOnFirstMatch;
+    BOOL _modalViewPruningDisabled;
     XCUIElementQuery *_inputQuery;
     NSSet *_expressedTypes;
     NSArray *_expressedIdentifiers;
@@ -62,6 +63,7 @@
 @property(readonly) XCUIElement *element;
 @property(readonly, copy) NSString *elementDescription;
 @property(readonly) id <XCTElementSnapshotAttributeDataSource> elementSnapshotAttributeDataSource;
+@property(readonly, copy) XCUIElementQuery *excludingNonModalElements;
 @property(copy) NSArray *expressedIdentifiers;
 @property(copy) NSSet *expressedTypes;
 @property(readonly) XCUIElement *firstMatch;
@@ -71,6 +73,7 @@
 @property(readonly, copy) XCUIElementQuery *helpTags;
 @property(readonly, copy) XCUIElementQuery *icons;
 @property(readonly, copy) XCUIElementQuery *images;
+@property(readonly, copy) XCUIElementQuery *includingNonModalElements;
 @property(readonly, copy) XCUIElementQuery *incrementArrows;
 @property(readonly) XCUIElementQuery *inputQuery;
 @property(readonly, copy) XCUIElementQuery *keyboards;
@@ -88,6 +91,7 @@
 @property(readonly, copy) XCUIElementQuery *menuButtons;
 @property(readonly, copy) XCUIElementQuery *menuItems;
 @property(readonly, copy) XCUIElementQuery *menus;
+@property BOOL modalViewPruningDisabled;
 @property(readonly, copy) XCUIElementQuery *navigationBars;
 @property(readonly, copy) XCUIElementQuery *otherElements;
 @property(readonly, copy) XCUIElementQuery *outlineRows;
@@ -153,7 +157,7 @@
 - (id)_predicateWithType:(NSUInteger)arg1 identifier:(id)arg2;
 - (id)_queryWithPredicate:(id)arg1;
 - (id)_queryWithPredicate:(id)arg1 description:(id)arg2;
-- (BOOL)_resolveRemoteElements:(id)arg1 inSnapshot:(id)arg2 runtimeIssues:(id *)arg3 error:(id *)arg4;
+- (BOOL)_resolveRemoteElements:(id)arg1 inSnapshot:(id)arg2 query:(id)arg3 runtimeIssues:(id *)arg4 error:(id *)arg5;
 - (id)allMatchingSnapshotsWithError:(id *)arg1;
 - (id)ascending:(NSUInteger)arg1;
 - (id)backingQueryWithError:(id *)arg1;

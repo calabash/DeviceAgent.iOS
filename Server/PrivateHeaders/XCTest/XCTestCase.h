@@ -92,6 +92,7 @@
 - (void)_reportFailuresForUnwaitedExpectations;
 - (Class)_requiredTestRunBaseClass;
 - (void)_runTeardownBlocks;
+- (id)_symbolicationRecordForAddress:(NSUInteger)arg1;
 - (id)_symbolicationRecordForTestCodeInAddressStack:(id)arg1;
 - (void)addAttachment:(id)arg1;
 - (void)addTeardownBlock:(CDUnknownBlockType)arg1;

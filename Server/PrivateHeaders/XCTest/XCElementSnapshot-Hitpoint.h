@@ -12,10 +12,10 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
+#import "XCElementSnapshot.h"
+
 #import "XCUIElementAttributes-Protocol.h"
 #import "XCUIElementSnapshot-Protocol.h"
-
-#import "XCElementSnapshot.h"
 
 @class NSArray, NSDictionary, NSString;
 

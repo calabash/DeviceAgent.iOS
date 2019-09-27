@@ -52,6 +52,7 @@
 - (id)accessibilityInterface;
 - (id)applicationAutomationSessionProvider;
 - (id)applicationMonitor;
+- (void)attachLocalizableStringsData;
 - (id)deviceEventAndStateInterface;
 - (id)eventSynthesizer;
 - (void)holdHomeButtonForDuration:(double)arg1;

@@ -45,7 +45,11 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0AA3924F23279A68000E799B /* SpringBoardAlertsCurrentLanguageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA3924D23279A68000E799B /* SpringBoardAlertsCurrentLanguageTests.m */; };
+		1A020FC02338BEB600D79E57 /* XCTest+CBXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F547174D204939DA0024AA0B /* XCTest+CBXAdditions.h */; };
+		4107F8FE231D7298003961AF /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107F8FC231D7262003961AF /* Resources.xcassets */; };
 		41188FEA22E9958D0012886A /* XCWebViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 4166C9AE22E7009800C8BEBF /* XCWebViews.m */; };
+		419BE54B231E46D800DF0ABD /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107F8FC231D7262003961AF /* Resources.xcassets */; };
 		89331CCE1CC00E82003C2E59 /* RotatePinchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */; };
 		89331D301CC50447003C2E59 /* ThreadUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 89331D2E1CC50447003C2E59 /* ThreadUtils.h */; };
 		89331D321CC50447003C2E59 /* ThreadUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D2F1CC50447003C2E59 /* ThreadUtils.m */; };
@@ -176,7 +180,6 @@
 		F5061A6F2153B15E00B85792 /* SessionRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83D31C6DDF1300A945C8 /* SessionRoutes.m */; };
 		F5061A702153B15E00B85792 /* UndefinedRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83D51C6DDF1300A945C8 /* UndefinedRoutes.m */; };
 		F5061A712153B15E00B85792 /* DeviceEventRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 89512BDE1CA095D20027D61E /* DeviceEventRoutes.m */; };
-		F5061A722153B19900B85792 /* XCTest+CBXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F547174F20496A200024AA0B /* XCTest+CBXAdditions.m */; };
 		F5061A732153B19900B85792 /* CBXCUITestServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BF1C6DDF1300A945C8 /* CBXCUITestServer.m */; };
 		F5061A742153B19900B85792 /* Testmanagerd.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F34F1C9A60E70093A018 /* Testmanagerd.m */; };
 		F5061A752153B19900B85792 /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -613,12 +616,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		898743D61C5847B30084FD93 /* PBXContainerItemProxy */ = {
+		4114005C231F86C300CA4CC1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 898743B41C5847B30084FD93 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 898743BB1C5847B30084FD93;
-			remoteInfo = "xcuitest-server";
+			remoteInfo = AppStub;
 		};
 		F50BB2941D73392200264915 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -746,6 +749,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0AA3924D23279A68000E799B /* SpringBoardAlertsCurrentLanguageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SpringBoardAlertsCurrentLanguageTests.m; sourceTree = "<group>"; };
+		4107F8FC231D7262003961AF /* Resources.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources.xcassets; sourceTree = "<group>"; };
 		4166C9AE22E7009800C8BEBF /* XCWebViews.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCWebViews.m; sourceTree = "<group>"; };
 		634244EC948D56732C2565E5 /* SpringBoardAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoardAlerts.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		6342494C7C23506565D2B802 /* SpringBoardAlerts.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = SpringBoardAlerts.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
@@ -1997,6 +2002,7 @@
 				F55F83C01C6DDF1300A945C8 /* Exceptions */,
 				F55F83C71C6DDF1300A945C8 /* Routes */,
 				F55F83D61C6DDF1300A945C8 /* Utilities */,
+				4107F8FC231D7262003961AF /* Resources.xcassets */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -2297,6 +2303,7 @@
 				F5DED0421D76368000563648 /* SpringBoardAlertTest.m */,
 				63424E46759C6B27C2BEC337 /* SpringBoardAlertsTest.m */,
 				F533496F1F3AFF97004138C7 /* CBXOrientationTest.m */,
+				0AA3924D23279A68000E799B /* SpringBoardAlertsCurrentLanguageTests.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -2471,6 +2478,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		1A020FBF2338BEAB00D79E57 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A020FC02338BEB600D79E57 /* XCTest+CBXAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		894ECF591C5BDDC0004B2555 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2764,7 +2779,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				898743D71C5847B30084FD93 /* PBXTargetDependency */,
+				4114005D231F86C300CA4CC1 /* PBXTargetDependency */,
 			);
 			name = DeviceAgent;
 			productName = "xcuitest-serverUITests";
@@ -2848,6 +2863,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5DBC0AC2101F18A00A4C274 /* Build configuration list for PBXNativeTarget "DeviceAgentUnitTests" */;
 			buildPhases = (
+				1A020FBF2338BEAB00D79E57 /* Headers */,
 				F5DBC0A12101F18A00A4C274 /* Sources */,
 				F5DBC0A22101F18A00A4C274 /* Frameworks */,
 				F5DBC0A32101F18A00A4C274 /* Resources */,
@@ -3073,6 +3089,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4107F8FE231D7298003961AF /* Resources.xcassets in Resources */,
 				F5169D171CFE06B700252F52 /* CocoaLumberjack.LICENSE in Resources */,
 				F5169D151CFE06B700252F52 /* CocoaAsyncSocket.LICENSE in Resources */,
 				F5169D221CFE07F500252F52 /* LICENSE in Resources */,
@@ -3129,6 +3146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				419BE54B231E46D800DF0ABD /* Resources.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3405,7 +3423,6 @@
 				F5061A742153B19900B85792 /* Testmanagerd.m in Sources */,
 				F5061A512153B0FF00B85792 /* SpringBoardAlertsTest.m in Sources */,
 				F5061A9C2153B4EF00B85792 /* HTTPAuthenticationRequest.m in Sources */,
-				F5061A722153B19900B85792 /* XCTest+CBXAdditions.m in Sources */,
 				F5061A8C2153B19900B85792 /* CoordinateQueryConfiguration.m in Sources */,
 				F5061A922153B19900B85792 /* Gesture.m in Sources */,
 				F5061A5A2153B14400B85792 /* CBXDevice.m in Sources */,
@@ -3488,6 +3505,7 @@
 				F5061A7C2153B19900B85792 /* QuerySpecifierFactory.m in Sources */,
 				F5061AA02153B4EF00B85792 /* MultipartFormDataParser.m in Sources */,
 				F5061A962153B19900B85792 /* TwoFingerTap.m in Sources */,
+				0AA3924F23279A68000E799B /* SpringBoardAlertsCurrentLanguageTests.m in Sources */,
 				F5061A632153B15E00B85792 /* Application.m in Sources */,
 				F5061A4A2153B0FF00B85792 /* QueryFactoryTests.m in Sources */,
 				F5061A3B2153B0FF00B85792 /* CBXiOSVersionInlinesTest.m in Sources */,
@@ -3559,10 +3577,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		898743D71C5847B30084FD93 /* PBXTargetDependency */ = {
+		4114005D231F86C300CA4CC1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 898743BB1C5847B30084FD93 /* AppStub */;
-			targetProxy = 898743D61C5847B30084FD93 /* PBXContainerItemProxy */;
+			targetProxy = 4114005C231F86C300CA4CC1 /* PBXContainerItemProxy */;
 		};
 		F50BB2951D73392200264915 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

@@ -144,6 +144,7 @@ And(/^I cannot touch the button behind the purple label using the view center$/)
 
   center = element_center(element)
   touch_coordinate(center)
+  wait_for_animations
 
   wait_for_view({marked: "That was touching."})
 
@@ -173,6 +174,7 @@ But(/^I cannot touch the mostly hidden button using the view center$/) do
   mark = "mostly hidden button"
   touch({marked: mark})
 
+  wait_for_animations
   wait_for_view({marked: "That was touching."})
 
   two_finger_tap({marked: "gesture performed"})

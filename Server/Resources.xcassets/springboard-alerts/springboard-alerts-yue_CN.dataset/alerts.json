@@ -1,0 +1,219 @@
+[
+  {
+    "title": "您要允许“%@”使用面容ID吗？",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "您的部分“%@”数据将发送给Apple以处理您的请求。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您的麦克风",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想要加入您的“照片”",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您的日历",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "部分来自此App的语音数据将发送给Apple以处理您的请求。这还将帮助Apple改进语音识别技术。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您的活动与体能训练记录",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您的相机",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您的提醒事项",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "您要通过Siri来使用“%@”吗？",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想要访问Apple Music、您的音乐与视频的相关活动以及您的媒体资料库",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您的通讯录",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您通讯录的基本信息",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您通讯录的所有信息",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您的照片",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您的家庭数据",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想在后台接收VoIP网络电话",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想在您未使用该App时仍与周围的蓝牙设备交换数据",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”在使用期间想要使用蓝牙",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想要使用蓝牙",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "这将允许“%@”查找并连接蓝牙配件。此App还可能使用蓝牙来确认您在附近。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问语音识别",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "您的部分“%@”数据将发送给 Apple 以处理您的请求。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "部分来自此应用的语音数据将发送给 Apple 以处理您的请求。这还将帮助 Apple 改进语音识别技术。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "您要通过 Siri 来使用“%@”吗？",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想要访问 Apple Music、您的音乐与视频的相关活动以及您的媒体资料库。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问您的住宅数据",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想提供原生通话体验",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想在您未使用该应用时仍与周围的蓝牙设备交换数据。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "您要允许“%@”使用面容 ID 吗？",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想在后台接收 VoIP 网络电话",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  }
+]

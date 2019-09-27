@@ -293,3 +293,26 @@ Then(/^I time how long it takes to make a bunch of queries$/) do
   log_inline "Took #{elapsed} seconds to make all those queries"
 
 end
+
+And(/^I am looking at the Text Input with placeholder$/) do
+  touch_tab("Misc")
+  wait_for_animations
+  touch({marked: "text input row", all: true})
+  wait_for_view({marked: "text input page"})
+  wait_for_animations
+end
+
+Then(/^I query the text field using \"(.+)\" with string \"(.+)\" and see value \"(.+)\"$/) do |type_query, string_query, value|
+  case type_query
+  when "type"
+    actual = wait_for_view({type: string_query})
+  when "marked"
+    actual = wait_for_view({marked: string_query})
+  when "id"
+    actual = wait_for_view({id: string_query})
+  when "text"
+    actual = wait_for_view({text: string_query})
+  end
+
+  expect(actual["value"]).to be == value
+end
