@@ -1,3 +1,25 @@
+### 2.0.0
+
+* Add support for new Apple hardware: iPhone 11, 11 Pro and 11 Pro Max, iPad
+  mini 5th Gen and iPad Air 2019 #350
+* Update private headers for Xcode 11 GM #348
+* Publish DeviceAgent.iOS artifacts to blob storage #330
+* Control ADO pipeline triggers in yaml #331
+* Add support for Xcode 10.3 #332
+* Use KeyVault for secrets in ADO pipeline #333
+* Update private headers for Xcode 11 beta 6 #334
+* Xcode 11 beta 6: deal with visibility, keyboard, and 3 finger taps #335
+* SpringBoard alerts: read alert titles from .strings files #336
+* SpringBoard alerts: implement tools to parse output of strings files and store
+  as json #338
+* Spring Board alerts: dismiss algorithm can handle cases were alert buttons
+  have alternative titles #339
+* Spring Board alerts: use regex to match alert titles (improve on existing
+  'contains' logic) #342
+* Improve SpringBoard alert extraction tools #343
+* Import only current language for springboard-alerts #344
+* Add one-off fixes for existing SpringBoard alert bugs #345
+
 ### 1.4.0
 
 * Add Xcode 11 support #317 #318 #319 #320 #321 #322
