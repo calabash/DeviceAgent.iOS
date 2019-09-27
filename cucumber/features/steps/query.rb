@@ -302,7 +302,7 @@ And(/^I am looking at the Text Input with placeholder$/) do
   wait_for_animations
 end
 
-Then(/^I get Text Field by \"(.+)\" query with string \"(.+)\" and check value \"(.+)\"$/) do |type_query, string_query, value|
+Then(/^I query the text field using \"(.+)\" with string \"(.+)\" and see value \"(.+)\"$/) do |type_query, string_query, value|
   case type_query
   when "type"
     actual = wait_for_view({type: string_query})
@@ -313,11 +313,6 @@ Then(/^I get Text Field by \"(.+)\" query with string \"(.+)\" and check value \
   when "text"
     actual = wait_for_view({text: string_query})
   end
-  
-  expect(actual["value"]).to be == value
-end
 
-And (/^I enter text "Hello!"$/) do
-  touch({marked: "text field"})
-  enter_text("Hello!")
+  expect(actual["value"]).to be == value
 end

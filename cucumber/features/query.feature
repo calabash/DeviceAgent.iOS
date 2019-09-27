@@ -60,18 +60,21 @@ Scenario: Time queries
 And I am looking at the Query page
 Then I time how long it takes to make a bunch of queries
 
-Scenario: Query return right ui element's value
+@query
+Scenario: Query returns the correct 'value' for element
 And I am looking at the Text Input with placeholder
-Then I get Text Field by "type" query with string "TextField" and check value "Schreib!"
-Then I get Text Field by "id" query with string "text field" and check value "Schreib!"
-Then I get Text Field by "marked" query with string "text field" and check value "Schreib!"
-Then I get Text Field by "marked" query with string "Schreib!" and check value "Schreib!"
-Then I get Text Field by "text" query with string "Schreib!" and check value "Schreib!"
-And I enter text "Hello!"
-Then I get Text Field by "type" query with string "TextField" and check value "Hello!"
-Then I get Text Field by "id" query with string "text field" and check value "Hello!"
-Then I get Text Field by "marked" query with string "text field" and check value "Hello!"
-Then I get Text Field by "marked" query with string "Schreib!" and check value "Hello!"
-Then I get Text Field by "marked" query with string "Hello!" and check value "Hello!"
-Then I get Text Field by "text" query with string "Schreib!" and check value "Hello!"
-Then I get Text Field by "text" query with string "Hello!" and check value "Hello!"
+Then I query the text field using "type" with string "TextField" and see value "Schreib!"
+Then I query the text field using "id" with string "text field" and see value "Schreib!"
+Then I query the text field using "marked" with string "text field" and see value "Schreib!"
+Then I query the text field using "marked" with string "Schreib!" and see value "Schreib!"
+Then I query the text field using "text" with string "Schreib!" and see value "Schreib!"
+Then I touch the text field
+When the keyboard is visible
+And I type "Hello!"
+Then I query the text field using "type" with string "TextField" and see value "Hello!"
+Then I query the text field using "id" with string "text field" and see value "Hello!"
+Then I query the text field using "marked" with string "text field" and see value "Hello!"
+Then I query the text field using "marked" with string "Schreib!" and see value "Hello!"
+Then I query the text field using "marked" with string "Hello!" and see value "Hello!"
+Then I query the text field using "text" with string "Schreib!" and see value "Hello!"
+Then I query the text field using "text" with string "Hello!" and see value "Hello!"
