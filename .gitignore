@@ -20,6 +20,7 @@ Gemfile.lock
 .appcenter-credentials
 testcloud-submit
 bin/test-cloud-uploader
+.azure-credentials
 
 # JetBrains
 .idea
