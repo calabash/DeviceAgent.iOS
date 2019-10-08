@@ -10,6 +10,7 @@
 #import "CBXException.h"
 #import "JSONUtils.h"
 #import "CBXDevice.h"
+#import "CBXMachClock.h"
 
 @interface Application ()
 @property (nonatomic, strong) XCUIApplication *app;
@@ -32,22 +33,55 @@ static Application *currentApplication;
 - (void)startSession {
     DDLogDebug(@"Launching application '%@'", self.app.bundleID);
 
+    // In some contexts, the application has not been completely installed
+    // when the POST /session route is called. In that case, the launch will
+    // fail with a detectable error.
+    //
+    // The private LSApplicationWorkspace API does not work on physical devices
+    // so we cannot poll to wait for the application to install.
+    NSUInteger attempts = 1;
+    NSUInteger maxAttempts = 12;
+    NSTimeInterval sleepBetween = 5;
+    NSTimeInterval start = [[CBXMachClock sharedClock] absoluteTime];
+
     __block NSError *outerError = nil;
-    [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
-        [[Testmanagerd get] _XCT_launchApplicationWithBundleID:self.app.bundleID
-                                                     arguments:self.app.launchArguments
-                                                   environment:self.app.launchEnvironment
-                                                    completion:^(NSError *innerError) {
-                                                        outerError = innerError;
-                                                        *setToTrueWhenDone = YES;
-                                                    }];
-    }];
+
+    do {
+        [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
+            [[Testmanagerd get]
+             _XCT_launchApplicationWithBundleID:self.app.bundleID
+             arguments:self.app.launchArguments
+             environment:self.app.launchEnvironment
+             completion:^(NSError *innerError) {
+                outerError = innerError;
+                *setToTrueWhenDone = YES;
+            }];
+        }];
+
+        if (!outerError) {
+            break;
+        }
+
+        DDLogDebug(@"Attempt %@ of %@ - could not launch application with "
+                   "bundle identifier: %@\n%@",
+                   @(attempts), @(maxAttempts), self.app.bundleID,
+                   outerError.localizedDescription);
+
+        CFRunLoopRunInMode(kCFRunLoopDefaultMode, sleepBetween, false);
+        attempts = attempts + 1;
+    } while (attempts < maxAttempts + 1);
+
+    NSTimeInterval elapsed = [[CBXMachClock sharedClock] absoluteTime] - start;
 
     if (outerError) {
         NSString *errorMessage;
-        errorMessage = [NSString stringWithFormat:@"Could not launch application with bundle identifier: %@\n%@",
-                        self.app.bundleID, outerError.localizedDescription];
+        errorMessage = [NSString stringWithFormat:@"Failed to launch application "
+                        "with bundle identifier: %@ after %@ tries over %@ seconds.\n"
+                        "Is the app installed?",
+                        self.app.bundleID, @(attempts), @(elapsed)];
         @throw [CBXException withMessage:errorMessage userInfo:nil];
+    } else {
+        DDLogDebug(@"Launched %@ after %@ seconds", self.app.bundleID, @(elapsed));
     }
 }
 

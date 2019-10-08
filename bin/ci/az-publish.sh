@@ -63,7 +63,7 @@ fi
 IPA="${PRODUCT_DIR}/DeviceAgent-Runner.ipa"
 azupload "${IPA}" "${BUILD_ID}.ipa"
 
-APP="${WORKING_DIR}/Products/app/DeviceAgent-Runner.app.zip"
+APP="${WORKING_DIR}/Products/app/DeviceAgent/DeviceAgent-Runner.app.zip"
 azupload "${APP}" "${BUILD_ID}.app.zip"
 
 echo "${BUILD_ID}"
