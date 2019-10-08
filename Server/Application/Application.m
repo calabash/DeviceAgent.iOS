@@ -10,7 +10,6 @@
 #import "CBXException.h"
 #import "JSONUtils.h"
 #import "CBXDevice.h"
-#import "CBLSApplicationWorkspace.h"
 #import "CBXMachClock.h"
 
 @interface Application ()
@@ -63,16 +62,10 @@ static Application *currentApplication;
             break;
         }
 
-
-        NSString *errorMessage;
-        errorMessage = [NSString stringWithFormat:@"Attempt %@ of %@ - could not "
-                        "launch application with bundle identifier: %@\n%@",
-                        @(attempts), @(maxAttempts), self.app.bundleID,
-                        outerError.localizedDescription];
-
-        DDLogDebug(@"Application did not launch (in the loop): Application is installed?  %@",
-                   @([CBLSApplicationWorkspace applicationIsInstalled:self.app.bundleID]));
-
+        DDLogDebug(@"Attempt %@ of %@ - could not launch application with "
+                   "bundle identifier: %@\n%@",
+                   @(attempts), @(maxAttempts), self.app.bundleID,
+                   outerError.localizedDescription);
 
         CFRunLoopRunInMode(kCFRunLoopDefaultMode, sleepBetween, false);
         attempts = attempts + 1;
