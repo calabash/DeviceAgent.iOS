@@ -1,3 +1,8 @@
+### 2.0.1
+
+* POST/session: on error, retry launching AUT #355
+* build/publish: can upload to Azure Blob Storage locally #354
+
 ### 2.0.0
 
 * Add support for new Apple hardware: iPhone 11, 11 Pro and 11 Pro Max, iPad
