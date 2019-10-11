@@ -7,6 +7,9 @@ variables:
   #             Tests on iPhones/iPads with iOS versions 11.0.x - 11.3.x -
   #             "unable to fetch parameterized attribute"
   # FB7315854
+  #
+  # Apple has fixed this bug in Xcode 11.2.  When that is released, we should
+  # change this to 'Mojave-Xcode-11.2"
   AzurePublishWhen: "Mojave-Xcode-10.3"
 
 trigger:
