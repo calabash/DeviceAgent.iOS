@@ -472,5 +472,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "\"%@\" vam želi slati obavijesti",
+    "buttons": [
+      "Dozvoli"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vam želi slati obavijesti",
+    "buttons": [
+      "Dozvoli"
+    ],
+    "shouldAccept": true
   }
 ]

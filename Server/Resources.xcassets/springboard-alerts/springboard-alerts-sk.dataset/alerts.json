@@ -604,5 +604,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "„%@\" vám chce posielať hlásenia",
+    "buttons": [
+      "Povoliť"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ vám chce posielať hlásenia",
+    "buttons": [
+      "Povoliť"
+    ],
+    "shouldAccept": true
   }
 ]

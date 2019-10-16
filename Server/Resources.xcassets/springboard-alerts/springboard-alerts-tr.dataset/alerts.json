@@ -478,5 +478,19 @@
       "Tamam"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "\"%@\" Size Bildirimler Göndermek İstiyor",
+    "buttons": [
+      "İzin Ver"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Size Bildirimler Göndermek İstiyor",
+    "buttons": [
+      "İzin Ver"
+    ],
+    "shouldAccept": true
   }
 ]

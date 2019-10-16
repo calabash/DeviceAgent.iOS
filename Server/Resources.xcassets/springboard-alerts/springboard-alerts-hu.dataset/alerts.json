@@ -471,5 +471,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@\" értesítéseket szeretne Önnek küldeni",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” értesítéseket szeretne Önnek küldeni",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
   }
 ]

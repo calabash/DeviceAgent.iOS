@@ -485,5 +485,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "\"%@\" vorrebbe inviarti delle notifiche",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe inviarti delle notifiche",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
   }
 ]

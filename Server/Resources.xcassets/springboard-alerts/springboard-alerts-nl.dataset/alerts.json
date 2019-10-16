@@ -471,5 +471,12 @@
       "Ga door"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "%@ wil je berichten sturen",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -450,5 +450,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "\"%@\" quiere enviarte notificaciones",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere enviarte notificaciones",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
   }
 ]

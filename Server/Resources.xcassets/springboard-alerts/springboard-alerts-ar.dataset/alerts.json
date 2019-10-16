@@ -457,5 +457,12 @@
       "موافق"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "يود \"%@\" إرسال الإشعارات إليك",
+    "buttons": [
+      "السماح"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -478,5 +478,12 @@
       "ΟΚ"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Αίτημα από «%@» για να σας στέλνει γνωστοποιήσεις",
+    "buttons": [
+      "Ναι"
+    ],
+    "shouldAccept": true
   }
 ]

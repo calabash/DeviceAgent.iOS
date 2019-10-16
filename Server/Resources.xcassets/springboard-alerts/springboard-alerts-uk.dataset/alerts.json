@@ -598,5 +598,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "«%@» хоче слати вам сповіщення",
+    "buttons": [
+      "Дозволити"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%@» хоче надсилати вам сповіщення",
+    "buttons": [
+      "Дозволити"
+    ],
+    "shouldAccept": true
   }
 ]

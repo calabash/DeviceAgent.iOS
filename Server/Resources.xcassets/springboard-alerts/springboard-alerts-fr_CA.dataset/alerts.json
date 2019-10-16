@@ -436,5 +436,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Autorisez-vous « %@ » à vous envoyer des notifications?",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
   }
 ]

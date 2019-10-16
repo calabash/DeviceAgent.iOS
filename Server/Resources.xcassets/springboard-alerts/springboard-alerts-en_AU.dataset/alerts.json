@@ -465,5 +465,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "\"%@\" Would Like to Send You Notifications",
+    "buttons": [
+      "Allow"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Would Like to Send You Notifications",
+    "buttons": [
+      "Allow"
+    ],
+    "shouldAccept": true
   }
 ]
