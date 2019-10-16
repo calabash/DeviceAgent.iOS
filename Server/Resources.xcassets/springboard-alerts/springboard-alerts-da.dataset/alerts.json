@@ -464,5 +464,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "\"%@\" vil gerne sende dig meddelelser",
+    "buttons": [
+      "Tillad"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vil gerne sende dig meddelelser",
+    "buttons": [
+      "Tillad"
+    ],
+    "shouldAccept": true
   }
 ]

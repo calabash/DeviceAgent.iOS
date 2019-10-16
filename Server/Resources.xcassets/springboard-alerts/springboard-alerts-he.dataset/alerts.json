@@ -469,5 +469,12 @@
       "אישור"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "״⁨%@״ מעוניין לשלוח לך עדכונים",
+    "buttons": [
+      "אפשר"
+    ],
+    "shouldAccept": true
   }
 ]

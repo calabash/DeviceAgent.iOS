@@ -478,5 +478,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "\"%@\" ar dori să vă trimită notificări",
+    "buttons": [
+      "Permiteți"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” ar dori să vă trimită notificări",
+    "buttons": [
+      "Permiteți"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -583,5 +583,19 @@
       "好"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "\"%@\"想给您发送通知",
+    "buttons": [
+      "允许"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想给您发送通知",
+    "buttons": [
+      "允许"
+    ],
+    "shouldAccept": true
   }
 ]

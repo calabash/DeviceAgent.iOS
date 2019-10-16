@@ -661,5 +661,19 @@
       "ठीक"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "\"%@\" आपको सूचनाएँ भेजना चाहता है",
+    "buttons": [
+      "अनुमति दें"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” आपको सूचनाएँ भेजना चाहता है",
+    "buttons": [
+      "अनुमति दें"
+    ],
+    "shouldAccept": true
   }
 ]

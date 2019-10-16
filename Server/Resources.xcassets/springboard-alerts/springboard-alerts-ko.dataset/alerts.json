@@ -544,5 +544,19 @@
       "승인"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "'%@'에서 알림을 보내고자 합니다.",
+    "buttons": [
+      "허용"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "‘%@’에서 알림을 보내고자 합니다.",
+    "buttons": [
+      "허용"
+    ],
+    "shouldAccept": true
   }
 ]

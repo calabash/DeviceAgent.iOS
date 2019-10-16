@@ -590,5 +590,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "«%@» vil sende deg varslinger",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
   }
 ]

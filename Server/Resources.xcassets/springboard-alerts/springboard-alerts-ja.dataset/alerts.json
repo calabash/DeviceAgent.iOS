@@ -443,5 +443,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "\"%@\"は通知を送信します。よろしいですか?",
+    "buttons": [
+      "許可"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”は通知を送信します。よろしいですか?",
+    "buttons": [
+      "許可"
+    ],
+    "shouldAccept": true
   }
 ]
