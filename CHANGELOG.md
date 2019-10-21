@@ -1,3 +1,7 @@
+### 2.0.2
+
+* Add push notification alerts from iOS 12, 13 #358
+
 ### 2.0.1
 
 * POST/session: on error, retry launching AUT #355
