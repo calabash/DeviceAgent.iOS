@@ -8,9 +8,14 @@ The database of alerts is extended with every new Xcode release. This database i
 * ruby >= 2.3
 
 ### How to use
+**Collect alerts under core simulator directory of current Xcode:**
 ```
 $ cd DeviceAgent.iOS
 $ make update-alerts
+```
+**Collect alerts under custom directory**
+```
+$ make update-alerts ROOT_DIR="/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS\ 10.3.simruntime"
 ```
 
 Changes will be done under `Server/Resources.xcassets/springboard-alerts/**`

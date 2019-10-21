@@ -58,4 +58,4 @@ gemuse:
 update-alerts:
 	cd tools/springboard-alerts && \
 	bundle install && \
-	bundle exec ruby update-alerts.rb
+	bundle exec ruby update-alerts.rb "$(ROOT_DIR)"

@@ -14,6 +14,13 @@
         ]
     },
     {
+        "name": "Maps.app",
+        "values": [
+            { "title": "Allow '%@' to access your location while you use the app?", "button": "Allow" },
+            { "title": "Allow '%@' to access your location while you are using the app?", "button": "Allow" }
+        ]
+    },
+    {
         "name": "TCC.framework",
         "values": [
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceFaceID", "button": "REQUEST_ACCESS_ALLOW" },
