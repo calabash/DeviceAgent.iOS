@@ -565,5 +565,47 @@
       "허용"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "이 App을 사용하지 않을 때에도 ‘%@’이(가) 사용자의 위치에 접근하도록 허용하겠습니까?",
+    "buttons": [
+      "허용"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "App을 사용하는 동안 ‘%@’이(가) 사용자의 위치에 접근하도록 허용하겠습니까?",
+    "buttons": [
+      "허용"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "‘%@’을(를) 사용하지 않을 때에도 해당 App이 사용자의 위치에 접근하도록 허용하곘습니까?",
+    "buttons": [
+      "허용"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "‘%@’이(가) Apple Music에 접근하려고 합니다.",
+    "buttons": [
+      "승인"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "사용자가 해당 App을 사용하고 있지 않을 때에도 ‘%@’이(가) bluetooth 기기 근처에서 데이터를 사용하려고 합니다.",
+    "buttons": [
+      "승인"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ App에서 열기",
+    "buttons": [
+      "열기"
+    ],
+    "shouldAccept": true
   }
 ]

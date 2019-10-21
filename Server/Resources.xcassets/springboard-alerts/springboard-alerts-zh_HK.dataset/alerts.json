@@ -153,14 +153,16 @@
   {
     "title": "新的設定檔現已可供下載。是否要立即更新？",
     "buttons": [
-      "稍後決定"
+      "稍後決定",
+      "現在不要"
     ],
     "shouldAccept": true
   },
   {
     "title": "電訊商設定更新",
     "buttons": [
-      "稍後決定"
+      "稍後決定",
+      "現在不要"
     ],
     "shouldAccept": true
   },
@@ -188,14 +190,16 @@
   {
     "title": "要啟用聽寫嗎？",
     "buttons": [
-      "稍後決定"
+      "稍後決定",
+      "現在不要"
     ],
     "shouldAccept": true
   },
   {
     "title": "啟用聽寫",
     "buttons": [
-      "稍後決定"
+      "稍後決定",
+      "現在不要"
     ],
     "shouldAccept": true
   },
@@ -616,6 +620,76 @@
     "title": "「%@」要傳送通知",
     "buttons": [
       "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "要允許「%@」在你正在使用 App 時使用你的位置嗎？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要使用你的咪高風",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要使用你的相機",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要使用你的提醒事項",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要使用 Apple Music",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要使用通訊錄",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要使用你的相片",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要取用你的家庭數據",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "允許「%@」更新你的健康數據。",
+    "buttons": [
+
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%1$@」要連接 %2$@ 帳戶",
+    "buttons": [
+      "好"
     ],
     "shouldAccept": true
   }

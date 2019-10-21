@@ -619,5 +619,19 @@
       "ОК"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "«%@» хоче отримати доступ до Apple Music",
+    "buttons": [
+      "ОК"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%@» хоче надавати доступ до даних для пристроїв Bluetooth поруч, навіть коли ви не користуєтесь цією програмою.",
+    "buttons": [
+      "ОК"
+    ],
+    "shouldAccept": true
   }
 ]

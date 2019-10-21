@@ -492,5 +492,12 @@
       "Permiteți"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” ar dori să acceseze Apple Music",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -216,35 +216,40 @@
   {
     "title": "Åbn i “%@”",
     "buttons": [
-      "Åbn"
+      "Åbn",
+      "Åben"
     ],
     "shouldAccept": true
   },
   {
     "title": "Åbn i “%@”?",
     "buttons": [
-      "Åbn"
+      "Åbn",
+      "Åben"
     ],
     "shouldAccept": true
   },
   {
     "title": "Søg i %@",
     "buttons": [
-      "Åbn"
+      "Åbn",
+      "Åben"
     ],
     "shouldAccept": true
   },
   {
     "title": "Åbn denne side i “%@”?",
     "buttons": [
-      "Åbn"
+      "Åbn",
+      "Åben"
     ],
     "shouldAccept": true
   },
   {
     "title": "Åbn i appen %@",
     "buttons": [
-      "Åbn"
+      "Åbn",
+      "Åben"
     ],
     "shouldAccept": true
   },
@@ -483,6 +488,27 @@
     "title": "Må “%@” få adgang til din lokalitet, når du bruger appen?",
     "buttons": [
       "Tillad"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vil bruge Apple Music",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vil bruge dine hjemmedata",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Adgang til Sunhed",
+    "buttons": [
+
     ],
     "shouldAccept": true
   }

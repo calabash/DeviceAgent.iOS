@@ -506,5 +506,12 @@
       "Consenti"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” desidera accedere ad Apple Music",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -160,7 +160,8 @@
   {
     "title": "電信業者設定更新",
     "buttons": [
-      "稍後再說"
+      "稍後再說",
+      "現在不要"
     ],
     "shouldAccept": true
   },
@@ -188,14 +189,16 @@
   {
     "title": "要啟用聽寫嗎？",
     "buttons": [
-      "稍後再說"
+      "稍後再說",
+      "現在不要"
     ],
     "shouldAccept": true
   },
   {
     "title": "啟用聽寫",
     "buttons": [
-      "稍後再說"
+      "稍後再說",
+      "現在不要"
     ],
     "shouldAccept": true
   },
@@ -559,7 +562,8 @@
   {
     "title": "新的設定現已可供下載。是否要立即更新？",
     "buttons": [
-      "稍後再說"
+      "稍後再說",
+      "現在不要"
     ],
     "shouldAccept": true
   },
@@ -581,6 +585,20 @@
     "title": "「%@」想要傳送通知",
     "buttons": [
       "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要取用 Apple Music",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要取用您的住家資料",
+    "buttons": [
+      "好"
     ],
     "shouldAccept": true
   }

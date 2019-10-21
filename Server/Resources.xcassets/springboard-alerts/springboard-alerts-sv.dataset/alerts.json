@@ -457,5 +457,12 @@
       "Tillåt"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "”%@” begär åtkomst till Apple Music",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

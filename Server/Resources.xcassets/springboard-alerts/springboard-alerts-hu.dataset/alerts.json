@@ -485,5 +485,61 @@
       "Engedélyezés"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” meg kívánja nyitni az Ön naptárját.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” meg kívánja nyitni az Ön mozgási és fitnesztevékenységét",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” meg kívánja nyitni az Ön emlékeztetőit.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” hozzá szeretne férni az Apple Musichoz",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” meg kívánja nyitni az Ön kontaktjait.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” meg kívánja nyitni az Ön fotóit.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” meg kívánja nyitni az Ön otthoni adatait.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Megnyitás ezzel: „%@”",
+    "buttons": [
+      "Megnyitás"
+    ],
+    "shouldAccept": true
   }
 ]

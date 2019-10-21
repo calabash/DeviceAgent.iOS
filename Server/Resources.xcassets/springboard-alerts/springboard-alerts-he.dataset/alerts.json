@@ -476,5 +476,26 @@
       "אפשר"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "לאפשר ל-״%@״ לגשת לפרטי מיקומך גם שאינך משתמש/ת ביישום?",
+    "buttons": [
+      "אפשר"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "״%@״ מעוניין לגשת אל Apple Music",
+    "buttons": [
+      "אישור"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "״%@״ מעוניין להעמיד נתונים לרשות התקני Bluetooth בסביבה אפילו כשאינך משתמש/ת ביישום.",
+    "buttons": [
+      "אישור"
+    ],
+    "shouldAccept": true
   }
 ]

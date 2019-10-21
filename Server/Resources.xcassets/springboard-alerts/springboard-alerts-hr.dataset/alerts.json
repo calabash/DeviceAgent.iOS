@@ -486,5 +486,12 @@
       "Dozvoli"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” želi pristupiti značajki Apple Music",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

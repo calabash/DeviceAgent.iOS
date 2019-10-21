@@ -138,7 +138,8 @@
   {
     "title": "“%@” quiere acceder a tus datos de casa",
     "buttons": [
-      "Permitir"
+      "Permitir",
+      "OK"
     ],
     "shouldAccept": true
   },
@@ -488,14 +489,16 @@
   {
     "title": "“%@” desea acceder a tu actividad física y deportiva",
     "buttons": [
-      "Permitir"
+      "Permitir",
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "%@ quiere que los datos estén disponibles para los dispositivos Bluetooth cercanos aunque no estés utilizando la aplicación.",
     "buttons": [
-      "Permitir"
+      "Permitir",
+      "OK"
     ],
     "shouldAccept": true
   },
@@ -531,6 +534,55 @@
     "title": "“%@” quiere enviarte notificaciones",
     "buttons": [
       "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere acceder a Apple Music",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Iniciar sesión en App Store",
+    "buttons": [
+      "Cancelar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Iniciar sesión en Game Center",
+    "buttons": [
+      "Cancelar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Iniciar sesión en iTunes Store",
+    "buttons": [
+      "Cancelar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Iniciar sesión en iMessage",
+    "buttons": [
+      "Cancelar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Iniciar sesión en FaceTime",
+    "buttons": [
+      "Cancelar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Iniciar sesión en iCloud",
+    "buttons": [
+      "Cancelar"
     ],
     "shouldAccept": true
   }

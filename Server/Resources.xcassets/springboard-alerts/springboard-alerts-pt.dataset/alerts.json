@@ -506,5 +506,33 @@
       "Permitir"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso ao Apple Music",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” deseja disponibilizar dados para os dispositivos Bluetooth das redondezas até mesmo quando você não estiver usando o aplicativo.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "O iPhone não está Ativado.",
+    "buttons": [
+      "Ignorar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Acesso à Saúde",
+    "buttons": [
+
+    ],
+    "shouldAccept": true
   }
 ]

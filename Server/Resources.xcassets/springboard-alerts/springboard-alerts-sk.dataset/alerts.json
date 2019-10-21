@@ -618,5 +618,19 @@
       "Povoliť"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Aplikácia „%@“ žiada o prístup k Apple Music",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikácia „%@“ žiada o prístup k dátam domova",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

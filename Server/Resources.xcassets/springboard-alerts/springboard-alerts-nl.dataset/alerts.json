@@ -478,5 +478,47 @@
       "Sta toe"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "%@ wil toegang tot Apple Music",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "'%@' wil toegang tot uw woninggegevens",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil gegevens beschikbaar stellen voor Bluetooth-apparaten in de buurt, ook als de app niet gebruikt.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil uw netwerkinhoud filteren",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Log in op iCloud",
+    "buttons": [
+      "Annuleer"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Sta toe dat %@ uw gezondheidsgegevens bijwerkt.",
+    "buttons": [
+
+    ],
+    "shouldAccept": true
   }
 ]

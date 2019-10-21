@@ -535,5 +535,19 @@
       "Permetre"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol accedir a l’Apple Music",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Iniciar sessió a l’iTunes Store",
+    "buttons": [
+      "Cancel·lar"
+    ],
+    "shouldAccept": true
   }
 ]
