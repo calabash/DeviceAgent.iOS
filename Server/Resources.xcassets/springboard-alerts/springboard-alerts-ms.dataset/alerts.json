@@ -501,5 +501,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "\"%@\" Mahu Menghantar Pemberitahuan Kepada Anda",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Menghantar Pemberitahuan Kepada Anda",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
   }
 ]

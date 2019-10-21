@@ -479,5 +479,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "„%@\" vám chce zasílat oznámení.",
+    "buttons": [
+      "Povolit"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ vám chce zasílat oznámení",
+    "buttons": [
+      "Povolit"
+    ],
+    "shouldAccept": true
   }
 ]

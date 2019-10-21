@@ -48,13 +48,15 @@ VERSION=$(/usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" ${INFO_
 XC_VERSION=$(/usr/libexec/PlistBuddy -c "Print :DTXcode" ${INFO_PLIST})
 XC_BUILD=$(/usr/libexec/PlistBuddy -c "Print :DTXcodeBuild" ${INFO_PLIST})
 
-# Xcode 10.3 reports as 1030, which is confusing
+# When building any XCUITest runner, Xcode 10.3 reports as 1020.
 if [[ "${XC_VERSION}" = "1020"  &&  "${XC_BUILD}" = "10G1d" ]]; then
   XC_VERSION="1030"
 fi
 
+# In ADO pipelines, the GIT_BRANCH does not match 'tag/'.
+# SOURCE_BRANCH is an env variable provided by the ADO pipeline.
 GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-if [[ "${GIT_BRANCH}" =~ "tag/" ]]; then
+if [[ "${GIT_BRANCH}" =~ "tag/" || "${SOURCE_BRANCH}" =~ "refs/tags" ]]; then
   BUILD_ID="DeviceAgent-${VERSION}-Xcode-${XC_VERSION}-${GIT_SHA}"
 else
   BUILD_ID="DeviceAgent-${VERSION}-Xcode-${XC_VERSION}-${GIT_SHA}-AdHoc"

@@ -531,5 +531,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "\"%@\" Muốn Gửi Thông báo cho Bạn",
+    "buttons": [
+      "Cho phép"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Muốn Gửi Thông báo cho Bạn",
+    "buttons": [
+      "Cho phép"
+    ],
+    "shouldAccept": true
   }
 ]

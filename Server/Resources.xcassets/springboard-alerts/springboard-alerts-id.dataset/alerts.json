@@ -454,5 +454,19 @@
       "OKE"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "\"%@\" Ingin Mengirimi Anda Pemberitahuan",
+    "buttons": [
+      "Izinkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Mengirimi Anda Pemberitahuan",
+    "buttons": [
+      "Izinkan"
+    ],
+    "shouldAccept": true
   }
 ]

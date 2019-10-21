@@ -576,5 +576,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "„%@\" möchte dir Mitteilungen senden",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte dir Mitteilungen senden",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
   }
 ]

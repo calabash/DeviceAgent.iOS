@@ -443,5 +443,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "\"%@\" vill skicka notiser till dig",
+    "buttons": [
+      "Tillåt"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "”%@” vill skicka notiser till dig",
+    "buttons": [
+      "Tillåt"
+    ],
+    "shouldAccept": true
   }
 ]

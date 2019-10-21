@@ -576,5 +576,12 @@
       "好"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要傳送通知",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
   }
 ]

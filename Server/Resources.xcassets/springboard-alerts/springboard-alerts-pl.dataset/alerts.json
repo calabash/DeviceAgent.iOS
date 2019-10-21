@@ -478,5 +478,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "„%@\" chce wysyłać Ci powiadomienia",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce wysyłać Ci powiadomienia",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
   }
 ]
