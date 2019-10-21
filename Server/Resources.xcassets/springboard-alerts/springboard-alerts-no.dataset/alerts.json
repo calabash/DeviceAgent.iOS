@@ -597,5 +597,12 @@
       "Tillat"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Vil du gi «%@» tilgang til posisjonen din mens du bruker appen?",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
   }
 ]

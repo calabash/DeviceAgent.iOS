@@ -558,5 +558,12 @@
       "허용"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "앱을 사용하는 동안 ‘%@’이(가) 사용자의 위치에 접근하도록 허용하겠습니까?",
+    "buttons": [
+      "허용"
+    ],
+    "shouldAccept": true
   }
 ]

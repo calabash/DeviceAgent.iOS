@@ -492,5 +492,12 @@
       "Pozwalaj"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Pozwalać programowi „%@” udostępniać Twoje położenie, gdy go używasz?",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
   }
 ]

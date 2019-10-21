@@ -478,5 +478,12 @@
       "Tillad"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Må “%@” få adgang til din lokalitet, når du bruger appen?",
+    "buttons": [
+      "Tillad"
+    ],
+    "shouldAccept": true
   }
 ]
