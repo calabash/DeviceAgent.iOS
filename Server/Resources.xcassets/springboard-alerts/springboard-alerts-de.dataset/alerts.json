@@ -741,7 +741,7 @@
   {
     "title": "Darf „%@“ Ihre Gesundheitsdaten aktualisieren?",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   }

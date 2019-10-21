@@ -517,7 +517,7 @@
   {
     "title": "Sta toe dat %@ uw gezondheidsgegevens bijwerkt.",
     "buttons": [
-
+      "OK"
     ],
     "shouldAccept": true
   }

@@ -682,7 +682,7 @@
   {
     "title": "允許「%@」更新你的健康數據。",
     "buttons": [
-
+      "好"
     ],
     "shouldAccept": true
   },
