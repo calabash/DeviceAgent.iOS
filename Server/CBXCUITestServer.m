@@ -21,6 +21,15 @@
 
 @implementation CBXCUITestServer
 
++ (NSString*)valueFromArguments: (NSArray<NSString *> *)arguments forKey: (NSString*)key
+{
+  NSUInteger index = [arguments indexOfObject:key];
+  if (index == NSNotFound || index == arguments.count - 1) {
+    return nil;
+  }
+  return arguments[index + 1];
+}
+
 static NSString *serverName = @"CalabashXCUITestServer";
 
 - (id)init {
@@ -79,8 +88,17 @@ static NSString *serverName = @"CalabashXCUITestServer";
 - (void)start {
     NSError *error;
     BOOL serverStarted = NO;
-
-    [self.server setPort:CBX_DEFAULT_SERVER_PORT];
+    
+    NSString *portNumberString = [CBXCUITestServer valueFromArguments: NSProcessInfo.processInfo.arguments
+                                                   forKey: @"--port"];
+    NSUInteger port = (NSUInteger)[portNumberString integerValue];
+    
+    if (port == 0) {
+      [self.server setPort:CBX_DEFAULT_SERVER_PORT];
+    } else {
+        [self.server setPort:port];
+    }
+    
     DDLogDebug(@"Attempting to start the DeviceAgent server");
     serverStarted = [self attemptToStartWithError:&error];
 

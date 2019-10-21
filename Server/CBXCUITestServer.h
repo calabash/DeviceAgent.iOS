@@ -17,4 +17,6 @@
  Stops the server
  */
 + (void)stop;   //Come to a complete (non-rolling) stop.
+
++ (NSString* _Nullable)valueFromArguments: (NSArray<NSString *> *_Nullable)arguments forKey: (NSString *_Nullable)key;
 @end
