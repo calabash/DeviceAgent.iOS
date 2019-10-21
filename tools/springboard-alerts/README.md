@@ -15,7 +15,7 @@ $ make update-alerts
 ```
 **Collect alerts under custom directory**
 ```
-$ make update-alerts ROOT_DIR="/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS\ 10.3.simruntime"
+$ make update-alerts XCODE_CORE_SIM_DIR="/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS\ 10.3.simruntime"
 ```
 
 Changes will be done under `Server/Resources.xcassets/springboard-alerts/**`
