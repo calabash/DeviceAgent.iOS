@@ -55,7 +55,9 @@ gemuse:
 	bin/make/gemuse-libs.sh
 
 # update springboard alerts
+# example of custom sim dir
+# make update-alerts XCODE_CORE_SIM_DIR="/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS\ 10.3.simruntime"
 update-alerts:
 	cd tools/springboard-alerts && \
 	bundle install && \
-	bundle exec ruby update-alerts.rb
+	bundle exec ruby update-alerts.rb "$(XCODE_CORE_SIM_DIR)"

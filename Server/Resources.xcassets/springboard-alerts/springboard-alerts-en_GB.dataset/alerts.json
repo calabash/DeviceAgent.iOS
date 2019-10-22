@@ -479,5 +479,19 @@
       "Allow"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” Would Like to Access Apple Music",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” would like to make data available to nearby bluetooth devices even when you're not using the app.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

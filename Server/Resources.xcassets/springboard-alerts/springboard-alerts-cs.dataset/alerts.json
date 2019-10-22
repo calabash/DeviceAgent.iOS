@@ -493,5 +493,75 @@
       "Povolit"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "„%@“ žádá o přístup k mikrofonu",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ žádá o přístup k vašemu kalendáři",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ žádá o přístup k vaší pohybové a kondiční aktivitě",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ žádá o přístup k fotoaparátu",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ žádá o přístup k vašim připomínkám",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikace „%@“ žádá o přístup k Apple Music",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ žádá o přístup k vašim kontaktům",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ žádá o přístup k vašim fotografiím",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ žádá o přístup k datům vaší domácnosti.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikace %@ žádá o povolení k zpřístupnění dat blízkým Bluetooth zařízením i v případě, že ji právě nepoužíváte.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

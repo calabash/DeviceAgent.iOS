@@ -492,5 +492,89 @@
       "İzin Ver"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” Öğesinin Aksesuarlara Bağlanmasına İzin Vermek için Bluetooth'u Açın",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” arkaplanda konumunuzu kullanıyor. Buna izin vermeyi sürdürmek istiyor musunuz?",
+    "buttons": [
+      "İzin Ver"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Apple Music'e Erişmek İstiyor",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”, siz uygulamayı kullanmıyorken bile yakındaki bluetooth aygıtları için verileri kullanılabilir yapmak istiyor.",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dikte'yi Etkinleştir",
+    "buttons": [
+      "Sonra"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Öğesinin Aksesuarlara Bağlanmasına İzin Vermek İçin Bluetooth'u Açın",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "App Store'a Giriş Yapın",
+    "buttons": [
+      "Vazgeç"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Game Center'a Giriş Yapın",
+    "buttons": [
+      "Vazgeç"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iTunes Store'a Giriş Yapın",
+    "buttons": [
+      "Vazgeç"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iMessage'a Giriş Yapın",
+    "buttons": [
+      "Vazgeç"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "FaceTime'a Giriş Yapın",
+    "buttons": [
+      "Vazgeç"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iCloud'a Giriş Yapın",
+    "buttons": [
+      "Vazgeç"
+    ],
+    "shouldAccept": true
   }
 ]

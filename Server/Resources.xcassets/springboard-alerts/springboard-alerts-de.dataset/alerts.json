@@ -590,5 +590,159 @@
       "Erlauben"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Wilt u %@ toegang tot uw locatie toestaan, zelfs als u de app niet gebruikt?",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Wilt u %@ toegang tot uw locatie toestaan terwijl u de app gebruikt?",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Wilt u %@ ook toegang tot uw locatie toestaan, zelfs als u de app niet gebruikt?",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ heeft op de achtergrond uw locatie gebruikt. Geeft u toestemming om daarmee door te gaan?",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf Ihren Standort zugreifen, selbst wenn Sie die App nicht benutzen?",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf Ihren Standort zugreifen, wenn Sie die App benutzen?",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auch auf Ihren Standort zugreifen, wenn Sie die App nicht benutzen?",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ hat Ihren Standort im Hintergrund verwendet. Möchten Sie dies weiterhin erlauben?",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf das Mikrofon zugreifen?",
+    "buttons": [
+      "Ja"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf Ihren Kalender zugreifen?",
+    "buttons": [
+      "Ja"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte auf Ihre Bewegungs- und Fitnessdaten zugreifen",
+    "buttons": [
+      "Ja"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf Ihre Kamera zugreifen?",
+    "buttons": [
+      "Ja"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf Ihre Erinnerungen zugreifen?",
+    "buttons": [
+      "Ja"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf Apple Music zugreifen?",
+    "buttons": [
+      "Ja"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf Ihre Kontakte zugreifen?",
+    "buttons": [
+      "Ja"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf Ihre Fotos zugreifen?",
+    "buttons": [
+      "Ja"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf Ihre Home-Daten zugreifen?",
+    "buttons": [
+      "Ja"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte für benachbarte Bluetooth-Geräte bereitstellen, auch wenn Sie die App nicht nutzen.",
+    "buttons": [
+      "Ja"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Er zijn nieuwe instellingen beschikbaar. Wilt u ze nu bijwerken?",
+    "buttons": [
+      "Nu niet"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Es sind neue Einstellungen verfügbar. Möchten Sie sie jetzt aktualisieren?",
+    "buttons": [
+      "Später"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aktivieren Sie Bluetooth, damit „%@“ die Verbindung zum Zubehör herstellen kann",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ Ihre Gesundheitsdaten aktualisieren?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

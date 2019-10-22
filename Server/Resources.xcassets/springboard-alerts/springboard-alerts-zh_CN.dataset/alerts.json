@@ -597,5 +597,12 @@
       "允许"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问 Apple Music",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
   }
 ]

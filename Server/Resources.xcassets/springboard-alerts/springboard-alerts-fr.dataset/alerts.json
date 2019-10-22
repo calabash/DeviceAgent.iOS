@@ -450,5 +450,19 @@
       "Autoriser"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "« %@ » souhaite accéder à Apple Music.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » voudrait rendre les données disponibles pour les appareils bluetooth proches lorsque vous n’utilisez pas cette app.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

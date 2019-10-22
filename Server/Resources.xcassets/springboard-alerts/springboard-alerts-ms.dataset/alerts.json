@@ -515,5 +515,61 @@
       "Benarkan"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Benarkan “%@” untuk mengakses lokasi anda walaupun apabila anda tidak menggunakan aplikasi?",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Benarkan “%@” untuk mengakses lokasi anda semasa anda menggunakan aplikasi?",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Benarkan “%@” untuk turut mengakses lokasi anda walaupun apabila anda tidak menggunakan aplikasi?",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Mengakses Apple Music",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” mahu menyediakan data kepada peranti bluetooth berdekatan walaupun anda tidak menggunakan aplikasi.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Menambahkan Konfigurasi VPN",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aktifkan Bluetooth untuk Membenarkan “%@” untuk Bersambung ke Aksesori",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Daftar masuk ke FaceTime",
+    "buttons": [
+      "Batal"
+    ],
+    "shouldAccept": true
   }
 ]

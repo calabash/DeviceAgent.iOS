@@ -597,5 +597,33 @@
       "Tillat"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Vil du gi «%@» tilgang til posisjonen din mens du bruker appen?",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vil du gi «%@» tilgang til plasseringen din mens du bruker appen?",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%@» vil ha tilgang til Apple Music",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%@» ønsker å gjøre data tilgjengelig for bluetooth-enheter i nærheten selv om appen ikke er i bruk.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

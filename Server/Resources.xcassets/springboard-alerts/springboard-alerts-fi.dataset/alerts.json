@@ -478,5 +478,61 @@
       "Salli"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Sallitko, että %@ käyttää sijaintiasi myös silloin, kun et käytä ohjelmaa?",
+    "buttons": [
+      "Salli"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Sallitko, että %@ käyttää sijaintiasi silloin, kun käytät ohjelmaa?",
+    "buttons": [
+      "Salli"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Saako %@ käyttää sijaintiasi silloin, kun käytät ohjelmaa?",
+    "buttons": [
+      "Salli"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ haluaa käyttää Apple Musicia",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ haluaa antaa dataa lähellä oleville Bluetooth-laitteille, vaikka et käyttäisikään ohjelmaa.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Avataanko ohjelmassa %@?",
+    "buttons": [
+      "Avaa"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Avaa ohjelmassa %@",
+    "buttons": [
+      "Avaa"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iTunes Storeen kirjautuminen",
+    "buttons": [
+      "Kumoa"
+    ],
+    "shouldAccept": true
   }
 ]

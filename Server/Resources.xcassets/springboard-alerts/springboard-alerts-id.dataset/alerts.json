@@ -468,5 +468,19 @@
       "Izinkan"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Mengakses Apple Music",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” ingin membuat data tersedia untuk perangkat bluetooth di sekitar saat Anda sedang tidak menggunakan app.",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
   }
 ]

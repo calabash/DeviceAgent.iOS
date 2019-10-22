@@ -457,5 +457,26 @@
       "許可"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@”がApple Musicへのアクセスを求めています",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iPhoneはアクティベート\nされていません",
+    "buttons": [
+      "無視"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”Appで開く",
+    "buttons": [
+      "開く"
+    ],
+    "shouldAccept": true
   }
 ]

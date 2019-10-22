@@ -464,5 +464,26 @@
       "السماح"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "السماح لـ \"%@\" بالوصول إلى موقعك عند استخدامك للتطبيق؟",
+    "buttons": [
+      "السماح"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "يرغب \"%@\" في الوصول إلى Apple Music",
+    "buttons": [
+      "موافق"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "يرغب \"%@\" في إتاحة البيانات إلى أجهزة bluetooth القريبة حتى عند عدم استخدامك للتطبيق.",
+    "buttons": [
+      "موافق"
+    ],
+    "shouldAccept": true
   }
 ]

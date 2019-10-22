@@ -492,5 +492,26 @@
       "Pozwalaj"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Pozwalać programowi „%@” udostępniać Twoje położenie, gdy go używasz?",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Udostępniać „%@” Twoje położenie, gdy używasz programu?",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce uzyskać dostęp do Apple Music",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

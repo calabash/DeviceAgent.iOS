@@ -499,5 +499,19 @@
       "Consenti"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Vuoi consentire a “%@” di accedere alla tua posizione mentre utilizzi l'app?",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” desidera accedere ad Apple Music",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

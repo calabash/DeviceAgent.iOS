@@ -545,5 +545,26 @@
       "Cho phép"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” Muốn Truy cập Apple Music",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn làm cho dữ liệu khả dụng đối với thiết bị bluetooth gần đó ngay cả khi bạn không sử dụng ứng dụng.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Truy cập Sức khỏe",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]
