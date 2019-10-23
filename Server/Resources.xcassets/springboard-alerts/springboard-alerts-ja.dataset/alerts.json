@@ -459,6 +459,13 @@
     "shouldAccept": true
   },
   {
+    "title": "“%@”は\n通知を送信します。\nよろしいですか？",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
     "title": "“%@”がApple Musicへのアクセスを求めています",
     "buttons": [
       "OK"

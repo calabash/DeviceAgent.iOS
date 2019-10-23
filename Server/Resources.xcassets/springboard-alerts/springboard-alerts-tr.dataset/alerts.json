@@ -489,7 +489,8 @@
   {
     "title": "“%@” Size Bildirimler Göndermek İstiyor",
     "buttons": [
-      "İzin Ver"
+      "İzin Ver",
+      "Tamam"
     ],
     "shouldAccept": true
   },

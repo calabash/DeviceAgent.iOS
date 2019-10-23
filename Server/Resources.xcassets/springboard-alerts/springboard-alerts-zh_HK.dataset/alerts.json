@@ -619,7 +619,8 @@
   {
     "title": "「%@」要傳送通知",
     "buttons": [
-      "允許"
+      "允許",
+      "好"
     ],
     "shouldAccept": true
   },

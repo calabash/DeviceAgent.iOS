@@ -508,6 +508,13 @@
     "shouldAccept": true
   },
   {
+    "title": "“%@” Deseja Enviar-lhe Notificações",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
     "title": "“%@” Deseja Ter Acesso ao Apple Music",
     "buttons": [
       "OK"

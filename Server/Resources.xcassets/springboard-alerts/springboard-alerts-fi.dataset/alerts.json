@@ -475,7 +475,8 @@
   {
     "title": "%@ haluaa lähettää sinulle ilmoituksia",
     "buttons": [
-      "Salli"
+      "Salli",
+      "OK"
     ],
     "shouldAccept": true
   },

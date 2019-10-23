@@ -465,7 +465,8 @@
   {
     "title": "“%@” Ingin Mengirimi Anda Pemberitahuan",
     "buttons": [
-      "Izinkan"
+      "Izinkan",
+      "OKE"
     ],
     "shouldAccept": true
   },

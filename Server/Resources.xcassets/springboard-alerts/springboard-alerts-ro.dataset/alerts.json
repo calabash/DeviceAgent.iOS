@@ -489,7 +489,8 @@
   {
     "title": "“%@” ar dori să vă trimită notificări",
     "buttons": [
-      "Permiteți"
+      "Permiteți",
+      "OK"
     ],
     "shouldAccept": true
   },

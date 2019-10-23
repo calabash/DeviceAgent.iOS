@@ -594,7 +594,8 @@
   {
     "title": "«%@» vil sende deg varslinger",
     "buttons": [
-      "Tillat"
+      "Tillat",
+      "OK"
     ],
     "shouldAccept": true
   },

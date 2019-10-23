@@ -592,6 +592,13 @@
     "shouldAccept": true
   },
   {
+    "title": "Darf „%@“ Ihnen Mitteilungen senden?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
     "title": "Wilt u %@ toegang tot uw locatie toestaan, zelfs als u de app niet gebruikt?",
     "buttons": [
       "Sta toe"

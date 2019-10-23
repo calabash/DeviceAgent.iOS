@@ -547,6 +547,13 @@
     "shouldAccept": true
   },
   {
+    "title": "“%@” Muốn Gửi cho Bạn Thông báo",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
     "title": "“%@” Muốn Truy cập Apple Music",
     "buttons": [
       "OK"

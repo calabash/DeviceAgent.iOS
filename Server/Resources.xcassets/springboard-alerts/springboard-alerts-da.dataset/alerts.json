@@ -473,14 +473,16 @@
   {
     "title": "\"%@\" vil gerne sende dig meddelelser",
     "buttons": [
-      "Tillad"
+      "Tillad",
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” vil gerne sende dig meddelelser",
     "buttons": [
-      "Tillad"
+      "Tillad",
+      "OK"
     ],
     "shouldAccept": true
   },

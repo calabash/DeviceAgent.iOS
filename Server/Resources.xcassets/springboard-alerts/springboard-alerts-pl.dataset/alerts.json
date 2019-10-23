@@ -489,7 +489,8 @@
   {
     "title": "„%@” chce wysyłać Ci powiadomienia",
     "buttons": [
-      "Pozwalaj"
+      "Pozwalaj",
+      "OK"
     ],
     "shouldAccept": true
   },
