@@ -19,6 +19,7 @@
 
 @interface XCTElementSnapshotRequest : NSObject
 {
+    BOOL _preserveRemoteElementPlaceholders;
     BOOL _loadResult;
     BOOL _hasLoaded;
     XCAccessibilityElement *_element;
@@ -42,6 +43,7 @@
 @property(retain) NSError *loadError;
 @property BOOL loadResult;
 @property(copy) NSDictionary *parameters;
+@property BOOL preserveRemoteElementPlaceholders;
 @property(readonly) NSObject<OS_dispatch_queue> *queue;
 @property(readonly) XCTTimeoutControls *timeoutControls;
 
