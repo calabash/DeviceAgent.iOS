@@ -111,6 +111,7 @@
 @property(readonly) CGRect visibleFrame;
 
 + (id)axAttributesForElementSnapshotKeyPaths:(id)arg1 isMacOS:(BOOL)arg2;
++ (id)axAttributesForFaultingPropertiesOnMacOS:(BOOL)arg1;
 + (id)axAttributesForSnapshotAttributes:(id)arg1 isMacOS:(BOOL)arg2;
 + (NSUInteger)elementTypeForAccessibilityElement:(id)arg1 usingAXAttributes_iOS:(id)arg2 useLegacyElementType:(BOOL)arg3;
 + (NSUInteger)elementTypeForAccessibilityElement:(id)arg1 usingAXAttributes_macOS:(id)arg2 useLegacyElementType:(BOOL)arg3;
