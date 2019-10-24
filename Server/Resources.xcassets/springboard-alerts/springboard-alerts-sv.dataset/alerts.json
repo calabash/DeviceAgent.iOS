@@ -454,7 +454,8 @@
   {
     "title": "”%@” vill skicka notiser till dig",
     "buttons": [
-      "Tillåt"
+      "Tillåt",
+      "OK"
     ],
     "shouldAccept": true
   },

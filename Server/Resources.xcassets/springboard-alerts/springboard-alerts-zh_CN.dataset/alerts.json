@@ -599,6 +599,13 @@
     "shouldAccept": true
   },
   {
+    "title": "“%@”想给您发送推送通知",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
     "title": "“%@”想访问 Apple Music",
     "buttons": [
       "好"

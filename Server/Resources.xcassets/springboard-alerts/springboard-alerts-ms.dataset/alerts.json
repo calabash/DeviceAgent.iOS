@@ -512,7 +512,8 @@
   {
     "title": "“%@” Mahu Menghantar Pemberitahuan Kepada Anda",
     "buttons": [
-      "Benarkan"
+      "Benarkan",
+      "OK"
     ],
     "shouldAccept": true
   },

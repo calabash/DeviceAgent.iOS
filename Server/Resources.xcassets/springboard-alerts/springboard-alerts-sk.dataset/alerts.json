@@ -615,7 +615,8 @@
   {
     "title": "„%@“ vám chce posielať hlásenia",
     "buttons": [
-      "Povoliť"
+      "Povoliť",
+      "OK"
     ],
     "shouldAccept": true
   },

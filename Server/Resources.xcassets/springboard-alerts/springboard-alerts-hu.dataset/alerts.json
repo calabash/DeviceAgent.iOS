@@ -487,6 +487,14 @@
     "shouldAccept": true
   },
   {
+    "title": "A(z) „%@” értesítéseket kíván Önnek küldeni",
+    "buttons": [
+      "Engedélyezés",
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
     "title": "A(z) „%@” meg kívánja nyitni az Ön naptárját.",
     "buttons": [
       "OK"

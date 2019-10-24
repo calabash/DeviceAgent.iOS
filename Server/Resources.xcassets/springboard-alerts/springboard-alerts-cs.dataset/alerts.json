@@ -488,6 +488,14 @@
     "shouldAccept": true
   },
   {
+    "title": "„%@“ vám chce zasílat oznámení.",
+    "buttons": [
+      "Povolit",
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
     "title": "„%@“ vám chce zasílat oznámení",
     "buttons": [
       "Povolit"

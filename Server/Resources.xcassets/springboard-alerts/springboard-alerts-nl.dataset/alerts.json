@@ -480,6 +480,20 @@
     "shouldAccept": true
   },
   {
+    "title": "%@ wil je meldingen sturen",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil u berichten sturen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
     "title": "%@ wil toegang tot Apple Music",
     "buttons": [
       "OK"

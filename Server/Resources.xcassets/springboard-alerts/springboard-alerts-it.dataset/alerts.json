@@ -501,6 +501,13 @@
     "shouldAccept": true
   },
   {
+    "title": "“%@” vorrebbe inviarti notifiche",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
     "title": "Vuoi consentire a “%@” di accedere alla tua posizione mentre utilizzi l'app?",
     "buttons": [
       "Consenti"

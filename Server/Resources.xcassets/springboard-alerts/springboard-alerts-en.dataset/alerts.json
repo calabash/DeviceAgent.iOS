@@ -294,7 +294,8 @@
   {
     "title": "“%@” Would Like to Send You Notifications",
     "buttons": [
-      "Allow"
+      "Allow",
+      "OK"
     ],
     "shouldAccept": true
   },

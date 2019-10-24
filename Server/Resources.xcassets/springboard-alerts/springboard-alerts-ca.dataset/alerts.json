@@ -525,14 +525,16 @@
   {
     "title": "\"%@\" et vol enviar notificacions",
     "buttons": [
-      "Permetre"
+      "Permetre",
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” et vol enviar notificacions",
     "buttons": [
-      "Permetre"
+      "Permetre",
+      "OK"
     ],
     "shouldAccept": true
   },

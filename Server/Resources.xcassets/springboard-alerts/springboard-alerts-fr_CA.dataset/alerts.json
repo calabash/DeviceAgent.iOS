@@ -440,7 +440,8 @@
   {
     "title": "Autorisez-vous « %@ » à vous envoyer des notifications?",
     "buttons": [
-      "Autoriser"
+      "Autoriser",
+      "OK"
     ],
     "shouldAccept": true
   },

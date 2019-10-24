@@ -483,7 +483,8 @@
   {
     "title": "“%@” vam želi slati obavijesti",
     "buttons": [
-      "Dozvoli"
+      "Dozvoli",
+      "OK"
     ],
     "shouldAccept": true
   },

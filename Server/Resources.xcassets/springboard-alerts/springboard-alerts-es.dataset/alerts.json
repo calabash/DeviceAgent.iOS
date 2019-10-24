@@ -533,7 +533,8 @@
   {
     "title": "“%@” quiere enviarte notificaciones",
     "buttons": [
-      "Permitir"
+      "Permitir",
+      "OK"
     ],
     "shouldAccept": true
   },
