@@ -46,13 +46,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Niektoré dáta aplikácie %@ budú kvôli spracovaniu vašich žiadostí odoslané do Apple.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Aplikácia „%@“ žiada o prístup k mikrofónu",
     "buttons": [
       "OK"
@@ -68,13 +61,6 @@
   },
   {
     "title": "Aplikácia „%@“ žiada o prístup ku kalendáru",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Rečové dáta z tejto apky budú kvôli spracovaniu vašich žiadostí odoslané do Apple a použité aj na vylepšovanie technológie rozpoznávania reči spoločnosti Apple.",
     "buttons": [
       "OK"
     ],
@@ -546,13 +532,6 @@
     "title": "Chcete povoliť aplikácii „%@“ pristupovať k vašej polohe aj v čase, keď ju nepoužívate?",
     "buttons": [
       "Povoliť"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Rečové dáta z tejto aplikácie budú kvôli spracovaniu vašich žiadostí odoslané do Apple a použité aj na vylepšovanie technológie rozpoznávania reči spoločnosti Apple.",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },

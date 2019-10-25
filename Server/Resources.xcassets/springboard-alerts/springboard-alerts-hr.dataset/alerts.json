@@ -45,13 +45,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Neki vaši %@ podaci poslat će se Appleu radi obrade vaših zahtjeva.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%@” želi pristupiti mikrofonu",
     "buttons": [
       "OK"
@@ -67,13 +60,6 @@
   },
   {
     "title": "“%@” želi pristupiti vašem kalendaru",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Podaci govora iz ove aplikacije poslat će se Appleu radi obrade vaših zahtjeva. Time će se također pomoći Appleu u poboljšanju tehnologije prepoznavanja govora.",
     "buttons": [
       "OK"
     ],

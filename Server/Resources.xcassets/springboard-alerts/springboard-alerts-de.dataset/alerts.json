@@ -46,13 +46,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Einige deiner Daten von %@ werden an Apple gesendet, um deine Anfragen zu verarbeiten.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "„%@“ möchte auf das Mikrofon zugreifen",
     "buttons": [
       "OK"
@@ -68,13 +61,6 @@
   },
   {
     "title": "„%@“ möchte auf deinen Kalender zugreifen",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Sprachdaten von dieser App werden an Apple gesendet, um deine Anfragen zu verarbeiten. Außerdem werden sie verwendet, um Apple beim Verbessern der Spracherkennungstechnologie zu unterstützen.",
     "buttons": [
       "OK"
     ],

@@ -46,13 +46,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Sebagian data %@ Anda akan dikirimkan ke Apple untuk memproses permintaan Anda.",
-    "buttons": [
-      "OKE"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%@” Ingin Mengakses Mikrofon",
     "buttons": [
       "OKE"
@@ -68,13 +61,6 @@
   },
   {
     "title": "“%@” Ingin Mengakses Kalender Anda",
-    "buttons": [
-      "OKE"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Data ucapan dari app ini akan dikirimkan ke Apple untuk memproses permintaan Anda. Ini juga akan membantu Apple meningkatkan teknologi pengenalan ucapannya.",
     "buttons": [
       "OKE"
     ],

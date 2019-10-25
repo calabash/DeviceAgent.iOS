@@ -39,13 +39,6 @@
     "shouldAccept": true
   },
   {
-    "title": "「%@」的部分資料將傳送予 Apple 以處理你的要求。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "「%@」要取用咪高風",
     "buttons": [
       "好"
@@ -61,13 +54,6 @@
   },
   {
     "title": "「%@」要取用你的日曆",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "此 App 的語音識別數據將傳送給 Apple 以處理你的要求。這亦會有助 Apple 改善語音識別技術。",
     "buttons": [
       "好"
     ],
@@ -330,13 +316,6 @@
     "shouldAccept": true
   },
   {
-    "title": "「%@」的部份資料將傳送予 Apple 以處理你的要求。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "「%@」要取用你的運動與健身記錄",
     "buttons": [
       "好"
@@ -380,20 +359,6 @@
   },
   {
     "title": "你允許「%@」使用Face ID嗎？",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "「%@」的部份資料將傳送予Apple以處理你的要求。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "此App的語音識別數據將傳送予Apple以處理你的要求。這亦會有助Apple改善語音識別技術。",
     "buttons": [
       "好"
     ],
@@ -585,20 +550,6 @@
     "title": "要允許「%@」在你正在使用 App 時取用你的位置嗎？",
     "buttons": [
       "允許"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "%@ 的部分資料將傳送給 Apple 以處理你的請求。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "此 App 的語音識別數據將傳送給 Apple 以處理你的請求。這亦會有助 Apple 改善語音識別技術。",
-    "buttons": [
-      "好"
     ],
     "shouldAccept": true
   },

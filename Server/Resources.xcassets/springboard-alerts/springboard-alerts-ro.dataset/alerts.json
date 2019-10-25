@@ -46,13 +46,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Unele dintre datele %@ vor fi trimise la Apple pentru a vă procesa solicitările.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%@” ar dori să acceseze microfonul",
     "buttons": [
       "OK"
@@ -68,13 +61,6 @@
   },
   {
     "title": "“%@” ar dori să vă acceseze calendarul",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Datele vocale din această aplicație vor fi trimise la Apple pentru a vă procesa solicitările. Aceasta va ajuta și la îmbunătățirea tehnologiei de recunoaștere vocală Apple.",
     "buttons": [
       "OK"
     ],

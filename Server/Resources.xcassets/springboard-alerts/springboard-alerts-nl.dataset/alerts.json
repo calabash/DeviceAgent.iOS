@@ -46,13 +46,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Enkele gegevens van %@ worden naar Apple verstuurd om je verzoeken te verwerken.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "%@ wil toegang tot de microfoon",
     "buttons": [
       "OK"
@@ -75,13 +68,6 @@
   },
   {
     "title": "%@ wil toegang tot uw agenda",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Spraakgegevens uit deze app worden naar Apple verstuurd om je verzoeken te verwerken. Deze gegevens worden ook gebruikt om de spraakherkenningstechnologie van Apple te verbeteren.",
     "buttons": [
       "OK"
     ],

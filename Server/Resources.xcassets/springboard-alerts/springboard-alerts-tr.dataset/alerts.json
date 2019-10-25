@@ -46,13 +46,6 @@
     "shouldAccept": true
   },
   {
-    "title": "İsteklerinizi işlemek için %@ verilerinizden bazıları Apple’a gönderilir.",
-    "buttons": [
-      "Tamam"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%@” Mikrofona Erişmek İstiyor",
     "buttons": [
       "Tamam"
@@ -68,13 +61,6 @@
   },
   {
     "title": "“%@” Takviminize Erişmek İstiyor",
-    "buttons": [
-      "Tamam"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "İsteklerinizi işlemek için bu uygulamadaki konuşma verileri Apple’a gönderilir. Bu aynı zamanda Apple’ın konuşma tanıma teknolojisini geliştirmesine de yardımcı olur.",
     "buttons": [
       "Tamam"
     ],

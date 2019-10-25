@@ -47,13 +47,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Algunes dades de %@ s’enviaran a Apple per processar les teves peticions.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%@” vol accedir al micròfon",
     "buttons": [
       "OK"
@@ -69,13 +62,6 @@
   },
   {
     "title": "“%@” vol accedir al teu calendari",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Les dades de veu d’aquesta app s’enviaran a Apple per processar les teves peticions i perquè Apple pugui millorar la tecnologia de reconeixement de veu.",
     "buttons": [
       "OK"
     ],
@@ -477,13 +463,6 @@
     "title": "Permets que “%@” també accedeixi a la teva ubicació encara que no estiguis utilitzant l’aplicació?",
     "buttons": [
       "Permetre"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Les dades de veu d’aquesta aplicació s’enviaran a Apple per processar les teves peticions i perquè Apple pugui millorar la tecnologia de reconeixement de veu.",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },
