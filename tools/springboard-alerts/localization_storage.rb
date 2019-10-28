@@ -9,10 +9,10 @@ class LocalizationStorage
   end
 
   # Adds new alert with specific language and title to the database
-  def add_entry(language, title, button)
+  def add_entry(language, title, button, default_value)
     @storage[language] ||= []
 
-    alert_entry = add_alert(language, title)
+    alert_entry = add_alert(language, title, default_value)
     add_button_to_alert(alert_entry, button) if button
   end
 
@@ -27,14 +27,14 @@ class LocalizationStorage
   private
 
   # Adds new alert if it doesn't exist yet
-  def add_alert(language, title)
+  def add_alert(language, title, default_value)
     alert_entry = @storage[language].find { |item| item['title'] == title }
     return alert_entry if alert_entry
 
     alert_entry = {
       'title' => title,
       'buttons' => [],
-      'shouldAccept' => true
+      'shouldAccept' => default_value
     }
     @storage[language].push(alert_entry)
     alert_entry

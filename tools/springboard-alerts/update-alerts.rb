@@ -76,6 +76,9 @@ def pick_required_values(found_values_dict, target_values, localization_storage,
   target_values.each do |item|
     title = item['title']
     button = item['button']
+    default_value = item['default_value']
+    default_value = true if default_value.nil?
+
     title_value = found_values_dict[title]
     button_value = found_values_dict[button]
 
@@ -84,7 +87,7 @@ def pick_required_values(found_values_dict, target_values, localization_storage,
     end
 
     if title_value
-      localization_storage.add_entry(language, title_value, button_value)
+      localization_storage.add_entry(language, title_value, button_value, default_value)
     else
       unknown_alert_constants.push(title)
     end
