@@ -74,15 +74,7 @@
     [invocation getReturnValue:&buffer];
     element = (__bridge XCUIElement *)buffer;
 
-    if ([element respondsToSelector:@selector(resolve)]) {
-        [element resolve];
-    } else {
-        NSError *error = nil;
-        if (![element resolveOrRaiseTestFailure:NO error:&error]) {
-            DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
-                    element, [error localizedDescription]);
-        }
-    }
+    [element cbx_resolve];
 }
 
 - (XCUIElementQuery *_Nonnull)cbxQueryForDescendantsOfAnyType {
@@ -115,10 +107,23 @@
 
 @end
 
+@implementation XCUIElement (CBXAdditions)
+- (void)cbx_resolve {
+    if ([self respondsToSelector:@selector(resolve)]) {
+        [self resolve];
+    } else {
+        NSError *error = nil;
+        if (![self resolveOrRaiseTestFailure:NO error:&error]) {
+            DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
+                    self, [error localizedDescription]);
+        }
+    }
+}
+@end
+
 @implementation XCUIElementQuery (CBXAdditions)
 
-- (XCElementSnapshot *)cbx_elementSnapshotForDebugDescription
-{
+- (XCElementSnapshot *)cbx_elementSnapshotForDebugDescription {
   if ([self respondsToSelector:@selector(elementSnapshotForDebugDescription)]) {
     return [self elementSnapshotForDebugDescription];
   }
