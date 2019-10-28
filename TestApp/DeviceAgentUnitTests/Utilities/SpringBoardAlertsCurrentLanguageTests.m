@@ -169,7 +169,7 @@
     SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
     
     expect([self containsLanguage:@"Программа «%@» запрашивает доступ к «Контактам».": alertsArray]).to.beTruthy();
-    expect([self containsLanguage:@"Sign In to iTunes Store":alertsArray]).to.beTruthy();
+    expect([self containsLanguage:@"Add Third-Party Keyboard?":alertsArray]).to.beTruthy();
     expect([self containsLanguage:@"« %@ » souhaite accéder à vos mouvements et vos activités physiques.":alertsArray]).to.beFalsy();
 
     [localeMock stopMocking];
@@ -182,7 +182,7 @@
     SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
     
     expect([self containsLanguage:@"Программа «%@» запрашивает доступ к «Контактам».": alertsArray]).to.beFalsy();
-    expect([self containsLanguage:@"Sign In to iTunes Store":alertsArray]).to.beTruthy();
+    expect([self containsLanguage:@"Add Third-Party Keyboard?":alertsArray]).to.beTruthy();
     expect([self containsLanguage:@"« %@ » souhaite accéder à vos mouvements et vos activités physiques.":alertsArray]).to.beFalsy();
 
     [localeMock stopMocking];
@@ -195,7 +195,7 @@
     SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
     
     expect([self containsLanguage:@"“%@” quiere acceder al reconocimiento de voz": alertsArray]).to.beTruthy();
-    expect([self containsLanguage:@"Sign In to iTunes Store":alertsArray]).to.beTruthy();
+    expect([self containsLanguage:@"Add Third-Party Keyboard?":alertsArray]).to.beTruthy();
     expect([self containsLanguage:@"acceda a tu ubicación incluso cuando la app no está en uso":alertsArray]).to.beFalsy();
 
     [localeMock stopMocking];
@@ -208,7 +208,7 @@
     SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
     
     expect([self containsLanguage:@"“%@” quiere acceder a tu condición y actividad física": alertsArray]).to.beTruthy();
-    expect([self containsLanguage:@"Sign In to iTunes Store":alertsArray]).to.beTruthy();
+    expect([self containsLanguage:@"Add Third-Party Keyboard?":alertsArray]).to.beTruthy();
     expect([self containsLanguage:@"“%@” quiere acceder al reconocimiento de voz":alertsArray]).to.beTruthy();
 
     [localeMock stopMocking];
@@ -221,7 +221,7 @@
     SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
     
     expect([self containsLanguage:@"״%@״ מעוניין לגשת למשימות שלך": alertsArray]).to.beTruthy();
-    expect([self containsLanguage:@"Sign In to iTunes Store":alertsArray]).to.beTruthy();
+    expect([self containsLanguage:@"Add Third-Party Keyboard?":alertsArray]).to.beTruthy();
     expect([self containsLanguage:@"« %@ » souhaite accéder à vos mouvements et vos activités physiques.":alertsArray]).to.beFalsy();
 
     [localeMock stopMocking];
