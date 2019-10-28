@@ -228,48 +228,6 @@
     "shouldAccept": true
   },
   {
-    "title": "登录 App Store",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登录 Game Center",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登录 iTunes Store",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登录 iMessage 信息",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登录 FaceTime 通话",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登录 iCloud",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "允许“%@”更新您的健康数据。",
     "buttons": [
       "好"
@@ -291,21 +249,7 @@
     "shouldAccept": true
   },
   {
-    "title": "当前 Wi-Fi 网络及附近其他网络会在明天之前保持断开状态。\n\nWi-Fi 仍可用于“隔空投送”、“个人热点”和定位准确性。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "当前无线局域网络及附近其他网络会在明天之前保持断开状态。\n\n无线局域网仍可用于“隔空投送”、“个人热点”和定位准确性。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "当前已连接的配件将断开连接，且其他配件不会连接。\n\n蓝牙仍可用于 Apple Watch、Apple Pencil、“个人热点”和“接力”。",
     "buttons": [
       "好"
     ],
@@ -396,56 +340,7 @@
     "shouldAccept": true
   },
   {
-    "title": "登录Game Center",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "通过Apple ID登录",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登录iMessage信息",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登录FaceTime通话",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登录iCloud",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%1$@”想访问%2$@帐户",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "当前Wi-Fi网络及附近其他网络会在明天之前保持断开状态。\n\nWi-Fi仍可用于“隔空投送”、“个人热点”和定位准确性。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "当前已连接的配件将断开连接，且其他配件不会连接。\n\n蓝牙仍可用于Apple Watch、Apple Pencil、“个人热点”和“接力”。",
     "buttons": [
       "好"
     ],
@@ -529,30 +424,9 @@
     "shouldAccept": true
   },
   {
-    "title": "登录 iMessage",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登录 FaceTime",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%@”想要使用“%@”登录",
     "buttons": [
       "继续"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "打开蓝牙来允许“%@”连接到配件",
-    "buttons": [
-      "好"
     ],
     "shouldAccept": true
   },

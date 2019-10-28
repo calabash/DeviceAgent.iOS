@@ -240,48 +240,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Log ind på App Store",
-    "buttons": [
-      "Annuller"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Log Ind på Game Center",
-    "buttons": [
-      "Annuller"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Log ind på iTunes Store",
-    "buttons": [
-      "Annuller"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Log ind på iMessage",
-    "buttons": [
-      "Annuller"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Log ind på FaceTime",
-    "buttons": [
-      "Annuller"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Log ind på iCloud",
-    "buttons": [
-      "Annuller"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%@” må opdatere dine sundhedsdata.",
     "buttons": [
       "OK"
@@ -297,27 +255,6 @@
   },
   {
     "title": "“%1$@” ønsker adgang til %2$@-konti",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Det aktuelle Wi-Fi-netværk og andre i nærheden afbrydes indtil i morgen.\n\nWi-Fi vil stadig være tilgængeligt for AirDrop, Internetdeling og lokaliteternøjagtighed.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Det aktuelle WLAN-netværk og andre i nærheden afbrydes indtil i morgen.\n\nWLAN vil stadig være tilgængeligt for AirDrop, Internetdeling og lokaliteternøjagtighed.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Tilbehør, der er forbundet nu, vil få afbrudt forbindelsen, og andet tilbehør vil ikke oprette forbindelse.\n\nBluetooth vil stadig være tilgængeligt for Apple Watch, Apple Pencil, Internetdeling og Handoff.",
     "buttons": [
       "OK"
     ],
@@ -348,13 +285,6 @@
     "title": "“%@“ vil gøre data tilgængelige for Bluetooth-enheder i nærheden, også når du ikke bruger appen",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Log ind med Apple-id",
-    "buttons": [
-      "Annuller"
     ],
     "shouldAccept": true
   },
@@ -446,13 +376,6 @@
     "title": "“%@” vil bruge “%@” til at logge ind",
     "buttons": [
       "Fortsæt"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Slå Bluetooth til for at tillade “%@” at oprette forbindelse til Tilbehør",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },

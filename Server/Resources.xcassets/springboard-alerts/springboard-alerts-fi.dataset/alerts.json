@@ -228,48 +228,6 @@
     "shouldAccept": true
   },
   {
-    "title": "App Storeen kirjautuminen",
-    "buttons": [
-      "Kumoa"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Game Centeriin kirjautuminen",
-    "buttons": [
-      "Kumoa"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Kirjaudu iTunes Storeen",
-    "buttons": [
-      "Kumoa"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "iMessageen kirjautuminen",
-    "buttons": [
-      "Kumoa"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "FaceTimeen kirjautumInen",
-    "buttons": [
-      "Kumoa"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Kirjaudu iCloudiin",
-    "buttons": [
-      "Kumoa"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Salli laitteen %@ päivittää terveystietosi.",
     "buttons": [
       "OK"
@@ -285,27 +243,6 @@
   },
   {
     "title": "%1$@ haluaa käyttää %2$@-tilejä",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Yhteys nykyisiin ja muihin lähellä oleviin Wi-Fi-verkkoihin katkaistaan huomiseen saakka.\n\nWi-Fi toimii edelleen AirDropille, omalle yhteyspisteelle ja sijainnin tarkkuudelle.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Yhteys nykyisiin ja muihin lähellä oleviin WLAN-verkkoihin katkaistaan huomiseen saakka.\n\nWLAN toimii edelleen AirDropille, omalle yhteyspisteelle ja sijainnin tarkkuudelle.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Yhdistettyjen lisälaitteiden yhteydet katkaistaan ja muita lisälaitteita ei voida yhdistää.\n\nBluetooth toimii edelleen Apple Watchin, Apple Pencilin, oman yhteyspisteen ja Handoffin kanssa.",
     "buttons": [
       "OK"
     ],
@@ -334,34 +271,6 @@
   },
   {
     "title": "%@ haluaa antaa dataa lähellä oleville Bluetooth-laitteille, vaikka et käyttäisikään appia",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Kirjaudu sisään Apple ID:llä",
-    "buttons": [
-      "Kumoa"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Yhteys nykyisiin ja muihin lähellä oleviin Wi-Fi-verkkoihin katkaistaan huomiseen saakka.\n\nWi-Fi toimii edelleen AirDropille, omalle hotspotille ja sijainnin tarkkuudelle.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Yhteys nykyisiin ja muihin lähellä oleviin WLAN-verkkoihin katkaistaan huomiseen saakka.\n\nWLAN toimii edelleen AirDropille, omalle hotspotille ja sijainnin tarkkuudelle.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Yhdistettyjen lisälaitteiden yhteydet katkaistaan ja muita lisälaitteita ei voida yhdistää.\n\nBluetooth toimii edelleen Apple Watchin, Apple Pencilin, oman hotspotin ja Handoffin kanssa.",
     "buttons": [
       "OK"
     ],
@@ -452,13 +361,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Laita Bluetooth päälle, jos sallit, että %@ voi yhdistää lisälaitteisiin",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "%@ haluaa lähettää sinulle ilmoituksia",
     "buttons": [
       "Salli",
@@ -512,13 +414,6 @@
     "title": "Avaa ohjelmassa %@",
     "buttons": [
       "Avaa"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "iTunes Storeen kirjautuminen",
-    "buttons": [
-      "Kumoa"
     ],
     "shouldAccept": true
   }

@@ -235,48 +235,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Σύνδεση στο App Store",
-    "buttons": [
-      "Ακύρωση"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Σύνδεση στο Game Center",
-    "buttons": [
-      "Ακύρωση"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Σύνδεση στο iTunes Store",
-    "buttons": [
-      "Ακύρωση"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Σύνδεση στο iMessage",
-    "buttons": [
-      "Ακύρωση"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Σύνδεση στο FaceTime",
-    "buttons": [
-      "Ακύρωση"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Σύνδεση στο iCloud",
-    "buttons": [
-      "Ακύρωση"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Να επιτρέπεται στην εφαρμογή «%@» η ενημέρωση των ιατρικών δεδομένων σας.",
     "buttons": [
       "ΟΚ"
@@ -292,27 +250,6 @@
   },
   {
     "title": "Αίτημα από «%1$@» για πρόσβαση στους λογαριασμούς %2$@",
-    "buttons": [
-      "ΟΚ"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Θα γίνει αποσύνδεση από το τρέχον δίκτυο Wi-Fi και άλλα γειτονικά δίκτυα μέχρι αύριο.\n\nΤο Wi-Fi θα εξακολουθεί να είναι διαθέσιμο για το AirDrop, το Προσωπικό hotspot, και για ακρίβεια τοποθεσίας.",
-    "buttons": [
-      "ΟΚ"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Θα γίνει αποσύνδεση από το τρέχον δίκτυο WLAN και άλλα γειτονικά δίκτυα μέχρι αύριο.\n\nΤο WLAN θα εξακολουθεί να είναι διαθέσιμο για το AirDrop, το Προσωπικό hotspot, και για ακρίβεια τοποθεσίας.",
-    "buttons": [
-      "ΟΚ"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Θα αποσυνδεθούν τα αξεσουάρ που είναι συνδεδεμένα τώρα και δεν θα είναι δυνατή η σύνδεση άλλων αξεσουάρ.\n\nΤο Bluetooth θα εξακολουθεί να είναι διαθέσιμο για το Apple Watch, το Apple Pencil, το Προσωπικό hotspot και το Handoff.",
     "buttons": [
       "ΟΚ"
     ],
@@ -350,13 +287,6 @@
     "title": "Αίτημα από «%@» για να καθιστά δεδομένα διαθέσιμα σε κοντινές συσκευές Bluetooth ακόμη κι όταν δεν χρησιμοποιείτε την εφαρμογή",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Σύνδεση με Apple ID",
-    "buttons": [
-      "Ακύρωση"
     ],
     "shouldAccept": true
   },
@@ -455,13 +385,6 @@
     "title": "Η εφαρμογή «%@» θέλει να χρησιμοποιήσει το «%@» για σύνδεση",
     "buttons": [
       "Συνέχεια"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Ενεργοποίηση Bluetooth για σύνδεση του «%@» με αξεσουάρ",
-    "buttons": [
-      "ΟΚ"
     ],
     "shouldAccept": true
   },

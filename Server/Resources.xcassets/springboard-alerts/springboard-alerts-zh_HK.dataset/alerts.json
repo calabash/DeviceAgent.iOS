@@ -232,48 +232,6 @@
     "shouldAccept": true
   },
   {
-    "title": "登入 App Store",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登入 Game Center",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登入 iTunes Store",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登入 iMessage",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登入 FaceTime",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登入 iCloud",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "允許「%@」更新你的「健康」資料。",
     "buttons": [
       "好"
@@ -295,27 +253,6 @@
     "shouldAccept": true
   },
   {
-    "title": "將會中斷目前的 Wi-Fi 網絡和附近其他網直至明天為止。\n\nWi-Fi 仍可繼續用於 AirDrop、「個人熱點」和定位準確度。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "將會中斷目前的 WLAN 網絡和附近其他網直至明天為止。\n\nWLAN 仍可繼續用於 AirDrop、「個人熱點」和定位準確度。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "將中斷目前已連接的配件連線，並且不會連接其他配件。\n\nApple Watch、Apple Pencil、「個人熱點」和 Handoff 仍可繼續使用藍牙。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "「%@」要取用你的運動與健身記錄",
     "buttons": [
       "好"
@@ -331,13 +268,6 @@
   },
   {
     "title": "尚未安裝 SIM 卡",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "將中斷目前已連接的配件連線，並且不會連接其他配件。\n\nApple Watch、Apple Pencil、「個人熱點」和「接手」仍可繼續使用藍牙。",
     "buttons": [
       "好"
     ],
@@ -435,34 +365,6 @@
     "shouldAccept": true
   },
   {
-    "title": "使用Apple ID登入",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登入iMessage",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登入FaceTime",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登入iCloud",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "「%1$@」要連接%2$@帳户",
     "buttons": [
       "好"
@@ -471,13 +373,6 @@
   },
   {
     "title": "將會中斷目前的Wi-Fi網絡和附近其他網絡直至明天為止。\n\nWi-Fi仍可繼續用於AirDrop、「個人熱點」和定位準確度。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "將會中斷目前的WLAN網絡和附近其他網絡直至明天為止。\n\nWLAN仍可繼續用於AirDrop、「個人熱點」和定位準確度。",
     "buttons": [
       "好"
     ],
@@ -557,13 +452,6 @@
     "title": "「%@」想使用「%@」登入",
     "buttons": [
       "繼續"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "請開啟藍牙以允許「%@」連接配件",
-    "buttons": [
-      "好"
     ],
     "shouldAccept": true
   },

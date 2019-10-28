@@ -228,48 +228,6 @@
     "shouldAccept": true
   },
   {
-    "title": "App Storeにサインイン",
-    "buttons": [
-      "キャンセル"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Game Centerにサインイン",
-    "buttons": [
-      "キャンセル"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "iTunes Storeにサインイン",
-    "buttons": [
-      "キャンセル"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "iMessageにサインイン",
-    "buttons": [
-      "キャンセル"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "FaceTimeにサインイン",
-    "buttons": [
-      "キャンセル"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "iCloudにサインイン",
-    "buttons": [
-      "キャンセル"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%@”にヘルスケアデータのアップデートを許可します。",
     "buttons": [
       "OK"
@@ -285,27 +243,6 @@
   },
   {
     "title": "“%1$@”は%2$@アカウントへのアクセスを求めています",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "現在のWi-Fiネットワークおよびほかの近くのネットワークは明日まで接続を解除されます。\n\nWi-Fiは引き続きAirDrop、インターネット共有、および位置情報の精度の向上で利用可能です。",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "現在のWLANネットワークおよびほかの近くのネットワークは明日まで接続を解除されます。\n\nWLANは引き続きAirDrop、インターネット共有、および位置情報の精度の向上で利用可能です。",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "現在接続されているアクセサリは接続を解除され、ほかのアクセサリは接続しません。\n\nBluetoothは引き続きApple Watch、Apple Pencil、インターネット共有、およびHandoffで利用可能です。",
     "buttons": [
       "OK"
     ],
@@ -336,13 +273,6 @@
     "title": "“%@”が近隣のBluetoothデバイスに、Appを使用していないときでもデータ通信することを求めています",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Apple IDでサインイン",
-    "buttons": [
-      "キャンセル"
     ],
     "shouldAccept": true
   },
@@ -420,13 +350,6 @@
     "title": "“%@”がサインインのために“%@”を使用しようとしています。",
     "buttons": [
       "続ける"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "“%@”がアクセサリに接続できるようにするには、Bluetoothをオンにしてください。",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },

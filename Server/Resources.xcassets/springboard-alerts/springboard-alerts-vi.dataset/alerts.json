@@ -239,48 +239,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Đăng nhập vào App Store",
-    "buttons": [
-      "Hủy"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Đăng nhập vào Game Center",
-    "buttons": [
-      "Hủy"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Đăng nhập vào iTunes Store",
-    "buttons": [
-      "Hủy"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Đăng nhập vào iMessage",
-    "buttons": [
-      "Hủy"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Đăng nhập vào FaceTime",
-    "buttons": [
-      "Hủy"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Đăng nhập vào iCloud",
-    "buttons": [
-      "Hủy"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Cho phép “%@” cập nhật dữ liệu sức khỏe của bạn.",
     "buttons": [
       "OK"
@@ -296,27 +254,6 @@
   },
   {
     "title": "“%1$@” muốn truy cập các tài khoản %2$@ của bạn",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Mạng Wi-Fi hiện tại và các mạng khác gần bạn sẽ bị ngắt kết nối cho đến ngày mai.\n\nWi-Fi sẽ tiếp tục khả dụng cho AirDrop, Điểm truy cập cá nhân và độ chính xác về vị trí.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Mạng WLAN hiện tại và các mạng khác gần bạn sẽ bị ngắt kết nối cho đến ngày mai.\n\nWLAN sẽ tiếp tục khả dụng cho AirDrop, Điểm truy cập cá nhân và độ chính xác về vị trí.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Các phụ kiện hiện đang được kết nối sẽ bị ngắt kết nối và các phụ kiện khác sẽ không kết nối.\n\nBluetooth sẽ tiếp tục khả dụng cho Apple Watch, Apple Pencil, Điểm truy cập cá nhân và Handoff.",
     "buttons": [
       "OK"
     ],
@@ -414,13 +351,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Đăng nhập bằng ID Apple",
-    "buttons": [
-      "Hủy"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%@” đã sử dụng vị trí của bạn trong nền trong 3 ngày qua. Bạn có muốn tiếp tục cho phép sử dụng vị trí trong nền không?",
     "buttons": [
       "Cho phép"
@@ -508,13 +438,6 @@
     "title": "“%@” muốn sử dụng “%@” để đăng nhập",
     "buttons": [
       "Tiếp tục"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Bật Bluetooth để Cho phép “%@” Kết nối với Phụ kiện",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },

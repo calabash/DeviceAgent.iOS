@@ -240,48 +240,6 @@
     "shouldAccept": true
   },
   {
-    "title": "התחברות ל-App Store",
-    "buttons": [
-      "ביטול"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "התחברות אל Game Center",
-    "buttons": [
-      "ביטול"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "התחברות ל-iTunes Store",
-    "buttons": [
-      "ביטול"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "התחברות ל-iMessage",
-    "buttons": [
-      "ביטול"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "התחבר/י ל-FaceTime",
-    "buttons": [
-      "ביטול"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "התחברות ל-iCloud",
-    "buttons": [
-      "ביטול"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "אפשר/י ל-״%@״ לעדכן את נתוני הבריאות שלך.",
     "buttons": [
       "אישור"
@@ -297,27 +255,6 @@
   },
   {
     "title": "״%1$@״ מבקש לגשת לחשבונות %2$@",
-    "buttons": [
-      "אישור"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "החיבור לרשת האלחוטית הנוכחית ולרשתות אלחוטיות קרובות ינותק עד מחר.\n\nהאינטרנט האלחוטי ימשיך להיות זמין עבור AirDrop, נקודת גישה אישית, ולצורך זיהוי מיקום מדויק.",
-    "buttons": [
-      "אישור"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "החיבור לרשת ה-WLAN הנוכחית ולרשתות אלחוטיות קרובות ינותק עד מחר.\n\nחיבור ה-WLAN ימשיך להיות זמין עבור AirDrop, נקודת גישה אישית, ולצורך זיהוי מיקום מדויק.",
-    "buttons": [
-      "אישור"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "אביזרים המחוברים כעת ינותקו, ואביזרים אחרים לא יחוברו.\n\n‏Bluetooth ימשיך להיות זמין עבור Apple Watch,‏ Apple Pencil, נקודת גישה אישית ו-Handoff.",
     "buttons": [
       "אישור"
     ],
@@ -355,13 +292,6 @@
     "title": "״%@״ מעוניין לאפשר להתקני Bluetooth קרובים לקבל גישה לנתונים גם לא בעת השימוש ביישום",
     "buttons": [
       "אישור"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "התחברות באמצעות Apple ID",
-    "buttons": [
-      "ביטול"
     ],
     "shouldAccept": true
   },
@@ -446,13 +376,6 @@
     "title": "‏״%@״ מבקש להשתמש ב-״%@״ כדי להתחבר",
     "buttons": [
       "המשך"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "הפעל/י את Bluetooth על-מנת לאפשר ל-״%@״ להתחבר לאביזרים",
-    "buttons": [
-      "אישור"
     ],
     "shouldAccept": true
   },

@@ -242,35 +242,7 @@
     "shouldAccept": true
   },
   {
-    "title": "Prihláste sa do Game Center",
-    "buttons": [
-      "Zrušiť"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Prihláste sa do iTunes Storu",
-    "buttons": [
-      "Zrušiť"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Prihláste sa do iMessage",
-    "buttons": [
-      "Zrušiť"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Prihláste sa do FaceTime",
-    "buttons": [
-      "Zrušiť"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Prihláste sa do iCloudu",
     "buttons": [
       "Zrušiť"
     ],
@@ -292,27 +264,6 @@
   },
   {
     "title": "Aplikácia „%1$@“ chce pristupovať k %2$@ účtom",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Aktuálna Wi-Fi sieť a ostatné okolité siete budú odpojené do zajtrajšieho dňa.\n\nWi-Fi bude aj naďalej k dispozícii pre AirDrop, Zdieľanie internetu a vylepšovanie presnosti polohy.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Aktuálna WLAN sieť a ostatné okolité siete budú odpojené do zajtrajšieho dňa.\n\nWLAN bude aj naďalej k dispozícii pre AirDrop, Zdieľanie internetu a vylepšovanie presnosti polohy.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Aktuálne pripojené príslušenstvá budú odpojené a ďalšie príslušenstvá sa nepripoja.\n\nBluetooth bude aj naďalej k dispozícii pre Apple Watch, Apple Pencil, Zdieľanie internetu a Handoff.",
     "buttons": [
       "OK"
     ],
@@ -424,34 +375,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Prihláste sa použitím Apple ID",
-    "buttons": [
-      "Zrušiť"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Aktuálna Wi-Fi sieť a ostatné okolité siete budú odpojené do zajtrajšieho dňa.\n\nWi-Fi bude aj naďalej k dispozícii pre AirDrop, Osobný hotspot a vylepšovanie presnosti polohy.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Aktuálna WLAN sieť a ostatné okolité siete budú odpojené do zajtrajšieho dňa.\n\nWLAN bude aj naďalej k dispozícii pre AirDrop, Osobný hotspot a vylepšovanie presnosti polohy.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Aktuálne pripojené príslušenstvá budú odpojené a ďalšie príslušenstvá sa nepripoja.\n\nBluetooth bude aj naďalej k dispozícii pre Apple Watch, Apple Pencil, Osobný hotspot a Handoff.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Apka „%@“ počas posledných 3 dní používala vašu polohu na pozadí. Chcete, aby aj naďalej mohla používať vašu polohu na pozadí?",
     "buttons": [
       "Povoliť"
@@ -550,30 +473,9 @@
     "shouldAccept": true
   },
   {
-    "title": "Prihláste sa do App Store",
-    "buttons": [
-      "Zrušiť"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Prihláste sa do iTunes Store",
-    "buttons": [
-      "Zrušiť"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "„%@“ chce na prihlásenie použiť „%@“",
     "buttons": [
       "Pokračovať"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Ak chcete povoliť aplikácii „%@“ pripojiť sa k príslušenstvu, zapnite Bluetooth",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },

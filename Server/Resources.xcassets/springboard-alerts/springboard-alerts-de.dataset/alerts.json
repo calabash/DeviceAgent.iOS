@@ -235,48 +235,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Im App Store anmelden",
-    "buttons": [
-      "Abbrechen"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Beim Game Center anmelden",
-    "buttons": [
-      "Abbrechen"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Im iTunes Store anmelden",
-    "buttons": [
-      "Abbrechen"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Bei iMessage anmelden",
-    "buttons": [
-      "Abbrechen"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Bei FaceTime anmelden",
-    "buttons": [
-      "Abbrechen"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Bei iCloud anmelden",
-    "buttons": [
-      "Abbrechen"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Darf „%@“ deine Gesundheitsdaten aktualisieren?",
     "buttons": [
       "OK"
@@ -294,20 +252,6 @@
     "title": "„%1$@“ möchte auf %2$@-Accounts zugreifen",
     "buttons": [
       "Erlauben"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Das aktuelle WLAN und andere nahegelegene drahtlose Netzwerke werden bis morgen getrennt.\n\nWLAN ist weiterhin für AirDrop, den persönlichen Hotspot und zur Standortgenauigkeit verfügbar.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Die Verbindung zu aktuell verbundenem Zubehör wird getrennt und anderes Zubehör kann nicht verbunden werden.\n\nBluetooth ist weiterhin für Apple Watch, Apple Pencil, den persönlichen Hotspot und Handoff verfügbar.",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },
@@ -336,13 +280,6 @@
     "title": "„%@“ möchte Daten mit Bluetooth-Geräten in der Nähe teilen, auch wenn die App nicht benutzt wird",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Mit Apple‑ID anmelden",
-    "buttons": [
-      "Abbrechen"
     ],
     "shouldAccept": true
   },
@@ -550,20 +487,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Schakel Bluetooth in om '%@' verbinding te laten maken met accessoires",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Bluetooth aktivieren, damit „%@“ die Verbindung zum Zubehör herstellen kann",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "„%@\" möchte dir Mitteilungen senden",
     "buttons": [
       "Erlauben"
@@ -721,13 +644,6 @@
     "title": "Es sind neue Einstellungen verfügbar. Möchten Sie sie jetzt aktualisieren?",
     "buttons": [
       "Später"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Aktivieren Sie Bluetooth, damit „%@“ die Verbindung zum Zubehör herstellen kann",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },

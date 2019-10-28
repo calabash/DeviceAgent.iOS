@@ -245,48 +245,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Увійдіть в App Store",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увійдіть у Game Center",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увійдіть в iTunes Store",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увійдіть в iMessage",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увійдіть у FaceTime",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увійдіть в iCloud",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Дозвольте «%@» оновлювати ваші меддані.",
     "buttons": [
       "OK"
@@ -305,27 +263,6 @@
     "buttons": [
       "OK",
       "ОК"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Поточну мережу Wi-Fi та інші поблизу буде відʼєднано до завтра.\n\nWi-Fi лишатиметься доступним для AirDrop, Власного хот-спота і точнішої геолокації.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Поточну мережу WLAN та інші поблизу буде відʼєднано до завтра.\n\nWLAN лишатиметься доступним для AirDrop, Власного хот-спота і точнішої геолокації.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Підʼєднані зараз прилади буде відʼєднано, а інші прилади не підʼєднуватимуться.\n\nBluetooth лишатиметься доступним для Apple Watch, Apple Pencil, Власного хот-спота і Handoff.",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },
@@ -377,13 +314,6 @@
     "title": "«%@» хоче надавати Bluetooth-пристроям поблизу доступ до даних, навіть коли ви не використовуєте цю програму",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увійдіть з Apple ID",
-    "buttons": [
-      "Скасувати"
     ],
     "shouldAccept": true
   },
@@ -521,48 +451,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Увійти до App Store",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увійти до Game Center",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увійти до iTunes Store",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увійти до iMessage",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увійти до FaceTime",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увійти до iCloud",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Доступ до «Здоров’я»",
     "buttons": [
       "OK"
@@ -573,13 +461,6 @@
     "title": "«%@» хоче застосувати «%@» для входу",
     "buttons": [
       "Далі"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увімкніть Bluetooth, щоб дати «%@» змогу підключатися до приладів",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },
@@ -595,13 +476,6 @@
     "buttons": [
       "Дозволити",
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увімкніть Bluetooth, щоб дозволити «%@» підключитися до приладдя",
-    "buttons": [
-      "ОК"
     ],
     "shouldAccept": true
   },

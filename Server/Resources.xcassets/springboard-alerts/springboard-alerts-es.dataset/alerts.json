@@ -242,48 +242,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Inicia sesión en App Store",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicia sesión en Game Center",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicia sesión en iTunes Store",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicia sesión en iMessage",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicia sesión en FaceTime",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicia sesión en iCloud",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Permitir a %@ actualizar tus datos de salud.",
     "buttons": [
       "OK"
@@ -299,27 +257,6 @@
   },
   {
     "title": "“%1$@” quiere obtener acceso a cuentas %2$@",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "La red Wi-Fi actual y otras cercanas se desconectarán hasta mañana.\n\nLa red Wi-Fi seguirá estando disponible para AirDrop, “Compartir Internet” y para mejorar la precisión de la localización.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "La red WLAN actual y otras cercanas se desconectarán hasta mañana.\n\nLa red WLAN seguirá estando disponible para AirDrop, “Compartir Internet” y para mejorar la precisión de la localización.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Los accesorios conectados se desconectarán y no se conectarán otros accesorios.\n\nBluetooth seguirá estando disponible para el Apple Watch, el Apple Pencil, “Compartir Internet” y Handoff.",
     "buttons": [
       "OK"
     ],
@@ -350,34 +287,6 @@
     "title": "%@ quiere que los datos estén disponibles para los dispositivos Bluetooth cercanos aunque no estés utilizando la app",
     "buttons": [
       "Permitir"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicia sesión con ID de Apple",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "La red Wi-Fi actual y otras cercanas se desconectarán hasta mañana.\n\nLa red Wi-Fi seguirá estando disponible para AirDrop, para el punto de acceso personal y para mejorar la precisión de la localización.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "La red WLAN actual y otras cercanas se desconectarán hasta mañana.\n\nLa red WLAN seguirá estando disponible para AirDrop, para el punto de acceso personal y para mejorar la precisión de la localización.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Los accesorios conectados se desconectarán y no se conectarán otros accesorios.\n\nBluetooth seguirá estando disponible para el Apple Watch, el Apple Pencil, el punto de acceso personal y Handoff.",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },
@@ -496,13 +405,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Activa Bluetooth para permitir que “%@” se conecte a los accesorios",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "\"%@\" quiere enviarte notificaciones",
     "buttons": [
       "Permitir"
@@ -521,48 +423,6 @@
     "title": "“%@” quiere acceder a Apple Music",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Iniciar sesión en App Store",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Iniciar sesión en Game Center",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Iniciar sesión en iTunes Store",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Iniciar sesión en iMessage",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Iniciar sesión en FaceTime",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Iniciar sesión en iCloud",
-    "buttons": [
-      "Cancelar"
     ],
     "shouldAccept": true
   }

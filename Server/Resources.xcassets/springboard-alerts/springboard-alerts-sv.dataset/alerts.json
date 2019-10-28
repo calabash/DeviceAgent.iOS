@@ -235,48 +235,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Logga in på App Store",
-    "buttons": [
-      "Avbryt"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Logga in på Game Center",
-    "buttons": [
-      "Avbryt"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Logga in på iTunes Store",
-    "buttons": [
-      "Avbryt"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Logga in på iMessage",
-    "buttons": [
-      "Avbryt"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Logga in på FaceTime",
-    "buttons": [
-      "Avbryt"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Logga in på iCloud",
-    "buttons": [
-      "Avbryt"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Tillåt att ”%@” uppdaterar dina hälsodata.",
     "buttons": [
       "OK"
@@ -292,27 +250,6 @@
   },
   {
     "title": "”%1$@” vill komma åt dina %2$@-konton",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Det aktuella Wi-Fi-nätverket och andra i närheten kopplas från tills imorgon.\n\nWi-Fi är fortfarande tillgängligt för AirDrop, Internetdelning och noggrannhet vid platsbestämning.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Det aktuella WLAN-nätverket och andra i närheten kopplas från tills imorgon.\n\nWLAN är fortfarande tillgängligt för AirDrop, Internetdelning och noggrannhet vid platsbestämning.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Tillbehör som är anslutna just nu kopplas från och andra tillbehör ansluter inte.\n\nBluetooth är fortfarande tillgängligt för Apple Watch, Apple Pencil, Internetdelning och Handoff.",
     "buttons": [
       "OK"
     ],
@@ -343,13 +280,6 @@
     "title": "”%@” vill göra dina data tillgängliga för andra Bluetooth-enheter i närheten, även när du inte använder appen",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Logga in med Apple-ID",
-    "buttons": [
-      "Avbryt"
     ],
     "shouldAccept": true
   },
@@ -420,13 +350,6 @@
     "title": "”%@” vill logga in med hjälp av ”%@”",
     "buttons": [
       "Fortsätt"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Slå på Bluetooth om du vill låta ”%@” ansluta till tillbehör",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },
