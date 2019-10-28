@@ -19,6 +19,7 @@
 #import <UIKit/UIKit.h>
 #import "CBXConstants.h"
 #import "XCTest+CBXAdditions.h"
+#import "CBXMachClock.h"
 
 typedef enum : NSUInteger {
     SpringBoardAlertHandlerIgnoringAlerts = 0,
@@ -29,7 +30,6 @@ typedef enum : NSUInteger {
 
 @interface SpringBoard ()
 
-- (BOOL)UIApplication_isSpringBoardShowingAnAlert;
 - (BOOL)shouldDismissAlertsAutomatically;
 - (SpringBoardAlertHandlerResult)handleAlert;
 - (BOOL)tapAlertButton:(XCUIElement *)alertButton;
@@ -60,47 +60,23 @@ typedef enum : NSUInteger {
     return _springBoard;
 }
 
-- (BOOL)UIApplication_isSpringBoardShowingAnAlert {
-    SEL selector = NSSelectorFromString(@"_isSpringBoardShowingAnAlert");
-    if (![[UIApplication sharedApplication] respondsToSelector:selector]) {
-        DDLogDebug(@"UIApplication does not respond to %@; returning YES to force XCUIElementQuery",
-              NSStringFromSelector(selector));
-        return YES;
-    }
-
-    NSMethodSignature *signature;
-    signature = [[UIApplication class] instanceMethodSignatureForSelector:selector];
-    NSInvocation *invocation;
-
-    invocation = [NSInvocation invocationWithMethodSignature:signature];
-    invocation.target = [UIApplication sharedApplication];
-    invocation.selector = selector;
-
-    [invocation invoke];
-
-    BOOL alertShowing = NO;
-    char ref;
-    [invocation getReturnValue:(void **) &ref];
-    if (ref == (BOOL)1) {
-        alertShowing = YES;
-    }
-
-    return alertShowing;
-}
-
 - (XCUIElement *)queryForAlert {
     @synchronized (self) {
         XCUIElement *alert = nil;
+            
+        // Collect timing info
+        NSTimeInterval startTime = [[CBXMachClock sharedClock] absoluteTime];
+        
+        XCUIElementQuery *query = [self descendantsMatchingType:XCUIElementTypeAlert];
+        NSArray <XCUIElement *> *elements = [query allElementsBoundByIndex];
 
-        if([self UIApplication_isSpringBoardShowingAnAlert]) {
-
-            XCUIElementQuery *query = [self descendantsMatchingType:XCUIElementTypeAlert];
-            NSArray <XCUIElement *> *elements = [query allElementsBoundByIndex];
-
-            if ([elements count] != 0) {
-                alert = elements[0];
-            }
+        if ([elements count] != 0) {
+            alert = elements[0];
         }
+
+        NSTimeInterval elapsedSeconds = [[CBXMachClock sharedClock] absoluteTime] - startTime;
+        DDLogDebug(@"SpringBoard.queryForAlert took %@ seconds", @(elapsedSeconds));
+
         return alert;
     }
 }
