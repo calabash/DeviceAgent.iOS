@@ -235,20 +235,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Prihláste sa do App Storu",
-    "buttons": [
-      "Zrušiť"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Prihláste sa do iTunes Storu",
-    "buttons": [
-      "Zrušiť"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Povoliť aplikácii „%@“ aktualizovať vaše zdravotné dáta.",
     "buttons": [
       "OK"
