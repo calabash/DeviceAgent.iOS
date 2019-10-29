@@ -39,13 +39,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Osa apin %@ tiedoista lähetetään Applelle pyyntöjesi käsittelyä varten.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "%@ haluaa käyttää mikrofonia",
     "buttons": [
       "OK"
@@ -61,13 +54,6 @@
   },
   {
     "title": "%@ haluaa käyttää kalenteriasi",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Tämän apin puhetiedot lähetetään Applelle pyyntöjesi käsittelyä varten. Tämä auttaa myös Applea parantamaan puheentunnistusteknologiaansa.",
     "buttons": [
       "OK"
     ],

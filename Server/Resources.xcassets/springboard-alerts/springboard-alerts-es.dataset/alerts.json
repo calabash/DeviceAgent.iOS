@@ -46,13 +46,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Algunos de tus datos en %@ se enviarán a Apple para procesar tus solicitudes.",
-    "buttons": [
-      "Permitir"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%@” quiere acceder al micrófono",
     "buttons": [
       "Permitir",
@@ -72,13 +65,6 @@
     "buttons": [
       "Permitir",
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Los datos de voz de esta app se enviarán a Apple para procesar tus solicitudes. Estos datos también ayudan a Apple a mejorar su tecnología de reconocimiento de voz.",
-    "buttons": [
-      "Permitir"
     ],
     "shouldAccept": true
   },
@@ -474,13 +460,6 @@
   },
   {
     "title": "¿Permitir a %@ acceder también a tu ubicación aunque no estés utilizando la aplicación?",
-    "buttons": [
-      "Permitir"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Los datos de voz de esta aplicación se enviarán a Apple para procesar tus solicitudes. Estos datos también ayudan a Apple a mejorar su tecnología de reconocimiento de voz.",
     "buttons": [
       "Permitir"
     ],

@@ -46,13 +46,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Noen av dataene fra %@ blir sendt til Apple for å behandle forespørslene dine.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "%@ vil ha tilgang til mikrofonen",
     "buttons": [
       "OK"
@@ -68,13 +61,6 @@
   },
   {
     "title": "%@ vil ha tilgang til kalenderen din",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Taledata fra denne appen vil bli sendt til Apple for å behandle forespørslene dine. Dette vil også hjelpe Apple med å forbedre talegjenkjenningsteknologien.",
     "buttons": [
       "OK"
     ],

@@ -39,13 +39,6 @@
     "shouldAccept": true
   },
   {
-    "title": "您的部分「%@」資料會傳送給 Apple 來處理您的要求。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "「%@」想要取用您的麥克風",
     "buttons": [
       "好"
@@ -61,13 +54,6 @@
   },
   {
     "title": "「%@」想要取用您的行事曆",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "此 App 的語音資料會傳送給 Apple 來處理您的要求。這也可協助 Apple 改進其語音辨識技術。",
     "buttons": [
       "好"
     ],
@@ -358,20 +344,6 @@
   },
   {
     "title": "要允許「%@」使用Face ID嗎？",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "您的部分%[tt]@資料會傳送給Apple來處理您的要求。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "此App的語音資料會傳送給Apple來處理您的要求。這也可協助Apple改進其語音辨識技術。",
     "buttons": [
       "好"
     ],

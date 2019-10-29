@@ -46,13 +46,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Nogle af dine %@-data sendes til Apple for at behandle dine anmodninger.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%@” vil bruge mikrofonen",
     "buttons": [
       "OK"
@@ -68,13 +61,6 @@
   },
   {
     "title": "“%@” vil bruge din kalender",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Talegenkendelsesdata fra denne app, sendes til Apple til behandling af dine anmodninger. Det hjælper desuden Apple med at forbedre sin talegenkendelsesteknologi.",
     "buttons": [
       "OK"
     ],

@@ -24,11 +24,9 @@
         "name": "TCC.framework",
         "values": [
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceFaceID", "button": "REQUEST_ACCESS_ALLOW" },
-            { "title": "REQUEST_ACCESS_INFO_SERVICE_kTCCServiceSiri", "button": "REQUEST_ACCESS_ALLOW" },
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceMicrophone", "button": "REQUEST_ACCESS_ALLOW" },
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServicePhotosAdd", "button": "REQUEST_ACCESS_ALLOW" },
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceCalendar", "button": "REQUEST_ACCESS_ALLOW" },
-            { "title": "REQUEST_ACCESS_INFO_SERVICE_kTCCServiceSpeechRecognition", "button": "REQUEST_ACCESS_ALLOW" },
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceMotion", "button": "REQUEST_ACCESS_ALLOW" },
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceCamera", "button": "REQUEST_ACCESS_ALLOW" },
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceReminders", "button": "REQUEST_ACCESS_ALLOW" },

@@ -38,13 +38,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Některá data aplikace %@ budou odeslána do Apple na pomoc se zpracováním vašich požadavků.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Aplikace „%@“ žádá o přístup k mikrofonu",
     "buttons": [
       "OK"
@@ -60,13 +53,6 @@
   },
   {
     "title": "Aplikace „%@“ žádá o přístup k vašemu kalendáři",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Řečová data z této aplikace budou odeslána do Apple na pomoc se zpracováním vašich požadavků a vylepšováním technologie rozpoznávání řeči.",
     "buttons": [
       "OK"
     ],

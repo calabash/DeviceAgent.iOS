@@ -46,13 +46,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Sesetengah data %@ anda akan dihantar kepada Apple untuk memproses permintaan anda.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%@” Mahu Mengakses Mikrofon",
     "buttons": [
       "OK"
@@ -68,13 +61,6 @@
   },
   {
     "title": "“%@” Mahu Mengakses Kalendar Anda",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Data pertuturan daripada app ini akan dihantar kepada Apple untuk memproses permintaan anda. Ini turut akan membantu Apple meningkatkan teknologi pengecaman pertuturan.",
     "buttons": [
       "OK"
     ],
@@ -457,13 +443,6 @@
     "title": "Benarkan “%@” turut mengakses lokasi anda walaupun anda tidak menggunakan aplikasi?",
     "buttons": [
       "Benarkan"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Data pertuturan daripada aplikasi ini akan dihantar kepada Apple untuk memproses permintaan anda. Ini turut akan membantu Apple meningkatkan teknologi pengecaman pertuturannya.",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },

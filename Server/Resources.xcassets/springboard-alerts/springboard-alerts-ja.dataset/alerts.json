@@ -39,13 +39,6 @@
     "shouldAccept": true
   },
   {
-    "title": "%@データの一部は、リクエストを処理するためにAppleに送信されます。",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%@”がマイクへのアクセスを求めています",
     "buttons": [
       "OK"
@@ -61,13 +54,6 @@
   },
   {
     "title": "“%@”がカレンダーへのアクセスを求めています",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "このAppからの音声データはリクエストを処理するためにAppleに送信されます。また、音声認識技術の向上にも役立てられます。",
     "buttons": [
       "OK"
     ],

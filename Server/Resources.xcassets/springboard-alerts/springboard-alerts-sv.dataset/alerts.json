@@ -46,13 +46,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Viss information från %@ skickas till Apple så att dina instruktioner kan behandlas.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "”%@” begär åtkomst till mikrofonen",
     "buttons": [
       "OK"
@@ -68,13 +61,6 @@
   },
   {
     "title": "”%@” begär åtkomst till din kalender",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Röstdata från den här appen skickas till Apple så att dina instruktioner kan behandlas. Detta hjälper även Apple att förbättra tekniken för röstigenkänning.",
     "buttons": [
       "OK"
     ],

@@ -46,13 +46,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Một số dữ liệu %@ của bạn sẽ được gửi đến Apple để xử lý yêu cầu của bạn.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%@” Muốn Truy cập Micrô",
     "buttons": [
       "OK"
@@ -68,13 +61,6 @@
   },
   {
     "title": "“%@” Muốn Truy cập Lịch của bạn",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Dữ liệu lời nói từ ứng dụng này sẽ được gửi đến Apple để xử lý yêu cầu của bạn. Việc nãy cũng sẽ giúp Apple cải thiện công nghệ nhận dạng lời nói của mình.",
     "buttons": [
       "OK"
     ],

@@ -39,13 +39,6 @@
     "shouldAccept": true
   },
   {
-    "title": "A(z) %@ adatai közül néhány el lesz küldve az Apple-nek az Ön kérelme feldolgozásához.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "A(z) „%@” hozzá szeretne férni az Ön mikrofonjához.",
     "buttons": [
       "OK"
@@ -61,13 +54,6 @@
   },
   {
     "title": "A(z) „%@” hozzá szeretne férni az Ön naptárjához.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "A beszédadatok el lesznek küldve az alkalmazásból az Apple-nek a kérelme feldolgozásához. Ez segít az Apple-nek a beszédfelismerési technológiájának fejlesztésében is.",
     "buttons": [
       "OK"
     ],

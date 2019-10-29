@@ -46,13 +46,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Alcuni dati di %@ verranno inviati ad Apple per elaborare le tue richieste.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%@” vorrebbe accedere al microfono",
     "buttons": [
       "OK"
@@ -68,13 +61,6 @@
   },
   {
     "title": "“%@” vorrebbe accedere al tuo calendario",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "I dati vocali di quest'app verranno inviati ad Apple per l'elaborazione delle tue richieste. L'invio dei dati consentirà ad Apple di migliorare la propria tecnologia di riconoscimento vocale.",
     "buttons": [
       "OK"
     ],
