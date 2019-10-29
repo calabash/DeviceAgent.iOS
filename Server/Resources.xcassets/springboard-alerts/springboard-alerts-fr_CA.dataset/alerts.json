@@ -41,9 +41,9 @@
   {
     "title": "Souhaitez-vous autoriser « %@ » à utiliser Face ID?",
     "buttons": [
-      "OK"
+      "Refuser"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "« %@ » souhaite accéder au micro.",
@@ -148,35 +148,35 @@
     "buttons": [
       "Plus tard"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Mise à jour des réglages de l’opérateur",
     "buttons": [
       "Plus tard"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "« %@ » souhaite ajouter des configurations VPN",
     "buttons": [
-      "Autoriser"
+      "Refuser"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "« %@ » souhaite filtrer les contenus réseau",
     "buttons": [
-      "Autoriser"
+      "Refuser"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "L’iPhone n’est pas activé.",
     "buttons": [
       "Ignorer"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Activer Dictée?",

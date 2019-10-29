@@ -34,9 +34,9 @@
   {
     "title": "Saako %@ käyttää Face ID:tä?",
     "buttons": [
-      "OK"
+      "Älä salli"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "%@ haluaa käyttää mikrofonia",
@@ -141,35 +141,35 @@
     "buttons": [
       "Ei nyt"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Operaattoriasetusten päivitys",
     "buttons": [
       "Ei nyt"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "%@ haluaa lisätä VPN-määrityksiä",
     "buttons": [
-      "Salli"
+      "Älä salli"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "”%@” haluaa suodattaa verkkosisältöä",
     "buttons": [
-      "Salli"
+      "Älä salli"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhonea ei ole aktivoitu",
     "buttons": [
       "Älä huomioi"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Otetaanko sanelu käyttöön?",

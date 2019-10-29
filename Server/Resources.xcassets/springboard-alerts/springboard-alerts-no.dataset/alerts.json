@@ -41,9 +41,9 @@
   {
     "title": "Vil du tillate at %@ bruker Face ID?",
     "buttons": [
-      "OK"
+      "Ikke tillat"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "%@ vil ha tilgang til mikrofonen",
@@ -155,28 +155,28 @@
     "buttons": [
       "Ikke nå"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "«%@» vil legge til VPN-konfigurasjoner",
     "buttons": [
-      "Tillat"
+      "Ikke tillat"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "«%@» vil filtrere nettverksinnhold",
     "buttons": [
-      "Tillat"
+      "Ikke tillat"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone er ikke aktivert",
     "buttons": [
       "Ignorer"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Aktiver diktering?",
@@ -470,7 +470,7 @@
     "buttons": [
       "Ikke nå"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "%@ vil bruke %@ for å logge på",

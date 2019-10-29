@@ -41,9 +41,9 @@
   {
     "title": "Bạn có muốn cho phép “%@” sử dụng Face ID không?",
     "buttons": [
-      "OK"
+      "Từ chối"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Muốn Truy cập Micrô",
@@ -153,31 +153,30 @@
   {
     "title": "Cập nhật Cài đặt Nhà cung cấp",
     "buttons": [
-      "Để sau",
       "Để Sau"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Muốn Thêm Cấu hình VPN",
     "buttons": [
-      "Cho phép"
+      "Từ chối"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Muốn Lọc Nội dung Mạng",
     "buttons": [
-      "Cho phép"
+      "Từ chối"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone chưa được Kích hoạt",
     "buttons": [
       "Bỏ qua"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Bật Đọc chính tả?",
@@ -425,7 +424,7 @@
     "buttons": [
       "Để Sau"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%1$@” Muốn Truy cập các Tài khoản %2$@ của bạn",

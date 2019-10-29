@@ -33,9 +33,9 @@
   {
     "title": "Хотите разрешить «%@» использовать Face ID?",
     "buttons": [
-      "Разрешить"
+      "Запретить"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Программа «%@» запрашивает доступ к микрофону.",
@@ -147,28 +147,28 @@
     "buttons": [
       "Не сейчас"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "«%@» запрашивает разрешение на добавление конфигураций VPN",
     "buttons": [
-      "Разрешить"
+      "Запретить"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Программа «%@» запрашивает разрешение фильтровать сетевой трафик",
     "buttons": [
-      "Разрешить"
+      "Запретить"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone не активирован",
     "buttons": [
       "Пропустить"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Включить диктовку?",
@@ -464,7 +464,7 @@
     "buttons": [
       "Не сейчас"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Поиск на %@",

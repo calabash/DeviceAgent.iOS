@@ -177,9 +177,9 @@
   {
     "title": "您要允许“%@”使用面容 ID 吗？",
     "buttons": [
-      "好"
+      "不允许"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@”想在后台接收 VoIP 网络电话",

@@ -41,9 +41,9 @@
   {
     "title": "Vil du give “%@” tilladelse til at bruge Face ID?",
     "buttons": [
-      "OK"
+      "Tillad ikke"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” vil bruge mikrofonen",
@@ -148,35 +148,35 @@
     "buttons": [
       "Ikke nu"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Opdatering af operatørindstillinger",
     "buttons": [
       "Ikke nu"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” vil gerne tilføje VPN-konfigurationer",
     "buttons": [
-      "Tillad"
+      "Tillad ikke"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” vil bruge filter til netværksindhold",
     "buttons": [
-      "Tillad"
+      "Tillad ikke"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone er ikke aktiveret",
     "buttons": [
       "Ignorer"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Slå Diktering til?",

@@ -23,7 +23,7 @@
     {
         "name": "TCC.framework",
         "values": [
-            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceFaceID", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceFaceID", "button": "REQUEST_ACCESS_DENY", "default_value": false },
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceMicrophone", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServicePhotosAdd", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceCalendar", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
@@ -48,23 +48,23 @@
     {
         "name": "CoreTelephony.framework",
         "values": [
-            { "title": "CBMessageBody", "button": "CBMessageDeclineButton", "default_value": true },
-            { "title": "CBMessageTitle", "button": "CBMessageDeclineButton", "default_value": true },
+            { "title": "CBMessageBody", "button": "CBMessageDeclineButton", "default_value": false },
+            { "title": "CBMessageTitle", "button": "CBMessageDeclineButton", "default_value": false },
             { "title": "NO_SIM_CARD_INSTALLED", "button": "OK", "default_value": true }
         ]
     },
     {
         "name": "NetworkExtension.framework",
         "values": [
-            { "title": "APP_WARNING_HEADER_VPN", "button": "ALLOW_BUTTON", "default_value": true },
-            { "title": "APP_WARNING_HEADER_FILTER", "button": "ALLOW_BUTTON", "default_value": true },
+            { "title": "APP_WARNING_HEADER_VPN", "button": "DONT_ALLOW_BUTTON", "default_value": false },
+            { "title": "APP_WARNING_HEADER_FILTER", "button": "DONT_ALLOW_BUTTON", "default_value": false },
             { "title": "APP_WARNING_HEADER_DNS_PROXY", "button": "ALLOW_BUTTON", "default_value": true }
         ]
     },
     {
         "name": "SpringBoard.app",
         "values": [
-            { "title": "ACTIVATION_FAILED_TITLE", "button": "ACTIVATION_FAILED_IGNORE_BUTTON", "default_value": true }
+            { "title": "ACTIVATION_FAILED_TITLE", "button": "ACTIVATION_FAILED_IGNORE_BUTTON", "default_value": false }
         ]
     },
     {

@@ -41,9 +41,9 @@
   {
     "title": "Darf „%@“ Face ID verwenden?",
     "buttons": [
-      "OK"
+      "Nicht erlauben"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "„%@“ möchte auf das Mikrofon zugreifen",
@@ -148,35 +148,35 @@
     "buttons": [
       "Später"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Update der Netzbetreiber-Einstellungen",
     "buttons": [
       "Später"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "„%@“ möchte VPN-Konfigurationen hinzufügen",
     "buttons": [
-      "Erlauben"
+      "Nicht erlauben"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Darf „%@“ Netzwerkinhalte filtern?",
     "buttons": [
-      "Erlauben"
+      "Nicht erlauben"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone ist nicht aktiviert",
     "buttons": [
       "Ignorieren"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Diktierfunktion aktivieren?",

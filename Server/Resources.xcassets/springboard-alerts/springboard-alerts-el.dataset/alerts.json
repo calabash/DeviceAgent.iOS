@@ -41,9 +41,9 @@
   {
     "title": "Θέλετε να επιτραπεί στην εφαρμογή «%@» η χρήση του Face ID;",
     "buttons": [
-      "OK"
+      "Άρνηση"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Αίτημα από «%@» για πρόσβαση στο Μικρόφωνο",
@@ -148,35 +148,35 @@
     "buttons": [
       "Όχι τώρα"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Ενημέρωση ρυθμίσεων φορέα",
     "buttons": [
       "Όχι τώρα"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Αίτημα από «%@» για προσθήκη διαμορφώσεων VPN",
     "buttons": [
-      "Να επιτρέπεται"
+      "Να μην επιτρέπεται"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Αίτημα από «%@» για φιλτράρισμα περιεχομένου δικτύου",
     "buttons": [
-      "Να επιτρέπεται"
+      "Να μην επιτρέπεται"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Το iPhone δεν είναι ενεργοποιημένο",
     "buttons": [
       "Αγνόηση"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Ενεργοποίηση Υπαγόρευσης;",

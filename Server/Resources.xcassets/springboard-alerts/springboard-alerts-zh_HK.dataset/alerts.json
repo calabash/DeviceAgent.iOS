@@ -34,9 +34,9 @@
   {
     "title": "你允許「%@」使用 Face ID 嗎？",
     "buttons": [
-      "好"
+      "不允許"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "「%@」要取用咪高風",
@@ -139,39 +139,37 @@
   {
     "title": "新的設定檔現已可供下載。是否要立即更新？",
     "buttons": [
-      "稍後決定",
-      "現在不要"
+      "稍後決定"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "電訊商設定更新",
     "buttons": [
-      "稍後決定",
-      "現在不要"
+      "稍後決定"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "「%@」想加入 VPN 設定",
     "buttons": [
-      "允許"
+      "不允許"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "「%@」要過濾網絡內容",
     "buttons": [
-      "允許"
+      "不允許"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone 尚未啟用",
     "buttons": [
       "忽略"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "要啟用聽寫嗎？",

@@ -41,9 +41,9 @@
   {
     "title": "Deseja permitir que “%@” use Face ID?",
     "buttons": [
-      "OK"
+      "Não permitir"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” gostaria de aceder ao microfone",
@@ -148,35 +148,35 @@
     "buttons": [
       "Agora não"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Atualização das definições de rede",
     "buttons": [
       "Agora não"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” gostaria de adicionar configurações de VPN",
     "buttons": [
-      "Permitir"
+      "Não permitir"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” gostaria de filtrar conteúdo da rede",
     "buttons": [
-      "Permitir"
+      "Não permitir"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "O iPhone não está ativado",
     "buttons": [
       "Ignorar"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Ativar Ditado?",

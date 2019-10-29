@@ -34,9 +34,9 @@
   {
     "title": "Szeretné engedélyezni a(z) „%@” számára a Face ID használatát?",
     "buttons": [
-      "OK"
+      "Tiltás"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "A(z) „%@” hozzá szeretne férni az Ön mikrofonjához.",
@@ -148,7 +148,7 @@
     "buttons": [
       "Ne most"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "„%@” VPN-konfigurációt szeretne hozzáadni",
@@ -160,9 +160,9 @@
   {
     "title": "A(z) „%@” szűrni akarja a hálózati tartalmat",
     "buttons": [
-      "Engedélyezés"
+      "Tiltás"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Az iPhone nincs aktiválva.",
@@ -351,21 +351,21 @@
     "buttons": [
       "Ne most"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "„%@” VPN-konfigurációt kíván hozzáadni",
     "buttons": [
-      "Engedélyezés"
+      "Tiltás"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Az iPhone készülék nincs aktiválva.",
     "buttons": [
       "Kihagyás"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "A(z) „%1$@” meg kívánja nyitni a(z) %2$@ fiókjait",

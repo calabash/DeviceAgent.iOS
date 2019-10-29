@@ -40,9 +40,9 @@
   {
     "title": "क्या आप “%@” को Face ID का उपयोग करने की अनुमति देना चाहते हैं?",
     "buttons": [
-      "ठीक"
+      "अनुमति न दें"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” माइक्रोफ़ोन तक पहुँचना चाहता है",
@@ -154,28 +154,28 @@
     "buttons": [
       "अभी नहीं"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” की इच्छा VPN कॉन्फ़िगरेशन जोड़ने की है",
     "buttons": [
-      "अनुमति दें"
+      "अनुमति न दें"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” नेटवर्क कॉन्टेंट को फ़िल्टर करना चाहता है",
     "buttons": [
-      "अनुमति दें"
+      "अनुमति न दें"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone सक्रिय नहीं है",
     "buttons": [
       "नज़रअंदाज़ करें"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "श्रुतलेखन सक्षम करें?",
@@ -506,7 +506,7 @@
     "buttons": [
       "अभी नहीं"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "साइन इन करने के लिए “%@” “%@” का उपयोग करना चाहता है",

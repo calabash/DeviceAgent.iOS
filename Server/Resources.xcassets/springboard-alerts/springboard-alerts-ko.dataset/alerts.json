@@ -34,9 +34,9 @@
   {
     "title": "‘%@’ 앱이 Face ID를 사용하도록 허용하겠습니까?",
     "buttons": [
-      "승인"
+      "허용 안 함"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "‘%@’이(가) 마이크에 접근하려고 합니다.",
@@ -159,28 +159,28 @@
     "buttons": [
       "지금 안 함"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "‘%@’에서 VPN 구성을 추가하고자 합니다.",
     "buttons": [
-      "허용"
+      "허용 안 함"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "‘%@’에서 네트워크 콘텐츠를 필터링하려고 합니다.",
     "buttons": [
-      "허용"
+      "허용 안 함"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone이 네트워크에 연결되지 않음",
     "buttons": [
       "무시"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "받아쓰기를 활성화하겠습니까?",
@@ -408,7 +408,7 @@
     "buttons": [
       "지금 안 함"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "‘%@’이(가) ‘%@’을(를) 사용하여 로그인하려고 합니다.",

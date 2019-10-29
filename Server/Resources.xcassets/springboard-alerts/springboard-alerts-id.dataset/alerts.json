@@ -41,9 +41,9 @@
   {
     "title": "Apakah Anda ingin mengizinkan “%@” untuk menggunakan Face ID?",
     "buttons": [
-      "OKE"
+      "Tidak Boleh"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Ingin Mengakses Mikrofon",
@@ -153,31 +153,30 @@
   {
     "title": "Pembaruan Pengaturan Operator",
     "buttons": [
-      "Nanti",
       "Tidak Sekarang"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Ingin Menambah Konfigurasi VPN",
     "buttons": [
-      "Izinkan"
+      "Jangan Izinkan"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Ingin Memfilter Konten Jaringan",
     "buttons": [
-      "Izinkan"
+      "Jangan Izinkan"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone tidak Diaktifkan",
     "buttons": [
       "Abaikan"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Aktifkan Dikte?",
@@ -355,7 +354,7 @@
     "buttons": [
       "Tidak Sekarang"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Ingin Menggunakan “%@” untuk Masuk",

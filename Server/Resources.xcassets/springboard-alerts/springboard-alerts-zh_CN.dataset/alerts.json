@@ -34,9 +34,9 @@
   {
     "title": "您要允许“%@”使用面容 ID 吗？",
     "buttons": [
-      "好"
+      "不允许"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@”想访问您的麦克风",
@@ -148,28 +148,28 @@
     "buttons": [
       "以后"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@”想添加 VPN 配置",
     "buttons": [
-      "允许"
+      "不允许"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@”想要过滤网络内容",
     "buttons": [
-      "允许"
+      "不允许"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone 尚未激活",
     "buttons": [
       "忽略"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "启用听写？",
@@ -421,7 +421,7 @@
     "buttons": [
       "以后"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@”想要使用“%@”登录",

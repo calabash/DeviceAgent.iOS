@@ -34,9 +34,9 @@
   {
     "title": "要允許「%@」使用 Face ID 嗎？",
     "buttons": [
-      "好"
+      "不允許"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "「%@」想要取用您的麥克風",
@@ -146,31 +146,30 @@
   {
     "title": "電信業者設定更新",
     "buttons": [
-      "稍後再說",
-      "現在不要"
+      "稍後再說"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "「%@」想要加入 VPN 設定",
     "buttons": [
-      "允許"
+      "不允許"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "「%@」想要過濾網路內容",
     "buttons": [
-      "允許"
+      "不允許"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "未啟用 iPhone",
     "buttons": [
       "忽略"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "要啟用聽寫嗎？",
@@ -422,10 +421,9 @@
   {
     "title": "新的設定現已可供下載。是否要立即更新？",
     "buttons": [
-      "稍後再說",
-      "現在不要"
+      "稍後再說"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "「%@」想要使用「%@」登入",
