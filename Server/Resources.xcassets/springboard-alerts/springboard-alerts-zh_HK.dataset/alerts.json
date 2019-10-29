@@ -139,14 +139,16 @@
   {
     "title": "新的設定檔現已可供下載。是否要立即更新？",
     "buttons": [
-      "稍後決定"
+      "稍後決定",
+      "現在不要"
     ],
     "shouldAccept": false
   },
   {
     "title": "電訊商設定更新",
     "buttons": [
-      "稍後決定"
+      "稍後決定",
+      "現在不要"
     ],
     "shouldAccept": false
   },
