@@ -350,13 +350,6 @@
     "shouldAccept": true
   },
   {
-    "title": "將會中斷目前Wi-Fi和附近其他網路連線直到明天為止。\n\nWi-Fi仍可用於AirDrop、「個人熱點」和定位準確度。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "「%@」在過去三天已在背景使用了您的位置。要繼續允許在背景使用位置嗎？",
     "buttons": [
       "允許"

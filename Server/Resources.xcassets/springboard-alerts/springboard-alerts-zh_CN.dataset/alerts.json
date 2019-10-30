@@ -249,13 +249,6 @@
     "shouldAccept": true
   },
   {
-    "title": "当前无线局域网络及附近其他网络会在明天之前保持断开状态。\n\n无线局域网仍可用于“隔空投送”、“个人热点”和定位准确性。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%@”想在后台接收 VoIP 网络电话",
     "buttons": [
       "好"

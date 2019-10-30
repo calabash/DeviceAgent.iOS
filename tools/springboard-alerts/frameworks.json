@@ -92,23 +92,6 @@
         ]
     },
     {
-        "name": "MobileBluetooth.framework",
-        "values": [
-            { "title": "LE_POWER_OFF_HEADER", "button": "OK", "default_value": true }
-        ]
-    },
-    {
-        "name": "AuthKit.framework",
-        "values": [
-            { "title": "INLINE_PASSWORD_ALERT_TITLE_SERVICE_APP_STORE", "button": "INLINE_PASSWORD_ALERT_CANCEL_BUTTON", "default_value": false },
-            { "title": "INLINE_PASSWORD_ALERT_TITLE_SERVICE_GAME_CENTER", "button": "INLINE_PASSWORD_ALERT_CANCEL_BUTTON", "default_value": false },
-            { "title": "INLINE_PASSWORD_ALERT_TITLE_SERVICE_ITUNES", "button": "INLINE_PASSWORD_ALERT_CANCEL_BUTTON", "default_value": false },
-            { "title": "INLINE_PASSWORD_ALERT_TITLE_SERVICE_IMESSAGE", "button": "INLINE_PASSWORD_ALERT_CANCEL_BUTTON", "default_value": false },
-            { "title": "INLINE_PASSWORD_ALERT_TITLE_SERVICE_FACETIME", "button": "INLINE_PASSWORD_ALERT_CANCEL_BUTTON", "default_value": false },
-            { "title": "INLINE_PASSWORD_ALERT_TITLE_SERVICE_ICLOUD", "button": "INLINE_PASSWORD_ALERT_CANCEL_BUTTON", "default_value": false }
-        ]
-    },
-    {
         "name": "UserNotificationsServer.framework",
         "values": [
             { "title": "CRITICAL_ALERT_PERMISSION_ALERT_TITLE", "button": "PERMISSION_ALERT_ALLOW", "default_value": true },
@@ -126,14 +109,6 @@
         "name": "Accounts.framework",
         "values": [
             { "title": "ACCOUNT_ACCESS_MESSAGE", "button": "OK", "default_value": true }
-        ]
-    },
-    {
-        "name": "ConnectivityModule.bundle",
-        "values": [
-            { "title": "CONTROL_CENTER_WIFI_BEHAVIOR_ALERT_MESSAGE", "button": "CONTROL_CENTER_ALERT_OK", "default_value": true },
-            { "title": "CONTROL_CENTER_WLAN_BEHAVIOR_ALERT_MESSAGE", "button": "CONTROL_CENTER_ALERT_OK", "default_value": true },
-            { "title": "CONTROL_CENTER_BLUETOOTH_BEHAVIOR_ALERT_MESSAGE", "button": "CONTROL_CENTER_ALERT_OK", "default_value": true }
         ]
     },
     {

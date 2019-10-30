@@ -19,6 +19,7 @@
 #import <UIKit/UIKit.h>
 #import "CBXConstants.h"
 #import "XCTest+CBXAdditions.h"
+#import "CBXMachClock.h"
 
 typedef enum : NSUInteger {
     SpringBoardAlertHandlerIgnoringAlerts = 0,
@@ -29,7 +30,6 @@ typedef enum : NSUInteger {
 
 @interface SpringBoard ()
 
-- (BOOL)UIApplication_isSpringBoardShowingAnAlert;
 - (BOOL)shouldDismissAlertsAutomatically;
 - (SpringBoardAlertHandlerResult)handleAlert;
 - (BOOL)tapAlertButton:(XCUIElement *)alertButton;
@@ -60,47 +60,23 @@ typedef enum : NSUInteger {
     return _springBoard;
 }
 
-- (BOOL)UIApplication_isSpringBoardShowingAnAlert {
-    SEL selector = NSSelectorFromString(@"_isSpringBoardShowingAnAlert");
-    if (![[UIApplication sharedApplication] respondsToSelector:selector]) {
-        DDLogDebug(@"UIApplication does not respond to %@; returning YES to force XCUIElementQuery",
-              NSStringFromSelector(selector));
-        return YES;
-    }
-
-    NSMethodSignature *signature;
-    signature = [[UIApplication class] instanceMethodSignatureForSelector:selector];
-    NSInvocation *invocation;
-
-    invocation = [NSInvocation invocationWithMethodSignature:signature];
-    invocation.target = [UIApplication sharedApplication];
-    invocation.selector = selector;
-
-    [invocation invoke];
-
-    BOOL alertShowing = NO;
-    char ref;
-    [invocation getReturnValue:(void **) &ref];
-    if (ref == (BOOL)1) {
-        alertShowing = YES;
-    }
-
-    return alertShowing;
-}
-
 - (XCUIElement *)queryForAlert {
     @synchronized (self) {
         XCUIElement *alert = nil;
+            
+        // Collect timing info
+        NSTimeInterval startTime = [[CBXMachClock sharedClock] absoluteTime];
+        
+        XCUIElementQuery *query = [self descendantsMatchingType:XCUIElementTypeAlert];
+        NSArray <XCUIElement *> *elements = [query allElementsBoundByIndex];
 
-        if([self UIApplication_isSpringBoardShowingAnAlert]) {
-
-            XCUIElementQuery *query = [self descendantsMatchingType:XCUIElementTypeAlert];
-            NSArray <XCUIElement *> *elements = [query allElementsBoundByIndex];
-
-            if ([elements count] != 0) {
-                alert = elements[0];
-            }
+        if ([elements count] != 0) {
+            alert = elements[0];
         }
+
+        NSTimeInterval elapsedSeconds = [[CBXMachClock sharedClock] absoluteTime] - startTime;
+        DDLogDebug(@"SpringBoard.queryForAlert took %@ seconds", @(elapsedSeconds));
+
         return alert;
     }
 }
@@ -170,11 +146,7 @@ typedef enum : NSUInteger {
         button = alert.buttons[mark];
 
         // Resolve before asking if the button exists.
-        if ([button respondsToSelector:@selector(resolve)]) {
-            [button resolve];
-        } else {
-            [button resolveOrRaiseTestFailure];
-        }
+        [button cbx_resolve];
 
         if (button && button.exists) {
             return button;
@@ -270,15 +242,7 @@ typedef enum : NSUInteger {
     }
 
     // Resolve before asking if the button exists.
-    if ([button respondsToSelector:@selector(resolve)]) {
-        [button resolve];
-    } else {
-        NSError *error = nil;
-        if (![button resolveOrRaiseTestFailure:NO error:&error]) {
-            DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
-                      button, [error localizedDescription]);
-        }
-    }
+    [button cbx_resolve];
 
     if (!button || !button.exists) {
         return SpringBoardAlertHandlerNoAlert;
@@ -301,15 +265,7 @@ typedef enum : NSUInteger {
             return SpringBoardDismissAlertNoAlert;
         } else {
             XCUIElement *button = alert.buttons[title];
-            if ([button respondsToSelector:@selector(resolve)]) {
-                [button resolve];
-            } else {
-                NSError *error = nil;
-                if (![button resolveOrRaiseTestFailure:NO error:&error]) {
-                    DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
-                            button, [error localizedDescription]);
-                }
-            }
+            [button cbx_resolve];
 
             if (!button || !button.exists) {
                 return SpringBoardDismissAlertNoMatchingButton;
@@ -331,15 +287,7 @@ typedef enum : NSUInteger {
 
 - (BOOL)tapAlertButton:(XCUIElement *)alertButton {
     @synchronized (self) {
-        if ([alertButton respondsToSelector:@selector(resolve)]) {
-            [alertButton resolve];
-        } else {
-            NSError *error = nil;
-            if (![alertButton resolveOrRaiseTestFailure:NO error:&error]) {
-                DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
-                        alertButton, [error localizedDescription]);
-            }
-        }
+        [alertButton cbx_resolve];
         CGPoint hitPoint = [self hitPointForAlertButton:alertButton];
 
         if (hitPoint.x < 0 || hitPoint.y < 0) {
@@ -406,15 +354,7 @@ typedef enum : NSUInteger {
 }
 
 - (CGPoint)hitPointForAlertButton:(XCUIElement *)alertButton {
-    if ([alertButton respondsToSelector:@selector(resolve)]) {
-        [alertButton resolve];
-    } else {
-        NSError *error = nil;
-        if (![alertButton resolveOrRaiseTestFailure:NO error:&error]) {
-            DDLogWarn(@"Encountered an error resolving element '%@':\n%@",
-                    alertButton, [error localizedDescription]);
-        }
-    }
+    [alertButton cbx_resolve];
 
     XCElementSnapshot *snapshot = alertButton.lastSnapshot;
 
