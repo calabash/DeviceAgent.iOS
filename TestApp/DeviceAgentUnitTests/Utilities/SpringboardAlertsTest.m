@@ -162,8 +162,8 @@
     SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
 
     NSString *alertTitle = @"«Прiложение» хоче фільтрувати мережевий контент";
-    NSString *expectedButton = @"Дозволити";
-    BOOL expectedShouldAccept = YES;
+    NSString *expectedButton = @"Заборонити";
+    BOOL expectedShouldAccept = NO;
     SpringBoardAlert *actual = [alertsArray alertMatchingTitle:alertTitle];
 
     expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
