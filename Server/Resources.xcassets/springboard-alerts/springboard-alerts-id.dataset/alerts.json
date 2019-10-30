@@ -153,7 +153,8 @@
   {
     "title": "Pembaruan Pengaturan Operator",
     "buttons": [
-      "Nanti"
+      "Nanti",
+      "Tidak Sekarang"
     ],
     "shouldAccept": false
   },
