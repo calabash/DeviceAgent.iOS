@@ -41,9 +41,9 @@
   {
     "title": "Do you want to allow “%@” to use Face ID?",
     "buttons": [
-      "OK"
+      "Don’t Allow"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Would Like to Access the Microphone",
@@ -148,28 +148,28 @@
     "buttons": [
       "Not Now"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Carrier Settings Update",
     "buttons": [
       "Not Now"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Would Like to Add VPN Configurations",
     "buttons": [
-      "Allow"
+      "Don’t Allow"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Would Like to Filter Network Content",
     "buttons": [
-      "Allow"
+      "Don’t Allow"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone is not Activated",
@@ -177,7 +177,7 @@
       "Ignore",
       "Dismiss"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Enable Dictation?",
@@ -289,7 +289,7 @@
     "buttons": [
       "Not Now"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” has been using your location in the background over the past 3 days. Do you want to continue to allow background location use?",
@@ -366,7 +366,7 @@
     "buttons": [
       "Not Now"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Wants to Use “%@” to Sign In",

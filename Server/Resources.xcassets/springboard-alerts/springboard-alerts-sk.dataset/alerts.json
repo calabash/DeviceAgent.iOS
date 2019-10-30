@@ -41,9 +41,9 @@
   {
     "title": "Chcete aplikácii „%@“ povoliť používanie Face ID?",
     "buttons": [
-      "OK"
+      "Nepovoliť"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Aplikácia „%@“ žiada o prístup k mikrofónu",
@@ -148,35 +148,35 @@
     "buttons": [
       "Teraz nie"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Aktualizácia nastavení operátora",
     "buttons": [
       "Teraz nie"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Aplikácia „%@“ chce pridať nastavenia VPN",
     "buttons": [
-      "Povoliť"
+      "Nepovoliť"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Aplikácia „%@“ chce filtrovať obsah zo siete",
     "buttons": [
-      "Povoliť"
+      "Nepovoliť"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone nie je aktivovaný",
     "buttons": [
       "Ignorovať"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Povoliť Diktovanie?",
@@ -456,7 +456,7 @@
     "buttons": [
       "Teraz nie"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "„%@“ chce na prihlásenie použiť „%@“",

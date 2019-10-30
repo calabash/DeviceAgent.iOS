@@ -33,9 +33,9 @@
   {
     "title": "Chcete aplikaci %@ povolit používání Face ID?",
     "buttons": [
-      "OK"
+      "Nepovolovat"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Aplikace „%@“ žádá o přístup k mikrofonu",
@@ -140,35 +140,35 @@
     "buttons": [
       "Teď ne"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Aktualizace nastavení",
     "buttons": [
       "Teď ne"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "„%@“ chce přidat konfigurace VPN",
     "buttons": [
-      "Povolit"
+      "Nepovolovat"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "„%@“ chce filtrovat obsah ze sítě",
     "buttons": [
-      "Povolit"
+      "Nepovolovat"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone není aktivovaný",
     "buttons": [
       "Ignorovat"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Zapnout diktování?",
@@ -380,7 +380,7 @@
     "buttons": [
       "Teď ne"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "„%@“ chce použít k přihlášení „%@“",

@@ -40,9 +40,9 @@
   {
     "title": "Želite li dozvoliti usluzi “%@” uporabu Face ID-a?",
     "buttons": [
-      "OK"
+      "Nemoj dozvoliti"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” želi pristupiti mikrofonu",
@@ -147,35 +147,35 @@
     "buttons": [
       "Ne sad"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Ažuriranje postavki operatera",
     "buttons": [
       "Ne sad"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” želi dodati VPN konfiguracije",
     "buttons": [
-      "Dozvoli"
+      "Nemoj dozvoliti"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” želi filtrirati mrežne sadržaje",
     "buttons": [
-      "Dozvoli"
+      "Nemoj dozvoliti"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone nije aktiviran",
     "buttons": [
       "Ignoriraj"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Omogućiti Diktat?",
@@ -373,7 +373,7 @@
     "buttons": [
       "Ne sad"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@“ želi upotrijebiti “%@“ za prijavu",

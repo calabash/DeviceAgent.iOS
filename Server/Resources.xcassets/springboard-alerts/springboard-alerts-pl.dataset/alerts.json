@@ -34,9 +34,9 @@
   {
     "title": "Czy chcesz pozwolić „%@” używać Face ID?",
     "buttons": [
-      "OK"
+      "Nie pozwalaj"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "„%@” chce uzyskać dostęp do mikrofonu",
@@ -141,35 +141,35 @@
     "buttons": [
       "Nie teraz"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Uaktualnienie ustawień operatora",
     "buttons": [
       "Nie teraz"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "„%@” chce dodać konfiguracje VPN",
     "buttons": [
-      "Pozwól"
+      "Nie pozwalaj"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "„%@” chce filtrować treści w sieci",
     "buttons": [
-      "Pozwól"
+      "Nie pozwalaj"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone nie został aktywowany",
     "buttons": [
       "Ignoruj"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Włączyć dyktowanie?",

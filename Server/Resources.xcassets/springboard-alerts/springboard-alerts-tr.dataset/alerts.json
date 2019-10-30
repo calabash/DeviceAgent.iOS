@@ -41,9 +41,9 @@
   {
     "title": "“%@” uygulaması Face ID’yi kullanabilsin mi?",
     "buttons": [
-      "Tamam"
+      "İzin Verme"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Mikrofona Erişmek İstiyor",
@@ -148,35 +148,35 @@
     "buttons": [
       "Şimdi Değil"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Operatör Ayarı Güncelleme",
     "buttons": [
       "Şimdi Değil"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” VPN Konfigürasyonları Eklemek İstiyor",
     "buttons": [
-      "İzin Ver"
+      "İzin Verme"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Ağ İçeriğini Filtrelemek İstiyor",
     "buttons": [
-      "İzin Ver"
+      "İzin Verme"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone Etkinleştirilemedi",
     "buttons": [
       "Yok Say"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Dikte Etkinleştirilsin mi?",
@@ -295,7 +295,7 @@
     "buttons": [
       "Yok Say"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” son 3 gündür arka planda konumunuzu kullanıyor. Arka planda konumun kullanılmasına izin vermeyi sürdürmek istiyor musunuz?",
@@ -379,7 +379,7 @@
     "buttons": [
       "Şimdi Değil"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Giriş Yapmak için “%@” Kullanmak İstiyor",

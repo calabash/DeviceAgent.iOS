@@ -42,9 +42,9 @@
   {
     "title": "Vols permetre que “%@” utilitzi el Face ID?",
     "buttons": [
-      "OK"
+      "No permetre"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” vol accedir al micròfon",
@@ -149,35 +149,35 @@
     "buttons": [
       "Ara no"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Actualització de la configuració de l’operador",
     "buttons": [
       "Ara no"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” vol afegir configuracions de VPN",
     "buttons": [
-      "Permetre"
+      "No permetre"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” vol filtrar el contingut de la xarxa",
     "buttons": [
-      "Permetre"
+      "No permetre"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "L’iPhone no s’ha activat",
     "buttons": [
       "Ignorar"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Activar el dictat?",
@@ -387,7 +387,7 @@
     "buttons": [
       "Ara no"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Obrir-ho a l’aplicació %@",

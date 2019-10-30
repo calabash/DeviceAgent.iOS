@@ -41,9 +41,9 @@
   {
     "title": "לאפשר ל-״%@״ להשתמש ב-Face ID?",
     "buttons": [
-      "אישור"
+      "אל תאפשר"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "״%@״ מעוניין להשתמש במיקרופון",
@@ -148,35 +148,35 @@
     "buttons": [
       "לא כעת"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "עדכון להגדרות המפעיל",
     "buttons": [
       "לא כעת"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "״%@״ מעוניין להוסיף תצורות VPN",
     "buttons": [
-      "אפשר"
+      "אל תאפשר"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "‏״%@״ מעוניין לסנן תוכן המתקבל מהרשת",
     "buttons": [
-      "אפשר"
+      "אל תאפשר"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "‏iPhone זה טרם הופעל",
     "buttons": [
       "התעלם/י"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "להפעיל את ״הכתבה״?",
@@ -370,7 +370,7 @@
     "buttons": [
       "לא כעת"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "‏״%@״ מבקש להשתמש ב-״%@״ כדי להתחבר",

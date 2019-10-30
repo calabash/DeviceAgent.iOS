@@ -34,9 +34,9 @@
   {
     "title": "“%@”にFace IDの使用を許可しますか?",
     "buttons": [
-      "OK"
+      "許可しない"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@”がマイクへのアクセスを求めています",
@@ -141,35 +141,35 @@
     "buttons": [
       "今はしない"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "キャリア設定アップデート",
     "buttons": [
       "今はしない"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@”がVPN構成の追加を求めています",
     "buttons": [
-      "許可"
+      "許可しない"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@”がネットワークコンテンツのフィルタリングを求めています",
     "buttons": [
-      "許可"
+      "許可しない"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhoneはアクティベートされていません",
     "buttons": [
       "無視"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "音声入力を有効にしますか?",

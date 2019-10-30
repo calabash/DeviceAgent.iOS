@@ -41,9 +41,9 @@
   {
     "title": "هل ترغب بالسماح لـ \"%@\" باستخدام Face ID؟",
     "buttons": [
-      "موافق"
+      "عدم السماح"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "يرغب \"%@\" بالوصول إلى الميكروفون",
@@ -148,35 +148,35 @@
     "buttons": [
       "ليس الآن"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "تحديث شركة الاتصالات",
     "buttons": [
       "ليس الآن"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "يرغب \"%@\" في إضافة تكوينات VPN",
     "buttons": [
-      "السماح"
+      "عدم السماح"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "يرغب \"%@\" في تصفية محتوى الشبكة",
     "buttons": [
-      "السماح"
+      "عدم السماح"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "لم يتم تنشيط الـ iPhone",
     "buttons": [
       "تجاهل"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "تمكين الإملاء؟",
@@ -358,7 +358,7 @@
     "buttons": [
       "ليس الآن"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "يرغب “%@” في استخدام “%@” لتسجيل الدخول",

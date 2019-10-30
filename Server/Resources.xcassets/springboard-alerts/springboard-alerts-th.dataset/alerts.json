@@ -41,9 +41,9 @@
   {
     "title": "คุณต้องการอนุญาตให้ “%@” ใช้ Face ID หรือไม่",
     "buttons": [
-      "ตกลง"
+      "ไม่อนุญาต"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” ต้องการที่จะเข้าถึงไมโครโฟน",
@@ -148,35 +148,35 @@
     "buttons": [
       "ไม่ใช่ตอนนี้"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "การอัพเดทการตั้งค่าของผู้ให้บริการ",
     "buttons": [
       "ไม่ใช่ตอนนี้"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” ต้องการที่จะเพิ่มการกำหนดค่า VPN",
     "buttons": [
-      "อนุญาต"
+      "ไม่อนุญาต"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” ต้องการที่จะฟิลเตอร์เนื้อหาเครือข่าย",
     "buttons": [
-      "อนุญาต"
+      "ไม่อนุญาต"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "ยังไม่เปิดใช้งาน iPhone",
     "buttons": [
       "ไม่สนใจ"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "เปิดใช้งานป้อนตามคำบอกหรือไม่",

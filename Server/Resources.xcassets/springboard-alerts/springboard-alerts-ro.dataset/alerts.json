@@ -41,9 +41,9 @@
   {
     "title": "Doriți să permiteți ca aplicația “%@” să utilizeze Face ID?",
     "buttons": [
-      "OK"
+      "Nu permiteți"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” ar dori să acceseze microfonul",
@@ -148,35 +148,35 @@
     "buttons": [
       "Nu acum"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Actualizare configurări operator",
     "buttons": [
       "Nu acum"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” ar dori să adauge configurații VPN",
     "buttons": [
-      "Permiteți"
+      "Nu permiteți"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” ar dori să filtreze conținutul din rețea",
     "buttons": [
-      "Permiteți"
+      "Nu permiteți"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone-ul nu este activat",
     "buttons": [
       "Ignorați"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Activați dictarea?",
@@ -351,7 +351,7 @@
     "buttons": [
       "Nu acum"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” vrea să utilizeze “%@” pentru autentificare",

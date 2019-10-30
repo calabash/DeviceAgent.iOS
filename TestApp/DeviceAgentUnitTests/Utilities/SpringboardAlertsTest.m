@@ -97,7 +97,7 @@
     
     NSString *alertTitle = @"Carrier Settings Update";
     NSString *expectedButton = @"Not Now";
-    BOOL expectedShouldAccept = YES;
+    BOOL expectedShouldAccept = NO;
     SpringBoardAlert *actual = [[SpringBoardAlerts shared] alertMatchingTitle:alertTitle];
 
     expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
@@ -145,8 +145,8 @@
     SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
 
     NSString *alertTitle = @"‘합니다’에서 네트워크 콘텐츠를 필터링하려고 합니다.";
-    NSString *expectedButton = @"허용";
-    BOOL expectedShouldAccept = YES;
+    NSString *expectedButton = @"허용 안 함";
+    BOOL expectedShouldAccept = NO;
     SpringBoardAlert *actual = [alertsArray alertMatchingTitle:alertTitle];
 
     expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);
@@ -162,8 +162,8 @@
     SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
 
     NSString *alertTitle = @"«Прiложение» хоче фільтрувати мережевий контент";
-    NSString *expectedButton = @"Дозволити";
-    BOOL expectedShouldAccept = YES;
+    NSString *expectedButton = @"Заборонити";
+    BOOL expectedShouldAccept = NO;
     SpringBoardAlert *actual = [alertsArray alertMatchingTitle:alertTitle];
 
     expect(actual.defaultDismissButtonMarks).to.contain(expectedButton);

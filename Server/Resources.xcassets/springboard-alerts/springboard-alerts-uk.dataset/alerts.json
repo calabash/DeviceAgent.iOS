@@ -40,9 +40,9 @@
   {
     "title": "Ви хочете дозволити «%@» застосовувати Face ID?",
     "buttons": [
-      "OK"
+      "Заборонити"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "«%@» хоче отримати доступ до мікрофона",
@@ -158,35 +158,35 @@
     "buttons": [
       "Не зараз"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Оновлення налаштувань",
     "buttons": [
       "Не зараз"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "«%@» хоче додати VPN-конфігурації",
     "buttons": [
-      "Дозволити"
+      "Заборонити"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "«%@» хоче фільтрувати мережевий контент",
     "buttons": [
-      "Дозволити"
+      "Заборонити"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone не активовано",
     "buttons": [
       "Ігнорувати"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Увімкнути Диктування?",
@@ -427,28 +427,28 @@
     "buttons": [
       "Не зараз"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Оновлення настройок оператора",
     "buttons": [
       "Не зараз"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "«%@» хоче додати конфігурації VPN",
     "buttons": [
-      "Дозволити"
+      "Заборонити"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "«%@» хоче фільтрувати мережний контент",
     "buttons": [
-      "Дозволити"
+      "Заборонити"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Доступ до «Здоров’я»",

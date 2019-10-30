@@ -41,9 +41,9 @@
   {
     "title": "Adakah anda mahu membenarkan “%@” menggunakan Face ID?",
     "buttons": [
-      "OK"
+      "Jangan Benarkan"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Mahu Mengakses Mikrofon",
@@ -146,39 +146,37 @@
   {
     "title": "Seting baru tersedia. Adakah anda mahu mengemas kininya sekarang?",
     "buttons": [
-      "Nanti",
       "Bukan Sekarang"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Kemas Kini Seting Pembawa",
     "buttons": [
-      "Nanti",
       "Bukan Sekarang"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Mahu Menambah Konfigurasi VPN",
     "buttons": [
-      "Benarkan"
+      "Jangan Benarkan"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Mahu Menapis Kandungan Rangkaian",
     "buttons": [
-      "Benarkan"
+      "Jangan Benarkan"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone tidak Diaktifkan",
     "buttons": [
       "Abaikan"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Dayakan Perencanaan?",
@@ -388,7 +386,7 @@
     "buttons": [
       "Nanti"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Buka dalam aplikasi %@",

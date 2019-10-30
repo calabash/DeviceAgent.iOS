@@ -41,9 +41,9 @@
   {
     "title": "Wil je toestaan dat %@ Face ID gebruikt?",
     "buttons": [
-      "OK"
+      "Weiger"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "%@ wil toegang tot de microfoon",
@@ -183,35 +183,35 @@
     "buttons": [
       "Nu niet"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Update voor aanbiederinstellingen",
     "buttons": [
       "Nu niet"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "%@ wil VPN-configuraties toevoegen",
     "buttons": [
-      "Sta toe"
+      "Weiger"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "%@ wil je netwerkinhoud filteren",
     "buttons": [
-      "Sta toe"
+      "Weiger"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone is niet geactiveerd",
     "buttons": [
       "Negeer"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Dicteren inschakelen?",
