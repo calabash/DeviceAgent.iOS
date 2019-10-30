@@ -236,48 +236,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Sign In to App Store",
-    "buttons": [
-      "Cancel"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Sign In to Game Center",
-    "buttons": [
-      "Cancel"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Sign In to iTunes Store",
-    "buttons": [
-      "Cancel"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Sign In to iMessage",
-    "buttons": [
-      "Cancel"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Sign In to FaceTime",
-    "buttons": [
-      "Cancel"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Sign In to iCloud",
-    "buttons": [
-      "Cancel"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Allow “%@” to update your health data.",
     "buttons": [
       "OK"
@@ -293,27 +251,6 @@
   },
   {
     "title": "“%1$@” Would Like Access to %2$@ Accounts",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "The current Wi-Fi network and others nearby will be disconnected until tomorrow.\n\nWi-Fi will continue to be available for AirDrop, Personal Hotspot and location accuracy.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "The current WLAN network and others nearby will be disconnected until tomorrow.\n\nWLAN will continue to be available for AirDrop, Personal Hotspot and location accuracy.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Currently connected accessories will be disconnected and other accessories will not connect.\n\nBluetooth will continue to be available for Apple Watch, Apple Pencil, Personal Hotspot and Handoff.",
     "buttons": [
       "OK"
     ],
@@ -351,13 +288,6 @@
     "title": "Network Provider Settings Update",
     "buttons": [
       "Not Now"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Sign In with Apple ID",
-    "buttons": [
-      "Cancel"
     ],
     "shouldAccept": true
   },
@@ -442,13 +372,6 @@
     "title": "“%@” Wants to Use “%@” to Sign In",
     "buttons": [
       "Continue"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Turn On Bluetooth to Allow “%@” to Connect to Accessories",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },

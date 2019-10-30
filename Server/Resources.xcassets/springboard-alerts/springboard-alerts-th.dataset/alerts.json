@@ -235,48 +235,6 @@
     "shouldAccept": true
   },
   {
-    "title": "ลงชื่อเข้า App Store",
-    "buttons": [
-      "ยกเลิก"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "ลงชื่อเข้า Game Center",
-    "buttons": [
-      "ยกเลิก"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "ลงชื่อเข้า iTunes Store",
-    "buttons": [
-      "ยกเลิก"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "ลงชื่อเข้า iMessage",
-    "buttons": [
-      "ยกเลิก"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "ลงชื่อเข้า FaceTime",
-    "buttons": [
-      "ยกเลิก"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "ลงชื่อเข้า iCloud",
-    "buttons": [
-      "ยกเลิก"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "อนุญาตให้ “%@” อัพเดทข้อมูลสุขภาพของคุณ",
     "buttons": [
       "ตกลง"
@@ -292,27 +250,6 @@
   },
   {
     "title": "“%1$@” ต้องการที่จะเข้าถึงบัญชี %2$@",
-    "buttons": [
-      "ตกลง"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "ระบบจะเลิกเชื่อมต่อกับเครือข่าย Wi-Fi ปัจจุบันและเครือข่ายอื่นๆ ที่อยู่ใกล้เคียงจนถึงวันพรุ่งนี้\n\nแต่คุณจะยังคงสามารถใช้ Wi-Fi กับ AirDrop, ฮอตสปอตส่วนบุคคล และความแม่นยำของตำแหน่งที่ตั้งได้",
-    "buttons": [
-      "ตกลง"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "ระบบจะเลิกเชื่อมต่อกับเครือข่าย WLAN ปัจจุบันและเครือข่ายอื่นๆ ที่อยู่ใกล้เคียงจนถึงวันพรุ่งนี้\n\nแต่คุณจะยังคงสามารถใช้ WLAN กับ AirDrop, ฮอตสปอตส่วนบุคคล และความแม่นยำของตำแหน่งที่ตั้งได้",
-    "buttons": [
-      "ตกลง"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "ระบบจะเลิกเชื่อมต่อกับอุปกรณ์เสริมที่เชื่อมต่ออยู่ในขณะนี้และอุปกรณ์เสริมอื่นๆ จะไม่เชื่อมต่อ\n\nแต่คุณจะยังคงสามารถใช้บลูทูธกับ Apple Watch, Apple Pencil, ฮอตสปอตส่วนบุคคล และ Handoff ได้",
     "buttons": [
       "ตกลง"
     ],
@@ -364,13 +301,6 @@
     "title": "“%@” ต้องการที่จะเข้าถึงการรู้จำเสียงพูด",
     "buttons": [
       "ตกลง"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "ลงชื่อเข้าด้วย Apple ID",
-    "buttons": [
-      "ยกเลิก"
     ],
     "shouldAccept": true
   },
@@ -445,20 +375,6 @@
     "shouldAccept": true
   },
   {
-    "title": "ลงชื่อเข้าใช้ iMessage",
-    "buttons": [
-      "ยกเลิก"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "ลงชื่อเข้าใช้ FaceTime",
-    "buttons": [
-      "ยกเลิก"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "อนุญาต “%@” ให้อัพเดทข้อมูลสุขภาพของคุณ",
     "buttons": [
       "ตกลง"
@@ -469,13 +385,6 @@
     "title": "“%@” ต้องการใช้ “%@” เพื่อลงชื่อเข้า",
     "buttons": [
       "ดำเนินการต่อ"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "เปิดใช้งานบลูทูธเพื่ออนุญาต “%@” ให้เชื่อมต่อกับอุปกรณ์เสริม",
-    "buttons": [
-      "ตกลง"
     ],
     "shouldAccept": true
   },

@@ -227,48 +227,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Přihlášení k App Storu",
-    "buttons": [
-      "Zrušit"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Přihlášení ke Game Center",
-    "buttons": [
-      "Zrušit"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Přihlášení k iTunes Storu",
-    "buttons": [
-      "Zrušit"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Přihlášení k iMessage",
-    "buttons": [
-      "Zrušit"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Přihlášení k FaceTimu",
-    "buttons": [
-      "Zrušit"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Přihlášení k iCloudu",
-    "buttons": [
-      "Zrušit"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Povolit aplikaci „%@“ aktualizaci vašich zdravotních dat.",
     "buttons": [
       "OK"
@@ -284,27 +242,6 @@
   },
   {
     "title": "„%1$@“ žádá o přístup k účtům %2$@",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Aktuální Wi‑Fi síť a jiné sítě v okolí budou pro zbytek dne odpojeny.\n\nWi‑Fi bude nadále k dispozici pro AirDrop, Osobní hotspot a přesné určování polohy.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Aktuální WLAN a jiné sítě v okolí budou pro zbytek dne odpojeny.\n\nWLAN bude nadále k dispozici pro AirDrop, Osobní hotspot a přesné určování polohy.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Připojené příslušenství bude odpojeno a nebude možné připojit ani jiné příslušenství.\n\nRozhraní Bluetooth bude nadále dostupné pro Apple Watch, Apple Pencil, Osobní hotspot a Handoff.",
     "buttons": [
       "OK"
     ],
@@ -344,13 +281,6 @@
     "title": "Aplikace„%@“ žádá o povolení k sdílení dat s Bluetooth zařízeními v okolí i v čase, kdy ji právě nepoužíváte",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Přihlaste se pomocí Apple ID",
-    "buttons": [
-      "Zrušit"
     ],
     "shouldAccept": true
   },
@@ -456,13 +386,6 @@
     "title": "„%@“ chce použít k přihlášení „%@“",
     "buttons": [
       "Pokračovat"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Chcete‑li aplikaci „%@“ povolit připojení k příslušenstvím, zapněte Bluetooth",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },

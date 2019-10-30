@@ -235,48 +235,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Inicie a Sessão na App Store",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicie a Sessão no Game Center",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicie a Sessão na iTunes Store",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicie a Sessão no iMessage",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicie a Sessão no FaceTime",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicie a Sessão no iCloud",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Permitir que “%@” atualize seus dados de saúde.",
     "buttons": [
       "OK"
@@ -292,27 +250,6 @@
   },
   {
     "title": "“%1$@” Deseja Ter Acesso às Contas do %2$@",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "A rede Wi-Fi atual e outras redes por perto serão desconectadas até amanhã.\n\nO Wi-Fi continuará disponível para o AirDrop, Acesso Pessoal e precisão da localização.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "A rede WLAN atual e outras redes por perto serão desconectadas até amanhã.\n\nO WLAN continuará disponível para o AirDrop, Acesso Pessoal e precisão da localização.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Os acessórios conectados atualmente serão desconectados e outros acessórios não se conectarão.\n\nO Bluetooth continuará disponível para o Apple Watch, Apple Pencil, Acesso Pessoal e Handoff.",
     "buttons": [
       "OK"
     ],
@@ -350,13 +287,6 @@
     "title": "“%@” deseja disponibilizar dados para os dispositivos Bluetooth por perto até mesmo quando você não estiver usando o app",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicie a Sessão com o ID Apple",
-    "buttons": [
-      "Cancelar"
     ],
     "shouldAccept": true
   },
@@ -462,13 +392,6 @@
     "title": "“%@” Deseja Usar “%@” para Iniciar Sessão",
     "buttons": [
       "Continuar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Ative o Bluetooth para Permitir que “%@” se Conecte a Acessórios",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },

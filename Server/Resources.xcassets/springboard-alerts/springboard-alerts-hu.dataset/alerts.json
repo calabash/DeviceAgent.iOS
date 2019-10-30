@@ -228,48 +228,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Bejelentkezés az App Store-ba",
-    "buttons": [
-      "Mégsem"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Bejelentkezés a Game Centerbe",
-    "buttons": [
-      "Mégsem"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Bejelentkezés az iTunes Store-ba",
-    "buttons": [
-      "Mégsem"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Bejelentkezés az iMessage-be",
-    "buttons": [
-      "Mégsem"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Bejelentkezés a FaceTime-ba",
-    "buttons": [
-      "Mégsem"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Bejelentkezés az iCloudba",
-    "buttons": [
-      "Mégsem"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Az egészségügyi adatok frissítésének engedélyezése a(z) „%@” számára.",
     "buttons": [
       "OK"
@@ -285,27 +243,6 @@
   },
   {
     "title": "A(z) „%1$@” meg szeretné nyitni a(z) %2$@ fiókjait",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "A jelenlegi Wi-Fi-hálózat és más közeli hálózatok holnapig le lesznek választva.\n\nA Wi-Fi továbbra is rendelkezésre áll az AirDrophoz, a Személyes Hotspothoz és a helymeghatározás pontossága érdekében.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "A jelenlegi WLAN-hálózat és más közeli hálózatok holnapig le lesznek választva.\n\nA WLAN továbbra is rendelkezésre áll az AirDrophoz, a Személyes Hotspothoz és a helymeghatározás pontossága érdekében.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "A jelenleg csatlakoztatott tartozékok le lesznek választva, és más tartozékok nem fognak kapcsolódni.\n\nA Bluetooth továbbra is rendelkezésre áll az Apple Watchhoz, az Apple Pencilhez, a Személyes Hotspothoz és a Handoffhoz.",
     "buttons": [
       "OK"
     ],
@@ -336,13 +273,6 @@
     "title": "A(z) „%@” adatokat akar elérhetővé tenni közeli Bluetooth-eszközök számára akkor is, amikor Ön nem használja az alkalmazást",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Jelentkezzen be Apple ID-val",
-    "buttons": [
-      "Mégsem"
     ],
     "shouldAccept": true
   },
@@ -448,13 +378,6 @@
     "title": "A(z) „%@” a következőt szeretné használni a bejelentkezéshez: „%@”",
     "buttons": [
       "Folytatás"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Kapcsolja be a Bluetooth-ot, hogy a(z) „%@” számára engedélyezze a kiegészítőkhöz való csatlakozást",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },

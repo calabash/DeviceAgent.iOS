@@ -234,48 +234,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Prijavite se na App Store",
-    "buttons": [
-      "Poništi"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Prijavite se na Game Center",
-    "buttons": [
-      "Poništi"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Prijavite se na iTunes Store",
-    "buttons": [
-      "Poništi"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Prijavite se na iMessage",
-    "buttons": [
-      "Poništi"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Prijavite se na FaceTime",
-    "buttons": [
-      "Poništi"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Prijavite se na iCloud",
-    "buttons": [
-      "Poništi"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Dozvolite da “%@” ažurira vaše zdravstvene podatke.",
     "buttons": [
       "OK"
@@ -291,27 +249,6 @@
   },
   {
     "title": "“%1$@” želi pristupiti %2$@ računima",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Trenutačna Wi-Fi mreža i druge u blizini bit će odspojene do sutra.\n\nWi-Fi će i dalje biti dostupan za AirDrop, Osobni hotspot i točnost lokacije.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Trenutačna WLAN mreža i druge u blizini bit će odspojene do sutra.\n\nWLAN će i dalje biti dostupan za AirDrop, Osobni hotspot i točnost lokacije.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Odspojit će se trenutačno spojeni pribori i drugi pribori neće se moći spojiti.\n\nBluetooth će i dalje biti dostupan za Apple Watch, Apple Pencil, Osobni hotspot i Handoff.",
     "buttons": [
       "OK"
     ],
@@ -365,13 +302,6 @@
     "title": "Pretraži: %@",
     "buttons": [
       "Otvori"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Prijavite se koristeći Apple ID",
-    "buttons": [
-      "Poništi"
     ],
     "shouldAccept": true
   },
@@ -449,13 +379,6 @@
     "title": "“%@“ želi upotrijebiti “%@“ za prijavu",
     "buttons": [
       "Nastavi"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Uključite Bluetooth kako bi se “%@” mogao spojiti na dodatni pribor",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },

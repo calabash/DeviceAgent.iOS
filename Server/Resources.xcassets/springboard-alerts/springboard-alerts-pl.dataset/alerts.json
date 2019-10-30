@@ -221,48 +221,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Zaloguj się do App Store",
-    "buttons": [
-      "Anuluj"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Zaloguj się do Game Center",
-    "buttons": [
-      "Anuluj"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Zaloguj się do iTunes Store",
-    "buttons": [
-      "Anuluj"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Zaloguj się do iMessage",
-    "buttons": [
-      "Anuluj"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Zaloguj się do FaceTime",
-    "buttons": [
-      "Anuluj"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Zaloguj się do iCloud",
-    "buttons": [
-      "Anuluj"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Pozwala „%@” uaktualniać Twoje dane zdrowotne.",
     "buttons": [
       "OK"
@@ -284,27 +242,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Urządzenie pozostanie rozłączone z bieżącą siecią Wi-Fi oraz pobliskimi sieciami do jutra.\n\nSieć Wi-Fi będzie nadal dostępna na potrzeby funkcji AirDrop i Hotspot osobisty oraz będzie używana w celu dokładniejszego ustalania położenia.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Urządzenie pozostanie rozłączone z bieżącą siecią WLAN oraz pobliskimi sieciami do jutra.\n\nSieć WLAN będzie nadal dostępna na potrzeby funkcji AirDrop i Hotspot osobisty oraz będzie używana w celu dokładniejszego ustalania położenia.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Połączone obecnie akcesoria zostaną rozłączone, a łączenie z nowymi nie będzie możliwe.\n\nBluetooth będzie nadal dostępny na potrzeby łączenia z Apple Watch i Apple Pencil oraz funkcji Hotspot osobisty i Handoff.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "„%@” chce odbierać połączenia VoIP w tle",
     "buttons": [
       "OK"
@@ -315,13 +252,6 @@
     "title": "Brak karty SIM",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Zaloguj się, podając Apple ID",
-    "buttons": [
-      "Anuluj"
     ],
     "shouldAccept": true
   },
@@ -448,13 +378,6 @@
     "title": "„%@” chce użyć „%@” do zalogowania się",
     "buttons": [
       "Dalej"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Aby używać akcesoriów z „%@”, włącz Bluetooth.",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },

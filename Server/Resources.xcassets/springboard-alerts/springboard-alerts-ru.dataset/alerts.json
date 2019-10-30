@@ -227,48 +227,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Войти в App Store",
-    "buttons": [
-      "Отменить"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Вход в Game Center",
-    "buttons": [
-      "Отменить"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Вход в iTunes Store",
-    "buttons": [
-      "Отменить"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Вход в iMessage",
-    "buttons": [
-      "Отменить"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Вход в FaceTime",
-    "buttons": [
-      "Отменить"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Вход в iCloud",
-    "buttons": [
-      "Отменить"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Разрешить «%@» обновлять Ваши медданные.",
     "buttons": [
       "ОК"
@@ -284,27 +242,6 @@
   },
   {
     "title": "Программа «%1$@» запрашивает разрешение на доступ к учетным записям %2$@",
-    "buttons": [
-      "ОК"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Сети Wi-Fi в зоне доступа, включая текущую, будут отключены до завтра.\n\nWi-Fi будет по-прежнему доступен для функции AirDrop, режима модема и точного определения геопозиции.",
-    "buttons": [
-      "ОК"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Сети WLAN в зоне доступа, включая текущую, будут отключены до завтра.\n\nWLAN будет по-прежнему доступен для функции AirDrop, режима модема и точного определения геопозиции.",
-    "buttons": [
-      "ОК"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Подключенные в настоящий момент аксессуары будут отключены, а другие аксессуары подключаться не будут.\n\nBluetooth будет по-прежнему доступен для Apple Watch, Apple Pencil, функции Handoff и режима модема.",
     "buttons": [
       "ОК"
     ],
@@ -439,13 +376,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Вход с Apple ID",
-    "buttons": [
-      "Отменить"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Приложение «%1$@» запрашивает разрешение на доступ к учетным записям %2$@",
     "buttons": [
       "ОК"
@@ -554,13 +484,6 @@
     "title": "Программа «%@» хочет использовать для входа «%@»",
     "buttons": [
       "Дальше"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Включите Bluetooth, чтобы разрешить «%@» подключение к аксессуарам",
-    "buttons": [
-      "ОК"
     ],
     "shouldAccept": true
   },

@@ -235,48 +235,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Autentificați-vă în App Store",
-    "buttons": [
-      "Anulați"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Autentificați-vă în Game Center",
-    "buttons": [
-      "Anulați"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Autentificați-vă în iTunes Store",
-    "buttons": [
-      "Anulați"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Autentificați-vă la iMessage",
-    "buttons": [
-      "Anulați"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Autentificați-vă la FaceTime",
-    "buttons": [
-      "Anulați"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Autentificați-vă pe iCloud",
-    "buttons": [
-      "Anulați"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Permiteți ca aplicația “%@” să actualizeze datele dvs. de sănătate.",
     "buttons": [
       "OK"
@@ -292,27 +250,6 @@
   },
   {
     "title": "“%1$@” ar dori acces la conturile %2$@",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Rețeaua Wi‑Fi actuală și altele din apropiere vor fi deconectate până mâine.\n\nConexiunea Wi‑Fi va fi disponibilă în continuare pentru AirDrop, Hotspot personal și precizia localizării.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Rețeaua WLAN actuală și altele din apropiere vor fi deconectate până mâine.\n\nConexiunea WLAN va fi disponibilă în continuare pentru AirDrop, Hotspot personal și precizia localizării.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Accesoriile conectate în prezent vor fi deconectate și nu se vor conecta alte accesorii.\n\nConexiunea Bluetooth va fi disponibilă în continuare pentru Apple Watch, Apple Pencil, Hotspot personal și Handoff.",
     "buttons": [
       "OK"
     ],
@@ -343,41 +280,6 @@
     "title": "“%@” ar dori să pună la dispoziție date dispozitivelor Bluetooth din apropiere, chiar și atunci când nu utilizați aplicația",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Autentificați‑vă în Game Center",
-    "buttons": [
-      "Anulați"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Autentificați‑vă cu ID‑ul Apple",
-    "buttons": [
-      "Anulați"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Autentificați‑vă la iMessage",
-    "buttons": [
-      "Anulați"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Autentificați‑vă la FaceTime",
-    "buttons": [
-      "Anulați"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Autentificați‑vă pe iCloud",
-    "buttons": [
-      "Anulați"
     ],
     "shouldAccept": true
   },
@@ -455,13 +357,6 @@
     "title": "“%@” vrea să utilizeze “%@” pentru autentificare",
     "buttons": [
       "Continuați"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Activați Bluetooth pentru a permite conectarea “%@” la accesorii",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },

@@ -237,48 +237,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Daftar Masuk ke App Store",
-    "buttons": [
-      "Batal"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Daftar Masuk ke Game Center",
-    "buttons": [
-      "Batal"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Daftar Masuk ke iTunes Store",
-    "buttons": [
-      "Batal"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Daftar Masuk ke iMessage",
-    "buttons": [
-      "Batal"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Daftar Masuk ke FaceTime",
-    "buttons": [
-      "Batal"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Daftar Masuk ke iCloud",
-    "buttons": [
-      "Batal"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Benarkan “%@” untuk mengemas kini data kesihatan anda.",
     "buttons": [
       "OK"
@@ -294,27 +252,6 @@
   },
   {
     "title": "“%1$@” Mahu Mendapatkan Akses kepada Akaun %2$@",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Rangkaian Wi-Fi semasa dan rangkaian lain yang berdekatan akan diputuskan sambungan sehingga esok.\n\nWi-Fi akan terus tersedia untuk AirDrop, Hotspot Peribadi dan ketepatan lokasi.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Rangkaian WLAN semasa dan rangkaian lain yang berdekatan akan diputuskan sambungan sehingga esok.\n\nWLAN akan terus tersedia untuk AirDrop, Hotspot Peribadi dan ketepatan lokasi.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Aksesori yang disambungkan pada masa ini akan diputuskan sambungan dan aksesori lain tidak akan bersambung.\n\nBluetooth akan terus tersedia untuk Apple Watch, Apple Pencil, Hotspot Peribadi dan Handoff.",
     "buttons": [
       "OK"
     ],
@@ -352,13 +289,6 @@
     "title": "“%@” mahu menyediakan data kepada peranti Bluetooth berdekatan walaupun anda tidak menggunakan app",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Daftar Masuk dengan Apple ID",
-    "buttons": [
-      "Batal"
     ],
     "shouldAccept": true
   },
@@ -475,13 +405,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Aktifkan Bluetooth untuk Membenarkan “%@” Bersambung ke Aksesori",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "\"%@\" Mahu Menghantar Pemberitahuan Kepada Anda",
     "buttons": [
       "Benarkan"
@@ -535,20 +458,6 @@
     "title": "“%@” Mahu Menambahkan Konfigurasi VPN",
     "buttons": [
       "Benarkan"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Aktifkan Bluetooth untuk Membenarkan “%@” untuk Bersambung ke Aksesori",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Daftar masuk ke FaceTime",
-    "buttons": [
-      "Batal"
     ],
     "shouldAccept": true
   }

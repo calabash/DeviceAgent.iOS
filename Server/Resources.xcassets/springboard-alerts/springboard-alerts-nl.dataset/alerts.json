@@ -270,48 +270,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Log in bij de App Store",
-    "buttons": [
-      "Annuleer"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Log in bij Game Center",
-    "buttons": [
-      "Annuleer"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Log in bij de iTunes Store",
-    "buttons": [
-      "Annuleer"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Log in bij iMessage",
-    "buttons": [
-      "Annuleer"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Log in bij FaceTime",
-    "buttons": [
-      "Annuleer"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Log in bij iCloud",
-    "buttons": [
-      "Annuleer"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Sta toe dat %@ je gezondheidsgegevens bijwerkt.",
     "buttons": [
       "OK"
@@ -327,27 +285,6 @@
   },
   {
     "title": "%1$@ wil toegang tot %2$@-accounts",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Het huidige wifinetwerk en andere netwerken in de buurt worden tot morgen losgekoppeld. Wifi blijft beschikbaar voor AirDrop, 'Persoonlijke hotspot' en de nauwkeurigheid van de locatie.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Het huidige WLAN-netwerk en andere netwerken in de buurt worden tot morgen losgekoppeld. WLAN blijft beschikbaar voor AirDrop, 'Persoonlijke hotspot' en de nauwkeurigheid van de locatie.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Gekoppelde accessoires worden losgekoppeld en andere accessoires worden niet gekoppeld.\n\nBluetooth blijft beschikbaar voor Apple Watch, Apple Pencil, 'Persoonlijke hotspot' en Handoff.",
     "buttons": [
       "OK"
     ],
@@ -378,13 +315,6 @@
     "title": "%@ wil gegevens beschikbaar stellen voor Bluetooth-apparaten in de buurt, ook als je de app niet gebruikt",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Log in met Apple ID",
-    "buttons": [
-      "Annuleer"
     ],
     "shouldAccept": true
   },
@@ -504,13 +434,6 @@
     "title": "%@ wil uw netwerkinhoud filteren",
     "buttons": [
       "Sta toe"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Log in op iCloud",
-    "buttons": [
-      "Annuleer"
     ],
     "shouldAccept": true
   },

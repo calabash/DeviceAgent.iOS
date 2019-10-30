@@ -235,48 +235,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Accedi ad App Store",
-    "buttons": [
-      "Annulla"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Accedi a Game Center",
-    "buttons": [
-      "Annulla"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Accedi a iTunes Store",
-    "buttons": [
-      "Annulla"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Accedi a iMessage",
-    "buttons": [
-      "Annulla"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Accedi a FaceTime",
-    "buttons": [
-      "Annulla"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Accedi a iCloud",
-    "buttons": [
-      "Annulla"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Consenti a “%@” di aggiornare i tuoi dati sanitari.",
     "buttons": [
       "OK"
@@ -292,27 +250,6 @@
   },
   {
     "title": "“%1$@” vorrebbe accedere agli account %2$@",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "La connessione alla rete Wi-Fi attuale e ad altre reti nelle vicinanze rimarrà inattiva fino a domani.\n\nLa connessione Wi-Fi continuerà a essere disponibile per AirDrop, per l'hotspot personale e per garantire l'esattezza della posizione.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "La connessione alla rete WLAN attuale e ad altre reti nelle vicinanze rimarrà inattiva fino a domani.\n\nLa connessione WLAN continuerà a essere disponibile per AirDrop, per l'hotspot personale e per garantire l'esattezza della posizione.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Gli accessori attualmente connessi verranno disconnessi e non sarà possibile connetterne altri.\n\nLa connessione Bluetooth continuerà a essere disponibile per Apple Watch, Apple Pencil, Handoff e per l'hotspot personale.",
     "buttons": [
       "OK"
     ],
@@ -343,13 +280,6 @@
     "title": "“%@” desidera rendere disponibili i dati ai dispositivi Bluetooth nelle vicinanze anche quando l'app non è in uso",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Accedi con il tuo ID Apple",
-    "buttons": [
-      "Annulla"
     ],
     "shouldAccept": true
   },
@@ -462,13 +392,6 @@
     "title": "“%@” desidera utilizzare “%@” per eseguire l’accesso",
     "buttons": [
       "Continua"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Attiva Bluetooth per consentire a “%@” di connettersi agli accessori",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },
