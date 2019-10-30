@@ -443,5 +443,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” acesse sua localização enquanto você estiver usando o app?",
+    "buttons": [
+      "Permitir Uma Vez"
+    ],
+    "shouldAccept": true
   }
 ]

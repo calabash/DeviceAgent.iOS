@@ -20,7 +20,8 @@
     "title": "Benarkan “%@” mengakses lokasi anda semasa anda menggunakan app?",
     "buttons": [
       "Benarkan",
-      "Hanya Semasa Menggunakan App"
+      "Hanya Semasa Menggunakan App",
+      "Benarkan Sekali"
     ],
     "shouldAccept": true
   },

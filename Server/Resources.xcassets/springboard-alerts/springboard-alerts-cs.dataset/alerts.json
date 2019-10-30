@@ -19,7 +19,8 @@
     "title": "Chcete aplikaci %@ povolit přístup k polohovým údajům v čase, kdy ji používáte?",
     "buttons": [
       "Povolit",
-      "Jen při používání aplikace"
+      "Jen při používání aplikace",
+      "Povolit jednou"
     ],
     "shouldAccept": true
   },

@@ -367,5 +367,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Autoriser « %@ » à accéder à votre position lorsque vous utilisez cette app?",
+    "buttons": [
+      "Autoriser une fois"
+    ],
+    "shouldAccept": true
   }
 ]

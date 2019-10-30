@@ -20,7 +20,8 @@
     "title": "Vill du tillåta ”%@” att se din platsinfo när du använder appen?",
     "buttons": [
       "Tillåt",
-      "Bara när appen används"
+      "Bara när appen används",
+      "Tillåt en gång"
     ],
     "shouldAccept": true
   },

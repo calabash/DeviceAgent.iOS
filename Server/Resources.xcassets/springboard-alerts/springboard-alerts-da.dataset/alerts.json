@@ -422,5 +422,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Må “%@” få adgang til din lokalitet, mens du bruger appen?",
+    "buttons": [
+      "Tillad en gang"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Det gør det muligt for “%@” at finde og oprette forbindelse til Bluetooth-tilbehør. Denne app bruger muligvis også Bluetooth til at registrere, når du er i nærheden.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

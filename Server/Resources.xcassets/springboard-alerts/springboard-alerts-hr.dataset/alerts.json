@@ -19,7 +19,8 @@
     "title": "Dozvoliti aplikaciji “%@” pristup vašoj lokaciji dok koristite aplikaciju?",
     "buttons": [
       "Dozvoli",
-      "Tijekom uporabe aplikacije"
+      "Tijekom uporabe aplikacije",
+      "Dozvoli jedanput"
     ],
     "shouldAccept": true
   },

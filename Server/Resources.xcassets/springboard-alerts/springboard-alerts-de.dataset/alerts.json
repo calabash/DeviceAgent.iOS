@@ -384,7 +384,8 @@
   {
     "title": "Darf „%@“ auf deinen Standort zugreifen, wenn du die App benutzt?",
     "buttons": [
-      "Erlauben"
+      "Erlauben",
+      "Einmal erlauben"
     ],
     "shouldAccept": true
   },

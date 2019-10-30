@@ -388,5 +388,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” aceda à sua localização enquanto estiver a usar a aplicação?",
+    "buttons": [
+      "Permitir uma vez"
+    ],
+    "shouldAccept": true
   }
 ]

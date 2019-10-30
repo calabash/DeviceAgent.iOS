@@ -416,5 +416,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Pozwalać aplikacji „%@” udostępniać Twoje położenie, gdy jej używasz?",
+    "buttons": [
+      "Pozwól raz"
+    ],
+    "shouldAccept": true
   }
 ]

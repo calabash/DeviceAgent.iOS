@@ -448,5 +448,12 @@
       "好"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "當您使用App的時候，要允許「%@」取用您的位置嗎？",
+    "buttons": [
+      "允許一次"
+    ],
+    "shouldAccept": true
   }
 ]

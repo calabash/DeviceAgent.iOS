@@ -17,7 +17,8 @@
         "name": "Maps.app",
         "values": [
             { "title": "Allow '%@' to access your location while you use the app?", "button": "Allow", "default_value": true },
-            { "title": "Allow '%@' to access your location while you are using the app?", "button": "Allow", "default_value": true }
+            { "title": "Allow '%@' to access your location while you are using the app?", "button": "Allow", "default_value": true },
+            { "title": "Allow '%@' to access your location while you are using the app?", "button": "Allow Once", "default_value": true }
         ]
     },
     {

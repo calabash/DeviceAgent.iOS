@@ -20,7 +20,8 @@
     "title": "Chcete povoliť apke „%@“ pristupovať k vašej polohe v čase, keď ju používate?",
     "buttons": [
       "Povoliť",
-      "Len počas používania"
+      "Len počas používania",
+      "Povoliť raz"
     ],
     "shouldAccept": true
   },

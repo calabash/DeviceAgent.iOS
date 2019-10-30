@@ -20,7 +20,8 @@
     "title": "Vil du gi %@ tilgang til posisjonen din når du bruker appen?",
     "buttons": [
       "Tillat",
-      "Kun når appen er i bruk"
+      "Kun når appen er i bruk",
+      "Tillat én gang"
     ],
     "shouldAccept": true
   },
