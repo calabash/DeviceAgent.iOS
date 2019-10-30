@@ -146,15 +146,14 @@
   {
     "title": "Seting baru tersedia. Adakah anda mahu mengemas kininya sekarang?",
     "buttons": [
-      "Nanti",
       "Bukan Sekarang"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Kemas Kini Seting Pembawa",
     "buttons": [
-      "Nanti"
+      "Bukan Sekarang"
     ],
     "shouldAccept": false
   },

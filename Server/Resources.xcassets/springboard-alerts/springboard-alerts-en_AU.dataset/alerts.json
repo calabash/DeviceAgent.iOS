@@ -148,14 +148,14 @@
     "buttons": [
       "Not Now"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Service Provider Settings Update",
     "buttons": [
       "Not Now"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Would Like to Add VPN Configurations",

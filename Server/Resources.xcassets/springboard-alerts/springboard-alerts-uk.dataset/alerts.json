@@ -158,28 +158,28 @@
     "buttons": [
       "Не зараз"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Оновлення налаштувань",
     "buttons": [
       "Не зараз"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "«%@» хоче додати VPN-конфігурації",
     "buttons": [
-      "Дозволити"
+      "Заборонити"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "«%@» хоче фільтрувати мережевий контент",
     "buttons": [
-      "Дозволити"
+      "Заборонити"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone не активовано",

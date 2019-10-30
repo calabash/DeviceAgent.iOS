@@ -148,12 +148,12 @@
     "buttons": [
       "Để sau"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Cập nhật Cài đặt Nhà cung cấp",
     "buttons": [
-      "Để Sau"
+      "Để sau"
     ],
     "shouldAccept": false
   },

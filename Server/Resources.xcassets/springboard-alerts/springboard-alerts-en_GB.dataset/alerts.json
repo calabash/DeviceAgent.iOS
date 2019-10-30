@@ -148,7 +148,7 @@
     "buttons": [
       "Not Now"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Carrier Settings Update",
@@ -289,7 +289,7 @@
     "buttons": [
       "Not Now"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” has been using your location in the background over the past 3 days. Do you want to continue to allow background location use?",

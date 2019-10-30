@@ -149,7 +149,7 @@
     "buttons": [
       "Ara no"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Actualització de la configuració de l’operador",

@@ -148,7 +148,7 @@
     "buttons": [
       "Şimdi Değil"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Operatör Ayarı Güncelleme",
@@ -295,7 +295,7 @@
     "buttons": [
       "Yok Say"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” son 3 gündür arka planda konumunuzu kullanıyor. Arka planda konumun kullanılmasına izin vermeyi sürdürmek istiyor musunuz?",

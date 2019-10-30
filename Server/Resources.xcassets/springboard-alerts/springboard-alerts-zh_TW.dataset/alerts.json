@@ -141,13 +141,12 @@
     "buttons": [
       "稍後再說"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "電信業者設定更新",
     "buttons": [
-      "稍後再說",
-      "現在不要"
+      "稍後再說"
     ],
     "shouldAccept": false
   },
@@ -275,9 +274,9 @@
   {
     "title": "要允許「%@」使用Face ID嗎？",
     "buttons": [
-      "好"
+      "不允許"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "您要在「%@」上使用Siri嗎？",
@@ -324,16 +323,16 @@
   {
     "title": "「%@」想要加入VPN設定",
     "buttons": [
-      "允許"
+      "不允許"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "未啟用iPhone",
     "buttons": [
       "忽略"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "在「%@」App中打開",
@@ -422,8 +421,7 @@
   {
     "title": "新的設定現已可供下載。是否要立即更新？",
     "buttons": [
-      "稍後再說",
-      "現在不要"
+      "稍後再說"
     ],
     "shouldAccept": false
   },

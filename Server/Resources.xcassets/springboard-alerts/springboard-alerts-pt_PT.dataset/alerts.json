@@ -295,7 +295,7 @@
     "buttons": [
       "Agora não"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” tem estado a usar a sua localização em segundo plano nos últimos 3 dias. Deseja continuar a permitir o uso em segundo plano?",

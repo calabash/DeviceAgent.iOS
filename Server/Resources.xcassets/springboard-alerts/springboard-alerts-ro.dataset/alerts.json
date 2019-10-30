@@ -148,7 +148,7 @@
     "buttons": [
       "Nu acum"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Actualizare configurări operator",

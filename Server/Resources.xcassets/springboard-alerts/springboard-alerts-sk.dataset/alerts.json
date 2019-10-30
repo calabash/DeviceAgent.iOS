@@ -148,7 +148,7 @@
     "buttons": [
       "Teraz nie"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Aktualizácia nastavení operátora",

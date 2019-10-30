@@ -140,7 +140,7 @@
     "buttons": [
       "Teď ne"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Aktualizace nastavení",
@@ -152,14 +152,14 @@
   {
     "title": "„%@“ chce přidat konfigurace VPN",
     "buttons": [
-      "Zakázat"
+      "Nepovolovat"
     ],
     "shouldAccept": false
   },
   {
     "title": "„%@“ chce filtrovat obsah ze sítě",
     "buttons": [
-      "Zakázat"
+      "Nepovolovat"
     ],
     "shouldAccept": false
   },

@@ -141,7 +141,7 @@
     "buttons": [
       "以后"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "运营商设置更新",
@@ -279,9 +279,9 @@
   {
     "title": "您要允许“%@”使用面容ID吗？",
     "buttons": [
-      "好"
+      "不允许"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "您要通过Siri来使用“%@”吗？",
@@ -321,16 +321,16 @@
   {
     "title": "“%@”想添加VPN配置",
     "buttons": [
-      "允许"
+      "不允许"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone尚未激活",
     "buttons": [
       "忽略"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "在“%@”App中打开",

@@ -147,7 +147,7 @@
     "buttons": [
       "Ne sad"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Ažuriranje postavki operatera",

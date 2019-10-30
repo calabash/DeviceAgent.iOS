@@ -152,7 +152,7 @@
     "buttons": [
       "지금 안 함"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "통신 사업자 설정 업데이트",
@@ -309,14 +309,14 @@
     "buttons": [
       "지금 안 함"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "이동통신사 설정 업데이트",
     "buttons": [
       "지금 안 함"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "‘%@’이(가) 지난 3일간 백그라운드에서 사용자의 위치를 사용했습니다. 백그라운드에서의 위치 사용을 계속 허용하겠습니까?",

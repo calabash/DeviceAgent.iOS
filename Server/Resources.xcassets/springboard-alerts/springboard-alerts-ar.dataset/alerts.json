@@ -148,7 +148,7 @@
     "buttons": [
       "ليس الآن"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "تحديث شركة الاتصالات",

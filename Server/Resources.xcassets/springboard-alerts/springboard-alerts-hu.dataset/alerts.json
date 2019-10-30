@@ -141,7 +141,7 @@
     "buttons": [
       "Ne most"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Szolgáltatói beállítások frissítése",
@@ -153,9 +153,9 @@
   {
     "title": "„%@” VPN-konfigurációt szeretne hozzáadni",
     "buttons": [
-      "Engedélyezés"
+      "Tiltás"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "A(z) „%@” szűrni akarja a hálózati tartalmat",
@@ -169,7 +169,7 @@
     "buttons": [
       "Kihagyás"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Engedélyezi a Diktálást?",

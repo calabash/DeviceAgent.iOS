@@ -148,12 +148,12 @@
     "buttons": [
       "Nanti"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Pembaruan Pengaturan Operator",
     "buttons": [
-      "Tidak Sekarang"
+      "Nanti"
     ],
     "shouldAccept": false
   },

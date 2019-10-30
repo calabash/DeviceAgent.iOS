@@ -148,7 +148,7 @@
     "buttons": [
       "לא כעת"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "עדכון להגדרות המפעיל",

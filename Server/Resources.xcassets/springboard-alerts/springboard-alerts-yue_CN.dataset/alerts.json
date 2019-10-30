@@ -2,9 +2,9 @@
   {
     "title": "您要允许“%@”使用面容ID吗？",
     "buttons": [
-      "好"
+      "不允许"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@”想访问您的麦克风",

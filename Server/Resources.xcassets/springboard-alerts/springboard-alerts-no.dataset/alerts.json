@@ -148,7 +148,7 @@
     "buttons": [
       "Ikke nå"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Oppdatering av operatørinnstillinger",
