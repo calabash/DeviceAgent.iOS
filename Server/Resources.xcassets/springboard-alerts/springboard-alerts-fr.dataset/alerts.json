@@ -284,13 +284,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Se connecter",
-    "buttons": [
-      "Annuler"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "« %@ » a utilisé votre position en arrière-plan au cours des 3 derniers jours. L’autorisez-vous à continuer à utiliser votre position en arrière-plan ?",
     "buttons": [
       "Autoriser"
