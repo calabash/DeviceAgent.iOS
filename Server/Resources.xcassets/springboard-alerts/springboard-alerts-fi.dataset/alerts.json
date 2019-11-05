@@ -20,7 +20,8 @@
     "title": "Saako %@ käyttää sijaintiasi silloin, kun käytät appia?",
     "buttons": [
       "Salli",
-      "Vain appia käytettäessä"
+      "Vain appia käytettäessä",
+      "Salli kerran"
     ],
     "shouldAccept": true
   },

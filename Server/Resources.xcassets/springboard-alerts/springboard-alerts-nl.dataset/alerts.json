@@ -443,5 +443,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Wil je %@ toegang tot je locatie geven terwijl je de app gebruikt?",
+    "buttons": [
+      "Sta één sessie toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Zoek op %@",
+    "buttons": [
+      "Open"
+    ],
+    "shouldAccept": true
   }
 ]

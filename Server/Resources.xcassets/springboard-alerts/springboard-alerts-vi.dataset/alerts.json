@@ -20,7 +20,8 @@
     "title": "Cho phép “%@” truy cập vị trí của bạn khi bạn đang dùng ứng dụng?",
     "buttons": [
       "Cho phép",
-      "Chỉ khi dùng ứng dụng"
+      "Chỉ khi dùng ứng dụng",
+      "Cho phép một lần"
     ],
     "shouldAccept": true
   },

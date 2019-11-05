@@ -429,5 +429,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Vuoi che “%@” acceda alla tua posizione mentre usi l'app?",
+    "buttons": [
+      "Consenti una volta"
+    ],
+    "shouldAccept": true
   }
 ]

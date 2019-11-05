@@ -391,7 +391,8 @@
   {
     "title": "앱을 사용하는 동안 ‘%@’에서 사용자의 위치에 접근하도록 허용하겠습니까?",
     "buttons": [
-      "허용"
+      "허용",
+      "한 번 허용"
     ],
     "shouldAccept": true
   },
@@ -477,6 +478,13 @@
     "title": "%@ App에서 열기",
     "buttons": [
       "열기"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "‘%@’이(가) Bluetooth 액세서리를 찾고 연결할 수 있도록 합니다. 이 앱은 Bluetooth를 사용해서 사용자가 주변에 있는지 확인할 수도 있습니다.",
+    "buttons": [
+      "확인"
     ],
     "shouldAccept": true
   }

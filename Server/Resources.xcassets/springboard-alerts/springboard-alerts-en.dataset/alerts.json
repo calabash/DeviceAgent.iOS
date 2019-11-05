@@ -20,7 +20,8 @@
     "title": "Allow “%@” to access your location while you are using the app?",
     "buttons": [
       "Allow",
-      "Only While Using the App"
+      "Only While Using the App",
+      "Allow Once"
     ],
     "shouldAccept": true
   },
