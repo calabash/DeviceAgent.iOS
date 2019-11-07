@@ -7,6 +7,7 @@
             { "title": "LOCATION_CLIENT_PERMISSION_ALWAYS", "button": "LOCATION_CLIENT_PERMISSION_OK", "default_value": true },
             { "title": "LOCATION_CLIENT_PERMISSION_WHENINUSE", "button": "LOCATION_CLIENT_PERMISSION_KEEP_ALWAYS_BUTTON", "default_value": true },
             { "title": "LOCATION_CLIENT_PERMISSION_WHENINUSE", "button": "LOCATION_CLIENT_PERMISSION_OK", "default_value": true },
+            { "title": "LOCATION_CLIENT_PERMISSION_WHENINUSE", "button": "LOCATION_CLIENT_PERMISSION_WHENINUSE_BUTTON", "default_value": true },
             { "title": "LOCATION_CLIENT_PERMISSION_UPGRADE_WHENINUSE_ALWAYS", "button": "LOCATION_CLIENT_PERMISSION_OK", "default_value": true },
             { "title": "LOCATION_CLIENT_PERMISSION_REPROMPT", "button": "LOCATION_CLIENT_PERMISSION_OK", "default_value": true },
             { "title": "LOCATION_CLIENT_PERMISSION_REPROMPT_ZERO", "button": "LOCATION_CLIENT_PERMISSION_OK", "default_value": true },
