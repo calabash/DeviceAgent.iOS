@@ -10,7 +10,7 @@ variables:
   #
   # Apple has fixed this bug in Xcode 11.2.  When that is released, we should
   # change this to 'Mojave-Xcode-11.2"
-  AzurePublishWhen: "Mojave-Xcode-10.3"
+  AzurePublishWhen: "Mojave-Xcode-11.2"
 
 trigger:
   tags:
@@ -90,7 +90,6 @@ jobs:
   - script: bundle exec bin/ci/cucumber.rb
     displayName: "exec cucumber"
 
-  # azureStorage* env vars are defined in the pipeline UI as secret variables
   - bash: "./bin/ci/az-publish.sh"
     env:
       AZURE_STORAGE_ACCOUNT: $(AzureStorageAccount)
