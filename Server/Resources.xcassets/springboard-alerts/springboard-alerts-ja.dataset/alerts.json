@@ -20,7 +20,8 @@
     "title": "“%@”の使用中に位置情報の利用を許可しますか?",
     "buttons": [
       "許可",
-      "このAppの使用中のみ許可"
+      "このAppの使用中のみ許可",
+      "1度だけ許可"
     ],
     "shouldAccept": true
   },
@@ -34,16 +35,9 @@
   {
     "title": "“%@”にFace IDの使用を許可しますか?",
     "buttons": [
-      "OK"
+      "許可しない"
     ],
-    "shouldAccept": true
-  },
-  {
-    "title": "%@データの一部は、リクエストを処理するためにAppleに送信されます。",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@”がマイクへのアクセスを求めています",
@@ -61,13 +55,6 @@
   },
   {
     "title": "“%@”がカレンダーへのアクセスを求めています",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "このAppからの音声データはリクエストを処理するためにAppleに送信されます。また、音声認識技術の向上にも役立てられます。",
     "buttons": [
       "OK"
     ],
@@ -155,35 +142,35 @@
     "buttons": [
       "今はしない"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "キャリア設定アップデート",
     "buttons": [
       "今はしない"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@”がVPN構成の追加を求めています",
     "buttons": [
-      "許可"
+      "許可しない"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@”がネットワークコンテンツのフィルタリングを求めています",
     "buttons": [
-      "許可"
+      "許可しない"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhoneはアクティベートされていません",
     "buttons": [
       "無視"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "音声入力を有効にしますか?",
@@ -242,48 +229,6 @@
     "shouldAccept": true
   },
   {
-    "title": "App Storeにサインイン",
-    "buttons": [
-      "キャンセル"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Game Centerにサインイン",
-    "buttons": [
-      "キャンセル"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "iTunes Storeにサインイン",
-    "buttons": [
-      "キャンセル"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "iMessageにサインイン",
-    "buttons": [
-      "キャンセル"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "FaceTimeにサインイン",
-    "buttons": [
-      "キャンセル"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "iCloudにサインイン",
-    "buttons": [
-      "キャンセル"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%@”にヘルスケアデータのアップデートを許可します。",
     "buttons": [
       "OK"
@@ -299,27 +244,6 @@
   },
   {
     "title": "“%1$@”は%2$@アカウントへのアクセスを求めています",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "現在のWi-Fiネットワークおよびほかの近くのネットワークは明日まで接続を解除されます。\n\nWi-Fiは引き続きAirDrop、インターネット共有、および位置情報の精度の向上で利用可能です。",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "現在のWLANネットワークおよびほかの近くのネットワークは明日まで接続を解除されます。\n\nWLANは引き続きAirDrop、インターネット共有、および位置情報の精度の向上で利用可能です。",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "現在接続されているアクセサリは接続を解除され、ほかのアクセサリは接続しません。\n\nBluetoothは引き続きApple Watch、Apple Pencil、インターネット共有、およびHandoffで利用可能です。",
     "buttons": [
       "OK"
     ],
@@ -350,13 +274,6 @@
     "title": "“%@”が近隣のBluetoothデバイスに、Appを使用していないときでもデータ通信することを求めています",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Apple IDでサインイン",
-    "buttons": [
-      "キャンセル"
     ],
     "shouldAccept": true
   },
@@ -438,13 +355,6 @@
     "shouldAccept": true
   },
   {
-    "title": "“%@”がアクセサリに接続できるようにするには、Bluetoothをオンにしてください。",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "\"%@\"は通知を送信します。よろしいですか?",
     "buttons": [
       "許可"
@@ -455,6 +365,34 @@
     "title": "“%@”は通知を送信します。よろしいですか?",
     "buttons": [
       "許可"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”は\n通知を送信します。\nよろしいですか？",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”がApple Musicへのアクセスを求めています",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "iPhoneはアクティベート\nされていません",
+    "buttons": [
+      "無視"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”Appで開く",
+    "buttons": [
+      "開く"
     ],
     "shouldAccept": true
   }

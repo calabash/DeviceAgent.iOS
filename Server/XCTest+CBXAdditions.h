@@ -63,13 +63,19 @@
 @interface XCUIElement (CBXAdditions)
 
 - (XCElementSnapshot *_Nullable)lastSnapshot;
-- (void)resolveOrRaiseTestFailure;
-- (BOOL)resolveOrRaiseTestFailure:(BOOL)arg1 error:(id _Nonnull *_Nonnull)arg2;
 - (XCUICoordinate *_Nonnull)hitPointCoordinate;
 - (XCUIElementQuery *_Nonnull)query;
 
-// Removed in Xcode 11.0
+// Deprecated since Xcode 11.0
 - (void)resolve;
+// Added since Xcode 11.0
+- (void)resolveOrRaiseTestFailure;
+- (BOOL)resolveOrRaiseTestFailure:(BOOL)arg1 error:(id _Nonnull *_Nonnull)arg2;
+
+/**
+ Resolve element
+ */
+- (void)cbx_resolve;
 @end
 
 @interface XCElementSnapshot (CBXAdditions)

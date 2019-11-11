@@ -19,7 +19,8 @@
     "title": "Dozvoliti aplikaciji “%@” pristup vašoj lokaciji dok koristite aplikaciju?",
     "buttons": [
       "Dozvoli",
-      "Tijekom uporabe aplikacije"
+      "Tijekom uporabe aplikacije",
+      "Dozvoli jedanput"
     ],
     "shouldAccept": true
   },
@@ -40,16 +41,9 @@
   {
     "title": "Želite li dozvoliti usluzi “%@” uporabu Face ID-a?",
     "buttons": [
-      "OK"
+      "Nemoj dozvoliti"
     ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Neki vaši %@ podaci poslat će se Appleu radi obrade vaših zahtjeva.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” želi pristupiti mikrofonu",
@@ -67,13 +61,6 @@
   },
   {
     "title": "“%@” želi pristupiti vašem kalendaru",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Podaci govora iz ove aplikacije poslat će se Appleu radi obrade vaših zahtjeva. Time će se također pomoći Appleu u poboljšanju tehnologije prepoznavanja govora.",
     "buttons": [
       "OK"
     ],
@@ -161,35 +148,35 @@
     "buttons": [
       "Ne sad"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Ažuriranje postavki operatera",
     "buttons": [
       "Ne sad"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” želi dodati VPN konfiguracije",
     "buttons": [
-      "Dozvoli"
+      "Nemoj dozvoliti"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” želi filtrirati mrežne sadržaje",
     "buttons": [
-      "Dozvoli"
+      "Nemoj dozvoliti"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone nije aktiviran",
     "buttons": [
       "Ignoriraj"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Omogućiti Diktat?",
@@ -248,48 +235,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Prijavite se na App Store",
-    "buttons": [
-      "Poništi"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Prijavite se na Game Center",
-    "buttons": [
-      "Poništi"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Prijavite se na iTunes Store",
-    "buttons": [
-      "Poništi"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Prijavite se na iMessage",
-    "buttons": [
-      "Poništi"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Prijavite se na FaceTime",
-    "buttons": [
-      "Poništi"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Prijavite se na iCloud",
-    "buttons": [
-      "Poništi"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Dozvolite da “%@” ažurira vaše zdravstvene podatke.",
     "buttons": [
       "OK"
@@ -305,27 +250,6 @@
   },
   {
     "title": "“%1$@” želi pristupiti %2$@ računima",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Trenutačna Wi-Fi mreža i druge u blizini bit će odspojene do sutra.\n\nWi-Fi će i dalje biti dostupan za AirDrop, Osobni hotspot i točnost lokacije.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Trenutačna WLAN mreža i druge u blizini bit će odspojene do sutra.\n\nWLAN će i dalje biti dostupan za AirDrop, Osobni hotspot i točnost lokacije.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Odspojit će se trenutačno spojeni pribori i drugi pribori neće se moći spojiti.\n\nBluetooth će i dalje biti dostupan za Apple Watch, Apple Pencil, Osobni hotspot i Handoff.",
     "buttons": [
       "OK"
     ],
@@ -379,13 +303,6 @@
     "title": "Pretraži: %@",
     "buttons": [
       "Otvori"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Prijavite se koristeći Apple ID",
-    "buttons": [
-      "Poništi"
     ],
     "shouldAccept": true
   },
@@ -457,19 +374,12 @@
     "buttons": [
       "Ne sad"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@“ želi upotrijebiti “%@“ za prijavu",
     "buttons": [
       "Nastavi"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Uključite Bluetooth kako bi se “%@” mogao spojiti na dodatni pribor",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },
@@ -483,7 +393,15 @@
   {
     "title": "“%@” vam želi slati obavijesti",
     "buttons": [
-      "Dozvoli"
+      "Dozvoli",
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” želi pristupiti značajki Apple Music",
+    "buttons": [
+      "OK"
     ],
     "shouldAccept": true
   }

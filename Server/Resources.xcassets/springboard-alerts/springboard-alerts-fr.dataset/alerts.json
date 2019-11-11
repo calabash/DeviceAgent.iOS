@@ -41,16 +41,9 @@
   {
     "title": "Voulez-vous autoriser « %@ » à utiliser Face ID ?",
     "buttons": [
-      "OK"
+      "Refuser"
     ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Certaines de vos données %@ seront envoyées à Apple pour traiter vos demandes.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "« %@ » souhaite accéder au micro.",
@@ -68,13 +61,6 @@
   },
   {
     "title": "« %@ » souhaite accéder à votre calendrier.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Les données vocales recueillies par cette app seront envoyées à Apple pour traiter vos demandes. Cela aidera également Apple à améliorer sa technologie en matière de reconnaissance vocale.",
     "buttons": [
       "OK"
     ],
@@ -162,35 +148,35 @@
     "buttons": [
       "Plus tard"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Mise à jour des réglages de l’opérateur",
     "buttons": [
       "Plus tard"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "« %@ » aimerait ajouter des configurations VPN",
     "buttons": [
-      "Autoriser"
+      "Refuser"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "« %@ » aimerait filtrer le contenu du réseau",
     "buttons": [
-      "Autoriser"
+      "Refuser"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "L’iPhone n’est pas activé.",
     "buttons": [
       "Ignorer"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Activer Dictée ?",
@@ -249,48 +235,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Se connecter à l’App Store",
-    "buttons": [
-      "Annuler"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Se connecter à Game Center",
-    "buttons": [
-      "Annuler"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Se connecter à l’iTunes Store",
-    "buttons": [
-      "Annuler"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Se connecter à iMessage",
-    "buttons": [
-      "Annuler"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Se connecter à FaceTime",
-    "buttons": [
-      "Annuler"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Se connecter à iCloud",
-    "buttons": [
-      "Annuler"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Autorisez « %@ » à mettre à jour vos Données Santé.",
     "buttons": [
       "OK"
@@ -306,27 +250,6 @@
   },
   {
     "title": "« %1$@ » souhaite accéder aux comptes %2$@.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Le réseau Wi-Fi actuel et les autres réseaux à proximité seront déconnectés jusqu’à demain.\n\nLa connexion Wi-Fi restera disponible pour AirDrop, le partage de connexion et la précision de votre localisation.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Le réseau WLAN actuel et les autres réseaux à proximité seront déconnectés jusqu’à demain.\n\nLa connexion WLAN restera disponible pour AirDrop, le partage de connexion et la précision de votre localisation.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Les accessoires actuellement connectés seront déconnectés et il ne sera pas possible de connecter d’autres accessoires.\n\nLa connexion Bluetooth restera disponible pour l’Apple Watch, l’Apple Pencil, le partage de connexion et Handoff.",
     "buttons": [
       "OK"
     ],
@@ -357,13 +280,6 @@
     "title": "« %@ » souhaite permettre aux appareils Bluetooth à proximité d’accéder à des données lorsque vous n’utilisez pas l’app",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Se connecter",
-    "buttons": [
-      "Annuler"
     ],
     "shouldAccept": true
   },
@@ -438,16 +354,31 @@
     "shouldAccept": true
   },
   {
-    "title": "Activez Bluetooth pour permettre à « %@ » de se connecter aux accessoires.",
+    "title": "Autorisez-vous « %@ » à vous envoyer des notifications ?",
+    "buttons": [
+      "Autoriser",
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » souhaite accéder à Apple Music.",
     "buttons": [
       "OK"
     ],
     "shouldAccept": true
   },
   {
-    "title": "Autorisez-vous « %@ » à vous envoyer des notifications ?",
+    "title": "« %@ » voudrait rendre les données disponibles pour les appareils bluetooth proches lorsque vous n’utilisez pas cette app.",
     "buttons": [
-      "Autoriser"
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Autoriser « %@ » à accéder à votre position lorsque vous utilisez l’app ?",
+    "buttons": [
+      "Autoriser une fois"
     ],
     "shouldAccept": true
   }

@@ -41,16 +41,9 @@
   {
     "title": "Vil du give “%@” tilladelse til at bruge Face ID?",
     "buttons": [
-      "OK"
+      "Tillad ikke"
     ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Nogle af dine %@-data sendes til Apple for at behandle dine anmodninger.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” vil bruge mikrofonen",
@@ -68,13 +61,6 @@
   },
   {
     "title": "“%@” vil bruge din kalender",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Talegenkendelsesdata fra denne app, sendes til Apple til behandling af dine anmodninger. Det hjælper desuden Apple med at forbedre sin talegenkendelsesteknologi.",
     "buttons": [
       "OK"
     ],
@@ -162,35 +148,35 @@
     "buttons": [
       "Ikke nu"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Opdatering af operatørindstillinger",
     "buttons": [
       "Ikke nu"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” vil gerne tilføje VPN-konfigurationer",
     "buttons": [
-      "Tillad"
+      "Tillad ikke"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” vil bruge filter til netværksindhold",
     "buttons": [
-      "Tillad"
+      "Tillad ikke"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone er ikke aktiveret",
     "buttons": [
       "Ignorer"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Slå Diktering til?",
@@ -216,77 +202,40 @@
   {
     "title": "Åbn i “%@”",
     "buttons": [
-      "Åbn"
+      "Åbn",
+      "Åben"
     ],
     "shouldAccept": true
   },
   {
     "title": "Åbn i “%@”?",
     "buttons": [
-      "Åbn"
+      "Åbn",
+      "Åben"
     ],
     "shouldAccept": true
   },
   {
     "title": "Søg i %@",
     "buttons": [
-      "Åbn"
+      "Åbn",
+      "Åben"
     ],
     "shouldAccept": true
   },
   {
     "title": "Åbn denne side i “%@”?",
     "buttons": [
-      "Åbn"
+      "Åbn",
+      "Åben"
     ],
     "shouldAccept": true
   },
   {
     "title": "Åbn i appen %@",
     "buttons": [
-      "Åbn"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Log ind på App Store",
-    "buttons": [
-      "Annuller"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Log Ind på Game Center",
-    "buttons": [
-      "Annuller"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Log ind på iTunes Store",
-    "buttons": [
-      "Annuller"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Log ind på iMessage",
-    "buttons": [
-      "Annuller"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Log ind på FaceTime",
-    "buttons": [
-      "Annuller"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Log ind på iCloud",
-    "buttons": [
-      "Annuller"
+      "Åbn",
+      "Åben"
     ],
     "shouldAccept": true
   },
@@ -306,27 +255,6 @@
   },
   {
     "title": "“%1$@” ønsker adgang til %2$@-konti",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Det aktuelle Wi-Fi-netværk og andre i nærheden afbrydes indtil i morgen.\n\nWi-Fi vil stadig være tilgængeligt for AirDrop, Internetdeling og lokaliteternøjagtighed.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Det aktuelle WLAN-netværk og andre i nærheden afbrydes indtil i morgen.\n\nWLAN vil stadig være tilgængeligt for AirDrop, Internetdeling og lokaliteternøjagtighed.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Tilbehør, der er forbundet nu, vil få afbrudt forbindelsen, og andet tilbehør vil ikke oprette forbindelse.\n\nBluetooth vil stadig være tilgængeligt for Apple Watch, Apple Pencil, Internetdeling og Handoff.",
     "buttons": [
       "OK"
     ],
@@ -357,13 +285,6 @@
     "title": "“%@“ vil gøre data tilgængelige for Bluetooth-enheder i nærheden, også når du ikke bruger appen",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Log ind med Apple-id",
-    "buttons": [
-      "Annuller"
     ],
     "shouldAccept": true
   },
@@ -459,23 +380,60 @@
     "shouldAccept": true
   },
   {
-    "title": "Slå Bluetooth til for at tillade “%@” at oprette forbindelse til Tilbehør",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "\"%@\" vil gerne sende dig meddelelser",
     "buttons": [
-      "Tillad"
+      "Tillad",
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” vil gerne sende dig meddelelser",
     "buttons": [
+      "Tillad",
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Må “%@” få adgang til din lokalitet, når du bruger appen?",
+    "buttons": [
       "Tillad"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vil bruge Apple Music",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vil bruge dine hjemmedata",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Adgang til Sunhed",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Må “%@” få adgang til din lokalitet, mens du bruger appen?",
+    "buttons": [
+      "Tillad en gang"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Det gør det muligt for “%@” at finde og oprette forbindelse til Bluetooth-tilbehør. Denne app bruger muligvis også Bluetooth til at registrere, når du er i nærheden.",
+    "buttons": [
+      "OK"
     ],
     "shouldAccept": true
   }

@@ -20,7 +20,8 @@
     "title": "Cho phép “%@” truy cập vị trí của bạn khi bạn đang dùng ứng dụng?",
     "buttons": [
       "Cho phép",
-      "Chỉ khi dùng ứng dụng"
+      "Chỉ khi dùng ứng dụng",
+      "Cho phép một lần"
     ],
     "shouldAccept": true
   },
@@ -41,16 +42,9 @@
   {
     "title": "Bạn có muốn cho phép “%@” sử dụng Face ID không?",
     "buttons": [
-      "OK"
+      "Từ chối"
     ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Một số dữ liệu %@ của bạn sẽ được gửi đến Apple để xử lý yêu cầu của bạn.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Muốn Truy cập Micrô",
@@ -68,13 +62,6 @@
   },
   {
     "title": "“%@” Muốn Truy cập Lịch của bạn",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Dữ liệu lời nói từ ứng dụng này sẽ được gửi đến Apple để xử lý yêu cầu của bạn. Việc nãy cũng sẽ giúp Apple cải thiện công nghệ nhận dạng lời nói của mình.",
     "buttons": [
       "OK"
     ],
@@ -162,36 +149,35 @@
     "buttons": [
       "Để sau"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Cập nhật Cài đặt Nhà cung cấp",
     "buttons": [
-      "Để sau",
-      "Để Sau"
+      "Để sau"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Muốn Thêm Cấu hình VPN",
     "buttons": [
-      "Cho phép"
+      "Từ chối"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Muốn Lọc Nội dung Mạng",
     "buttons": [
-      "Cho phép"
+      "Từ chối"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone chưa được Kích hoạt",
     "buttons": [
       "Bỏ qua"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Bật Đọc chính tả?",
@@ -253,48 +239,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Đăng nhập vào App Store",
-    "buttons": [
-      "Hủy"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Đăng nhập vào Game Center",
-    "buttons": [
-      "Hủy"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Đăng nhập vào iTunes Store",
-    "buttons": [
-      "Hủy"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Đăng nhập vào iMessage",
-    "buttons": [
-      "Hủy"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Đăng nhập vào FaceTime",
-    "buttons": [
-      "Hủy"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Đăng nhập vào iCloud",
-    "buttons": [
-      "Hủy"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Cho phép “%@” cập nhật dữ liệu sức khỏe của bạn.",
     "buttons": [
       "OK"
@@ -310,27 +254,6 @@
   },
   {
     "title": "“%1$@” muốn truy cập các tài khoản %2$@ của bạn",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Mạng Wi-Fi hiện tại và các mạng khác gần bạn sẽ bị ngắt kết nối cho đến ngày mai.\n\nWi-Fi sẽ tiếp tục khả dụng cho AirDrop, Điểm truy cập cá nhân và độ chính xác về vị trí.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Mạng WLAN hiện tại và các mạng khác gần bạn sẽ bị ngắt kết nối cho đến ngày mai.\n\nWLAN sẽ tiếp tục khả dụng cho AirDrop, Điểm truy cập cá nhân và độ chính xác về vị trí.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Các phụ kiện hiện đang được kết nối sẽ bị ngắt kết nối và các phụ kiện khác sẽ không kết nối.\n\nBluetooth sẽ tiếp tục khả dụng cho Apple Watch, Apple Pencil, Điểm truy cập cá nhân và Handoff.",
     "buttons": [
       "OK"
     ],
@@ -428,13 +351,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Đăng nhập bằng ID Apple",
-    "buttons": [
-      "Hủy"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%@” đã sử dụng vị trí của bạn trong nền trong 3 ngày qua. Bạn có muốn tiếp tục cho phép sử dụng vị trí trong nền không?",
     "buttons": [
       "Cho phép"
@@ -509,7 +425,7 @@
     "buttons": [
       "Để Sau"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%1$@” Muốn Truy cập các Tài khoản %2$@ của bạn",
@@ -526,13 +442,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Bật Bluetooth để Cho phép “%@” Kết nối với Phụ kiện",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "\"%@\" Muốn Gửi Thông báo cho Bạn",
     "buttons": [
       "Cho phép"
@@ -543,6 +452,34 @@
     "title": "“%@” Muốn Gửi Thông báo cho Bạn",
     "buttons": [
       "Cho phép"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Muốn Gửi cho Bạn Thông báo",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Muốn Truy cập Apple Music",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn làm cho dữ liệu khả dụng đối với thiết bị bluetooth gần đó ngay cả khi bạn không sử dụng ứng dụng.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Truy cập Sức khỏe",
+    "buttons": [
+      "OK"
     ],
     "shouldAccept": true
   }

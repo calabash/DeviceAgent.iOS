@@ -19,7 +19,8 @@
     "title": "Надавати програмі «%@» доступ до вашого місця, коли ви нею користуєтесь?",
     "buttons": [
       "Надавати",
-      "Лише за використання"
+      "Лише за використання",
+      "Дозволити раз"
     ],
     "shouldAccept": true
   },
@@ -40,17 +41,9 @@
   {
     "title": "Ви хочете дозволити «%@» застосовувати Face ID?",
     "buttons": [
-      "OK"
+      "Заборонити"
     ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Деякі ваші дані %@ будуть надсилатися до Apple для опрацювання ваших запитів.",
-    "buttons": [
-      "OK",
-      "ОК"
-    ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "«%@» хоче отримати доступ до мікрофона",
@@ -69,14 +62,6 @@
   },
   {
     "title": "«%@» хоче отримати доступ до вашого календаря",
-    "buttons": [
-      "OK",
-      "ОК"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Голосові дані з цієї програми будуть надсилатися до Apple для опрацювання ваших запитів. Це також допоможе Apple вдосконалювати технологію розпізнавання мовлення.",
     "buttons": [
       "OK",
       "ОК"
@@ -174,35 +159,35 @@
     "buttons": [
       "Не зараз"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Оновлення налаштувань",
     "buttons": [
       "Не зараз"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "«%@» хоче додати VPN-конфігурації",
     "buttons": [
-      "Дозволити"
+      "Заборонити"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "«%@» хоче фільтрувати мережевий контент",
     "buttons": [
-      "Дозволити"
+      "Заборонити"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone не активовано",
     "buttons": [
       "Ігнорувати"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Увімкнути Диктування?",
@@ -261,48 +246,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Увійдіть в App Store",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увійдіть у Game Center",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увійдіть в iTunes Store",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увійдіть в iMessage",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увійдіть у FaceTime",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увійдіть в iCloud",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Дозвольте «%@» оновлювати ваші меддані.",
     "buttons": [
       "OK"
@@ -321,27 +264,6 @@
     "buttons": [
       "OK",
       "ОК"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Поточну мережу Wi-Fi та інші поблизу буде відʼєднано до завтра.\n\nWi-Fi лишатиметься доступним для AirDrop, Власного хот-спота і точнішої геолокації.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Поточну мережу WLAN та інші поблизу буде відʼєднано до завтра.\n\nWLAN лишатиметься доступним для AirDrop, Власного хот-спота і точнішої геолокації.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Підʼєднані зараз прилади буде відʼєднано, а інші прилади не підʼєднуватимуться.\n\nBluetooth лишатиметься доступним для Apple Watch, Apple Pencil, Власного хот-спота і Handoff.",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },
@@ -393,13 +315,6 @@
     "title": "«%@» хоче надавати Bluetooth-пристроям поблизу доступ до даних, навіть коли ви не використовуєте цю програму",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увійдіть з Apple ID",
-    "buttons": [
-      "Скасувати"
     ],
     "shouldAccept": true
   },
@@ -513,70 +428,28 @@
     "buttons": [
       "Не зараз"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Оновлення настройок оператора",
     "buttons": [
       "Не зараз"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "«%@» хоче додати конфігурації VPN",
     "buttons": [
-      "Дозволити"
+      "Заборонити"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "«%@» хоче фільтрувати мережний контент",
     "buttons": [
-      "Дозволити"
+      "Заборонити"
     ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увійти до App Store",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увійти до Game Center",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увійти до iTunes Store",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увійти до iMessage",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увійти до FaceTime",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Увійти до iCloud",
-    "buttons": [
-      "Скасувати"
-    ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Доступ до «Здоров’я»",
@@ -593,13 +466,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Увімкніть Bluetooth, щоб дати «%@» змогу підключатися до приладів",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "«%@» хоче слати вам сповіщення",
     "buttons": [
       "Дозволити"
@@ -609,7 +475,22 @@
   {
     "title": "«%@» хоче надсилати вам сповіщення",
     "buttons": [
-      "Дозволити"
+      "Дозволити",
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%@» хоче отримати доступ до Apple Music",
+    "buttons": [
+      "ОК"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%@» хоче надавати доступ до даних для пристроїв Bluetooth поруч, навіть коли ви не користуєтесь цією програмою.",
+    "buttons": [
+      "ОК"
     ],
     "shouldAccept": true
   }

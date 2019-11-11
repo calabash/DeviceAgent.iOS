@@ -34,16 +34,9 @@
   {
     "title": "您要允许“%@”使用面容 ID 吗？",
     "buttons": [
-      "好"
+      "不允许"
     ],
-    "shouldAccept": true
-  },
-  {
-    "title": "您的部分“%@”数据将发送给 Apple 以处理您的请求。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@”想访问您的麦克风",
@@ -61,13 +54,6 @@
   },
   {
     "title": "“%@”想访问您的日历",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "部分来自此应用的语音数据将发送给 Apple 以处理您的请求。这还将帮助 Apple 改进语音识别技术。",
     "buttons": [
       "好"
     ],
@@ -155,35 +141,35 @@
     "buttons": [
       "以后"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "运营商设置更新",
     "buttons": [
       "以后"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@”想添加 VPN 配置",
     "buttons": [
-      "允许"
+      "不允许"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@”想要过滤网络内容",
     "buttons": [
-      "允许"
+      "不允许"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone 尚未激活",
     "buttons": [
       "忽略"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "启用听写？",
@@ -242,48 +228,6 @@
     "shouldAccept": true
   },
   {
-    "title": "登录 App Store",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登录 Game Center",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登录 iTunes Store",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登录 iMessage 信息",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登录 FaceTime 通话",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登录 iCloud",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "允许“%@”更新您的健康数据。",
     "buttons": [
       "好"
@@ -299,27 +243,6 @@
   },
   {
     "title": "“%1$@”想访问 %2$@ 帐户",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "当前 Wi-Fi 网络及附近其他网络会在明天之前保持断开状态。\n\nWi-Fi 仍可用于“隔空投送”、“个人热点”和定位准确性。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "当前无线局域网络及附近其他网络会在明天之前保持断开状态。\n\n无线局域网仍可用于“隔空投送”、“个人热点”和定位准确性。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "当前已连接的配件将断开连接，且其他配件不会连接。\n\n蓝牙仍可用于 Apple Watch、Apple Pencil、“个人热点”和“接力”。",
     "buttons": [
       "好"
     ],
@@ -349,23 +272,9 @@
   {
     "title": "您要允许“%@”使用面容ID吗？",
     "buttons": [
-      "好"
+      "不允许"
     ],
-    "shouldAccept": true
-  },
-  {
-    "title": "您的部分%[tt]@数据将发送给Apple以处理您的请求。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "部分来自此App的语音数据将发送给Apple以处理您的请求。这还将帮助Apple改进语音识别技术。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "您要通过Siri来使用“%@”吗？",
@@ -405,16 +314,16 @@
   {
     "title": "“%@”想添加VPN配置",
     "buttons": [
-      "允许"
+      "不允许"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone尚未激活",
     "buttons": [
       "忽略"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "在“%@”App中打开",
@@ -424,56 +333,7 @@
     "shouldAccept": true
   },
   {
-    "title": "登录Game Center",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "通过Apple ID登录",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登录iMessage信息",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登录FaceTime通话",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登录iCloud",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%1$@”想访问%2$@帐户",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "当前Wi-Fi网络及附近其他网络会在明天之前保持断开状态。\n\nWi-Fi仍可用于“隔空投送”、“个人热点”和定位准确性。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "当前已连接的配件将断开连接，且其他配件不会连接。\n\n蓝牙仍可用于Apple Watch、Apple Pencil、“个人热点”和“接力”。",
     "buttons": [
       "好"
     ],
@@ -554,33 +414,12 @@
     "buttons": [
       "以后"
     ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登录 iMessage",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "登录 FaceTime",
-    "buttons": [
-      "取消"
-    ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@”想要使用“%@”登录",
     "buttons": [
       "继续"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "打开蓝牙来允许“%@”连接到配件",
-    "buttons": [
-      "好"
     ],
     "shouldAccept": true
   },
@@ -595,6 +434,27 @@
     "title": "“%@”想给您发送通知",
     "buttons": [
       "允许"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想给您发送推送通知",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问 Apple Music",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "允许“%@”在您使用该App时访问您的位置吗？",
+    "buttons": [
+      "允许一次"
     ],
     "shouldAccept": true
   }

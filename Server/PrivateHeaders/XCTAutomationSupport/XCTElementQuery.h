@@ -67,6 +67,7 @@
 - (id)initWithRootElement:(id)arg1 transformers:(id)arg2 options:(NSUInteger)arg3;
 - (id)initWithRootElement:(id)arg1 transformers:(id)arg2 options:(NSUInteger)arg3 isMacOS:(BOOL)arg4;
 - (id)initWithRootElement:(id)arg1 transformers:(id)arg2 options:(NSUInteger)arg3 isMacOS:(BOOL)arg4 timeoutControls:(id)arg5;
+- (id)matchingSnapshotsInSnapshotTree:(id)arg1 relatedElements:(id *)arg2 noMatchesMessage:(id *)arg3 error:(id *)arg4;
 - (id)matchingSnapshotsWithRelatedElements:(id *)arg1 noMatchesMessage:(id *)arg2 error:(id *)arg3;
 
 

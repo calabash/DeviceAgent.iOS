@@ -41,16 +41,9 @@
   {
     "title": "Deseja permitir que “%@” use Face ID?",
     "buttons": [
-      "OK"
+      "Não permitir"
     ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Alguns dados da aplicação %@ serão enviados à Apple para processar os seus pedidos.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” gostaria de aceder ao microfone",
@@ -68,13 +61,6 @@
   },
   {
     "title": "“%@” gostaria de aceder ao seu calendário",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Os dados de fala desta aplicação serão enviados à Apple para processar os seus pedidos. Estará igualmente a ajudar a Apple a melhorar a respetiva tecnologia de reconhecimento da fala.",
     "buttons": [
       "OK"
     ],
@@ -162,35 +148,35 @@
     "buttons": [
       "Agora não"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Atualização das definições de rede",
     "buttons": [
       "Agora não"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” gostaria de adicionar configurações de VPN",
     "buttons": [
-      "Permitir"
+      "Não permitir"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” gostaria de filtrar conteúdo da rede",
     "buttons": [
-      "Permitir"
+      "Não permitir"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "O iPhone não está ativado",
     "buttons": [
       "Ignorar"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Ativar Ditado?",
@@ -249,48 +235,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Inicie sessão na App Store",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicie sessão no Game Center",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicie sessão na iTunes Store",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicie sessão no iMessage",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicie sessão no FaceTime",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicie sessão em iCloud",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Permitir que “%@” atualize os seus dados de saúde.",
     "buttons": [
       "OK"
@@ -306,27 +250,6 @@
   },
   {
     "title": "“%1$@” gostaria de aceder às contas %2$@",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "A rede Wi‑Fi atual e outras próximas serão desligadas até amanhã.\n\nA ligação Wi‑Fi continuará a estar disponível para AirDrop, hotspot pessoal e precisão da localização.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "A rede WLAN atual e outras próximas serão desligadas até amanhã.\n\nA ligação WLAN continuará a estar disponível para AirDrop, hotspot pessoal e precisão da localização.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Os acessórios ligados serão desligados e outros acessórios não poderão estabelecer ligação.\n\nO Bluetooth continuará a estar disponível para usar com o Apple Watch, Apple Pencil, hotspot pessoal e Handoff.",
     "buttons": [
       "OK"
     ],
@@ -372,21 +295,7 @@
     "buttons": [
       "Agora não"
     ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicie sessão com o ID Apple",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicie sessão em iMessage",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” tem estado a usar a sua localização em segundo plano nos últimos 3 dias. Deseja continuar a permitir o uso em segundo plano?",
@@ -459,13 +368,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Ative Bluetooth para permitir que “%@” estabeleça ligação com os acessórios.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "\"%@\" gostaria de lhe enviar notificações",
     "buttons": [
       "Permitir"
@@ -475,7 +377,22 @@
   {
     "title": "“%@” gostaria de lhe enviar notificações",
     "buttons": [
-      "Permitir"
+      "Permitir",
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” gostaria de aceder a Apple Music",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” aceda à sua localização enquanto estiver a usar a aplicação?",
+    "buttons": [
+      "Permitir uma vez"
     ],
     "shouldAccept": true
   }

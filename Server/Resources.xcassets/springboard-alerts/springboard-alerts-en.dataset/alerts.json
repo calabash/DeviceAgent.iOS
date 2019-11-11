@@ -20,7 +20,8 @@
     "title": "Allow “%@” to access your location while you are using the app?",
     "buttons": [
       "Allow",
-      "Only While Using the App"
+      "Only While Using the App",
+      "Allow Once"
     ],
     "shouldAccept": true
   },
@@ -41,16 +42,9 @@
   {
     "title": "Do you want to allow “%@” to use Face ID?",
     "buttons": [
-      "OK"
+      "Don’t Allow"
     ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Some of your %@ data will be sent to Apple to process your requests.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Would Like to Access the Microphone",
@@ -68,13 +62,6 @@
   },
   {
     "title": "“%@” Would Like to Access Your Calendar",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Speech data from this app will be sent to Apple to process your requests. This will also help Apple improve its speech recognition technology.",
     "buttons": [
       "OK"
     ],
@@ -162,28 +149,28 @@
     "buttons": [
       "Not Now"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Carrier Settings Update",
     "buttons": [
       "Not Now"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Would Like to Add VPN Configurations",
     "buttons": [
-      "Allow"
+      "Don’t Allow"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Would Like to Filter Network Content",
     "buttons": [
-      "Allow"
+      "Don’t Allow"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone is not Activated",
@@ -191,7 +178,7 @@
       "Ignore",
       "Dismiss"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Enable Dictation?",
@@ -250,51 +237,10 @@
     "shouldAccept": true
   },
   {
-    "title": "Sign In to App Store",
-    "buttons": [
-      "Cancel"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Sign In to Game Center",
-    "buttons": [
-      "Cancel"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Sign In to iTunes Store",
-    "buttons": [
-      "Cancel"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Sign In to iMessage",
-    "buttons": [
-      "Cancel"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Sign In to FaceTime",
-    "buttons": [
-      "Cancel"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Sign In to iCloud",
-    "buttons": [
-      "Cancel"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%@” Would Like to Send You Notifications",
     "buttons": [
-      "Allow"
+      "Allow",
+      "OK"
     ],
     "shouldAccept": true
   },
@@ -314,27 +260,6 @@
   },
   {
     "title": "“%1$@” Would Like Access to %2$@ Accounts",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "The current Wi-Fi network and others nearby will be disconnected until tomorrow.\n\nWi-Fi will continue to be available for AirDrop, Personal Hotspot, and location accuracy.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "The current WLAN network and others nearby will be disconnected until tomorrow.\n\nWLAN will continue to be available for AirDrop, Personal Hotspot, and location accuracy.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Currently connected accessories will be disconnected and other accessories will not connect.\n\nBluetooth will continue to be available for Apple Watch, Apple Pencil, Personal Hotspot, and Handoff.",
     "buttons": [
       "OK"
     ],
@@ -372,13 +297,6 @@
     "title": "“%@” would like to make data available to nearby Bluetooth devices even when you’re not using the app",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Sign In with Apple ID",
-    "buttons": [
-      "Cancel"
     ],
     "shouldAccept": true
   },
@@ -488,16 +406,23 @@
     "shouldAccept": true
   },
   {
-    "title": "Turn On Bluetooth to Allow “%@” to Connect to Accessories",
+    "title": "\"%@\" Would Like to Send You Notifications",
+    "buttons": [
+      "Allow"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Would Like to Access Apple Music",
     "buttons": [
       "OK"
     ],
     "shouldAccept": true
   },
   {
-    "title": "\"%@\" Would Like to Send You Notifications",
+    "title": "“%@” would like to make data available to nearby bluetooth devices even when you're not using the app.",
     "buttons": [
-      "Allow"
+      "OK"
     ],
     "shouldAccept": true
   }

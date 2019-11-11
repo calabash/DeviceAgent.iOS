@@ -2,139 +2,121 @@
     {
         "name": "CoreLocation.framework",
         "values": [
-            { "title": "LOCATION_CLIENT_PERMISSION", "button": "LOCATION_CLIENT_PERMISSION_KEEP_ALWAYS_BUTTON" },
-            { "title": "LOCATION_CLIENT_PERMISSION", "button": "LOCATION_CLIENT_PERMISSION_OK" },
-            { "title": "LOCATION_CLIENT_PERMISSION_ALWAYS", "button": "LOCATION_CLIENT_PERMISSION_OK" },
-            { "title": "LOCATION_CLIENT_PERMISSION_WHENINUSE", "button": "LOCATION_CLIENT_PERMISSION_KEEP_ALWAYS_BUTTON" },
-            { "title": "LOCATION_CLIENT_PERMISSION_WHENINUSE", "button": "LOCATION_CLIENT_PERMISSION_OK" },
-            { "title": "LOCATION_CLIENT_PERMISSION_UPGRADE_WHENINUSE_ALWAYS", "button": "LOCATION_CLIENT_PERMISSION_OK" },
-            { "title": "LOCATION_CLIENT_PERMISSION_REPROMPT", "button": "LOCATION_CLIENT_PERMISSION_OK" },
-            { "title": "LOCATION_CLIENT_PERMISSION_REPROMPT_ZERO", "button": "LOCATION_CLIENT_PERMISSION_OK" },
-            { "title": "LOCATION_CLIENT_PERMISSION_REPROMPT_ONE", "button": "LOCATION_CLIENT_PERMISSION_OK" }
+            { "title": "LOCATION_CLIENT_PERMISSION", "button": "LOCATION_CLIENT_PERMISSION_KEEP_ALWAYS_BUTTON", "default_value": true },
+            { "title": "LOCATION_CLIENT_PERMISSION", "button": "LOCATION_CLIENT_PERMISSION_OK", "default_value": true },
+            { "title": "LOCATION_CLIENT_PERMISSION_ALWAYS", "button": "LOCATION_CLIENT_PERMISSION_OK", "default_value": true },
+            { "title": "LOCATION_CLIENT_PERMISSION_WHENINUSE", "button": "LOCATION_CLIENT_PERMISSION_KEEP_ALWAYS_BUTTON", "default_value": true },
+            { "title": "LOCATION_CLIENT_PERMISSION_WHENINUSE", "button": "LOCATION_CLIENT_PERMISSION_OK", "default_value": true },
+            { "title": "LOCATION_CLIENT_PERMISSION_WHENINUSE", "button": "LOCATION_CLIENT_PERMISSION_WHENINUSE_BUTTON", "default_value": true },
+            { "title": "LOCATION_CLIENT_PERMISSION_UPGRADE_WHENINUSE_ALWAYS", "button": "LOCATION_CLIENT_PERMISSION_OK", "default_value": true },
+            { "title": "LOCATION_CLIENT_PERMISSION_REPROMPT", "button": "LOCATION_CLIENT_PERMISSION_OK", "default_value": true },
+            { "title": "LOCATION_CLIENT_PERMISSION_REPROMPT_ZERO", "button": "LOCATION_CLIENT_PERMISSION_OK", "default_value": true },
+            { "title": "LOCATION_CLIENT_PERMISSION_REPROMPT_ONE", "button": "LOCATION_CLIENT_PERMISSION_OK", "default_value": true }
+        ]
+    },
+    {
+        "name": "Maps.app",
+        "values": [
+            { "title": "Allow '%@' to access your location while you use the app?", "button": "Allow", "default_value": true },
+            { "title": "Allow '%@' to access your location while you are using the app?", "button": "Allow", "default_value": true },
+            { "title": "Allow '%@' to access your location while you are using the app?", "button": "Allow Once", "default_value": true }
         ]
     },
     {
         "name": "TCC.framework",
         "values": [
-            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceFaceID", "button": "REQUEST_ACCESS_ALLOW" },
-            { "title": "REQUEST_ACCESS_INFO_SERVICE_kTCCServiceSiri", "button": "REQUEST_ACCESS_ALLOW" },
-            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceMicrophone", "button": "REQUEST_ACCESS_ALLOW" },
-            { "title": "REQUEST_ACCESS_SERVICE_kTCCServicePhotosAdd", "button": "REQUEST_ACCESS_ALLOW" },
-            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceCalendar", "button": "REQUEST_ACCESS_ALLOW" },
-            { "title": "REQUEST_ACCESS_INFO_SERVICE_kTCCServiceSpeechRecognition", "button": "REQUEST_ACCESS_ALLOW" },
-            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceMotion", "button": "REQUEST_ACCESS_ALLOW" },
-            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceCamera", "button": "REQUEST_ACCESS_ALLOW" },
-            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceReminders", "button": "REQUEST_ACCESS_ALLOW" },
-            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceSiri", "button": "REQUEST_ACCESS_ALLOW" },
-            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceMediaLibrary", "button": "REQUEST_ACCESS_ALLOW" },
-            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceAddressBook", "button": "REQUEST_ACCESS_ALLOW" },
-            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceContactsLimited", "button": "REQUEST_ACCESS_ALLOW"},
-            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceContactsFull", "button": "REQUEST_ACCESS_ALLOW"},
-            { "title": "REQUEST_ACCESS_SERVICE_kTCCServicePhotos", "button": "REQUEST_ACCESS_ALLOW" },
-            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceWillow", "button": "REQUEST_ACCESS_ALLOW" },
-            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceCalls", "button": "REQUEST_ACCESS_ALLOW" },
-            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceBluetoothPeripheral", "button": "REQUEST_ACCESS_ALLOW" },
-            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceBluetoothWhileInUse", "button": "REQUEST_ACCESS_ALLOW"},
-            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceBluetoothAlways", "button": "REQUEST_ACCESS_ALLOW"},
-            { "title": "REQUEST_DEFAULT_PURPOSE_STRING_SERVICE_kTCCServiceBluetoothAlways", "button": "REQUEST_ACCESS_ALLOW"},
-            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceSpeechRecognition", "button": "REQUEST_ACCESS_ALLOW" }
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceFaceID", "button": "REQUEST_ACCESS_DENY", "default_value": false },
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceMicrophone", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServicePhotosAdd", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceCalendar", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceMotion", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceCamera", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceReminders", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceSiri", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceMediaLibrary", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceAddressBook", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceContactsLimited", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceContactsFull", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServicePhotos", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceWillow", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceCalls", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceBluetoothPeripheral", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceBluetoothWhileInUse", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceBluetoothAlways", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
+            { "title": "REQUEST_DEFAULT_PURPOSE_STRING_SERVICE_kTCCServiceBluetoothAlways", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceSpeechRecognition", "button": "REQUEST_ACCESS_ALLOW", "default_value": true }
         ]
     },
     {
         "name": "CoreTelephony.framework",
         "values": [
-            { "title": "CBMessageBody", "button": "CBMessageDeclineButton" },
-            { "title": "CBMessageTitle", "button": "CBMessageDeclineButton"},
-            { "title": "NO_SIM_CARD_INSTALLED", "button": "OK" }
+            { "title": "CBMessageBody", "button": "CBMessageDeclineButton", "default_value": false },
+            { "title": "CBMessageTitle", "button": "CBMessageDeclineButton", "default_value": false },
+            { "title": "NO_SIM_CARD_INSTALLED", "button": "OK", "default_value": true }
         ]
     },
     {
         "name": "NetworkExtension.framework",
         "values": [
-            { "title": "APP_WARNING_HEADER_VPN", "button": "ALLOW_BUTTON" },
-            { "title": "APP_WARNING_HEADER_FILTER", "button": "ALLOW_BUTTON" },
-            { "title": "APP_WARNING_HEADER_DNS_PROXY", "button": "ALLOW_BUTTON" }
+            { "title": "APP_WARNING_HEADER_VPN", "button": "DONT_ALLOW_BUTTON", "default_value": false },
+            { "title": "APP_WARNING_HEADER_FILTER", "button": "DONT_ALLOW_BUTTON", "default_value": false },
+            { "title": "APP_WARNING_HEADER_DNS_PROXY", "button": "ALLOW_BUTTON", "default_value": true }
         ]
     },
     {
         "name": "SpringBoard.app",
         "values": [
-            { "title": "ACTIVATION_FAILED_TITLE", "button": "ACTIVATION_FAILED_IGNORE_BUTTON" }
+            { "title": "ACTIVATION_FAILED_TITLE", "button": "ACTIVATION_FAILED_IGNORE_BUTTON", "default_value": false }
         ]
     },
     {
         "name": "TextInput.framework",
         "values": [
-            { "title": "DICTATION_OPT_IN_TITLE", "button": "DICTATION_OPT_IN_NOT_NOW" },
-            { "title": "DICTATION_OPT_IN_ENABLE", "button": "DICTATION_OPT_IN_NOT_NOW" },
-            { "title": "EXTENSION_OPT_IN_TITLE", "button": "DICTATION_OPT_IN_NOT_NOW" }
+            { "title": "DICTATION_OPT_IN_TITLE", "button": "DICTATION_OPT_IN_NOT_NOW", "default_value": true },
+            { "title": "DICTATION_OPT_IN_ENABLE", "button": "DICTATION_OPT_IN_NOT_NOW", "default_value": true },
+            { "title": "EXTENSION_OPT_IN_TITLE", "button": "DICTATION_OPT_IN_NOT_NOW", "default_value": true }
         ]
     },
     {
         "name": "MobileSafari.app",
         "values": [
-            { "title": "Open in “%@”", "button": "Open" },
-            { "title": "Open in “%@”?", "button": "Open" },
-            { "title": "Search %@ (Quick Website Search)", "button": "Open" },
-            { "title": "Open this page in “%@”?", "button": "Open" },
-            { "title": "Open in the %@ app", "button": "Open" }
+            { "title": "Open in “%@”", "button": "Open", "default_value": true },
+            { "title": "Open in “%@”?", "button": "Open", "default_value": true },
+            { "title": "Search %@ (Quick Website Search)", "button": "Open", "default_value": true },
+            { "title": "Open this page in “%@”?", "button": "Open", "default_value": true },
+            { "title": "Open in the %@ app", "button": "Open", "default_value": true }
         ]
     },
     {
         "name": "SafariServices.framework",
         "values": [
-            { "title": "“%@” Wants to Use “%@” to Sign In", "button": "Continue" }
-        ]
-    },
-    {
-        "name": "MobileBluetooth.framework",
-        "values": [
-            { "title": "LE_POWER_OFF_HEADER", "button": "OK"}
-        ]
-    },
-    {
-        "name": "AuthKit.framework",
-        "values": [
-            { "title": "INLINE_PASSWORD_ALERT_TITLE_SERVICE_APP_STORE", "button": "INLINE_PASSWORD_ALERT_CANCEL_BUTTON" },
-            { "title": "INLINE_PASSWORD_ALERT_TITLE_SERVICE_GAME_CENTER", "button": "INLINE_PASSWORD_ALERT_CANCEL_BUTTON" },
-            { "title": "INLINE_PASSWORD_ALERT_TITLE_SERVICE_ITUNES", "button": "INLINE_PASSWORD_ALERT_CANCEL_BUTTON" },
-            { "title": "INLINE_PASSWORD_ALERT_TITLE_SERVICE_IMESSAGE", "button": "INLINE_PASSWORD_ALERT_CANCEL_BUTTON" },
-            { "title": "INLINE_PASSWORD_ALERT_TITLE_SERVICE_FACETIME", "button": "INLINE_PASSWORD_ALERT_CANCEL_BUTTON" },
-            { "title": "INLINE_PASSWORD_ALERT_TITLE_SERVICE_ICLOUD", "button": "INLINE_PASSWORD_ALERT_CANCEL_BUTTON" }
+            { "title": "“%@” Wants to Use “%@” to Sign In", "button": "Continue", "default_value": true }
         ]
     },
     {
         "name": "UserNotificationsServer.framework",
         "values": [
-            { "title": "CRITICAL_ALERT_PERMISSION_ALERT_TITLE", "button": "PERMISSION_ALERT_ALLOW" },
-            { "title": "USER_NOTIFICATION_PERMISSION_ALERT_TITLE", "button": "PERMISSION_ALERT_ALLOW" }
+            { "title": "CRITICAL_ALERT_PERMISSION_ALERT_TITLE", "button": "PERMISSION_ALERT_ALLOW", "default_value": true },
+            { "title": "USER_NOTIFICATION_PERMISSION_ALERT_TITLE", "button": "PERMISSION_ALERT_ALLOW", "default_value": true }
         ]
     },
     {
         "name": "HealthUI.framework",
         "values": [
-            { "title": "ALLOW_DEVICE_DATA_UPDATES", "button": "OD_ALERT_OK"},
-            { "title": "AUTHORIZATION_DONT_ALLOW_ALERT_TITLE", "button": "OD_ALERT_OK"}
+            { "title": "ALLOW_DEVICE_DATA_UPDATES", "button": "OD_ALERT_OK", "default_value": true },
+            { "title": "AUTHORIZATION_DONT_ALLOW_ALERT_TITLE", "button": "OD_ALERT_OK", "default_value": true }
         ]
     },
     {
         "name": "Accounts.framework",
         "values": [
-            { "title": "ACCOUNT_ACCESS_MESSAGE", "button": "OK"}
-        ]
-    },
-    {
-        "name": "ConnectivityModule.bundle",
-        "values": [
-            { "title": "CONTROL_CENTER_WIFI_BEHAVIOR_ALERT_MESSAGE", "button": "CONTROL_CENTER_ALERT_OK" },
-            { "title": "CONTROL_CENTER_WLAN_BEHAVIOR_ALERT_MESSAGE", "button": "CONTROL_CENTER_ALERT_OK" },
-            { "title": "CONTROL_CENTER_BLUETOOTH_BEHAVIOR_ALERT_MESSAGE", "button": "CONTROL_CENTER_ALERT_OK" }
+            { "title": "ACCOUNT_ACCESS_MESSAGE", "button": "OK", "default_value": true }
         ]
     },
     {
         "name": "UIKitCore.framework",
         "values": [
-            { "title": "“%@” Would Like To Use Your Current Location", "button": "OK" }
+            { "title": "“%@” Would Like To Use Your Current Location", "button": "OK", "default_value": true }
         ]
     }
 ]

@@ -39,11 +39,12 @@
 + (id)deviceElement;
 + (id)elementWithAXUIElement:(struct __AXUIElement *)arg1;
 + (id)elementWithProcessIdentifier:(NSInteger)arg1;
++ (id)elementWithProcessIdentifier:(NSInteger)arg1 originPlatform:(NSUInteger)arg2;
 + (id)mockElementWithProcessIdentifier:(NSInteger)arg1;
 + (id)mockElementWithProcessIdentifier:(NSInteger)arg1 originPlatform:(NSUInteger)arg2;
 + (id)mockElementWithProcessIdentifier:(NSInteger)arg1 originPlatform:(NSUInteger)arg2 payload:(id)arg3;
 + (id)mockElementWithProcessIdentifier:(NSInteger)arg1 payload:(id)arg2;
-- (id)initWithAXUIElement:(struct __AXUIElement *)arg1 elementType:(NSUInteger)arg2;
+- (id)initWithAXUIElement:(struct __AXUIElement *)arg1 elementType:(NSUInteger)arg2 originPlatform:(NSUInteger)arg3;
 - (id)initWithToken:(id)arg1 elementOrHash:(NSUInteger)arg2 elementID:(NSUInteger)arg3 pid:(NSInteger)arg4 elementType:(NSUInteger)arg5 originPlatform:(NSUInteger)arg6;
 
 @end

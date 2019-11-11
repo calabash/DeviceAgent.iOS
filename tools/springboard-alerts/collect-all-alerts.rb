@@ -6,6 +6,8 @@ require_relative 'helpers'
 
 # Init with current Xcode
 xcode = RunLoop::Xcode.new
+root_dir = xcode.core_simulator_dir
+root_dir = ARGV[0] unless ARGV.empty? || ARGV[0].empty?
 
 output_path = File.expand_path("reports/all-alerts/#{xcode.version}/")
 
@@ -24,7 +26,7 @@ def collect_localization_dictionary(lang_dir_path)
 end
 
 collection = {}
-Dir.glob("#{xcode.core_simulator_dir}/**/*.lproj") do |lang_dir|
+Dir.glob("#{root_dir}/**/*.lproj") do |lang_dir|
   puts "Scanning #{lang_dir}..."
   lang_name = File.basename(lang_dir, '.lproj')
   dict = collect_localization_dictionary(lang_dir)

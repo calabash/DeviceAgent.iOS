@@ -41,16 +41,9 @@
   {
     "title": "Darf „%@“ Face ID verwenden?",
     "buttons": [
-      "OK"
+      "Nicht erlauben"
     ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Einige deiner Daten von %@ werden an Apple gesendet, um deine Anfragen zu verarbeiten.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "„%@“ möchte auf das Mikrofon zugreifen",
@@ -68,13 +61,6 @@
   },
   {
     "title": "„%@“ möchte auf deinen Kalender zugreifen",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Sprachdaten von dieser App werden an Apple gesendet, um deine Anfragen zu verarbeiten. Außerdem werden sie verwendet, um Apple beim Verbessern der Spracherkennungstechnologie zu unterstützen.",
     "buttons": [
       "OK"
     ],
@@ -162,35 +148,35 @@
     "buttons": [
       "Später"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Update der Netzbetreiber-Einstellungen",
     "buttons": [
       "Später"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "„%@“ möchte VPN-Konfigurationen hinzufügen",
     "buttons": [
-      "Erlauben"
+      "Nicht erlauben"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Darf „%@“ Netzwerkinhalte filtern?",
     "buttons": [
-      "Erlauben"
+      "Nicht erlauben"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone ist nicht aktiviert",
     "buttons": [
       "Ignorieren"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Diktierfunktion aktivieren?",
@@ -249,48 +235,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Im App Store anmelden",
-    "buttons": [
-      "Abbrechen"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Beim Game Center anmelden",
-    "buttons": [
-      "Abbrechen"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Im iTunes Store anmelden",
-    "buttons": [
-      "Abbrechen"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Bei iMessage anmelden",
-    "buttons": [
-      "Abbrechen"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Bei FaceTime anmelden",
-    "buttons": [
-      "Abbrechen"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Bei iCloud anmelden",
-    "buttons": [
-      "Abbrechen"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Darf „%@“ deine Gesundheitsdaten aktualisieren?",
     "buttons": [
       "OK"
@@ -308,20 +252,6 @@
     "title": "„%1$@“ möchte auf %2$@-Accounts zugreifen",
     "buttons": [
       "Erlauben"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Das aktuelle WLAN und andere nahegelegene drahtlose Netzwerke werden bis morgen getrennt.\n\nWLAN ist weiterhin für AirDrop, den persönlichen Hotspot und zur Standortgenauigkeit verfügbar.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Die Verbindung zu aktuell verbundenem Zubehör wird getrennt und anderes Zubehör kann nicht verbunden werden.\n\nBluetooth ist weiterhin für Apple Watch, Apple Pencil, den persönlichen Hotspot und Handoff verfügbar.",
-    "buttons": [
-      "OK"
     ],
     "shouldAccept": true
   },
@@ -350,13 +280,6 @@
     "title": "„%@“ möchte Daten mit Bluetooth-Geräten in der Nähe teilen, auch wenn die App nicht benutzt wird",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Mit Apple‑ID anmelden",
-    "buttons": [
-      "Abbrechen"
     ],
     "shouldAccept": true
   },
@@ -461,7 +384,8 @@
   {
     "title": "Darf „%@“ auf deinen Standort zugreifen, wenn du die App benutzt?",
     "buttons": [
-      "Erlauben"
+      "Erlauben",
+      "Einmal erlauben"
     ],
     "shouldAccept": true
   },
@@ -564,20 +488,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Schakel Bluetooth in om '%@' verbinding te laten maken met accessoires",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Bluetooth aktivieren, damit „%@“ die Verbindung zum Zubehör herstellen kann",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "„%@\" möchte dir Mitteilungen senden",
     "buttons": [
       "Erlauben"
@@ -588,6 +498,160 @@
     "title": "„%@“ möchte dir Mitteilungen senden",
     "buttons": [
       "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ Ihnen Mitteilungen senden?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Wilt u %@ toegang tot uw locatie toestaan, zelfs als u de app niet gebruikt?",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Wilt u %@ toegang tot uw locatie toestaan terwijl u de app gebruikt?",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Wilt u %@ ook toegang tot uw locatie toestaan, zelfs als u de app niet gebruikt?",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ heeft op de achtergrond uw locatie gebruikt. Geeft u toestemming om daarmee door te gaan?",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf Ihren Standort zugreifen, selbst wenn Sie die App nicht benutzen?",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf Ihren Standort zugreifen, wenn Sie die App benutzen?",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auch auf Ihren Standort zugreifen, wenn Sie die App nicht benutzen?",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ hat Ihren Standort im Hintergrund verwendet. Möchten Sie dies weiterhin erlauben?",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf das Mikrofon zugreifen?",
+    "buttons": [
+      "Ja"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf Ihren Kalender zugreifen?",
+    "buttons": [
+      "Ja"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte auf Ihre Bewegungs- und Fitnessdaten zugreifen",
+    "buttons": [
+      "Ja"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf Ihre Kamera zugreifen?",
+    "buttons": [
+      "Ja"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf Ihre Erinnerungen zugreifen?",
+    "buttons": [
+      "Ja"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf Apple Music zugreifen?",
+    "buttons": [
+      "Ja"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf Ihre Kontakte zugreifen?",
+    "buttons": [
+      "Ja"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf Ihre Fotos zugreifen?",
+    "buttons": [
+      "Ja"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ auf Ihre Home-Daten zugreifen?",
+    "buttons": [
+      "Ja"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte für benachbarte Bluetooth-Geräte bereitstellen, auch wenn Sie die App nicht nutzen.",
+    "buttons": [
+      "Ja"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Er zijn nieuwe instellingen beschikbaar. Wilt u ze nu bijwerken?",
+    "buttons": [
+      "Nu niet"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Es sind neue Einstellungen verfügbar. Möchten Sie sie jetzt aktualisieren?",
+    "buttons": [
+      "Später"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ Ihre Gesundheitsdaten aktualisieren?",
+    "buttons": [
+      "OK"
     ],
     "shouldAccept": true
   }

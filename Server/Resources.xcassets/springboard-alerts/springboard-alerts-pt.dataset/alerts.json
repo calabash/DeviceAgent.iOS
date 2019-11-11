@@ -41,16 +41,9 @@
   {
     "title": "Deseja permitir que “%@” use o Face ID?",
     "buttons": [
-      "OK"
+      "Não Permitir"
     ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Alguns dos seus dados de %@ serão enviados à Apple para processar as solicitações.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Deseja Ter Acesso ao Microfone",
@@ -68,13 +61,6 @@
   },
   {
     "title": "“%@” Deseja Ter Acesso ao Seu Calendário",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Dados de fala deste app serão enviados à Apple para processar as solicitações. Isso também ajudará a Apple a melhorar sua tecnologia de reconhecimento de fala.",
     "buttons": [
       "OK"
     ],
@@ -162,35 +148,35 @@
     "buttons": [
       "Agora Não"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Atualização dos Ajustes da Operadora",
     "buttons": [
       "Agora Não"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Deseja Adicionar Configurações de VPN",
     "buttons": [
-      "Permitir"
+      "Não Permitir"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Deseja Filtrar Conteúdo da Rede",
     "buttons": [
-      "Permitir"
+      "Não Permitir"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "O iPhone não está Ativado",
     "buttons": [
       "Ignorar"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Ativar Ditado?",
@@ -249,48 +235,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Inicie a Sessão na App Store",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicie a Sessão no Game Center",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicie a Sessão na iTunes Store",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicie a Sessão no iMessage",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicie a Sessão no FaceTime",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicie a Sessão no iCloud",
-    "buttons": [
-      "Cancelar"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Permitir que “%@” atualize seus dados de saúde.",
     "buttons": [
       "OK"
@@ -306,27 +250,6 @@
   },
   {
     "title": "“%1$@” Deseja Ter Acesso às Contas do %2$@",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "A rede Wi-Fi atual e outras redes por perto serão desconectadas até amanhã.\n\nO Wi-Fi continuará disponível para o AirDrop, Acesso Pessoal e precisão da localização.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "A rede WLAN atual e outras redes por perto serão desconectadas até amanhã.\n\nO WLAN continuará disponível para o AirDrop, Acesso Pessoal e precisão da localização.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Os acessórios conectados atualmente serão desconectados e outros acessórios não se conectarão.\n\nO Bluetooth continuará disponível para o Apple Watch, Apple Pencil, Acesso Pessoal e Handoff.",
     "buttons": [
       "OK"
     ],
@@ -364,13 +287,6 @@
     "title": "“%@” deseja disponibilizar dados para os dispositivos Bluetooth por perto até mesmo quando você não estiver usando o app",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicie a Sessão com o ID Apple",
-    "buttons": [
-      "Cancelar"
     ],
     "shouldAccept": true
   },
@@ -459,13 +375,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Dados de fala deste aplicativo serão enviados à Apple para processar as solicitações. Isso também ajudará a Apple a melhorar sua tecnologia de reconhecimento de fala.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%@” deseja disponibilizar dados para os dispositivos Bluetooth por perto até mesmo quando você não estiver usando o aplicativo.",
     "buttons": [
       "OK"
@@ -487,13 +396,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Ative o Bluetooth para Permitir que “%@” se Conecte a Acessórios",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "\"%@\" Deseja Enviar Notificações",
     "buttons": [
       "Permitir"
@@ -504,6 +406,48 @@
     "title": "“%@” Deseja Enviar Notificações",
     "buttons": [
       "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Enviar-lhe Notificações",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso ao Apple Music",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” deseja disponibilizar dados para os dispositivos Bluetooth das redondezas até mesmo quando você não estiver usando o aplicativo.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "O iPhone não está Ativado.",
+    "buttons": [
+      "Ignorar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Acesso à Saúde",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” acesse sua localização enquanto você estiver usando o app?",
+    "buttons": [
+      "Permitir Uma Vez"
     ],
     "shouldAccept": true
   }

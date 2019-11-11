@@ -21,7 +21,8 @@
     "title": "Permets que “%@” accedeixi a la teva ubicació mentre estàs utilitzant l’app?",
     "buttons": [
       "Permetre",
-      "Només amb l’app en ús"
+      "Només amb l’app en ús",
+      "Permetre una vegada"
     ],
     "shouldAccept": true
   },
@@ -42,16 +43,9 @@
   {
     "title": "Vols permetre que “%@” utilitzi el Face ID?",
     "buttons": [
-      "OK"
+      "No permetre"
     ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Algunes dades de %@ s’enviaran a Apple per processar les teves peticions.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” vol accedir al micròfon",
@@ -69,13 +63,6 @@
   },
   {
     "title": "“%@” vol accedir al teu calendari",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Les dades de veu d’aquesta app s’enviaran a Apple per processar les teves peticions i perquè Apple pugui millorar la tecnologia de reconeixement de veu.",
     "buttons": [
       "OK"
     ],
@@ -163,35 +150,35 @@
     "buttons": [
       "Ara no"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Actualització de la configuració de l’operador",
     "buttons": [
       "Ara no"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” vol afegir configuracions de VPN",
     "buttons": [
-      "Permetre"
+      "No permetre"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” vol filtrar el contingut de la xarxa",
     "buttons": [
-      "Permetre"
+      "No permetre"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "L’iPhone no s’ha activat",
     "buttons": [
       "Ignorar"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Activar el dictat?",
@@ -250,48 +237,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Inicia sessió a l’App Store",
-    "buttons": [
-      "Cancel·lar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicia sessió al Game Center",
-    "buttons": [
-      "Cancel·lar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicia sessió a l’iTunes Store",
-    "buttons": [
-      "Cancel·lar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicia sessió a l’iMessage",
-    "buttons": [
-      "Cancel·lar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicia sessió al FaceTime",
-    "buttons": [
-      "Cancel·lar"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Inicia sessió a l’iCloud",
-    "buttons": [
-      "Cancel·lar"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Permetre que “%@” actualitzi la teva informació mèdica.",
     "buttons": [
       "OK"
@@ -307,27 +252,6 @@
   },
   {
     "title": "“%1$@” vol accedir als comptes de %2$@",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "La xarxa Wi‑Fi actual i la resta de xarxes properes es desconnectaran fins demà.\n\nLes xarxes Wi‑Fi continuaran estant disponibles per a l’AirDrop, “Compartir Internet” i per millorar la precisió de la ubicació.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "La xarxa WLAN actual i la resta de xarxes properes es desconnectaran fins demà.\n\nLes xarxes WLAN continuaran estant disponibles per a l’AirDrop, “Compartir Internet” i per millorar la precisió de la ubicació.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Es desconnectaran els accessoris que en aquest moment estiguin connectats i no es connectarà cap altre accessori.\n\nEl Bluetooth continuarà estant disponible per a l’Apple Watch, l’Apple Pencil, “Compartir Internet” i el Handoff.",
     "buttons": [
       "OK"
     ],
@@ -362,35 +286,7 @@
     "shouldAccept": true
   },
   {
-    "title": "Inicia sessió amb l’ID d’Apple",
-    "buttons": [
-      "Cancel·lar"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Permets que “%@” actualitzi la teva informació mèdica.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "La xarxa Wi‑Fi actual i la resta de xarxes properes es desconnectaran fins demà.\n\nLes xarxes Wi‑Fi continuaran estant disponibles per a l’AirDrop, el punt d’accés personal, i per millorar la precisió de la ubicació.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "La xarxa WLAN actual i la resta de xarxes properes es desconnectaran fins demà.\n\nLes xarxes WLAN continuaran estant disponibles per a l’AirDrop, el punt d’accés personal, i per millorar la precisió de la ubicació.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Es desconnectaran els accessoris que en aquest moment estiguin connectats i no es connectarà cap altre accessori.\n\nEl Bluetooth continuarà estant disponible per a l’Apple Watch, l’Apple Pencil, el punt d’accés personal i el Handoff.",
     "buttons": [
       "OK"
     ],
@@ -481,13 +377,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Les dades de veu d’aquesta aplicació s’enviaran a Apple per processar les teves peticions i perquè Apple pugui millorar la tecnologia de reconeixement de veu.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%@” vol posar les dades a disposició dels dispositius Bluetooth propers fins i tot quan no utilitzis l’aplicació.",
     "buttons": [
       "OK"
@@ -499,7 +388,7 @@
     "buttons": [
       "Ara no"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Obrir-ho a l’aplicació %@",
@@ -516,23 +405,25 @@
     "shouldAccept": true
   },
   {
-    "title": "Activar Bluetooth per permetre que “%@” es connecti als accessoris",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "\"%@\" et vol enviar notificacions",
     "buttons": [
-      "Permetre"
+      "Permetre",
+      "OK"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” et vol enviar notificacions",
     "buttons": [
-      "Permetre"
+      "Permetre",
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol accedir a l’Apple Music",
+    "buttons": [
+      "OK"
     ],
     "shouldAccept": true
   }

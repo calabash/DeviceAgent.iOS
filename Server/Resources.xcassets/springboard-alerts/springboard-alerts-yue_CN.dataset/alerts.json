@@ -2,16 +2,9 @@
   {
     "title": "您要允许“%@”使用面容ID吗？",
     "buttons": [
-      "好"
+      "不允许"
     ],
-    "shouldAccept": true
-  },
-  {
-    "title": "您的部分“%@”数据将发送给Apple以处理您的请求。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@”想访问您的麦克风",
@@ -29,13 +22,6 @@
   },
   {
     "title": "“%@”想访问您的日历",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "部分来自此App的语音数据将发送给Apple以处理您的请求。这还将帮助Apple改进语音识别技术。",
     "buttons": [
       "好"
     ],
@@ -154,20 +140,6 @@
     "shouldAccept": true
   },
   {
-    "title": "您的部分“%@”数据将发送给 Apple 以处理您的请求。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "部分来自此应用的语音数据将发送给 Apple 以处理您的请求。这还将帮助 Apple 改进语音识别技术。",
-    "buttons": [
-      "好"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "您要通过 Siri 来使用“%@”吗？",
     "buttons": [
       "好"
@@ -205,14 +177,21 @@
   {
     "title": "您要允许“%@”使用面容 ID 吗？",
     "buttons": [
-      "好"
+      "不允许"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@”想在后台接收 VoIP 网络电话",
     "buttons": [
       "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "允许“%@”在您使用该App时访问您的位置吗？",
+    "buttons": [
+      "允许一次"
     ],
     "shouldAccept": true
   }

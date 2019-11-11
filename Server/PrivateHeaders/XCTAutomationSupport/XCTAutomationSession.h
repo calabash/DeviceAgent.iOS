@@ -16,13 +16,19 @@
 
 #import "XCTAutomationTarget-Protocol.h"
 #import "XCTConnectionAccepting-Protocol.h"
+#import "XCTElementSnapshotAttributeDataSource-Protocol.h"
+#import "XCTElementSnapshotProvider-Protocol.h"
 #import "XCTRemoteApplicationAutomationTarget-Protocol.h"
 
 @class DTXConnection, DTXProxyChannel, NSMutableArray, NSString, XCTAnimationsIdleNotifier, XCTCapabilities, XCTElementQueryProcessor, XCTMainRunLoopIdleNotifier;
-@protocol OS_dispatch_queue;
+@protocol OS_dispatch_queue, XCTElementSnapshotProvider><XCTElementSnapshotAttributeDataSource;
 
-@interface XCTAutomationSession : NSObject <XCTRemoteApplicationAutomationTarget, XCTConnectionAccepting, XCTAutomationTarget>
+
+@protocol XCTElementSnapshotProvider;
+
+@interface XCTAutomationSession : NSObject <XCTRemoteApplicationAutomationTarget, XCTElementSnapshotProvider, XCTElementSnapshotAttributeDataSource, XCTConnectionAccepting, XCTAutomationTarget>
 {
+    id <XCTElementSnapshotProvider><XCTElementSnapshotAttributeDataSource> _dataSource;
     NSMutableArray *_connections;
     XCTElementQueryProcessor *_queryProcessor;
     NSObject<OS_dispatch_queue> *_queue;
@@ -33,14 +39,18 @@
     XCTCapabilities *_remoteInterfaceCapabilities;
 }
 
+@property(readonly) BOOL allowsRemoteAccess;
 @property(readonly) XCTAnimationsIdleNotifier *animationIdleNotifier;
 @property(readonly) NSMutableArray *connections;
+@property(readonly) __weak id <XCTElementSnapshotProvider><XCTElementSnapshotAttributeDataSource> dataSource;
 @property(readonly) DTXConnection *dtxConnection;
 @property(readonly) DTXProxyChannel *proxyChannel;
 @property(readonly) XCTElementQueryProcessor *queryProcessor;
 @property(readonly) NSObject<OS_dispatch_queue> *queue;
 @property(retain) XCTCapabilities *remoteInterfaceCapabilities;
 @property(readonly) XCTMainRunLoopIdleNotifier *runLoopIdleMonitor;
+@property(readonly) BOOL supportsHostedViewCoordinateTransformations;
+@property(readonly) BOOL usePointTransformationsForFrameConversions;
 
 + (id)capabilitiesBuilder;
 - (id)_XCT_attributesForElement:(id)arg1 attributes:(id)arg2;
@@ -49,13 +59,17 @@
 - (id)_XCT_notifyWhenAnimationsAreIdle;
 - (id)_XCT_notifyWhenMainRunLoopIsIdle;
 - (BOOL)acceptNewConnection:(id)arg1;
+- (id)attributesForElement:(id)arg1 attributes:(id)arg2 error:(id *)arg3;
 - (void)attributesForElement:(id)arg1 attributes:(id)arg2 reply:(CDUnknownBlockType)arg3;
 - (void)exchangeCapabilities:(id)arg1 reply:(CDUnknownBlockType)arg2;
 - (void)fetchMatchesForQuery:(id)arg1 reply:(CDUnknownBlockType)arg2;
+- (id)initWithDataSource:(id)arg1;
 - (void)listenForRemoteConnectionViaSerializedTransportWrapper:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)notifyWhenAnimationsAreIdle:(CDUnknownBlockType)arg1;
 - (void)notifyWhenMainRunLoopIsIdle:(CDUnknownBlockType)arg1;
+- (id)parameterizedAttribute:(id)arg1 forElement:(id)arg2 parameter:(id)arg3 error:(id *)arg4;
 - (void)requestHostAppExecutableNameWithReply:(CDUnknownBlockType)arg1;
+- (id)snapshotForElement:(id)arg1 attributes:(id)arg2 parameters:(id)arg3 timeoutControls:(id)arg4 error:(id *)arg5;
 
 
 @end

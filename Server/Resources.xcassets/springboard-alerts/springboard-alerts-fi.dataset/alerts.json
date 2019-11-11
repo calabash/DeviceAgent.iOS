@@ -20,7 +20,8 @@
     "title": "Saako %@ käyttää sijaintiasi silloin, kun käytät appia?",
     "buttons": [
       "Salli",
-      "Vain appia käytettäessä"
+      "Vain appia käytettäessä",
+      "Salli kerran"
     ],
     "shouldAccept": true
   },
@@ -34,16 +35,9 @@
   {
     "title": "Saako %@ käyttää Face ID:tä?",
     "buttons": [
-      "OK"
+      "Älä salli"
     ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Osa apin %@ tiedoista lähetetään Applelle pyyntöjesi käsittelyä varten.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "%@ haluaa käyttää mikrofonia",
@@ -61,13 +55,6 @@
   },
   {
     "title": "%@ haluaa käyttää kalenteriasi",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Tämän apin puhetiedot lähetetään Applelle pyyntöjesi käsittelyä varten. Tämä auttaa myös Applea parantamaan puheentunnistusteknologiaansa.",
     "buttons": [
       "OK"
     ],
@@ -155,35 +142,35 @@
     "buttons": [
       "Ei nyt"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Operaattoriasetusten päivitys",
     "buttons": [
       "Ei nyt"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "%@ haluaa lisätä VPN-määrityksiä",
     "buttons": [
-      "Salli"
+      "Älä salli"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "”%@” haluaa suodattaa verkkosisältöä",
     "buttons": [
-      "Salli"
+      "Älä salli"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhonea ei ole aktivoitu",
     "buttons": [
       "Älä huomioi"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Otetaanko sanelu käyttöön?",
@@ -242,48 +229,6 @@
     "shouldAccept": true
   },
   {
-    "title": "App Storeen kirjautuminen",
-    "buttons": [
-      "Kumoa"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Game Centeriin kirjautuminen",
-    "buttons": [
-      "Kumoa"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Kirjaudu iTunes Storeen",
-    "buttons": [
-      "Kumoa"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "iMessageen kirjautuminen",
-    "buttons": [
-      "Kumoa"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "FaceTimeen kirjautumInen",
-    "buttons": [
-      "Kumoa"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Kirjaudu iCloudiin",
-    "buttons": [
-      "Kumoa"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Salli laitteen %@ päivittää terveystietosi.",
     "buttons": [
       "OK"
@@ -299,27 +244,6 @@
   },
   {
     "title": "%1$@ haluaa käyttää %2$@-tilejä",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Yhteys nykyisiin ja muihin lähellä oleviin Wi-Fi-verkkoihin katkaistaan huomiseen saakka.\n\nWi-Fi toimii edelleen AirDropille, omalle yhteyspisteelle ja sijainnin tarkkuudelle.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Yhteys nykyisiin ja muihin lähellä oleviin WLAN-verkkoihin katkaistaan huomiseen saakka.\n\nWLAN toimii edelleen AirDropille, omalle yhteyspisteelle ja sijainnin tarkkuudelle.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Yhdistettyjen lisälaitteiden yhteydet katkaistaan ja muita lisälaitteita ei voida yhdistää.\n\nBluetooth toimii edelleen Apple Watchin, Apple Pencilin, oman yhteyspisteen ja Handoffin kanssa.",
     "buttons": [
       "OK"
     ],
@@ -348,34 +272,6 @@
   },
   {
     "title": "%@ haluaa antaa dataa lähellä oleville Bluetooth-laitteille, vaikka et käyttäisikään appia",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Kirjaudu sisään Apple ID:llä",
-    "buttons": [
-      "Kumoa"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Yhteys nykyisiin ja muihin lähellä oleviin Wi-Fi-verkkoihin katkaistaan huomiseen saakka.\n\nWi-Fi toimii edelleen AirDropille, omalle hotspotille ja sijainnin tarkkuudelle.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Yhteys nykyisiin ja muihin lähellä oleviin WLAN-verkkoihin katkaistaan huomiseen saakka.\n\nWLAN toimii edelleen AirDropille, omalle hotspotille ja sijainnin tarkkuudelle.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Yhdistettyjen lisälaitteiden yhteydet katkaistaan ja muita lisälaitteita ei voida yhdistää.\n\nBluetooth toimii edelleen Apple Watchin, Apple Pencilin, oman hotspotin ja Handoffin kanssa.",
     "buttons": [
       "OK"
     ],
@@ -466,16 +362,59 @@
     "shouldAccept": true
   },
   {
-    "title": "Laita Bluetooth päälle, jos sallit, että %@ voi yhdistää lisälaitteisiin",
+    "title": "%@ haluaa lähettää sinulle ilmoituksia",
+    "buttons": [
+      "Salli",
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Sallitko, että %@ käyttää sijaintiasi myös silloin, kun et käytä ohjelmaa?",
+    "buttons": [
+      "Salli"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Sallitko, että %@ käyttää sijaintiasi silloin, kun käytät ohjelmaa?",
+    "buttons": [
+      "Salli"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Saako %@ käyttää sijaintiasi silloin, kun käytät ohjelmaa?",
+    "buttons": [
+      "Salli"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ haluaa käyttää Apple Musicia",
     "buttons": [
       "OK"
     ],
     "shouldAccept": true
   },
   {
-    "title": "%@ haluaa lähettää sinulle ilmoituksia",
+    "title": "%@ haluaa antaa dataa lähellä oleville Bluetooth-laitteille, vaikka et käyttäisikään ohjelmaa.",
     "buttons": [
-      "Salli"
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Avataanko ohjelmassa %@?",
+    "buttons": [
+      "Avaa"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Avaa ohjelmassa %@",
+    "buttons": [
+      "Avaa"
     ],
     "shouldAccept": true
   }

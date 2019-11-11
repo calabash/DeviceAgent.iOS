@@ -41,16 +41,9 @@
   {
     "title": "“%@” uygulaması Face ID’yi kullanabilsin mi?",
     "buttons": [
-      "Tamam"
+      "İzin Verme"
     ],
-    "shouldAccept": true
-  },
-  {
-    "title": "İsteklerinizi işlemek için %@ verilerinizden bazıları Apple’a gönderilir.",
-    "buttons": [
-      "Tamam"
-    ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Mikrofona Erişmek İstiyor",
@@ -68,13 +61,6 @@
   },
   {
     "title": "“%@” Takviminize Erişmek İstiyor",
-    "buttons": [
-      "Tamam"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "İsteklerinizi işlemek için bu uygulamadaki konuşma verileri Apple’a gönderilir. Bu aynı zamanda Apple’ın konuşma tanıma teknolojisini geliştirmesine de yardımcı olur.",
     "buttons": [
       "Tamam"
     ],
@@ -162,35 +148,35 @@
     "buttons": [
       "Şimdi Değil"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Operatör Ayarı Güncelleme",
     "buttons": [
       "Şimdi Değil"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” VPN Konfigürasyonları Eklemek İstiyor",
     "buttons": [
-      "İzin Ver"
+      "İzin Verme"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Ağ İçeriğini Filtrelemek İstiyor",
     "buttons": [
-      "İzin Ver"
+      "İzin Verme"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone Etkinleştirilemedi",
     "buttons": [
       "Yok Say"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Dikte Etkinleştirilsin mi?",
@@ -249,48 +235,6 @@
     "shouldAccept": true
   },
   {
-    "title": "App Store’a Giriş Yapın",
-    "buttons": [
-      "Vazgeç"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Game Center’a Giriş Yapın",
-    "buttons": [
-      "Vazgeç"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "iTunes Store’a Giriş Yapın",
-    "buttons": [
-      "Vazgeç"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "iMessage’a Giriş Yapın",
-    "buttons": [
-      "Vazgeç"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "FaceTime’a Giriş Yapın",
-    "buttons": [
-      "Vazgeç"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "iCloud’a Giriş Yapın",
-    "buttons": [
-      "Vazgeç"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "“%@”, sağlık verilerimi güncelleyebilsin.",
     "buttons": [
       "Tamam"
@@ -306,27 +250,6 @@
   },
   {
     "title": "“%1$@”, %2$@ Hesaplarına Erişmek İstiyor",
-    "buttons": [
-      "Tamam"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Şu anki Wi-Fi ağının ve yakınlardaki diğerlerinin bağlantısı yarına kadar kesilecektir.\n\nWi-Fi; AirDrop, Kişisel Erişim Noktası ve konum doğruluğu için kullanılmaya devam edecektir.",
-    "buttons": [
-      "Tamam"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Şu anki WLAN ağının ve yakınlardaki diğerlerinin bağlantısı yarına kadar kesilecektir.\n\nWLAN; AirDrop, Kişisel Erişim Noktası ve konum doğruluğu için kullanılmaya devam edecektir.",
-    "buttons": [
-      "Tamam"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Şu an için bağlı aksesuarların bağlantısı kesilecek ve diğer aksesuarlar bağlanmayacak.\n\nBluetooth; Apple Watch, Apple Pencil, Kişisel Erişim Noktası ve Handoff için kullanılmaya devam edecektir.",
     "buttons": [
       "Tamam"
     ],
@@ -372,14 +295,7 @@
     "buttons": [
       "Yok Say"
     ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Apple Kimliğiyle Giriş Yapın",
-    "buttons": [
-      "Vazgeç"
-    ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” son 3 gündür arka planda konumunuzu kullanıyor. Arka planda konumun kullanılmasına izin vermeyi sürdürmek istiyor musunuz?",
@@ -447,7 +363,8 @@
   {
     "title": "“%@”, uygulamayı kullanırken konumunuza erişebilsin mi?",
     "buttons": [
-      "İzin Ver"
+      "İzin Ver",
+      "Bir Kez İzin Ver"
     ],
     "shouldAccept": true
   },
@@ -463,19 +380,12 @@
     "buttons": [
       "Şimdi Değil"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Giriş Yapmak için “%@” Kullanmak İstiyor",
     "buttons": [
       "Sürdür"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "“%@” Öğesinin Aksesuarlara Bağlanmasına İzin Vermek için Bluetooth’u Açın",
-    "buttons": [
-      "Tamam"
     ],
     "shouldAccept": true
   },
@@ -489,7 +399,43 @@
   {
     "title": "“%@” Size Bildirimler Göndermek İstiyor",
     "buttons": [
+      "İzin Ver",
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” arkaplanda konumunuzu kullanıyor. Buna izin vermeyi sürdürmek istiyor musunuz?",
+    "buttons": [
       "İzin Ver"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Apple Music'e Erişmek İstiyor",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”, siz uygulamayı kullanmıyorken bile yakındaki bluetooth aygıtları için verileri kullanılabilir yapmak istiyor.",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dikte'yi Etkinleştir",
+    "buttons": [
+      "Sonra"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Giriş Yapmak İçin Şunu Kullanmak İstiyor: “%@”",
+    "buttons": [
+      "Sürdür"
     ],
     "shouldAccept": true
   }

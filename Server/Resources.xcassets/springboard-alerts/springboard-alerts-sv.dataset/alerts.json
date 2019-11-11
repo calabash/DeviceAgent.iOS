@@ -20,7 +20,8 @@
     "title": "Vill du tillåta ”%@” att se din platsinfo när du använder appen?",
     "buttons": [
       "Tillåt",
-      "Bara när appen används"
+      "Bara när appen används",
+      "Tillåt en gång"
     ],
     "shouldAccept": true
   },
@@ -41,16 +42,9 @@
   {
     "title": "Vill du tillåta att ”%@” använder Face ID?",
     "buttons": [
-      "OK"
+      "Tillåt inte"
     ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Viss information från %@ skickas till Apple så att dina instruktioner kan behandlas.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "”%@” begär åtkomst till mikrofonen",
@@ -68,13 +62,6 @@
   },
   {
     "title": "”%@” begär åtkomst till din kalender",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Röstdata från den här appen skickas till Apple så att dina instruktioner kan behandlas. Detta hjälper även Apple att förbättra tekniken för röstigenkänning.",
     "buttons": [
       "OK"
     ],
@@ -162,35 +149,35 @@
     "buttons": [
       "Inte nu"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Uppdatering av operatörsinställningar",
     "buttons": [
       "Inte nu"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "”%@” vill lägga till VPN-konfigurationer",
     "buttons": [
-      "Tillåt"
+      "Tillåt inte"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "”%@” vill filtrera nätverksinnehåll",
     "buttons": [
-      "Tillåt"
+      "Tillåt inte"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone är inte aktiverad",
     "buttons": [
       "Ignorera"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Vill du aktivera diktering?",
@@ -249,48 +236,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Logga in på App Store",
-    "buttons": [
-      "Avbryt"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Logga in på Game Center",
-    "buttons": [
-      "Avbryt"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Logga in på iTunes Store",
-    "buttons": [
-      "Avbryt"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Logga in på iMessage",
-    "buttons": [
-      "Avbryt"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Logga in på FaceTime",
-    "buttons": [
-      "Avbryt"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Logga in på iCloud",
-    "buttons": [
-      "Avbryt"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Tillåt att ”%@” uppdaterar dina hälsodata.",
     "buttons": [
       "OK"
@@ -306,27 +251,6 @@
   },
   {
     "title": "”%1$@” vill komma åt dina %2$@-konton",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Det aktuella Wi-Fi-nätverket och andra i närheten kopplas från tills imorgon.\n\nWi-Fi är fortfarande tillgängligt för AirDrop, Internetdelning och noggrannhet vid platsbestämning.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Det aktuella WLAN-nätverket och andra i närheten kopplas från tills imorgon.\n\nWLAN är fortfarande tillgängligt för AirDrop, Internetdelning och noggrannhet vid platsbestämning.",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Tillbehör som är anslutna just nu kopplas från och andra tillbehör ansluter inte.\n\nBluetooth är fortfarande tillgängligt för Apple Watch, Apple Pencil, Internetdelning och Handoff.",
     "buttons": [
       "OK"
     ],
@@ -357,13 +281,6 @@
     "title": "”%@” vill göra dina data tillgängliga för andra Bluetooth-enheter i närheten, även när du inte använder appen",
     "buttons": [
       "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Logga in med Apple-ID",
-    "buttons": [
-      "Avbryt"
     ],
     "shouldAccept": true
   },
@@ -438,13 +355,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Slå på Bluetooth om du vill låta ”%@” ansluta till tillbehör",
-    "buttons": [
-      "OK"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "\"%@\" vill skicka notiser till dig",
     "buttons": [
       "Tillåt"
@@ -454,7 +364,15 @@
   {
     "title": "”%@” vill skicka notiser till dig",
     "buttons": [
-      "Tillåt"
+      "Tillåt",
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "”%@” begär åtkomst till Apple Music",
+    "buttons": [
+      "OK"
     ],
     "shouldAccept": true
   }

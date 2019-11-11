@@ -22,7 +22,7 @@ language_mapping = {
   'zh-Hant-US' => 'zh_TW',
   'zh-Hant-HK' => 'zh-HK',
   # Norwegian, it is the same language: preferredLanguage returns 'nb' but translation folder is named as 'no'
-  'nb' => 'no' 
+  'nb' => 'no'
 }
 
 language_to_ignore = [
@@ -31,6 +31,8 @@ language_to_ignore = [
 
 # Init with current Xcode
 xcode = RunLoop::Xcode.new
+root_dir = xcode.core_simulator_dir
+root_dir = ARGV[0] unless ARGV.empty? || ARGV[0].empty?
 
 # Try to find specific framework under CoreSimulators directory
 def find_framework(root_path, framework_name)
@@ -67,22 +69,31 @@ end
 
 # Iterate through required values for framework and try to get values from dict
 # Add found values to localization storage
-def pick_required_values(found_values_dict, target_framework, localization_storage, language)
-  framework_name = target_framework['name']
-  target_framework['values'].each do |item|
+def pick_required_values(found_values_dict, target_values, localization_storage, language)
+  unknown_alert_constants = []
+  unknown_button_constants = []
+
+  target_values.each do |item|
     title = item['title']
     button = item['button']
+    default_value = item['default_value']
+    default_value = true if default_value.nil?
+
     title_value = found_values_dict[title]
     button_value = found_values_dict[button]
 
-    puts "Unknown button constant '#{button}' for framework '#{framework_name}'(#{language})".yellow if button && !button_value
+    if button && !button_value
+      unknown_button_constants.push(button)
+    end
 
     if title_value
-      localization_storage.add_entry(language, title_value, button_value)
+      localization_storage.add_entry(language, title_value, button_value, default_value)
     else
-      puts "Unknown alert constant '#{title}' for framework '#{framework_name}'(#{language})".red
+      unknown_alert_constants.push(title)
     end
   end
+
+  return unknown_alert_constants, unknown_button_constants
 end
 
 target_frameworks = read_json('frameworks.json')
@@ -90,7 +101,7 @@ localization_storage = LocalizationStorage.new('../../Server/Resources.xcassets/
 
 target_frameworks.each do |framework|
   puts "Scan framework '#{framework['name']}'".green
-  framework_path = find_framework(xcode.core_simulator_dir, framework['name'])
+  framework_path = find_framework(root_dir, framework['name'])
 
   unless framework_path && Dir.exist?(framework_path)
     puts "Skip '#{framework['name']}' since it was not found".red
@@ -99,12 +110,25 @@ target_frameworks.each do |framework|
 
   puts "Found on path '#{framework_path}'"
 
+  unknown_alert_constants = {}
+  unknown_button_constants = {}
+
   find_languages(framework_path).each do |language_path|
     language_name = get_language_name(language_path, language_mapping)
     next if language_to_ignore.include?(language_name)
 
     found_values_dict = collect_localization_dictionary(language_path)
-    pick_required_values(found_values_dict, framework, localization_storage, language_name)
+    unknown_alerts, unknown_buttons = pick_required_values(found_values_dict, framework['values'], localization_storage, language_name)
+
+    # log missed alerts and buttons for debug
+    unknown_alerts.each do |unknown_alert|
+      unknown_alert_constants[unknown_alert] = [] unless unknown_alert_constants.key?(unknown_alert)
+      unknown_alert_constants[unknown_alert].push(language_name)
+    end
+    unknown_buttons.each do |unknown_button|
+      unknown_button_constants[unknown_button] = [] unless unknown_button_constants.key?(unknown_button)
+      unknown_button_constants[unknown_button].push(language_name)
+    end
 
     # debug info
     if ENV['DEBUG'] && language_name == 'en'
@@ -112,6 +136,19 @@ target_frameworks.each do |framework|
       save_json(report_path, found_values_dict)
     end
   end
+
+  if unknown_alert_constants.any?
+    unknown_alert_constants.each_pair do |key, value|
+      puts "Unknown alert constant '#{key}' for framework '#{framework['name']}' (#{value.join(',')})".red
+    end
+  end
+
+  if unknown_button_constants.any?
+    unknown_button_constants.each_pair do |key, value|
+      puts "Unknown button constant '#{key}' for framework '#{framework['name']}' (#{value.join(',')})".red
+    end
+  end
+
 end
 
 # save updated database to the local file

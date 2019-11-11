@@ -41,16 +41,9 @@
   {
     "title": "هل ترغب بالسماح لـ \"%@\" باستخدام Face ID؟",
     "buttons": [
-      "موافق"
+      "عدم السماح"
     ],
-    "shouldAccept": true
-  },
-  {
-    "title": "سيتم إرسال بعض بيانات %@ إلى Apple بهدف معالجة طلباتك.",
-    "buttons": [
-      "موافق"
-    ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "يرغب \"%@\" بالوصول إلى الميكروفون",
@@ -68,13 +61,6 @@
   },
   {
     "title": "يرغب \"%@\" بالوصول إلى التقويم الخاص بك",
-    "buttons": [
-      "موافق"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "سيتم إرسال بيانات الكلام من هذا التطبيق إلى Apple بهدف معالجة طلباتك. كما أن هذا سيساعد Apple على تحسين تقنية التعرف على الكلام.",
     "buttons": [
       "موافق"
     ],
@@ -162,35 +148,35 @@
     "buttons": [
       "ليس الآن"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "تحديث شركة الاتصالات",
     "buttons": [
       "ليس الآن"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "يرغب \"%@\" في إضافة تكوينات VPN",
     "buttons": [
-      "السماح"
+      "عدم السماح"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "يرغب \"%@\" في تصفية محتوى الشبكة",
     "buttons": [
-      "السماح"
+      "عدم السماح"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "لم يتم تنشيط الـ iPhone",
     "buttons": [
       "تجاهل"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "تمكين الإملاء؟",
@@ -249,48 +235,6 @@
     "shouldAccept": true
   },
   {
-    "title": "تسجيل الدخول إلى App Store",
-    "buttons": [
-      "إلغاء"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "تسجيل الدخول لـ Game Center",
-    "buttons": [
-      "إلغاء"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "تسجيل الدخول إلى iTunes Store",
-    "buttons": [
-      "إلغاء"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "تسجيل الدخول إلى iMessage",
-    "buttons": [
-      "إلغاء"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "تسجيل الدخول إلى FaceTime",
-    "buttons": [
-      "إلغاء"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "تسجيل الدخول إلى iCloud",
-    "buttons": [
-      "إلغاء"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "السماح لـ \"%@\" بتحديث البيانات الصحية الخاصة بك.",
     "buttons": [
       "موافق"
@@ -306,27 +250,6 @@
   },
   {
     "title": "يرغب \"%1$@\" بالوصول إلى حسابات %2$@",
-    "buttons": [
-      "موافق"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "سيتم فصل شبكة Wi-Fi الحالية والشبكات القريبة الأخرى حتى الغد.\n\nسيظل اتصال Wi-Fi متوفرًا لكل من AirDrop ونقطة الاتصال الشخصية ودقة الموقع.",
-    "buttons": [
-      "موافق"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "سيتم فصل شبكة WLAN الحالية والشبكات القريبة الأخرى حتى الغد.\n\nسيظل اتصال WLAN متوفرًا لكل من AirDrop ونقطة الاتصال الشخصية ودقة الموقع.",
-    "buttons": [
-      "موافق"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "سيتم فصل الملحقات المتصلة حاليًا ولن تتصل ملحقات أخرى.\n\nسيظل اتصال Bluetooth متوفرًا لكل من Apple Watch و Apple Pencil ونقطة الاتصال الشخصية و Handoff.",
     "buttons": [
       "موافق"
     ],
@@ -357,13 +280,6 @@
     "title": "يرغب \"%@\" في إتاحة البيانات إلى أجهزة Bluetooth القريبة حتى عند عدم استخدامك للتطبيق",
     "buttons": [
       "موافق"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "تسجيل الدخول باستخدام Apple ID",
-    "buttons": [
-      "إلغاء"
     ],
     "shouldAccept": true
   },
@@ -442,7 +358,7 @@
     "buttons": [
       "ليس الآن"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "يرغب “%@” في استخدام “%@” لتسجيل الدخول",
@@ -452,16 +368,38 @@
     "shouldAccept": true
   },
   {
-    "title": "تشغيل الـ Bluetooth يسمح \"%@\" بالاتصال بالملحقات",
+    "title": "يود \"%@\" إرسال الإشعارات إليك",
+    "buttons": [
+      "السماح",
+      "موافق"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "السماح لـ \"%@\" بالوصول إلى موقعك عند استخدامك للتطبيق؟",
+    "buttons": [
+      "السماح"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "يرغب \"%@\" في الوصول إلى Apple Music",
     "buttons": [
       "موافق"
     ],
     "shouldAccept": true
   },
   {
-    "title": "يود \"%@\" إرسال الإشعارات إليك",
+    "title": "يرغب \"%@\" في إتاحة البيانات إلى أجهزة bluetooth القريبة حتى عند عدم استخدامك للتطبيق.",
     "buttons": [
-      "السماح"
+      "موافق"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "السماح لتطبيق %@ بالوصول إلى موقعك أثناء استخدامك للتطبيق؟",
+    "buttons": [
+      "السماح لمرة واحدة"
     ],
     "shouldAccept": true
   }

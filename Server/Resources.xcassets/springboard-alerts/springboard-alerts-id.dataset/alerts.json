@@ -41,16 +41,9 @@
   {
     "title": "Apakah Anda ingin mengizinkan “%@” untuk menggunakan Face ID?",
     "buttons": [
-      "OKE"
+      "Tidak Boleh"
     ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Sebagian data %@ Anda akan dikirimkan ke Apple untuk memproses permintaan Anda.",
-    "buttons": [
-      "OKE"
-    ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Ingin Mengakses Mikrofon",
@@ -68,13 +61,6 @@
   },
   {
     "title": "“%@” Ingin Mengakses Kalender Anda",
-    "buttons": [
-      "OKE"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Data ucapan dari app ini akan dikirimkan ke Apple untuk memproses permintaan Anda. Ini juga akan membantu Apple meningkatkan teknologi pengenalan ucapannya.",
     "buttons": [
       "OKE"
     ],
@@ -162,7 +148,7 @@
     "buttons": [
       "Nanti"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Pembaruan Pengaturan Operator",
@@ -170,28 +156,28 @@
       "Nanti",
       "Tidak Sekarang"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Ingin Menambah Konfigurasi VPN",
     "buttons": [
-      "Izinkan"
+      "Jangan Izinkan"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Ingin Memfilter Konten Jaringan",
     "buttons": [
-      "Izinkan"
+      "Jangan Izinkan"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "iPhone tidak Diaktifkan",
     "buttons": [
       "Abaikan"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "Aktifkan Dikte?",
@@ -253,48 +239,6 @@
     "shouldAccept": true
   },
   {
-    "title": "Masuk ke App Store",
-    "buttons": [
-      "Batalkan"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Masuk ke Game Center",
-    "buttons": [
-      "Batalkan"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Masuk ke iTunes Store",
-    "buttons": [
-      "Batalkan"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Masuk ke iMessage",
-    "buttons": [
-      "Batalkan"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Masuk ke FaceTime",
-    "buttons": [
-      "Batalkan"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Masuk ke iCloud",
-    "buttons": [
-      "Batalkan"
-    ],
-    "shouldAccept": true
-  },
-  {
     "title": "Izinkan “%@” untuk memperbarui data kesehatan Anda.",
     "buttons": [
       "OKE"
@@ -310,27 +254,6 @@
   },
   {
     "title": "“%1$@” Menginginkan Akses ke Akun %2$@",
-    "buttons": [
-      "OKE"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Jaringan Wi-Fi saat ini dan jaringan terdekat lainnya akan diputuskan hingga besok.\n\nWi-Fi akan lanjut tersedia untuk AirDrop, Hotspot Pribadi, dan akurasi lokasi.",
-    "buttons": [
-      "OKE"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Jaringan WLAN saat ini dan jaringan terdekat lainnya akan diputuskan hingga besok.\n\nWLAN akan lanjut tersedia untuk AirDrop, Hotspot Pribadi, dan akurasi lokasi.",
-    "buttons": [
-      "OKE"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Aksesori yang saat ini terhubung akan diputuskan dan aksesori lainnya tidak akan terhubung.\n\nBluetooth akan lanjut tersedia untuk Apple Watch, Apple Pencil, Hotspot Pribadi, dan Handoff.",
     "buttons": [
       "OKE"
     ],
@@ -361,13 +284,6 @@
     "title": "“%@” ingin membuat data tersedia untuk perangkat Bluetooth di sekitar saat Anda sedang tidak menggunakan app",
     "buttons": [
       "OKE"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Masuk dengan ID Apple",
-    "buttons": [
-      "Batalkan"
     ],
     "shouldAccept": true
   },
@@ -439,19 +355,12 @@
     "buttons": [
       "Tidak Sekarang"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   },
   {
     "title": "“%@” Ingin Menggunakan “%@” untuk Masuk",
     "buttons": [
       "Lanjutkan"
-    ],
-    "shouldAccept": true
-  },
-  {
-    "title": "Nyalakan Bluetooth untuk Mengizinkan “%@” Terhubung ke Aksesori",
-    "buttons": [
-      "OKE"
     ],
     "shouldAccept": true
   },
@@ -465,7 +374,29 @@
   {
     "title": "“%@” Ingin Mengirimi Anda Pemberitahuan",
     "buttons": [
-      "Izinkan"
+      "Izinkan",
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Mengakses Apple Music",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” ingin membuat data tersedia untuk perangkat bluetooth di sekitar saat Anda sedang tidak menggunakan app.",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Izinkan “%@” untuk mengakses lokasi Anda saat Anda sedang menggunakan app?",
+    "buttons": [
+      "Izinkan Sekali"
     ],
     "shouldAccept": true
   }
