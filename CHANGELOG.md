@@ -1,3 +1,7 @@
+### 2.1.0
+
+Fixes various problems in dismiss-SpringBoard-alert system.
+
 ### 2.0.2
 
 * Add push notification alerts from iOS 12, 13 #358
