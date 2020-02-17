@@ -47,6 +47,7 @@
 /* Begin PBXBuildFile section */
 		0AA3924F23279A68000E799B /* SpringBoardAlertsCurrentLanguageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA3924D23279A68000E799B /* SpringBoardAlertsCurrentLanguageTests.m */; };
 		1A020FC02338BEB600D79E57 /* XCTest+CBXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F547174D204939DA0024AA0B /* XCTest+CBXAdditions.h */; };
+		3BE0245123F2E66D0052DD40 /* QuerySpecifierByPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0245023F2E66D0052DD40 /* QuerySpecifierByPredicate.m */; };
 		4107F8FE231D7298003961AF /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107F8FC231D7262003961AF /* Resources.xcassets */; };
 		41188FEA22E9958D0012886A /* XCWebViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 4166C9AE22E7009800C8BEBF /* XCWebViews.m */; };
 		419BE54B231E46D800DF0ABD /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107F8FC231D7262003961AF /* Resources.xcassets */; };
@@ -750,6 +751,8 @@
 
 /* Begin PBXFileReference section */
 		0AA3924D23279A68000E799B /* SpringBoardAlertsCurrentLanguageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SpringBoardAlertsCurrentLanguageTests.m; sourceTree = "<group>"; };
+		3BE0244F23F2E5810052DD40 /* QuerySpecifierByPredicate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuerySpecifierByPredicate.h; sourceTree = "<group>"; };
+		3BE0245023F2E66D0052DD40 /* QuerySpecifierByPredicate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuerySpecifierByPredicate.m; sourceTree = "<group>"; };
 		4107F8FC231D7262003961AF /* Resources.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources.xcassets; sourceTree = "<group>"; };
 		4166C9AE22E7009800C8BEBF /* XCWebViews.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCWebViews.m; sourceTree = "<group>"; };
 		634244EC948D56732C2565E5 /* SpringBoardAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoardAlerts.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
@@ -2144,6 +2147,8 @@
 				899696FE1CB5C93400BB42E2 /* QuerySpecifierByCoordinate.m */,
 				89B9519F1CF5B297007FD0AB /* QuerySpecifierByType.h */,
 				89B951A01CF5B297007FD0AB /* QuerySpecifierByType.m */,
+				3BE0244F23F2E5810052DD40 /* QuerySpecifierByPredicate.h */,
+				3BE0245023F2E66D0052DD40 /* QuerySpecifierByPredicate.m */,
 				F536799F1D7C324E009956D0 /* QuerySpecifierByMark.h */,
 				F53679A01D7C324E009956D0 /* QuerySpecifierByMark.m */,
 			);
@@ -3309,6 +3314,7 @@
 				899696D41CB44D9B00BB42E2 /* GestureConfiguration.m in Sources */,
 				899696EB1CB5857C00BB42E2 /* JSONKeyValidator.m in Sources */,
 				F55F81981C6DD07500A945C8 /* MultipartMessageHeader.m in Sources */,
+				3BE0245123F2E66D0052DD40 /* QuerySpecifierByPredicate.m in Sources */,
 				F5538B8B1E28BEB9003EC5F3 /* CBXLogging.m in Sources */,
 				899697061CB5D5CF00BB42E2 /* Gesture+Options.m in Sources */,
 				89C5F35F1C9C51680093A018 /* Query.m in Sources */,
