@@ -13,11 +13,12 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@class NSArray, NSDictionary;
+@class NSArray, NSDictionary, XCAccessibilityElement;
 
 @protocol XCTAccessibilityFramework <NSObject>
 - (NSInteger)appOrientationForElement:(const struct __AXUIElement *)arg1 error:(id *)arg2;
 - (NSArray *)attributes:(NSArray *)arg1 forElement:(const struct __AXUIElement *)arg2 error:(id *)arg3;
+- (NSDictionary *)attributesForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 error:(id *)arg3;
 - (CGRect)frameForElement:(const struct __AXUIElement *)arg1 error:(id *)arg2;
 - (const struct __AXUIElement *)mainWindowForElement:(const struct __AXUIElement *)arg1 error:(id *)arg2;
 - (void)performWithAXTimeout:(double)arg1 block:(void (^)(void))arg2;

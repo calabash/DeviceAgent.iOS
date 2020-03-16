@@ -16,7 +16,7 @@
  */
 
 #import "FBFailureProofTestCase.h"
-#import "_XCTestCaseImplementation.h"
+#import "FBXCTestCaseImplementationFailureHoldingProxy.h"
 
 @interface FBFailureProofTestCase ()
 @property (nonatomic, assign) BOOL didRegisterAXTestFailure;
@@ -27,8 +27,15 @@
 - (void)setUp {
   [super setUp];
   self.continueAfterFailure = YES;
-  self.internalImplementation = (_XCTestCaseImplementation *)[FBXCTestCaseImplementationFailureHoldingProxy
-  proxyWithXCTestCaseImplementation:self.internalImplementation];
+  if ([self respondsToSelector:@selector(internalImplementation)]) {
+    // The `internalImplementation` API has been removed since Xcode 11.4
+    self.internalImplementation =
+      (_XCTestCaseImplementation *)[FBXCTestCaseImplementationFailureHoldingProxy
+                                    proxyWithXCTestCaseImplementation:self.internalImplementation];
+  } else {
+    self.shouldSetShouldHaltWhenReceivesControl = NO;
+    self.shouldHaltWhenReceivesControl = NO;
+  }
 }
 
 /**
@@ -50,32 +57,6 @@
                                userInfo:nil]
          raise];
     }
-}
-
-@end
-
-@interface FBXCTestCaseImplementationFailureHoldingProxy ()
-@property (nonatomic, strong) _XCTestCaseImplementation *internalImplementation;
-@end
-
-@implementation FBXCTestCaseImplementationFailureHoldingProxy
-
-+ (instancetype)proxyWithXCTestCaseImplementation:(_XCTestCaseImplementation *)internalImplementation
-{
-    FBXCTestCaseImplementationFailureHoldingProxy *proxy = [super alloc];
-    proxy.internalImplementation = internalImplementation;
-    return proxy;
-}
-
-- (id)forwardingTargetForSelector:(SEL)aSelector
-{
-    return self.internalImplementation;
-}
-
-// This will prevent test from quiting on app crash or any other test failure
-- (BOOL)shouldHaltWhenReceivesControl
-{
-    return NO;
 }
 
 @end

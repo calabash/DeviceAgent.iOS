@@ -14,20 +14,39 @@
 
 #import <objc/NSObject.h>
 
-@class NSDate, XCTest, _XCInternalTestRun;
+@class NSDate, XCTest;
 
 @interface XCTestRun : NSObject
 {
-    id _internalTestRun;
+    BOOL _hasBeenSkipped;
+    BOOL _hasStarted;
+    BOOL _hasStopped;
+    XCTest *_test;
+    NSUInteger _executionCount;
+    NSUInteger _failureCount;
+    NSUInteger _unexpectedExceptionCount;
+    double _startTimeInterval;
+    double _stopTimeInterval;
+    NSUInteger _executionCountBeforeCrash;
+    NSUInteger _skipCountBeforeCrash;
+    NSUInteger _failureCountBeforeCrash;
+    NSUInteger _unexpectedExceptionCountBeforeCrash;
 }
 
-@property(readonly) NSUInteger executionCount;
+@property NSUInteger executionCount;
 @property NSUInteger executionCountBeforeCrash;
-@property(readonly) NSUInteger failureCount;
+@property NSUInteger failureCount;
 @property NSUInteger failureCountBeforeCrash;
+@property BOOL hasBeenSkipped;
+@property BOOL hasStarted;
+@property BOOL hasStopped;
 @property(readonly) BOOL hasSucceeded;
-@property(readonly) _XCInternalTestRun *implementation;
+@property NSUInteger skipCountBeforeCrash;
+@property double startTimeInterval;
+@property double stopTimeInterval;
+@property NSUInteger unexpectedExceptionCount;
 @property NSUInteger unexpectedExceptionCountBeforeCrash;
+@property(readonly) NSUInteger skipCount;
 @property(readonly, copy) NSDate *startDate;
 @property(readonly, copy) NSDate *stopDate;
 @property(readonly) XCTest *test;
@@ -35,11 +54,11 @@
 @property(readonly) double testDuration;
 @property(readonly) double totalDuration;
 @property(readonly) NSUInteger totalFailureCount;
-@property(readonly) NSUInteger unexpectedExceptionCount;
 
 + (id)testRunWithTest:(id)arg1;
 - (id)initWithTest:(id)arg1;
 - (void)recordFailureWithDescription:(id)arg1 inFile:(id)arg2 atLine:(NSUInteger)arg3 expected:(BOOL)arg4;
+- (void)recordSkipWithDescription:(id)arg1 inFile:(id)arg2 atLine:(NSUInteger)arg3;
 - (void)start;
 - (void)stop;
 

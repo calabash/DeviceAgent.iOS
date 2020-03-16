@@ -28,7 +28,6 @@
 @property BOOL stopsOnFirstMatch;
 @property(copy) NSString *transformationDescription;
 @property(readonly) BOOL supportsAttributeKeyPathAnalysis;
-@property(readonly) BOOL supportsRemoteEvaluation;
 
 + (void)provideCapabilitiesToBuilder:(id)arg1;
 - (BOOL)canBeRemotelyEvaluatedWithCapabilities:(id)arg1;

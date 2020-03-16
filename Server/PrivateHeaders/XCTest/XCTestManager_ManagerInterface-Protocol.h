@@ -9,9 +9,10 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <XCTest/XCUIElementTypes.h>
 #import "CDStructures.h"
-#import "../XCTAutomationSupport/XCUIElementSnapshotRequestResult.h"
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
+
+#import "XCTestManager_ProtectedResources-Protocol.h"
 
 @class NSArray, NSDictionary, NSNumber, NSString, NSURL, NSUUID, XCAccessibilityElement, XCDeviceEvent, XCSynthesizedEventRecord, XCTCapabilities, XCTSpindumpRequestSpecification;
 
@@ -19,7 +20,7 @@
 @class XCElementSnapshot;
 @class NSXPCListenerEndpoint;
 
-@protocol XCTestManager_ManagerInterface
+@protocol XCTestManager_ManagerInterface <XCTestManager_ProtectedResources>
 - (void)_XCT_enableFauxCollectionViewCells:(void (^)(BOOL, NSError *))arg1;
 - (void)_XCT_exchangeCapabilities:(XCTCapabilities *)arg1 reply:(void (^)(XCTCapabilities *))arg2;
 - (void)_XCT_exchangeProtocolVersion:(NSUInteger)arg1 reply:(void (^)(NSUInteger))arg2;
@@ -27,7 +28,7 @@
 - (void)_XCT_fetchAttributesForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 reply:(void (^)(NSDictionary *, NSError *))arg3;
 - (void)_XCT_fetchParameterizedAttribute:(NSString *)arg1 forElement:(XCAccessibilityElement *)arg2 parameter:(id)arg3 reply:(void (^)(id, NSError *))arg4;
 - (void)_XCT_fetchParameterizedAttributeForElement:(XCAccessibilityElement *)arg1 attributes:(NSNumber *)arg2 parameter:(id)arg3 reply:(void (^)(id, NSError *))arg4;
-- (void)_XCT_fetchSnapshotForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 parameters:(NSDictionary *)arg3 reply:(void (^)(XCUIElementSnapshotRequestResult *, NSError *))arg4;
+- (void)_XCT_fetchSnapshotForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 parameters:(NSDictionary *)arg3 reply:(void (^)(NSDictionary *, NSError *))arg4;
 - (void)_XCT_getDeviceOrientationWithCompletion:(void (^)(NSNumber *, NSError *))arg1;
 - (void)_XCT_injectAssistantRecognitionStrings:(NSArray *)arg1 completion:(void (^)(BOOL, NSError *))arg2;
 - (void)_XCT_injectVoiceRecognitionAudioInputPaths:(NSArray *)arg1 completion:(void (^)(BOOL, NSError *))arg2;
@@ -60,6 +61,7 @@
 - (void)_XCT_startSiriUIRequestWithAudioFileURL:(NSURL *)arg1 completion:(void (^)(BOOL, NSError *))arg2;
 - (void)_XCT_startSiriUIRequestWithText:(NSString *)arg1 completion:(void (^)(BOOL, NSError *))arg2;
 - (void)_XCT_synthesizeEvent:(XCSynthesizedEventRecord *)arg1 completion:(void (^)(NSError *))arg2;
+- (void)_XCT_synthesizeEvent:(XCSynthesizedEventRecord *)arg1 implicitConfirmationInterval:(double)arg2 completion:(void (^)(NSError *))arg3;
 - (void)_XCT_terminateApplicationWithBundleID:(NSString *)arg1 completion:(void (^)(NSError *))arg2;
 - (void)_XCT_unregisterForAccessibilityNotification:(NSInteger)arg1 withRegistrationToken:(NSNumber *)arg2 reply:(void (^)(NSError *))arg3;
 - (void)_XCT_updateDeviceOrientation:(NSInteger)arg1 completion:(void (^)(NSError *))arg2;

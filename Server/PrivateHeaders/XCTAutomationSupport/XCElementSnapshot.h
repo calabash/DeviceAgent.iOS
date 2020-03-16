@@ -23,13 +23,13 @@
 
 @interface XCElementSnapshot : NSObject <NSSecureCoding, NSCopying>
 {
-    NSUInteger _faultedInProperties;
     BOOL _isMainWindow;
     BOOL _enabled;
     BOOL _selected;
     BOOL _hasFocus;
     BOOL _hasKeyboardFocus;
     BOOL _isTruncatedValue;
+    NSUInteger _faultedInProperties;
     id <XCUIElementSnapshotApplication> _application;
     NSUInteger _generation;
     id <XCTElementSnapshotAttributeDataSource> _dataSource;
@@ -68,6 +68,7 @@
 @property(copy) NSSet *disclosedChildRowAXElements;
 @property(readonly) NSArray *disclosedChildRows;
 @property NSUInteger elementType;
+@property NSUInteger faultedInProperties;
 @property CGRect frame;
 @property(nonatomic) NSUInteger generation;
 @property BOOL hasFocus;
@@ -114,7 +115,7 @@
 + (id)axAttributesForFaultingPropertiesOnMacOS:(BOOL)arg1;
 + (id)axAttributesForSnapshotAttributes:(id)arg1 isMacOS:(BOOL)arg2;
 + (NSUInteger)elementTypeForAccessibilityElement:(id)arg1 usingAXAttributes_iOS:(id)arg2 useLegacyElementType:(BOOL)arg3;
-+ (NSUInteger)elementTypeForAccessibilityElement:(id)arg1 usingAXAttributes_macOS:(id)arg2 useLegacyElementType:(BOOL)arg3;
++ (NSUInteger)elementTypeForAccessibilityElement:(id)arg1 usingAXAttributes_macOS:(id)arg2 macCatalystStatusProvider:(id)arg3 useLegacyElementType:(BOOL)arg4;
 + (id)elementWithAccessibilityElement:(id)arg1;
 + (id)requiredAXAttributesForElementSnapshotHierarchyOnMacOS:(BOOL)arg1;
 + (id)sanitizedElementSnapshotHierarchyAttributesForAttributes:(id)arg1 isMacOS:(BOOL)arg2;
@@ -126,6 +127,7 @@
 - (BOOL)_fetchBoolForKey:(id)arg1;
 - (id)_fetchSimpleValueForKey:(id)arg1;
 - (BOOL)_frameFuzzyMatchesElement:(id)arg1;
+- (BOOL)_frameFuzzyMatchesElement:(id)arg1 tolerance:(double)arg2;
 - (BOOL)_fuzzyMatchesElement:(id)arg1;
 - (BOOL)_isAncestorOfElement:(id)arg1;
 - (BOOL)_isDescendantOfElement:(id)arg1;

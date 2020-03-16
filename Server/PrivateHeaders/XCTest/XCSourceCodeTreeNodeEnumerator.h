@@ -21,6 +21,8 @@
     NSMutableArray *_remainingNodes;
 }
 
+@property(retain, nonatomic) NSMutableArray *remainingNodes;
+
 - (id)initWithNode:(id)arg1;
 - (id)nextObject;
 

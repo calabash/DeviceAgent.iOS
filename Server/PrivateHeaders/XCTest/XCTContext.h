@@ -14,15 +14,26 @@
 
 #import <objc/NSObject.h>
 
-@class NSDictionary, _XCTContextImplementation;
+@class NSDictionary, NSMutableArray, NSMutableDictionary, XCTActivityRecordStack, XCTestCase;
 
 @interface XCTContext : NSObject
 {
-    id _internalImplementation;
+    BOOL _valid;
+    NSMutableDictionary *_associatedObjects;
+    NSMutableArray *_tearDownBlocks;
+    XCTContext *_parent;
+    XCTestCase *_testCase;
+    XCTActivityRecordStack *_activityRecordStack;
 }
 
+@property(readonly) XCTActivityRecordStack *activityRecordStack;
 @property(readonly) NSDictionary *aggregationRecords;
-@property(retain) _XCTContextImplementation *internalImplementation;
+@property(readonly) NSMutableDictionary *associatedObjects;
+@property(readonly) NSMutableArray *interruptionHandlers;
+@property(readonly, getter=isValid) BOOL valid;
+@property(readonly) XCTContext *parent;
+@property(readonly) NSMutableArray *tearDownBlocks;
+@property(readonly) __weak XCTestCase *testCase;
 
 + (id)_currentContextInThread:(id)arg1;
 + (void)_runActivityNamed:(id)arg1 block:(CDUnknownBlockType)arg2;
@@ -30,16 +41,19 @@
 + (id)currentContext;
 + (id)currentContextInThread:(id)arg1;
 + (BOOL)hasContextInThread:(id)arg1;
-+ (void)popCurrentContextInThread:(id)arg1;
-+ (void)pushCurrentContext:(id)arg1 inThread:(id)arg2;
 + (void)runActivityNamed:(id)arg1 block:(CDUnknownBlockType)arg2;
 + (void)runInContextForTestCase:(id)arg1 block:(CDUnknownBlockType)arg2;
 + (BOOL)shouldReportActivityWithType:(id)arg1 inTestMode:(NSInteger)arg2;
+- (void)_reportEmptyActivityWithType:(id)arg1 format:(id)arg2;
 - (void)_runActivityNamed:(id)arg1 block:(CDUnknownBlockType)arg2;
 - (void)_runActivityNamed:(id)arg1 type:(id)arg2 block:(CDUnknownBlockType)arg3;
 - (NSInteger)activityRecordStackDepth;
+- (void)addTearDownBlock:(CDUnknownBlockType)arg1;
+- (id)associatedObjectForKey:(id)arg1;
 - (void)didFinishActivity:(id)arg1;
-- (id)initInternally;
+- (id)initWithParent:(id)arg1 testCase:(id)arg2;
+- (void)invalidate;
+- (void)setAssociatedObject:(id)arg1 forKey:(id)arg2;
 - (id)topActivity;
 - (void)unwindRemainingActivities;
 - (id)willStartActivityWithTitle:(id)arg1 type:(id)arg2;

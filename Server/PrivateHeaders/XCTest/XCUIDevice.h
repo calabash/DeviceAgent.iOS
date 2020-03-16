@@ -16,8 +16,8 @@
 
 #import <UIKit/UIDevice.h>
 
-@class NSString, XCUIRemote, XCUISiriService, XCUITestContext;
-@protocol XCUIAccessibilityInterface, XCUIApplicationAutomationSessionProviding, XCUIApplicationManaging, XCUIApplicationMonitor, XCUIDeviceEventAndStateInterface, XCUIEventSynthesizing, XCUIScreenDataSource, XCUIXcodeApplicationManaging;
+@class NSString, XCUIRemote, XCUISiriService;
+@protocol XCUIAccessibilityInterface, XCUIApplicationAutomationSessionProviding, XCUIApplicationManaging, XCUIApplicationMonitor, XCUIDeviceEventAndStateInterface, XCUIEventSynthesizing, XCUIInterruptionMonitoring, XCUIResetAuthorizationStatusOfProtectedResourcesInterface, XCUIScreenDataSource, XCUIXcodeApplicationManaging;
 
 
 @protocol XCUIAccessibilityInterface;
@@ -38,14 +38,16 @@
     XCUISiriService *_siriService;
     id <XCUIScreenDataSource> _screenDataSource;
     NSString *_uniqueIdentifier;
-    XCUITestContext *_testContext;
     XCUIRemote *_remote;
+    id <XCUIInterruptionMonitoring> _interruptionMonitor;
+    id <XCUIResetAuthorizationStatusOfProtectedResourcesInterface> _resetAuthorizationStatusInterface;
 }
 
 @property(nonatomic) UIDeviceOrientation orientation;
 @property(readonly) XCUISiriService *siriService;
 
 + (id)localDevice;
++ (void)setLocalDevice:(id)arg1;
 + (XCUIDevice *)sharedDevice;
 - (void)_setOrientation:(NSInteger)arg1;
 - (void)_silentPressButton:(NSInteger)arg1;
@@ -57,6 +59,7 @@
 - (id)eventSynthesizer;
 - (void)holdHomeButtonForDuration:(double)arg1;
 - (id)initLocalDeviceWithPlatform:(NSInteger)arg1;
+- (id)interruptionMonitor;
 - (BOOL)isLocal;
 - (BOOL)isSimulatorDevice;
 - (id)mainScreen;
@@ -68,12 +71,12 @@
 - (void)pressLockButton;
 - (id)remote;
 - (void)remoteAutomationSessionDidDisconnect:(id)arg1;
+- (id)resetAuthorizationStatusInterface;
 - (void)rotateDigitalCrown:(double)arg1 velocity:(double)arg2;
 - (id)screenDataSource;
 - (id)screens;
 - (id)screensOrError:(id *)arg1;
 - (BOOL)supportsPressureInteraction;
-- (id)testContext;
 - (id)uniqueIdentifier;
 - (id)xcodeApplicationManager;
 

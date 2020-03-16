@@ -20,16 +20,18 @@
 {
     NSString *_suiteName;
     NSUInteger _executionCount;
+    NSUInteger _skipCount;
     NSUInteger _failureCount;
     NSUInteger _unexpectedExceptionCount;
 }
 
 @property(readonly) NSUInteger executionCount;
 @property(readonly) NSUInteger failureCount;
+@property(readonly) NSUInteger skipCount;
 @property(readonly) NSString *suiteName;
 @property(readonly) NSUInteger unexpectedExceptionCount;
 
-- (id)initWithSuiteName:(id)arg1 executionCount:(NSUInteger)arg2 failureCount:(NSUInteger)arg3 unexpectedExceptionCount:(NSUInteger)arg4;
+- (id)initWithSuiteName:(id)arg1 executionCount:(NSUInteger)arg2 skipCount:(NSUInteger)arg3 failureCount:(NSUInteger)arg4 unexpectedExceptionCount:(NSUInteger)arg5;
 - (BOOL)isEqualToStatisticsRecord:(id)arg1;
 
 @end

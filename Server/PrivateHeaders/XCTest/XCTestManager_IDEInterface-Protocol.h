@@ -12,7 +12,7 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@class NSArray, NSData, NSDictionary, NSError, NSNumber, NSString, XCActivityRecord, XCElementSnapshot;
+@class NSArray, NSData, NSDictionary, NSError, NSNumber, NSString, XCActivityRecord, XCElementSnapshot, XCTTestIdentifier;
 
 @protocol XCTestManager_IDEInterface
 - (id)_XCT_didBeginExecutingTestPlan;
@@ -32,6 +32,8 @@
 - (id)_XCT_recordedKeyEventsWithApplicationSnapshot:(XCElementSnapshot *)arg1 characters:(NSString *)arg2 charactersIgnoringModifiers:(NSString *)arg3 modifierFlags:(NSNumber *)arg4;
 - (id)_XCT_recordedOrientationChange:(NSString *)arg1;
 - (id)_XCT_reportSelfDiagnosisIssue:(NSString *)arg1 description:(NSString *)arg2;
+- (id)_XCT_reportTestWithIdentifier:(XCTTestIdentifier *)arg1 didExceedExecutionTimeAllowance:(NSNumber *)arg2;
+- (id)_XCT_reportTestWithIdentifier:(XCTTestIdentifier *)arg1 didExceedMaxDuration:(NSNumber *)arg2;
 - (id)_XCT_terminateProcess:(id)arg1;
 - (id)_XCT_testBundleReadyWithProtocolVersion:(NSNumber *)arg1 minimumVersion:(NSNumber *)arg2;
 - (id)_XCT_testCase:(NSString *)arg1 method:(NSString *)arg2 didFinishActivity:(XCActivityRecord *)arg3;
@@ -40,7 +42,9 @@
 - (id)_XCT_testCaseDidFailForTestClass:(NSString *)arg1 method:(NSString *)arg2 withMessage:(NSString *)arg3 file:(NSString *)arg4 line:(NSNumber *)arg5;
 - (id)_XCT_testCaseDidFinishForTestClass:(NSString *)arg1 method:(NSString *)arg2 withStatus:(NSString *)arg3 duration:(NSNumber *)arg4;
 - (id)_XCT_testCaseDidStartForTestClass:(NSString *)arg1 method:(NSString *)arg2;
+- (id)_XCT_testCaseWasSkippedForTestClass:(NSString *)arg1 method:(NSString *)arg2 withMessage:(NSString *)arg3 file:(NSString *)arg4 line:(NSNumber *)arg5;
 - (id)_XCT_testMethod:(NSString *)arg1 ofClass:(NSString *)arg2 didMeasureMetric:(NSDictionary *)arg3 file:(NSString *)arg4 line:(NSNumber *)arg5;
+- (id)_XCT_testSuite:(NSString *)arg1 didFinishAt:(NSString *)arg2 runCount:(NSNumber *)arg3 skipCount:(NSNumber *)arg4 failureCount:(NSNumber *)arg5 unexpectedFailureCount:(NSNumber *)arg6 testDuration:(NSNumber *)arg7 totalDuration:(NSNumber *)arg8;
 - (id)_XCT_testSuite:(NSString *)arg1 didFinishAt:(NSString *)arg2 runCount:(NSNumber *)arg3 withFailures:(NSNumber *)arg4 unexpected:(NSNumber *)arg5 testDuration:(NSNumber *)arg6 totalDuration:(NSNumber *)arg7;
 - (id)_XCT_testSuite:(NSString *)arg1 didStartAt:(NSString *)arg2;
 @end

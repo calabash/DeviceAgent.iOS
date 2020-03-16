@@ -21,16 +21,16 @@
 
 @interface XCTFixedPriorityTestScheduler : NSObject <XCTTestScheduler>
 {
-    NSObject<OS_dispatch_queue> *_queue;
+    BOOL _hasStarted;
     NSObject<OS_dispatch_queue> *_workerQueue;
+    id <XCTTestSchedulerDelegate> _delegate;
+    NSObject<OS_dispatch_queue> *_delegateQueue;
+    NSObject<OS_dispatch_queue> *_queue;
     NSMutableArray *_undispatchedTestIdentifierGroups;
     NSSet *_testIdentifiersToSkip;
     NSMutableSet *_inFlightWorkers;
     CDUnknownBlockType _prioritizer;
-    BOOL _hasStarted;
     NSMutableSet *_queuedWorkers;
-    id <XCTTestSchedulerDelegate> _delegate;
-    NSObject<OS_dispatch_queue> *_delegateQueue;
 }
 
 @property __weak id <XCTTestSchedulerDelegate> delegate;

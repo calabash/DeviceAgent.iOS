@@ -16,26 +16,26 @@
 
 #import "XCTTestRunSessionDelegate-Protocol.h"
 #import "XCTestDriverInterface-Protocol.h"
-#import "XCTestObservation-Protocol.h"
 #import "XCUIXcodeApplicationManaging-Protocol.h"
+#import "_XCTestObservationPrivate-Protocol.h"
 
 @class DTXConnection, NSString, XCTestRun;
 @protocol OS_dispatch_queue, XCTRunnerIDESessionDelegate, XCTTestWorker, XCTestManager_IDEInterface, XCUIApplicationMonitor;
 
 
-@protocol XCTestManager_IDEInterface;
 @protocol XCTRunnerIDESessionDelegate;
 @protocol XCTTestWorker;
+@protocol XCTestManager_IDEInterface;
 
-@interface XCTRunnerIDESession : NSObject <XCTestObservation, XCTestDriverInterface, XCTTestRunSessionDelegate, XCUIXcodeApplicationManaging>
+@interface XCTRunnerIDESession : NSObject <_XCTestObservationPrivate, XCTestDriverInterface, XCTTestRunSessionDelegate, XCUIXcodeApplicationManaging>
 {
-    NSObject<OS_dispatch_queue> *_queue;
-    DTXConnection *_IDEConnection;
-    id <XCTestManager_IDEInterface> _IDEProxy;
     NSInteger _IDEProtocolVersion;
     id <XCTRunnerIDESessionDelegate> _delegate;
     id <XCUIApplicationMonitor> _applicationMonitor;
     id <XCTTestWorker> _testWorker;
+    NSObject<OS_dispatch_queue> *_queue;
+    DTXConnection *_IDEConnection;
+    id <XCTestManager_IDEInterface> _IDEProxy;
     XCTestRun *_currentTestRun;
     CDUnknownBlockType _readinessReply;
 }
@@ -44,8 +44,9 @@
 @property NSInteger IDEProtocolVersion;
 @property(retain) id <XCTestManager_IDEInterface> IDEProxy;
 @property __weak id <XCUIApplicationMonitor> applicationMonitor;
+@property(retain) XCTestRun *currentTestRun;
 @property __weak id <XCTRunnerIDESessionDelegate> delegate;
-@property(retain) NSObject<OS_dispatch_queue> *queue;
+@property(readonly) NSObject<OS_dispatch_queue> *queue;
 @property(copy) CDUnknownBlockType readinessReply;
 @property(readonly) BOOL reportsCrashes;
 @property __weak id <XCTTestWorker> testWorker;
@@ -72,12 +73,14 @@
 - (void)reportBootstrappingFailure:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)reportSelfDiagnosisIssue:(id)arg1 description:(id)arg2;
 - (void)reportStallOnMainThreadInTestCase:(id)arg1 method:(id)arg2 file:(id)arg3 line:(NSUInteger)arg4;
+- (void)reportTestWithIdentifier:(id)arg1 didExceedExecutionTimeAllowance:(double)arg2;
 - (void)requestLaunchProgressForProcessWithToken:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)requestReadinessForTesting:(CDUnknownBlockType)arg1;
 - (void)terminateProcessWithToken:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)testBundleDidFinish:(id)arg1;
 - (void)testBundleWillStart:(id)arg1;
 - (void)testCase:(id)arg1 didFailWithDescription:(id)arg2 inFile:(id)arg3 atLine:(NSUInteger)arg4;
+- (void)testCase:(id)arg1 wasSkippedWithDescription:(id)arg2 inFile:(id)arg3 atLine:(NSUInteger)arg4;
 - (void)testCaseDidFinish:(id)arg1;
 - (void)testCaseWillStart:(id)arg1;
 - (void)testRunSession:(id)arg1 initializationForUITestingDidFailWithError:(id)arg2;

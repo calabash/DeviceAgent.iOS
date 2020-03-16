@@ -5,6 +5,7 @@
 //  Copyright (C) 1997-2019 Steve Nygard.
 //
 
+
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <XCTest/XCUIElementTypes.h>
@@ -12,21 +13,12 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-#import <objc/NSObject.h>
+@class NSString, XCUIElement;
+@protocol NSObject;
 
-@class NSArray;
-
-@interface _XCTCompoundExpectationImplementation : NSObject
-{
-    NSUInteger _logicalType;
-    NSArray *_subexpectations;
-}
-
-@property(readonly, nonatomic) NSUInteger logicalType;
-@property(readonly, copy, nonatomic) NSArray *subexpectations;
-
-- (void)cleanup;
-- (id)initWithLogicalType:(NSUInteger)arg1 subexpectations:(id)arg2;
-
+@protocol XCUIInterruptionMonitoring <NSObject>
+- (id <NSObject>)addInterruptionHandlerWithDescription:(NSString *)arg1 block:(BOOL (^)(XCUIElement *))arg2;
+- (BOOL)handleInterruptingElement:(XCUIElement *)arg1;
+- (void)removeInterruptionHandlerWithIdentifier:(id <NSObject>)arg1;
 @end
 

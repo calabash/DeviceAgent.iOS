@@ -23,15 +23,15 @@
 
 @interface XCTestDriver : NSObject <XCTRunnerIDESessionDelegate, XCDebugLogDelegate, XCTASDebugLogDelegate>
 {
+    NSInteger _debugMessageBufferOverflow;
     XCTestConfiguration *_testConfiguration;
     NSObject<OS_dispatch_queue> *_queue;
     NSMutableArray *_debugMessageBuffer;
-    NSInteger _debugMessageBufferOverflow;
 }
 
 @property(retain) NSMutableArray *debugMessageBuffer;
 @property NSInteger debugMessageBufferOverflow;
-@property(retain) NSObject<OS_dispatch_queue> *queue;
+@property(readonly) NSObject<OS_dispatch_queue> *queue;
 @property(readonly) XCTestConfiguration *testConfiguration;
 
 + (id)sharedTestDriver;

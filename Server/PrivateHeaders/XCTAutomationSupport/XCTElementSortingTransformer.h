@@ -31,7 +31,6 @@
 - (id)iteratorForInput:(id)arg1;
 - (id)requiredKeyPathsOrError:(id *)arg1;
 - (BOOL)supportsAttributeKeyPathAnalysis;
-- (BOOL)supportsRemoteEvaluation;
 - (id)transform:(id)arg1 relatedElements:(id *)arg2;
 
 
