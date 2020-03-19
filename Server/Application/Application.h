@@ -5,7 +5,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIApplication.h>
 #import "XCTest+CBXAdditions.h"
-#import "CBX-XCTest-Umbrella.h"
 
 @class XCUIApplication;
 

@@ -19,7 +19,7 @@
 // Licensed under the MIT license.
  
 #import <Foundation/Foundation.h>
-#import "XCTestCase.h"
+#import "XCTest/XCTestCase.h"
 
 @class _XCTestCaseImplementation;
 
@@ -29,7 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (_XCTestCaseImplementation *)internalImplementation;
 - (void)setInternalImplementation:(_XCTestCaseImplementation *)implementation;
-
+@property(nonatomic) BOOL shouldHaltWhenReceivesControl;
+@property(nonatomic) BOOL shouldSetShouldHaltWhenReceivesControl;
 @end
 
 /**
