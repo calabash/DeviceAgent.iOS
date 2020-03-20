@@ -1,3 +1,7 @@
+### ???
+
+* Add support for Xcode 11.4 beta 3 #377 Thanks @sergey-plevako-badoo
+
 ### 2.1.0
 
 Fixes various problems in dismiss-SpringBoard-alert system.
