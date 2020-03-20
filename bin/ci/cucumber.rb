@@ -13,10 +13,11 @@ Bundler.with_clean_env do
     require "run_loop"
     require "fileutils"
 
-    hash = RunLoop::Shell.run_shell_command(["bundle", "show", "run_loop"],
+    hash = RunLoop::Shell.run_shell_command(["bundle", "info", "--path", "run_loop"],
                                             {log_cmd: true})
-
-    target = File.join(hash[:out].strip,
+    lines = File.join(hash[:out].strip)
+    last_line = lines.split("\n")[-1]
+    target = File.join(last_line,
                        "lib", "run_loop", "device_agent",
                        "app", "DeviceAgent-Runner.app")
     source = File.join("..", "Products", "app", "DeviceAgent",
