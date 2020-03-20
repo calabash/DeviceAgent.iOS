@@ -19,6 +19,8 @@
     Class _testCaseClass;
 }
 
+@property(readonly) Class testCaseClass;
+
 + (id)emptyTestSuiteForTestCaseClass:(Class)arg1;
 - (id)initWithTestCaseClass:(Class)arg1;
 - (void)setUp;

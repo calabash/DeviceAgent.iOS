@@ -14,17 +14,25 @@
 
 #import "XCTestExpectation.h"
 
-@class NSString, _XCTDarwinNotificationExpectationImplementation;
+@class NSObject, NSString;
+@protocol OS_dispatch_queue;
 
 @interface XCTDarwinNotificationExpectation : XCTestExpectation
 {
-    _XCTDarwinNotificationExpectationImplementation *_internal;
+    BOOL _hasCleanedUp;
+    NSInteger _notifyToken;
+    CDUnknownBlockType _handler;
+    NSString *_notificationName;
+    NSObject<OS_dispatch_queue> *_queue;
 }
 
 @property(copy) CDUnknownBlockType handler;
-@property(retain) _XCTDarwinNotificationExpectationImplementation *internal;
+@property BOOL hasCleanedUp;
 @property(readonly, copy) NSString *notificationName;
+@property NSInteger notifyToken;
+@property(readonly) NSObject<OS_dispatch_queue> *queue;
 
+- (void)_handleNotification;
 - (void)cleanup;
 - (id)initWithNotificationName:(id)arg1;
 

@@ -71,6 +71,7 @@
 - (id)initWithPath:(id)arg1 bundleID:(id)arg2;
 - (id)initWithPath:(id)arg1 bundleID:(id)arg2 device:(id)arg3;
 - (void)resetAlertCount;
+- (void)resetAuthorizationStatusForResource:(NSInteger)arg1;
 - (void)serviceOpenRequest:(id)arg1;
 - (BOOL)shouldWaitForAutomationSessionWhenUsingPlatformLauncher:(BOOL)arg1;
 - (void)terminate;

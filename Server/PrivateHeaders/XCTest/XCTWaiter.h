@@ -17,7 +17,7 @@
 #import "XCTWaiterManagement-Protocol.h"
 #import "XCTestExpectationDelegate-Protocol.h"
 
-@class NSArray, NSString, _XCTWaiterImpl;
+@class NSArray, NSMutableArray, NSString, XCTWaiterManager;
 @protocol OS_dispatch_queue, XCTWaiterDelegate;
 
 
@@ -25,18 +25,33 @@
 
 @interface XCTWaiter : NSObject <XCTestExpectationDelegate, XCTWaiterManagement>
 {
-    _XCTWaiterImpl *_internalImplementation;
+    BOOL _enforceOrderOfFulfillment;
+    id <XCTWaiterDelegate> _delegate;
+    NSObject<OS_dispatch_queue> *_delegateQueue;
+    NSInteger _state;
+    NSInteger _result;
+    double _timeout;
+    NSArray *_waitCallStackReturnAddresses;
+    NSArray *_expectations;
+    NSMutableArray *_mutableFulfilledExpectations;
+    struct __CFRunLoop *_waitingRunLoop;
+    XCTWaiterManager *_manager;
 }
 
 @property(readonly) BOOL currentContextIsNested;
 @property __weak id <XCTWaiterDelegate> delegate;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *delegateQueue;
+@property BOOL enforceOrderOfFulfillment;
+@property(copy, nonatomic) NSArray *expectations;
 @property(readonly) NSArray *fulfilledExpectations;
-@property(readonly) _XCTWaiterImpl *internalImplementation;
 @property(readonly, getter=isInProgress) BOOL inProgress;
+@property __weak XCTWaiterManager *manager;
+@property(readonly, nonatomic) NSMutableArray *mutableFulfilledExpectations;
+@property NSInteger result;
+@property NSInteger state;
+@property double timeout;
+@property(copy) NSArray *waitCallStackReturnAddresses;
 @property struct __CFRunLoop *waitingRunLoop;
-@property(readonly) double timeout;
-@property(readonly, copy) NSArray *waitCallStackReturnAddresses;
 
 + (void)handleStalledWaiter:(id)arg1;
 + (CDUnknownBlockType)installWatchdogForWaiter:(id)arg1 timeout:(double)arg2;
@@ -58,10 +73,6 @@
 - (id)initWithDelegate:(id)arg1;
 - (void)interruptForWaiter:(id)arg1;
 - (void)primitiveWait:(double)arg1;
-- (NSInteger)result;
-- (void)setState:(NSInteger)arg1;
-- (void)setWaitCallStackReturnAddresses:(id)arg1;
-- (NSInteger)state;
 - (NSInteger)waitForExpectations:(id)arg1 timeout:(double)arg2;
 - (NSInteger)waitForExpectations:(id)arg1 timeout:(double)arg2 enforceOrder:(BOOL)arg3;
 

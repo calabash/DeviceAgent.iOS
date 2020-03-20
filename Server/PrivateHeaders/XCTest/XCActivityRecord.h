@@ -20,17 +20,17 @@
 
 @interface XCActivityRecord : NSObject <NSSecureCoding, XCTActivity>
 {
+    BOOL _valid;
+    BOOL _isTopLevel;
+    BOOL _useLegacySerializationFormat;
     NSString *_title;
     NSString *_activityType;
     NSUUID *_uuid;
     NSDate *_start;
     NSDate *_finish;
-    NSMutableArray *_attachments;
-    BOOL _valid;
-    BOOL _useLegacySerializationFormat;
     NSString *_aggregationIdentifier;
     double _subactivitiesDuration;
-    BOOL _isTopLevel;
+    NSMutableArray *_mutableAttachments;
 }
 
 @property(copy) NSString *activityType;
@@ -40,6 +40,7 @@
 @property(copy) NSDate *finish;
 @property BOOL isTopLevel;
 @property(readonly, getter=isValid) BOOL valid;
+@property(readonly) NSMutableArray *mutableAttachments;
 @property(readonly, copy) NSString *name;
 @property(copy) NSDate *start;
 @property(copy) NSString *title;

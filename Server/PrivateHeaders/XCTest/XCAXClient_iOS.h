@@ -58,6 +58,7 @@
 - (id)hitTestElement:(id)arg1 withPoint:(CGPoint)arg2 error:(id *)arg3;
 - (id)initWithApplicationProcessTracker:(id)arg1 remoteAccessibilityInterface:(id)arg2;
 - (id)interruptingUIElementsAffectingSnapshot:(id)arg1 checkForHandledElement:(id)arg2 containsHandledElement:(BOOL *)arg3;
+- (BOOL)isMacCatalystForPID:(NSInteger)arg1;
 - (BOOL)loadAccessibility:(id *)arg1;
 - (id)localizableStringsDataForActiveApplications;
 - (void)notifyOnNextOccurrenceOfUserTestingEvent:(id)arg1 handler:(CDUnknownBlockType)arg2;
@@ -68,11 +69,12 @@
 - (id)parameterizedAttribute:(id)arg1 forElement:(id)arg2 parameter:(id)arg3 error:(id *)arg4;
 - (BOOL)performAction:(id)arg1 onElement:(id)arg2 value:(id)arg3 error:(id *)arg4;
 - (void)performWhenMenuOpens:(id)arg1 block:(CDUnknownBlockType)arg2;
-- (void)registerForAXNotificationsForApplicationWithPID:(NSInteger)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)registerForAXNotificationsForApplicationWithPID:(NSInteger)arg1 timeout:(double)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)removeObserver:(id)arg1 forAXNotification:(id)arg2;
 - (id)requestSnapshotForElement:(id)arg1 attributes:(id)arg2 parameters:(id)arg3 error:(id *)arg4;
 - (BOOL)setAttribute:(id)arg1 value:(id)arg2 element:(id)arg3 outError:(id *)arg4;
 - (id)systemApplication;
+- (void)unregisterForAXNotificationsForApplicationWithPID:(NSInteger)arg1;
 
 
 @end

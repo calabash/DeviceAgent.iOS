@@ -24,6 +24,7 @@
 @property(readonly, copy) XCTCapabilities *capabilities;
 @property(readonly, copy) NSMutableDictionary *capabilitiesDictionary;
 
++ (id)capabilitiesFromProvider:(Class)arg1;
 - (void)registerCapability:(id)arg1;
 - (void)registerCapability:(id)arg1 version:(NSUInteger)arg2;
 - (void)upgradeCapability:(id)arg1 toVersion:(NSUInteger)arg2;

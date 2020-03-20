@@ -37,6 +37,7 @@
     NSUInteger _alertCount;
     id <XCTRunnerAutomationSession> _automationSession;
     XCTFuture *_automationSessionFuture;
+    NSString *_path;
     NSString *_bundleID;
     XCElementSnapshot *_lastSnapshot;
     id <XCUIDevice> _device;
@@ -62,6 +63,7 @@
 @property BOOL hasExitCode;
 @property(readonly, getter=isProcessIDValid) BOOL processIDValid;
 @property(retain) XCElementSnapshot *lastSnapshot;
+@property(readonly, copy, nonatomic) NSString *path;
 @property(nonatomic) NSInteger processID;
 @property(readonly) BOOL running;
 @property(retain) id token;
@@ -91,7 +93,9 @@
 - (id)attributesForElement:(id)arg1 attributes:(id)arg2 error:(id *)arg3;
 - (void)incrementAlertCount;
 - (id)initWithBundleID:(id)arg1 device:(id)arg2 delegate:(id)arg3;
+- (id)initWithPath:(id)arg1 bundleID:(id)arg2 device:(id)arg3 delegate:(id)arg4;
 - (BOOL)isApplicationStateKnown;
+- (BOOL)isMacCatalystForPID:(NSInteger)arg1;
 - (BOOL)isQuiescent;
 - (id)parameterizedAttribute:(id)arg1 forElement:(id)arg2 parameter:(id)arg3 error:(id *)arg4;
 - (void)resetAlertCount;
