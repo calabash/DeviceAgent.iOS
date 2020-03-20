@@ -1,16 +1,7 @@
 variables:
   # When Agent.JobName matches this value (and the git ref is a tag), then
   # built artifacts will be published to Azure Blob Storage.
-  #
-  # We cannot build with Xcode 11 because of this bug:
-  # REGRESSION: Xcode 11 (xcodebuild) fails to perform gestures during UI
-  #             Tests on iPhones/iPads with iOS versions 11.0.x - 11.3.x -
-  #             "unable to fetch parameterized attribute"
-  # FB7315854
-  #
-  # Apple has fixed this bug in Xcode 11.2.  When that is released, we should
-  # change this to 'Mojave-Xcode-11.2"
-  AzurePublishWhen: "Mojave-Xcode-11.2"
+  AzurePublishWhen: "Catalina-Xcode-11.3"
 
 trigger:
   tags:
@@ -33,16 +24,19 @@ jobs:
     matrix:
       Mojave-Xcode-10.3:
         IMAGE_POOL: 'macOS-10.14'
-        XCODE_VERSION: '10.3'
-      Mojave-Xcode-11.0:
-        IMAGE_POOL: 'macOS-10.14'
+        XCODE_VERSION: '11.3'
+      Catalina-Xcode-11.0:
+        IMAGE_POOL: 'macOS-10.15'
         XCODE_VERSION: '11'
-      Mojave-Xcode-11.1:
-        IMAGE_POOL: 'macOS-10.14'
+      Catalina-Xcode-11.1:
+        IMAGE_POOL: 'macOS-10.15'
         XCODE_VERSION: '11.1'
-      Mojave-Xcode-11.2:
-        IMAGE_POOL: 'macOS-10.14'
+      Catalina-Xcode-11.2:
+        IMAGE_POOL: 'macOS-10.15'
         XCODE_VERSION: '11.2'
+      Catalina-Xcode-11.3:
+        IMAGE_POOL: 'macOS-10.15'
+        XCODE_VERSION: '11.3'
   pool:
     vmImage: $(IMAGE_POOL)
   variables:
@@ -57,7 +51,6 @@ jobs:
       echo "Xcode path: $(xcrun -f xcodebuild)"
       echo "Xcode select path: $(xcode-select --print-path)"
     displayName: "Select Xcode $(XCODE_VERSION)"
-
 
   - script: |
       set -e
