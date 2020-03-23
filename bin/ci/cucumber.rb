@@ -5,7 +5,7 @@ working_directory = File.expand_path(File.join(this_dir, "..", "..", "cucumber")
 
 require "bundler"
 
-Bundler.with_clean_env do
+Bundler.with_unbundled_env do
   Dir.chdir(working_directory) do
 
     system("bundle update")
