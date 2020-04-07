@@ -472,5 +472,21 @@
       "Engedélyezés egyszer"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Engedélyezi a(z) „%@” számára, hogy használja az Ön helyzetét?",
+    "buttons": [
+      "Engedélyezés mindig",
+      "Engedélyezés",
+      "Az alkalmazás használata közben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Engedélyezi, hogy a(z) „%@” használja az Ön helyzetét akkor is, ha nem használja az alkalmazást?",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
   }
 ]

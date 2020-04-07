@@ -426,5 +426,28 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Permets que “%@” utilitzi la teva ubicació?",
+    "buttons": [
+      "Permetre-ho sempre",
+      "Permetre",
+      "Permetre amb l’app en ús"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permets que “%@” utilitzi la teva ubicació encara que no estiguis utilitzant l’app?",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permets que “%@” també utilitzi la teva ubicació encara que no estiguis utilitzant l’app?",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
   }
 ]

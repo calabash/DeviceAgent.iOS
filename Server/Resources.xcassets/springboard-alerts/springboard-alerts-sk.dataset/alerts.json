@@ -501,5 +501,56 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Povoliť apke %@ používať vašu polohu?",
+    "buttons": [
+      "Vždy povoliť",
+      "Povoliť",
+      "Povoliť len pri používaní apky"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Chcete povoliť apke %@ používať vašu polohu aj v čase, keď ju nepoužívate?",
+    "buttons": [
+      "Povoliť"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka %@ počas posledných 3 dní použila vašu polohu na pozadí. Chcete jej to umožniť aj naďalej?",
+    "buttons": [
+      "Povoliť"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka %@ použila vašu polohu na pozadí 1-krát za posledné 3 dni. Chcete jej to umožniť aj naďalej?",
+    "buttons": [
+      "Povoliť"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Zapnúť Diktovanie?",
+    "buttons": [
+      "Teraz nie"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Zapnúť Diktovanie",
+    "buttons": [
+      "Teraz nie"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Povoliť aktualizáciu zdravotných dát pre „%@“.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

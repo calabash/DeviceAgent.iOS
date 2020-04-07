@@ -395,5 +395,21 @@
       "開く"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@”に位置情報の使用を許可しますか?",
+    "buttons": [
+      "常に許可",
+      "許可",
+      "Appの使用中は許可"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”を使用していないときでも位置情報の使用を許可しますか?",
+    "buttons": [
+      "許可"
+    ],
+    "shouldAccept": true
   }
 ]

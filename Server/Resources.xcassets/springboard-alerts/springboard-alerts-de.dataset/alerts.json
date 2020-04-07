@@ -654,5 +654,35 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ deinen Standort verwenden?",
+    "buttons": [
+      "Immer erlauben",
+      "Erlauben",
+      "Beim Verwenden der App erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ deinen Standort verwenden, wenn du die App nicht benutzt?",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ deinen Standort auch verwenden, wenn du die App nicht benutzt?",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte Fotos hinzufügen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

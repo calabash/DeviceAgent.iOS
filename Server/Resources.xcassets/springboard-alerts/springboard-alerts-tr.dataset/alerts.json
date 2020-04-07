@@ -438,5 +438,28 @@
       "Sürdür"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@”, konumunuzu kullanabilsin mi?",
+    "buttons": [
+      "Her Zaman İzin Ver",
+      "İzin Ver",
+      "Uygulamayı Kullanırken İzin Ver"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”, uygulamayı kullanmıyorken bile konumunuzu kullanabilsin mi?",
+    "buttons": [
+      "İzin Ver"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”, uygulamayı kullanmıyorken bile konumunuzu da kullanabilsin mi?",
+    "buttons": [
+      "İzin Ver"
+    ],
+    "shouldAccept": true
   }
 ]

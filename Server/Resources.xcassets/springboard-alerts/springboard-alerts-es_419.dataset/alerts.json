@@ -381,5 +381,28 @@
       "Permitir una vez"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir a “%@” utilizar tu ubicación?",
+    "buttons": [
+      "Permitir siempre",
+      "Permitir",
+      "Permitir al usar la app"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir a “%@” utilizar tu ubicación incluso cuando la app no está en uso?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir que “%@” también utilice tu ubicación incluso cuando la app no está en uso?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
   }
 ]

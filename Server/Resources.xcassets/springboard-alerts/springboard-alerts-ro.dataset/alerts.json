@@ -382,5 +382,28 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Permiteți ca aplicația “%@” să utilizeze localizarea dvs.?",
+    "buttons": [
+      "Permiteți întotdeauna",
+      "Permiteți",
+      "Permiteți în timpul utilizării aplicației"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permiteți ca aplicația “%@” să utilizeze localizarea dvs. chiar și atunci când nu o utilizați?",
+    "buttons": [
+      "Permiteți"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permiteți ca aplicația “%@” să utilizeze, de asemenea, localizarea dvs. chiar și atunci când nu o utilizați?",
+    "buttons": [
+      "Permiteți"
+    ],
+    "shouldAccept": true
   }
 ]
