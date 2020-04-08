@@ -1,10 +1,11 @@
 ### ???
 
 * Add support for Xcode 11.4 beta 3 #377 Thanks @sergey-plevako-badoo
+* Add alerts new in Xcode 11.4 #382 Thanks @humbled
 
 ### 2.1.0
 
-Fixes various problems in dismiss-SpringBoard-alert system.
+* Fixes various problems in dismiss-SpringBoard-alert system.
 
 ### 2.0.2
 
