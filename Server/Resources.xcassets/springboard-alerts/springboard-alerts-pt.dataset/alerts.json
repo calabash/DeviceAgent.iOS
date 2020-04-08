@@ -450,5 +450,35 @@
       "Permitir Uma Vez"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” use a sua localização?",
+    "buttons": [
+      "Permitir Sempre",
+      "Permitir",
+      "Permitir Durante o Uso do App"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” use sua localização mesmo quando você não estiver usando o aplicativo?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” também use sua localização mesmo quando você não estiver usando o aplicativo?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso ao Reconhecimento de Fala",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -375,5 +375,28 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Tillåter du att ”%@” använder din platsinformation?",
+    "buttons": [
+      "Tillåt alltid",
+      "Tillåt",
+      "Tillåt medan appen används"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vill du tillåta att ”%@” använder din platsinfo även när du inte använder appen?",
+    "buttons": [
+      "Tillåt"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vill du tillåta att ”%@” även använder din platsinfo när du inte använder appen?",
+    "buttons": [
+      "Tillåt"
+    ],
+    "shouldAccept": true
   }
 ]

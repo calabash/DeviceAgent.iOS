@@ -436,5 +436,21 @@
       "Consenti una volta"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Vuoi consentire a “%@” di utilizzare la tua posizione?",
+    "buttons": [
+      "Consenti sempre",
+      "Consenti",
+      "Consenti quando utilizzi l'app"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vuoi consentire a “%@” di accedere alla tua posizione anche quando non stai utilizzando l'app?",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -399,5 +399,28 @@
       "Izinkan Sekali"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Izinkan “%@” untuk menggunakan lokasi Anda?",
+    "buttons": [
+      "Selalu Izinkan",
+      "Izinkan",
+      "Izinkan Saat Menggunakan App"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Izinkan “%@” untuk menggunakan lokasi Anda bahkan saat Anda tidak menggunakan app?",
+    "buttons": [
+      "Izinkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Izinkan juga “%@” untuk menggunakan lokasi Anda bahkan saat Anda tidak menggunakan app?",
+    "buttons": [
+      "Izinkan"
+    ],
+    "shouldAccept": true
   }
 ]

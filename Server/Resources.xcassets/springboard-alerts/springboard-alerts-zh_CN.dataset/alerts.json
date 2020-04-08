@@ -457,5 +457,21 @@
       "允许一次"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "允许“%@”使用您的位置？",
+    "buttons": [
+      "始终允许",
+      "允许",
+      "使用App时允许"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "允许“%@”在您并未使用该App时使用您的位置吗？",
+    "buttons": [
+      "允许"
+    ],
+    "shouldAccept": true
   }
 ]

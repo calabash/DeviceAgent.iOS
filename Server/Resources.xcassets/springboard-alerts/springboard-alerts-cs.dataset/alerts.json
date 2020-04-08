@@ -481,5 +481,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Aplikace „%@“ žádá o povolení ke sdílení dat s Bluetooth zařízeními v okolí i v čase, kdy ji právě nepoužíváte",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ chce přidat konfigurace DNS proxy",
+    "buttons": [
+      "Povolit"
+    ],
+    "shouldAccept": true
   }
 ]

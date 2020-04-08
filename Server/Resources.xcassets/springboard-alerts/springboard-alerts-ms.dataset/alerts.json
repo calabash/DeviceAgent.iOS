@@ -459,5 +459,28 @@
       "Benarkan"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Benarkan “%@” menggunakan lokasi anda?",
+    "buttons": [
+      "Sentiasa Benarkan",
+      "Benarkan",
+      "Benarkan Semasa Menggunakan App"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Benarkan “%@” menggunakan lokasi anda walaupun anda tidak menggunakan app?",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Benarkan “%@” turut menggunakan lokasi anda walaupun anda tidak menggunakan app?",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
   }
 ]

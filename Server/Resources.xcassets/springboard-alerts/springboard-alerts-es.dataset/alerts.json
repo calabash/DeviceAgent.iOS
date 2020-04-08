@@ -426,5 +426,21 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir que “%@” use tu ubicación?",
+    "buttons": [
+      "Permitir siempre",
+      "Permitir",
+      "Permitir al usarse la app"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir que “%@” también use tu ubicación aunque no estés utilizando la app?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
   }
 ]
