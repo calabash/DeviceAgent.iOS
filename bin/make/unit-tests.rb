@@ -31,8 +31,7 @@ args =
         "-sdk", "iphonesimulator",
         "-configuration", "Debug",
         "GCC_TREAT_WARNINGS_AS_ERRORS=YES",
-        "CLANG_ENABLE_CODE_COVERAGE=NO",
-        "SWIFT_COMPILATION_MODE=wholemodule"
+        "CLANG_ENABLE_CODE_COVERAGE=NO"
       ]
 
 env = { "COMMAND_LINE_BUILD" => "1",
