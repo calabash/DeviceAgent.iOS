@@ -32,7 +32,7 @@ args =
         "-configuration", "Debug",
         "GCC_TREAT_WARNINGS_AS_ERRORS=YES",
         "CLANG_ENABLE_CODE_COVERAGE=NO",
-        "OTHER_CFLAGS='-Xclang -Wno-switch'"    
+        "OTHER_CFLAGS=-Xclang -Wno-switch"    
       ]
 
 env = { "COMMAND_LINE_BUILD" => "1",
