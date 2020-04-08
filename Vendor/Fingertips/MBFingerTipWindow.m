@@ -251,7 +251,7 @@
                     [self removeFingerTipWithHash:touch.hash animated:YES];
                     break;
                 }
-	        case UITouchPhaseRegionEntered:
+	    	case UITouchPhaseRegionEntered:
                     break;
                 case UITouchPhaseRegionMoved:
                     break;
