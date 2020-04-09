@@ -1,4 +1,4 @@
-### ???
+### 2.2.0
 
 * Add support for Xcode 11.4 beta 3 #377 Thanks @sergey-plevako-badoo
 * Add alerts new in Xcode 11.4 #382 Thanks @humbled
