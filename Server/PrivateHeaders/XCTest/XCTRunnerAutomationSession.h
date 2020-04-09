@@ -28,6 +28,7 @@
 @property(readonly) BOOL allowsRemoteAccess;
 @property(readonly) NSXPCConnection *connection;
 @property(readonly) NSInteger connectionPid;
+@property(readonly) BOOL isMacCatalyst;
 @property(retain) XCTCapabilities *remoteInterfaceCapabilities;
 @property(readonly) BOOL supportsAnimationsIdleNotifications;
 @property(readonly) BOOL supportsFetchingAttributesForElement;
@@ -40,6 +41,7 @@
 + (void)requestSessionWithEndpoint:(id)arg1 pid:(NSInteger)arg2 completion:(CDUnknownBlockType)arg3;
 - (id)attributesForElement:(id)arg1 attributes:(id)arg2 error:(id *)arg3;
 - (id)initWithConnection:(id)arg1 pid:(NSInteger)arg2 remoteInterfaceCapabilities:(id)arg3;
+- (BOOL)isMacCatalystForPID:(NSInteger)arg1;
 - (id)matchesForQuery:(id)arg1 error:(id *)arg2;
 - (void)notifyWhenAnimationsAreIdle:(CDUnknownBlockType)arg1;
 - (void)notifyWhenMainRunLoopIsIdle:(CDUnknownBlockType)arg1;

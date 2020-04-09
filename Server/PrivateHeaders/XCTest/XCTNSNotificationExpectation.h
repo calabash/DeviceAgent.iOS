@@ -14,19 +14,27 @@
 
 #import "XCTestExpectation.h"
 
-@class NSNotificationCenter, NSString, _XCTNSNotificationExpectationImplementation;
+@class NSNotificationCenter, NSObject, NSString;
+@protocol OS_dispatch_queue;
 
 @interface XCTNSNotificationExpectation : XCTestExpectation
 {
-    _XCTNSNotificationExpectationImplementation *_internal;
+    BOOL _hasCleanedUp;
+    CDUnknownBlockType _handler;
+    NSString *_notificationName;
+    id _observedObject;
+    NSNotificationCenter *_notificationCenter;
+    NSObject<OS_dispatch_queue> *_queue;
 }
 
 @property(copy) CDUnknownBlockType handler;
-@property(retain) _XCTNSNotificationExpectationImplementation *internal;
+@property BOOL hasCleanedUp;
 @property(readonly) NSNotificationCenter *notificationCenter;
 @property(readonly, copy) NSString *notificationName;
 @property(readonly) id observedObject;
+@property(readonly) NSObject<OS_dispatch_queue> *queue;
 
+- (void)_observeExpectedNotification:(id)arg1;
 - (void)cleanup;
 - (id)initWithName:(id)arg1;
 - (id)initWithName:(id)arg1 object:(id)arg2;

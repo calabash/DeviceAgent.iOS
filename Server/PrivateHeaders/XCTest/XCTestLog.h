@@ -14,12 +14,11 @@
 
 #import "XCTestObserver.h"
 
-#import "XCTestObservation-Protocol.h"
 #import "_XCTestObservationPrivate-Protocol.h"
 
 @class NSFileHandle, NSString;
 
-@interface XCTestLog : XCTestObserver <XCTestObservation, _XCTestObservationPrivate>
+@interface XCTestLog : XCTestObserver <_XCTestObservationPrivate>
 {
 }
 
@@ -32,6 +31,7 @@
 - (void)_testDidFail:(id)arg1 withDescription:(id)arg2 inFile:(id)arg3 atLine:(NSUInteger)arg4;
 - (id)dateFormatter;
 - (void)testCase:(id)arg1 didFailWithDescription:(id)arg2 inFile:(id)arg3 atLine:(NSUInteger)arg4;
+- (void)testCase:(id)arg1 wasSkippedWithDescription:(id)arg2 inFile:(id)arg3 atLine:(NSUInteger)arg4;
 - (void)testCaseDidFinish:(id)arg1;
 - (void)testCaseWillStart:(id)arg1;
 - (void)testLogWithFormat:(id)arg1;

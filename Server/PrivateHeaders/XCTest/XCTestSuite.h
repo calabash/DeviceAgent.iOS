@@ -14,15 +14,21 @@
 
 #import "XCTest.h"
 
-@class NSArray, NSDictionary, NSString;
+@class NSArray, NSDictionary, NSMutableArray, NSMutableDictionary, NSString, XCTestConfiguration;
 
 @interface XCTestSuite : XCTest
 {
-    id _internalImplementation;
+    NSString *_name;
+    NSMutableArray *_mutableTests;
+    XCTestConfiguration *_testConfiguration;
+    NSMutableDictionary *_mutableActivityAggregateStatistics;
 }
 
 @property(readonly) NSDictionary *activityAggregateStatistics;
+@property(readonly) NSMutableDictionary *mutableActivityAggregateStatistics;
+@property(retain) NSMutableArray *mutableTests;
 @property(copy) NSString *name;
+@property(retain) XCTestConfiguration *testConfiguration;
 @property(readonly, copy) NSArray *tests;
 
 + (void)_applyRandomExecutionOrderingSeed:(id)arg1;

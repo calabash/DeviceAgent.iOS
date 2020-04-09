@@ -15,13 +15,14 @@
 #import <objc/NSObject.h>
 
 @class NSArray, NSDictionary, NSError, XCAXCycleDetector, XCAccessibilityElement, XCElementSnapshot, XCTAccessibilitySnapshot_iOS, XCTTimeoutControls;
-@protocol NSCopying, OS_dispatch_queue;
+@protocol NSCopying, OS_dispatch_queue, XCTAccessibilityFramework, XCTMacCatalystStatusProviding;
 
 @interface XCTElementSnapshotRequest : NSObject
 {
     BOOL _preserveRemoteElementPlaceholders;
     BOOL _loadResult;
     BOOL _hasLoaded;
+    id <XCTAccessibilityFramework> _accessibilityFramework;
     XCAccessibilityElement *_element;
     NSArray *_attributes;
     NSDictionary *_parameters;
@@ -29,10 +30,12 @@
     id <NSCopying> _accessibilitySnapshot;
     XCTTimeoutControls *_timeoutControls;
     XCAXCycleDetector *_cycleDetector;
+    id <XCTMacCatalystStatusProviding> _macCatalystStatusProvider;
     NSObject<OS_dispatch_queue> *_queue;
     NSError *_loadError;
 }
 
+@property(readonly) id <XCTAccessibilityFramework> accessibilityFramework;
 @property(copy) id <NSCopying> accessibilitySnapshot;
 @property(readonly) XCTAccessibilitySnapshot_iOS *accessibilitySnapshot_iOS;
 @property(readonly) NSArray *attributes;
@@ -42,6 +45,7 @@
 @property BOOL hasLoaded;
 @property(retain) NSError *loadError;
 @property BOOL loadResult;
+@property(retain) id <XCTMacCatalystStatusProviding> macCatalystStatusProvider;
 @property(copy) NSDictionary *parameters;
 @property BOOL preserveRemoteElementPlaceholders;
 @property(readonly) NSObject<OS_dispatch_queue> *queue;
@@ -52,8 +56,8 @@
 - (id)_snapshotFromUserTestingSnapshot:(id)arg1 frameTransformer:(CDUnknownBlockType)arg2 error:(id *)arg3;
 - (id)accessibilitySnapshotOrError:(id *)arg1;
 - (id)elementSnapshotOrError:(id *)arg1;
-- (id)initWithElement:(id)arg1 attributes:(id)arg2 parameters:(id)arg3;
-- (id)initWithElement:(id)arg1 attributes:(id)arg2 parameters:(id)arg3 timeoutControls:(id)arg4;
+- (id)initWithAccessibilityFramework:(id)arg1 element:(id)arg2 attributes:(id)arg3 parameters:(id)arg4;
+- (id)initWithAccessibilityFramework:(id)arg1 element:(id)arg2 attributes:(id)arg3 parameters:(id)arg4 timeoutControls:(id)arg5;
 - (BOOL)loadSnapshotAndReturnError:(id *)arg1;
 - (id)safeParametersForParameters:(id)arg1;
 

@@ -34,7 +34,9 @@
 @property(readonly) NSString *stringRepresentation;
 @property(readonly) NSUInteger type;
 
++ (id)bundleNameForClass:(Class)arg1;
 + (id)identifierForClass:(Class)arg1;
++ (id)identifierForTestCase:(id)arg1;
 + (id)identifiersGroupedByClass:(id)arg1;
 + (id)minimumEquivalentIdentifiers:(id)arg1;
 + (id)testIdentifiersForStringIdentifiers:(id)arg1 inBundleWithName:(id)arg2;

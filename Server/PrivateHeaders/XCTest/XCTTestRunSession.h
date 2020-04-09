@@ -24,8 +24,8 @@
 
 @interface XCTTestRunSession : NSObject <XCTTestWorker>
 {
-    XCTestConfiguration *_testConfiguration;
     id <XCTTestRunSessionDelegate> _delegate;
+    XCTestConfiguration *_testConfiguration;
     XCTBlockingQueue *_workQueue;
 }
 

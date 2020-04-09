@@ -15,17 +15,21 @@
 #import <objc/NSObject.h>
 
 
-@class NSData, NSString, UIImage, _XCTImageImplementation;
+@class NSData, NSString, UIImage;
 
 @interface XCTImage : NSObject <NSCopying>
 {
-    _XCTImageImplementation *_internalImplementation;
+    UIImage *_platformImage;
+    NSData *_originalData;
+    NSString *_name;
+    double _scale;
 }
 
 @property(readonly, copy) NSData *data;
 @property(readonly, copy) UIImage *image;
-@property(retain) _XCTImageImplementation *internalImplementation;
 @property(copy) NSString *name;
+@property(copy) NSData *originalData;
+@property(copy) UIImage *platformImage;
 @property(readonly) double scale;
 
 + (id)UTIForQuality:(NSInteger)arg1;
@@ -34,7 +38,6 @@
 + (double)compressionQualityForQuality:(NSInteger)arg1;
 + (id)emptyImageWithSize:(struct CGSize)arg1;
 - (void)_ensureImage;
-- (id)_init;
 - (id)attachment;
 - (id)dataWithQuality:(NSInteger)arg1;
 - (id)debugQuickLookObject;

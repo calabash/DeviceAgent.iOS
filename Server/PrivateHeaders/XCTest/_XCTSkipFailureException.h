@@ -5,6 +5,7 @@
 //  Copyright (C) 1997-2019 Steve Nygard.
 //
 
+
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <XCTest/XCUIElementTypes.h>
@@ -12,13 +13,11 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-#import <objc/NSObject.h>
-
-@interface XCTAccessibilityInterface : NSObject
+@interface _XCTSkipFailureException : NSException
 {
 }
 
-+ (id)attributesForElement:(id)arg1 attributes:(id)arg2 error:(id *)arg3;
++ (void)raiseWithContext:(id)arg1;
 
 @end
 

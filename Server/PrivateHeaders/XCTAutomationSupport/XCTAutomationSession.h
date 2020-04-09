@@ -18,16 +18,18 @@
 #import "XCTConnectionAccepting-Protocol.h"
 #import "XCTElementSnapshotAttributeDataSource-Protocol.h"
 #import "XCTElementSnapshotProvider-Protocol.h"
+#import "XCTMacCatalystStatusProviding-Protocol.h"
 #import "XCTRemoteApplicationAutomationTarget-Protocol.h"
 
 @class DTXConnection, DTXProxyChannel, NSMutableArray, NSString, XCTAnimationsIdleNotifier, XCTCapabilities, XCTElementQueryProcessor, XCTMainRunLoopIdleNotifier;
-@protocol OS_dispatch_queue, XCTElementSnapshotProvider><XCTElementSnapshotAttributeDataSource;
+@protocol OS_dispatch_queue, XCTAccessibilityFramework, XCTElementSnapshotProvider><XCTElementSnapshotAttributeDataSource;
 
 
 @protocol XCTElementSnapshotProvider;
 
-@interface XCTAutomationSession : NSObject <XCTRemoteApplicationAutomationTarget, XCTElementSnapshotProvider, XCTElementSnapshotAttributeDataSource, XCTConnectionAccepting, XCTAutomationTarget>
+@interface XCTAutomationSession : NSObject <XCTRemoteApplicationAutomationTarget, XCTElementSnapshotProvider, XCTElementSnapshotAttributeDataSource, XCTMacCatalystStatusProviding, XCTConnectionAccepting, XCTAutomationTarget>
 {
+    id <XCTAccessibilityFramework> _accessibilityFramework;
     id <XCTElementSnapshotProvider><XCTElementSnapshotAttributeDataSource> _dataSource;
     NSMutableArray *_connections;
     XCTElementQueryProcessor *_queryProcessor;
@@ -39,6 +41,7 @@
     XCTCapabilities *_remoteInterfaceCapabilities;
 }
 
+@property(readonly) id <XCTAccessibilityFramework> accessibilityFramework;
 @property(readonly) BOOL allowsRemoteAccess;
 @property(readonly) XCTAnimationsIdleNotifier *animationIdleNotifier;
 @property(readonly) NSMutableArray *connections;
@@ -63,7 +66,9 @@
 - (void)attributesForElement:(id)arg1 attributes:(id)arg2 reply:(CDUnknownBlockType)arg3;
 - (void)exchangeCapabilities:(id)arg1 reply:(CDUnknownBlockType)arg2;
 - (void)fetchMatchesForQuery:(id)arg1 reply:(CDUnknownBlockType)arg2;
-- (id)initWithDataSource:(id)arg1;
+- (id)initWithAccessibilityFramework:(id)arg1;
+- (id)initWithAccessibilityFramework:(id)arg1 dataSource:(id)arg2;
+- (BOOL)isMacCatalystForPID:(NSInteger)arg1;
 - (void)listenForRemoteConnectionViaSerializedTransportWrapper:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)notifyWhenAnimationsAreIdle:(CDUnknownBlockType)arg1;
 - (void)notifyWhenMainRunLoopIsIdle:(CDUnknownBlockType)arg1;

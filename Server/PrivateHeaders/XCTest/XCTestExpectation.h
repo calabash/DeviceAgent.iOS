@@ -14,7 +14,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSString, _XCTestExpectationImplementation;
+@class NSArray, NSString;
 @protocol XCTestExpectationDelegate;
 
 
@@ -22,13 +22,24 @@
 
 @interface XCTestExpectation : NSObject
 {
-    id _internalImplementation;
+    BOOL _fulfilled;
+    BOOL _hasBeenWaitedOn;
+    BOOL _inverted;
+    BOOL _assertForOverFulfill;
+    id <XCTestExpectationDelegate> _delegate;
+    NSUInteger _fulfillmentToken;
+    NSArray *_fulfillCallStackReturnAddresses;
+    NSUInteger _expectedFulfillmentCount;
+    NSString *_expectationDescription;
+    NSUInteger _numberOfFulfillments;
+    NSUInteger _creationToken;
+    NSArray *_creationCallStackReturnAddresses;
 }
 
 @property(nonatomic) BOOL assertForOverFulfill;
 @property(readonly, copy) NSArray *creationCallStackReturnAddresses;
 @property(readonly) NSUInteger creationToken;
-@property id <XCTestExpectationDelegate> delegate;
+@property __weak id <XCTestExpectationDelegate> delegate;
 @property(copy) NSString *expectationDescription;
 @property(nonatomic) NSUInteger expectedFulfillmentCount;
 @property(readonly, copy) NSArray *fulfillCallStackReturnAddresses;
@@ -37,8 +48,8 @@
 @property(readonly) NSUInteger fulfillmentToken;
 @property BOOL hasBeenWaitedOn;
 @property BOOL hasInverseBehavior;
-@property(readonly) _XCTestExpectationImplementation *internalImplementation;
 @property(getter=isInverted) BOOL inverted;
+@property NSUInteger numberOfFulfillments;
 @property(readonly) BOOL on_queue_fulfilled;
 @property(readonly) NSUInteger on_queue_fulfillmentToken;
 @property(readonly) BOOL on_queue_isInverted;

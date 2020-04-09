@@ -28,6 +28,7 @@
     BOOL _initializeForUITesting;
     BOOL _gatherLocalizableStringsData;
     BOOL _emitOSLogs;
+    BOOL _testTimeoutsEnabled;
     NSString *_absolutePath;
     NSString *_testBundleRelativePath;
     NSURL *_testBundleURL;
@@ -49,6 +50,8 @@
     NSInteger _userAttachmentLifetime;
     NSInteger _testExecutionOrdering;
     NSNumber *_randomExecutionOrderingSeed;
+    NSNumber *_defaultTestExecutionTimeAllowance;
+    NSNumber *_maximumTestExecutionTimeAllowance;
 }
 
 @property(copy) NSString *absolutePath;
@@ -56,10 +59,12 @@
 @property(copy) NSString *automationFrameworkPath;
 @property(copy) NSString *baselineFileRelativePath;
 @property(copy, nonatomic) NSURL *baselineFileURL;
+@property(copy, nonatomic) NSNumber *defaultTestExecutionTimeAllowance;
 @property BOOL disablePerformanceMetrics;
 @property BOOL emitOSLogs;
 @property BOOL gatherLocalizableStringsData;
 @property BOOL initializeForUITesting;
+@property(copy, nonatomic) NSNumber *maximumTestExecutionTimeAllowance;
 @property(copy) NSString *productModuleName;
 @property(retain) NSNumber *randomExecutionOrderingSeed;
 @property BOOL reportActivities;
@@ -75,6 +80,7 @@
 @property(copy) NSString *testBundleRelativePath;
 @property(copy, nonatomic) NSURL *testBundleURL;
 @property NSInteger testExecutionOrdering;
+@property BOOL testTimeoutsEnabled;
 @property BOOL testsDrivenByIDE;
 @property BOOL testsMustRunOnMainThread;
 @property(copy) NSSet *testsToRun;

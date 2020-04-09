@@ -14,26 +14,45 @@
 
 #import "XCTestExpectation.h"
 
-@class NSPredicate, _XCTNSPredicateExpectationImplementation;
+@class NSObject, NSPredicate, NSRunLoop, NSString, NSTimer;
+@protocol OS_dispatch_queue;
 
 @interface XCTNSPredicateExpectation : XCTestExpectation
 {
-    _XCTNSPredicateExpectationImplementation *_internal;
+    BOOL _hasCleanedUp;
+    BOOL _isEvaluating;
+    BOOL _shouldEvaluate;
+    CDUnknownBlockType _handler;
+    NSString *_debugDescription;
+    NSPredicate *_predicate;
+    id _object;
+    NSObject<OS_dispatch_queue> *_queue;
+    NSRunLoop *_timerRunLoop;
+    NSTimer *_timer;
+    double _pollingInterval;
 }
 
+@property(copy) NSString *debugDescription;
 @property(copy) CDUnknownBlockType handler;
-@property(retain) _XCTNSPredicateExpectationImplementation *internal;
+@property BOOL hasCleanedUp;
+@property BOOL isEvaluating;
 @property(readonly) id object;
 @property double pollingInterval;
 @property(readonly, copy) NSPredicate *predicate;
+@property(readonly) NSObject<OS_dispatch_queue> *queue;
+@property BOOL shouldEvaluate;
+@property(retain) NSTimer *timer;
+@property(retain) NSRunLoop *timerRunLoop;
 @property(nonatomic) NSUInteger expectedFulfillmentCount; // @dynamic expectedFulfillmentCount;
 
+- (void)_considerFulfilling;
+- (void)_scheduleTimer;
+- (BOOL)_shouldFulfillForObject:(id)arg1 handler:(CDUnknownBlockType)arg2;
 - (void)cleanup;
-- (void)considerFulfilling;
-- (id)debugDescription;
 - (void)fulfill;
 - (id)initWithPredicate:(id)arg1 object:(id)arg2;
 - (void)on_queue_setHasBeenWaitedOn:(BOOL)arg1;
+- (void)startPolling;
 
 
 @end

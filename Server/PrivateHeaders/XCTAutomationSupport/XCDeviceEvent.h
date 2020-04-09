@@ -20,8 +20,8 @@
     NSUInteger _eventPage;
     NSUInteger _usage;
     double _duration;
-    NSUInteger _type;
     double _rotation;
+    NSUInteger _type;
 }
 
 @property double duration;

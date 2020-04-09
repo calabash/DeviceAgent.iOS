@@ -19,8 +19,8 @@
 @interface XCTMeasurement : NSObject
 {
     NSString *_identifier;
-    NSString *_name;
     NSString *_units;
+    NSString *_name;
     NSDictionary *_baseline;
     NSDictionary *_defaultBaseline;
     NSArray *_measurements;

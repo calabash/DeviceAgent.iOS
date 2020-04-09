@@ -14,18 +14,20 @@
 
 #import <objc/NSObject.h>
 
-@class NSMutableArray;
+@class NSString, NSUUID;
 
-@interface XCUITestContextScope : NSObject
+@interface XCUIInterruptionHandler : NSObject
 {
-    XCUITestContextScope *_parentScope;
-    NSMutableArray *_handlers;
+    CDUnknownBlockType _block;
+    NSString *_handlerDescription;
+    NSUUID *_identifier;
 }
 
-@property(readonly, copy) NSMutableArray *handlers;
-@property(readonly) XCUITestContextScope *parentScope;
+@property(readonly, copy) CDUnknownBlockType block;
+@property(readonly, copy) NSString *handlerDescription;
+@property(readonly, copy) NSUUID *identifier;
 
-- (id)initWithParentScope:(id)arg1;
+- (id)initWithBlock:(CDUnknownBlockType)arg1 description:(id)arg2;
 
 @end
 

@@ -34,9 +34,10 @@
 - (id)parameterizedAttribute:(NSString *)arg1 forElement:(XCAccessibilityElement *)arg2 parameter:(id)arg3 error:(id *)arg4;
 - (BOOL)performAction:(XCUIAccessibilityAction *)arg1 onElement:(XCAccessibilityElement *)arg2 value:(id)arg3 error:(id *)arg4;
 - (void)performWhenMenuOpens:(XCAccessibilityElement *)arg1 block:(void (^)(void))arg2;
-- (void)registerForAXNotificationsForApplicationWithPID:(NSInteger)arg1 completion:(void (^)(BOOL, NSError *))arg2;
+- (void)registerForAXNotificationsForApplicationWithPID:(NSInteger)arg1 timeout:(double)arg2 completion:(void (^)(BOOL, NSError *))arg3;
 - (void)removeObserver:(id)arg1 forAXNotification:(NSString *)arg2;
 - (XCUIElementSnapshotRequestResult *)requestSnapshotForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 parameters:(NSDictionary *)arg3 error:(id *)arg4;
 - (BOOL)setAttribute:(NSString *)arg1 value:(id)arg2 element:(XCAccessibilityElement *)arg3 outError:(id *)arg4;
+- (void)unregisterForAXNotificationsForApplicationWithPID:(NSInteger)arg1;
 @end
 

@@ -515,5 +515,35 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Vil du tillate at %@ bruker posisjonen din?",
+    "buttons": [
+      "Tillat alltid",
+      "Tillat",
+      "Tillat mens appen er i bruk"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vil du tillate at «%@» bruker posisjonen din selv når du ikke bruker appen?",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vil du også tillate at «%@» bruker posisjonen din selv når du ikke bruker appen?",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dette tillater at %@ kan søke etter og koble til Bluetooth-tilbehør. Appen kan også bruke Bluetooth til å finne ut når du er i nærheten.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

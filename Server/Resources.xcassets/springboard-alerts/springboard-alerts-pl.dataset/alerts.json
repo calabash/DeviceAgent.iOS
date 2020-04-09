@@ -423,5 +423,21 @@
       "Pozwól raz"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Pozwalać aplikacji „%@” na używanie Twojego położenia?",
+    "buttons": [
+      "Zawsze pozwalaj",
+      "Pozwalaj",
+      "Pozwalaj, gdy używam aplikacji"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Pozwalać aplikacji „%@” na używanie Twojego położenia także, gdy jej nie używasz?",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
   }
 ]

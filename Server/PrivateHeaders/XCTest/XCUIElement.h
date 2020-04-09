@@ -162,9 +162,10 @@
 - (id)_pointsInFrame:(CGRect)arg1 numberOfTouches:(NSUInteger)arg2;
 - (void)_pressWithPressure:(double)arg1 pressDuration:(double)arg2 holdDuration:(double)arg3 releaseDuration:(double)arg4 activityTitle:(id)arg5;
 - (BOOL)_shouldDispatchEvent:(id *)arg1;
-- (void)_swipe:(NSUInteger)arg1;
+- (void)_swipe:(NSUInteger)arg1 withVelocity:(double)arg2;
 - (void)_tapWithNumberOfTaps:(NSUInteger)arg1 numberOfTouches:(NSUInteger)arg2 activityTitle:(id)arg3;
 - (BOOL)_waitForExistenceWithTimeout:(double)arg1;
+- (BOOL)_waitForNonExistenceWithTimeout:(double)arg1;
 - (void)adjustToNormalizedSliderPosition:(double)arg1;
 - (void)adjustToPickerWheelValue:(id)arg1;
 - (id)childrenMatchingType:(NSUInteger)arg1;
@@ -178,6 +179,7 @@
 - (void)pinchWithScale:(double)arg1 velocity:(double)arg2;
 - (void)pressForDuration:(double)arg1;
 - (void)pressForDuration:(double)arg1 thenDragToElement:(id)arg2;
+- (void)pressForDuration:(double)arg1 thenDragToElement:(id)arg2 withVelocity:(double)arg3 thenHoldForDuration:(double)arg4;
 - (void)pressWithPressure:(double)arg1 duration:(double)arg2;
 - (void)resolveOrRaiseTestFailure;
 - (BOOL)resolveOrRaiseTestFailure:(BOOL)arg1 error:(id *)arg2;
@@ -185,9 +187,13 @@
 - (id)screenshot;
 - (id)snapshotWithError:(id *)arg1;
 - (void)swipeDown;
+- (void)swipeDownWithVelocity:(double)arg1;
 - (void)swipeLeft;
+- (void)swipeLeftWithVelocity:(double)arg1;
 - (void)swipeRight;
+- (void)swipeRightWithVelocity:(double)arg1;
 - (void)swipeUp;
+- (void)swipeUpWithVelocity:(double)arg1;
 - (void)tap;
 - (void)tapOrClick;
 - (void)tapWithNumberOfTaps:(NSUInteger)arg1 numberOfTouches:(NSUInteger)arg2;
@@ -197,7 +203,6 @@
 - (id)valueForAccessibilityAttribute:(id)arg1 error:(id *)arg2;
 - (id)valuesForAccessibilityAttributes:(id)arg1 error:(id *)arg2;
 - (BOOL)waitForExistenceWithTimeout:(double)arg1;
-- (BOOL)waitForNonExistenceWithTimeout:(double)arg1;
 
 
 @end

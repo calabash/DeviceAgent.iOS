@@ -18,9 +18,10 @@
 
 @interface XCTestSuiteRun : XCTestRun
 {
-    NSMutableArray *_testRuns;
+    NSMutableArray *_mutableTestRuns;
 }
 
+@property(readonly) NSMutableArray *mutableTestRuns;
 @property(readonly, copy) NSArray *testRuns;
 
 - (void)addTestRun:(id)arg1;
@@ -28,6 +29,7 @@
 - (NSUInteger)failureCount;
 - (id)initWithTest:(id)arg1;
 - (void)recordFailureWithDescription:(id)arg1 inFile:(id)arg2 atLine:(NSUInteger)arg3 expected:(BOOL)arg4;
+- (NSUInteger)skipCount;
 - (void)start;
 - (void)stop;
 - (double)testDuration;

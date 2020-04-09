@@ -14,6 +14,19 @@
 
 #import "XCUIElement.h"
 
+#if XCT_UI_TESTING_AVAILABLE
+
+typedef NS_ENUM(NSUInteger, XCUIApplicationState) {
+    XCUIApplicationStateUnknown = 0,
+    XCUIApplicationStateNotRunning = 1,
+#if !TARGET_OS_OSX
+    XCUIApplicationStateRunningBackgroundSuspended = 2,
+#endif
+    XCUIApplicationStateRunningBackground = 3,
+    XCUIApplicationStateRunningForeground = 4
+};
+#endif
+
 @class NSArray, NSDictionary, NSString, XCAccessibilityElement, XCApplicationQuery, XCUIApplicationImpl, XCUIApplicationOpenRequest;
 @protocol XCTRunnerAutomationSession, XCUIDevice;
 
@@ -98,6 +111,7 @@
 - (void)launch;
 - (id)query;
 - (void)resetAlertCount;
+- (void)resetAuthorizationStatusForResource:(NSInteger)arg1;
 - (BOOL)resolveOrRaiseTestFailure:(BOOL)arg1 error:(id *)arg2;
 - (BOOL)setFauxCollectionViewCellsEnabled:(BOOL)arg1 error:(id *)arg2;
 - (void)terminate;

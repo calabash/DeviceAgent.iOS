@@ -51,9 +51,9 @@
 @property(readonly, copy) NSArray *snapshotAttributes;
 @property(readonly, copy) NSDictionary *snapshotParameters;
 @property(readonly) BOOL supportsAttributeKeyPathAnalysis;
-@property(readonly) BOOL supportsRemoteEvaluation;
 @property(readonly, copy) NSArray *transformers;
 
++ (id)_descriptionForTransformerArray:(id)arg1;
 + (id)_firstMatchTransformerSubarraysFromArray:(id)arg1 trailingMatchAllTransformers:(id *)arg2;
 + (void)provideCapabilitiesToBuilder:(id)arg1;
 - (id)_allMatchingSnapshotsForInput:(id)arg1 transformers:(id)arg2 relatedElements:(id *)arg3 noMatchesMessage:(id *)arg4 error:(id *)arg5;
