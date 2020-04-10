@@ -31,8 +31,7 @@ args =
         "-sdk", "iphonesimulator",
         "-configuration", "Debug",
         "GCC_TREAT_WARNINGS_AS_ERRORS=YES",
-        "CLANG_ENABLE_CODE_COVERAGE=NO",
-        "OTHER_CFLAGS=-Xclang -Wno-switch"    
+        "CLANG_ENABLE_CODE_COVERAGE=NO"    
       ]
 
 env = { "COMMAND_LINE_BUILD" => "1",
