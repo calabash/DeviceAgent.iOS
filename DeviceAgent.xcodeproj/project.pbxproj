@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -53,7 +53,6 @@
 		7DEAAE74241FA80D009894BA /* FBXCTestCaseImplementationFailureHoldingProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEAAE72241FA80D009894BA /* FBXCTestCaseImplementationFailureHoldingProxy.m */; };
 		7DEAAE75241FA80D009894BA /* FBXCTestCaseImplementationFailureHoldingProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DEAAE73241FA80D009894BA /* FBXCTestCaseImplementationFailureHoldingProxy.h */; };
 		7DEAAE77241FA8B5009894BA /* XCTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DEAAE76241FA8B4009894BA /* XCTestCase.h */; };
-		7DEAAE79241FEEF8009894BA /* _XCTestCaseImplementation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DEAAE78241FEEF7009894BA /* _XCTestCaseImplementation.h */; };
 		89331CCE1CC00E82003C2E59 /* RotatePinchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */; };
 		89331D301CC50447003C2E59 /* ThreadUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 89331D2E1CC50447003C2E59 /* ThreadUtils.h */; };
 		89331D321CC50447003C2E59 /* ThreadUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D2F1CC50447003C2E59 /* ThreadUtils.m */; };
@@ -2731,7 +2730,6 @@
 				F54C02462043F0EF00FD8DDE /* XCTASDebugLogDelegate-Protocol.h in Headers */,
 				F54C029C2043F0EF00FD8DDE /* XCTElementSortingTransformer.h in Headers */,
 				F54C025E2043F0EF00FD8DDE /* XCTAutomationTarget-Protocol.h in Headers */,
-				7DEAAE79241FEEF8009894BA /* _XCTestCaseImplementation.h in Headers */,
 				89C5F3501C9A60E70093A018 /* Testmanagerd.h in Headers */,
 				F54C02992043F0EF00FD8DDE /* NSArray-XCTElementQueryAdditions.h in Headers */,
 				F55F819B1C6DD07500A945C8 /* HTTPAsyncFileResponse.h in Headers */,
@@ -2971,7 +2969,7 @@
 		898743B41C5847B30084FD93 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = Calabash;
 				TargetAttributes = {
 					898743BB1C5847B30084FD93 = {
@@ -3058,7 +3056,7 @@
 				};
 			};
 			buildConfigurationList = 898743B71C5847B30084FD93 /* Build configuration list for PBXProject "DeviceAgent" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
