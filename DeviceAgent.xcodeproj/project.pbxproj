@@ -4244,8 +4244,6 @@
 				OTHER_LDFLAGS = (
 					"-framework",
 					XCTAutomationSupport,
-					"-Xclang",
-					"-Wno-switch",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.microsoft.ServerUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4288,8 +4286,6 @@
 				OTHER_LDFLAGS = (
 					"-framework",
 					XCTAutomationSupport,
-					"-Xclang",
-					"-Wno-switch",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.microsoft.ServerUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
