@@ -1,4 +1,13 @@
-### 2.2.0
+### 2.2.1
+
+The 2.2.0 release was cancelled.
+
+We discovered a problem with running tests against a DeviceAgent built with
+Xcode 11.4.  Xamarin.UITest, run-loop, and Test Cloud will use a DeviceAgent
+built with Xcode 11.3.1 until we sort out the problem.  Tracking here (private
+link):
+
+DeviceAgent built with Xcode 11.4 crashes after launching the AUT [ADO](https://msmobilecenter.visualstudio.com/Mobile-Center/_workitems/edit/79012)
 
 * Add support for Xcode 11.4 beta 3 #377 Thanks @sergey-plevako-badoo
 * Add alerts new in Xcode 11.4 #382 Thanks @humbled

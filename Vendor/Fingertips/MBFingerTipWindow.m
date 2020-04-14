@@ -251,6 +251,8 @@
                     [self removeFingerTipWithHash:touch.hash animated:YES];
                     break;
                 }
+
+                default: { }
             }
         }
     }
