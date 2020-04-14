@@ -1,9 +1,0 @@
-[
-  {
-    "title": "Allow “%@” to access your location while you are using the app?",
-    "buttons": [
-      "Allow Once"
-    ],
-    "shouldAccept": true
-  }
-]
