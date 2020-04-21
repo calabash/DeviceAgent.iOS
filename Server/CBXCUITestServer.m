@@ -37,6 +37,10 @@ static NSString *serverName = @"CalabashXCUITestServer";
         [_server setRouteQueue:dispatch_get_main_queue()];
         [_server setDefaultHeader:@"CalabusDriver"
                                         value:@"CalabashXCUITestServer/1.0"];
+        [_server setDefaultHeader:@"Access-Control-Allow-Origin"
+                                        value:@"*"];
+        [_server setDefaultHeader:@"Access-Control-Allow-Headers"
+                                        value:@"Content-Type, X-Requested-With"];
         [_server setConnectionClass:[RoutingConnection self]];
         [_server setType:@"_calabus._tcp."];
 

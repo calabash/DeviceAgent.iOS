@@ -51,6 +51,9 @@
 + (instancetype)delete:(NSString *)path withBlock:(RequestHandler)block {
     return [self http:@"DELETE" path:path withBlock:block];
 }
++ (instancetype)options:(NSString *)path withBlock:(RequestHandler)block {
+    return [self http:@"OPTIONS" path:path withBlock:block];
+}
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"%@ %@", self.HTTPVerb, self.path];

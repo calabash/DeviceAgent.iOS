@@ -30,11 +30,17 @@
                                      @"requestBody" : body ?: @{}
          }];
     };
+
+    RequestHandler pingBlock = ^(RouteRequest *request, NSDictionary *body, RouteResponse *response) {
+        [response setStatusCode:200];
+    };
+
     return @[
              [CBXRoute get:@"/*" withBlock:unhandledBlock].dontAutoregister,
              [CBXRoute post:@"/*" withBlock:unhandledBlock].dontAutoregister,
              [CBXRoute put:@"/*" withBlock:unhandledBlock].dontAutoregister,
              [CBXRoute delete:@"/*" withBlock:unhandledBlock].dontAutoregister,
+             [CBXRoute options:@"/*" withBlock:pingBlock].dontAutoregister,
              ];
 }
 @end
