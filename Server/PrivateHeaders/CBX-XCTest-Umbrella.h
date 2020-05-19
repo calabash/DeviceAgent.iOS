@@ -83,6 +83,7 @@
 #import "XCTest/XCTSkippedTestContext.h"
 #import "XCTest/XCTStorageMetric.h"
 #import "XCTest/XCTSwiftErrorObservation.h"
+#import "XCTest/XCTSwiftErrorObservation_Overlay-Protocol.h"
 #import "XCTest/XCTTestIdentifier.h"
 #import "XCTest/XCTTestRunSession.h"
 #import "XCTest/XCTTestRunSessionDelegate-Protocol.h"
