@@ -14,7 +14,7 @@
 
 #import "XCTestManager_ProtectedResources-Protocol.h"
 
-@class NSArray, NSDictionary, NSNumber, NSString, NSURL, NSUUID, XCAccessibilityElement, XCDeviceEvent, XCSynthesizedEventRecord, XCTCapabilities, XCTSpindumpRequestSpecification;
+@class NSArray, NSDictionary, NSNumber, NSString, NSURL, NSUUID, XCAccessibilityElement, XCDeviceEvent, XCSynthesizedEventRecord, XCTCapabilities, XCTSpindumpRequestSpecification, XCUIElementSnapshotRequestResult;
 
 @class XCTSerializedTransportWrapper;
 @class XCElementSnapshot;
