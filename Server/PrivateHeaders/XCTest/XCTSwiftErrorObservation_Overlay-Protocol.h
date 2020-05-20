@@ -5,10 +5,10 @@
 //  Copyright (C) 1997-2019 Steve Nygard.
 //
 
-@protocol XCTSwiftErrorObservation_Overlay
+// @protocol XCTSwiftErrorObservation_Overlay
 
-@optional
-+ (BOOL)_installErrorObserver;
-+ (id <XCTSwiftErrorIssue> (^)(void))_observeErrors;
-@end
+// @optional
+// + (BOOL)_installErrorObserver;
+// + (id <XCTSwiftErrorIssue> (^)(void))_observeErrors;
+// @end
 

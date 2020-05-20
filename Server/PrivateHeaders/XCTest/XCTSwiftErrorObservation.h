@@ -14,11 +14,6 @@
 
 #import <objc/NSObject.h>
 
-#import "XCTSwiftErrorObservation_Overlay-Protocol.h"
-
-@interface XCTSwiftErrorObservation : NSObject <XCTSwiftErrorObservation_Overlay>
-{
-}
 
 + (void)installSwiftErrorObserverIfPossible;
 + (id)observeErrorsInBlock:(CDUnknownBlockType)arg1;
