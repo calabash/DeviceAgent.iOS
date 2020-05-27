@@ -14,15 +14,9 @@
 
 #import <objc/NSObject.h>
 
-@class XCTestRun;
 
-@interface _XCTestImplementation : NSObject
-{
-    XCTestRun *_testRun;
-}
-
-@property(retain) XCTestRun *testRun;
-
++ (void)installSwiftErrorObserverIfPossible;
++ (id)observeErrorsInBlock:(CDUnknownBlockType)arg1;
 
 @end
 
