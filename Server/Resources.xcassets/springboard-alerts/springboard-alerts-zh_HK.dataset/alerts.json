@@ -525,5 +525,35 @@
       "允許一次"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "允許「%@」使用你的位置嗎？",
+    "buttons": [
+      "總是允許",
+      "允許",
+      "使用App時允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "允許「%@」使用你的位置嗎（即使你並非正在使用App時亦會使用）？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "也允許「%@」使用你的位置嗎（即使你並非正在使用App時亦會使用）？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想加入VPN設定",
+    "buttons": [
+      "不允許"
+    ],
+    "shouldAccept": false
   }
 ]

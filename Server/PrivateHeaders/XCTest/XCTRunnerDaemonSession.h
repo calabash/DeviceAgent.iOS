@@ -21,6 +21,7 @@
 #import "XCUIPlatformApplicationServicesProviding-Protocol.h"
 #import "XCUIRemoteAccessibilityInterface-Protocol.h"
 #import "XCUIRemoteSiriInterface-Protocol.h"
+#import "XCUIResetAuthorizationStatusOfProtectedResourcesInterface-Protocol.h"
 
 @class NSMutableDictionary, NSString, NSXPCConnection, XCTCapabilities;
 @protocol OS_dispatch_queue, XCTestManager_ManagerInterface, XCUIAXNotificationHandling, XCUIApplicationPlatformServicesProviderDelegate;
@@ -29,8 +30,9 @@
 @protocol XCUIAXNotificationHandling;
 @protocol XCTestManager_ManagerInterface;
 
-@interface XCTRunnerDaemonSession : NSObject <XCUIRemoteSiriInterface, XCUIDeviceEventAndStateInterface, XCUIPlatformApplicationServicesProviding, XCUIApplicationAutomationSessionProviding, XCTestManager_TestsInterface, XCUIRemoteAccessibilityInterface, XCUIEventSynthesizing>
+@interface XCTRunnerDaemonSession : NSObject <XCUIRemoteSiriInterface, XCUIDeviceEventAndStateInterface, XCUIPlatformApplicationServicesProviding, XCUIApplicationAutomationSessionProviding, XCUIResetAuthorizationStatusOfProtectedResourcesInterface, XCTestManager_TestsInterface, XCUIRemoteAccessibilityInterface, XCUIEventSynthesizing>
 {
+    double _implicitEventConfirmationIntervalForCurrentContext;
     NSXPCConnection *_connection;
     XCTCapabilities *_remoteInterfaceCapabilities;
     id <XCUIApplicationPlatformServicesProviderDelegate> _platformApplicationServicesProviderDelegate;
@@ -44,6 +46,7 @@
 @property(readonly) BOOL axNotificationsIncludeElement;
 @property(readonly) NSXPCConnection *connection;
 @property(readonly) id <XCTestManager_ManagerInterface> daemonProxy;
+@property double implicitEventConfirmationIntervalForCurrentContext;
 @property(retain) NSMutableDictionary *invalidationHandlers;
 @property __weak id <XCUIApplicationPlatformServicesProviderDelegate> platformApplicationServicesProviderDelegate;
 @property(readonly) NSObject<OS_dispatch_queue> *queue;
@@ -59,6 +62,7 @@
 + (id)capabilities;
 + (id)capabilitiesForDaemonConnection:(id)arg1 error:(id *)arg2;
 + (id)daemonCapabilitiesForProtocolVersion:(NSUInteger)arg1 platform:(NSUInteger)arg2 error:(id *)arg3;
++ (id)sessionWithConnection:(id)arg1;
 + (id)sharedSession;
 - (void)_XCT_applicationWithBundleID:(id)arg1 didUpdatePID:(NSInteger)arg2 andState:(NSUInteger)arg3;
 - (void)_XCT_receivedAccessibilityNotification:(NSInteger)arg1 fromElement:(id)arg2 payload:(id)arg3;
@@ -92,6 +96,7 @@
 - (void)requestSiriEnabledStatus:(CDUnknownBlockType)arg1;
 - (void)requestSnapshotForElement:(id)arg1 attributes:(id)arg2 parameters:(id)arg3 reply:(CDUnknownBlockType)arg4;
 - (void)requestSpindumpWithSpecification:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (BOOL)resetAuthorizationStatusForBundleIdentifier:(id)arg1 resourceIdentifier:(id)arg2 error:(id *)arg3;
 - (void)setAXTimeout:(double)arg1 reply:(CDUnknownBlockType)arg2;
 - (void)setAttribute:(id)arg1 value:(id)arg2 element:(id)arg3 reply:(CDUnknownBlockType)arg4;
 - (void)setLocalizableStringsDataGatheringEnabled:(BOOL)arg1 reply:(CDUnknownBlockType)arg2;

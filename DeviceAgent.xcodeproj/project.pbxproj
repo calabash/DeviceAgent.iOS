@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -50,6 +50,9 @@
 		4107F8FE231D7298003961AF /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107F8FC231D7262003961AF /* Resources.xcassets */; };
 		41188FEA22E9958D0012886A /* XCWebViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 4166C9AE22E7009800C8BEBF /* XCWebViews.m */; };
 		419BE54B231E46D800DF0ABD /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107F8FC231D7262003961AF /* Resources.xcassets */; };
+		7DEAAE74241FA80D009894BA /* FBXCTestCaseImplementationFailureHoldingProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEAAE72241FA80D009894BA /* FBXCTestCaseImplementationFailureHoldingProxy.m */; };
+		7DEAAE75241FA80D009894BA /* FBXCTestCaseImplementationFailureHoldingProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DEAAE73241FA80D009894BA /* FBXCTestCaseImplementationFailureHoldingProxy.h */; };
+		7DEAAE77241FA8B5009894BA /* XCTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DEAAE76241FA8B4009894BA /* XCTestCase.h */; };
 		89331CCE1CC00E82003C2E59 /* RotatePinchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */; };
 		89331D301CC50447003C2E59 /* ThreadUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 89331D2E1CC50447003C2E59 /* ThreadUtils.h */; };
 		89331D321CC50447003C2E59 /* ThreadUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D2F1CC50447003C2E59 /* ThreadUtils.m */; };
@@ -755,6 +758,10 @@
 		634244EC948D56732C2565E5 /* SpringBoardAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoardAlerts.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		6342494C7C23506565D2B802 /* SpringBoardAlerts.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = SpringBoardAlerts.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		63424E46759C6B27C2BEC337 /* SpringBoardAlertsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SpringBoardAlertsTest.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		7DEAAE72241FA80D009894BA /* FBXCTestCaseImplementationFailureHoldingProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBXCTestCaseImplementationFailureHoldingProxy.m; sourceTree = "<group>"; };
+		7DEAAE73241FA80D009894BA /* FBXCTestCaseImplementationFailureHoldingProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBXCTestCaseImplementationFailureHoldingProxy.h; sourceTree = "<group>"; };
+		7DEAAE76241FA8B4009894BA /* XCTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XCTestCase.h; path = ../../../../WebDriverAgent/PrivateHeaders/XCTest/XCTestCase.h; sourceTree = "<group>"; };
+		7DEAAE78241FEEF7009894BA /* _XCTestCaseImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _XCTestCaseImplementation.h; sourceTree = "<group>"; };
 		89331CCC1CC00E82003C2E59 /* RotatePinchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotatePinchViewController.h; sourceTree = "<group>"; };
 		89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatePinchViewController.m; sourceTree = "<group>"; };
 		89331D2E1CC50447003C2E59 /* ThreadUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadUtils.h; sourceTree = "<group>"; };
@@ -1636,6 +1643,7 @@
 			isa = PBXGroup;
 			children = (
 				F54C01C32043F0EF00FD8DDE /* _XCInternalTestRun.h */,
+				7DEAAE78241FEEF7009894BA /* _XCTestCaseImplementation.h */,
 				F54C01802043F0EF00FD8DDE /* _XCKVOExpectationImplementation.h */,
 				F54C019D2043F0EF00FD8DDE /* _XCTAttachmentImplementation.h */,
 				F5449D1C21216FD400E11642 /* _XCTCompoundExpectationImplementation.h */,
@@ -1711,6 +1719,7 @@
 				F54C01C52043F0EF00FD8DDE /* XCTestProbe.h */,
 				F54C01BE2043F0EF00FD8DDE /* XCTestRun.h */,
 				F54C01972043F0EF00FD8DDE /* XCTestSuite.h */,
+				7DEAAE76241FA8B4009894BA /* XCTestCase.h */,
 				F54C01942043F0EF00FD8DDE /* XCTestSuiteRun.h */,
 				F54C01D42043F0EF00FD8DDE /* XCTestWaiter.h */,
 				F54C014D2043F0EF00FD8DDE /* XCTFailure.h */,
@@ -1969,6 +1978,8 @@
 		F55F83541C6DD99900A945C8 /* DeviceAgent */ = {
 			isa = PBXGroup;
 			children = (
+				7DEAAE73241FA80D009894BA /* FBXCTestCaseImplementationFailureHoldingProxy.h */,
+				7DEAAE72241FA80D009894BA /* FBXCTestCaseImplementationFailureHoldingProxy.m */,
 				F58935F91E93F16D00BDF39D /* DeviceAgent-device.xctestrun */,
 				F58935FA1E93F16D00BDF39D /* DeviceAgent-simulator-template.xctestrun */,
 				F58935F71E93F09A00BDF39D /* CBX.xctestconfiguration */,
@@ -2513,6 +2524,7 @@
 				F54C029F2043F0EF00FD8DDE /* NSError-XCTAutomationSupportErrors.h in Headers */,
 				F54C02092043F0EF00FD8DDE /* XCUITestContextScope.h in Headers */,
 				F54C026F2043F0EF00FD8DDE /* XCTRunnerAutomationSession.h in Headers */,
+				7DEAAE75241FA80D009894BA /* FBXCTestCaseImplementationFailureHoldingProxy.h in Headers */,
 				F54C026E2043F0EF00FD8DDE /* XCUIApplicationMonitor.h in Headers */,
 				F54C021D2043F0EF00FD8DDE /* XCUIElement.h in Headers */,
 				F55F819D1C6DD07500A945C8 /* HTTPDataResponse.h in Headers */,
@@ -2558,6 +2570,7 @@
 				F54C02BC2043F0EF00FD8DDE /* XCTContainingTransformerIterator.h in Headers */,
 				F54C02A42043F0EF00FD8DDE /* XCTAccessibilityFramework-Protocol.h in Headers */,
 				F54C020B2043F0EF00FD8DDE /* XCUIAXNotificationHandling-Protocol.h in Headers */,
+				7DEAAE77241FA8B5009894BA /* XCTestCase.h in Headers */,
 				F55F81801C6DD07500A945C8 /* GCDAsyncSocket.h in Headers */,
 				F54C02332043F0EF00FD8DDE /* XCUICoordinate.h in Headers */,
 				F54C02322043F0EF00FD8DDE /* _XCTNSPredicateExpectationImplementation.h in Headers */,
@@ -2956,7 +2969,7 @@
 		898743B41C5847B30084FD93 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = Calabash;
 				TargetAttributes = {
 					898743BB1C5847B30084FD93 = {
@@ -3043,7 +3056,7 @@
 				};
 			};
 			buildConfigurationList = 898743B71C5847B30084FD93 /* Build configuration list for PBXProject "DeviceAgent" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -3331,6 +3344,7 @@
 				899696C51CB3360900BB42E2 /* Pinch.m in Sources */,
 				F55F82531C6DD07500A945C8 /* RouteRequest.m in Sources */,
 				F55F84101C6E437A00A945C8 /* JSONUtils.m in Sources */,
+				7DEAAE74241FA80D009894BA /* FBXCTestCaseImplementationFailureHoldingProxy.m in Sources */,
 				F5E663211D74958200068CE9 /* SpringBoard.m in Sources */,
 				F5870B431CF0BEFF00B3376C /* TouchPath.m in Sources */,
 				89512BDC1C9EEC3C0027D61E /* Drag.m in Sources */,

@@ -482,5 +482,28 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Cho phép “%@” sử dụng vị trí của bạn?",
+    "buttons": [
+      "Luôn cho phép",
+      "Cho phép",
+      "Cho phép khi dùng ứng dụng"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Cho phép “%@” sử dụng vị trí của bạn ngay cả khi bạn không dùng ứng dụng?",
+    "buttons": [
+      "Cho phép"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Cũng cho phép “%@” sử dụng vị trí của bạn ngay cả khi bạn không dùng ứng dụng?",
+    "buttons": [
+      "Cho phép"
+    ],
+    "shouldAccept": true
   }
 ]

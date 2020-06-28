@@ -14,14 +14,16 @@
 
 #import <objc/NSObject.h>
 
-@class NSDictionary, NSMutableDictionary;
+@class NSDictionary;
 
 @interface XCTMeasureOptions : NSObject
 {
-    NSMutableDictionary *_instrumentOptions;
+    BOOL _enableParallelizedSampling;
+    BOOL _scheduleKickOffOnNewThread;
+    BOOL _allowContinuousSampling;
     BOOL _discardFirstIteration;
-    NSUInteger _instrumentAutomatic;
-    NSUInteger _metricPerferredSampleMode;
+    NSUInteger _invocationOptions;
+    NSUInteger _iterationCount;
 }
 
 @property(nonatomic) BOOL allowConcurrentIterations;
@@ -31,7 +33,6 @@
 @property(readonly, nonatomic) NSDictionary *instrumentOptions;
 @property(nonatomic) NSUInteger invocationOptions;
 @property(nonatomic) NSUInteger iterationCount;
-@property(readonly, nonatomic) NSUInteger metricPerferredSampleMode;
 
 + (id)defaultOptions;
 - (id)initWithInstrumentOptionsDictionary:(id)arg1;

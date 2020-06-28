@@ -42,6 +42,7 @@
 - (id)initWithElement:(id)arg1 normalizedOffset:(CGVector)arg2;
 - (void)pressForDuration:(double)arg1;
 - (void)pressForDuration:(double)arg1 thenDragToCoordinate:(id)arg2;
+- (void)pressForDuration:(double)arg1 thenDragToCoordinate:(id)arg2 withVelocity:(double)arg3 thenHoldForDuration:(double)arg4;
 - (void)pressWithPressure:(double)arg1 duration:(double)arg2;
 - (void)tap;
 

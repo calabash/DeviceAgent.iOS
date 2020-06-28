@@ -19,10 +19,12 @@
 @interface XCTActivityRecordStack : NSObject
 {
     NSMutableArray *_storage;
-    NSMutableDictionary *_aggregationRecords;
+    NSMutableDictionary *_mutableAggregationRecords;
 }
 
 @property(readonly) NSDictionary *aggregationRecords;
+@property(readonly) NSMutableDictionary *mutableAggregationRecords;
+@property(readonly) NSMutableArray *storage;
 
 - (NSInteger)depth;
 - (void)didFinishActivity:(id)arg1 testCase:(id)arg2 observationCenter:(id)arg3;

@@ -31,7 +31,6 @@
 - (void)setTransformationDescription:(id)arg1;
 - (BOOL)stopsOnFirstMatch;
 - (BOOL)supportsAttributeKeyPathAnalysis;
-- (BOOL)supportsRemoteEvaluation;
 - (id)transform:(id)arg1 relatedElements:(id *)arg2;
 - (id)transformationDescription;
 

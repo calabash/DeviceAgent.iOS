@@ -20,16 +20,23 @@
 @interface XCTAccessibilityFramework : NSObject <XCTAccessibilityFramework>
 {
     BOOL _allowsRemoteAccess;
+    NSInteger _processID;
     struct __AXUIElement *_systemWideElement;
 }
 
-@property BOOL allowsRemoteAccess;
+@property(readonly) BOOL allowsRemoteAccess;
+@property(readonly) NSInteger processID;
 @property struct __AXUIElement *systemWideElement;
 
 + (void)_startAXServer;
+- (BOOL)_canAccessElement:(struct __AXUIElement *)arg1 withError:(id *)arg2;
 - (NSInteger)appOrientationForElement:(struct __AXUIElement *)arg1 error:(id *)arg2;
 - (id)attributes:(id)arg1 forElement:(struct __AXUIElement *)arg2 error:(id *)arg3;
+- (id)attributesForElement:(id)arg1 attributes:(id)arg2 error:(id *)arg3;
 - (CGRect)frameForElement:(struct __AXUIElement *)arg1 error:(id *)arg2;
+- (id)initAllowingRemoteAccess:(BOOL)arg1 processID:(NSInteger)arg2;
+- (id)initForLocalAccess;
+- (id)initForRemoteAccess;
 - (const struct __AXUIElement *)mainWindowForElement:(struct __AXUIElement *)arg1 error:(id *)arg2;
 - (void)performWithAXTimeout:(double)arg1 block:(CDUnknownBlockType)arg2;
 - (id)userTestingSnapshotForElement:(struct __AXUIElement *)arg1 options:(id)arg2 error:(id *)arg3;

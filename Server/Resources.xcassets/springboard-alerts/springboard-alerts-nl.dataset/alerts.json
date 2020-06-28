@@ -457,5 +457,28 @@
       "Open"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Toestaan dat %@ je locatie gebruikt?",
+    "buttons": [
+      "Sta altijd toe",
+      "Sta toe",
+      "Bij gebruik van app"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Toestaan dat %@ je locatie gebruikt, ook als je de app niet gebruikt?",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Toestaan dat %@ ook je locatie gebruikt als je de app niet gebruikt?",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
   }
 ]

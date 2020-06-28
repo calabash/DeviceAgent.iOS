@@ -18,7 +18,7 @@
 
 @interface XCTest : NSObject
 {
-    id _internal;
+    XCTestRun *_testRun;
 }
 
 @property(readonly) NSString *_classNameForReporting;
@@ -38,7 +38,9 @@
 - (void)removeTestsWithNames:(id)arg1;
 - (void)runTest;
 - (void)setUp;
+- (BOOL)setUpWithError:(id *)arg1;
 - (void)tearDown;
+- (BOOL)tearDownWithError:(id *)arg1;
 
 @end
 

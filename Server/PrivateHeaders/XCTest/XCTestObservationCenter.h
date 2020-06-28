@@ -15,17 +15,26 @@
 #import <objc/NSObject.h>
 
 @class NSMutableArray;
+@protocol XCTestObservation;
 
 @interface XCTestObservationCenter : NSObject
 {
-    id _internalImplementation;
+    BOOL _suspended;
+    NSMutableArray *_observers;
+    CDUnknownBlockType _exceptionHandler;
+    id <XCTestObservation> _throwingTestObserver;
+    SEL _throwingTestObserverMethod;
 }
 
+@property(readonly, copy) CDUnknownBlockType exceptionHandler;
 @property(readonly) NSMutableArray *observers;
 @property BOOL suspended;
+@property(retain) id <XCTestObservation> throwingTestObserver;
+@property SEL throwingTestObserverMethod;
 
 + (void)setSharedTestObservationCenter:(id)arg1;
 + (id)sharedTestObservationCenter;
+- (void)_handleException:(id)arg1 thrownBy:(id)arg2 inMethod:(SEL)arg3;
 - (void)_observeTestExecutionForBlock:(CDUnknownBlockType)arg1;
 - (void)_resumeObservation;
 - (void)_suspendObservation;
@@ -36,11 +45,12 @@
 - (void)_testCaseDidFail:(id)arg1 withDescription:(id)arg2 inFile:(id)arg3 atLine:(NSUInteger)arg4;
 - (void)_testCaseDidStart:(id)arg1;
 - (void)_testCaseDidStop:(id)arg1;
+- (void)_testCaseWasSkipped:(id)arg1 withDescription:(id)arg2 inFile:(id)arg3 atLine:(NSUInteger)arg4;
 - (void)_testSuiteDidFail:(id)arg1 withDescription:(id)arg2 inFile:(id)arg3 atLine:(NSUInteger)arg4;
 - (void)_testSuiteDidStart:(id)arg1;
 - (void)_testSuiteDidStop:(id)arg1;
 - (void)addTestObserver:(id)arg1;
-- (id)initBasicCenter;
+- (id)initWithObservers:(id)arg1 exceptionHandler:(CDUnknownBlockType)arg2;
 - (void)removeTestObserver:(id)arg1;
 
 @end

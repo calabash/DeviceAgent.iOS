@@ -263,6 +263,9 @@ NSString *const CBXDeviceSimKeyVersionInfo = @"SIMULATOR_VERSION_INFO";
       @"iPhone12,3" : @"iphone 10",
       @"iPhone12,5" : @"iphone 10s max",
 
+      // iPhone SE 2020
+      @"iPhone12,8" : @"iPhone 6",
+
       // iPad Pro 13in
       @"iPad6,7" : @"ipad pro",
       @"iPad6,8" : @"ipad pro",

@@ -27,7 +27,7 @@
     DTXConnection *_dtxConnection;
 }
 
-@property id <XCTMemoryCheckerDelegate> delegate;
+@property __weak id <XCTMemoryCheckerDelegate> delegate;
 @property(retain, nonatomic) DTXConnection *dtxConnection;
 @property(retain) NSMutableSet *markedAddresses;
 

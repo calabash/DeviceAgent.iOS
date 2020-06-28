@@ -381,5 +381,35 @@
       "Autoriser une fois"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Autoriser « %@ » à utiliser votre position ?",
+    "buttons": [
+      "Toujours autoriser",
+      "Autoriser",
+      "Autoriser lorsque l’app est active"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Autoriser « %@ » à utiliser votre position même lorsque vous n’utilisez pas l’app ?",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » a utilisé votre position en arrière-plan au cours des 3 derniers jours. Voulez-vous maintenir cette autorisation d’utiliser votre position en arrière-plan ?",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » a utilisé votre position une fois en arrière-plan au cours des 3 derniers jours. Voulez-vous maintenir cette autorisation d’utiliser votre position en arrière-plan ?",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
   }
 ]

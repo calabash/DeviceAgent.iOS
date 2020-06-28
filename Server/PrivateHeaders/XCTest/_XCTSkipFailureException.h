@@ -5,6 +5,7 @@
 //  Copyright (C) 1997-2019 Steve Nygard.
 //
 
+
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <XCTest/XCUIElementTypes.h>
@@ -12,19 +13,11 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-#import <objc/NSObject.h>
-
-@class NSMutableArray;
-
-@interface _XCTestObservationCenterImplementation : NSObject
+@interface _XCTSkipFailureException : NSException
 {
-    NSMutableArray *_observers;
-    BOOL _suspended;
 }
 
-@property(retain) NSMutableArray *observers;
-@property BOOL suspended;
-
++ (void)raiseWithContext:(id)arg1;
 
 @end
 

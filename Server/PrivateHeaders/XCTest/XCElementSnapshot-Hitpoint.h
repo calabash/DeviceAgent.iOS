@@ -21,6 +21,7 @@
 
 @interface XCElementSnapshot (Hitpoint) <XCUIElementAttributes, XCUIElementSnapshot>
 - (BOOL)_canTransformPoint:(CGPoint)arg1;
+- (BOOL)_elementIsContainerSubviewWithMatchingFrame:(id)arg1;
 - (id)_hitPointTransformationRequestOrError:(id *)arg1;
 - (id)_snapshotForAccessibilityElement:(id)arg1 error:(id *)arg2;
 - (id)_transformParametersFromDictionary:(id)arg1 error:(id *)arg2;

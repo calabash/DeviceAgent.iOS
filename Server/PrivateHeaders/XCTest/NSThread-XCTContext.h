@@ -5,6 +5,7 @@
 //  Copyright (C) 1997-2019 Steve Nygard.
 //
 
+
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <XCTest/XCUIElementTypes.h>
@@ -12,20 +13,8 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-#import <objc/NSObject.h>
-
 @class NSMutableArray;
 
-@interface XCUITestContextScope : NSObject
-{
-    XCUITestContextScope *_parentScope;
-    NSMutableArray *_handlers;
-}
-
-@property(readonly, copy) NSMutableArray *handlers;
-@property(readonly) XCUITestContextScope *parentScope;
-
-- (id)initWithParentScope:(id)arg1;
-
+@interface NSThread (XCTContext)
 @end
 

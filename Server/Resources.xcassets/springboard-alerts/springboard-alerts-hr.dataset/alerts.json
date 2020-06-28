@@ -404,5 +404,21 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Dozvoliti aplikaciji “%@” uporabu vaše lokacije?",
+    "buttons": [
+      "Uvijek dozvoli",
+      "Dozvoli",
+      "Dozvoli tijekom uporabe aplikacije"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dozvoliti aplikaciji “%@” uporabu vaše lokacije čak i kad ne koristite aplikaciju?",
+    "buttons": [
+      "Dozvoli"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -16,14 +16,14 @@
 
 #import "XCTestExpectationDelegate-Protocol.h"
 
-@class NSArray, NSString, _XCTCompoundExpectationImplementation;
+@class NSArray, NSString;
 
 @interface XCTCompoundExpectation : XCTestExpectation <XCTestExpectationDelegate>
 {
-    id _internalCompoundExpectation;
+    NSUInteger _logicalType;
+    NSArray *_subexpectations;
 }
 
-@property(readonly) _XCTCompoundExpectationImplementation *internalCompoundExpectation;
 @property(readonly) NSUInteger logicalType;
 @property(readonly, copy) NSArray *subexpectations;
 

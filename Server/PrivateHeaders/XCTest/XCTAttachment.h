@@ -15,20 +15,28 @@
 #import <objc/NSObject.h>
 
 
-@class NSData, NSDate, NSDictionary, NSString, _XCTAttachmentImplementation;
+@class NSData, NSDate, NSDictionary, NSString;
 
 @interface XCTAttachment : NSObject <NSSecureCoding>
 {
-    id _internalImplementation;
+    BOOL _hasPayload;
+    NSString *_uniformTypeIdentifier;
+    NSString *_name;
+    NSDictionary *_userInfo;
+    CDUnknownBlockType _serializationBlock;
+    NSInteger _internalLifetime;
+    NSDate *_timestamp;
+    NSString *_fileNameOverride;
+    NSData *_payload;
 }
 
 @property(copy) NSString *fileNameOverride;
 @property(readonly) BOOL hasPayload;
-@property(readonly) _XCTAttachmentImplementation *internalImplementation;
 @property NSInteger internalLifetime;
 @property NSInteger lifetime;
 @property(copy) NSString *name;
 @property(readonly, copy) NSData *payload;
+@property(copy) CDUnknownBlockType serializationBlock;
 @property(copy) NSDate *timestamp;
 @property(copy) NSDictionary *userInfo;
 @property(readonly, copy) NSString *uniformTypeIdentifier;

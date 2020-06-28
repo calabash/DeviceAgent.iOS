@@ -19,8 +19,8 @@
 @interface XCTAttachmentManager : NSObject
 {
     BOOL _isValid;
-    NSMutableArray *_attachments;
     XCTestCase *_testCase;
+    NSMutableArray *_attachments;
 }
 
 @property(readonly) NSMutableArray *attachments;

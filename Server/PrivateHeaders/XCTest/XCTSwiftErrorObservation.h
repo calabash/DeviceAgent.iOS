@@ -14,19 +14,9 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray;
 
-@interface _XCTCompoundExpectationImplementation : NSObject
-{
-    NSUInteger _logicalType;
-    NSArray *_subexpectations;
-}
-
-@property(readonly, nonatomic) NSUInteger logicalType;
-@property(readonly, copy, nonatomic) NSArray *subexpectations;
-
-- (void)cleanup;
-- (id)initWithLogicalType:(NSUInteger)arg1 subexpectations:(id)arg2;
++ (void)installSwiftErrorObserverIfPossible;
++ (id)observeErrorsInBlock:(CDUnknownBlockType)arg1;
 
 @end
 

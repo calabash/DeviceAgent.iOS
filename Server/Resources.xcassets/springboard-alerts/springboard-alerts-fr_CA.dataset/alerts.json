@@ -374,5 +374,28 @@
       "Autoriser une fois"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Autoriser « %@ » à utiliser vos données de localisation?",
+    "buttons": [
+      "Toujours autoriser",
+      "Autoriser",
+      "Autoriser lorsque l’app est active"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Autoriser « %@ » à utiliser vos données de localisation même si vous n’utilisez pas l’app?",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Autoriser « %@ » à utiliser aussi vos données de localisation même si vous n’utilisez pas l’app?",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
   }
 ]

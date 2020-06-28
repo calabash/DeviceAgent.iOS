@@ -14,15 +14,20 @@
 
 #import <objc/NSObject.h>
 
-@class XCTestRun;
+@class NSString, NSUUID;
 
-@interface _XCTestImplementation : NSObject
+@interface XCUIInterruptionHandler : NSObject
 {
-    XCTestRun *_testRun;
+    CDUnknownBlockType _block;
+    NSString *_handlerDescription;
+    NSUUID *_identifier;
 }
 
-@property(retain) XCTestRun *testRun;
+@property(readonly, copy) CDUnknownBlockType block;
+@property(readonly, copy) NSString *handlerDescription;
+@property(readonly, copy) NSUUID *identifier;
 
+- (id)initWithBlock:(CDUnknownBlockType)arg1 description:(id)arg2;
 
 @end
 

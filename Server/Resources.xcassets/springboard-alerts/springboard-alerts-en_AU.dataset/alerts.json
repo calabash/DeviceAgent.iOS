@@ -404,5 +404,28 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Allow “%@” to use your location?",
+    "buttons": [
+      "Always Allow",
+      "Allow",
+      "Allow While Using App"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Allow “%@” to use your location even when you are not using the app?",
+    "buttons": [
+      "Allow"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Allow “%@” to also use your location even when you are not using the app?",
+    "buttons": [
+      "Allow"
+    ],
+    "shouldAccept": true
   }
 ]
