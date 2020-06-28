@@ -19,6 +19,11 @@
 			<key>XCODE_DBG_XPC_EXCLUSIONS</key>
 			<string>com.apple.dt.xctestSymbolicator</string>
 		</dict>
+		<key>EnvironmentVariables</key>
+		<dict>
+			<key>CbxServerPort</key>
+			<string>CBX_SERVER_PORT</string>
+		</dict>	
 		<key>UITargetAppPath</key>
 		<string>/path/to/AUT.app</string>
 		<key>UseUITargetAppProvidedByTests</key>
