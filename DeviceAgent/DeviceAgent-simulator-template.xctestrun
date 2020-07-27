@@ -12,6 +12,8 @@
 		<string>TEST_HOST_PATH</string>
 		<key>TestingEnvironmentVariables</key>
 		<dict>
+			<key>CbxServerPort</key>
+			<string>CBX_SERVER_PORT</string>
 			<key>DYLD_FRAMEWORK_PATH</key>
 			<string></string>
 			<key>DYLD_LIBRARY_PATH</key>
@@ -23,7 +25,7 @@
 		<dict>
 			<key>CbxServerPort</key>
 			<string>CBX_SERVER_PORT</string>
-		</dict>	
+		</dict>
 		<key>UITargetAppPath</key>
 		<string>/path/to/AUT.app</string>
 		<key>UseUITargetAppProvidedByTests</key>

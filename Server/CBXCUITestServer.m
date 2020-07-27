@@ -93,8 +93,7 @@ static NSString *serverName = @"CalabashXCUITestServer";
     NSError *error;
     BOOL serverStarted = NO;
     
-    NSString *portNumberString = [CBXCUITestServer valueFromArguments: NSProcessInfo.processInfo.arguments
-                                                   forKey: @"--port"];
+    NSString *portNumberString = [NSProcessInfo.processInfo.environment objectForKey: @"CbxServerPort"];
     NSUInteger port = (NSUInteger)[portNumberString integerValue];
     
     if (port == 0) {
