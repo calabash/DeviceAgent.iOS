@@ -1,6 +1,6 @@
 // Software License Agreement (BSD License)
 //
-// Copyright (c) 2010-2016, Deusty, LLC
+// Copyright (c) 2010-2020, Deusty, LLC
 // All rights reserved.
 //
 // Redistribution and use of this software in source and binary forms,
@@ -20,7 +20,9 @@
     #define DD_LEGACY_MACROS 0
 #endif
 
-#import "DDLog.h"
+#import <CocoaLumberjack/DDLog.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * This class provides a log formatter that filters log statements from a logging context not on the whitelist.
@@ -53,26 +55,26 @@
  *
  *  @param loggingContext the context
  */
-- (void)addToWhitelist:(NSUInteger)loggingContext;
+- (void)addToWhitelist:(NSInteger)loggingContext;
 
 /**
  *  Remove context from whitelist
  *
  *  @param loggingContext the context
  */
-- (void)removeFromWhitelist:(NSUInteger)loggingContext;
+- (void)removeFromWhitelist:(NSInteger)loggingContext;
 
 /**
  *  Return the whitelist
  */
-@property (readonly, copy) NSArray<NSNumber *> *whitelist;
+@property (nonatomic, readonly, copy) NSArray<NSNumber *> *whitelist;
 
 /**
  *  Check if a context is on the whitelist
  *
  *  @param loggingContext the context
  */
-- (BOOL)isOnWhitelist:(NSUInteger)loggingContext;
+- (BOOL)isOnWhitelist:(NSInteger)loggingContext;
 
 @end
 
@@ -92,14 +94,14 @@
  *
  *  @param loggingContext the context
  */
-- (void)addToBlacklist:(NSUInteger)loggingContext;
+- (void)addToBlacklist:(NSInteger)loggingContext;
 
 /**
  *  Remove context from blacklist
  *
  *  @param loggingContext the context
  */
-- (void)removeFromBlacklist:(NSUInteger)loggingContext;
+- (void)removeFromBlacklist:(NSInteger)loggingContext;
 
 /**
  *  Return the blacklist
@@ -112,6 +114,8 @@
  *
  *  @param loggingContext the context
  */
-- (BOOL)isOnBlacklist:(NSUInteger)loggingContext;
+- (BOOL)isOnBlacklist:(NSInteger)loggingContext;
 
 @end
+
+NS_ASSUME_NONNULL_END

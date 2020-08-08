@@ -1,6 +1,6 @@
 // Software License Agreement (BSD License)
 //
-// Copyright (c) 2010-2016, Deusty, LLC
+// Copyright (c) 2010-2020, Deusty, LLC
 // All rights reserved.
 //
 // Redistribution and use of this software in source and binary forms,
@@ -15,12 +15,18 @@
 
 #import <Foundation/Foundation.h>
 
-// Enable 1.9.x legacy macros if imported directly
-#ifndef DD_LEGACY_MACROS
-    #define DD_LEGACY_MACROS 1
+// The Swift Package integration has no support for the legacy macros.
+#if __has_include(<CocoaLumberjack/DDLegacyMacros.h>)
+    // Enable 1.9.x legacy macros if imported directly and it's not a swift package build.
+    #ifndef DD_LEGACY_MACROS
+        #define DD_LEGACY_MACROS 1
+    #endif
+    // DD_LEGACY_MACROS is checked in the file itself
+    #import <CocoaLumberjack/DDLegacyMacros.h>
 #endif
-// DD_LEGACY_MACROS is checked in the file itself
-#import "DDLegacyMacros.h"
+
+// Names of loggers.
+#import <CocoaLumberjack/DDLoggerNames.h>
 
 #if OS_OBJECT_USE_OBJC
     #define DISPATCH_QUEUE_REFERENCE_TYPE strong
@@ -32,6 +38,8 @@
 @class DDLoggerInformation;
 @protocol DDLogger;
 @protocol DDLogFormatter;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Define the standard options.
@@ -105,22 +113,22 @@ typedef NS_OPTIONS(NSUInteger, DDLogFlag){
      *  0...00001 DDLogFlagError
      */
     DDLogFlagError      = (1 << 0),
-    
+
     /**
      *  0...00010 DDLogFlagWarning
      */
     DDLogFlagWarning    = (1 << 1),
-    
+
     /**
      *  0...00100 DDLogFlagInfo
      */
     DDLogFlagInfo       = (1 << 2),
-    
+
     /**
      *  0...01000 DDLogFlagDebug
      */
     DDLogFlagDebug      = (1 << 3),
-    
+
     /**
      *  0...10000 DDLogFlagVerbose
      */
@@ -135,39 +143,37 @@ typedef NS_ENUM(NSUInteger, DDLogLevel){
      *  No logs
      */
     DDLogLevelOff       = 0,
-    
+
     /**
      *  Error logs only
      */
     DDLogLevelError     = (DDLogFlagError),
-    
+
     /**
      *  Error and warning logs
      */
     DDLogLevelWarning   = (DDLogLevelError   | DDLogFlagWarning),
-    
+
     /**
      *  Error, warning and info logs
      */
     DDLogLevelInfo      = (DDLogLevelWarning | DDLogFlagInfo),
-    
+
     /**
      *  Error, warning, info and debug logs
      */
     DDLogLevelDebug     = (DDLogLevelInfo    | DDLogFlagDebug),
-    
+
     /**
      *  Error, warning, info, debug and verbose logs
      */
     DDLogLevelVerbose   = (DDLogLevelDebug   | DDLogFlagVerbose),
-    
+
     /**
      *  All logs (1...11111)
      */
     DDLogLevelAll       = NSUIntegerMax
 };
-
-NS_ASSUME_NONNULL_BEGIN
 
 /**
  *  Extracts just the file name, no path or extension
@@ -241,9 +247,9 @@ FOUNDATION_EXTERN NSString * __nullable DDExtractFileNameWithoutExtension(const 
        flag:(DDLogFlag)flag
     context:(NSInteger)context
        file:(const char *)file
-   function:(const char *)function
+   function:(nullable const char *)function
        line:(NSUInteger)line
-        tag:(id __nullable)tag
+        tag:(nullable id)tag
      format:(NSString *)format, ... NS_FORMAT_FUNCTION(9,10);
 
 /**
@@ -267,9 +273,9 @@ FOUNDATION_EXTERN NSString * __nullable DDExtractFileNameWithoutExtension(const 
        flag:(DDLogFlag)flag
     context:(NSInteger)context
        file:(const char *)file
-   function:(const char *)function
+   function:(nullable const char *)function
        line:(NSUInteger)line
-        tag:(id __nullable)tag
+        tag:(nullable id)tag
      format:(NSString *)format, ... NS_FORMAT_FUNCTION(9,10);
 
 /**
@@ -294,9 +300,9 @@ FOUNDATION_EXTERN NSString * __nullable DDExtractFileNameWithoutExtension(const 
        flag:(DDLogFlag)flag
     context:(NSInteger)context
        file:(const char *)file
-   function:(const char *)function
+   function:(nullable const char *)function
        line:(NSUInteger)line
-        tag:(id __nullable)tag
+        tag:(nullable id)tag
      format:(NSString *)format
        args:(va_list)argList NS_SWIFT_NAME(log(asynchronous:level:flag:context:file:function:line:tag:format:arguments:));
 
@@ -322,16 +328,16 @@ FOUNDATION_EXTERN NSString * __nullable DDExtractFileNameWithoutExtension(const 
        flag:(DDLogFlag)flag
     context:(NSInteger)context
        file:(const char *)file
-   function:(const char *)function
+   function:(nullable const char *)function
        line:(NSUInteger)line
-        tag:(id __nullable)tag
+        tag:(nullable id)tag
      format:(NSString *)format
        args:(va_list)argList NS_SWIFT_NAME(log(asynchronous:level:flag:context:file:function:line:tag:format:arguments:));
 
 /**
  * Logging Primitive.
  *
- * This method can be used if you manualy prepared DDLogMessage.
+ * This method can be used if you manually prepared DDLogMessage.
  *
  *  @param asynchronous YES if the logging is done async, NO if you want to force sync
  *  @param logMessage   the log message stored in a `DDLogMessage` model object
@@ -342,7 +348,7 @@ FOUNDATION_EXTERN NSString * __nullable DDExtractFileNameWithoutExtension(const 
 /**
  * Logging Primitive.
  *
- * This method can be used if you manualy prepared DDLogMessage.
+ * This method can be used if you manually prepared DDLogMessage.
  *
  *  @param asynchronous YES if the logging is done async, NO if you want to force sync
  *  @param logMessage   the log message stored in a `DDLogMessage` model object
@@ -575,7 +581,7 @@ FOUNDATION_EXTERN NSString * __nullable DDExtractFileNameWithoutExtension(const 
  * If no formatter is set, the logger simply logs the message as it is given in logMessage,
  * or it may use its own built in formatting style.
  **/
-@property (nonatomic, strong) id <DDLogFormatter> logFormatter;
+@property (nonatomic, strong, nullable) id <DDLogFormatter> logFormatter;
 
 @optional
 
@@ -606,13 +612,13 @@ FOUNDATION_EXTERN NSString * __nullable DDExtractFileNameWithoutExtension(const 
 - (void)didAddLoggerInQueue:(dispatch_queue_t)queue;
 
 /**
- *  See the above description for `didAddLoger`
+ *  See the above description for `didAddLogger`
  */
 - (void)willRemoveLogger;
 
 /**
  * Some loggers may buffer IO for optimization purposes.
- * For example, a database logger may only save occasionaly as the disk IO is slow.
+ * For example, a database logger may only save occasionally as the disk IO is slow.
  * In such loggers, this method should be implemented to flush any pending IO.
  *
  * This allows invocations of DDLog's flushLog method to be propogated to loggers that need it.
@@ -635,7 +641,7 @@ FOUNDATION_EXTERN NSString * __nullable DDExtractFileNameWithoutExtension(const 
  * The created queue will receive its name from this method.
  * This may be helpful for debugging or profiling reasons.
  **/
-@property (nonatomic, readonly) NSString *loggerName;
+@property (copy, nonatomic, readonly) DDLoggerName loggerName;
 
 @end
 
@@ -660,7 +666,7 @@ FOUNDATION_EXTERN NSString * __nullable DDExtractFileNameWithoutExtension(const 
  * The formatter may also optionally filter the log message by returning nil,
  * in which case the logger will not log the message.
  **/
-- (NSString * __nullable)formatLogMessage:(DDLogMessage *)logMessage NS_SWIFT_NAME(format(message:));
+- (nullable NSString *)formatLogMessage:(DDLogMessage *)logMessage NS_SWIFT_NAME(format(message:));
 
 @optional
 
@@ -670,7 +676,7 @@ FOUNDATION_EXTERN NSString * __nullable DDExtractFileNameWithoutExtension(const 
  *
  * This is primarily for thread-safety.
  * If a formatter is explicitly not thread-safe, it may wish to throw an exception if added to multiple loggers.
- * Or if a formatter has potentially thread-unsafe code (e.g. NSDateFormatter),
+ * Or if a formatter has potentially thread-unsafe code (e.g. NSDateFormatter with 10.0 behavior),
  * it could possibly use these hooks to switch to thread-safe versions of the code.
  **/
 - (void)didAddToLogger:(id <DDLogger>)logger;
@@ -681,7 +687,7 @@ FOUNDATION_EXTERN NSString * __nullable DDExtractFileNameWithoutExtension(const 
  *
  * This is primarily for thread-safety.
  * If a formatter is explicitly not thread-safe, it may wish to throw an exception if added to multiple loggers.
- * Or if a formatter has potentially thread-unsafe code (e.g. NSDateFormatter),
+ * Or if a formatter has potentially thread-unsafe code (e.g. NSDateFormatter with 10.0 behavior),
  * it could possibly use these hooks to switch to thread-safe versions of the code or use dispatch_set_specific()
 .* to add its own specific values.
  **/
@@ -774,10 +780,11 @@ typedef NS_OPTIONS(NSInteger, DDLogMessageOptions){
     NSUInteger _line;
     id _tag;
     DDLogMessageOptions _options;
-    NSDate *_timestamp;
+    NSDate * _timestamp;
     NSString *_threadID;
     NSString *_threadName;
     NSString *_queueLabel;
+    NSUInteger _qos;
 }
 
 /**
@@ -817,11 +824,11 @@ typedef NS_OPTIONS(NSInteger, DDLogMessageOptions){
                            flag:(DDLogFlag)flag
                         context:(NSInteger)context
                            file:(NSString *)file
-                       function:(NSString * __nullable)function
+                       function:(nullable NSString *)function
                            line:(NSUInteger)line
-                            tag:(id __nullable)tag
+                            tag:(nullable id)tag
                         options:(DDLogMessageOptions)options
-                      timestamp:(NSDate * __nullable)timestamp NS_DESIGNATED_INITIALIZER;
+                      timestamp:(nullable NSDate *)timestamp NS_DESIGNATED_INITIALIZER;
 
 /**
  * Read-only properties
@@ -836,14 +843,15 @@ typedef NS_OPTIONS(NSInteger, DDLogMessageOptions){
 @property (readonly, nonatomic) NSInteger context;
 @property (readonly, nonatomic) NSString *file;
 @property (readonly, nonatomic) NSString *fileName;
-@property (readonly, nonatomic) NSString * __nullable function;
+@property (readonly, nonatomic, nullable) NSString * function;
 @property (readonly, nonatomic) NSUInteger line;
-@property (readonly, nonatomic) id __nullable tag;
+@property (readonly, nonatomic, nullable) id tag;
 @property (readonly, nonatomic) DDLogMessageOptions options;
 @property (readonly, nonatomic) NSDate *timestamp;
 @property (readonly, nonatomic) NSString *threadID; // ID as it appears in NSLog calculated from the machThreadID
-@property (readonly, nonatomic) NSString *threadName;
+@property (readonly, nonatomic, nullable) NSString *threadName;
 @property (readonly, nonatomic) NSString *queueLabel;
+@property (readonly, nonatomic) NSUInteger qos API_AVAILABLE(macos(10.10), ios(8.0));
 
 @end
 
@@ -855,10 +863,10 @@ typedef NS_OPTIONS(NSInteger, DDLogMessageOptions){
  * The `DDLogger` protocol specifies that an optional formatter can be added to a logger.
  * Most (but not all) loggers will want to support formatters.
  *
- * However, writting getters and setters in a thread safe manner,
+ * However, writing getters and setters in a thread safe manner,
  * while still maintaining maximum speed for the logging process, is a difficult task.
  *
- * To do it right, the implementation of the getter/setter has strict requiremenets:
+ * To do it right, the implementation of the getter/setter has strict requirements:
  * - Must NOT require the `logMessage:` method to acquire a lock.
  * - Must NOT require the `logMessage:` method to access an atomic property (also a lock of sorts).
  *
@@ -901,8 +909,8 @@ typedef NS_OPTIONS(NSInteger, DDLogMessageOptions){
 @property (nonatomic, readonly) id <DDLogger> logger;
 @property (nonatomic, readonly) DDLogLevel level;
 
-+ (DDLoggerInformation *)informationWithLogger:(id <DDLogger>)logger
-                           andLevel:(DDLogLevel)level;
++ (instancetype)informationWithLogger:(id <DDLogger>)logger
+                             andLevel:(DDLogLevel)level;
 
 @end
 
