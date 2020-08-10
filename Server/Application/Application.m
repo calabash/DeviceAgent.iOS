@@ -132,11 +132,20 @@ static Application *currentApplication;
     return [iOSVersion compare:tenDotThree] != NSOrderedAscending;
 }
 
++ (BOOL)iOSVersionIsAtLeast14 {
+    NSString *version = [[CBXDevice sharedDevice] iOSVersion];
+    NSDecimalNumber *iOSVersion = [NSDecimalNumber decimalNumberWithString:version];
+    NSDecimalNumber *fourteen = [NSDecimalNumber decimalNumberWithString:@"14.0"];
+    return [iOSVersion compare:fourteen] != NSOrderedAscending;
+}
+
 + (NSDictionary *)launchEnvironmentWithEnvArg:(NSDictionary *)environmentArg {
     static NSString *bootstrapDylib = @"/Developer/usr/lib/libXCTTargetBootstrapInject.dylib";
     static NSString *key = @"DYLD_INSERT_LIBRARIES";
 
-    if ([Application iOSVersionIsAtLeast103]) {
+    if ([Application iOSVersionIsAtLeast14]) {
+        return environmentArg ?: @{}; // /Developer/usr/lib/libXCTTargetBootstrapInject.dylib does not exist for iOS 14.0
+    } else if ([Application iOSVersionIsAtLeast103]) {
         if (!environmentArg || environmentArg.count == 0) {
             return @{key : bootstrapDylib};
         } else {
