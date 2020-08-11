@@ -21,7 +21,7 @@
 
 @implementation CBXCUITestServer
 
-+ (NSString*)valueFromArguments: (NSArray<NSString *> *)arguments forKey: (NSString*)key
++ (NSString *)valueFromArguments: (NSArray<NSString *> *)arguments forKey: (NSString *)key
 {
   NSUInteger index = [arguments indexOfObject:key];
   if (index == NSNotFound || index == arguments.count - 1) {
