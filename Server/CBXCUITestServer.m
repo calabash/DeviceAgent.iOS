@@ -93,14 +93,7 @@ static NSString *serverName = @"CalabashXCUITestServer";
     NSError *error;
     BOOL serverStarted = NO;
     
-    NSString *portNumberString = [NSProcessInfo.processInfo.environment objectForKey: @"CbxServerPort"];
-    NSUInteger port = (NSUInteger)[portNumberString integerValue];
-    
-    if (port == 0) {
-      [self.server setPort:CBX_DEFAULT_SERVER_PORT];
-    } else {
-        [self.server setPort:port];
-    }
+    [self setServerPort];
     
     DDLogDebug(@"Attempting to start the DeviceAgent server");
     serverStarted = [self attemptToStartWithError:&error];
@@ -181,6 +174,17 @@ static NSString *serverName = @"CalabashXCUITestServer";
     free(classes);
     for (CBXRoute *route in [UndefinedRoutes getRoutes]) {
         [self.server addRoute:route];
+    }
+}
+
+- (void) setServerPort {
+    NSString *portNumberString = [NSProcessInfo.processInfo.environment objectForKey: @"CbxServerPort"];
+    NSUInteger port = (NSUInteger)[portNumberString integerValue];
+    
+    if (!portNumberString) {
+      [self.server setPort:CBX_DEFAULT_SERVER_PORT];
+    } else {
+      [self.server setPort:port];
     }
 }
 
