@@ -1,6 +1,6 @@
 ### 2.2.2
 
-* Remove arm64 to be able to build for Xcode 12 #393
+* Adapt architecture and identitiy to be able to build on Xcode 12 #393
 
 ### 2.2.1
 
