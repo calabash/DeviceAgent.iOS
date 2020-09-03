@@ -1,3 +1,7 @@
+### 2.2.2
+
+* Remove arm64 to be able to build for Xcode 12 #393
+
 ### 2.2.1
 
 The 2.2.0 release was cancelled.
