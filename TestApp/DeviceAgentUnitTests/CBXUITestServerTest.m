@@ -1,6 +1,8 @@
 
 #import "CBXServerUnitTestUmbrellaHeader.h"
 #import "CBXCUITestServer.h"
+#import "CBXConstants.h"
+#import <OCMock/OCMock.h>
 #import "RoutingHTTPServer.h"
 
 @interface CBXCUITestServer (CBXTEST)
@@ -41,6 +43,17 @@
     expect(self.testServer.server).notTo.beNil;
     expect([[self.testServer.server routes] count]).notTo.equal(0);
     expect(self.testServer.isFinishedTesting).to.equal(NO);
+}
+
+-(void)testInitSetsDefaultPort {
+    expect(self.testServer.server.port).equal(CBX_DEFAULT_SERVER_PORT);
+}
+
+-(void)testPassingPortFromEnvironment {
+    id processInfoMock = OCMClassMock([NSProcessInfo class]);
+    OCMStub([[processInfoMock environment] objectForKey: @"CbxServerPort"]).andReturn("41799");
+    
+    expect(self.testServer.server.port).equal(41799);
 }
 
 @end

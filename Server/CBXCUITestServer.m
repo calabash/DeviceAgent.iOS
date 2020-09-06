@@ -65,6 +65,7 @@ static NSString *serverName = @"CalabashXCUITestServer";
 
         [_server setTXTRecordDictionary:capabilities];
         [self registerRoutes];
+        [self setServerPort];
     }
     return self;
 }
@@ -92,8 +93,6 @@ static NSString *serverName = @"CalabashXCUITestServer";
 - (void)start {
     NSError *error;
     BOOL serverStarted = NO;
-    
-    [self setServerPort];
     
     DDLogDebug(@"Attempting to start the DeviceAgent server");
     serverStarted = [self attemptToStartWithError:&error];
