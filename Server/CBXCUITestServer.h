@@ -18,5 +18,4 @@
  */
 + (void)stop;   //Come to a complete (non-rolling) stop.
 
-+ (NSString*)valueFromArguments: (NSArray<NSString *> *)arguments forKey: (NSString *_Nullable)key;
 @end

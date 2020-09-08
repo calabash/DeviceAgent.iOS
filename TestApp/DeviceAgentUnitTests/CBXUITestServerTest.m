@@ -51,9 +51,12 @@
 
 -(void)testPassingPortFromEnvironment {
     id processInfoMock = OCMClassMock([NSProcessInfo class]);
-    OCMStub([[processInfoMock environment] objectForKey: @"CbxServerPort"]).andReturn("41799");
+    NSDictionary *mockedEnv = @{ @"CbxServerPort" : @"41799" };
+    OCMExpect([processInfoMock environment]).andReturn(mockedEnv);
     
     expect(self.testServer.server.port).equal(41799);
+
+    OCMVerifyAll(processInfoMock);
 }
 
 @end
