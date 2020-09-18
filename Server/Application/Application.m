@@ -125,11 +125,12 @@ static Application *currentApplication;
     return [Application terminateApplication:application];
 }
 
-+ (BOOL)iOSVersionIsAtLeast103 {
++ (BOOL)iOSVersionIsBetween103And14 {
     NSString *version = [[CBXDevice sharedDevice] iOSVersion];
     NSDecimalNumber *iOSVersion = [NSDecimalNumber decimalNumberWithString:version];
     NSDecimalNumber *tenDotThree = [NSDecimalNumber decimalNumberWithString:@"10.3"];
-    return [iOSVersion compare:tenDotThree] != NSOrderedAscending;
+    NSDecimalNumber *thirteenDotNine = [NSDecimalNumber decimalNumberWithString:@"14.0"];
+    return ([iOSVersion compare:tenDotThree] != NSOrderedAscending) && ([iOSVersion compare:thirteenDotNine] == NSOrderedAscending);
 }
 
 + (BOOL)iOSVersionIsAtLeast14 {
@@ -145,7 +146,7 @@ static Application *currentApplication;
 
     if ([Application iOSVersionIsAtLeast14]) {
         return environmentArg ?: @{}; // /Developer/usr/lib/libXCTTargetBootstrapInject.dylib does not exist for iOS 14.0
-    } else if ([Application iOSVersionIsAtLeast103]) {
+    } else if ([Application iOSVersionIsBetween103And14]) {
         if (!environmentArg || environmentArg.count == 0) {
             return @{key : bootstrapDylib};
         } else {
