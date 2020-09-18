@@ -6,8 +6,8 @@
 @interface Application (CBXTEST)
 
 + (NSDictionary *)launchEnvironmentWithEnvArg:(NSDictionary *)environmentArg;
-+ (BOOL)iOSVersionIsBetween103And14;
-+ (BOOL)iOSVersionIsAtLeast14;
++ (BOOL)iOSVersionGTE103;
++ (BOOL)iOSVersionGTE14;
 
 @end
 
@@ -17,83 +17,83 @@
 
 @implementation ApplicationTest
 
-- (void)testiOSVersionIsAtLeast103_933 {
+- (void)testiOSVersionGTE103_933 {
     id deviceMock = OCMPartialMock([CBXDevice sharedDevice]);
 
     OCMExpect([deviceMock iOSVersion]).andReturn(@"9.3.3");
-    expect([Application iOSVersionIsBetween103And14]).to.equal(NO);
+    expect([Application iOSVersionGTE103]).to.equal(NO);
     OCMVerifyAll(deviceMock);
 }
 
-- (void)testiOSVersionIsAtLeast103_100 {
+- (void)testiOSVersionGTE103_100 {
     id deviceMock = OCMPartialMock([CBXDevice sharedDevice]);
 
     OCMExpect([deviceMock iOSVersion]).andReturn(@"10.0");
-    expect([Application iOSVersionIsBetween103And14]).to.equal(NO);
+    expect([Application iOSVersionGTE103]).to.equal(NO);
     OCMVerifyAll(deviceMock);
 }
 
-- (void)testiOSVersionIsAtLeast103_102 {
+- (void)testiOSVersionGTE103_102 {
     id deviceMock = OCMPartialMock([CBXDevice sharedDevice]);
 
     OCMExpect([deviceMock iOSVersion]).andReturn(@"10.2");
-    expect([Application iOSVersionIsBetween103And14]).to.equal(NO);
+    expect([Application iOSVersionGTE103]).to.equal(NO);
     OCMVerifyAll(deviceMock);
 }
 
-- (void)testiOSVersionIsAtLeast103_103 {
+- (void)testiOSVersionGTE103_103 {
     id deviceMock = OCMPartialMock([CBXDevice sharedDevice]);
 
     OCMExpect([deviceMock iOSVersion]).andReturn(@"10.3");
-    expect([Application iOSVersionIsBetween103And14]).to.equal(YES);
+    expect([Application iOSVersionGTE103]).to.equal(YES);
     OCMVerifyAll(deviceMock);
 }
 
-- (void)testiOSVersionIsAtLeast103_104 {
+- (void)testiOSVersionGTE103_104 {
     id deviceMock = OCMPartialMock([CBXDevice sharedDevice]);
 
     OCMExpect([deviceMock iOSVersion]).andReturn(@"10.4");
-    expect([Application iOSVersionIsBetween103And14]).to.equal(YES);
+    expect([Application iOSVersionGTE103]).to.equal(YES);
     OCMVerifyAll(deviceMock);
 }
 
-- (void)testiOSVersionIsAtLeast103_110 {
+- (void)testiOSVersionGTE103_110 {
     id deviceMock = OCMPartialMock([CBXDevice sharedDevice]);
 
     OCMExpect([deviceMock iOSVersion]).andReturn(@"11.0");
-    expect([Application iOSVersionIsBetween103And14]).to.equal(YES);
+    expect([Application iOSVersionGTE103]).to.equal(YES);
     OCMVerifyAll(deviceMock);
 }
 
-- (void)testiOSVersionIsAtLeast103_140 {
+- (void)testiOSVersionGTE103_140 {
     id deviceMock = OCMPartialMock([CBXDevice sharedDevice]);
 
     OCMExpect([deviceMock iOSVersion]).andReturn(@"14.0");
-    expect([Application iOSVersionIsBetween103And14]).to.equal(NO);
+    expect([Application iOSVersionGTE103]).to.equal(NO);
     OCMVerifyAll(deviceMock);
 }
 
-- (void)testiOSVersionIsAtLeast14_110 {
+- (void)testiOSVersionGTE14_110 {
     id deviceMock = OCMPartialMock([CBXDevice sharedDevice]);
 
     OCMExpect([deviceMock iOSVersion]).andReturn(@"11.0");
-    expect([Application iOSVersionIsAtLeast14]).to.equal(NO);
+    expect([Application iOSVersionGTE14]).to.equal(NO);
     OCMVerifyAll(deviceMock);
 }
 
-- (void)testiOSVersionIsAtLeast14_140 {
+- (void)testiOSVersionGTE14_140 {
     id deviceMock = OCMPartialMock([CBXDevice sharedDevice]);
 
     OCMExpect([deviceMock iOSVersion]).andReturn(@"14.0");
-    expect([Application iOSVersionIsAtLeast14]).to.equal(YES);
+    expect([Application iOSVersionGTE14]).to.equal(YES);
     OCMVerifyAll(deviceMock);
 }
 
-- (void)testiOSVersionIsAtLeast14_141 {
+- (void)testiOSVersionGTE14_141 {
     id deviceMock = OCMPartialMock([CBXDevice sharedDevice]);
 
     OCMExpect([deviceMock iOSVersion]).andReturn(@"14.1");
-    expect([Application iOSVersionIsAtLeast14]).to.equal(YES);
+    expect([Application iOSVersionGTE14]).to.equal(YES);
     OCMVerifyAll(deviceMock);
 }
 
@@ -111,7 +111,7 @@ describe(@"launchEnvironmentWithEnvArg:", ^{
     describe(@"iOS < 10.3", ^{
         beforeEach(^{
             AppMock = OCMClassMock([Application class]);
-            OCMExpect([AppMock iOSVersionIsBetween103And14]).andReturn(NO);
+            OCMExpect([AppMock iOSVersionGTE103]).andReturn(NO);
         });
 
         it(@"returns an empty dictionary when arg is nil", ^{
@@ -131,7 +131,8 @@ describe(@"launchEnvironmentWithEnvArg:", ^{
     describe(@"iOS >= 10.3 && iOS < 14.0", ^{
         beforeEach(^{
             AppMock = OCMClassMock([Application class]);
-            OCMExpect([AppMock iOSVersionIsBetween103And14]).andReturn(YES);
+            OCMExpect([AppMock iOSVersionGTE103]).andReturn(YES);
+            OCMExpect([AppMock iOSVersionGTE14]).andReturn(NO);
         });
 
         it(@"returns dict w/ DYLD_INSERT_LIBS key/value pair when env arg is nil", ^{
@@ -186,7 +187,7 @@ describe(@"launchEnvironmentWithEnvArg:", ^{
     describe(@"iOS >= 14.0", ^{
         beforeEach(^{
             AppMock = OCMClassMock([Application class]);
-            OCMExpect([AppMock iOSVersionIsAtLeast14]).andReturn(YES);
+            OCMExpect([AppMock iOSVersionGTE14]).andReturn(YES);
         });
 
         it(@"returns dict w/ DYLD_INSERT_LIBS key/value pair when env arg does "
