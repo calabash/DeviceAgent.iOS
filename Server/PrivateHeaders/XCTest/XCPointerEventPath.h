@@ -56,7 +56,7 @@
 - (void)scrollWithDeltaVector:(CGVector)arg1 atOffset:(double)arg2 duration:(double)arg3;
 - (void)setModifiers:(NSUInteger)arg1 mergeWithCurrentModifierFlags:(BOOL)arg2 atOffset:(double)arg3;
 - (void)typeKey:(id)arg1 modifiers:(NSUInteger)arg2 atOffset:(double)arg3;
-- (void)typeText:(id)arg1 atOffset:(double)arg2 typingSpeed:(NSUInteger)arg3;
+- (void)typeText:(id)arg1 atOffset:(double)arg2 typingSpeed:(NSUInteger)arg3 shouldRedact:(BOOL)arg4;
 
 @end
 

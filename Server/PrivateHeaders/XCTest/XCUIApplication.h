@@ -64,7 +64,7 @@
 @property(nonatomic) NSInteger processID;
 @property(readonly) BOOL running;
 @property(nonatomic) NSUInteger state;
-@property(readonly) BOOL shouldBeCheckedForAlerts;
+@property(readonly) BOOL shouldBeCheckedForInterruptingElements;
 @property(readonly) BOOL shouldSkipPostEventQuiescence;
 @property(readonly) BOOL shouldSkipPreEventQuiescence;
 @property(readonly) BOOL suspended;
@@ -86,6 +86,7 @@
 - (void)clearQuery;
 - (void)commonInitWithApplicationSpecifier:(id)arg1 device:(id)arg2;
 - (id)currentProcess;
+- (id)diagnosticAttachmentsForError:(id)arg1;
 - (void)dismissKeyboard;
 - (NSUInteger)elementType;
 - (BOOL)exists;
@@ -102,6 +103,7 @@
 - (BOOL)resolveOrRaiseTestFailure:(BOOL)arg1 error:(id *)arg2;
 - (BOOL)setFauxCollectionViewCellsEnabled:(BOOL)arg1 error:(id *)arg2;
 - (void)terminate;
+- (id)viewDidAppearExpectationForViewControllerWithName:(id)arg1;
 - (BOOL)waitForState:(NSUInteger)arg1 timeout:(double)arg2;
 
 @end

@@ -27,10 +27,10 @@
 @property(readonly) NSMutableArray *storage;
 
 - (NSInteger)depth;
-- (void)didFinishActivity:(id)arg1 testCase:(id)arg2 observationCenter:(id)arg3;
+- (void)didFinishActivity:(id)arg1 testCase:(id)arg2;
 - (id)topActivity;
-- (void)unwindRemainingActivitiesWithTestCase:(id)arg1 observationCenter:(id)arg2;
-- (id)willStartActivityWithTitle:(id)arg1 type:(id)arg2 testCase:(id)arg3 observationCenter:(id)arg4;
+- (void)unwindRemainingActivitiesWithTestCase:(id)arg1;
+- (id)willStartActivityWithTitle:(id)arg1 type:(id)arg2 testCase:(id)arg3;
 
 @end
 

@@ -17,7 +17,7 @@
 #import <UIKit/UIDevice.h>
 
 @class NSString, XCUIRemote, XCUISiriService;
-@protocol XCUIAccessibilityInterface, XCUIApplicationAutomationSessionProviding, XCUIApplicationManaging, XCUIApplicationMonitor, XCUIDeviceEventAndStateInterface, XCUIEventSynthesizing, XCUIInterruptionMonitoring, XCUIResetAuthorizationStatusOfProtectedResourcesInterface, XCUIScreenDataSource, XCUIXcodeApplicationManaging;
+@protocol XCUIAccessibilityInterface, XCUIApplicationAutomationSessionProviding, XCUIApplicationManaging, XCUIApplicationMonitor, XCUIDeviceDiagnostics, XCUIDeviceEventAndStateInterface, XCUIEventSynthesizing, XCUIInterruptionMonitoring, XCUIResetAuthorizationStatusOfProtectedResourcesInterface, XCUIScreenDataSource, XCUIXcodeApplicationManaging;
 
 
 @protocol XCUIAccessibilityInterface;
@@ -41,6 +41,7 @@
     XCUIRemote *_remote;
     id <XCUIInterruptionMonitoring> _interruptionMonitor;
     id <XCUIResetAuthorizationStatusOfProtectedResourcesInterface> _resetAuthorizationStatusInterface;
+    id <XCUIDeviceDiagnostics> _diagnosticsProvider;
 }
 
 @property(nonatomic) UIDeviceOrientation orientation;
@@ -55,15 +56,20 @@
 - (id)applicationAutomationSessionProvider;
 - (id)applicationMonitor;
 - (void)attachLocalizableStringsData;
+- (BOOL)configuredForUITesting;
 - (id)deviceEventAndStateInterface;
+- (id)diagnosticAttachmentsForError:(id)arg1;
+- (id)diagnosticsProvider;
 - (id)eventSynthesizer;
 - (void)holdHomeButtonForDuration:(double)arg1;
 - (id)initLocalDeviceWithPlatform:(NSInteger)arg1;
+- (id)initWithDiagnosticProvider:(id)arg1;
 - (id)interruptionMonitor;
 - (BOOL)isLocal;
 - (BOOL)isSimulatorDevice;
 - (id)mainScreen;
 - (id)mainScreenOrError:(id *)arg1;
+- (id)makeDiagnosticScreenshotAttachmentForDevice;
 - (BOOL)performDeviceEvent:(id)arg1 error:(id *)arg2;
 - (NSInteger)platform;
 - (id)platformApplicationManager;
@@ -76,6 +82,7 @@
 - (id)screenDataSource;
 - (id)screens;
 - (id)screensOrError:(id *)arg1;
+- (id)spindumpAttachmentForProcessID:(NSInteger)arg1 error:(id *)arg2;
 - (BOOL)supportsPressureInteraction;
 - (id)uniqueIdentifier;
 - (id)xcodeApplicationManager;

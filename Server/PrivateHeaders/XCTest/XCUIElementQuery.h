@@ -16,6 +16,7 @@
 
 #import "XCTElementSnapshotProvider-Protocol.h"
 #import "XCUIElementTypeQueryProvider-Protocol.h"
+#import "XCUIElementTypeQueryProvider_Private-Protocol.h"
 
 @class NSArray, NSOrderedSet, NSSet, NSString, XCElementSnapshot, XCUIApplication, XCUIElement;
 @protocol XCTElementSetTransformer, XCTElementSnapshotAttributeDataSource;
@@ -24,7 +25,7 @@
 @protocol XCTElementSetTransformer;
 @protocol XCTElementSnapshotAttributeDataSource;
 
-@interface XCUIElementQuery : NSObject <XCTElementSnapshotProvider, XCUIElementTypeQueryProvider>
+@interface XCUIElementQuery : NSObject <XCTElementSnapshotProvider, XCUIElementTypeQueryProvider_Private, XCUIElementTypeQueryProvider>
 {
     BOOL _changesScope;
     BOOL _stopsOnFirstMatch;
@@ -43,7 +44,9 @@
 @property(readonly, copy) XCUIElementQuery *alerts;
 @property(readonly, copy) NSArray *allElementsBoundByAccessibilityElement;
 @property(readonly, copy) NSArray *allElementsBoundByIndex;
+@property(readonly, copy) NSSet *allExpressedTypes;
 @property(readonly) XCUIApplication *application;
+@property(readonly, copy) XCUIElementQuery *bannerNotifications;
 @property(readonly, copy) XCUIElementQuery *browsers;
 @property(readonly, copy) XCUIElementQuery *buttons;
 @property(readonly, copy) XCUIElementQuery *cells;
@@ -149,6 +152,7 @@
 - (id)_derivedExpressedIdentifiers;
 - (id)_derivedExpressedTypes;
 - (id)_descendantMatchingAccessibilityElement:(id)arg1;
+- (id)_descendantsMatchingPredicate:(id)arg1;
 - (id)_descendantsMatchingTypes:(id)arg1;
 - (id)_elementMatchingAccessibilityElementOfSnapshot:(id)arg1;
 - (id)_executeWithError:(id *)arg1;
@@ -167,6 +171,7 @@
 - (id)debugDescriptionWithSnapshot:(id)arg1;
 - (id)descendantsMatchingType:(NSUInteger)arg1;
 - (id)descending:(NSUInteger)arg1;
+- (id)device;
 - (id)elementAtIndex:(NSUInteger)arg1;
 - (id)elementBoundByIndex:(NSUInteger)arg1;
 - (id)elementMatchingPredicate:(id)arg1;

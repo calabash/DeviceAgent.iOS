@@ -16,6 +16,7 @@
 
 #import "XCTElementSetTransformer-Protocol.h"
 
+@class NSSet, NSString;
 
 @interface XCTElementBlockFilteringTransformer : NSObject <XCTElementSetTransformer>
 {
@@ -24,6 +25,7 @@
     CDUnknownBlockType _filter;
 }
 
+@property(readonly, copy) NSSet *elementTypes;
 @property(readonly, copy) CDUnknownBlockType filter;
 @property BOOL stopsOnFirstMatch;
 @property(copy) NSString *transformationDescription;

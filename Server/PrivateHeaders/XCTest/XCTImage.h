@@ -34,6 +34,7 @@
 
 + (id)UTIForQuality:(NSInteger)arg1;
 + (id)_dataForImage:(id)arg1 quality:(NSInteger)arg2;
++ (id)_dataForImage:(id)arg1 uti:(id)arg2 compressionQuality:(double)arg3;
 + (double)_scaleForImage:(id)arg1;
 + (double)compressionQualityForQuality:(NSInteger)arg1;
 + (id)emptyImageWithSize:(struct CGSize)arg1;

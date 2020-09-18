@@ -26,6 +26,7 @@
 + (void)provideCapabilitiesToBuilder:(id)arg1;
 - (BOOL)_elementMatches:(id)arg1 relatedElement:(id *)arg2;
 - (BOOL)canBeRemotelyEvaluatedWithCapabilities:(id)arg1;
+- (id)elementTypes;
 - (id)initWithPredicate:(id)arg1;
 - (id)iteratorForInput:(id)arg1;
 - (id)requiredKeyPathsOrError:(id *)arg1;

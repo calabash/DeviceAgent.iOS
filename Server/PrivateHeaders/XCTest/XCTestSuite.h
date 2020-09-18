@@ -14,16 +14,20 @@
 
 #import "XCTest.h"
 
-@class NSArray, NSDictionary, NSMutableArray, NSMutableDictionary, NSString, XCTestConfiguration;
+#import "XCTIssueHandling-Protocol.h"
 
-@interface XCTestSuite : XCTest
+@class NSArray, NSDictionary, NSMutableArray, NSMutableDictionary, NSString, XCTTestIdentifier, XCTestConfiguration;
+
+@interface XCTestSuite : XCTest <XCTIssueHandling>
 {
     NSString *_name;
+    XCTTestIdentifier *_identifier;
     NSMutableArray *_mutableTests;
     XCTestConfiguration *_testConfiguration;
     NSMutableDictionary *_mutableActivityAggregateStatistics;
 }
 
+@property(readonly, copy) XCTTestIdentifier *_identifier;
 @property(readonly) NSDictionary *activityAggregateStatistics;
 @property(readonly) NSMutableDictionary *mutableActivityAggregateStatistics;
 @property(retain) NSMutableArray *mutableTests;
@@ -55,6 +59,7 @@
 - (id)_testSuiteWithIdentifier:(id)arg1;
 - (void)addTest:(id)arg1;
 - (NSInteger)defaultExecutionOrderCompare:(id)arg1;
+- (void)handleIssue:(id)arg1;
 - (id)initWithName:(id)arg1;
 - (void)performTest:(id)arg1;
 - (void)recordFailureWithDescription:(id)arg1 inFile:(id)arg2 atLine:(NSUInteger)arg3 expected:(BOOL)arg4;
@@ -62,6 +67,7 @@
 - (void)setTests:(id)arg1;
 - (NSUInteger)testCaseCount;
 - (Class)testRunClass;
+
 
 @end
 

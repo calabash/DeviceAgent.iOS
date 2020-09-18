@@ -29,6 +29,7 @@
     BOOL _hasFocus;
     BOOL _hasKeyboardFocus;
     BOOL _isTruncatedValue;
+    BOOL _hasPrivilegedAttributeValues;
     NSUInteger _faultedInProperties;
     id <XCUIElementSnapshotApplication> _application;
     NSUInteger _generation;
@@ -55,6 +56,7 @@
 
 @property(readonly, copy, nonatomic) XCAccessibilityElement *accessibilityElement;
 @property(copy) NSDictionary *additionalAttributes;
+@property(readonly) BOOL anyDescendantHasPrivilegedAttributeValues;
 @property(nonatomic) __weak id <XCUIElementSnapshotApplication> application;
 @property(readonly) CGPoint center;
 @property(readonly) double centerX;
@@ -73,6 +75,7 @@
 @property(nonatomic) NSUInteger generation;
 @property BOOL hasFocus;
 @property BOOL hasKeyboardFocus;
+@property BOOL hasPrivilegedAttributeValues;
 @property NSInteger horizontalSizeClass;
 @property(copy) NSString *identifier;
 @property(readonly, copy) NSArray *identifiers;
@@ -91,7 +94,7 @@
 @property(readonly) XCElementSnapshot *menu;
 @property(readonly) XCElementSnapshot *menuItem;
 @property(readonly) XCElementSnapshot *outline;
-@property XCElementSnapshot *parent;
+@property __weak XCElementSnapshot *parent;
 @property(retain) XCAccessibilityElement *parentAccessibilityElement;
 @property(readonly, copy) NSString *pathDescription;
 @property(readonly, copy) XCElementSnapshot *pathFromRoot;
@@ -125,6 +128,7 @@
 - (void)_compensateForInsufficientElementTypeData;
 - (NSInteger)_faultingBitForKey:(id)arg1;
 - (BOOL)_fetchBoolForKey:(id)arg1;
+- (id)_fetchPrivilegedValueForKey:(id)arg1;
 - (id)_fetchSimpleValueForKey:(id)arg1;
 - (BOOL)_frameFuzzyMatchesElement:(id)arg1;
 - (BOOL)_frameFuzzyMatchesElement:(id)arg1 tolerance:(double)arg2;
@@ -138,6 +142,7 @@
 - (void)_recursivelySetFaultedBits:(NSInteger)arg1;
 - (void)_setIsFaultedIn:(NSInteger)arg1;
 - (BOOL)_shouldAttemptFaultForBit:(NSInteger)arg1;
+- (BOOL)_shouldAttemptPrivilegedFaultForValue:(id)arg1;
 - (void)_unsetIsFaultedIn:(NSInteger)arg1;
 - (BOOL)_willAssertOnFault;
 - (id)debugDescription;

@@ -21,20 +21,31 @@
     BOOL _enableParallelizedSampling;
     BOOL _scheduleKickOffOnNewThread;
     BOOL _allowContinuousSampling;
+    BOOL _discardTraceIteration;
     BOOL _discardFirstIteration;
+    BOOL _traceCollectionEnabled;
     NSUInteger _invocationOptions;
     NSUInteger _iterationCount;
+    NSDictionary *_performanceTestConfiguration;
+    double _quiesceCpuIdlePercent;
+    double _quiesceCpuIdleTimeLimit;
 }
 
 @property(nonatomic) BOOL allowConcurrentIterations;
 @property(nonatomic) BOOL allowContinuousSampling;
 @property(nonatomic) BOOL discardFirstIteration;
+@property(nonatomic) BOOL discardTraceIteration;
 @property(readonly, nonatomic) NSUInteger instrumentAutomatic;
 @property(readonly, nonatomic) NSDictionary *instrumentOptions;
 @property(nonatomic) NSUInteger invocationOptions;
 @property(nonatomic) NSUInteger iterationCount;
+@property(retain, nonatomic) NSDictionary *performanceTestConfiguration;
+@property(nonatomic) double quiesceCpuIdlePercent;
+@property(nonatomic) double quiesceCpuIdleTimeLimit;
+@property(nonatomic) BOOL traceCollectionEnabled;
 
 + (id)defaultOptions;
+- (void)applyPerformanceTestConfiguration;
 - (id)initWithInstrumentOptionsDictionary:(id)arg1;
 
 @end

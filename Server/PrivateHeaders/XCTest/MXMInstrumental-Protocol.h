@@ -19,7 +19,9 @@
 - (BOOL)harvestData:(id *)arg1 error:(id *)arg2;
 
 @optional
+- (void)didStartAtContinuousTime:(NSUInteger)arg1 absoluteTime:(NSUInteger)arg2 startDate:(NSDate *)arg3;
 - (void)didStartAtTime:(NSUInteger)arg1 startDate:(NSDate *)arg2;
+- (void)didStopAtContinuousTime:(NSUInteger)arg1 absoluteTime:(NSUInteger)arg2 stopDate:(NSDate *)arg3;
 - (void)didStopAtTime:(NSUInteger)arg1 stopDate:(NSDate *)arg2;
 - (BOOL)prepareWithOptions:(NSDictionary *)arg1 error:(id *)arg2;
 - (void)willStartAtEstimatedTime:(NSUInteger)arg1;

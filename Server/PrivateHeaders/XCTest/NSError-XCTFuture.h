@@ -13,7 +13,7 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@interface NSError (XCTFutureCancelation)
+@interface NSError (XCTFuture)
 + (id)_xcui_error:(NSInteger)arg1 description:(id)arg2;
 + (id)_xcui_error:(NSInteger)arg1 userInfo:(id)arg2 description:(id)arg3;
 + (id)_xcui_errorWithDomain:(id)arg1 code:(NSInteger)arg2 description:(id)arg3;

@@ -14,20 +14,19 @@
 
 #import "XCTestObserver.h"
 
-#import "_XCTestObservationPrivate-Protocol.h"
+#import "_XCTestObservationInternal-Protocol.h"
 
 @class NSFileHandle, NSString;
 
-@interface XCTestLog : XCTestObserver <_XCTestObservationPrivate>
+@interface XCTestLog : XCTestObserver <_XCTestObservationInternal>
 {
 }
 
 @property(readonly) NSFileHandle *logFileHandle;
 
-+ (void)_logActivity:(id)arg1 inTestCase:(id)arg2;
 + (id)_messageForTest:(id)arg1 didMeasureValues:(id)arg2 forPerformanceMetricID:(id)arg3 name:(id)arg4 unitsOfMeasurement:(id)arg5 baselineName:(id)arg6 baselineAverage:(id)arg7 maxPercentRegression:(id)arg8 maxPercentRelativeStandardDeviation:(id)arg9 maxRegression:(id)arg10 maxStandardDeviation:(id)arg11 file:(id)arg12 line:(NSUInteger)arg13;
+- (void)_context:(id)arg1 willStartActivity:(id)arg2;
 - (void)_testCase:(id)arg1 didMeasureValues:(id)arg2 forPerformanceMetricID:(id)arg3 name:(id)arg4 unitsOfMeasurement:(id)arg5 baselineName:(id)arg6 baselineAverage:(id)arg7 maxPercentRegression:(id)arg8 maxPercentRelativeStandardDeviation:(id)arg9 maxRegression:(id)arg10 maxStandardDeviation:(id)arg11 file:(id)arg12 line:(NSUInteger)arg13;
-- (void)_testCase:(id)arg1 willStartActivity:(id)arg2;
 - (void)_testDidFail:(id)arg1 withDescription:(id)arg2 inFile:(id)arg3 atLine:(NSUInteger)arg4;
 - (id)dateFormatter;
 - (void)testCase:(id)arg1 didFailWithDescription:(id)arg2 inFile:(id)arg3 atLine:(NSUInteger)arg4;

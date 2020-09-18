@@ -15,6 +15,7 @@
 #import <objc/NSObject.h>
 
 #import "XCTElementSnapshotAttributeDataSource-Protocol.h"
+#import "XCUIIssueDiagnosticsProviding-Protocol.h"
 
 @class NSString, XCAccessibilityElement, XCElementSnapshot, XCTFuture;
 @protocol OS_dispatch_queue, XCTRunnerAutomationSession, XCUIApplicationProcessDelegate, XCUIDevice;
@@ -22,7 +23,7 @@
 
 @protocol XCTRunnerAutomationSession;
 
-@interface XCUIApplicationProcess : NSObject <XCTElementSnapshotAttributeDataSource>
+@interface XCUIApplicationProcess : NSObject <XCTElementSnapshotAttributeDataSource, XCUIIssueDiagnosticsProviding>
 {
     NSObject<OS_dispatch_queue> *_queue;
     BOOL _accessibilityActive;
@@ -59,12 +60,14 @@
 @property BOOL eventLoopHasIdled;
 @property NSInteger exitCode;
 @property(readonly) BOOL foreground;
+@property(readonly) BOOL hasBannerNotificationIsStickyAttribute;
 @property BOOL hasCrashReport;
 @property BOOL hasExitCode;
 @property(readonly, getter=isProcessIDValid) BOOL processIDValid;
 @property(retain) XCElementSnapshot *lastSnapshot;
 @property(readonly, copy, nonatomic) NSString *path;
 @property(nonatomic) NSInteger processID;
+@property(readonly) BOOL providesValuesForPrivilegedAttributes;
 @property(readonly) BOOL running;
 @property(retain) id token;
 @property(readonly, copy) NSString *shortDescription;
@@ -91,6 +94,7 @@
 - (id)_underlyingDataSourceForElement:(id)arg1;
 - (void)acquireBackgroundAssertion;
 - (id)attributesForElement:(id)arg1 attributes:(id)arg2 error:(id *)arg3;
+- (id)diagnosticAttachmentsForError:(id)arg1;
 - (void)incrementAlertCount;
 - (id)initWithBundleID:(id)arg1 device:(id)arg2 delegate:(id)arg3;
 - (id)initWithPath:(id)arg1 bundleID:(id)arg2 device:(id)arg3 delegate:(id)arg4;
@@ -100,6 +104,7 @@
 - (id)parameterizedAttribute:(id)arg1 forElement:(id)arg2 parameter:(id)arg3 error:(id *)arg4;
 - (void)resetAlertCount;
 - (BOOL)terminate:(id *)arg1;
+- (id)valuesForPrivilegedAttributes:(id)arg1 forElement:(id)arg2 error:(id *)arg3;
 - (void)waitForAutomationSession;
 - (void)waitForQuiescenceIncludingAnimationsIdle:(BOOL)arg1;
 - (BOOL)waitForViewControllerViewDidDisappearWithTimeout:(double)arg1 error:(id *)arg2;

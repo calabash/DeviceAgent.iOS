@@ -21,10 +21,12 @@
 
 @interface XCTMemoryMetric : NSObject <XCTMetric_Private, XCTMetric>
 {
+    NSString *_instrumentationName;
     MXMMemoryMetric *__underlyingMetric;
 }
 
 @property(retain, nonatomic) MXMMemoryMetric *_underlyingMetric;
+@property(readonly, nonatomic) NSString *instrumentationName;
 
 - (void)didStartMeasuringAtTimestamp:(id)arg1;
 - (void)didStopMeasuringAtTimestamp:(id)arg1;
