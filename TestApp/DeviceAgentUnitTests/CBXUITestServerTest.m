@@ -50,13 +50,16 @@
 }
 
 -(void)testPassingPortFromEnvironment {
-    id processInfoMock = OCMClassMock([NSProcessInfo class]);
-    NSDictionary *mockedEnv = @{ @"CbxServerPort" : @"41799" };
-    OCMExpect([processInfoMock environment]).andReturn(mockedEnv);
+    id processInfo = [NSProcessInfo processInfo];
+    id processInfoPartialMock = OCMPartialMock(processInfo);
+    NSMutableDictionary *mockedEnv = [[[NSProcessInfo processInfo] environment] mutableCopy];
+    mockedEnv[@"CbxServerPort"] = @"41799";
+    OCMStub([processInfoPartialMock environment]).andReturn([mockedEnv copy]);
     
-    expect(self.testServer.server.port).equal(41799);
-
-    OCMVerifyAll(processInfoMock);
+    expect([[NSProcessInfo processInfo] environment][@"CbxServerPort"]).equal(@"41799");
+    
+    CBXCUITestServer *customServer = [[CBXCUITestServer alloc] init_private];
+    expect(customServer.server.port).equal(41799);
 }
 
 @end
