@@ -9,7 +9,6 @@
 #import "XCTest/NSKeyedArchiver-XCTestAdditions.h"
 #import "XCTest/NSKeyedUnarchiver-XCTestAdditions.h"
 #import "XCTest/NSMutableArray-XCTestAdditions.h"
-#import "XCTest/NSMutableCopying-Protocol.h"
 #import "XCTest/NSSet-XCTestAdditions.h"
 #import "XCTest/NSString-XCTAdditions.h"
 #import "XCTest/NSThread-XCTContext.h"

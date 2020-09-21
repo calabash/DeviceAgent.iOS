@@ -13,7 +13,7 @@
 @protocol OS_xpc_object;
 
 #import <objc/NSObject.h>
-
+#import <stdatomic.h>
 
 @class NSArray, NSDate, NSError, NSString, XCTSourceCodeContext;
 

@@ -8,11 +8,12 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <XCTest/XCUIElementTypes.h>
-#import "CDStructures.h"
+#import <CDStructures.h>
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
 #import <objc/NSObject.h>
+#import <stdatomic.h>
 
 #import "XCTSymbolInfoProviding-Protocol.h"
 
@@ -22,21 +23,20 @@
 {
     struct atomic_flag _symbolicatorInitialized;
     NSSet *_imageNames;
-    struct _CSTypeRef _symbolicator;
-    CDStruct_7da0dd4a _symbolicationFunctions;
+    CDStruct_2ec95fd7 _symbolicationFunctions;
 }
 
 @property(readonly, copy) NSSet *imageNames;
-@property(readonly) CDStruct_7da0dd4a symbolicationFunctions;
+@property(readonly) CDStruct_2ec95fd7 symbolicationFunctions;
 @property(readonly) struct _CSTypeRef symbolicator;
 @property(readonly) struct atomic_flag symbolicatorInitialized;
 
 + (id)imageNamesFromEnvironmentVariables:(id)arg1;
 + (void)registerSharedServiceWithConfiguration:(id)arg1;
-+ (CDStruct_7da0dd4a)standardSymbolicationFunctions;
++ (CDStruct_2ec95fd7)standardSymbolicationFunctions;
 - (void)_prepareForSymbolication;
 - (id)initWithImageNames:(id)arg1;
-- (id)initWithImageNames:(id)arg1 symbolicationFunctions:(CDStruct_7da0dd4a)arg2;
+- (id)initWithImageNames:(id)arg1 symbolicationFunctions:(CDStruct_2ec95fd7)arg2;
 - (id)symbolInfoForAddressInCurrentProcess:(NSUInteger)arg1 error:(id *)arg2;
 
 
