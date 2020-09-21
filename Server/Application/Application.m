@@ -129,8 +129,7 @@ static Application *currentApplication;
     NSString *version = [[CBXDevice sharedDevice] iOSVersion];
     NSDecimalNumber *iOSVersion = [NSDecimalNumber decimalNumberWithString:version];
     NSDecimalNumber *tenDotThree = [NSDecimalNumber decimalNumberWithString:@"10.3"];
-    NSDecimalNumber *thirteenDotNine = [NSDecimalNumber decimalNumberWithString:@"14.0"];
-    return ([iOSVersion compare:tenDotThree] != NSOrderedAscending) && ([iOSVersion compare:thirteenDotNine] == NSOrderedAscending);
+    return [iOSVersion compare:tenDotThree] != NSOrderedAscending;
 }
 
 + (BOOL)iOSVersionGTE14 {

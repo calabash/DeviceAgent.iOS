@@ -69,7 +69,7 @@
     id deviceMock = OCMPartialMock([CBXDevice sharedDevice]);
 
     OCMExpect([deviceMock iOSVersion]).andReturn(@"14.0");
-    expect([Application iOSVersionGTE103]).to.equal(NO);
+    expect([Application iOSVersionGTE103]).to.equal(YES);
     OCMVerifyAll(deviceMock);
 }
 
@@ -112,6 +112,7 @@ describe(@"launchEnvironmentWithEnvArg:", ^{
         beforeEach(^{
             AppMock = OCMClassMock([Application class]);
             OCMExpect([AppMock iOSVersionGTE103]).andReturn(NO);
+            OCMExpect([AppMock iOSVersionGTE14]).andReturn(NO);
         });
 
         it(@"returns an empty dictionary when arg is nil", ^{
@@ -207,8 +208,7 @@ describe(@"launchEnvironmentWithEnvArg:", ^{
 
             expect(actual.count).to.equal(2);
             expect(actual[@"a"]).to.equal(@(1));
-            NSString *value = [NSString stringWithFormat:@"%@:%@",
-                               arg[key], bootstrap];
+            NSString *value = arg[key];
             expect(actual[key]).to.equal(value);
         });
 
