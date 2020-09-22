@@ -4160,8 +4160,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = FYD86LA7RE;
 				ENABLE_BITCODE = NO;
-				EXCLUDED_ARCHS = "";
-				"EXCLUDED_ARCHS[sdk=iphonesimulator14.0]" = "arm64 armv7s";
+				EXCLUDED_ARCHS = armv7s;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator14.0]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Vendor",
@@ -4201,7 +4201,8 @@
 				DEVELOPMENT_TEAM = FYD86LA7RE;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
-				"EXCLUDED_ARCHS[sdk=iphonesimulator14.0]" = "arm64 armv7s";
+				"EXCLUDED_ARCHS[sdk=*]" = armv7s;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator14.0]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Vendor",
