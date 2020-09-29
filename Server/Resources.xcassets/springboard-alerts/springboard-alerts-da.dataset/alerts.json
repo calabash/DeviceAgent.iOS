@@ -436,5 +436,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” vil finde og oprette forbindelse til enheder på dit lokale netværk.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]
