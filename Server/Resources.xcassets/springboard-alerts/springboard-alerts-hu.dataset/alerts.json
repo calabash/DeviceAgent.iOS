@@ -488,5 +488,12 @@
       "Engedélyezés"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” eszközöket szeretne keresni a helyi hálózatán, és csatlakozni szeretne hozzájuk.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

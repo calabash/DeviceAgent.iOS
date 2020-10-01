@@ -461,5 +461,12 @@
       "İzin Ver"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” yerel ağınızdaki aygıtları bulmak ve onlara bağlanmak istiyor.",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
   }
 ]

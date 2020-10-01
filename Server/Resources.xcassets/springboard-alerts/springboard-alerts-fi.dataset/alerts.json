@@ -417,5 +417,12 @@
       "Avaa"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "%@ haluaa etsiä lähiverkossasi olevia laitteita ja yhdistää niihin.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -473,5 +473,12 @@
       "允许"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@”想要查找并连接到本地网络上的设备。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
   }
 ]

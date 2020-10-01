@@ -420,5 +420,12 @@
       "Dozvoli"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” želi pronaći i spojiti se na uređaje na vašoj lokalnoj mreži.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

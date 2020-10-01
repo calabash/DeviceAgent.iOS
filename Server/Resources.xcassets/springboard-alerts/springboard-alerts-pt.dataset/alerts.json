@@ -480,5 +480,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” deseja buscar e conectar a dispositivos na sua rede local.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

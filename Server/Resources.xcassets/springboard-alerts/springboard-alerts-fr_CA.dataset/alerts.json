@@ -404,5 +404,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "« %@ » souhaite rechercher des appareils sur votre réseau local et s’y connecter.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]
