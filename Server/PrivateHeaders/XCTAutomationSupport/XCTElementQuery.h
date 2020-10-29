@@ -16,7 +16,7 @@
 
 #import "XCTCapabilitiesProviding-Protocol.h"
 
-@class NSArray, NSDictionary, NSString, XCAccessibilityElement, XCElementSnapshot, XCTTimeoutControls;
+@class NSArray, NSDictionary, NSSet, NSString, XCAccessibilityElement, XCElementSnapshot, XCTTimeoutControls;
 @protocol XCTElementSnapshotAttributeDataSource, XCTElementSnapshotProvider;
 
 
@@ -39,6 +39,7 @@
 }
 
 @property __weak id <XCTElementSnapshotAttributeDataSource> elementSnapshotAttributeDataSource;
+@property(readonly, copy) NSSet *elementTypes;
 @property(copy, nonatomic) CDUnknownBlockType evaluationContext;
 @property(readonly) BOOL isMacOS;
 @property(readonly) NSUInteger options;

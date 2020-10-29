@@ -14,11 +14,15 @@
 
 #import <objc/NSObject.h>
 
-@class NSDictionary, NSMutableArray, NSMutableDictionary, XCTActivityRecordStack, XCTestCase;
+#import "XCTActivityRecordContext-Protocol.h"
 
-@interface XCTContext : NSObject
+@class NSDate, NSDictionary, NSMutableArray, NSMutableDictionary, NSString, XCTActivityRecordStack, XCTestCase;
+
+@interface XCTContext : NSObject <XCTActivityRecordContext>
 {
     BOOL _valid;
+    BOOL _isReportingBase;
+    NSDate *_startDate;
     NSMutableDictionary *_associatedObjects;
     NSMutableArray *_tearDownBlocks;
     XCTContext *_parent;
@@ -27,27 +31,35 @@
 }
 
 @property(readonly) XCTActivityRecordStack *activityRecordStack;
+@property(readonly) NSUInteger activityRecordStackDepth;
 @property(readonly) NSDictionary *aggregationRecords;
 @property(readonly) NSMutableDictionary *associatedObjects;
 @property(readonly) NSMutableArray *interruptionHandlers;
+@property(readonly) BOOL isReportingBase;
 @property(readonly, getter=isValid) BOOL valid;
 @property(readonly) XCTContext *parent;
+@property(readonly) XCTContext *reportingBaseContext;
+@property(readonly, copy) NSDate *startDate;
 @property(readonly) NSMutableArray *tearDownBlocks;
 @property(readonly) __weak XCTestCase *testCase;
+@property(readonly) NSUInteger transitiveActivityRecordStackDepth;
 
 + (id)_currentContextInThread:(id)arg1;
++ (void)_recordActivityMessageWithFormat:(id)arg1;
 + (void)_runActivityNamed:(id)arg1 block:(CDUnknownBlockType)arg2;
++ (void)_runActivityNamed:(id)arg1 type:(id)arg2 block:(CDUnknownBlockType)arg3;
 + (BOOL)_shouldReportActivityWithType:(id)arg1;
 + (id)currentContext;
 + (id)currentContextInThread:(id)arg1;
 + (BOOL)hasContextInThread:(id)arg1;
 + (void)runActivityNamed:(id)arg1 block:(CDUnknownBlockType)arg2;
 + (void)runInContextForTestCase:(id)arg1 block:(CDUnknownBlockType)arg2;
++ (void)runInContextForTestCase:(id)arg1 markAsReportingBase:(BOOL)arg2 block:(CDUnknownBlockType)arg3;
++ (void)runInternalActivityNamed:(id)arg1 block:(CDUnknownBlockType)arg2;
 + (BOOL)shouldReportActivityWithType:(id)arg1 inTestMode:(NSInteger)arg2;
 - (void)_reportEmptyActivityWithType:(id)arg1 format:(id)arg2;
 - (void)_runActivityNamed:(id)arg1 block:(CDUnknownBlockType)arg2;
 - (void)_runActivityNamed:(id)arg1 type:(id)arg2 block:(CDUnknownBlockType)arg3;
-- (NSInteger)activityRecordStackDepth;
 - (void)addTearDownBlock:(CDUnknownBlockType)arg1;
 - (id)associatedObjectForKey:(id)arg1;
 - (void)didFinishActivity:(id)arg1;
@@ -57,6 +69,7 @@
 - (id)topActivity;
 - (void)unwindRemainingActivities;
 - (id)willStartActivityWithTitle:(id)arg1 type:(id)arg2;
+
 
 @end
 

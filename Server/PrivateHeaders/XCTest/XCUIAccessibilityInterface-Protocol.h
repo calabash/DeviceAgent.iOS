@@ -15,7 +15,7 @@
 #import "XCTElementSnapshotAttributeDataSource-Protocol.h"
 #import "XCUIAXNotificationHandling-Protocol.h"
 
-@class NSArray, NSDictionary, NSString, XCAccessibilityElement, XCElementSnapshot, XCUIAccessibilityAction, XCUIApplicationProcess, XCUIElementSnapshotRequestResult;
+@class NSArray, NSDictionary, NSString, XCAccessibilityElement, XCElementSnapshot, XCTestExpectation, XCUIAccessibilityAction, XCUIApplicationProcess, XCUIElementSnapshotRequestResult;
 
 @protocol XCUIAccessibilityInterface <NSObject, XCUIAXNotificationHandling, XCTElementSnapshotAttributeDataSource>
 - (XCAccessibilityElement *)accessibilityElementForElementAtPoint:(CGPoint)arg1 error:(id *)arg2;
@@ -29,7 +29,6 @@
 - (void)notifyOnNextOccurrenceOfUserTestingEvent:(NSString *)arg1 handler:(void (^)(NSDictionary *, NSError *))arg2;
 - (void)notifyWhenEventLoopIsIdleForApplication:(XCUIApplicationProcess *)arg1 reply:(void (^)(NSDictionary *, NSError *))arg2;
 - (void)notifyWhenNoAnimationsAreActiveForApplication:(XCUIApplicationProcess *)arg1 reply:(void (^)(NSDictionary *, NSError *))arg2;
-- (void)notifyWhenViewControllerViewDidAppearReply:(void (^)(NSDictionary *, NSError *))arg1;
 - (void)notifyWhenViewControllerViewDidDisappearReply:(void (^)(NSDictionary *, NSError *))arg1;
 - (id)parameterizedAttribute:(NSString *)arg1 forElement:(XCAccessibilityElement *)arg2 parameter:(id)arg3 error:(id *)arg4;
 - (BOOL)performAction:(XCUIAccessibilityAction *)arg1 onElement:(XCAccessibilityElement *)arg2 value:(id)arg3 error:(id *)arg4;
@@ -39,5 +38,6 @@
 - (XCUIElementSnapshotRequestResult *)requestSnapshotForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 parameters:(NSDictionary *)arg3 error:(id *)arg4;
 - (BOOL)setAttribute:(NSString *)arg1 value:(id)arg2 element:(XCAccessibilityElement *)arg3 outError:(id *)arg4;
 - (void)unregisterForAXNotificationsForApplicationWithPID:(NSInteger)arg1;
+- (XCTestExpectation *)viewDidAppearExpectationForElement:(XCAccessibilityElement *)arg1 viewControllerName:(NSString *)arg2;
 @end
 

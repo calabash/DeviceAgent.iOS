@@ -411,5 +411,12 @@
       "許可"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@”がローカルネットワーク上のデバイスの検索および接続を求めています。",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

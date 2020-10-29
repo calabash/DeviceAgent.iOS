@@ -480,5 +480,12 @@
       "Sta toe"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "%@ wil apparaten op je lokale netwerk zoeken en er verbinding mee maken.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

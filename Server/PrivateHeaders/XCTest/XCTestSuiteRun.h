@@ -24,11 +24,11 @@
 @property(readonly) NSMutableArray *mutableTestRuns;
 @property(readonly, copy) NSArray *testRuns;
 
+- (void)_handleIssue:(id)arg1;
 - (void)addTestRun:(id)arg1;
 - (NSUInteger)executionCount;
 - (NSUInteger)failureCount;
 - (id)initWithTest:(id)arg1;
-- (void)recordFailureWithDescription:(id)arg1 inFile:(id)arg2 atLine:(NSUInteger)arg3 expected:(BOOL)arg4;
 - (NSUInteger)skipCount;
 - (void)start;
 - (void)stop;

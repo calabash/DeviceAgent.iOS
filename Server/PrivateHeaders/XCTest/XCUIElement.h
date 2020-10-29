@@ -19,12 +19,13 @@
 #import "XCUIElementAttributesPrivate-Protocol.h"
 #import "XCUIElementSnapshotProviding-Protocol.h"
 #import "XCUIElementTypeQueryProvider-Protocol.h"
+#import "XCUIElementTypeQueryProvider_Private-Protocol.h"
 #import "XCUIScreenshotProviding-Protocol.h"
 
 @class NSString, XCElementSnapshot, XCTLocalizableStringInfo, XCUIApplication, XCUICoordinate, XCUIElementQuery;
 @protocol XCUIDevice;
 
-@interface XCUIElement : NSObject <XCUIScreenshotProviding, XCUIElementSnapshotProviding, XCTNSPredicateExpectationObject, XCUIElementAttributesPrivate, XCUIElementAttributes, XCUIElementTypeQueryProvider>
+@interface XCUIElement : NSObject <XCUIScreenshotProviding, XCUIElementSnapshotProviding, XCTNSPredicateExpectationObject, XCUIElementAttributesPrivate, XCUIElementTypeQueryProvider_Private, XCUIElementAttributes, XCUIElementTypeQueryProvider>
 {
     BOOL _safeQueryResolutionEnabled;
     XCUIElementQuery *_query;
@@ -34,6 +35,8 @@
 @property(readonly, copy) XCUIElementQuery *activityIndicators;
 @property(readonly, copy) XCUIElementQuery *alerts;
 @property(readonly, nonatomic) XCUIApplication *application;
+@property(readonly) BOOL bannerNotificationIsSticky;
+@property(readonly, copy) XCUIElementQuery *bannerNotifications;
 @property(readonly, copy) XCUIElementQuery *browsers;
 @property(readonly, copy) XCUIElementQuery *buttons;
 @property(readonly, copy) XCUIElementQuery *cells;
@@ -59,6 +62,7 @@
 @property(readonly, copy) XCUIElementQuery *grids;
 @property(readonly, copy) XCUIElementQuery *groups;
 @property(readonly, copy) XCUIElementQuery *handles;
+@property(readonly) BOOL hasBannerNotificationIsStickyAttribute;
 @property(readonly) BOOL hasKeyboardFocus;
 @property(readonly, copy) XCUIElementQuery *helpTags;
 @property(readonly, copy) XCUICoordinate *hitPointCoordinate;
@@ -144,7 +148,7 @@
 @property(readonly, copy) XCUIElementQuery *webViews;
 @property(readonly, copy) XCUIElementQuery *windows;
 
-+ (BOOL)_dispatchEventWithEventBuilder:(CDUnknownBlockType)arg1 eventSynthesizer:(id)arg2 inContext:(id)arg3 withSnapshot:(id)arg4 applicationSnapshot:(id)arg5 process:(id)arg6 error:(id *)arg7;
++ (BOOL)_dispatchEventWithEventBuilder:(CDUnknownBlockType)arg1 eventSynthesizer:(id)arg2 withSnapshot:(id)arg3 applicationSnapshot:(id)arg4 process:(id)arg5 error:(id *)arg6;
 + (BOOL)_isInvalidEventDuration:(double)arg1;
 + (id)standardAttributeNames;
 - (BOOL)_allUIInterruptionsHandledForElementSnapshot:(id)arg1 error:(id *)arg2;

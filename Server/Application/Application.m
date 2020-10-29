@@ -125,14 +125,14 @@ static Application *currentApplication;
     return [Application terminateApplication:application];
 }
 
-+ (BOOL)iOSVersionIsAtLeast103 {
++ (BOOL)iOSVersionGTE103 {
     NSString *version = [[CBXDevice sharedDevice] iOSVersion];
     NSDecimalNumber *iOSVersion = [NSDecimalNumber decimalNumberWithString:version];
     NSDecimalNumber *tenDotThree = [NSDecimalNumber decimalNumberWithString:@"10.3"];
     return [iOSVersion compare:tenDotThree] != NSOrderedAscending;
 }
 
-+ (BOOL)iOSVersionIsAtLeast14 {
++ (BOOL)iOSVersionGTE14 {
     NSString *version = [[CBXDevice sharedDevice] iOSVersion];
     NSDecimalNumber *iOSVersion = [NSDecimalNumber decimalNumberWithString:version];
     NSDecimalNumber *fourteen = [NSDecimalNumber decimalNumberWithString:@"14.0"];
@@ -143,9 +143,9 @@ static Application *currentApplication;
     static NSString *bootstrapDylib = @"/Developer/usr/lib/libXCTTargetBootstrapInject.dylib";
     static NSString *key = @"DYLD_INSERT_LIBRARIES";
 
-    if ([Application iOSVersionIsAtLeast14]) {
+    if ([Application iOSVersionGTE14]) {
         return environmentArg ?: @{}; // /Developer/usr/lib/libXCTTargetBootstrapInject.dylib does not exist for iOS 14.0
-    } else if ([Application iOSVersionIsAtLeast103]) {
+    } else if ([Application iOSVersionGTE103]) {
         if (!environmentArg || environmentArg.count == 0) {
             return @{key : bootstrapDylib};
         } else {

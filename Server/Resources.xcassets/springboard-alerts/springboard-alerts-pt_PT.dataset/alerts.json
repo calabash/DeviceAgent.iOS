@@ -418,5 +418,12 @@
       "Permitir"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” gostaria de procurar e estabelecer ligação a dispositivos na rede local.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

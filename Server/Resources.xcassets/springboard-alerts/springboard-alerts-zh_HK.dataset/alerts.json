@@ -555,5 +555,12 @@
       "不允許"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "「%@」想尋找和連接你本地網絡上的裝置。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": false
   }
 ]

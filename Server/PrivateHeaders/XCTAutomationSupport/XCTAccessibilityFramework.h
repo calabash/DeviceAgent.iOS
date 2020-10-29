@@ -30,6 +30,7 @@
 
 + (void)_startAXServer;
 - (BOOL)_canAccessElement:(struct __AXUIElement *)arg1 withError:(id *)arg2;
+- (void)_setAXRequestingClient;
 - (NSInteger)appOrientationForElement:(struct __AXUIElement *)arg1 error:(id *)arg2;
 - (id)attributes:(id)arg1 forElement:(struct __AXUIElement *)arg2 error:(id *)arg3;
 - (id)attributesForElement:(id)arg1 attributes:(id)arg2 error:(id *)arg3;

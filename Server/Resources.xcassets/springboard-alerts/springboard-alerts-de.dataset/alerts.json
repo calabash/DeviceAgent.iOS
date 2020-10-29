@@ -684,5 +684,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte Geräte in deinem lokalen Netzwerk finden und eine Verbindung herstellen.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

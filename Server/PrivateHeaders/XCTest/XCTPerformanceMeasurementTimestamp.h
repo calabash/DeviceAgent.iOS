@@ -18,15 +18,20 @@
 
 @interface XCTPerformanceMeasurementTimestamp : NSObject
 {
+    BOOL _hasContinuousTime;
+    NSUInteger _continuousTime;
     NSUInteger _absoluteTime;
     NSDate *_date;
 }
 
 @property(readonly) NSUInteger absoluteTime;
 @property(readonly) NSUInteger absoluteTimeNanoSeconds;
+@property(readonly) NSUInteger continuousTime;
 @property(readonly, copy) NSDate *date;
+@property(readonly) BOOL hasContinuousTime;
 
 - (id)initWithAbsoluteTime:(NSUInteger)arg1 date:(id)arg2;
+- (id)initWithContinuousTime:(NSUInteger)arg1 absoluteTime:(NSUInteger)arg2 date:(id)arg3;
 
 @end
 

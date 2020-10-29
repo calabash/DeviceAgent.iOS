@@ -76,7 +76,7 @@ else
 fi
 
 if [ "$(xcode_gte_9)" = "true" ]; then
-  banner "Patching for Xcode 9"
+  banner "Patching for Xcode >= 9"
 
   XCTEST_BUNDLE="${XC_TARGET}.xctest"
   BUILD_PRODUCTS_XCTEST="${BUILD_PRODUCTS_DIR}/${XCTEST_BUNDLE}"

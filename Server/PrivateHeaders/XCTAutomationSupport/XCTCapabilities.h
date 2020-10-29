@@ -23,6 +23,7 @@
 }
 
 @property(readonly, copy) NSDictionary *capabilitiesDictionary;
+@property(readonly, copy) NSDictionary *dictionaryRepresentation;
 
 + (id)emptyCapabilities;
 - (BOOL)hasCapability:(id)arg1;

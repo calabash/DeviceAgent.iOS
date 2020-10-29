@@ -15,7 +15,7 @@
 #import <objc/NSObject.h>
 
 
-@class NSArray, NSDictionary, NSNumber, NSSet, NSString, NSURL, NSUUID, XCTAggregateSuiteRunStatistics;
+@class NSArray, NSDictionary, NSNumber, NSSet, NSString, NSURL, NSUUID, XCTAggregateSuiteRunStatistics, XCTCapabilities;
 
 @interface XCTestConfiguration : NSObject <NSSecureCoding, NSCopying>
 {
@@ -42,6 +42,8 @@
     NSDictionary *_testApplicationDependencies;
     NSDictionary *_testApplicationUserOverrides;
     NSString *_productModuleName;
+    NSNumber *_traceCollectionEnabled;
+    NSDictionary *_performanceTestConfiguration;
     NSDictionary *_targetApplicationEnvironment;
     NSArray *_targetApplicationArguments;
     XCTAggregateSuiteRunStatistics *_aggregateStatisticsBeforeCrash;
@@ -52,8 +54,10 @@
     NSNumber *_randomExecutionOrderingSeed;
     NSNumber *_defaultTestExecutionTimeAllowance;
     NSNumber *_maximumTestExecutionTimeAllowance;
+    XCTCapabilities *_IDECapabilities;
 }
 
+@property(retain) XCTCapabilities *IDECapabilities;
 @property(copy) NSString *absolutePath;
 @property(copy) XCTAggregateSuiteRunStatistics *aggregateStatisticsBeforeCrash;
 @property(copy) NSString *automationFrameworkPath;
@@ -65,6 +69,7 @@
 @property BOOL gatherLocalizableStringsData;
 @property BOOL initializeForUITesting;
 @property(copy, nonatomic) NSNumber *maximumTestExecutionTimeAllowance;
+@property(copy) NSDictionary *performanceTestConfiguration;
 @property(copy) NSString *productModuleName;
 @property(retain) NSNumber *randomExecutionOrderingSeed;
 @property BOOL reportActivities;
@@ -85,6 +90,7 @@
 @property BOOL testsMustRunOnMainThread;
 @property(copy) NSSet *testsToRun;
 @property(copy) NSSet *testsToSkip;
+@property(copy) NSNumber *traceCollectionEnabled;
 @property BOOL treatMissingBaselinesAsFailures;
 @property NSInteger userAttachmentLifetime;
 @property(readonly) NSInteger testMode;
@@ -92,6 +98,7 @@
 + (id)activeTestConfiguration;
 + (id)configurationWithContentsOfFile:(id)arg1;
 + (void)setActiveTestConfiguration:(id)arg1;
+- (void)clearXcodeReportingConfiguration;
 - (BOOL)writeToFile:(id)arg1;
 
 @end

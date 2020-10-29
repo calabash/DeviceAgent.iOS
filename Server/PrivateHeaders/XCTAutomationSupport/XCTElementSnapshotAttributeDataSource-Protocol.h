@@ -19,5 +19,6 @@
 @protocol XCTElementSnapshotAttributeDataSource <XCTMacCatalystStatusProviding>
 - (NSDictionary *)attributesForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 error:(id *)arg3;
 - (id)parameterizedAttribute:(NSString *)arg1 forElement:(XCAccessibilityElement *)arg2 parameter:(id)arg3 error:(id *)arg4;
+- (NSDictionary *)valuesForPrivilegedAttributes:(NSArray *)arg1 forElement:(XCAccessibilityElement *)arg2 error:(id *)arg3;
 @end
 

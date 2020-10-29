@@ -16,6 +16,7 @@
 
 #import "XCTElementSetTransformer-Protocol.h"
 
+@class NSSet, NSString;
 
 @interface XCTElementSetCodableTransformer : NSObject <XCTElementSetTransformer, NSSecureCoding>
 {
@@ -23,6 +24,7 @@
     NSString *_transformationDescription;
 }
 
+@property(readonly, copy) NSSet *elementTypes;
 @property BOOL stopsOnFirstMatch;
 @property(copy) NSString *transformationDescription;
 @property(readonly) BOOL supportsAttributeKeyPathAnalysis;

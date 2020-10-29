@@ -14,11 +14,12 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, XCTestRun;
+@class NSString, XCTestObservationCenter, XCTestRun;
 
 @interface XCTest : NSObject
 {
     XCTestRun *_testRun;
+    XCTestObservationCenter *_observationCenter;
 }
 
 @property(readonly) NSString *_classNameForReporting;
@@ -28,6 +29,7 @@
 @property(readonly) NSString *languageAgnosticTestMethodName;
 @property(readonly, copy) NSString *name;
 @property(readonly) NSString *nameForLegacyLogging;
+@property(retain) XCTestObservationCenter *observationCenter;
 @property(readonly) NSUInteger testCaseCount;
 @property(readonly) XCTestRun *testRun;
 @property(readonly) Class testRunClass;

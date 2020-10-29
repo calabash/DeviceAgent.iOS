@@ -21,10 +21,12 @@
 
 @interface XCTStorageMetric : NSObject <XCTMetric_Private, XCTMetric>
 {
+    NSString *_instrumentationName;
     MXMDiskMetric *__underlyingMetric;
 }
 
 @property(retain, nonatomic) MXMDiskMetric *_underlyingMetric;
+@property(readonly, nonatomic) NSString *instrumentationName;
 
 - (void)didStartMeasuringAtTimestamp:(id)arg1;
 - (void)didStopMeasuringAtTimestamp:(id)arg1;

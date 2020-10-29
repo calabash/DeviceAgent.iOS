@@ -482,5 +482,12 @@
       "Benarkan"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” mahu mencari dan bersambung kepada peranti pada rangkaian setempat anda.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

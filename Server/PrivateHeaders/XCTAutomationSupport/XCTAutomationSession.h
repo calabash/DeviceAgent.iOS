@@ -47,6 +47,8 @@
 @property(readonly) NSMutableArray *connections;
 @property(readonly) __weak id <XCTElementSnapshotProvider><XCTElementSnapshotAttributeDataSource> dataSource;
 @property(readonly) DTXConnection *dtxConnection;
+@property(readonly) BOOL hasBannerNotificationIsStickyAttribute;
+@property(readonly) BOOL providesValuesForPrivilegedAttributes;
 @property(readonly) DTXProxyChannel *proxyChannel;
 @property(readonly) XCTElementQueryProcessor *queryProcessor;
 @property(readonly) NSObject<OS_dispatch_queue> *queue;
@@ -75,6 +77,7 @@
 - (id)parameterizedAttribute:(id)arg1 forElement:(id)arg2 parameter:(id)arg3 error:(id *)arg4;
 - (void)requestHostAppExecutableNameWithReply:(CDUnknownBlockType)arg1;
 - (id)snapshotForElement:(id)arg1 attributes:(id)arg2 parameters:(id)arg3 timeoutControls:(id)arg4 error:(id *)arg5;
+- (id)valuesForPrivilegedAttributes:(id)arg1 forElement:(id)arg2 error:(id *)arg3;
 
 
 @end

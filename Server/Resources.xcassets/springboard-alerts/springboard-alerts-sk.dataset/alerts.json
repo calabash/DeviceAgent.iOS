@@ -552,5 +552,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Aplikácia „%@“ chce vyhľadať zariadenia vo vašej lokálnej sieti a pripojiť sa k nim.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

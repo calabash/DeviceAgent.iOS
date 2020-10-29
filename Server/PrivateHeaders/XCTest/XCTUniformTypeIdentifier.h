@@ -19,6 +19,7 @@
 }
 
 + (id)GIF;
++ (id)HEIC;
 + (id)JPEG;
 + (id)PNG;
 + (id)TIFF;
@@ -27,6 +28,7 @@
 + (id)inferredUTIForFileExtension:(id)arg1;
 + (BOOL)isImageUTI:(id)arg1;
 + (id)plainText;
++ (id)testIssue;
 + (id)zipArchive;
 
 @end
