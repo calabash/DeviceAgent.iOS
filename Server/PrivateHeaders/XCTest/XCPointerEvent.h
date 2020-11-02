@@ -19,6 +19,7 @@
 @interface XCPointerEvent : NSObject <NSSecureCoding>
 {
     BOOL _mergeModifierFlagsWithCurrentFlags;
+    BOOL _shouldRedact;
     NSUInteger _eventType;
     NSUInteger _buttonType;
     double _pressure;
@@ -57,6 +58,7 @@
 @property BOOL mergeModifierFlagsWithCurrentFlags;
 @property double offset;
 @property double pressure;
+@property BOOL shouldRedact;
 @property(copy) NSString *string;
 @property NSUInteger typingSpeed;
 @property NSInteger verticalLineScroll;
@@ -67,6 +69,7 @@
 + (id)eventWithType:(NSUInteger)arg1 buttonType:(NSUInteger)arg2 coordinate:(CGPoint)arg3 pressure:(double)arg4 gestureStage:(double)arg5 offset:(double)arg6 duration:(double)arg7 clickCount:(NSUInteger)arg8 gesturePhase:(NSUInteger)arg9;
 + (id)eventWithType:(NSUInteger)arg1 buttonType:(NSUInteger)arg2 coordinate:(CGPoint)arg3 pressure:(double)arg4 offset:(double)arg5 duration:(double)arg6 clickCount:(NSUInteger)arg7;
 + (id)keyboardEventForKeyCode:(NSUInteger)arg1 keyPhase:(NSUInteger)arg2 modifierFlags:(NSUInteger)arg3 offset:(double)arg4;
++ (id)keyboardEventForKeyCode:(NSUInteger)arg1 keyPhase:(NSUInteger)arg2 modifierFlags:(NSUInteger)arg3 offset:(double)arg4 shouldRedact:(BOOL)arg5;
 + (id)moveEventWithStartPoint:(CGPoint)arg1 destination:(CGPoint)arg2 offset:(double)arg3 duration:(double)arg4;
 + (CDUnknownBlockType)offsetComparator;
 + (id)scrollEventAtPoint:(CGPoint)arg1 lines:(NSInteger)arg2 offset:(double)arg3;
@@ -74,6 +77,7 @@
 + (id)textEventForKey:(id)arg1 withModifierFlags:(NSUInteger)arg2 offset:(double)arg3;
 + (id)textEventForModifierFlags:(NSUInteger)arg1 mergeWithCurrent:(BOOL)arg2 offset:(double)arg3;
 + (id)textEventForString:(id)arg1 offset:(double)arg2 typingSpeed:(NSUInteger)arg3;
++ (id)textEventForString:(id)arg1 offset:(double)arg2 typingSpeed:(NSUInteger)arg3 shouldRedact:(BOOL)arg4;
 
 @end
 

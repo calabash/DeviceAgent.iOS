@@ -24,6 +24,7 @@
     NSDictionary *_baseline;
     NSDictionary *_defaultBaseline;
     NSArray *_measurements;
+    NSInteger _polarity;
 }
 
 @property(copy) NSDictionary *baseline;
@@ -31,6 +32,7 @@
 @property(copy) NSString *identifier;
 @property(copy) NSArray *measurements;
 @property(copy) NSString *name;
+@property NSInteger polarity;
 @property(copy) NSString *units;
 
 

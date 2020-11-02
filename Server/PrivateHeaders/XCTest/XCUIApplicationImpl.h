@@ -17,7 +17,7 @@
 #import "XCUIApplicationProcessDelegate-Protocol.h"
 
 @class NSString, XCAccessibilityElement, XCUIApplicationProcess;
-@protocol XCUIDevice;
+@protocol XCUIDevice, XCUIIssueDiagnosticsProviding;
 
 @interface XCUIApplicationImpl : NSObject <XCUIApplicationProcessDelegate>
 {
@@ -38,6 +38,7 @@
 @property BOOL codeCoverageEnabled;
 @property(retain, nonatomic) XCUIApplicationProcess *currentProcess;
 @property(readonly) id <XCUIDevice> device;
+@property(readonly) id <XCUIIssueDiagnosticsProviding> diagnosticsProvider;
 @property(readonly) BOOL foreground;
 @property BOOL hasValidAlertCount;
 @property(readonly, copy) NSString *path;

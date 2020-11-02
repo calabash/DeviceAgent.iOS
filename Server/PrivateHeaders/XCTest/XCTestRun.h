@@ -14,7 +14,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSDate, XCTest;
+@class NSDate, XCTIssue, XCTest, XCTestObservationCenter;
 
 @interface XCTestRun : NSObject
 {
@@ -27,12 +27,14 @@
     NSUInteger _unexpectedExceptionCount;
     double _startTimeInterval;
     double _stopTimeInterval;
+    XCTIssue *_candidateIssue;
     NSUInteger _executionCountBeforeCrash;
     NSUInteger _skipCountBeforeCrash;
     NSUInteger _failureCountBeforeCrash;
     NSUInteger _unexpectedExceptionCountBeforeCrash;
 }
 
+@property(retain) XCTIssue *candidateIssue;
 @property NSUInteger executionCount;
 @property NSUInteger executionCountBeforeCrash;
 @property NSUInteger failureCount;
@@ -41,6 +43,7 @@
 @property BOOL hasStarted;
 @property BOOL hasStopped;
 @property(readonly) BOOL hasSucceeded;
+@property(readonly) XCTestObservationCenter *observationCenter;
 @property NSUInteger skipCountBeforeCrash;
 @property double startTimeInterval;
 @property double stopTimeInterval;
@@ -56,8 +59,11 @@
 @property(readonly) NSUInteger totalFailureCount;
 
 + (id)testRunWithTest:(id)arg1;
+- (void)_handleIssue:(id)arg1;
+- (void)_recordIssue:(id)arg1;
 - (id)initWithTest:(id)arg1;
 - (void)recordFailureWithDescription:(id)arg1 inFile:(id)arg2 atLine:(NSUInteger)arg3 expected:(BOOL)arg4;
+- (void)recordIssue:(id)arg1;
 - (void)recordSkipWithDescription:(id)arg1 inFile:(id)arg2 atLine:(NSUInteger)arg3;
 - (void)start;
 - (void)stop;

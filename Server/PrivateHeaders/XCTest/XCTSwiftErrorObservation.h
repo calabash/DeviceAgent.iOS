@@ -14,15 +14,14 @@
 
 #import <objc/NSObject.h>
 
-@class XCTestRun;
+#import "XCTSwiftErrorObservation_Overlay-Protocol.h"
 
-@interface _XCTestImplementation : NSObject
+@interface XCTSwiftErrorObservation : NSObject <XCTSwiftErrorObservation_Overlay>
 {
-    XCTestRun *_testRun;
 }
 
-@property(retain) XCTestRun *testRun;
-
++ (void)installSwiftErrorObserverIfPossible;
++ (id)observeErrorsInBlock:(CDUnknownBlockType)arg1;
 
 @end
 

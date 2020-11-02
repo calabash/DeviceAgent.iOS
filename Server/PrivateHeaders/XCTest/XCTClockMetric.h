@@ -21,10 +21,12 @@
 
 @interface XCTClockMetric : NSObject <XCTMetric_Private, XCTMetric>
 {
+    NSString *_instrumentationName;
     MXMClockMetric *__underlyingMetric;
 }
 
 @property(retain, nonatomic) MXMClockMetric *_underlyingMetric;
+@property(readonly, nonatomic) NSString *instrumentationName;
 
 + (id)monotonicTime;
 + (id)realTime;

@@ -47,6 +47,11 @@
 /* Begin PBXBuildFile section */
 		0AA3924F23279A68000E799B /* SpringBoardAlertsCurrentLanguageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA3924D23279A68000E799B /* SpringBoardAlertsCurrentLanguageTests.m */; };
 		1A020FC02338BEB600D79E57 /* XCTest+CBXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F547174D204939DA0024AA0B /* XCTest+CBXAdditions.h */; };
+		3B5444E52498241500532AE0 /* QuerySpecifierByDescendantType.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B81F693240E937F00825603 /* QuerySpecifierByDescendantType.h */; };
+		3B5444EA249838AC00532AE0 /* QuerySpecifierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5444E02498216000532AE0 /* QuerySpecifierTests.m */; };
+		3B81F695240E952F00825603 /* QuerySpecifierByDescendantType.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B81F694240E952F00825603 /* QuerySpecifierByDescendantType.m */; };
+		3B81F696240E952F00825603 /* QuerySpecifierByDescendantType.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B81F694240E952F00825603 /* QuerySpecifierByDescendantType.m */; };
+		3BE3ED1E2498CF0700830B19 /* XCTest+CBXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F547174F20496A200024AA0B /* XCTest+CBXAdditions.m */; };
 		4107F8FE231D7298003961AF /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107F8FC231D7262003961AF /* Resources.xcassets */; };
 		41188FEA22E9958D0012886A /* XCWebViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 4166C9AE22E7009800C8BEBF /* XCWebViews.m */; };
 		419BE54B231E46D800DF0ABD /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107F8FC231D7262003961AF /* Resources.xcassets */; };
@@ -753,6 +758,9 @@
 
 /* Begin PBXFileReference section */
 		0AA3924D23279A68000E799B /* SpringBoardAlertsCurrentLanguageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SpringBoardAlertsCurrentLanguageTests.m; sourceTree = "<group>"; };
+		3B5444E02498216000532AE0 /* QuerySpecifierTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuerySpecifierTests.m; sourceTree = "<group>"; };
+		3B81F693240E937F00825603 /* QuerySpecifierByDescendantType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuerySpecifierByDescendantType.h; sourceTree = "<group>"; };
+		3B81F694240E952F00825603 /* QuerySpecifierByDescendantType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuerySpecifierByDescendantType.m; sourceTree = "<group>"; };
 		4107F8FC231D7262003961AF /* Resources.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources.xcassets; sourceTree = "<group>"; };
 		4166C9AE22E7009800C8BEBF /* XCWebViews.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCWebViews.m; sourceTree = "<group>"; };
 		634244EC948D56732C2565E5 /* SpringBoardAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoardAlerts.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
@@ -2153,6 +2161,8 @@
 				89D5380F1CA34CBE00F62E09 /* QuerySpecifierByTextLike.m */,
 				899696FD1CB5C93400BB42E2 /* QuerySpecifierByCoordinate.h */,
 				899696FE1CB5C93400BB42E2 /* QuerySpecifierByCoordinate.m */,
+				3B81F693240E937F00825603 /* QuerySpecifierByDescendantType.h */,
+				3B81F694240E952F00825603 /* QuerySpecifierByDescendantType.m */,
 				89B9519F1CF5B297007FD0AB /* QuerySpecifierByType.h */,
 				89B951A01CF5B297007FD0AB /* QuerySpecifierByType.m */,
 				F536799F1D7C324E009956D0 /* QuerySpecifierByMark.h */,
@@ -2267,6 +2277,7 @@
 		F58D27E81D4F947F000FF6C0 /* Queries */ = {
 			isa = PBXGroup;
 			children = (
+				3B5444E02498216000532AE0 /* QuerySpecifierTests.m */,
 				F58D27EA1D4F947F000FF6C0 /* CoordinateQueryTests.m */,
 				F58D27EB1D4F947F000FF6C0 /* Factory */,
 				F58D27ED1D4F947F000FF6C0 /* QuerySelectors */,
@@ -2501,6 +2512,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B5444E52498241500532AE0 /* QuerySpecifierByDescendantType.h in Headers */,
 				F54C02B02043F0EF00FD8DDE /* XCTElementFilteringTransformer.h in Headers */,
 				F54C027E2043F0EF00FD8DDE /* XCTKVOExpectation.h in Headers */,
 				F54C02502043F0EF00FD8DDE /* XCUIApplicationProcess.h in Headers */,
@@ -3356,6 +3368,7 @@
 				F55F81A41C6DD07500A945C8 /* HTTPFileResponse.m in Sources */,
 				896586831CEB9B9800E8329C /* QueryFactory.m in Sources */,
 				F55F81941C6DD07500A945C8 /* HTTPServer.m in Sources */,
+				3B81F695240E952F00825603 /* QuerySpecifierByDescendantType.m in Sources */,
 				89D538161CA351F400F62E09 /* QuerySpecifierByIndex.m in Sources */,
 				89B951A21CF5B297007FD0AB /* QuerySpecifierByType.m in Sources */,
 				F5870B401CF0BEFF00B3376C /* CBXTouchEvent.m in Sources */,
@@ -3434,6 +3447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5061A8A2153B19900B85792 /* QueryConfigurationFactory.m in Sources */,
+				3BE3ED1E2498CF0700830B19 /* XCTest+CBXAdditions.m in Sources */,
 				F5061A742153B19900B85792 /* Testmanagerd.m in Sources */,
 				F5061A512153B0FF00B85792 /* SpringBoardAlertsTest.m in Sources */,
 				F5061A9C2153B4EF00B85792 /* HTTPAuthenticationRequest.m in Sources */,
@@ -3461,6 +3475,7 @@
 				F5061AAC2153B4EF00B85792 /* RouteRequest.m in Sources */,
 				F5061A682153B15E00B85792 /* ElementNotFoundException.m in Sources */,
 				F5061A4C2153B0FF00B85792 /* CBXDecimalRounderTest.m in Sources */,
+				3B81F696240E952F00825603 /* QuerySpecifierByDescendantType.m in Sources */,
 				F5061A642153B15E00B85792 /* SpringBoard.m in Sources */,
 				F5061A4E2153B0FF00B85792 /* CBXDeviceTest.m in Sources */,
 				F5061A522153B0FF00B85792 /* CBXOrientationTest.m in Sources */,
@@ -3503,6 +3518,7 @@
 				F5061A812153B19900B85792 /* QuerySpecifierByPropertyLike.m in Sources */,
 				F5061A592153B14400B85792 /* ThreadUtils.m in Sources */,
 				F5061A422153B0FF00B85792 /* QueryConfigurationFactoryTests.m in Sources */,
+				3B5444EA249838AC00532AE0 /* QuerySpecifierTests.m in Sources */,
 				F5061A502153B0FF00B85792 /* SpringBoardAlertTest.m in Sources */,
 				F5061A582153B14400B85792 /* GeometryUtils.m in Sources */,
 				F5061A782153B19900B85792 /* (null) in Sources */,
@@ -3860,6 +3876,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Karl Krukow (YTTN6Y2QS9)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = FYD86LA7RE;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator14.0]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -3900,6 +3917,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Karl Krukow (YTTN6Y2QS9)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = FYD86LA7RE;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator14.0]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -4141,6 +4160,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = FYD86LA7RE;
 				ENABLE_BITCODE = NO;
+				EXCLUDED_ARCHS = armv7s;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator14.0]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Vendor",
@@ -4179,6 +4200,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Karl Krukow (YTTN6Y2QS9)";
 				DEVELOPMENT_TEAM = FYD86LA7RE;
 				ENABLE_BITCODE = NO;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=*]" = armv7s;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator14.0]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Vendor",

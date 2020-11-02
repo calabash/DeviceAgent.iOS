@@ -33,7 +33,7 @@
 
 - (id)_acquireMemoryGenerationForPID:(NSInteger)arg1 withError:(id *)arg2;
 - (void)_assertInvalidObjectsDeallocatedAfterScope:(CDUnknownBlockType)arg1;
-- (void)_assertNoLeaksInProcess:(NSInteger)arg1 withOptions:(NSInteger)arg2 inScope:(CDUnknownBlockType)arg3;
+- (void)_assertNoLeaksInProcessWithIdentifier:(NSInteger)arg1 withOptions:(NSInteger)arg2 inScope:(CDUnknownBlockType)arg3;
 - (void)_assertNoObjectAbandonedBetweenGeneration:(id)arg1 and:(id)arg2;
 - (void)_assertObjectsOfTypes:(id)arg1 inProcess:(NSInteger)arg2 invalidAfterScope:(CDUnknownBlockType)arg3;
 - (id)_createGraphForNewObjectsInGeneration:(id)arg1 withPreviousGeneration:(id)arg2;
@@ -46,6 +46,8 @@
 - (void)assertInvalidObjectsDeallocatedAfterScope:(CDUnknownBlockType)arg1;
 - (void)assertNoLeaksInApplication:(id)arg1 inScope:(CDUnknownBlockType)arg2;
 - (void)assertNoLeaksInApplication:(id)arg1 withOptions:(NSInteger)arg2 inScope:(CDUnknownBlockType)arg3;
+- (void)assertNoLeaksInProcessWithIdentifier:(NSInteger)arg1 inScope:(CDUnknownBlockType)arg2;
+- (void)assertNoLeaksInProcessWithIdentifier:(NSInteger)arg1 withOptions:(NSInteger)arg2 inScope:(CDUnknownBlockType)arg3;
 - (void)assertNoLeaksInScope:(CDUnknownBlockType)arg1;
 - (void)assertNoLeaksWithOptions:(NSInteger)arg1 inScope:(CDUnknownBlockType)arg2;
 - (void)assertNoObjectAbandonmentBetweenGeneration:(id)arg1 and:(id)arg2;

@@ -14,46 +14,50 @@
 
 #import <objc/NSObject.h>
 
+#import "XCDebugLogDelegate-Protocol.h"
 #import "XCTTestRunSessionDelegate-Protocol.h"
 #import "XCTestDriverInterface-Protocol.h"
 #import "XCUIXcodeApplicationManaging-Protocol.h"
-#import "_XCTestObservationPrivate-Protocol.h"
+#import "_XCTestObservationInternal-Protocol.h"
 
-@class DTXConnection, NSString, XCTestRun;
-@protocol OS_dispatch_queue, XCTRunnerIDESessionDelegate, XCTTestWorker, XCTestManager_IDEInterface, XCUIApplicationMonitor;
+@class DTXConnection, NSString, XCTCapabilities, XCTFuture, XCTPromise, XCTestRun;
+@protocol OS_dispatch_queue, XCTRunnerIDESessionDelegate, XCTestManager_IDEInterface, XCUIApplicationMonitor;
 
 
 @protocol XCTRunnerIDESessionDelegate;
-@protocol XCTTestWorker;
 @protocol XCTestManager_IDEInterface;
 
-@interface XCTRunnerIDESession : NSObject <_XCTestObservationPrivate, XCTestDriverInterface, XCTTestRunSessionDelegate, XCUIXcodeApplicationManaging>
+@interface XCTRunnerIDESession : NSObject <_XCTestObservationInternal, XCTestDriverInterface, XCTTestRunSessionDelegate, XCUIXcodeApplicationManaging, XCDebugLogDelegate>
 {
-    NSInteger _IDEProtocolVersion;
+    XCTCapabilities *_IDECapabilities;
+    XCTFuture *_readyForTestingFuture;
+    XCTFuture *_testConfigurationFuture;
     id <XCTRunnerIDESessionDelegate> _delegate;
     id <XCUIApplicationMonitor> _applicationMonitor;
-    id <XCTTestWorker> _testWorker;
     NSObject<OS_dispatch_queue> *_queue;
     DTXConnection *_IDEConnection;
     id <XCTestManager_IDEInterface> _IDEProxy;
+    XCTPromise *_readyForTestingPromise;
     XCTestRun *_currentTestRun;
     CDUnknownBlockType _readinessReply;
 }
 
+@property(retain) XCTCapabilities *IDECapabilities;
 @property(retain) DTXConnection *IDEConnection;
-@property NSInteger IDEProtocolVersion;
 @property(retain) id <XCTestManager_IDEInterface> IDEProxy;
 @property __weak id <XCUIApplicationMonitor> applicationMonitor;
 @property(retain) XCTestRun *currentTestRun;
 @property __weak id <XCTRunnerIDESessionDelegate> delegate;
 @property(readonly) NSObject<OS_dispatch_queue> *queue;
 @property(copy) CDUnknownBlockType readinessReply;
-@property(readonly) BOOL reportsCrashes;
-@property __weak id <XCTTestWorker> testWorker;
-@property(readonly) BOOL supportsVariableScreenshotFormats;
+@property(readonly) XCTFuture *readyForTestingFuture;
+@property(retain) XCTPromise *readyForTestingPromise;
+@property(readonly) XCTFuture *testConfigurationFuture;
 
++ (id)IDECapabilitiesForLegacyProtocolVersion:(NSUInteger)arg1;
 + (double)IDEConnectionTimeout;
-+ (id)daemonMediatedSessionForSessionIdentifier:(id)arg1 delegate:(id)arg2 error:(id *)arg3;
++ (void)daemonMediatedSessionForSessionIdentifier:(id)arg1 daemonSession:(id)arg2 delegate:(id)arg3 completion:(CDUnknownBlockType)arg4;
++ (id)exportedCapabilities;
 + (void)setSharedSession:(id)arg1;
 + (id)sharedSession;
 + (id)sharedSessionQueue;
@@ -64,22 +68,25 @@
 - (id)_IDE_shutdown;
 - (id)_IDE_startExecutingTestPlanWithProtocolVersion:(id)arg1;
 - (id)_IDE_stopTrackingProcessWithToken:(id)arg1;
-- (void)_testCase:(id)arg1 didFinishActivity:(id)arg2;
+- (void)_context:(id)arg1 didFinishActivity:(id)arg2;
+- (void)_context:(id)arg1 willStartActivity:(id)arg2;
+- (id)_queue_makeReadyForTestingFuture;
+- (id)_queue_makeTestConfigurationFuture;
+- (id)_queue_testConfigurationFuture;
 - (void)_testCase:(id)arg1 didMeasureValues:(id)arg2 forPerformanceMetricID:(id)arg3 name:(id)arg4 unitsOfMeasurement:(id)arg5 baselineName:(id)arg6 baselineAverage:(id)arg7 maxPercentRegression:(id)arg8 maxPercentRelativeStandardDeviation:(id)arg9 maxRegression:(id)arg10 maxStandardDeviation:(id)arg11 file:(id)arg12 line:(NSUInteger)arg13;
-- (void)_testCase:(id)arg1 willStartActivity:(id)arg2;
 - (id)initWithTransport:(id)arg1 delegate:(id)arg2;
 - (void)launchProcessWithPath:(id)arg1 bundleID:(id)arg2 arguments:(id)arg3 environmentVariables:(id)arg4 completion:(CDUnknownBlockType)arg5;
 - (void)logDebugMessage:(id)arg1;
+- (void)patchUpRelativePathsInTestConfiguration:(id)arg1;
 - (void)reportBootstrappingFailure:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)reportSelfDiagnosisIssue:(id)arg1 description:(id)arg2;
 - (void)reportStallOnMainThreadInTestCase:(id)arg1 method:(id)arg2 file:(id)arg3 line:(NSUInteger)arg4;
 - (void)reportTestWithIdentifier:(id)arg1 didExceedExecutionTimeAllowance:(double)arg2;
 - (void)requestLaunchProgressForProcessWithToken:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)requestReadinessForTesting:(CDUnknownBlockType)arg1;
 - (void)terminateProcessWithToken:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)testBundleDidFinish:(id)arg1;
 - (void)testBundleWillStart:(id)arg1;
-- (void)testCase:(id)arg1 didFailWithDescription:(id)arg2 inFile:(id)arg3 atLine:(NSUInteger)arg4;
+- (void)testCase:(id)arg1 didRecordIssue:(id)arg2;
 - (void)testCase:(id)arg1 wasSkippedWithDescription:(id)arg2 inFile:(id)arg3 atLine:(NSUInteger)arg4;
 - (void)testCaseDidFinish:(id)arg1;
 - (void)testCaseWillStart:(id)arg1;
@@ -87,7 +94,7 @@
 - (void)testRunSessionDidBeginExecutingTestPlan:(id)arg1;
 - (void)testRunSessionDidBeginInitializingForUITesting:(id)arg1;
 - (void)testRunSessionDidFinishExecutingTestPlan:(id)arg1 reply:(CDUnknownBlockType)arg2;
-- (void)testSuite:(id)arg1 didFailWithDescription:(id)arg2 inFile:(id)arg3 atLine:(NSUInteger)arg4;
+- (void)testSuite:(id)arg1 didRecordIssue:(id)arg2;
 - (void)testSuiteDidFinish:(id)arg1;
 - (void)testSuiteWillStart:(id)arg1;
 

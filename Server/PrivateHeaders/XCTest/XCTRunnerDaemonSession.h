@@ -60,10 +60,14 @@
 
 + (id)automationSessionBlacklist;
 + (id)capabilities;
-+ (id)capabilitiesForDaemonConnection:(id)arg1 error:(id *)arg2;
++ (void)capabilitiesForDaemonConnection:(id)arg1 completion:(CDUnknownBlockType)arg2;
 + (id)daemonCapabilitiesForProtocolVersion:(NSUInteger)arg1 platform:(NSUInteger)arg2 error:(id *)arg3;
-+ (id)sessionWithConnection:(id)arg1;
++ (void)initiateSharedSessionWithCompletion:(CDUnknownBlockType)arg1;
++ (void)legacyCapabilitiesForDaemonConnection:(id)arg1 completion:(CDUnknownBlockType)arg2;
++ (void)modernCapabilitiesForDaemonConnection:(id)arg1 completion:(CDUnknownBlockType)arg2;
++ (void)sessionWithConnection:(id)arg1 completion:(CDUnknownBlockType)arg2;
 + (id)sharedSession;
++ (id)sharedSessionPromiseAndImplicitlyInitiateSession:(BOOL)arg1;
 - (void)_XCT_applicationWithBundleID:(id)arg1 didUpdatePID:(NSInteger)arg2 andState:(NSUInteger)arg3;
 - (void)_XCT_receivedAccessibilityNotification:(NSInteger)arg1 fromElement:(id)arg2 payload:(id)arg3;
 - (void)_XCT_receivedAccessibilityNotification:(NSInteger)arg1 withPayload:(id)arg2;

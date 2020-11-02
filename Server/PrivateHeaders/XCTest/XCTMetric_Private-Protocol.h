@@ -14,7 +14,7 @@
 
 #import "XCTMetric-Protocol.h"
 
-@class XCTMeasureOptions, XCTPerformanceMeasurementTimestamp;
+@class NSString, XCTMeasureOptions, XCTPerformanceMeasurementTimestamp;
 
 @protocol XCTMetric_Private <XCTMetric>
 

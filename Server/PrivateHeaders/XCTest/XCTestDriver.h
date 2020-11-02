@@ -14,38 +14,51 @@
 
 #import <objc/NSObject.h>
 
-#import "XCDebugLogDelegate-Protocol.h"
-#import "XCTASDebugLogDelegate-Protocol.h"
 #import "XCTRunnerIDESessionDelegate-Protocol.h"
 
-@class NSMutableArray, NSString, XCTestConfiguration;
-@protocol OS_dispatch_queue;
+@class NSBundle, NSString, NSURL, NSUUID, XCTFuture, XCTPromise, XCTRunnerIDESession, XCTestConfiguration;
 
-@interface XCTestDriver : NSObject <XCTRunnerIDESessionDelegate, XCDebugLogDelegate, XCTASDebugLogDelegate>
+@interface XCTestDriver : NSObject <XCTRunnerIDESessionDelegate>
 {
-    NSInteger _debugMessageBufferOverflow;
+    XCTRunnerIDESession *_ideSession;
+    NSURL *_testBundleURLFromEnvironment;
+    NSUUID *_sessionIdentifierFromEnvironment;
+    NSURL *_testConfigurationURLFromEnvironment;
+    CDUnknownBlockType _daemonSessionProvider;
     XCTestConfiguration *_testConfiguration;
-    NSObject<OS_dispatch_queue> *_queue;
-    NSMutableArray *_debugMessageBuffer;
+    NSBundle *_testBundle;
+    id _testBundlePrincipalClassInstance;
+    XCTFuture *_testRunSessionFuture;
+    XCTPromise *_testRunSessionPromise;
 }
 
-@property(retain) NSMutableArray *debugMessageBuffer;
-@property NSInteger debugMessageBufferOverflow;
-@property(readonly) NSObject<OS_dispatch_queue> *queue;
-@property(readonly) XCTestConfiguration *testConfiguration;
+@property(readonly, copy) CDUnknownBlockType daemonSessionProvider;
+@property(retain) XCTRunnerIDESession *ideSession;
+@property(readonly, copy) NSUUID *sessionIdentifierFromEnvironment;
+@property(retain) NSBundle *testBundle;
+@property(retain) id testBundlePrincipalClassInstance;
+@property(retain) XCTestConfiguration *testConfiguration;
+@property(retain) XCTFuture *testRunSessionFuture;
+@property(retain) XCTPromise *testRunSessionPromise;
+@property(readonly, copy) NSURL *testBundleURLFromEnvironment;
+@property(readonly, copy) NSURL *testConfigurationURLFromEnvironment;
 
-+ (id)sharedTestDriver;
++ (BOOL)environmentSpecifiesTestConfiguration;
++ (BOOL)shouldSkipInitialBundleLoadBeforeXCTestMain;
++ (id)testBundleURLFromEnvironment;
 - (void)IDESessionDidDisconnect:(id)arg1;
-- (void)_queue_flushDebugMessageBufferWithBlock:(CDUnknownBlockType)arg1;
-- (BOOL)_readyIDESession:(id)arg1 forTestRunSession:(id)arg2 error:(id *)arg3;
+- (void)_configureGlobalState;
+- (void)_createTestBundlePrincipalClassInstance;
+- (Class)_declaredPrincipalClassFromTestBundle:(id)arg1;
+- (id)_loadTestBundleFromURL:(id)arg1 error:(id *)arg2;
+- (id)_prepareIDESessionWithIdentifier:(id)arg1 exitCode:(NSInteger *)arg2;
+- (NSInteger)_prepareTestConfigurationAndIDESession;
+- (void)_reportBootstrappingFailure:(id)arg1;
+- (NSInteger)_runTests;
+- (id)initWithTestBundleURLFromEnvironment:(id)arg1 sessionIdentifierFromEnvironment:(id)arg2 testConfigurationURLFromEnvironment:(id)arg3 testConfiguration:(id)arg4 daemonSessionProvider:(CDUnknownBlockType)arg5;
 - (id)initWithTestConfiguration:(id)arg1;
-- (void)logDebugMessage:(id)arg1;
-- (void)logStartupInfo;
-- (void)printBufferedDebugMessages;
-- (void)reportStallOnMainThreadInTestCase:(id)arg1 method:(id)arg2 file:(id)arg3 line:(NSUInteger)arg4;
-- (void)runTestConfiguration:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
-- (void)runTestSuite:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
-- (BOOL)runTestsAndReturnError:(id *)arg1;
+- (NSInteger)run;
+- (id)testWorkerForIDESession:(id)arg1;
 
 
 @end

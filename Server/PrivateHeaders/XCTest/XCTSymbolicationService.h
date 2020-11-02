@@ -14,17 +14,13 @@
 
 #import <objc/NSObject.h>
 
-
-@interface XCTFailureLocation : NSObject
+@interface XCTSymbolicationService : NSObject
 {
-    NSString *_filePath;
-    NSUInteger _lineNumber;
 }
 
-@property(readonly, copy) NSString *filePath;
-@property(readonly) NSUInteger lineNumber;
-
-- (id)initWithFilePath:(id)arg1 lineNumber:(NSUInteger)arg2;
++ (void)pushSharedSymbolicationService:(id)arg1 forScope:(CDUnknownBlockType)arg2;
++ (void)setSharedService:(id)arg1;
++ (id)sharedService;
 
 @end
 

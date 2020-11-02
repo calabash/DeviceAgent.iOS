@@ -28,7 +28,9 @@
 @property(readonly) BOOL allowsRemoteAccess;
 @property(readonly) NSXPCConnection *connection;
 @property(readonly) NSInteger connectionPid;
+@property(readonly) BOOL hasBannerNotificationIsStickyAttribute;
 @property(readonly) BOOL isMacCatalyst;
+@property(readonly) BOOL providesValuesForPrivilegedAttributes;
 @property(retain) XCTCapabilities *remoteInterfaceCapabilities;
 @property(readonly) BOOL supportsAnimationsIdleNotifications;
 @property(readonly) BOOL supportsFetchingAttributesForElement;
@@ -46,6 +48,7 @@
 - (void)notifyWhenAnimationsAreIdle:(CDUnknownBlockType)arg1;
 - (void)notifyWhenMainRunLoopIsIdle:(CDUnknownBlockType)arg1;
 - (id)parameterizedAttribute:(id)arg1 forElement:(id)arg2 parameter:(id)arg3 error:(id *)arg4;
+- (id)valuesForPrivilegedAttributes:(id)arg1 forElement:(id)arg2 error:(id *)arg3;
 
 
 @end

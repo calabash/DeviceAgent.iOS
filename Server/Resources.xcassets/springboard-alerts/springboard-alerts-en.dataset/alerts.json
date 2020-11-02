@@ -448,5 +448,12 @@
       "Allow"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” would like to find and connect to devices on your local network.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

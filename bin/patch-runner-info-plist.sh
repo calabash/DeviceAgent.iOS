@@ -99,29 +99,43 @@ else
   RUNNER_BIN="${RUNNER}/XCTRunner"
 fi
 
-set +e
-ARCHINFO=`xcrun lipo -info "${RUNNER_BIN}"`
-IGNORED=`echo ${ARCHINFO} | egrep -o "arm"`
-EXIT_STATUS=$?
-set -e
-
 # $1 variable to store the identity in
 # $2 the .app to extract the identity from
 # extract_identity IDENTITY "${RUNNER}"
 function extract_identity {
-    DETAILS=`xcrun codesign --display --verbose=3 ${2} 2>&1`
-    NAME=`echo ${DETAILS} | egrep -o "iPhone Developer: .*\)" |  tr -d '\n'`
+  DETAILS=$(xcrun codesign --display --verbose=3 ${2} 2>&1)
+
+  set +e
+  NAME=$(
+    echo "${DETAILS}" | egrep --max-count 1 --only-matching \
+      "((iPhone Developer:|Apple Development:) .*\)|adhoc)"
+  )
+  set -e
+
+  if [ -z "${NAME}" ]; then
+    error "Could not find signing identity for ${2}"
+    exit 1
+  fi
+
+  if [ "${NAME}" = "adhoc" ]; then
+    eval "$1=\"-\""
+  else
     CLEAN_NAME=`echo $NAME | cut -d\( -f1 | sed -e 's/[[:space:]]*$//'`
-    SHA=`xcrun security find-certificate -a -Z -c "${CLEAN_NAME}" \
-      | grep "SHA-1" \
-      | head -n1 \
-      | cut -d: -f2 \
-      | sed -e 's/^[[:space:]]*//'`
+    SHA=$(
+      xcrun security find-certificate -a -Z -c "${CLEAN_NAME}" \
+        | grep "SHA-1" \
+        | head -n1 \
+        | cut -d: -f2 \
+        | sed -e 's/^[[:space:]]*//'
+      )
     eval "$1=\"${SHA}\""
+  fi
 }
 
-if [ "${EXIT_STATUS}" != "0" ]; then
+IDENTITY=""
+extract_identity IDENTITY "${RUNNER}"
 
+if [ "${IDENTITY}" = "-" ]; then
   xcrun codesign \
     --sign - \
     --force \
@@ -153,42 +167,43 @@ if [ "${EXIT_STATUS}" != "0" ]; then
     --deep \
     --timestamp=none \
     "${RUNNER}"
+
   xcrun codesign --verify --verbose=4 "${RUNNER}"
 else
-    ENTITLEMENTS=bin/codesign/DeviceAgent.xctest.xcent
-    IDENTITY=""
-    extract_identity IDENTITY "${RUNNER}"
+  ENTITLEMENTS=bin/codesign/DeviceAgent.xctest.xcent
+  IDENTITY=""
+  extract_identity IDENTITY "${RUNNER}"
 
+  xcrun codesign \
+    --sign "${IDENTITY}" \
+    --force \
+    --deep \
+    --entitlements "${ENTITLEMENTS}" \
+    ${DEVICE_AGENT}
+
+  xcrun codesign \
+    --sign "${IDENTITY}" \
+    --force \
+    --deep \
+    "${RUNNER}/Frameworks/XCTest.framework"
+
+  AUTOMATION_FRAMEWORK="${RUNNER}/Frameworks/XCTAutomationSupport.framework"
+
+  if [ -e "${AUTOMATION_FRAMEWORK}" ]; then
     xcrun codesign \
       --sign "${IDENTITY}" \
       --force \
       --deep \
-      --entitlements "${ENTITLEMENTS}" \
-      ${DEVICE_AGENT}
+      "${AUTOMATION_FRAMEWORK}"
+  fi
 
-    xcrun codesign \
-      --sign "${IDENTITY}" \
-      --force \
-      --deep \
-      "${RUNNER}/Frameworks/XCTest.framework"
+  xcrun codesign \
+    --sign "${IDENTITY}" \
+    --force \
+    --deep \
+    --entitlements "${ENTITLEMENTS}" \
+    ${RUNNER}
 
-    AUTOMATION_FRAMEWORK="${RUNNER}/Frameworks/XCTAutomationSupport.framework"
-
-    if [ -e "${AUTOMATION_FRAMEWORK}" ]; then
-      xcrun codesign \
-        --sign "${IDENTITY}" \
-        --force \
-        --deep \
-        "${AUTOMATION_FRAMEWORK}"
-    fi
-
-    xcrun codesign \
-      --sign "${IDENTITY}" \
-      --force \
-      --deep \
-      --entitlements "${ENTITLEMENTS}" \
-      ${RUNNER}
-
-    bin/codesign/verify-ios-certs.sh "${RUNNER}"
+  bin/codesign/verify-ios-certs.sh "${RUNNER}"
 fi
 

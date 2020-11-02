@@ -495,5 +495,12 @@
       "Povolit"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Aplikace „%@“ žádá o možnost vyhledávat zařízení ve vaší místní síti a připojovat se k nim.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

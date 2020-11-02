@@ -545,5 +545,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "%@ ber om tillatelse til å finne og koble til enheter på det lokale nettverket ditt.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

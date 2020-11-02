@@ -505,5 +505,12 @@
       "Cho phép"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn tìm và kết nối với các thiết bị trên mạng cục bộ của bạn.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

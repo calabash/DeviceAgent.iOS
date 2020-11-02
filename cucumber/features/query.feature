@@ -78,3 +78,12 @@ Then I query the text field using "marked" with string "Schreib!" and see value 
 Then I query the text field using "marked" with string "Hello!" and see value "Hello!"
 Then I query the text field using "text" with string "Schreib!" and see value "Hello!"
 Then I query the text field using "text" with string "Hello!" and see value "Hello!"
+
+@query
+Scenario: Descendant query returns array of elements
+Given I am looking at the Text Input with placeholder
+And   I touch the text field
+When the keyboard is visible
+Then I query the keyboard using "descendant_element" and see keyboard buttons
+  | parent_type | descendant_type |
+  | Keyboard    | Button          |

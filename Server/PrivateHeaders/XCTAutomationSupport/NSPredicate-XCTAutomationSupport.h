@@ -17,5 +17,6 @@
 
 @interface NSPredicate (XCTAutomationSupport)
 - (id)_xct_requiredKeyPathsOrError:(id *)arg1;
+- (id)xct_matchedValuesOfClass:(Class)arg1 forKeyPath:(id)arg2;
 @end
 

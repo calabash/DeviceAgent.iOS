@@ -14,8 +14,10 @@
 @protocol OS_xpc_object;
 
 @class XCTRunnerIDESession;
+@protocol XCTTestWorker;
 
 @protocol XCTRunnerIDESessionDelegate <NSObject>
 - (void)IDESessionDidDisconnect:(XCTRunnerIDESession *)arg1;
+- (id <XCTTestWorker>)testWorkerForIDESession:(XCTRunnerIDESession *)arg1;
 @end
 
