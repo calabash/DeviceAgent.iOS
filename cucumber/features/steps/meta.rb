@@ -154,3 +154,7 @@ Then(/^the AUT pid is zero$/) do
   aut_pid = process_pid("sh.calaba.TestApp")
   expect(aut_pid).not_to be == 0
 end
+
+Then(/^I can make a screenshot$/) do
+  expect(screenshot).not_to be_empty
+end

@@ -248,6 +248,10 @@ module DeviceAgent
     def element_types
       Automator.client.element_types
     end
+
+    def screenshot(filepath = "")
+      Automator.client.screenshot(filepath)
+    end
   end
 end
 

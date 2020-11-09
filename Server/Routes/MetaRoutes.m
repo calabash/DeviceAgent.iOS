@@ -114,22 +114,38 @@
                               NSDictionary *body,
                               RouteResponse *response) {
 
-                      NSString *key = @"dismiss_automatically";
-                      NSNumber *valueFromBody = body[key];
-                      if (!valueFromBody) {
-                          NSString *message;
-                          message = [NSString stringWithFormat:@"Request body is missing"
-                                     "required key: '%@'", key];
-                          @throw [InvalidArgumentException withMessage:message
-                                                              userInfo:@{@"received_body" : body}];
+                NSString *key = @"dismiss_automatically";
+                NSNumber *valueFromBody = body[key];
+                if (!valueFromBody) {
+                  NSString *message;
+                  message = [NSString stringWithFormat:@"Request body is missing"
+                             "required key: '%@'", key];
+                  @throw [InvalidArgumentException withMessage:message
+                                                      userInfo:@{@"received_body" : body}];
 
-                      }
+                }
 
-                      [SpringBoard application].shouldDismissAlertsAutomatically = [valueFromBody boolValue];
-                      BOOL value = [[SpringBoard application] shouldDismissAlertsAutomatically];
-                      NSDictionary *json = @{@"is_dismissing_alerts_automatically" : @(value)};
-                      [response respondWithJSON:json];
-                  }]
+                [SpringBoard application].shouldDismissAlertsAutomatically = [valueFromBody boolValue];
+                BOOL value = [[SpringBoard application] shouldDismissAlertsAutomatically];
+                NSDictionary *json = @{@"is_dismissing_alerts_automatically" : @(value)};
+                [response respondWithJSON:json];
+              }],
+             [CBXRoute post:endpoint(@"/screenshot", 1.0)
+                 withBlock:^(RouteRequest *request,
+                             NSDictionary *body,
+                             RouteResponse *response) {
+
+                     NSString *key = @"filename";
+                     NSString *filePathFromBody = body[key];
+                     NSString *path;
+                     @try {
+                         path = [[CBXDevice sharedDevice] saveScreenshotAtPath:filePathFromBody];
+                     } @catch (NSException *e) {
+                         @throw [CBXException withMessage:e.userInfo.description];
+                     }
+
+                     [response respondWithJSON:@{@"filePath": path}];
+             }]
              ];
 }
 
