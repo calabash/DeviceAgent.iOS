@@ -388,6 +388,22 @@
     "shouldAccept": true
   },
   {
+    "title": "“%@“ vil gerne sende dig meddelelser",
+    "buttons": [
+      "Tillad",
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title":  "“%@” vil gerne sende dig notifikationer",
+    "buttons": [
+      "Tillad",
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
     "title": "“%@” vil gerne sende dig meddelelser",
     "buttons": [
       "Tillad",
