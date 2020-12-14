@@ -502,5 +502,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Smí „%@“ jednou použít vaši přesnou polohu?",
+    "buttons": [
+      "Povolit jednou"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Povolit widgetům „%@“ používání vaší polohy?",
+    "buttons": [
+      "Povolit"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -5,7 +5,8 @@
       "Salli",
       "Salli aina",
       "Salli käytettäessä",
-      "Vain appia käytettäessä"
+      "Vain appia käytettäessä",
+      "Salli käytettäessä appia"
     ],
     "shouldAccept": true
   },
@@ -422,6 +423,20 @@
     "title": "%@ haluaa etsiä lähiverkossasi olevia laitteita ja yhdistää niihin.",
     "buttons": [
       "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Saako %@ käyttää tarkkaa sijaintiasi kerran?",
+    "buttons": [
+      "Salli kerran"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Saavatko widgetit (%@) käyttää sijaintiasi?",
+    "buttons": [
+      "Salli"
     ],
     "shouldAccept": true
   }

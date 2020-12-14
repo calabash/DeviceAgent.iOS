@@ -487,5 +487,26 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "%@ wil toegang tot je bewegings- en conditie-activiteit",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Toestaan dat %@ je exacte locatie één keer gebruikt?",
+    "buttons": [
+      "Sta één sessie toe"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Toestaan dat widgets van %@ je locatie gebruiken?",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
   }
 ]

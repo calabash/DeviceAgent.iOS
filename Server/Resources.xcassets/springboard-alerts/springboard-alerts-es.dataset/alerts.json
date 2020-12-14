@@ -449,5 +449,63 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir que la app %@ use tu ubicación?",
+    "buttons": [
+      "Permitir siempre",
+      "Permitir",
+      "Permitir al usarse la app"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir que la app %@ use tu ubicación aunque no la estés utilizando?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir que la app %@ también use tu ubicación aunque no la estés utilizando?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Activar dictado?",
+    "buttons": [
+      "Ahora no"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Activar dictado",
+    "buttons": [
+      "Ahora no"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir que la app %@ use tu ubicación exacta una vez?",
+    "buttons": [
+      "Permitir una vez"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir que los widgets de “%@” utilicen tu ubicación?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere buscar dispositivos en tu red local y conectarse a ellos.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -412,5 +412,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Permiteți ca aplicația “%@” să utilizeze o dată localizarea dvs. precisă?",
+    "buttons": [
+      "Permiteți o dată"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permiteți ca widgeturile din “%@” să vă utilizeze localizarea?",
+    "buttons": [
+      "Permiteți"
+    ],
+    "shouldAccept": true
   }
 ]

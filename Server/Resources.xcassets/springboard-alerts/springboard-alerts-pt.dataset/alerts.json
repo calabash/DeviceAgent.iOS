@@ -487,5 +487,33 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” use a sua localização mesmo quando você não estiver usando o app?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” também use a sua localização mesmo quando você não estiver usando o app?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” use a sua localização precisa uma vez?",
+    "buttons": [
+      "Permitir Uma Vez"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permitir que os widgets de “%@” usem a sua localização?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
   }
 ]

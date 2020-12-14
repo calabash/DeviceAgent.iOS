@@ -11,7 +11,9 @@
             { "title": "LOCATION_CLIENT_PERMISSION_UPGRADE_WHENINUSE_ALWAYS", "button": "LOCATION_CLIENT_PERMISSION_OK", "default_value": true },
             { "title": "LOCATION_CLIENT_PERMISSION_REPROMPT", "button": "LOCATION_CLIENT_PERMISSION_OK", "default_value": true },
             { "title": "LOCATION_CLIENT_PERMISSION_REPROMPT_ZERO", "button": "LOCATION_CLIENT_PERMISSION_OK", "default_value": true },
-            { "title": "LOCATION_CLIENT_PERMISSION_REPROMPT_ONE", "button": "LOCATION_CLIENT_PERMISSION_OK", "default_value": true }
+            { "title": "LOCATION_CLIENT_PERMISSION_REPROMPT_ONE", "button": "LOCATION_CLIENT_PERMISSION_OK", "default_value": true },
+            { "title": "LOCATION_CLIENT_PERMISSION_TEMPORARY_PRECISE_TITLE", "button": "LOCATION_CLIENT_PERMISSION_TEMPORARY_PRECISE_YES_BUTTON", "default_value": true },
+            { "title": "LOCATION_CLIENT_PERMISSION_INCIDENTAL_USE_MODE_TITLE", "button": "LOCATION_CLIENT_PERMISSION_INCIDENTAL_USE_MODE_YES_BUTTON", "default_value": true }
         ]
     },
     {
@@ -60,7 +62,8 @@
         "values": [
             { "title": "APP_WARNING_HEADER_VPN", "button": "DONT_ALLOW_BUTTON", "default_value": false },
             { "title": "APP_WARNING_HEADER_FILTER", "button": "DONT_ALLOW_BUTTON", "default_value": false },
-            { "title": "APP_WARNING_HEADER_DNS_PROXY", "button": "ALLOW_BUTTON", "default_value": true }
+            { "title": "APP_WARNING_HEADER_DNS_PROXY", "button": "ALLOW_BUTTON", "default_value": true },
+            { "title": "APP_WANTS_LOCAL_NETWORK_HEADER", "button": "OK", "default_value": true }
         ]
     },
     {

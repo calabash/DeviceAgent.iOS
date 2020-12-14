@@ -480,5 +480,19 @@
       "好"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "允许“%@”使用您的精确位置一次？",
+    "buttons": [
+      "允许一次"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "允许来自“%@”的小组件使用您的位置？",
+    "buttons": [
+      "允许"
+    ],
+    "shouldAccept": true
   }
 ]

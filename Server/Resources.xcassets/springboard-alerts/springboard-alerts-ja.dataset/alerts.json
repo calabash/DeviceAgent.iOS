@@ -418,5 +418,33 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@”で写真をライブラリに追加しようとしています",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”から“写真”にアクセスしようとしています",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”に正確な位置情報の使用を1度だけ許可しますか?",
+    "buttons": [
+      "1度だけ許可"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”のウィジェットに位置情報の使用を許可しますか?",
+    "buttons": [
+      "許可"
+    ],
+    "shouldAccept": true
   }
 ]

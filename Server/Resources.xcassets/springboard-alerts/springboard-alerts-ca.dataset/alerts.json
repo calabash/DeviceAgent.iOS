@@ -456,5 +456,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Permets que “%@” utilitzi la teva ubicació exacta una vegada?",
+    "buttons": [
+      "Permetre una vegada"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permets que els widgets de “%@” utilitzin la teva ubicació?",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
   }
 ]

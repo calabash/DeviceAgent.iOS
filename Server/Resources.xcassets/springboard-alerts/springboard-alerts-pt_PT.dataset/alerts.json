@@ -425,5 +425,26 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” gostaria de aceder à atividade de Movimento e fitness",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” use a sua localização exata uma vez?",
+    "buttons": [
+      "Permitir uma vez"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permitir que os widgets de “%@” usem a sua localização?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
   }
 ]

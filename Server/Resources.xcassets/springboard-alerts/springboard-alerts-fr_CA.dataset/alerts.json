@@ -404,5 +404,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Autoriser « %@ » à utiliser une fois votre position exacte?",
+    "buttons": [
+      "Autoriser une fois"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Autoriser les widgets de « %@ » à utiliser vos données de localisation?",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
   }
 ]

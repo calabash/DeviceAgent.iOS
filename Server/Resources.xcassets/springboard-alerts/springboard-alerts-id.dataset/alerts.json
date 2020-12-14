@@ -41,7 +41,8 @@
   {
     "title": "Apakah Anda ingin mengizinkan “%@” untuk menggunakan Face ID?",
     "buttons": [
-      "Tidak Boleh"
+      "Tidak Boleh",
+      "Jangan Izinkan"
     ],
     "shouldAccept": false
   },
@@ -427,6 +428,20 @@
     "title": "“%@” ingin menemukan dan terhubung ke perangkat di jaringan lokal Anda.",
     "buttons": [
       "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Izinkan “%@” untuk menggunakan lokasi tepat Anda sekali?",
+    "buttons": [
+      "Izinkan Sekali"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Izinkan widget dari “%@” untuk menggunakan lokasi Anda?",
+    "buttons": [
+      "Izinkan"
     ],
     "shouldAccept": true
   }

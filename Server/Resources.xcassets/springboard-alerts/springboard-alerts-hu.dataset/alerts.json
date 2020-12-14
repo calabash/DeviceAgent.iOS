@@ -495,5 +495,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Engedélyezi a(z) „%@” számára, hogy egyszer használja az Ön pontos helyzetét?",
+    "buttons": [
+      "Engedélyezés egyszer"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Engedélyezi a(z) „%@” widgetek számára, hogy használják az Ön helyzetét?",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
   }
 ]

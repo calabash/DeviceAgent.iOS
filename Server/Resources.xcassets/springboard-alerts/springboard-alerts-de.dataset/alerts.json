@@ -691,5 +691,26 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte auf die Daten deines Zuhauses zugreifen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ deinen genauen Standort einmal verwenden?",
+    "buttons": [
+      "Einmal erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dürfen Widgets von „%@“ deinen Standort verwenden?",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
   }
 ]

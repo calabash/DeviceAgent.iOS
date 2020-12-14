@@ -418,5 +418,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Autoriser « %@ » à utiliser votre position exacte une fois ?",
+    "buttons": [
+      "Autoriser une fois"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Autoriser les widgets de « %@ » à utiliser votre position ?",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -427,5 +427,41 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Dozvoliti aplikaciji “%@“ uporabu vaše lokacije?",
+    "buttons": [
+      "Uvijek dozvoli",
+      "Dozvoli"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dozvoliti aplikaciji “%@” uporabu vaše lokacije čak i kad je ne koristite?",
+    "buttons": [
+      "Dozvoli"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@“ želi upotrijebiti “⁠%@“ za prijavu",
+    "buttons": [
+      "Nastavi"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dozvoliti aplikaciji “%@” uporabu vaše precizne lokacije jedanput?",
+    "buttons": [
+      "Dozvoli jedanput"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dozvoliti widgetima aplikacije “%@” korištenje vaše lokacije?",
+    "buttons": [
+      "Dozvoli"
+    ],
+    "shouldAccept": true
   }
 ]

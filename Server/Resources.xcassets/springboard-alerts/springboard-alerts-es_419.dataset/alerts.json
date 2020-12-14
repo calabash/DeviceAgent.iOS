@@ -265,7 +265,8 @@
   {
     "title": "No hay ninguna tarjeta SIM",
     "buttons": [
-      "Aceptar"
+      "Aceptar",
+      "OK"
     ],
     "shouldAccept": true
   },
@@ -409,6 +410,27 @@
     "title": "%@ quiere buscar y conectarse a dispositivos en tu red local.",
     "buttons": [
       "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere acceder a tu condición y actividad física",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir a “%@” usar tu ubicación precisa una vez?",
+    "buttons": [
+      "Permitir una vez"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir que los widgets de “%@” usen tu ubicación?",
+    "buttons": [
+      "Permitir"
     ],
     "shouldAccept": true
   }

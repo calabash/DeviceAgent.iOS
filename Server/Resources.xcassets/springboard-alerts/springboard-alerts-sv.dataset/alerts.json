@@ -405,5 +405,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Tillåter du att ”%@” använder din exakta platsinformation en gång?",
+    "buttons": [
+      "Tillåt en gång"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Tillåter du att widgetar från ”%@” använder din platsinformation?",
+    "buttons": [
+      "Tillåt"
+    ],
+    "shouldAccept": true
   }
 ]
