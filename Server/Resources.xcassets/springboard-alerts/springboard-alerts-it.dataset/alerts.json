@@ -452,5 +452,12 @@
       "Consenti"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe rilevare i dispositivi sulla tua rete locale e connettersi.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

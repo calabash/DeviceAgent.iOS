@@ -60,8 +60,8 @@ COMMAND_LINE_BUILD=1 xcrun xcodebuild  \
   -target "${XC_TARGET}" \
   -configuration "${XC_CONFIG}" \
   -sdk iphonesimulator \
-  ARCHS="i386 x86_64" \
-  VALID_ARCHS="i386 x86_64" \
+  ARCHS="x86_64" \
+  VALID_ARCHS="x86_64" \
   ONLY_ACTIVE_ARCH=NO \
   GCC_TREAT_WARNINGS_AS_ERRORS=YES \
   build | $XC_PIPE
@@ -76,7 +76,7 @@ else
 fi
 
 if [ "$(xcode_gte_9)" = "true" ]; then
-  banner "Patching for Xcode 9"
+  banner "Patching for Xcode >= 9"
 
   XCTEST_BUNDLE="${XC_TARGET}.xctest"
   BUILD_PRODUCTS_XCTEST="${BUILD_PRODUCTS_DIR}/${XCTEST_BUNDLE}"

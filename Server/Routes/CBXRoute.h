@@ -54,5 +54,12 @@ Object containing logic for an HTTP route.
  @param block Block to execude when requests are matched to this route
  */
 + (instancetype)delete:(NSString *)path withBlock:(RequestHandler)block;
+
+/**
+ Convenience constructor for an OPTIONS route
+ @param path Route path regex
+ @param block Block to execute when requests are matched to this route
+ */
++ (instancetype)options:(NSString *)path withBlock:(RequestHandler)block;
 @end
  

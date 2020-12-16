@@ -439,5 +439,12 @@
       "Pozwalaj"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce znajdować urządzenia w sieci lokalnej i łączyć się z nimi.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

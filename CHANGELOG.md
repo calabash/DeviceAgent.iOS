@@ -1,3 +1,11 @@
+### 2.2.3
+
+* Fixed pubishing of new DeviceAgent.iOS version
+
+### 2.2.2
+
+* Adapt architecture and identitiy to be able to build on Xcode 12 #393
+
 ### 2.2.1
 
 The 2.2.0 release was cancelled.

@@ -398,5 +398,12 @@
       "Tillåt"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "”%@” vill hitta och ansluta till enheter på ditt lokala nätverk.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

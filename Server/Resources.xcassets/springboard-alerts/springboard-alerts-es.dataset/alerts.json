@@ -442,5 +442,12 @@
       "Permitir"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere buscar y conectarse a dispositivos en tu red local.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -405,5 +405,12 @@
       "Permiteți"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” ar dori să găsească și să se conecteze la dispozitivele din rețeaua locală.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

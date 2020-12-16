@@ -98,7 +98,7 @@ static Application *currentApplication;
 + (XCUIApplicationState)terminateApplication:(XCUIApplication *)application {
     NSTimeInterval startTime = [[CBXMachClock sharedClock] absoluteTime];
     if (application.state == XCUIApplicationStateNotRunning) {
-        DDLogDebug(@"Application %@ is not running", application.identifier);
+        DDLogDebug(@"Application %@ is not running", application.bundleID);
         return XCUIApplicationStateNotRunning;
     }
 
@@ -125,18 +125,27 @@ static Application *currentApplication;
     return [Application terminateApplication:application];
 }
 
-+ (BOOL)iOSVersionIsAtLeast103 {
++ (BOOL)iOSVersionGTE103 {
     NSString *version = [[CBXDevice sharedDevice] iOSVersion];
     NSDecimalNumber *iOSVersion = [NSDecimalNumber decimalNumberWithString:version];
     NSDecimalNumber *tenDotThree = [NSDecimalNumber decimalNumberWithString:@"10.3"];
     return [iOSVersion compare:tenDotThree] != NSOrderedAscending;
 }
 
++ (BOOL)iOSVersionGTE14 {
+    NSString *version = [[CBXDevice sharedDevice] iOSVersion];
+    NSDecimalNumber *iOSVersion = [NSDecimalNumber decimalNumberWithString:version];
+    NSDecimalNumber *fourteen = [NSDecimalNumber decimalNumberWithString:@"14.0"];
+    return [iOSVersion compare:fourteen] != NSOrderedAscending;
+}
+
 + (NSDictionary *)launchEnvironmentWithEnvArg:(NSDictionary *)environmentArg {
     static NSString *bootstrapDylib = @"/Developer/usr/lib/libXCTTargetBootstrapInject.dylib";
     static NSString *key = @"DYLD_INSERT_LIBRARIES";
 
-    if ([Application iOSVersionIsAtLeast103]) {
+    if ([Application iOSVersionGTE14]) {
+        return environmentArg ?: @{}; // /Developer/usr/lib/libXCTTargetBootstrapInject.dylib does not exist for iOS 14.0
+    } else if ([Application iOSVersionGTE103]) {
         if (!environmentArg || environmentArg.count == 0) {
             return @{key : bootstrapDylib};
         } else {

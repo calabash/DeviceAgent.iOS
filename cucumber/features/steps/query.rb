@@ -316,3 +316,9 @@ Then(/^I query the text field using \"(.+)\" with string \"(.+)\" and see value 
 
   expect(actual["value"]).to be == value
 end
+
+Then(/^I query the keyboard using "descendant_element" and see keyboard buttons$/) do |table|
+  locator = {descendant_element: table.hashes.first}
+  actual_keyboard_buttons = wait_for_view(locator)
+  expect(actual_keyboard_buttons.count).to be > 1
+end

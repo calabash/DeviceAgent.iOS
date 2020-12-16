@@ -61,8 +61,8 @@ COMMAND_LINE_BUILD=1 xcrun xcodebuild \
   -derivedDataPath "${XC_BUILD_DIR}" \
   -configuration "${XC_CONFIG}" \
   -sdk iphoneos \
-  ARCHS="armv7 arm64" \
-  VALID_ARCHS="armv7 arm64" \
+  ARCHS="arm64" \
+  VALID_ARCHS="arm64" \
   ONLY_ACTIVE_ARCH=NO \
   GCC_TREAT_WARNINGS_AS_ERRORS=YES \
   build-for-testing | $XC_PIPE

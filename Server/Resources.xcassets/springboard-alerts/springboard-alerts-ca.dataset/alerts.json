@@ -449,5 +449,12 @@
       "Permetre"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” vol veure els dispositius de la teva xarxa local i connectar‑s’hi.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]
