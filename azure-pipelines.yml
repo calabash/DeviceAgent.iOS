@@ -1,7 +1,7 @@
 variables:
   # When Agent.JobName matches this value (and the git ref is a tag), then
   # built artifacts will be published to Azure Blob Storage.
-  AzurePublishWhen: "Catalina-Xcode-12.0"
+  AzurePublishWhen: "Catalina-Xcode-11.7"
 
 trigger:
   tags:
@@ -28,6 +28,9 @@ jobs:
       Catalina-Xcode-12.0:
         IMAGE_POOL: 'macOS-10.15'
         XCODE_VERSION: '12'
+      Catalina-Xcode-12.2:
+        IMAGE_POOL: 'macOS-10.15'
+        XCODE_VERSION: '12.2'
   pool:
     vmImage: $(IMAGE_POOL)
   variables:
