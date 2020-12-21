@@ -74,6 +74,9 @@ jobs:
   - script: make unit-tests
     displayName: "Make unit-tests"
 
+  - script: bundle exec bin/ci/cucumber.rb
+    displayName: "exec cucumber"
+
   - bash: "./bin/ci/az-publish.sh"
     env:
       AZURE_STORAGE_ACCOUNT: $(AzureStorageAccount)
@@ -81,7 +84,7 @@ jobs:
       AZURE_STORAGE_CONNECTION_STRING: $(AzureStorageConnectionString)
       SOURCE_BRANCH: $(Build.SourceBranch)
     displayName: "Publish to Azure Blob Storage"
-    condition: and(succeeded(), eq(variables['Agent.JobName'], variables['AzurePublishWhen']))
+    condition: and(succeeded(), eq(variables['Agent.JobName'], variables['AzurePublishWhen']), startsWith(variables['Build.SourceBranch'], 'refs/tags/'))
 
   - task: PublishTestResults@2
     displayName: 'Publish Test Results'
