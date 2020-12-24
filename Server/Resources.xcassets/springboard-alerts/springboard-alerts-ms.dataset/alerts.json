@@ -489,5 +489,26 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Benarkan “%@” untuk turut menggunakan lokasi anda walaupun anda tidak menggunakan app?",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Benarkan “%@” menggunakan lokasi tepat anda sekali?",
+    "buttons": [
+      "Benarkan Sekali"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Benarkan widget daripada “%@” menggunakan lokasi anda?",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
   }
 ]

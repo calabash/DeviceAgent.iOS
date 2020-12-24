@@ -396,7 +396,7 @@
     "shouldAccept": true
   },
   {
-    "title":  "“%@” vil gerne sende dig notifikationer",
+    "title": "“%@” vil gerne sende dig notifikationer",
     "buttons": [
       "Tillad",
       "OK"
@@ -457,6 +457,20 @@
     "title": "“%@” vil finde og oprette forbindelse til enheder på dit lokale netværk.",
     "buttons": [
       "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Må “%@” bruge din præcise lokalitet en enkelt gang?",
+    "buttons": [
+      "Tillad en gang"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Må widgets fra “%@” bruge din lokalitet?",
+    "buttons": [
+      "Tillad"
     ],
     "shouldAccept": true
   }

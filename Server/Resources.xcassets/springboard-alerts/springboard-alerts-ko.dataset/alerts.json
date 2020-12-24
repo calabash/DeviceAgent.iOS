@@ -517,5 +517,33 @@
       "확인"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "‘%@’을(를) 사용 중일 때 이 앱에서 Bluetooth를 사용하려고 합니다",
+    "buttons": [
+      "확인"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "‘%@’에서 Bluetooth를 사용하려고 합니다",
+    "buttons": [
+      "확인"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "‘%@’이(가) 사용자의 정확한 위치를 한 번 사용하도록 허용하겠습니까?",
+    "buttons": [
+      "한 번 허용"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "‘%@’에서 위젯이 사용자의 위치를 사용하도록 허용하겠습니까?",
+    "buttons": [
+      "허용"
+    ],
+    "shouldAccept": true
   }
 ]

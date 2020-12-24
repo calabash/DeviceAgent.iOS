@@ -562,5 +562,26 @@
       "好"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "「%@」要取用你的動作與健身記錄",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "允許「%@」使用你的精確位置一次嗎？",
+    "buttons": [
+      "允許一次"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "允許來自「%@」的小工具使用你的位置？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
   }
 ]

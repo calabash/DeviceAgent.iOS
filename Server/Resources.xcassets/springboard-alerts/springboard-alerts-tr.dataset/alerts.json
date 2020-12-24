@@ -468,5 +468,33 @@
       "Tamam"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” giriş yapmak için şunu kullanmak istiyor: “%@”",
+    "buttons": [
+      "Sürdür"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Giriş Yapmak İçin “%@” Kullanmak İstiyor",
+    "buttons": [
+      "Sürdür"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” tam konumunuzu bir kez kullanabilsin mi?",
+    "buttons": [
+      "Bir Kez İzin Ver"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” araç takımları konumunuzu kullanabilsin mi?",
+    "buttons": [
+      "İzin Ver"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -485,5 +485,47 @@
       "好"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要取用您的動作與健身記錄",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "您要將「%@」與Siri搭配使用嗎？",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要在未使用App時也能讓附近藍牙裝置取得資料",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "這將允許「%@」尋找並連接藍牙配件。此App可能也會使用藍牙以確認您在附近。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "要允許「%@」使用您的準確位置一次嗎？",
+    "buttons": [
+      "允許一次"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "要允許來自「%@」的小工具使用您的位置嗎？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -1,0 +1,9 @@
+[
+  {
+    "title": "“%1$@” Deseja Ter Acesso às Contas do %2$@",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  }
+]

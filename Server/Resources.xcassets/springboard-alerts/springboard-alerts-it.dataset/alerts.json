@@ -459,5 +459,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Vuoi consentire a “%@” di utilizzare la tua posizione esatta una volta?",
+    "buttons": [
+      "Consenti una volta"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vuoi consentire ai widget di “%@” di utilizzare la tua posizione?",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
   }
 ]

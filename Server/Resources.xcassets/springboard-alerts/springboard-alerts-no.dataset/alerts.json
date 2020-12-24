@@ -552,5 +552,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Vil du tillate at «%@» kan bruke din nøyaktige posisjon én gang?",
+    "buttons": [
+      "Tillat én gang"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vil du tillate at widgeter fra «%@» bruker posisjonen din?",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
   }
 ]

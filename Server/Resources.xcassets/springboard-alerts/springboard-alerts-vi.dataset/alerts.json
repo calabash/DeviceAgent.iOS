@@ -512,5 +512,26 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Cập nhật cài đặt nhà cung cấp",
+    "buttons": [
+      "Để sau"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "Cho phép “%@” sử dụng vị trí chính xác của bạn một lần?",
+    "buttons": [
+      "Cho phép một lần"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Cho phép các tiện ích từ “%@” sử dụng vị trí của bạn?",
+    "buttons": [
+      "Cho phép"
+    ],
+    "shouldAccept": true
   }
 ]

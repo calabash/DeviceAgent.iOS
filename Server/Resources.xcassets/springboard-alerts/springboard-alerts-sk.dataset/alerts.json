@@ -559,5 +559,152 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Apka %@ žiada o prístup k mikrofónu",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka %@ chce pridať položky do aplikácie Fotky",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka %@ žiada o prístup ku kalendáru",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka %@ žiada o prístup k pohybovej a fitnes aktivite",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka %@ žiada o prístup ku kamere",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka %@ žiada o prístup k pripomienkam",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka %@ žiada o prístup k Apple Music, informáciám o prehrávaní hudby a videí a vašej knižnici médií",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka %@ žiada o prístup ku kontaktom",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka %@ žiada o prístup k vašim základným kontaktným údajom",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka %@ žiada o prístup ku všetkým vašim kontaktným údajom",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka %@ žiada o prístup k fotkám",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka %@ žiada o prístup k dátam domácnosti",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka %@ chce prijímať VoIP hovory na pozadí",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka %@ chce sprístupňovať dáta pre okolité Bluetooth zariadenia, aj keď ju práve nepoužívate",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka %@ chce používať Bluetooth v čase, keď ju používate",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka %@ chce používať Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka %@ bude môcť vyhľadávať Bluetooth príslušenstvo a pripájať sa k nemu. Zároveň bude môcť zistiť cez Bluetooth, či ste nablízku.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka %@ žiada o prístup k rozpoznávaniu reči",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Chcete povoliť apke %@ použiť vašu presnú polohu raz?",
+    "buttons": [
+      "Povoliť raz"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Chcete povoliť widgetom apky %@ používať vašu polohu?",
+    "buttons": [
+      "Povoliť"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Chcete povoliť apke %@ jedenkrát použiť vašu presnú polohu?",
+    "buttons": [
+      "Povoliť raz"
+    ],
+    "shouldAccept": true
   }
 ]

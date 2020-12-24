@@ -446,5 +446,26 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Pozwolić aplikacji „%@” na jednorazowe użycie Twojego dokładnego położenia?",
+    "buttons": [
+      "Pozwól raz"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Pozwolić widżetom z „%@” używać Twojej lokalizacji?",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Pozwolić widżetom z „%@” na używanie Twojej lokalizacji?",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
   }
 ]

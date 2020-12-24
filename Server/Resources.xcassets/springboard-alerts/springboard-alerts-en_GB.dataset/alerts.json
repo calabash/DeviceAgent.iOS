@@ -434,5 +434,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Allow “%@” to use your precise location once?",
+    "buttons": [
+      "Allow Once"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Allow widgets from “%@” to use your location?",
+    "buttons": [
+      "Allow"
+    ],
+    "shouldAccept": true
   }
 ]
