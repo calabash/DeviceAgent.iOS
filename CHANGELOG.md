@@ -1,3 +1,12 @@
+### 2.2.5
+
+* Added alerts from iOS 14
+* Updated Private Headers from Xcode 12.2
+
+### 2.2.4
+
+* Added support of Xcode 12.0
+
 ### 2.2.3
 
 * Fixed pubishing of new DeviceAgent.iOS version
