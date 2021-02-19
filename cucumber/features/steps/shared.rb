@@ -7,7 +7,7 @@ module DeviceAgent
       return true if DeviceAgent::Shared.class_variable_get(:@@app_ready)
 
       if device_info["simulator"]
-        timeout = 600
+        timeout = 120
       else
         timeout = 20
       end
