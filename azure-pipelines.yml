@@ -22,15 +22,6 @@ jobs:
 - job:
   strategy:
     matrix:
-      Catalina-Xcode-11.7:
-        IMAGE_POOL: 'macOS-10.15'
-        XCODE_VERSION: '11.7'
-      Catalina-Xcode-12.2:
-        IMAGE_POOL: 'macOS-10.15'
-        XCODE_VERSION: '12.2'
-      Catalina-Xcode-12.3:
-        IMAGE_POOL: 'macOS-10.15'
-        XCODE_VERSION: '12.3'
       Catalina-Xcode-12.4:
         IMAGE_POOL: 'macOS-10.15'
         XCODE_VERSION: '12.4'
