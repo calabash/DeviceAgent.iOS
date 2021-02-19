@@ -9,6 +9,7 @@ And I am looking at the Alerts and Sheets page
 @reset_device
 @auto_dismiss
 Scenario: Auto-dismiss contacts
+Given the app has launched
 When DeviceAgent is dismissing alerts automatically
 When I touch the Contacts row
 Then the Contacts Privacy alert appears
@@ -20,6 +21,7 @@ And the next gesture dismisses the alert
 @reset_device
 @manual_dismiss
 Scenario: Dismiss Alerts Manually
+Given the app has launched
 When DeviceAgent is not dismissing alerts automatically
 When I touch the Reminders row
 Then the Reminders Privacy alert appears
