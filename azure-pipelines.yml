@@ -80,7 +80,7 @@ jobs:
 
   - script: bundle exec bin/ci/cucumber.rb
     displayName: "exec cucumber"
-    condition: eq(variables[IsRunCucumberTests], 'true')
+    condition: eq(variables['IsRunCucumberTests'], 'true')
 
   - bash: "./bin/ci/az-publish.sh"
     env:
