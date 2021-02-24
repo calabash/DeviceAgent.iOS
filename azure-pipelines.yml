@@ -1,7 +1,7 @@
 variables:
   # When Agent.JobName matches this value (and the git ref is a tag), then
   # built artifacts will be published to Azure Blob Storage.
-  AzurePublishWhen: "Catalina-Xcode-11.7"
+  AzurePublishWhen: "Catalina-Xcode-12.4"
 
 trigger:
   tags:
@@ -25,12 +25,15 @@ jobs:
       Catalina-Xcode-11.7:
         IMAGE_POOL: 'macOS-10.15'
         XCODE_VERSION: '11.7'
-      Catalina-Xcode-12.0:
-        IMAGE_POOL: 'macOS-10.15'
-        XCODE_VERSION: '12'
       Catalina-Xcode-12.2:
         IMAGE_POOL: 'macOS-10.15'
         XCODE_VERSION: '12.2'
+      Catalina-Xcode-12.3:
+        IMAGE_POOL: 'macOS-10.15'
+        XCODE_VERSION: '12.3'
+      Catalina-Xcode-12.4:
+        IMAGE_POOL: 'macOS-10.15'
+        XCODE_VERSION: '12.4'
   pool:
     vmImage: $(IMAGE_POOL)
   timeoutInMinutes: 120
@@ -77,6 +80,7 @@ jobs:
 
   - script: bundle exec bin/ci/cucumber.rb
     displayName: "exec cucumber"
+    condition: eq(variables['IsRunCucumberTests'], 'true')
 
   - bash: "./bin/ci/az-publish.sh"
     env:

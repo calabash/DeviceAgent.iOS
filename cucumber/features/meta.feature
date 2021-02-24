@@ -22,6 +22,7 @@ Scenario: XCUIElement types
 Given the app has launched
 Then I can compare Xcode element types with DeviceAgent supported element types
 
+@reset_device
 @term
 Scenario: Terminating the AUT on POST /session
 Given the app has launched
@@ -32,6 +33,7 @@ Then I can tell the AUT has quit because I see the Touch tab
 And I can tell the AUT has quit because the pid is different
 And the DeviceAgent test-session has not changed
 
+@reset_device
 @term
 Scenario: Disabling terminating the AUT on POST /session
 Given the app has launched
@@ -42,6 +44,7 @@ Then I can tell the AUT was not quit because I see the Misc tab
 And I can tell the AUT has not quit because the pid is the same
 And the DeviceAgent test-session has not changed
 
+@reset_device
 @term
 Scenario: Terminating the AUT with POST /terminate
 Given the app has launched
@@ -53,6 +56,7 @@ Then I can tell the AUT has quit because I see the Touch tab
 And I can tell the AUT has quit because the pid is different
 And the DeviceAgent test-session has not changed
 
+@reset_device
 @term
 @not_xtc
 Scenario: DELETE /session
