@@ -1,3 +1,6 @@
+### 2.2.6
+* Added fixes for Xcode 12.4 build
+
 ### 2.2.5
 
 * Added alerts from iOS 14
