@@ -1,7 +1,9 @@
 variables:
   # When Agent.JobName matches this value (and the git ref is a tag), then
   # built artifacts will be published to Azure Blob Storage.
-  AzurePublishWhen: "Catalina-Xcode-11.7"
+  AzurePublishWhen: "Catalina-Xcode-12.4"
+  - name: IsRunCucumber
+    value: true
 
 trigger:
   tags:
@@ -80,6 +82,7 @@ jobs:
 
   - script: bundle exec bin/ci/cucumber.rb
     displayName: "exec cucumber"
+    condition: eq(variables[IsRunCucumber], true)
 
   - bash: "./bin/ci/az-publish.sh"
     env:
