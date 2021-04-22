@@ -18,10 +18,23 @@ end
 
 def collect_localization_dictionary(lang_dir_path)
   dict = {}
-  Dir.glob("#{lang_dir_path}/*.strings") do |file_path|
-    pairs = read_strings(file_path)
-    dict.merge!(pairs)
+  
+  begin
+    sleep(0.005)
+    Dir.glob("#{lang_dir_path}/*.strings") do |file_path|
+      pairs = read_strings(file_path)
+      dict.merge!(pairs)
+    end
+  rescue StandardError => e
+    puts e.message
+    puts e.backtrace.inspect
+    sleep(0.005)
+    Dir.glob("#{lang_dir_path}/*.strings") do |file_path|
+      pairs = read_strings(file_path)
+      dict.merge!(pairs)
+    end
   end
+
   dict
 end
 

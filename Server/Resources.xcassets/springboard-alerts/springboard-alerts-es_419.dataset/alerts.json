@@ -433,5 +433,19 @@
       "Permitir"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "¿Activar Dictado?",
+    "buttons": [
+      "Ahora no"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Activar Dictado",
+    "buttons": [
+      "Ahora no"
+    ],
+    "shouldAccept": true
   }
 ]
