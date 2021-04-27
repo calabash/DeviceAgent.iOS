@@ -60,11 +60,8 @@ end
 def collect_localization_dictionary(language_dir_path)
   dict = {}
 
-  counter = 3
-
-  while counter >= 1 
+  3.times do |counter|
     sleep(0.005)
-
     begin
       Dir.glob("#{language_dir_path}/*.strings") do |file_path|
         pairs = read_strings(file_path)
@@ -74,9 +71,8 @@ def collect_localization_dictionary(language_dir_path)
     rescue StandardError => e
       puts e.message
       puts e.backtrace.inspect
-      counter -= 1
+      next
     end
-
   end
 
   dict
