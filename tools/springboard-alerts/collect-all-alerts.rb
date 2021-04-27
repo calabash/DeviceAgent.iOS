@@ -19,7 +19,7 @@ end
 def collect_localization_dictionary(lang_dir_path)
   dict = {}
   
-  3.times do |counter|
+  3.times do
     sleep(0.005)
     begin
       Dir.glob("#{lang_dir_path}/*.strings") do |file_path|
