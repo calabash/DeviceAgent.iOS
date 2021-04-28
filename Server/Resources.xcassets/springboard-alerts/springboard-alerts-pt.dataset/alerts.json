@@ -515,5 +515,12 @@
       "Permitir"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” rastreie suas atividades entre apps e sites de outras empresas?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
   }
 ]

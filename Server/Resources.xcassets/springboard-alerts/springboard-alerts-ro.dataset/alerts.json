@@ -426,5 +426,12 @@
       "Permiteți"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Permiteți ca “%@” să vă urmărească activitatea în aplicațiile și pe site‑urile web ale altor companii?",
+    "buttons": [
+      "Permiteți"
+    ],
+    "shouldAccept": true
   }
 ]

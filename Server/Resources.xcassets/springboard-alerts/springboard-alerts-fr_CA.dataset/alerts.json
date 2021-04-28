@@ -418,5 +418,12 @@
       "Autoriser"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Autoriser « %@ » à suivre votre activité dans les apps et sur les sites Web d’autres entreprises?",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
   }
 ]

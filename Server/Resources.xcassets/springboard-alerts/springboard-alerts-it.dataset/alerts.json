@@ -473,5 +473,12 @@
       "Consenti"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Vuoi consentire a “%@” di tenere traccia delle attività che svolgi nelle app e sui siti web di altre aziende?",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
   }
 ]

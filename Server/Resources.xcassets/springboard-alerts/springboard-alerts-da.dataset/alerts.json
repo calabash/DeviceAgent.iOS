@@ -473,5 +473,12 @@
       "Tillad"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Må “%@” spore din aktivitet på tværs af andre virksomheders apps og websteder?",
+    "buttons": [
+      "Tillad"
+    ],
+    "shouldAccept": true
   }
 ]

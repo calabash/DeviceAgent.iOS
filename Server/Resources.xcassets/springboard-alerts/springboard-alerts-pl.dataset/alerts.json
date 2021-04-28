@@ -467,5 +467,12 @@
       "Pozwalaj"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Pozwolić aplikacji „%@” na śledzenie Twojej aktywności w aplikacjach i witrynach innych firm?",
+    "buttons": [
+      "Pozwól"
+    ],
+    "shouldAccept": true
   }
 ]

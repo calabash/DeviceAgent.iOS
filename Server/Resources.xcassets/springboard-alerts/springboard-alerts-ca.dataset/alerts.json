@@ -470,5 +470,13 @@
       "Permetre"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Vols permetre que %@ faci un seguiment de l’activitat registrada als llocs web i a les apps de tercers?",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
   }
+  
 ]

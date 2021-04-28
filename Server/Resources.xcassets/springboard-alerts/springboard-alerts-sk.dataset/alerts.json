@@ -706,5 +706,12 @@
       "Povoliť raz"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Povoliť apke %@ sledovanie vašej aktivity v apkách a na webových stránkach iných spoločností?",
+    "buttons": [
+      "Povoliť"
+    ],
+    "shouldAccept": true
   }
 ]

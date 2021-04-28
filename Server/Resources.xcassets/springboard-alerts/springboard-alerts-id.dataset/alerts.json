@@ -444,5 +444,12 @@
       "Izinkan"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Izinkan “%@” untuk melacak aktivitas di app dan situs web perusahaan lainnya?",
+    "buttons": [
+      "Izinkan"
+    ],
+    "shouldAccept": true
   }
 ]

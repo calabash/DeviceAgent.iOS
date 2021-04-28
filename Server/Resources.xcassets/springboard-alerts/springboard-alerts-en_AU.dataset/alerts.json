@@ -448,5 +448,12 @@
       "Allow"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Allow “%@” to track your activity across other companies’ apps and websites?",
+    "buttons": [
+      "Allow"
+    ],
+    "shouldAccept": true
   }
 ]

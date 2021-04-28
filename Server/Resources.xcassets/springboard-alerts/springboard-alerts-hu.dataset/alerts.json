@@ -509,5 +509,12 @@
       "Engedélyezés"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Engedélyezi a(z) „%@” számára, hogy kövesse az Ön tevékenységét más vállalatok alkalmazásaiban és webhelyein?",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
   }
 ]

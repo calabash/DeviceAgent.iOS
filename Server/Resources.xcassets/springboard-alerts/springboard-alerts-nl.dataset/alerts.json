@@ -508,5 +508,12 @@
       "Sta toe"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Toestaan dat %@ je activiteit volgt in apps en op websites van andere bedrijven?",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
   }
 ]

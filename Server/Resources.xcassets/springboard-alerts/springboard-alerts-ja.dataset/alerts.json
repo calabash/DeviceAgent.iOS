@@ -446,5 +446,12 @@
       "許可"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@”が他社のAppやWebサイトを横断してあなたのアクティビティの追跡することを許可しますか?",
+    "buttons": [
+      "許可"
+    ],
+    "shouldAccept": true
   }
 ]

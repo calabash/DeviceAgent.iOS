@@ -447,5 +447,12 @@
       "Ahora no"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir que “%@” rastree tu actividad en sitios web y apps de otras empresas?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
   }
 ]
