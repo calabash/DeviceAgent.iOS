@@ -527,5 +527,12 @@
       "允許"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "要允許「%@」追蹤您在其他公司App和網站的記錄嗎？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
   }
 ]
