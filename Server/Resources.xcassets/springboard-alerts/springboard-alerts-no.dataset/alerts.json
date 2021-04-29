@@ -566,5 +566,12 @@
       "Tillat"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Vil du tillate at %@ sporer aktiviteten din på tvers av andre selskapers apper og nettsteder?",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
   }
 ]

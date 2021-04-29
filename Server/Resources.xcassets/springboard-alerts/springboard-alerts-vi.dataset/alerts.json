@@ -533,5 +533,12 @@
       "Cho phép"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Cho phép “%@” theo dõi hoạt động của bạn trên các ứng dụng và trang web của các công ty khác?",
+    "buttons": [
+      "Cho phép"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -463,5 +463,12 @@
       "Dozvoli"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Dozvoliti aplikaciji “%@” praćenje vaše aktivnosti na aplikacijama i web stranicama drugih tvrtki?",
+    "buttons": [
+      "Dozvoli"
+    ],
+    "shouldAccept": true
   }
 ]

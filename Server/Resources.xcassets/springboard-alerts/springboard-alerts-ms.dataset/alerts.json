@@ -510,5 +510,12 @@
       "Benarkan"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Benarkan “%@” menjejak aktiviti anda merentas app dan tapak web syarikat lain?",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
   }
 ]

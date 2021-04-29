@@ -712,5 +712,12 @@
       "Erlauben"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Darf „%@“ deine Aktivitäten in Apps und auf Websites anderer Unternehmen erfassen?",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
   }
 ]

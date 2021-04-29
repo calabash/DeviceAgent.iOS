@@ -446,5 +446,12 @@
       "Permitir"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” siga a sua atividade nos sites e aplicações de outras empresas?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
   }
 ]

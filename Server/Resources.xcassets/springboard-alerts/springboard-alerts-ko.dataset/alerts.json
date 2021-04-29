@@ -545,5 +545,12 @@
       "허용"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "%@ 앱이 다른 회사의 앱 및 웹 사이트에 걸친 사용자의 활동을 추적하도록 허용하겠습니까?",
+    "buttons": [
+      "허용"
+    ],
+    "shouldAccept": true
   }
 ]

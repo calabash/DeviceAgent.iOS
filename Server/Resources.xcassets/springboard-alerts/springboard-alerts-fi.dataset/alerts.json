@@ -439,5 +439,12 @@
       "Salli"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Saako %@ seurata toimintaasi muiden yritysten apeissa ja sivustoilla?",
+    "buttons": [
+      "Salli"
+    ],
+    "shouldAccept": true
   }
 ]

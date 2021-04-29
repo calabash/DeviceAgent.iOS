@@ -496,5 +496,12 @@
       "İzin Ver"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@”, diğer şirketlerin uygulamalarındaki ve web sitelerindeki eylemlerinizi takip etsin mi?",
+    "buttons": [
+      "İzin Ver"
+    ],
+    "shouldAccept": true
   }
 ]

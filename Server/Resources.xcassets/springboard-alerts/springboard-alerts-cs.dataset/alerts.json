@@ -516,5 +516,12 @@
       "Povolit"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Povolit aplikaci „%@“ sledování vašich aktivit v aplikacích a na webových stránkách jiných společností?",
+    "buttons": [
+      "Povolit"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -121,5 +121,13 @@
         "values": [
             { "title": "“%@” Would Like To Use Your Current Location", "button": "OK", "default_value": true }
         ]
+    },
+    {
+        "name": "AppTrackingTransparency.framework",
+        "values": [
+            { "title": "“%@” would like permission to track you across apps and websites owned by other companies.", "button": "Allow Tracking", "default_value": true },
+	        { "title": "Allow “%@” to track your activity across other companies’ apps and websites?", "button": "Allow", "default_value": true }
+        ]
     }
+    
 ]

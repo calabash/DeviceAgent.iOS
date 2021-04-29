@@ -419,5 +419,12 @@
       "Tillåt"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Tillåter du att ”%@” spårar din aktivitet mellan andra företags appar och webbplatser?",
+    "buttons": [
+      "Tillåt"
+    ],
+    "shouldAccept": true
   }
 ]

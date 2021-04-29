@@ -494,5 +494,12 @@
       "允许"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "允许“%@”跟踪您在其他公司的App和网站上的活动吗？",
+    "buttons": [
+      "允许"
+    ],
+    "shouldAccept": true
   }
 ]
