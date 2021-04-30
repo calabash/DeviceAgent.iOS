@@ -12,8 +12,37 @@
 #import "CBXConstants.h"
 #import "CBXRoute.h"
 #import "XCTest+CBXAdditions.h"
+#import "XCTest/XCUIProtectedResource.h"
+
+static NSDictionary *protectedResources = nil;
 
 @implementation MetaRoutes
++ (void)initialize {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        // XCUIProtectedResource.h
+        protectedResources = @{
+            @"Contacts" : [NSNumber numberWithInt:XCUIProtectedResourceContacts],
+            @"Calendar" : [NSNumber numberWithInt:XCUIProtectedResourceCalendar],
+            @"Reminders" : [NSNumber numberWithInt:XCUIProtectedResourceReminders],
+            @"Photos" : [NSNumber numberWithInt:XCUIProtectedResourcePhotos],
+            @"Microphone" : [NSNumber numberWithInt:XCUIProtectedResourceMicrophone],
+            @"Camera" : [NSNumber numberWithInt:XCUIProtectedResourceCamera],
+            @"Library" : [NSNumber numberWithInt:XCUIProtectedResourceMediaLibrary],
+            @"HomeKit" : [NSNumber numberWithInt:XCUIProtectedResourceHomeKit],
+            @"Bluetooth" : [NSNumber numberWithInt:XCUIProtectedResourceBluetooth],
+            @"KeyboardNetwork" : [NSNumber numberWithInt:XCUIProtectedResourceKeyboardNetwork],
+            @"Location" : [NSNumber numberWithInt:XCUIProtectedResourceLocation]
+        };
+
+        if (@available(iOS 14.0, *)) {
+            NSMutableDictionary *protectedResourcesiOS14 = [protectedResources mutableCopy];
+            protectedResourcesiOS14[@"Health"] = [NSNumber numberWithInt:XCUIProtectedResourceHealth];
+            protectedResources = protectedResourcesiOS14;
+        }
+    });
+}
+
 + (NSArray <CBXRoute *> *)getRoutes {
     return @[
              [CBXRoute get:endpoint(@"/sessionIdentifier", 1.0) withBlock:^(RouteRequest *request, NSDictionary *data, RouteResponse *response) {
@@ -108,6 +137,37 @@
 
                  [response respondWithJSON:json];
              }],
+
+             [CBXRoute post:endpoint(@"/reset-authorization-status-for-resource", 1.0)
+                  withBlock:^(RouteRequest *request,
+                              NSDictionary *data,
+                              RouteResponse *response) {
+                 NSString *protectedResourceKey = @"protected_resource";
+                 NSString *protectedResourceName = data[protectedResourceKey];
+
+                 if (protectedResourceName == nil) {
+                     @throw [CBXException withFormat:
+                             @"Missing required key '%@' in request body: %@",
+                             protectedResourceKey, data];
+                 }
+
+                 NSNumber *protectedResource = protectedResources[protectedResourceName];
+
+                 if (protectedResource == nil) {
+                     @throw [CBXException withFormat:
+                             @"Unknown protected resource type for key '%@'. Known resources are: %@",
+                             protectedResourceName, protectedResources.allKeys];
+                 }
+
+                 NSString *bundleIdentifier = data[CBX_BUNDLE_ID_KEY];
+                 XCUIApplication *application = [[XCUIApplication alloc]
+                                                 initWithBundleIdentifier:bundleIdentifier];
+
+                 [application resetAuthorizationStatusForResource:[protectedResource intValue]];
+
+                 [response respondWithJSON:@{@"result" : @"OK"}];
+                }
+              ],
 
              [CBXRoute post:endpoint(@"/set-dismiss-springboard-alerts-automatically", 1.0)
                   withBlock:^(RouteRequest *request,
