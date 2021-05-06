@@ -186,8 +186,6 @@
 		84D3D595264465B4009EF056 /* XCTMessagingChannel_IDEToRunner-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D548264465B1009EF056 /* XCTMessagingChannel_IDEToRunner-Protocol.h */; };
 		84D3D596264465B4009EF056 /* XCUILocalDeviceScreenshotIPCInterface-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D549264465B1009EF056 /* XCUILocalDeviceScreenshotIPCInterface-Protocol.h */; };
 		84D3D597264465B4009EF056 /* XCUILocalDeviceScreenshotIPCInterface-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D549264465B1009EF056 /* XCUILocalDeviceScreenshotIPCInterface-Protocol.h */; };
-		84D3D598264465B4009EF056 /* NSMutableCopying-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D54A264465B1009EF056 /* NSMutableCopying-Protocol.h */; };
-		84D3D599264465B4009EF056 /* NSMutableCopying-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D54A264465B1009EF056 /* NSMutableCopying-Protocol.h */; };
 		84D3D59A264465B4009EF056 /* _XCTTestIdentifier_Class.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D54B264465B1009EF056 /* _XCTTestIdentifier_Class.h */; };
 		84D3D59B264465B4009EF056 /* _XCTTestIdentifier_Class.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D54B264465B1009EF056 /* _XCTTestIdentifier_Class.h */; };
 		84D3D59C264465B4009EF056 /* XCTMessagingRole_DebugLogging-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D54C264465B1009EF056 /* XCTMessagingRole_DebugLogging-Protocol.h */; };
@@ -1122,7 +1120,6 @@
 		84D3D547264465B1009EF056 /* XCTMessagingRole_PerformanceMeasurementReporting_Legacy-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingRole_PerformanceMeasurementReporting_Legacy-Protocol.h"; sourceTree = "<group>"; };
 		84D3D548264465B1009EF056 /* XCTMessagingChannel_IDEToRunner-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingChannel_IDEToRunner-Protocol.h"; sourceTree = "<group>"; };
 		84D3D549264465B1009EF056 /* XCUILocalDeviceScreenshotIPCInterface-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUILocalDeviceScreenshotIPCInterface-Protocol.h"; sourceTree = "<group>"; };
-		84D3D54A264465B1009EF056 /* NSMutableCopying-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableCopying-Protocol.h"; sourceTree = "<group>"; };
 		84D3D54B264465B1009EF056 /* _XCTTestIdentifier_Class.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _XCTTestIdentifier_Class.h; sourceTree = "<group>"; };
 		84D3D54C264465B1009EF056 /* XCTMessagingRole_DebugLogging-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingRole_DebugLogging-Protocol.h"; sourceTree = "<group>"; };
 		84D3D54D264465B1009EF056 /* XCTMessagingRole_ProcessMonitoring-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingRole_ProcessMonitoring-Protocol.h"; sourceTree = "<group>"; };
@@ -2067,7 +2064,6 @@
 				84D3D555264465B2009EF056 /* _XCTTestIdentifierSet_Set.h */,
 				84D3D559264465B2009EF056 /* DTXConnection-XCTestAdditions.h */,
 				84D3D551264465B1009EF056 /* NSFastEnumeration-Protocol.h */,
-				84D3D54A264465B1009EF056 /* NSMutableCopying-Protocol.h */,
 				84D3D542264465B0009EF056 /* NSThread-XCTestAdditions.h */,
 				84D3D541264465B0009EF056 /* XCElementSnapshot-TreeManagement.h */,
 				84D3D578264465B3009EF056 /* XCTDaemonTelemetryLogger.h */,
@@ -3083,7 +3079,6 @@
 				84D3D5FB264465B4009EF056 /* _XCTMessaging_VoidProtocol-Protocol.h in Headers */,
 				84D3D5BD264465B4009EF056 /* XCTMessagingRole_PerformanceMeasurementReporting-Protocol.h in Headers */,
 				84D3D5FF264465B4009EF056 /* XCTMessagingRole_DiagnosticsCollection-Protocol.h in Headers */,
-				84D3D599264465B4009EF056 /* NSMutableCopying-Protocol.h in Headers */,
 				84D3D5C9264465B4009EF056 /* XCTMessagingRole_SelfDiagnosisIssueReporting-Protocol.h in Headers */,
 				84D3D597264465B4009EF056 /* XCUILocalDeviceScreenshotIPCInterface-Protocol.h in Headers */,
 				84D3D5AD264465B4009EF056 /* XCTMessagingRole_AccessibilityNotificationReporting-Protocol.h in Headers */,
@@ -3527,7 +3522,6 @@
 				F5870B421CF0BEFF00B3376C /* TouchPath.h in Headers */,
 				F54C02652043F0EF00FD8DDE /* _XCTestImplementation.h in Headers */,
 				F54C02762043F0EF00FD8DDE /* NSKeyedUnarchiver-XCTestAdditions.h in Headers */,
-				84D3D598264465B4009EF056 /* NSMutableCopying-Protocol.h in Headers */,
 				84D3D5CA264465B4009EF056 /* _XCTTestIdentifier_Array.h in Headers */,
 				F55F82501C6DD07500A945C8 /* Route.h in Headers */,
 				F54C02462043F0EF00FD8DDE /* XCTASDebugLogDelegate-Protocol.h in Headers */,
