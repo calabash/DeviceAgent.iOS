@@ -14,8 +14,8 @@ else
   XC_PIPE='cat'
 fi
 
-XC_TARGET="TestApp"
-XC_PROJECT="DeviceAgent.xcodeproj"
+XC_SCHEME="TestApp"
+XC_WORKSPACE="DeviceAgent.xcworkspace"
 XC_CONFIG=Debug
 
 XC_BUILD_DIR="build/ipa/TestApp"
@@ -51,11 +51,11 @@ if [ "${PREPARE_TC_ONLY}" != "1" ]; then
 
   COMMAND_LINE_BUILD=1 xcrun xcodebuild \
     -SYMROOT="${XC_BUILD_DIR}" \
-    BUILT_PRODUCTS_DIR="${BUILD_PRODUCTS_DIR}" \
+    -derivedDataPath "${BUILD_PRODUCTS_DIR}" \
     TARGET_BUILD_DIR="${BUILD_PRODUCTS_DIR}" \
     DWARF_DSYM_FOLDER_PATH="${BUILD_PRODUCTS_DIR}" \
-    -project "${XC_PROJECT}" \
-    -target "${XC_TARGET}" \
+    -workspace "${XC_WORKSPACE}" \
+    -scheme "${XC_SCHEME}" \
     -configuration "${XC_CONFIG}" \
     -sdk iphoneos \
     ARCHS="arm64" \
@@ -97,7 +97,7 @@ if [ "${PREPARE_TC_ONLY}" != "1" ]; then
 
   echo ""
 
-  CAL_VERSION=`xcrun strings "${INSTALLED_APP}/${XC_TARGET}" | grep -E 'CALABASH VERSION' | head -n 1`
+  CAL_VERSION=`xcrun strings "${INSTALLED_APP}/${XC_SCHEME}" | grep -E 'CALABASH VERSION' | head -n 1`
   info "${CAL_VERSION}"
 
   echo ""
