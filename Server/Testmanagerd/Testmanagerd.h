@@ -21,7 +21,7 @@
 //XCTMessagingRole_MemoryTesting
 //XCTMessagingRole_ForcePressureSupportQuerying
 //XCTMessagingRole_CapabilityExchange
-//
+//beside this method: _XCT_requestAutomationSessionBlacklist - it was removed
 //Right now only two of them are used: XCTMessagingRole_EventSynthesis, XCTMessagingRole_CapabilityExchange
 //That's how it looked before:
 //@interface Testmanagerd : NSObject
