@@ -356,18 +356,18 @@ typedef enum : NSUInteger {
 - (CGPoint)hitPointForAlertButton:(XCUIElement *)alertButton {
     [alertButton cbx_resolve];
 
-    XCElementSnapshot *snapshot = alertButton.lastSnapshot;
-
-    NSValue *hitPointValue = snapshot.suggestedHitpoints.firstObject;
-
+//    XCElementSnapshot *snapshot = alertButton.lastSnapshot;
+//
+//    NSValue *hitPointValue = snapshot.suggestedHitpoints.firstObject;
+//
     CGPoint hitPoint;
-    if (!hitPointValue) {
+//    if (!hitPointValue) {
         XCUICoordinate *coordinate;
         coordinate = [alertButton coordinateWithNormalizedOffset:CGVectorMake(0.5, 0.5)];
         hitPoint = coordinate.screenPoint;
-    } else {
-        hitPoint = hitPointValue.CGPointValue;
-    }
+//    } else {
+//        hitPoint = hitPointValue.CGPointValue;
+//    }
 
     return [self pointByTranslatingPoint:hitPoint];
 }

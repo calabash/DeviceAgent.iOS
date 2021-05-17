@@ -14,6 +14,7 @@
 
 #import <objc/NSObject.h>
 
+#import "XCTMessagingChannel_RunnerToDaemon-Protocol.h"
 #import "XCTMessagingChannel_DaemonToRunner-Protocol.h"
 #import "XCUIApplicationAutomationSessionProviding-Protocol.h"
 #import "XCUIDeviceEventAndStateInterface-Protocol.h"
