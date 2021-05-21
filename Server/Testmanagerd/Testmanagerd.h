@@ -1,7 +1,3 @@
-//
-//#import <Foundation/Foundation.h>
-//#import "XCTest/XCTestManager_DaemonConnectionInterface-Protocol.h"
-//
 ///**
 // Wrapper object for the `testmanagerd` proxy.
 //
