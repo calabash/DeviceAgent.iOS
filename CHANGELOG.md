@@ -1,4 +1,10 @@
+### 2.2.7
+
+* Added fixes for Xcode 12.5 build
+* Updated Private Headers from Xcode 12.5
+
 ### 2.2.6
+
 * Added fixes for Xcode 12.4 build
 
 ### 2.2.5

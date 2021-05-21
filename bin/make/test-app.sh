@@ -14,8 +14,8 @@ else
   XC_PIPE='cat'
 fi
 
-XC_TARGET="TestApp"
-XC_PROJECT="DeviceAgent.xcodeproj"
+XC_SCHEME="TestApp"
+XC_WORKSPACE="DeviceAgent.xcworkspace"
 XC_CONFIG=Debug
 
 XC_BUILD_DIR="build/app/TestApp"
@@ -49,11 +49,11 @@ banner "Building ${APP}"
 
 COMMAND_LINE_BUILD=1 xcrun xcodebuild  \
   -SYMROOT="${XC_BUILD_DIR}" \
-  BUILT_PRODUCTS_DIR="${BUILD_PRODUCTS_DIR}" \
+  -derivedDataPath "${BUILD_PRODUCTS_DIR}" \
   TARGET_BUILD_DIR="${BUILD_PRODUCTS_DIR}" \
   DWARF_DSYM_FOLDER_PATH="${BUILD_PRODUCTS_DIR}" \
-  -project "${XC_PROJECT}" \
-  -target "${XC_TARGET}" \
+  -workspace "${XC_WORKSPACE}" \
+  -scheme "${XC_SCHEME}" \
   -configuration "${XC_CONFIG}" \
   -sdk iphonesimulator \
   ARCHS="x86_64" \
@@ -80,7 +80,7 @@ install_with_ditto "${BUILD_PRODUCTS_DSYM}" "${INSTALLED_DSYM}"
 install_with_ditto "${BUILD_PRODUCTS_DSYM}" \
   "${INSTALL_DIR}/DeviceAgent-sim.app.dSYM"
 
-CAL_VERSION=`xcrun strings "${INSTALLED_APP}/${XC_TARGET}" | grep -E 'CALABASH VERSION'`
+CAL_VERSION=`xcrun strings "${INSTALLED_APP}/${XC_SCHEME}" | grep -E 'CALABASH VERSION'`
 info "${CAL_VERSION}"
 
 echo ""

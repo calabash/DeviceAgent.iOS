@@ -48,7 +48,7 @@ static Application *currentApplication;
 
     do {
         [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
-            [[Testmanagerd get]
+            [[Testmanagerd_CapabilityExchange get]
              _XCT_launchApplicationWithBundleID:self.app.bundleID
              arguments:self.app.launchArguments
              environment:self.app.launchEnvironment

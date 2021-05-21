@@ -16,8 +16,8 @@ else
   XC_PIPE='cat'
 fi
 
-XC_TARGET="DeviceAgent"
-XC_PROJECT="DeviceAgent.xcodeproj"
+XC_WORKSPACE="DeviceAgent.xcworkspace"
+XC_SCHEME="DeviceAgent"
 XC_CONFIG=Debug
 
 XC_BUILD_DIR="build/app/DeviceAgent"
@@ -53,11 +53,11 @@ banner "Building ${APP}"
 
 COMMAND_LINE_BUILD=1 xcrun xcodebuild  \
   -SYMROOT="${XC_BUILD_DIR}" \
-  BUILT_PRODUCTS_DIR="${BUILD_PRODUCTS_DIR}" \
   TARGET_BUILD_DIR="${BUILD_PRODUCTS_DIR}" \
   DWARF_DSYM_FOLDER_PATH="${BUILD_PRODUCTS_DIR}" \
-  -project "${XC_PROJECT}" \
-  -target "${XC_TARGET}" \
+  -derivedDataPath "${BUILD_PRODUCTS_DIR}" \
+  -workspace "${XC_WORKSPACE}" \
+  -scheme "${XC_SCHEME}" \
   -configuration "${XC_CONFIG}" \
   -sdk iphonesimulator \
   ARCHS="x86_64" \
@@ -78,7 +78,7 @@ fi
 if [ "$(xcode_gte_9)" = "true" ]; then
   banner "Patching for Xcode >= 9"
 
-  XCTEST_BUNDLE="${XC_TARGET}.xctest"
+  XCTEST_BUNDLE="${XC_SCHEME}.xctest"
   BUILD_PRODUCTS_XCTEST="${BUILD_PRODUCTS_DIR}/${XCTEST_BUNDLE}"
   RUNNER_PLUGINS="${BUILD_PRODUCTS_RUNNER}/PlugIns"
   mkdir -p "${RUNNER_PLUGINS}"

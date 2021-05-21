@@ -80,7 +80,7 @@
     [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
 
         CBXTouchEvent *event = [self cbxEventWithCoordinates:coords];
-        [[Testmanagerd get] _XCT_synthesizeEvent:event.event
+        [[Testmanagerd_EventSynthesis get] _XCT_synthesizeEvent:event.event
                                       completion:^(NSError *e) {
                                           err = e;
                                           *setToTrueWhenDone = YES;

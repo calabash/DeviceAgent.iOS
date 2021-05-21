@@ -30,7 +30,7 @@
 
     __block NSError *outerError = nil;
     [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
-        [[Testmanagerd get]
+        [[Testmanagerd_EventSynthesis get]
          _XCT_sendString:string
          maximumFrequency:CBX_DEFAULT_SEND_STRING_FREQUENCY
          completion:^(NSError *innerError) {

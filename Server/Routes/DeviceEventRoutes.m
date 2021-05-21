@@ -53,7 +53,7 @@
           DDLogDebug(@"Will touch home button for %@ seconds", @(duration));
 
           __block NSError *outerError = nil;
-          [[Testmanagerd get] _XCT_performDeviceEvent:event
+          [[Testmanagerd_EventSynthesis get] _XCT_performDeviceEvent:event
                                            completion:^(NSError *innerError) {
                                                outerError = innerError;
 
@@ -86,7 +86,7 @@
           id event = [NSClassFromString(@"XCDeviceEvent") deviceEventWithPage:page
                                                                         usage:direction
                                                                      duration:0.2];
-          [[Testmanagerd get] _XCT_performDeviceEvent:event completion:^(NSError *e) {
+          [[Testmanagerd_EventSynthesis get] _XCT_performDeviceEvent:event completion:^(NSError *e) {
               if (e) {
                   DDLogDebug(@"%@", e);
               }
