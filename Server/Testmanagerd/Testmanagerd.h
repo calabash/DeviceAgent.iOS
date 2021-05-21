@@ -36,13 +36,6 @@
 #import "XCTMessagingRole_EventSynthesis-Protocol.h"
 
 @interface Testmanagerd_EventSynthesis : NSObject
-//
-///**
-// Return a singleton instance of the Testmanagerd proxy object, on which
-// raw testmanagerd methods may be invoked. Note that these are not all entirely
-// documented, as it is a private API and we have yet to fully understand all
-// of the methods.
-// */
 + (id<XCTMessagingRole_EventSynthesis>)get;
 
 @end
@@ -50,13 +43,6 @@
 #import "XCTMessagingRole_CapabilityExchange-Protocol.h"
 
 @interface Testmanagerd_CapabilityExchange : NSObject
-//
-///**
-// Return a singleton instance of the Testmanagerd proxy object, on which
-// raw testmanagerd methods may be invoked. Note that these are not all entirely
-// documented, as it is a private API and we have yet to fully understand all
-// of the methods.
-// */
 + (id<XCTMessagingRole_CapabilityExchange>)get;
 
 @end
