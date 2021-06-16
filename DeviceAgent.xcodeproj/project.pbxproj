@@ -136,6 +136,7 @@
 		8415B6C22575113A001694B1 /* XCUIScreenDataSource-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 8415B6C12575113A001694B1 /* XCUIScreenDataSource-Protocol.h */; };
 		8415B6DC25751141001694B1 /* XCUISnapshotGenerationTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 8415B6DB25751141001694B1 /* XCUISnapshotGenerationTracker.h */; };
 		84A10D952679A375004446C7 /* CocoaLumberjack.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A10D942679A375004446C7 /* CocoaLumberjack.xcframework */; };
+		84A10D982679A474004446C7 /* CocoaLumberjack.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84A10D942679A375004446C7 /* CocoaLumberjack.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84D3D50E264464B6009EF056 /* XCTImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D4F6264464B5009EF056 /* XCTImage.h */; };
 		84D3D510264464B6009EF056 /* XCTMacCatalystStatusProviding-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D4F7264464B5009EF056 /* XCTMacCatalystStatusProviding-Protocol.h */; };
 		84D3D512264464B6009EF056 /* XCTMessagingChannel_RunnerToUIProcess-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D4F8264464B5009EF056 /* XCTMessagingChannel_RunnerToUIProcess-Protocol.h */; };
@@ -889,6 +890,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				84A10D982679A474004446C7 /* CocoaLumberjack.xcframework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
