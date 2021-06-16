@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -135,6 +135,7 @@
 		8415B6A825751135001694B1 /* XCUIResetAuthorizationStatusOfProtectedResourcesInterface-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 8415B6A725751135001694B1 /* XCUIResetAuthorizationStatusOfProtectedResourcesInterface-Protocol.h */; };
 		8415B6C22575113A001694B1 /* XCUIScreenDataSource-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 8415B6C12575113A001694B1 /* XCUIScreenDataSource-Protocol.h */; };
 		8415B6DC25751141001694B1 /* XCUISnapshotGenerationTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 8415B6DB25751141001694B1 /* XCUISnapshotGenerationTracker.h */; };
+		84A10D952679A375004446C7 /* CocoaLumberjack.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A10D942679A375004446C7 /* CocoaLumberjack.xcframework */; };
 		84D3D50E264464B6009EF056 /* XCTImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D4F6264464B5009EF056 /* XCTImage.h */; };
 		84D3D510264464B6009EF056 /* XCTMacCatalystStatusProviding-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D4F7264464B5009EF056 /* XCTMacCatalystStatusProviding-Protocol.h */; };
 		84D3D512264464B6009EF056 /* XCTMessagingChannel_RunnerToUIProcess-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D4F8264464B5009EF056 /* XCTMessagingChannel_RunnerToUIProcess-Protocol.h */; };
@@ -766,8 +767,6 @@
 		F5A14DE51E02CF84001A0037 /* CBLSApplicationWorkspace.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A14DE31E02CF84001A0037 /* CBLSApplicationWorkspace.h */; };
 		F5A14DE61E02CF84001A0037 /* CBLSApplicationWorkspace.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A14DE41E02CF84001A0037 /* CBLSApplicationWorkspace.m */; };
 		F5AC714D1CEB816E00DE059A /* TaoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5AC714C1CEB816E00DE059A /* TaoController.m */; };
-		F5B0B5C52101CA30004030B5 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B0B5BE2101C9F7004030B5 /* CocoaLumberjack.framework */; };
-		F5B0B5C72101CA47004030B5 /* CocoaLumberjack.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5B0B5BE2101C9F7004030B5 /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F5B8C9192163444700EB3A67 /* XCUIElement+VisibilityResult.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A81FD4215E429A0067AE63 /* XCUIElement+VisibilityResult.m */; };
 		F5BA9ED81E48B462008CFE64 /* AlertsAndSheetsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BA9ED71E48B462008CFE64 /* AlertsAndSheetsTableController.m */; };
 		F5BA9ED91E48CBE8008CFE64 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F594B3851D7449450035A5CA /* Contacts.framework */; };
@@ -779,14 +778,12 @@
 		F5D42A191D40E3150041105C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D42A181D40E3150041105C /* AVFoundation.framework */; };
 		F5DBC09E2101EEE900A4C274 /* UIDevice+Wifi_IP.h in Headers */ = {isa = PBXBuildFile; fileRef = F5DBC09C2101EEE900A4C274 /* UIDevice+Wifi_IP.h */; };
 		F5DBC09F2101EEE900A4C274 /* UIDevice+Wifi_IP.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBC09D2101EEE900A4C274 /* UIDevice+Wifi_IP.m */; };
-		F5DBC0AF2101F21A00A4C274 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B0B5BE2101C9F7004030B5 /* CocoaLumberjack.framework */; };
 		F5DBC0B02101F21A00A4C274 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B0B5B72101C91B004030B5 /* Expecta.framework */; };
 		F5DBC0B12101F21A00A4C274 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B0B5B92101C91B004030B5 /* OCMock.framework */; };
 		F5DBC0B22101F21A00A4C274 /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B0B5B82101C91B004030B5 /* Specta.framework */; };
 		F5DBC0B32101F22900A4C274 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA1B1CC53EC800D87200 /* CFNetwork.framework */; };
 		F5DBC0B42101F23200A4C274 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA201CC53F6400D87200 /* CoreGraphics.framework */; };
 		F5DBC0B52101F23B00A4C274 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA141CC5368000D87200 /* UIKit.framework */; };
-		F5DBC0B72101F24E00A4C274 /* CocoaLumberjack.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5B0B5BE2101C9F7004030B5 /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F5DBC0B82101F24E00A4C274 /* Expecta.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5B0B5B72101C91B004030B5 /* Expecta.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F5DBC0B92101F24E00A4C274 /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5B0B5B92101C91B004030B5 /* OCMock.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F5DBC0BA2101F24E00A4C274 /* Specta.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5B0B5B82101C91B004030B5 /* Specta.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -892,7 +889,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F5B0B5C72101CA47004030B5 /* CocoaLumberjack.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -902,7 +898,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F5DBC0B72101F24E00A4C274 /* CocoaLumberjack.framework in CopyFiles */,
 				F5DBC0B82101F24E00A4C274 /* Expecta.framework in CopyFiles */,
 				F5DBC0B92101F24E00A4C274 /* OCMock.framework in CopyFiles */,
 				F5DBC0BA2101F24E00A4C274 /* Specta.framework in CopyFiles */,
@@ -1028,6 +1023,7 @@
 		8415B6A725751135001694B1 /* XCUIResetAuthorizationStatusOfProtectedResourcesInterface-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIResetAuthorizationStatusOfProtectedResourcesInterface-Protocol.h"; sourceTree = "<group>"; };
 		8415B6C12575113A001694B1 /* XCUIScreenDataSource-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIScreenDataSource-Protocol.h"; sourceTree = "<group>"; };
 		8415B6DB25751141001694B1 /* XCUISnapshotGenerationTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUISnapshotGenerationTracker.h; sourceTree = "<group>"; };
+		84A10D942679A375004446C7 /* CocoaLumberjack.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CocoaLumberjack.xcframework; path = Carthage/Build/iOS/CocoaLumberjack.xcframework; sourceTree = "<group>"; };
 		84D3D4F6264464B5009EF056 /* XCTImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTImage.h; sourceTree = "<group>"; };
 		84D3D4F7264464B5009EF056 /* XCTMacCatalystStatusProviding-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMacCatalystStatusProviding-Protocol.h"; sourceTree = "<group>"; };
 		84D3D4F8264464B5009EF056 /* XCTMessagingChannel_RunnerToUIProcess-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingChannel_RunnerToUIProcess-Protocol.h"; sourceTree = "<group>"; };
@@ -1567,7 +1563,6 @@
 		F5B0B5B72101C91B004030B5 /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/iOS/Expecta.framework; sourceTree = "<group>"; };
 		F5B0B5B82101C91B004030B5 /* Specta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Specta.framework; path = Carthage/Build/iOS/Specta.framework; sourceTree = "<group>"; };
 		F5B0B5B92101C91B004030B5 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = Carthage/Build/iOS/OCMock.framework; sourceTree = "<group>"; };
-		F5B0B5BE2101C9F7004030B5 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
 		F5BA9ED61E48B462008CFE64 /* AlertsAndSheetsTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertsAndSheetsTableController.h; sourceTree = "<group>"; };
 		F5BA9ED71E48B462008CFE64 /* AlertsAndSheetsTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertsAndSheetsTableController.m; sourceTree = "<group>"; };
 		F5BC7AB81D5CF38F00D9AC8E /* CompanyTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = CompanyTableController.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
@@ -1630,7 +1625,7 @@
 				F542EA1F1CC53EFF00D87200 /* UIKit.framework in Frameworks */,
 				F542EA1E1CC53EE100D87200 /* Security.framework in Frameworks */,
 				F542EA1C1CC53EC800D87200 /* CFNetwork.framework in Frameworks */,
-				F5B0B5C52101CA30004030B5 /* CocoaLumberjack.framework in Frameworks */,
+				84A10D952679A375004446C7 /* CocoaLumberjack.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1680,7 +1675,6 @@
 				F5DBC0B52101F23B00A4C274 /* UIKit.framework in Frameworks */,
 				F5DBC0B42101F23200A4C274 /* CoreGraphics.framework in Frameworks */,
 				F5DBC0B32101F22900A4C274 /* CFNetwork.framework in Frameworks */,
-				F5DBC0AF2101F21A00A4C274 /* CocoaLumberjack.framework in Frameworks */,
 				F5DBC0B02101F21A00A4C274 /* Expecta.framework in Frameworks */,
 				F5DBC0B12101F21A00A4C274 /* OCMock.framework in Frameworks */,
 				F5DBC0B22101F21A00A4C274 /* Specta.framework in Frameworks */,
@@ -1917,7 +1911,7 @@
 		F542EA1A1CC53DD000D87200 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F5B0B5BE2101C9F7004030B5 /* CocoaLumberjack.framework */,
+				84A10D942679A375004446C7 /* CocoaLumberjack.xcframework */,
 				F5B0B5B72101C91B004030B5 /* Expecta.framework */,
 				F5B0B5B92101C91B004030B5 /* OCMock.framework */,
 				F5B0B5B82101C91B004030B5 /* Specta.framework */,
