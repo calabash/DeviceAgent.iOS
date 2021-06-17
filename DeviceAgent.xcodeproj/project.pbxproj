@@ -4476,7 +4476,7 @@
 				);
 				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS/CocoaLumberjack.xcframework/ios-arm64_armv7/**",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/CocoaLumberjack.xcframework/**",
 					"$(PLATFORM_DIR)/Developer/Library/PrivateFrameworks",
 				);
 				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
@@ -4526,7 +4526,7 @@
 				);
 				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS/CocoaLumberjack.xcframework/ios-arm64_armv7/**",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/CocoaLumberjack.xcframework/**",
 					"$(PLATFORM_DIR)/Developer/Library/PrivateFrameworks",
 				);
 				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
