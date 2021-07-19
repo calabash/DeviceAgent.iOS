@@ -509,7 +509,6 @@
 		F519E0FE1D79E336003A84B0 /* FBFailureProofTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = F519E0F81D79E336003A84B0 /* FBFailureProofTestCase.h */; };
 		F519E0FF1D79E336003A84B0 /* FBFailureProofTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F519E0F91D79E336003A84B0 /* FBFailureProofTestCase.m */; };
 		F52802181DED9F280085D4CB /* ArgumentsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = F52802171DED9F280085D4CB /* ArgumentsTableController.m */; };
-		F52A4C692024616D0052F27F /* RevealServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D086A31F38C96B008B894C /* RevealServer.framework */; };
 		F52A4C6B20246C910052F27F /* CBXDylibInjectionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F52A4C6A20246C910052F27F /* CBXDylibInjectionTest.m */; };
 		F52BA3431CED23E400475D5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA201CC53F6400D87200 /* CoreGraphics.framework */; };
 		F52BA3451CED23EC00475D5A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F52BA3441CED23EC00475D5A /* libz.tbd */; };
@@ -1575,7 +1574,6 @@
 		F5BCAB101D5BC15500ED6EE3 /* DragDropController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = DragDropController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F5CE18E01E8BBA61001116A5 /* CBLSApplicationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBLSApplicationProxy.h; sourceTree = "<group>"; };
 		F5CE18E11E8BBA61001116A5 /* CBLSApplicationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBLSApplicationProxy.m; sourceTree = "<group>"; };
-		F5D086A31F38C96B008B894C /* RevealServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevealServer.framework; sourceTree = "<group>"; };
 		F5D42A181D40E3150041105C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F5DBC09C2101EEE900A4C274 /* UIDevice+Wifi_IP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Wifi_IP.h"; sourceTree = "<group>"; };
 		F5DBC09D2101EEE900A4C274 /* UIDevice+Wifi_IP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Wifi_IP.m"; sourceTree = "<group>"; };
@@ -1665,7 +1663,6 @@
 				F52BA3451CED23EC00475D5A /* libz.tbd in Frameworks */,
 				F52BA3431CED23E400475D5A /* CoreGraphics.framework in Frameworks */,
 				F542EA191CC536AF00D87200 /* QuartzCore.framework in Frameworks */,
-				F52A4C692024616D0052F27F /* RevealServer.framework in Frameworks */,
 				F542EA151CC5368000D87200 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2273,7 +2270,6 @@
 		F55F7FEA1C6DD07500A945C8 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				F5D086A31F38C96B008B894C /* RevealServer.framework */,
 				F54063ED1EBB344200C80B4E /* FLWebView */,
 				F55F7FEB1C6DD07500A945C8 /* CocoaAsyncSocket */,
 				F55F7FEF1C6DD07500A945C8 /* CocoaHTTPServer */,
@@ -3835,7 +3831,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "bin/xcode-build-phase/stage-testapp-to-Products.sh";
+			shellScript = "bin/xcode-build-phase/stage-testapp-to-Products.sh\n";
 			showEnvVarsInLog = 0;
 		};
 		F5D086A51F38C99A008B894C /* ShellScript */ = {
@@ -3849,7 +3845,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "bin/xcode-build-phase/integrate-RevealServer.sh \"${SRCROOT}\" \"${CONFIGURATION}\"";
+			shellScript = "bin/xcode-build-phase/integrate-RevealServer.sh \"${SRCROOT}\" \"${CONFIGURATION}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -4763,7 +4759,6 @@
 		F5954E1D1CBD2E1200117745 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"ARCHS[sdk=iphonesimulator*]" = x86_64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = TestAppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -4788,10 +4783,6 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lz",
-					"-weak_framework",
-					RevealServer,
-					"-force_load",
-					"\"$(PROJECT_DIR)/Vendor/calabash.framework/calabash\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4803,7 +4794,6 @@
 		F5954E1E1CBD2E1200117745 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"ARCHS[sdk=iphonesimulator*]" = x86_64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = TestAppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -4826,10 +4816,6 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lz",
-					"-weak_framework",
-					RevealServer,
-					"-force_load",
-					"\"$(PROJECT_DIR)/Vendor/calabash.framework/calabash\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

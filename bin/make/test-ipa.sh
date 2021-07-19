@@ -58,8 +58,6 @@ if [ "${PREPARE_TC_ONLY}" != "1" ]; then
     -scheme "${XC_SCHEME}" \
     -configuration "${XC_CONFIG}" \
     -sdk iphoneos \
-    ARCHS="arm64" \
-    VALID_ARCHS="arm64" \
     ONLY_ACTIVE_ARCH=NO \
     build | $XC_PIPE
 
