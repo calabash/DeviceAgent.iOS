@@ -20,7 +20,7 @@ XC_WORKSPACE="DeviceAgent.xcworkspace"
 XC_SCHEME="DeviceAgent"
 XC_CONFIG=Debug
 
-XC_BUILD_DIR="build/app/DeviceAgent"
+XC_BUILD_DIR="${pwd}/build/app/DeviceAgent"
 mkdir -p "${XC_BUILD_DIR}"
 
 INSTALL_DIR=Products/app/DeviceAgent
