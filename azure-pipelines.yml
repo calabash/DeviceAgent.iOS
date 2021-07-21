@@ -52,7 +52,20 @@ jobs:
     displayName: "Select Xcode $(XCODE_VERSION)"
 
   - script: |
+      eval "$(/opt/homebrew/bin/rbenv init -)" && ruby -v
+      rbenv global 2.7.2
+      ruby -v
+      gem uninstall bundler
+      gem install bundler:2.2.7
+      bundle _2.2.7_ install
+    displayName: "Bundler 2.2.7 Install"
+
+  - script: |
       set -e
+      whoami
+      echo $0
+      echo $SHELL
+      echo $PATH
       ruby -v
       echo -e "install: --no-document --env-shebang\nupdate:  --no-document --env-shebang" > ~/.gemrc
       bundle install
@@ -60,6 +73,8 @@ jobs:
 
   - script: |
       set -e
+      rm -rf calabash-codesign
+      [ -d "calabash-codesign" ] && rm -rf calabash-codesign
       git clone https://$(CalabashKeychainGitHubAccessToken)@github.com/xamarinhq/calabash-codesign.git
       calabash-codesign/apple/create-keychain.sh
     displayName: "Download and install keychain"
