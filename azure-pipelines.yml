@@ -35,7 +35,8 @@ jobs:
         IMAGE_POOL: 'TestCloudPool2'
         XCODE_VERSION: '12.5'
   pool:
-    vmImage: $(IMAGE_POOL)
+    #vmImage: $(IMAGE_POOL)
+    name: TestCloudPool2
   timeoutInMinutes: 120
   variables:
   - group: XTCRunTimeArtifactsCI
