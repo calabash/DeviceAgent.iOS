@@ -36,12 +36,16 @@ jobs:
         XCODE_VERSION: '12.5'
   pool:
     #vmImage: $(IMAGE_POOL)
-    name: TestCloudPool2
+    name: TestCloudPool
   timeoutInMinutes: 120
   variables:
   - group: XTCRunTimeArtifactsCI
 
   steps:
+
+  - script: |
+      echo "Hello world"
+      exit 1
 
   - script: |
       set -e
