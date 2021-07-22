@@ -18,7 +18,7 @@ XC_SCHEME="TestApp"
 XC_WORKSPACE="DeviceAgent.xcworkspace"
 XC_CONFIG=Debug
 
-XC_BUILD_DIR="build/app/TestApp"
+XC_BUILD_DIR="${pwd}/build/app/TestApp"
 mkdir -p "${XC_BUILD_DIR}"
 
 INSTALL_DIR="Products/app/TestApp"
