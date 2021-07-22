@@ -40,13 +40,13 @@ jobs:
     #vmImage: $(IMAGE_POOL)
     name: 'Test Cloud Pool'
   timeoutInMinutes: 120
-  # variables:
-  # - group: XTCRunTimeArtifactsCI
+  variables:
+  - group: XTCRunTimeArtifactsCI
 
   steps:
 
   - script: |
-      echo "Hello world"
+      echo "Hello world with variables"
       exit 1
 
   # - script: |
