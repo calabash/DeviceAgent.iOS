@@ -1,7 +1,7 @@
-# variables:
-#   # When Agent.JobName matches this value (and the git ref is a tag), then
-#   # built artifacts will be published to Azure Blob Storage.
-#   AzurePublishWhen: "Catalina-Xcode-12.4"
+variables:
+  # When Agent.JobName matches this value (and the git ref is a tag), then
+  # built artifacts will be published to Azure Blob Storage.
+  AzurePublishWhen: "Catalina-Xcode-12.4"
 
 trigger:
   tags:
@@ -39,9 +39,9 @@ jobs:
     - IS_IN_AAR
     #vmImage: $(IMAGE_POOL)
     name: 'Test Cloud Pool'
-  # timeoutInMinutes: 120
-  # variables:
-  # - group: XTCRunTimeArtifactsCI
+  timeoutInMinutes: 120
+  variables:
+  - group: XTCRunTimeArtifactsCI
 
   steps:
 
