@@ -20,23 +20,25 @@ pr:
 jobs:
 
 - job:
-  strategy:
-    matrix:
-      # Catalina-Xcode-12.2:
-      #   IMAGE_POOL: 'macOS-10.15'
-      #   XCODE_VERSION: '12.2'
-      # Catalina-Xcode-12.3:
-      #   IMAGE_POOL: 'macOS-10.15'
-      #   XCODE_VERSION: '12.3'
-      # Catalina-Xcode-12.4:
-      #   IMAGE_POOL: 'macOS-10.15'
-      #   XCODE_VERSION: '12.4'
-      BigSur-Xcode-12.5:
-        IMAGE_POOL: 'TestCloudPool2'
-        XCODE_VERSION: '12.5'
+  # strategy:
+  #   matrix:
+  #     # Catalina-Xcode-12.2:
+  #     #   IMAGE_POOL: 'macOS-10.15'
+  #     #   XCODE_VERSION: '12.2'
+  #     # Catalina-Xcode-12.3:
+  #     #   IMAGE_POOL: 'macOS-10.15'
+  #     #   XCODE_VERSION: '12.3'
+  #     # Catalina-Xcode-12.4:
+  #     #   IMAGE_POOL: 'macOS-10.15'
+  #     #   XCODE_VERSION: '12.4'
+  #     BigSur-Xcode-12.5:
+  #       IMAGE_POOL: 'TestCloudPool2'
+  #       XCODE_VERSION: '12.5'
   pool:
+    demands:
+    - IS_IN_AZURE
     #vmImage: $(IMAGE_POOL)
-    name: Test Cloud Pool
+    name: 'Test Cloud Pool'
   timeoutInMinutes: 120
   variables:
   - group: XTCRunTimeArtifactsCI
