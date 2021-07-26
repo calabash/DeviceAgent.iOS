@@ -1,3 +1,8 @@
+### 2.3.0
+
+* Added depndencies as xcframework format.
+* Added supporting of Apple Silicon arm64 platform for simulator.
+
 ### 2.2.7
 
 * Added fixes for Xcode 12.5 build

@@ -60,8 +60,8 @@ COMMAND_LINE_BUILD=1 xcrun xcodebuild  \
   -scheme "${XC_SCHEME}" \
   -configuration "${XC_CONFIG}" \
   -sdk iphonesimulator \
-  ARCHS="x86_64" \
-  VALID_ARCHS="x86_64" \
+  ARCHS="x86_64 arm64" \
+  VALID_ARCHS="x86_64 arm64" \
   ONLY_ACTIVE_ARCH=NO \
   GCC_TREAT_WARNINGS_AS_ERRORS=YES \
   build | $XC_PIPE

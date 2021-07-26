@@ -18,7 +18,7 @@ XC_SCHEME="TestApp"
 XC_WORKSPACE="DeviceAgent.xcworkspace"
 XC_CONFIG=Debug
 
-XC_BUILD_DIR="build/app/TestApp"
+XC_BUILD_DIR="$/build/app/TestApp"
 mkdir -p "${XC_BUILD_DIR}"
 
 INSTALL_DIR="Products/app/TestApp"
@@ -56,8 +56,8 @@ COMMAND_LINE_BUILD=1 xcrun xcodebuild  \
   -scheme "${XC_SCHEME}" \
   -configuration "${XC_CONFIG}" \
   -sdk iphonesimulator \
-  ARCHS="x86_64" \
-  VALID_ARCHS="x86_64" \
+  ARCHS="x86_64 arm64" \
+  VALID_ARCHS="x86_64 arm64" \
   ONLY_ACTIVE_ARCH=NO \
   build | $XC_PIPE
 

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -135,6 +135,14 @@
 		8415B6A825751135001694B1 /* XCUIResetAuthorizationStatusOfProtectedResourcesInterface-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 8415B6A725751135001694B1 /* XCUIResetAuthorizationStatusOfProtectedResourcesInterface-Protocol.h */; };
 		8415B6C22575113A001694B1 /* XCUIScreenDataSource-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 8415B6C12575113A001694B1 /* XCUIScreenDataSource-Protocol.h */; };
 		8415B6DC25751141001694B1 /* XCUISnapshotGenerationTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 8415B6DB25751141001694B1 /* XCUISnapshotGenerationTracker.h */; };
+		84A10D952679A375004446C7 /* CocoaLumberjack.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A10D942679A375004446C7 /* CocoaLumberjack.xcframework */; };
+		84A10D982679A474004446C7 /* CocoaLumberjack.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84A10D942679A375004446C7 /* CocoaLumberjack.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84A10D9A2679A4CC004446C7 /* Expecta.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A10D992679A4CC004446C7 /* Expecta.xcframework */; };
+		84A10D9B2679A4D8004446C7 /* Expecta.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84A10D992679A4CC004446C7 /* Expecta.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84A10D9D2679A50D004446C7 /* OCMock.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A10D9C2679A50D004446C7 /* OCMock.xcframework */; };
+		84A10D9E2679A51C004446C7 /* OCMock.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84A10D9C2679A50D004446C7 /* OCMock.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84A10DA02679A575004446C7 /* Specta.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A10D9F2679A575004446C7 /* Specta.xcframework */; };
+		84A10DA12679A582004446C7 /* Specta.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84A10D9F2679A575004446C7 /* Specta.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84D3D50E264464B6009EF056 /* XCTImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D4F6264464B5009EF056 /* XCTImage.h */; };
 		84D3D510264464B6009EF056 /* XCTMacCatalystStatusProviding-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D4F7264464B5009EF056 /* XCTMacCatalystStatusProviding-Protocol.h */; };
 		84D3D512264464B6009EF056 /* XCTMessagingChannel_RunnerToUIProcess-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D4F8264464B5009EF056 /* XCTMessagingChannel_RunnerToUIProcess-Protocol.h */; };
@@ -501,7 +509,6 @@
 		F519E0FE1D79E336003A84B0 /* FBFailureProofTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = F519E0F81D79E336003A84B0 /* FBFailureProofTestCase.h */; };
 		F519E0FF1D79E336003A84B0 /* FBFailureProofTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F519E0F91D79E336003A84B0 /* FBFailureProofTestCase.m */; };
 		F52802181DED9F280085D4CB /* ArgumentsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = F52802171DED9F280085D4CB /* ArgumentsTableController.m */; };
-		F52A4C692024616D0052F27F /* RevealServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D086A31F38C96B008B894C /* RevealServer.framework */; };
 		F52A4C6B20246C910052F27F /* CBXDylibInjectionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F52A4C6A20246C910052F27F /* CBXDylibInjectionTest.m */; };
 		F52BA3431CED23E400475D5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA201CC53F6400D87200 /* CoreGraphics.framework */; };
 		F52BA3451CED23EC00475D5A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F52BA3441CED23EC00475D5A /* libz.tbd */; };
@@ -766,8 +773,6 @@
 		F5A14DE51E02CF84001A0037 /* CBLSApplicationWorkspace.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A14DE31E02CF84001A0037 /* CBLSApplicationWorkspace.h */; };
 		F5A14DE61E02CF84001A0037 /* CBLSApplicationWorkspace.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A14DE41E02CF84001A0037 /* CBLSApplicationWorkspace.m */; };
 		F5AC714D1CEB816E00DE059A /* TaoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5AC714C1CEB816E00DE059A /* TaoController.m */; };
-		F5B0B5C52101CA30004030B5 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B0B5BE2101C9F7004030B5 /* CocoaLumberjack.framework */; };
-		F5B0B5C72101CA47004030B5 /* CocoaLumberjack.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5B0B5BE2101C9F7004030B5 /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F5B8C9192163444700EB3A67 /* XCUIElement+VisibilityResult.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A81FD4215E429A0067AE63 /* XCUIElement+VisibilityResult.m */; };
 		F5BA9ED81E48B462008CFE64 /* AlertsAndSheetsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BA9ED71E48B462008CFE64 /* AlertsAndSheetsTableController.m */; };
 		F5BA9ED91E48CBE8008CFE64 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F594B3851D7449450035A5CA /* Contacts.framework */; };
@@ -779,17 +784,9 @@
 		F5D42A191D40E3150041105C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D42A181D40E3150041105C /* AVFoundation.framework */; };
 		F5DBC09E2101EEE900A4C274 /* UIDevice+Wifi_IP.h in Headers */ = {isa = PBXBuildFile; fileRef = F5DBC09C2101EEE900A4C274 /* UIDevice+Wifi_IP.h */; };
 		F5DBC09F2101EEE900A4C274 /* UIDevice+Wifi_IP.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBC09D2101EEE900A4C274 /* UIDevice+Wifi_IP.m */; };
-		F5DBC0AF2101F21A00A4C274 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B0B5BE2101C9F7004030B5 /* CocoaLumberjack.framework */; };
-		F5DBC0B02101F21A00A4C274 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B0B5B72101C91B004030B5 /* Expecta.framework */; };
-		F5DBC0B12101F21A00A4C274 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B0B5B92101C91B004030B5 /* OCMock.framework */; };
-		F5DBC0B22101F21A00A4C274 /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B0B5B82101C91B004030B5 /* Specta.framework */; };
 		F5DBC0B32101F22900A4C274 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA1B1CC53EC800D87200 /* CFNetwork.framework */; };
 		F5DBC0B42101F23200A4C274 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA201CC53F6400D87200 /* CoreGraphics.framework */; };
 		F5DBC0B52101F23B00A4C274 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F542EA141CC5368000D87200 /* UIKit.framework */; };
-		F5DBC0B72101F24E00A4C274 /* CocoaLumberjack.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5B0B5BE2101C9F7004030B5 /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F5DBC0B82101F24E00A4C274 /* Expecta.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5B0B5B72101C91B004030B5 /* Expecta.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F5DBC0B92101F24E00A4C274 /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5B0B5B92101C91B004030B5 /* OCMock.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F5DBC0BA2101F24E00A4C274 /* Specta.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5B0B5B82101C91B004030B5 /* Specta.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F5DD368E20036D7200308564 /* StandAloneUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DD368D20036D7200308564 /* StandAloneUITests.m */; };
 		F5DED03F1D7634AB00563648 /* SpringBoardAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = F5DED03D1D7634AB00563648 /* SpringBoardAlert.h */; };
 		F5DED0401D7634AB00563648 /* SpringBoardAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DED03E1D7634AB00563648 /* SpringBoardAlert.m */; };
@@ -892,7 +889,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F5B0B5C72101CA47004030B5 /* CocoaLumberjack.framework in CopyFiles */,
+				84A10D982679A474004446C7 /* CocoaLumberjack.xcframework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -902,10 +899,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F5DBC0B72101F24E00A4C274 /* CocoaLumberjack.framework in CopyFiles */,
-				F5DBC0B82101F24E00A4C274 /* Expecta.framework in CopyFiles */,
-				F5DBC0B92101F24E00A4C274 /* OCMock.framework in CopyFiles */,
-				F5DBC0BA2101F24E00A4C274 /* Specta.framework in CopyFiles */,
+				84A10D9B2679A4D8004446C7 /* Expecta.xcframework in CopyFiles */,
+				84A10D9E2679A51C004446C7 /* OCMock.xcframework in CopyFiles */,
+				84A10DA12679A582004446C7 /* Specta.xcframework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1028,6 +1024,10 @@
 		8415B6A725751135001694B1 /* XCUIResetAuthorizationStatusOfProtectedResourcesInterface-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIResetAuthorizationStatusOfProtectedResourcesInterface-Protocol.h"; sourceTree = "<group>"; };
 		8415B6C12575113A001694B1 /* XCUIScreenDataSource-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIScreenDataSource-Protocol.h"; sourceTree = "<group>"; };
 		8415B6DB25751141001694B1 /* XCUISnapshotGenerationTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUISnapshotGenerationTracker.h; sourceTree = "<group>"; };
+		84A10D942679A375004446C7 /* CocoaLumberjack.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CocoaLumberjack.xcframework; path = Carthage/Build/iOS/CocoaLumberjack.xcframework; sourceTree = "<group>"; };
+		84A10D992679A4CC004446C7 /* Expecta.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Expecta.xcframework; path = Carthage/Build/iOS/Expecta.xcframework; sourceTree = "<group>"; };
+		84A10D9C2679A50D004446C7 /* OCMock.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OCMock.xcframework; path = Carthage/Build/iOS/OCMock.xcframework; sourceTree = "<group>"; };
+		84A10D9F2679A575004446C7 /* Specta.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Specta.xcframework; path = Carthage/Build/iOS/Specta.xcframework; sourceTree = "<group>"; };
 		84D3D4F6264464B5009EF056 /* XCTImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTImage.h; sourceTree = "<group>"; };
 		84D3D4F7264464B5009EF056 /* XCTMacCatalystStatusProviding-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMacCatalystStatusProviding-Protocol.h"; sourceTree = "<group>"; };
 		84D3D4F8264464B5009EF056 /* XCTMessagingChannel_RunnerToUIProcess-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingChannel_RunnerToUIProcess-Protocol.h"; sourceTree = "<group>"; };
@@ -1564,10 +1564,6 @@
 		F5AC714C1CEB816E00DE059A /* TaoController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = TaoController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F5B0A0D31CAD3CBC00E056CE /* DeviceAgentUnitTestsInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DeviceAgentUnitTestsInfo.plist; sourceTree = "<group>"; };
 		F5B0A1891CAD4A1F00E056CE /* CBXiOSVersionInlines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBXiOSVersionInlines.h; sourceTree = "<group>"; };
-		F5B0B5B72101C91B004030B5 /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/iOS/Expecta.framework; sourceTree = "<group>"; };
-		F5B0B5B82101C91B004030B5 /* Specta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Specta.framework; path = Carthage/Build/iOS/Specta.framework; sourceTree = "<group>"; };
-		F5B0B5B92101C91B004030B5 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = Carthage/Build/iOS/OCMock.framework; sourceTree = "<group>"; };
-		F5B0B5BE2101C9F7004030B5 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
 		F5BA9ED61E48B462008CFE64 /* AlertsAndSheetsTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertsAndSheetsTableController.h; sourceTree = "<group>"; };
 		F5BA9ED71E48B462008CFE64 /* AlertsAndSheetsTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertsAndSheetsTableController.m; sourceTree = "<group>"; };
 		F5BC7AB81D5CF38F00D9AC8E /* CompanyTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = CompanyTableController.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
@@ -1578,7 +1574,6 @@
 		F5BCAB101D5BC15500ED6EE3 /* DragDropController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = DragDropController.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F5CE18E01E8BBA61001116A5 /* CBLSApplicationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBLSApplicationProxy.h; sourceTree = "<group>"; };
 		F5CE18E11E8BBA61001116A5 /* CBLSApplicationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBLSApplicationProxy.m; sourceTree = "<group>"; };
-		F5D086A31F38C96B008B894C /* RevealServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevealServer.framework; sourceTree = "<group>"; };
 		F5D42A181D40E3150041105C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F5DBC09C2101EEE900A4C274 /* UIDevice+Wifi_IP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Wifi_IP.h"; sourceTree = "<group>"; };
 		F5DBC09D2101EEE900A4C274 /* UIDevice+Wifi_IP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Wifi_IP.m"; sourceTree = "<group>"; };
@@ -1630,7 +1625,7 @@
 				F542EA1F1CC53EFF00D87200 /* UIKit.framework in Frameworks */,
 				F542EA1E1CC53EE100D87200 /* Security.framework in Frameworks */,
 				F542EA1C1CC53EC800D87200 /* CFNetwork.framework in Frameworks */,
-				F5B0B5C52101CA30004030B5 /* CocoaLumberjack.framework in Frameworks */,
+				84A10D952679A375004446C7 /* CocoaLumberjack.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1668,7 +1663,6 @@
 				F52BA3451CED23EC00475D5A /* libz.tbd in Frameworks */,
 				F52BA3431CED23E400475D5A /* CoreGraphics.framework in Frameworks */,
 				F542EA191CC536AF00D87200 /* QuartzCore.framework in Frameworks */,
-				F52A4C692024616D0052F27F /* RevealServer.framework in Frameworks */,
 				F542EA151CC5368000D87200 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1680,10 +1674,9 @@
 				F5DBC0B52101F23B00A4C274 /* UIKit.framework in Frameworks */,
 				F5DBC0B42101F23200A4C274 /* CoreGraphics.framework in Frameworks */,
 				F5DBC0B32101F22900A4C274 /* CFNetwork.framework in Frameworks */,
-				F5DBC0AF2101F21A00A4C274 /* CocoaLumberjack.framework in Frameworks */,
-				F5DBC0B02101F21A00A4C274 /* Expecta.framework in Frameworks */,
-				F5DBC0B12101F21A00A4C274 /* OCMock.framework in Frameworks */,
-				F5DBC0B22101F21A00A4C274 /* Specta.framework in Frameworks */,
+				84A10D9A2679A4CC004446C7 /* Expecta.xcframework in Frameworks */,
+				84A10D9D2679A50D004446C7 /* OCMock.xcframework in Frameworks */,
+				84A10DA02679A575004446C7 /* Specta.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1917,10 +1910,10 @@
 		F542EA1A1CC53DD000D87200 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F5B0B5BE2101C9F7004030B5 /* CocoaLumberjack.framework */,
-				F5B0B5B72101C91B004030B5 /* Expecta.framework */,
-				F5B0B5B92101C91B004030B5 /* OCMock.framework */,
-				F5B0B5B82101C91B004030B5 /* Specta.framework */,
+				84A10D9F2679A575004446C7 /* Specta.xcframework */,
+				84A10D9C2679A50D004446C7 /* OCMock.xcframework */,
+				84A10D992679A4CC004446C7 /* Expecta.xcframework */,
+				84A10D942679A375004446C7 /* CocoaLumberjack.xcframework */,
 				F594B3851D7449450035A5CA /* Contacts.framework */,
 				F56F44941D733A8200E58B0D /* HealthKit.framework */,
 				F5D42A181D40E3150041105C /* AVFoundation.framework */,
@@ -2277,7 +2270,6 @@
 		F55F7FEA1C6DD07500A945C8 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				F5D086A31F38C96B008B894C /* RevealServer.framework */,
 				F54063ED1EBB344200C80B4E /* FLWebView */,
 				F55F7FEB1C6DD07500A945C8 /* CocoaAsyncSocket */,
 				F55F7FEF1C6DD07500A945C8 /* CocoaHTTPServer */,
@@ -3577,7 +3569,7 @@
 		898743B41C5847B30084FD93 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = Calabash;
 				TargetAttributes = {
 					898743BB1C5847B30084FD93 = {
@@ -3839,7 +3831,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "bin/xcode-build-phase/stage-testapp-to-Products.sh";
+			shellScript = "bin/xcode-build-phase/stage-testapp-to-Products.sh\n";
 			showEnvVarsInLog = 0;
 		};
 		F5D086A51F38C99A008B894C /* ShellScript */ = {
@@ -3853,7 +3845,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "bin/xcode-build-phase/integrate-RevealServer.sh \"${SRCROOT}\" \"${CONFIGURATION}\"";
+			shellScript = "bin/xcode-build-phase/integrate-RevealServer.sh \"${SRCROOT}\" \"${CONFIGURATION}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -4417,7 +4409,6 @@
 		898743DF1C5847B30084FD93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"ARCHS[sdk=iphonesimulator*]" = x86_64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppStubIcon;
 				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Karl Krukow (YTTN6Y2QS9)";
@@ -4444,7 +4435,6 @@
 		898743E01C5847B30084FD93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"ARCHS[sdk=iphonesimulator*]" = x86_64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppStubIcon;
 				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Karl Krukow (YTTN6Y2QS9)";
@@ -4470,7 +4460,6 @@
 		898743E21C5847B30084FD93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"ARCHS[sdk=iphonesimulator*]" = x86_64;
 				CLANG_ENABLE_CODE_COVERAGE = NO;
 				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Karl Krukow (YTTN6Y2QS9)";
@@ -4479,7 +4468,16 @@
 				DEVELOPMENT_TEAM = FYD86LA7RE;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PLATFORM_DIR)/Developer/Library/PrivateFrameworks",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/CocoaLumberjack.xcframework/ios-arm64_armv7/**",
+					"$(PLATFORM_DIR)/Developer/Library/PrivateFrameworks",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/CocoaLumberjack.xcframework/ios-arm64_i386_x86_64-simulator/**",
 					"$(PLATFORM_DIR)/Developer/Library/PrivateFrameworks",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -4511,7 +4509,6 @@
 		898743E31C5847B30084FD93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"ARCHS[sdk=iphonesimulator*]" = x86_64;
 				CLANG_ENABLE_CODE_COVERAGE = NO;
 				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Karl Krukow (YTTN6Y2QS9)";
@@ -4521,7 +4518,16 @@
 				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PLATFORM_DIR)/Developer/Library/PrivateFrameworks",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/CocoaLumberjack.xcframework/ios-arm64_armv7/**",
+					"$(PLATFORM_DIR)/Developer/Library/PrivateFrameworks",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/CocoaLumberjack.xcframework/ios-arm64_i386_x86_64-simulator/**",
 					"$(PLATFORM_DIR)/Developer/Library/PrivateFrameworks",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = "LOAD_XCTEST_PRIVATE_HEADERS=1";
@@ -4753,7 +4759,6 @@
 		F5954E1D1CBD2E1200117745 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"ARCHS[sdk=iphonesimulator*]" = x86_64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = TestAppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -4778,10 +4783,6 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lz",
-					"-weak_framework",
-					RevealServer,
-					"-force_load",
-					"\"$(PROJECT_DIR)/Vendor/calabash.framework/calabash\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4793,7 +4794,6 @@
 		F5954E1E1CBD2E1200117745 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"ARCHS[sdk=iphonesimulator*]" = x86_64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = TestAppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -4816,10 +4816,6 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lz",
-					"-weak_framework",
-					RevealServer,
-					"-force_load",
-					"\"$(PROJECT_DIR)/Vendor/calabash.framework/calabash\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
