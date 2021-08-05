@@ -663,6 +663,7 @@
 		84D3D538264464B6009EF056 /* XCTAutomationTypeMismatchIssue.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D50B264464B6009EF056 /* XCTAutomationTypeMismatchIssue.h */; };
 		84D3D53A264464B6009EF056 /* _XCTMessaging_VoidProtocol-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D50C264464B6009EF056 /* _XCTMessaging_VoidProtocol-Protocol.h */; };
 		84D3D53C264464B6009EF056 /* NSFastEnumeration-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D50D264464B6009EF056 /* NSFastEnumeration-Protocol.h */; };
+		84DE9FA026BC927100F5C970 /* CocoaLumberjack.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84A10D942679A375004446C7 /* CocoaLumberjack.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		89331CCE1CC00E82003C2E59 /* RotatePinchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */; };
 		89331D301CC50447003C2E59 /* ThreadUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 89331D2E1CC50447003C2E59 /* ThreadUtils.h */; };
 		89331D321CC50447003C2E59 /* ThreadUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331D2F1CC50447003C2E59 /* ThreadUtils.m */; };
@@ -1174,6 +1175,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				84DE9FA026BC927100F5C970 /* CocoaLumberjack.xcframework in CopyFiles */,
 				84A10D9B2679A4D8004446C7 /* Expecta.xcframework in CopyFiles */,
 				84A10D9E2679A51C004446C7 /* OCMock.xcframework in CopyFiles */,
 				84A10DA12679A582004446C7 /* Specta.xcframework in CopyFiles */,
