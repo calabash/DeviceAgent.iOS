@@ -2,6 +2,8 @@
 #import "CBXLogging.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
 #import <libkern/OSAtomic.h>
+#import <CocoaLumberjack/DDOSLogger.h>
+#import <stdatomic.h>
 
 #pragma mark - CBXLogFileManager
 
@@ -9,7 +11,7 @@ static NSString *const IDMLogFormatterDateFormat = @"yyyy-MM-dd HH:mm:ss.SSS";
 static NSString *const IDMLogFormatterDateFormatterKey = @"sh.calaba-IDMLogFormatter-NSDateFormatter";
 
 @interface CBXLogFormatter : NSObject <DDLogFormatter>  {
-  int32_t atomicLoggerCount;
+  atomic_int_fast32_t atomicLoggerCount;
   NSDateFormatter *threadUnsafeDateFormatter;
 }
 
@@ -21,7 +23,7 @@ static NSString *const IDMLogFormatterDateFormatterKey = @"sh.calaba-IDMLogForma
 @implementation CBXLogFormatter
 
 - (NSString *)stringFromDate:(NSDate *)date {
-  int32_t loggerCount = OSAtomicAdd32(0, &atomicLoggerCount);
+  atomic_int_fast32_t loggerCount = atomic_fetch_add_explicit(&atomicLoggerCount, 0, memory_order_relaxed);
 
   if (loggerCount <= 1) {
     // Single-threaded mode.
@@ -72,11 +74,11 @@ static NSString *const IDMLogFormatterDateFormatterKey = @"sh.calaba-IDMLogForma
 }
 
 - (void)didAddToLogger:(id <DDLogger>)logger {
-  OSAtomicIncrement32(&atomicLoggerCount);
+  atomic_fetch_add_explicit(&atomicLoggerCount, 1, memory_order_relaxed);
 }
 
 - (void)willRemoveFromLogger:(id <DDLogger>)logger {
-  OSAtomicDecrement32(&atomicLoggerCount);
+  atomic_fetch_sub_explicit(&atomicLoggerCount, 1, memory_order_relaxed);
 }
 
 @end
@@ -95,8 +97,8 @@ static NSString *const IDMLogFormatterDateFormatterKey = @"sh.calaba-IDMLogForma
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
 
     // Apple System Logger
-    [[DDASLLogger sharedInstance] setLogFormatter:[CBXLogFormatter new]];
-    [DDLog addLogger:[DDASLLogger sharedInstance]];
+    [[DDOSLogger sharedInstance] setLogFormatter:[CBXLogFormatter new]];
+    [DDLog addLogger:[DDOSLogger sharedInstance]];
   });
 }
 

@@ -6370,7 +6370,7 @@ static OSStatus SSLWriteFunction(SSLConnectionRef connection, const void *data, 
 			}
 			else
 			{
-				if ([sslLevel isEqualToString:(NSString *)kCFStreamSocketSecurityLevelSSLv3])
+				if ([sslLevel isEqualToString:(NSString *)kCFStreamSocketSecurityLevelNegotiatedSSL])
 				{
 					sslMinLevel = sslMaxLevel = @"kSSLProtocol3";
 				}
