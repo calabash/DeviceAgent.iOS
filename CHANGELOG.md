@@ -1,4 +1,4 @@
-### 2.3.0
+### 2.4.0-beta-1
 
 * Added depndencies as xcframework format.
 * Added supporting of Apple Silicon arm64 platform for simulator.
