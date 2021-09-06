@@ -9,10 +9,10 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <XCTest/XCUIElementTypes.h>
 #import "CDStructures.h"
-#import <DTXConnectionServices/DTXConnection.h>
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
+#import <DTXConnectionServices/DTXConnection.h>
 
 @interface DTXConnection (XCTestAdditions)
 - (void)xct_handleProxyRequestForInterface:(id)arg1 peerInterface:(id)arg2 handler:(CDUnknownBlockType)arg3;

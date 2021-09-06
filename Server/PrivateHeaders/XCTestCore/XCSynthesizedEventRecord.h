@@ -20,13 +20,17 @@
 @interface XCSynthesizedEventRecord : NSObject <NSSecureCoding>
 {
     NSMutableArray *_eventPaths;
+    BOOL _beginsPersistentState;
+    BOOL _endsPersistentState;
     NSString *_name;
     NSInteger _interfaceOrientation;
     NSInteger _targetProcessID;
     NSUInteger _displayID;
 }
 
+@property BOOL beginsPersistentState;
 @property(readonly) NSUInteger displayID;
+@property BOOL endsPersistentState;
 @property(readonly) NSArray *eventPaths;
 @property(readonly) NSInteger interfaceOrientation;
 @property(readonly) double maximumOffset;

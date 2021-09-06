@@ -14,18 +14,18 @@
 
 #import <objc/NSObject.h>
 
+@class NSArray, NSDictionary;
 
-@class NSArray;
-
-@interface XCAXAuditConfiguration : NSObject <NSSecureCoding, NSCopying>
+@interface XCTVariationOptions : NSObject
 {
-    NSArray *_auditTypes;
-    NSInteger _timeout;
+    NSDictionary *_inputs;
 }
 
-@property(copy, nonatomic) NSArray *auditTypes;
-@property(nonatomic) NSInteger timeout;
+@property(readonly, copy) NSDictionary *inputs;
+@property(readonly) NSArray *variations;
 
++ (id)defaultVariationOptions;
+- (id)initWithInputs:(id)arg1;
 
 @end
 

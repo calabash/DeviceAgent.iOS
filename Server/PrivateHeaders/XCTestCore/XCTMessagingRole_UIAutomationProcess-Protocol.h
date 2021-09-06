@@ -13,7 +13,7 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@class NSArray, XCAccessibilityElement, XCTCapabilities, XCTElementQuery, XCTSerializedTransportWrapper2, XCTElementQueryResults;
+@class NSArray, XCAccessibilityElement, XCTCapabilities, XCTElementQuery, XCTElementQueryResults, XCTSerializedTransportWrapper2;
 
 @protocol XCTMessagingRole_UIAutomationProcess <NSObject>
 - (void)attributesForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 reply:(void (^)(NSDictionary *, NSError *))arg3;

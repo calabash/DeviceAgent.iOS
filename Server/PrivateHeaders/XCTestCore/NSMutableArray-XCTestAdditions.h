@@ -14,6 +14,7 @@
 @protocol OS_xpc_object;
 
 @interface NSMutableArray (XCTestAdditions)
+- (void)xct_removeObjectsPassingTest:(CDUnknownBlockType)arg1;
 - (void)xct_shuffle;
 - (void)xct_shuffleWithRandomNumberGenerator:(CDUnknownBlockType)arg1;
 @end

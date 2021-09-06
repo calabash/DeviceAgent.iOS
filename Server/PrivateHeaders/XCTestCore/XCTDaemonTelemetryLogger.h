@@ -27,23 +27,15 @@
     NSString *_osVersion;
     NSString *_hardwareModel;
     NSString *_frameworkVariant;
+    NSString *_frameworkVersion;
     NSMutableDictionary *_localEvents;
     NSObject<OS_dispatch_group> *_submissionGroup;
 }
 
-@property(readonly, copy) CDUnknownBlockType eventDataSink;
-@property(readonly, copy) NSString *frameworkVariant;
-@property(readonly, copy) NSString *hardwareModel;
-@property(readonly) BOOL isUITest;
-@property(retain) NSMutableDictionary *localEvents;
-@property(readonly, copy) NSString *osVersion;
-@property(readonly, copy) NSString *sessionUUID;
-@property(readonly) NSObject<OS_dispatch_group> *submissionGroup;
-
-+ (BOOL)telemetrySupported;
 - (void)flushWithCompletion:(CDUnknownBlockType)arg1;
 - (id)initWithEventDataSink:(CDUnknownBlockType)arg1;
-- (id)initWithSessionUUID:(id)arg1 OSVersion:(id)arg2 hardwareModel:(id)arg3 frameworkVariant:(id)arg4 isUITest:(BOOL)arg5 eventDataSink:(CDUnknownBlockType)arg6;
+- (id)initWithRunnerDaemonSession:(id)arg1;
+- (id)initWithSessionUUID:(id)arg1 OSVersion:(id)arg2 hardwareModel:(id)arg3 frameworkVariant:(id)arg4 frameworkVersion:(id)arg5 isUITest:(BOOL)arg6 eventDataSink:(CDUnknownBlockType)arg7;
 - (void)logEventWithName:(id)arg1;
 - (void)logUsageOfClass:(id)arg1 method:(id)arg2;
 - (void)logUsageOfFunction:(id)arg1;
