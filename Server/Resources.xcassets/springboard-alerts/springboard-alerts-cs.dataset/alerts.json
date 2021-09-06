@@ -523,5 +523,12 @@
       "Povolit"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Povolit zařízení %@ aktualizaci vašich zdravotních dat.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

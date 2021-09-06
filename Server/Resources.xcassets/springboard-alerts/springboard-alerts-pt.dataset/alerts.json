@@ -522,5 +522,12 @@
       "Permitir"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Adicionar Teclado de Terceiros?",
+    "buttons": [
+      "Agora Não"
+    ],
+    "shouldAccept": true
   }
 ]

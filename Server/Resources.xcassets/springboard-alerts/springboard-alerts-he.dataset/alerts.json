@@ -471,5 +471,12 @@
       "אפשר"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "״%1$@״ רוצה לגשת לחשבונות %2$@",
+    "buttons": [
+      "אישור"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -503,5 +503,12 @@
       "İzin Ver"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Üçüncü Parti Klavye Eklensin mi?",
+    "buttons": [
+      "Sonra"
+    ],
+    "shouldAccept": true
   }
 ]

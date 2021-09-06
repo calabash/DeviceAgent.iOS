@@ -573,5 +573,19 @@
       "Tillat"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Vil du tillate at %@ bruker posisjonen din selv når du ikke bruker appen?",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vil du også tillate at %@ bruker posisjonen din selv når du ikke bruker appen?",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
   }
 ]

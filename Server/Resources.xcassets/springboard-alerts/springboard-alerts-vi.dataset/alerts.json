@@ -540,5 +540,26 @@
       "Cho phép"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn thêm cấu hình VPN",
+    "buttons": [
+      "Từ chối"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "“%@” muốn lọc nội dung mạng",
+    "buttons": [
+      "Từ chối"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "Thêm bàn phím bên thứ ba?",
+    "buttons": [
+      "Để sau"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -477,6 +477,19 @@
       "Permetre"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Permets que els ginys de “%@” utilitzin la teva ubicació?",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%1$@” vol accedir als comptes %2$@",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
-  
 ]
