@@ -454,5 +454,12 @@
       "Permitir"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Actualización de configuración del operador",
+    "buttons": [
+      "Ahora no"
+    ],
+    "shouldAccept": false
   }
 ]

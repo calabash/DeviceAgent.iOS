@@ -453,5 +453,26 @@
       "السماح"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "تحديث إعدادات شركة الاتصالات",
+    "buttons": [
+      "ليس الآن"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "هل تريد تمكين الإملاء؟",
+    "buttons": [
+      "ليس الآن"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "هل تريد إضافة لوحة المفاتيح التابعة لجهة خارجية؟",
+    "buttons": [
+      "ليس الآن"
+    ],
+    "shouldAccept": true
   }
 ]

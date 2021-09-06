@@ -251,7 +251,8 @@
   {
     "title": "„%1$@“ möchte auf %2$@-Accounts zugreifen",
     "buttons": [
-      "Erlauben"
+      "Erlauben",
+      "OK"
     ],
     "shouldAccept": true
   },

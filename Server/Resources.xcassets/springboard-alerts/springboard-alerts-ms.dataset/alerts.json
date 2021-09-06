@@ -517,5 +517,12 @@
       "Benarkan"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Seting baharu tersedia. Adakah anda mahu mengemas kininya sekarang?",
+    "buttons": [
+      "Bukan Sekarang"
+    ],
+    "shouldAccept": false
   }
 ]

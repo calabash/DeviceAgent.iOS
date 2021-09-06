@@ -425,5 +425,12 @@
       "Autoriser"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "« %@ » souhaite ajouter des configurations de serveur mandataire DNS.",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
   }
 ]
