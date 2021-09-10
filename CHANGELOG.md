@@ -1,4 +1,12 @@
+### 2.4.0-beta-2
+
+* Added support of Xcode 13.0 Beta 5
+
 ### 2.4.0-beta-1
+
+* Added support of Xcode 13.0 Beta 4
+
+### 2.3.0
 
 * Added depndencies as xcframework format.
 * Added supporting of Apple Silicon arm64 platform for simulator.
