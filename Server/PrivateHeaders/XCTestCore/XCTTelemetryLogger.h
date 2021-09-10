@@ -26,12 +26,14 @@
 @property(readonly, copy) NSArray *loggers;
 
 + (double)defaultFlushTimeout;
-+ (id)defaultLoggers;
++ (id)defaultLoggersWithRunnerDaemonSession:(id)arg1;
 + (void)setSharedLogger:(id)arg1;
 + (id)sharedLogger;
++ (id)sharedLoggerIfInitiated;
 - (void)flushWithCompletion:(CDUnknownBlockType)arg1;
 - (void)flushWithTimeout:(double)arg1;
 - (id)initWithLoggers:(id)arg1;
+- (id)initWithRunnerDaemonSession:(id)arg1;
 - (void)logEventWithName:(id)arg1;
 - (void)logUsageOfClass:(id)arg1 method:(id)arg2;
 - (void)logUsageOfFunction:(id)arg1;

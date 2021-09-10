@@ -15,7 +15,7 @@
 #import <objc/NSObject.h>
 
 
-@class NSDictionary, NSSet, NSString;
+@class NSDictionary, NSSet, NSString, XCTVariationOptions;
 
 @interface XCTApplicationBundleInfo : NSObject <NSSecureCoding>
 {
@@ -24,7 +24,7 @@
     NSDictionary *_infoDictionary;
 }
 
-@property(readonly, copy) NSDictionary *automaticTestRunConfigurations;
+@property(readonly) XCTVariationOptions *automaticVariationOptions;
 @property(copy) NSDictionary *infoDictionary;
 @property BOOL infoDictionaryNeedsProcessing;
 @property(readonly, copy) NSSet *localizations;

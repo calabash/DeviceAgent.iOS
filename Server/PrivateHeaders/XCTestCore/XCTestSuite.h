@@ -26,7 +26,6 @@
 }
 
 @property(readonly) NSMutableDictionary *mutableActivityAggregateStatistics;
-@property(retain) NSMutableArray *mutableTests;
 @property(copy) NSString *name;
 @property(retain) XCTestConfiguration *testConfiguration;
 @property(readonly, copy) NSArray *tests;

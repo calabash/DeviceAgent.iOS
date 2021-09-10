@@ -58,7 +58,7 @@
 - (BOOL)_registerForAXNotification:(NSInteger)arg1 error:(id *)arg2;
 - (void)_removeUserTestNotificationHandlerForToken:(id)arg1;
 - (BOOL)_setAXTimeout:(double)arg1 error:(id *)arg2;
-- (id)_snapshotsForInterruptingElementsPresentedByApplication:(id)arg1;
+- (id)_snapshotsForInterruptingElementsPresentedByApplication:(id)arg1 interuptedSnapshotFrame:(CGRect)arg2;
 - (BOOL)_unloadAccessibility:(id *)arg1;
 - (id)accessibilityElementForElementAtPoint:(CGPoint)arg1 error:(id *)arg2;
 - (id)activeApplications;

@@ -14,7 +14,7 @@
 
 #import "XCUIElement.h"
 
-@class NSArray, NSDictionary, NSString, XCAccessibilityElement, XCApplicationQuery, XCUIApplicationImpl, XCUIApplicationOpenRequest;
+@class NSArray, NSDictionary, NSString, XCAccessibilityElement, XCApplicationQuery, XCTVariationOptions, XCUIApplicationImpl, XCUIApplicationOpenRequest;
 @protocol XCTRunnerAutomationSession, XCUIDevice;
 
 
@@ -43,6 +43,7 @@
 @property(readonly) XCUIApplicationImpl *applicationImpl;
 @property(retain) XCApplicationQuery *applicationQuery;
 @property(readonly, copy) NSDictionary *automaticTestRunConfigurations;
+@property(readonly) XCTVariationOptions *automaticVariationOptions;
 @property(readonly) id <XCTRunnerAutomationSession> automationSession;
 @property(readonly) BOOL background;
 @property(readonly) BOOL backgroundInteractionAllowed;

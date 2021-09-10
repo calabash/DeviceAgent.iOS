@@ -22,7 +22,7 @@ FRAMEWORKS_MAP.each do |framework, output_path|
     binary_path = File.join(library, "PrivateFrameworks",
                             "XCTAutomationSupport.framework", framework)
   else
-    binary_path = File.join(library, "Frameworks",
+    binary_path = File.join(library, "PrivateFrameworks",
                             "XCTestCore.framework", framework)
   end
 

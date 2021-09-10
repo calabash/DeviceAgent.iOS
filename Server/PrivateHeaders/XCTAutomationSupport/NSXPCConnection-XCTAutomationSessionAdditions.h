@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
-#import <XCTestCore/XCUIElementTypes.h>
+#import <XCTest/XCUIElementTypes.h>
 #import "CDStructures.h"
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;

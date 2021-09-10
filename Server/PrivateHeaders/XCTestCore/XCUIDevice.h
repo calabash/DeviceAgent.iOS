@@ -54,7 +54,7 @@
 + (id)localDevice;
 + (void)setLocalDevice:(id)arg1;
 + (XCUIDevice *)sharedDevice;
-- (NSUInteger)_setModifiers:(NSUInteger)arg1 merge:(BOOL)arg2 description:(id)arg3;
+- (NSUInteger)_setModifiers:(NSUInteger)arg1 merge:(BOOL)arg2 beginPersistentState:(BOOL)arg3 description:(id)arg4;
 - (void)_setOrientation:(NSInteger)arg1;
 - (void)_silentPressButton:(NSInteger)arg1;
 - (id)accessibilityInterface;

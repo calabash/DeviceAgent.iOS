@@ -164,6 +164,7 @@
 #import "XCTestCore/XCTTestWorker-Protocol.h"
 #import "XCTestCore/XCTUniformTypeIdentifier.h"
 #import "XCTestCore/XCTUniformTypeIdentifier_Internal.h"
+#import "XCTestCore/XCTVariationOptions.h"
 #import "XCTestCore/XCTWaiter.h"
 #import "XCTestCore/XCTWaiterDelegate-Protocol.h"
 #import "XCTestCore/XCTWaiterInterruptionCompletionHandler.h"

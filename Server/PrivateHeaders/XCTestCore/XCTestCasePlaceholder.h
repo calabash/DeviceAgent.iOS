@@ -26,6 +26,7 @@
 
 - (id)_identifier;
 - (Class)_requiredTestRunBaseClass;
+- (NSInteger)defaultExecutionOrderCompare:(id)arg1;
 - (id)initWithIdentifier:(id)arg1 reason:(id)arg2;
 - (id)name;
 - (id)nameForLegacyLogging;

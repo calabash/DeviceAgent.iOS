@@ -97,9 +97,8 @@
 + (id)_testInvocationDescriptors;
 + (id)_testMethodInvocationDescriptors;
 + (id)_testMethodSignatureForSelector:(SEL)arg1 resolvedSelector:(SEL *)arg2;
-+ (id)_testRunConfigurations;
-+ (id)_testRunConfigurationsFromInputs:(id)arg1;
 + (BOOL)_treatMissingBaselinesAsTestFailures;
++ (id)_variationOptions;
 + (id)allSubclasses;
 + (id)allSubclassesOutsideXCTest;
 + (id)allTestMethodInvocations;
@@ -110,6 +109,7 @@
 + (BOOL)isInheritingTestCases;
 + (BOOL)isValidTestMethodWithSignature:(id)arg1 convention:(NSInteger *)arg2;
 + (CDStruct_2ec95fd7)minimumOperatingSystemVersion;
++ (BOOL)runsForEachTargetApplicationUIConfiguration;
 + (void)setUp;
 + (void)tearDown;
 + (id)testCaseWithInvocation:(id)arg1;
