@@ -65,7 +65,7 @@
     NSMutableDictionary *__perfMetricsForID;
 }
 
-@property(copy, getter=_activityAggregateStatistics, setter=_setActivityAggregateStatistics:) NSDictionary *activityAggregateStatistics;
+@property(copy, getter=_activityAggregateStatistics) NSDictionary *activityAggregateStatistics;
 @property BOOL _didMeasureMetrics;
 @property BOOL _didStartMeasuring;
 @property BOOL _didStopMeasuring;
