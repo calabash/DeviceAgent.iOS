@@ -2,6 +2,8 @@
 
 * Added depndencies as xcframework format.
 * Added supporting of Apple Silicon arm64 platform for simulator.
+* Added missed alerts localiztions from Xcode 12.5.
+* Fixed issue with tapping on elements in horizontal screen orientation.
 
 ### 2.2.7
 
