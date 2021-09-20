@@ -4577,8 +4577,6 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lz",
-					"-framework",
-					Reveal,
 					"-force_load",
 					"\"$(PROJECT_DIR)/Vendor/calabash.framework/calabash\"",
 				);
@@ -4614,8 +4612,6 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lz",
-					"-framework",
-					Reveal,
 					"-force_load",
 					"\"$(PROJECT_DIR)/Vendor/calabash.framework/calabash\"",
 				);
