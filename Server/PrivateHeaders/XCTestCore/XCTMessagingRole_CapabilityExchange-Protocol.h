@@ -12,7 +12,7 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@class NSArray, NSDictionary, NSNumber, NSString, NSUUID, XCTImage, XCAXAuditConfiguration, XCAccessibilityElement, XCTCapabilities, XCTScreenshotRequest, XCTSpindumpRequestSpecification, XCTSerializedTransportWrapper, XCUIElementSnapshotRequestResult, XCElementSnapshot, XCAXAuditResultCollection;
+@class NSArray, NSDictionary, NSNumber, NSString, NSUUID, XCAXAuditConfiguration, XCAccessibilityElement, XCTCapabilities, XCTScreenshotRequest, XCTSpindumpRequestSpecification, XCUIElementSnapshotRequestResult, XCTImage, XCTSerializedTransportWrapper, XCElementSnapshot, XCAXAuditResultCollection;
 
 @protocol XCTMessagingRole_CapabilityExchange
 - (void)_XCT_enableAutomationModeWithReply:(void (^)(NSError *))arg1;

@@ -13,7 +13,7 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@class NSArray, NSDictionary, NSNumber, NSString, XCAXAuditConfiguration, XCAccessibilityElement, XCTCapabilities, XCUIAccessibilityAction;
+@class NSArray, NSDictionary, NSNumber, NSString, XCAXAuditConfiguration, XCAccessibilityElement, XCTCapabilities, XCUIAccessibilityAction, XCUIElementSnapshotRequestResult, XCElementSnapshot, XCAXAuditResultCollection;
 
 @protocol XCUIRemoteAccessibilityInterface <NSObject>
 - (void)enableFauxCollectionViewCells:(void (^)(BOOL, NSError *))arg1;

@@ -3,7 +3,7 @@
 require "fileutils"
 require "run_loop"
 
-FRAMEWORKS=["XCTestCore", "XCTAutomationSupport"]
+FRAMEWORKS=["XCTestCore", "XCTAutomationSupport", "DTXConnectionServices"]
 FileUtils.rm_rf(File.join("tmp", "class-dump"))
 
 FRAMEWORKS_MAP = {}
@@ -21,6 +21,8 @@ FRAMEWORKS_MAP.each do |framework, output_path|
   if framework == "XCTAutomationSupport"
     binary_path = File.join(library, "PrivateFrameworks",
                             "XCTAutomationSupport.framework", framework)
+  elsif framework == "DTXConnectionServices"
+    binary_path = File.join(developer_dir, "..", "SharedFrameworks", "DTXConnectionServices.framework", framework)
   else
     binary_path = File.join(library, "PrivateFrameworks",
                             "XCTestCore.framework", framework)

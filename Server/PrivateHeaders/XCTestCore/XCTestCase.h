@@ -12,7 +12,7 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-#import "XCTest.h"
+#import "XCTestCore/XCTest.h"
 
 #import "XCTActivity-Protocol.h"
 #import "XCTMemoryCheckerDelegate-Protocol.h"
@@ -65,7 +65,7 @@
     NSMutableDictionary *__perfMetricsForID;
 }
 
-@property(copy, getter=_activityAggregateStatistics) NSDictionary *activityAggregateStatistics;
+@property(copy, getter=_activityAggregateStatistics, setter=_setActivityAggregateStatistics:) NSDictionary *activityAggregateStatistics;
 @property BOOL _didMeasureMetrics;
 @property BOOL _didStartMeasuring;
 @property BOOL _didStopMeasuring;
@@ -94,9 +94,9 @@
 + (BOOL)_isDiscoverable;
 + (id)_languageSpecificTestMethodNameForSelectorString:(id)arg1;
 + (BOOL)_reportPerformanceFailuresForLargeImprovements;
++ (SEL)_resolvedTestMethodSelectorForSelector:(SEL)arg1;
 + (id)_testInvocationDescriptors;
 + (id)_testMethodInvocationDescriptors;
-+ (id)_testMethodSignatureForSelector:(SEL)arg1 resolvedSelector:(SEL *)arg2;
 + (BOOL)_treatMissingBaselinesAsTestFailures;
 + (id)_variationOptions;
 + (id)allSubclasses;

@@ -31,6 +31,7 @@
 @property BOOL immutable;
 @property NSUInteger index;
 @property(readonly) CGPoint initialMouseLocation;
+@property(readonly) double maximumOffset;
 @property(readonly) NSUInteger pathType;
 @property(readonly) NSArray *pointerEvents;
 
