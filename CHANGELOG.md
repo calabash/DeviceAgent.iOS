@@ -1,10 +1,6 @@
-### 2.4.0-beta-2
+### 2.4.0
 
-* Added support of Xcode 13.0 Beta 5
-
-### 2.4.0-beta-1
-
-* Added support of Xcode 13.0 Beta 4
+* Added support of Xcode 13.0 and iOS 15.
 
 ### 2.3.0
 

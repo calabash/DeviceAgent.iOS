@@ -684,7 +684,6 @@
 		84D3D536264464B6009EF056 /* XCTCapabilitiesBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D50A264464B6009EF056 /* XCTCapabilitiesBuilder.h */; };
 		84D3D538264464B6009EF056 /* XCTAutomationTypeMismatchIssue.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D50B264464B6009EF056 /* XCTAutomationTypeMismatchIssue.h */; };
 		84D3D53A264464B6009EF056 /* _XCTMessaging_VoidProtocol-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D50C264464B6009EF056 /* _XCTMessaging_VoidProtocol-Protocol.h */; };
-		84D3D53C264464B6009EF056 /* NSFastEnumeration-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D50D264464B6009EF056 /* NSFastEnumeration-Protocol.h */; };
 		84DE9FA026BC927100F5C970 /* CocoaLumberjack.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84A10D942679A375004446C7 /* CocoaLumberjack.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		89331CCE1CC00E82003C2E59 /* RotatePinchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */; };
 		89331D301CC50447003C2E59 /* ThreadUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 89331D2E1CC50447003C2E59 /* ThreadUtils.h */; };
@@ -1570,9 +1569,7 @@
 		84D3D50A264464B6009EF056 /* XCTCapabilitiesBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTCapabilitiesBuilder.h; sourceTree = "<group>"; };
 		84D3D50B264464B6009EF056 /* XCTAutomationTypeMismatchIssue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTAutomationTypeMismatchIssue.h; sourceTree = "<group>"; };
 		84D3D50C264464B6009EF056 /* _XCTMessaging_VoidProtocol-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "_XCTMessaging_VoidProtocol-Protocol.h"; sourceTree = "<group>"; };
-		84D3D50D264464B6009EF056 /* NSFastEnumeration-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFastEnumeration-Protocol.h"; sourceTree = "<group>"; };
 		84DE9F9C26BC4E4800F5C970 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		84DE9F9E26BC4E5300F5C970 /* XCTestCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTestCore.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTestCore.framework; sourceTree = DEVELOPER_DIR; };
 		89331CCC1CC00E82003C2E59 /* RotatePinchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotatePinchViewController.h; sourceTree = "<group>"; };
 		89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatePinchViewController.m; sourceTree = "<group>"; };
 		89331D2E1CC50447003C2E59 /* ThreadUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadUtils.h; sourceTree = "<group>"; };
@@ -2579,7 +2576,6 @@
 		F542EA1A1CC53DD000D87200 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				84DE9F9E26BC4E5300F5C970 /* XCTestCore.framework */,
 				84DE9F9C26BC4E4800F5C970 /* XCTest.framework */,
 				84A10D9F2679A575004446C7 /* Specta.xcframework */,
 				84A10D9C2679A50D004446C7 /* OCMock.xcframework */,
@@ -2614,7 +2610,6 @@
 			isa = PBXGroup;
 			children = (
 				84D3D50C264464B6009EF056 /* _XCTMessaging_VoidProtocol-Protocol.h */,
-				84D3D50D264464B6009EF056 /* NSFastEnumeration-Protocol.h */,
 				84D3D502264464B6009EF056 /* XCUIElementSnapshotRequestResult.h */,
 				84D3D4F9264464B5009EF056 /* XCAXCycleDetector.h */,
 				84D3D50B264464B6009EF056 /* XCTAutomationTypeMismatchIssue.h */,
@@ -3691,7 +3686,6 @@
 				7DEAAE75241FA80D009894BA /* FBXCTestCaseImplementationFailureHoldingProxy.h in Headers */,
 				843A0D2E26B8DB92001CF302 /* XCTActivityRecordStack.h in Headers */,
 				843A0B8226B8DB90001CF302 /* XCUIElementTypeQueryProvider_Private-Protocol.h in Headers */,
-				84D3D53C264464B6009EF056 /* NSFastEnumeration-Protocol.h in Headers */,
 				843A0BCA26B8DB91001CF302 /* XCTestManager_IDEInterface-Protocol.h in Headers */,
 				F55F819D1C6DD07500A945C8 /* HTTPDataResponse.h in Headers */,
 				843A0C5226B8DB91001CF302 /* NSMutableArray-XCTestAdditions.h in Headers */,
