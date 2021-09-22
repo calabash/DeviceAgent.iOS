@@ -1,7 +1,7 @@
 variables:
   # When Agent.JobName matches this value (and the git ref is a tag), then
   # built artifacts will be published to Azure Blob Storage.
-  AzurePublishWhen: "Catalina-Xcode-12.4"
+  AzurePublishWhen: "BigSur-Xcode-13.0"
 
 trigger:
   tags:
@@ -22,12 +22,12 @@ jobs:
 - job:
   strategy:
     matrix:
-      Catalina-Xcode-12.4:
-        IMAGE_POOL: 'macOS-10.15'
-        XCODE_VERSION: '12.4'
       BigSur-Xcode-12.5:
         IMAGE_POOL: 'macOS-11'
         XCODE_VERSION: '12.5'
+      BigSur-Xcode-13.0:
+        IMAGE_POOL: 'macOS-11'
+        XCODE_VERSION: '13.0'
   pool:
     vmImage: $(IMAGE_POOL)
   timeoutInMinutes: 120
@@ -71,10 +71,11 @@ jobs:
 
   - script: make unit-tests
     displayName: "Make unit-tests"
+    condition: and(succeeded(), eq(variables['IsRunUnitTests'], 'true'))
 
   - script: bundle exec bin/ci/cucumber.rb
     displayName: "exec cucumber"
-    condition: eq(variables['IsRunCucumberTests'], 'true')
+    condition: and(succeeded(), eq(variables['IsRunCucumberTests'], 'true'))
 
   - bash: "./bin/ci/az-publish.sh"
     env:

@@ -1,3 +1,7 @@
+### 2.4.0
+
+* Added support of Xcode 13.0 and iOS 15.
+
 ### 2.3.0
 
 * Added depndencies as xcframework format.

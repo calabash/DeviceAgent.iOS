@@ -608,5 +608,26 @@
       "अनुमति दें"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” आपकी मोशन और फ़िटनेस ऐक्टिविटी को ऐक्सेस करना चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” बैकग्राउंड में VoIP कॉल लेना चाहता है",
+    "buttons": [
+      "ठीक"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” VPN कॉन्फ़िगरेशन जोड़ना चाहता है",
+    "buttons": [
+      "अनुमति न दें"
+    ],
+    "shouldAccept": false
   }
 ]

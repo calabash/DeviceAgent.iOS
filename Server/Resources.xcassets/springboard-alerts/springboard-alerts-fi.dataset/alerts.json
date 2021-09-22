@@ -446,5 +446,19 @@
       "Salli"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Saavatko %[tt]@-widgetit käyttää sijaintiasi?",
+    "buttons": [
+      "Salli"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%1$@ haluaa käyttää %2$[tt]@-tilejä",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

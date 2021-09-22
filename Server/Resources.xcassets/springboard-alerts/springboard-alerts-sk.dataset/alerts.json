@@ -713,5 +713,12 @@
       "Povoliť"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Povoliť widgetom apky %@ používať vašu polohu?",
+    "buttons": [
+      "Povoliť"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -13,9 +13,9 @@
 
 @implementation Testmanagerd_EventSynthesis
 
-+ (id<XCTMessagingRole_EventSynthesis>)get {
++ (id<XCTMessagingChannel_RunnerToDaemon>)get {
 
-    static id <XCTMessagingRole_EventSynthesis> managerInterface = nil;
+    static id <XCTMessagingChannel_RunnerToDaemon> managerInterface = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Class xctRunnerDaemonSessionClass = objc_lookUpClass("XCTRunnerDaemonSession");
@@ -38,9 +38,9 @@
 
 @implementation Testmanagerd_CapabilityExchange
 
-+ (id<XCTMessagingRole_CapabilityExchange>)get {
++ (id<XCTMessagingChannel_RunnerToDaemon>)get {
 
-    static id <XCTMessagingRole_CapabilityExchange> managerInterface = nil;
+    static id <XCTMessagingChannel_RunnerToDaemon> managerInterface = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Class xctRunnerDaemonSessionClass = objc_lookUpClass("XCTRunnerDaemonSession");

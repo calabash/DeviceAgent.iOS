@@ -41,7 +41,8 @@
   {
     "title": "Voulez-vous autoriser « %@ » à utiliser Face ID ?",
     "buttons": [
-      "Refuser"
+      "Refuser",
+      "Ne pas autoriser"
     ],
     "shouldAccept": false
   },
@@ -160,14 +161,16 @@
   {
     "title": "« %@ » aimerait ajouter des configurations VPN",
     "buttons": [
-      "Refuser"
+      "Refuser",
+      "Ne pas autoriser"
     ],
     "shouldAccept": false
   },
   {
     "title": "« %@ » aimerait filtrer le contenu du réseau",
     "buttons": [
-      "Refuser"
+      "Refuser",
+      "Ne pas autoriser"
     ],
     "shouldAccept": false
   },
@@ -437,6 +440,20 @@
     "title": "Autoriser « %@ » à suivre vos activités dans les apps et sur les sites web d’autres sociétés ?",
     "buttons": [
       "Autoriser"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » souhaite accéder à vos données Maison",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Ajouter un clavier tiers ?",
+    "buttons": [
+      "Plus tard"
     ],
     "shouldAccept": true
   }
