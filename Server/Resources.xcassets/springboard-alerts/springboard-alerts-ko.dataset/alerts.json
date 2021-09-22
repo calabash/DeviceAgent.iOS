@@ -552,5 +552,12 @@
       "허용"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "‘%@’에서 VPN 구성을 추가하려고 합니다.",
+    "buttons": [
+      "허용 안 함"
+    ],
+    "shouldAccept": false
   }
 ]

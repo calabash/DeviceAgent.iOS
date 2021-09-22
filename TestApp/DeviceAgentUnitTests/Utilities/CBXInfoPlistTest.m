@@ -52,7 +52,7 @@ describe(@"CBXInfoPlist", ^{
 
             expect([infoPlist stringForKey:@"key"]).to.equal(@"value");
 
-            OCMVerify(mockInfoPlist);
+            OCMVerifyAll(mockInfoPlist);
         });
 
         it(@"returns an empty string if the key is missing in the Info.plist", ^{
@@ -62,7 +62,7 @@ describe(@"CBXInfoPlist", ^{
 
             expect([infoPlist stringForKey:@"key"]).to.equal(@"");
 
-            OCMVerify(mockInfoPlist);
+            OCMVerifyAll(mockInfoPlist);
         });
     });
 
@@ -195,7 +195,7 @@ describe(@"CBXInfoPlist", ^{
               };
 
             expect([mockPlist versionInfo]).to.equal(expected);
-            OCMVerify(mockPlist);
+            OCMVerifyAll(mockPlist);
         });
     });
 });

@@ -30,9 +30,8 @@ args =
         "-destination", "id=#{sim_udid}",
         "-sdk", "iphonesimulator",
         "-configuration", "Debug",
-        "ARCHS=x86_64",
-        "VALID_ARCHS=x86_64",
-        "EXCLUDED_ARCHS[sdk=iphonesimulator*]=arm64",
+        "ARCHS=x86_64 arm64",
+        "VALID_ARCHS=x86_64 arm64",
         "GCC_TREAT_WARNINGS_AS_ERRORS=YES",
         "CLANG_ENABLE_CODE_COVERAGE=NO",
         "OTHER_CFLAGS=-Xclang -Wno-switch"    

@@ -181,14 +181,16 @@
   {
     "title": "Er zijn nieuwe instellingen beschikbaar. Wil je ze nu bijwerken?",
     "buttons": [
-      "Nu niet"
+      "Nu niet",
+      "Niet nu"
     ],
     "shouldAccept": false
   },
   {
     "title": "Update voor aanbiederinstellingen",
     "buttons": [
-      "Nu niet"
+      "Nu niet",
+      "Niet nu"
     ],
     "shouldAccept": false
   },

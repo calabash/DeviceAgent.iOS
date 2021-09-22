@@ -480,5 +480,19 @@
       "Consenti"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” vuole filtrare i contenuti di rete",
+    "buttons": [
+      "Non consentire"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "Vuoi aggiungere una tastiera di terze parti?",
+    "buttons": [
+      "Non ora"
+    ],
+    "shouldAccept": true
   }
 ]

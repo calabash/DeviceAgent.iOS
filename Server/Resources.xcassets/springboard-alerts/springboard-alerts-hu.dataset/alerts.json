@@ -139,14 +139,16 @@
   {
     "title": "Új beállítások állnak rendelkezésre. Szeretne most frissíteni?",
     "buttons": [
-      "Ne most"
+      "Ne most",
+      "Később"
     ],
     "shouldAccept": false
   },
   {
     "title": "Szolgáltatói beállítások frissítése",
     "buttons": [
-      "Ne most"
+      "Ne most",
+      "Később"
     ],
     "shouldAccept": false
   },
@@ -478,7 +480,8 @@
     "buttons": [
       "Engedélyezés mindig",
       "Engedélyezés",
-      "Az alkalmazás használata közben"
+      "Az alkalmazás használata közben",
+      "Az app használata közben"
     ],
     "shouldAccept": true
   },
@@ -516,5 +519,33 @@
       "Engedélyezés"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Engedélyezi, hogy a(z) „%@” használja az Ön helyzetét akkor is, ha nem használja az appot?",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” adatokat akar elérhetővé tenni közeli Bluetooth-eszközök számára akkor is, amikor Ön nem használja az appot",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Ez lehetővé teszi, hogy a(z) „%@” megkeresse és csatlakozzon a Bluetooth-kiegészítőkhöz. Előfordulhat, hogy ez az app Bluetooth-t is használ annak megállapításához, hogy Ön a közelben tartózkodik-e.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” szűrni szeretné a hálózati tartalmat",
+    "buttons": [
+      "Tiltás"
+    ],
+    "shouldAccept": false
   }
 ]

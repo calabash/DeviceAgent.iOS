@@ -18,7 +18,7 @@ XC_SCHEME="TestApp"
 XC_WORKSPACE="DeviceAgent.xcworkspace"
 XC_CONFIG=Debug
 
-XC_BUILD_DIR="$/build/app/TestApp"
+XC_BUILD_DIR="build/app/TestApp"
 mkdir -p "${XC_BUILD_DIR}"
 
 INSTALL_DIR="Products/app/TestApp"
@@ -77,11 +77,10 @@ install_with_ditto "${BUILD_PRODUCTS_APP}" "${INSTALLED_APP}"
 ditto_to_zip "${INSTALLED_APP}" "${INSTALL_DIR}/DeviceAgent-sim.app.zip"
 
 install_with_ditto "${BUILD_PRODUCTS_DSYM}" "${INSTALLED_DSYM}"
-install_with_ditto "${BUILD_PRODUCTS_DSYM}" \
-  "${INSTALL_DIR}/DeviceAgent-sim.app.dSYM"
+install_with_ditto "${BUILD_PRODUCTS_DSYM}" "${INSTALL_DIR}/DeviceAgent-sim.app.dSYM"
 
-CAL_VERSION=`xcrun strings "${INSTALLED_APP}/${XC_SCHEME}" | grep -E 'CALABASH VERSION'`
-info "${CAL_VERSION}"
+# CAL_VERSION=`xcrun strings "${INSTALLED_APP}/${XC_SCHEME}" | grep -E 'CALABASH VERSION'`
+# info "${CAL_VERSION}"
 
 echo ""
 
