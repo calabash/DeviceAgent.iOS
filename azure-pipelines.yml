@@ -22,11 +22,14 @@ jobs:
 - job:
   strategy:
     matrix:
+      BigSur-Xcode-12.5:
+        IMAGE_POOL: 'macOS-11'
+        XCODE_VERSION: '12.5'
       BigSur-Xcode-13.0:
-        IMAGE_POOL: 'TestCloudPool2'
+        IMAGE_POOL: 'macOS-11'
         XCODE_VERSION: '13.0'
   pool:
-    name: TestCloudPool2
+    vmImage: $(IMAGE_POOL)
   timeoutInMinutes: 120
   variables:
   - group: XTCRunTimeArtifactsCI
@@ -50,8 +53,6 @@ jobs:
 
   - script: |
       set -e
-      rm -rf calabash-codesign
-      [ -d "calabash-codesign" ] && rm -rf calabash-codesign
       git clone https://$(CalabashKeychainGitHubAccessToken)@github.com/xamarinhq/calabash-codesign.git
       calabash-codesign/apple/create-keychain.sh
     displayName: "Download and install keychain"
