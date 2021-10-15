@@ -158,6 +158,7 @@ typedef enum : NSUInteger {
 // handleAlertsOrThrow
 - (SpringBoardAlertHandlerResult)handleAlert {
 
+    DDLogDebug(@"handleAlert1");
     XCUIElement *alert = [self queryForAlert];
 
     // There is not alert.
@@ -169,7 +170,7 @@ typedef enum : NSUInteger {
     NSString *title = alert.label;
     SpringBoardAlert *springBoardAlert;
     springBoardAlert = [[SpringBoardAlerts shared] alertMatchingTitle:title];
-
+    DDLogDebug(@"handleAlert2_title=%@", title);
     // We don't know about this alert.
     if (!springBoardAlert) {
         return SpringBoardAlertHandlerUnrecognizedAlert;
@@ -188,6 +189,7 @@ typedef enum : NSUInteger {
     // A button with the expected title does not exist.
     // It probably changed after an iOS update.
     if (!button || !button.exists) {
+        DDLogDebug(@"handleAlert3");
         button = nil;
     }
 
