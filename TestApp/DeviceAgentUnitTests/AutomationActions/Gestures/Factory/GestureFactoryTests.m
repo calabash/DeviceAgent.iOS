@@ -8,6 +8,12 @@
 #import "Pinch.h"
 #import "Drag.h"
 
+#import "QueryFactory.h"
+#import "QueryConfigurationFactory.h"
+#import "CoordinateQueryConfiguration.h"
+#import "QueryFactory.h"
+#import "JSONUtils.h"
+
 @interface GestureFactoryTests : XCTestCase
 @property (nonatomic, strong) NSArray <NSDictionary *> *validJSON;
 @property (nonatomic, strong) NSArray <NSDictionary *> *invalidJSON;
@@ -27,6 +33,7 @@
 
 - (void)setUp {
     [super setUp];
+
     // Put setup code here. This method is called before the invocation of each test method in the class.
     _validJSON = @[
                    @{
@@ -153,8 +160,24 @@
                         @"num_fingers" : @1
                         }
                 };
+    
+    [XCUIDevice sharedDevice].orientation = UIDeviceOrientationLandscapeLeft;
+
+    [self expectGestureWithJSON:json gestureClass:[Touch class]];
+
+    [XCUIDevice sharedDevice].orientation = UIDeviceOrientationPortrait;
+
     [self expectGestureWithJSON:json gestureClass:[Touch class]];
 }
+
+//-(void)testMarked {
+//
+//    id json = @{@"marked" : @"Second"};
+//    id validQueryConfig = [QueryConfiguration withJSON:json validator:nil];
+//
+//    Query *query = [QueryFactory queryWithQueryConfiguration: validQueryConfig];
+//    NSArray<XCUIElement *> * elements = [query execute];
+//}
 
 - (void)testDrag {
     id json = @{

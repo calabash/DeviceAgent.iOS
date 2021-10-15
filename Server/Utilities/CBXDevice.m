@@ -277,43 +277,53 @@ NSString *const CBXDeviceSimKeyVersionInfo = @"SIMULATOR_VERSION_INFO";
       @"iPhone14,2" : @"iPhone 13",
       @"iPhone14,3" : @"iPhone 13 max",
       
-      // iPad Pro 13in
-      @"iPad6,7" : @"ipad pro",
-      @"iPad6,8" : @"ipad pro",
+      // iPad Pro 11in
+      @"iPad8,1" : @"ipad pro 11",
+      @"iPad8,2" : @"ipad pro 11",
+      @"iPad8,3" : @"ipad pro 11",
+      @"iPad8,4" : @"ipad pro 11",
+      @"iPad8,10" : @"ipad pro 11",
+      @"iPad13,4" : @"ipad pro 11",
+      @"iPad13,5" : @"ipad pro 11",
+      @"iPad13,6" : @"ipad pro 11",
+      @"iPad13,7" : @"ipad pro 11",
 
-      // iPad Pro 9in
-      @"iPad6,3" : @"ipad pro",
-      @"iPad6,4" : @"ipad pro",
-      @"iPad6,11" : @"ipad pro",
-      @"iPad6,12" : @"ipad pro",
+      // iPad Pro 9.7in
+      @"iPad6,3" : @"ipad pro 9.7",
+      @"iPad6,4" : @"ipad pro 9.7",
+
+      // iPad 9.7 in
+      @"iPad5,4": @"ipad air 2",
+      @"iPad6,11" : @"ipad 9.7",
+      @"iPad6,12" : @"ipad 9.7",
+      @"iPad7,5"  : @"ipad 9.7",
+      @"iPad7,6"  : @"ipad 9.7",
 
       // iPad Pro 10.5in
-      @"iPad7,4" : @"ipad pro",
-      @"iPad7,3" : @"ipad pro",
-      @"iPad7,2" : @"ipad pro",
-      @"iPad7,1" : @"ipad pro",
-      @"iPad7,5" : @"ipad pro",
-      @"iPad7,6" : @"ipad pro",
-
-      // iPad Pro 11in
-      @"iPad8,1" : @"ipad pro",
-      @"iPad8,2" : @"ipad pro",
-      @"iPad8,3" : @"ipad pro",
-      @"iPad8,4" : @"ipad pro",
-
-      // iPad Pro 12.9in
-      @"iPad8,5" : @"ipad pro",
-      @"iPad8,6" : @"ipad pro",
-      @"iPad8,7" : @"ipad pro",
-      @"iPad8,8" : @"ipad pro",
+      @"iPad7,4" : @"ipad pro 10.5",
+      @"iPad7,3" : @"ipad pro 10.5",
 
       // iPad mini 7,9in
+      @"iPad5,2": @"ipad mini",
       @"iPad11,1" : @"ipad mini",
       @"iPad11,2" : @"ipad mini",
 
       // iPad Air 10.5in
       @"iPad11,3" : @"ipad air",
       @"iPad11,4" : @"ipad air",
+
+      // iPad Air 10.9in
+      @"iPad13,1" : @"ipad air 4th gen",
+      @"iPad13,2" : @"ipad air 4th gen",
+      
+      // iPad 10.2in
+      @"iPad7,12": @"ipad 7th gen",
+      @"iPad11,7": @"ipad 8th gen",
+      
+      //iPad mini 8.3in
+      @"iPad14,1": @"ipad mini 6th gen",
+      @"iPad14,2": @"ipad mini 6th gen",
+      
       };
 
     return _formFactorMap;
