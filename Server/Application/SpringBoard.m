@@ -158,7 +158,6 @@ typedef enum : NSUInteger {
 // handleAlertsOrThrow
 - (SpringBoardAlertHandlerResult)handleAlert {
 
-    DDLogDebug(@"handleAlert1");
     XCUIElement *alert = [self queryForAlert];
 
     // There is not alert.
@@ -170,7 +169,7 @@ typedef enum : NSUInteger {
     NSString *title = alert.label;
     SpringBoardAlert *springBoardAlert;
     springBoardAlert = [[SpringBoardAlerts shared] alertMatchingTitle:title];
-    DDLogDebug(@"handleAlert2_title=%@", title);
+
     // We don't know about this alert.
     if (!springBoardAlert) {
         return SpringBoardAlertHandlerUnrecognizedAlert;
@@ -189,7 +188,6 @@ typedef enum : NSUInteger {
     // A button with the expected title does not exist.
     // It probably changed after an iOS update.
     if (!button || !button.exists) {
-        DDLogDebug(@"handleAlert3");
         button = nil;
     }
 
@@ -246,13 +244,7 @@ typedef enum : NSUInteger {
     if (!button || !button.exists) {
         return SpringBoardAlertHandlerNoAlert;
     }
-    
-    BOOL success = [self tapAlertButton:button];
-
-    if (!success) {
-        return SpringBoardAlertHandlerNoAlert;
-    }
-//    [button tap];
+    [button tap];
 
     return SpringBoardAlertHandlerDismissedAlert;
 }
@@ -271,124 +263,11 @@ typedef enum : NSUInteger {
                 return SpringBoardDismissAlertNoMatchingButton;
             }
 
-            BOOL success = [self tapAlertButton:button];
+            [button tap];
 
-            SpringBoardDismissAlertResult result;
-            if (success) {
-                result = SpringBoardDismissAlertDismissedAlert;
-            } else {
-                result = SpringBoardDismissAlertDismissTouchFailed;
-            }
-
-            return result;
+            return SpringBoardDismissAlertDismissedAlert;
         }
     }
 }
-
-- (BOOL)tapAlertButton:(XCUIElement *)alertButton {
-    @synchronized (self) {
-        [alertButton cbx_resolve];
-        CGPoint hitPoint = [self hitPointForAlertButton:alertButton];
-
-        if (hitPoint.x < 0 || hitPoint.y < 0) {
-           return NO;
-        }
-
-        NSDictionary *body =
-        @{
-          @"gesture" : @"touch",
-          @"options" : @{},
-          @"specifiers" : @{@"coordinate" :
-                                @{ @"x" : @(hitPoint.x),
-                                   @"y" : @(hitPoint.y)
-                                   }
-                            }
-          };
-
-        __block BOOL success = YES;
-        [GestureFactory executeGestureWithJSON:body completion:^(NSError *error) {
-            if (error) {
-                DDLogError(@"Error dismissing alert: %@", error.localizedDescription);
-                success = NO;
-            }
-        }];
-
-        // Let the main RunLoop progress before executing more queries or
-        // gestures.  It is possible that a failed touch will succeed on the
-        // next pass.
-        //
-        // There is one alert workflow that is very problematic:
-        //
-        // PhotoRoll
-        //
-        // 1. Trigger the alert
-        // 2. Alert appears
-        // 3. Alert is automatically dismissed
-        // 3. Photo Roll is animated on behind the alert
-        // 4. Next gesture or query triggers an alert query
-        //
-        // The AXServer crashes, then the AUT crashes, and then DeviceAgent
-        // performs the gesture or query on the SpringBoard.  For example, if
-        // the gesture was a touch to Cancel the Photo Roll, the Newstand app
-        // would open because that is the App Icon at the position of the
-        // of the Cancel touch.  Sleeping after the dismiss definitely
-        // reduced the frequency of crashes - they still happened.
-        //
-        // The AUT crash was caused by UIImagePickerViewController which has a
-        // history of crashing in situations like this.
-        //
-        // After days device and simulator testing, I settled on 1.0 second.
-        // If there is no sleep or the sleep is too short the AXServer can
-        // disconnect which can cause the DeviceAgent to fail: crashes,
-        // TestPlan exits, etc.
-        //
-        // We will need to see if this value needs to be adjusted for different
-        // environments e.g. CI, XTC, Simulators, etc.
-        //
-        // We prefer stability over speed.
-        CFTimeInterval interval = 1.0;
-        CFRunLoopRunInMode(kCFRunLoopDefaultMode, interval, false);
-
-        return success;
-   }
-}
-
-- (CGPoint)hitPointForAlertButton:(XCUIElement *)alertButton {
-    [alertButton cbx_resolve];
-
-    CGPoint hitPoint;
-    XCUICoordinate *coordinate;
-    coordinate = [alertButton coordinateWithNormalizedOffset:CGVectorMake(0.5, 0.5)];
-    hitPoint = coordinate.screenPoint;
-
-    return [self pointByTranslatingPoint:hitPoint];
-}
-
-- (CGPoint)pointByTranslatingPoint:(CGPoint)point {
-    CGPoint translated = point;
-    CGSize appSize = self.frame.size;
-    UIInterfaceOrientation orientation = self.interfaceOrientation;
-
-    switch (orientation) {
-        case UIInterfaceOrientationPortraitUpsideDown: {
-            translated = CGPointMake(appSize.width - point.x,
-                                     appSize.height - point.y);
-            break;
-        }
-        case UIInterfaceOrientationLandscapeLeft: {
-            translated = CGPointMake(appSize.height - point.y, point.x);
-            break;
-        }
-        case UIInterfaceOrientationLandscapeRight: {
-            translated = CGPointMake(point.y, appSize.width - point.x);
-            break;
-        }
-
-        default: { break; }
-    }
-
-    return translated;
-}
-
 
 @end

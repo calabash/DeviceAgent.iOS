@@ -8,11 +8,6 @@
 #import "Pinch.h"
 #import "Drag.h"
 
-#import "QueryFactory.h"
-#import "QueryConfigurationFactory.h"
-#import "CoordinateQueryConfiguration.h"
-#import "QueryFactory.h"
-#import "JSONUtils.h"
 
 @interface GestureFactoryTests : XCTestCase
 @property (nonatomic, strong) NSArray <NSDictionary *> *validJSON;
@@ -160,13 +155,6 @@
                         @"num_fingers" : @1
                         }
                 };
-    
-    [XCUIDevice sharedDevice].orientation = UIDeviceOrientationLandscapeLeft;
-
-    [self expectGestureWithJSON:json gestureClass:[Touch class]];
-
-    [XCUIDevice sharedDevice].orientation = UIDeviceOrientationPortrait;
-
     [self expectGestureWithJSON:json gestureClass:[Touch class]];
 }
 
