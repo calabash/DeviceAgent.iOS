@@ -120,22 +120,20 @@
     XCTAssertEqual(complete.count, _validJSON.count, @"Not all of the valid gestures were completed.");
 }
 
+- (void)testInvalidJSON {
+    NSThread *cur = [NSThread currentThread];
+    NSMutableArray *complete = [NSMutableArray array];
+    for (NSDictionary *json in _invalidJSON) {
 
-- (void)testTouch {
-    id json = @{
-                @"gesture" : @"touch",
-                @"specifiers" : @{
-                        @"coordinate" :  @[ @50, @50 ]
-                        },
-                @"options" : @{
-                        @"duration" : @0.2,
-                        @"repetitions" : @2,
-                        @"num_fingers" : @1
-                        }
-                };
-    
-    [self expectGestureWithJSON:json gestureClass:[Touch class]];
+        XCTAssertThrows([GestureFactory executeGestureWithJSON:json completion:^(NSError *e) {
+            XCTAssert(cur == [NSThread currentThread],
+                      @"Completion block run on a different queue for %@!",
+                      json[@"gesture"]);
+            [complete addObject:json];
+        }]);
+    }
 }
+
 
 - (void)expectGestureWithJSON:(id)json gestureClass:(Class<Gesture>)gestureClass {
     XCTAssertEqual([gestureClass name], json[@"gesture"], @"You wrote your test wrong!");
@@ -162,15 +160,21 @@
     [self expectGestureWithJSON:json gestureClass:[DoubleTap class]];
 }
 
-
-//-(void)testMarked {
-//
-//    id json = @{@"marked" : @"Second"};
-//    id validQueryConfig = [QueryConfiguration withJSON:json validator:nil];
-//
-//    Query *query = [QueryFactory queryWithQueryConfiguration: validQueryConfig];
-//    NSArray<XCUIElement *> * elements = [query execute];
-//}
+- (void)testTouch {
+    id json = @{
+                @"gesture" : @"touch",
+                @"specifiers" : @{
+                        @"coordinate" :  @[ @50, @50 ]
+                        },
+                @"options" : @{
+                        @"duration" : @0.2,
+                        @"repetitions" : @2,
+                        @"num_fingers" : @1
+                        }
+                };
+    
+    [self expectGestureWithJSON:json gestureClass:[Touch class]];
+}
 
 - (void)testDrag {
     id json = @{
