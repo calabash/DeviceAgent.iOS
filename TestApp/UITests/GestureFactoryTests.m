@@ -103,6 +103,26 @@
     
 }
 
+- (void)tearDown {
+    [super tearDown];
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
+}
+
+- (void)testValidJSON {
+    NSThread *cur = [NSThread currentThread];
+    NSMutableArray *complete = [NSMutableArray array];
+    for (NSDictionary *json in _validJSON) {
+        [GestureFactory executeGestureWithJSON:json completion:^(NSError *e) {
+            XCTAssert(cur == [NSThread currentThread],
+                      @"Completion block run on a different queue for %@!",
+                      json[@"gesture"]);
+            [complete addObject:json];
+        }];
+    }
+    XCTAssertEqual(complete.count, _validJSON.count, @"Not all of the valid gestures were completed.");
+}
+
+
 - (void)testTouch {
     id json = @{
                 @"gesture" : @"touch",
@@ -116,16 +136,6 @@
                         }
                 };
     
-//    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIDeviceOrientationLandscapeLeft] forKey:@"orientation"];
-    //Failed to set device orientation: Not authorized for performing UI testing actions.
-    [XCUIDevice sharedDevice].orientation = UIDeviceOrientationPortrait;
-    
-    //Not authorized for performing UI testing actions
-    [self expectGestureWithJSON:json gestureClass:[Touch class]];
-
-    [XCUIDevice sharedDevice].orientation = UIDeviceOrientationPortrait;
-//    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIDeviceOrientationLandscapeLeft] forKey:@"orientation"];
-
     [self expectGestureWithJSON:json gestureClass:[Touch class]];
 }
 
@@ -141,14 +151,75 @@
 }
 
 
-- (void)tearDown {
-    [super tearDown];
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+- (void)testDoubleTap {
+    id json = @{
+                @"gesture" : @"double_tap",
+                @"specifiers" : @{
+                        @"coordinate" :  @[ @50, @50 ]
+                        },
+                @"options" : @{
+                        @"duration" : @0.1
+                        }
+                };
+    [self expectGestureWithJSON:json gestureClass:[DoubleTap class]];
 }
 
-- (void)testExample {
-    // Use recording to get started writing UI tests.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+//-(void)testMarked {
+//
+//    id json = @{@"marked" : @"Second"};
+//    id validQueryConfig = [QueryConfiguration withJSON:json validator:nil];
+//
+//    Query *query = [QueryFactory queryWithQueryConfiguration: validQueryConfig];
+//    NSArray<XCUIElement *> * elements = [query execute];
+//}
+
+- (void)testDrag {
+    id json = @{
+                @"gesture" : @"drag",
+                @"specifiers" : @{
+                        @"coordinates" :  @[ @[@50, @50], @[@60, @60], @[@70, @70] ]
+                        },
+                @"options" : @{
+                        @"duration" : @0.1,
+                        @"num_fingers" : @1,
+                        @"allow_inertia" : @YES,
+                        @"first_touch_hold_duration" : @0.0
+                        }
+                };
+    [self expectGestureWithJSON:json gestureClass:[Drag class]];
+}
+
+- (void)testPinch {
+    id json = @{
+                @"gesture" : @"pinch",
+                @"specifiers" : @{
+                        @"coordinate" :  @[ @50, @50 ]
+                        },
+                @"options" : @{
+                        @"duration" : @0.1,
+                        @"pinch_direction" : @"out",
+                        @"amount" : @100
+                        }
+                };
+    [self expectGestureWithJSON:json gestureClass:[Pinch class]];
+}
+
+- (void)testRotate {
+    id json = @{
+                @"gesture" : @"rotate",
+                @"specifiers" : @{
+                        @"coordinate" :  @[ @50, @50 ]
+                        },
+                @"options" : @{
+                        @"duration" : @0.1,
+                        @"rotation_direction" : @"clockwise",
+                        @"degrees" : @180,
+                        @"rotation_start" : @90,
+                        @"radius" : @90
+                        }
+                };
+    [self expectGestureWithJSON:json gestureClass:[Rotate class]];
 }
 
 @end

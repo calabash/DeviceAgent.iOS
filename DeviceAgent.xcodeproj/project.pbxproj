@@ -1174,7 +1174,6 @@
 		F5061A432153B0FF00B85792 /* Gestures+OptionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27E11D4F947F000FF6C0 /* Gestures+OptionsTests.m */; };
 		F5061A442153B0FF00B85792 /* CBXTouchEventTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27E31D4F947F000FF6C0 /* CBXTouchEventTests.m */; };
 		F5061A452153B0FF00B85792 /* TouchPathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27E41D4F947F000FF6C0 /* TouchPathTests.m */; };
-		F5061A462153B0FF00B85792 /* GestureFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27E61D4F947F000FF6C0 /* GestureFactoryTests.m */; };
 		F5061A472153B0FF00B85792 /* TouchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27E71D4F947F000FF6C0 /* TouchTest.m */; };
 		F5061A482153B0FF00B85792 /* DragTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F52C9D861DA7E60300DAFC75 /* DragTest.m */; };
 		F5061A492153B0FF00B85792 /* CoordinateQueryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27EA1D4F947F000FF6C0 /* CoordinateQueryTests.m */; };
@@ -2301,7 +2300,6 @@
 		F58D27E11D4F947F000FF6C0 /* Gestures+OptionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "Gestures+OptionsTests.m"; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F58D27E31D4F947F000FF6C0 /* CBXTouchEventTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CBXTouchEventTests.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F58D27E41D4F947F000FF6C0 /* TouchPathTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TouchPathTests.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
-		F58D27E61D4F947F000FF6C0 /* GestureFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GestureFactoryTests.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F58D27E71D4F947F000FF6C0 /* TouchTest.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TouchTest.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F58D27EA1D4F947F000FF6C0 /* CoordinateQueryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CoordinateQueryTests.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		F58D27EC1D4F947F000FF6C0 /* QueryFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = QueryFactoryTests.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
@@ -3492,7 +3490,6 @@
 				F58D27E11D4F947F000FF6C0 /* Gestures+OptionsTests.m */,
 				F58D27E01D4F947F000FF6C0 /* Categories */,
 				F58D27E21D4F947F000FF6C0 /* EventSynthesis */,
-				F58D27E51D4F947F000FF6C0 /* Factory */,
 				F58D27E71D4F947F000FF6C0 /* TouchTest.m */,
 				F52C9D861DA7E60300DAFC75 /* DragTest.m */,
 			);
@@ -3513,14 +3510,6 @@
 				F58D27E41D4F947F000FF6C0 /* TouchPathTests.m */,
 			);
 			path = EventSynthesis;
-			sourceTree = "<group>";
-		};
-		F58D27E51D4F947F000FF6C0 /* Factory */ = {
-			isa = PBXGroup;
-			children = (
-				F58D27E61D4F947F000FF6C0 /* GestureFactoryTests.m */,
-			);
-			path = Factory;
 			sourceTree = "<group>";
 		};
 		F58D27E81D4F947F000FF6C0 /* Queries */ = {
@@ -5695,7 +5684,6 @@
 				F5061A732153B19900B85792 /* CBXCUITestServer.m in Sources */,
 				F5061A892153B19900B85792 /* QueryConfiguration.m in Sources */,
 				F5061A832153B19900B85792 /* QuerySpecifierByTextLike.m in Sources */,
-				F5061A462153B0FF00B85792 /* GestureFactoryTests.m in Sources */,
 				F5061A622153B14400B85792 /* CBXOrientation.m in Sources */,
 				F5061A702153B15E00B85792 /* UndefinedRoutes.m in Sources */,
 				F5061A802153B19900B85792 /* QuerySpecifierByProperty.m in Sources */,
