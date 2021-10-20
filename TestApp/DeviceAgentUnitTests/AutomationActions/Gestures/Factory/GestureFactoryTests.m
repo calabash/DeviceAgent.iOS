@@ -8,6 +8,7 @@
 #import "Pinch.h"
 #import "Drag.h"
 
+#import "CBXOrientation.h"
 
 @interface GestureFactoryTests : XCTestCase
 @property (nonatomic, strong) NSArray <NSDictionary *> *validJSON;
@@ -155,6 +156,17 @@
                         @"num_fingers" : @1
                         }
                 };
+    
+    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIDeviceOrientationLandscapeLeft] forKey:@"orientation"];
+    //Failed to set device orientation: Not authorized for performing UI testing actions.
+//    [XCUIDevice sharedDevice].orientation = UIDeviceOrientationPortrait;
+    
+    //Not authorized for performing UI testing actions
+    [self expectGestureWithJSON:json gestureClass:[Touch class]];
+
+    //[XCUIDevice sharedDevice].orientation = UIDeviceOrientationPortrait;
+    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIDeviceOrientationLandscapeLeft] forKey:@"orientation"];
+
     [self expectGestureWithJSON:json gestureClass:[Touch class]];
 }
 
