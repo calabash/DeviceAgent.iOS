@@ -55,9 +55,70 @@
 		419BE54B231E46D800DF0ABD /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107F8FC231D7262003961AF /* Resources.xcassets */; };
 		4740BCC1271FE9C6003792B6 /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107F8FC231D7262003961AF /* Resources.xcassets */; };
 		4740BCC2271FF548003792B6 /* CocoaLumberjack.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84A10D942679A375004446C7 /* CocoaLumberjack.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4740BCC327200212003792B6 /* XCTest+CBXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F547174F20496A200024AA0B /* XCTest+CBXAdditions.m */; };
+		4740BCC427200219003792B6 /* CBXCUITestServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83BF1C6DDF1300A945C8 /* CBXCUITestServer.m */; };
+		4740BCC527200286003792B6 /* UIDevice+Wifi_IP.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBC09D2101EEE900A4C274 /* UIDevice+Wifi_IP.m */; };
+		4740BCC6272002C5003792B6 /* QuerySpecifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537F61CA1DF8500F62E09 /* QuerySpecifier.m */; };
+		4740BCC7272002C8003792B6 /* QuerySpecifierById.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D537FA1CA2020700F62E09 /* QuerySpecifierById.m */; };
+		4740BCC8272002CE003792B6 /* QuerySpecifierByIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538141CA351F400F62E09 /* QuerySpecifierByIndex.m */; };
+		4740BCC9272002D1003792B6 /* QuerySpecifierByProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538181CA3551600F62E09 /* QuerySpecifierByProperty.m */; };
+		4740BCCA272002D3003792B6 /* QuerySpecifierByPropertyLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5381C1CA359B200F62E09 /* QuerySpecifierByPropertyLike.m */; };
+		4740BCCB272002D5003792B6 /* QuerySpecifierByText.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D538021CA20DB800F62E09 /* QuerySpecifierByText.m */; };
+		4740BCCC272002D8003792B6 /* QuerySpecifierByTextLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5380F1CA34CBE00F62E09 /* QuerySpecifierByTextLike.m */; };
+		4740BCCD272002DA003792B6 /* QuerySpecifierByCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696FE1CB5C93400BB42E2 /* QuerySpecifierByCoordinate.m */; };
+		4740BCCE272002DC003792B6 /* QuerySpecifierByDescendantType.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B81F694240E952F00825603 /* QuerySpecifierByDescendantType.m */; };
+		4740BCCF272002DE003792B6 /* QuerySpecifierByType.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B951A01CF5B297007FD0AB /* QuerySpecifierByType.m */; };
+		4740BCD0272002E2003792B6 /* QuerySpecifierByMark.m in Sources */ = {isa = PBXBuildFile; fileRef = F53679A01D7C324E009956D0 /* QuerySpecifierByMark.m */; };
+		4740BCD12720030F003792B6 /* Gesture+Options.m in Sources */ = {isa = PBXBuildFile; fileRef = 899697041CB5D5CF00BB42E2 /* Gesture+Options.m */; };
+		4740BCD227200313003792B6 /* EnterText.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696B91CADF84B00BB42E2 /* EnterText.m */; };
+		4740BCD32720031A003792B6 /* ClearText.m in Sources */ = {isa = PBXBuildFile; fileRef = 896C7C761D19AE990017CE08 /* ClearText.m */; };
+		4740BCD42720031C003792B6 /* DoubleTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C5F36E1C9E32440093A018 /* DoubleTap.m */; };
+		4740BCD52720031E003792B6 /* TwoFingerTap.m in Sources */ = {isa = PBXBuildFile; fileRef = F55B31C41CBE6E3800DFB13C /* TwoFingerTap.m */; };
+		4740BCD627200322003792B6 /* Drag.m in Sources */ = {isa = PBXBuildFile; fileRef = 89512BDA1C9EEC3C0027D61E /* Drag.m */; };
+		4740BCD727200324003792B6 /* Pinch.m in Sources */ = {isa = PBXBuildFile; fileRef = 899696C31CB3360900BB42E2 /* Pinch.m */; };
+		4740BCD827200326003792B6 /* Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BF8A1CBC4BDD0088269C /* Rotate.m */; };
+		4740BCD92720032D003792B6 /* CBLSApplicationWorkspace.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A14DE41E02CF84001A0037 /* CBLSApplicationWorkspace.m */; };
+		4740BCDA2720032F003792B6 /* CBLSApplicationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE18E11E8BBA61001116A5 /* CBLSApplicationProxy.m */; };
+		4740BCDB27200335003792B6 /* ElementNotFoundException.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C21C6DDF1300A945C8 /* ElementNotFoundException.m */; };
+		4740BCDC2720033B003792B6 /* CBXRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C91C6DDF1300A945C8 /* CBXRoute.m */; };
+		4740BCDD2720033D003792B6 /* GestureRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83CB1C6DDF1300A945C8 /* GestureRoutes.m */; };
+		4740BCDE2720033F003792B6 /* HealthRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83CD1C6DDF1300A945C8 /* HealthRoutes.m */; };
+		4740BCE027200342003792B6 /* MetaRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83CF1C6DDF1300A945C8 /* MetaRoutes.m */; };
+		4740BCE127200343003792B6 /* QueryRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83D11C6DDF1300A945C8 /* QueryRoutes.m */; };
+		4740BCE227200346003792B6 /* SessionRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83D31C6DDF1300A945C8 /* SessionRoutes.m */; };
+		4740BCE327200347003792B6 /* UndefinedRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83D51C6DDF1300A945C8 /* UndefinedRoutes.m */; };
+		4740BCE427200349003792B6 /* DeviceEventRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 89512BDE1CA095D20027D61E /* DeviceEventRoutes.m */; };
+		4740BCE527200352003792B6 /* GeometryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BF8F1CBEB5AD0088269C /* GeometryUtils.m */; };
+		4740BCE627200358003792B6 /* CBXInfoPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = F549E1A31D54723300C4FA36 /* CBXInfoPlist.m */; };
+		4740BCE72720035C003792B6 /* TextInputFirstResponderProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F5366D9D1DE6CC2900E7C765 /* TextInputFirstResponderProvider.m */; };
+		4740BCE827200361003792B6 /* CBXLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = F5538B891E28BEB9003EC5F3 /* CBXLogging.m */; };
 		47609A96271F075100974A30 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47609A95271F075100974A30 /* UIKit.framework */; };
 		47609A98271F075600974A30 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47609A97271F075600974A30 /* CoreGraphics.framework */; };
 		47609A9A271F076200974A30 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47609A99271F076200974A30 /* CFNetwork.framework */; };
+		47A3793C2720045E00214051 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FEE1C6DD07500A945C8 /* GCDAsyncSocket.m */; };
+		47A3793D2720046300214051 /* DDData.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FF61C6DD07500A945C8 /* DDData.m */; };
+		47A3793E2720046600214051 /* DDNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FF81C6DD07500A945C8 /* DDNumber.m */; };
+		47A3793F2720046800214051 /* DDRange.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FFA1C6DD07500A945C8 /* DDRange.m */; };
+		47A379402720046B00214051 /* HTTPAuthenticationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FFC1C6DD07500A945C8 /* HTTPAuthenticationRequest.m */; };
+		47A379412720046E00214051 /* HTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F7FFE1C6DD07500A945C8 /* HTTPConnection.m */; };
+		47A379422720047200214051 /* HTTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80011C6DD07500A945C8 /* HTTPMessage.m */; };
+		47A379432720047500214051 /* HTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80041C6DD07500A945C8 /* HTTPServer.m */; };
+		47A37944272004AE00214051 /* MultipartFormDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80071C6DD07500A945C8 /* MultipartFormDataParser.m */; };
+		47A37945272004B000214051 /* MultipartMessageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80091C6DD07500A945C8 /* MultipartMessageHeader.m */; };
+		47A37946272004B200214051 /* MultipartMessageHeaderField.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F800B1C6DD07500A945C8 /* MultipartMessageHeaderField.m */; };
+		47A37947272004B500214051 /* HTTPAsyncFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F800E1C6DD07500A945C8 /* HTTPAsyncFileResponse.m */; };
+		47A37948272004B800214051 /* HTTPDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80101C6DD07500A945C8 /* HTTPDataResponse.m */; };
+		47A37949272004BA00214051 /* HTTPDynamicFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80121C6DD07500A945C8 /* HTTPDynamicFileResponse.m */; };
+		47A3794A272004BC00214051 /* HTTPErrorResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80141C6DD07500A945C8 /* HTTPErrorResponse.m */; };
+		47A3794B272004BF00214051 /* HTTPFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80161C6DD07500A945C8 /* HTTPFileResponse.m */; };
+		47A3794C272004C300214051 /* HTTPRedirectResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F80181C6DD07500A945C8 /* HTTPRedirectResponse.m */; };
+		47A3794D2720059C00214051 /* WebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F801A1C6DD07500A945C8 /* WebSocket.m */; };
+		47A3794E272005A600214051 /* HTTPResponseProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F81181C6DD07500A945C8 /* HTTPResponseProxy.m */; };
+		47A3794F272005A800214051 /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F811A1C6DD07500A945C8 /* Route.m */; };
+		47A37950272005AA00214051 /* RouteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F811C1C6DD07500A945C8 /* RouteRequest.m */; };
+		47A37951272005AD00214051 /* RouteResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F811E1C6DD07500A945C8 /* RouteResponse.m */; };
+		47A37952272005AF00214051 /* RoutingConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F81201C6DD07500A945C8 /* RoutingConnection.m */; };
+		47A37953272005B000214051 /* RoutingHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F81221C6DD07500A945C8 /* RoutingHTTPServer.m */; };
 		47C26420271F141F006EF0B9 /* XCApplicationQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0ADB26B8DB90001CF302 /* XCApplicationQuery.h */; };
 		47C26423271F17B5006EF0B9 /* XCTest+CBXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F547174D204939DA0024AA0B /* XCTest+CBXAdditions.h */; };
 		47C26424271F17B6006EF0B9 /* XCTest+CBXAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F547174D204939DA0024AA0B /* XCTest+CBXAdditions.h */; };
@@ -5399,41 +5460,102 @@
 			buildActionMask = 2147483647;
 			files = (
 				47C2655E271F20B4006EF0B9 /* TouchPath.m in Sources */,
+				4740BCC7272002C8003792B6 /* QuerySpecifierById.m in Sources */,
+				4740BCC427200219003792B6 /* CBXCUITestServer.m in Sources */,
+				47A3793F2720046800214051 /* DDRange.m in Sources */,
 				47C2655C271F203C006EF0B9 /* Query.m in Sources */,
 				47C2655F271F20D7006EF0B9 /* InvalidArgumentException.m in Sources */,
+				4740BCD42720031C003792B6 /* DoubleTap.m in Sources */,
+				47A3793C2720045E00214051 /* GCDAsyncSocket.m in Sources */,
+				47A37948272004B800214051 /* HTTPDataResponse.m in Sources */,
+				4740BCC9272002D1003792B6 /* QuerySpecifierByProperty.m in Sources */,
+				4740BCD12720030F003792B6 /* Gesture+Options.m in Sources */,
+				47A379422720047200214051 /* HTTPMessage.m in Sources */,
+				47A3793D2720046300214051 /* DDData.m in Sources */,
+				47A3793E2720046600214051 /* DDNumber.m in Sources */,
+				47A37946272004B200214051 /* MultipartMessageHeaderField.m in Sources */,
+				4740BCE227200346003792B6 /* SessionRoutes.m in Sources */,
+				4740BCD727200324003792B6 /* Pinch.m in Sources */,
+				4740BCD627200322003792B6 /* Drag.m in Sources */,
 				47C26562271F2121006EF0B9 /* JSONUtils.m in Sources */,
+				4740BCDD2720033D003792B6 /* GestureRoutes.m in Sources */,
+				4740BCD227200313003792B6 /* EnterText.m in Sources */,
+				4740BCE627200358003792B6 /* CBXInfoPlist.m in Sources */,
 				47C2656B271F224F006EF0B9 /* CBXTouchEvent.m in Sources */,
+				4740BCD827200326003792B6 /* Rotate.m in Sources */,
+				4740BCDE2720033F003792B6 /* HealthRoutes.m in Sources */,
+				47A37953272005B000214051 /* RoutingHTTPServer.m in Sources */,
+				4740BCD0272002E2003792B6 /* QuerySpecifierByMark.m in Sources */,
+				4740BCE827200361003792B6 /* CBXLogging.m in Sources */,
 				47C26559271F1FF2006EF0B9 /* GestureFactory.m in Sources */,
 				47C2656C271F225C006EF0B9 /* QueryFactory.m in Sources */,
+				47A37945272004B000214051 /* MultipartMessageHeader.m in Sources */,
 				47C2655A271F2020006EF0B9 /* Touch.m in Sources */,
+				4740BCDA2720032F003792B6 /* CBLSApplicationProxy.m in Sources */,
 				47C2655D271F2096006EF0B9 /* Coordinate.m in Sources */,
+				47A379432720047500214051 /* HTTPServer.m in Sources */,
 				47C26579271F2460006EF0B9 /* XCUIElement+VisibilityResult.m in Sources */,
+				4740BCE527200352003792B6 /* GeometryUtils.m in Sources */,
+				4740BCDC2720033B003792B6 /* CBXRoute.m in Sources */,
+				4740BCD92720032D003792B6 /* CBLSApplicationWorkspace.m in Sources */,
 				47C26568271F21F1006EF0B9 /* ThreadUtils.m in Sources */,
 				47C26570271F22AF006EF0B9 /* GestureConfiguration.m in Sources */,
+				47A37951272005AD00214051 /* RouteResponse.m in Sources */,
+				47A3794C272004C300214051 /* HTTPRedirectResponse.m in Sources */,
+				4740BCE127200343003792B6 /* QueryRoutes.m in Sources */,
+				47A379402720046B00214051 /* HTTPAuthenticationRequest.m in Sources */,
+				47A37947272004B500214051 /* HTTPAsyncFileResponse.m in Sources */,
+				4740BCD32720031A003792B6 /* ClearText.m in Sources */,
+				47A3794A272004BC00214051 /* HTTPErrorResponse.m in Sources */,
+				47A3794E272005A600214051 /* HTTPResponseProxy.m in Sources */,
+				4740BCE427200349003792B6 /* DeviceEventRoutes.m in Sources */,
 				47C26565271F2180006EF0B9 /* CBXDevice.m in Sources */,
 				47C26560271F20FB006EF0B9 /* AutomationAction.m in Sources */,
+				4740BCE72720035C003792B6 /* TextInputFirstResponderProvider.m in Sources */,
+				4740BCE027200342003792B6 /* MetaRoutes.m in Sources */,
 				47C26572271F22DA006EF0B9 /* QueryConfiguration.m in Sources */,
 				47C26569271F2229006EF0B9 /* CBXOrientation.m in Sources */,
 				47C26566271F2189006EF0B9 /* CBXWaiter.m in Sources */,
+				4740BCCA272002D3003792B6 /* QuerySpecifierByPropertyLike.m in Sources */,
 				47C26576271F23DD006EF0B9 /* QuerySpecifierFactory.m in Sources */,
+				4740BCD52720031E003792B6 /* TwoFingerTap.m in Sources */,
 				47C2656D271F2265006EF0B9 /* QueryConfigurationFactory.m in Sources */,
+				4740BCCB272002D5003792B6 /* QuerySpecifierByText.m in Sources */,
+				47A3794B272004BF00214051 /* HTTPFileResponse.m in Sources */,
 				47C2656F271F22A6006EF0B9 /* CoordinateQueryConfiguration.m in Sources */,
+				4740BCC327200212003792B6 /* XCTest+CBXAdditions.m in Sources */,
+				4740BCCF272002DE003792B6 /* QuerySpecifierByType.m in Sources */,
+				4740BCCD272002DA003792B6 /* QuerySpecifierByCoordinate.m in Sources */,
 				47C26554271F1E78006EF0B9 /* CBXDylibInjectionTest.m in Sources */,
+				4740BCC6272002C5003792B6 /* QuerySpecifier.m in Sources */,
+				4740BCDB27200335003792B6 /* ElementNotFoundException.m in Sources */,
 				47C2656E271F2271006EF0B9 /* CoordinateQuery.m in Sources */,
+				47A379412720046E00214051 /* HTTPConnection.m in Sources */,
+				47A37952272005AF00214051 /* RoutingConnection.m in Sources */,
+				47A37944272004AE00214051 /* MultipartFormDataParser.m in Sources */,
 				47C26575271F23C9006EF0B9 /* SpringBoardAlerts.m in Sources */,
 				47C2655B271F2036006EF0B9 /* Gesture.m in Sources */,
 				47C26567271F21CC006EF0B9 /* Testmanagerd.m in Sources */,
+				4740BCE327200347003792B6 /* UndefinedRoutes.m in Sources */,
 				47C2656A271F223E006EF0B9 /* CBXMachClock.m in Sources */,
 				47C26555271F1E78006EF0B9 /* XCWebViews.m in Sources */,
+				4740BCC527200286003792B6 /* UIDevice+Wifi_IP.m in Sources */,
+				47A3794D2720059C00214051 /* WebSocket.m in Sources */,
 				47C26553271F1E78006EF0B9 /* GestureFactoryTests.m in Sources */,
+				47A37950272005AA00214051 /* RouteRequest.m in Sources */,
 				47C26573271F22EB006EF0B9 /* CBXDecimalRounder.m in Sources */,
 				47C26574271F23B6006EF0B9 /* ActionConfiguration.m in Sources */,
+				4740BCCE272002DC003792B6 /* QuerySpecifierByDescendantType.m in Sources */,
+				4740BCC8272002CE003792B6 /* QuerySpecifierByIndex.m in Sources */,
 				47C26564271F2153006EF0B9 /* CBXException.m in Sources */,
+				47A37949272004BA00214051 /* HTTPDynamicFileResponse.m in Sources */,
 				47C26571271F22D0006EF0B9 /* SpringBoard.m in Sources */,
 				47C26563271F212A006EF0B9 /* Application.m in Sources */,
 				47C26577271F23EE006EF0B9 /* SpringBoardAlert.m in Sources */,
+				47A3794F272005A800214051 /* Route.m in Sources */,
 				47C26558271F1E78006EF0B9 /* Screenshotter.m in Sources */,
 				47C26561271F2119006EF0B9 /* JSONKeyValidator.m in Sources */,
+				4740BCCC272002D8003792B6 /* QuerySpecifierByTextLike.m in Sources */,
 				47C26557271F1E78006EF0B9 /* CBXStressTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
