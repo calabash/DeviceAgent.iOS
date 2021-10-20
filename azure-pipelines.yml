@@ -73,6 +73,10 @@ jobs:
     displayName: "Make unit-tests"
     condition: and(succeeded(), eq(variables['IsRunUnitTests'], 'true'))
 
+  - script: make ui-tests
+    displayName: "Make ui-tests"
+    condition: and(succeeded(), eq(variables['IsRunUnitTests'], 'true'))
+
   - script: bundle exec bin/ci/cucumber.rb
     displayName: "exec cucumber"
     condition: and(succeeded(), eq(variables['IsRunCucumberTests'], 'true'))

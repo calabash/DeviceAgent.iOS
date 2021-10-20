@@ -177,7 +177,7 @@
 
 
     NSString *text = nil;
-    for (NSUInteger try = 0; try < 100; try++) {
+    for (NSUInteger try = 0; try < 10; try++) {
         // show the keyboard
         [self.aut.textFields[@"text field"] tap];
 

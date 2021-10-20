@@ -5,7 +5,7 @@
 //  Created by Алан Максвелл on 19.10.2021.
 //  Copyright © 2021 Calabash. All rights reserved.
 //
-#import "CBXServerUnitTestUmbrellaHeader.h"
+
 #import "GestureFactory.h"
 #import "EnterText.h"
 #import "DoubleTap.h"
@@ -13,8 +13,6 @@
 #import "Touch.h"
 #import "Pinch.h"
 #import "Drag.h"
-
-#import "CBXOrientation.h"
 
 #import <XCTest/XCTest.h>
 
