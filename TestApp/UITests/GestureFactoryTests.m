@@ -1,5 +1,11 @@
+//
+//  GestureFactoryTests.m
+//  DeviceAgent
+//
+//  Created by Алан Максвелл on 19.10.2021.
+//  Copyright © 2021 Calabash. All rights reserved.
+//
 
-#import "CBXServerUnitTestUmbrellaHeader.h"
 #import "GestureFactory.h"
 #import "EnterText.h"
 #import "DoubleTap.h"
@@ -7,6 +13,9 @@
 #import "Touch.h"
 #import "Pinch.h"
 #import "Drag.h"
+
+#import <XCTest/XCTest.h>
+
 
 @interface GestureFactoryTests : XCTestCase
 @property (nonatomic, strong) NSArray <NSDictionary *> *validJSON;
@@ -82,11 +91,19 @@
                         @"banana" : @"man"
                         }
                     ];
+    // In UI tests it is usually best to stop immediately when a failure occurs.
+    self.continueAfterFailure = NO;
+
+    // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
+    [[[XCUIApplication alloc] init] launch];
+
+    // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+    
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
 }
 
 - (void)testValidJSON {
@@ -107,7 +124,7 @@
     NSThread *cur = [NSThread currentThread];
     NSMutableArray *complete = [NSMutableArray array];
     for (NSDictionary *json in _invalidJSON) {
-        
+
         XCTAssertThrows([GestureFactory executeGestureWithJSON:json completion:^(NSError *e) {
             XCTAssert(cur == [NSThread currentThread],
                       @"Completion block run on a different queue for %@!",
@@ -116,6 +133,7 @@
         }]);
     }
 }
+
 
 - (void)expectGestureWithJSON:(id)json gestureClass:(Class<Gesture>)gestureClass {
     XCTAssertEqual([gestureClass name], json[@"gesture"], @"You wrote your test wrong!");
@@ -127,6 +145,7 @@
         XCTAssertNil(e, @"Error executing gesture with json: %@, %@", e, json);
     }];
 }
+
 
 - (void)testDoubleTap {
     id json = @{
@@ -153,6 +172,7 @@
                         @"num_fingers" : @1
                         }
                 };
+    
     [self expectGestureWithJSON:json gestureClass:[Touch class]];
 }
 

@@ -85,6 +85,20 @@
     [self waitUntilElementExists:element withTimeout:5];
     [element tap];
 
+    element = self.app.tables[@"table"].cells[@"health kit"];
+    [self waitUntilElementExists:element withTimeout:5];
+    [element tap];
+    
+    [NSThread sleepForTimeInterval:5.0f];
+    
+    NSArray<XCUIElement *>* buttons = self.app.buttons.allElementsBoundByIndex;
+    NSArray<XCUIElement *>* switches = self.app.switches.allElementsBoundByIndex;
+    NSArray<XCUIElement *>* staticTexts = self.app.staticTexts.allElementsBoundByIndex;
+    
+    NSString* switchTitle = [switches[0] title];
+    [switches[0] tap];
+    [buttons[1] tap];
+    
     element = self.app.tables[@"table"].cells[@"dog food"];
     [self waitUntilElementExists:element withTimeout:120];
     [element tap];
