@@ -95,6 +95,7 @@
 - (BOOL)exists;
 - (id)initPrivateWithPath:(id)arg1 bundleID:(id)arg2;
 - (id)initWithApplicationSpecifier:(id)arg1 device:(id)arg2;
+- (id)initWithApplicationSpecifier:(id)arg1 device:(id)arg2 error:(id *)arg3;
 - (id)initWithBundleIdentifier:(id)arg1;
 - (id)initWithBundleIdentifier:(id)arg1 device:(id)arg2;
 - (id)initWithElementQuery:(id)arg1;
