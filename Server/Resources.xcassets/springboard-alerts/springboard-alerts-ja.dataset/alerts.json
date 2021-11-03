@@ -453,5 +453,12 @@
       "許可"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Apple IDが必要です",
+    "buttons": [
+      "今はしない"
+    ],
+    "shouldAccept": false
   }
 ]

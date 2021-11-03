@@ -524,5 +524,12 @@
       "Bukan Sekarang"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Apple ID Diperlukan",
+    "buttons": [
+      "Bukan Sekarang"
+    ],
+    "shouldAccept": false
   }
 ]

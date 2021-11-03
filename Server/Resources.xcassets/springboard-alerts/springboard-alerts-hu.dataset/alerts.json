@@ -547,5 +547,12 @@
       "Tiltás"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Apple ID szükséges",
+    "buttons": [
+      "Ne most"
+    ],
+    "shouldAccept": false
   }
 ]

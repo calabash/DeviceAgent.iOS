@@ -609,5 +609,12 @@
       "Не зараз"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Потрібний Apple ID",
+    "buttons": [
+      "Не зараз"
+    ],
+    "shouldAccept": false
   }
 ]

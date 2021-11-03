@@ -460,5 +460,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Vaaditaan Apple ID",
+    "buttons": [
+      "Ei nyt"
+    ],
+    "shouldAccept": false
   }
 ]

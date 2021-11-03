@@ -474,5 +474,12 @@
       "ليس الآن"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "مطلوب Apple ID",
+    "buttons": [
+      "ليس الآ"
+    ],
+    "shouldAccept": false
   }
 ]

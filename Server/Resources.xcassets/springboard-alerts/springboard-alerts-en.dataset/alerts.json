@@ -476,5 +476,12 @@
       "Allow"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Apple ID Required",
+    "buttons": [
+      "Not Now"
+    ],
+    "shouldAccept": false
   }
 ]

@@ -478,5 +478,12 @@
       "אישור"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "נדרש Apple ID",
+    "buttons": [
+      "לא כעת"
+    ],
+    "shouldAccept": false
   }
 ]

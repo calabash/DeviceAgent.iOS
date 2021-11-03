@@ -480,5 +480,12 @@
       "Tillad"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Apple-id kræves",
+    "buttons": [
+      "Ikke nu"
+    ],
+    "shouldAccept": false
   }
 ]
