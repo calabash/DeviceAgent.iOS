@@ -29,7 +29,7 @@ jobs:
         IMAGE_POOL: 'macOS-11'
         XCODE_VERSION: '13.0'
       BigSur-Xcode-13.1:
-        IMAGE_POOL: 'macOS-12'
+        IMAGE_POOL: 'macOS-11'
         XCODE_VERSION: '13.1'
   pool:
     vmImage: $(IMAGE_POOL)
