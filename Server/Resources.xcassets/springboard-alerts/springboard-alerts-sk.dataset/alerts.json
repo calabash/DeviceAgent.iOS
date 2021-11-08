@@ -720,5 +720,12 @@
       "Povoliť"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Vyžaduje sa Apple ID",
+    "buttons": [
+      "Teraz nie"
+    ],
+    "shouldAccept": false
   }
 ]

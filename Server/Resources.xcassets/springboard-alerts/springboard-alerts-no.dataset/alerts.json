@@ -587,5 +587,12 @@
       "Tillat"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Apple‑ID kreves",
+    "buttons": [
+      "Ikke nå"
+    ],
+    "shouldAccept": false
   }
 ]

@@ -456,5 +456,12 @@
       "Plus tard"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Identifiant Apple requis",
+    "buttons": [
+      "Plus tard"
+    ],
+    "shouldAccept": false
   }
 ]

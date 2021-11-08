@@ -563,5 +563,12 @@
       "Ναι"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Απαιτείται Apple ID",
+    "buttons": [
+      "Όχι τώρα"
+    ],
+    "shouldAccept": false
   }
 ]

@@ -720,5 +720,12 @@
       "Erlauben"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Apple‑ID erforderlich",
+    "buttons": [
+      "Später"
+    ],
+    "shouldAccept": false
   }
 ]

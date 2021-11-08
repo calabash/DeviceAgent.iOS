@@ -624,5 +624,12 @@
       "Разрешить"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Требуется Apple ID",
+    "buttons": [
+      "Не сейчас"
+    ],
+    "shouldAccept": false
   }
 ]

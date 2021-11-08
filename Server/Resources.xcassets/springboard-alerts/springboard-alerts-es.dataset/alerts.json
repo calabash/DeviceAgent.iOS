@@ -514,5 +514,12 @@
       "Permitir"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "ID de Apple necesario",
+    "buttons": [
+      "Ahora no"
+    ],
+    "shouldAccept": false
   }
 ]

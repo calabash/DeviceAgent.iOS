@@ -491,5 +491,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "ID d’Apple obligatori",
+    "buttons": [
+      "Ara no"
+    ],
+    "shouldAccept": false
   }
 ]

@@ -433,5 +433,12 @@
       "Permiteți"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "ID Apple necesar",
+    "buttons": [
+      "Nu acum"
+    ],
+    "shouldAccept": false
   }
 ]

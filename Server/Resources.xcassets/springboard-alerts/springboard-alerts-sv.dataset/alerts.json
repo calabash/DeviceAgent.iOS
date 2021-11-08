@@ -426,5 +426,12 @@
       "Tillåt"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Apple-ID krävs",
+    "buttons": [
+      "Inte nu"
+    ],
+    "shouldAccept": false
   }
 ]

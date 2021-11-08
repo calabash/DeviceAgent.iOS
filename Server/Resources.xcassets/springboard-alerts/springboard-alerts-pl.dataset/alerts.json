@@ -474,5 +474,12 @@
       "Pozwól"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Wymagany Apple ID",
+    "buttons": [
+      "Nie teraz"
+    ],
+    "shouldAccept": false
   }
 ]

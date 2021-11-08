@@ -494,5 +494,12 @@
       "Non ora"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "È richiesto un ID Apple",
+    "buttons": [
+      "Non ora"
+    ],
+    "shouldAccept": false
   }
 ]
