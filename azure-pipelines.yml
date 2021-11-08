@@ -28,10 +28,7 @@ jobs:
       BigSur-Xcode-13.0:
         IMAGE_POOL: 'macOS-11'
         XCODE_VERSION: '13.0'
-      Monterey-Xcode-13.0:
-        IMAGE_POOL: 'macOS-12'
-        XCODE_VERSION: '13.0'
-      Monterey-Xcode-13.1:
+      BigSur-Xcode-13.1:
         IMAGE_POOL: 'macOS-12'
         XCODE_VERSION: '13.1'
   pool:
