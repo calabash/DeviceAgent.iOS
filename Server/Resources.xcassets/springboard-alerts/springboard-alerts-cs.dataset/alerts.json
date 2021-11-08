@@ -530,5 +530,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Je požadováno Apple ID",
+    "buttons": [
+      "Teď ne"
+    ],
+    "shouldAccept": false
   }
 ]

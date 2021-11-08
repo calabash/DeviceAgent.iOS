@@ -559,5 +559,12 @@
       "허용 안 함"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Apple ID 필요",
+    "buttons": [
+      "지금 안 함"
+    ],
+    "shouldAccept": false
   }
 ]

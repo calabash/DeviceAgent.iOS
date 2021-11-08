@@ -538,5 +538,12 @@
       "ตกลง"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "ต้องใช้ Apple ID",
+    "buttons": [
+      "ไม่ใช่ตอนนี้"
+    ],
+    "shouldAccept": false
   }
 ]

@@ -629,5 +629,12 @@
       "अनुमति न दें"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Apple ID आवश्यक",
+    "buttons": [
+      "अभी नहीं"
+    ],
+    "shouldAccept": false
   }
 ]

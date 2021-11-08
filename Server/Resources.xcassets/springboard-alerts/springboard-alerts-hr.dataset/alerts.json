@@ -477,5 +477,12 @@
       "Nemoj dozvoliti"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Potreban je Apple ID",
+    "buttons": [
+      "Ne sad"
+    ],
+    "shouldAccept": false
   }
 ]

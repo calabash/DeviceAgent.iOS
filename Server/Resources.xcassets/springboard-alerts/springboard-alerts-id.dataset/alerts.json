@@ -451,5 +451,12 @@
       "Izinkan"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "ID Apple Diperlukan",
+    "buttons": [
+      "Nanti"
+    ],
+    "shouldAccept": false
   }
 ]

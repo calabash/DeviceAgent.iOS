@@ -510,5 +510,12 @@
       "Sonra"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Apple Kimliği Gerekli",
+    "buttons": [
+      "Sonra"
+    ],
+    "shouldAccept": false
   }
 ]
