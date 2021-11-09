@@ -1,3 +1,9 @@
+### 2.4.1
+
+* Added support of Xcode 13.1.
+* Added handling of "Apple ID Required" notification.
+* Updated calabash.xcframework.
+
 ### 2.4.0
 
 * Added support of Xcode 13.0 and iOS 15.
