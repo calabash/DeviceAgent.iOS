@@ -6372,6 +6372,18 @@
 					"-ObjC",
 					"-lz",
 				);
+				"OTHER_LDFLAGS[sdk=iphoneos*]" = (
+					"-ObjC",
+					"-lz",
+					"-force_load",
+					"\"$(PROJECT_DIR)/Vendor/calabash.xcframework/ios-arm64_armv7/libcalabash.a\"",
+				);
+				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = (
+					"-ObjC",
+					"-lz",
+					"-force_load",
+					"\"$(PROJECT_DIR)/Vendor/calabash.xcframework/ios-arm64_x86_64-simulator/libcalabash.a\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5f9752ef-87bc-4cd7-9c7e-5c2478f07391";
@@ -6403,6 +6415,18 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lz",
+				);
+				"OTHER_LDFLAGS[sdk=iphoneos*]" = (
+					"-ObjC",
+					"-lz",
+					"-force_load",
+					"\"$(PROJECT_DIR)/Vendor/calabash.xcframework/ios-arm64_armv7/libcalabash.a\"",
+				);
+				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = (
+					"-ObjC",
+					"-lz",
+					"-force_load",
+					"\"$(PROJECT_DIR)/Vendor/calabash.xcframework/ios-arm64_x86_64-simulator/libcalabash.a\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calaba.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
