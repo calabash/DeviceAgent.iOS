@@ -380,8 +380,6 @@
 		840C9129279016BD000A4F52 /* XCUIInterruptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90BF279016BD000A4F52 /* XCUIInterruptionHandler.h */; };
 		840C912A279016BD000A4F52 /* XCTMetricDiagnosticHelper-UIAutomation.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90C0279016BD000A4F52 /* XCTMetricDiagnosticHelper-UIAutomation.h */; };
 		840C912B279016BD000A4F52 /* XCTMetricDiagnosticHelper-UIAutomation.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90C0279016BD000A4F52 /* XCTMetricDiagnosticHelper-UIAutomation.h */; };
-		840C912C279016BD000A4F52 /* XCTIssueHandling-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90C1279016BD000A4F52 /* XCTIssueHandling-Protocol.h */; };
-		840C912D279016BD000A4F52 /* XCTIssueHandling-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90C1279016BD000A4F52 /* XCTIssueHandling-Protocol.h */; };
 		840C912E279016BD000A4F52 /* XCUIElementTypeQueryProvider_Private-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90C2279016BD000A4F52 /* XCUIElementTypeQueryProvider_Private-Protocol.h */; };
 		840C912F279016BD000A4F52 /* XCUIElementTypeQueryProvider_Private-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90C2279016BD000A4F52 /* XCUIElementTypeQueryProvider_Private-Protocol.h */; };
 		840C9130279016BD000A4F52 /* XCUIAXNotificationHandling-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90C3279016BD000A4F52 /* XCUIAXNotificationHandling-Protocol.h */; };
@@ -394,16 +392,12 @@
 		840C9137279016BD000A4F52 /* XCSourceCodeRecording.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90C6279016BD000A4F52 /* XCSourceCodeRecording.h */; };
 		840C9138279016BD000A4F52 /* XCUIApplicationSpecifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90C7279016BD000A4F52 /* XCUIApplicationSpecifier.h */; };
 		840C9139279016BD000A4F52 /* XCUIApplicationSpecifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90C7279016BD000A4F52 /* XCUIApplicationSpecifier.h */; };
-		840C913A279016BD000A4F52 /* XCTestObservation-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90C8279016BD000A4F52 /* XCTestObservation-Protocol.h */; };
-		840C913B279016BD000A4F52 /* XCTestObservation-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90C8279016BD000A4F52 /* XCTestObservation-Protocol.h */; };
 		840C913C279016BD000A4F52 /* XCUIPlatformApplicationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90C9279016BD000A4F52 /* XCUIPlatformApplicationManager.h */; };
 		840C913D279016BD000A4F52 /* XCUIPlatformApplicationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90C9279016BD000A4F52 /* XCUIPlatformApplicationManager.h */; };
 		840C913E279016BD000A4F52 /* XCTContext-XCUIInterruptionMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90CA279016BD000A4F52 /* XCTContext-XCUIInterruptionMonitor.h */; };
 		840C913F279016BD000A4F52 /* XCTContext-XCUIInterruptionMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90CA279016BD000A4F52 /* XCTContext-XCUIInterruptionMonitor.h */; };
 		840C9140279016BD000A4F52 /* XCTStorageMetric-UIAutomation_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90CB279016BD000A4F52 /* XCTStorageMetric-UIAutomation_Private.h */; };
 		840C9141279016BD000A4F52 /* XCTStorageMetric-UIAutomation_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90CB279016BD000A4F52 /* XCTStorageMetric-UIAutomation_Private.h */; };
-		840C9142279016BD000A4F52 /* XCTMessagingRole_UIApplicationStateUpdating-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90CC279016BD000A4F52 /* XCTMessagingRole_UIApplicationStateUpdating-Protocol.h */; };
-		840C9143279016BD000A4F52 /* XCTMessagingRole_UIApplicationStateUpdating-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90CC279016BD000A4F52 /* XCTMessagingRole_UIApplicationStateUpdating-Protocol.h */; };
 		840C9144279016BD000A4F52 /* XCUIApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90CD279016BD000A4F52 /* XCUIApplication.h */; };
 		840C9145279016BD000A4F52 /* XCUIApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90CD279016BD000A4F52 /* XCUIApplication.h */; };
 		840C9146279016BD000A4F52 /* XCTCPUMetric-UIAutomation_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C90CE279016BD000A4F52 /* XCTCPUMetric-UIAutomation_Private.h */; };
@@ -520,8 +514,6 @@
 		840C91B5279016BE000A4F52 /* XCUIApplicationProcessDelegate-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C9105279016BD000A4F52 /* XCUIApplicationProcessDelegate-Protocol.h */; };
 		840C91B6279016BE000A4F52 /* XCUIDeviceEventAndStateInterface-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C9106279016BD000A4F52 /* XCUIDeviceEventAndStateInterface-Protocol.h */; };
 		840C91B7279016BE000A4F52 /* XCUIDeviceEventAndStateInterface-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C9106279016BD000A4F52 /* XCUIDeviceEventAndStateInterface-Protocol.h */; };
-		840C91B8279016BE000A4F52 /* _XCTMessaging_VoidProtocol-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C9107279016BD000A4F52 /* _XCTMessaging_VoidProtocol-Protocol.h */; };
-		840C91B9279016BE000A4F52 /* _XCTMessaging_VoidProtocol-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C9107279016BD000A4F52 /* _XCTMessaging_VoidProtocol-Protocol.h */; };
 		840C91BA279016BE000A4F52 /* XCTestCase-UIAutomationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C9108279016BD000A4F52 /* XCTestCase-UIAutomationDelegate.h */; };
 		840C91BB279016BE000A4F52 /* XCTestCase-UIAutomationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C9108279016BD000A4F52 /* XCTestCase-UIAutomationDelegate.h */; };
 		840C91BC279016BE000A4F52 /* XCSynthesizedEventRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C9109279016BD000A4F52 /* XCSynthesizedEventRecord.h */; };
@@ -558,8 +550,6 @@
 		840C91DB279016BE000A4F52 /* XCUIElementAttributesPrivate-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C9118279016BD000A4F52 /* XCUIElementAttributesPrivate-Protocol.h */; };
 		840C91DC279016BE000A4F52 /* XCUIRecorderUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C9119279016BD000A4F52 /* XCUIRecorderUtilities.h */; };
 		840C91DD279016BE000A4F52 /* XCUIRecorderUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C9119279016BD000A4F52 /* XCUIRecorderUtilities.h */; };
-		840C91DE279016BE000A4F52 /* XCUIApplicationManaging-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C911A279016BD000A4F52 /* XCUIApplicationManaging-Protocol.h */; };
-		840C91DF279016BE000A4F52 /* XCUIApplicationManaging-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C911A279016BD000A4F52 /* XCUIApplicationManaging-Protocol.h */; };
 		840C91E0279016BE000A4F52 /* XCTElementSnapshotProvider-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C911B279016BD000A4F52 /* XCTElementSnapshotProvider-Protocol.h */; };
 		840C91E1279016BE000A4F52 /* XCTElementSnapshotProvider-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C911B279016BD000A4F52 /* XCTElementSnapshotProvider-Protocol.h */; };
 		840C91E2279016BE000A4F52 /* XCUIInterruptionMonitoring-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 840C911C279016BD000A4F52 /* XCUIInterruptionMonitoring-Protocol.h */; };
@@ -1034,7 +1024,6 @@
 		84D3D534264464B6009EF056 /* XCTImageConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D509264464B6009EF056 /* XCTImageConverter.h */; };
 		84D3D536264464B6009EF056 /* XCTCapabilitiesBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D50A264464B6009EF056 /* XCTCapabilitiesBuilder.h */; };
 		84D3D538264464B6009EF056 /* XCTAutomationTypeMismatchIssue.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D50B264464B6009EF056 /* XCTAutomationTypeMismatchIssue.h */; };
-		84D3D53A264464B6009EF056 /* _XCTMessaging_VoidProtocol-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D3D50C264464B6009EF056 /* _XCTMessaging_VoidProtocol-Protocol.h */; };
 		84DE9FA026BC927100F5C970 /* CocoaLumberjack.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84A10D942679A375004446C7 /* CocoaLumberjack.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		89331CCE1CC00E82003C2E59 /* RotatePinchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */; };
 		89331D301CC50447003C2E59 /* ThreadUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 89331D2E1CC50447003C2E59 /* ThreadUtils.h */; };
@@ -1611,18 +1600,15 @@
 		840C90BE279016BD000A4F52 /* XCTRunnerDaemonSession-XCUIPlatformApplicationServicesProviding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTRunnerDaemonSession-XCUIPlatformApplicationServicesProviding.h"; sourceTree = "<group>"; };
 		840C90BF279016BD000A4F52 /* XCUIInterruptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUIInterruptionHandler.h; sourceTree = "<group>"; };
 		840C90C0279016BD000A4F52 /* XCTMetricDiagnosticHelper-UIAutomation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMetricDiagnosticHelper-UIAutomation.h"; sourceTree = "<group>"; };
-		840C90C1279016BD000A4F52 /* XCTIssueHandling-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTIssueHandling-Protocol.h"; sourceTree = "<group>"; };
 		840C90C2279016BD000A4F52 /* XCUIElementTypeQueryProvider_Private-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIElementTypeQueryProvider_Private-Protocol.h"; sourceTree = "<group>"; };
 		840C90C3279016BD000A4F52 /* XCUIAXNotificationHandling-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIAXNotificationHandling-Protocol.h"; sourceTree = "<group>"; };
 		840C90C4279016BD000A4F52 /* XCUIApplicationAutomationSessionProviding-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIApplicationAutomationSessionProviding-Protocol.h"; sourceTree = "<group>"; };
 		840C90C5279016BD000A4F52 /* XCUISiriService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUISiriService.h; sourceTree = "<group>"; };
 		840C90C6279016BD000A4F52 /* XCSourceCodeRecording.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCSourceCodeRecording.h; sourceTree = "<group>"; };
 		840C90C7279016BD000A4F52 /* XCUIApplicationSpecifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUIApplicationSpecifier.h; sourceTree = "<group>"; };
-		840C90C8279016BD000A4F52 /* XCTestObservation-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestObservation-Protocol.h"; sourceTree = "<group>"; };
 		840C90C9279016BD000A4F52 /* XCUIPlatformApplicationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUIPlatformApplicationManager.h; sourceTree = "<group>"; };
 		840C90CA279016BD000A4F52 /* XCTContext-XCUIInterruptionMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTContext-XCUIInterruptionMonitor.h"; sourceTree = "<group>"; };
 		840C90CB279016BD000A4F52 /* XCTStorageMetric-UIAutomation_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTStorageMetric-UIAutomation_Private.h"; sourceTree = "<group>"; };
-		840C90CC279016BD000A4F52 /* XCTMessagingRole_UIApplicationStateUpdating-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingRole_UIApplicationStateUpdating-Protocol.h"; sourceTree = "<group>"; };
 		840C90CD279016BD000A4F52 /* XCUIApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUIApplication.h; sourceTree = "<group>"; };
 		840C90CE279016BD000A4F52 /* XCTCPUMetric-UIAutomation_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTCPUMetric-UIAutomation_Private.h"; sourceTree = "<group>"; };
 		840C90CF279016BD000A4F52 /* XCSourceCodeTreeNodeEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCSourceCodeTreeNodeEnumerator.h; sourceTree = "<group>"; };
@@ -1681,7 +1667,6 @@
 		840C9104279016BD000A4F52 /* XCTApplicationBundleInfo-AutomaticTestRunConfigurations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTApplicationBundleInfo-AutomaticTestRunConfigurations.h"; sourceTree = "<group>"; };
 		840C9105279016BD000A4F52 /* XCUIApplicationProcessDelegate-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIApplicationProcessDelegate-Protocol.h"; sourceTree = "<group>"; };
 		840C9106279016BD000A4F52 /* XCUIDeviceEventAndStateInterface-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIDeviceEventAndStateInterface-Protocol.h"; sourceTree = "<group>"; };
-		840C9107279016BD000A4F52 /* _XCTMessaging_VoidProtocol-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "_XCTMessaging_VoidProtocol-Protocol.h"; sourceTree = "<group>"; };
 		840C9108279016BD000A4F52 /* XCTestCase-UIAutomationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase-UIAutomationDelegate.h"; sourceTree = "<group>"; };
 		840C9109279016BD000A4F52 /* XCSynthesizedEventRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCSynthesizedEventRecord.h; sourceTree = "<group>"; };
 		840C910A279016BD000A4F52 /* XCTRunnerIDESession-UIAutomation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTRunnerIDESession-UIAutomation.h"; sourceTree = "<group>"; };
@@ -1700,7 +1685,6 @@
 		840C9117279016BD000A4F52 /* XCTRunnerDaemonSessionEventRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTRunnerDaemonSessionEventRequest.h; sourceTree = "<group>"; };
 		840C9118279016BD000A4F52 /* XCUIElementAttributesPrivate-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIElementAttributesPrivate-Protocol.h"; sourceTree = "<group>"; };
 		840C9119279016BD000A4F52 /* XCUIRecorderUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUIRecorderUtilities.h; sourceTree = "<group>"; };
-		840C911A279016BD000A4F52 /* XCUIApplicationManaging-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIApplicationManaging-Protocol.h"; sourceTree = "<group>"; };
 		840C911B279016BD000A4F52 /* XCTElementSnapshotProvider-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTElementSnapshotProvider-Protocol.h"; sourceTree = "<group>"; };
 		840C911C279016BD000A4F52 /* XCUIInterruptionMonitoring-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIInterruptionMonitoring-Protocol.h"; sourceTree = "<group>"; };
 		840C911D279016BD000A4F52 /* XCUIIssueDiagnosticsProviding-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIIssueDiagnosticsProviding-Protocol.h"; sourceTree = "<group>"; };
@@ -1949,7 +1933,6 @@
 		84D3D509264464B6009EF056 /* XCTImageConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTImageConverter.h; sourceTree = "<group>"; };
 		84D3D50A264464B6009EF056 /* XCTCapabilitiesBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTCapabilitiesBuilder.h; sourceTree = "<group>"; };
 		84D3D50B264464B6009EF056 /* XCTAutomationTypeMismatchIssue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTAutomationTypeMismatchIssue.h; sourceTree = "<group>"; };
-		84D3D50C264464B6009EF056 /* _XCTMessaging_VoidProtocol-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "_XCTMessaging_VoidProtocol-Protocol.h"; sourceTree = "<group>"; };
 		84DE9F9C26BC4E4800F5C970 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		89331CCC1CC00E82003C2E59 /* RotatePinchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotatePinchViewController.h; sourceTree = "<group>"; };
 		89331CCD1CC00E82003C2E59 /* RotatePinchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatePinchViewController.m; sourceTree = "<group>"; };
@@ -2479,109 +2462,104 @@
 		840C90BC279016BD000A4F52 /* XCUIAutomation */ = {
 			isa = PBXGroup;
 			children = (
-				840C90BD279016BD000A4F52 /* XCUIApplicationOpenRequest.h */,
-				840C90BE279016BD000A4F52 /* XCTRunnerDaemonSession-XCUIPlatformApplicationServicesProviding.h */,
-				840C90BF279016BD000A4F52 /* XCUIInterruptionHandler.h */,
-				840C90C0279016BD000A4F52 /* XCTMetricDiagnosticHelper-UIAutomation.h */,
-				840C90C1279016BD000A4F52 /* XCTIssueHandling-Protocol.h */,
-				840C90C2279016BD000A4F52 /* XCUIElementTypeQueryProvider_Private-Protocol.h */,
-				840C90C3279016BD000A4F52 /* XCUIAXNotificationHandling-Protocol.h */,
-				840C90C4279016BD000A4F52 /* XCUIApplicationAutomationSessionProviding-Protocol.h */,
-				840C90C5279016BD000A4F52 /* XCUISiriService.h */,
-				840C90C6279016BD000A4F52 /* XCSourceCodeRecording.h */,
-				840C90C7279016BD000A4F52 /* XCUIApplicationSpecifier.h */,
-				840C90C8279016BD000A4F52 /* XCTestObservation-Protocol.h */,
-				840C90C9279016BD000A4F52 /* XCUIPlatformApplicationManager.h */,
-				840C90CA279016BD000A4F52 /* XCTContext-XCUIInterruptionMonitor.h */,
-				840C90CB279016BD000A4F52 /* XCTStorageMetric-UIAutomation_Private.h */,
-				840C90CC279016BD000A4F52 /* XCTMessagingRole_UIApplicationStateUpdating-Protocol.h */,
-				840C90CD279016BD000A4F52 /* XCUIApplication.h */,
-				840C90CE279016BD000A4F52 /* XCTCPUMetric-UIAutomation_Private.h */,
-				840C90CF279016BD000A4F52 /* XCSourceCodeTreeNodeEnumerator.h */,
-				840C90D0279016BD000A4F52 /* XCUIScreenshot.h */,
-				840C90D1279016BD000A4F52 /* XCUIRemoteSiriInterface-Protocol.h */,
-				840C90D2279016BD000A4F52 /* XCPointerEvent.h */,
-				840C90D3279016BD000A4F52 /* XCElementSnapshot-XCUIElementAttributes.h */,
-				840C90D4279016BD000A4F52 /* XCUIElement.h */,
-				840C90D5279016BD000A4F52 /* XCUIDevice.h */,
 				840C90D6279016BD000A4F52 /* NSError-XCUIApplicationProcess.h */,
-				840C90D7279016BD000A4F52 /* XCTElementSnapshotAttributeDataSource-Protocol.h */,
-				840C90D8279016BD000A4F52 /* XCUIRectTransformationRequest.h */,
-				840C90D9279016BD000A4F52 /* XCUIApplicationProcessTracker-Protocol.h */,
+				840C9115279016BD000A4F52 /* XCActivityRecord-UITesting.h */,
+				840C90F8279016BD000A4F52 /* XCApplicationQuery.h */,
 				840C90DA279016BD000A4F52 /* XCAXClient_iOS.h */,
-				840C90DB279016BD000A4F52 /* XCUIApplicationRegistry.h */,
-				840C90DC279016BD000A4F52 /* XCUIElementSnapshotProviding-Protocol.h */,
-				840C90DD279016BD000A4F52 /* XCUIDeviceAutomationModeInterface-Protocol.h */,
-				840C90DE279016BD000A4F52 /* XCUIInterruptionMonitor.h */,
-				840C90DF279016BD000A4F52 /* XCUIApplicationMonitor-Protocol.h */,
-				840C90E0279016BD000A4F52 /* XCUIKnobControl.h */,
+				840C90D3279016BD000A4F52 /* XCElementSnapshot-XCUIElementAttributes.h */,
+				840C90D2279016BD000A4F52 /* XCPointerEvent.h */,
+				840C90FF279016BD000A4F52 /* XCPointerEventPath.h */,
+				840C90C6279016BD000A4F52 /* XCSourceCodeRecording.h */,
+				840C910C279016BD000A4F52 /* XCSourceCodeTreeNode.h */,
+				840C90CF279016BD000A4F52 /* XCSourceCodeTreeNodeEnumerator.h */,
+				840C9109279016BD000A4F52 /* XCSynthesizedEventRecord.h */,
+				840C9104279016BD000A4F52 /* XCTApplicationBundleInfo-AutomaticTestRunConfigurations.h */,
+				840C90EE279016BD000A4F52 /* XCTAttachment-XCUIScreenshot_ConvenienceInitializers.h */,
+				840C90CA279016BD000A4F52 /* XCTContext-XCUIInterruptionMonitor.h */,
+				840C90CE279016BD000A4F52 /* XCTCPUMetric-UIAutomation_Private.h */,
+				840C90D7279016BD000A4F52 /* XCTElementSnapshotAttributeDataSource-Protocol.h */,
+				840C911B279016BD000A4F52 /* XCTElementSnapshotProvider-Protocol.h */,
+				840C9108279016BD000A4F52 /* XCTestCase-UIAutomationDelegate.h */,
+				840C9112279016BD000A4F52 /* XCTestCaseIssueHandlingUIAutomationDelegate-Protocol.h */,
+				840C9123279016BD000A4F52 /* XCTestDriver-XCTTestRunSessionUIAutomationDelegate.h */,
+				840C90E7279016BD000A4F52 /* XCTImageEncoding-XCTImageEncodingXCTImageQualityUIAutomationDelegate.h */,
+				840C9101279016BD000A4F52 /* XCTMacCatalystStatusProviding-Protocol.h */,
+				840C911F279016BD000A4F52 /* XCTMemoryChecker-XCUIAutomation.h */,
+				840C90E4279016BD000A4F52 /* XCTMemoryMetric-UIAutomation_Private.h */,
+				840C9120279016BD000A4F52 /* XCTMessagingChannel_RunnerToUIProcess-Protocol.h */,
+				840C90EA279016BD000A4F52 /* XCTMessagingRole_UIAutomationProcess-Protocol.h */,
+				840C90C0279016BD000A4F52 /* XCTMetricDiagnosticHelper-UIAutomation.h */,
 				840C90E1279016BD000A4F52 /* XCTNSPredicateExpectationObject-Protocol.h */,
+				840C9103279016BD000A4F52 /* XCTRunnerAutomationSession-Protocol.h */,
+				840C9110279016BD000A4F52 /* XCTRunnerAutomationSession.h */,
+				840C90BE279016BD000A4F52 /* XCTRunnerDaemonSession-XCUIPlatformApplicationServicesProviding.h */,
+				840C9117279016BD000A4F52 /* XCTRunnerDaemonSessionEventRequest.h */,
+				840C910A279016BD000A4F52 /* XCTRunnerIDESession-UIAutomation.h */,
+				840C90F9279016BD000A4F52 /* XCTRunnerIDESessionUIAutomationDelegate-Protocol.h */,
+				840C90CB279016BD000A4F52 /* XCTStorageMetric-UIAutomation_Private.h */,
+				840C90F6279016BD000A4F52 /* XCUIAccessibilityAction.h */,
+				840C90F2279016BD000A4F52 /* XCUIAccessibilityAudit.h */,
+				840C910F279016BD000A4F52 /* XCUIAccessibilityAuditIssue.h */,
+				840C910B279016BD000A4F52 /* XCUIAccessibilityInterface-Protocol.h */,
+				840C90CD279016BD000A4F52 /* XCUIApplication.h */,
+				840C90C4279016BD000A4F52 /* XCUIApplicationAutomationSessionProviding-Protocol.h */,
+				840C90F5279016BD000A4F52 /* XCUIApplicationImpl.h */,
+				840C9116279016BD000A4F52 /* XCUIApplicationImplDepot.h */,
+				840C90DF279016BD000A4F52 /* XCUIApplicationMonitor-Protocol.h */,
+				840C910D279016BD000A4F52 /* XCUIApplicationMonitor.h */,
+				840C90BD279016BD000A4F52 /* XCUIApplicationOpenRequest.h */,
+				840C9100279016BD000A4F52 /* XCUIApplicationPlatformServicesProviderDelegate-Protocol.h */,
+				840C90FC279016BD000A4F52 /* XCUIApplicationProcess.h */,
+				840C9105279016BD000A4F52 /* XCUIApplicationProcessDelegate-Protocol.h */,
+				840C90D9279016BD000A4F52 /* XCUIApplicationProcessTracker-Protocol.h */,
+				840C90DB279016BD000A4F52 /* XCUIApplicationRegistry.h */,
+				840C90FB279016BD000A4F52 /* XCUIApplicationRegistryRecord.h */,
+				840C90C7279016BD000A4F52 /* XCUIApplicationSpecifier.h */,
+				840C90C3279016BD000A4F52 /* XCUIAXNotificationHandling-Protocol.h */,
+				840C9102279016BD000A4F52 /* XCUIButtonConsole.h */,
 				840C90E2279016BD000A4F52 /* XCUICoordinate.h */,
 				840C90E3279016BD000A4F52 /* XCUIDefaultIssueHandler.h */,
-				840C90E4279016BD000A4F52 /* XCTMemoryMetric-UIAutomation_Private.h */,
-				840C90E5279016BD000A4F52 /* XCUIPlatformApplicationServicesProviding-Protocol.h */,
-				840C90E6279016BD000A4F52 /* XCUIElementQuery.h */,
-				840C90E7279016BD000A4F52 /* XCTImageEncoding-XCTImageEncodingXCTImageQualityUIAutomationDelegate.h */,
-				840C90E8279016BD000A4F52 /* XCUIRecorderTimingMessage.h */,
-				840C90E9279016BD000A4F52 /* XCUILocalDeviceScreenshotIPCInterface-Protocol.h */,
-				840C90EA279016BD000A4F52 /* XCTMessagingRole_UIAutomationProcess-Protocol.h */,
-				840C90EB279016BD000A4F52 /* XCUIElementSnapshot-Protocol.h */,
-				840C90EC279016BD000A4F52 /* XCUITransformParameters.h */,
-				840C90ED279016BD000A4F52 /* XCUIElementAttributes-Protocol.h */,
-				840C90EE279016BD000A4F52 /* XCTAttachment-XCUIScreenshot_ConvenienceInitializers.h */,
-				840C90EF279016BD000A4F52 /* XCUILocalDeviceScreenDataSource.h */,
-				840C90F0279016BD000A4F52 /* XCUIRecorderNodeFinderMatch.h */,
-				840C90F1279016BD000A4F52 /* XCUIResetAuthorizationStatusOfProtectedResourcesInterface-Protocol.h */,
-				840C90F2279016BD000A4F52 /* XCUIAccessibilityAudit.h */,
-				840C90F3279016BD000A4F52 /* XCUIElementSnapshotCoordinateTransforms-Protocol.h */,
-				840C90F4279016BD000A4F52 /* XCUIRecorderNodeFinder.h */,
-				840C90F5279016BD000A4F52 /* XCUIApplicationImpl.h */,
-				840C90F6279016BD000A4F52 /* XCUIAccessibilityAction.h */,
-				840C90F7279016BD000A4F52 /* XCUIScreenDataSource-Protocol.h */,
-				840C90F8279016BD000A4F52 /* XCApplicationQuery.h */,
-				840C90F9279016BD000A4F52 /* XCTRunnerIDESessionUIAutomationDelegate-Protocol.h */,
-				840C90FA279016BD000A4F52 /* XCUIEventSynthesisRequest-Protocol.h */,
-				840C90FB279016BD000A4F52 /* XCUIApplicationRegistryRecord.h */,
-				840C90FC279016BD000A4F52 /* XCUIApplicationProcess.h */,
-				840C90FD279016BD000A4F52 /* XCUIHitPointResult.h */,
-				840C90FE279016BD000A4F52 /* XCUIElementTypeQueryProvider-Protocol.h */,
-				840C90FF279016BD000A4F52 /* XCPointerEventPath.h */,
-				840C9100279016BD000A4F52 /* XCUIApplicationPlatformServicesProviderDelegate-Protocol.h */,
-				840C9101279016BD000A4F52 /* XCTMacCatalystStatusProviding-Protocol.h */,
-				840C9102279016BD000A4F52 /* XCUIButtonConsole.h */,
-				840C9103279016BD000A4F52 /* XCTRunnerAutomationSession-Protocol.h */,
-				840C9104279016BD000A4F52 /* XCTApplicationBundleInfo-AutomaticTestRunConfigurations.h */,
-				840C9105279016BD000A4F52 /* XCUIApplicationProcessDelegate-Protocol.h */,
+				840C90D5279016BD000A4F52 /* XCUIDevice.h */,
+				840C90DD279016BD000A4F52 /* XCUIDeviceAutomationModeInterface-Protocol.h */,
 				840C9106279016BD000A4F52 /* XCUIDeviceEventAndStateInterface-Protocol.h */,
-				840C9107279016BD000A4F52 /* _XCTMessaging_VoidProtocol-Protocol.h */,
-				840C9108279016BD000A4F52 /* XCTestCase-UIAutomationDelegate.h */,
-				840C9109279016BD000A4F52 /* XCSynthesizedEventRecord.h */,
-				840C910A279016BD000A4F52 /* XCTRunnerIDESession-UIAutomation.h */,
-				840C910B279016BD000A4F52 /* XCUIAccessibilityInterface-Protocol.h */,
-				840C910C279016BD000A4F52 /* XCSourceCodeTreeNode.h */,
-				840C910D279016BD000A4F52 /* XCUIApplicationMonitor.h */,
 				840C910E279016BD000A4F52 /* XCUIDeviceSetupManager.h */,
-				840C910F279016BD000A4F52 /* XCUIAccessibilityAuditIssue.h */,
-				840C9110279016BD000A4F52 /* XCTRunnerAutomationSession.h */,
-				840C9111279016BD000A4F52 /* XCUIElementHitPointCoordinate.h */,
-				840C9112279016BD000A4F52 /* XCTestCaseIssueHandlingUIAutomationDelegate-Protocol.h */,
-				840C9113279016BD000A4F52 /* XCUISnapshotGenerationTracker.h */,
-				840C9114279016BD000A4F52 /* XCUIScreen.h */,
-				840C9115279016BD000A4F52 /* XCActivityRecord-UITesting.h */,
-				840C9116279016BD000A4F52 /* XCUIApplicationImplDepot.h */,
-				840C9117279016BD000A4F52 /* XCTRunnerDaemonSessionEventRequest.h */,
+				840C90D4279016BD000A4F52 /* XCUIElement.h */,
+				840C90ED279016BD000A4F52 /* XCUIElementAttributes-Protocol.h */,
 				840C9118279016BD000A4F52 /* XCUIElementAttributesPrivate-Protocol.h */,
-				840C9119279016BD000A4F52 /* XCUIRecorderUtilities.h */,
-				840C911A279016BD000A4F52 /* XCUIApplicationManaging-Protocol.h */,
-				840C911B279016BD000A4F52 /* XCTElementSnapshotProvider-Protocol.h */,
+				840C9111279016BD000A4F52 /* XCUIElementHitPointCoordinate.h */,
+				840C90E6279016BD000A4F52 /* XCUIElementQuery.h */,
+				840C90EB279016BD000A4F52 /* XCUIElementSnapshot-Protocol.h */,
+				840C90F3279016BD000A4F52 /* XCUIElementSnapshotCoordinateTransforms-Protocol.h */,
+				840C90DC279016BD000A4F52 /* XCUIElementSnapshotProviding-Protocol.h */,
+				840C90C2279016BD000A4F52 /* XCUIElementTypeQueryProvider_Private-Protocol.h */,
+				840C90FE279016BD000A4F52 /* XCUIElementTypeQueryProvider-Protocol.h */,
+				840C90FA279016BD000A4F52 /* XCUIEventSynthesisRequest-Protocol.h */,
+				840C90FD279016BD000A4F52 /* XCUIHitPointResult.h */,
+				840C90BF279016BD000A4F52 /* XCUIInterruptionHandler.h */,
+				840C90DE279016BD000A4F52 /* XCUIInterruptionMonitor.h */,
 				840C911C279016BD000A4F52 /* XCUIInterruptionMonitoring-Protocol.h */,
 				840C911D279016BD000A4F52 /* XCUIIssueDiagnosticsProviding-Protocol.h */,
-				840C911E279016BD000A4F52 /* XCUIScreenshotProviding-Protocol.h */,
-				840C911F279016BD000A4F52 /* XCTMemoryChecker-XCUIAutomation.h */,
-				840C9120279016BD000A4F52 /* XCTMessagingChannel_RunnerToUIProcess-Protocol.h */,
-				840C9121279016BD000A4F52 /* XCUIRemoteAccessibilityInterface-Protocol.h */,
+				840C90E0279016BD000A4F52 /* XCUIKnobControl.h */,
+				840C90EF279016BD000A4F52 /* XCUILocalDeviceScreenDataSource.h */,
+				840C90E9279016BD000A4F52 /* XCUILocalDeviceScreenshotIPCInterface-Protocol.h */,
+				840C90C9279016BD000A4F52 /* XCUIPlatformApplicationManager.h */,
+				840C90E5279016BD000A4F52 /* XCUIPlatformApplicationServicesProviding-Protocol.h */,
 				840C9122279016BD000A4F52 /* XCUIPointTransformationRequest.h */,
-				840C9123279016BD000A4F52 /* XCTestDriver-XCTTestRunSessionUIAutomationDelegate.h */,
+				840C90F4279016BD000A4F52 /* XCUIRecorderNodeFinder.h */,
+				840C90F0279016BD000A4F52 /* XCUIRecorderNodeFinderMatch.h */,
+				840C90E8279016BD000A4F52 /* XCUIRecorderTimingMessage.h */,
+				840C9119279016BD000A4F52 /* XCUIRecorderUtilities.h */,
+				840C90D8279016BD000A4F52 /* XCUIRectTransformationRequest.h */,
+				840C9121279016BD000A4F52 /* XCUIRemoteAccessibilityInterface-Protocol.h */,
+				840C90D1279016BD000A4F52 /* XCUIRemoteSiriInterface-Protocol.h */,
+				840C90F1279016BD000A4F52 /* XCUIResetAuthorizationStatusOfProtectedResourcesInterface-Protocol.h */,
+				840C9114279016BD000A4F52 /* XCUIScreen.h */,
+				840C90F7279016BD000A4F52 /* XCUIScreenDataSource-Protocol.h */,
+				840C90D0279016BD000A4F52 /* XCUIScreenshot.h */,
+				840C911E279016BD000A4F52 /* XCUIScreenshotProviding-Protocol.h */,
+				840C90C5279016BD000A4F52 /* XCUISiriService.h */,
+				840C9113279016BD000A4F52 /* XCUISnapshotGenerationTracker.h */,
+				840C90EC279016BD000A4F52 /* XCUITransformParameters.h */,
 			);
 			path = XCUIAutomation;
 			sourceTree = "<group>";
@@ -3015,7 +2993,6 @@
 		F54C01DD2043F0EF00FD8DDE /* XCTAutomationSupport */ = {
 			isa = PBXGroup;
 			children = (
-				84D3D50C264464B6009EF056 /* _XCTMessaging_VoidProtocol-Protocol.h */,
 				84D3D502264464B6009EF056 /* XCUIElementSnapshotRequestResult.h */,
 				84D3D4F9264464B5009EF056 /* XCAXCycleDetector.h */,
 				84D3D50B264464B6009EF056 /* XCTAutomationTypeMismatchIssue.h */,
@@ -3758,7 +3735,6 @@
 				843A0D4926B8DB92001CF302 /* XCTestExpectationDelegate-Protocol.h in Headers */,
 				840C9195279016BE000A4F52 /* XCUIApplicationImpl.h in Headers */,
 				840C9161279016BD000A4F52 /* XCUIApplicationRegistry.h in Headers */,
-				840C912D279016BD000A4F52 /* XCTIssueHandling-Protocol.h in Headers */,
 				840C91DD279016BE000A4F52 /* XCUIRecorderUtilities.h in Headers */,
 				843A0D4B26B8DB92001CF302 /* XCTExpectedFailure.h in Headers */,
 				840C9163279016BD000A4F52 /* XCUIElementSnapshotProviding-Protocol.h in Headers */,
@@ -3801,7 +3777,6 @@
 				843A0B7F26B8DB90001CF302 /* XCTOSSignpostMetric.h in Headers */,
 				843A0C1126B8DB91001CF302 /* NSKeyedArchiver-XCTestAdditions.h in Headers */,
 				8479D81A26F8D37600F6EFDA /* DTXRemoteInvocationReceipt.h in Headers */,
-				840C9143279016BD000A4F52 /* XCTMessagingRole_UIApplicationStateUpdating-Protocol.h in Headers */,
 				843A0B9326B8DB91001CF302 /* XCTestObservation-Protocol.h in Headers */,
 				840C9165279016BD000A4F52 /* XCUIDeviceAutomationModeInterface-Protocol.h in Headers */,
 				843A0D3B26B8DB92001CF302 /* XCTKVOExpectation.h in Headers */,
@@ -3854,7 +3829,6 @@
 				843A0C9126B8DB92001CF302 /* XCTestSuite.h in Headers */,
 				840C9137279016BD000A4F52 /* XCSourceCodeRecording.h in Headers */,
 				843A0BC526B8DB91001CF302 /* XCTestConfiguration.h in Headers */,
-				840C91B9279016BE000A4F52 /* _XCTMessaging_VoidProtocol-Protocol.h in Headers */,
 				843A0C2F26B8DB91001CF302 /* XCTFuture.h in Headers */,
 				843A0B7926B8DB90001CF302 /* XCTMessagingRole_EventSynthesis-Protocol.h in Headers */,
 				843A0D7126B8DB92001CF302 /* XCTTestRunSession.h in Headers */,
@@ -3923,7 +3897,6 @@
 				8479D80826F8D37600F6EFDA /* DTXBlockCompressorFactory.h in Headers */,
 				840C91B5279016BE000A4F52 /* XCUIApplicationProcessDelegate-Protocol.h in Headers */,
 				843A0D0326B8DB92001CF302 /* _XCTTestIdentifier_Class.h in Headers */,
-				840C913B279016BD000A4F52 /* XCTestObservation-Protocol.h in Headers */,
 				843A0D5926B8DB92001CF302 /* XCTestCaseRun.h in Headers */,
 				843A0BB126B8DB91001CF302 /* XCTRunnerDaemonSession.h in Headers */,
 				843A0D6726B8DB92001CF302 /* XCTIssue.h in Headers */,
@@ -4006,7 +3979,6 @@
 				843A0B7126B8DB90001CF302 /* XCTMessagingRole_SelfDiagnosisIssueReporting-Protocol.h in Headers */,
 				843A0D2726B8DB92001CF302 /* XCTestRun.h in Headers */,
 				843A0D3F26B8DB92001CF302 /* XCTestProbe.h in Headers */,
-				840C91DF279016BE000A4F52 /* XCUIApplicationManaging-Protocol.h in Headers */,
 				843A0C1526B8DB91001CF302 /* XCActivityRecord.h in Headers */,
 				8479D81E26F8D37600F6EFDA /* _DTXProxy.h in Headers */,
 				8479D82226F8D37600F6EFDA /* DTXResourceTracker.h in Headers */,
@@ -4297,7 +4269,6 @@
 				843A0D2626B8DB92001CF302 /* XCTestRun.h in Headers */,
 				840C91C8279016BE000A4F52 /* XCUIAccessibilityAuditIssue.h in Headers */,
 				899696D91CB45FFC00BB42E2 /* ActionConfiguration.h in Headers */,
-				840C912C279016BD000A4F52 /* XCTIssueHandling-Protocol.h in Headers */,
 				843A0B9226B8DB91001CF302 /* XCTestObservation-Protocol.h in Headers */,
 				F54C02AD2043F0EF00FD8DDE /* XCTElementContainingTransformer.h in Headers */,
 				843A0D6E26B8DB92001CF302 /* XCTMessagingRole_ActivityReporting_Legacy-Protocol.h in Headers */,
@@ -4419,7 +4390,6 @@
 				840C9168279016BD000A4F52 /* XCUIApplicationMonitor-Protocol.h in Headers */,
 				843A0B7E26B8DB90001CF302 /* XCTOSSignpostMetric.h in Headers */,
 				840C91CE279016BE000A4F52 /* XCTestCaseIssueHandlingUIAutomationDelegate-Protocol.h in Headers */,
-				840C91B8279016BE000A4F52 /* _XCTMessaging_VoidProtocol-Protocol.h in Headers */,
 				840C913C279016BD000A4F52 /* XCUIPlatformApplicationManager.h in Headers */,
 				899696E51CB46C0100BB42E2 /* CoordinateQueryConfiguration.h in Headers */,
 				84D3D52A264464B6009EF056 /* XCTRemoteApplicationAutomationTarget-Protocol.h in Headers */,
@@ -4521,7 +4491,6 @@
 				F54C02AC2043F0EF00FD8DDE /* NSIndexPath-XCTConvenience.h in Headers */,
 				840C91DA279016BE000A4F52 /* XCUIElementAttributesPrivate-Protocol.h in Headers */,
 				F55F82561C6DD07500A945C8 /* RoutingConnection.h in Headers */,
-				840C91DE279016BE000A4F52 /* XCUIApplicationManaging-Protocol.h in Headers */,
 				840C91AE279016BE000A4F52 /* XCUIButtonConsole.h in Headers */,
 				840C91D6279016BE000A4F52 /* XCUIApplicationImplDepot.h in Headers */,
 				843A0C5E26B8DB91001CF302 /* XCTASDebugLogDelegate-Protocol.h in Headers */,
@@ -4577,7 +4546,6 @@
 				843A0B9E26B8DB91001CF302 /* XCTApplicationLaunchMetric.h in Headers */,
 				840C91EA279016BE000A4F52 /* XCTMessagingChannel_RunnerToUIProcess-Protocol.h in Headers */,
 				840C91C6279016BE000A4F52 /* XCUIDeviceSetupManager.h in Headers */,
-				840C913A279016BD000A4F52 /* XCTestObservation-Protocol.h in Headers */,
 				89D5381D1CA359B200F62E09 /* QuerySpecifierByPropertyLike.h in Headers */,
 				840C9150279016BD000A4F52 /* XCElementSnapshot-XCUIElementAttributes.h in Headers */,
 				840C91BA279016BE000A4F52 /* XCTestCase-UIAutomationDelegate.h in Headers */,
@@ -4684,7 +4652,6 @@
 				843A0D6A26B8DB92001CF302 /* XCTMessagingRole_UIRecordingControl-Protocol.h in Headers */,
 				F55F819B1C6DD07500A945C8 /* HTTPAsyncFileResponse.h in Headers */,
 				840C91EE279016BE000A4F52 /* XCUIPointTransformationRequest.h in Headers */,
-				840C9142279016BD000A4F52 /* XCTMessagingRole_UIApplicationStateUpdating-Protocol.h in Headers */,
 				840C9198279016BE000A4F52 /* XCUIScreenDataSource-Protocol.h in Headers */,
 				843A0CD626B8DB92001CF302 /* _XCTTestIdentifier_Array.h in Headers */,
 				89C5F3561C9B9B690093A018 /* CBXTypedefs.h in Headers */,
@@ -4708,7 +4675,6 @@
 				840C917A279016BD000A4F52 /* XCUIRecorderTimingMessage.h in Headers */,
 				840C9154279016BD000A4F52 /* XCUIDevice.h in Headers */,
 				843A0CA626B8DB92001CF302 /* XCTMessagingChannel_DaemonToIDE-Protocol.h in Headers */,
-				84D3D53A264464B6009EF056 /* _XCTMessaging_VoidProtocol-Protocol.h in Headers */,
 				843A0CDE26B8DB92001CF302 /* XCTMessagingRole_RunnerSessionInitiation-Protocol.h in Headers */,
 				840C9158279016BD000A4F52 /* XCTElementSnapshotAttributeDataSource-Protocol.h in Headers */,
 				8479D80B26F8D37600F6EFDA /* DTXBlockCompressorLibCompression.h in Headers */,
