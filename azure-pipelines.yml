@@ -31,6 +31,9 @@ jobs:
       BigSur-Xcode-13.1:
         IMAGE_POOL: 'macOS-11'
         XCODE_VERSION: '13.1'
+      BigSur-Xcode-13.2:
+        IMAGE_POOL: 'macOS-11'
+        XCODE_VERSION: '13.2'
   pool:
     vmImage: $(IMAGE_POOL)
   timeoutInMinutes: 120
