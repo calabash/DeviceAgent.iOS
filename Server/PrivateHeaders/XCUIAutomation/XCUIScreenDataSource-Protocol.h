@@ -16,6 +16,7 @@
 @class XCTImageEncoding;
 
 @protocol XCUIScreenDataSource <NSObject>
+- (void)requestBoundsForScreenWithIdentifier:(NSInteger)arg1 completion:(void (^)(CGRect, NSError *))arg2;
 - (void)requestScaleForScreenWithIdentifier:(NSInteger)arg1 completion:(void (^)(double, NSError *))arg2;
 - (void)requestScreenIdentifiersWithCompletion:(void (^)(NSArray *, NSError *))arg1;
 - (void)requestScreenshotOfScreenWithID:(NSInteger)arg1 withRect:(CGRect)arg2 encoding:(XCTImageEncoding *)arg3 withReply:(void (^)(XCTImage *, NSError *))arg4;

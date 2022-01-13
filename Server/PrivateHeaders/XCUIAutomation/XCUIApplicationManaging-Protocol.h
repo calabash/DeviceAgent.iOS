@@ -13,6 +13,9 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@interface NSError (XCTFuture)
+@class NSArray, NSDictionary, NSString;
+
+@protocol XCUIApplicationManaging <NSObject>
+- (void)launchProcessWithPath:(NSString *)arg1 bundleID:(NSString *)arg2 arguments:(NSArray *)arg3 environmentVariables:(NSDictionary *)arg4 completion:(void (^)(id, NSError *))arg5;
 @end
 

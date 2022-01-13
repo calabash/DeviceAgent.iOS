@@ -13,6 +13,11 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@interface NSError (XCTFuture)
+@class XCTIssue;
+
+@protocol XCTestCaseIssueHandlingUIAutomationDelegate <NSObject>
+
+@optional
+- (XCTIssue *)_issueWithFailureScreenshotAttachedToIssue:(XCTIssue *)arg1;
 @end
 

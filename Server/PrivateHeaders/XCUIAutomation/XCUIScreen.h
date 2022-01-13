@@ -29,6 +29,7 @@
     id <XCUIScreenDataSource> _screenDataSource;
 }
 
+@property(readonly) CGRect bounds;
 @property(readonly) XCUIButtonConsole *buttonConsole;
 @property(readonly) __weak id <XCUIDevice> device;
 @property(readonly) NSInteger displayID;

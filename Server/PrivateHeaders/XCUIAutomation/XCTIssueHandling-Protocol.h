@@ -13,6 +13,11 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@interface NSError (XCTFuture)
+@class XCTExpectedFailureContext, XCTIssue;
+
+@protocol XCTIssueHandling <NSObject>
+- (void)expectFailureWithContext:(XCTExpectedFailureContext *)arg1;
+- (void)expectFailureWithContext:(XCTExpectedFailureContext *)arg1 inBlock:(void (^)(void))arg2;
+- (void)handleIssue:(XCTIssue *)arg1;
 @end
 

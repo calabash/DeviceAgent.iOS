@@ -5,7 +5,6 @@
 //  Copyright (C) 1997-2019 Steve Nygard.
 //
 
-
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <XCTest/XCUIElementTypes.h>
@@ -13,6 +12,10 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@interface NSError (XCTFuture)
+#import "XCTAttachment.h"
+
+@interface XCTAttachment (XCUIScreenshot_ConvenienceInitializers)
++ (id)attachmentWithScreenshot:(id)arg1;
++ (id)attachmentWithScreenshot:(id)arg1 quality:(NSInteger)arg2;
 @end
 

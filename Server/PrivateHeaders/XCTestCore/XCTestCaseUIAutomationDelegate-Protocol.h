@@ -13,6 +13,12 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@interface NSError (XCTFuture)
+@class XCActivityRecord;
+
+@protocol XCTestCaseUIAutomationDelegate <NSObject>
+
+@optional
+- (void)performingTestAfterInvokingTest;
+- (void)startingTestWithActivity:(XCActivityRecord *)arg1;
 @end
 

@@ -5,7 +5,6 @@
 //  Copyright (C) 1997-2019 Steve Nygard.
 //
 
-
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <XCTest/XCUIElementTypes.h>
@@ -13,6 +12,10 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@interface NSError (XCTFuture)
+#import "XCTMetricDiagnosticHelper.h"
+
+@interface XCTMetricDiagnosticHelper (UIAutomation)
+- (id)collectMemgraphsForPregeneration_UIAutomation:(BOOL)arg1 metric:(id)arg2 error:(id *)arg3;
+- (void)setMallocStackLoggingForPregeneration:(BOOL)arg1 forApplicationProcess:(id)arg2;
 @end
 

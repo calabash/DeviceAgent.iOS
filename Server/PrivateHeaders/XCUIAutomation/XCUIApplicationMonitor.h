@@ -26,6 +26,7 @@
     id <XCUIDevice> _device;
     id <XCUIPlatformApplicationServicesProviding> _platformServicesProvider;
     XCTestConfiguration *_testConfiguration;
+    double _crashReportWaitInterval;
     NSObject<OS_dispatch_queue> *_queue;
     XCUIApplicationImplDepot *_applicationImplDepot;
     NSMutableSet *_trackedBundleIDs;
@@ -42,9 +43,11 @@
 @property(readonly, copy) NSMutableDictionary *applicationProcessesForToken;
 @property(retain) XCUIApplicationRegistry *applicationRegistry;
 @property(readonly) NSMapTable *applicationsToResponsiveSignpostExpectations;
+@property double crashReportWaitInterval;
 @property(readonly) __weak id <XCUIDevice> device;
 @property(readonly, copy) NSMutableSet *launchedApplications;
 @property(readonly) id <XCUIPlatformApplicationServicesProviding> platformServicesProvider;
+@property(readonly) BOOL providesClientStateUpdates;
 @property(retain) NSObject<OS_dispatch_queue> *queue;
 @property(readonly) XCTestConfiguration *testConfiguration;
 @property(readonly, copy) NSMutableSet *trackedBundleIDs;

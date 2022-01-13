@@ -13,6 +13,10 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@interface NSError (XCTFuture)
+@class XCTTestIdentifierSet;
+
+@protocol XCTExecutionExtension <NSObject>
+- (void)executeTestsWithIdentifiers:(XCTTestIdentifierSet *)arg1 skippingTestsWithIdentifiers:(XCTTestIdentifierSet *)arg2 completion:(void (^)(BOOL, NSError *))arg3;
+- (void)getParallelizableTestIdentifiersWithCompletion:(void (^)(XCTTestIdentifierSet *, NSError *))arg1;
 @end
 

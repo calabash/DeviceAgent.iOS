@@ -13,6 +13,13 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@interface NSError (XCTFuture)
+@class NSNumber, NSString;
+
+@protocol XCTRunnerIDESessionUIAutomationDelegate <NSObject>
+
+@optional
+- (void)processWithBundleID:(NSString *)arg1 path:(NSString *)arg2 pid:(NSNumber *)arg3 crashedUnderSymbol:(NSString *)arg4;
+- (void)processWithToken:(NSNumber *)arg1 exitedWithStatus:(NSNumber *)arg2;
+- (void)stopTrackingProcessWithToken:(NSNumber *)arg1;
 @end
 

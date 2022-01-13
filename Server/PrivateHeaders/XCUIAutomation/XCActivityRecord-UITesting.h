@@ -5,7 +5,6 @@
 //  Copyright (C) 1997-2019 Steve Nygard.
 //
 
-
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <XCTest/XCUIElementTypes.h>
@@ -13,6 +12,14 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@interface NSError (XCTFuture)
+#import "XCActivityRecord.h"
+
+@interface XCActivityRecord (UITesting)
+- (void)addLocalizableStringsData:(id)arg1;
+- (void)addScreenImageData:(id)arg1 forceKeepAlways:(BOOL)arg2;
+- (void)addSnapshot:(id)arg1;
+- (void)addSynthesizedEvent:(id)arg1;
+- (void)attachAutomaticScreenshotForDevice:(id)arg1;
+- (void)attachAutomaticScreenshotForScreen:(id)arg1;
 @end
 

@@ -5,7 +5,6 @@
 //  Copyright (C) 1997-2019 Steve Nygard.
 //
 
-
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <XCTest/XCUIElementTypes.h>
@@ -13,6 +12,15 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@interface NSError (XCTFuture)
+#import "XCTRunnerIDESession.h"
+
+#import "XCTRunnerIDESessionUIAutomationDelegate-Protocol.h"
+
+
+@interface XCTRunnerIDESession (UIAutomation) <XCTRunnerIDESessionUIAutomationDelegate>
+- (void)processWithBundleID:(id)arg1 path:(id)arg2 pid:(id)arg3 crashedUnderSymbol:(id)arg4;
+- (void)processWithToken:(id)arg1 exitedWithStatus:(id)arg2;
+- (void)stopTrackingProcessWithToken:(id)arg1;
+
 @end
 

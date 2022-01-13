@@ -34,7 +34,7 @@
 
 - (void)_clickForDuration:(double)arg1 thenDragToCoordinate:(id)arg2 dragVelocity:(double)arg3;
 - (void)_pressWithPressure:(double)arg1 pressDuration:(double)arg2 holdDuration:(double)arg3 releaseDuration:(double)arg4 activityTitle:(id)arg5;
-- (CGPoint)_untransformedScreenPoint;
+- (CGPoint)_userSpaceScreenPoint;
 - (void)click;
 - (void)clickForDuration:(double)arg1;
 - (void)clickForDuration:(double)arg1 thenDragToCoordinate:(id)arg2;
