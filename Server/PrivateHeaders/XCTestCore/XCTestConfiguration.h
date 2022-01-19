@@ -16,7 +16,7 @@
 
 #import "XCTReportingSessionConfiguration-Protocol.h"
 
-@class NSArray, NSDictionary, NSNumber, NSString, NSURL, NSUUID, XCTAggregateSuiteRunStatistics, XCTCapabilities, XCTRepetitionPolicy, XCTRerunPolicy, XCTTestIdentifierSet;
+@class NSArray, NSDictionary, NSNumber, NSString, NSURL, NSUUID, XCTAggregateSuiteRunStatistics, XCTCapabilities, XCTRepetitionPolicy, XCTTestIdentifierSet;
 
 @interface XCTestConfiguration : NSObject <XCTReportingSessionConfiguration, NSSecureCoding, NSCopying>
 {
@@ -55,7 +55,6 @@
     NSInteger _testExecutionOrdering;
     NSNumber *_randomExecutionOrderingSeed;
     XCTRepetitionPolicy *_repetitionPolicy;
-    XCTRerunPolicy *_rerunPolicy;
     NSNumber *_defaultTestExecutionTimeAllowance;
     NSNumber *_maximumTestExecutionTimeAllowance;
     CDUnknownBlockType _randomNumberGenerator;
@@ -85,7 +84,6 @@
 @property(retain) XCTRepetitionPolicy *repetitionPolicy;
 @property BOOL reportActivities;
 @property BOOL reportResultsToIDE;
-@property(retain) XCTRerunPolicy *rerunPolicy;
 @property(copy) NSUUID *sessionIdentifier;
 @property BOOL shouldEncodeLegacyTestIdentifiers;
 @property NSInteger systemAttachmentLifetime;

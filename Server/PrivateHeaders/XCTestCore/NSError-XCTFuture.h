@@ -14,10 +14,5 @@
 @protocol OS_xpc_object;
 
 @interface NSError (XCTFuture)
-+ (id)_xcui_error:(NSInteger)arg1 description:(id)arg2;
-+ (id)_xcui_error:(NSInteger)arg1 userInfo:(id)arg2 description:(id)arg3;
-+ (id)_xcui_errorWithDomain:(id)arg1 code:(NSInteger)arg2 description:(id)arg3;
-+ (id)_xcui_errorWithDomain:(id)arg1 code:(NSInteger)arg2 userInfo:(id)arg3 description:(id)arg4 arguments:(char *)arg5;
-- (BOOL)xcui_isUITestingError:(NSInteger)arg1;
 @end
 

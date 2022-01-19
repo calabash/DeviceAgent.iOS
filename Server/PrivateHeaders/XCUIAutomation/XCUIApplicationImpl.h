@@ -24,6 +24,7 @@
     BOOL _codeCoverageEnabled;
     BOOL _hasValidAlertCount;
     BOOL _previousOnDemandAutomationSessionRequestFailed;
+    NSInteger _terminatingPID;
     NSString *_path;
     NSString *_bundleID;
     XCUIApplicationProcess *_currentProcess;
@@ -46,10 +47,12 @@
 @property(nonatomic) NSInteger processID;
 @property(readonly) BOOL running;
 @property(nonatomic) NSUInteger state;
+@property NSInteger terminatingPID;
 @property(readonly) BOOL suspended;
 
 + (id)keyPathsForValuesAffectingActivated;
 + (id)keyPathsForValuesAffectingBackground;
++ (id)keyPathsForValuesAffectingCurrentProcessAccessibilityActive;
 + (id)keyPathsForValuesAffectingForeground;
 + (id)keyPathsForValuesAffectingHasCurrentProcess;
 + (id)keyPathsForValuesAffectingRunning;
@@ -68,6 +71,7 @@
 - (void)applicationProcessAutomationSessionRequestFailed:(id)arg1;
 - (BOOL)applicationProcessShouldRequestAutomationSession:(id)arg1;
 - (id)compactDescription;
+- (BOOL)currentProcessAccessibilityActive;
 - (void)handleCrashUnderSymbol:(id)arg1;
 - (BOOL)hasCurrentProcess;
 - (id)initWithPath:(id)arg1 bundleID:(id)arg2;

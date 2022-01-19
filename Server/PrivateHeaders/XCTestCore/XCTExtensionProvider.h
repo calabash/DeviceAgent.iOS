@@ -5,7 +5,6 @@
 //  Copyright (C) 1997-2019 Steve Nygard.
 //
 
-
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <XCTest/XCUIElementTypes.h>
@@ -13,12 +12,13 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@class XCSynthesizedEventRecord;
-@protocol XCUIEventSynthesisRequest;
+#import <objc/NSObject.h>
 
-@protocol XCUIEventSynthesizing <NSObject>
-- (BOOL)requestPointerEventsSupportedOrError:(id *)arg1;
-- (BOOL)requestPressureEventsSupportedOrError:(id *)arg1;
-- (id <XCUIEventSynthesisRequest>)synthesizeEvent:(XCSynthesizedEventRecord *)arg1 completion:(void (^)(BOOL, NSError *))arg2;
+@interface XCTExtensionProvider : NSObject
+{
+}
+
+- (id)executionExtensionWithTestConfiguration:(id)arg1 reportingSession:(id)arg2;
+
 @end
 

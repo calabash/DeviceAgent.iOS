@@ -14,13 +14,15 @@
 
 #import "XCUIElement.h"
 
+#import "XCUIIssueDiagnosticsProviding-Protocol.h"
+
 @class NSArray, NSDictionary, NSString, XCAccessibilityElement, XCApplicationQuery, XCTVariationOptions, XCUIApplicationImpl, XCUIApplicationOpenRequest;
 @protocol XCTRunnerAutomationSession, XCUIDevice;
 
 
 @protocol XCTRunnerAutomationSession;
 
-@interface XCUIApplication : XCUIElement
+@interface XCUIApplication : XCUIElement <XCUIIssueDiagnosticsProviding>
 {
     BOOL _ancillary;
     BOOL _prefersPlatformLauncher;
@@ -110,6 +112,7 @@
 - (void)terminate;
 - (id)viewDidAppearExpectationForViewControllerWithName:(id)arg1;
 - (BOOL)waitForState:(NSUInteger)arg1 timeout:(double)arg2;
+
 
 @end
 

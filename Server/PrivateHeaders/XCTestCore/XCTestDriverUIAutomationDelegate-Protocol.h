@@ -5,6 +5,10 @@
 //  Copyright (C) 1997-2019 Steve Nygard.
 //
 
-@protocol _XCTMessaging_VoidProtocol
+
+@protocol XCTestDriverUIAutomationDelegate <NSObject>
+
+@optional
+- (BOOL)_preTestingInitializationForUIAutomation;
 @end
 

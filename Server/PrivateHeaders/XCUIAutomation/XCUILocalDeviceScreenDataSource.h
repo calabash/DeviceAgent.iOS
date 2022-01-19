@@ -27,7 +27,9 @@
 @property(readonly, nonatomic) BOOL supportsHEICImageEncoding;
 
 - (id)_clippedScreenshotFromImage:(id)arg1 encoding:(id)arg2 rect:(CGRect)arg3;
+- (id)_displayWithIdentifier:(NSInteger)arg1;
 - (id)initWithScreenshotIPCInterface:(id)arg1;
+- (void)requestBoundsForScreenWithIdentifier:(NSInteger)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)requestScaleForScreenWithIdentifier:(NSInteger)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)requestScreenIdentifiersWithCompletion:(CDUnknownBlockType)arg1;
 - (void)requestScreenshotOfScreenWithID:(NSInteger)arg1 withRect:(CGRect)arg2 encoding:(id)arg3 withReply:(CDUnknownBlockType)arg4;

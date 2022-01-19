@@ -16,10 +16,10 @@ typedef void (^CDUnknownFunctionPointerType)(void); // return type and parameter
 #pragma mark Typedef'd Structures
 
 typedef struct {
-    NSUInteger _field1;
+    unsigned long long _field1;
     id _field2;
-    NSUInteger *_field3;
-    NSUInteger _field4[5];
+    unsigned long long *_field3;
+    unsigned long long _field4[5];
 } CDStruct_70511ce9;
 
 typedef struct {
@@ -44,8 +44,7 @@ typedef struct {
 } CDStruct_37ea9563;
 
 typedef struct {
-    NSInteger _field1;
-    NSInteger _field2;
-    NSInteger _field3;
+    long long _field1;
+    long long _field2;
+    long long _field3;
 } CDStruct_2ec95fd7;
-

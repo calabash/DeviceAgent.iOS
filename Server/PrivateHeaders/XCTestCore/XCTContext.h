@@ -34,7 +34,6 @@
 @property(readonly) NSUInteger activityRecordStackDepth;
 @property(readonly) NSDictionary *aggregationRecords;
 @property(readonly) NSMutableDictionary *associatedObjects;
-@property(readonly) NSMutableArray *interruptionHandlers;
 @property(readonly) BOOL isReportingBase;
 @property(readonly, getter=isValid) BOOL valid;
 @property(readonly) XCTContext *parent;

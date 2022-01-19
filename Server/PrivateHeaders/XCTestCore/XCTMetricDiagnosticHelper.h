@@ -44,7 +44,6 @@
 - (id)initWithMetrics:(id)arg1 attachmentManager:(id)arg2 options:(id)arg3 testIdentifier:(id)arg4;
 - (void)performMemoryDiagnosticRunForBlock:(CDUnknownBlockType)arg1;
 - (void)sendMetricUseToCoreAnalytics:(id)arg1;
-- (void)setMallocStackLoggingForPregeneration:(BOOL)arg1 forApplicationProcess:(id)arg2;
 - (NSInteger)setMallocStackLoggingForPregeneration:(BOOL)arg1 forPid:(id)arg2 error:(id *)arg3;
 - (void)setMallocStackLoggingForRunnerProcessForPregeneration:(BOOL)arg1;
 

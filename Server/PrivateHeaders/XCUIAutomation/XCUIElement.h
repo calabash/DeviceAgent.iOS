@@ -25,7 +25,7 @@
 @class NSString, XCElementSnapshot, XCTLocalizableStringInfo, XCUIApplication, XCUICoordinate, XCUIElementQuery, XCUIScreen;
 @protocol XCUIDevice;
 
-@interface XCUIElement : NSObject <XCUIScreenshotProviding, XCUIElementSnapshotProviding, XCTNSPredicateExpectationObject, XCUIElementAttributesPrivate, XCUIElementTypeQueryProvider_Private, XCUIElementAttributes, XCUIElementTypeQueryProvider>
+@interface XCUIElement : NSObject <XCUIElementSnapshotProviding, XCUIScreenshotProviding, XCTNSPredicateExpectationObject, XCUIElementAttributesPrivate, XCUIElementTypeQueryProvider_Private, XCUIElementAttributes, XCUIElementTypeQueryProvider>
 {
     BOOL _safeQueryResolutionEnabled;
     XCUIElementQuery *_query;
@@ -118,6 +118,7 @@
 @property(readonly, copy) XCUIElementQuery *rulers;
 @property BOOL safeQueryResolutionEnabled;
 @property(readonly) XCUIScreen *screen;
+@property(readonly) CGRect screenshotFrame;
 @property(readonly, copy) XCUIElementQuery *scrollBars;
 @property(readonly, copy) XCUIElementQuery *scrollViews;
 @property(readonly, copy) XCUIElementQuery *searchFields;
