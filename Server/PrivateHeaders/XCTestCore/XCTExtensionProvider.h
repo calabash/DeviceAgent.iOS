@@ -18,7 +18,7 @@
 {
 }
 
-- (id)executionExtensionWithTestConfiguration:(id)arg1 reportingSession:(id)arg2;
+- (void)executionExtensionWithTestConfiguration:(id)arg1 reportingSession:(id)arg2 completion:(CDUnknownBlockType)arg3;
 
 @end
 

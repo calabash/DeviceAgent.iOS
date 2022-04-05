@@ -17,12 +17,14 @@
 #import "XCTActivity-Protocol.h"
 #import "XCTMemoryCheckerDelegate-Protocol.h"
 #import "XCTWaiterDelegate-Protocol.h"
+#import "XCTestCaseDiscoveryUIAutomationDelegate-Protocol.h"
 #import "XCTestCaseUIAutomationDelegate-Protocol.h"
+#import "XCTestCastMethodNamesUIAutomationDelegate-Protocol.h"
 
 @class MXMInstrument, NSArray, NSDictionary, NSInvocation, NSMutableArray, NSMutableDictionary, NSMutableSet, NSObject, NSString, NSThread, XCTAttachmentManager, XCTIssue, XCTMemoryChecker, XCTMetricDiagnosticHelper, XCTSkippedTestContext, XCTTestIdentifier, XCTWaiter, XCTestCaseRun;
 @protocol OS_dispatch_source;
 
-@interface XCTestCase : XCTest <XCTWaiterDelegate, XCTestCaseUIAutomationDelegate, XCTMemoryCheckerDelegate, XCTActivity>
+@interface XCTestCase : XCTest <XCTWaiterDelegate, XCTestCaseUIAutomationDelegate, XCTestCastMethodNamesUIAutomationDelegate, XCTestCaseDiscoveryUIAutomationDelegate, XCTMemoryCheckerDelegate, XCTActivity>
 {
     BOOL _continueAfterFailure;
     BOOL __preciseTimeoutsEnabled;
@@ -87,6 +89,7 @@
 @property NSInteger runLoopNestingCount;
 @property(nonatomic) BOOL shouldHaltWhenReceivesControl;
 @property(nonatomic) BOOL shouldSetShouldHaltWhenReceivesControl;
+@property(retain, nonatomic) XCTSkippedTestContext *skippedTestContext;
 @property(retain) XCTestCaseRun *testCaseRun;
 @property(readonly) BOOL shouldRelaunchBeforeRunningTest;
 
@@ -95,6 +98,7 @@
 + (id)_baselineDictionary;
 + (void)_collectTestInvocationDescriptorsForClassHierarchyIntoDictionary:(id)arg1;
 + (id)_identifierForSelectorString:(id)arg1;
++ (BOOL)_isAvailable;
 + (BOOL)_isDiscoverable;
 + (id)_languageSpecificTestMethodNameForSelectorString:(id)arg1;
 + (BOOL)_reportPerformanceFailuresForLargeImprovements;
@@ -131,7 +135,6 @@
 - (id)_expectationForDarwinNotification:(id)arg1;
 - (id)_expectationForDistributedNotification:(id)arg1 object:(id)arg2 handler:(CDUnknownBlockType)arg3;
 - (void)_handleIssue:(id)arg1;
-- (id)_identifier;
 - (void)_interruptOrMarkForLaterInterruption;
 - (BOOL)_isDuplicateOfIssueAssociatedWithSameSwiftError:(id)arg1;
 - (void)_logAndReportPerformanceMetrics:(id)arg1 perfMetricResultsForIDs:(id)arg2 withBaselinesForTest:(id)arg3;
@@ -149,6 +152,7 @@
 - (void)_stopTimeoutTimer;
 - (id)_storageKeyForCandidateIssue;
 - (BOOL)_testMethodSkippedWithXCTSkip;
+- (id)_xctTestIdentifier;
 - (id)addAdditionalIterationsBasedOnOptions:(id)arg1;
 - (void)addAsyncTeardownBlock:(CDUnknownBlockType)arg1;
 - (void)addAttachment:(id)arg1;

@@ -13,12 +13,12 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@class XCTImageEncoding;
+@class XCTScreenshotRequest;
 
 @protocol XCUIScreenDataSource <NSObject>
 - (void)requestBoundsForScreenWithIdentifier:(NSInteger)arg1 completion:(void (^)(CGRect, NSError *))arg2;
 - (void)requestScaleForScreenWithIdentifier:(NSInteger)arg1 completion:(void (^)(double, NSError *))arg2;
 - (void)requestScreenIdentifiersWithCompletion:(void (^)(NSArray *, NSError *))arg1;
-- (void)requestScreenshotOfScreenWithID:(NSInteger)arg1 withRect:(CGRect)arg2 encoding:(XCTImageEncoding *)arg3 withReply:(void (^)(XCTImage *, NSError *))arg4;
+- (void)requestScreenshotWithRequest:(XCTScreenshotRequest *)arg1 withReply:(void (^)(XCTImage *, NSError *))arg2;
 @end
 

@@ -16,16 +16,17 @@
 
 #import "XCTExecutionExtension-Protocol.h"
 
-@class NSString, XCTestConfiguration;
+@class NSString, XCTestConfiguration, XCTestSuite;
 
 @interface XCTTestRunSession : NSObject <XCTExecutionExtension>
 {
     XCTestConfiguration *_testConfiguration;
+    XCTestSuite *_testSuite;
 }
 
 - (void)executeTestsWithIdentifiers:(id)arg1 skippingTestsWithIdentifiers:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)getParallelizableTestIdentifiersWithCompletion:(CDUnknownBlockType)arg1;
-- (id)initWithTestConfiguration:(id)arg1;
+- (id)initWithTestConfiguration:(id)arg1 error:(id *)arg2;
 
 
 @end

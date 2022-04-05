@@ -64,6 +64,7 @@
 - (void)requestDTServiceHubConnectionWithReply:(CDUnknownBlockType)arg1;
 - (void)requestIDEConnectionTransportForSessionIdentifier:(id)arg1 reply:(CDUnknownBlockType)arg2;
 - (void)requestSpindumpWithSpecification:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)requestTailspinWithRequest:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)unregisterForSignpostsWithToken:(id)arg1;
 - (void)unregisterInvalidationHandlerWithToken:(id)arg1;
 

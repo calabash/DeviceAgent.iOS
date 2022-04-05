@@ -22,6 +22,7 @@
     NSMutableArray *_eventPaths;
     BOOL _beginsPersistentState;
     BOOL _endsPersistentState;
+    NSUInteger _windowContextID;
     NSString *_name;
     NSInteger _interfaceOrientation;
     NSInteger _targetProcessID;
@@ -36,6 +37,7 @@
 @property(readonly) double maximumOffset;
 @property(readonly, copy) NSString *name;
 @property NSInteger targetProcessID;
+@property NSUInteger windowContextID;
 
 - (void)addPointerEventPath:(id)arg1;
 - (id)initWithName:(id)arg1;

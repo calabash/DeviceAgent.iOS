@@ -29,7 +29,7 @@ __attribute__((visibility("hidden")))
 
 - (void)enqueueTestIdentifiersToRun:(id)arg1 testIdentifiersToSkip:(id)arg2;
 - (void)executeTestIdentifiers:(id)arg1 skippingTestIdentifiers:(id)arg2 completionHandler:(CDUnknownBlockType)arg3 completionQueue:(id)arg4;
-- (void)fetchDiscoveredTestClasses:(CDUnknownBlockType)arg1;
+- (void)fetchParallelizableTestIdentifiersWithCompletion:(CDUnknownBlockType)arg1;
 - (id)initWithExecutionExtensions:(id)arg1;
 - (BOOL)runWithError:(id *)arg1;
 - (void)shutdown;
