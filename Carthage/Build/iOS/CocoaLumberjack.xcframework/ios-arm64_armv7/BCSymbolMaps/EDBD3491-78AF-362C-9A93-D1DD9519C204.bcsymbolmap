@@ -1,9 +1,9 @@
 BCSymbolMap Version: 2.0
-Apple clang version 12.0.5 (clang-1205.0.22.9)
-/Users/Shared/Xcode/12.5/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk
-iPhoneOS14.5.sdk
-/Users/admin/Library/Caches/org.carthage.CarthageKit/DerivedData/12.5_12E262/CocoaLumberjack/3.7.2/Build/Intermediates.noindex/ArchiveIntermediates/CocoaLumberjack/IntermediateBuildFilesPath/Lumberjack.build/Release-iphoneos/CocoaLumberjack.build/DerivedSources/CocoaLumberjack_vers.c
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack
+Apple clang version 13.1.6 (clang-1316.0.21.2)
+/Users/Shared/Xcode/13.3/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk
+iPhoneOS15.4.sdk
+/Users/ilya.bausov/Library/Caches/org.carthage.CarthageKit/DerivedData/13.3_13E113/CocoaLumberjack/3.7.4/Build/Intermediates.noindex/ArchiveIntermediates/CocoaLumberjack/IntermediateBuildFilesPath/Lumberjack.build/Release-iphoneos/CocoaLumberjack.build/DerivedSources/CocoaLumberjack_vers.c
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack
 -[DDMultiFormatter init]
 -[DDMultiFormatter formatLogMessage:]
 ___Block_byref_object_copy_
@@ -64,7 +64,7 @@ _OBJC_IVAR_$_DDMultiFormatter._formatters
 __OBJC_$_INSTANCE_VARIABLES_DDMultiFormatter
 __OBJC_$_PROP_LIST_DDMultiFormatter
 __OBJC_CLASS_RO_$_DDMultiFormatter
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/Extensions/DDMultiFormatter.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/Extensions/DDMultiFormatter.m
 Sources/CocoaLumberjack/Extensions/DDMultiFormatter.m
 __46-[DDMultiFormatter isFormattingWithFormatter:]_block_invoke
 __destroy_helper_block_e8_32s
@@ -82,7 +82,7 @@ __copy_helper_block_e8_32s40s48r
 __37-[DDMultiFormatter formatLogMessage:]_block_invoke
 __Block_byref_object_dispose_
 __Block_byref_object_copy_
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/DDLoggerNames.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/DDLoggerNames.m
 +[DDTTYLogger initialize_colors_16]
 +[DDTTYLogger initialize_colors_256]
 +[DDTTYLogger getRed:green:blue:fromColor:]
@@ -224,7 +224,7 @@ __OBJC_$_INSTANCE_VARIABLES_DDTTYLoggerColorProfile
 __OBJC_CLASS_RO_$_DDTTYLoggerColorProfile
 _OBJC_CLASSLIST_REFERENCES_$_.314
 _OBJC_SELECTOR_REFERENCES_.316
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/DDTTYLogger.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/DDTTYLogger.m
 Sources/CocoaLumberjack/DDTTYLogger.m
 Sources/CocoaLumberjack/include/CocoaLumberjack/DDTTYLogger.h
 __29-[DDTTYLogger clearAllColors]_block_invoke_2
@@ -254,7 +254,7 @@ DDMakeColor
 __destroy_helper_block_e8_
 __copy_helper_block_e8_
 __29+[DDTTYLogger sharedInstance]_block_invoke
-Shared/Xcode/12.5/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/usr/include/dispatch/once.h
+Shared/Xcode/13.3/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/usr/include/dispatch/once.h
 /Users
 +[DDLog sharedInstance]
 ___23+[DDLog sharedInstance]_block_invoke
@@ -479,7 +479,7 @@ __OBJC_$_INSTANCE_METHODS_DDLoggerInformation
 __OBJC_$_INSTANCE_VARIABLES_DDLoggerInformation
 __OBJC_$_PROP_LIST_DDLoggerInformation
 __OBJC_CLASS_RO_$_DDLoggerInformation
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/DDLog.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/DDLog.m
 Sources/CocoaLumberjack/DDLog.m
 Sources/CocoaLumberjack/include/CocoaLumberjack/DDLog.h
 __36-[DDAbstractLogger setLogFormatter:]_block_invoke_2
@@ -550,7 +550,7 @@ _OBJC_IVAR_$_DDLoggingContextSet._set
 __OBJC_$_INSTANCE_VARIABLES_DDLoggingContextSet
 __OBJC_$_PROP_LIST_DDLoggingContextSet
 __OBJC_CLASS_RO_$_DDLoggingContextSet
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/Extensions/DDContextFilterLogFormatter.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/Extensions/DDContextFilterLogFormatter.m
 Sources/CocoaLumberjack/Extensions/DDContextFilterLogFormatter.m
 +[DDASLLogCapture start]
 ___24+[DDASLLogCapture start]_block_invoke
@@ -575,13 +575,13 @@ __OBJC_$_CLASS_METHODS_DDASLLogCapture
 __OBJC_$_CLASS_PROP_LIST_DDASLLogCapture
 __OBJC_METACLASS_RO_$_DDASLLogCapture
 __OBJC_CLASS_RO_$_DDASLLogCapture
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/DDASLLogCapture.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/DDASLLogCapture.m
 __destroy_helper_block_e8_40r
+Sources/CocoaLumberjack/DDASLLogCapture.m
 __copy_helper_block_e8_40r
 __33+[DDASLLogCapture captureAslLogs]_block_invoke
-Sources/CocoaLumberjack/DDASLLogCapture.m
 __24+[DDASLLogCapture start]_block_invoke
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/CLI/CLIColor.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/CLI/CLIColor.m
 -[DDLogFileManagerDefault init]
 -[DDLogFileManagerDefault initWithLogsDirectory:]
 -[DDLogFileManagerDefault initWithLogsDirectory:defaultFileProtectionLevel:]
@@ -627,7 +627,7 @@ ___31-[DDFileLogger maximumFileSize]_block_invoke
 ___31-[DDFileLogger maximumFileSize]_block_invoke.316
 -[DDFileLogger setMaximumFileSize:]
 ___35-[DDFileLogger setMaximumFileSize:]_block_invoke
-___35-[DDFileLogger setMaximumFileSize:]_block_invoke.319
+___35-[DDFileLogger setMaximumFileSize:]_block_invoke.321
 -[DDFileLogger rollingFrequency]
 ___32-[DDFileLogger rollingFrequency]_block_invoke
 ___32-[DDFileLogger rollingFrequency]_block_invoke_2
@@ -643,10 +643,10 @@ ___destroy_helper_block_e8_32w
 ___47-[DDFileLogger rollLogFileWithCompletionBlock:]_block_invoke
 ___47-[DDFileLogger rollLogFileWithCompletionBlock:]_block_invoke_2
 ___copy_helper_block_e8_32b
-___47-[DDFileLogger rollLogFileWithCompletionBlock:]_block_invoke.332
+___47-[DDFileLogger rollLogFileWithCompletionBlock:]_block_invoke.334
 -[DDFileLogger lt_rollLogFileNow]
 ___33-[DDFileLogger lt_rollLogFileNow]_block_invoke
-___33-[DDFileLogger lt_rollLogFileNow]_block_invoke.338
+___33-[DDFileLogger lt_rollLogFileNow]_block_invoke.340
 -[DDFileLogger lt_maybeRollLogFileDueToAge]
 -[DDFileLogger lt_maybeRollLogFileDueToSize]
 -[DDFileLogger lt_shouldLogFileBeArchived:]
@@ -799,60 +799,60 @@ _OBJC_SELECTOR_REFERENCES_.312
 _OBJC_CLASSLIST_REFERENCES_$_.313
 _OBJC_SELECTOR_REFERENCES_.315
 _OBJC_SELECTOR_REFERENCES_.318
+_OBJC_SELECTOR_REFERENCES_.320
 ___block_descriptor_48_e8_32s_e5_v8?0l
-_OBJC_SELECTOR_REFERENCES_.321
-_OBJC_IVAR_$_DDFileLogger._currentLogFileInfo
 _OBJC_SELECTOR_REFERENCES_.323
+_OBJC_IVAR_$_DDFileLogger._currentLogFileInfo
 _OBJC_SELECTOR_REFERENCES_.325
-___block_descriptor_40_e8_32w_e5_v8?0l
 _OBJC_SELECTOR_REFERENCES_.327
+___block_descriptor_40_e8_32w_e5_v8?0l
 _OBJC_SELECTOR_REFERENCES_.329
 _OBJC_SELECTOR_REFERENCES_.331
+_OBJC_SELECTOR_REFERENCES_.333
 ___block_descriptor_40_e8_32bs_e5_v8?0l
-_OBJC_SELECTOR_REFERENCES_.334
-_OBJC_SELECTOR_REFERENCES_.335
 _OBJC_SELECTOR_REFERENCES_.336
 _OBJC_SELECTOR_REFERENCES_.337
-_OBJC_SELECTOR_REFERENCES_.340
+_OBJC_SELECTOR_REFERENCES_.338
+_OBJC_SELECTOR_REFERENCES_.339
 _OBJC_SELECTOR_REFERENCES_.342
 _OBJC_SELECTOR_REFERENCES_.344
-_OBJC_SELECTOR_REFERENCES_.348
+_OBJC_SELECTOR_REFERENCES_.346
 _OBJC_SELECTOR_REFERENCES_.350
 _OBJC_SELECTOR_REFERENCES_.352
 _OBJC_SELECTOR_REFERENCES_.354
 _OBJC_SELECTOR_REFERENCES_.356
 _OBJC_SELECTOR_REFERENCES_.358
-_OBJC_SELECTOR_REFERENCES_.359
-_OBJC_SELECTOR_REFERENCES_.362
+_OBJC_SELECTOR_REFERENCES_.360
+_OBJC_SELECTOR_REFERENCES_.361
 _OBJC_SELECTOR_REFERENCES_.364
-_OBJC_IVAR_$_DDFileLogger._doNotReuseLogFiles
 _OBJC_SELECTOR_REFERENCES_.366
-_OBJC_SELECTOR_REFERENCES_.367
+_OBJC_IVAR_$_DDFileLogger._doNotReuseLogFiles
+_OBJC_SELECTOR_REFERENCES_.368
 _OBJC_SELECTOR_REFERENCES_.369
-_OBJC_CLASSLIST_REFERENCES_$_.370
-_OBJC_SELECTOR_REFERENCES_.372
+_OBJC_SELECTOR_REFERENCES_.371
+_OBJC_CLASSLIST_REFERENCES_$_.372
 _OBJC_SELECTOR_REFERENCES_.374
-_OBJC_SELECTOR_REFERENCES_.378
+_OBJC_SELECTOR_REFERENCES_.376
 _OBJC_SELECTOR_REFERENCES_.380
 _OBJC_SELECTOR_REFERENCES_.382
 _OBJC_SELECTOR_REFERENCES_.384
 _OBJC_SELECTOR_REFERENCES_.386
+_OBJC_SELECTOR_REFERENCES_.388
 __OBJC_CLASS_PROTOCOLS_$_DDFileLogger
 __OBJC_METACLASS_RO_$_DDFileLogger
 __OBJC_$_INSTANCE_METHODS_DDFileLogger
 __OBJC_$_INSTANCE_VARIABLES_DDFileLogger
 __OBJC_$_PROP_LIST_DDFileLogger
 __OBJC_CLASS_RO_$_DDFileLogger
-_OBJC_SELECTOR_REFERENCES_.457
-_OBJC_SELECTOR_REFERENCES_.459
-_OBJC_SELECTOR_REFERENCES_.461
-_OBJC_SELECTOR_REFERENCES_.463
-_OBJC_SELECTOR_REFERENCES_.465
-_OBJC_SELECTOR_REFERENCES_.467
+_OBJC_SELECTOR_REFERENCES_.458
+_OBJC_SELECTOR_REFERENCES_.460
+_OBJC_SELECTOR_REFERENCES_.462
+_OBJC_SELECTOR_REFERENCES_.464
+_OBJC_SELECTOR_REFERENCES_.466
+_OBJC_SELECTOR_REFERENCES_.468
 _lt_logData:.implementsDeprecatedWillLog
 _lt_logData:.implementsDeprecatedDidLog
 _lt_logData:.onceToken
-_OBJC_SELECTOR_REFERENCES_.468
 _OBJC_SELECTOR_REFERENCES_.469
 _OBJC_SELECTOR_REFERENCES_.471
 _OBJC_SELECTOR_REFERENCES_.475
@@ -893,7 +893,7 @@ _OBJC_IVAR_$_DDLogFileInfo.filePath
 __OBJC_$_INSTANCE_VARIABLES_DDLogFileInfo
 __OBJC_$_PROP_LIST_DDLogFileInfo
 __OBJC_CLASS_RO_$_DDLogFileInfo
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/DDFileLogger.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/DDFileLogger.m
 Sources/CocoaLumberjack/DDFileLogger.m
 __37-[DDFileLogger(Internal) lt_logData:]_block_invoke
 __34-[DDFileLogger(Internal) logData:]_block_invoke_2
@@ -906,9 +906,9 @@ __47-[DDFileLogger lt_shouldUseLogFile:isResuming:]_block_invoke_2
 __47-[DDFileLogger lt_shouldUseLogFile:isResuming:]_block_invoke
 __34-[DDFileLogger currentLogFileInfo]_block_invoke_2
 __34-[DDFileLogger currentLogFileInfo]_block_invoke
-__33-[DDFileLogger lt_rollLogFileNow]_block_invoke.338
+__33-[DDFileLogger lt_rollLogFileNow]_block_invoke.340
 __33-[DDFileLogger lt_rollLogFileNow]_block_invoke
-__47-[DDFileLogger rollLogFileWithCompletionBlock:]_block_invoke.332
+__47-[DDFileLogger rollLogFileWithCompletionBlock:]_block_invoke.334
 __copy_helper_block_e8_32b
 __47-[DDFileLogger rollLogFileWithCompletionBlock:]_block_invoke_2
 __47-[DDFileLogger rollLogFileWithCompletionBlock:]_block_invoke
@@ -919,7 +919,7 @@ __36-[DDFileLogger setRollingFrequency:]_block_invoke_2
 __36-[DDFileLogger setRollingFrequency:]_block_invoke
 __32-[DDFileLogger rollingFrequency]_block_invoke_2
 __32-[DDFileLogger rollingFrequency]_block_invoke
-__35-[DDFileLogger setMaximumFileSize:]_block_invoke.319
+__35-[DDFileLogger setMaximumFileSize:]_block_invoke.321
 __35-[DDFileLogger setMaximumFileSize:]_block_invoke
 __31-[DDFileLogger maximumFileSize]_block_invoke.316
 __31-[DDFileLogger maximumFileSize]_block_invoke
@@ -954,7 +954,7 @@ __OBJC_$_INSTANCE_METHODS_DDOSLogger
 __OBJC_$_INSTANCE_VARIABLES_DDOSLogger
 __OBJC_$_PROP_LIST_DDOSLogger
 __OBJC_CLASS_RO_$_DDOSLogger
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/DDOSLogger.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/DDOSLogger.m
 Sources/CocoaLumberjack/DDOSLogger.m
 __28+[DDOSLogger sharedInstance]_block_invoke
 -[DDBufferedProxy initWithFileLogger:]
@@ -1008,7 +1008,7 @@ _DDGetDefaultBufferSizeBytes.onceToken
 _DDGetMaxBufferSizeBytes.maxBufferSize
 _DDGetMaxBufferSizeBytes.onceToken
 ___block_literal_global.80
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/Extensions/DDFileLogger+Buffering.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/Extensions/DDFileLogger+Buffering.m
 __DDGetMaxBufferSizeBytes_block_invoke
 Sources/CocoaLumberjack/Extensions/DDFileLogger+Buffering.m
 p_DDGetDefaultBufferSizeBytesMax
@@ -1067,7 +1067,7 @@ _OBJC_IVAR_$_DDAtomicCounter._value
 __OBJC_$_INSTANCE_VARIABLES_DDAtomicCounter
 __OBJC_$_PROP_LIST_DDAtomicCounter
 __OBJC_CLASS_RO_$_DDAtomicCounter
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/Extensions/DDDispatchQueueLogFormatter.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/Extensions/DDDispatchQueueLogFormatter.m
 Sources/CocoaLumberjack/Extensions/DDDispatchQueueLogFormatter.m
 _qos_name
 -[DDAbstractDatabaseLogger init]
@@ -1131,7 +1131,7 @@ __OBJC_$_INSTANCE_METHODS_DDAbstractDatabaseLogger
 __OBJC_$_INSTANCE_VARIABLES_DDAbstractDatabaseLogger
 __OBJC_$_PROP_LIST_DDAbstractDatabaseLogger
 __OBJC_CLASS_RO_$_DDAbstractDatabaseLogger
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/DDAbstractDatabaseLogger.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/DDAbstractDatabaseLogger.m
 Sources/CocoaLumberjack/DDAbstractDatabaseLogger.m
 __47-[DDAbstractDatabaseLogger deleteOldLogEntries]_block_invoke
 __49-[DDAbstractDatabaseLogger savePendingLogEntries]_block_invoke
@@ -1171,7 +1171,7 @@ __OBJC_$_CATEGORY_DDContextAllowlistFilterLogFormatter_$_Deprecated
 __OBJC_$_CATEGORY_INSTANCE_METHODS_DDContextDenylistFilterLogFormatter_$_Deprecated
 __OBJC_$_PROP_LIST_DDContextDenylistFilterLogFormatter_$_Deprecated
 __OBJC_$_CATEGORY_DDContextDenylistFilterLogFormatter_$_Deprecated
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/Extensions/DDContextFilterLogFormatter+Deprecated.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/Extensions/DDContextFilterLogFormatter+Deprecated.m
 Sources/CocoaLumberjack/Extensions/DDContextFilterLogFormatter+Deprecated.m
 +[DDASLLogger sharedInstance]
 ___29+[DDASLLogger sharedInstance]_block_invoke
@@ -1189,6 +1189,6 @@ __OBJC_$_INSTANCE_METHODS_DDASLLogger
 __OBJC_$_INSTANCE_VARIABLES_DDASLLogger
 __OBJC_$_PROP_LIST_DDASLLogger
 __OBJC_CLASS_RO_$_DDASLLogger
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/DDASLLogger.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/CocoaLumberjack/Sources/CocoaLumberjack/DDASLLogger.m
 Sources/CocoaLumberjack/DDASLLogger.m
 __29+[DDASLLogger sharedInstance]_block_invoke

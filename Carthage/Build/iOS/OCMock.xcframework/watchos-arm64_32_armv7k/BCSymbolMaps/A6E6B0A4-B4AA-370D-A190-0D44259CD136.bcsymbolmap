@@ -1,9 +1,9 @@
 BCSymbolMap Version: 2.0
-Apple clang version 12.0.5 (clang-1205.0.22.9)
-/Users/Shared/Xcode/12.5/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.4.sdk
-WatchOS7.4.sdk
-/Users/admin/Library/Caches/org.carthage.CarthageKit/DerivedData/12.5_12E262/ocmock/b9c7fb949d7afc7087165b9c57fb5d7ddbe2ce4d/Build/Intermediates.noindex/ArchiveIntermediates/OCMock watchOS/IntermediateBuildFilesPath/OCMock.build/Release-watchos/OCMock watchOS.build/DerivedSources/OCMock_vers.c
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source
+Apple clang version 13.1.6 (clang-1316.0.21.2)
+/Users/Shared/Xcode/13.3/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.5.sdk
+WatchOS8.5.sdk
+/Users/ilya.bausov/Library/Caches/org.carthage.CarthageKit/DerivedData/13.3_13E113/ocmock/37c9b038823126a41397a9bd8f49c308ccaa3e2a/Build/Intermediates.noindex/ArchiveIntermediates/OCMock watchOS/IntermediateBuildFilesPath/OCMock.build/Release-watchos/OCMock watchOS.build/DerivedSources/OCMock_vers.c
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source
 +[OCMockObject initialize]
 +[OCMockObject mockForClass:]
 +[OCMockObject mockForProtocol:]
@@ -126,7 +126,7 @@ __OBJC_METACLASS_RO_$_OCMockObject
 __OBJC_$_INSTANCE_METHODS_OCMockObject
 __OBJC_$_INSTANCE_VARIABLES_OCMockObject
 __OBJC_CLASS_RO_$_OCMockObject
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMockObject.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMockObject.m
 OCMock/OCMockObject.m
 -[OCClassMockObject initWithClass:]
 -[OCClassMockObject dealloc]
@@ -201,7 +201,7 @@ _OBJC_CLASSLIST_REFERENCES_$_.116
 _OBJC_CLASSLIST_REFERENCES_$_.117
 __OBJC_$_CATEGORY_INSTANCE_METHODS_OCClassMockObject_$_NSIsKindsImplementation
 __OBJC_$_CATEGORY_OCClassMockObject_$_NSIsKindsImplementation
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCClassMockObject.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCClassMockObject.m
 OCMock/OCClassMockObject.m
 __destroy_helper_block_e4_20o24o
 __copy_helper_block_e4_20o24o
@@ -249,11 +249,11 @@ __OBJC_METACLASS_RO_$_OCPartialMockObject
 __OBJC_$_INSTANCE_METHODS_OCPartialMockObject
 __OBJC_$_INSTANCE_VARIABLES_OCPartialMockObject
 __OBJC_CLASS_RO_$_OCPartialMockObject
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCPartialMockObject.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCPartialMockObject.m
 __destroy_helper_block_e4_20r
+OCMock/OCPartialMockObject.m
 __copy_helper_block_e4_20r
 __95-[OCPartialMockObject descriptionForVerificationFailureWithMatcher:quantifier:invocationCount:]_block_invoke
-OCMock/OCPartialMockObject.m
 __60-[OCPartialMockObject prepareObjectForInstanceMethodMocking]_block_invoke
 -[OCProtocolMockObject initWithProtocol:]
 -[OCProtocolMockObject description]
@@ -266,7 +266,7 @@ __OBJC_METACLASS_RO_$_OCProtocolMockObject
 __OBJC_$_INSTANCE_METHODS_OCProtocolMockObject
 __OBJC_$_INSTANCE_VARIABLES_OCProtocolMockObject
 __OBJC_CLASS_RO_$_OCProtocolMockObject
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCProtocolMockObject.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCProtocolMockObject.m
 OCMock/OCProtocolMockObject.m
 -[OCMRecorder init]
 -[OCMRecorder initWithMockObject:]
@@ -297,11 +297,11 @@ _OBJC_SELECTOR_REFERENCES_.58
 __OBJC_$_CATEGORY_INSTANCE_METHODS_OCMRecorder_$_Properties
 __OBJC_$_PROP_LIST_OCMRecorder_$_Properties
 __OBJC_$_CATEGORY_OCMRecorder_$_Properties
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMRecorder.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMRecorder.m
 __destroy_helper_block_e4_20o
+OCMock/OCMRecorder.m
 __copy_helper_block_e4_20o
 __49-[OCMRecorder(Properties) _ignoringNonObjectArgs]_block_invoke
-OCMock/OCMRecorder.m
 +[OCMQuantifier exactly:]
 +[OCMQuantifier never]
 +[OCMQuantifier atLeast:]
@@ -336,7 +336,7 @@ __OBJC_CLASS_RO_$_OCMAtLeastQuantifier
 __OBJC_METACLASS_RO_$_OCMAtMostQuantifier
 __OBJC_$_INSTANCE_METHODS_OCMAtMostQuantifier
 __OBJC_CLASS_RO_$_OCMAtMostQuantifier
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMQuantifier.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMQuantifier.m
 OCMock/OCMQuantifier.m
 -[OCMStubRecorder init]
 -[OCMStubRecorder stub]
@@ -377,7 +377,7 @@ ___block_descriptor_24_e4_20o_e28_8?0?<v?"NSInvocation">4l
 __OBJC_$_CATEGORY_INSTANCE_METHODS_OCMStubRecorder_$_Properties
 __OBJC_$_PROP_LIST_OCMStubRecorder_$_Properties
 __OBJC_$_CATEGORY_OCMStubRecorder_$_Properties
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMStubRecorder.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMStubRecorder.m
 __54-[OCMStubRecorder(Properties) _andForwardToRealObject]_block_invoke
 OCMock/OCMStubRecorder.m
 __37-[OCMStubRecorder(Properties) _andDo]_block_invoke
@@ -392,7 +392,7 @@ __41-[OCMStubRecorder(Properties) _andReturn]_block_invoke
 __OBJC_METACLASS_RO_$_OCMExpectationRecorder
 __OBJC_$_INSTANCE_METHODS_OCMExpectationRecorder
 __OBJC_CLASS_RO_$_OCMExpectationRecorder
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMExpectationRecorder.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMExpectationRecorder.m
 OCMock/OCMExpectationRecorder.m
 -[OCMVerifier init]
 -[OCMVerifier withQuantifier:]
@@ -410,7 +410,7 @@ __OBJC_$_INSTANCE_METHODS_OCMVerifier
 __OBJC_$_INSTANCE_VARIABLES_OCMVerifier
 __OBJC_$_PROP_LIST_OCMVerifier
 __OBJC_CLASS_RO_$_OCMVerifier
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMVerifier.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMVerifier.m
 OCMock/OCMVerifier.h
 OCMock/OCMVerifier.m
 -[OCMInvocationMatcher dealloc]
@@ -428,7 +428,7 @@ __OBJC_METACLASS_RO_$_OCMInvocationMatcher
 __OBJC_$_INSTANCE_METHODS_OCMInvocationMatcher
 __OBJC_$_INSTANCE_VARIABLES_OCMInvocationMatcher
 __OBJC_CLASS_RO_$_OCMInvocationMatcher
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMInvocationMatcher.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMInvocationMatcher.m
 OCMock/OCMInvocationMatcher.m
 -[OCMInvocationStub init]
 -[OCMInvocationStub dealloc]
@@ -447,7 +447,7 @@ __OBJC_METACLASS_RO_$_OCMInvocationStub
 __OBJC_$_INSTANCE_METHODS_OCMInvocationStub
 __OBJC_$_INSTANCE_VARIABLES_OCMInvocationStub
 __OBJC_CLASS_RO_$_OCMInvocationStub
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMInvocationStub.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMInvocationStub.m
 OCMock/OCMInvocationStub.m
 -[OCMInvocationExpectation setMatchAndReject:]
 -[OCMInvocationExpectation isMatchAndReject]
@@ -458,13 +458,13 @@ __OBJC_METACLASS_RO_$_OCMInvocationExpectation
 __OBJC_$_INSTANCE_METHODS_OCMInvocationExpectation
 __OBJC_$_INSTANCE_VARIABLES_OCMInvocationExpectation
 __OBJC_CLASS_RO_$_OCMInvocationExpectation
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMInvocationExpectation.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMInvocationExpectation.m
 OCMock/OCMInvocationExpectation.m
 -[OCMRealObjectForwarder handleInvocation:]
 __OBJC_METACLASS_RO_$_OCMRealObjectForwarder
 __OBJC_$_INSTANCE_METHODS_OCMRealObjectForwarder
 __OBJC_CLASS_RO_$_OCMRealObjectForwarder
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMRealObjectForwarder.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMRealObjectForwarder.m
 OCMock/OCMRealObjectForwarder.m
 -[OCMBlockCaller initWithCallBlock:]
 -[OCMBlockCaller dealloc]
@@ -473,20 +473,20 @@ __OBJC_METACLASS_RO_$_OCMBlockCaller
 __OBJC_$_INSTANCE_METHODS_OCMBlockCaller
 __OBJC_$_INSTANCE_VARIABLES_OCMBlockCaller
 __OBJC_CLASS_RO_$_OCMBlockCaller
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMBlockCaller.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMBlockCaller.m
 OCMock/OCMBlockCaller.m
 -[OCMBoxedReturnValueProvider handleInvocation:]
 -[OCMBoxedReturnValueProvider isMethodReturnType:compatibleWithValueType:value:valueSize:]
 __OBJC_METACLASS_RO_$_OCMBoxedReturnValueProvider
 __OBJC_$_INSTANCE_METHODS_OCMBoxedReturnValueProvider
 __OBJC_CLASS_RO_$_OCMBoxedReturnValueProvider
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMBoxedReturnValueProvider.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMBoxedReturnValueProvider.m
 OCMock/OCMBoxedReturnValueProvider.m
 -[OCMExceptionReturnValueProvider handleInvocation:]
 __OBJC_METACLASS_RO_$_OCMExceptionReturnValueProvider
 __OBJC_$_INSTANCE_METHODS_OCMExceptionReturnValueProvider
 __OBJC_CLASS_RO_$_OCMExceptionReturnValueProvider
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMExceptionReturnValueProvider.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMExceptionReturnValueProvider.m
 OCMock/OCMExceptionReturnValueProvider.m
 -[OCMIndirectReturnValueProvider initWithProvider:andSelector:]
 -[OCMIndirectReturnValueProvider dealloc]
@@ -495,7 +495,7 @@ __OBJC_METACLASS_RO_$_OCMIndirectReturnValueProvider
 __OBJC_$_INSTANCE_METHODS_OCMIndirectReturnValueProvider
 __OBJC_$_INSTANCE_VARIABLES_OCMIndirectReturnValueProvider
 __OBJC_CLASS_RO_$_OCMIndirectReturnValueProvider
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMIndirectReturnValueProvider.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMIndirectReturnValueProvider.m
 OCMock/OCMIndirectReturnValueProvider.m
 -[OCMNotificationPoster initWithNotification:]
 -[OCMNotificationPoster dealloc]
@@ -504,14 +504,14 @@ __OBJC_METACLASS_RO_$_OCMNotificationPoster
 __OBJC_$_INSTANCE_METHODS_OCMNotificationPoster
 __OBJC_$_INSTANCE_VARIABLES_OCMNotificationPoster
 __OBJC_CLASS_RO_$_OCMNotificationPoster
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMNotificationPoster.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMNotificationPoster.m
 OCMock/OCMNotificationPoster.m
 -[OCMObjectReturnValueProvider initWithValue:]
 -[OCMObjectReturnValueProvider dealloc]
 __OBJC_METACLASS_RO_$_OCMObjectReturnValueProvider
 __OBJC_$_INSTANCE_METHODS_OCMObjectReturnValueProvider
 __OBJC_CLASS_RO_$_OCMObjectReturnValueProvider
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMObjectReturnValueProvider.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMObjectReturnValueProvider.m
 OCMock/OCMObjectReturnValueProvider.m
 +[OCMLocation locationWithTestCase:file:line:]
 -[OCMLocation initWithTestCase:file:line:]
@@ -525,7 +525,7 @@ __OBJC_$_INSTANCE_METHODS_OCMLocation
 __OBJC_$_INSTANCE_VARIABLES_OCMLocation
 __OBJC_CLASS_RO_$_OCMLocation
 _OBJC_CLASSLIST_REFERENCES_$_.15
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMLocation.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMLocation.m
 OCMMakeLocation
 OCMock/OCMLocation.m
 +[OCMMacroState beginStubMacro]
@@ -553,7 +553,7 @@ __OBJC_METACLASS_RO_$_OCMMacroState
 __OBJC_$_INSTANCE_METHODS_OCMMacroState
 __OBJC_$_INSTANCE_VARIABLES_OCMMacroState
 __OBJC_CLASS_RO_$_OCMMacroState
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMMacroState.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMMacroState.m
 OCMock/OCMMacroState.m
 -[OCMBlockArgCaller initWithBlockArguments:]
 -[OCMBlockArgCaller dealloc]
@@ -568,7 +568,7 @@ __OBJC_METACLASS_RO_$_OCMBlockArgCaller
 __OBJC_$_INSTANCE_METHODS_OCMBlockArgCaller
 __OBJC_$_INSTANCE_VARIABLES_OCMBlockArgCaller
 __OBJC_CLASS_RO_$_OCMBlockArgCaller
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMBlockArgCaller.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMBlockArgCaller.m
 OCMock/OCMBlockArgCaller.m
 -[OCObserverMockObject init]
 -[OCObserverMockObject retain]
@@ -587,7 +587,7 @@ __OBJC_METACLASS_RO_$_OCObserverMockObject
 __OBJC_$_INSTANCE_METHODS_OCObserverMockObject
 __OBJC_$_INSTANCE_VARIABLES_OCObserverMockObject
 __OBJC_CLASS_RO_$_OCObserverMockObject
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCObserverMockObject.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCObserverMockObject.m
 OCMock/OCObserverMockObject.m
 -[OCMObserverRecorder dealloc]
 -[OCMObserverRecorder didRecordInvocation]
@@ -599,7 +599,7 @@ __OBJC_METACLASS_RO_$_OCMObserverRecorder
 __OBJC_$_INSTANCE_METHODS_OCMObserverRecorder
 __OBJC_$_INSTANCE_VARIABLES_OCMObserverRecorder
 __OBJC_CLASS_RO_$_OCMObserverRecorder
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMObserverRecorder.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMObserverRecorder.m
 OCMock/OCMObserverRecorder.m
 +[OCMArg any]
 +[OCMArg anyPointer]
@@ -625,7 +625,7 @@ _OBJC_CLASSLIST_REFERENCES_$_.10
 __OBJC_$_CLASS_METHODS_OCMArg
 __OBJC_METACLASS_RO_$_OCMArg
 __OBJC_CLASS_RO_$_OCMArg
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMArg.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMArg.m
 OCMock/OCMArg.m
 __24+[OCMArg isKindOfClass:]_block_invoke
 +[OCMConstraint constraint]
@@ -666,7 +666,7 @@ __OBJC_METACLASS_RO_$_OCMBlockConstraint
 __OBJC_$_INSTANCE_METHODS_OCMBlockConstraint
 __OBJC_$_INSTANCE_VARIABLES_OCMBlockConstraint
 __OBJC_CLASS_RO_$_OCMBlockConstraint
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMConstraint.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMConstraint.m
 OCMock/OCMConstraint.m
 -[OCMPassByRefSetter initWithValue:]
 -[OCMPassByRefSetter dealloc]
@@ -675,7 +675,7 @@ __OBJC_METACLASS_RO_$_OCMPassByRefSetter
 __OBJC_$_INSTANCE_METHODS_OCMPassByRefSetter
 __OBJC_$_INSTANCE_VARIABLES_OCMPassByRefSetter
 __OBJC_CLASS_RO_$_OCMPassByRefSetter
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMPassByRefSetter.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMPassByRefSetter.m
 OCMock/OCMPassByRefSetter.m
 +[NSInvocation(OCMAdditions) invocationForBlock:withArguments:]
 -[NSInvocation(OCMAdditions) retainObjectArgumentsExcludingObject:]
@@ -734,10 +734,10 @@ _OBJC_SELECTOR_REFERENCES_.238
 __OBJC_$_CATEGORY_INSTANCE_METHODS_NSInvocation_$_OCMAdditions
 __OBJC_$_CATEGORY_CLASS_METHODS_NSInvocation_$_OCMAdditions
 __OBJC_$_CATEGORY_NSInvocation_$_OCMAdditions
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/NSInvocation+OCMAdditions.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/NSInvocation+OCMAdditions.m
 OCMock/NSInvocation+OCMAdditions.m
 NSMaxRange
-Shared/Xcode/12.5/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
+Shared/Xcode/13.3/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
 /Users
 +[NSMethodSignature(OCMAdditions) signatureForDynamicPropertyAccessedWithSelector:inClass:]
 +[NSMethodSignature(OCMAdditions) propertyMatchingSelector:inClass:isGetter:]
@@ -749,24 +749,24 @@ _OBJC_CLASSLIST_REFERENCES_$_.56
 __OBJC_$_CATEGORY_INSTANCE_METHODS_NSMethodSignature_$_OCMAdditions
 __OBJC_$_CATEGORY_CLASS_METHODS_NSMethodSignature_$_OCMAdditions
 __OBJC_$_CATEGORY_NSMethodSignature_$_OCMAdditions
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/NSMethodSignature+OCMAdditions.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/NSMethodSignature+OCMAdditions.m
 OCMock/NSMethodSignature+OCMAdditions.m
 -[NSNotificationCenter(OCMAdditions) addMockObserver:name:object:]
 __OBJC_$_CATEGORY_INSTANCE_METHODS_NSNotificationCenter_$_OCMAdditions
 __OBJC_$_CATEGORY_NSNotificationCenter_$_OCMAdditions
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/NSNotificationCenter+OCMAdditions.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/NSNotificationCenter+OCMAdditions.m
 OCMock/NSNotificationCenter+OCMAdditions.m
 +[NSObject(OCMAdditions) instanceMethodForwarderForSelector:]
 +[NSObject(OCMAdditions) enumerateMethodsInClass:usingBlock:]
 _instanceMethodForwarderForSelector:._OCMReturnTypeCache
 __OBJC_$_CATEGORY_CLASS_METHODS_NSObject_$_OCMAdditions
 __OBJC_$_CATEGORY_NSObject_$_OCMAdditions
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/NSObject+OCMAdditions.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/NSObject+OCMAdditions.m
 OCMock/NSObject+OCMAdditions.m
 -[NSValue(OCMAdditions) getBytes:objCType:]
 __OBJC_$_CATEGORY_INSTANCE_METHODS_NSValue_$_OCMAdditions
 __OBJC_$_CATEGORY_NSValue_$_OCMAdditions
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/NSValue+OCMAdditions.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/NSValue+OCMAdditions.m
 OCMock/NSValue+OCMAdditions.m
 OCMNumberForValue
 _OCMIsUnqualifiedBlockType
@@ -783,7 +783,7 @@ _OBJC_CLASSLIST_REFERENCES_$_.43
 _OBJC_SELECTOR_REFERENCES_.74
 _OBJC_SELECTOR_REFERENCES_.76
 _OBJC_SELECTOR_REFERENCES_.78
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMFunctions.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMFunctions.m
 ParseStructType
 OCMock/OCMFunctions.m
 OCMReportFailure
@@ -802,7 +802,7 @@ OCMIsNonEscapingBlock
 __OCMIsBlock_block_invoke_2
 __OCMIsBlock_block_invoke
 OCMIsBlock
-Shared/Xcode/12.5/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.4.sdk/usr/include/dispatch/once.h
+Shared/Xcode/13.3/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.5.sdk/usr/include/dispatch/once.h
 OCMIsApplePrivateMethod
 OCMIsAppleBaseClass
 OCMIsNilValue
@@ -820,7 +820,7 @@ OCMTypeWithoutQualifiers
 __OBJC_METACLASS_RO_$_OCMArgAction
 __OBJC_$_INSTANCE_METHODS_OCMArgAction
 __OBJC_CLASS_RO_$_OCMArgAction
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMArgAction.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMArgAction.m
 OCMock/OCMArgAction.m
 -[OCMNonRetainingObjectReturnValueProvider initWithValue:]
 -[OCMNonRetainingObjectReturnValueProvider handleInvocation:]
@@ -828,5 +828,5 @@ __OBJC_METACLASS_RO_$_OCMNonRetainingObjectReturnValueProvider
 __OBJC_$_INSTANCE_METHODS_OCMNonRetainingObjectReturnValueProvider
 __OBJC_$_INSTANCE_VARIABLES_OCMNonRetainingObjectReturnValueProvider
 __OBJC_CLASS_RO_$_OCMNonRetainingObjectReturnValueProvider
-/Users/admin/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMNonRetainingObjectReturnValueProvider.m
+/Users/ilya.bausov/git/DeviceAgent.iOS/Carthage/Checkouts/ocmock/Source/OCMock/OCMNonRetainingObjectReturnValueProvider.m
 OCMock/OCMNonRetainingObjectReturnValueProvider.m
