@@ -27,6 +27,8 @@
     BOOL _reportActivities;
     BOOL _testsMustRunOnMainThread;
     BOOL _initializeForUITesting;
+    BOOL _initializeForMultiDevice;
+    BOOL _shouldExtractMultiDeviceRequirements;
     BOOL _gatherLocalizableStringsData;
     BOOL _emitOSLogs;
     BOOL _testTimeoutsEnabled;
@@ -43,6 +45,7 @@
     NSDictionary *_testApplicationDependencies;
     NSDictionary *_testApplicationUserOverrides;
     NSString *_productModuleName;
+    NSString *_multiDeviceRequirementsFilePath;
     NSNumber *_traceCollectionEnabled;
     NSDictionary *_performanceTestConfiguration;
     NSNumber *_enablePerformanceTestsDiagnostics;
@@ -75,8 +78,10 @@
 @property BOOL emitOSLogs;
 @property(copy) NSNumber *enablePerformanceTestsDiagnostics;
 @property BOOL gatherLocalizableStringsData;
+@property BOOL initializeForMultiDevice;
 @property BOOL initializeForUITesting;
 @property(copy, nonatomic) NSNumber *maximumTestExecutionTimeAllowance;
+@property(copy) NSString *multiDeviceRequirementsFilePath;
 @property(copy) NSDictionary *performanceTestConfiguration;
 @property(copy) NSString *productModuleName;
 @property(retain) NSNumber *randomExecutionOrderingSeed;
@@ -86,6 +91,7 @@
 @property BOOL reportResultsToIDE;
 @property(copy) NSUUID *sessionIdentifier;
 @property BOOL shouldEncodeLegacyTestIdentifiers;
+@property BOOL shouldExtractMultiDeviceRequirements;
 @property NSInteger systemAttachmentLifetime;
 @property(copy) NSArray *targetApplicationArguments;
 @property(copy) NSString *targetApplicationBundleID;

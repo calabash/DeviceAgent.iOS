@@ -17,8 +17,8 @@
 #import "XCTWaiterManagement-Protocol.h"
 #import "XCTestExpectationDelegate-Protocol.h"
 
-@class NSArray, NSMutableArray, NSString, XCTWaiterManager;
-@protocol OS_dispatch_queue, XCTWaiterDelegate;
+@class NSArray, NSMutableArray, NSString;
+@protocol OS_dispatch_queue, XCTWaiterDelegate, XCTWaiterManager;
 
 
 @protocol XCTWaiterDelegate;
@@ -35,7 +35,7 @@
     NSArray *_expectations;
     NSMutableArray *_mutableFulfilledExpectations;
     struct __CFRunLoop *_waitingRunLoop;
-    XCTWaiterManager *_manager;
+    id <XCTWaiterManager> _manager;
     NSUInteger _waitingThreadId;
 }
 
@@ -46,7 +46,7 @@
 @property(copy, nonatomic) NSArray *expectations;
 @property(readonly) NSArray *fulfilledExpectations;
 @property(readonly, getter=isInProgress) BOOL inProgress;
-@property __weak XCTWaiterManager *manager;
+@property __weak id <XCTWaiterManager> manager;
 @property(readonly, nonatomic) NSMutableArray *mutableFulfilledExpectations;
 @property NSInteger result;
 @property NSInteger state;

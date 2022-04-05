@@ -65,7 +65,7 @@
 - (void)requestElementAtPoint:(CGPoint)arg1 reply:(CDUnknownBlockType)arg2;
 - (BOOL)requestPointerEventsSupportedOrError:(id *)arg1;
 - (BOOL)requestPressureEventsSupportedOrError:(id *)arg1;
-- (void)requestScreenshotOfScreenWithID:(NSInteger)arg1 withRect:(CGRect)arg2 encoding:(id)arg3 withReply:(CDUnknownBlockType)arg4;
+- (void)requestScreenshotWithRequest:(id)arg1 withReply:(CDUnknownBlockType)arg2;
 - (void)requestSiriEnabledStatus:(CDUnknownBlockType)arg1;
 - (void)requestSnapshotForElement:(id)arg1 attributes:(id)arg2 parameters:(id)arg3 reply:(CDUnknownBlockType)arg4;
 - (void)requestUnsupportedBundleIdentifiersForAutomationSessions:(CDUnknownBlockType)arg1;

@@ -32,7 +32,7 @@
 - (void)requestBoundsForScreenWithIdentifier:(NSInteger)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)requestScaleForScreenWithIdentifier:(NSInteger)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)requestScreenIdentifiersWithCompletion:(CDUnknownBlockType)arg1;
-- (void)requestScreenshotOfScreenWithID:(NSInteger)arg1 withRect:(CGRect)arg2 encoding:(id)arg3 withReply:(CDUnknownBlockType)arg4;
+- (void)requestScreenshotWithRequest:(id)arg1 withReply:(CDUnknownBlockType)arg2;
 
 
 @end

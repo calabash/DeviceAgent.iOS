@@ -14,6 +14,7 @@
 @protocol OS_xpc_object;
 
 @class NSXPCConnection;
+@protocol XCTInternalEntitlementChecking;
 
 @protocol XCTConnectionAccepting <NSObject>
 - (BOOL)acceptNewConnection:(NSXPCConnection *)arg1;

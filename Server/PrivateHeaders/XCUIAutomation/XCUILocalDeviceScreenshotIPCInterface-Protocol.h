@@ -13,9 +13,9 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@class XCTImageEncoding;
+@class XCTScreenshotRequest;
 
 @protocol XCUILocalDeviceScreenshotIPCInterface <NSObject>
-- (void)requestScreenshotOfScreenWithID:(NSInteger)arg1 withRect:(CGRect)arg2 encoding:(XCTImageEncoding *)arg3 withReply:(void (^)(XCTImage *, NSError *))arg4;
+- (void)requestScreenshotWithRequest:(XCTScreenshotRequest *)arg1 withReply:(void (^)(XCTImage *, NSError *))arg2;
 @end
 

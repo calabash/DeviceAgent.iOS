@@ -13,6 +13,7 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@interface NSError (XCTFuture)
+@interface NSError (XCTTestRunSession)
+- (id)xct_initWithTestSuiteConstructionException:(id)arg1;
 @end
 

@@ -19,16 +19,16 @@
 
 @interface XCTScreenshotRequest : NSObject <NSSecureCoding>
 {
-    NSUInteger _screenID;
+    NSInteger _screenID;
     XCTImageEncoding *_encoding;
     CGRect _rect;
 }
 
 @property(readonly) XCTImageEncoding *encoding;
 @property(readonly) CGRect rect;
-@property(readonly) NSUInteger screenID;
+@property(readonly) NSInteger screenID;
 
-- (id)initWithScreenID:(NSUInteger)arg1 rect:(CGRect)arg2 encoding:(id)arg3;
+- (id)initWithScreenID:(NSInteger)arg1 rect:(CGRect)arg2 encoding:(id)arg3;
 
 @end
 

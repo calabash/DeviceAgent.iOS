@@ -20,7 +20,7 @@
 @interface XCSourceCodeTreeNode : NSObject <NSSecureCoding>
 {
     NSArray *_childNodes;
-    NSInteger _selectedChildNodeIndex;
+    NSUInteger _selectedChildNodeIndex;
     NSString *_sourceCodePrefix;
     NSString *_sourceCodeSuffix;
     XCSourceCodeTreeNode *_parentNode;

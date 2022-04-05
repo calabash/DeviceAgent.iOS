@@ -14,12 +14,12 @@
 
 #import <objc/NSObject.h>
 
-#import "XCUIApplicationManaging-Protocol.h"
+#import "XCUIApplicationProcessManaging-Protocol.h"
 
 @protocol XCUIPlatformApplicationServicesProviding;
 
 __attribute__((visibility("hidden")))
-@interface XCUIPlatformApplicationManager : NSObject <XCUIApplicationManaging>
+@interface XCUIPlatformApplicationManager : NSObject <XCUIApplicationProcessManaging>
 {
     id <XCUIPlatformApplicationServicesProviding> _platformApplicationServicesProvider;
 }

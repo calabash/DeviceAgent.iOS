@@ -17,7 +17,7 @@
 #import <UIKit/UIDevice.h>
 
 @class NSString, XCUIRemote, XCUISiriService;
-@protocol XCTSignpostListener, XCUIAccessibilityInterface, XCUIApplicationAutomationSessionProviding, XCUIApplicationManaging, XCUIApplicationMonitor, XCUIDeviceAutomationModeInterface, XCUIDeviceDiagnostics, XCUIDeviceEventAndStateInterface, XCUIEventSynthesizing, XCUIInterruptionMonitoring, XCUIResetAuthorizationStatusOfProtectedResourcesInterface, XCUIScreenDataSource, XCUIXcodeApplicationManaging;
+@protocol XCTSignpostListener, XCUIAccessibilityInterface, XCUIApplicationAutomationSessionProviding, XCUIApplicationMonitor, XCUIApplicationProcessManaging, XCUIDeviceAutomationModeInterface, XCUIDeviceDiagnostics, XCUIDeviceEventAndStateInterface, XCUIEventSynthesizing, XCUIInterruptionMonitoring, XCUIResetAuthorizationStatusOfProtectedResourcesInterface, XCUIScreenDataSource, XCUIXcodeApplicationManaging;
 
 
 @protocol XCUIAccessibilityInterface;
@@ -31,7 +31,7 @@
     id <XCUIAccessibilityInterface> _accessibilityInterface;
     id <XCUIApplicationMonitor> _applicationMonitor;
     id <XCUIEventSynthesizing> _eventSynthesizer;
-    id <XCUIApplicationManaging> _platformApplicationManager;
+    id <XCUIApplicationProcessManaging> _platformApplicationManager;
     id <XCUIXcodeApplicationManaging> _xcodeApplicationManager;
     id <XCUIDeviceEventAndStateInterface> _deviceEventAndStateInterface;
     id <XCUIApplicationAutomationSessionProviding> _applicationAutomationSessionProvider;
