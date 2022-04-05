@@ -36,7 +36,7 @@ jobs:
         IMAGE_POOL: 'macOS-11'
         XCODE_VERSION: '13.2'
       Monterey-Xcode-13.3:
-        IMAGE_POOL: 'macOS-12'
+        IMAGE_POOL: 'macOS-latest'
         XCODE_VERSION: '13.3'
   pool:
     vmImage: $(IMAGE_POOL)
