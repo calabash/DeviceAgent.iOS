@@ -1,3 +1,8 @@
+### 2.4.3
+
+* Added support of Xcode 13.3
+* Updated dependencies.
+
 ### 2.4.2
 
 * Added support of Xcode 13.2.1.
