@@ -57,16 +57,6 @@ extern NSString *const CBXDeviceSimKeyVersionInfo;
 - (BOOL)isPhysicalDevice;
 
 /**
- @return True if the device is an iPhone 6 or iPhone 6s.
- */
-- (BOOL)isIPhone6Like;
-
-/**
- @return True if the device is an iPhone 6+ or iPhone 6s plus.
- */
-- (BOOL)isIPhone6PlusLike;
-
-/**
  @return True if the device an iPad.
  */
 - (BOOL)isIPad;
@@ -75,31 +65,6 @@ extern NSString *const CBXDeviceSimKeyVersionInfo;
  @return True if the device is an iPad Pro.
  */
 - (BOOL)isIPadPro;
-
-/**
- @return True if the device is an iPhone 4 or iPhone 4s.
- */
-- (BOOL)isIPhone4Like;
-
-/**
- @return True if the device is an iPhone 5, 5c, 5s, or 6se.
- */
-- (BOOL)isIPhone5Like;
-
-/**
- @return True if the device has an iPad 10.5" form factor.
- */
-- (BOOL) isIPadPro10point5inch;
-
-/**
- @return True if the device has an iPhone X form factor.
- */
-- (BOOL) isIPhone10Like;
-
-/**
- @return True if the device is arm64
- */
-- (BOOL)isArm64;
 
 /**
  @return A dictionary describing the attributes of this device.
