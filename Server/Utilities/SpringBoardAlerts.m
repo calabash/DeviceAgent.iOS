@@ -97,7 +97,8 @@ static SpringBoardAlert *alert(NSArray *buttonTitles, BOOL shouldAccept, NSStrin
             // fix mismatching language name for Norwegian and Chinese languages
 
             // '.lproj' files uses '_' as separator. 'preferredLanguages' uses '-' as separator, need to convert
-            NSString *fullLanguageName = [fixedPreferredLanguage stringByReplacingOccurrencesOfString:@"-" withString:@"_"];
+            NSString *fullLanguageName = [fixedPreferredLanguage stringByReplacingOccurrencesOfString:@"-" withString: @"_"];
+            if ([fullLanguageName  isEqual: @"en_US"]) fullLanguageName = @"en";
             // load exact name like "pt_PT"
             [self loadLanguageIfExists:fullLanguageName:resultArray];
             // load short name like "pt"
