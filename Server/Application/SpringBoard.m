@@ -25,7 +25,8 @@ typedef enum : NSUInteger {
     SpringBoardAlertHandlerIgnoringAlerts = 0,
     SpringBoardAlertHandlerNoAlert,
     SpringBoardAlertHandlerDismissedAlert,
-    SpringBoardAlertHandlerUnrecognizedAlert
+    SpringBoardAlertHandlerUnrecognizedAlert,
+    SpringBoardAlertHandlerFailed
 } SpringBoardAlertHandlerResult;
 
 @interface SpringBoard ()
@@ -249,7 +250,8 @@ typedef enum : NSUInteger {
     @try {
         [button tap];
     } @catch (NSException *e) {
-        DDLogError(@"Caught an exception '%@'", [e description]);
+        DDLogError(@"Caught an exception '%@': '%@'.", [e name], [e reason]);
+        return SpringBoardAlertHandlerFailed;
     }
 
     return SpringBoardAlertHandlerDismissedAlert;

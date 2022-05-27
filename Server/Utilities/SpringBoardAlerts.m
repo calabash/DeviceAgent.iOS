@@ -98,7 +98,6 @@ static SpringBoardAlert *alert(NSArray *buttonTitles, BOOL shouldAccept, NSStrin
 
             // '.lproj' files uses '_' as separator. 'preferredLanguages' uses '-' as separator, need to convert
             NSString *fullLanguageName = [fixedPreferredLanguage stringByReplacingOccurrencesOfString:@"-" withString: @"_"];
-            if ([fullLanguageName  isEqual: @"en_US"]) fullLanguageName = @"en";
             // load exact name like "pt_PT"
             [self loadLanguageIfExists:fullLanguageName:resultArray];
             // load short name like "pt"
@@ -162,18 +161,12 @@ static SpringBoardAlert *alert(NSArray *buttonTitles, BOOL shouldAccept, NSStrin
         [SpringBoardAlerts raiseIfInvalidAlert:alertDict
                                     ofLanguage:languageName
                                    andPosition:i];
-        SpringBoardAlert *alertToAdd = alert(
-                                              alertDict[@"buttons"],
-                                              [alertDict[@"shouldAccept"] boolValue],
-                                              alertDict[@"title"]
-                                              );
-        if (alertToAdd) {
-            [resultArray addObject: alert(
-                                          alertDict[@"buttons"],
-                                          [alertDict[@"shouldAccept"] boolValue],
-                                          alertDict[@"title"]
-                                          )];
-        }
+
+        [resultArray addObject: alert(
+                                      alertDict[@"buttons"],
+                                      [alertDict[@"shouldAccept"] boolValue],
+                                      alertDict[@"title"]
+                                      )];
     }
 }
 
