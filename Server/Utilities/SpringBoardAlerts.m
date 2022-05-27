@@ -109,11 +109,6 @@ static SpringBoardAlert *alert(NSArray *buttonTitles, BOOL shouldAccept, NSStrin
             [self loadLanguageIfExists:fixedPreferredLanguage:resultArray];
         }
 
-        // load "en" lang
-        if (![preferredLanguage hasPrefix:@"en"]) {
-            [self loadLanguageIfExists:@"en": resultArray];
-        }
-
         _alerts =  [NSArray<SpringBoardAlert *> arrayWithArray: resultArray];
         NSTimeInterval elapsedSeconds =
         [[CBXMachClock sharedClock] absoluteTime] - startTime;
@@ -126,7 +121,9 @@ static SpringBoardAlert *alert(NSArray *buttonTitles, BOOL shouldAccept, NSStrin
 // Some language names can be different in different Xcode versions
 // function maps language names to make sure that all xcode versions will work
 - (NSString *)fixLanguageName:(NSString *)languageName {
-    if ([languageName isEqualToString: @"zh-Hans-US"]) {
+    if (![languageName isEqualToString: @"en-US"]) {
+        return @"en";
+    } else if ([languageName isEqualToString: @"zh-Hans-US"]) {
         return @"zh-CN";
     } else if ([languageName isEqualToString: @"zh-Hant-US"]) {
         return @"zh-TW";
@@ -165,12 +162,18 @@ static SpringBoardAlert *alert(NSArray *buttonTitles, BOOL shouldAccept, NSStrin
         [SpringBoardAlerts raiseIfInvalidAlert:alertDict
                                     ofLanguage:languageName
                                    andPosition:i];
-        [resultArray
-         addObject: alert(
-                          alertDict[@"buttons"],
-                          [alertDict[@"shouldAccept"] boolValue],
-                          alertDict[@"title"]
-                          )];
+        SpringBoardAlert *alertToAdd = alert(
+                                              alertDict[@"buttons"],
+                                              [alertDict[@"shouldAccept"] boolValue],
+                                              alertDict[@"title"]
+                                              );
+        if (alertToAdd) {
+            [resultArray addObject: alert(
+                                          alertDict[@"buttons"],
+                                          [alertDict[@"shouldAccept"] boolValue],
+                                          alertDict[@"title"]
+                                          )];
+        }
     }
 }
 
