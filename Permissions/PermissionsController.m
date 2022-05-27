@@ -4,6 +4,7 @@
 @import CoreBluetooth;
 @import CoreMotion;
 @import Accounts;
+@import UserNotifications;
 
 #import "PermissionsController.h"
 #import "AlertFactory.h"
@@ -366,15 +367,15 @@ typedef enum : NSInteger {
 }
 
 - (void)rowTouchedApns {
-    UIApplication *shared = [UIApplication sharedApplication];
-
-    UIUserNotificationType types = (UIUserNotificationTypeBadge |
-            UIUserNotificationTypeSound |
-            UIUserNotificationTypeAlert);
-    UIUserNotificationSettings *settings;
-    settings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
-    [shared registerUserNotificationSettings:settings];
-    [shared registerForRemoteNotifications];
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    [center requestAuthorizationWithOptions:(UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert)
+                          completionHandler:^(BOOL success, NSError *error) {
+      if (success) {
+        NSLog(@"");
+      } else {
+        NSLog(@"");
+      }
+    }];
 }
 
 #pragma mark - <UITableViewDataSource>

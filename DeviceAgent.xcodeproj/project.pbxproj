@@ -1100,6 +1100,14 @@
 		89F6BF901CBEB5AD0088269C /* GeometryUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 89F6BF8E1CBEB5AD0088269C /* GeometryUtils.h */; };
 		B9A81FD5215E429A0067AE63 /* XCUIElement+VisibilityResult.h in Headers */ = {isa = PBXBuildFile; fileRef = B9A81FD3215E429A0067AE63 /* XCUIElement+VisibilityResult.h */; };
 		B9A81FD6215E429A0067AE63 /* XCUIElement+VisibilityResult.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A81FD4215E429A0067AE63 /* XCUIElement+VisibilityResult.m */; };
+		DD6401D7284005F4008CD3F5 /* SpringBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E6631F1D74946000068CE9 /* SpringBoard.m */; };
+		DD6401DA28400DC3008CD3F5 /* Dismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = F50BB2971D73392200264915 /* Dismiss.m */; };
+		DD6401DB28400EF6008CD3F5 /* CBXException.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C41C6DDF1300A945C8 /* CBXException.m */; };
+		DD6401DC28400F0C008CD3F5 /* SpringBoardAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 634244EC948D56732C2565E5 /* SpringBoardAlerts.m */; };
+		DD6401DD28400F17008CD3F5 /* CBXMachClock.m in Sources */ = {isa = PBXBuildFile; fileRef = F547EEAB1E437910000FC160 /* CBXMachClock.m */; };
+		DD6401DE28400F36008CD3F5 /* SpringBoardAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DED03E1D7634AB00563648 /* SpringBoardAlert.m */; };
+		DD6401DF284011AF008CD3F5 /* XCTest+CBXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F547174F20496A200024AA0B /* XCTest+CBXAdditions.m */; };
+		DD6401E028403F25008CD3F5 /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107F8FC231D7262003961AF /* Resources.xcassets */; };
 		F5061A3B2153B0FF00B85792 /* CBXiOSVersionInlinesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27F01D4F947F000FF6C0 /* CBXiOSVersionInlinesTest.m */; };
 		F5061A3C2153B0FF00B85792 /* CBXTestToolsStandup.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27F11D4F947F000FF6C0 /* CBXTestToolsStandup.m */; };
 		F5061A3D2153B0FF00B85792 /* CBXUITestServerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F52975BE1D4FB1FA009094D5 /* CBXUITestServerTest.m */; };
@@ -1442,6 +1450,13 @@
 			remoteInfo = AppStub;
 		};
 		47609AC4271F0BF100974A30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 898743B41C5847B30084FD93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 898743BB1C5847B30084FD93;
+			remoteInfo = AppStub;
+		};
+		DD6401D828400C9D008CD3F5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 898743B41C5847B30084FD93 /* Project object */;
 			proxyType = 1;
@@ -4764,6 +4779,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				DD6401D928400C9D008CD3F5 /* PBXTargetDependency */,
 				F50BB2951D73392200264915 /* PBXTargetDependency */,
 			);
 			name = Dismiss;
@@ -5069,6 +5085,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD6401E028403F25008CD3F5 /* Resources.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5277,6 +5294,7 @@
 				896C7C781D19AE990017CE08 /* ClearText.m in Sources */,
 				89C5F3681C9C5BC20093A018 /* InvalidArgumentException.m in Sources */,
 				F55F84091C6E436500A945C8 /* CBXRoute.m in Sources */,
+				DD6401DA28400DC3008CD3F5 /* Dismiss.m in Sources */,
 				F55F81911C6DD07500A945C8 /* HTTPMessage.m in Sources */,
 				89F6BF8C1CBC4BDD0088269C /* Rotate.m in Sources */,
 				899696D41CB44D9B00BB42E2 /* GestureConfiguration.m in Sources */,
@@ -5340,7 +5358,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD6401DF284011AF008CD3F5 /* XCTest+CBXAdditions.m in Sources */,
+				DD6401DE28400F36008CD3F5 /* SpringBoardAlert.m in Sources */,
+				DD6401DD28400F17008CD3F5 /* CBXMachClock.m in Sources */,
+				DD6401DC28400F0C008CD3F5 /* SpringBoardAlerts.m in Sources */,
+				DD6401DB28400EF6008CD3F5 /* CBXException.m in Sources */,
 				F50BB2981D73392200264915 /* Dismiss.m in Sources */,
+				DD6401D7284005F4008CD3F5 /* SpringBoard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5655,6 +5679,11 @@
 			isa = PBXTargetDependency;
 			target = 898743BB1C5847B30084FD93 /* AppStub */;
 			targetProxy = 47609AC4271F0BF100974A30 /* PBXContainerItemProxy */;
+		};
+		DD6401D928400C9D008CD3F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 898743BB1C5847B30084FD93 /* AppStub */;
+			targetProxy = DD6401D828400C9D008CD3F5 /* PBXContainerItemProxy */;
 		};
 		F50BB2951D73392200264915 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

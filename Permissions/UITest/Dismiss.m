@@ -1,4 +1,8 @@
-#import <XCTest/XCTest.h>
+#import "XCTest+CBXAdditions.h"
+#import "CBXServerUnitTestUmbrellaHeader.h"
+#import "SpringBoardAlerts.h"
+#import "SpringBoardAlert.h"
+#import "SpringBoard.h"
 
 
 @interface Dismiss : XCTestCase
@@ -60,26 +64,26 @@
 //
 // http://tinyurl.com/jgsnaxb
 - (void)testDismiss {
+    //[self addUIInterruptionMonitorWithDescription:@"Outer Handler" handler:^BOOL(XCUIElement *alert) {
+    //    BOOL handled = NO;
+    //    XCUIElement *allowButton = alert.buttons[@"Allow"];
+    //    if (allowButton.exists) {
+    //        [allowButton tap];
+    //        handled = YES;
+    //    }
 
-    [self addUIInterruptionMonitorWithDescription:@"Outer Handler" handler:^BOOL(XCUIElement *alert) {
-        BOOL handled = NO;
-        XCUIElement *allowButton = alert.buttons[@"Allow"];
-        if (allowButton.exists) {
-            [allowButton tap];
-            handled = YES;
-        }
-
-        XCUIElement *okButton = alert.buttons[@"OK"];
-        if (okButton.exists) {
-            [okButton tap];
-            handled = YES;
-        }
-        return handled;
-    }];
+    //    XCUIElement *okButton = alert.buttons[@"OK"];
+    //    if (okButton.exists) {
+    //        [okButton tap];
+    //        handled = YES;
+    //    }
+    //    return handled;
+    //}];
 
     XCUIElement *element = self.app.tables[@"table"].cells[@"reminders"];
     [self waitUntilElementExists:element withTimeout:5];
     [element tap];
+    [[SpringBoard application] handleAlertsOrThrow];
 
     element = self.app.tables[@"table"].cells[@"calendar"];
     [self waitUntilElementExists:element withTimeout:5];
