@@ -246,7 +246,11 @@ typedef enum : NSUInteger {
     if (!button || !button.exists) {
         return SpringBoardAlertHandlerNoAlert;
     }
-    [button tap];
+    @try {
+        [button tap];
+    } @catch (NSException *e) {
+        DDLogError(@"Caught an exception '%@'", [e description]);
+    }
 
     return SpringBoardAlertHandlerDismissedAlert;
 }
