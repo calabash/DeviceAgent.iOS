@@ -111,18 +111,20 @@ typedef enum : NSUInteger {
                 alertTitle = alert.label;
                 XCUIElementQuery *query = [alert descendantsMatchingType:XCUIElementTypeButton];
                 NSArray<XCUIElement *> *buttons = [query allElementsBoundByIndex];
+                if (buttons.count > 0) {
+                    NSMutableArray *mutable = [[NSMutableArray alloc] init];
+                    mutable = [NSMutableArray arrayWithCapacity:buttons.count];
 
-                NSMutableArray *mutable = [NSMutableArray arrayWithCapacity:buttons.count];
-
-                for(XCUIElement *button in buttons) {
-                    if (button.exists) {
-                        NSString *name = button.label;
-                        if (name) {
-                            [mutable addObject:name];
+                    for(XCUIElement *button in buttons) {
+                        if (button.exists) {
+                            NSString *name = button.label;
+                            if (name) {
+                                [mutable addObject:name];
+                            }
                         }
                     }
+                    alertButtonTitles = [NSArray arrayWithArray:mutable];
                 }
-                alertButtonTitles = [NSArray arrayWithArray:mutable];
             }
 
             NSString *message;
@@ -244,7 +246,11 @@ typedef enum : NSUInteger {
     if (!button || !button.exists) {
         return SpringBoardAlertHandlerNoAlert;
     }
-    [button tap];
+    @try {
+        [button tap];
+    } @catch (NSException *e) {
+        DDLogError(@"Caught an exception '%@'", [e description]);
+    }
 
     return SpringBoardAlertHandlerDismissedAlert;
 }
