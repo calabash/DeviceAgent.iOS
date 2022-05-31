@@ -1,0 +1,92 @@
+variables:
+  # When Agent.JobName matches this value (and the git ref is a tag), then
+  # built artifacts will be published to Azure Blob Storage.
+  AzurePublishWhen: "BigSur-Xcode-13.1"
+  EOCompliance-Mac: true
+
+trigger:
+  tags:
+    include:
+    - '*'
+  branches:
+    include:
+    - master
+    - develop
+pr:
+  branches:
+    include:
+    - master
+    - develop
+
+jobs:
+
+- job:
+  pool:
+    vmImage: 'macOS-12'
+    XCODE_VERSION: '13.3.1'
+  timeoutInMinutes: 120
+  variables:
+  - group: XTCRunTimeArtifactsCI
+
+  steps:
+
+  - script: |
+      set -e
+      sudo xcode-select --switch "/Applications/Xcode_$(XCODE_VERSION).app/Contents/Developer"
+      echo "Xcode version: $(xcrun xcodebuild -version)"
+      echo "Xcode path: $(xcrun -f xcodebuild)"
+      echo "Xcode select path: $(xcode-select --print-path)"
+    displayName: "Select Xcode $(XCODE_VERSION)"
+
+  - script: |
+      set -e
+      ruby -v
+      echo -e "install: --no-document --env-shebang\nupdate:  --no-document --env-shebang" > ~/.gemrc
+      bundle install
+    displayName: "Prepare Ruby Environment"
+
+  - script: |
+      set -e
+      git clone https://$(CalabashKeychainGitHubAccessToken)@github.com/xamarinhq/calabash-codesign.git
+      calabash-codesign/apple/create-keychain.sh
+    displayName: "Download and install keychain"
+
+  - script: make app-agent
+    displayName: "Make app-agent"
+
+  - script: make ipa-agent
+    displayName: "Make ipa-agent"
+
+  - script: make test-ipa
+    displayName: "Make test-ipa"
+
+  - script: make test-app
+    displayName: "Make test-app"
+
+  - script: make unit-tests
+    displayName: "Make unit-tests"
+    condition: and(succeeded(), eq(variables['IsRunUnitTests'], 'true'))
+
+  - script: make ui-tests
+    displayName: "Make ui-tests"
+    condition: and(succeeded(), eq(variables['IsRunUnitTests'], 'true'))
+
+  - script: bundle exec bin/ci/cucumber.rb
+    displayName: "exec cucumber"
+    condition: and(succeeded(), eq(variables['IsRunCucumberTests'], 'true'))
+
+  - bash: "./bin/ci/az-publish.sh"
+    env:
+      AZURE_STORAGE_ACCOUNT: $(AzureStorageAccount)
+      AZURE_STORAGE_KEY: $(AzureStorageKey)
+      AZURE_STORAGE_CONNECTION_STRING: $(AzureStorageConnectionString)
+      SOURCE_BRANCH: $(Build.SourceBranch)
+    displayName: "Publish to Azure Blob Storage"
+    condition: and(succeeded(), eq(variables['Agent.JobName'], variables['AzurePublishWhen']), startsWith(variables['Build.SourceBranch'], 'refs/tags/'))
+
+  - task: PublishTestResults@2
+    displayName: 'Publish Test Results'
+    inputs:
+      testResultsFiles: 'cucumber/reports/junit/*.xml'
+      failTaskOnFailedTests: true
+    condition: always()
