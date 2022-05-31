@@ -113,8 +113,7 @@ typedef enum : NSUInteger {
                 XCUIElementQuery *query = [alert descendantsMatchingType:XCUIElementTypeButton];
                 NSArray<XCUIElement *> *buttons = [query allElementsBoundByIndex];
                 if (buttons.count > 0) {
-                    NSMutableArray *mutable = [[NSMutableArray alloc] init];
-                    mutable = [NSMutableArray arrayWithCapacity:buttons.count];
+                    NSMutableArray *mutable = [NSMutableArray arrayWithCapacity:buttons.count];
 
                     for(XCUIElement *button in buttons) {
                         if (button.exists) {
