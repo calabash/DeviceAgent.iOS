@@ -96,9 +96,7 @@
     
     NSArray<XCUIElement *>* buttons = self.app.buttons.allElementsBoundByIndex;
     NSArray<XCUIElement *>* switches = self.app.switches.allElementsBoundByIndex;
-    NSArray<XCUIElement *>* staticTexts = self.app.staticTexts.allElementsBoundByIndex;
-    
-    NSString* switchTitle = [switches[0] title];
+
     [switches[0] tap];
     [buttons[1] tap];
     

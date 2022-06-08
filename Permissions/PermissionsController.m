@@ -562,9 +562,7 @@ typedef enum : NSInteger {
 
 - (void) centralManagerDidUpdateState:(CBCentralManager *)central{
     NSLog(@"Central Bluetooth manager did update state");
-    if (central.state != CBCentralManagerStatePoweredOn) { return; }
-
-    if (central.state == CBCentralManagerStatePoweredOn) {
+    if (central.state == CBManagerStatePoweredOn) {
         [self.cbManager scanForPeripheralsWithServices:nil options:nil];
     }
 }
