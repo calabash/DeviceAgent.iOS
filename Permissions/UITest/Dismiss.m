@@ -1,4 +1,8 @@
-#import <XCTest/XCTest.h>
+#import "XCTest+CBXAdditions.h"
+#import "CBXServerUnitTestUmbrellaHeader.h"
+#import "SpringBoardAlerts.h"
+#import "SpringBoardAlert.h"
+#import "SpringBoard.h"
 
 
 @interface Dismiss : XCTestCase
@@ -60,7 +64,6 @@
 //
 // http://tinyurl.com/jgsnaxb
 - (void)testDismiss {
-
     [self addUIInterruptionMonitorWithDescription:@"Outer Handler" handler:^BOOL(XCUIElement *alert) {
         BOOL handled = NO;
         XCUIElement *allowButton = alert.buttons[@"Allow"];
@@ -93,9 +96,7 @@
     
     NSArray<XCUIElement *>* buttons = self.app.buttons.allElementsBoundByIndex;
     NSArray<XCUIElement *>* switches = self.app.switches.allElementsBoundByIndex;
-    NSArray<XCUIElement *>* staticTexts = self.app.staticTexts.allElementsBoundByIndex;
-    
-    NSString* switchTitle = [switches[0] title];
+
     [switches[0] tap];
     [buttons[1] tap];
     

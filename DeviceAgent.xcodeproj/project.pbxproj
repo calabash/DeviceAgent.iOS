@@ -1100,6 +1100,16 @@
 		89F6BF901CBEB5AD0088269C /* GeometryUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 89F6BF8E1CBEB5AD0088269C /* GeometryUtils.h */; };
 		B9A81FD5215E429A0067AE63 /* XCUIElement+VisibilityResult.h in Headers */ = {isa = PBXBuildFile; fileRef = B9A81FD3215E429A0067AE63 /* XCUIElement+VisibilityResult.h */; };
 		B9A81FD6215E429A0067AE63 /* XCUIElement+VisibilityResult.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A81FD4215E429A0067AE63 /* XCUIElement+VisibilityResult.m */; };
+		DD6401D7284005F4008CD3F5 /* SpringBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E6631F1D74946000068CE9 /* SpringBoard.m */; };
+		DD6401DA28400DC3008CD3F5 /* Dismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = F50BB2971D73392200264915 /* Dismiss.m */; };
+		DD6401DB28400EF6008CD3F5 /* CBXException.m in Sources */ = {isa = PBXBuildFile; fileRef = F55F83C41C6DDF1300A945C8 /* CBXException.m */; };
+		DD6401DC28400F0C008CD3F5 /* SpringBoardAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 634244EC948D56732C2565E5 /* SpringBoardAlerts.m */; };
+		DD6401DD28400F17008CD3F5 /* CBXMachClock.m in Sources */ = {isa = PBXBuildFile; fileRef = F547EEAB1E437910000FC160 /* CBXMachClock.m */; };
+		DD6401DE28400F36008CD3F5 /* SpringBoardAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DED03E1D7634AB00563648 /* SpringBoardAlert.m */; };
+		DD6401DF284011AF008CD3F5 /* XCTest+CBXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F547174F20496A200024AA0B /* XCTest+CBXAdditions.m */; };
+		DD6401E028403F25008CD3F5 /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107F8FC231D7262003961AF /* Resources.xcassets */; };
+		DD64021828407DF3008CD3F5 /* SpringBoardAlertsDismissAuto.m in Sources */ = {isa = PBXBuildFile; fileRef = DD64021728407DF3008CD3F5 /* SpringBoardAlertsDismissAuto.m */; };
+		DD6402192840803F008CD3F5 /* SpringBoardAlertsDismissAuto.m in Sources */ = {isa = PBXBuildFile; fileRef = DD64021728407DF3008CD3F5 /* SpringBoardAlertsDismissAuto.m */; };
 		F5061A3B2153B0FF00B85792 /* CBXiOSVersionInlinesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27F01D4F947F000FF6C0 /* CBXiOSVersionInlinesTest.m */; };
 		F5061A3C2153B0FF00B85792 /* CBXTestToolsStandup.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27F11D4F947F000FF6C0 /* CBXTestToolsStandup.m */; };
 		F5061A3D2153B0FF00B85792 /* CBXUITestServerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F52975BE1D4FB1FA009094D5 /* CBXUITestServerTest.m */; };
@@ -1442,6 +1452,13 @@
 			remoteInfo = AppStub;
 		};
 		47609AC4271F0BF100974A30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 898743B41C5847B30084FD93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 898743BB1C5847B30084FD93;
+			remoteInfo = AppStub;
+		};
+		DD6401D828400C9D008CD3F5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 898743B41C5847B30084FD93 /* Project object */;
 			proxyType = 1;
@@ -2014,6 +2031,7 @@
 		89F6BF8F1CBEB5AD0088269C /* GeometryUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeometryUtils.m; sourceTree = "<group>"; };
 		B9A81FD3215E429A0067AE63 /* XCUIElement+VisibilityResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIElement+VisibilityResult.h"; sourceTree = "<group>"; };
 		B9A81FD4215E429A0067AE63 /* XCUIElement+VisibilityResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCUIElement+VisibilityResult.m"; sourceTree = "<group>"; };
+		DD64021728407DF3008CD3F5 /* SpringBoardAlertsDismissAuto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpringBoardAlertsDismissAuto.m; sourceTree = "<group>"; };
 		F50AF09E20F60D6600CF1250 /* CBXURLHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBXURLHelper.h; sourceTree = "<group>"; };
 		F50AF09F20F60D6600CF1250 /* CBXURLHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBXURLHelper.m; sourceTree = "<group>"; };
 		F50BB27B1D73392100264915 /* Permissions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Permissions.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2907,6 +2925,7 @@
 			children = (
 				F50BB2971D73392200264915 /* Dismiss.m */,
 				F50BB2991D73392200264915 /* Info.plist */,
+				DD64021728407DF3008CD3F5 /* SpringBoardAlertsDismissAuto.m */,
 			);
 			path = UITest;
 			sourceTree = "<group>";
@@ -4764,6 +4783,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				DD6401D928400C9D008CD3F5 /* PBXTargetDependency */,
 				F50BB2951D73392200264915 /* PBXTargetDependency */,
 			);
 			name = Dismiss;
@@ -5069,6 +5089,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD6401E028403F25008CD3F5 /* Resources.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5255,6 +5276,7 @@
 				F55F840A1C6E437100A945C8 /* GestureRoutes.m in Sources */,
 				89C5F3511C9A60E70093A018 /* Testmanagerd.m in Sources */,
 				F55F840C1C6E437100A945C8 /* MetaRoutes.m in Sources */,
+				DD64021828407DF3008CD3F5 /* SpringBoardAlertsDismissAuto.m in Sources */,
 				F55F818E1C6DD07500A945C8 /* HTTPConnection.m in Sources */,
 				89D538111CA34CBE00F62E09 /* QuerySpecifierByTextLike.m in Sources */,
 				B9A81FD6215E429A0067AE63 /* XCUIElement+VisibilityResult.m in Sources */,
@@ -5277,6 +5299,7 @@
 				896C7C781D19AE990017CE08 /* ClearText.m in Sources */,
 				89C5F3681C9C5BC20093A018 /* InvalidArgumentException.m in Sources */,
 				F55F84091C6E436500A945C8 /* CBXRoute.m in Sources */,
+				DD6401DA28400DC3008CD3F5 /* Dismiss.m in Sources */,
 				F55F81911C6DD07500A945C8 /* HTTPMessage.m in Sources */,
 				89F6BF8C1CBC4BDD0088269C /* Rotate.m in Sources */,
 				899696D41CB44D9B00BB42E2 /* GestureConfiguration.m in Sources */,
@@ -5340,7 +5363,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD6401DF284011AF008CD3F5 /* XCTest+CBXAdditions.m in Sources */,
+				DD6401DE28400F36008CD3F5 /* SpringBoardAlert.m in Sources */,
+				DD6401DD28400F17008CD3F5 /* CBXMachClock.m in Sources */,
+				DD6401DC28400F0C008CD3F5 /* SpringBoardAlerts.m in Sources */,
+				DD6402192840803F008CD3F5 /* SpringBoardAlertsDismissAuto.m in Sources */,
+				DD6401DB28400EF6008CD3F5 /* CBXException.m in Sources */,
 				F50BB2981D73392200264915 /* Dismiss.m in Sources */,
+				DD6401D7284005F4008CD3F5 /* SpringBoard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5655,6 +5685,11 @@
 			isa = PBXTargetDependency;
 			target = 898743BB1C5847B30084FD93 /* AppStub */;
 			targetProxy = 47609AC4271F0BF100974A30 /* PBXContainerItemProxy */;
+		};
+		DD6401D928400C9D008CD3F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 898743BB1C5847B30084FD93 /* AppStub */;
+			targetProxy = DD6401D828400C9D008CD3F5 /* PBXContainerItemProxy */;
 		};
 		F50BB2951D73392200264915 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
