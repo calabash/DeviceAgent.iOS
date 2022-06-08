@@ -371,9 +371,9 @@ typedef enum : NSInteger {
     [center requestAuthorizationWithOptions:(UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert)
                           completionHandler:^(BOOL success, NSError *error) {
       if (success) {
-        NSLog(@"");
+        NSLog(@"Successfully got access to Notifications");
       } else {
-        NSLog(@"");
+        NSLog(@"Cannot enable Notifications: %@", [error localizedDescription]);
       }
     }];
 }
