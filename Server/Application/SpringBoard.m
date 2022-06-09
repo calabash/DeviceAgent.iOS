@@ -247,7 +247,24 @@ typedef enum : NSUInteger {
         return SpringBoardAlertHandlerNoAlert;
     }
     @try {
-        [button tap];
+//        [button tap];
+        CGRect rect = [button frame];
+        
+        id json = @{
+                    @"gesture" : @"touch",
+                    @"specifiers" : @{
+                            @"coordinate" :  @[ @(rect.origin.x), @(rect.origin.y) ]
+                            },
+                    @"options" : @{
+                            @"duration" : @0.2,
+                            @"repetitions" : @2,
+                            @"num_fingers" : @1
+                            }
+                    };
+        
+        [GestureFactory executeGestureWithJSON:json completion:^(NSError *e) {
+            DDLogDebug(@"Error tapping a button!");
+        }];
     } @catch (NSException *e) {
         DDLogError(@"Caught an exception '%@': '%@'.", [e name], [e reason]);
         return SpringBoardAlertHandlerFailed;
