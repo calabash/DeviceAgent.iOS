@@ -431,6 +431,7 @@
     "buttons": [
       "Always Allow",
       "Allow",
+      "Allow Once",
       "Allow While Using App"
     ],
     "shouldAccept": true
