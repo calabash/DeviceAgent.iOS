@@ -15,7 +15,7 @@
 #import <objc/NSObject.h>
 
 
-@class NSArray, NSDictionary, NSEnumerator, NSIndexPath, NSSet, NSString, XCAccessibilityElement, XCTLocalizableStringInfo;
+@class NSArray, NSDictionary, NSEnumerator, NSIndexPath, NSSet, NSString, NSValue, XCAccessibilityElement, XCTLocalizableStringInfo;
 @protocol XCTElementSnapshotAttributeDataSource, XCUIElementSnapshotApplication;
 
 
@@ -30,6 +30,7 @@
     BOOL _hasKeyboardFocus;
     BOOL _isTruncatedValue;
     BOOL _hasPrivilegedAttributeValues;
+    NSUInteger _windowContextID;
     NSUInteger _faultedInProperties;
     id <XCUIElementSnapshotApplication> _application;
     NSUInteger _generation;
@@ -48,14 +49,18 @@
     NSDictionary *_additionalAttributes;
     NSArray *_userTestingAttributes;
     NSSet *_disclosedChildRowAXElements;
+    NSValue *_activationPoint;
+    NSInteger _interfaceOrientation;
     XCAccessibilityElement *_accessibilityElement;
     XCAccessibilityElement *_parentAccessibilityElement;
     XCElementSnapshot *_parent;
     XCTLocalizableStringInfo *_localizableStringInfo;
     CGRect _frame;
+    CGRect _eventSynthesisFrame;
 }
 
 @property(readonly, copy, nonatomic) XCAccessibilityElement *accessibilityElement;
+@property(copy) NSValue *activationPoint;
 @property(copy) NSDictionary *additionalAttributes;
 @property(readonly) BOOL anyDescendantHasPrivilegedAttributeValues;
 @property(nonatomic) __weak id <XCUIElementSnapshotApplication> application;
@@ -72,6 +77,7 @@
 @property(readonly) NSArray *disclosedChildRows;
 @property NSInteger displayID;
 @property NSUInteger elementType;
+@property CGRect eventSynthesisFrame;
 @property NSUInteger faultedInProperties;
 @property CGRect frame;
 @property(nonatomic) NSUInteger generation;
@@ -82,6 +88,7 @@
 @property(copy) NSString *identifier;
 @property(readonly, copy) NSArray *identifiers;
 @property(readonly, copy) NSIndexPath *indexPath;
+@property(readonly) NSInteger interfaceOrientation;
 @property(getter=isEnabled) BOOL enabled;
 @property(readonly) BOOL isInRootMenu;
 @property(readonly) BOOL isMacOS;
@@ -110,6 +117,7 @@
 @property(copy) NSArray *userTestingAttributes;
 @property(copy) id value;
 @property NSInteger verticalSizeClass;
+@property NSUInteger windowContextID;
 @property(readonly, copy) NSString *sparseTreeDescription;
 @property(readonly, copy) NSString *truncatedValueString;
 @property(readonly) NSSet *uniqueDescendantSubframes;
@@ -161,10 +169,12 @@
 - (BOOL)matchesTreeWithRoot:(id)arg1;
 - (void)mergeTreeWithSnapshot:(id)arg1;
 - (id)nearestAncestorMatchingType:(NSInteger)arg1;
+- (id)nearestRemoteAncestor;
 - (id)nearestSharedAncestorOfElement:(id)arg1 matchingType:(NSInteger)arg2;
 - (id)recursiveDescriptionWithIndent:(id)arg1 includeAccessibilityElement:(BOOL)arg2 includingPointers:(BOOL)arg3;
 - (void)recursivelyClearDataSource;
 - (void)replaceDescendant:(id)arg1 withElement:(id)arg2;
+- (void)setInterfaceOrientation:(NSInteger)arg1;
 - (id)sparseTreeWithDescendants:(id)arg1 error:(id *)arg2;
 
 @end

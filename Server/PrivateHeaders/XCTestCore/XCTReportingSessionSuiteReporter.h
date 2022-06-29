@@ -33,6 +33,7 @@
 - (void)reportIssue:(id)arg1 atDate:(id)arg2;
 - (id)reportSuiteStartedWithName:(id)arg1 atDate:(id)arg2;
 - (id)reportTestStartedWithName:(id)arg1 atDate:(id)arg2;
+- (id)reportTestStartedWithName:(id)arg1 atDate:(id)arg2 iteration:(NSInteger)arg3;
 
 @end
 

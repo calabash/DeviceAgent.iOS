@@ -38,7 +38,7 @@
 		</data>
 		<key>Headers/DDDispatchQueueLogFormatter.h</key>
 		<data>
-		WYO7V7yF+t+e8MFvB8Uh7hbwmAU=
+		uBjVO0+MFD5m/0gq4yz81eFCZYs=
 		</data>
 		<key>Headers/DDFileLogger+Buffering.h</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		qSjFSWaq5vi3wnGx/UnkUshLStU=
+		Uzklw7BeXrHvx9wgNsFHh5tu7k0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -187,11 +187,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WYO7V7yF+t+e8MFvB8Uh7hbwmAU=
+			uBjVO0+MFD5m/0gq4yz81eFCZYs=
 			</data>
 			<key>hash2</key>
 			<data>
-			MtaGpLn9k61YJ92IMlqb2VU354G3LckwOfT8pJnxdOw=
+			t8RNnHemwYTQhoORaEYctfjJ15uSvWp+DBUji1xtWs0=
 			</data>
 		</dict>
 		<key>Headers/DDFileLogger+Buffering.h</key>

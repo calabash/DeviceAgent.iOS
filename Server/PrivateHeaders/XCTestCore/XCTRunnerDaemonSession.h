@@ -14,17 +14,8 @@
 
 #import <objc/NSObject.h>
 
-#import "XCTMessagingChannel_DaemonToRunner-Protocol.h"
 #import "XCTRemoteSignpostListenerProxy-Protocol.h"
-#import "XCUIApplicationAutomationSessionProviding-Protocol.h"
-#import "XCUIDeviceAutomationModeInterface-Protocol.h"
-#import "XCUIDeviceEventAndStateInterface-Protocol.h"
-#import "XCUIEventSynthesizing-Protocol.h"
-#import "XCUILocalDeviceScreenshotIPCInterface-Protocol.h"
-#import "XCUIPlatformApplicationServicesProviding-Protocol.h"
-#import "XCUIRemoteAccessibilityInterface-Protocol.h"
-#import "XCUIRemoteSiriInterface-Protocol.h"
-#import "XCUIResetAuthorizationStatusOfProtectedResourcesInterface-Protocol.h"
+#import "XCTRunnerDaemonSessionUIAutomationDelegate-Protocol.h"
 
 @class NSMutableDictionary, NSString, NSXPCConnection, XCTCapabilities;
 @protocol OS_dispatch_queue, XCTMessagingChannel_RunnerToDaemon, XCTSignpostListener, XCUIAXNotificationHandling, XCUIApplicationPlatformServicesProviderDelegate;
@@ -32,114 +23,50 @@
 
 @protocol XCUIAXNotificationHandling;
 
-@interface XCTRunnerDaemonSession : NSObject <XCUIResetAuthorizationStatusOfProtectedResourcesInterface, XCUIDeviceAutomationModeInterface, XCUIRemoteSiriInterface, XCUILocalDeviceScreenshotIPCInterface, XCUIApplicationAutomationSessionProviding, XCUIDeviceEventAndStateInterface, XCUIPlatformApplicationServicesProviding, XCTMessagingChannel_DaemonToRunner, XCUIRemoteAccessibilityInterface, XCUIEventSynthesizing, XCTRemoteSignpostListenerProxy>
+@interface XCTRunnerDaemonSession : NSObject <XCTRunnerDaemonSessionUIAutomationDelegate, XCTRemoteSignpostListenerProxy>
 {
     id <XCTSignpostListener> _signpostListener;
-    double _implicitEventConfirmationIntervalForCurrentContext;
     NSXPCConnection *_connection;
     XCTCapabilities *_remoteInterfaceCapabilities;
-    id <XCUIApplicationPlatformServicesProviderDelegate> _platformApplicationServicesProviderDelegate;
-    id <XCUIAXNotificationHandling> _axNotificationHandler;
     NSObject<OS_dispatch_queue> *_queue;
     NSMutableDictionary *_invalidationHandlers;
 }
 
-@property(readonly) NSInteger applicationAutomationSessionSupport;
-@property __weak id <XCUIAXNotificationHandling> axNotificationHandler;
-@property(readonly) BOOL axNotificationsIncludeElement;
 @property(readonly) NSXPCConnection *connection;
-@property(readonly) NSUInteger currentKeyboardModifierFlags;
 @property(readonly) id <XCTMessagingChannel_RunnerToDaemon> daemonProxy;
-@property double implicitEventConfirmationIntervalForCurrentContext;
 @property(retain) NSMutableDictionary *invalidationHandlers;
-@property __weak id <XCUIApplicationPlatformServicesProviderDelegate> platformApplicationServicesProviderDelegate;
 @property(readonly) NSObject<OS_dispatch_queue> *queue;
 @property(readonly) XCTCapabilities *remoteInterfaceCapabilities;
 @property __weak id <XCTSignpostListener> signpostListener;
-@property(readonly) BOOL supportsAppearanceMode;
-@property(readonly) BOOL supportsAutomationMode;
-@property(readonly, nonatomic) BOOL supportsHEICImageEncoding;
-@property(readonly) BOOL supportsHIDEventRecording;
-@property(readonly) BOOL supportsInjectingVoiceRecognitionAudioInputPaths;
 @property(readonly) BOOL supportsPostingTelemetryData;
 @property(readonly) BOOL supportsSignpostListening;
-@property(readonly) BOOL supportsStartingSiriUIRequestWithAudioFileURL;
+@property __weak id <XCUIAXNotificationHandling> axNotificationHandler;
+@property __weak id <XCUIApplicationPlatformServicesProviderDelegate> platformApplicationServicesProviderDelegate;
 @property(readonly) BOOL useLegacyEventCoordinateTransformationPath;
-@property(readonly, nonatomic) BOOL useLegacyScreenshotPath;
-@property(readonly) BOOL useLegacySnapshotPath;
 @property(readonly) BOOL usePointTransformationsForFrameConversions;
 
-+ (id)capabilities;
 + (void)capabilitiesForDaemonConnection:(id)arg1 completion:(CDUnknownBlockType)arg2;
 + (id)connectionForInitiatingSharedSession;
-+ (id)daemonCapabilitiesForProtocolVersion:(NSUInteger)arg1 platform:(NSUInteger)arg2 error:(id *)arg3;
 + (void)initiateSessionWithCompletion:(CDUnknownBlockType)arg1;
 + (void)initiateSharedSessionWithCompletion:(CDUnknownBlockType)arg1;
-+ (void)legacyCapabilitiesForDaemonConnection:(id)arg1 completion:(CDUnknownBlockType)arg2;
-+ (void)modernCapabilitiesForDaemonConnection:(id)arg1 completion:(CDUnknownBlockType)arg2;
 + (void)sessionWithConnection:(id)arg1 completion:(CDUnknownBlockType)arg2;
 + (id)sharedSession;
 + (id)sharedSessionIfInitiated;
 + (id)sharedSessionPromiseAndImplicitlyInitiateSession:(BOOL)arg1;
-+ (id)unsupportedBundleIdentifiersForAutomationSessions;
-- (void)_XCT_applicationDidUpdateState:(id)arg1;
-- (void)_XCT_applicationWithBundleID:(id)arg1 didUpdatePID:(NSInteger)arg2 andState:(NSUInteger)arg3;
 - (void)_XCT_receivedAccessibilityNotification:(NSInteger)arg1 fromElement:(id)arg2 payload:(id)arg3;
 - (void)_XCT_receivedAccessibilityNotification:(NSInteger)arg1 withPayload:(id)arg2;
 - (void)_XCT_receivedSignpost:(id)arg1 withToken:(id)arg2;
 - (void)_reportInvalidation;
-- (void)beginMonitoringApplicationWithSpecifier:(id)arg1;
-- (BOOL)enableAutomationModeWithError:(id *)arg1;
-- (void)enableFauxCollectionViewCells:(CDUnknownBlockType)arg1;
-- (void)fetchAttributes:(id)arg1 forElement:(id)arg2 reply:(CDUnknownBlockType)arg3;
-- (void)fetchAttributesForElement:(id)arg1 attributes:(id)arg2 reply:(CDUnknownBlockType)arg3;
-- (void)fetchParameterizedAttribute:(id)arg1 forElement:(id)arg2 parameter:(id)arg3 reply:(CDUnknownBlockType)arg4;
-- (void)fetchSnapshotForElement:(id)arg1 attributes:(id)arg2 parameters:(id)arg3 reply:(CDUnknownBlockType)arg4;
-- (void)getAppearanceModeWithReply:(CDUnknownBlockType)arg1;
-- (void)getDeviceOrientationWithCompletion:(CDUnknownBlockType)arg1;
 - (id)initWithConnection:(id)arg1 remoteInterfaceCapabilities:(id)arg2;
-- (void)injectAssistantRecognitionStrings:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)injectVoiceRecognitionAudioInputPaths:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)launchApplicationWithPath:(id)arg1 bundleID:(id)arg2 arguments:(id)arg3 environment:(id)arg4 completion:(CDUnknownBlockType)arg5;
-- (void)loadAccessibilityWithTimeout:(double)arg1 reply:(CDUnknownBlockType)arg2;
-- (void)performAccessibilityAction:(id)arg1 onElement:(id)arg2 value:(id)arg3 reply:(CDUnknownBlockType)arg4;
-- (void)performDeviceEvent:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)playBackHIDEventRecordingFromData:(id)arg1 reply:(CDUnknownBlockType)arg2;
 - (void)postTelemetryData:(id)arg1 reply:(CDUnknownBlockType)arg2;
-- (void)registerForAccessibilityNotification:(NSInteger)arg1 reply:(CDUnknownBlockType)arg2;
 - (void)registerForSignpostsFromSubsystem:(id)arg1 category:(id)arg2 intervalTimeout:(double)arg3 reply:(CDUnknownBlockType)arg4;
 - (id)registerInvalidationHandler:(CDUnknownBlockType)arg1;
-- (void)requestApplicationSpecifierForPID:(NSInteger)arg1 reply:(CDUnknownBlockType)arg2;
-- (void)requestAutomationSessionForTestTargetWithPID:(NSInteger)arg1 preferredBackendPath:(id)arg2 reply:(CDUnknownBlockType)arg3;
-- (void)requestBackgroundAssertionForPID:(NSInteger)arg1 reply:(CDUnknownBlockType)arg2;
 - (void)requestDTServiceHubConnectionWithReply:(CDUnknownBlockType)arg1;
-- (void)requestElementAtPoint:(CGPoint)arg1 reply:(CDUnknownBlockType)arg2;
 - (void)requestIDEConnectionTransportForSessionIdentifier:(id)arg1 reply:(CDUnknownBlockType)arg2;
-- (BOOL)requestPointerEventsSupportedOrError:(id *)arg1;
-- (BOOL)requestPressureEventsSupportedOrError:(id *)arg1;
-- (void)requestScreenshotOfScreenWithID:(NSInteger)arg1 withRect:(CGRect)arg2 encoding:(id)arg3 withReply:(CDUnknownBlockType)arg4;
-- (void)requestSiriEnabledStatus:(CDUnknownBlockType)arg1;
-- (void)requestSnapshotForElement:(id)arg1 attributes:(id)arg2 parameters:(id)arg3 reply:(CDUnknownBlockType)arg4;
 - (void)requestSpindumpWithSpecification:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)requestUnsupportedBundleIdentifiersForAutomationSessions:(CDUnknownBlockType)arg1;
-- (BOOL)resetAuthorizationStatusForBundleIdentifier:(id)arg1 resourceIdentifier:(id)arg2 error:(id *)arg3;
-- (void)runAccessibilityAuditForElement:(id)arg1 withConfiguration:(id)arg2 reply:(CDUnknownBlockType)arg3;
-- (void)setAXTimeout:(double)arg1 reply:(CDUnknownBlockType)arg2;
-- (void)setAttribute:(id)arg1 value:(id)arg2 element:(id)arg3 reply:(CDUnknownBlockType)arg4;
-- (void)setLocalizableStringsDataGatheringEnabled:(BOOL)arg1 reply:(CDUnknownBlockType)arg2;
-- (void)snapshotForElement:(id)arg1 attributes:(id)arg2 parameters:(id)arg3 reply:(CDUnknownBlockType)arg4;
-- (void)startHIDEventRecordingWithReply:(CDUnknownBlockType)arg1;
-- (void)startSiriUIRequestWithAudioFileURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)startSiriUIRequestWithText:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)stopHIDEventRecordingWithReply:(CDUnknownBlockType)arg1;
-- (id)synthesizeEvent:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)terminateApplicationWithBundleID:(id)arg1 pid:(NSInteger)arg2 completion:(CDUnknownBlockType)arg3;
-- (void)unloadAccessibility:(CDUnknownBlockType)arg1;
-- (void)unregisterForAccessibilityNotification:(NSInteger)arg1 registrationToken:(id)arg2 reply:(CDUnknownBlockType)arg3;
+- (void)requestTailspinWithRequest:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)unregisterForSignpostsWithToken:(id)arg1;
 - (void)unregisterInvalidationHandlerWithToken:(id)arg1;
-- (void)updateAppearanceMode:(NSInteger)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)updateDeviceOrientation:(NSInteger)arg1 completion:(CDUnknownBlockType)arg2;
 
 
 @end

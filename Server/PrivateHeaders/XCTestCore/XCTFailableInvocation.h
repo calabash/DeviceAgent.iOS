@@ -20,6 +20,7 @@
 
 + (id)invokeAsynchronousBlock:(CDUnknownBlockType)arg1 lastObservedErrorIssue:(id *)arg2;
 + (id)invokeInvocation:(id)arg1 lastObservedErrorIssue:(id *)arg2;
++ (id)invokeInvocation:(id)arg1 withTestMethodConvention:(NSInteger)arg2 lastObservedErrorIssue:(id *)arg3;
 + (id)invokeSynchronousBlock:(CDUnknownBlockType)arg1 lastObservedErrorIssue:(id *)arg2;
 
 @end

@@ -5,7 +5,6 @@
 //  Copyright (C) 1997-2019 Steve Nygard.
 //
 
-
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <XCTest/XCUIElementTypes.h>
@@ -15,7 +14,7 @@
 
 @class XCTCapabilitiesBuilder;
 
-@protocol XCTCapabilitiesProviding <NSObject>
+@protocol XCTCapabilitiesProviding
 + (void)provideCapabilitiesToBuilder:(XCTCapabilitiesBuilder *)arg1;
 @end
 

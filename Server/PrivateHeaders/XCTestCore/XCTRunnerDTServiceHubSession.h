@@ -16,7 +16,6 @@
 
 @class DTXConnection;
 
-__attribute__((visibility("hidden")))
 @interface XCTRunnerDTServiceHubSession : NSObject
 {
     DTXConnection *_dtxConnection;

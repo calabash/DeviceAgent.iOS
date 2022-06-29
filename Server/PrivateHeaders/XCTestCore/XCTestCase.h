@@ -17,11 +17,14 @@
 #import "XCTActivity-Protocol.h"
 #import "XCTMemoryCheckerDelegate-Protocol.h"
 #import "XCTWaiterDelegate-Protocol.h"
+#import "XCTestCaseDiscoveryUIAutomationDelegate-Protocol.h"
+#import "XCTestCaseUIAutomationDelegate-Protocol.h"
+#import "XCTestCastMethodNamesUIAutomationDelegate-Protocol.h"
 
 @class MXMInstrument, NSArray, NSDictionary, NSInvocation, NSMutableArray, NSMutableDictionary, NSMutableSet, NSObject, NSString, NSThread, XCTAttachmentManager, XCTIssue, XCTMemoryChecker, XCTMetricDiagnosticHelper, XCTSkippedTestContext, XCTTestIdentifier, XCTWaiter, XCTestCaseRun;
 @protocol OS_dispatch_source;
 
-@interface XCTestCase : XCTest <XCTWaiterDelegate, XCTMemoryCheckerDelegate, XCTActivity>
+@interface XCTestCase : XCTest <XCTWaiterDelegate, XCTestCaseUIAutomationDelegate, XCTestCastMethodNamesUIAutomationDelegate, XCTestCaseDiscoveryUIAutomationDelegate, XCTMemoryCheckerDelegate, XCTActivity>
 {
     BOOL _continueAfterFailure;
     BOOL __preciseTimeoutsEnabled;
@@ -54,7 +57,6 @@
     XCTAttachmentManager *_attachmentManager;
     NSObject<OS_dispatch_source> *_timeoutSource;
     NSUInteger _signpostID;
-    NSDictionary *_testRunConfiguration;
     NSThread *_primaryThread;
     NSMutableSet *_previousIssuesAssociatedWithSwiftErrors;
     NSMutableArray *_enqueuedIssues;
@@ -63,9 +65,10 @@
     XCTestCaseRun *_testCaseRun;
     XCTMemoryChecker *_defaultMemoryChecker;
     NSMutableDictionary *__perfMetricsForID;
+    NSDictionary *_testRunConfiguration;
 }
 
-@property(copy, getter=_activityAggregateStatistics, setter=_setActivityAggregateStatistics:) NSDictionary *activityAggregateStatistics;
+@property(readonly, getter=_activityAggregateStatistics) NSDictionary *activityAggregateStatistics;
 @property BOOL _didMeasureMetrics;
 @property BOOL _didStartMeasuring;
 @property BOOL _didStopMeasuring;
@@ -75,7 +78,9 @@
 @property(readonly, getter=_testRunConfiguration) NSDictionary *testRunConfiguration;
 @property(copy) XCTIssue *candidateIssueForCurrentThread;
 @property BOOL continueAfterFailure;
+@property(retain, nonatomic) XCTMemoryChecker *defaultMemoryChecker;
 @property double executionTimeAllowance;
+@property(nonatomic) BOOL hasAttemptedToCaptureScreenshotOnFailure;
 @property(retain) NSInvocation *invocation;
 @property NSUInteger maxDurationInMinutes;
 @property(readonly) CDStruct_2ec95fd7 minimumOperatingSystemVersion;
@@ -84,13 +89,16 @@
 @property NSInteger runLoopNestingCount;
 @property(nonatomic) BOOL shouldHaltWhenReceivesControl;
 @property(nonatomic) BOOL shouldSetShouldHaltWhenReceivesControl;
+@property(retain, nonatomic) XCTSkippedTestContext *skippedTestContext;
 @property(retain) XCTestCaseRun *testCaseRun;
+@property(readonly) BOOL shouldRelaunchBeforeRunningTest;
 
 + (id)_allSubclasses;
 + (id)_allTestMethodInvocationDescriptors;
 + (id)_baselineDictionary;
 + (void)_collectTestInvocationDescriptorsForClassHierarchyIntoDictionary:(id)arg1;
 + (id)_identifierForSelectorString:(id)arg1;
++ (BOOL)_isAvailable;
 + (BOOL)_isDiscoverable;
 + (id)_languageSpecificTestMethodNameForSelectorString:(id)arg1;
 + (BOOL)_reportPerformanceFailuresForLargeImprovements;
@@ -109,7 +117,6 @@
 + (BOOL)isInheritingTestCases;
 + (BOOL)isValidTestMethodWithSignature:(id)arg1 convention:(NSInteger *)arg2;
 + (CDStruct_2ec95fd7)minimumOperatingSystemVersion;
-+ (BOOL)runsForEachTargetApplicationUIConfiguration;
 + (void)setUp;
 + (void)tearDown;
 + (id)testCaseWithInvocation:(id)arg1;
@@ -128,10 +135,8 @@
 - (id)_expectationForDarwinNotification:(id)arg1;
 - (id)_expectationForDistributedNotification:(id)arg1 object:(id)arg2 handler:(CDUnknownBlockType)arg3;
 - (void)_handleIssue:(id)arg1;
-- (id)_identifier;
 - (void)_interruptOrMarkForLaterInterruption;
 - (BOOL)_isDuplicateOfIssueAssociatedWithSameSwiftError:(id)arg1;
-- (id)_issueWithFailureScreenshotAttachedToIssue:(id)arg1;
 - (void)_logAndReportPerformanceMetrics:(id)arg1 perfMetricResultsForIDs:(id)arg2 withBaselinesForTest:(id)arg3;
 - (void)_logAndReportPerformanceMetrics:(id)arg1 perfMetricResultsForIDs:(id)arg2 withBaselinesForTest:(id)arg3 defaultBaselinesForPerfMetricID:(id)arg4;
 - (void)_logMemoryGraphData:(id)arg1 withTitle:(id)arg2;
@@ -147,22 +152,19 @@
 - (void)_stopTimeoutTimer;
 - (id)_storageKeyForCandidateIssue;
 - (BOOL)_testMethodSkippedWithXCTSkip;
+- (id)_xctTestIdentifier;
 - (id)addAdditionalIterationsBasedOnOptions:(id)arg1;
 - (void)addAsyncTeardownBlock:(CDUnknownBlockType)arg1;
 - (void)addAttachment:(id)arg1;
 - (void)addTeardownBlock:(CDUnknownBlockType)arg1;
-- (id)addUIInterruptionMonitorWithDescription:(id)arg1 handler:(CDUnknownBlockType)arg2;
 - (void)afterTestIteration:(NSUInteger)arg1 selector:(SEL)arg2;
 - (void)assertInvalidObjectsDeallocatedAfterScope:(CDUnknownBlockType)arg1;
-- (void)assertNoLeaksInApplication:(id)arg1 inScope:(CDUnknownBlockType)arg2;
-- (void)assertNoLeaksInProcessWithIdentifier:(NSInteger)arg1 inScope:(CDUnknownBlockType)arg2;
 - (void)assertNoLeaksInScope:(CDUnknownBlockType)arg1;
-- (void)assertObjectsOfType:(id)arg1 inApplication:(id)arg2 invalidAfterScope:(CDUnknownBlockType)arg3;
 - (void)assertObjectsOfType:(id)arg1 invalidAfterScope:(CDUnknownBlockType)arg2;
-- (void)assertObjectsOfTypes:(id)arg1 inApplication:(id)arg2 invalidAfterScope:(CDUnknownBlockType)arg3;
 - (void)assertObjectsOfTypes:(id)arg1 invalidAfterScope:(CDUnknownBlockType)arg2;
 - (id)baselinesDictionaryForTest;
 - (void)beforeTestIteration:(NSUInteger)arg1 selector:(SEL)arg2;
+- (void)conditionallyRelaunchTestRunnerProcess;
 - (NSInteger)defaultExecutionOrderCompare:(id)arg1;
 - (void)expectFailureWithContext:(id)arg1;
 - (id)expectationForNotification:(id)arg1 object:(id)arg2 handler:(CDUnknownBlockType)arg3;
@@ -193,7 +195,6 @@
 - (void)registerMetricID:(id)arg1 name:(id)arg2 unit:(id)arg3;
 - (void)registerMetricID:(id)arg1 name:(id)arg2 unitString:(id)arg3;
 - (void)registerMetricID:(id)arg1 name:(id)arg2 unitString:(id)arg3 polarity:(NSInteger)arg4;
-- (void)removeUIInterruptionMonitor:(id)arg1;
 - (void)reportMeasurements:(id)arg1 forMetricID:(id)arg2 reportFailures:(BOOL)arg3;
 - (void)reportMetric:(id)arg1 reportFailures:(BOOL)arg2;
 - (void)runActivityNamed:(id)arg1 inScope:(CDUnknownBlockType)arg2;
