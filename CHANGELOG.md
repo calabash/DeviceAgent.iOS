@@ -1,7 +1,9 @@
-### 2.4.3-hotfix-3
+### 2.4.4
 
 * Reverted all changes related to headers update from Xcode 13.2 and 13.3.1.
 * Added handler for exceptions while trying to dismiss SpringBoard alert.
+* Added tests for checking alerts handling.
+* Fixed minor issues.
 
 ### 2.4.3
 
