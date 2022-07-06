@@ -107,7 +107,11 @@ static SpringBoardAlert *alert(NSArray *buttonTitles, BOOL shouldAccept, NSStrin
             // if preferredLanguage is short name, just load it
             [self loadLanguageIfExists:fixedPreferredLanguage:resultArray];
         }
-
+        
+        // load "en" lang
+        if (![preferredLanguage hasPrefix:@"en"]) {
+            [self loadLanguageIfExists:@"en": resultArray];
+        }
         _alerts =  [NSArray<SpringBoardAlert *> arrayWithArray: resultArray];
         NSTimeInterval elapsedSeconds =
         [[CBXMachClock sharedClock] absoluteTime] - startTime;
