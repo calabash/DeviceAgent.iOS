@@ -108,11 +108,11 @@ static SpringBoardAlert *alert(NSArray *buttonTitles, BOOL shouldAccept, NSStrin
             [self loadLanguageIfExists:fixedPreferredLanguage:resultArray];
         }
 
-        // load "en" lang
+            // load "en" lang
         if (![preferredLanguage hasPrefix:@"en"]) {
             [self loadLanguageIfExists:@"en": resultArray];
         }
-
+        
         _alerts =  [NSArray<SpringBoardAlert *> arrayWithArray: resultArray];
         NSTimeInterval elapsedSeconds =
         [[CBXMachClock sharedClock] absoluteTime] - startTime;
@@ -164,12 +164,12 @@ static SpringBoardAlert *alert(NSArray *buttonTitles, BOOL shouldAccept, NSStrin
         [SpringBoardAlerts raiseIfInvalidAlert:alertDict
                                     ofLanguage:languageName
                                    andPosition:i];
-        [resultArray
-         addObject: alert(
-                          alertDict[@"buttons"],
-                          [alertDict[@"shouldAccept"] boolValue],
-                          alertDict[@"title"]
-                          )];
+
+        [resultArray addObject: alert(
+                                      alertDict[@"buttons"],
+                                      [alertDict[@"shouldAccept"] boolValue],
+                                      alertDict[@"title"]
+                                      )];
     }
 }
 
