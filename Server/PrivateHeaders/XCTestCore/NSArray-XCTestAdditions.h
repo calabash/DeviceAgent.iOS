@@ -14,7 +14,6 @@
 @protocol OS_xpc_object;
 
 @interface NSArray (XCTestAdditions)
-- (void)xct_arrayByApplyingAsyncBlock:(CDUnknownBlockType)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)xct_arrayByApplyingBlock:(CDUnknownBlockType)arg1;
 - (id)xct_objectsPassingTest:(CDUnknownBlockType)arg1;
 @end

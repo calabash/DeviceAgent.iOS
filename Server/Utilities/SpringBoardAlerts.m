@@ -97,7 +97,7 @@ static SpringBoardAlert *alert(NSArray *buttonTitles, BOOL shouldAccept, NSStrin
             // fix mismatching language name for Norwegian and Chinese languages
 
             // '.lproj' files uses '_' as separator. 'preferredLanguages' uses '-' as separator, need to convert
-            NSString *fullLanguageName = [fixedPreferredLanguage stringByReplacingOccurrencesOfString:@"-" withString:@"_"];
+            NSString *fullLanguageName = [fixedPreferredLanguage stringByReplacingOccurrencesOfString:@"-" withString: @"_"];
             // load exact name like "pt_PT"
             [self loadLanguageIfExists:fullLanguageName:resultArray];
             // load short name like "pt"
@@ -107,12 +107,11 @@ static SpringBoardAlert *alert(NSArray *buttonTitles, BOOL shouldAccept, NSStrin
             // if preferredLanguage is short name, just load it
             [self loadLanguageIfExists:fixedPreferredLanguage:resultArray];
         }
-
+        
         // load "en" lang
         if (![preferredLanguage hasPrefix:@"en"]) {
             [self loadLanguageIfExists:@"en": resultArray];
         }
-
         _alerts =  [NSArray<SpringBoardAlert *> arrayWithArray: resultArray];
         NSTimeInterval elapsedSeconds =
         [[CBXMachClock sharedClock] absoluteTime] - startTime;
@@ -125,7 +124,9 @@ static SpringBoardAlert *alert(NSArray *buttonTitles, BOOL shouldAccept, NSStrin
 // Some language names can be different in different Xcode versions
 // function maps language names to make sure that all xcode versions will work
 - (NSString *)fixLanguageName:(NSString *)languageName {
-    if ([languageName isEqualToString: @"zh-Hans-US"]) {
+    if (![languageName isEqualToString: @"en-US"]) {
+        return @"en";
+    } else if ([languageName isEqualToString: @"zh-Hans-US"]) {
         return @"zh-CN";
     } else if ([languageName isEqualToString: @"zh-Hant-US"]) {
         return @"zh-TW";
@@ -164,12 +165,12 @@ static SpringBoardAlert *alert(NSArray *buttonTitles, BOOL shouldAccept, NSStrin
         [SpringBoardAlerts raiseIfInvalidAlert:alertDict
                                     ofLanguage:languageName
                                    andPosition:i];
-        [resultArray
-         addObject: alert(
-                          alertDict[@"buttons"],
-                          [alertDict[@"shouldAccept"] boolValue],
-                          alertDict[@"title"]
-                          )];
+
+        [resultArray addObject: alert(
+                                      alertDict[@"buttons"],
+                                      [alertDict[@"shouldAccept"] boolValue],
+                                      alertDict[@"title"]
+                                      )];
     }
 }
 

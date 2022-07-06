@@ -16,7 +16,7 @@
 
 #import "XCTReportingSessionConfiguration-Protocol.h"
 
-@class NSArray, NSDictionary, NSNumber, NSString, NSURL, NSUUID, XCTAggregateSuiteRunStatistics, XCTCapabilities, XCTRepetitionPolicy, XCTTestIdentifierSet;
+@class NSArray, NSDictionary, NSNumber, NSString, NSURL, NSUUID, XCTAggregateSuiteRunStatistics, XCTCapabilities, XCTRepetitionPolicy, XCTRerunPolicy, XCTTestIdentifierSet;
 
 @interface XCTestConfiguration : NSObject <XCTReportingSessionConfiguration, NSSecureCoding, NSCopying>
 {
@@ -27,8 +27,6 @@
     BOOL _reportActivities;
     BOOL _testsMustRunOnMainThread;
     BOOL _initializeForUITesting;
-    BOOL _initializeForMultiDevice;
-    BOOL _shouldExtractMultiDeviceRequirements;
     BOOL _gatherLocalizableStringsData;
     BOOL _emitOSLogs;
     BOOL _testTimeoutsEnabled;
@@ -45,7 +43,6 @@
     NSDictionary *_testApplicationDependencies;
     NSDictionary *_testApplicationUserOverrides;
     NSString *_productModuleName;
-    NSString *_multiDeviceRequirementsFilePath;
     NSNumber *_traceCollectionEnabled;
     NSDictionary *_performanceTestConfiguration;
     NSNumber *_enablePerformanceTestsDiagnostics;
@@ -58,6 +55,7 @@
     NSInteger _testExecutionOrdering;
     NSNumber *_randomExecutionOrderingSeed;
     XCTRepetitionPolicy *_repetitionPolicy;
+    XCTRerunPolicy *_rerunPolicy;
     NSNumber *_defaultTestExecutionTimeAllowance;
     NSNumber *_maximumTestExecutionTimeAllowance;
     CDUnknownBlockType _randomNumberGenerator;
@@ -78,10 +76,8 @@
 @property BOOL emitOSLogs;
 @property(copy) NSNumber *enablePerformanceTestsDiagnostics;
 @property BOOL gatherLocalizableStringsData;
-@property BOOL initializeForMultiDevice;
 @property BOOL initializeForUITesting;
 @property(copy, nonatomic) NSNumber *maximumTestExecutionTimeAllowance;
-@property(copy) NSString *multiDeviceRequirementsFilePath;
 @property(copy) NSDictionary *performanceTestConfiguration;
 @property(copy) NSString *productModuleName;
 @property(retain) NSNumber *randomExecutionOrderingSeed;
@@ -89,9 +85,9 @@
 @property(retain) XCTRepetitionPolicy *repetitionPolicy;
 @property BOOL reportActivities;
 @property BOOL reportResultsToIDE;
+@property(retain) XCTRerunPolicy *rerunPolicy;
 @property(copy) NSUUID *sessionIdentifier;
 @property BOOL shouldEncodeLegacyTestIdentifiers;
-@property BOOL shouldExtractMultiDeviceRequirements;
 @property NSInteger systemAttachmentLifetime;
 @property(copy) NSArray *targetApplicationArguments;
 @property(copy) NSString *targetApplicationBundleID;

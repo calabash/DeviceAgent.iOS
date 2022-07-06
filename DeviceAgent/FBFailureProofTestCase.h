@@ -19,7 +19,7 @@
 // Licensed under the MIT license.
  
 #import <Foundation/Foundation.h>
-#import "XCTest/XCTestCase.h"
+#import <XCTestCore/XCTestCase.h>
 
 @class _XCTestCaseImplementation;
 

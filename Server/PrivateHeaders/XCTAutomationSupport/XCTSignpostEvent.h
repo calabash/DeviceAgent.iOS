@@ -22,7 +22,6 @@
 
 @property(readonly, nonatomic) NSInteger processID;
 
-- (id)initWithProcessID:(NSInteger)arg1;
 - (id)initWithSignpostEvent:(id)arg1;
 
 @end

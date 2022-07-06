@@ -16,6 +16,7 @@
 
 #import "XCTCapabilitiesProviding-Protocol.h"
 
+
 @interface XCTAnimationsIdleNotifier : NSObject <XCTCapabilitiesProviding>
 {
 }
@@ -29,6 +30,7 @@
 + (BOOL)supportsAnimationsIdleNotification;
 + (BOOL)swizzleUIViewAnimationStateMethodsWithError:(id *)arg1;
 - (void)notifyWhenIdle:(CDUnknownBlockType)arg1;
+
 
 @end
 

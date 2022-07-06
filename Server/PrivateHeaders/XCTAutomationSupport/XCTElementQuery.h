@@ -16,7 +16,7 @@
 
 #import "XCTCapabilitiesProviding-Protocol.h"
 
-@class NSArray, NSDictionary, NSSet, XCAccessibilityElement, XCElementSnapshot, XCTTimeoutControls;
+@class NSArray, NSDictionary, NSSet, NSString, XCAccessibilityElement, XCElementSnapshot, XCTTimeoutControls;
 @protocol XCTElementSnapshotAttributeDataSource, XCTElementSnapshotProvider;
 
 
@@ -70,6 +70,7 @@
 - (id)initWithRootElement:(id)arg1 transformers:(id)arg2 options:(NSUInteger)arg3 isMacOS:(BOOL)arg4 timeoutControls:(id)arg5;
 - (id)matchingSnapshotsInSnapshotTree:(id)arg1 relatedElements:(id *)arg2 noMatchesMessage:(id *)arg3 error:(id *)arg4;
 - (id)matchingSnapshotsWithRelatedElements:(id *)arg1 noMatchesMessage:(id *)arg2 error:(id *)arg3;
+
 
 @end
 

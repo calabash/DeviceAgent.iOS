@@ -18,7 +18,6 @@
 
 @interface XCTApplicationStateSnapshot : NSObject <NSSecureCoding>
 {
-    BOOL _trackingPID;
     NSInteger _processID;
     NSString *_bundleID;
     NSString *_path;
@@ -30,7 +29,6 @@
 @property(readonly) NSUInteger activationPolicy;
 @property(readonly, copy) NSString *bundleID;
 @property(readonly) NSUInteger eventID;
-@property(getter=isTrackingPID) BOOL trackingPID;
 @property(readonly, copy) NSString *path;
 @property(readonly) NSInteger processID;
 @property(readonly) NSUInteger runState;

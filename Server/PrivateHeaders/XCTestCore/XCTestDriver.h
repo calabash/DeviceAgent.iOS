@@ -15,11 +15,10 @@
 #import <objc/NSObject.h>
 
 #import "XCTRunnerIDESessionDelegate-Protocol.h"
-#import "XCTestDriverUIAutomationDelegate-Protocol.h"
 
-@class NSBundle, NSString, NSURL, NSUUID, XCTFuture, XCTPromise, XCTReportingSession, XCTRunnerIDESession, XCTestConfiguration;
+@class NSBundle, NSString, NSURL, NSUUID, XCTFuture, XCTPromise, XCTRunnerIDESession, XCTestConfiguration;
 
-@interface XCTestDriver : NSObject <XCTestDriverUIAutomationDelegate, XCTRunnerIDESessionDelegate>
+@interface XCTestDriver : NSObject <XCTRunnerIDESessionDelegate>
 {
     XCTRunnerIDESession *_ideSession;
     NSURL *_testBundleURLFromEnvironment;
@@ -29,9 +28,8 @@
     XCTestConfiguration *_testConfiguration;
     NSBundle *_testBundle;
     id _testBundlePrincipalClassInstance;
-    XCTFuture *_executionWorkerFuture;
-    XCTPromise *_executionWorkerPromise;
-    XCTReportingSession *_reportingSession;
+    XCTFuture *_testRunSessionFuture;
+    XCTPromise *_testRunSessionPromise;
 }
 
 @property(readonly, copy) CDUnknownBlockType daemonSessionProvider;
@@ -40,13 +38,13 @@
 @property(retain) NSBundle *testBundle;
 @property(retain) id testBundlePrincipalClassInstance;
 @property(retain) XCTestConfiguration *testConfiguration;
+@property(retain) XCTFuture *testRunSessionFuture;
+@property(retain) XCTPromise *testRunSessionPromise;
 @property(readonly, copy) NSURL *testBundleURLFromEnvironment;
 @property(readonly, copy) NSURL *testConfigurationURLFromEnvironment;
 
 + (void)_applyRandomExecutionOrderingSeed:(id)arg1;
 + (BOOL)environmentSpecifiesTestConfiguration;
-+ (void)initializeSharedTestDriverWithRunConfiguration:(id)arg1;
-+ (id)sharedTestDriver;
 + (BOOL)shouldSkipInitialBundleLoadBeforeXCTestMain;
 + (id)testBundleURLFromEnvironment;
 - (void)IDESessionDidDisconnect:(id)arg1;
@@ -54,17 +52,13 @@
 - (void)_createTestBundlePrincipalClassInstance;
 - (Class)_declaredPrincipalClassFromTestBundle:(id)arg1;
 - (id)_loadTestBundleFromURL:(id)arg1 error:(id *)arg2;
-- (BOOL)_preTestingInitialization;
 - (id)_prepareIDESessionWithIdentifier:(id)arg1 exitCode:(NSInteger *)arg2;
 - (NSInteger)_prepareTestConfigurationAndIDESession;
 - (void)_reportBootstrappingFailure:(id)arg1;
-- (void)_reportFinishedExecutingTests;
 - (NSInteger)_runTests;
-- (void)flushIDEConnectionAndExitWithCode:(NSInteger)arg1;
 - (id)initWithTestBundleURLFromEnvironment:(id)arg1 sessionIdentifierFromEnvironment:(id)arg2 testConfigurationURLFromEnvironment:(id)arg3 testConfiguration:(id)arg4 daemonSessionProvider:(CDUnknownBlockType)arg5;
 - (id)initWithTestConfiguration:(id)arg1;
 - (NSInteger)run;
-- (id)suspendAppSleep;
 - (id)testWorkerForIDESession:(id)arg1;
 
 

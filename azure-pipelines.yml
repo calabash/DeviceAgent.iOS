@@ -1,7 +1,7 @@
 variables:
   # When Agent.JobName matches this value (and the git ref is a tag), then
   # built artifacts will be published to Azure Blob Storage.
-  AzurePublishWhen: "Monterey-Xcode-13.3.1"
+  AzurePublishWhen: "BigSur-Xcode-13.1"
   EOCompliance-Mac: true
 
 trigger:
@@ -23,6 +23,9 @@ jobs:
 - job:
   strategy:
     matrix:
+      BigSur-Xcode-13.1:
+        IMAGE_POOL: 'macOS-11'
+        XCODE_VERSION: '13.1'
       BigSur-Xcode-13.2:
         IMAGE_POOL: 'macOS-11'
         XCODE_VERSION: '13.2'
@@ -76,6 +79,10 @@ jobs:
 
   - script: make ui-tests
     displayName: "Make ui-tests"
+    condition: and(succeeded(), eq(variables['IsRunUnitTests'], 'true'))
+
+  - script: make alerts-ui-tests
+    displayName: "Run alerts UI tests"
     condition: and(succeeded(), eq(variables['IsRunUnitTests'], 'true'))
 
   - script: bundle exec bin/ci/cucumber.rb

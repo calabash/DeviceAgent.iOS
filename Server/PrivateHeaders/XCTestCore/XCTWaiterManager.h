@@ -14,12 +14,10 @@
 
 #import <objc/NSObject.h>
 
-#import "XCTWaiterManager-Protocol.h"
-
 @class NSMutableArray, NSMutableSet, NSThread;
 @protocol OS_dispatch_queue;
 
-@interface XCTWaiterManager : NSObject <XCTWaiterManager>
+@interface XCTWaiterManager : NSObject
 {
     NSMutableArray *_waiterStack;
     NSThread *_thread;

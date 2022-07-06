@@ -56,7 +56,13 @@
 - (void)_synchronized_removeAttachmentsWithName:(id)arg1;
 - (void)addAttachment:(id)arg1;
 - (void)addDiagnosticReportData:(id)arg1;
+- (void)addLocalizableStringsData:(id)arg1;
 - (void)addMemoryGraphData:(id)arg1;
+- (void)addScreenImageData:(id)arg1 forceKeepAlways:(BOOL)arg2;
+- (void)addSnapshot:(id)arg1;
+- (void)addSynthesizedEvent:(id)arg1;
+- (void)attachAutomaticScreenshotForDevice:(id)arg1;
+- (void)attachAutomaticScreenshotForScreen:(id)arg1;
 - (id)attachmentForName:(id)arg1;
 - (void)invalidate;
 - (void)removeAttachmentsWithName:(id)arg1;

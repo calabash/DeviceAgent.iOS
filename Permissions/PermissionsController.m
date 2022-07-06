@@ -4,6 +4,7 @@
 @import CoreBluetooth;
 @import CoreMotion;
 @import Accounts;
+@import UserNotifications;
 
 #import "PermissionsController.h"
 #import "AlertFactory.h"
@@ -366,15 +367,15 @@ typedef enum : NSInteger {
 }
 
 - (void)rowTouchedApns {
-    UIApplication *shared = [UIApplication sharedApplication];
-
-    UIUserNotificationType types = (UIUserNotificationTypeBadge |
-            UIUserNotificationTypeSound |
-            UIUserNotificationTypeAlert);
-    UIUserNotificationSettings *settings;
-    settings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
-    [shared registerUserNotificationSettings:settings];
-    [shared registerForRemoteNotifications];
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    [center requestAuthorizationWithOptions:(UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert)
+                          completionHandler:^(BOOL success, NSError *error) {
+      if (success) {
+        NSLog(@"Successfully got access to Notifications");
+      } else {
+        NSLog(@"Cannot enable Notifications: %@", [error localizedDescription]);
+      }
+    }];
 }
 
 #pragma mark - <UITableViewDataSource>
@@ -561,9 +562,7 @@ typedef enum : NSInteger {
 
 - (void) centralManagerDidUpdateState:(CBCentralManager *)central{
     NSLog(@"Central Bluetooth manager did update state");
-    if (central.state != CBCentralManagerStatePoweredOn) { return; }
-
-    if (central.state == CBCentralManagerStatePoweredOn) {
+    if (central.state == CBManagerStatePoweredOn) {
         [self.cbManager scanForPeripheralsWithServices:nil options:nil];
     }
 }

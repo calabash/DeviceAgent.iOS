@@ -17,24 +17,27 @@
 #import "XCTMetric-Protocol.h"
 #import "XCTMetric_Private-Protocol.h"
 
-@class MXMCPUMetric, NSString;
+@class MXMCPUMetric, NSString, XCUIApplication;
 
 @interface XCTCPUMetric : NSObject <XCTMetric_Private, XCTMetric>
 {
     NSString *_instrumentationName;
-    MXMCPUMetric *_underlyingMetric;
+    MXMCPUMetric *__underlyingMetric;
+    XCUIApplication *_targetApplication;
     NSString *_processDisplayName;
     NSString *_processIdentifierName;
 }
 
+@property(retain, nonatomic) MXMCPUMetric *_underlyingMetric;
 @property(readonly, nonatomic) NSString *instrumentationName;
 @property(retain, nonatomic) NSString *processDisplayName;
 @property(retain, nonatomic) NSString *processIdentifierName;
-@property(readonly, nonatomic) MXMCPUMetric *underlyingMetric;
+@property(retain, nonatomic) XCUIApplication *targetApplication;
 
 - (void)didStartMeasuringAtTimestamp:(id)arg1;
 - (void)didStopMeasuringAtTimestamp:(id)arg1;
 - (id)initLimitingToCurrentThread:(BOOL)arg1;
+- (id)initWithApplication:(id)arg1;
 - (id)initWithBundleIdentifier:(id)arg1;
 - (id)initWithProcessIdentifier:(NSInteger)arg1;
 - (id)initWithProcessName:(id)arg1;

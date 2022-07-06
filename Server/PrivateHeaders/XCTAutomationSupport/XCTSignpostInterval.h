@@ -33,7 +33,6 @@
 @property(readonly, copy, nonatomic) NSString *subsystem;
 
 - (id)initWithSignpostInterval:(id)arg1;
-- (id)initWithSubsystem:(id)arg1 category:(id)arg2 name:(id)arg3 beginEvent:(id)arg4 endEvent:(id)arg5;
 
 @end
 

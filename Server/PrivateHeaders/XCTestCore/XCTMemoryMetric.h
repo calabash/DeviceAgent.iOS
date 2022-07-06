@@ -17,12 +17,13 @@
 #import "XCTMetric-Protocol.h"
 #import "XCTMetric_Private-Protocol.h"
 
-@class MXMMemoryMetric, NSString, XCTMemgraph;
+@class MXMMemoryMetric, NSString, XCTMemgraph, XCUIApplication;
 
 @interface XCTMemoryMetric : NSObject <XCTMetric_Private, XCTMetric>
 {
     NSString *_instrumentationName;
     MXMMemoryMetric *_underlyingMetric;
+    XCUIApplication *_targetApplication;
     NSString *_processDisplayName;
     NSString *_processIdentifierName;
     XCTMemgraph *_preGenerationMemgraph;
@@ -34,10 +35,12 @@
 @property(retain, nonatomic) XCTMemgraph *preGenerationMemgraph;
 @property(retain, nonatomic) NSString *processDisplayName;
 @property(retain, nonatomic) NSString *processIdentifierName;
-@property(readonly, nonatomic) MXMMemoryMetric *underlyingMetric;
+@property(retain, nonatomic) XCUIApplication *targetApplication;
+@property(retain, nonatomic) MXMMemoryMetric *underlyingMetric;
 
 - (void)didStartMeasuringAtTimestamp:(id)arg1;
 - (void)didStopMeasuringAtTimestamp:(id)arg1;
+- (id)initWithApplication:(id)arg1;
 - (id)initWithBundleIdentifier:(id)arg1;
 - (id)initWithProcessIdentifier:(NSInteger)arg1;
 - (id)initWithProcessName:(id)arg1;

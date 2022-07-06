@@ -1,5 +1,3 @@
-
-#import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
 #import <Specta/Specta.h>
 

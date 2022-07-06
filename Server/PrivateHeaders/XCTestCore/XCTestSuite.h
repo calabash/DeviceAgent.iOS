@@ -42,6 +42,7 @@
 + (id)testSuiteWithName:(id)arg1;
 - (id)_activityAggregateStatistics;
 - (void)_applyRandomExecutionOrderingWithGenerator:(CDUnknownBlockType)arg1;
+- (id)_identifier;
 - (id)_initWithTestConfiguration:(id)arg1;
 - (void)_mergeActivityStatistics:(id)arg1;
 - (void)_performProtectedSectionForTest:(id)arg1 testSection:(CDUnknownBlockType)arg2;
@@ -49,7 +50,6 @@
 - (Class)_requiredTestRunBaseClass;
 - (void)_sortTestsUsingDefaultExecutionOrdering;
 - (id)_testSuiteWithIdentifier:(id)arg1;
-- (id)_xctTestIdentifier;
 - (void)addTest:(id)arg1;
 - (NSInteger)defaultExecutionOrderCompare:(id)arg1;
 - (void)handleIssue:(id)arg1;

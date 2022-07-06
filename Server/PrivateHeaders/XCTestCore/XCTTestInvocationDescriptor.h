@@ -16,6 +16,7 @@
 
 @class NSInvocation, NSNumber, NSString;
 
+__attribute__((visibility("hidden")))
 @interface XCTTestInvocationDescriptor : NSObject
 {
     NSString *_selectorString;
@@ -24,15 +25,7 @@
     NSString *_customErrorMessage;
 }
 
-@property(readonly) NSNumber *convention;
-@property(readonly, copy) NSString *customErrorMessage;
-@property(readonly) NSInvocation *invocation;
-@property(readonly, getter=isAvailable) BOOL available;
-@property(readonly, copy) NSString *selectorString;
-
-- (id)initWithSelectorString:(id)arg1 convention:(NSInteger)arg2 invocation:(id)arg3 customErrorMessage:(id)arg4;
 - (id)initWithSelectorString:(id)arg1 conventionNumber:(id)arg2 invocation:(id)arg3 customErrorMessage:(id)arg4;
-- (id)initWithSelectorString:(id)arg1 invocation:(id)arg2 customErrorMessage:(id)arg3;
 
 @end
 

@@ -56,6 +56,8 @@
 + (id)attachmentWithImage:(id)arg1;
 + (id)attachmentWithImage:(id)arg1 quality:(NSInteger)arg2;
 + (id)attachmentWithPlistObject:(id)arg1;
++ (id)attachmentWithScreenshot:(id)arg1;
++ (id)attachmentWithScreenshot:(id)arg1 quality:(NSInteger)arg2;
 + (id)attachmentWithString:(id)arg1;
 + (id)attachmentWithUniformTypeIdentifier:(id)arg1 name:(id)arg2 payload:(id)arg3 userInfo:(id)arg4;
 + (id)attachmentWithXCTImage:(id)arg1;

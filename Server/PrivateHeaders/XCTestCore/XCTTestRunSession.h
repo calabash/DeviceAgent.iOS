@@ -14,19 +14,33 @@
 
 #import <objc/NSObject.h>
 
-#import "XCTExecutionExtension-Protocol.h"
+#import "XCTTestWorker-Protocol.h"
 
-@class NSString, XCTestConfiguration, XCTestSuite;
+@class NSString, XCTBlockingQueue, XCTestConfiguration;
+@protocol XCTTestRunSessionDelegate;
 
-@interface XCTTestRunSession : NSObject <XCTExecutionExtension>
+
+@protocol XCTTestRunSessionDelegate;
+
+@interface XCTTestRunSession : NSObject <XCTTestWorker>
 {
+    id <XCTTestRunSessionDelegate> _delegate;
     XCTestConfiguration *_testConfiguration;
-    XCTestSuite *_testSuite;
+    XCTBlockingQueue *_workQueue;
 }
 
-- (void)executeTestsWithIdentifiers:(id)arg1 skippingTestsWithIdentifiers:(id)arg2 completion:(CDUnknownBlockType)arg3;
-- (void)getParallelizableTestIdentifiersWithCompletion:(CDUnknownBlockType)arg1;
-- (id)initWithTestConfiguration:(id)arg1 error:(id *)arg2;
+@property __weak id <XCTTestRunSessionDelegate> delegate;
+@property(retain) XCTestConfiguration *testConfiguration;
+@property(retain) XCTBlockingQueue *workQueue;
+
+- (BOOL)_preTestingInitialization;
+- (void)executeTestIdentifiers:(id)arg1 skippingTestIdentifiers:(id)arg2 completionHandler:(CDUnknownBlockType)arg3 completionQueue:(id)arg4;
+- (void)fetchDiscoveredTestClasses:(CDUnknownBlockType)arg1;
+- (id)initWithTestConfiguration:(id)arg1;
+- (void)resumeAppSleep:(id)arg1;
+- (BOOL)runTestsAndReturnError:(id *)arg1;
+- (void)shutdown;
+- (id)suspendAppSleep;
 
 
 @end

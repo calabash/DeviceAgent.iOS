@@ -30,7 +30,6 @@
 - (void)_testDidFail:(id)arg1 withDescription:(id)arg2 inFile:(id)arg3 atLine:(NSUInteger)arg4;
 - (void)_testWithName:(id)arg1 didRecordExpectedFailure:(id)arg2;
 - (id)dateFormatter;
-- (id)iterationInfoStringForTestCase:(id)arg1;
 - (void)logTestMessage:(id)arg1;
 - (void)testCase:(id)arg1 didFailWithDescription:(id)arg2 inFile:(id)arg3 atLine:(NSUInteger)arg4;
 - (void)testCase:(id)arg1 didRecordExpectedFailure:(id)arg2;

@@ -15,24 +15,16 @@
 #import <objc/NSObject.h>
 
 
-@class NSData, NSNumber, NSString;
 
 @interface XCTMemgraph : NSObject <NSCopying, NSSecureCoding>
 {
-    NSNumber *_leakNodesCount;
-    NSNumber *_leakNodesBytes;
     NSInteger _processIdentifier;
     NSString *_filePath;
-    NSData *_graphData;
 }
 
 @property(readonly, nonatomic) NSString *filePath;
-@property(readonly, nonatomic) NSData *graphData;
-@property(readonly, nonatomic) NSUInteger leakNodesBytes;
-@property(readonly, nonatomic) NSUInteger leakNodesCount;
 @property(readonly, nonatomic) NSInteger processIdentifier;
 
-- (void)computeLeakProperties;
 - (id)initWithGraphData:(id)arg1;
 - (id)initWithPid:(NSInteger)arg1 filePath:(id)arg2;
 - (id)saveMemgraphData:(id)arg1 withProcessName:(id)arg2;

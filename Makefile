@@ -46,6 +46,10 @@ ui-tests:
 	bundle update
 	bundle exec bin/make/ui-tests.rb
 
+alerts-ui-tests:
+	bundle update
+	bundle exec bin/make/alerts-ui-tests.rb
+
 # Makes the TestApp.app
 test-app:
 	bin/make/test-app.sh
