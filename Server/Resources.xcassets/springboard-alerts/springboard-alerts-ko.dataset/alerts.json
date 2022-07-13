@@ -566,5 +566,12 @@
       "지금 안 함"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "홈 화면 편집",
+    "buttons": [
+      "닫기"
+    ],
+    "shouldAccept": false
   }
 ]
