@@ -501,5 +501,12 @@
       "允许"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "编辑主屏幕",
+    "buttons": [
+      "关闭"
+    ],
+    "shouldAccept": true
   }
 ]
