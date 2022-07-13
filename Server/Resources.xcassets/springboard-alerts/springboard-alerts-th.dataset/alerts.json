@@ -545,5 +545,12 @@
       "ไม่ใช่ตอนนี้"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Edit Home Screen",
+    "buttons": [
+      "Dismiss"
+    ],
+    "shouldAccept": false
   }
 ]
