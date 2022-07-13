@@ -529,5 +529,12 @@
       "Agora Não"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Edit Home Screen",
+    "buttons": [
+      "Dismiss"
+    ],
+    "shouldAccept": true
   }
 ]
