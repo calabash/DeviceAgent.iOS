@@ -531,10 +531,10 @@
     "shouldAccept": true
   },
   {
-    "title": "Edit Home Screen",
+    "title": "Editar Tela de Início",
     "buttons": [
-      "Dismiss"
+      "Descartar"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   }
 ]

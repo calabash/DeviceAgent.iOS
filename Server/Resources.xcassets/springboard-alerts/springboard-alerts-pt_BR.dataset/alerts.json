@@ -5,12 +5,5 @@
       "OK"
     ],
     "shouldAccept": true
-  },
-  {
-    "title": "Editar Tela de Início",
-    "buttons": [
-      "Descartar"
-    ],
-    "shouldAccept": false
   }
 ]

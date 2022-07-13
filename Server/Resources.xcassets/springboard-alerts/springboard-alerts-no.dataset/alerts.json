@@ -596,9 +596,9 @@
     "shouldAccept": false
   },
   {
-    "title": "Edit Home Screen",
+    "title": "Rediger Hjem-skjerm",
     "buttons": [
-      "Dismiss"
+      "Lukk"
     ],
     "shouldAccept": false
   }

@@ -547,9 +547,9 @@
     "shouldAccept": false
   },
   {
-    "title": "Edit Home Screen",
+    "title": "แก้ไขหน้าจอโฮม",
     "buttons": [
-      "Dismiss"
+      "ปิดทิ้ง"
     ],
     "shouldAccept": false
   }

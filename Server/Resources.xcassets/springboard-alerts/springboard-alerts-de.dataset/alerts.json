@@ -729,9 +729,9 @@
     "shouldAccept": false
   },
   {
-    "title": "Edit Home Screen",
+    "title": "Home-Bildschirm bearbeiten",
     "buttons": [
-      "Dismiss"
+      "Schließen"
     ],
     "shouldAccept": false
   }
