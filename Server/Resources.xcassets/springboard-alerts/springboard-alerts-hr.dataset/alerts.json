@@ -484,5 +484,12 @@
       "Ne sad"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "PUredite početni zaslon",
+    "buttons": [
+      "Odbaci"
+    ],
+    "shouldAccept": false
   }
 ]
