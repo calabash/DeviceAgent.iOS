@@ -481,5 +481,12 @@
       "ليس الآ"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "تحرير الشاشة الرئيسية",
+    "buttons": [
+      "استبعاد"
+    ],
+    "shouldAccept": false
   }
 ]
