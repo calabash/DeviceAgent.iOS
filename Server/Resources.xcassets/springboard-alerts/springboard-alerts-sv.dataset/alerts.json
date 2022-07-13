@@ -433,5 +433,12 @@
       "Inte nu"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Ändra hemskärmen",
+    "buttons": [
+      "Avfärda"
+    ],
+    "shouldAccept": false
   }
 ]

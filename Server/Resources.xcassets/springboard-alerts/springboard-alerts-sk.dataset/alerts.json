@@ -727,5 +727,12 @@
       "Teraz nie"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Úprava plochy",
+    "buttons": [
+      "Zrušiť"
+    ],
+    "shouldAccept": false
   }
 ]

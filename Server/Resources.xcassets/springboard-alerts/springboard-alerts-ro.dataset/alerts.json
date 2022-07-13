@@ -440,5 +440,12 @@
       "Nu acum"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Editați ecranul principal",
+    "buttons": [
+      "Închideți"
+    ],
+    "shouldAccept": false
   }
 ]

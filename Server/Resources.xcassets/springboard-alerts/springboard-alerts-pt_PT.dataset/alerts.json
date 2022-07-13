@@ -453,5 +453,12 @@
       "Permitir"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Editar ecrã principal",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]
