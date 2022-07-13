@@ -636,5 +636,12 @@
       "अभी नहीं"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "होम स्क्रीन संपादित करें",
+    "buttons": [
+      "ख़ारिज करें"
+    ],
+    "shouldAccept": false
   }
 ]
