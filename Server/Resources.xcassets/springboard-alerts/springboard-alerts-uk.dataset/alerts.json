@@ -616,5 +616,12 @@
       "Не зараз"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Впорядкування іконок",
+    "buttons": [
+      "Гаразд"
+    ],
+    "shouldAccept": false
   }
 ]
