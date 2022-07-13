@@ -458,5 +458,12 @@
       "Nanti"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Edit Layar Utama",
+    "buttons": [
+      "Tutup"
+    ],
+    "shouldAccept": false
   }
 ]
