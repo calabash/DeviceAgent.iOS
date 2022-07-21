@@ -603,6 +603,6 @@
     "buttons": [
       "關閉"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   }
 ]

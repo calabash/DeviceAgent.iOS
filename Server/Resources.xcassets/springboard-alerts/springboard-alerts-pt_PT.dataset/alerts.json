@@ -459,6 +459,6 @@
     "buttons": [
       "OK"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   }
 ]

@@ -507,6 +507,6 @@
     "buttons": [
       "关闭"
     ],
-    "shouldAccept": true
+    "shouldAccept": false
   }
 ]
