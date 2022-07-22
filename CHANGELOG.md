@@ -1,3 +1,7 @@
+### 2.4.5
+
+* Added "Edit Home Screen" notification handler.
+
 ### 2.4.4
 
 * Reverted all changes related to headers update from Xcode 13.2 and 13.3.1 to Xcode 13.1.
