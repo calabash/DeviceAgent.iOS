@@ -467,5 +467,12 @@
       "Ei nyt"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Muokkaa Koti-valikkoa",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": false
   }
 ]

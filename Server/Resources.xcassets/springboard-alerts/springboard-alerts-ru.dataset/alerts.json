@@ -631,5 +631,12 @@
       "Не сейчас"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Изменить экран «Домой»",
+    "buttons": [
+      "Закрыть"
+    ],
+    "shouldAccept": false
   }
 ]

@@ -537,5 +537,12 @@
       "Teď ne"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Úprava plochy",
+    "buttons": [
+      "Zavřít"
+    ],
+    "shouldAccept": false
   }
 ]

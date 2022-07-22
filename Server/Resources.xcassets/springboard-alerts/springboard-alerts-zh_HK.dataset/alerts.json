@@ -597,5 +597,12 @@
       "好"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "編輯主畫面",
+    "buttons": [
+      "關閉"
+    ],
+    "shouldAccept": false
   }
 ]

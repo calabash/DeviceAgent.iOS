@@ -554,5 +554,12 @@
       "Ne most"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Főképernyő szerkesztése",
+    "buttons": [
+      "Bezárás"
+    ],
+    "shouldAccept": false
   }
 ]

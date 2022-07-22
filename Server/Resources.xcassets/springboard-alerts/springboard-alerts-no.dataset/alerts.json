@@ -594,5 +594,12 @@
       "Ikke nå"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Rediger Hjem-skjerm",
+    "buttons": [
+      "Lukk"
+    ],
+    "shouldAccept": false
   }
 ]

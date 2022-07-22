@@ -531,5 +531,12 @@
       "Bukan Sekarang"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Edit Skrin Utama",
+    "buttons": [
+      "Tutup"
+    ],
+    "shouldAccept": false
   }
 ]

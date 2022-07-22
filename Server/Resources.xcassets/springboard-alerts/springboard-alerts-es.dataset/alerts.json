@@ -521,5 +521,12 @@
       "Ahora no"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Editar pantalla de inicio",
+    "buttons": [
+      "Cerrar"
+    ],
+    "shouldAccept": false
   }
 ]

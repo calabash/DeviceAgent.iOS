@@ -498,5 +498,12 @@
       "Ara no"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Editar pantalla d’inici",
+    "buttons": [
+      "Tancar"
+    ],
+    "shouldAccept": false
   }
 ]

@@ -501,5 +501,12 @@
       "Non ora"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Modifica la schermata Home",
+    "buttons": [
+      "Chiudi"
+    ],
+    "shouldAccept": false
   }
 ]

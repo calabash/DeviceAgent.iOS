@@ -460,5 +460,12 @@
       "今はしない"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "ホーム画面を編集",
+    "buttons": [
+      "了解"
+    ],
+    "shouldAccept": false
   }
 ]

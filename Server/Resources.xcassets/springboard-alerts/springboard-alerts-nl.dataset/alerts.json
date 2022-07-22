@@ -524,5 +524,12 @@
       "Niet nu"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Wijzig beginscherm",
+    "buttons": [
+      "Sluit"
+    ],
+    "shouldAccept": false
   }
 ]

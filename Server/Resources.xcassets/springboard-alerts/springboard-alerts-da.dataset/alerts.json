@@ -487,5 +487,12 @@
       "Ikke nu"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Rediger hjemmeskærm",
+    "buttons": [
+      "Luk"
+    ],
+    "shouldAccept": false
   }
 ]

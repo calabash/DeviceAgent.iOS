@@ -727,5 +727,12 @@
       "Später"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Home-Bildschirm bearbeiten",
+    "buttons": [
+      "Schließen"
+    ],
+    "shouldAccept": false
   }
 ]

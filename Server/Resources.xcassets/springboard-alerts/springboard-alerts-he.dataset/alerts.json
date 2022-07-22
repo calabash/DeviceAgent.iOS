@@ -485,5 +485,12 @@
       "לא כעת"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "ערוך את מסך הבית",
+    "buttons": [
+      "אישור"
+    ],
+    "shouldAccept": false
   }
 ]

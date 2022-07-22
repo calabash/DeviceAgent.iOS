@@ -570,5 +570,12 @@
       "Όχι τώρα"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Αλλαγές στην οθόνη Αφετηρίας",
+    "buttons": [
+      "Απόρριψη"
+    ],
+    "shouldAccept": false
   }
 ]

@@ -568,5 +568,12 @@
       "Để sau"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Sửa Màn hình Chính",
+    "buttons": [
+      "Bỏ qua"
+    ],
+    "shouldAccept": false
   }
 ]

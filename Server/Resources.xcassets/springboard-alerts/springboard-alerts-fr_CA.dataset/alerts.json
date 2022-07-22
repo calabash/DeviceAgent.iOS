@@ -439,5 +439,12 @@
       "Plus tard"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Disposition des icônes",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": false
   }
 ]

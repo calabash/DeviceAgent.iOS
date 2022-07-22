@@ -481,5 +481,12 @@
       "Nie teraz"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Edycja ekranu początkowego",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": false
   }
 ]
