@@ -124,9 +124,7 @@ static SpringBoardAlert *alert(NSArray *buttonTitles, BOOL shouldAccept, NSStrin
 // Some language names can be different in different Xcode versions
 // function maps language names to make sure that all xcode versions will work
 - (NSString *)fixLanguageName:(NSString *)languageName {
-    if (![languageName isEqualToString: @"en-US"]) {
-        return @"en";
-    } else if ([languageName isEqualToString: @"zh-Hans-US"]) {
+    if ([languageName isEqualToString: @"zh-Hans-US"]) {
         return @"zh-CN";
     } else if ([languageName isEqualToString: @"zh-Hant-US"]) {
         return @"zh-TW";
