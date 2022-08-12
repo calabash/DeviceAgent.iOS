@@ -41,7 +41,8 @@
   {
     "title": "Wil je toestaan dat %@ Face ID gebruikt?",
     "buttons": [
-      "Weiger"
+      "Weiger",
+      "Sta niet toe"
     ],
     "shouldAccept": false
   },
@@ -531,5 +532,40 @@
       "Sluit"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Geen simkaart beschikbaar",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil apparaten op je lokale netwerk zoeken en er verbinding mee maken",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dicteerfunctie inschakelen?",
+    "buttons": [
+      "Niet nu"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Schakel dicteerfunctie in",
+    "buttons": [
+      "Niet nu"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil je kritieke meldingen sturen",
+    "buttons": [
+      "Sta toe"
+    ],
+    "shouldAccept": true
   }
 ]

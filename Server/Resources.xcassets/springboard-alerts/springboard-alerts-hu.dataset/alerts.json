@@ -34,7 +34,8 @@
   {
     "title": "Szeretné engedélyezni a(z) „%@” számára a Face ID használatát?",
     "buttons": [
-      "Tiltás"
+      "Tiltás",
+      "Nem engedélyezem"
     ],
     "shouldAccept": false
   },
@@ -561,5 +562,54 @@
       "Bezárás"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Szeretné a következőt Sirivel használni: „%@”?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” Bluetootht szeretné használni, miközben az használatban van",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” a Bluetootht szeretné használni",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Ez lehetővé teszi, hogy a(z) „%@” megkeresse és csatlakozzon a Bluetooth-kiegészítőkhöz. Előfordulhat, hogy ez az app Bluetootht is használ annak megállapításához, hogy Ön a közelben tartózkodik-e.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Nincs elérhető SIM-kártya",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” eszközöket szeretne keresni a helyi hálózatán, és csatlakozni szeretne hozzájuk",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” kritikus jelzéseket szeretne küldeni",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -470,5 +470,19 @@
       "OK"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Aucune SIM disponible",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » souhaite vous envoyer des alertes critiques.",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
   }
 ]

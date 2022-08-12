@@ -48,49 +48,56 @@
   {
     "title": "“%@” želi pristupiti mikrofonu",
     "buttons": [
-      "OK"
+      "OK",
+      "U redu"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” želi dodavati u vaše fotografije",
     "buttons": [
-      "OK"
+      "OK",
+      "U redu"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” želi pristupiti vašem kalendaru",
     "buttons": [
-      "OK"
+      "OK",
+      "U redu"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” želi pristupiti vašim aktivnostima kretanja i kondicije",
     "buttons": [
-      "OK"
+      "OK",
+      "U redu"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” želi pristupiti kameri",
     "buttons": [
-      "OK"
+      "OK",
+      "U redu"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” želi pristupiti vašim podsjetnicima",
     "buttons": [
-      "OK"
+      "OK",
+      "U redu"
     ],
     "shouldAccept": true
   },
   {
     "title": "Želite li koristiti “%@” sa Siri?",
     "buttons": [
-      "OK"
+      "OK",
+      "U redu"
     ],
     "shouldAccept": true
   },
@@ -104,21 +111,24 @@
   {
     "title": "“%@” želi pristupiti vašim kontaktima",
     "buttons": [
-      "OK"
+      "OK",
+      "U redu"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” želi pristupiti vašim fotografijama",
     "buttons": [
-      "OK"
+      "OK",
+      "U redu"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” želi pristupiti vašim podacima o domu",
     "buttons": [
-      "OK"
+      "OK",
+      "U redu"
     ],
     "shouldAccept": true
   },
@@ -139,7 +149,8 @@
   {
     "title": "“%@” želi pristupiti prepoznavanju govora",
     "buttons": [
-      "OK"
+      "OK",
+      "U redu"
     ],
     "shouldAccept": true
   },
@@ -258,7 +269,8 @@
   {
     "title": "“%@” želi primati VoIP pozive u pozadini",
     "buttons": [
-      "OK"
+      "OK",
+      "U redu"
     ],
     "shouldAccept": true
   },
@@ -288,14 +300,16 @@
   {
     "title": "“%@” želi pristupiti Apple Musicu, vašim aktivnostima povezanim s glazbom i videozapisima, te vašoj medijateci",
     "buttons": [
-      "OK"
+      "OK",
+      "U redu"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” želi učiniti podatke dostupnima obližnjim Bluetooth uređajima, čak i kad ne koristite aplikaciju",
     "buttons": [
-      "OK"
+      "OK",
+      "U redu"
     ],
     "shouldAccept": true
   },
@@ -323,35 +337,40 @@
   {
     "title": "“%@” želi pristupiti vašim osnovnim kontaktnim informacijama",
     "buttons": [
-      "OK"
+      "OK",
+      "U redu"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” želi pristupiti svim vašim kontaktnim informacijama",
     "buttons": [
-      "OK"
+      "OK",
+      "U redu"
     ],
     "shouldAccept": true
   },
   {
     "title": "Aplikacija “%@” želi koristiti Bluetooth dok se koristi",
     "buttons": [
-      "OK"
+      "OK",
+      "U redu"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” želi koristiti Bluetooth",
     "buttons": [
-      "OK"
+      "OK",
+      "U redu"
     ],
     "shouldAccept": true
   },
   {
     "title": "Ovime će se aplikaciji “%@” omogućiti pronalaženje i spajanje na Bluetooth pribore. Ova aplikacija također može koristiti Bluetooth kako bi detektirala kad ste u blizini.",
     "buttons": [
-      "OK"
+      "OK",
+      "U redu"
     ],
     "shouldAccept": true
   },
@@ -491,5 +510,33 @@
       "Odbaci"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "SIM nije dostupan",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” želi pronaći i spojiti se na uređaje na vašoj lokalnoj mreži",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikacija “%@” želi vam slati kritične alarme",
+    "buttons": [
+      "Dozvoli"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikacija “%@” želi vam slati obavijesti",
+    "buttons": [
+      "Dozvoli"
+    ],
+    "shouldAccept": true
   }
 ]

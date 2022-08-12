@@ -488,5 +488,26 @@
       "OK"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Brak dostępnej karty SIM",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce znajdować urządzenia w sieci lokalnej i łączyć się z nimi",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce wysyłać Ci alerty krytyczne",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
   }
 ]

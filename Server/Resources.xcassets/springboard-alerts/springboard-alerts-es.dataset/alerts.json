@@ -528,5 +528,33 @@
       "Cerrar"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "“%@” quiere acceder a tus datos de la app Casa",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "No hay SIM",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere buscar dispositivos en tu red local y conectarse a ellos",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere enviarte avisos críticos",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
   }
 ]

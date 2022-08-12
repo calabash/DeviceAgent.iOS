@@ -194,5 +194,117 @@
       "允许一次"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "你要允许“%@”使用面容ID吗？",
+    "buttons": [
+      "不允许"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "“%@”想访问你的麦克风",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想要加入你的“照片”",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问你的日历",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问你的活动与体能训练记录",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问你的相机",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问你的提醒事项",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "你要通过Siri来使用“%@”吗？",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想要访问Apple Music、你的音乐与视频的相关活动以及你的媒体资料库",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问你的通讯录",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问你通讯录的基本信息",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问你通讯录的所有信息",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问你的照片",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问你的家庭数据",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想在你未使用该App时仍与周围的蓝牙设备交换数据",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "这将允许“%@”查找并连接蓝牙配件。此App还可能使用蓝牙来确认你在附近。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
   }
 ]

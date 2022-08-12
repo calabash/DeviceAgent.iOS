@@ -474,5 +474,33 @@
       "OK"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "%@ haluaa käyttää Apple Musicia, musiikki- ja videotoimintaasi sekä mediakirjastoasi",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Ei SIM-korttia",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ haluaa etsiä lähiverkossasi olevia laitteita ja yhdistää niihin",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ haluaa lähettää sinulle kriittisiä varoituksia",
+    "buttons": [
+      "Salli"
+    ],
+    "shouldAccept": true
   }
 ]

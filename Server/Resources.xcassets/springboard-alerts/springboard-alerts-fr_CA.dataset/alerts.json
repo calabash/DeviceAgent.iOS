@@ -181,21 +181,24 @@
   {
     "title": "Activer Dictée?",
     "buttons": [
-      "Pas maintenant"
+      "Pas maintenant",
+      "Plus tard"
     ],
     "shouldAccept": true
   },
   {
     "title": "Activer Dictée",
     "buttons": [
-      "Pas maintenant"
+      "Pas maintenant",
+      "Plus tard"
     ],
     "shouldAccept": true
   },
   {
     "title": "Ajouter un clavier tiers?",
     "buttons": [
-      "Pas maintenant"
+      "Pas maintenant",
+      "Plus tard"
     ],
     "shouldAccept": true
   },
@@ -446,5 +449,19 @@
       "OK"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Aucune carte SIM disponible",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » souhaite vous envoyer des alertes critiques",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
   }
 ]

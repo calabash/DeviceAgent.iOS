@@ -544,5 +544,26 @@
       "Zavřít"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Není k dispozici žádná SIM",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikace „%@“ žádá o možnost vyhledávat zařízení ve vaší místní síti a připojovat se k nim",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikace %@ vám chce posílat kritická upozornění",
+    "buttons": [
+      "Povolit"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -575,5 +575,26 @@
       "Bỏ qua"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Không có SIM khả dụng",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn tìm và kết nối với các thiết bị trên mạng cục bộ của bạn",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” muốn gửi cho bạn các cảnh báo quan trọng",
+    "buttons": [
+      "Cho phép"
+    ],
+    "shouldAccept": true
   }
 ]
