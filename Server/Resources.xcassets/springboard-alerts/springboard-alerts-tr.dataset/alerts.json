@@ -524,5 +524,26 @@
       "Kapat"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Kullanılabilir SIM Yok",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” yerel ağınızdaki aygıtları bulmak ve onlara bağlanmak istiyor",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Size Kritik Uyarılar Göndermek İstiyor",
+    "buttons": [
+      "İzin Ver"
+    ],
+    "shouldAccept": true
   }
 ]

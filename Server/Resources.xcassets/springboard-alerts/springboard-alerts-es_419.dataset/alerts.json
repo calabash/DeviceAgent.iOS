@@ -475,5 +475,33 @@
       "OK"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "¿Quieres usar “%@” con Siri?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Sin SIM disponible",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere buscar y conectarse a dispositivos en tu red local",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” quiere enviarte alertas críticas",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
   }
 ]

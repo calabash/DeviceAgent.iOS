@@ -538,5 +538,33 @@
       "Tutup"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Tiada SIM Tersedia",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” mahu mencari dan bersambung kepada peranti pada rangkaian setempat anda",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Menghantar Isyarat Kritikal Kepada Anda",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Benarkan “%@” mengemas kini data kesihatan anda.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

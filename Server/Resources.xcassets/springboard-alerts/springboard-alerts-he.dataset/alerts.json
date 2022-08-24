@@ -389,7 +389,8 @@
   {
     "title": "״%@״ מעוניין לשלוח לך עדכונים",
     "buttons": [
-      "אישור"
+      "אישור",
+      "אפשר"
     ],
     "shouldAccept": true
   },
@@ -492,5 +493,33 @@
       "אישור"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "‏״%@״ מעוניין לגשת ל-Apple Music, לפעילות המוזיקה והווידאו שלך, ולספריית המדיה שלך",
+    "buttons": [
+      "אישור"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "אין SIM זמין",
+    "buttons": [
+      "אישור"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "‏״%@״ רוצה לאתר מכשירים ברשת המקומית שלך ולהתחבר אליהם",
+    "buttons": [
+      "אישור"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "״%@״ מעוניין לשלוח לך אזהרות קריטיות",
+    "buttons": [
+      "אפשר"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -601,5 +601,26 @@
       "Lukk"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "SIM mangler",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ ber om tillatelse til å finne og koble til enheter på det lokale nettverket ditt",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vil sende deg viktige varsler",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
   }
 ]

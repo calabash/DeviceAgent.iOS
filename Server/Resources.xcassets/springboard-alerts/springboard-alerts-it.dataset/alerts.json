@@ -508,5 +508,26 @@
       "Chiudi"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Nessuna SIM disponibile",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe rilevare i dispositivi sulla tua rete locale e connettersi",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” desidera inviarti avvisi importanti",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
   }
 ]

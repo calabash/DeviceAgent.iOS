@@ -604,5 +604,33 @@
       "關閉"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "你要在「%@」使用Siri嗎？",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "沒有可用SIM卡",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想尋找和連接你區域網絡上的裝置",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要傳送重要提示",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
   }
 ]

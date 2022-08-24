@@ -440,5 +440,26 @@
       "Avfärda"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Inget SIM-kort tillgängligt",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "”%@” vill hitta och ansluta till enheter i ditt lokala nätverk",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "”%@” vill skicka viktiga varningar till dig",
+    "buttons": [
+      "Tillåt"
+    ],
+    "shouldAccept": true
   }
 ]

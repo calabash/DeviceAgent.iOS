@@ -505,5 +505,194 @@
       "Tancar"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Permets que l’app %@ també faci servir la ubicació, encara que no l’estiguis utilitzant?",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permets que els ginys de la categoria “%@” utilitzin la teva ubicació?",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vols permetre que l’app %@ utilitzi el Face ID?",
+    "buttons": [
+      "No permetre"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "%@ vol accedir al micròfon",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vol afegir fotos a la fototeca",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vol accedir al calendari",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vol accedir a la teva activitat física",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vol accedir a la càmera",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vol accedir als recordatoris",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vols utilitzar l’app %@ amb Siri?",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vol accedir a l’Apple Music, a l’activitat relacionada amb la música i els vídeos, i a la biblioteca multimèdia",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vol accedir als contactes",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vol accedir a la informació bàsica dels contactes",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vol accedir a tota la informació dels contactes",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vol accedir a les fotos",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vol accedir a les dades de l’app Casa",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vol rebre trucades VoIP en segon pla",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vol posar les dades a disposició dels dispositius Bluetooth propers fins i tot quan no utilitzis l’app",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vol fer servir el Bluetooth mentre l’utilitzis",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vol fer servir el Bluetooth",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "D’aquesta manera, l’app %@ podrà detectar els accessoris Bluetooth i connectar‑s’hi. També podrà utilitzar el Bluetooth per saber quan ets a prop.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vol accedir al reconeixement de veu",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Cap SIM disponible",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "L’app %@ vol veure els dispositius de la xarxa local i connectar‑s’hi",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vols activar el dictat?",
+    "buttons": [
+      "Ara no"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” et vol enviar avisos crítics",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "L’app %@ et vol enviar notificacions",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
   }
 ]

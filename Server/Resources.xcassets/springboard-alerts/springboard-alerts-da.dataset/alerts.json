@@ -494,5 +494,26 @@
       "Luk"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Intet SIM-kort tilgængeligt",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vil finde og oprette forbindelse til enheder på dit lokale netværk",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vil sende dig vigtige advarsler",
+    "buttons": [
+      "Tillad"
+    ],
+    "shouldAccept": true
   }
 ]

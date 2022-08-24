@@ -536,5 +536,19 @@
       "Descartar"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Nenhum SIM Disponível",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” deseja buscar dispositivos na sua rede local e se conectar a eles",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

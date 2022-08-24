@@ -734,5 +734,26 @@
       "Schließen"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Keine SIM verfügbar",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte Geräte in deinem lokalen Netzwerk finden und eine Verbindung herstellen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte dir kritische Hinweise senden",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -465,5 +465,26 @@
       "Tutup"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "Tidak Ada SIM yang Tersedia",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” ingin menemukan dan terhubung ke perangkat di jaringan lokal Anda",
+    "buttons": [
+      "OKE"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Mengirimi Anda Peringatan Penting",
+    "buttons": [
+      "Izinkan"
+    ],
+    "shouldAccept": true
   }
 ]

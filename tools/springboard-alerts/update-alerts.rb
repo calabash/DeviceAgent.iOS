@@ -112,8 +112,13 @@ localization_storage = LocalizationStorage.new('../../Server/Resources.xcassets/
 
 target_frameworks.each do |framework|
   puts "Scan framework '#{framework['name']}'".green
-  framework_path = find_framework(root_dir, framework['name'])
-
+  begin
+    framework_path = find_framework(root_dir, framework['name'])
+  rescue StandardError => e
+    puts e.message
+    puts e.backtrace.inspect
+    next
+  end
   unless framework_path && Dir.exist?(framework_path)
     puts "Skip '#{framework['name']}' since it was not found".red
     next

@@ -541,5 +541,168 @@
       "關閉"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "要允許「%@」使用你的位置嗎？",
+    "buttons": [
+      "永遠允許",
+      "允許",
+      "使用App期間允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "要允許「%@」在你未使用App時使用你的位置嗎？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "要允許「%@」在你未使用App時也可使用你的位置嗎？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "要允許「%@」使用你的準確位置一次嗎？",
+    "buttons": [
+      "允許一次"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "要允許來自「%@」的小工具使用你的位置嗎？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要取用你的麥克風",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要加入你的「照片」",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要取用你的行事曆",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要取用你的動作與健身記錄",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要取用你的相機",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要取用你的提醒事項",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "你要將「%@」與Siri搭配使用嗎？",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要取用Apple Music、你的音樂和影片活動和媒體資料庫",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要取用你聯絡人的基本資訊",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要取用你聯絡人的所有資訊",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要取用你的照片",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要取用你的家庭資料",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "這將允許「%@」尋找並連接藍牙配件。此App可能也會使用藍牙以確認你在附近。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "無可用的SIM卡",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要尋找並連接你區域網路上的裝置",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要傳送「重要提示」",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "允許「%@」更新你的健康資料。",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想要使用你的目前位置",
+    "buttons": [
+      "好"
+    ],
+    "shouldAccept": true
   }
 ]

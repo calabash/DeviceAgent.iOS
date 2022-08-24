@@ -467,5 +467,26 @@
       "了解"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "SIMがありません",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”がローカルネットワーク上のデバイスの検索および接続を求めています",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”が重大な通知をあなたに送信することを求めています",
+    "buttons": [
+      "許可"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -5,5 +5,19 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Enviar Alertas Críticos",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Enviar Notificações",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
   }
 ]

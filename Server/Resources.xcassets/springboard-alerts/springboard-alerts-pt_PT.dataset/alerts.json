@@ -460,5 +460,33 @@
       "OK"
     ],
     "shouldAccept": false
+  },
+  {
+    "title": "“%@” gostaria de aceder aos dados da aplicação Casa",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Nenhum SIM disponível",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” gostaria de procurar e estabelecer ligação a dispositivos na rede local",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” gostaria de lhe enviar avisos críticos",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
   }
 ]
