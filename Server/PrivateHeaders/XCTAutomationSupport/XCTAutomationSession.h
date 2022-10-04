@@ -22,7 +22,7 @@
 #import "XCTRemoteApplicationAutomationTarget-Protocol.h"
 
 @class DTXConnection, DTXProxyChannel, NSMutableArray, NSString, XCTAnimationsIdleNotifier, XCTCapabilities, XCTElementQueryProcessor, XCTMainRunLoopIdleNotifier;
-@protocol OS_dispatch_queue, XCTAccessibilityFramework, XCTElementSnapshotProvider><XCTElementSnapshotAttributeDataSource;
+@protocol OS_dispatch_queue, XCTAccessibilityFramework, XCTElementSnapshotProvider><XCTElementSnapshotAttributeDataSource, XCTInternalEntitlementChecking;
 
 
 @protocol XCTElementSnapshotProvider;
@@ -31,6 +31,7 @@
 {
     id <XCTAccessibilityFramework> _accessibilityFramework;
     id <XCTElementSnapshotProvider><XCTElementSnapshotAttributeDataSource> _dataSource;
+    id <XCTInternalEntitlementChecking> _internalEntitlementChecker;
     NSMutableArray *_connections;
     XCTElementQueryProcessor *_queryProcessor;
     NSObject<OS_dispatch_queue> *_queue;
@@ -48,6 +49,7 @@
 @property(readonly) __weak id <XCTElementSnapshotProvider><XCTElementSnapshotAttributeDataSource> dataSource;
 @property(readonly) DTXConnection *dtxConnection;
 @property(readonly) BOOL hasBannerNotificationIsStickyAttribute;
+@property __weak id <XCTInternalEntitlementChecking> internalEntitlementChecker;
 @property(readonly) BOOL providesValuesForPrivilegedAttributes;
 @property(readonly) DTXProxyChannel *proxyChannel;
 @property(readonly) XCTElementQueryProcessor *queryProcessor;

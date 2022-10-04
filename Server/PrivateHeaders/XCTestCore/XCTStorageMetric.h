@@ -17,13 +17,13 @@
 #import "XCTMetric-Protocol.h"
 #import "XCTMetric_Private-Protocol.h"
 
-@class MXMDiskMetric, NSString, XCUIApplication;
+@class MXMDiskMetric, NSString;
 
 @interface XCTStorageMetric : NSObject <XCTMetric_Private, XCTMetric>
 {
     NSString *_instrumentationName;
     MXMDiskMetric *__underlyingMetric;
-    XCUIApplication *_targetApplication;
+    MXMDiskMetric *_underlyingMetric;
     NSString *_processDisplayName;
     NSString *_processIdentifierName;
 }
@@ -32,11 +32,10 @@
 @property(readonly, nonatomic) NSString *instrumentationName;
 @property(retain, nonatomic) NSString *processDisplayName;
 @property(retain, nonatomic) NSString *processIdentifierName;
-@property(retain, nonatomic) XCUIApplication *targetApplication;
+@property(readonly, nonatomic) MXMDiskMetric *underlyingMetric;
 
 - (void)didStartMeasuringAtTimestamp:(id)arg1;
 - (void)didStopMeasuringAtTimestamp:(id)arg1;
-- (id)initWithApplication:(id)arg1;
 - (id)initWithProcessIdentifier:(NSInteger)arg1;
 - (id)initWithProcessName:(id)arg1;
 - (id)initWithUnderlyingMetric:(id)arg1;

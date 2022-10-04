@@ -15,12 +15,12 @@
 #import <objc/NSObject.h>
 
 @class NSDate, XCTTestIdentifier;
-@protocol XCTMessagingRole_TestReporting, XCTMessagingRole_ActivityReporting, _XCTMessaging_VoidProtocol;
+@protocol XCTMessagingRole_TestReporting><XCTMessagingRole_ActivityReporting><_XCTMessaging_VoidProtocol;
 
 @interface XCTReportingSessionTestReporter : NSObject
 {
     XCTTestIdentifier *_identifier;
-    id <XCTMessagingRole_TestReporting, XCTMessagingRole_ActivityReporting, _XCTMessaging_VoidProtocol> _IDEProxy;
+    id <XCTMessagingRole_TestReporting><XCTMessagingRole_ActivityReporting><_XCTMessaging_VoidProtocol> _IDEProxy;
     CDUnknownBlockType _finishHandler;
     NSDate *_startDate;
 }
@@ -30,7 +30,9 @@
 - (void)finishWithStatus:(id)arg1 atDate:(id)arg2;
 - (id)reportActivityStartedWithName:(id)arg1 atDate:(id)arg2;
 - (void)reportAttachment:(id)arg1 atDate:(id)arg2;
+- (void)reportExpectedFailure:(id)arg1;
 - (void)reportIssue:(id)arg1 atDate:(id)arg2;
+- (void)reportSkipWithDescription:(id)arg1 sourceCodeContext:(id)arg2;
 
 @end
 

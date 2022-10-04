@@ -45,6 +45,7 @@
 @property(retain) NSRunLoop *timerRunLoop;
 @property(nonatomic) NSUInteger expectedFulfillmentCount; // @dynamic expectedFulfillmentCount;
 
++ (double)initialPollingInterval;
 - (void)_considerFulfilling;
 - (void)_scheduleTimer;
 - (BOOL)_shouldFulfillForObject:(id)arg1 handler:(CDUnknownBlockType)arg2;

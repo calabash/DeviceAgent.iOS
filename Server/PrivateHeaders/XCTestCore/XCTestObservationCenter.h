@@ -40,7 +40,7 @@
 + (id)sharedTestObservationCenter;
 - (void)_context:(id)arg1 didFinishActivity:(id)arg2;
 - (void)_context:(id)arg1 willStartActivity:(id)arg2;
-- (void)_handleException:(id)arg1 thrownBy:(id)arg2 inMethod:(SEL)arg3;
+- (void)_handleExceptionThrownBy:(id)arg1 inMethod:(SEL)arg2;
 - (void)_observeTestExecutionForBlock:(CDUnknownBlockType)arg1;
 - (void)_performBlockOnInternalObserversWhichRespondToSelector:(SEL)arg1 block:(CDUnknownBlockType)arg2;
 - (void)_performBlockOnObserversWhichRespondToSelector:(SEL)arg1 block:(CDUnknownBlockType)arg2;

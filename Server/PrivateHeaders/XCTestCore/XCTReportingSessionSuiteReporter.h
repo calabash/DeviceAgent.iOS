@@ -15,12 +15,12 @@
 #import <objc/NSObject.h>
 
 @class NSDate, NSMutableDictionary, XCTTestIdentifier;
-@protocol XCTMessagingRole_TestReporting, XCTMessagingRole_ActivityReporting, _XCTMessaging_VoidProtocol;
+@protocol XCTMessagingRole_TestReporting><XCTMessagingRole_ActivityReporting><_XCTMessaging_VoidProtocol;
 
 @interface XCTReportingSessionSuiteReporter : NSObject
 {
     XCTTestIdentifier *_identifier;
-    id <XCTMessagingRole_TestReporting, XCTMessagingRole_ActivityReporting, _XCTMessaging_VoidProtocol> _IDEProxy;
+    id <XCTMessagingRole_TestReporting><XCTMessagingRole_ActivityReporting><_XCTMessaging_VoidProtocol> _IDEProxy;
     NSDate *_startDate;
     double _totalTestDuration;
     NSInteger _totalTestCount;
@@ -33,6 +33,7 @@
 - (void)reportIssue:(id)arg1 atDate:(id)arg2;
 - (id)reportSuiteStartedWithName:(id)arg1 atDate:(id)arg2;
 - (id)reportTestStartedWithName:(id)arg1 atDate:(id)arg2;
+- (id)reportTestStartedWithName:(id)arg1 atDate:(id)arg2 iteration:(NSInteger)arg3;
 
 @end
 

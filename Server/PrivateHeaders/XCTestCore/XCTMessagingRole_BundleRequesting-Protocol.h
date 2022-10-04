@@ -7,5 +7,6 @@
 
 @protocol XCTMessagingRole_BundleRequesting
 - (void)_XCT_requestBundleIDForPID:(NSInteger)arg1 reply:(void (^)(NSString *, NSError *))arg2;
+- (void)_XCT_requestProcessSpecifierForPID:(NSInteger)arg1 reply:(void (^)(XCTProcessSpecifier *, NSError *))arg2;
 @end
 

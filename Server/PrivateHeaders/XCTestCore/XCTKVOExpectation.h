@@ -14,28 +14,24 @@
 
 #import "XCTestExpectation.h"
 
-@class NSObject, NSString;
-@protocol OS_dispatch_queue;
 
 @interface XCTKVOExpectation : XCTestExpectation
 {
-    BOOL _hasCleanedUp;
-    CDUnknownBlockType _handler;
+    struct atomic_flag _hasCleanedUp;
     NSString *_keyPath;
     id _observedObject;
     id _expectedValue;
     NSUInteger _options;
-    NSObject<OS_dispatch_queue> *_queue;
+    CDUnknownBlockType _handler;
 }
 
 @property(readonly) id expectedValue;
 @property(copy) CDUnknownBlockType handler;
-@property BOOL hasCleanedUp;
 @property(readonly, copy) NSString *keyPath;
 @property(readonly) id observedObject;
 @property(readonly) NSUInteger options;
-@property(readonly) NSObject<OS_dispatch_queue> *queue;
 
+- (id)_generateExpectationDescription;
 - (void)cleanup;
 - (id)initWithKeyPath:(id)arg1 object:(id)arg2;
 - (id)initWithKeyPath:(id)arg1 object:(id)arg2 expectedValue:(id)arg3;

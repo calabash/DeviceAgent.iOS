@@ -12,11 +12,13 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@class NSString, XCDeviceEvent, XCSynthesizedEventRecord;
+@class NSNumber, NSString, XCDeviceEvent, XCSynthesizedEventRecord;
 
 @protocol XCTMessagingRole_EventSynthesis
 - (void)_XCT_enableFauxCollectionViewCells:(void (^)(BOOL, NSError *))arg1;
 - (void)_XCT_getDeviceOrientationWithCompletion:(void (^)(NSNumber *, NSError *))arg1;
+- (void)_XCT_getInterfaceOrientationWithCompletion:(void (^)(NSNumber *, NSError *))arg1;
+- (void)_XCT_hasHardwareButton:(NSNumber *)arg1 completion:(void (^)(NSNumber *, NSError *))arg2;
 - (void)_XCT_loadAccessibilityWithTimeout:(double)arg1 reply:(void (^)(BOOL, NSError *))arg2;
 - (void)_XCT_performDeviceEvent:(XCDeviceEvent *)arg1 completion:(void (^)(NSError *))arg2;
 - (void)_XCT_sendString:(NSString *)arg1 maximumFrequency:(NSUInteger)arg2 completion:(void (^)(NSError *))arg3;

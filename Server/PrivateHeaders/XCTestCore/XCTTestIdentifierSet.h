@@ -30,6 +30,7 @@
 - (id)builder;
 - (Class)classForCoder;
 - (BOOL)containsTestIdentifier:(id)arg1;
+- (BOOL)containsTestIdentifier:(id)arg1 includingParents:(BOOL)arg2;
 - (NSUInteger)countByEnumeratingWithState:(CDStruct_70511ce9 *)arg1 objects:(id *)arg2 count:(NSUInteger)arg3;
 - (void)enumerateTestIdentifiersUsingBlock:(CDUnknownBlockType)arg1;
 - (id)initWithArray:(id)arg1;
