@@ -22,14 +22,14 @@
 #import "XCUIElementTypeQueryProvider_Private-Protocol.h"
 #import "XCUIScreenshotProviding-Protocol.h"
 
-@class NSString, XCElementSnapshot, XCTLocalizableStringInfo, XCUIApplication, XCUICoordinate, XCUIElementQuery, XCUIScreen;
+@class NSString, XCTLocalizableStringInfo, XCUIApplication, XCUICoordinate, XCUIElementQuery, XCUIScreen;
 @protocol XCUIDevice, XCUIElementEventTarget;
 
 @interface XCUIElement : NSObject <XCUIElementSnapshotProviding, XCUIScreenshotProviding, XCTNSPredicateExpectationObject, XCUIElementAttributesPrivate, XCUIElementTypeQueryProvider_Private, XCUIElementAttributes, XCUIElementTypeQueryProvider>
 {
     BOOL _safeQueryResolutionEnabled;
     XCUIElementQuery *_query;
-    XCElementSnapshot *_lastSnapshot;
+    /*XCElementSnapshot **/id _lastSnapshot;
 }
 
 @property(readonly, copy) XCUIElementQuery *activityIndicators;
@@ -85,7 +85,7 @@
 @property(readonly, copy) XCUIElementQuery *keyboards;
 @property(readonly, copy) XCUIElementQuery *keys;
 @property(readonly, copy) NSString *label;
-@property(retain) XCElementSnapshot *lastSnapshot;
+@property(retain) /*XCElementSnapshot **/id lastSnapshot;
 @property(readonly, copy) XCUIElementQuery *layoutAreas;
 @property(readonly, copy) XCUIElementQuery *layoutItems;
 @property(readonly, copy) XCUIElementQuery *levelIndicators;

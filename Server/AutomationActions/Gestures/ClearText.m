@@ -3,7 +3,7 @@
 #import "CBX-XCTest-Umbrella.h"
 #import "XCTest+CBXAdditions.h"
 #import <UIKit/UIGeometry.h>
-#import "XCElementSnapshot.h"
+//#import "XCElementSnapshot.h"
 #import "Testmanagerd.h"
 #import "TextInputFirstResponderProvider.h"
 #import "ThreadUtils.h"

@@ -16,7 +16,7 @@
 
 #import "XCTMatchingElementIterator-Protocol.h"
 
-@class NSMutableSet, NSSet, NSString, XCElementSnapshot, XCTElementIndexingTransformer;
+@class NSMutableSet, NSSet, NSString, XCTElementIndexingTransformer;
 @protocol XCTElementSetTransformer;
 
 __attribute__((visibility("hidden")))
@@ -26,20 +26,20 @@ __attribute__((visibility("hidden")))
 @interface XCTIndexingTransformerIterator : NSObject <XCTMatchingElementIterator>
 {
     BOOL _hasMatched;
-    XCElementSnapshot *_input;
+    /*XCElementSnapshot **/id _input;
     id <XCTElementSetTransformer> _transformer;
-    XCElementSnapshot *_currentMatch;
+    /*XCElementSnapshot **/id _currentMatch;
     XCTElementIndexingTransformer *_indexingTransformer;
     NSUInteger _count;
     NSMutableSet *_mutableRelatedElements;
 }
 
 @property NSUInteger count;
-@property(retain) XCElementSnapshot *currentMatch;
+@property(retain) /*XCElementSnapshot **/id currentMatch;
 @property(readonly) NSSet *currentRelatedElements;
 @property(readonly) BOOL hasMatched;
 @property(readonly) XCTElementIndexingTransformer *indexingTransformer;
-@property(retain) XCElementSnapshot *input;
+@property(retain) /*XCElementSnapshot **/id input;
 @property(readonly) NSMutableSet *mutableRelatedElements;
 @property(readonly) id <XCTElementSetTransformer> transformer;
 

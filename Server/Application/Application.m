@@ -192,11 +192,11 @@ static Application *currentApplication;
 + (NSDictionary *)tree {
     XCUIApplication *application = [Application currentApplication];
     XCUIElementQuery *applicationQuery = [XCUIApplication cbxQuery:application];
-    XCElementSnapshot *applicationSnaphot = [applicationQuery cbx_elementSnapshotForDebugDescription];
+    /*XCElementSnapshot **/id applicationSnaphot = [applicationQuery cbx_elementSnapshotForDebugDescription];
     return [Application snapshotTree:applicationSnaphot];
 }
 
-+ (NSDictionary *)snapshotTree:(XCElementSnapshot *)snapshot {
++ (NSDictionary *)snapshotTree:(/*XCElementSnapshot **/id )snapshot {
     NSMutableDictionary *json = [[JSONUtils snapshotOrElementToJSON:snapshot] mutableCopy];
 
     if (snapshot.children.count) {

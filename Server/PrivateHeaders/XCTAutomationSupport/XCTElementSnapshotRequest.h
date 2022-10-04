@@ -14,7 +14,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSDictionary, NSError, XCAXCycleDetector, XCAccessibilityElement, XCElementSnapshot, XCTAccessibilitySnapshot_iOS, XCTTimeoutControls;
+@class NSArray, NSDictionary, NSError, XCAXCycleDetector, XCAccessibilityElement, XCTAccessibilitySnapshot_iOS, XCTTimeoutControls;
 @protocol NSCopying, OS_dispatch_queue, XCTAccessibilityFramework, XCTMacCatalystStatusProviding;
 
 @interface XCTElementSnapshotRequest : NSObject
@@ -26,7 +26,7 @@
     XCAccessibilityElement *_element;
     NSArray *_attributes;
     NSDictionary *_parameters;
-    XCElementSnapshot *_elementSnapshot;
+    /*XCElementSnapshot **/id _elementSnapshot;
     id <NSCopying> _accessibilitySnapshot;
     XCTTimeoutControls *_timeoutControls;
     XCAXCycleDetector *_cycleDetector;
@@ -41,7 +41,7 @@
 @property(readonly) NSArray *attributes;
 @property(retain) XCAXCycleDetector *cycleDetector;
 @property(readonly) XCAccessibilityElement *element;
-@property(retain) XCElementSnapshot *elementSnapshot;
+@property(retain) /*XCElementSnapshot **/id elementSnapshot;
 @property BOOL hasLoaded;
 @property(retain) NSError *loadError;
 @property BOOL loadResult;

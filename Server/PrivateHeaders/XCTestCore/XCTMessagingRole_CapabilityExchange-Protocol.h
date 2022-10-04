@@ -12,7 +12,7 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@class NSArray, NSDictionary, NSNumber, NSString, NSUUID, XCAXAuditConfiguration, XCAccessibilityElement, XCTCapabilities, XCTScreenshotRequest, XCTSpindumpRequestSpecification, XCTTailspinRequest, XCUIElementSnapshotRequestResult, XCTImage, XCTSerializedTransportWrapper, XCAXAuditResultCollection, XCElementSnapshot;
+@class NSArray, NSDictionary, NSNumber, NSString, NSUUID, XCAXAuditConfiguration, XCAccessibilityElement, XCTCapabilities, XCTScreenshotRequest, XCTSpindumpRequestSpecification, XCTTailspinRequest, XCUIElementSnapshotRequestResult, XCTImage, XCTSerializedTransportWrapper, XCAXAuditResultCollection;
 
 @protocol XCTMessagingRole_CapabilityExchange
 - (void)_XCT_enableAutomationModeWithReply:(void (^)(NSError *))arg1;
@@ -35,14 +35,14 @@
 - (void)_XCT_requestScreenshotOfScreenWithID:(NSUInteger)arg1 withRect:(CGRect)arg2 uti:(NSString *)arg3 compressionQuality:(double)arg4 withReply:(void (^)(NSData *, NSError *))arg5;
 - (void)_XCT_requestScreenshotWithReply:(void (^)(NSData *, NSError *))arg1;
 - (void)_XCT_requestSerializedTransportWrapperForIDESessionWithIdentifier:(NSUUID *)arg1 reply:(void (^)(XCTSerializedTransportWrapper *))arg2;
-- (void)_XCT_requestSnapshotForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 parameters:(NSDictionary *)arg3 reply:(void (^)(XCElementSnapshot *, NSError *))arg4;
+- (void)_XCT_requestSnapshotForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 parameters:(NSDictionary *)arg3 reply:(void (^)(/*XCElementSnapshot **/id, NSError *))arg4;
 - (void)_XCT_requestSocketForSessionIdentifier:(NSUUID *)arg1 reply:(void (^)(NSFileHandle *))arg2;
 - (void)_XCT_requestSpindumpWithSpecification:(XCTSpindumpRequestSpecification *)arg1 completion:(void (^)(NSData *, NSError *))arg2;
 - (void)_XCT_requestTailspinWithRequest:(XCTTailspinRequest *)arg1 completion:(void (^)(NSData *, NSError *))arg2;
 - (void)_XCT_requestUnsupportedBundleIdentifiersForAutomationSessions:(void (^)(NSSet *, NSError *))arg1;
 - (void)_XCT_runAccessibilityAuditForElement:(XCAccessibilityElement *)arg1 withConfiguration:(XCAXAuditConfiguration *)arg2 reply:(void (^)(XCAXAuditResultCollection *, NSError *))arg3;
 - (void)_XCT_setAttribute:(NSNumber *)arg1 value:(id)arg2 element:(XCAccessibilityElement *)arg3 reply:(void (^)(BOOL, NSError *))arg4;
-- (void)_XCT_snapshotForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 parameters:(NSDictionary *)arg3 reply:(void (^)(XCElementSnapshot *, NSError *))arg4;
+- (void)_XCT_snapshotForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 parameters:(NSDictionary *)arg3 reply:(void (^)(/*XCElementSnapshot **/id, NSError *))arg4;
 - (void)_XCT_startMonitoringApplicationWithBundleID:(NSString *)arg1;
 - (void)_XCT_startMonitoringApplicationWithBundleID:(NSString *)arg1 path:(NSString *)arg2;
 - (void)_XCT_terminateApplicationWithBundleID:(NSString *)arg1 completion:(void (^)(NSError *))arg2;

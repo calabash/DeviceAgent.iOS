@@ -16,7 +16,7 @@
 
 #import "XCTCapabilitiesProviding-Protocol.h"
 
-@class NSArray, NSDictionary, NSSet, XCAccessibilityElement, XCElementSnapshot, XCTTimeoutControls;
+@class NSArray, NSDictionary, NSSet, XCAccessibilityElement, XCTTimeoutControls;
 @protocol XCTElementSnapshotAttributeDataSource, XCTElementSnapshotProvider;
 
 
@@ -33,7 +33,7 @@
     XCTTimeoutControls *_timeoutControls;
     id <XCTElementSnapshotProvider> _snapshotProvider;
     id <XCTElementSnapshotAttributeDataSource> _elementSnapshotAttributeDataSource;
-    XCElementSnapshot *_rootElementSnapshot;
+    /*XCElementSnapshot **/id _rootElementSnapshot;
     CDUnknownBlockType _evaluationContext;
     NSArray *_transformers;
 }
@@ -44,7 +44,7 @@
 @property(readonly) BOOL isMacOS;
 @property(readonly) NSUInteger options;
 @property(readonly, copy) XCAccessibilityElement *rootElement;
-@property(retain) XCElementSnapshot *rootElementSnapshot;
+@property(retain) /*XCElementSnapshot **/id rootElementSnapshot;
 @property(retain) id <XCTElementSnapshotProvider> snapshotProvider;
 @property BOOL suppressAttributeKeyPathAnalysis;
 @property(retain) XCTTimeoutControls *timeoutControls;

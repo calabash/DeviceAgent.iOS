@@ -24,12 +24,12 @@
 - (void)performAccessibilityAction:(XCUIAccessibilityAction *)arg1 onElement:(XCAccessibilityElement *)arg2 value:(id)arg3 reply:(void (^)(NSError *))arg4;
 - (void)registerForAccessibilityNotification:(NSInteger)arg1 reply:(void (^)(NSNumber *, NSError *))arg2;
 - (void)requestElementAtPoint:(CGPoint)arg1 reply:(void (^)(XCAccessibilityElement *, NSError *))arg2;
-- (void)requestSnapshotForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 parameters:(NSDictionary *)arg3 reply:(void (^)(XCElementSnapshot *, NSError *))arg4;
+- (void)requestSnapshotForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 parameters:(NSDictionary *)arg3 reply:(void (^)(/*XCElementSnapshot **/id , NSError *))arg4;
 - (void)runAccessibilityAuditForElement:(XCAccessibilityElement *)arg1 withConfiguration:(XCAXAuditConfiguration *)arg2 reply:(void (^)(XCAXAuditResultCollection *, NSError *))arg3;
 - (void)setAXTimeout:(double)arg1 reply:(void (^)(NSError *))arg2;
 - (void)setAttribute:(NSString *)arg1 value:(id)arg2 element:(XCAccessibilityElement *)arg3 reply:(void (^)(BOOL, NSError *))arg4;
 - (void)setLocalizableStringsDataGatheringEnabled:(BOOL)arg1 reply:(void (^)(BOOL, NSError *))arg2;
-- (void)snapshotForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 parameters:(NSDictionary *)arg3 reply:(void (^)(XCElementSnapshot *, NSError *))arg4;
+- (void)snapshotForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 parameters:(NSDictionary *)arg3 reply:(void (^)(/*XCElementSnapshot **/id , NSError *))arg4;
 - (void)unloadAccessibility:(void (^)(BOOL, NSError *))arg1;
 - (void)unregisterForAccessibilityNotification:(NSInteger)arg1 registrationToken:(NSNumber *)arg2 reply:(void (^)(NSError *))arg3;
 @end

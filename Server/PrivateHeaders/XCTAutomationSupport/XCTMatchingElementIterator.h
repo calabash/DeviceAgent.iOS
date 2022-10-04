@@ -16,7 +16,7 @@
 
 #import "XCTMatchingElementIterator-Protocol.h"
 
-@class NSEnumerator, NSSet, NSString, XCElementSnapshot;
+@class NSEnumerator, NSSet, NSString;
 @protocol XCTElementSetTransformer;
 
 
@@ -25,15 +25,15 @@
 @interface XCTMatchingElementIterator : NSObject <XCTMatchingElementIterator>
 {
     NSEnumerator *_outputEnumerator;
-    XCElementSnapshot *_input;
+    /*XCElementSnapshot **/id _input;
     id <XCTElementSetTransformer> _transformer;
-    XCElementSnapshot *_currentMatch;
+    /*XCElementSnapshot **/id _currentMatch;
     NSSet *_currentRelatedElements;
 }
 
-@property(retain) XCElementSnapshot *currentMatch;
+@property(retain) /*XCElementSnapshot **/id currentMatch;
 @property(retain) NSSet *currentRelatedElements;
-@property(readonly) XCElementSnapshot *input;
+@property(readonly) /*XCElementSnapshot **/id input;
 @property(readonly) id <XCTElementSetTransformer> transformer;
 
 - (id)initWithInput:(id)arg1 transformer:(id)arg2;

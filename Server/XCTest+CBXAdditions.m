@@ -123,7 +123,7 @@
 
 @implementation XCUIElementQuery (CBXAdditions)
 
-- (XCElementSnapshot *)cbx_elementSnapshotForDebugDescription {
+- (/*XCElementSnapshot* */ id)cbx_elementSnapshotForDebugDescription {
   if ([self respondsToSelector:@selector(elementSnapshotForDebugDescription)]) {
     return [self elementSnapshotForDebugDescription];
   }

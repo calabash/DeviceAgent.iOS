@@ -57,7 +57,7 @@
 @end
 
 @class XCSynthesizedEventRecord;
-@class XCElementSnapshot;
+//@class XCElementSnapshot;
 
 /*
 @protocol XCTestManager_TestsInterface

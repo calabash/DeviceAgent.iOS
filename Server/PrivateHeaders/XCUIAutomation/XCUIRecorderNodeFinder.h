@@ -14,7 +14,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSMutableArray, NSSet, XCElementSnapshot, XCUIRecorderNodeFinderMatch;
+@class NSArray, NSMutableArray, NSSet, XCUIRecorderNodeFinderMatch;
 
 __attribute__((visibility("hidden")))
 @interface XCUIRecorderNodeFinder : NSObject
@@ -34,7 +34,7 @@ __attribute__((visibility("hidden")))
     NSMutableArray *_unprocessedContainsMatches;
     XCUIRecorderNodeFinderMatch *_ancestorNodeFinderMatch;
     NSUInteger _targetSnapshotIndex;
-    XCElementSnapshot *_targetSnapshot;
+    /*XCElementSnapshot **/id _targetSnapshot;
     NSUInteger _language;
     NSUInteger _platform;
 }
@@ -45,7 +45,7 @@ __attribute__((visibility("hidden")))
 @property NSUInteger language;
 @property(retain) NSMutableArray *mutableFoundNodeMatches;
 @property NSUInteger platform;
-@property(retain) XCElementSnapshot *targetSnapshot;
+@property(retain) /*XCElementSnapshot **/id targetSnapshot;
 @property NSUInteger targetSnapshotIndex;
 @property(retain) NSMutableArray *unprocessedContainsMatches;
 

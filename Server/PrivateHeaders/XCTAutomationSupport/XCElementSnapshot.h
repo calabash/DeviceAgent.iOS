@@ -21,44 +21,6 @@
 
 @protocol XCTElementSnapshotAttributeDataSource;
 
-@interface XCElementSnapshot : NSObject <NSSecureCoding, NSCopying>
-{
-    BOOL _isMainWindow;
-    BOOL _enabled;
-    BOOL _selected;
-    BOOL _hasFocus;
-    BOOL _hasKeyboardFocus;
-    BOOL _isTruncatedValue;
-    BOOL _hasPrivilegedAttributeValues;
-    NSUInteger _windowContextID;
-    NSUInteger _faultedInProperties;
-    id <XCUIElementSnapshotApplication> _application;
-    NSUInteger _generation;
-    id <XCTElementSnapshotAttributeDataSource> _dataSource;
-    NSInteger _displayID;
-    NSString *_title;
-    NSString *_label;
-    id _value;
-    NSString *_placeholderValue;
-    NSUInteger _elementType;
-    NSUInteger _traits;
-    NSString *_identifier;
-    NSInteger _verticalSizeClass;
-    NSInteger _horizontalSizeClass;
-    NSArray *_children;
-    NSDictionary *_additionalAttributes;
-    NSArray *_userTestingAttributes;
-    NSSet *_disclosedChildRowAXElements;
-    NSValue *_activationPoint;
-    NSInteger _interfaceOrientation;
-    XCAccessibilityElement *_accessibilityElement;
-    XCAccessibilityElement *_parentAccessibilityElement;
-    XCElementSnapshot *_parent;
-    XCTLocalizableStringInfo *_localizableStringInfo;
-    CGRect _frame;
-    CGRect _eventSynthesisFrame;
-}
-
 @property(readonly, copy, nonatomic) XCAccessibilityElement *accessibilityElement;
 @property(copy) NSValue *activationPoint;
 @property(copy) NSDictionary *additionalAttributes;
@@ -100,18 +62,18 @@
 @property BOOL isTruncatedValue;
 @property(copy) NSString *label;
 @property(copy) XCTLocalizableStringInfo *localizableStringInfo;
-@property(readonly) XCElementSnapshot *menu;
-@property(readonly) XCElementSnapshot *menuItem;
-@property(readonly) XCElementSnapshot *outline;
-@property __weak XCElementSnapshot *parent;
+@property(readonly) /*XCElementSnapshot **/id menu;
+@property(readonly) /*XCElementSnapshot **/id menuItem;
+@property(readonly) /*XCElementSnapshot **/id outline;
+@property __weak /*XCElementSnapshot **/id parent;
 @property(retain) XCAccessibilityElement *parentAccessibilityElement;
 @property(readonly, copy) NSString *pathDescription;
-@property(readonly, copy) XCElementSnapshot *pathFromRoot;
+@property(readonly, copy) /*XCElementSnapshot **/id pathFromRoot;
 @property(copy) NSString *placeholderValue;
 @property(readonly) NSString *recursiveDescription;
 @property(readonly) NSString *recursiveDescriptionIncludingAccessibilityElement;
-@property(readonly) XCElementSnapshot *rootElement;
-@property(readonly) XCElementSnapshot *scrollView;
+@property(readonly) /*XCElementSnapshot **/id rootElement;
+@property(readonly) /*XCElementSnapshot **/id scrollView;
 @property(copy) NSString *title;
 @property NSUInteger traits;
 @property(copy) NSArray *userTestingAttributes;
@@ -122,7 +84,7 @@
 @property(readonly, copy) NSString *truncatedValueString;
 @property(readonly) NSSet *uniqueDescendantSubframes;
 @property(readonly) CGRect visibleFrame;
-@property(readonly) XCElementSnapshot *window;
+@property(readonly) /*XCElementSnapshot **/id window;
 
 + (id)axAttributesForElementSnapshotKeyPaths:(id)arg1 isMacOS:(BOOL)arg2;
 + (id)axAttributesForFaultingPropertiesOnMacOS:(BOOL)arg1;

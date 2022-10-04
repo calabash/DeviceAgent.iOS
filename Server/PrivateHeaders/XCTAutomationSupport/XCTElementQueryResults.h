@@ -17,11 +17,11 @@
 #import "XCTCapabilitiesProviding-Protocol.h"
 #import "XCTRuntimeIssueContextReportingDelegate-Protocol.h"
 
-@class NSOrderedSet, NSSet, NSString, XCElementSnapshot;
+@class NSOrderedSet, NSSet, NSString;
 
 @interface XCTElementQueryResults : NSObject <NSSecureCoding, XCTCapabilitiesProviding, XCTRuntimeIssueContextReportingDelegate>
 {
-    XCElementSnapshot *_rootElement;
+    /*XCElementSnapshot **/id _rootElement;
     NSOrderedSet *_matchingElements;
     NSSet *_remoteElements;
     NSOrderedSet *_runtimeIssues;
@@ -31,7 +31,7 @@
 @property(readonly, copy) NSOrderedSet *matchingElements;
 @property(readonly, copy) NSString *noMatchesMessage;
 @property(readonly, copy) NSSet *remoteElements;
-@property(readonly) XCElementSnapshot *rootElement;
+@property(readonly) /*XCElementSnapshot **/id rootElement;
 @property(readonly, copy) NSOrderedSet *runtimeIssues;
 
 + (void)provideCapabilitiesToBuilder:(id)arg1;

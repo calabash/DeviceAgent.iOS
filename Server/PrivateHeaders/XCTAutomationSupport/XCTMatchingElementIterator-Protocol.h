@@ -13,10 +13,10 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@class NSSet, XCElementSnapshot;
+@class NSSet;
 @protocol XCTElementSetTransformer;
 
 @protocol XCTMatchingElementIterator <NSObject>
-- (XCElementSnapshot *)nextMatch;
+- (/*XCElementSnapshot **/id)nextMatch;
 @end
 
