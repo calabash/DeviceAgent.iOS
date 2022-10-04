@@ -9,6 +9,7 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <XCTest/XCUIElementTypes.h>
 #import "CDStructures.h"
+#import <stdatomic.h>
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
@@ -22,7 +23,7 @@
 {
     struct atomic_flag _symbolicatorInitialized;
     NSSet *_imageNames;
-    struct _CSTypeRef _symbolicator;
+    CDStruct_37ea9563 _symbolicator;
     CDStruct_37ea9563 _symbolicationFunctions;
 }
 

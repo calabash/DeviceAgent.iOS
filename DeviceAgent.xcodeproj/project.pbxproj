@@ -1406,7 +1406,6 @@
 		1B7F979A28EB4464003A6E27 /* XCTExecutionWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTExecutionWorker.h; sourceTree = "<group>"; };
 		1B7F979B28EB4464003A6E27 /* XCTExecutionExtension-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTExecutionExtension-Protocol.h"; sourceTree = "<group>"; };
 		1B7F979C28EB4464003A6E27 /* XCTestCastMethodNamesUIAutomationDelegate-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCastMethodNamesUIAutomationDelegate-Protocol.h"; sourceTree = "<group>"; };
-		1B7F979D28EB4464003A6E27 /* _XCTExceptionPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _XCTExceptionPointer.h; sourceTree = "<group>"; };
 		1B7F979E28EB4464003A6E27 /* XCTestDriverUIAutomationDelegate-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestDriverUIAutomationDelegate-Protocol.h"; sourceTree = "<group>"; };
 		1B7F979F28EB4464003A6E27 /* XCTReportingSessionConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTReportingSessionConfiguration.h; sourceTree = "<group>"; };
 		1B7F97A028EB4464003A6E27 /* XCTestCaseUIAutomationDelegate-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCaseUIAutomationDelegate-Protocol.h"; sourceTree = "<group>"; };
@@ -2205,7 +2204,6 @@
 		843A0A4F26B8DB90001CF302 /* XCTestCore */ = {
 			isa = PBXGroup;
 			children = (
-				1B7F979D28EB4464003A6E27 /* _XCTExceptionPointer.h */,
 				1B7F979928EB4464003A6E27 /* NSError-XCTTestRunSession.h */,
 				1B7F97A228EB4464003A6E27 /* XCTestCaseDiscoveryUIAutomationDelegate-Protocol.h */,
 				1B7F97A028EB4464003A6E27 /* XCTestCaseUIAutomationDelegate-Protocol.h */,
