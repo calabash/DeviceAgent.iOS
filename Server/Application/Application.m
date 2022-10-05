@@ -199,13 +199,13 @@ static Application *currentApplication;
 + (NSDictionary *)snapshotTree:(/*XCElementSnapshot **/id )snapshot {
     NSMutableDictionary *json = [[JSONUtils snapshotOrElementToJSON:snapshot] mutableCopy];
 
-    if (snapshot.children.count) {
-        NSMutableArray *children = [NSMutableArray array];
-        for (XCElementSnapshot *child in snapshot.children) {
-            [children addObject:[self snapshotTree:child]];
-        }
-        json[@"children"] = children;
-    }
+//    if (snapshot.children.count) {
+//        NSMutableArray *children = [NSMutableArray array];
+//        for (XCElementSnapshot *child in snapshot.children) {
+//            [children addObject:[self snapshotTree:child]];
+//        }
+//        json[@"children"] = children;
+//    }
     return json;
 }
 
