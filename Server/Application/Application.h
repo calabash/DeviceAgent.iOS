@@ -6,6 +6,8 @@
 #import <UIKit/UIApplication.h>
 #import "XCTest+CBXAdditions.h"
 
+#import "FBXCElementSnapshot.h"
+
 @class XCUIApplication;
 
 /**

@@ -20,6 +20,8 @@
 
 #import "CBXConstants.h"
 
+#import "FBXCElementSnapshot.h"
+
 
 @class XCUIApplication;
 @class XCApplicationQuery;
@@ -99,6 +101,6 @@ Retrieves the snapshot for the given element
 @returns The resolved snapshot
 */
 //- (XCElementSnapshot *_Nonnull)cbx_elementSnapshotForDebugDescription;
-- (id _Nonnull)cbx_elementSnapshotForDebugDescription;
+- (id<FBXCElementSnapshot> _Nonnull)cbx_elementSnapshotForDebugDescription;
 
 @end

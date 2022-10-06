@@ -97,14 +97,14 @@ static NSDictionary *typeStringToElementType;
 
 
     XCUIElementQuery *elementQuery = ((XCUIElement *)element).query;
-    id snapshot = [elementQuery cbx_elementSnapshotForDebugDescription];
+    id<FBXCElementSnapshot> snapshot = [elementQuery cbx_elementSnapshotForDebugDescription];
 
-    //TODO:!
-//
-//    // Occasionally XCUIElement with type 'Any' are not responding to the
-//    // WebDriverAgent methods.
-//    // See https://github.com/calabash/DeviceAgent.iOS/pull/255 for analysis
-//    @try {
+
+    // Occasionally XCUIElement with type 'Any' are not responding to the
+    // WebDriverAgent methods.
+    // See https://github.com/calabash/DeviceAgent.iOS/pull/255 for analysis
+    @try {
+        //TODO:!
 //        json[CBX_TYPE_KEY] = elementTypeToString[@(snapshot.elementType)];
 //        [JSONUtils setObject:snapshot.label
 //                      forKey:CBX_LABEL_KEY
@@ -133,13 +133,13 @@ static NSDictionary *typeStringToElementType;
 //        json[CBX_HITABLE_KEY] = @(result.isVisible);
 //        json[CBX_HIT_POINT_KEY] = @{@"x" : [JSONUtils normalizeFloat:result.point.x],
 //                                    @"y" : [JSONUtils normalizeFloat:result.point.y]};
-//    } @catch (NSException *exception) {
-//        DDLogError(@"Caught an exception converting '%@' with class '%@' to JSON:\n%@",
-//                   snapshot, [snapshot class], [exception reason]);
-//        DDLogError(@"returning an empty dictionary after converting this much of the"
-//                   "instance to JSON:\n%@", json);
-//        return [NSDictionary dictionary];
-//    }
+    } @catch (NSException *exception) {
+        DDLogError(@"Caught an exception converting '%@' with class '%@' to JSON:\n%@",
+                   snapshot, [snapshot class], [exception reason]);
+        DDLogError(@"returning an empty dictionary after converting this much of the"
+                   "instance to JSON:\n%@", json);
+        return [NSDictionary dictionary];
+    }
 
     return [NSDictionary dictionaryWithDictionary:json];
 }

@@ -7,7 +7,7 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import <XCTest/XCTest.h>
+//#import <XCTest/XCTest.h>
 //#import <WebDriverAgentLib/CDStructures.h>
 #import <Foundation/Foundation.h>
 
@@ -17,6 +17,10 @@
 @protocol FBXCAccessibilityElement;
 
 NS_ASSUME_NONNULL_BEGIN
+
+//@protocol XCUIElementAttributes
+//@end
+
 
 @protocol FBXCElementSnapshot <NSObject, XCUIElementAttributes>
 
