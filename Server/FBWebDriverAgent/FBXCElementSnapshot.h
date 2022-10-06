@@ -14,12 +14,25 @@
 #import "CDStructures.h"
 #import "CBX-XCTest-Umbrella.h"
 
+#if LOAD_XCTEST_PRIVATE_HEADERS == 0
+//
+//#import "XCUIElementAttributes-Protocol.h"
+//#import "XCUIApplication.h"
+
+//@protocol XCUIElementAttributes
+//@end
+
+//
+//#import <XCUIAutomation/XCUIElementAttributes-Protocol.h>
+#import <XCTest/XCTest.h>
+#import "CDStructures.h"
+
+#endif
+
 @protocol FBXCAccessibilityElement;
 
 NS_ASSUME_NONNULL_BEGIN
 
-//@protocol XCUIElementAttributes
-//@end
 
 
 @protocol FBXCElementSnapshot <NSObject, XCUIElementAttributes>
