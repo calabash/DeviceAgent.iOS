@@ -4426,7 +4426,6 @@
 				F58D28141D4F964D000FF6C0 /* Sources */,
 				F58D28151D4F964D000FF6C0 /* Frameworks */,
 				F58D28161D4F964D000FF6C0 /* Resources */,
-				47C2657B271F25E1006EF0B9 /* Run Script - Copy XCTAutomationSupport.framework to .xctest bundle */,
 				4740BCBC271FE871003792B6 /* CopyFiles */,
 			);
 			buildRules = (
@@ -4468,7 +4467,6 @@
 				F5DBC0A12101F18A00A4C274 /* Sources */,
 				F5DBC0A22101F18A00A4C274 /* Frameworks */,
 				F5DBC0A32101F18A00A4C274 /* Resources */,
-				F58A891C2153D85F00C63C31 /* Run Script - Copy XCTAutomationSupport.framework to .xctest bundle */,
 				F5DBC0B62101F24500A4C274 /* CopyFiles */,
 			);
 			buildRules = (
@@ -4763,24 +4761,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		47C2657B271F25E1006EF0B9 /* Run Script - Copy XCTAutomationSupport.framework to .xctest bundle */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script - Copy XCTAutomationSupport.framework to .xctest bundle";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "bin/xcode-build-phase/install-XCTAutomationSuppport-framework-in-unit-test-bundle.sh\n";
-		};
 		F5169CE31CFD9A2600252F52 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -4808,24 +4788,6 @@
 			shellPath = /bin/sh;
 			shellScript = "bin/xcode-build-phase/increment-build-number.sh\n";
 			showEnvVarsInLog = 0;
-		};
-		F58A891C2153D85F00C63C31 /* Run Script - Copy XCTAutomationSupport.framework to .xctest bundle */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script - Copy XCTAutomationSupport.framework to .xctest bundle";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#bin/xcode-build-phase/install-XCTAutomationSuppport-framework-in-unit-test-bundle.sh\n";
 		};
 		F5A252C21CBFFE2700C05F1F /* Run Script stage to ./Products */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -5865,10 +5827,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				OTHER_LDFLAGS = (
-					"-framework",
-					XCTAutomationSupport,
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calab.UITest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = TestApp;
@@ -5904,10 +5863,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				OTHER_LDFLAGS = (
-					"-framework",
-					XCTAutomationSupport,
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = sh.calab.UITest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = TestApp;
