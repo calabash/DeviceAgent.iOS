@@ -21,6 +21,44 @@
 
 @protocol XCTElementSnapshotAttributeDataSource;
 
+@interface XCElementSnapshot : NSObject <NSSecureCoding, NSCopying>
+{
+    BOOL _isMainWindow;
+    BOOL _enabled;
+    BOOL _selected;
+    BOOL _hasFocus;
+    BOOL _hasKeyboardFocus;
+    BOOL _isTruncatedValue;
+    BOOL _hasPrivilegedAttributeValues;
+    NSUInteger _windowContextID;
+    NSUInteger _faultedInProperties;
+    id <XCUIElementSnapshotApplication> _application;
+    NSUInteger _generation;
+    id <XCTElementSnapshotAttributeDataSource> _dataSource;
+    NSInteger _displayID;
+    NSString *_title;
+    NSString *_label;
+    id _value;
+    NSString *_placeholderValue;
+    NSUInteger _elementType;
+    NSUInteger _traits;
+    NSString *_identifier;
+    NSInteger _verticalSizeClass;
+    NSInteger _horizontalSizeClass;
+    NSArray *_children;
+    NSDictionary *_additionalAttributes;
+    NSArray *_userTestingAttributes;
+    NSSet *_disclosedChildRowAXElements;
+    NSValue *_activationPoint;
+    NSInteger _interfaceOrientation;
+    XCAccessibilityElement *_accessibilityElement;
+    XCAccessibilityElement *_parentAccessibilityElement;
+    XCElementSnapshot *_parent;
+    XCTLocalizableStringInfo *_localizableStringInfo;
+    CGRect _frame;
+    CGRect _eventSynthesisFrame;
+}
+
 @property(readonly, copy, nonatomic) XCAccessibilityElement *accessibilityElement;
 @property(copy) NSValue *activationPoint;
 @property(copy) NSDictionary *additionalAttributes;

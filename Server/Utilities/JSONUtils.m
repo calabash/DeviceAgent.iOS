@@ -37,7 +37,7 @@ static NSDictionary *typeStringToElementType;
             sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 }
 
-+(id)getValueBySelector:(id)object : (NSString*)selectorString : (Class)type {
++(NSInvocation*)getInvocation:(id)object : (NSString*)selectorString{
     SEL selector = NSSelectorFromString(selectorString);
     if ([object respondsToSelector:selector]) {
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:
@@ -46,100 +46,39 @@ static NSDictionary *typeStringToElementType;
         [invocation setTarget:object];
         [invocation invoke];
 
-        id returnValue = [[type alloc] init];
-        [invocation getReturnValue:&returnValue];
-        
-        return returnValue;
+        return invocation;
     }
     
     return nil;
 }
 
++ (CBXVisibilityResult *)visibilityResult: (XCUIHitPointResult*)hitPoint {
+    CBXVisibilityResult *cbxResult = [CBXVisibilityResult new];
+    CGPoint intermediate;
+    XCUIHitPointResult *result = hitPoint;
 
-+(id)getValueBySelector:(id)object : (NSString*)selectorString {
-    SEL selector = NSSelectorFromString(selectorString);
-    if ([object respondsToSelector:selector]) {
-        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:
-                                    [[object class] instanceMethodSignatureForSelector:selector]];
-        [invocation setSelector:selector];
-        [invocation setTarget:object];
-        [invocation invoke];
+    cbxResult.isVisible = result.isHittable;
 
-        id returnValue;
-        [invocation getReturnValue:&returnValue];
-        
-        return returnValue;
+    if (result.isHittable) {
+        intermediate = result.hitPoint;
+    } else {
+        intermediate = CGPointMake(-1, -1);
     }
-    
-    return nil;
+
+    cbxResult.point = intermediate;
+
+    DDLogDebug(@"Finding hit point for XCElementSnapshot: %@\n"
+               "hitpoint: %@\n"
+               "visible: %@\n",
+               self,
+               [NSString stringWithFormat:@"(%@, %@)", @(intermediate.x), @(intermediate.y)],
+               result.isHittable ? @"YES" : @"NO");
+
+    return cbxResult;
 }
-
-//@interface XCElementSnapshot : NSObject <NSSecureCoding, NSCopying>
-//{
-//    BOOL _isMainWindow;
-//    BOOL _enabled;
-//    BOOL _selected;
-//    BOOL _hasFocus;
-//    BOOL _hasKeyboardFocus;
-//    BOOL _isTruncatedValue;
-//    BOOL _hasPrivilegedAttributeValues;
-//    NSUInteger _windowContextID;
-//    NSUInteger _faultedInProperties;
-//    id <XCUIElementSnapshotApplication> _application;
-//    NSUInteger _generation;
-//    id <XCTElementSnapshotAttributeDataSource> _dataSource;
-//    NSInteger _displayID;
-//    NSString *_title;
-//    NSString *_label;
-//    id _value;
-//    NSString *_placeholderValue;
-//    NSUInteger _elementType;
-//    NSUInteger _traits;
-//    NSString *_identifier;
-//    NSInteger _verticalSizeClass;
-//    NSInteger _horizontalSizeClass;
-//    NSArray *_children;
-//    NSDictionary *_additionalAttributes;
-//    NSArray *_userTestingAttributes;
-//    NSSet *_disclosedChildRowAXElements;
-//    NSValue *_activationPoint;
-//    NSInteger _interfaceOrientation;
-//    XCAccessibilityElement *_accessibilityElement;
-//    XCAccessibilityElement *_parentAccessibilityElement;
-//    XCElementSnapshot *_parent;
-//    XCTLocalizableStringInfo *_localizableStringInfo;
-//    CGRect _frame;
-//    CGRect _eventSynthesisFrame;
-//}
-
-//- (CBXVisibilityResult *)visibilityResult: (CGRect)hitPoint {
-//    CBXVisibilityResult *cbxResult = [CBXVisibilityResult new];
-//    CGPoint intermediate;
-//    XCUIHitPointResult *result = hitPoint;
-//
-//    cbxResult.isVisible = result.isHittable;
-//
-//    if (result.isHittable) {
-//        intermediate = result.hitPoint;
-//    } else {
-//        intermediate = CGPointMake(-1, -1);
-//    }
-//
-//    cbxResult.point = intermediate;
-//
-//    DDLogDebug(@"Finding hit point for XCElementSnapshot: %@\n"
-//               "hitpoint: %@\n"
-//               "visible: %@\n",
-//               self,
-//               [NSString stringWithFormat:@"(%@, %@)", @(intermediate.x), @(intermediate.y)],
-//               result.isHittable ? @"YES" : @"NO");
-//
-//    return cbxResult;
-//}
 
 + (NSDictionary *)snapshotOrElementToJSON:(id)element {
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
-
 
     XCUIElementQuery *elementQuery = ((XCUIElement *)element).query;
     id<FBXCElementSnapshot> snapshot = [elementQuery cbx_elementSnapshotForDebugDescription];
@@ -148,56 +87,97 @@ static NSDictionary *typeStringToElementType;
     // WebDriverAgent methods.
     // See https://github.com/calabash/DeviceAgent.iOS/pull/255 for analysis
     @try {
-        NSNumber* elementType = [self getValueBySelector:snapshot :@"elementType" : [NSNumber class] ];
         
-        json[CBX_TYPE_KEY] = elementTypeToString[@([elementType unsignedLongValue])];
+        NSInvocation* invocation = [self getInvocation:snapshot :@"elementType"];
         
-        NSString* label = [self getValueBySelector:snapshot :@"label" : [NSString class] ];
+        unsigned long long elementType;
+        [invocation getReturnValue:&elementType];
+        json[CBX_TYPE_KEY] = elementTypeToString[@(elementType)];
+
+        NSString* label = [[NSString alloc] init];
+        invocation = [self getInvocation:snapshot :@"label"];
+        [invocation getReturnValue:&label];
         [JSONUtils setObject:label
                       forKey:CBX_LABEL_KEY
                 inDictionary:json];
-        
-        NSString* title = [self getValueBySelector:snapshot :@"title" : [NSString class] ];
+
+        NSString* title = [[NSString alloc] init];
+        invocation = [self getInvocation:snapshot :@"title"];
+        [invocation getReturnValue:&title];
         [JSONUtils setObject:title
                       forKey:CBX_TITLE_KEY
                 inDictionary:json];
-        
-        id value = [self getValueBySelector:snapshot :@"value"];
+
+        id value;
+        invocation = [self getInvocation:snapshot :@"title"];
+        [invocation getReturnValue:&value];
         [JSONUtils setObject:value
                       forKey:CBX_VALUE_KEY
                 inDictionary:json];
-        
-        NSString* placeholderValue = [self getValueBySelector:snapshot :@"placeholderValue" : [NSString class] ];
+
+        NSString* placeholderValue = [[NSString alloc] init];
+        invocation = [self getInvocation:snapshot :@"placeholderValue"];
+        [invocation getReturnValue:&placeholderValue];
         [JSONUtils setObject:placeholderValue
                       forKey:CBX_PLACEHOLDER_KEY
                 inDictionary:json];
-        
-        NSString* identifier = [self getValueBySelector:snapshot :@"identifier" : [NSString class] ];
+
+        NSString* identifier = [[NSString alloc] init];
+        invocation = [self getInvocation:snapshot :@"identifier"];
+        [invocation getReturnValue:&identifier];
         [JSONUtils setObject:identifier
                       forKey:CBX_IDENTIFIER_KEY
                 inDictionary:json];
 
-        CGRect* frame = (__bridge CGRect *)([self getValueBySelector:snapshot :@"frame"]);
-        json[CBX_RECT_KEY] = [JSONUtils rectToJSON:*frame];
-        
-        BOOL isEnabled = [self getValueBySelector:snapshot :@"enabled"];
+
+        CGRect frame;
+        invocation = [self getInvocation:snapshot :@"frame"];
+        [invocation getReturnValue:&frame];
+        json[CBX_RECT_KEY] = [JSONUtils rectToJSON:frame];
+
+        BOOL isEnabled;
+        invocation = [self getInvocation:snapshot :@"isEnabled"];
+        [invocation getReturnValue:&isEnabled];
         json[CBX_ENABLED_KEY] = @(isEnabled);
-        
-        BOOL isSelected = [self getValueBySelector:snapshot :@"selected"];
+
+        BOOL isSelected;
+        invocation = [self getInvocation:snapshot :@"isSelected"];
+        [invocation getReturnValue:&isSelected];
         json[CBX_SELECTED_KEY] = @(isSelected);
 
+
         json[CBX_HAS_FOCUS_KEY] = @(NO);
-        
-        BOOL hasKeyboardFocus = [self getValueBySelector:snapshot :@"hasKeyboardFocus"];
+
+        BOOL hasKeyboardFocus;
+        invocation = [self getInvocation:snapshot :@"hasKeyboardFocus"];
+        [invocation getReturnValue:&hasKeyboardFocus];
         json[CBX_HAS_KEYBOARD_FOCUS_KEY] = @(hasKeyboardFocus);
 
-//        //TODO:!
-////        snapshot.hitPoint
-//        CBXVisibilityResult *result = [snapshot visibilityResult];
-//
-//        json[CBX_HITABLE_KEY] = @(result.isVisible);
-//        json[CBX_HIT_POINT_KEY] = @{@"x" : [JSONUtils normalizeFloat:result.point.x],
-//                                    @"y" : [JSONUtils normalizeFloat:result.point.y]};
+
+        SEL selector = @selector(hitPoint:);
+        if ([snapshot respondsToSelector:selector]) {
+            invocation = [NSInvocation invocationWithMethodSignature:
+                          [[snapshot class] instanceMethodSignatureForSelector:selector]];
+            [invocation setSelector:selector];
+            [invocation setTarget:snapshot];
+            [invocation invoke];
+            
+            //void* lets us avoid EXC_BAD_ACCESS
+            void * tempResultSet;
+            [invocation getReturnValue:&tempResultSet];
+            XCUIHitPointResult *hitPoint = (__bridge XCUIHitPointResult *) tempResultSet;
+            CBXVisibilityResult *result = [self visibilityResult:hitPoint];
+            
+            json[CBX_HITABLE_KEY] = @(result.isVisible);
+            json[CBX_HIT_POINT_KEY] = @{@"x" : [JSONUtils normalizeFloat:result.point.x],
+                                        @"y" : [JSONUtils normalizeFloat:result.point.y]};
+        }
+        else{
+            json[CBX_HITABLE_KEY] = @(NO);
+            json[CBX_HIT_POINT_KEY] = @{@"x" : @"",
+                                        @"y" : @""};
+        }
+        
     } @catch (NSException *exception) {
         DDLogError(@"Caught an exception converting '%@' with class '%@' to JSON:\n%@",
                    snapshot, [snapshot class], [exception reason]);
