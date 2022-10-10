@@ -7,12 +7,9 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-//#import <XCTest/XCTest.h>
-//#import <WebDriverAgentLib/CDStructures.h>
-#import <Foundation/Foundation.h>
+//Taken from https://github.com/appium/WebDriverAgent
 
-#import "CDStructures.h"
-#import "CBX-XCTest-Umbrella.h"
+#import <Foundation/Foundation.h>
 
 #if LOAD_XCTEST_PRIVATE_HEADERS == 0
 

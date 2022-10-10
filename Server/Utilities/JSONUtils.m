@@ -37,61 +37,6 @@ static NSDictionary *typeStringToElementType;
             sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 }
 
-//+ (NSDictionary *)snapshotOrElementToJSON:(id)element {
-//    NSMutableDictionary *json = [NSMutableDictionary dictionary];
-//
-//    XCElementSnapshot *snapshot;
-//    if ([element isKindOfClass:[XCElementSnapshot class]]) {
-//        snapshot = element;
-//    } else {
-//        XCUIElementQuery *elementQuery = ((XCUIElement *)element).query;
-//        snapshot = [elementQuery cbx_elementSnapshotForDebugDescription];
-//    }
-//
-//
-//    // Occasionally XCUIElement with type 'Any' are not responding to the
-//    // WebDriverAgent methods.
-//    // See https://github.com/calabash/DeviceAgent.iOS/pull/255 for analysis
-//    @try {
-//        json[CBX_TYPE_KEY] = elementTypeToString[@(snapshot.elementType)];
-//        [JSONUtils setObject:snapshot.label
-//                      forKey:CBX_LABEL_KEY
-//                inDictionary:json];
-//        [JSONUtils setObject:snapshot.title
-//                      forKey:CBX_TITLE_KEY
-//                inDictionary:json];
-//        [JSONUtils setObject:snapshot.value
-//                      forKey:CBX_VALUE_KEY
-//                inDictionary:json];
-//        [JSONUtils setObject:snapshot.placeholderValue
-//                      forKey:CBX_PLACEHOLDER_KEY
-//                inDictionary:json];
-//        [JSONUtils setObject:snapshot.identifier
-//                      forKey:CBX_IDENTIFIER_KEY
-//                inDictionary:json];
-//
-//        json[CBX_RECT_KEY] = [JSONUtils rectToJSON:snapshot.frame];
-//        json[CBX_ENABLED_KEY] = @(snapshot.isEnabled);
-//        json[CBX_SELECTED_KEY] = @(snapshot.isSelected);
-//        json[CBX_HAS_FOCUS_KEY] = @(NO);
-//        json[CBX_HAS_KEYBOARD_FOCUS_KEY] = @(snapshot.hasKeyboardFocus);
-//
-//        CBXVisibilityResult *result = [snapshot visibilityResult];
-//
-//        json[CBX_HITABLE_KEY] = @(result.isVisible);
-//        json[CBX_HIT_POINT_KEY] = @{@"x" : [JSONUtils normalizeFloat:result.point.x],
-//                                    @"y" : [JSONUtils normalizeFloat:result.point.y]};
-//    } @catch (NSException *exception) {
-//        DDLogError(@"Caught an exception converting '%@' with class '%@' to JSON:\n%@",
-//                   snapshot, [snapshot class], [exception reason]);
-//        DDLogError(@"returning an empty dictionary after converting this much of the"
-//                   "instance to JSON:\n%@", json);
-//        return [NSDictionary dictionary];
-//    }
-//
-//    return [NSDictionary dictionaryWithDictionary:json];
-//}
-
 + (NSDictionary *)snapshotOrElementToJSON:(id)element {
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
 
@@ -104,7 +49,7 @@ static NSDictionary *typeStringToElementType;
     // WebDriverAgent methods.
     // See https://github.com/calabash/DeviceAgent.iOS/pull/255 for analysis
     @try {
-        //TODO:!
+        
 //        json[CBX_TYPE_KEY] = elementTypeToString[@(snapshot.elementType)];
 //        [JSONUtils setObject:snapshot.label
 //                      forKey:CBX_LABEL_KEY

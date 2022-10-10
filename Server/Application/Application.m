@@ -1,6 +1,6 @@
 
 #import "Application.h"
-//#import "CBX-XCTest-Umbrella.h"
+#import "CBX-XCTest-Umbrella.h"
 #import "XCTest+CBXAdditions.h"
 #import "Testmanagerd.h"
 #import "ThreadUtils.h"
@@ -198,7 +198,7 @@ static Application *currentApplication;
     return [Application snapshotTree:applicationSnaphot];
 }
 
-//+ (NSDictionary *)snapshotTree:(/*XCElementSnapshot **/id )snapshot {
+//+ (NSDictionary *)snapshotTree:(XCElementSnapshot *id )snapshot {
 + (NSDictionary *)snapshotTree:(id<FBXCElementSnapshot>)snapshot {
     NSMutableDictionary *json = [[JSONUtils snapshotOrElementToJSON:snapshot] mutableCopy];
 

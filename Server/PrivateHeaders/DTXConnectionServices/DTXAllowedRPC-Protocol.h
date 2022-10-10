@@ -12,8 +12,6 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-//#import <DTXConnectionServices/NSObject-Protocol.h>
-
 @protocol DTXAllowedRPC <NSObject>
 @end
 
