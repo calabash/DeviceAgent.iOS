@@ -37,42 +37,162 @@ static NSDictionary *typeStringToElementType;
             sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 }
 
++(id)getValueBySelector:(id)object : (NSString*)selectorString : (Class)type {
+    SEL selector = NSSelectorFromString(selectorString);
+    if ([object respondsToSelector:selector]) {
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:
+                                    [[object class] instanceMethodSignatureForSelector:selector]];
+        [invocation setSelector:selector];
+        [invocation setTarget:object];
+        [invocation invoke];
+
+        id returnValue = [[type alloc] init];
+        [invocation getReturnValue:&returnValue];
+        
+        return returnValue;
+    }
+    
+    return nil;
+}
+
+
++(id)getValueBySelector:(id)object : (NSString*)selectorString {
+    SEL selector = NSSelectorFromString(selectorString);
+    if ([object respondsToSelector:selector]) {
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:
+                                    [[object class] instanceMethodSignatureForSelector:selector]];
+        [invocation setSelector:selector];
+        [invocation setTarget:object];
+        [invocation invoke];
+
+        id returnValue;
+        [invocation getReturnValue:&returnValue];
+        
+        return returnValue;
+    }
+    
+    return nil;
+}
+
+//@interface XCElementSnapshot : NSObject <NSSecureCoding, NSCopying>
+//{
+//    BOOL _isMainWindow;
+//    BOOL _enabled;
+//    BOOL _selected;
+//    BOOL _hasFocus;
+//    BOOL _hasKeyboardFocus;
+//    BOOL _isTruncatedValue;
+//    BOOL _hasPrivilegedAttributeValues;
+//    NSUInteger _windowContextID;
+//    NSUInteger _faultedInProperties;
+//    id <XCUIElementSnapshotApplication> _application;
+//    NSUInteger _generation;
+//    id <XCTElementSnapshotAttributeDataSource> _dataSource;
+//    NSInteger _displayID;
+//    NSString *_title;
+//    NSString *_label;
+//    id _value;
+//    NSString *_placeholderValue;
+//    NSUInteger _elementType;
+//    NSUInteger _traits;
+//    NSString *_identifier;
+//    NSInteger _verticalSizeClass;
+//    NSInteger _horizontalSizeClass;
+//    NSArray *_children;
+//    NSDictionary *_additionalAttributes;
+//    NSArray *_userTestingAttributes;
+//    NSSet *_disclosedChildRowAXElements;
+//    NSValue *_activationPoint;
+//    NSInteger _interfaceOrientation;
+//    XCAccessibilityElement *_accessibilityElement;
+//    XCAccessibilityElement *_parentAccessibilityElement;
+//    XCElementSnapshot *_parent;
+//    XCTLocalizableStringInfo *_localizableStringInfo;
+//    CGRect _frame;
+//    CGRect _eventSynthesisFrame;
+//}
+
+//- (CBXVisibilityResult *)visibilityResult: (CGRect)hitPoint {
+//    CBXVisibilityResult *cbxResult = [CBXVisibilityResult new];
+//    CGPoint intermediate;
+//    XCUIHitPointResult *result = hitPoint;
+//
+//    cbxResult.isVisible = result.isHittable;
+//
+//    if (result.isHittable) {
+//        intermediate = result.hitPoint;
+//    } else {
+//        intermediate = CGPointMake(-1, -1);
+//    }
+//
+//    cbxResult.point = intermediate;
+//
+//    DDLogDebug(@"Finding hit point for XCElementSnapshot: %@\n"
+//               "hitpoint: %@\n"
+//               "visible: %@\n",
+//               self,
+//               [NSString stringWithFormat:@"(%@, %@)", @(intermediate.x), @(intermediate.y)],
+//               result.isHittable ? @"YES" : @"NO");
+//
+//    return cbxResult;
+//}
+
 + (NSDictionary *)snapshotOrElementToJSON:(id)element {
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
 
 
     XCUIElementQuery *elementQuery = ((XCUIElement *)element).query;
     id<FBXCElementSnapshot> snapshot = [elementQuery cbx_elementSnapshotForDebugDescription];
-
-
+    
     // Occasionally XCUIElement with type 'Any' are not responding to the
     // WebDriverAgent methods.
     // See https://github.com/calabash/DeviceAgent.iOS/pull/255 for analysis
     @try {
+        NSNumber* elementType = [self getValueBySelector:snapshot :@"elementType" : [NSNumber class] ];
         
-//        json[CBX_TYPE_KEY] = elementTypeToString[@(snapshot.elementType)];
-//        [JSONUtils setObject:snapshot.label
-//                      forKey:CBX_LABEL_KEY
-//                inDictionary:json];
-//        [JSONUtils setObject:snapshot.title
-//                      forKey:CBX_TITLE_KEY
-//                inDictionary:json];
-//        [JSONUtils setObject:snapshot.value
-//                      forKey:CBX_VALUE_KEY
-//                inDictionary:json];
-//        [JSONUtils setObject:snapshot.placeholderValue
-//                      forKey:CBX_PLACEHOLDER_KEY
-//                inDictionary:json];
-//        [JSONUtils setObject:snapshot.identifier
-//                      forKey:CBX_IDENTIFIER_KEY
-//                inDictionary:json];
-//
-//        json[CBX_RECT_KEY] = [JSONUtils rectToJSON:snapshot.frame];
-//        json[CBX_ENABLED_KEY] = @(snapshot.isEnabled);
-//        json[CBX_SELECTED_KEY] = @(snapshot.isSelected);
-//        json[CBX_HAS_FOCUS_KEY] = @(NO);
-//        json[CBX_HAS_KEYBOARD_FOCUS_KEY] = @(snapshot.hasKeyboardFocus);
-//
+        json[CBX_TYPE_KEY] = elementTypeToString[@([elementType unsignedLongValue])];
+        
+        NSString* label = [self getValueBySelector:snapshot :@"label" : [NSString class] ];
+        [JSONUtils setObject:label
+                      forKey:CBX_LABEL_KEY
+                inDictionary:json];
+        
+        NSString* title = [self getValueBySelector:snapshot :@"title" : [NSString class] ];
+        [JSONUtils setObject:title
+                      forKey:CBX_TITLE_KEY
+                inDictionary:json];
+        
+        id value = [self getValueBySelector:snapshot :@"value"];
+        [JSONUtils setObject:value
+                      forKey:CBX_VALUE_KEY
+                inDictionary:json];
+        
+        NSString* placeholderValue = [self getValueBySelector:snapshot :@"placeholderValue" : [NSString class] ];
+        [JSONUtils setObject:placeholderValue
+                      forKey:CBX_PLACEHOLDER_KEY
+                inDictionary:json];
+        
+        NSString* identifier = [self getValueBySelector:snapshot :@"identifier" : [NSString class] ];
+        [JSONUtils setObject:identifier
+                      forKey:CBX_IDENTIFIER_KEY
+                inDictionary:json];
+
+        CGRect* frame = (__bridge CGRect *)([self getValueBySelector:snapshot :@"frame"]);
+        json[CBX_RECT_KEY] = [JSONUtils rectToJSON:*frame];
+        
+        BOOL isEnabled = [self getValueBySelector:snapshot :@"enabled"];
+        json[CBX_ENABLED_KEY] = @(isEnabled);
+        
+        BOOL isSelected = [self getValueBySelector:snapshot :@"selected"];
+        json[CBX_SELECTED_KEY] = @(isSelected);
+
+        json[CBX_HAS_FOCUS_KEY] = @(NO);
+        
+        BOOL hasKeyboardFocus = [self getValueBySelector:snapshot :@"hasKeyboardFocus"];
+        json[CBX_HAS_KEYBOARD_FOCUS_KEY] = @(hasKeyboardFocus);
+
+//        //TODO:!
+////        snapshot.hitPoint
 //        CBXVisibilityResult *result = [snapshot visibilityResult];
 //
 //        json[CBX_HITABLE_KEY] = @(result.isVisible);
