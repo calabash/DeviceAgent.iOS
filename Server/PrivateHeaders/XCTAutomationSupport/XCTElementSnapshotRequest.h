@@ -26,7 +26,7 @@
     XCAccessibilityElement *_element;
     NSArray *_attributes;
     NSDictionary *_parameters;
-    XCElementSnapshot * _elementSnapshot;
+    XCElementSnapshot *_elementSnapshot;
     id <NSCopying> _accessibilitySnapshot;
     XCTTimeoutControls *_timeoutControls;
     XCAXCycleDetector *_cycleDetector;
@@ -41,7 +41,7 @@
 @property(readonly) NSArray *attributes;
 @property(retain) XCAXCycleDetector *cycleDetector;
 @property(readonly) XCAccessibilityElement *element;
-@property(retain) XCElementSnapshot * elementSnapshot;
+@property(retain) XCElementSnapshot *elementSnapshot;
 @property BOOL hasLoaded;
 @property(retain) NSError *loadError;
 @property BOOL loadResult;

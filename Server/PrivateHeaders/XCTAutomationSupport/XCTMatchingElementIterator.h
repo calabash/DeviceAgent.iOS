@@ -25,15 +25,15 @@
 @interface XCTMatchingElementIterator : NSObject <XCTMatchingElementIterator>
 {
     NSEnumerator *_outputEnumerator;
-    XCElementSnapshot * _input;
+    XCElementSnapshot *_input;
     id <XCTElementSetTransformer> _transformer;
-    XCElementSnapshot * _currentMatch;
+    XCElementSnapshot *_currentMatch;
     NSSet *_currentRelatedElements;
 }
 
-@property(retain) XCElementSnapshot * currentMatch;
+@property(retain) XCElementSnapshot *currentMatch;
 @property(retain) NSSet *currentRelatedElements;
-@property(readonly) XCElementSnapshot * input;
+@property(readonly) XCElementSnapshot *input;
 @property(readonly) id <XCTElementSetTransformer> transformer;
 
 - (id)initWithInput:(id)arg1 transformer:(id)arg2;

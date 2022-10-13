@@ -29,7 +29,7 @@
 {
     BOOL _safeQueryResolutionEnabled;
     XCUIElementQuery *_query;
-    XCElementSnapshot * _lastSnapshot;
+    XCElementSnapshot *_lastSnapshot;
 }
 
 @property(readonly, copy) XCUIElementQuery *activityIndicators;
@@ -85,7 +85,7 @@
 @property(readonly, copy) XCUIElementQuery *keyboards;
 @property(readonly, copy) XCUIElementQuery *keys;
 @property(readonly, copy) NSString *label;
-@property(retain) XCElementSnapshot * lastSnapshot;
+@property(retain) XCElementSnapshot *lastSnapshot;
 @property(readonly, copy) XCUIElementQuery *layoutAreas;
 @property(readonly, copy) XCUIElementQuery *layoutItems;
 @property(readonly, copy) XCUIElementQuery *levelIndicators;

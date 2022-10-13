@@ -34,7 +34,7 @@ __attribute__((visibility("hidden")))
     NSMutableArray *_unprocessedContainsMatches;
     XCUIRecorderNodeFinderMatch *_ancestorNodeFinderMatch;
     NSUInteger _targetSnapshotIndex;
-    XCElementSnapshot * _targetSnapshot;
+    XCElementSnapshot *_targetSnapshot;
     NSUInteger _language;
     NSUInteger _platform;
 }
@@ -45,7 +45,7 @@ __attribute__((visibility("hidden")))
 @property NSUInteger language;
 @property(retain) NSMutableArray *mutableFoundNodeMatches;
 @property NSUInteger platform;
-@property(retain) XCElementSnapshot * targetSnapshot;
+@property(retain) XCElementSnapshot *targetSnapshot;
 @property NSUInteger targetSnapshotIndex;
 @property(retain) NSMutableArray *unprocessedContainsMatches;
 

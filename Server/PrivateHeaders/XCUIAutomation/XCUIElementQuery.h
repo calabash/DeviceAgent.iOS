@@ -35,7 +35,7 @@
     NSArray *_expressedIdentifiers;
     NSOrderedSet *_lastInput;
     NSOrderedSet *_lastOutput;
-    XCElementSnapshot * _rootElementSnapshot;
+    XCElementSnapshot *_rootElementSnapshot;
     NSString *_queryDescription;
     id <XCTElementSetTransformer> _transformer;
 }
@@ -110,7 +110,7 @@
 @property(readonly, copy) XCUIElementQuery *radioGroups;
 @property(readonly, copy) XCUIElementQuery *ratingIndicators;
 @property(readonly, copy) XCUIElementQuery *relevanceIndicators;
-@property(retain) XCElementSnapshot * rootElementSnapshot;
+@property(retain) XCElementSnapshot *rootElementSnapshot;
 @property(readonly, copy) XCUIElementQuery *rulerMarkers;
 @property(readonly, copy) XCUIElementQuery *rulers;
 @property(readonly, copy) XCUIElementQuery *scrollBars;

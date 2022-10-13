@@ -41,7 +41,7 @@
     XCTFuture *_automationSessionFuture;
     NSString *_path;
     NSString *_bundleID;
-    XCElementSnapshot * _lastSnapshot;
+    XCElementSnapshot *_lastSnapshot;
     id <XCUIDevice> _device;
     id <XCUIApplicationProcessDelegate> _delegate;
 }
@@ -66,7 +66,7 @@
 @property BOOL hasCrashReport;
 @property BOOL hasExitCode;
 @property(readonly, getter=isProcessIDValid) BOOL processIDValid;
-@property(retain) XCElementSnapshot * lastSnapshot;
+@property(retain) XCElementSnapshot *lastSnapshot;
 @property(nonatomic) BOOL mayTerminateOutOfBandWithoutCrashReport;
 @property(readonly, copy, nonatomic) NSString *path;
 @property(nonatomic) NSInteger processID;
