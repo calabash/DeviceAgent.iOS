@@ -20,6 +20,7 @@
 #import "XCUIHitPointResult.h"
 #import "CBXConstants.h"
 
+#import "XCElementSnapshot.h"
 #import "FBXCElementSnapshot.h"
 
 
@@ -27,7 +28,7 @@
 @class XCApplicationQuery;
 @class XCUIElement;
 @class XCUIHitPointResult;
-//@class XCElementSnapshot;
+@class XCElementSnapshot;
 @class XCUIElementQuery;
 
 @interface XCUIApplication (CBXAdditions)
@@ -35,7 +36,7 @@
 - (UIInterfaceOrientation)interfaceOrientation;
 - (instancetype _Nonnull)initWithBundleIdentifier:(NSString *_Nonnull)arg1;
 - (NSInteger)processID;
-- (id/*XCElementSnapshot* */ _Nullable)lastSnapshot;
+- (XCElementSnapshot* _Nullable)lastSnapshot;
 - (void)resolve;
 - (NSString *_Nonnull)bundleID;
 - (XCUIApplicationState)state;
@@ -55,14 +56,14 @@
 + (id _Nullable)cbxQuery:(XCUIApplication *_Nonnull)xcuiApplication;
 
 - (XCUIElementQuery *_Nonnull)cbxQueryForDescendantsOfAnyType;
-- (id/*XCElementSnapshot* */ _Nullable)cbxXCElementSnapshot;
+- (XCElementSnapshot* _Nullable)cbxXCElementSnapshot;
 + (void)cbxResolveApplication:(XCUIApplication *_Nonnull)xcuiApplication;
 
 @end
 
 @interface XCUIElement (CBXAdditions)
 
-- (id/*XCElementSnapshot* */ _Nullable)lastSnapshot;
+- (XCElementSnapshot* _Nullable)lastSnapshot;
 - (XCUICoordinate *_Nonnull)hitPointCoordinate;
 - (XCUIElementQuery *_Nonnull)query;
 
@@ -78,29 +79,24 @@
 - (void)cbx_resolve;
 @end
 
-//@interface XCElementSnapshot (CBXAdditions)
-//
-//- (XCUIHitPointResult *_Nullable)hitPoint:(int8_t *_Nullable)arg1;
-//
-//@end
+@interface XCElementSnapshot (CBXAdditions)
+
+- (XCUIHitPointResult *_Nullable)hitPoint:(int8_t *_Nullable)arg1;
+
+@end
 
 @interface XCUIElementQuery (CBXAdditions)
 
 //// Deprecated since Xcode 11.0
-//- (XCElementSnapshot *_Nonnull)elementSnapshotForDebugDescription;
-//// Added since Xcode 11.0
-//- (XCElementSnapshot *_Nonnull)elementSnapshotForDebugDescriptionWithNoMatchesMessage:(id _Nullable *_Nullable)arg1;
-// Deprecated since Xcode 11.0
-- (id _Nonnull)elementSnapshotForDebugDescription;
+- (XCElementSnapshot *_Nonnull)elementSnapshotForDebugDescription;
 // Added since Xcode 11.0
-- (id _Nonnull)elementSnapshotForDebugDescriptionWithNoMatchesMessage:(id _Nullable *_Nullable)arg1;
+- (XCElementSnapshot *_Nonnull)elementSnapshotForDebugDescriptionWithNoMatchesMessage:(id _Nullable *_Nullable)arg1;
 
 /**
 Retrieves the snapshot for the given element
 
 @returns The resolved snapshot
 */
-//- (XCElementSnapshot *_Nonnull)cbx_elementSnapshotForDebugDescription;
-- (id<FBXCElementSnapshot> _Nonnull)cbx_elementSnapshotForDebugDescription;
+- (XCElementSnapshot *_Nonnull)cbx_elementSnapshotForDebugDescription;
 
 @end

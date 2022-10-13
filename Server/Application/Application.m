@@ -192,19 +192,18 @@ static Application *currentApplication;
 + (NSDictionary *)tree {
     XCUIApplication *application = [Application currentApplication];
     XCUIElementQuery *applicationQuery = [XCUIApplication cbxQuery:application];
-//    /*XCElementSnapshot **/id applicationSnaphot = [applicationQuery cbx_elementSnapshotForDebugDescription];
-    id<FBXCElementSnapshot> applicationSnaphot = [applicationQuery cbx_elementSnapshotForDebugDescription];
+    XCElementSnapshot * applicationSnaphot = [applicationQuery cbx_elementSnapshotForDebugDescription];
+//    id<FBXCElementSnapshot> applicationSnaphot = [applicationQuery cbx_elementSnapshotForDebugDescription];
     
     return [Application snapshotTree:applicationSnaphot];
 }
 
-//+ (NSDictionary *)snapshotTree:(XCElementSnapshot *id )snapshot {
-+ (NSDictionary *)snapshotTree:(id<FBXCElementSnapshot>)snapshot {
++ (NSDictionary *)snapshotTree:(XCElementSnapshot *)snapshot {
     NSMutableDictionary *json = [[JSONUtils snapshotOrElementToJSON:snapshot] mutableCopy];
 
     if (snapshot.children.count) {
-        NSMutableArray<id<FBXCElementSnapshot>> *children = [NSMutableArray array];
-        for (id child in snapshot.children) {
+        NSMutableArray *children = [NSMutableArray array];
+        for (XCElementSnapshot *child in snapshot.children) {
             [children addObject:[self snapshotTree:child]];
         }
         json[@"children"] = children;

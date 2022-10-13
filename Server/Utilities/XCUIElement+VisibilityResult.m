@@ -61,8 +61,9 @@
 //  self,
 //  [NSString stringWithFormat:@"(%@, %@)", @(intermediate.x), @(intermediate.y)],
 //  result.isHittable ? @"YES" : @"NO");
-//  
+//
 //  return cbxResult;
+//    return nil;
 //}
 //
 //@end

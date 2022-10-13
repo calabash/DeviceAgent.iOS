@@ -81,7 +81,7 @@ static NSDictionary *typeStringToElementType;
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
 
     XCUIElementQuery *elementQuery = ((XCUIElement *)element).query;
-    id<FBXCElementSnapshot> snapshot = [elementQuery cbx_elementSnapshotForDebugDescription];
+    XCElementSnapshot *snapshot = [elementQuery cbx_elementSnapshotForDebugDescription];
     
     // Occasionally XCUIElement with type 'Any' are not responding to the
     // WebDriverAgent methods.
