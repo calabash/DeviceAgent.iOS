@@ -109,7 +109,7 @@ static NSDictionary *typeStringToElementType;
                 inDictionary:json];
 
         id value;
-        invocation = [self getInvocation:snapshot :@"title"];
+        invocation = [self getInvocation:snapshot :@"value"];
         [invocation getReturnValue:&value];
         [JSONUtils setObject:value
                       forKey:CBX_VALUE_KEY
