@@ -18,7 +18,7 @@
 #import "XCUIElementTypeQueryProvider-Protocol.h"
 #import "XCUIElementTypeQueryProvider_Private-Protocol.h"
 
-@class NSArray, NSOrderedSet, NSSet, NSString, XCUIApplication, XCUIElement;
+@class NSArray, NSOrderedSet, NSSet, NSString, XCElementSnapshot, XCUIApplication, XCUIElement;
 @protocol XCTElementSetTransformer, XCTElementSnapshotAttributeDataSource;
 
 
@@ -35,7 +35,7 @@
     NSArray *_expressedIdentifiers;
     NSOrderedSet *_lastInput;
     NSOrderedSet *_lastOutput;
-    /*XCElementSnapshot **/id _rootElementSnapshot;
+    XCElementSnapshot * _rootElementSnapshot;
     NSString *_queryDescription;
     id <XCTElementSetTransformer> _transformer;
 }
@@ -110,7 +110,7 @@
 @property(readonly, copy) XCUIElementQuery *radioGroups;
 @property(readonly, copy) XCUIElementQuery *ratingIndicators;
 @property(readonly, copy) XCUIElementQuery *relevanceIndicators;
-@property(retain) /*XCElementSnapshot **/id rootElementSnapshot;
+@property(retain) XCElementSnapshot * rootElementSnapshot;
 @property(readonly, copy) XCUIElementQuery *rulerMarkers;
 @property(readonly, copy) XCUIElementQuery *rulers;
 @property(readonly, copy) XCUIElementQuery *scrollBars;

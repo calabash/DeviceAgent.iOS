@@ -16,7 +16,7 @@
 
 #import "XCTMatchingElementIterator-Protocol.h"
 
-@class NSEnumerator, NSSet, NSString;
+@class NSEnumerator, NSSet, NSString, XCElementSnapshot;
 @protocol XCTElementSetTransformer;
 
 

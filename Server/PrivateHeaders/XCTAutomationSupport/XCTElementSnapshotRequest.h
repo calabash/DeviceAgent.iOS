@@ -14,7 +14,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSDictionary, NSError, XCAXCycleDetector, XCAccessibilityElement, XCTAccessibilitySnapshot_iOS, XCTTimeoutControls;
+@class NSArray, NSDictionary, NSError, XCAXCycleDetector, XCAccessibilityElement, XCElementSnapshot, XCTAccessibilitySnapshot_iOS, XCTTimeoutControls;
 @protocol NSCopying, OS_dispatch_queue, XCTAccessibilityFramework, XCTMacCatalystStatusProviding;
 
 @interface XCTElementSnapshotRequest : NSObject

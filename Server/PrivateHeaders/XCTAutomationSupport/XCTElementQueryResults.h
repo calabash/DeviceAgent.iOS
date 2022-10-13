@@ -17,7 +17,7 @@
 #import "XCTCapabilitiesProviding-Protocol.h"
 #import "XCTRuntimeIssueContextReportingDelegate-Protocol.h"
 
-@class NSOrderedSet, NSSet, NSString;
+@class NSOrderedSet, NSSet, NSString, XCElementSnapshot;
 
 @interface XCTElementQueryResults : NSObject <NSSecureCoding, XCTCapabilitiesProviding, XCTRuntimeIssueContextReportingDelegate>
 {

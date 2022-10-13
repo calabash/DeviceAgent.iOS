@@ -13,9 +13,9 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@class NSArray, NSDictionary, XCAccessibilityElement, XCTTimeoutControls;
+@class NSArray, NSDictionary, XCAccessibilityElement, XCElementSnapshot, XCTTimeoutControls;
 
 @protocol XCTElementSnapshotProvider <NSObject>
-- (/*XCElementSnapshot **/id)snapshotForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 parameters:(NSDictionary *)arg3 timeoutControls:(XCTTimeoutControls *)arg4 error:(id *)arg5;
+- (XCElementSnapshot *)snapshotForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 parameters:(NSDictionary *)arg3 timeoutControls:(XCTTimeoutControls *)arg4 error:(id *)arg5;
 @end
 

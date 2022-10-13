@@ -16,7 +16,7 @@
 
 #import "XCTMatchingElementIterator-Protocol.h"
 
-@class NSMutableSet, NSSet, NSString, XCTElementIndexingTransformer;
+@class NSMutableSet, NSSet, NSString, XCElementSnapshot, XCTElementIndexingTransformer;
 @protocol XCTElementSetTransformer;
 
 __attribute__((visibility("hidden")))

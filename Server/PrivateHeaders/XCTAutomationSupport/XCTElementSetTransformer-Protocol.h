@@ -14,7 +14,7 @@
 
 #import "XCTCapabilitiesProviding-Protocol.h"
 
-@class NSOrderedSet, NSSet, NSString, XCTCapabilities;
+@class NSOrderedSet, NSSet, NSString, XCElementSnapshot, XCTCapabilities;
 @protocol XCTMatchingElementIterator;
 
 @protocol XCTElementSetTransformer <NSObject, NSCopying, XCTCapabilitiesProviding>

@@ -16,7 +16,7 @@
 
 #import "XCTCapabilitiesProviding-Protocol.h"
 
-@class NSArray, NSDictionary, NSSet, XCAccessibilityElement, XCTTimeoutControls;
+@class NSArray, NSDictionary, NSSet, XCAccessibilityElement, XCElementSnapshot, XCTTimeoutControls;
 @protocol XCTElementSnapshotAttributeDataSource, XCTElementSnapshotProvider;
 
 

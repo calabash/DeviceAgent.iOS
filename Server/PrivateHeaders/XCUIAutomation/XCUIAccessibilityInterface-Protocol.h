@@ -15,15 +15,15 @@
 #import "XCTElementSnapshotAttributeDataSource-Protocol.h"
 #import "XCUIAXNotificationHandling-Protocol.h"
 
-@class NSArray, NSDictionary, NSString, XCAXAuditConfiguration, XCAXAuditResultCollection, XCAccessibilityElement, XCTestExpectation, XCUIAccessibilityAction, XCUIApplicationProcess, XCUIElementSnapshotRequestResult;
+@class NSArray, NSDictionary, NSString, XCAXAuditConfiguration, XCAXAuditResultCollection, XCAccessibilityElement, XCElementSnapshot, XCTestExpectation, XCUIAccessibilityAction, XCUIApplicationProcess, XCUIElementSnapshotRequestResult;
 
 @protocol XCUIAccessibilityInterface <NSObject, XCUIAXNotificationHandling, XCTElementSnapshotAttributeDataSource>
 - (XCAccessibilityElement *)accessibilityElementForElementAtPoint:(CGPoint)arg1 error:(id *)arg2;
 - (id)addObserverForAXNotification:(NSString *)arg1 handler:(void (^)(XCAccessibilityElement *, NSDictionary *))arg2;
 - (BOOL)cachedAccessibilityLoadedValueForPID:(NSInteger)arg1;
 - (BOOL)enableFauxCollectionViewCells:(id *)arg1;
-- (XCAccessibilityElement *)hitTestElement:(/*XCElementSnapshot **/id)arg1 withPoint:(CGPoint)arg2 error:(id *)arg3;
-- (NSArray *)interruptingUIElementsAffectingSnapshot:(/*XCElementSnapshot **/id)arg1 checkForHandledElement:(XCAccessibilityElement *)arg2 containsHandledElement:(BOOL *)arg3;
+- (XCAccessibilityElement *)hitTestElement:(XCElementSnapshot *)arg1 withPoint:(CGPoint)arg2 error:(id *)arg3;
+- (NSArray *)interruptingUIElementsAffectingSnapshot:(XCElementSnapshot *)arg1 checkForHandledElement:(XCAccessibilityElement *)arg2 containsHandledElement:(BOOL *)arg3;
 - (BOOL)isValidElement:(XCAccessibilityElement *)arg1;
 - (BOOL)loadAccessibility:(id *)arg1;
 - (NSArray *)localizableStringsDataForActiveApplications;
