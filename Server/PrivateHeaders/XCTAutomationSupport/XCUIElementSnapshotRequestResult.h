@@ -21,11 +21,11 @@
 
 @interface XCUIElementSnapshotRequestResult : NSObject <NSSecureCoding, XCTCapabilitiesProviding, XCTRuntimeIssueContextReportingDelegate>
 {
-    /*XCElementSnapshot **/id _rootElementSnapshot;
+    XCElementSnapshot * _rootElementSnapshot;
     NSOrderedSet *_runtimeIssues;
 }
 
-@property(readonly) /*XCElementSnapshot **/id rootElementSnapshot;
+@property(readonly) XCElementSnapshot * rootElementSnapshot;
 @property(readonly, copy) NSOrderedSet *runtimeIssues;
 
 + (void)provideCapabilitiesToBuilder:(id)arg1;

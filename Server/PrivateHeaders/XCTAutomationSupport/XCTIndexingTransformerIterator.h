@@ -26,20 +26,20 @@ __attribute__((visibility("hidden")))
 @interface XCTIndexingTransformerIterator : NSObject <XCTMatchingElementIterator>
 {
     BOOL _hasMatched;
-    /*XCElementSnapshot **/id _input;
+    XCElementSnapshot * _input;
     id <XCTElementSetTransformer> _transformer;
-    /*XCElementSnapshot **/id _currentMatch;
+    XCElementSnapshot * _currentMatch;
     XCTElementIndexingTransformer *_indexingTransformer;
     NSUInteger _count;
     NSMutableSet *_mutableRelatedElements;
 }
 
 @property NSUInteger count;
-@property(retain) /*XCElementSnapshot **/id currentMatch;
+@property(retain) XCElementSnapshot * currentMatch;
 @property(readonly) NSSet *currentRelatedElements;
 @property(readonly) BOOL hasMatched;
 @property(readonly) XCTElementIndexingTransformer *indexingTransformer;
-@property(retain) /*XCElementSnapshot **/id input;
+@property(retain) XCElementSnapshot * input;
 @property(readonly) NSMutableSet *mutableRelatedElements;
 @property(readonly) id <XCTElementSetTransformer> transformer;
 

@@ -16,6 +16,6 @@
 @class NSArray, NSDictionary, XCAccessibilityElement, XCTTimeoutControls;
 
 @protocol XCTElementSnapshotProvider <NSObject>
-- (/*XCElementSnapshot **/id)snapshotForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 parameters:(NSDictionary *)arg3 timeoutControls:(XCTTimeoutControls *)arg4 error:(id *)arg5;
+- (XCElementSnapshot *)snapshotForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 parameters:(NSDictionary *)arg3 timeoutControls:(XCTTimeoutControls *)arg4 error:(id *)arg5;
 @end
 

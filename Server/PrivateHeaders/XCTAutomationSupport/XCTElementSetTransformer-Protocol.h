@@ -19,7 +19,7 @@
 
 @protocol XCTElementSetTransformer <NSObject, NSCopying, XCTCapabilitiesProviding>
 - (BOOL)canBeRemotelyEvaluatedWithCapabilities:(XCTCapabilities *)arg1;
-- (id <XCTMatchingElementIterator>)iteratorForInput:(/*XCElementSnapshot **/id)arg1;
+- (id <XCTMatchingElementIterator>)iteratorForInput:(XCElementSnapshot *)arg1;
 - (NSSet *)requiredKeyPathsOrError:(id *)arg1;
 - (NSOrderedSet *)transform:(NSOrderedSet *)arg1 relatedElements:(id *)arg2;
 @end

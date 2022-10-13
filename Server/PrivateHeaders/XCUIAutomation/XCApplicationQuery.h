@@ -14,16 +14,16 @@
 
 #import "XCUIElementQuery.h"
 
-@class XCUIApplication;
+@class XCElementSnapshot, XCUIApplication;
 
 __attribute__((visibility("hidden")))
 @interface XCApplicationQuery : XCUIElementQuery
 {
     XCUIApplication *_application;
-    /*XCElementSnapshot **/id _lastSnapshot;
+    XCElementSnapshot * _lastSnapshot;
 }
 
-@property(retain) /*XCElementSnapshot **/id lastSnapshot;
+@property(retain) XCElementSnapshot * lastSnapshot;
 
 - (id)application;
 - (id)initWithApplication:(id)arg1;

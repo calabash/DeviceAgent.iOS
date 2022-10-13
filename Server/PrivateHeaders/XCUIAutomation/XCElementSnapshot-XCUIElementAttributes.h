@@ -12,30 +12,30 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-//#import "XCElementSnapshot.h"
+#import "XCElementSnapshot.h"
 
 #import "XCUIElementAttributes-Protocol.h"
 #import "XCUIElementSnapshot-Protocol.h"
 #import "XCUIElementSnapshotCoordinateTransforms-Protocol.h"
 
-//@class NSArray, NSDictionary, NSString;
+@class NSArray, NSDictionary, NSString;
 
-//@interface XCElementSnapshot (XCUIElementAttributes) <XCUIElementAttributes, XCUIElementSnapshot, XCUIElementSnapshotCoordinateTransforms>
-//- (BOOL)_canTransformPoint:(CGPoint)arg1;
-//- (BOOL)_elementIsContainerSubviewWithMatchingFrame:(id)arg1;
-//- (id)_snapshotForAccessibilityElement:(id)arg1 error:(id *)arg2;
-//- (id)_transformParametersOrError:(id *)arg1;
-//- (id)_transformPointWithRequest:(id)arg1 error:(id *)arg2;
-//- (id)_transformRectWithRequest:(id)arg1 error:(id *)arg2;
-//- (id)hitPoint:(id *)arg1;
-//- (id)hitPointForScrolling:(id *)arg1;
-//- (id)hitTest:(CGPoint)arg1;
-//- (id)hostingAndOrientationTransformedPoint:(CGPoint)arg1 error:(id *)arg2;
-//- (id)hostingAndOrientationTransformedRect:(CGRect)arg1 error:(id *)arg2;
-//- (id)point:(CGPoint)arg1 transformedForEventSynthesisFromOrientation:(NSInteger)arg2 error:(id *)arg3;
-//- (id)reparentedOrphanElementMatchingAccessibilityElement:(id)arg1 inconsistentRelationshipDescriptions:(id *)arg2 error:(id *)arg3;
-//- (id)snapshotFetchingIfNeededIntoTreeForAccessibilityElement:(id)arg1 error:(id *)arg2;
-//- (id)userOrientationTransformedEventSynthesisRect:(CGRect)arg1 error:(id *)arg2;
-//
-//@end
+@interface XCElementSnapshot (XCUIElementAttributes) <XCUIElementAttributes, XCUIElementSnapshot, XCUIElementSnapshotCoordinateTransforms>
+- (BOOL)_canTransformPoint:(CGPoint)arg1;
+- (BOOL)_elementIsContainerSubviewWithMatchingFrame:(id)arg1;
+- (id)_snapshotForAccessibilityElement:(id)arg1 error:(id *)arg2;
+- (id)_transformParametersOrError:(id *)arg1;
+- (id)_transformPointWithRequest:(id)arg1 error:(id *)arg2;
+- (id)_transformRectWithRequest:(id)arg1 error:(id *)arg2;
+- (id)hitPoint:(id *)arg1;
+- (id)hitPointForScrolling:(id *)arg1;
+- (id)hitTest:(CGPoint)arg1;
+- (id)hostingAndOrientationTransformedPoint:(CGPoint)arg1 error:(id *)arg2;
+- (id)hostingAndOrientationTransformedRect:(CGRect)arg1 error:(id *)arg2;
+- (id)point:(CGPoint)arg1 transformedForEventSynthesisFromOrientation:(NSInteger)arg2 error:(id *)arg3;
+- (id)reparentedOrphanElementMatchingAccessibilityElement:(id)arg1 inconsistentRelationshipDescriptions:(id *)arg2 error:(id *)arg3;
+- (id)snapshotFetchingIfNeededIntoTreeForAccessibilityElement:(id)arg1 error:(id *)arg2;
+- (id)userOrientationTransformedEventSynthesisRect:(CGRect)arg1 error:(id *)arg2;
+
+@end
 

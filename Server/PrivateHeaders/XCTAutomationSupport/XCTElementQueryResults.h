@@ -21,7 +21,7 @@
 
 @interface XCTElementQueryResults : NSObject <NSSecureCoding, XCTCapabilitiesProviding, XCTRuntimeIssueContextReportingDelegate>
 {
-    /*XCElementSnapshot **/id _rootElement;
+    XCElementSnapshot * _rootElement;
     NSOrderedSet *_matchingElements;
     NSSet *_remoteElements;
     NSOrderedSet *_runtimeIssues;
@@ -31,7 +31,7 @@
 @property(readonly, copy) NSOrderedSet *matchingElements;
 @property(readonly, copy) NSString *noMatchesMessage;
 @property(readonly, copy) NSSet *remoteElements;
-@property(readonly) /*XCElementSnapshot **/id rootElement;
+@property(readonly) XCElementSnapshot * rootElement;
 @property(readonly, copy) NSOrderedSet *runtimeIssues;
 
 + (void)provideCapabilitiesToBuilder:(id)arg1;

@@ -17,6 +17,6 @@
 @protocol XCTElementSetTransformer;
 
 @protocol XCTMatchingElementIterator <NSObject>
-- (/*XCElementSnapshot **/id)nextMatch;
+- (XCElementSnapshot *)nextMatch;
 @end
 
