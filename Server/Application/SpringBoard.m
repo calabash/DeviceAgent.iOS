@@ -13,7 +13,6 @@
 #import "Application.h"
 #import "SpringBoardAlert.h"
 #import "SpringBoardAlerts.h"
-//#import "XCElementSnapshot.h"
 #import "GestureFactory.h"
 #import "CBXException.h"
 #import <UIKit/UIKit.h>

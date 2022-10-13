@@ -17,7 +17,7 @@
 #import "XCTElementSnapshotAttributeDataSource-Protocol.h"
 #import "XCUIIssueDiagnosticsProviding-Protocol.h"
 
-@class NSString, XCAccessibilityElement, XCTFuture;
+@class NSString, XCAccessibilityElement, XCElementSnapshot, XCTFuture;
 @protocol OS_dispatch_queue, XCTRunnerAutomationSession, XCUIApplicationProcessDelegate, XCUIDevice;
 
 

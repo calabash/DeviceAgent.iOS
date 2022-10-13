@@ -37,21 +37,6 @@ static NSDictionary *typeStringToElementType;
             sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 }
 
-+(NSInvocation*)getInvocation:(id)object : (NSString*)selectorString{
-    SEL selector = NSSelectorFromString(selectorString);
-    if ([object respondsToSelector:selector]) {
-        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:
-                                    [[object class] instanceMethodSignatureForSelector:selector]];
-        [invocation setSelector:selector];
-        [invocation setTarget:object];
-        [invocation invoke];
-
-        return invocation;
-    }
-    
-    return nil;
-}
-
 + (CBXVisibilityResult *)visibilityResult: (XCUIHitPointResult*)hitPoint {
     CBXVisibilityResult *cbxResult = [CBXVisibilityResult new];
     CGPoint intermediate;
@@ -80,103 +65,49 @@ static NSDictionary *typeStringToElementType;
 + (NSDictionary *)snapshotOrElementToJSON:(id)element {
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
 
-    XCUIElementQuery *elementQuery = ((XCUIElement *)element).query;
-    XCElementSnapshot *snapshot = [elementQuery cbx_elementSnapshotForDebugDescription];
-    
+    XCElementSnapshot *snapshot;
+    if ([element isKindOfClass:[snapshot class]]) {
+        snapshot = element;
+    } else {
+        XCUIElementQuery *elementQuery = ((XCUIElement *)element).query;
+        snapshot = [elementQuery cbx_elementSnapshotForDebugDescription];
+    }
+
+
     // Occasionally XCUIElement with type 'Any' are not responding to the
     // WebDriverAgent methods.
     // See https://github.com/calabash/DeviceAgent.iOS/pull/255 for analysis
     @try {
-        
-        NSInvocation* invocation = [self getInvocation:snapshot :@"elementType"];
-        
-        unsigned long long elementType;
-        [invocation getReturnValue:&elementType];
-        json[CBX_TYPE_KEY] = elementTypeToString[@(elementType)];
-
-        NSString* label = [[NSString alloc] init];
-        invocation = [self getInvocation:snapshot :@"label"];
-        [invocation getReturnValue:&label];
-        [JSONUtils setObject:label
+        json[CBX_TYPE_KEY] = elementTypeToString[@(snapshot.elementType)];
+        [JSONUtils setObject:snapshot.label
                       forKey:CBX_LABEL_KEY
                 inDictionary:json];
-
-        NSString* title = [[NSString alloc] init];
-        invocation = [self getInvocation:snapshot :@"title"];
-        [invocation getReturnValue:&title];
-        [JSONUtils setObject:title
+        [JSONUtils setObject:snapshot.title
                       forKey:CBX_TITLE_KEY
                 inDictionary:json];
-
-        id value;
-        invocation = [self getInvocation:snapshot :@"value"];
-        [invocation getReturnValue:&value];
-        [JSONUtils setObject:value
+        [JSONUtils setObject:snapshot.value
                       forKey:CBX_VALUE_KEY
                 inDictionary:json];
-
-        NSString* placeholderValue = [[NSString alloc] init];
-        invocation = [self getInvocation:snapshot :@"placeholderValue"];
-        [invocation getReturnValue:&placeholderValue];
-        [JSONUtils setObject:placeholderValue
+        [JSONUtils setObject:snapshot.placeholderValue
                       forKey:CBX_PLACEHOLDER_KEY
                 inDictionary:json];
-
-        NSString* identifier = [[NSString alloc] init];
-        invocation = [self getInvocation:snapshot :@"identifier"];
-        [invocation getReturnValue:&identifier];
-        [JSONUtils setObject:identifier
+        [JSONUtils setObject:snapshot.identifier
                       forKey:CBX_IDENTIFIER_KEY
                 inDictionary:json];
 
-
-        CGRect frame;
-        invocation = [self getInvocation:snapshot :@"frame"];
-        [invocation getReturnValue:&frame];
-        json[CBX_RECT_KEY] = [JSONUtils rectToJSON:frame];
-
-        BOOL isEnabled;
-        invocation = [self getInvocation:snapshot :@"isEnabled"];
-        [invocation getReturnValue:&isEnabled];
-        json[CBX_ENABLED_KEY] = @(isEnabled);
-
-        BOOL isSelected;
-        invocation = [self getInvocation:snapshot :@"isSelected"];
-        [invocation getReturnValue:&isSelected];
-        json[CBX_SELECTED_KEY] = @(isSelected);
-
-
+        json[CBX_RECT_KEY] = [JSONUtils rectToJSON:snapshot.frame];
+        json[CBX_ENABLED_KEY] = @(snapshot.isEnabled);
+        json[CBX_SELECTED_KEY] = @(snapshot.isSelected);
         json[CBX_HAS_FOCUS_KEY] = @(NO);
-
-        BOOL hasKeyboardFocus;
-        invocation = [self getInvocation:snapshot :@"hasKeyboardFocus"];
-        [invocation getReturnValue:&hasKeyboardFocus];
-        json[CBX_HAS_KEYBOARD_FOCUS_KEY] = @(hasKeyboardFocus);
+        json[CBX_HAS_KEYBOARD_FOCUS_KEY] = @(snapshot.hasKeyboardFocus);
 
 
-        SEL selector = @selector(hitPoint:);
-        if ([snapshot respondsToSelector:selector]) {
-            invocation = [NSInvocation invocationWithMethodSignature:
-                          [[snapshot class] instanceMethodSignatureForSelector:selector]];
-            [invocation setSelector:selector];
-            [invocation setTarget:snapshot];
-            [invocation invoke];
-            
-            //void* lets us avoid EXC_BAD_ACCESS
-            void * tempResultSet;
-            [invocation getReturnValue:&tempResultSet];
-            XCUIHitPointResult *hitPoint = (__bridge XCUIHitPointResult *) tempResultSet;
-            CBXVisibilityResult *result = [self visibilityResult:hitPoint];
-            
-            json[CBX_HITABLE_KEY] = @(result.isVisible);
-            json[CBX_HIT_POINT_KEY] = @{@"x" : [JSONUtils normalizeFloat:result.point.x],
-                                        @"y" : [JSONUtils normalizeFloat:result.point.y]};
-        }
-        else{
-            json[CBX_HITABLE_KEY] = @(NO);
-            json[CBX_HIT_POINT_KEY] = @{@"x" : @"",
-                                        @"y" : @""};
-        }
+        XCUIHitPointResult *hitPoint = [snapshot hitPoint:NULL];
+        CBXVisibilityResult *result = [self visibilityResult:hitPoint];
+        
+        json[CBX_HITABLE_KEY] = @(result.isVisible);
+        json[CBX_HIT_POINT_KEY] = @{@"x" : [JSONUtils normalizeFloat:result.point.x],
+                                    @"y" : [JSONUtils normalizeFloat:result.point.y]};
         
     } @catch (NSException *exception) {
         DDLogError(@"Caught an exception converting '%@' with class '%@' to JSON:\n%@",

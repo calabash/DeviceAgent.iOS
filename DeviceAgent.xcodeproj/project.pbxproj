@@ -46,22 +46,12 @@
 
 /* Begin PBXBuildFile section */
 		0AA3924F23279A68000E799B /* SpringBoardAlertsCurrentLanguageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA3924D23279A68000E799B /* SpringBoardAlertsCurrentLanguageTests.m */; };
-		1B9DD47228ED969300F1AAB2 /* FBXCElementSnapshot.m in Headers */ = {isa = PBXBuildFile; fileRef = 1B9DD46C28ED955000F1AAB2 /* FBXCElementSnapshot.m */; };
-		1B9DD47328ED969300F1AAB2 /* FBXCElementSnapshotWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B9DD46B28ED955000F1AAB2 /* FBXCElementSnapshotWrapper.h */; };
-		1B9DD47428ED969300F1AAB2 /* FBXCElementSnapshotWrapper.m in Headers */ = {isa = PBXBuildFile; fileRef = 1B9DD46A28ED955000F1AAB2 /* FBXCElementSnapshotWrapper.m */; };
-		1B9DD47528ED9FEC00F1AAB2 /* FBXCElementSnapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9DD46C28ED955000F1AAB2 /* FBXCElementSnapshot.m */; };
-		1B9DD47628ED9FF900F1AAB2 /* FBXCElementSnapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9DD46C28ED955000F1AAB2 /* FBXCElementSnapshot.m */; };
-		1B9DD47728EDA00700F1AAB2 /* FBXCElementSnapshotWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9DD46A28ED955000F1AAB2 /* FBXCElementSnapshotWrapper.m */; };
-		1B9DD47828EDA00800F1AAB2 /* FBXCElementSnapshotWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9DD46A28ED955000F1AAB2 /* FBXCElementSnapshotWrapper.m */; };
 		1B9DD53928EDE01D00F1AAB2 /* XCUIApplicationStateTypedef.h in Headers */ = {isa = PBXBuildFile; fileRef = F53BECCC210211420016C035 /* XCUIApplicationStateTypedef.h */; };
 		1B9DD53D28EEAD7200F1AAB2 /* CDStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = F54C01DC2043F0EF00FD8DDE /* CDStructures.h */; };
 		1B9DD53E28EEAD7F00F1AAB2 /* CDStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = F54C01DC2043F0EF00FD8DDE /* CDStructures.h */; };
 		1B9DD53F28EEAD9900F1AAB2 /* CDStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = F54C01DC2043F0EF00FD8DDE /* CDStructures.h */; };
 		1B9DD54028EEAD9B00F1AAB2 /* CDStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = F54C01DC2043F0EF00FD8DDE /* CDStructures.h */; };
 		1B9DD54128EEAE2300F1AAB2 /* XCTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B0C26B8DB90001CF302 /* XCTest.h */; };
-		1B9DD54228EEAE6F00F1AAB2 /* FBXCElementSnapshotWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B9DD46B28ED955000F1AAB2 /* FBXCElementSnapshotWrapper.h */; };
-		1B9DD54328EEAE7000F1AAB2 /* FBXCElementSnapshotWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B9DD46B28ED955000F1AAB2 /* FBXCElementSnapshotWrapper.h */; };
-		1B9DD54428EEAE7900F1AAB2 /* FBXCElementSnapshotWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9DD46A28ED955000F1AAB2 /* FBXCElementSnapshotWrapper.m */; };
 		1B9DD54528EEAE7E00F1AAB2 /* UIDevice+Wifi_IP.h in Headers */ = {isa = PBXBuildFile; fileRef = F5DBC09C2101EEE900A4C274 /* UIDevice+Wifi_IP.h */; };
 		1B9DD54628EEAE7F00F1AAB2 /* UIDevice+Wifi_IP.h in Headers */ = {isa = PBXBuildFile; fileRef = F5DBC09C2101EEE900A4C274 /* UIDevice+Wifi_IP.h */; };
 		1B9DD54728EEAE8000F1AAB2 /* UIDevice+Wifi_IP.h in Headers */ = {isa = PBXBuildFile; fileRef = F5DBC09C2101EEE900A4C274 /* UIDevice+Wifi_IP.h */; };
@@ -1391,10 +1381,6 @@
 		1B7F97A228EB4464003A6E27 /* XCTestCaseDiscoveryUIAutomationDelegate-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCaseDiscoveryUIAutomationDelegate-Protocol.h"; sourceTree = "<group>"; };
 		1B7F97A328EB4464003A6E27 /* XCTTestRunSessionProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTTestRunSessionProvider.h; sourceTree = "<group>"; };
 		1B7F97A428EB4465003A6E27 /* XCTExtensionProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTExtensionProvider.h; sourceTree = "<group>"; };
-		1B9DD46A28ED955000F1AAB2 /* FBXCElementSnapshotWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBXCElementSnapshotWrapper.m; sourceTree = "<group>"; };
-		1B9DD46B28ED955000F1AAB2 /* FBXCElementSnapshotWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBXCElementSnapshotWrapper.h; sourceTree = "<group>"; };
-		1B9DD46C28ED955000F1AAB2 /* FBXCElementSnapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBXCElementSnapshot.m; sourceTree = "<group>"; };
-		1B9DD46D28ED955000F1AAB2 /* FBXCElementSnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBXCElementSnapshot.h; sourceTree = "<group>"; };
 		1B9DD48228EDBE3C00F1AAB2 /* XCAXAuditResultCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCAXAuditResultCollection.h; sourceTree = "<group>"; };
 		1B9DD48328EDBE3C00F1AAB2 /* XCTElementIndexingTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTElementIndexingTransformer.h; sourceTree = "<group>"; };
 		1B9DD48428EDBE3C00F1AAB2 /* XCTTimeoutControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTTimeoutControls.h; sourceTree = "<group>"; };
@@ -2812,10 +2798,6 @@
 			isa = PBXGroup;
 			children = (
 				1B9DD55C28EF388A00F1AAB2 /* FBElement.h */,
-				1B9DD46D28ED955000F1AAB2 /* FBXCElementSnapshot.h */,
-				1B9DD46C28ED955000F1AAB2 /* FBXCElementSnapshot.m */,
-				1B9DD46B28ED955000F1AAB2 /* FBXCElementSnapshotWrapper.h */,
-				1B9DD46A28ED955000F1AAB2 /* FBXCElementSnapshotWrapper.m */,
 				F5DBC09C2101EEE900A4C274 /* UIDevice+Wifi_IP.h */,
 				F5DBC09D2101EEE900A4C274 /* UIDevice+Wifi_IP.m */,
 			);
@@ -3751,7 +3733,6 @@
 				843A0C1926B8DB91001CF302 /* XCTApplicationBundleInfo.h in Headers */,
 				843A0C2126B8DB91001CF302 /* XCTMessagingRole_PerformanceMeasurementReporting-Protocol.h in Headers */,
 				843A0BF726B8DB91001CF302 /* XCTMessagingRole_ProtectedResourceAuthorization-Protocol.h in Headers */,
-				1B9DD54228EEAE6F00F1AAB2 /* FBXCElementSnapshotWrapper.h in Headers */,
 				843A0C7F26B8DB92001CF302 /* XCTMetric_Private-Protocol.h in Headers */,
 				843A0D8926B8DB93001CF302 /* XCDebugLogDelegate-Protocol.h in Headers */,
 				843A0D4F26B8DB92001CF302 /* XCTMessagingRole_TestReporting_Legacy-Protocol.h in Headers */,
@@ -3979,7 +3960,6 @@
 				47C26463271F1902006EF0B9 /* _XCTestObservationInternal-Protocol.h in Headers */,
 				47C2645C271F1902006EF0B9 /* _XCTSkipFailureException.h in Headers */,
 				47C264FD271F1926006EF0B9 /* XCTRepetitionPolicy.h in Headers */,
-				1B9DD54328EEAE7000F1AAB2 /* FBXCElementSnapshotWrapper.h in Headers */,
 				47C264D3271F1926006EF0B9 /* XCTMessagingChannel_RunnerToDaemon-Protocol.h in Headers */,
 				47C26540271F1926006EF0B9 /* XCTMessagingRole_ControlSessionInitiation-Protocol.h in Headers */,
 				47C2642B271F1896006EF0B9 /* XCTMessagingRole_UIAutomationEventReporting-Protocol.h in Headers */,
@@ -4028,9 +4008,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B9DD47228ED969300F1AAB2 /* FBXCElementSnapshot.m in Headers */,
-				1B9DD47328ED969300F1AAB2 /* FBXCElementSnapshotWrapper.h in Headers */,
-				1B9DD47428ED969300F1AAB2 /* FBXCElementSnapshotWrapper.m in Headers */,
 				843A0D5C26B8DB92001CF302 /* XCTSerializedTransportWrapper.h in Headers */,
 				843A0D1E26B8DB92001CF302 /* XCTOutOfProcessSymbolicationService.h in Headers */,
 				3B5444E52498241500532AE0 /* QuerySpecifierByDescendantType.h in Headers */,
@@ -4950,7 +4927,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B9DD47828EDA00800F1AAB2 /* FBXCElementSnapshotWrapper.m in Sources */,
 				DD6401DF284011AF008CD3F5 /* XCTest+CBXAdditions.m in Sources */,
 				DD6401DE28400F36008CD3F5 /* SpringBoardAlert.m in Sources */,
 				DD6401DD28400F17008CD3F5 /* CBXMachClock.m in Sources */,
@@ -5005,7 +4981,6 @@
 				47A379432720047500214051 /* HTTPServer.m in Sources */,
 				47C26579271F2460006EF0B9 /* XCUIElement+VisibilityResult.m in Sources */,
 				4740BCE527200352003792B6 /* GeometryUtils.m in Sources */,
-				1B9DD47528ED9FEC00F1AAB2 /* FBXCElementSnapshot.m in Sources */,
 				4740BCDC2720033B003792B6 /* CBXRoute.m in Sources */,
 				4740BCD92720032D003792B6 /* CBLSApplicationWorkspace.m in Sources */,
 				47C26568271F21F1006EF0B9 /* ThreadUtils.m in Sources */,
@@ -5057,7 +5032,6 @@
 				47C26574271F23B6006EF0B9 /* ActionConfiguration.m in Sources */,
 				4740BCCE272002DC003792B6 /* QuerySpecifierByDescendantType.m in Sources */,
 				4740BCC8272002CE003792B6 /* QuerySpecifierByIndex.m in Sources */,
-				1B9DD54428EEAE7900F1AAB2 /* FBXCElementSnapshotWrapper.m in Sources */,
 				47C26564271F2153006EF0B9 /* CBXException.m in Sources */,
 				47A37949272004BA00214051 /* HTTPDynamicFileResponse.m in Sources */,
 				47C26571271F22D0006EF0B9 /* SpringBoard.m in Sources */,
@@ -5177,7 +5151,6 @@
 				F5061A3D2153B0FF00B85792 /* CBXUITestServerTest.m in Sources */,
 				F5061A932153B19900B85792 /* EnterText.m in Sources */,
 				F5061A7F2153B19900B85792 /* QuerySpecifierByIndex.m in Sources */,
-				1B9DD47728EDA00700F1AAB2 /* FBXCElementSnapshotWrapper.m in Sources */,
 				F5061A812153B19900B85792 /* QuerySpecifierByPropertyLike.m in Sources */,
 				F5061A592153B14400B85792 /* ThreadUtils.m in Sources */,
 				F5061A422153B0FF00B85792 /* QueryConfigurationFactoryTests.m in Sources */,
@@ -5206,7 +5179,6 @@
 				F5061A9E2153B4EF00B85792 /* HTTPMessage.m in Sources */,
 				F5061A732153B19900B85792 /* CBXCUITestServer.m in Sources */,
 				F5061A892153B19900B85792 /* QueryConfiguration.m in Sources */,
-				1B9DD47628ED9FF900F1AAB2 /* FBXCElementSnapshot.m in Sources */,
 				F5061A832153B19900B85792 /* QuerySpecifierByTextLike.m in Sources */,
 				F5061A622153B14400B85792 /* CBXOrientation.m in Sources */,
 				F5061A702153B15E00B85792 /* UndefinedRoutes.m in Sources */,

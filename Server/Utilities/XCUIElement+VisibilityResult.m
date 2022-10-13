@@ -3,7 +3,6 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import "CBX-XCTest-Umbrella.h"
-//#import "XCElementSnapshot.h"
 #import "XCAXClient_iOS.h"
 #import "XCUIHitPointResult.h"
 #import "CBXConstants.h"
@@ -37,7 +36,7 @@
 @end
 
 #pragma mark - XCElementSnapshot
-
+//
 //@implementation XCElementSnapshot (VisibilityResult)
 //
 //- (CBXVisibilityResult *)visibilityResult {

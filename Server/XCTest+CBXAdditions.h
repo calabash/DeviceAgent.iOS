@@ -21,7 +21,6 @@
 #import "CBXConstants.h"
 
 #import "XCElementSnapshot.h"
-#import "FBXCElementSnapshot.h"
 
 
 @class XCUIApplication;
