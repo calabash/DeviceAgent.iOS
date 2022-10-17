@@ -200,7 +200,7 @@
 #import "XCTestCore/_XCTTestIdentifier_SingleContainer.h"
 #import "XCTestCore/_XCTestCaseInterruptionException.h"
 #import "XCTestCore/_XCTestObservationInternal-Protocol.h"
-#import "XCTestCore/_XCTestObservationPrivate-Protocol.h"rr
+#import "XCTestCore/_XCTestObservationPrivate-Protocol.h"
 #import "XCUIAutomation/NSError-XCUIApplicationProcess.h"
 #import "XCUIAutomation/XCAXClient_iOS.h"
 #import "XCUIAutomation/XCActivityRecord-UITesting.h"
