@@ -65,8 +65,13 @@ static NSDictionary *typeStringToElementType;
 + (NSDictionary *)snapshotOrElementToJSON:(id)element {
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
 
+    
     XCElementSnapshot *snapshot;
-    if ([element isKindOfClass:[snapshot class]]) {
+    
+    //after Xcode 14 [XCElementSnapshot class] can't be get and this is the only way to compare classes
+    Class targetClass = NSClassFromString(@"XCElementSnapshot");
+    
+    if ([element isKindOfClass:targetClass]) {
         snapshot = element;
     } else {
         XCUIElementQuery *elementQuery = ((XCUIElement *)element).query;
