@@ -68,7 +68,7 @@ static NSDictionary *typeStringToElementType;
     
     XCElementSnapshot *snapshot;
     
-    //after Xcode 14 [XCElementSnapshot class] can't be get and this is the only way to compare classes
+    //In Xcode 14 [XCElementSnapshot class] is not available, so this is the only way to compare classes.
     Class targetClass = NSClassFromString(@"XCElementSnapshot");
     
     if ([element isKindOfClass:targetClass]) {
