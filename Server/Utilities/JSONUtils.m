@@ -113,7 +113,6 @@ static NSDictionary *typeStringToElementType;
         json[CBX_HITABLE_KEY] = @(result.isVisible);
         json[CBX_HIT_POINT_KEY] = @{@"x" : [JSONUtils normalizeFloat:result.point.x],
                                     @"y" : [JSONUtils normalizeFloat:result.point.y]};
-        
     } @catch (NSException *exception) {
         DDLogError(@"Caught an exception converting '%@' with class '%@' to JSON:\n%@",
                    snapshot, [snapshot class], [exception reason]);
