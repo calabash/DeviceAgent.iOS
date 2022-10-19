@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+#NOT USED ANYMORE SINCE XCODE 14
+
 source "bin/log.sh"
 source "bin/ditto.sh"
 

@@ -16,17 +16,16 @@
 
 #import "XCDebugLogDelegate-Protocol.h"
 #import "XCTMessagingChannel_IDEToRunner-Protocol.h"
-#import "XCTTestRunSessionDelegate-Protocol.h"
 #import "XCUIXcodeApplicationManaging-Protocol.h"
 #import "_XCTestObservationInternal-Protocol.h"
 
 @class DTXConnection, NSString, XCTCapabilities, XCTFuture, XCTPromise, XCTestRun;
-@protocol OS_dispatch_queue, NSObject, XCTRunnerIDESessionDelegate, XCUIApplicationMonitor, XCTMessagingChannel_RunnerToIDE;
+@protocol OS_dispatch_queue, XCTMessagingChannel_RunnerToIDE, NSObject, XCTRunnerIDESessionDelegate, XCUIApplicationMonitor;
 
 
 @protocol XCTRunnerIDESessionDelegate;
 
-@interface XCTRunnerIDESession : NSObject <_XCTestObservationInternal, XCTMessagingChannel_IDEToRunner, XCTTestRunSessionDelegate, XCUIXcodeApplicationManaging, XCDebugLogDelegate>
+@interface XCTRunnerIDESession : NSObject <_XCTestObservationInternal, XCTMessagingChannel_IDEToRunner, XCUIXcodeApplicationManaging, XCDebugLogDelegate>
 {
     XCTCapabilities *_IDECapabilities;
     XCTFuture *_readyForTestingFuture;
@@ -43,8 +42,8 @@
 }
 
 @property(retain) XCTCapabilities *IDECapabilities;
-@property(retain) DTXConnection *IDEConnection;
-@property(retain) id <XCTMessagingChannel_RunnerToIDE, NSObject> IDEProxy;
+@property(readonly) DTXConnection *IDEConnection;
+@property(readonly) id <XCTMessagingChannel_RunnerToIDE, NSObject> IDEProxy;
 @property(readonly) XCTFuture *IDEProxyFuture;
 @property __weak id <XCUIApplicationMonitor> applicationMonitor;
 @property(retain) XCTestRun *currentTestRun;
@@ -79,6 +78,9 @@
 - (void)launchProcessWithPath:(id)arg1 bundleID:(id)arg2 arguments:(id)arg3 environmentVariables:(id)arg4 completion:(CDUnknownBlockType)arg5;
 - (void)logDebugMessage:(id)arg1;
 - (void)reportBootstrappingFailure:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)reportDidBeginExecutingTestPlan;
+- (void)reportDidFinishExecutingTestPlanWithCompletion:(CDUnknownBlockType)arg1;
+- (void)reportInitializationForUITestingFinishedWithError:(id)arg1;
 - (void)reportSelfDiagnosisIssue:(id)arg1 description:(id)arg2;
 - (void)reportStallOnMainThreadInTestCase:(id)arg1 file:(id)arg2 line:(NSUInteger)arg3;
 - (void)reportTestWithIdentifier:(id)arg1 didExceedExecutionTimeAllowance:(double)arg2;
@@ -92,10 +94,6 @@
 - (void)testCaseDidFinish:(id)arg1;
 - (void)testCasePlaceholder:(id)arg1 isUnavailableWithReason:(id)arg2;
 - (void)testCaseWillStart:(id)arg1;
-- (void)testRunSession:(id)arg1 initializationForUITestingDidFailWithError:(id)arg2;
-- (void)testRunSessionDidBeginExecutingTestPlan:(id)arg1;
-- (void)testRunSessionDidBeginInitializingForUITesting:(id)arg1;
-- (void)testRunSessionDidFinishExecutingTestPlan:(id)arg1 reply:(CDUnknownBlockType)arg2;
 - (void)testSuite:(id)arg1 didRecordExpectedFailure:(id)arg2;
 - (void)testSuite:(id)arg1 didRecordIssue:(id)arg2;
 - (void)testSuiteDidFinish:(id)arg1;

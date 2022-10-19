@@ -17,6 +17,7 @@
 #import "XCTActivityRecordContext-Protocol.h"
 
 @class NSDate, NSDictionary, NSMutableArray, NSMutableDictionary, NSString, XCTActivityRecordStack, XCTestCase;
+@protocol XCTContextDelegate;
 
 @interface XCTContext : NSObject <XCTActivityRecordContext>
 {
@@ -27,6 +28,7 @@
     NSMutableArray *_tearDownBlocks;
     XCTContext *_parent;
     XCTestCase *_testCase;
+    id <XCTContextDelegate> _delegate;
     XCTActivityRecordStack *_activityRecordStack;
 }
 
@@ -34,7 +36,7 @@
 @property(readonly) NSUInteger activityRecordStackDepth;
 @property(readonly) NSDictionary *aggregationRecords;
 @property(readonly) NSMutableDictionary *associatedObjects;
-@property(readonly) NSMutableArray *interruptionHandlers;
+@property __weak id <XCTContextDelegate> delegate;
 @property(readonly) BOOL isReportingBase;
 @property(readonly, getter=isValid) BOOL valid;
 @property(readonly) XCTContext *parent;
@@ -49,6 +51,7 @@
 + (void)_recordActivityMessageWithFormat:(id)arg1;
 + (void)_runActivityNamed:(id)arg1 block:(CDUnknownBlockType)arg2;
 + (void)_runActivityNamed:(id)arg1 type:(id)arg2 block:(CDUnknownBlockType)arg3;
++ (void)_runInChildOfContext:(id)arg1 forTestCase:(id)arg2 markAsReportingBase:(BOOL)arg3 block:(CDUnknownBlockType)arg4;
 + (BOOL)_shouldReportActivityWithType:(id)arg1;
 + (id)currentContext;
 + (id)currentContextInThread:(id)arg1;
@@ -58,15 +61,21 @@
 + (void)runInContextForTestCase:(id)arg1 markAsReportingBase:(BOOL)arg2 block:(CDUnknownBlockType)arg3;
 + (void)runInternalActivityNamed:(id)arg1 block:(CDUnknownBlockType)arg2;
 + (BOOL)shouldReportActivityWithType:(id)arg1 inTestMode:(NSInteger)arg2;
-- (void)_pushOnToCurrentThreadContextStack;
+- (void)_recordActivityMessageWithFormat:(id)arg1;
 - (void)_reportEmptyActivityWithType:(id)arg1 format:(id)arg2;
 - (void)_runActivityNamed:(id)arg1 block:(CDUnknownBlockType)arg2;
 - (void)_runActivityNamed:(id)arg1 type:(id)arg2 block:(CDUnknownBlockType)arg3;
 - (void)addTearDownBlock:(CDUnknownBlockType)arg1;
+- (id)associatedContexts;
 - (id)associatedObjectForKey:(id)arg1;
 - (void)didFinishActivity:(id)arg1;
 - (id)initWithParent:(id)arg1 testCase:(id)arg2;
 - (void)invalidate;
+- (BOOL)isBoundToCurrentThread;
+- (id)observationCenter;
+- (void)runInContextForTestCase:(id)arg1 block:(CDUnknownBlockType)arg2;
+- (void)runInContextForTestCase:(id)arg1 markAsReportingBase:(BOOL)arg2 block:(CDUnknownBlockType)arg3;
+- (void)runInternalActivityNamed:(id)arg1 block:(CDUnknownBlockType)arg2;
 - (void)setAssociatedObject:(id)arg1 forKey:(id)arg2;
 - (id)topActivity;
 - (void)unwindRemainingActivities;

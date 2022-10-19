@@ -14,8 +14,8 @@
 
 #import <objc/NSObject.h>
 
-#import <DTXConnectionServices/DTXConnectionRemoteReceiveQueueCalls-Protocol.h>
-#import <DTXConnectionServices/DTXMessenger-Protocol.h>
+#import "DTXConnectionRemoteReceiveQueueCalls-Protocol.h"
+#import "DTXMessenger-Protocol.h"
 
 @class DTXChannel, DTXMessageParser, DTXMessageTransmitter, DTXResourceTracker, DTXTransport, NSDictionary, NSMutableArray, NSMutableDictionary, NSSet, NSString;
 @protocol DTXBlockCompressor, OS_dispatch_queue, OS_dispatch_semaphore;

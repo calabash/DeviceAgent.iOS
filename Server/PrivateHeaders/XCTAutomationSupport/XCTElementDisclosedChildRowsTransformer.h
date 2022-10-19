@@ -16,7 +16,6 @@
 
 #import "XCTCapabilitiesProviding-Protocol.h"
 
-
 @interface XCTElementDisclosedChildRowsTransformer : XCTElementSetCodableTransformer <XCTCapabilitiesProviding>
 {
 }
@@ -28,7 +27,6 @@
 - (id)requiredKeyPathsOrError:(id *)arg1;
 - (BOOL)supportsAttributeKeyPathAnalysis;
 - (id)transform:(id)arg1 relatedElements:(id *)arg2;
-
 
 @end
 

@@ -31,6 +31,8 @@
 @property(readonly) XCTSourceCodeContext *sourceCodeContext;
 @property(readonly, copy) NSString *summary;
 
++ (id)skippedTestContextWithExceptionPointer:(id)arg1 evaluatedExpression:(id)arg2 message:(id)arg3 sourceCodeContext:(id)arg4;
+- (id)initWithCurrentExceptionAndEvaluatedExpression:(id)arg1 message:(id)arg2 sourceCodeContext:(id)arg3;
 - (id)initWithError:(id)arg1 evaluatedExpression:(id)arg2 message:(id)arg3 sourceCodeContext:(id)arg4;
 - (id)initWithException:(id)arg1 evaluatedExpression:(id)arg2 message:(id)arg3 sourceCodeContext:(id)arg4;
 - (id)initWithExpectedValue:(BOOL)arg1 evaluatedExpression:(id)arg2 message:(id)arg3 sourceCodeContext:(id)arg4;

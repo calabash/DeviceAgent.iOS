@@ -20,10 +20,12 @@
 @interface XCAXAuditConfiguration : NSObject <NSSecureCoding, NSCopying>
 {
     NSArray *_auditTypes;
+    NSArray *_ignoredIdentifiers;
     NSInteger _timeout;
 }
 
 @property(copy, nonatomic) NSArray *auditTypes;
+@property(copy, nonatomic) NSArray *ignoredIdentifiers;
 @property(nonatomic) NSInteger timeout;
 
 

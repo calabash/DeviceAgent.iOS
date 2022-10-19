@@ -11,8 +11,6 @@
 
 typedef void (^CDUnknownBlockType)(void); // return type and parameters are unknown
 
-typedef void (^CDUnknownFunctionPointerType)(void); // return type and parameters are unknown
-
 #pragma mark Typedef'd Structures
 
 typedef struct {
@@ -23,24 +21,24 @@ typedef struct {
 } CDStruct_70511ce9;
 
 typedef struct {
-    CDUnknownFunctionPointerType release;
-    CDUnknownFunctionPointerType retain;
-    CDUnknownFunctionPointerType isNull;
-    CDUnknownFunctionPointerType getArchitectureForName;
-    CDUnknownFunctionPointerType symbolicatorCreateWithTask;
-    CDUnknownFunctionPointerType symbolicatorForeachSymbolicatorWithPath;
-    CDUnknownFunctionPointerType symbolicatorForeachSharedCache;
-    CDUnknownFunctionPointerType symbolOwnerGetBaseAddress;
-    CDUnknownFunctionPointerType symbolicatorGetArchitecture;
-    CDUnknownFunctionPointerType symbolicatorForeachSymbolOwnerWithPathAtTime;
-    CDUnknownFunctionPointerType symbolicatorGetSymbolOwnerWithUUIDAtTime;
-    CDUnknownFunctionPointerType symbolicatorGetSymbolOwnerWithAddressAtTime;
-    CDUnknownFunctionPointerType symbolOwnerGetName;
-    CDUnknownFunctionPointerType symbolOwnerGetSymbolWithAddress;
-    CDUnknownFunctionPointerType symbolOwnerGetSourceInfoWithAddress;
-    CDUnknownFunctionPointerType symbolGetName;
-    CDUnknownFunctionPointerType sourceInfoGetPath;
-    CDUnknownFunctionPointerType sourceInfoGetLineNumber;
+    CDUnknownBlockType release;
+    CDUnknownBlockType retain;
+    CDUnknownBlockType isNull;
+    CDUnknownBlockType getArchitectureForName;
+    CDUnknownBlockType symbolicatorCreateWithTask;
+    CDUnknownBlockType symbolicatorForeachSymbolicatorWithPath;
+    CDUnknownBlockType symbolicatorForeachSharedCache;
+    CDUnknownBlockType symbolOwnerGetBaseAddress;
+    CDUnknownBlockType symbolicatorGetArchitecture;
+    CDUnknownBlockType symbolicatorForeachSymbolOwnerWithPathAtTime;
+    CDUnknownBlockType symbolicatorGetSymbolOwnerWithUUIDAtTime;
+    CDUnknownBlockType symbolicatorGetSymbolOwnerWithAddressAtTime;
+    CDUnknownBlockType symbolOwnerGetName;
+    CDUnknownBlockType symbolOwnerGetSymbolWithAddress;
+    CDUnknownBlockType symbolOwnerGetSourceInfoWithAddress;
+    CDUnknownBlockType symbolGetName;
+    CDUnknownBlockType sourceInfoGetPath;
+    CDUnknownBlockType sourceInfoGetLineNumber;
 } CDStruct_37ea9563;
 
 typedef struct {
@@ -48,4 +46,11 @@ typedef struct {
     NSInteger _field2;
     NSInteger _field3;
 } CDStruct_2ec95fd7;
+
+typedef struct {
+    NSObject *userDispatchQueue;
+    id dispatchTarget;
+    CDUnknownBlockType messageHandler;
+    CDUnknownBlockType dispatchValidator;
+} CDStruct_f5f3468d;
 

@@ -3,7 +3,6 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import "CBX-XCTest-Umbrella.h"
-#import "XCElementSnapshot.h"
 #import "XCAXClient_iOS.h"
 #import "XCUIHitPointResult.h"
 #import "CBXConstants.h"
@@ -32,37 +31,6 @@
   }
   
   return result;
-}
-
-@end
-
-#pragma mark - XCElementSnapshot
-
-@implementation XCElementSnapshot (VisibilityResult)
-
-- (CBXVisibilityResult *)visibilityResult {
-  CBXVisibilityResult *cbxResult = [CBXVisibilityResult new];
-  CGPoint intermediate;
-  XCUIHitPointResult *result = [self hitPoint:NULL];
-
-  cbxResult.isVisible = result.isHittable;
-
-  if (result.isHittable) {
-    intermediate = result.hitPoint;
-  } else {
-    intermediate = CGPointMake(-1, -1);
-  }
-
-  cbxResult.point = intermediate;
-
-  DDLogDebug(@"Finding hit point for XCElementSnapshot: %@\n"
-  "hitpoint: %@\n"
-  "visible: %@\n",
-  self,
-  [NSString stringWithFormat:@"(%@, %@)", @(intermediate.x), @(intermediate.y)],
-  result.isHittable ? @"YES" : @"NO");
-  
-  return cbxResult;
 }
 
 @end

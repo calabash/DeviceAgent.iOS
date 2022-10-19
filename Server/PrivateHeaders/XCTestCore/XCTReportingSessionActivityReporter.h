@@ -15,7 +15,7 @@
 #import <objc/NSObject.h>
 
 @class NSString, XCActivityRecord, XCTTestIdentifier;
-@protocol _XCTMessaging_VoidProtocol, XCTMessagingRole_TestReporting, XCTMessagingRole_ActivityReporting;
+@protocol XCTMessagingRole_TestReporting, XCTMessagingRole_ActivityReporting, _XCTMessaging_VoidProtocol;
 
 @interface XCTReportingSessionActivityReporter : NSObject
 {

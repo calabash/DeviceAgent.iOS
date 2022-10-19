@@ -12,7 +12,7 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-#import <DTXConnectionServices/DTXAllowedRPC-Protocol.h>
+#import "DTXAllowedRPC-Protocol.h"
 
 @class NSDictionary, NSString;
 

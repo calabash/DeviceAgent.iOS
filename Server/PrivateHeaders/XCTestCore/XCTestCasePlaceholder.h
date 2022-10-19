@@ -24,8 +24,8 @@
 
 @property(readonly, copy) NSString *reason;
 
-- (id)_identifier;
 - (Class)_requiredTestRunBaseClass;
+- (id)_xctTestIdentifier;
 - (NSInteger)defaultExecutionOrderCompare:(id)arg1;
 - (id)initWithIdentifier:(id)arg1 reason:(id)arg2;
 - (id)name;

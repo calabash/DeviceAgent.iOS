@@ -29,13 +29,14 @@
     id <XCTestExpectationDelegate> _delegate;
     NSUInteger _fulfillmentToken;
     NSArray *_fulfillCallStackReturnAddresses;
-    NSUInteger _expectedFulfillmentCount;
     NSString *_expectationDescription;
+    NSUInteger _expectedFulfillmentCount;
     NSUInteger _numberOfFulfillments;
     NSUInteger _creationToken;
     NSArray *_creationCallStackReturnAddresses;
 }
 
+@property(copy, setter=_setExpectationDescription:) NSString *_expectationDescription;
 @property(nonatomic) BOOL assertForOverFulfill;
 @property(readonly, copy) NSArray *creationCallStackReturnAddresses;
 @property(readonly) NSUInteger creationToken;
@@ -57,6 +58,7 @@
 + (id)compoundAndExpectationWithSubexpectations:(id)arg1;
 + (id)compoundOrExpectationWithSubexpectations:(id)arg1;
 + (id)expectationWithDescription:(id)arg1;
+- (id)_generateExpectationDescription;
 - (BOOL)_queue_fulfillWithCallStackReturnAddresses:(id)arg1;
 - (void)cleanup;
 - (void)fulfill;

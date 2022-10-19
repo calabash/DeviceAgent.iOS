@@ -19,7 +19,7 @@
 @interface XCTReportingSession : NSObject
 {
     id <XCTReportingSessionConfiguration> _configuration;
-    id <_XCTMessaging_VoidProtocol, XCTMessagingRole_ActivityReporting, XCTMessagingRole_TestReporting> _IDEProxy;
+    id <XCTMessagingRole_TestReporting, XCTMessagingRole_ActivityReporting, _XCTMessaging_VoidProtocol> _IDEProxy;
 }
 
 @property(readonly) id <XCTReportingSessionConfiguration> configuration;
@@ -27,6 +27,7 @@
 + (void)beginReportingSessionWithIdentifier:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)finishWithCompletion:(CDUnknownBlockType)arg1;
 - (id)initWithIDEProxy:(id)arg1 configuration:(id)arg2;
+- (id)initWithIDEProxy:(id)arg1 testConfiguration:(id)arg2;
 - (void)reportStarted;
 - (id)reportSuiteStartedWithName:(id)arg1 atDate:(id)arg2;
 

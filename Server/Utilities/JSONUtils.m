@@ -37,11 +37,41 @@ static NSDictionary *typeStringToElementType;
             sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 }
 
++ (CBXVisibilityResult *)visibilityResult: (XCUIHitPointResult*)hitPoint {
+    CBXVisibilityResult *cbxResult = [CBXVisibilityResult new];
+    CGPoint intermediate;
+    XCUIHitPointResult *result = hitPoint;
+
+    cbxResult.isVisible = result.isHittable;
+
+    if (result.isHittable) {
+        intermediate = result.hitPoint;
+    } else {
+        intermediate = CGPointMake(-1, -1);
+    }
+
+    cbxResult.point = intermediate;
+
+    DDLogDebug(@"Finding hit point for XCElementSnapshot: %@\n"
+               "hitpoint: %@\n"
+               "visible: %@\n",
+               self,
+               [NSString stringWithFormat:@"(%@, %@)", @(intermediate.x), @(intermediate.y)],
+               result.isHittable ? @"YES" : @"NO");
+
+    return cbxResult;
+}
+
 + (NSDictionary *)snapshotOrElementToJSON:(id)element {
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
 
+    
     XCElementSnapshot *snapshot;
-    if ([element isKindOfClass:[XCElementSnapshot class]]) {
+    
+    //In Xcode 14 [XCElementSnapshot class] is not available, so this is the only way to compare classes.
+    Class targetClass = NSClassFromString(@"XCElementSnapshot");
+    
+    if ([element isKindOfClass:targetClass]) {
         snapshot = element;
     } else {
         XCUIElementQuery *elementQuery = ((XCUIElement *)element).query;
@@ -76,8 +106,10 @@ static NSDictionary *typeStringToElementType;
         json[CBX_HAS_FOCUS_KEY] = @(NO);
         json[CBX_HAS_KEYBOARD_FOCUS_KEY] = @(snapshot.hasKeyboardFocus);
 
-        CBXVisibilityResult *result = [snapshot visibilityResult];
 
+        XCUIHitPointResult *hitPoint = [snapshot hitPoint:NULL];
+        CBXVisibilityResult *result = [self visibilityResult:hitPoint];
+        
         json[CBX_HITABLE_KEY] = @(result.isVisible);
         json[CBX_HIT_POINT_KEY] = @{@"x" : [JSONUtils normalizeFloat:result.point.x],
                                     @"y" : [JSONUtils normalizeFloat:result.point.y]};

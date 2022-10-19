@@ -193,6 +193,7 @@ static Application *currentApplication;
     XCUIApplication *application = [Application currentApplication];
     XCUIElementQuery *applicationQuery = [XCUIApplication cbxQuery:application];
     XCElementSnapshot *applicationSnaphot = [applicationQuery cbx_elementSnapshotForDebugDescription];
+    
     return [Application snapshotTree:applicationSnaphot];
 }
 
