@@ -20,8 +20,9 @@
 #import "XCUIHitPointResult.h"
 #import "CBXConstants.h"
 
+// Defined in XCTAutomationSupport framework, so it is safe to import
+// in any context.
 #import "XCElementSnapshot.h"
-
 
 @class XCUIApplication;
 @class XCApplicationQuery;
@@ -35,7 +36,7 @@
 - (UIInterfaceOrientation)interfaceOrientation;
 - (instancetype _Nonnull)initWithBundleIdentifier:(NSString *_Nonnull)arg1;
 - (NSInteger)processID;
-- (XCElementSnapshot* _Nullable)lastSnapshot;
+- (XCElementSnapshot * _Nullable)lastSnapshot;
 - (void)resolve;
 - (NSString *_Nonnull)bundleID;
 - (XCUIApplicationState)state;
@@ -55,14 +56,14 @@
 + (id _Nullable)cbxQuery:(XCUIApplication *_Nonnull)xcuiApplication;
 
 - (XCUIElementQuery *_Nonnull)cbxQueryForDescendantsOfAnyType;
-- (XCElementSnapshot* _Nullable)cbxXCElementSnapshot;
+- (XCElementSnapshot * _Nullable)cbxXCElementSnapshot;
 + (void)cbxResolveApplication:(XCUIApplication *_Nonnull)xcuiApplication;
 
 @end
 
 @interface XCUIElement (CBXAdditions)
 
-- (XCElementSnapshot* _Nullable)lastSnapshot;
+- (XCElementSnapshot * _Nullable)lastSnapshot;
 - (XCUICoordinate *_Nonnull)hitPointCoordinate;
 - (XCUIElementQuery *_Nonnull)query;
 
@@ -86,7 +87,7 @@
 
 @interface XCUIElementQuery (CBXAdditions)
 
-//// Deprecated since Xcode 11.0
+// Deprecated since Xcode 11.0
 - (XCElementSnapshot *_Nonnull)elementSnapshotForDebugDescription;
 // Added since Xcode 11.0
 - (XCElementSnapshot *_Nonnull)elementSnapshotForDebugDescriptionWithNoMatchesMessage:(id _Nullable *_Nullable)arg1;
