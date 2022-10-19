@@ -36,7 +36,7 @@
 - (UIInterfaceOrientation)interfaceOrientation;
 - (instancetype _Nonnull)initWithBundleIdentifier:(NSString *_Nonnull)arg1;
 - (NSInteger)processID;
-- (XCElementSnapshot * _Nullable)lastSnapshot;
+- (XCElementSnapshot *_Nullable)lastSnapshot;
 - (void)resolve;
 - (NSString *_Nonnull)bundleID;
 - (XCUIApplicationState)state;
@@ -56,14 +56,14 @@
 + (id _Nullable)cbxQuery:(XCUIApplication *_Nonnull)xcuiApplication;
 
 - (XCUIElementQuery *_Nonnull)cbxQueryForDescendantsOfAnyType;
-- (XCElementSnapshot * _Nullable)cbxXCElementSnapshot;
+- (XCElementSnapshot *_Nullable)cbxXCElementSnapshot;
 + (void)cbxResolveApplication:(XCUIApplication *_Nonnull)xcuiApplication;
 
 @end
 
 @interface XCUIElement (CBXAdditions)
 
-- (XCElementSnapshot * _Nullable)lastSnapshot;
+- (XCElementSnapshot *_Nullable)lastSnapshot;
 - (XCUICoordinate *_Nonnull)hitPointCoordinate;
 - (XCUIElementQuery *_Nonnull)query;
 
