@@ -686,5 +686,12 @@
       "Разрешить"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Включите Bluetooth, чтобы разрешить «%@» подключение к аксессуарам",
+    "buttons": [
+      "Закрыть"
+    ],
+    "shouldAccept": true
   }
 ]

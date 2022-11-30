@@ -463,5 +463,12 @@
       "Autoriser"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Activez Bluetooth pour permettre à « %@ » de se connecter aux accessoires",
+    "buttons": [
+      "Fermer"
+    ],
+    "shouldAccept": true
   }
 ]

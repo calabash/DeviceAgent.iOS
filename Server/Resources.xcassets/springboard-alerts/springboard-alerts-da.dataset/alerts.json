@@ -515,5 +515,12 @@
       "Tillad"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Slå Bluetooth til for at tillade “%@” at oprette forbindelse til Tilbehør",
+    "buttons": [
+      "Tillad"
+    ],
+    "shouldAccept": true
   }
 ]

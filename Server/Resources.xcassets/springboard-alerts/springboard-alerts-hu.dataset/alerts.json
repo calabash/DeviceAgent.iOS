@@ -611,5 +611,12 @@
       "Engedélyezés"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Kapcsolja be a Bluetootht, hogy a(z) „%@” csatlakozni tudjon kiegészítőkhöz",
+    "buttons": [
+      "Bezárás"
+    ],
+    "shouldAccept": true
   }
 ]

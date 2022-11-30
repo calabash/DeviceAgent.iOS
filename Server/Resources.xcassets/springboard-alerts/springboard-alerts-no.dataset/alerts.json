@@ -622,5 +622,12 @@
       "Tillat"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Slå på Bluetooth for å tillate at «%@» kobler til Tilbehør",
+    "buttons": [
+      "Lukk"
+    ],
+    "shouldAccept": true
   }
 ]

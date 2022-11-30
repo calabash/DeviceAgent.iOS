@@ -488,5 +488,12 @@
       "Permitir"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Ative Bluetooth para permitir que “%@” estabeleça ligação com os acessórios.",
+    "buttons": [
+      "Fechar"
+    ],
+    "shouldAccept": true
   }
 ]

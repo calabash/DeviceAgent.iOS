@@ -294,5 +294,12 @@
       "ОК"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Включване на Bluetooth, за да се разреши на „%@“ да се свързва към аксесоари",
+    "buttons": [
+      "Затвори"
+    ],
+    "shouldAccept": true
   }
 ]

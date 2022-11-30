@@ -632,5 +632,12 @@
       "允許"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "開啟藍牙來允許「%@」連接配件",
+    "buttons": [
+      "關閉"
+    ],
+    "shouldAccept": true
   }
 ]

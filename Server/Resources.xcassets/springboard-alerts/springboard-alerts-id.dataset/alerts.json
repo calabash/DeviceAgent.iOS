@@ -486,5 +486,12 @@
       "Izinkan"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Nyalakan Bluetooth untuk Mengizinkan “%@” Terhubung ke Aksesori",
+    "buttons": [
+      "Tutup"
+    ],
+    "shouldAccept": true
   }
 ]

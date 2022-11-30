@@ -598,5 +598,12 @@
       "Ναι"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Ενεργοποίηση Bluetooth για σύνδεση του «%@» με αξεσουάρ",
+    "buttons": [
+      "Κλείσιμο"
+    ],
+    "shouldAccept": true
   }
 ]

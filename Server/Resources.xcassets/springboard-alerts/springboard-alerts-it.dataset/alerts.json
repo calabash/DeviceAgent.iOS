@@ -529,5 +529,12 @@
       "Consenti"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Attiva Bluetooth per consentire a “%@” di connettersi agli accessori",
+    "buttons": [
+      "Chiudi"
+    ],
+    "shouldAccept": true
   }
 ]

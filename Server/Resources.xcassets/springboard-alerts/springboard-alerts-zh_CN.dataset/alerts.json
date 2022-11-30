@@ -699,5 +699,12 @@
       "好"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "打开蓝牙允许“%@”连接配件",
+    "buttons": [
+      "关闭"
+    ],
+    "shouldAccept": true
   }
 ]

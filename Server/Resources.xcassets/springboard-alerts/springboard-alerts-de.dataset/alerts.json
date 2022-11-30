@@ -755,5 +755,12 @@
       "Erlauben"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Bluetooth aktivieren, damit „%@“ die Verbindung zum Zubehör herstellen kann",
+    "buttons": [
+      "Schließen"
+    ],
+    "shouldAccept": true
   }
 ]

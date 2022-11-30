@@ -504,5 +504,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Turn On Bluetooth to Allow “%@” to Connect to Accessories",
+    "buttons": [
+      "Close"
+    ],
+    "shouldAccept": true
   }
 ]
