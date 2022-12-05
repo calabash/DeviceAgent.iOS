@@ -509,5 +509,12 @@
       "Pozwalaj"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Aby używać akcesoriów z „%@”, włącz Bluetooth.",
+    "buttons": [
+      "Zamknij"
+    ],
+    "shouldAccept": true
   }
 ]

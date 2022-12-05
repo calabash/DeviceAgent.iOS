@@ -545,5 +545,12 @@
       "İzin Ver"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” Öğesinin Aksesuarlara Bağlanmasına İzin Vermek için Bluetooth’u Aç",
+    "buttons": [
+      "Kapat"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -804,5 +804,12 @@
       "Povoliť"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Ak chcete povoliť apke „%@“ pripojiť sa k príslušenstvu, zapnite Bluetooth",
+    "buttons": [
+      "Zatvoriť"
+    ],
+    "shouldAccept": true
   }
 ]

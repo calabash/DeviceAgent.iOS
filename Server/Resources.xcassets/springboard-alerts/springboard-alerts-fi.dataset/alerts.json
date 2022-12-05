@@ -502,5 +502,12 @@
       "Salli"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Laita Bluetooth päälle, jos sallit, että %@ voi yhdistää lisälaitteisiin",
+    "buttons": [
+      "Sulje"
+    ],
+    "shouldAccept": true
   }
 ]

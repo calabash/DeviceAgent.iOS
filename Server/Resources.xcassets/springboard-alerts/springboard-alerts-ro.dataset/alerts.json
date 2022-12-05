@@ -468,5 +468,12 @@
       "Permiteți"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Activați Bluetooth pentru a permite conectarea “%@” la accesorii",
+    "buttons": [
+      "Închide"
+    ],
+    "shouldAccept": true
   }
 ]

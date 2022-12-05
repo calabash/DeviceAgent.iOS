@@ -596,5 +596,12 @@
       "Cho phép"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Bật Bluetooth để cho phép “%@” kết nối với phụ kiện",
+    "buttons": [
+      "Đóng"
+    ],
+    "shouldAccept": true
   }
 ]

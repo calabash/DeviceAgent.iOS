@@ -652,5 +652,12 @@
       "Дозволити"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Увімкніть Bluetooth, щоб дозволити «%@» підʼєднуватися до приладдя",
+    "buttons": [
+      "Закрити"
+    ],
+    "shouldAccept": true
   }
 ]

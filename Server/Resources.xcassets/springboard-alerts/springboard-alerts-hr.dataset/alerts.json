@@ -538,5 +538,12 @@
       "Dozvoli"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Uključite Bluetooth kako bi se “%@” mogao spojiti na dodatni pribor",
+    "buttons": [
+      "Zatvori"
+    ],
+    "shouldAccept": true
   }
 ]

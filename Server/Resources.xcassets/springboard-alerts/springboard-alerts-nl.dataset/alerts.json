@@ -567,5 +567,12 @@
       "Sta toe"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Schakel Bluetooth in om %@ verbinding te laten maken met accessoires",
+    "buttons": [
+      "Sluit"
+    ],
+    "shouldAccept": true
   }
 ]

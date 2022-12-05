@@ -694,5 +694,12 @@
       "Permetre"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Activar el Bluetooth per permetre que “%@” es connecti als accessoris",
+    "buttons": [
+      "Tancar"
+    ],
+    "shouldAccept": true
   }
 ]

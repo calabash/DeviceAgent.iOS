@@ -550,5 +550,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Ative o Bluetooth para Permitir que “%@” se Conecte a Acessórios",
+    "buttons": [
+      "Fechar"
+    ],
+    "shouldAccept": true
   }
 ]

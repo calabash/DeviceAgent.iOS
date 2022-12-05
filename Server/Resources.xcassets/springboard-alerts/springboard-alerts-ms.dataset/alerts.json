@@ -566,5 +566,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Aktifkan Bluetooth untuk Membenarkan “%@” Bersambung ke Aksesori",
+    "buttons": [
+      "Tutup"
+    ],
+    "shouldAccept": true
   }
 ]

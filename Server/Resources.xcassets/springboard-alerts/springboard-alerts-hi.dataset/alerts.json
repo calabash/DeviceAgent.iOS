@@ -664,5 +664,12 @@
       "अनुमति दें"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@” को ऐक्सेसरी से कनेक्ट होने की अनुमति देने के लिए Bluetooth चालू करें",
+    "buttons": [
+      "द करें"
+    ],
+    "shouldAccept": true
   }
 ]

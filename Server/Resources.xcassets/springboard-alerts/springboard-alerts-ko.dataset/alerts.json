@@ -687,5 +687,12 @@
       "허용"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "‘%@’에서 액세서리에 연결하도록 허용하려면 Bluetooth를 켜십시오.",
+    "buttons": [
+      "닫기"
+    ],
+    "shouldAccept": true
   }
 ]

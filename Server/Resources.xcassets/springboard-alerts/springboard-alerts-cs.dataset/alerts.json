@@ -565,5 +565,12 @@
       "Povolit"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Chcete‑li povolit připojení příslušenství v aplikaci „%@“, zapněte Bluetooth",
+    "buttons": [
+      "Zavřít"
+    ],
+    "shouldAccept": true
   }
 ]

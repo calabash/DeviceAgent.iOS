@@ -488,5 +488,12 @@
       "許可"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "“%@”がアクセサリに接続できるようにするには、Bluetoothをオンにしてください。",
+    "buttons": [
+      "閉じる"
+    ],
+    "shouldAccept": true
   }
 ]

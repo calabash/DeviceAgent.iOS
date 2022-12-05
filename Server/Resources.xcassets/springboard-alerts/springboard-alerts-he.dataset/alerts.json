@@ -521,5 +521,12 @@
       "אפשר"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "הפעל/י את Bluetooth על-מנת לאפשר ל-״%@״ להתחבר לאביזרים",
+    "buttons": [
+      "סגירה"
+    ],
+    "shouldAccept": true
   }
 ]

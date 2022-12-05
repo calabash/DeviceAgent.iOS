@@ -503,5 +503,12 @@
       "Permitir"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Activa Bluetooth para permitir que “%@” se conecte a los accesorios",
+    "buttons": [
+      "Cerrar"
+    ],
+    "shouldAccept": true
   }
 ]

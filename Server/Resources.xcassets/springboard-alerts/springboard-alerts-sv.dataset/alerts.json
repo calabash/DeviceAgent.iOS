@@ -461,5 +461,12 @@
       "Tillåt"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Slå på Bluetooth om du vill låta ”%@” ansluta till tillbehör",
+    "buttons": [
+      "Stäng"
+    ],
+    "shouldAccept": true
   }
 ]
