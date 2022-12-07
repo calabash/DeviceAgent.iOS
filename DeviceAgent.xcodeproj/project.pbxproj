@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -4724,6 +4724,7 @@
 			inputPaths = (
 			);
 			outputPaths = (
+				"$(PROJECT_DIR)/TestApp/App/InfoPlist.h",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -4738,6 +4739,7 @@
 			inputPaths = (
 			);
 			outputPaths = (
+				"$(PROJECT_DIR)/AppStub/InfoPlist.h",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -4746,6 +4748,7 @@
 		};
 		F5A252C21CBFFE2700C05F1F /* Run Script stage to ./Products */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -4761,6 +4764,7 @@
 		};
 		F5D086A51F38C99A008B894C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
