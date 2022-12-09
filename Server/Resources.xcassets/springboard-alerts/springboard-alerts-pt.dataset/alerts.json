@@ -533,7 +533,8 @@
   {
     "title": "Editar Tela de Início",
     "buttons": [
-      "Descartar"
+      "Descartar",
+      "OK"
     ],
     "shouldAccept": false
   },

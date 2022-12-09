@@ -491,7 +491,8 @@
   {
     "title": "Rediger hjemmeskærm",
     "buttons": [
-      "Luk"
+      "Luk",
+      "OK"
     ],
     "shouldAccept": false
   },

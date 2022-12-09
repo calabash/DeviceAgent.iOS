@@ -464,7 +464,8 @@
   {
     "title": "ホーム画面を編集",
     "buttons": [
-      "了解"
+      "了解",
+      "OK"
     ],
     "shouldAccept": false
   },

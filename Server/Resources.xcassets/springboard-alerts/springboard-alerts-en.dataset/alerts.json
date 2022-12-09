@@ -487,7 +487,8 @@
   {
     "title": "Edit Home Screen",
     "buttons": [
-      "Dismiss"
+      "Dismiss",
+      "OK"
     ],
     "shouldAccept": false
   },

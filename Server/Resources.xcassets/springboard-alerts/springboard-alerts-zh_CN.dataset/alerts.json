@@ -505,7 +505,8 @@
   {
     "title": "编辑主屏幕",
     "buttons": [
-      "关闭"
+      "关闭",
+      "好"
     ],
     "shouldAccept": false
   },

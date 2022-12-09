@@ -462,7 +462,8 @@
   {
     "title": "Edit Layar Utama",
     "buttons": [
-      "Tutup"
+      "Tutup",
+      "OKE"
     ],
     "shouldAccept": false
   },

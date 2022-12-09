@@ -437,7 +437,8 @@
   {
     "title": "Ändra hemskärmen",
     "buttons": [
-      "Avfärda"
+      "Avfärda",
+      "OK"
     ],
     "shouldAccept": false
   },

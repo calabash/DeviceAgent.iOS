@@ -572,7 +572,8 @@
   {
     "title": "Sửa Màn hình Chính",
     "buttons": [
-      "Bỏ qua"
+      "Bỏ qua",
+      "OK"
     ],
     "shouldAccept": false
   },

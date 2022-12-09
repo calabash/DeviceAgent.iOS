@@ -505,7 +505,8 @@
   {
     "title": "Modifica la schermata Home",
     "buttons": [
-      "Chiudi"
+      "Chiudi",
+      "OK"
     ],
     "shouldAccept": false
   },

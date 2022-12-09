@@ -507,7 +507,8 @@
   {
     "title": "PUredite početni zaslon",
     "buttons": [
-      "Odbaci"
+      "Odbaci",
+      "OK"
     ],
     "shouldAccept": false
   },

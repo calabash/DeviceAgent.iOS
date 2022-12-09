@@ -572,7 +572,8 @@
   {
     "title": "홈 화면 편집",
     "buttons": [
-      "닫기"
+      "닫기",
+      "승인"
     ],
     "shouldAccept": false
   },

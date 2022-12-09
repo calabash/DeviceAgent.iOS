@@ -529,7 +529,8 @@
   {
     "title": "Wijzig beginscherm",
     "buttons": [
-      "Sluit"
+      "Sluit",
+      "OK"
     ],
     "shouldAccept": false
   },

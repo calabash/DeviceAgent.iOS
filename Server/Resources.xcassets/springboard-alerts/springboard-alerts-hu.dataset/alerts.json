@@ -559,7 +559,8 @@
   {
     "title": "Főképernyő szerkesztése",
     "buttons": [
-      "Bezárás"
+      "Bezárás",
+      "OK"
     ],
     "shouldAccept": false
   },

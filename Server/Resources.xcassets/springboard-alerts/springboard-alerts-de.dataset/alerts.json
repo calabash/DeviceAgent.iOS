@@ -731,7 +731,8 @@
   {
     "title": "Home-Bildschirm bearbeiten",
     "buttons": [
-      "Schließen"
+      "Schließen",
+      "OK"
     ],
     "shouldAccept": false
   },

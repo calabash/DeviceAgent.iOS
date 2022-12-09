@@ -750,7 +750,8 @@
   {
     "title": "Úprava plochy",
     "buttons": [
-      "Zrušiť"
+      "Zrušiť",
+      "OK"
     ],
     "shouldAccept": false
   },

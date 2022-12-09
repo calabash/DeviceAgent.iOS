@@ -598,7 +598,8 @@
   {
     "title": "Rediger Hjem-skjerm",
     "buttons": [
-      "Lukk"
+      "Lukk",
+      "OK"
     ],
     "shouldAccept": false
   },

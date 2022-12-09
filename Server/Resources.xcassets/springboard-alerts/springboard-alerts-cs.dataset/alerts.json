@@ -541,7 +541,8 @@
   {
     "title": "Úprava plochy",
     "buttons": [
-      "Zavřít"
+      "Zavřít",
+      "OK"
     ],
     "shouldAccept": false
   },

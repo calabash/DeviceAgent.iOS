@@ -502,7 +502,8 @@
   {
     "title": "Editar pantalla d’inici",
     "buttons": [
-      "Tancar"
+      "Tancar",
+      "OK"
     ],
     "shouldAccept": false
   },
