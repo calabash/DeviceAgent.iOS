@@ -14,10 +14,6 @@ $ bin/appcenter.sh organization/device-set
 $ SKIP_IPA_BUILD=1 SERIES='Args and env' bin/appcenter.sh e9232255
 $ SERIES='DeviceAgent 2.0' bin/appcenter.sh e9232255 48d137d6228ccda303b2a71b0d09e1d0629bf980
 
-The DeviceAgent-SHA optional argument allows tests to be run against any
-DeviceAgent that has been uploaded to S3 rather than the current active
-DeviceAgent for Test Cloud.
-
 If you need to test local changes to run-loop or Calabash on Test Cloud,
 use the BUILD_RUN_LOOP and BUILD_CALABASH env variables.
 
@@ -67,10 +63,10 @@ if [ "${2}" != "" ]; then
   echo "${2}" > .xtc/device-agent-sha
 fi)
 
-S3_ROOT="https://s3-eu-west-1.amazonaws.com/calabash-files/dylibs/to-test-injection"
-LIB_BEETS="${S3_ROOT}/libBetaVulgaris.dylib"
-LIB_CABBAGE="${S3_ROOT}/libBrassica.dylib"
-LIB_CUCUMBER="${S3_ROOT}/libCucurbits.dylib"
+AZURE_ROOT="./files"
+LIB_BEETS="${AZURE_ROOT}/libBetaVulgaris.dylib"
+LIB_CABBAGE="${AZURE_ROOT}/libBrassica.dylib"
+LIB_CUCUMBER="${AZURE_ROOT}/libCucurbits.dylib"
 INJECT="inject=${LIB_BEETS};${LIB_CABBAGE};${LIB_CUCUMBER}"
 
 APP_ENV="app_env=ARG_FROM_UPLOADER_FOR_AUT=From-the-CLI-uploader!"
