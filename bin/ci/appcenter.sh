@@ -34,10 +34,10 @@ mkdir -p testcloud-submit/.xtc
 
 echo "${SHA}" > testcloud-submit/.xtc/device-agent-sha
 
-AZURE_ROOT="../files"
-LIB_BEETS="${AZURE_ROOT}/libBetaVulgaris.dylib"
-LIB_CABBAGE="${AZURE_ROOT}/libBrassica.dylib"
-LIB_CUCUMBER="${AZURE_ROOT}/libCucurbits.dylib"
+BIN_ROOT="../files"
+LIB_BEETS="${BIN_ROOT}/libBetaVulgaris.dylib"
+LIB_CABBAGE="${BIN_ROOT}/libBrassica.dylib"
+LIB_CUCUMBER="${BIN_ROOT}/libCucurbits.dylib"
 INJECT="inject=${LIB_BEETS};${LIB_CABBAGE};${LIB_CUCUMBER}"
 
 APP_ENV="app_env=ARG_FROM_UPLOADER_FOR_AUT=From-the-CLI-uploader!"
