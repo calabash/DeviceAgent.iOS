@@ -4,7 +4,7 @@
 
 #import "CBXURLHelper.h"
 
-static const NSString *kCBXURLHelperBaseURL = @"https://s3-eu-west-1.amazonaws.com/calabash-files/webpages-for-tests";
+static const NSString *kCBXURLHelperBaseURL = @"https://xtcruntimeartifacts.blob.core.windows.net/calabash-files/webpages-for-tests";
 @implementation CBXURLHelper
 
 + (NSURL *)URLForTestPage {

@@ -14,10 +14,6 @@ else
   XC_PIPE='cat'
 fi
 
-if [ "${1}" = "--upload" ]; then
-  UPLOAD_TO_S3="1"
-fi
-
 XC_WORKSPACE="DeviceAgent.xcworkspace"
 XC_CONFIG=Release
 
@@ -80,11 +76,6 @@ function fat_lib_with_lipo {
   local version=$(xcrun strings "${fat_lib}" | \
     grep -E 'kCBXLibVersion' |  head -n1 | cut -f2- -d":")
   info "Installed version $version to ${fat_lib}"
-
-  if [ "${UPLOAD_TO_S3}" = "1" ]; then
-    aws s3 cp "${fat_lib}" \
-      "s3://calabash-files/dylibs/to-test-injection/${1}.dylib"
-  fi
 }
 
 fat_lib_with_lipo "libCucurbits"

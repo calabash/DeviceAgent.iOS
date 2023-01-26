@@ -77,12 +77,3 @@ $ git branch -d release/1.3.2
 
 Announce the release on the public channels.
 ```
-
-## Deploying to Test Cloud
-
-Maintainers will be given a script to publish DeviceAgent-Runner.ipa to
-S3.
-
-```
-$ bin/s3-publish.sh {release | adhoc}
-```

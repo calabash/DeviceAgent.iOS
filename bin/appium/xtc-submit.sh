@@ -63,10 +63,10 @@ if [ "${SERIES}" = "" ]; then
 fi
 
 PIPELINE="pipeline:detect-dylibs-to-inject-in-app-bundle"
-S3_ROOT="https://s3-eu-west-1.amazonaws.com/calabash-files/dylibs/to-test-injection"
-LIB_BEETS="${S3_ROOT}/libBetaVulgaris.dylib"
-LIB_CABBAGE="${S3_ROOT}/libBrassica.dylib"
-LIB_CUCUMBER="${S3_ROOT}/libCucurbits.dylib"
+BIN_ROOT="../files"
+LIB_BEETS="${BIN_ROOT}/libBetaVulgaris.dylib"
+LIB_CABBAGE="${BIN_ROOT}/libBrassica.dylib"
+LIB_CUCUMBER="${BIN_ROOT}/libCucurbits.dylib"
 INJECT="inject:${LIB_BEETS};${LIB_CABBAGE};${LIB_CUCUMBER}"
 PARAMETERS="${INJECT},${PIPELINE}"
 

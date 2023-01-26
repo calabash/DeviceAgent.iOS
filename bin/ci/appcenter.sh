@@ -18,48 +18,26 @@ else
 fi
 set -e
 
-KEYCHAIN="${HOME}/.calabash/Calabash.keychain"
-
-if [ ! -e "${KEYCHAIN}" ]; then
-  echo "Cannot find S3 credentials: there is no Calabash.keychain"
-  echo "  ${KEYCHAIN}"
-  exit 1
-fi
-
-if [ ! -e "${HOME}/.calabash/find-keychain-credential.sh" ]; then
-  echo "Cannot find S3 credentials: no find-keychain-credential.sh script"
-  echo "  ${HOME}/.calabash/find-keychain-credential.sh"
-  exit 1
-fi
-
-export AWS_ACCESS_KEY_ID=$(
-"${HOME}/.calabash/find-keychain-credential.sh" s3-access-key
-)
-export AWS_SECRET_ACCESS_KEY=$(
-"${HOME}/.calabash/find-keychain-credential.sh" s3-secret
-)
-
-if [ "${AC_TOKEN}" = "" ]; then
-  AC_TOKEN=$("${HOME}/.calabash/find-keychain-credential.sh" api-token)
-fi
-
 IPA=Products/ipa/DeviceAgent/DeviceAgent-Runner.ipa
 SHA=$(/usr/bin/shasum "${IPA}" | awk '{print $1}')
 info "Will use DeviceAgent.iOS: ${SHA}"
 
 # Push will succeed even if file already exists
-URL="s3://calabash-files/ios-device-agent/${SHA}/DeviceAgent-Runner.ipa"
-aws s3 cp "${IPA}" "${URL}"
+az storage blob upload \
+    --account-name xtcruntimeartifacts \
+    --container-name ios-device-agent/${SHA} \
+    --name DeviceAgent-Runner.ipa \
+    --file ${IPA} \
 
 rm -rf testcloud-submit/.xtc
 mkdir -p testcloud-submit/.xtc
 
 echo "${SHA}" > testcloud-submit/.xtc/device-agent-sha
 
-S3_ROOT="https://s3-eu-west-1.amazonaws.com/calabash-files/dylibs/to-test-injection"
-LIB_BEETS="${S3_ROOT}/libBetaVulgaris.dylib"
-LIB_CABBAGE="${S3_ROOT}/libBrassica.dylib"
-LIB_CUCUMBER="${S3_ROOT}/libCucurbits.dylib"
+BIN_ROOT="../files"
+LIB_BEETS="${BIN_ROOT}/libBetaVulgaris.dylib"
+LIB_CABBAGE="${BIN_ROOT}/libBrassica.dylib"
+LIB_CUCUMBER="${BIN_ROOT}/libCucurbits.dylib"
 INJECT="inject=${LIB_BEETS};${LIB_CABBAGE};${LIB_CUCUMBER}"
 
 APP_ENV="app_env=ARG_FROM_UPLOADER_FOR_AUT=From-the-CLI-uploader!"
