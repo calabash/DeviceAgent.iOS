@@ -477,5 +477,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Modifier les écrans d’accueil",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

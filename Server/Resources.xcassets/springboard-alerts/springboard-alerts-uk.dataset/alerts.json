@@ -666,5 +666,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Упорядкування початкових екранів",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -818,5 +818,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Úpravy plochy",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

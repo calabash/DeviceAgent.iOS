@@ -606,5 +606,12 @@
       "Κλείσιμο"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Επεξεργασία οθονών Αφετηρίας",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

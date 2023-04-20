@@ -502,7 +502,8 @@
   {
     "title": "Editar pantalla d’inici",
     "buttons": [
-      "Tancar"
+      "Tancar",
+      "OK"
     ],
     "shouldAccept": false
   },
@@ -704,6 +705,13 @@
   },
   {
     "title": "Editar la pantalla d’inici",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Editar pantalles d’inici",
     "buttons": [
       "OK"
     ],

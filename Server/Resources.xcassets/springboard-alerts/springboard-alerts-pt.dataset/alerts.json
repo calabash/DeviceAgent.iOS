@@ -558,5 +558,12 @@
       "Fechar"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Edite Telas de Início",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

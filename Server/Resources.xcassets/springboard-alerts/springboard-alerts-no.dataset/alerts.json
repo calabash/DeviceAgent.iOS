@@ -630,5 +630,12 @@
       "Lukk"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Rediger Hjem-skjermer",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -549,7 +549,8 @@
   {
     "title": "Uredite početni zaslon",
     "buttons": [
-      "Odbaci"
+      "Odbaci",
+      "OK"
     ],
     "shouldAccept": false
   },

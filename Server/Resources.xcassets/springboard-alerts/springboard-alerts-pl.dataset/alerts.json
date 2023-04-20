@@ -516,5 +516,12 @@
       "Zamknij"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Edycja stron ekranu początkowego",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

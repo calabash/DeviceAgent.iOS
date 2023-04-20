@@ -523,5 +523,12 @@
       "Tillad"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Rediger hjemmeskærme",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

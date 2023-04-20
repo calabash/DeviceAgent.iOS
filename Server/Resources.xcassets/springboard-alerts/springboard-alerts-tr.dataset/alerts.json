@@ -553,5 +553,12 @@
       "Kapat"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Ana Ekranları Düzenle",
+    "buttons": [
+      "Tamam"
+    ],
+    "shouldAccept": true
   }
 ]

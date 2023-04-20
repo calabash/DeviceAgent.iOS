@@ -582,5 +582,12 @@
       "Sta toe"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Wijzig beginschermen",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

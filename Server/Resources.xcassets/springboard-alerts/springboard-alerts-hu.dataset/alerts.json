@@ -619,5 +619,12 @@
       "Bezárás"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Főképernyők szerkesztése",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

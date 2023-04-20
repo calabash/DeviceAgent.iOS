@@ -564,5 +564,12 @@
       "Cerrar"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Edita las pantallas de inicio",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

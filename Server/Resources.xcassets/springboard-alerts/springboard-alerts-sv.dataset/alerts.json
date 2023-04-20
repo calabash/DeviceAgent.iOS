@@ -469,5 +469,12 @@
       "Stäng"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Ändra hemskärmar",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

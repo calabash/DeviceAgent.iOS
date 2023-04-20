@@ -476,5 +476,12 @@
       "Închide"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Editați ecranele principale",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

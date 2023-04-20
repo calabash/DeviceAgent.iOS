@@ -498,5 +498,12 @@
       "Close"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Edit Home Screens",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

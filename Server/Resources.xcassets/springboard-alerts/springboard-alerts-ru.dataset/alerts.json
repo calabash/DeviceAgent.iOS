@@ -694,5 +694,12 @@
       "Закрыть"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Изменение экранов «Домой»",
+    "buttons": [
+      "ОК"
+    ],
+    "shouldAccept": true
   }
 ]

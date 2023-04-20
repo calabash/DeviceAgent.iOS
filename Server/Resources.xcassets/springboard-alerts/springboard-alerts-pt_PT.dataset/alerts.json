@@ -495,5 +495,12 @@
       "Fechar"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Editar ecrãs principais",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]
