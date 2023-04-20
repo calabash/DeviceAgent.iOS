@@ -529,7 +529,8 @@
   {
     "title": "Wijzig beginscherm",
     "buttons": [
-      "Sluit"
+      "Sluit",
+      "OK"
     ],
     "shouldAccept": false
   },
@@ -572,6 +573,13 @@
     "title": "Schakel Bluetooth in om %@ verbinding te laten maken met accessoires",
     "buttons": [
       "Sluit"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ wil je kritieke waarschuwingen sturen",
+    "buttons": [
+      "Sta toe"
     ],
     "shouldAccept": true
   }

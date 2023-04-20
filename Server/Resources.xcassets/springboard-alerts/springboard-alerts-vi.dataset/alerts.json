@@ -603,5 +603,12 @@
       "Đóng"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Sửa Màn hình chính",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

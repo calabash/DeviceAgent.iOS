@@ -470,5 +470,12 @@
       "Fermer"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Modifier l’écran d’accueil",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

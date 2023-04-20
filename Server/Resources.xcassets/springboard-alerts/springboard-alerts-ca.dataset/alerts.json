@@ -701,5 +701,12 @@
       "Tancar"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Editar la pantalla d’inici",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

@@ -572,5 +572,12 @@
       "Zavřít"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Upravit plochu",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

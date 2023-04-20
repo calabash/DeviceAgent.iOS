@@ -485,7 +485,8 @@
   {
     "title": "تحرير الشاشة الرئيسية",
     "buttons": [
-      "استبعاد"
+      "استبعاد",
+      "موافق"
     ],
     "shouldAccept": false
   },
@@ -522,7 +523,6 @@
     "buttons": [
       "إغلاق"
     ],
-
     "shouldAccept": true
   }
 ]

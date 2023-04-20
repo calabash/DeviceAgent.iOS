@@ -294,5 +294,13 @@
       "Жабу"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "«Басты бет» экранын өңдеу",
+    "buttons": [
+      "Жабу",
+      "OK"
+    ],
+    "shouldAccept": false
   }
 ]

@@ -572,7 +572,8 @@
   {
     "title": "홈 화면 편집",
     "buttons": [
-      "닫기"
+      "닫기",
+      "확인"
     ],
     "shouldAccept": false
   },
@@ -694,5 +695,12 @@
       "닫기"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "‘%@’이(가) Face ID를 사용하도록 허용하겠습니까?",
+    "buttons": [
+      "허용 안 함"
+    ],
+    "shouldAccept": false
   }
 ]

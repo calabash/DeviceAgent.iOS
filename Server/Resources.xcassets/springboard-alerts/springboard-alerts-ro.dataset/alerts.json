@@ -444,7 +444,8 @@
   {
     "title": "Editați ecranul principal",
     "buttons": [
-      "Închideți"
+      "Închideți",
+      "OK"
     ],
     "shouldAccept": false
   },

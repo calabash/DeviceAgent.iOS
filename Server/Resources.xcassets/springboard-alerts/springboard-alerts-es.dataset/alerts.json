@@ -525,7 +525,8 @@
   {
     "title": "Editar pantalla de inicio",
     "buttons": [
-      "Cerrar"
+      "Cerrar",
+      "OK"
     ],
     "shouldAccept": false
   },

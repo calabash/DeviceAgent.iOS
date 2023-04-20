@@ -521,7 +521,8 @@
   {
     "title": "Ana Ekranı Düzenle",
     "buttons": [
-      "Kapat"
+      "Kapat",
+      "Tamam"
     ],
     "shouldAccept": false
   },
