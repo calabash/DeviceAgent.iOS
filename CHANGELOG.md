@@ -1,3 +1,7 @@
+### 2.5.1
+
+* Added new 'Edit Home Screens' alert handler.
+
 ### 2.5.0
 
 * Added support for Xcode 14 and iOS 16.
