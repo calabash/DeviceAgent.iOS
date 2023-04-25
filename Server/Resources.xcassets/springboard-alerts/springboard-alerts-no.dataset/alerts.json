@@ -598,7 +598,8 @@
   {
     "title": "Rediger Hjem-skjerm",
     "buttons": [
-      "Lukk"
+      "Lukk",
+      "OK"
     ],
     "shouldAccept": false
   },
@@ -627,6 +628,13 @@
     "title": "Slå på Bluetooth for å tillate at «%@» kobler til Tilbehør",
     "buttons": [
       "Lukk"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Rediger Hjem-skjermer",
+    "buttons": [
+      "OK"
     ],
     "shouldAccept": true
   }

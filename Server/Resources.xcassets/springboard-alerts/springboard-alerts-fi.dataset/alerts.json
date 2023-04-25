@@ -509,5 +509,12 @@
       "Sulje"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Muokkaa Koti-valikkoja",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

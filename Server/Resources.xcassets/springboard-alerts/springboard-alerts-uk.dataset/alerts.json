@@ -659,5 +659,19 @@
       "Закрити"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Упорядкувати іконки",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Упорядкування початкових екранів",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

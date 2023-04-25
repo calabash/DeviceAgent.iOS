@@ -811,5 +811,19 @@
       "Zatvoriť"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Upraviť plochu",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Úpravy plochy",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

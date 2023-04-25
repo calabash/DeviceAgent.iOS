@@ -487,7 +487,8 @@
   {
     "title": "Edit Home Screen",
     "buttons": [
-      "Dismiss"
+      "Dismiss",
+      "OK"
     ],
     "shouldAccept": false
   },
@@ -509,6 +510,13 @@
     "title": "Turn On Bluetooth to Allow “%@” to Connect to Accessories",
     "buttons": [
       "Close"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Edit Home Screens",
+    "buttons": [
+      "OK"
     ],
     "shouldAccept": true
   }

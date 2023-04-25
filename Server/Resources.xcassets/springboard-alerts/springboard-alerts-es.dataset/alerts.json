@@ -525,7 +525,8 @@
   {
     "title": "Editar pantalla de inicio",
     "buttons": [
-      "Cerrar"
+      "Cerrar",
+      "OK"
     ],
     "shouldAccept": false
   },
@@ -561,6 +562,13 @@
     "title": "Activa Bluetooth para permitir que “%@” se conecte a los accesorios",
     "buttons": [
       "Cerrar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Edita las pantallas de inicio",
+    "buttons": [
+      "OK"
     ],
     "shouldAccept": true
   }

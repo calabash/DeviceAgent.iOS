@@ -444,7 +444,8 @@
   {
     "title": "Editați ecranul principal",
     "buttons": [
-      "Închideți"
+      "Închideți",
+      "OK"
     ],
     "shouldAccept": false
   },
@@ -473,6 +474,13 @@
     "title": "Activați Bluetooth pentru a permite conectarea “%@” la accesorii",
     "buttons": [
       "Închide"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Editați ecranele principale",
+    "buttons": [
+      "OK"
     ],
     "shouldAccept": true
   }

@@ -574,7 +574,8 @@
   {
     "title": "Αλλαγές στην οθόνη Αφετηρίας",
     "buttons": [
-      "Απόρριψη"
+      "Απόρριψη",
+      "OK"
     ],
     "shouldAccept": false
   },
@@ -603,6 +604,13 @@
     "title": "Ενεργοποίηση Bluetooth για σύνδεση του «%@» με αξεσουάρ",
     "buttons": [
       "Κλείσιμο"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Επεξεργασία οθονών Αφετηρίας",
+    "buttons": [
+      "OK"
     ],
     "shouldAccept": true
   }

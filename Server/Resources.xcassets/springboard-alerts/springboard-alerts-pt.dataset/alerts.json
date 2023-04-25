@@ -533,7 +533,8 @@
   {
     "title": "Editar Tela de Início",
     "buttons": [
-      "Descartar"
+      "Descartar",
+      "OK"
     ],
     "shouldAccept": false
   },
@@ -555,6 +556,13 @@
     "title": "Ative o Bluetooth para Permitir que “%@” se Conecte a Acessórios",
     "buttons": [
       "Fechar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Edite Telas de Início",
+    "buttons": [
+      "OK"
     ],
     "shouldAccept": true
   }

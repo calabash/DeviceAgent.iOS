@@ -69,7 +69,15 @@
     {
         "name": "SpringBoard.app",
         "values": [
-            { "title": "ACTIVATION_FAILED_TITLE", "button": "ACTIVATION_FAILED_IGNORE_BUTTON", "default_value": false }
+            { "title": "ACTIVATION_FAILED_TITLE", "button": "ACTIVATION_FAILED_IGNORE_BUTTON", "default_value": false },
+            { "title": "REORDER_INFO_TITLE", "button": "DISMISS_ALERT", "default_value": false },
+            { "title": "ONBOARDING_EDIT_HOME_SCREENS_ALERT_TITLE", "button": "OK", "default_value": true }
+        ]
+    },
+    {
+        "name": "SpringBoardHome.framework",
+        "values": [
+            { "title": "REARRANGE_ICONS_SHORTCUT_ITEM_TITLE", "button": "OK", "default_value": true }
         ]
     },
     {

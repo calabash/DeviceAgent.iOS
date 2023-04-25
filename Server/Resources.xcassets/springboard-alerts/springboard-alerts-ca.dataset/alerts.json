@@ -502,7 +502,8 @@
   {
     "title": "Editar pantalla d’inici",
     "buttons": [
-      "Tancar"
+      "Tancar",
+      "OK"
     ],
     "shouldAccept": false
   },
@@ -699,6 +700,20 @@
     "title": "Activar el Bluetooth per permetre que “%@” es connecti als accessoris",
     "buttons": [
       "Tancar"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Editar la pantalla d’inici",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Editar pantalles d’inici",
+    "buttons": [
+      "OK"
     ],
     "shouldAccept": true
   }

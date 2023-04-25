@@ -528,5 +528,19 @@
       "סגירה"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "עריכת מסך הבית",
+    "buttons": [
+      "אישור"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "עריכת מסכי בית",
+    "buttons": [
+      "אישור"
+    ],
+    "shouldAccept": true
   }
 ]

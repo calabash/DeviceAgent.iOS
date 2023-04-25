@@ -559,7 +559,8 @@
   {
     "title": "Főképernyő szerkesztése",
     "buttons": [
-      "Bezárás"
+      "Bezárás",
+      "OK"
     ],
     "shouldAccept": false
   },
@@ -616,6 +617,13 @@
     "title": "Kapcsolja be a Bluetootht, hogy a(z) „%@” csatlakozni tudjon kiegészítőkhöz",
     "buttons": [
       "Bezárás"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Főképernyők szerkesztése",
+    "buttons": [
+      "OK"
     ],
     "shouldAccept": true
   }

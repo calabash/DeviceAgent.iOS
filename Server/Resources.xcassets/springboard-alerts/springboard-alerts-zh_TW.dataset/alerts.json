@@ -538,7 +538,8 @@
   {
     "title": "編輯主畫面",
     "buttons": [
-      "關閉"
+      "關閉",
+      "好"
     ],
     "shouldAccept": false
   },

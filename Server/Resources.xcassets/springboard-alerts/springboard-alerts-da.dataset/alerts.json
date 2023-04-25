@@ -491,7 +491,8 @@
   {
     "title": "Rediger hjemmeskærm",
     "buttons": [
-      "Luk"
+      "Luk",
+      "OK"
     ],
     "shouldAccept": false
   },
@@ -520,6 +521,13 @@
     "title": "Slå Bluetooth til for at tillade “%@” at oprette forbindelse til Tilbehør",
     "buttons": [
       "Tillad"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Rediger hjemmeskærme",
+    "buttons": [
+      "OK"
     ],
     "shouldAccept": true
   }

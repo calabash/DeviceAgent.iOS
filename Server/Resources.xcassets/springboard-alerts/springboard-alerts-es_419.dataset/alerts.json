@@ -510,5 +510,12 @@
       "Cerrar"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Editar pantallas de inicio",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

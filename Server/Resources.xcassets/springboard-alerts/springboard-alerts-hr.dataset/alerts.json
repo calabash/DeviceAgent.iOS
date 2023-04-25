@@ -545,5 +545,20 @@
       "Zatvori"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Uredite početni zaslon",
+    "buttons": [
+      "Odbaci",
+      "OK"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "Uredi početni zaslon",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

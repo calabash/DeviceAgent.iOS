@@ -521,7 +521,8 @@
   {
     "title": "Ana Ekranı Düzenle",
     "buttons": [
-      "Kapat"
+      "Kapat",
+      "Tamam"
     ],
     "shouldAccept": false
   },
@@ -550,6 +551,13 @@
     "title": "“%@” Öğesinin Aksesuarlara Bağlanmasına İzin Vermek için Bluetooth’u Aç",
     "buttons": [
       "Kapat"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Ana Ekranları Düzenle",
+    "buttons": [
+      "Tamam"
     ],
     "shouldAccept": true
   }

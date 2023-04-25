@@ -731,7 +731,8 @@
   {
     "title": "Home-Bildschirm bearbeiten",
     "buttons": [
-      "Schließen"
+      "Schließen",
+      "OK"
     ],
     "shouldAccept": false
   },
@@ -760,6 +761,13 @@
     "title": "Bluetooth aktivieren, damit „%@“ die Verbindung zum Zubehör herstellen kann",
     "buttons": [
       "Schließen"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Home-Bildschirme bearbeiten",
+    "buttons": [
+      "OK"
     ],
     "shouldAccept": true
   }
