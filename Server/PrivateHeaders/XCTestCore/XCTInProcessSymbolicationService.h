@@ -13,6 +13,7 @@
 @protocol OS_xpc_object;
 
 #import <objc/NSObject.h>
+#import <stdatomic.h>
 
 #import "XCTSymbolInfoProviding-Protocol.h"
 
@@ -22,7 +23,7 @@
 {
     struct atomic_flag _symbolicatorInitialized;
     NSSet *_imageNames;
-    struct _CSTypeRef _symbolicator;
+    CDStruct_37ea9563 _symbolicator;
     CDStruct_37ea9563 _symbolicationFunctions;
 }
 
