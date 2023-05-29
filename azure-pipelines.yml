@@ -23,18 +23,12 @@ jobs:
 - job:
   strategy:
     matrix:
-      BigSur-Xcode-13.1:
-        IMAGE_POOL: 'macOS-11'
-        XCODE_VERSION: '13.1'
-      BigSur-Xcode-13.2:
-        IMAGE_POOL: 'macOS-11'
-        XCODE_VERSION: '13.2'
-      Monterey-Xcode-13.3.1:
+      Monterey-Xcode-13.4.1:
         IMAGE_POOL: 'macOS-12'
-        XCODE_VERSION: '13.3.1'
-      Monterey-Xcode-14.0.1:
+        XCODE_VERSION: '13.4.1'
+      Monterey-Xcode-14.2:
         IMAGE_POOL: 'macOS-12'
-        XCODE_VERSION: '14.0.1'
+        XCODE_VERSION: '14.2'
       Ventura-Xcode-14.3:
         IMAGE_POOL: 'macOS-13'
         XCODE_VERSION: '14.3'
