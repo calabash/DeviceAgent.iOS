@@ -25,7 +25,7 @@
     XCTestObservationCenter *_observationCenter;
 }
 
-@property(readonly, getter=_activityAggregateStatistics) NSDictionary *activityAggregateStatistics;
+@property(copy, getter=_activityAggregateStatistics, setter=_setActivityAggregateStatistics:) NSDictionary *activityAggregateStatistics;
 @property(readonly) NSString *_classNameForReporting;
 @property(readonly) NSString *_methodNameForReporting;
 @property(readonly) Class _requiredTestRunBaseClass;

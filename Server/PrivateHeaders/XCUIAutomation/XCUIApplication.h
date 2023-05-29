@@ -12,15 +12,16 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
+#import "XCUIElement.h"
 #import "XCUIIssueDiagnosticsProviding-Protocol.h"
 
-@class NSArray, NSDictionary, NSString, XCAccessibilityElement, XCApplicationQuery, XCTVariationOptions, XCUIApplicationImpl, XCUIApplicationOpenRequest, XCUIElement;
+@class NSArray, NSDictionary, NSString, XCAccessibilityElement, XCApplicationQuery, XCTVariationOptions, XCUIApplicationImpl, XCUIApplicationOpenRequest;
 @protocol XCTRunnerAutomationSession, XCUIDevice;
 
 
 @protocol XCTRunnerAutomationSession;
 
-@interface XCUIApplication <XCUIIssueDiagnosticsProviding>
+@interface XCUIApplication : XCUIElement <XCUIIssueDiagnosticsProviding>
 {
     BOOL _ancillary;
     BOOL _prefersPlatformLauncher;

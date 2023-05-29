@@ -9,6 +9,7 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <XCTest/XCUIElementTypes.h>
 #import "CDStructures.h"
+#import "XCTestCore/XCTest.h"
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
@@ -22,7 +23,7 @@
 @class MXMInstrument, NSArray, NSDictionary, NSInvocation, NSMutableArray, NSMutableDictionary, NSMutableSet, NSObject, NSString, NSThread, XCTAttachmentManager, XCTIssue, XCTMemoryChecker, XCTMetricDiagnosticHelper, XCTSkippedTestContext, XCTTestIdentifier, XCTWaiter, XCTestCaseRun;
 @protocol OS_dispatch_source;
 
-@interface XCTestCase <XCTWaiterDelegate, XCTestCaseUIAutomationDelegate, XCTestCastMethodNamesUIAutomationDelegate, XCTestCaseDiscoveryUIAutomationDelegate, XCTMemoryCheckerDelegate, XCTActivity>
+@interface XCTestCase : XCTest <XCTWaiterDelegate, XCTestCaseUIAutomationDelegate, XCTestCastMethodNamesUIAutomationDelegate, XCTestCaseDiscoveryUIAutomationDelegate, XCTMemoryCheckerDelegate, XCTActivity>
 {
     BOOL _continueAfterFailure;
     BOOL __preciseTimeoutsEnabled;
