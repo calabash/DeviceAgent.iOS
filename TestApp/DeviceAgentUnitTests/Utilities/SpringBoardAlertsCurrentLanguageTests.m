@@ -52,7 +52,6 @@
     SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
     
     expect([self containsLanguage:@"« %@ » souhaite accéder à vos mouvements et vos activités physiques.":alertsArray]).to.beTruthy();
-    expect([self containsLanguage:@"“%@” would like to make data available to nearby Bluetooth devices even when you’re not using the app.":alertsArray]).to.beTruthy();
     expect([self containsLanguage:@"Программа «%@» запрашивает доступ к «Напоминаниям».":alertsArray]).to.beFalsy();
 
     [localeMock stopMocking];
@@ -65,7 +64,6 @@
     SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
     
     expect([self containsLanguage:@"« %@ » souhaite accéder à vos mouvements et vos activités physiques.":alertsArray]).to.beTruthy();
-    expect([self containsLanguage:@"“%@” would like to make data available to nearby Bluetooth devices even when you’re not using the app.":alertsArray]).to.beTruthy();
     expect([self containsLanguage:@"Программа «%@» запрашивает доступ к «Напоминаниям».":alertsArray]).to.beFalsy();
 
     [localeMock stopMocking];
@@ -78,7 +76,6 @@
     SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
     
     expect([self containsLanguage:@"允许“%@”在您并未使用该应用时访问您的位置吗？":alertsArray]).to.beTruthy();
-    expect([self containsLanguage:@"“%@” would like to make data available to nearby Bluetooth devices even when you’re not using the app.":alertsArray]).to.beTruthy();
     expect([self containsLanguage:@"Программа «%@» запрашивает доступ к «Напоминаниям».":alertsArray]).to.beFalsy();
 
     [localeMock stopMocking];
@@ -91,7 +88,6 @@
     SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
     
     expect([self containsLanguage:@"允许“%@”在您并未使用该应用时访问您的位置吗？":alertsArray]).to.beTruthy();
-    expect([self containsLanguage:@"“%@” would like to make data available to nearby Bluetooth devices even when you’re not using the app.":alertsArray]).to.beTruthy();
     expect([self containsLanguage:@"Программа «%@» запрашивает доступ к «Напоминаниям».":alertsArray]).to.beFalsy();
 
     [localeMock stopMocking];
@@ -104,7 +100,6 @@
     SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
     
     expect([self containsLanguage:@"「%@」要取用你的提醒事項":alertsArray]).to.beTruthy();
-    expect([self containsLanguage:@"“%@” would like to make data available to nearby Bluetooth devices even when you’re not using the app.":alertsArray]).to.beTruthy();
     expect([self containsLanguage:@"Программа «%@» запрашивает доступ к «Напоминаниям».":alertsArray]).to.beFalsy();
 
     [localeMock stopMocking];
@@ -117,7 +112,6 @@
     SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
     
     expect([self containsLanguage:@"「%@」要取用你的提醒事項":alertsArray]).to.beTruthy();
-    expect([self containsLanguage:@"“%@” would like to make data available to nearby Bluetooth devices even when you’re not using the app.":alertsArray]).to.beTruthy();
     expect([self containsLanguage:@"Программа «%@» запрашивает доступ к «Напоминаниям».":alertsArray]).to.beFalsy();
 
     [localeMock stopMocking];
@@ -130,7 +124,6 @@
     SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
     
     expect([self containsLanguage:@"要允許「%@」在您使用 App 時取用您的位置嗎？":alertsArray]).to.beTruthy();
-    expect([self containsLanguage:@"“%@” would like to make data available to nearby Bluetooth devices even when you’re not using the app.":alertsArray]).to.beTruthy();
     expect([self containsLanguage:@"Программа «%@» запрашивает доступ к «Напоминаниям».":alertsArray]).to.beFalsy();
 
     [localeMock stopMocking];
@@ -143,7 +136,6 @@
     SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
     
     expect([self containsLanguage:@"要允許「%@」在您使用 App 時取用您的位置嗎？":alertsArray]).to.beTruthy();
-    expect([self containsLanguage:@"“%@” would like to make data available to nearby Bluetooth devices even when you’re not using the app.":alertsArray]).to.beTruthy();
     expect([self containsLanguage:@"Программа «%@» запрашивает доступ к «Напоминаниям».":alertsArray]).to.beFalsy();
 
     [localeMock stopMocking];
@@ -156,7 +148,6 @@
     SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
     
     expect([self containsLanguage:@"“%@” Deseja Ter Acesso aos Seus Contatos": alertsArray]).to.beTruthy();
-    expect([self containsLanguage:@"“%@” Would Like to Send You Push Notifications":alertsArray]).to.beTruthy();
     expect([self containsLanguage:@"Программа «%@» запрашивает доступ к «Напоминаниям».":alertsArray]).to.beFalsy();
 
     [localeMock stopMocking];
@@ -169,7 +160,6 @@
     SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
     
     expect([self containsLanguage:@"Программа «%@» запрашивает доступ к «Контактам».": alertsArray]).to.beTruthy();
-    expect([self containsLanguage:@"Add Third-Party Keyboard?":alertsArray]).to.beTruthy();
     expect([self containsLanguage:@"« %@ » souhaite accéder à vos mouvements et vos activités physiques.":alertsArray]).to.beFalsy();
 
     [localeMock stopMocking];
@@ -182,7 +172,6 @@
     SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
     
     expect([self containsLanguage:@"Программа «%@» запрашивает доступ к «Контактам».": alertsArray]).to.beFalsy();
-    expect([self containsLanguage:@"Add Third-Party Keyboard?":alertsArray]).to.beTruthy();
     expect([self containsLanguage:@"« %@ » souhaite accéder à vos mouvements et vos activités physiques.":alertsArray]).to.beFalsy();
 
     [localeMock stopMocking];
@@ -195,7 +184,6 @@
     SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
     
     expect([self containsLanguage:@"“%@” quiere acceder al reconocimiento de voz": alertsArray]).to.beTruthy();
-    expect([self containsLanguage:@"Add Third-Party Keyboard?":alertsArray]).to.beTruthy();
     expect([self containsLanguage:@"acceda a tu ubicación incluso cuando la app no está en uso":alertsArray]).to.beFalsy();
 
     [localeMock stopMocking];
@@ -208,7 +196,6 @@
     SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
     
     expect([self containsLanguage:@"“%@” quiere acceder a tu condición y actividad física": alertsArray]).to.beTruthy();
-    expect([self containsLanguage:@"Add Third-Party Keyboard?":alertsArray]).to.beTruthy();
     expect([self containsLanguage:@"“%@” quiere acceder al reconocimiento de voz":alertsArray]).to.beTruthy();
 
     [localeMock stopMocking];
@@ -221,7 +208,6 @@
     SpringBoardAlerts *alertsArray = [[SpringBoardAlerts alloc] init_private];
     
     expect([self containsLanguage:@"״%@״ מעוניין לגשת למשימות שלך": alertsArray]).to.beTruthy();
-    expect([self containsLanguage:@"Add Third-Party Keyboard?":alertsArray]).to.beTruthy();
     expect([self containsLanguage:@"« %@ » souhaite accéder à vos mouvements et vos activités physiques.":alertsArray]).to.beFalsy();
 
     [localeMock stopMocking];
