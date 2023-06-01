@@ -79,7 +79,7 @@ jobs:
   - script: make test-app
     displayName: "Make test-app"
 
-  - script: make unit-tests "$(SIM_NAME)" "$(SIM_OS_VERSION)"
+  - script: make unit-tests SIM_NAME="$(SIM_NAME)" SIM_OS_VERSION="$(SIM_OS_VERSION)"
     displayName: "Make unit-tests"
     condition: and(succeeded(), eq(variables['IsRunUnitTests'], 'true'))
 
