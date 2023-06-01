@@ -1,7 +1,7 @@
 variables:
   # When Agent.JobName matches this value (and the git ref is a tag), then
   # built artifacts will be published to Azure Blob Storage.
-  AzurePublishWhen: "Monterey-Xcode-14.0.1"
+  AzurePublishWhen: "Ventura-Xcode-14.3"
   EOCompliance-Mac: true
 
 trigger:
@@ -26,12 +26,18 @@ jobs:
       Monterey-Xcode-13.4.1:
         IMAGE_POOL: 'macOS-12'
         XCODE_VERSION: '13.4.1'
+        SIM_NAME: "iPhone 13"
+        SIM_OS_VERSION: "15.5"
       Monterey-Xcode-14.2:
         IMAGE_POOL: 'macOS-12'
         XCODE_VERSION: '14.2'
+        SIM_NAME: "iPhone 14"
+        SIM_OS_VERSION: "16.2"
       Ventura-Xcode-14.3:
         IMAGE_POOL: 'macOS-13'
         XCODE_VERSION: '14.3'
+        SIM_NAME: "iPhone 14"
+        SIM_OS_VERSION: "16.4"
   pool:
     vmImage: $(IMAGE_POOL)
   timeoutInMinutes: 120
@@ -73,7 +79,7 @@ jobs:
   - script: make test-app
     displayName: "Make test-app"
 
-  - script: make unit-tests
+  - script: make unit-tests $(SIM_NAME) $(SIM_OS_VERSION)
     displayName: "Make unit-tests"
     condition: and(succeeded(), eq(variables['IsRunUnitTests'], 'true'))
 
