@@ -1,3 +1,7 @@
+### 2.6.0
+
+* Added support of Xcode 14.3.
+
 ### 2.5.1
 
 * Added new 'Edit Home Screens' alert handler.
@@ -20,7 +24,7 @@
 
 ### 2.4.3
 
-* Added support of Xcode 13.3
+* Added support of Xcode 13.3.
 * Updated dependencies.
 
 ### 2.4.2
