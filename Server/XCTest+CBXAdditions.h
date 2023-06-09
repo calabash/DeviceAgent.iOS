@@ -15,6 +15,7 @@
 #import "XCUIDevice.h"
 #import "XCUIApplicationStateTypedef.h"
 #import "XCTestCore/XCTest.h"
+#import "XCUIAutomation/XCUIElementQuery.h"
 #endif
 
 #import "XCUIHitPointResult.h"

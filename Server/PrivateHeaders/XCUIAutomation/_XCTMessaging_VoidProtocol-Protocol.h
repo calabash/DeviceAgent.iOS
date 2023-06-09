@@ -5,16 +5,6 @@
 //  Copyright (C) 1997-2019 Steve Nygard. Updated in 2022 by Kevin Bradley.
 //
 
-#import <Foundation/Foundation.h>
-#import <CoreGraphics/CoreGraphics.h>
-#import <XCTest/XCUIElementTypes.h>
-#import "CDStructures.h"
-@protocol OS_dispatch_queue;
-@protocol OS_xpc_object;
-
-@interface XCTUniformTypeIdentifier_Internal
-{
-}
-
+@protocol _XCTMessaging_VoidProtocol
 @end
 

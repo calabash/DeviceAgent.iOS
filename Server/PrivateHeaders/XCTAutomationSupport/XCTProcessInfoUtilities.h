@@ -5,8 +5,6 @@
 //  Copyright (C) 1997-2019 Steve Nygard. Updated in 2022 by Kevin Bradley.
 //
 
-
-__attribute__((visibility("hidden")))
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <XCTest/XCUIElementTypes.h>
@@ -14,20 +12,15 @@ __attribute__((visibility("hidden")))
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@interface _XCTTestIdentifier_Class
+#import <objc/NSObject.h>
+
+@interface XCTProcessInfoUtilities : NSObject
 {
-    NSString *_firstComponent;
 }
 
-- (id)_identifierString;
-- (id)componentAtIndex:(NSUInteger)arg1;
-- (NSUInteger)componentCount;
-- (id)components;
-- (id)firstComponent;
-- (id)initWithComponents:(id)arg1 options:(NSUInteger)arg2;
-- (id)lastComponent;
-- (id)legacyEncodingCounterpart;
-- (NSUInteger)options;
++ (id)bundleIdentifierForPID:(NSInteger)arg1;
++ (id)executableNameForPID:(NSInteger)arg1;
++ (id)executablePathForPID:(NSInteger)arg1;
 
 @end
 

@@ -25,13 +25,13 @@ FRAMEWORKS_MAP.each do |framework, output_path|
     binary_path = File.join(library, "PrivateFrameworks",
                             "XCUIAutomation.framework", framework)
   elsif framework == "DTXConnectionServices"
-    binary_path = File.join(developer_dir, "..", "SharedFrameworks", "DTXConnectionServices.framework", framework)
+    binary_path = File.join(developer_dir, "..", "SharedFrameworks", "DTXConnectionServices.framework", "Versions", "A", framework)
   else
     binary_path = File.join(library, "PrivateFrameworks",
                             "XCTestCore.framework", framework)
   end
 
-  hash = RunLoop::Shell.run_shell_command([File.join(__dir__, "class-dump"),
+  hash = RunLoop::Shell.run_shell_command([File.join(__dir__, "classdumpc"),
                                            "-s", "-S", "-H", "-o", output_path,
                                            binary_path],
                                           {log_cmd: true})
