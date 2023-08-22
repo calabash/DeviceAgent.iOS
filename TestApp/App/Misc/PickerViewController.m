@@ -17,6 +17,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     pickerItems = [NSArray arrayWithObjects:@"First", @"Second", @"Third", @"Fourth", nil];
+
+    // Initializing date picker.
+    self.datePicker = [[UIDatePicker alloc] init];
+    self.datePicker.datePickerMode = UIDatePickerModeDate;
+    self.datePicker.preferredDatePickerStyle = UIDatePickerStyleWheels;
+    self.dateField.inputView = self.datePicker;
+
+    // Initializing time picker.
+    self.timePicker = [[UIDatePicker alloc] init];
+    self.timePicker.datePickerMode = UIDatePickerModeTime;
+    self.timePicker.preferredDatePickerStyle = UIDatePickerStyleWheels;
+    self.timeField.inputView = self.timePicker;
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
