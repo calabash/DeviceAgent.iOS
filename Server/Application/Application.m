@@ -210,4 +210,22 @@ static Application *currentApplication;
     return json;
 }
 
++ (void)setPickerWheelValue:(int)pickerIndex wheelIndex:(int)wheelIndex value:(NSString *)value {
+    XCUIElement *datePicker = nil;
+    XCUIApplication *application = [Application currentApplication];
+    XCUIElementQuery *pickersQuery = [application descendantsMatchingType:XCUIElementTypeDatePicker];
+
+    NSArray <XCUIElement *> *datePickers = [pickersQuery allElementsBoundByIndex];
+    if ([datePickers count] != 0) {
+        datePicker = datePickers[pickerIndex];
+    }
+
+    XCUIElementQuery *wheelsQuery = [datePicker descendantsMatchingType:XCUIElementTypePickerWheel];
+    NSArray <XCUIElement *> *pickerWheels = [wheelsQuery allElementsBoundByIndex];
+
+    XCUIElement *targetWheel = pickerWheels[wheelIndex];
+
+    [targetWheel adjustToPickerWheelValue:value];
+}
+
 @end

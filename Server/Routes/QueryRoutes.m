@@ -25,6 +25,12 @@
           [response respondWithJSON:[Application tree]];
       }],
 
+      [CBXRoute get:endpoint(@"/set_picker_wheel_value", 1.0) withBlock:^(RouteRequest *request,
+                                                              NSDictionary *data,
+                                                              RouteResponse *response) {
+          [Application setPickerWheelValue:0 wheelIndex:0 value:@"1"];
+      }],
+
       [CBXRoute post:endpoint(@"/query", 1.0) withBlock:^(RouteRequest *request,
                                                           NSDictionary *body,
                                                           RouteResponse *response) {
