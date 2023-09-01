@@ -79,6 +79,9 @@ static NSString *const CBX_NUM_TOUCHES_KEY = @"touches";
 static NSString *const CBX_NUM_FINGERS_KEY = @"num_fingers";
 static NSString *const CBX_PINCH_IN = @"in";
 static NSString *const CBX_PINCH_OUT = @"out";
+static NSString *const CBX_PICKER_INDEX_KEY = @"picker_index";
+static NSString *const CBX_PICKER_WHEEL_INDEX_KEY = @"picker_wheel_index";
+static NSString *const CBX_PICKER_WHEEL_VALUE_KEY = @"picker_wheel_value";
 
 static NSString *const CBX_DIRECTION_KEY = @"direction";
 static NSString *const CBX_UP_KEY = @"up";
