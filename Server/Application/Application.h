@@ -58,6 +58,6 @@
  */
 + (NSDictionary *_Nonnull)tree;
 
-+ (void)setPickerWheelValue:(int)pickerIndex wheelIndex:(int)wheelIndex value:(NSString *_Nonnull)value;
++ (void)setPickerWheelValue:(int)pickerIndex wheelIndex:(int)wheelIndex value:(NSString *_Nonnull)value error:(NSError *_Nullable*_Nullable)error;
 
 @end

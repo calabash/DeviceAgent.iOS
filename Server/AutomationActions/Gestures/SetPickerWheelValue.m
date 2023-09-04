@@ -48,10 +48,16 @@
     int wheelIndex = [gestureConfig[CBX_PICKER_WHEEL_INDEX_KEY] intValue];
     NSString *value = gestureConfig[CBX_PICKER_WHEEL_VALUE_KEY];
 
+    __block NSError *error = nil;
     [ThreadUtils runSync:^(BOOL *setToTrueWhenDone) {
-        [Application setPickerWheelValue:pickerIndex wheelIndex:wheelIndex value:value];
+        [Application setPickerWheelValue:pickerIndex
+                              wheelIndex:wheelIndex
+                                   value:value
+                                   error:&error];
         *setToTrueWhenDone = YES;
     }];
+
+    completion(nil);
     return nil;
 }
 @end

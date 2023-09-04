@@ -210,21 +210,66 @@ static Application *currentApplication;
     return json;
 }
 
-+ (void)setPickerWheelValue:(int)pickerIndex wheelIndex:(int)wheelIndex value:(NSString *)value {
-    XCUIElement *datePicker = nil;
++ (void)setPickerWheelValue:(int)pickerIndex
+                 wheelIndex:(int)wheelIndex
+                      value:(NSString *)value
+                      error:(NSError **)error {
+
+    // Getting pickers from Application's view.
     XCUIApplication *application = [Application currentApplication];
     XCUIElementQuery *pickersQuery = [application descendantsMatchingType:XCUIElementTypeDatePicker];
-
     NSArray <XCUIElement *> *datePickers = [pickersQuery allElementsBoundByIndex];
-    if ([datePickers count] != 0) {
-        datePicker = datePickers[pickerIndex];
+
+    // Checking is there any picker on the screen.
+    NSString *message;
+    if ([datePickers count] == 0) {
+        message = @"No pickers were found.";
+        if (error) {
+            *error = [NSError errorWithDomain:CBXWebServerErrorDomain code:1 userInfo:@{NSLocalizedDescriptionKey : message}];
+        }
+        DDLogDebug(@"ERROR: %@", message);
+        return;
     }
 
-    XCUIElementQuery *wheelsQuery = [datePicker descendantsMatchingType:XCUIElementTypePickerWheel];
+    // Validating that requested picker's index is not exceed actual pickers count.
+    if ([datePickers count] < pickerIndex + 1) {
+        message = [NSString stringWithFormat:@"Requested picker should has index %d, but only %d pickers were found.", pickerIndex, (int)[datePickers count]];
+        if (error) {
+            *error = [NSError errorWithDomain:CBXWebServerErrorDomain code:1 userInfo:@{NSLocalizedDescriptionKey : message}];
+        }
+        DDLogDebug(@"ERROR: %@", message);
+        return;
+    }
+
+    // Selecting picker with requested index.
+    XCUIElement *targetPicker = [datePickers objectAtIndex:pickerIndex];
+
+    // Getting selected picker's wheels with requested index.
+    XCUIElementQuery *wheelsQuery = [targetPicker descendantsMatchingType:XCUIElementTypePickerWheel];
     NSArray <XCUIElement *> *pickerWheels = [wheelsQuery allElementsBoundByIndex];
 
-    XCUIElement *targetWheel = pickerWheels[wheelIndex];
+    // Checking is there any wheels were found for selected picker.
+    if ([pickerWheels count] == 0) {
+        message = [NSString stringWithFormat:@"No wheels were found for picker with index %d", pickerIndex];
+        if (error) {
+            *error = [NSError errorWithDomain:CBXWebServerErrorDomain code:1 userInfo:@{NSLocalizedDescriptionKey : message}];
+        }
+        DDLogDebug(@"ERROR: %@", message);
+        return;
+    }
 
+    // Validating that requested wheel's index is not exceed actual pickers count.
+    if ([pickerWheels count] < wheelIndex + 1) {
+        message = [NSString stringWithFormat:@"Requested wheel should has index %d but only %d wheels on picker with index %d were found", wheelIndex, (int)[pickerWheels count], pickerIndex];
+        if (error) {
+            *error = [NSError errorWithDomain:CBXWebServerErrorDomain code:1 userInfo:@{NSLocalizedDescriptionKey : message}];
+        }
+        DDLogDebug(@"ERROR: %@", message);
+        return;
+    }
+
+    // Selecting wheel with required index and adjusting it's value.
+    XCUIElement *targetWheel = [pickerWheels objectAtIndex:wheelIndex];
     [targetWheel adjustToPickerWheelValue:value];
 }
 
