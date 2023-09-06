@@ -6,13 +6,12 @@
 //  Copyright © 2023 Calabash. All rights reserved.
 //
 
-#import "PickerViewController.h"
+#import "DatePickersViewController.h"
 
-@interface PickerViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
-
+@interface DatePickersViewController()
 @end
 
-@implementation PickerViewController
+@implementation DatePickersViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,15 +30,4 @@
     self.timeField.inputView = self.timePicker;
 }
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return 1;
-}
-
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return [pickerItems count];
-}
-
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return [pickerItems objectAtIndex:row];
-}
 @end

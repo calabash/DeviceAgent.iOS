@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PickerViewController: UIViewController<UIPickerViewDelegate, UIPickerViewDataSource> {
+@interface DatePickersViewController : UIViewController {
     NSArray *pickerItems;
 }
 @property (strong, nonatomic) IBOutlet UITextField *dateField;
