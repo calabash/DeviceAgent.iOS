@@ -210,6 +210,12 @@ static Application *currentApplication;
     return json;
 }
 
+/// Sets picker's wheel value.
+/// - Parameters:
+///   - pickerIndex: Index of picker.
+///   - wheelIndex: Index of wheel in the target picker.
+///   - value: Value to select.
+///   - error: Error message.
 + (void)setPickerWheelValue:(int)pickerIndex
                  wheelIndex:(int)wheelIndex
                       value:(NSString *)value
@@ -217,12 +223,12 @@ static Application *currentApplication;
 
     // Getting pickers from Application's view.
     XCUIApplication *application = [Application currentApplication];
-    XCUIElementQuery *pickersQuery = [application descendantsMatchingType:XCUIElementTypeDatePicker];
-    NSArray <XCUIElement *> *datePickers = [pickersQuery allElementsBoundByIndex];
+    XCUIElementQuery *pickersQuery = [application descendantsMatchingType:XCUIElementTypePicker];
+    NSArray <XCUIElement *> *pickers = [pickersQuery allElementsBoundByIndex];
 
     // Checking is there any picker on the screen.
     NSString *message;
-    if ([datePickers count] == 0) {
+    if ([pickers count] == 0) {
         message = @"No pickers were found.";
         if (error) {
             *error = [NSError errorWithDomain:CBXWebServerErrorDomain code:1 userInfo:@{NSLocalizedDescriptionKey : message}];
@@ -232,8 +238,8 @@ static Application *currentApplication;
     }
 
     // Validating that requested picker's index is not exceed actual pickers count.
-    if ([datePickers count] < pickerIndex + 1) {
-        message = [NSString stringWithFormat:@"Requested picker should has index %d, but only %d pickers were found.", pickerIndex, (int)[datePickers count]];
+    if ([pickers count] < pickerIndex + 1) {
+        message = [NSString stringWithFormat:@"Requested picker should has index %d, but only %d pickers were found.", pickerIndex, (int)[pickers count]];
         if (error) {
             *error = [NSError errorWithDomain:CBXWebServerErrorDomain code:1 userInfo:@{NSLocalizedDescriptionKey : message}];
         }
@@ -242,7 +248,7 @@ static Application *currentApplication;
     }
 
     // Selecting picker with requested index.
-    XCUIElement *targetPicker = [datePickers objectAtIndex:pickerIndex];
+    XCUIElement *targetPicker = [pickers objectAtIndex:pickerIndex];
 
     // Getting selected picker's wheels with requested index.
     XCUIElementQuery *wheelsQuery = [targetPicker descendantsMatchingType:XCUIElementTypePickerWheel];
