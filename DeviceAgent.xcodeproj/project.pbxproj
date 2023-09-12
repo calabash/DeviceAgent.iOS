@@ -886,6 +886,7 @@
 		DD0E0381287687B4008618F5 /* Specta.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A10D9F2679A575004446C7 /* Specta.xcframework */; };
 		DD0E0382287687B7008618F5 /* OCMock.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A10D9C2679A50D004446C7 /* OCMock.xcframework */; };
 		DD0E0383287687BA008618F5 /* Expecta.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A10D992679A4CC004446C7 /* Expecta.xcframework */; };
+		DD6261872AA86ABE0069D8AD /* PickersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6261862AA86ABE0069D8AD /* PickersViewController.m */; };
 		DD6297CC2A22BF3600E36189 /* NSPredicateVisitor-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6297C62A22BF3500E36189 /* NSPredicateVisitor-Protocol.h */; };
 		DD6297CD2A22BF3600E36189 /* NSPredicateVisitor-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6297C62A22BF3500E36189 /* NSPredicateVisitor-Protocol.h */; };
 		DD6297CE2A22BF3600E36189 /* NSPredicateVisitor-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6297C62A22BF3500E36189 /* NSPredicateVisitor-Protocol.h */; };
@@ -1870,6 +1871,8 @@
 		B9A81FD3215E429A0067AE63 /* XCUIElement+VisibilityResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIElement+VisibilityResult.h"; sourceTree = "<group>"; };
 		B9A81FD4215E429A0067AE63 /* XCUIElement+VisibilityResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCUIElement+VisibilityResult.m"; sourceTree = "<group>"; };
 		DD0E023D28768626008618F5 /* XCTVariationOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTVariationOptions.h; sourceTree = "<group>"; };
+		DD6261852AA86ABE0069D8AD /* PickersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickersViewController.h; sourceTree = "<group>"; };
+		DD6261862AA86ABE0069D8AD /* PickersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickersViewController.m; sourceTree = "<group>"; };
 		DD6297C62A22BF3500E36189 /* NSPredicateVisitor-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPredicateVisitor-Protocol.h"; sourceTree = "<group>"; };
 		DD6297C72A22BF3500E36189 /* XCTElementQueryTransformerPredicateValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTElementQueryTransformerPredicateValidator.h; sourceTree = "<group>"; };
 		DD6297C82A22BF3500E36189 /* XCTProcessInfoUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTProcessInfoUtilities.h; sourceTree = "<group>"; };
@@ -3518,6 +3521,8 @@
 				F5FEA56A201B41DB00CEF56A /* GemuseBoucheController.m */,
 				DD9717A52A819B8100366EB6 /* DatePickersViewController.h */,
 				DD9717A62A819B8100366EB6 /* DatePickersViewController.m */,
+				DD6261852AA86ABE0069D8AD /* PickersViewController.h */,
+				DD6261862AA86ABE0069D8AD /* PickersViewController.m */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -5086,6 +5091,7 @@
 				F5E1D8911DEC8EDE00B72A8E /* TextInputController.m in Sources */,
 				DD9717A72A819B8100366EB6 /* DatePickersViewController.m in Sources */,
 				F5AC714D1CEB816E00DE059A /* TaoController.m in Sources */,
+				DD6261872AA86ABE0069D8AD /* PickersViewController.m in Sources */,
 				F5BCAB0E1D5BBEDA00ED6EE3 /* PanPaletteController.m in Sources */,
 				F5E1D8921DEC8EDE00B72A8E /* ViewsToQueryController.m in Sources */,
 				89331CCE1CC00E82003C2E59 /* RotatePinchViewController.m in Sources */,

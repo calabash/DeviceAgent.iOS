@@ -1,11 +1,3 @@
-//
-//  PickerViewController.m
-//  TestApp
-//
-//  Created by Ilya Bausov on 8/7/23.
-//  Copyright © 2023 Calabash. All rights reserved.
-//
-
 #import "DatePickersViewController.h"
 
 @interface DatePickersViewController()
@@ -28,6 +20,41 @@
     self.timePicker.datePickerMode = UIDatePickerModeTime;
     self.timePicker.preferredDatePickerStyle = UIDatePickerStyleWheels;
     self.timeField.inputView = self.timePicker;
+
+    self.dateField.inputAccessoryView = [self setupToolbarForDatePicker];
+    self.timeField.inputAccessoryView = [self setupToolbarForTimePicker];
+}
+
+- (UIToolbar *)setupToolbarForDatePicker {
+    UIToolbar *toolbar = [[UIToolbar alloc] init];
+    toolbar.sizeToFit;
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemDone target:self action:@selector(doneActionForDatePicker:)];
+    UIBarButtonItem *flexSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    [toolbar setItems:[NSArray arrayWithObjects:flexSpace, doneButton, nil]];
+    return toolbar;
+}
+
+- (void)doneActionForDatePicker:(UIResponder *)sender {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"MM/dd/yyyy";
+    self.dateField.text = [dateFormatter stringFromDate:self.datePicker.date];
+    [self.dateField endEditing:YES];
+}
+
+- (UIToolbar *)setupToolbarForTimePicker {
+    UIToolbar *toolbar = [[UIToolbar alloc] init];
+    toolbar.sizeToFit;
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemDone target:self action:@selector(doneActionForTimePicker:)];
+    UIBarButtonItem *flexSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    [toolbar setItems:[NSArray arrayWithObjects:doneButton, flexSpace, nil]];
+    return toolbar;
+}
+
+- (void)doneActionForTimePicker:(UIResponder *)sender {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"HH:mm";
+    self.timeField.text = [dateFormatter stringFromDate:self.timePicker.date];
+    [self.timeField endEditing:YES];
 }
 
 @end
