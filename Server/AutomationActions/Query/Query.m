@@ -31,7 +31,7 @@
     return e;
 }
 
-- (NSArray<XCUIElement *> *)execute {
+- (NSArray<NSDictionary *> *)execute {
     if (self.queryConfiguration.selectors.count == 0) {
         @throw [CBXException withMessage:@"Query must have at least one "
                 "specifier"];
@@ -54,8 +54,28 @@
     //if (childQuery) {
     //    return [childQuery execute];
     //} else {
-    return [query allElementsBoundByIndex];
+    NSArray<XCUIElement *> *foundElements = [query allElementsBoundByIndex];
+
+    NSMutableArray<NSDictionary *> *results = [NSMutableArray array];
+    for (XCUIElement *element in foundElements) {
+        XCElementSnapshot *snapshot = element.lastSnapshot;
+        [results addObject:[self childrenTreeFor:snapshot]];
+    }
     //}
+    return results;
+}
+
+- (NSDictionary *)childrenTreeFor:(XCElementSnapshot *)element {
+    NSMutableDictionary *json = [[JSONUtils snapshotOrElementToJSON:element] mutableCopy];
+
+    if (element.children.count) {
+        NSMutableArray *children = [NSMutableArray array];
+        for (XCElementSnapshot *child in element.children) {
+            [children addObject:[self childrenTreeFor:child]];
+        }
+        json[@"children"] = children;
+    }
+    return json;
 }
 
 - (NSDictionary *)toDict {

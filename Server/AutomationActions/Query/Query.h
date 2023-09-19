@@ -59,8 +59,7 @@ Convenience constructor.
     
  @return a list of XCUIElement that matches all specifiers in the queryConfig
  */
-- (NSArray <XCUIElement *> *)execute;
-
+- (NSArray <NSDictionary *> *)execute;
 /*
     Debug description
  */
