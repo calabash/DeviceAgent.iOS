@@ -58,19 +58,19 @@
 
     NSMutableArray<NSDictionary *> *results = [NSMutableArray array];
     for (XCUIElement *element in foundElements) {
-        [results addObject:[self childrenTreeFor:element]];
+        XCElementSnapshot *snapshot = element.lastSnapshot;
+        [results addObject:[self childrenTreeFor:snapshot]];
     }
     //}
     return results;
 }
 
-- (NSDictionary *)childrenTreeFor:(XCUIElement *)element {
+- (NSDictionary *)childrenTreeFor:(XCElementSnapshot *)element {
     NSMutableDictionary *json = [[JSONUtils snapshotOrElementToJSON:element] mutableCopy];
 
-    NSArray<XCUIElement *> *children = [element childrenMatchingType:XCUIElementTypeAny];
-    if (children.count > 0) {
+    if (element.children.count) {
         NSMutableArray *children = [NSMutableArray array];
-        for (XCUIElement *child in [element childrenMatchingType:XCUIElementTypeAny]) {
+        for (XCElementSnapshot *child in element.children) {
             [children addObject:[self childrenTreeFor:child]];
         }
         json[@"children"] = children;
