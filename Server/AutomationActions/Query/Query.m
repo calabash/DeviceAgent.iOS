@@ -58,10 +58,7 @@
 
     NSMutableArray<NSDictionary *> *results = [NSMutableArray array];
     for (XCUIElement *element in foundElements) {
-        XCElementSnapshot *snapshot = element.lastSnapshot;
-        if (snapshot == nil) {
-            @throw [CBXException withMessage:@"Cannot get snapshot for element"];
-        }
+        XCElementSnapshot *snapshot = [[element query] cbx_elementSnapshotForDebugDescription];
         [results addObject:[self childrenTreeFor:snapshot]];
     }
     //}
