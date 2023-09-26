@@ -34,17 +34,7 @@
                                                    validator:[Query validator]];
           Query *query = [QueryFactory queryWithQueryConfiguration:config];
 
-          NSArray <XCUIElement *> *elements = [query execute];
-
-          /*
-           Format and return the results
-           */
-          NSMutableArray *results = [NSMutableArray arrayWithCapacity:elements.count];
-          for (XCUIElement *el in elements) {
-              NSDictionary *json = [JSONUtils snapshotOrElementToJSON:el];
-              [results addObject:json];
-          }
-          [response respondWithJSON:@{@"result" : results}];
+          [response respondWithJSON:@{@"result" : [query execute]}];
       }],
 
       [CBXRoute get:endpoint(@"/springboard-alert", 1.0) withBlock:^(RouteRequest *request,

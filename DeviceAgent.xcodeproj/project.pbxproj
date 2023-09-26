@@ -886,6 +886,7 @@
 		DD0E0381287687B4008618F5 /* Specta.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A10D9F2679A575004446C7 /* Specta.xcframework */; };
 		DD0E0382287687B7008618F5 /* OCMock.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A10D9C2679A50D004446C7 /* OCMock.xcframework */; };
 		DD0E0383287687BA008618F5 /* Expecta.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A10D992679A4CC004446C7 /* Expecta.xcframework */; };
+		DD6261872AA86ABE0069D8AD /* PickersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6261862AA86ABE0069D8AD /* PickersViewController.m */; };
 		DD6297CC2A22BF3600E36189 /* NSPredicateVisitor-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6297C62A22BF3500E36189 /* NSPredicateVisitor-Protocol.h */; };
 		DD6297CD2A22BF3600E36189 /* NSPredicateVisitor-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6297C62A22BF3500E36189 /* NSPredicateVisitor-Protocol.h */; };
 		DD6297CE2A22BF3600E36189 /* NSPredicateVisitor-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6297C62A22BF3500E36189 /* NSPredicateVisitor-Protocol.h */; };
@@ -924,6 +925,11 @@
 		DD6401DF284011AF008CD3F5 /* XCTest+CBXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F547174F20496A200024AA0B /* XCTest+CBXAdditions.m */; };
 		DD6401E028403F25008CD3F5 /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107F8FC231D7262003961AF /* Resources.xcassets */; };
 		DD6402192840803F008CD3F5 /* SpringBoardAlertsDismissAuto.m in Sources */ = {isa = PBXBuildFile; fileRef = DD64021728407DF3008CD3F5 /* SpringBoardAlertsDismissAuto.m */; };
+		DD7746C32AA15A1000BD3B0E /* SetPickerWheelValue.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7746C12AA15A1000BD3B0E /* SetPickerWheelValue.h */; };
+		DD7746C42AA15A1000BD3B0E /* SetPickerWheelValue.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7746C12AA15A1000BD3B0E /* SetPickerWheelValue.h */; };
+		DD7746C52AA15A1000BD3B0E /* SetPickerWheelValue.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7746C22AA15A1000BD3B0E /* SetPickerWheelValue.m */; };
+		DD7746C62AA15A1000BD3B0E /* SetPickerWheelValue.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7746C22AA15A1000BD3B0E /* SetPickerWheelValue.m */; };
+		DD9717A72A819B8100366EB6 /* DatePickersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9717A62A819B8100366EB6 /* DatePickersViewController.m */; };
 		F5061A3B2153B0FF00B85792 /* CBXiOSVersionInlinesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27F01D4F947F000FF6C0 /* CBXiOSVersionInlinesTest.m */; };
 		F5061A3C2153B0FF00B85792 /* CBXTestToolsStandup.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D27F11D4F947F000FF6C0 /* CBXTestToolsStandup.m */; };
 		F5061A3D2153B0FF00B85792 /* CBXUITestServerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F52975BE1D4FB1FA009094D5 /* CBXUITestServerTest.m */; };
@@ -1865,6 +1871,8 @@
 		B9A81FD3215E429A0067AE63 /* XCUIElement+VisibilityResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIElement+VisibilityResult.h"; sourceTree = "<group>"; };
 		B9A81FD4215E429A0067AE63 /* XCUIElement+VisibilityResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCUIElement+VisibilityResult.m"; sourceTree = "<group>"; };
 		DD0E023D28768626008618F5 /* XCTVariationOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTVariationOptions.h; sourceTree = "<group>"; };
+		DD6261852AA86ABE0069D8AD /* PickersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickersViewController.h; sourceTree = "<group>"; };
+		DD6261862AA86ABE0069D8AD /* PickersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickersViewController.m; sourceTree = "<group>"; };
 		DD6297C62A22BF3500E36189 /* NSPredicateVisitor-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPredicateVisitor-Protocol.h"; sourceTree = "<group>"; };
 		DD6297C72A22BF3500E36189 /* XCTElementQueryTransformerPredicateValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTElementQueryTransformerPredicateValidator.h; sourceTree = "<group>"; };
 		DD6297C82A22BF3500E36189 /* XCTProcessInfoUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTProcessInfoUtilities.h; sourceTree = "<group>"; };
@@ -1876,6 +1884,10 @@
 		DD6297DB2A22BF9500E36189 /* XCUISystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUISystem.h; sourceTree = "<group>"; };
 		DD6297DC2A22BF9500E36189 /* XCTMessagingRole_UIApplicationStateUpdating-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingRole_UIApplicationStateUpdating-Protocol.h"; sourceTree = "<group>"; };
 		DD64021728407DF3008CD3F5 /* SpringBoardAlertsDismissAuto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpringBoardAlertsDismissAuto.m; sourceTree = "<group>"; };
+		DD7746C12AA15A1000BD3B0E /* SetPickerWheelValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetPickerWheelValue.h; path = AutomationActions/Gestures/SetPickerWheelValue.h; sourceTree = "<group>"; };
+		DD7746C22AA15A1000BD3B0E /* SetPickerWheelValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetPickerWheelValue.m; path = AutomationActions/Gestures/SetPickerWheelValue.m; sourceTree = "<group>"; };
+		DD9717A52A819B8100366EB6 /* DatePickersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatePickersViewController.h; sourceTree = "<group>"; };
+		DD9717A62A819B8100366EB6 /* DatePickersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatePickersViewController.m; sourceTree = "<group>"; };
 		F50AF09E20F60D6600CF1250 /* CBXURLHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBXURLHelper.h; sourceTree = "<group>"; };
 		F50AF09F20F60D6600CF1250 /* CBXURLHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBXURLHelper.m; sourceTree = "<group>"; };
 		F50BB27B1D73392100264915 /* Permissions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Permissions.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2765,31 +2777,33 @@
 		89C5F3601C9C58A10093A018 /* Gestures */ = {
 			isa = PBXGroup;
 			children = (
-				F5870B3A1CF0BEFF00B3376C /* EventSynthesis */,
-				899696D11CB44D9B00BB42E2 /* GestureConfiguration.h */,
-				899696D21CB44D9B00BB42E2 /* GestureConfiguration.m */,
-				89C5F3691C9C912F0093A018 /* GestureFactory.h */,
-				89C5F36A1C9C912F0093A018 /* GestureFactory.m */,
-				899697031CB5D5CF00BB42E2 /* Gesture+Options.h */,
-				899697041CB5D5CF00BB42E2 /* Gesture+Options.m */,
-				89C5F3581C9B9C850093A018 /* Gesture.h */,
-				89C5F3591C9B9C850093A018 /* Gesture.m */,
-				899696B81CADF84B00BB42E2 /* EnterText.h */,
-				899696B91CADF84B00BB42E2 /* EnterText.m */,
 				896C7C751D19AE990017CE08 /* ClearText.h */,
 				896C7C761D19AE990017CE08 /* ClearText.m */,
 				89C5F36D1C9E32440093A018 /* DoubleTap.h */,
 				89C5F36E1C9E32440093A018 /* DoubleTap.m */,
-				F55B31C31CBE6E3800DFB13C /* TwoFingerTap.h */,
-				F55B31C41CBE6E3800DFB13C /* TwoFingerTap.m */,
-				89C5F3611C9C58BD0093A018 /* Touch.h */,
-				89C5F3621C9C58BD0093A018 /* Touch.m */,
 				89512BD91C9EEC3C0027D61E /* Drag.h */,
 				89512BDA1C9EEC3C0027D61E /* Drag.m */,
+				899696B81CADF84B00BB42E2 /* EnterText.h */,
+				899696B91CADF84B00BB42E2 /* EnterText.m */,
+				F5870B3A1CF0BEFF00B3376C /* EventSynthesis */,
+				89C5F3581C9B9C850093A018 /* Gesture.h */,
+				89C5F3591C9B9C850093A018 /* Gesture.m */,
+				899697031CB5D5CF00BB42E2 /* Gesture+Options.h */,
+				899697041CB5D5CF00BB42E2 /* Gesture+Options.m */,
+				899696D11CB44D9B00BB42E2 /* GestureConfiguration.h */,
+				899696D21CB44D9B00BB42E2 /* GestureConfiguration.m */,
+				89C5F3691C9C912F0093A018 /* GestureFactory.h */,
+				89C5F36A1C9C912F0093A018 /* GestureFactory.m */,
 				899696C21CB3360900BB42E2 /* Pinch.h */,
 				899696C31CB3360900BB42E2 /* Pinch.m */,
 				89F6BF891CBC4BDD0088269C /* Rotate.h */,
 				89F6BF8A1CBC4BDD0088269C /* Rotate.m */,
+				DD7746C12AA15A1000BD3B0E /* SetPickerWheelValue.h */,
+				DD7746C22AA15A1000BD3B0E /* SetPickerWheelValue.m */,
+				89C5F3611C9C58BD0093A018 /* Touch.h */,
+				89C5F3621C9C58BD0093A018 /* Touch.m */,
+				F55B31C31CBE6E3800DFB13C /* TwoFingerTap.h */,
+				F55B31C41CBE6E3800DFB13C /* TwoFingerTap.m */,
 			);
 			name = Gestures;
 			sourceTree = "<group>";
@@ -3505,6 +3519,10 @@
 				F54063FB1EBB410600C80B4E /* WebView */,
 				F5FEA569201B41DB00CEF56A /* GemuseBoucheController.h */,
 				F5FEA56A201B41DB00CEF56A /* GemuseBoucheController.m */,
+				DD9717A52A819B8100366EB6 /* DatePickersViewController.h */,
+				DD9717A62A819B8100366EB6 /* DatePickersViewController.m */,
+				DD6261852AA86ABE0069D8AD /* PickersViewController.h */,
+				DD6261862AA86ABE0069D8AD /* PickersViewController.m */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -3618,6 +3636,7 @@
 				843A0D1B26B8DB92001CF302 /* XCTMessagingChannel_IDEToDaemon-Protocol.h in Headers */,
 				843A0D2B26B8DB92001CF302 /* DTXConnection-XCTestAdditions.h in Headers */,
 				843A0C6B26B8DB91001CF302 /* XCTMessagingChannel_RunnerToDaemon-Protocol.h in Headers */,
+				DD7746C42AA15A1000BD3B0E /* SetPickerWheelValue.h in Headers */,
 				843A0CD526B8DB92001CF302 /* XCTestLog.h in Headers */,
 				843A0D7726B8DB92001CF302 /* _XCTestObservationInternal-Protocol.h in Headers */,
 				843A0D8726B8DB93001CF302 /* XCTestDriver.h in Headers */,
@@ -4175,6 +4194,7 @@
 				F5DBC09E2101EEE900A4C274 /* UIDevice+Wifi_IP.h in Headers */,
 				843A0C3826B8DB91001CF302 /* NSValue-XCTSymbolicationServiceAdditions.h in Headers */,
 				843A0D6026B8DB92001CF302 /* XCTMessagingChannel_IDEToRunner-Protocol.h in Headers */,
+				DD7746C32AA15A1000BD3B0E /* SetPickerWheelValue.h in Headers */,
 				8479D81326F8D37600F6EFDA /* DTXDecompressionException.h in Headers */,
 				843A0CB826B8DB92001CF302 /* XCTestCaseSuite.h in Headers */,
 				F55F81851C6DD07500A945C8 /* DDData.h in Headers */,
@@ -4865,6 +4885,7 @@
 				89D5381A1CA3551600F62E09 /* QuerySpecifierByProperty.m in Sources */,
 				F547175020496A210024AA0B /* XCTest+CBXAdditions.m in Sources */,
 				F5366D9F1DE6CC2900E7C765 /* TextInputFirstResponderProvider.m in Sources */,
+				DD7746C52AA15A1000BD3B0E /* SetPickerWheelValue.m in Sources */,
 				F55F82511C6DD07500A945C8 /* Route.m in Sources */,
 				F55F819E1C6DD07500A945C8 /* HTTPDataResponse.m in Sources */,
 				89C5F36C1C9C912F0093A018 /* GestureFactory.m in Sources */,
@@ -5068,7 +5089,9 @@
 				F54063F51EBB344200C80B4E /* UIWebView+FLUIWebView.m in Sources */,
 				F5954E0C1CBD2E1200117745 /* AppDelegate.m in Sources */,
 				F5E1D8911DEC8EDE00B72A8E /* TextInputController.m in Sources */,
+				DD9717A72A819B8100366EB6 /* DatePickersViewController.m in Sources */,
 				F5AC714D1CEB816E00DE059A /* TaoController.m in Sources */,
+				DD6261872AA86ABE0069D8AD /* PickersViewController.m in Sources */,
 				F5BCAB0E1D5BBEDA00ED6EE3 /* PanPaletteController.m in Sources */,
 				F5E1D8921DEC8EDE00B72A8E /* ViewsToQueryController.m in Sources */,
 				89331CCE1CC00E82003C2E59 /* RotatePinchViewController.m in Sources */,
@@ -5165,6 +5188,7 @@
 				F5061A472153B0FF00B85792 /* TouchTest.m in Sources */,
 				F5061A3D2153B0FF00B85792 /* CBXUITestServerTest.m in Sources */,
 				F5061A932153B19900B85792 /* EnterText.m in Sources */,
+				DD7746C62AA15A1000BD3B0E /* SetPickerWheelValue.m in Sources */,
 				F5061A7F2153B19900B85792 /* QuerySpecifierByIndex.m in Sources */,
 				F5061A812153B19900B85792 /* QuerySpecifierByPropertyLike.m in Sources */,
 				F5061A592153B14400B85792 /* ThreadUtils.m in Sources */,
