@@ -1,3 +1,8 @@
+### 2.7.0
+
+* Added set_picker_wheel_value server route.
+* Updated TestApp with picker screen.
+
 ### 2.6.0
 
 * Added support of Xcode 14.3.
