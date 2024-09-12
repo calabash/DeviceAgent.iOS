@@ -286,7 +286,13 @@ NSString *const CBXDeviceSimKeyVersionInfo = @"SIMULATOR_VERSION_INFO";
       @"iPhone14,8" : @"iPhone 14 Plus",
       @"iPhone15,2" : @"iPhone 14 Pro",
       @"iPhone15,3" : @"iPhone 14 Pro Max",
-      
+
+      // iPhone 15 Series.
+      @"iPhone15,4" : @"iPhone 15",
+      @"iPhone15,5" : @"iPhone 15 Plus",
+      @"iPhone16,1" : @"iPhone 15 Pro",
+      @"iPhone16,2" : @"iPhone 15 Pro Max",
+
       // iPad Pro 13in
       @"iPad6,7" : @"ipad pro",
       @"iPad6,8" : @"ipad pro",
