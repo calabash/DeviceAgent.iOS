@@ -36,7 +36,7 @@
     XCUIElement *firstResponder = nil;
     for (NSNumber *number in self.elementTypes) {
         XCUIElementType type = (XCUIElementType)[number unsignedIntegerValue];
-        XCUIElementQuery *firstResponderQuery = [(id)application descendantsMatchingType:type];
+        XCUIElementQuery *firstResponderQuery = [(XCUIElement *)application descendantsMatchingType:type];
         XCUIElementQuery *matching = [firstResponderQuery matchingPredicate:predicate];
         NSArray <XCUIElement *> *elements = [matching allElementsBoundByIndex];
         if ([elements count] == 1) {
