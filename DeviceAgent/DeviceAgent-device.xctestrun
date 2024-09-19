@@ -6,7 +6,7 @@
 	<dict>
 		<key>IsUITestBundle</key>
 		<true/>
-		<key>TestBundlePath</key>
+		<key>TestBundleDestinationRelativePath</key>
 		<string>__TESTHOST__/PlugIns/DeviceAgent.xctest</string>
 		<key>TestHostBundleIdentifier</key>
 		<string>sh.calaba.DeviceAgent.xctrunner</string>
