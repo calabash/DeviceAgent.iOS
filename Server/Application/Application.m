@@ -222,7 +222,7 @@ static Application *currentApplication;
 
     // Getting pickers from Application's view.
     XCUIApplication *application = [Application currentApplication];
-    XCUIElementQuery *pickersQuery = [(XCUIElement *)application descendantsMatchingType:XCUIElementTypePicker];
+    XCUIElementQuery *pickersQuery = [application descendantsMatchingType:XCUIElementTypePicker];
     NSArray <XCUIElement *> *pickers = [pickersQuery allElementsBoundByIndex];
 
     // Checking is there any picker on the screen.

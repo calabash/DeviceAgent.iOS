@@ -63,7 +63,7 @@ typedef enum : NSUInteger {
         // Collect timing info
         NSTimeInterval startTime = [[CBXMachClock sharedClock] absoluteTime];
         
-        XCUIElementQuery *query = [(XCUIElement *)self descendantsMatchingType:XCUIElementTypeAlert];
+        XCUIElementQuery *query = [self descendantsMatchingType:XCUIElementTypeAlert];
         NSArray <XCUIElement *> *elements = [query allElementsBoundByIndex];
 
         if ([elements count] != 0) {

@@ -9,6 +9,7 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <XCTest/XCUIElementTypes.h>
 #import "../CDStructures.h"
+#import "XCUIElement.h"
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
@@ -20,7 +21,7 @@
 
 @protocol XCTRunnerAutomationSession;
 
-@interface XCUIApplication: NSObject <XCUIIssueDiagnosticsProviding>
+@interface XCUIApplication: XCUIElement <XCUIIssueDiagnosticsProviding>
 {
     BOOL _ancillary;
     BOOL _prefersPlatformLauncher;

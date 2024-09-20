@@ -190,7 +190,7 @@
 
 - (XCUIElement *)deleteKey {
     XCUIApplication *application = [Application currentApplication];
-    XCUIElementQuery *query = [(XCUIElement *) application descendantsMatchingType:XCUIElementTypeKey];
+    XCUIElementQuery *query = [application descendantsMatchingType:XCUIElementTypeKey];
     XCUIElementQuery *matching = [query matchingPredicate:[self deleteKeyPredicate]];
     NSArray <XCUIElement *> *elements = [matching allElementsBoundByIndex];
 
