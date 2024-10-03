@@ -35,12 +35,11 @@ info "Prepared install directory ${INSTALL_DIR}"
 
 BUILD_PRODUCTS_DIR="${XC_BUILD_DIR}/Build/Products/${XC_CONFIG}-iphonesimulator"
 BUILD_PRODUCTS_APP="${BUILD_PRODUCTS_DIR}/${APP}"
-BUILD_PRODUCTS_DSYM="${BUILD_PRODUCTS_DIR}/${DSYM}"
+BUILD_PRODUCTS_DSYM="${XC_BUILD_DIR}/${DSYM}"
 BUILD_PRODUCTS_RUNNER="${BUILD_PRODUCTS_DIR}/${RUNNER}"
 
 rm -rf "${BUILD_PRODUCTS_APP}"
 rm -rf "${BUILD_PRODUCTS_DSYM}"
-rm -rf "${BUILD_PRODUCTS_RUNNER}"
 mkdir -p "${BUILD_PRODUCTS_DIR}"
 
 info "Prepared build directory ${XC_BUILD_DIR}"
@@ -49,9 +48,8 @@ banner "Building ${APP}"
 
 COMMAND_LINE_BUILD=1 xcrun xcodebuild  \
   -SYMROOT="${XC_BUILD_DIR}" \
-  -derivedDataPath "${BUILD_PRODUCTS_DIR}" \
-  TARGET_BUILD_DIR="${BUILD_PRODUCTS_DIR}" \
-  DWARF_DSYM_FOLDER_PATH="${BUILD_PRODUCTS_DIR}" \
+  -derivedDataPath "${XC_BUILD_DIR}" \
+  DWARF_DSYM_FOLDER_PATH="${XC_BUILD_DIR}" \
   -workspace "${XC_WORKSPACE}" \
   -scheme "${XC_SCHEME}" \
   -configuration "${XC_CONFIG}" \

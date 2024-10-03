@@ -33,7 +33,7 @@ INSTALLED_IPA="${INSTALL_DIR}/${IPA}"
 
 BUILD_PRODUCTS_DIR="${XC_BUILD_DIR}/Build/Products/${XC_CONFIG}-iphoneos"
 BUILD_PRODUCTS_APP="${BUILD_PRODUCTS_DIR}/${APP}"
-BUILD_PRODUCTS_DSYM="${BUILD_PRODUCTS_DIR}/${DSYM}"
+BUILD_PRODUCTS_DSYM="${XC_BUILD_DIR}/${DSYM}"
 
 rm -rf "${BUILD_PRODUCTS_APP}"
 rm -rf "${BUILD_PRODUCTS_DSYM}"
@@ -51,9 +51,8 @@ if [ "${PREPARE_TC_ONLY}" != "1" ]; then
 
   COMMAND_LINE_BUILD=1 xcrun xcodebuild \
     -SYMROOT="${XC_BUILD_DIR}" \
-    -derivedDataPath "${BUILD_PRODUCTS_DIR}" \
-    TARGET_BUILD_DIR="${BUILD_PRODUCTS_DIR}" \
-    DWARF_DSYM_FOLDER_PATH="${BUILD_PRODUCTS_DIR}" \
+    -derivedDataPath "${XC_BUILD_DIR}" \
+    DWARF_DSYM_FOLDER_PATH="${XC_BUILD_DIR}" \
     -workspace "${XC_WORKSPACE}" \
     -scheme "${XC_SCHEME}" \
     -configuration "${XC_CONFIG}" \
