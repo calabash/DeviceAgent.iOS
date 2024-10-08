@@ -565,5 +565,12 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Acesso ao App Saúde",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
   }
 ]

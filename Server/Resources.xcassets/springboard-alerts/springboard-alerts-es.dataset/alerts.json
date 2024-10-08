@@ -571,5 +571,194 @@
       "OK"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "¿Quieres permitir que %@ utilice Face ID?",
+    "buttons": [
+      "No permitir"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "%@ quiere acceder al micrófono",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere añadir ítems a tu fototeca",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere acceder a tu calendario",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Dar a %@ acceso total a tu calendario?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere añadir eventos a tu calendario",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere acceder a tu actividad física y deportiva",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere acceder a la cámara",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere acceder a tus recordatorios",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Quieres usar %@ con Siri?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere acceder a Apple Music, tu actividad relacionada con la música y los vídeos, y tu biblioteca multimedia",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere acceder a tus contactos",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere acceder a la información básica de tus contactos",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere acceder a la información de todos tus contactos",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere acceder a tu fototeca",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere acceder a tus datos de la app Casa",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere recibir llamadas VoIP en segundo plano",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere usar Bluetooth mientras esté en uso",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere usar Bluetooth",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere acceder al reconocimiento de voz",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Actualización de los ajustes del operador",
+    "buttons": [
+      "Ahora no"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "La app %@ quiere añadir configuraciones de VPN",
+    "buttons": [
+      "No permitir"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "La app %@ quiere filtrar el contenido de la red",
+    "buttons": [
+      "No permitir"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "La app %@ quiere añadir configuraciones de proxy DNS",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "La app %@ quiere buscar dispositivos en tu red local y conectarse a ellos",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere enviarte avisos críticos",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere enviarte notificaciones",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
   }
 ]

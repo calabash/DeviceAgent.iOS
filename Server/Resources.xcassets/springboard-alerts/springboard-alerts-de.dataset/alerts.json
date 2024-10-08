@@ -48,7 +48,8 @@
   {
     "title": "„%@“ möchte auf das Mikrofon zugreifen",
     "buttons": [
-      "OK"
+      "OK",
+      "Erlauben"
     ],
     "shouldAccept": true
   },
@@ -62,35 +63,40 @@
   {
     "title": "„%@“ möchte auf deinen Kalender zugreifen",
     "buttons": [
-      "OK"
+      "OK",
+      "Erlauben"
     ],
     "shouldAccept": true
   },
   {
     "title": "„%@“ möchte auf deine Bewegungs- und Fitnessdaten zugreifen",
     "buttons": [
-      "OK"
+      "OK",
+      "Erlauben"
     ],
     "shouldAccept": true
   },
   {
     "title": "„%@“ möchte auf deine Kamera zugreifen",
     "buttons": [
-      "OK"
+      "OK",
+      "Erlauben"
     ],
     "shouldAccept": true
   },
   {
     "title": "„%@“ möchte auf deine Erinnerungen zugreifen",
     "buttons": [
-      "OK"
+      "OK",
+      "Erlauben"
     ],
     "shouldAccept": true
   },
   {
     "title": "Möchtest du „%@“ mit Siri benutzen?",
     "buttons": [
-      "OK"
+      "OK",
+      "Erlauben"
     ],
     "shouldAccept": true
   },
@@ -104,7 +110,8 @@
   {
     "title": "„%@“ möchte auf deine Kontakte zugreifen",
     "buttons": [
-      "OK"
+      "OK",
+      "Erlauben"
     ],
     "shouldAccept": true
   },
@@ -139,7 +146,8 @@
   {
     "title": "„%@“ möchte auf die Spracherkennung zugreifen",
     "buttons": [
-      "OK"
+      "OK",
+      "Erlauben"
     ],
     "shouldAccept": true
   },
@@ -259,7 +267,8 @@
   {
     "title": "„%@“ möchte VoIP-Anrufe im Hintergrund empfangen",
     "buttons": [
-      "OK"
+      "OK",
+      "Erlauben"
     ],
     "shouldAccept": true
   },
@@ -273,14 +282,16 @@
   {
     "title": "„%@“ möchte auf Apple Music, deine Musik- und Videoaktivitäten und auf deine Mediathek zugreifen",
     "buttons": [
-      "OK"
+      "OK",
+      "Erlauben"
     ],
     "shouldAccept": true
   },
   {
     "title": "„%@“ möchte Daten mit Bluetooth-Geräten in der Nähe teilen, auch wenn die App nicht benutzt wird",
     "buttons": [
-      "OK"
+      "OK",
+      "Erlauben"
     ],
     "shouldAccept": true
   },
@@ -301,35 +312,40 @@
   {
     "title": "„%@“ möchte Zugriff auf deine grundlegenden Kontaktinformationen",
     "buttons": [
-      "OK"
+      "OK",
+      "Erlauben"
     ],
     "shouldAccept": true
   },
   {
     "title": "„%@“ möchte Zugriff auf all deine Kontaktinformationen",
     "buttons": [
-      "OK"
+      "OK",
+      "Erlauben"
     ],
     "shouldAccept": true
   },
   {
     "title": "„%@“ möchte beim Verwenden auf Bluetooth zugreifen",
     "buttons": [
-      "OK"
+      "OK",
+      "Erlauben"
     ],
     "shouldAccept": true
   },
   {
     "title": "„%@“ möchte Bluetooth verwenden",
     "buttons": [
-      "OK"
+      "OK",
+      "Erlauben"
     ],
     "shouldAccept": true
   },
   {
     "title": "Hiermit kann „%@“ Bluetooth-Zubehör finden und sich damit verbinden. Diese App kann Bluetooth ebenfalls verwenden, um zu erkennen, wenn du in der Nähe bist.",
     "buttons": [
-      "OK"
+      "OK",
+      "Erlauben"
     ],
     "shouldAccept": true
   },
@@ -696,7 +712,8 @@
   {
     "title": "„%@“ möchte auf die Daten deines Zuhauses zugreifen",
     "buttons": [
-      "OK"
+      "OK",
+      "Erlauben"
     ],
     "shouldAccept": true
   },
@@ -768,6 +785,34 @@
     "title": "Home-Bildschirme bearbeiten",
     "buttons": [
       "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte Fotos hinzufügen.",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Möchtest du „%@“ vollen Zugriff auf deinen Kalender geben?",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte Inhalte zu deinem Kalender hinzufügen.",
+    "buttons": [
+      "Erlauben"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@“ möchte auf deine Fotomediathek zugreifen",
+    "buttons": [
+      "Erlauben"
     ],
     "shouldAccept": true
   }

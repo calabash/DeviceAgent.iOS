@@ -1,15 +1,12 @@
 #!/usr/bin/env ruby
 require 'json'
 require 'pry'
-require 'run_loop'
 require_relative 'helpers'
 
-# Init with current Xcode
-xcode = RunLoop::Xcode.new
-root_dir = xcode.core_simulator_dir
+root_dir = "/Library/Developer/CoreSimulator/Volumes/iOS_21F79/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 17.5.simruntime"
 root_dir = ARGV[0] unless ARGV.empty? || ARGV[0].empty?
 
-output_path = File.expand_path("reports/all-alerts/#{xcode.version}/")
+output_path = File.expand_path("reports/all-alerts/#{17.5}/")
 
 def add_entries_to_collection(lang, file_path, dict, collection)
   collection[lang] ||= {}
@@ -38,7 +35,7 @@ def collect_localization_dictionary(lang_dir_path)
 end
 
 collection = {}
-Dir.glob("#{root_dir}/**/*.lproj") do |lang_dir|
+Dir.glob("#{root_dir}/**/en.lproj") do |lang_dir|
   puts "Scanning #{lang_dir}..."
   lang_name = File.basename(lang_dir, '.lproj')
   dict = collect_localization_dictionary(lang_dir)

@@ -42,42 +42,48 @@
   {
     "title": "A(z) „%@” hozzá szeretne férni az Ön mikrofonjához.",
     "buttons": [
-      "OK"
+      "OK",
+      "Engedélyezés"
     ],
     "shouldAccept": true
   },
   {
     "title": "A(z) „%@” hozzá szeretne adni az Ön fotóihoz",
     "buttons": [
-      "OK"
+      "OK",
+      "Engedélyezés"
     ],
     "shouldAccept": true
   },
   {
     "title": "A(z) „%@” hozzá szeretne férni az Ön naptárjához.",
     "buttons": [
-      "OK"
+      "OK",
+      "Engedélyezés"
     ],
     "shouldAccept": true
   },
   {
     "title": "A(z) „%@” hozzá szeretne férni az Ön mozgási és fitnesztevékenységéhez",
     "buttons": [
-      "OK"
+      "OK",
+      "Engedélyezés"
     ],
     "shouldAccept": true
   },
   {
     "title": "A(z) „%@” hozzá szeretne férni az Ön kamerájához.",
     "buttons": [
-      "OK"
+      "OK",
+      "Engedélyezés"
     ],
     "shouldAccept": true
   },
   {
     "title": "A(z) „%@” hozzá szeretne férni az Ön emlékeztetőihez.",
     "buttons": [
-      "OK"
+      "OK",
+      "Engedélyezés"
     ],
     "shouldAccept": true
   },
@@ -98,7 +104,8 @@
   {
     "title": "A(z) „%@” hozzá szeretne férni az Ön kontaktjaihoz.",
     "buttons": [
-      "OK"
+      "OK",
+      "Engedélyezés"
     ],
     "shouldAccept": true
   },
@@ -112,7 +119,8 @@
   {
     "title": "A(z) „%@” hozzá szeretne férni az Ön Otthon-adataihoz",
     "buttons": [
-      "OK"
+      "OK",
+      "Engedélyezés"
     ],
     "shouldAccept": true
   },
@@ -133,7 +141,8 @@
   {
     "title": "A(z) „%@” hozzá szeretne férni a beszédfelismeréshez",
     "buttons": [
-      "OK"
+      "OK",
+      "Engedélyezés"
     ],
     "shouldAccept": true
   },
@@ -141,7 +150,8 @@
     "title": "Új beállítások állnak rendelkezésre. Szeretne most frissíteni?",
     "buttons": [
       "Ne most",
-      "Később"
+      "Később",
+      "Most nem"
     ],
     "shouldAccept": false
   },
@@ -149,7 +159,8 @@
     "title": "Szolgáltatói beállítások frissítése",
     "buttons": [
       "Ne most",
-      "Később"
+      "Később",
+      "Most nem"
     ],
     "shouldAccept": false
   },
@@ -254,7 +265,8 @@
   {
     "title": "A(z) „%@” VoIP-hívásokat szeretne fogadni a háttérben",
     "buttons": [
-      "OK"
+      "OK",
+      "Engedélyezés"
     ],
     "shouldAccept": true
   },
@@ -268,7 +280,8 @@
   {
     "title": "A(z) „%@” hozzá szeretne férni az Apple Musichoz, az Ön zene- és videotevékenységeihez, valamint a médiakönyvtárához",
     "buttons": [
-      "OK"
+      "OK",
+      "Engedélyezés"
     ],
     "shouldAccept": true
   },
@@ -296,14 +309,16 @@
   {
     "title": "A(z) „%@” hozzá szeretne férni a kontaktok alapvető információihoz",
     "buttons": [
-      "OK"
+      "OK",
+      "Engedélyezés"
     ],
     "shouldAccept": true
   },
   {
     "title": "A(z) „%@” hozzá szeretne férni a kontaktok összes információjához",
     "buttons": [
-      "OK"
+      "OK",
+      "Engedélyezés"
     ],
     "shouldAccept": true
   },
@@ -531,7 +546,8 @@
   {
     "title": "A(z) „%@” adatokat akar elérhetővé tenni közeli Bluetooth-eszközök számára akkor is, amikor Ön nem használja az appot",
     "buttons": [
-      "OK"
+      "OK",
+      "Engedélyezés"
     ],
     "shouldAccept": true
   },
@@ -567,28 +583,32 @@
   {
     "title": "Szeretné a következőt Sirivel használni: „%@”?",
     "buttons": [
-      "OK"
+      "OK",
+      "Engedélyezés"
     ],
     "shouldAccept": true
   },
   {
     "title": "A(z) „%@” Bluetootht szeretné használni, miközben az használatban van",
     "buttons": [
-      "OK"
+      "OK",
+      "Engedélyezés"
     ],
     "shouldAccept": true
   },
   {
     "title": "A(z) „%@” a Bluetootht szeretné használni",
     "buttons": [
-      "OK"
+      "OK",
+      "Engedélyezés"
     ],
     "shouldAccept": true
   },
   {
     "title": "Ez lehetővé teszi, hogy a(z) „%@” megkeresse és csatlakozzon a Bluetooth-kiegészítőkhöz. Előfordulhat, hogy ez az app Bluetootht is használ annak megállapításához, hogy Ön a közelben tartózkodik-e.",
     "buttons": [
-      "OK"
+      "OK",
+      "Engedélyezés"
     ],
     "shouldAccept": true
   },
@@ -624,6 +644,41 @@
     "title": "Főképernyők szerkesztése",
     "buttons": [
       "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Engedélyezi a(z) „%@”-widgetek számára, hogy használják az Ön helyzetét?",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Teljes hozzáférést ad a(z) „%@” számára a naptárjához?",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” hozzá szeretne adni az Ön naptárjához",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "A(z) „%@” hozzá szeretne férni az Ön fotókönyvtárához",
+    "buttons": [
+      "Engedélyezés"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Hozzáad egy harmadik féltől származó billentyűzetet?",
+    "buttons": [
+      "Később"
     ],
     "shouldAccept": true
   }

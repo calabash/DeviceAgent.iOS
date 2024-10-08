@@ -42,7 +42,8 @@
   {
     "title": "“%@”がマイクへのアクセスを求めています",
     "buttons": [
-      "OK"
+      "OK",
+      "許可"
     ],
     "shouldAccept": true
   },
@@ -56,35 +57,40 @@
   {
     "title": "“%@”がカレンダーへのアクセスを求めています",
     "buttons": [
-      "OK"
+      "OK",
+      "許可"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@”がモーションとフィットネスのアクティビティへのアクセスを求めています",
     "buttons": [
-      "OK"
+      "OK",
+      "許可"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@”がカメラへのアクセスを求めています",
     "buttons": [
-      "OK"
+      "OK",
+      "許可"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@”がリマインダーへのアクセスを求めています",
     "buttons": [
-      "OK"
+      "OK",
+      "許可"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@”をSiriで使用しますか?",
     "buttons": [
-      "OK"
+      "OK",
+      "許可"
     ],
     "shouldAccept": true
   },
@@ -98,7 +104,8 @@
   {
     "title": "“%@”が連絡先へのアクセスを求めています",
     "buttons": [
-      "OK"
+      "OK",
+      "許可"
     ],
     "shouldAccept": true
   },
@@ -112,7 +119,8 @@
   {
     "title": "“%@”がホームデータへのアクセスを求めています",
     "buttons": [
-      "OK"
+      "OK",
+      "許可"
     ],
     "shouldAccept": true
   },
@@ -133,7 +141,8 @@
   {
     "title": "“%@”が音声認識へのアクセスを求めています",
     "buttons": [
-      "OK"
+      "OK",
+      "許可"
     ],
     "shouldAccept": true
   },
@@ -252,7 +261,8 @@
   {
     "title": "“%@”がバックグラウンドでVoIP通話の受信を求めています",
     "buttons": [
-      "OK"
+      "OK",
+      "許可"
     ],
     "shouldAccept": true
   },
@@ -266,7 +276,8 @@
   {
     "title": "“%@”がApple Music、ミュージックとビデオの履歴、およびメディアライブラリにアクセスを求めています",
     "buttons": [
-      "OK"
+      "OK",
+      "許可"
     ],
     "shouldAccept": true
   },
@@ -294,28 +305,32 @@
   {
     "title": "“%@”が連絡先の基本情報へのアクセスを求めています",
     "buttons": [
-      "OK"
+      "OK",
+      "許可"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@”がすべての連絡先情報へのアクセスを求めています",
     "buttons": [
-      "OK"
+      "OK",
+      "許可"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@”が使用中にBluetoothを使用することを求めています",
     "buttons": [
-      "OK"
+      "OK",
+      "許可"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@”がBluetoothの使用を求めています",
     "buttons": [
-      "OK"
+      "OK",
+      "許可"
     ],
     "shouldAccept": true
   },
@@ -401,7 +416,8 @@
     "buttons": [
       "常に許可",
       "許可",
-      "Appの使用中は許可"
+      "Appの使用中は許可",
+      "アプリの使用中は許可"
     ],
     "shouldAccept": true
   },
@@ -465,7 +481,8 @@
     "title": "ホーム画面を編集",
     "buttons": [
       "了解",
-      "OK"
+      "OK",
+      "閉じる"
     ],
     "shouldAccept": false
   },
@@ -494,6 +511,48 @@
     "title": "“%@”がアクセサリに接続できるようにするには、Bluetoothをオンにしてください。",
     "buttons": [
       "閉じる"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”で写真への追加アクセス権を求めています",
+    "buttons": [
+      "許可"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”にカレンダーへのフルアクセスを許可しますか?",
+    "buttons": [
+      "許可"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”がカレンダーへの追加アクセス権を求めています",
+    "buttons": [
+      "許可"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”から写真ライブラリにアクセスしようとしています",
+    "buttons": [
+      "許可"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”が近隣のBluetoothデバイスに、アプリを使用していないときでもデータ通信することを求めています",
+    "buttons": [
+      "許可"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "これにより、“%@”はBluetoothアクセサリを検出して接続できるようになります。このアプリはBluetoothを使ってあなたが近くにいるかどうかを知ることもできます。",
+    "buttons": [
+      "許可"
     ],
     "shouldAccept": true
   }

@@ -48,49 +48,56 @@
   {
     "title": "“%@” Mikrofona Erişmek İstiyor",
     "buttons": [
-      "Tamam"
+      "Tamam",
+      "İzin Ver"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Fotoğraflarınıza Eklemek İstiyor",
     "buttons": [
-      "Tamam"
+      "Tamam",
+      "İzin Ver"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Takviminize Erişmek İstiyor",
     "buttons": [
-      "Tamam"
+      "Tamam",
+      "İzin Ver"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Hareket ve Fitness Etkinliğinize Erişmek İstiyor",
     "buttons": [
-      "Tamam"
+      "Tamam",
+      "İzin Ver"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Kameraya Erişmek İstiyor",
     "buttons": [
-      "Tamam"
+      "Tamam",
+      "İzin Ver"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Anımsatıcılarınıza Erişmek İstiyor",
     "buttons": [
-      "Tamam"
+      "Tamam",
+      "İzin Ver"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” uygulamasını Siri ile kullanmak ister misiniz?",
     "buttons": [
-      "Tamam"
+      "Tamam",
+      "İzin Ver"
     ],
     "shouldAccept": true
   },
@@ -104,7 +111,8 @@
   {
     "title": "“%@” Kişilerinize Erişmek İstiyor",
     "buttons": [
-      "Tamam"
+      "Tamam",
+      "İzin Ver"
     ],
     "shouldAccept": true
   },
@@ -118,7 +126,8 @@
   {
     "title": "“%@” Ev Verilerinize Erişmek İstiyor",
     "buttons": [
-      "Tamam"
+      "Tamam",
+      "İzin Ver"
     ],
     "shouldAccept": true
   },
@@ -139,7 +148,8 @@
   {
     "title": "“%@” Konuşma Tanımaya Erişmek İstiyor",
     "buttons": [
-      "Tamam"
+      "Tamam",
+      "İzin Ver"
     ],
     "shouldAccept": true
   },
@@ -258,7 +268,8 @@
   {
     "title": "“%@” Arka Planda VoIP Araması Kabul Etmek İstiyor",
     "buttons": [
-      "Tamam"
+      "Tamam",
+      "İzin Ver"
     ],
     "shouldAccept": true
   },
@@ -272,14 +283,16 @@
   {
     "title": "“%@”; Apple Music’e, müzik ve video aktivitelerinize ve ortam arşivinize erişmek istiyor",
     "buttons": [
-      "Tamam"
+      "Tamam",
+      "İzin Ver"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@”, siz uygulamayı kullanmıyorken bile yakındaki Bluetooth aygıtları için verileri kullanılabilir yapmak istiyor",
     "buttons": [
-      "Tamam"
+      "Tamam",
+      "İzin Ver"
     ],
     "shouldAccept": true
   },
@@ -314,35 +327,40 @@
   {
     "title": "“%@” Kişiler’inizdeki Temel Bilgilere Erişmek İstiyor",
     "buttons": [
-      "Tamam"
+      "Tamam",
+      "İzin Ver"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Kişiler’inizdeki Bütün Bilgilere Erişmek İstiyor",
     "buttons": [
-      "Tamam"
+      "Tamam",
+      "İzin Ver"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” kullanılırken Bluetooth’u kullanmak istiyor",
     "buttons": [
-      "Tamam"
+      "Tamam",
+      "İzin Ver"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Bluetooth’u Kullanmak İstiyor",
     "buttons": [
-      "Tamam"
+      "Tamam",
+      "İzin Ver"
     ],
     "shouldAccept": true
   },
   {
     "title": "Bu, “%@” uygulamasının Bluetooth aksesuarlarını bulmasına ve onlara bağlanmasına izin verir. Bu uygulama ayrıca ne zaman yakınlarda olduğunuzu bilmek için de Bluetooth kullanır.",
     "buttons": [
-      "Tamam"
+      "Tamam",
+      "İzin Ver"
     ],
     "shouldAccept": true
   },
@@ -558,6 +576,27 @@
     "title": "Ana Ekranları Düzenle",
     "buttons": [
       "Tamam"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” adlı kişiye takviminize tam erişim verilsin mi?",
+    "buttons": [
+      "İzin Ver"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Takviminize Eklemek İstiyor",
+    "buttons": [
+      "İzin Ver"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Fotoğraf Arşivinize Erişmek İstiyor",
+    "buttons": [
+      "İzin Ver"
     ],
     "shouldAccept": true
   }

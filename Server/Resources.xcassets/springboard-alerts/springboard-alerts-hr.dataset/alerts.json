@@ -49,7 +49,8 @@
     "title": "“%@” želi pristupiti mikrofonu",
     "buttons": [
       "OK",
-      "U redu"
+      "U redu",
+      "Dozvoli"
     ],
     "shouldAccept": true
   },
@@ -57,7 +58,8 @@
     "title": "“%@” želi dodavati u vaše fotografije",
     "buttons": [
       "OK",
-      "U redu"
+      "U redu",
+      "Dozvoli"
     ],
     "shouldAccept": true
   },
@@ -65,7 +67,8 @@
     "title": "“%@” želi pristupiti vašem kalendaru",
     "buttons": [
       "OK",
-      "U redu"
+      "U redu",
+      "Dozvoli"
     ],
     "shouldAccept": true
   },
@@ -73,7 +76,8 @@
     "title": "“%@” želi pristupiti vašim aktivnostima kretanja i kondicije",
     "buttons": [
       "OK",
-      "U redu"
+      "U redu",
+      "Dozvoli"
     ],
     "shouldAccept": true
   },
@@ -81,7 +85,8 @@
     "title": "“%@” želi pristupiti kameri",
     "buttons": [
       "OK",
-      "U redu"
+      "U redu",
+      "Dozvoli"
     ],
     "shouldAccept": true
   },
@@ -89,7 +94,8 @@
     "title": "“%@” želi pristupiti vašim podsjetnicima",
     "buttons": [
       "OK",
-      "U redu"
+      "U redu",
+      "Dozvoli"
     ],
     "shouldAccept": true
   },
@@ -97,7 +103,8 @@
     "title": "Želite li koristiti “%@” sa Siri?",
     "buttons": [
       "OK",
-      "U redu"
+      "U redu",
+      "Dozvoli"
     ],
     "shouldAccept": true
   },
@@ -112,7 +119,8 @@
     "title": "“%@” želi pristupiti vašim kontaktima",
     "buttons": [
       "OK",
-      "U redu"
+      "U redu",
+      "Dozvoli"
     ],
     "shouldAccept": true
   },
@@ -128,7 +136,8 @@
     "title": "“%@” želi pristupiti vašim podacima o domu",
     "buttons": [
       "OK",
-      "U redu"
+      "U redu",
+      "Dozvoli"
     ],
     "shouldAccept": true
   },
@@ -150,7 +159,8 @@
     "title": "“%@” želi pristupiti prepoznavanju govora",
     "buttons": [
       "OK",
-      "U redu"
+      "U redu",
+      "Dozvoli"
     ],
     "shouldAccept": true
   },
@@ -270,7 +280,8 @@
     "title": "“%@” želi primati VoIP pozive u pozadini",
     "buttons": [
       "OK",
-      "U redu"
+      "U redu",
+      "Dozvoli"
     ],
     "shouldAccept": true
   },
@@ -301,7 +312,8 @@
     "title": "“%@” želi pristupiti Apple Musicu, vašim aktivnostima povezanim s glazbom i videozapisima, te vašoj medijateci",
     "buttons": [
       "OK",
-      "U redu"
+      "U redu",
+      "Dozvoli"
     ],
     "shouldAccept": true
   },
@@ -309,7 +321,8 @@
     "title": "“%@” želi učiniti podatke dostupnima obližnjim Bluetooth uređajima, čak i kad ne koristite aplikaciju",
     "buttons": [
       "OK",
-      "U redu"
+      "U redu",
+      "Dozvoli"
     ],
     "shouldAccept": true
   },
@@ -338,7 +351,8 @@
     "title": "“%@” želi pristupiti vašim osnovnim kontaktnim informacijama",
     "buttons": [
       "OK",
-      "U redu"
+      "U redu",
+      "Dozvoli"
     ],
     "shouldAccept": true
   },
@@ -346,7 +360,8 @@
     "title": "“%@” želi pristupiti svim vašim kontaktnim informacijama",
     "buttons": [
       "OK",
-      "U redu"
+      "U redu",
+      "Dozvoli"
     ],
     "shouldAccept": true
   },
@@ -354,7 +369,8 @@
     "title": "Aplikacija “%@” želi koristiti Bluetooth dok se koristi",
     "buttons": [
       "OK",
-      "U redu"
+      "U redu",
+      "Dozvoli"
     ],
     "shouldAccept": true
   },
@@ -362,7 +378,8 @@
     "title": "“%@” želi koristiti Bluetooth",
     "buttons": [
       "OK",
-      "U redu"
+      "U redu",
+      "Dozvoli"
     ],
     "shouldAccept": true
   },
@@ -370,7 +387,8 @@
     "title": "Ovime će se aplikaciji “%@” omogućiti pronalaženje i spajanje na Bluetooth pribore. Ova aplikacija također može koristiti Bluetooth kako bi detektirala kad ste u blizini.",
     "buttons": [
       "OK",
-      "U redu"
+      "U redu",
+      "Dozvoli"
     ],
     "shouldAccept": true
   },
@@ -558,6 +576,34 @@
     "title": "Uredi početni zaslon",
     "buttons": [
       "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Želite li dozvoliti usluzi “%@” uporabu Face ID‑ja?",
+    "buttons": [
+      "Nemoj dozvoliti"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "Dati “%@” puni pristup vašem kalendaru?",
+    "buttons": [
+      "Dozvoli"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” želi dodavati u vaš kalendar",
+    "buttons": [
+      "Dozvoli"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” želi pristupiti vašoj medijateci fotografija",
+    "buttons": [
+      "Dozvoli"
     ],
     "shouldAccept": true
   }

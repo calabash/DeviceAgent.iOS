@@ -48,7 +48,8 @@
   {
     "title": "“%@” vil bruge mikrofonen",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillad"
     ],
     "shouldAccept": true
   },
@@ -62,7 +63,8 @@
   {
     "title": "“%@” vil bruge din kalender",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillad"
     ],
     "shouldAccept": true
   },
@@ -76,21 +78,24 @@
   {
     "title": "“%@” vil bruge kameraet",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillad"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” vil bruge dine påmindelser",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillad"
     ],
     "shouldAccept": true
   },
   {
     "title": "Vil du bruge “%@” med Siri?",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillad"
     ],
     "shouldAccept": true
   },
@@ -104,7 +109,8 @@
   {
     "title": "“%@” vil bruge dine kontakter",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillad"
     ],
     "shouldAccept": true
   },
@@ -118,7 +124,8 @@
   {
     "title": "“%@” vil bruge dine hjemdata",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillad"
     ],
     "shouldAccept": true
   },
@@ -139,7 +146,8 @@
   {
     "title": "“%@” vil bruge talegenkendelse",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillad"
     ],
     "shouldAccept": true
   },
@@ -263,7 +271,8 @@
   {
     "title": "“%@” vil modtage VoIP‑opkald i baggrunden",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillad"
     ],
     "shouldAccept": true
   },
@@ -277,14 +286,16 @@
   {
     "title": "“%@“ vil have adgang til Apple Music, din musik- og videoaktivitet og dit mediebibliotek",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillad"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@“ vil gøre data tilgængelige for Bluetooth-enheder i nærheden, også når du ikke bruger appen",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillad"
     ],
     "shouldAccept": true
   },
@@ -305,28 +316,32 @@
   {
     "title": "“%@” vil bruge dine grundlæggende oplysninger om kontakter",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillad"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” vil bruge alle dine oplysninger om kontakter",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillad"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@“ vil bruge Bluetooth, mens den er i brug",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillad"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” vil bruge Bluetooth",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillad"
     ],
     "shouldAccept": true
   },
@@ -449,7 +464,8 @@
   {
     "title": "Det gør det muligt for “%@” at finde og oprette forbindelse til Bluetooth-tilbehør. Denne app bruger muligvis også Bluetooth til at registrere, når du er i nærheden.",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillad"
     ],
     "shouldAccept": true
   },
@@ -528,6 +544,41 @@
     "title": "Rediger hjemmeskærme",
     "buttons": [
       "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vil gerne føje billeder til dine fotos",
+    "buttons": [
+      "Tillad"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Giv “%@” fuld adgang til din kalender?",
+    "buttons": [
+      "Tillad"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vil gerne føje emner til din kalender",
+    "buttons": [
+      "Tillad"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vil bruge din bevægelses- og fitnessaktivitet",
+    "buttons": [
+      "Tillad"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vil bruge dit fotobibliotek",
+    "buttons": [
+      "Tillad"
     ],
     "shouldAccept": true
   }

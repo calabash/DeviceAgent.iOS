@@ -48,7 +48,8 @@
   {
     "title": "“%@” vorrebbe accedere al microfono",
     "buttons": [
-      "OK"
+      "OK",
+      "Consenti"
     ],
     "shouldAccept": true
   },
@@ -62,7 +63,8 @@
   {
     "title": "“%@” vorrebbe accedere al tuo calendario",
     "buttons": [
-      "OK"
+      "OK",
+      "Consenti"
     ],
     "shouldAccept": true
   },
@@ -76,21 +78,24 @@
   {
     "title": "“%@” vorrebbe accedere alla fotocamera",
     "buttons": [
-      "OK"
+      "OK",
+      "Consenti"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” vorrebbe accedere ai tuoi promemoria",
     "buttons": [
-      "OK"
+      "OK",
+      "Consenti"
     ],
     "shouldAccept": true
   },
   {
     "title": "Vuoi utilizzare “%@” con Siri?",
     "buttons": [
-      "OK"
+      "OK",
+      "Consenti"
     ],
     "shouldAccept": true
   },
@@ -104,7 +109,8 @@
   {
     "title": "“%@” vorrebbe accedere ai tuoi contatti",
     "buttons": [
-      "OK"
+      "OK",
+      "Consenti"
     ],
     "shouldAccept": true
   },
@@ -118,7 +124,8 @@
   {
     "title": "“%@” vorrebbe accedere ai dati della tua abitazione",
     "buttons": [
-      "OK"
+      "OK",
+      "Consenti"
     ],
     "shouldAccept": true
   },
@@ -300,14 +307,16 @@
   {
     "title": "“%@” vorrebbe accedere alle informazioni di base dei tuoi contatti",
     "buttons": [
-      "OK"
+      "OK",
+      "Consenti"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” vorrebbe accedere a tutte le informazioni dei tuoi contatti",
     "buttons": [
-      "OK"
+      "OK",
+      "Consenti"
     ],
     "shouldAccept": true
   },
@@ -442,7 +451,8 @@
     "buttons": [
       "Consenti sempre",
       "Consenti",
-      "Consenti quando utilizzi l'app"
+      "Consenti quando utilizzi l'app",
+      "Consenti quando utilizzi l’app"
     ],
     "shouldAccept": true
   },
@@ -535,6 +545,111 @@
     "title": "Attiva Bluetooth per consentire a “%@” di connettersi agli accessori",
     "buttons": [
       "Chiudi"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vuoi consentire a “%@” di accedere alla tua posizione anche quando non stai utilizzando l’app?",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe aggiungere foto ai tuoi album",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vuoi dare a “%@” l’accesso completo al tuo calendario?",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe aggiungere eventi al tuo calendario",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe accedere ai dati di “Movimento e fitness”",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe accedere ai contenuti di Apple Music, alla tua cronologia di riproduzione di brani e video e alla tua libreria multimediale",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe accedere alla libreria di foto",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe ricevere chiamate VoIP in background",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe rendere disponibili i dati ai dispositivi Bluetooth nelle vicinanze anche quando l’app non è in uso",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe utilizzare il Bluetooth mentre è in uso",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe utilizzare il Bluetooth",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Selezionando questa opzione, “%@” sarà in grado di trovare gli accessori Bluetooth e di effettuare una connessione. L’app potrebbe usare il Bluetooth anche per rilevare la tua presenza, quando ti trovi nelle vicinanze.",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe accedere all’opzione di riconoscimento vocale",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe inviarti avvisi importanti",
+    "buttons": [
+      "Consenti"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” vorrebbe usare la tua posizione attuale",
+    "buttons": [
+      "OK"
     ],
     "shouldAccept": true
   }

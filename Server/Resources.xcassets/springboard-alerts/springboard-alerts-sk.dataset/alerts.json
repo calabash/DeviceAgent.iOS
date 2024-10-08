@@ -565,7 +565,8 @@
     "title": "Apka %@ žiada o prístup k mikrofónu",
     "buttons": [
       "OK",
-      "Potvrdiť"
+      "Potvrdiť",
+      "Povoliť"
     ],
     "shouldAccept": true
   },
@@ -573,7 +574,8 @@
     "title": "Apka %@ chce pridať položky do aplikácie Fotky",
     "buttons": [
       "OK",
-      "Potvrdiť"
+      "Potvrdiť",
+      "Povoliť"
     ],
     "shouldAccept": true
   },
@@ -581,7 +583,8 @@
     "title": "Apka %@ žiada o prístup ku kalendáru",
     "buttons": [
       "OK",
-      "Potvrdiť"
+      "Potvrdiť",
+      "Povoliť"
     ],
     "shouldAccept": true
   },
@@ -589,7 +592,8 @@
     "title": "Apka %@ žiada o prístup k pohybovej a fitnes aktivite",
     "buttons": [
       "OK",
-      "Potvrdiť"
+      "Potvrdiť",
+      "Povoliť"
     ],
     "shouldAccept": true
   },
@@ -597,7 +601,8 @@
     "title": "Apka %@ žiada o prístup ku kamere",
     "buttons": [
       "OK",
-      "Potvrdiť"
+      "Potvrdiť",
+      "Povoliť"
     ],
     "shouldAccept": true
   },
@@ -605,7 +610,8 @@
     "title": "Apka %@ žiada o prístup k pripomienkam",
     "buttons": [
       "OK",
-      "Potvrdiť"
+      "Potvrdiť",
+      "Povoliť"
     ],
     "shouldAccept": true
   },
@@ -613,7 +619,8 @@
     "title": "Apka %@ žiada o prístup k Apple Music, informáciám o prehrávaní hudby a videí a vašej knižnici médií",
     "buttons": [
       "OK",
-      "Potvrdiť"
+      "Potvrdiť",
+      "Povoliť"
     ],
     "shouldAccept": true
   },
@@ -621,7 +628,8 @@
     "title": "Apka %@ žiada o prístup ku kontaktom",
     "buttons": [
       "OK",
-      "Potvrdiť"
+      "Potvrdiť",
+      "Povoliť"
     ],
     "shouldAccept": true
   },
@@ -629,7 +637,8 @@
     "title": "Apka %@ žiada o prístup k vašim základným kontaktným údajom",
     "buttons": [
       "OK",
-      "Potvrdiť"
+      "Potvrdiť",
+      "Povoliť"
     ],
     "shouldAccept": true
   },
@@ -637,7 +646,8 @@
     "title": "Apka %@ žiada o prístup ku všetkým vašim kontaktným údajom",
     "buttons": [
       "OK",
-      "Potvrdiť"
+      "Potvrdiť",
+      "Povoliť"
     ],
     "shouldAccept": true
   },
@@ -653,7 +663,8 @@
     "title": "Apka %@ žiada o prístup k dátam domácnosti",
     "buttons": [
       "OK",
-      "Potvrdiť"
+      "Potvrdiť",
+      "Povoliť"
     ],
     "shouldAccept": true
   },
@@ -661,7 +672,8 @@
     "title": "Apka %@ chce prijímať VoIP hovory na pozadí",
     "buttons": [
       "OK",
-      "Potvrdiť"
+      "Potvrdiť",
+      "Povoliť"
     ],
     "shouldAccept": true
   },
@@ -669,7 +681,8 @@
     "title": "Apka %@ chce sprístupňovať dáta pre okolité Bluetooth zariadenia, aj keď ju práve nepoužívate",
     "buttons": [
       "OK",
-      "Potvrdiť"
+      "Potvrdiť",
+      "Povoliť"
     ],
     "shouldAccept": true
   },
@@ -677,7 +690,8 @@
     "title": "Apka %@ chce používať Bluetooth v čase, keď ju používate",
     "buttons": [
       "OK",
-      "Potvrdiť"
+      "Potvrdiť",
+      "Povoliť"
     ],
     "shouldAccept": true
   },
@@ -685,7 +699,8 @@
     "title": "Apka %@ chce používať Bluetooth",
     "buttons": [
       "OK",
-      "Potvrdiť"
+      "Potvrdiť",
+      "Povoliť"
     ],
     "shouldAccept": true
   },
@@ -693,7 +708,8 @@
     "title": "Apka %@ bude môcť vyhľadávať Bluetooth príslušenstvo a pripájať sa k nemu. Zároveň bude môcť zistiť cez Bluetooth, či ste nablízku.",
     "buttons": [
       "OK",
-      "Potvrdiť"
+      "Potvrdiť",
+      "Povoliť"
     ],
     "shouldAccept": true
   },
@@ -701,7 +717,8 @@
     "title": "Apka %@ žiada o prístup k rozpoznávaniu reči",
     "buttons": [
       "OK",
-      "Potvrdiť"
+      "Potvrdiť",
+      "Povoliť"
     ],
     "shouldAccept": true
   },
@@ -823,6 +840,41 @@
     "title": "Úpravy plochy",
     "buttons": [
       "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Chcete apke %@ povoliť používanie Face ID?",
+    "buttons": [
+      "Nepovoliť"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "Udeliť apke %@ plný prístup ku kalendáru?",
+    "buttons": [
+      "Povoliť"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka %@ chce pridávať dáta do kalendára",
+    "buttons": [
+      "Povoliť"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Chcete používať apku %@ so Siri?",
+    "buttons": [
+      "Povoliť"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Apka %@ žiada o prístup ku knižnici fotiek",
+    "buttons": [
+      "Povoliť"
     ],
     "shouldAccept": true
   }

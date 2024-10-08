@@ -41,7 +41,8 @@
   {
     "title": "Aplikace „%@“ žádá o přístup k mikrofonu",
     "buttons": [
-      "OK"
+      "OK",
+      "Povolit"
     ],
     "shouldAccept": true
   },
@@ -55,35 +56,40 @@
   {
     "title": "Aplikace „%@“ žádá o přístup k vašemu kalendáři",
     "buttons": [
-      "OK"
+      "OK",
+      "Povolit"
     ],
     "shouldAccept": true
   },
   {
     "title": "Aplikace „%@“ žádá o přístup k vaší pohybové a kondiční aktivitě",
     "buttons": [
-      "OK"
+      "OK",
+      "Povolit"
     ],
     "shouldAccept": true
   },
   {
     "title": "Aplikace „%@“ žádá o přístup k fotoaparátu",
     "buttons": [
-      "OK"
+      "OK",
+      "Povolit"
     ],
     "shouldAccept": true
   },
   {
     "title": "Aplikace „%@“ žádá o přístup k vašim připomínkám",
     "buttons": [
-      "OK"
+      "OK",
+      "Povolit"
     ],
     "shouldAccept": true
   },
   {
     "title": "Chcete „%@“ používat se Siri?",
     "buttons": [
-      "OK"
+      "OK",
+      "Povolit"
     ],
     "shouldAccept": true
   },
@@ -97,7 +103,8 @@
   {
     "title": "Aplikace „%@“ žádá o přístup k vašim kontaktům",
     "buttons": [
-      "OK"
+      "OK",
+      "Povolit"
     ],
     "shouldAccept": true
   },
@@ -111,7 +118,8 @@
   {
     "title": "Aplikace „%@“ žádá o přístup k datům vaší domácnosti",
     "buttons": [
-      "OK"
+      "OK",
+      "Povolit"
     ],
     "shouldAccept": true
   },
@@ -132,7 +140,8 @@
   {
     "title": "Aplikace „%@“ žádá o přístup k rozpoznávání řeči",
     "buttons": [
-      "OK"
+      "OK",
+      "Povolit"
     ],
     "shouldAccept": true
   },
@@ -251,7 +260,8 @@
   {
     "title": "„%@“ žádá o povolení k příjmu VoIP hovorů na pozadí",
     "buttons": [
-      "OK"
+      "OK",
+      "Povolit"
     ],
     "shouldAccept": true
   },
@@ -274,7 +284,8 @@
   {
     "title": "Aplikace „%@“ žádá o přístup k Apple Music, informacím o přehrávání hudby a videí a vaší knihovně médií",
     "buttons": [
-      "OK"
+      "OK",
+      "Povolit"
     ],
     "shouldAccept": true
   },
@@ -302,35 +313,40 @@
   {
     "title": "„%@“ žádá o přístup k základním kontaktním údajům",
     "buttons": [
-      "OK"
+      "OK",
+      "Povolit"
     ],
     "shouldAccept": true
   },
   {
     "title": "„%@“ žádá o přístup k veškerým kontaktním údajům",
     "buttons": [
-      "OK"
+      "OK",
+      "Povolit"
     ],
     "shouldAccept": true
   },
   {
     "title": "Aplikace %@ žádá o přístup k rozhraní Bluetooth v čase, kdy ji budete používat",
     "buttons": [
-      "OK"
+      "OK",
+      "Povolit"
     ],
     "shouldAccept": true
   },
   {
     "title": "Aplikace %@ žádá o přístup k rozhraní Bluetooth",
     "buttons": [
-      "OK"
+      "OK",
+      "Povolit"
     ],
     "shouldAccept": true
   },
   {
     "title": "„%@“ bude moct vyhledávat Bluetooth zařízení a připojovat se k nim. Také bude moct přes Bluetooth zjišťovat, zda jste nablízku.",
     "buttons": [
-      "OK"
+      "OK",
+      "Povolit"
     ],
     "shouldAccept": true
   },
@@ -485,7 +501,8 @@
   {
     "title": "Aplikace „%@“ žádá o povolení ke sdílení dat s Bluetooth zařízeními v okolí i v čase, kdy ji právě nepoužíváte",
     "buttons": [
-      "OK"
+      "OK",
+      "Povolit"
     ],
     "shouldAccept": true
   },
@@ -584,6 +601,41 @@
     "title": "Úpravy plochy",
     "buttons": [
       "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikace „%@“ žádá o možnost přidávat vám do fotek další položky",
+    "buttons": [
+      "Povolit"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Poskytnout aplikaci %@ úplný přístup ke kalendáři?",
+    "buttons": [
+      "Povolit"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikace „%@“ žádá o možnost přidávat položky do vašeho kalendáře",
+    "buttons": [
+      "Povolit"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikace „%@“ žádá o přístup k vaší knihovně fotek",
+    "buttons": [
+      "Povolit"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Aplikace „%@“ vám chce zasílat oznámení",
+    "buttons": [
+      "Povolit"
     ],
     "shouldAccept": true
   }

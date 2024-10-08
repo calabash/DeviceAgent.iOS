@@ -100,7 +100,8 @@
   {
     "title": "“%@”想在后台接收VoIP网络电话",
     "buttons": [
-      "好"
+      "好",
+      "允许"
     ],
     "shouldAccept": true
   },
@@ -114,14 +115,16 @@
   {
     "title": "“%@”在使用期间想要使用蓝牙",
     "buttons": [
-      "好"
+      "好",
+      "允许"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@”想要使用蓝牙",
     "buttons": [
-      "好"
+      "好",
+      "允许"
     ],
     "shouldAccept": true
   },
@@ -135,7 +138,8 @@
   {
     "title": "“%@”想访问语音识别",
     "buttons": [
-      "好"
+      "好",
+      "允许"
     ],
     "shouldAccept": true
   },
@@ -205,7 +209,8 @@
   {
     "title": "“%@”想访问你的麦克风",
     "buttons": [
-      "好"
+      "好",
+      "允许"
     ],
     "shouldAccept": true
   },
@@ -219,35 +224,40 @@
   {
     "title": "“%@”想访问你的日历",
     "buttons": [
-      "好"
+      "好",
+      "允许"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@”想访问你的活动与体能训练记录",
     "buttons": [
-      "好"
+      "好",
+      "允许"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@”想访问你的相机",
     "buttons": [
-      "好"
+      "好",
+      "允许"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@”想访问你的提醒事项",
     "buttons": [
-      "好"
+      "好",
+      "允许"
     ],
     "shouldAccept": true
   },
   {
     "title": "你要通过Siri来使用“%@”吗？",
     "buttons": [
-      "好"
+      "好",
+      "允许"
     ],
     "shouldAccept": true
   },
@@ -261,7 +271,8 @@
   {
     "title": "“%@”想访问你的通讯录",
     "buttons": [
-      "好"
+      "好",
+      "允许"
     ],
     "shouldAccept": true
   },
@@ -275,7 +286,8 @@
   {
     "title": "“%@”想访问你通讯录的所有信息",
     "buttons": [
-      "好"
+      "好",
+      "允许"
     ],
     "shouldAccept": true
   },
@@ -289,21 +301,66 @@
   {
     "title": "“%@”想访问你的家庭数据",
     "buttons": [
-      "好"
+      "好",
+      "允许"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@”想在你未使用该App时仍与周围的蓝牙设备交换数据",
     "buttons": [
-      "好"
+      "好",
+      "允许"
     ],
     "shouldAccept": true
   },
   {
     "title": "这将允许“%@”查找并连接蓝牙配件。此App还可能使用蓝牙来确认你在附近。",
     "buttons": [
-      "好"
+      "好",
+      "允许"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想要添加到你的照片",
+    "buttons": [
+      "允许"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "允许“%@”完全访问你的日历？",
+    "buttons": [
+      "允许"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想要添加到你的日历",
+    "buttons": [
+      "允许"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问Apple Music、你的音乐与视频活动以及你的媒体资料库",
+    "buttons": [
+      "允许"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问你的通讯录基本信息",
+    "buttons": [
+      "允许"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@”想访问你的照片图库",
+    "buttons": [
+      "允许"
     ],
     "shouldAccept": true
   }

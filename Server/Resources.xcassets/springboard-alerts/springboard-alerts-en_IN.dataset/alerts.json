@@ -1,0 +1,31 @@
+[
+  {
+    "title": "iPhone is not Activated",
+    "buttons": [
+      "Ignore"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "Edit Home Screen",
+    "buttons": [
+      "Dismiss",
+      "OK"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "Allow “%@” to update your health data.",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Health Access",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  }
+]

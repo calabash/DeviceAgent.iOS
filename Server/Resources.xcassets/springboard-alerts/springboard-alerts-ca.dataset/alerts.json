@@ -531,7 +531,8 @@
   {
     "title": "%@ vol accedir al micròfon",
     "buttons": [
-      "OK"
+      "OK",
+      "Permetre"
     ],
     "shouldAccept": true
   },
@@ -545,7 +546,8 @@
   {
     "title": "%@ vol accedir al calendari",
     "buttons": [
-      "OK"
+      "OK",
+      "Permetre"
     ],
     "shouldAccept": true
   },
@@ -559,49 +561,56 @@
   {
     "title": "%@ vol accedir a la càmera",
     "buttons": [
-      "OK"
+      "OK",
+      "Permetre"
     ],
     "shouldAccept": true
   },
   {
     "title": "%@ vol accedir als recordatoris",
     "buttons": [
-      "OK"
+      "OK",
+      "Permetre"
     ],
     "shouldAccept": true
   },
   {
     "title": "Vols utilitzar l’app %@ amb Siri?",
     "buttons": [
-      "OK"
+      "OK",
+      "Permetre"
     ],
     "shouldAccept": true
   },
   {
     "title": "%@ vol accedir a l’Apple Music, a l’activitat relacionada amb la música i els vídeos, i a la biblioteca multimèdia",
     "buttons": [
-      "OK"
+      "OK",
+      "Permetre"
     ],
     "shouldAccept": true
   },
   {
     "title": "%@ vol accedir als contactes",
     "buttons": [
-      "OK"
+      "OK",
+      "Permetre"
     ],
     "shouldAccept": true
   },
   {
     "title": "%@ vol accedir a la informació bàsica dels contactes",
     "buttons": [
-      "OK"
+      "OK",
+      "Permetre"
     ],
     "shouldAccept": true
   },
   {
     "title": "%@ vol accedir a tota la informació dels contactes",
     "buttons": [
-      "OK"
+      "OK",
+      "Permetre"
     ],
     "shouldAccept": true
   },
@@ -615,49 +624,56 @@
   {
     "title": "%@ vol accedir a les dades de l’app Casa",
     "buttons": [
-      "OK"
+      "OK",
+      "Permetre"
     ],
     "shouldAccept": true
   },
   {
     "title": "%@ vol rebre trucades VoIP en segon pla",
     "buttons": [
-      "OK"
+      "OK",
+      "Permetre"
     ],
     "shouldAccept": true
   },
   {
     "title": "%@ vol posar les dades a disposició dels dispositius Bluetooth propers fins i tot quan no utilitzis l’app",
     "buttons": [
-      "OK"
+      "OK",
+      "Permetre"
     ],
     "shouldAccept": true
   },
   {
     "title": "%@ vol fer servir el Bluetooth mentre l’utilitzis",
     "buttons": [
-      "OK"
+      "OK",
+      "Permetre"
     ],
     "shouldAccept": true
   },
   {
     "title": "%@ vol fer servir el Bluetooth",
     "buttons": [
-      "OK"
+      "OK",
+      "Permetre"
     ],
     "shouldAccept": true
   },
   {
     "title": "D’aquesta manera, l’app %@ podrà detectar els accessoris Bluetooth i connectar‑s’hi. També podrà utilitzar el Bluetooth per saber quan ets a prop.",
     "buttons": [
-      "OK"
+      "OK",
+      "Permetre"
     ],
     "shouldAccept": true
   },
   {
     "title": "%@ vol accedir al reconeixement de veu",
     "buttons": [
-      "OK"
+      "OK",
+      "Permetre"
     ],
     "shouldAccept": true
   },
@@ -714,6 +730,85 @@
     "title": "Editar pantalles d’inici",
     "buttons": [
       "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permets que l’app %@ faci servir la ubicació?",
+    "buttons": [
+      "Permetre-ho sempre",
+      "Permetre",
+      "Permetre amb l’app en ús"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permets que l’app %@ faci servir la ubicació, encara que no l’estiguis utilitzant?",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permets que l’app %@ faci servir la ubicació exacta una vegada?",
+    "buttons": [
+      "Permetre una vegada"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "L’app %@ vol afegir fotos a la fototeca.",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vols donar accés complet al calendari a l’app %@?",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "L’app %@ vol afegir esdeveniments al calendari.",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vol accedir al moviment i a l’activitat física",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "L’app %@ vol accedir a la fototeca",
+    "buttons": [
+      "Permetre"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "L’app %@ vol afegir configuracions de VPN",
+    "buttons": [
+      "No permetre"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "L’app %@ vol filtrar el contingut de la xarxa",
+    "buttons": [
+      "No permetre"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "L’app %@ vol afegir configuracions de proxy DNS",
+    "buttons": [
+      "Permetre"
     ],
     "shouldAccept": true
   }

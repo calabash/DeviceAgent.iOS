@@ -41,7 +41,8 @@
   {
     "title": "「%@」要取用咪高風",
     "buttons": [
-      "好"
+      "好",
+      "允許"
     ],
     "shouldAccept": true
   },
@@ -55,7 +56,8 @@
   {
     "title": "「%@」要取用你的日曆",
     "buttons": [
-      "好"
+      "好",
+      "允許"
     ],
     "shouldAccept": true
   },
@@ -69,14 +71,16 @@
   {
     "title": "「%@」要取用相機",
     "buttons": [
-      "好"
+      "好",
+      "允許"
     ],
     "shouldAccept": true
   },
   {
     "title": "「%@」要取用你的提醒事項",
     "buttons": [
-      "好"
+      "好",
+      "允許"
     ],
     "shouldAccept": true
   },
@@ -97,7 +101,8 @@
   {
     "title": "「%@」要取用通訊錄",
     "buttons": [
-      "好"
+      "好",
+      "允許"
     ],
     "shouldAccept": true
   },
@@ -111,7 +116,8 @@
   {
     "title": "「%@」要取用你的家居資料",
     "buttons": [
-      "好"
+      "好",
+      "允許"
     ],
     "shouldAccept": true
   },
@@ -304,28 +310,32 @@
   {
     "title": "「%@」想取用Apple Music、你的音樂與影片活動和你的媒體資料庫",
     "buttons": [
-      "好"
+      "好",
+      "允許"
     ],
     "shouldAccept": true
   },
   {
     "title": "「%@」想在背景接收VoIP來電",
     "buttons": [
-      "好"
+      "好",
+      "允許"
     ],
     "shouldAccept": true
   },
   {
     "title": "「%@」想讓附近的藍牙裝置取得資料，即使你並非正在使用App時亦能夠取得資料。",
     "buttons": [
-      "好"
+      "好",
+      "允許"
     ],
     "shouldAccept": true
   },
   {
     "title": "「%@」要取用語音識別",
     "buttons": [
-      "好"
+      "好",
+      "允許"
     ],
     "shouldAccept": true
   },
@@ -381,35 +391,40 @@
   {
     "title": "「%@」要取用通訊錄的基本資料",
     "buttons": [
-      "好"
+      "好",
+      "允許"
     ],
     "shouldAccept": true
   },
   {
     "title": "「%@」要取用通訊錄的所有資料",
     "buttons": [
-      "好"
+      "好",
+      "允許"
     ],
     "shouldAccept": true
   },
   {
     "title": "「%@」想在使用期間使用藍牙",
     "buttons": [
-      "好"
+      "好",
+      "允許"
     ],
     "shouldAccept": true
   },
   {
     "title": "「%@」想使用藍牙",
     "buttons": [
-      "好"
+      "好",
+      "允許"
     ],
     "shouldAccept": true
   },
   {
     "title": "這將會允許「%@」尋找並連接藍牙配件。此App亦可能會使用藍牙以確認你在附近。",
     "buttons": [
-      "好"
+      "好",
+      "允許"
     ],
     "shouldAccept": true
   },
@@ -566,7 +581,8 @@
   {
     "title": "「%@」要取用你的動作與健身記錄",
     "buttons": [
-      "好"
+      "好",
+      "允許"
     ],
     "shouldAccept": true
   },
@@ -609,7 +625,8 @@
   {
     "title": "你要在「%@」使用Siri嗎？",
     "buttons": [
-      "好"
+      "好",
+      "允許"
     ],
     "shouldAccept": true
   },
@@ -638,6 +655,34 @@
     "title": "開啟藍牙來允許「%@」連接配件",
     "buttons": [
       "關閉"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想加至你的「相片」",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "要讓「%@」全權取用你的日曆嗎？",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」想加至你的「日曆」",
+    "buttons": [
+      "允許"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "「%@」要取用你的相片圖庫",
+    "buttons": [
+      "允許"
     ],
     "shouldAccept": true
   }

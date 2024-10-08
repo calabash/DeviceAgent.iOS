@@ -48,21 +48,24 @@
   {
     "title": "“%@” gostaria de aceder ao microfone",
     "buttons": [
-      "OK"
+      "OK",
+      "Permitir"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” gostaria de adicionar às suas fotografias",
     "buttons": [
-      "OK"
+      "OK",
+      "Permitir"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” gostaria de aceder ao seu calendário",
     "buttons": [
-      "OK"
+      "OK",
+      "Permitir"
     ],
     "shouldAccept": true
   },
@@ -76,21 +79,24 @@
   {
     "title": "“%@” gostaria de aceder à Câmara",
     "buttons": [
-      "OK"
+      "OK",
+      "Permitir"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” gostaria de aceder aos seus lembretes",
     "buttons": [
-      "OK"
+      "OK",
+      "Permitir"
     ],
     "shouldAccept": true
   },
   {
     "title": "Gostaria de usar “%@” com Siri?",
     "buttons": [
-      "OK"
+      "OK",
+      "Permitir"
     ],
     "shouldAccept": true
   },
@@ -104,7 +110,8 @@
   {
     "title": "“%@” gostaria de aceder aos seus contactos",
     "buttons": [
-      "OK"
+      "OK",
+      "Permitir"
     ],
     "shouldAccept": true
   },
@@ -139,7 +146,8 @@
   {
     "title": "“%@” gostaria de aceder ao reconhecimento da fala",
     "buttons": [
-      "OK"
+      "OK",
+      "Permitir"
     ],
     "shouldAccept": true
   },
@@ -258,7 +266,8 @@
   {
     "title": "“%@” gostaria de receber chamadas VoIP em segundo plano",
     "buttons": [
-      "OK"
+      "OK",
+      "Permitir"
     ],
     "shouldAccept": true
   },
@@ -279,14 +288,16 @@
   {
     "title": "“%@” gostaria de aceder a Apple Music, à informação de atividade (músicas e vídeo) e à biblioteca de multimédia",
     "buttons": [
-      "OK"
+      "OK",
+      "Permitir"
     ],
     "shouldAccept": true
   },
   {
     "title": "Mesmo quando não está a ser usado, “%@” gostaria de disponibilizar dados a dispositivos Bluetooth que se encontrem por perto",
     "buttons": [
-      "OK"
+      "OK",
+      "Permitir"
     ],
     "shouldAccept": true
   },
@@ -314,35 +325,40 @@
   {
     "title": "“%@” gostaria de aceder à informação básica relativa aos seus contactos",
     "buttons": [
-      "OK"
+      "OK",
+      "Permitir"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” gostaria de aceder a toda a informação relativa aos seus contactos",
     "buttons": [
-      "OK"
+      "OK",
+      "Permitir"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” gostaria de usar o Bluetooth enquanto estiver aberta",
     "buttons": [
-      "OK"
+      "OK",
+      "Permitir"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” gostaria de usar Bluetooth",
     "buttons": [
-      "OK"
+      "OK",
+      "Permitir"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” poderá encontrar e estabelecer ligação a acessórios Bluetooth. Esta aplicação pode igualmente usar Bluetooth para saber quando se encontra por perto.",
     "buttons": [
-      "OK"
+      "OK",
+      "Permitir"
     ],
     "shouldAccept": true
   },
@@ -429,7 +445,8 @@
   {
     "title": "“%@” gostaria de aceder à atividade de Movimento e fitness",
     "buttons": [
-      "OK"
+      "OK",
+      "Permitir"
     ],
     "shouldAccept": true
   },
@@ -464,7 +481,8 @@
   {
     "title": "“%@” gostaria de aceder aos dados da aplicação Casa",
     "buttons": [
-      "OK"
+      "OK",
+      "Permitir"
     ],
     "shouldAccept": true
   },
@@ -500,6 +518,27 @@
     "title": "Editar ecrãs principais",
     "buttons": [
       "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Conceder a “%@” acesso total ao seu calendário?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” gostaria de adicionar ao seu calendário",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” gostaria de aceder à sua fototeca",
+    "buttons": [
+      "Permitir"
     ],
     "shouldAccept": true
   }

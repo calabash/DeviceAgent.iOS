@@ -49,7 +49,8 @@
   {
     "title": "“%@” Mahu Mengakses Mikrofon",
     "buttons": [
-      "OK"
+      "OK",
+      "Benarkan"
     ],
     "shouldAccept": true
   },
@@ -63,35 +64,40 @@
   {
     "title": "“%@” Mahu Mengakses Kalendar Anda",
     "buttons": [
-      "OK"
+      "OK",
+      "Benarkan"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Mahu Mengakses Aktiviti Pergerakan & Kecergasan Anda",
     "buttons": [
-      "OK"
+      "OK",
+      "Benarkan"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Mahu Mengakses Kamera",
     "buttons": [
-      "OK"
+      "OK",
+      "Benarkan"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Mahu Mengakses Peringatan Anda",
     "buttons": [
-      "OK"
+      "OK",
+      "Benarkan"
     ],
     "shouldAccept": true
   },
   {
     "title": "Adakah Anda Mahu Menggunakan “%@” dengan Siri?",
     "buttons": [
-      "OK"
+      "OK",
+      "Benarkan"
     ],
     "shouldAccept": true
   },
@@ -105,7 +111,8 @@
   {
     "title": "“%@” Mahu Mengakses Kenalan Anda",
     "buttons": [
-      "OK"
+      "OK",
+      "Benarkan"
     ],
     "shouldAccept": true
   },
@@ -119,7 +126,8 @@
   {
     "title": "“%@” Mahu Mengakses Data Rumah Anda",
     "buttons": [
-      "OK"
+      "OK",
+      "Benarkan"
     ],
     "shouldAccept": true
   },
@@ -140,7 +148,8 @@
   {
     "title": "“%@” Mahu Mengakses Pengecaman Pertuturan",
     "buttons": [
-      "OK"
+      "OK",
+      "Benarkan"
     ],
     "shouldAccept": true
   },
@@ -259,7 +268,8 @@
   {
     "title": "“%@” Mahu Menerima Panggilan VoIP di Latar Belakang",
     "buttons": [
-      "OK"
+      "OK",
+      "Benarkan"
     ],
     "shouldAccept": true
   },
@@ -280,14 +290,16 @@
   {
     "title": "“%@” mahu mengakses Apple Music, aktiviti muzik dan video anda serta pustaka media anda",
     "buttons": [
-      "OK"
+      "OK",
+      "Benarkan"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” mahu menyediakan data kepada peranti Bluetooth berdekatan walaupun anda tidak menggunakan app",
     "buttons": [
-      "OK"
+      "OK",
+      "Benarkan"
     ],
     "shouldAccept": true
   },
@@ -308,35 +320,40 @@
   {
     "title": "“%@” Mahu Mengakses Maklumat Asas Hubungan Anda",
     "buttons": [
-      "OK"
+      "OK",
+      "Benarkan"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Mahu Mengakses Semua Maklumat Hubungan Anda",
     "buttons": [
-      "OK"
+      "OK",
+      "Benarkan"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” mahu menggunakan Bluetooth semasa ia dalam penggunaan",
     "buttons": [
-      "OK"
+      "OK",
+      "Benarkan"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Mahu Menggunakan Bluetooth",
     "buttons": [
-      "OK"
+      "OK",
+      "Benarkan"
     ],
     "shouldAccept": true
   },
   {
     "title": "Ini akan membenarkan “%@” mencari dan bersambung ke aksesori Bluetooth. App ini juga mungkin menggunakan Bluetooth untuk mengetahui apabila anda berada berdekatan.",
     "buttons": [
-      "OK"
+      "OK",
+      "Benarkan"
     ],
     "shouldAccept": true
   },
@@ -572,6 +589,41 @@
     "title": "Aktifkan Bluetooth untuk Membenarkan “%@” Bersambung ke Aksesori",
     "buttons": [
       "Tutup"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Menambah pada Foto Anda",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Beri “%@” akses penuh kepada kalendar anda?",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Menambah ke Kalendar Anda",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Mahu Mengakses Pustaka Foto Anda",
+    "buttons": [
+      "Benarkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” mahu mencari dan bersambung ke peranti pada rangkaian setempat anda",
+    "buttons": [
+      "OK"
     ],
     "shouldAccept": true
   }

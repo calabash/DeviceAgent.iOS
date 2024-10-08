@@ -49,49 +49,56 @@
   {
     "title": "“%@” Ingin Mengakses Mikrofon",
     "buttons": [
-      "OKE"
+      "OKE",
+      "Izinkan"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Ingin Menambahkan ke Foto Anda",
     "buttons": [
-      "OKE"
+      "OKE",
+      "Izinkan"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Ingin Mengakses Kalender Anda",
     "buttons": [
-      "OKE"
+      "OKE",
+      "Izinkan"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Ingin Mengakses Aktivitas Gerakan & Kebugaran Anda",
     "buttons": [
-      "OKE"
+      "OKE",
+      "Izinkan"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Ingin Mengakses Kamera",
     "buttons": [
-      "OKE"
+      "OKE",
+      "Izinkan"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Ingin Mengakses Pengingat Anda",
     "buttons": [
-      "OKE"
+      "OKE",
+      "Izinkan"
     ],
     "shouldAccept": true
   },
   {
     "title": "Apakah Anda Ingin Menggunakan “%@” dengan Siri?",
     "buttons": [
-      "OKE"
+      "OKE",
+      "Izinkan"
     ],
     "shouldAccept": true
   },
@@ -105,7 +112,8 @@
   {
     "title": "“%@” Ingin Mengakses Kontak Anda",
     "buttons": [
-      "OKE"
+      "OKE",
+      "Izinkan"
     ],
     "shouldAccept": true
   },
@@ -119,7 +127,8 @@
   {
     "title": "“%@” Ingin Mengakses Data Rumah Anda",
     "buttons": [
-      "OKE"
+      "OKE",
+      "Izinkan"
     ],
     "shouldAccept": true
   },
@@ -140,7 +149,8 @@
   {
     "title": "“%@” Ingin Mengakses Pengenalan Ucapan",
     "buttons": [
-      "OKE"
+      "OKE",
+      "Izinkan"
     ],
     "shouldAccept": true
   },
@@ -263,7 +273,8 @@
   {
     "title": "“%@” Ingin Menerima Panggilan VoIP di Latar Belakang",
     "buttons": [
-      "OKE"
+      "OKE",
+      "Izinkan"
     ],
     "shouldAccept": true
   },
@@ -277,14 +288,16 @@
   {
     "title": "“%@” ingin mengakses Apple Music, aktivitas musik dan video, serta perpustakaan media Anda",
     "buttons": [
-      "OKE"
+      "OKE",
+      "Izinkan"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” ingin membuat data tersedia untuk perangkat Bluetooth di sekitar saat Anda sedang tidak menggunakan app",
     "buttons": [
-      "OKE"
+      "OKE",
+      "Izinkan"
     ],
     "shouldAccept": true
   },
@@ -305,35 +318,40 @@
   {
     "title": "“%@” Ingin Mengakses Informasi Dasar Kontak Anda",
     "buttons": [
-      "OKE"
+      "OKE",
+      "Izinkan"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Ingin Mengakses Semua Informasi Kontak Anda",
     "buttons": [
-      "OKE"
+      "OKE",
+      "Izinkan"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” ingin menggunakan Bluetooth saat sedang digunakan",
     "buttons": [
-      "OKE"
+      "OKE",
+      "Izinkan"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Ingin Menggunakan Bluetooth",
     "buttons": [
-      "OKE"
+      "OKE",
+      "Izinkan"
     ],
     "shouldAccept": true
   },
   {
     "title": "Ini akan mengizinkan “%@” untuk menemukan dan terhubung ke aksesori Bluetooth. App ini juga dapat menggunakan Bluetooth untuk mencari tahu apakah Anda berada di sekitar.",
     "buttons": [
-      "OKE"
+      "OKE",
+      "Izinkan"
     ],
     "shouldAccept": true
   },
@@ -494,5 +512,33 @@
       "Tutup"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Beri “%@” akses penuh ke kalender Anda?",
+    "buttons": [
+      "Izinkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Menambahkan ke Kalender Anda",
+    "buttons": [
+      "Izinkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Ingin Mengakses Perpustakaan Foto Anda",
+    "buttons": [
+      "Izinkan"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Pengaturan baru tersedia. Apakah Anda ingin memperbaruinya sekarang?",
+    "buttons": [
+      "Nanti"
+    ],
+    "shouldAccept": false
   }
 ]

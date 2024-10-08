@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 require 'colorize'
 require 'pry'
-require 'run_loop'
 require_relative 'helpers'
 require_relative 'localization_storage'
 
@@ -30,8 +29,7 @@ language_to_ignore = [
 ]
 
 # Init with current Xcode
-xcode = RunLoop::Xcode.new
-root_dir = xcode.core_simulator_dir
+root_dir = "/Users/Shared/Xcode/15.0/Xcode.app"
 root_dir = ARGV[0] unless ARGV.empty? || ARGV[0].empty?
 
 # Try to find specific framework under CoreSimulators directory
@@ -148,7 +146,7 @@ target_frameworks.each do |framework|
 
     # debug info
     if ENV['DEBUG'] && language_name == 'en'
-      report_path = "reports/#{framework['name']}/#{xcode.version}.#{language_name}.json"
+      report_path = "reports/#{framework['name']}/#{15.0}.#{language_name}.json"
       save_json(report_path, found_values_dict)
     end
   end

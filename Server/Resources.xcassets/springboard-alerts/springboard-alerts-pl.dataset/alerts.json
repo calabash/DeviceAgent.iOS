@@ -41,49 +41,56 @@
   {
     "title": "„%@” chce uzyskać dostęp do mikrofonu",
     "buttons": [
-      "OK"
+      "OK",
+      "Pozwól"
     ],
     "shouldAccept": true
   },
   {
     "title": "„%@” chce dodać coś do Zdjęć",
     "buttons": [
-      "OK"
+      "OK",
+      "Pozwól"
     ],
     "shouldAccept": true
   },
   {
     "title": "„%@” chce uzyskać dostęp do Kalendarza",
     "buttons": [
-      "OK"
+      "OK",
+      "Pozwól"
     ],
     "shouldAccept": true
   },
   {
     "title": "„%@” chce uzyskać dostęp do danych o Twoim ruchu i ćwiczeniach",
     "buttons": [
-      "OK"
+      "OK",
+      "Pozwól"
     ],
     "shouldAccept": true
   },
   {
     "title": "„%@” chce uzyskać dostęp do Aparatu",
     "buttons": [
-      "OK"
+      "OK",
+      "Pozwól"
     ],
     "shouldAccept": true
   },
   {
     "title": "„%@” chce uzyskać dostęp do Przypomnień",
     "buttons": [
-      "OK"
+      "OK",
+      "Pozwól"
     ],
     "shouldAccept": true
   },
   {
     "title": "Czy chcesz używać „%@” z Siri?",
     "buttons": [
-      "OK"
+      "OK",
+      "Pozwól"
     ],
     "shouldAccept": true
   },
@@ -97,7 +104,8 @@
   {
     "title": "„%@” chce uzyskać dostęp do Kontaktów",
     "buttons": [
-      "OK"
+      "OK",
+      "Pozwól"
     ],
     "shouldAccept": true
   },
@@ -111,7 +119,8 @@
   {
     "title": "„%@” chce uzyskać dostęp do danych domu",
     "buttons": [
-      "OK"
+      "OK",
+      "Pozwól"
     ],
     "shouldAccept": true
   },
@@ -125,14 +134,16 @@
   {
     "title": "Aplikacja „%@” chce udostępniać dane pobliskim urządzeniom Bluetooth, także gdy jej nie używasz.",
     "buttons": [
-      "OK"
+      "OK",
+      "Pozwól"
     ],
     "shouldAccept": true
   },
   {
     "title": "„%@” chce uzyskać dostęp do rozpoznawania mowy",
     "buttons": [
-      "OK"
+      "OK",
+      "Pozwól"
     ],
     "shouldAccept": true
   },
@@ -244,7 +255,8 @@
   {
     "title": "„%@” chce odbierać połączenia VoIP w tle",
     "buttons": [
-      "OK"
+      "OK",
+      "Pozwól"
     ],
     "shouldAccept": true
   },
@@ -279,35 +291,40 @@
   {
     "title": "„%@” chce uzyskać dostęp do podstawowych danych kontaktów",
     "buttons": [
-      "OK"
+      "OK",
+      "Pozwól"
     ],
     "shouldAccept": true
   },
   {
     "title": "„%@” chce uzyskać dostęp do wszystkich danych kontaktów",
     "buttons": [
-      "OK"
+      "OK",
+      "Pozwól"
     ],
     "shouldAccept": true
   },
   {
     "title": "„%@” chce używać Bluetooth, gdy jest w użyciu",
     "buttons": [
-      "OK"
+      "OK",
+      "Pozwól"
     ],
     "shouldAccept": true
   },
   {
     "title": "„%@” chce używać Bluetooth",
     "buttons": [
-      "OK"
+      "OK",
+      "Pozwól"
     ],
     "shouldAccept": true
   },
   {
     "title": "Dzięki temu „%@” uzyska możliwość znajdowania akcesoriów Bluetooth i łączenia się z nimi. Ta aplikacja może także używać Bluetooth do określania, kiedy jesteś w pobliżu.",
     "buttons": [
-      "OK"
+      "OK",
+      "Pozwól"
     ],
     "shouldAccept": true
   },
@@ -521,6 +538,64 @@
     "title": "Edycja stron ekranu początkowego",
     "buttons": [
       "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Pozwalać aplikacji %@ na używanie Twojego położenia?",
+    "buttons": [
+      "Zawsze pozwalaj",
+      "Pozwalaj",
+      "Pozwalaj, gdy używam aplikacji"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Pozwalać aplikacji %@ na używanie Twojego położenia także, gdy jej nie używasz?",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Pozwolić aplikacji %@ na jednorazowe użycie Twojego dokładnego położenia?",
+    "buttons": [
+      "Pozwól raz"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Pozwolić widżetom z aplikacji %@ na używanie Twojej lokalizacji?",
+    "buttons": [
+      "Pozwalaj"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Dać „%@” pełny dostęp do Kalendarza?",
+    "buttons": [
+      "Pozwól"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce dodać coś do Kalendarza",
+    "buttons": [
+      "Pozwól"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce uzyskać dostęp do Apple Music, danych Twojej aktywności dotyczącej muzyki i wideo oraz do Twojej biblioteki multimediów",
+    "buttons": [
+      "Pozwól"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "„%@” chce uzyskać dostęp do biblioteki zdjęć",
+    "buttons": [
+      "Pozwól"
     ],
     "shouldAccept": true
   }

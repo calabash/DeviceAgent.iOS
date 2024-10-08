@@ -49,7 +49,8 @@
   {
     "title": "“%@” Would Like to Access the Microphone",
     "buttons": [
-      "OK"
+      "OK",
+      "Allow"
     ],
     "shouldAccept": true
   },
@@ -63,35 +64,40 @@
   {
     "title": "“%@” Would Like to Access Your Calendar",
     "buttons": [
-      "OK"
+      "OK",
+      "Allow"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Would Like to Access Your Motion & Fitness Activity",
     "buttons": [
-      "OK"
+      "OK",
+      "Allow"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Would Like to Access the Camera",
     "buttons": [
-      "OK"
+      "OK",
+      "Allow"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Would Like to Access Your Reminders",
     "buttons": [
-      "OK"
+      "OK",
+      "Allow"
     ],
     "shouldAccept": true
   },
   {
     "title": "Would You Like to Use “%@” with Siri?",
     "buttons": [
-      "OK"
+      "OK",
+      "Allow"
     ],
     "shouldAccept": true
   },
@@ -105,7 +111,8 @@
   {
     "title": "“%@” Would Like to Access Your Contacts",
     "buttons": [
-      "OK"
+      "OK",
+      "Allow"
     ],
     "shouldAccept": true
   },
@@ -119,7 +126,8 @@
   {
     "title": "“%@” Would Like to Access Your Home Data",
     "buttons": [
-      "OK"
+      "OK",
+      "Allow"
     ],
     "shouldAccept": true
   },
@@ -140,7 +148,8 @@
   {
     "title": "“%@” Would Like to Access Speech Recognition",
     "buttons": [
-      "OK"
+      "OK",
+      "Allow"
     ],
     "shouldAccept": true
   },
@@ -260,7 +269,8 @@
   {
     "title": "“%@” Would Like to Receive VoIP Calls in the Background",
     "buttons": [
-      "OK"
+      "OK",
+      "Allow"
     ],
     "shouldAccept": true
   },
@@ -274,14 +284,16 @@
   {
     "title": "“%@” would like to access Apple Music, your music and video activity, and your media library",
     "buttons": [
-      "OK"
+      "OK",
+      "Allow"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” would like to make data available to nearby Bluetooth devices even when you’re not using the app",
     "buttons": [
-      "OK"
+      "OK",
+      "Allow"
     ],
     "shouldAccept": true
   },
@@ -309,35 +321,40 @@
   {
     "title": "“%@” Would Like to Access Your Contacts Basic Information",
     "buttons": [
-      "OK"
+      "OK",
+      "Allow"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Would Like to Access All Your Contacts Information",
     "buttons": [
-      "OK"
+      "OK",
+      "Allow"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” would like to use Bluetooth while it is in use",
     "buttons": [
-      "OK"
+      "OK",
+      "Allow"
     ],
     "shouldAccept": true
   },
   {
     "title": "“%@” Would Like to Use Bluetooth",
     "buttons": [
-      "OK"
+      "OK",
+      "Allow"
     ],
     "shouldAccept": true
   },
   {
     "title": "This will allow “%@” to find and connect to Bluetooth accessories. This app may also use Bluetooth to know when you’re nearby.",
     "buttons": [
-      "OK"
+      "OK",
+      "Allow"
     ],
     "shouldAccept": true
   },
@@ -503,6 +520,34 @@
     "title": "Edit Home Screens",
     "buttons": [
       "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Would Like to Add to Your Photos",
+    "buttons": [
+      "Allow"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Give “%@” full access to your calendar?",
+    "buttons": [
+      "Allow"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Would Like to Add to Your Calendar",
+    "buttons": [
+      "Allow"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Would Like to Access Your Photo Library",
+    "buttons": [
+      "Allow"
     ],
     "shouldAccept": true
   }

@@ -287,7 +287,8 @@
   {
     "title": "%@ solicita que los datos estén disponibles para los dispositivos Bluetooth cercanos aunque no estés utilizando la app",
     "buttons": [
-      "OK"
+      "OK",
+      "Permitir"
     ],
     "shouldAccept": true
   },
@@ -336,7 +337,8 @@
   {
     "title": "Esto permitirá que %@ encuentre y se conecte a accesorios Bluetooth. Esta app también podría usar Bluetooth para saber cuándo estás cerca.",
     "buttons": [
-      "OK"
+      "OK",
+      "Permitir"
     ],
     "shouldAccept": true
   },
@@ -479,7 +481,8 @@
   {
     "title": "¿Quieres usar “%@” con Siri?",
     "buttons": [
-      "OK"
+      "OK",
+      "Permitir"
     ],
     "shouldAccept": true
   },
@@ -515,6 +518,169 @@
     "title": "Editar pantallas de inicio",
     "buttons": [
       "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir a %@ utilizar tu ubicación?",
+    "buttons": [
+      "Permitir siempre",
+      "Permitir",
+      "Permitir al usar la app"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir a %@ utilizar tu ubicación incluso cuando la app no está en uso?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir a %@ también usar tu ubicación incluso cuando la app no está en uso?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Permitir a %@ usar tu ubicación precisa una vez?",
+    "buttons": [
+      "Permitir una vez"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ solicita acceso al micrófono",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ solicita acceso para agregar fotos a las tuyas",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ solicita acceso a tu calendario",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "¿Otorgarle acceso completo a tu calendario a %@?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ solicita acceso a tu condición y actividad física",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ solicita acceso a la cámara",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ solicita acceso a tus recordatorios",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ solicita acceso a Apple Music, tu actividad musical y de videos, y tu biblioteca de contenidos multimedia",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ solicita acceso a tus contactos",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ solicita acceso a la información básica de tus contactos",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ solicita acceso a toda la información de tus contactos",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ solicita acceso a tu fototeca",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ solicita acceso a tus datos de Casa",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” solicita acceso para recibir llamadas VoIP en segundo plano",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” solicita acceso a Bluetooth mientras está en uso",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” solicita acceso a Bluetooth",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ solicita acceso al reconocimiento de voz",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere enviarte alertas críticas",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ quiere enviarte notificaciones",
+    "buttons": [
+      "Permitir"
     ],
     "shouldAccept": true
   }

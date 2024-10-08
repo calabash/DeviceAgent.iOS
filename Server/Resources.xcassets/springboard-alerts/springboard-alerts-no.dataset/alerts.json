@@ -49,7 +49,8 @@
   {
     "title": "%@ vil ha tilgang til mikrofonen",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillat"
     ],
     "shouldAccept": true
   },
@@ -63,35 +64,40 @@
   {
     "title": "%@ vil ha tilgang til kalenderen din",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillat"
     ],
     "shouldAccept": true
   },
   {
     "title": "%@ vil ha tilgang til bevegelses- og treningsaktiviteten din",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillat"
     ],
     "shouldAccept": true
   },
   {
     "title": "%@ vil ha tilgang til kameraet",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillat"
     ],
     "shouldAccept": true
   },
   {
     "title": "%@ vil ha tilgang til påminnelsene dine",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillat"
     ],
     "shouldAccept": true
   },
   {
     "title": "Vil du bruke %@ med Siri?",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillat"
     ],
     "shouldAccept": true
   },
@@ -105,7 +111,8 @@
   {
     "title": "%@ vil ha tilgang til kontaktene dine",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillat"
     ],
     "shouldAccept": true
   },
@@ -119,7 +126,8 @@
   {
     "title": "%@ vil ha tilgang til Hjem-dataene dine",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillat"
     ],
     "shouldAccept": true
   },
@@ -140,7 +148,8 @@
   {
     "title": "%@ vil ha tilgang til talegjenkjenning",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillat"
     ],
     "shouldAccept": true
   },
@@ -259,7 +268,8 @@
   {
     "title": "%@ vil motta VoIP-anrop i bakgrunnen",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillat"
     ],
     "shouldAccept": true
   },
@@ -280,14 +290,16 @@
   {
     "title": "%@ vil ha tilgang til Apple Music, musikk- og videobruken din og mediebiblioteket ditt",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillat"
     ],
     "shouldAccept": true
   },
   {
     "title": "%@ ønsker å gjøre data tilgjengelig for Bluetooth-enheter i nærheten selv om appen ikke er i bruk",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillat"
     ],
     "shouldAccept": true
   },
@@ -308,28 +320,32 @@
   {
     "title": "%@ vil ha tilgang til grunnleggende Kontakter-informasjon",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillat"
     ],
     "shouldAccept": true
   },
   {
     "title": "%@ vil ha tilgang til all Kontakter-informasjonen din",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillat"
     ],
     "shouldAccept": true
   },
   {
     "title": "%@ vil bruke Bluetooth mens appen er i bruk",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillat"
     ],
     "shouldAccept": true
   },
   {
     "title": "%@ vil bruke Bluetooth",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillat"
     ],
     "shouldAccept": true
   },
@@ -542,7 +558,8 @@
   {
     "title": "Dette tillater at %@ kan søke etter og koble til Bluetooth-tilbehør. Appen kan også bruke Bluetooth til å finne ut når du er i nærheten.",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillat"
     ],
     "shouldAccept": true
   },
@@ -635,6 +652,34 @@
     "title": "Rediger Hjem-skjermer",
     "buttons": [
       "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ vil legge til bilder i biblioteket ditt",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vil du gi %@ full tilgang til kalenderen?",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "%@ ber om tilgang til å legge til innhold i kalenderen din",
+    "buttons": [
+      "Tillat"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "«%@» vil ha tilgang til bildebiblioteket ditt",
+    "buttons": [
+      "Tillat"
     ],
     "shouldAccept": true
   }

@@ -31,6 +31,8 @@
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceMicrophone", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServicePhotosAdd", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceCalendar", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
+            { "title": "REQUEST_ACCESS_SETTINGS_FULL_kTCCServiceCalendar", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
+            { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceCalendar_ADD", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceMotion", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceCamera", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },
             { "title": "REQUEST_ACCESS_SERVICE_kTCCServiceReminders", "button": "REQUEST_ACCESS_ALLOW", "default_value": true },

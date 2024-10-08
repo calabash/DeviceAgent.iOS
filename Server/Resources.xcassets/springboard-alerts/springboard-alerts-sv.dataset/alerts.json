@@ -49,7 +49,8 @@
   {
     "title": "”%@” begär åtkomst till mikrofonen",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillåt"
     ],
     "shouldAccept": true
   },
@@ -63,35 +64,40 @@
   {
     "title": "”%@” begär åtkomst till din kalender",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillåt"
     ],
     "shouldAccept": true
   },
   {
     "title": "”%@” begär åtkomst till din rörelse- och träningsaktivitet",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillåt"
     ],
     "shouldAccept": true
   },
   {
     "title": "”%@” begär åtkomst till kameran",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillåt"
     ],
     "shouldAccept": true
   },
   {
     "title": "”%@” begär åtkomst till dina påminnelser",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillåt"
     ],
     "shouldAccept": true
   },
   {
     "title": "Vill du använda %@ med Siri?",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillåt"
     ],
     "shouldAccept": true
   },
@@ -105,7 +111,8 @@
   {
     "title": "”%@” begär åtkomst till dina kontakter",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillåt"
     ],
     "shouldAccept": true
   },
@@ -119,7 +126,8 @@
   {
     "title": "”%@” begär åtkomst till dina hemdata",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillåt"
     ],
     "shouldAccept": true
   },
@@ -140,7 +148,8 @@
   {
     "title": "”%@” begär åtkomst till röstigenkänning",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillåt"
     ],
     "shouldAccept": true
   },
@@ -259,7 +268,8 @@
   {
     "title": "”%@” vill ta emot VoIP-samtal i bakgrunden",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillåt"
     ],
     "shouldAccept": true
   },
@@ -273,14 +283,16 @@
   {
     "title": "”%@” vill få tillgång till Apple Music, din musik- och videoaktivitet samt ditt mediebibliotek",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillåt"
     ],
     "shouldAccept": true
   },
   {
     "title": "”%@” vill göra dina data tillgängliga för andra Bluetooth-enheter i närheten, även när du inte använder appen",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillåt"
     ],
     "shouldAccept": true
   },
@@ -301,35 +313,40 @@
   {
     "title": "”%@” begär åtkomst till standardinformation för dina kontakter.",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillåt"
     ],
     "shouldAccept": true
   },
   {
     "title": "”%@” begär åtkomst till all information för dina kontakter.",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillåt"
     ],
     "shouldAccept": true
   },
   {
     "title": "”%@” vill använda Bluetooth medan appen används",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillåt"
     ],
     "shouldAccept": true
   },
   {
     "title": "”%@” vill använda Bluetooth",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillåt"
     ],
     "shouldAccept": true
   },
   {
     "title": "Detta låter ”%@” hitta och ansluta till Bluetooth-tillbehör. Appen kan även använda Bluetooth till att få reda på om du är i närheten.",
     "buttons": [
-      "OK"
+      "OK",
+      "Tillåt"
     ],
     "shouldAccept": true
   },
@@ -474,6 +491,34 @@
     "title": "Ändra hemskärmar",
     "buttons": [
       "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "”%@” vill lägga till bland dina bilder",
+    "buttons": [
+      "Tillåt"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Vill du ge ”%@” fullständig åtkomst till din kalender?",
+    "buttons": [
+      "Tillåt"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "”%@” begär att få lägga till i din kalender",
+    "buttons": [
+      "Tillåt"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "”%@” begär åtkomst till ditt bildbibliotek",
+    "buttons": [
+      "Tillåt"
     ],
     "shouldAccept": true
   }

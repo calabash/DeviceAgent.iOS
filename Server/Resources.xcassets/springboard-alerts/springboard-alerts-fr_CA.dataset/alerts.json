@@ -48,7 +48,8 @@
   {
     "title": "« %@ » souhaite accéder au micro.",
     "buttons": [
-      "OK"
+      "OK",
+      "Autoriser"
     ],
     "shouldAccept": true
   },
@@ -62,49 +63,56 @@
   {
     "title": "« %@ » souhaite accéder à votre calendrier.",
     "buttons": [
-      "OK"
+      "OK",
+      "Autoriser"
     ],
     "shouldAccept": true
   },
   {
     "title": "« %@ » souhaite accéder à vos mouvements et à votre activité physique.",
     "buttons": [
-      "OK"
+      "OK",
+      "Autoriser"
     ],
     "shouldAccept": true
   },
   {
     "title": "« %@ » souhaite accéder à l’appareil photo.",
     "buttons": [
-      "OK"
+      "OK",
+      "Autoriser"
     ],
     "shouldAccept": true
   },
   {
     "title": "« %@ » souhaite accéder à vos rappels.",
     "buttons": [
-      "OK"
+      "OK",
+      "Autoriser"
     ],
     "shouldAccept": true
   },
   {
     "title": "Souhaitez-vous utiliser « %@ » avec Siri?",
     "buttons": [
-      "OK"
+      "OK",
+      "Autoriser"
     ],
     "shouldAccept": true
   },
   {
     "title": "« %@ » souhaite accéder à Apple Music, à votre activité en matière de musique et de vidéo, ainsi qu’à votre bibliothèque multimédia.",
     "buttons": [
-      "OK"
+      "OK",
+      "Autoriser"
     ],
     "shouldAccept": true
   },
   {
     "title": "« %@ » souhaite accéder à vos contacts.",
     "buttons": [
-      "OK"
+      "OK",
+      "Autoriser"
     ],
     "shouldAccept": true
   },
@@ -132,14 +140,16 @@
   {
     "title": "« %@ » voudrait rendre les données disponibles auprès des appareils Bluetooth à proximité lorsque vous n’utilisez pas cette app.",
     "buttons": [
-      "OK"
+      "OK",
+      "Autoriser"
     ],
     "shouldAccept": true
   },
   {
     "title": "« %@ » souhaite accéder à la reconnaissance vocale.",
     "buttons": [
-      "OK"
+      "OK",
+      "Autoriser"
     ],
     "shouldAccept": true
   },
@@ -261,7 +271,8 @@
   {
     "title": "« %@ » souhaite recevoir des appels VoIP en arrière-plan",
     "buttons": [
-      "OK"
+      "OK",
+      "Autoriser"
     ],
     "shouldAccept": true
   },
@@ -275,7 +286,8 @@
   {
     "title": "« %@ » souhaite accéder aux données de Domicile.",
     "buttons": [
-      "OK"
+      "OK",
+      "Autoriser"
     ],
     "shouldAccept": true
   },
@@ -296,35 +308,40 @@
   {
     "title": "« %@ » souhaite accéder aux informations de base de vos contacts.",
     "buttons": [
-      "OK"
+      "OK",
+      "Autoriser"
     ],
     "shouldAccept": true
   },
   {
     "title": "« %@ » souhaite accéder à l’ensemble des informations de vos contacts.",
     "buttons": [
-      "OK"
+      "OK",
+      "Autoriser"
     ],
     "shouldAccept": true
   },
   {
     "title": "L’app « %@ » souhaite utiliser Bluetooth lorsqu’elle est active.",
     "buttons": [
-      "OK"
+      "OK",
+      "Autoriser"
     ],
     "shouldAccept": true
   },
   {
     "title": "« %@ » souhaite utiliser Bluetooth.",
     "buttons": [
-      "OK"
+      "OK",
+      "Autoriser"
     ],
     "shouldAccept": true
   },
   {
     "title": "« %@ » pourra alors rechercher les accessoires Bluetooth et s’y connecter. Cette app peut également utiliser Bluetooth pour détecter lorsque vous êtes à proximité.",
     "buttons": [
-      "OK"
+      "OK",
+      "Autoriser"
     ],
     "shouldAccept": true
   },
@@ -482,6 +499,34 @@
     "title": "Modifier les écrans d’accueil",
     "buttons": [
       "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » souhaite ajouter des photos aux vôtres.",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Accorder l’accès complet à votre calendrier à « %@ »?",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » souhaite modifier votre calendrier.",
+    "buttons": [
+      "Autoriser"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "« %@ » souhaite accéder à votre photothèque.",
+    "buttons": [
+      "Autoriser"
     ],
     "shouldAccept": true
   }

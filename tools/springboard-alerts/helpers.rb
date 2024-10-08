@@ -1,3 +1,4 @@
+require 'json'
 # Reads and parses JSON object from local file
 def read_json(file_path)
   raise "The file '#{file_path}' is not found" unless File.exist?(file_path)

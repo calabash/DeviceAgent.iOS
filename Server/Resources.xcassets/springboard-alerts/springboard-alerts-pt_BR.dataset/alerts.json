@@ -19,5 +19,252 @@
       "Permitir"
     ],
     "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” use a sua localização?",
+    "buttons": [
+      "Permitir Sempre",
+      "Permitir",
+      "Permitir Durante o Uso do App"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” use a sua localização mesmo quando você não estiver usando o app?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” também use a sua localização mesmo quando você não estiver usando o app?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permitir que “%@” use a sua localização precisa uma vez?",
+    "buttons": [
+      "Permitir Uma Vez"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Permitir que os widgets de “%@” usem a sua localização?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Deseja permitir que “%@” use o Face ID?",
+    "buttons": [
+      "Não Permitir"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso ao Microfone",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Adicionar às Suas Fotos",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso ao Seu Calendário",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Conceder acesso total ao calendário para “%@”?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Adicionar Eventos ao Seu Calendário",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso às Suas Atividades de Movimento e Preparo Físico",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso à Câmera",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso aos Seus Lembretes",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Deseja Usar “%@” com a Siri?",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” deseja ter acesso ao Apple Music, suas atividades de música e vídeo, e à biblioteca de mídia",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso aos Seus Contatos",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso às Informações Básicas dos Seus Contatos",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso a Todas as Informações dos Seus Contatos",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso à Sua Fototeca",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Acessar os Dados do App Casa",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Receber Ligações de VoIP em Segundo Plano",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” deseja disponibilizar dados para os dispositivos Bluetooth por perto até mesmo quando você não estiver usando o app",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” deseja usar Bluetooth enquanto estiver em uso",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Usar Bluetooth",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Isso permitirá que “%@” busque e conecte-se a acessórios Bluetooth. Este app também pode usar Bluetooth para saber quando você estiver por perto.",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Ter Acesso ao Reconhecimento de Fala",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” Deseja Adicionar Configurações de VPN",
+    "buttons": [
+      "Não Permitir"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "“%@” Deseja Filtrar Conteúdo da Rede",
+    "buttons": [
+      "Não Permitir"
+    ],
+    "shouldAccept": false
+  },
+  {
+    "title": "“%@” Deseja Adicionar Configurações de Proxy DNS",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "“%@” deseja buscar dispositivos na sua rede local e se conectar a eles",
+    "buttons": [
+      "OK"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Ativar Ditado?",
+    "buttons": [
+      "Agora Não"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Ativar Ditado",
+    "buttons": [
+      "Agora Não"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "Adicionar Teclado de Terceiros?",
+    "buttons": [
+      "Agora Não"
+    ],
+    "shouldAccept": true
+  },
+  {
+    "title": "O App %@ Deseja Enviar Alertas Críticos",
+    "buttons": [
+      "Permitir"
+    ],
+    "shouldAccept": true
   }
 ]
