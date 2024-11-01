@@ -22,7 +22,9 @@
 
 @interface XCTestExpectation : NSObject
 {
-    struct atomic_flag _hasCleanedUp;
+    struct atomic_flag {
+        _Atomic bool _Value;
+    } _hasCleanedUp;
     NSLock *_cleanupHandlersLock;
     NSMutableArray *_cleanupHandlers;
     BOOL _fulfilled;
@@ -50,24 +52,20 @@
 @property(readonly) BOOL fulfilled;
 @property(nonatomic) NSUInteger fulfillmentCount;
 @property(readonly) NSUInteger fulfillmentToken;
-@property BOOL hasBeenWaitedOn;
+@property(readonly) BOOL hasBeenWaitedOn;
 @property BOOL hasInverseBehavior;
 @property(getter=isInverted) BOOL inverted;
 @property NSUInteger numberOfFulfillments;
-@property(readonly) BOOL on_queue_fulfilled;
-@property(readonly) NSUInteger on_queue_fulfillmentToken;
-@property(readonly) BOOL on_queue_isInverted;
 
 + (id)compoundAndExpectationWithSubexpectations:(id)arg1;
 + (id)compoundOrExpectationWithSubexpectations:(id)arg1;
 + (id)expectationWithDescription:(id)arg1;
 - (id)_generateExpectationDescription;
-- (BOOL)_queue_fulfillWithCallStackReturnAddresses:(id)arg1;
 - (void)addCleanupHandler:(CDUnknownBlockType)arg1;
 - (void)cleanup:(BOOL)arg1;
 - (void)fulfill;
 - (id)initWithDescription:(id)arg1;
-- (void)on_queue_setHasBeenWaitedOn:(BOOL)arg1;
+- (void)setHasBeenWaitedOn:(BOOL)arg1 wait:(id)arg2;
 
 @end
 

@@ -39,5 +39,6 @@
 - (BOOL)twoFingerTapWithError:(id *)arg1;
 
 
+
 @end
 

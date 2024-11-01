@@ -63,7 +63,7 @@
 - (id)_activationExpectation;
 - (void)_awaitValidCurrentProcess;
 - (void)_launchUsingPlatformWithArguments:(id)arg1 environment:(id)arg2 launchURL:(id)arg3;
-- (void)_launchUsingXcodeWithArguments:(id)arg1 environment:(id)arg2;
+- (void)_launchUsingXcodeWithArguments:(id)arg1 environment:(id)arg2 launchURL:(id)arg3;
 - (void)_launchWithRequest:(id)arg1;
 - (void)_waitForLaunchProgressWithToken:(id)arg1;
 - (void)_waitForValidPID;
@@ -84,6 +84,7 @@
 - (void)waitForAccessibilityActive;
 - (BOOL)waitForState:(NSUInteger)arg1 timeout:(double)arg2;
 - (BOOL)waitForViewControllerViewDidDisappearWithTimeout:(double)arg1 error:(id *)arg2;
+
 
 
 @end

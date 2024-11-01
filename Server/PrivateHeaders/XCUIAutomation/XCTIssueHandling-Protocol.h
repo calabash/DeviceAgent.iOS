@@ -19,5 +19,6 @@
 - (void)expectFailureWithContext:(XCTExpectedFailureContext *)arg1;
 - (void)expectFailureWithContext:(XCTExpectedFailureContext *)arg1 inBlock:(void (^)(void))arg2;
 - (void)handleIssue:(XCTIssue *)arg1;
+- (void)handleIssue:(XCTIssue *)arg1 completionHandler:(void (^)(void))arg2;
 @end
 

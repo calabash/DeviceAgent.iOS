@@ -21,5 +21,8 @@
 - (XCTSourceCodeSymbolInfo *)symbolInfoForImageOffset:(NSUInteger)arg1 inImageWithUUID:(NSString *)arg2 error:(id *)arg3;
 
 @optional
+// Preceding property had unknown attributes: ?
+// Original attribute string: T@"NSSet",?,R
+
 @end
 

@@ -30,6 +30,7 @@
 + (id)inferredUniformTypeIdentifierForFileExtension:(id)arg1;
 + (BOOL)isImageUniformTypeIdentifier:(id)arg1;
 + (id)plainText;
++ (id)synthesizedEventRecord;
 + (id)testIssue;
 + (id)zipArchive;
 

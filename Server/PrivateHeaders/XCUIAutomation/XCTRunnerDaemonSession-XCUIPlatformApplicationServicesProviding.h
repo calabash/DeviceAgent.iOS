@@ -17,6 +17,7 @@
 #import "XCTMessagingRole_UIApplicationStateUpdating-Protocol.h"
 #import "XCUIApplicationAutomationSessionProviding-Protocol.h"
 #import "XCUIDeviceAutomationModeInterface-Protocol.h"
+#import "XCUIDeviceDelayedAttachmentTransferSupportInterface-Protocol.h"
 #import "XCUIDeviceEventAndStateInterface-Protocol.h"
 #import "XCUILocalDeviceScreenshotIPCInterface-Protocol.h"
 #import "XCUIPlatformApplicationServicesProviding-Protocol.h"
@@ -27,15 +28,14 @@
 @class NSString, XCTCapabilities;
 @protocol XCUIApplicationPlatformServicesProviderDelegate;
 
-@interface XCTRunnerDaemonSession (XCUIPlatformApplicationServicesProviding) <XCUIPlatformApplicationServicesProviding, XCUIDeviceAutomationModeInterface, XCUIResetAuthorizationStatusOfProtectedResourcesInterface, XCUIRemoteSiriInterface, XCUIDeviceEventAndStateInterface, XCUILocalDeviceScreenshotIPCInterface, XCUIApplicationAutomationSessionProviding, XCTMessagingRole_UIApplicationStateUpdating, XCUIRemoteAccessibilityInterface>
+@interface XCTRunnerDaemonSession (XCUIPlatformApplicationServicesProviding) <XCUIRemoteAccessibilityInterface, XCTMessagingRole_UIApplicationStateUpdating, XCUIApplicationAutomationSessionProviding, XCUILocalDeviceScreenshotIPCInterface, XCUIDeviceEventAndStateInterface, XCUIRemoteSiriInterface, XCUIResetAuthorizationStatusOfProtectedResourcesInterface, XCUIDeviceAutomationModeInterface, XCUIDeviceDelayedAttachmentTransferSupportInterface, XCUIPlatformApplicationServicesProviding>
 + (id)capabilities;
-+ (id)daemonCapabilitiesForProtocolVersion:(NSUInteger)arg1 platform:(NSUInteger)arg2 error:(id *)arg3;
-+ (void)legacyCapabilitiesForDaemonConnection:(id)arg1 completion:(CDUnknownBlockType)arg2;
-+ (void)modernCapabilitiesForDaemonConnection:(id)arg1 completion:(CDUnknownBlockType)arg2;
 + (void)registerCapabilitiesForDaemonConnection:(id)arg1 completion:(CDUnknownBlockType)arg2;
 + (id)unsupportedBundleIdentifiersForAutomationSessions;
 - (void)_XCT_applicationDidUpdateState:(id)arg1;
 - (void)_XCT_applicationWithBundleID:(id)arg1 didUpdatePID:(NSInteger)arg2 andState:(NSUInteger)arg3;
+- (void)_XCT_deviceOrientationDidChange:(NSInteger)arg1;
+- (void)_XCT_interfaceOrientationDidChange:(NSInteger)arg1;
 - (id)axNotificationHandler;
 - (void)beginMonitoringApplicationWithSpecifier:(id)arg1;
 - (void)clearSimulatedLocationWithReply:(CDUnknownBlockType)arg1;
@@ -63,6 +63,7 @@
 - (void)performAccessibilityAction:(id)arg1 onElement:(id)arg2 value:(id)arg3 reply:(CDUnknownBlockType)arg4;
 - (void)performDeviceEvent:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)playBackHIDEventRecordingFromData:(id)arg1 reply:(CDUnknownBlockType)arg2;
+- (BOOL)preferScreenshotsOverScreenRecordings;
 - (void)receivedAccessibilityNotification:(NSInteger)arg1 fromElement:(id)arg2 payload:(id)arg3;
 - (void)registerForAccessibilityNotification:(NSInteger)arg1 reply:(CDUnknownBlockType)arg2;
 - (void)requestApplicationSpecifierForPID:(NSInteger)arg1 reply:(CDUnknownBlockType)arg2;
@@ -71,6 +72,7 @@
 - (void)requestElementAtPoint:(CGPoint)arg1 reply:(CDUnknownBlockType)arg2;
 - (BOOL)requestPointerEventsSupportedOrError:(id *)arg1;
 - (BOOL)requestPressureEventsSupportedOrError:(id *)arg1;
+- (void)requestScreenshotAttachmentWithRequest:(id)arg1 withReply:(CDUnknownBlockType)arg2;
 - (void)requestScreenshotWithRequest:(id)arg1 withReply:(CDUnknownBlockType)arg2;
 - (void)requestSiriEnabledStatus:(CDUnknownBlockType)arg1;
 - (void)requestSnapshotForElement:(id)arg1 attributes:(id)arg2 parameters:(id)arg3 reply:(CDUnknownBlockType)arg4;
@@ -86,10 +88,13 @@
 - (void)setSimulatedLocation:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)snapshotForElement:(id)arg1 attributes:(id)arg2 parameters:(id)arg3 reply:(CDUnknownBlockType)arg4;
 - (void)startHIDEventRecordingWithReply:(CDUnknownBlockType)arg1;
+- (void)startScreenRecordingWithRequest:(id)arg1 withReply:(CDUnknownBlockType)arg2;
 - (void)startSiriUIRequestWithAudioFileURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)startSiriUIRequestWithText:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)stopHIDEventRecordingWithReply:(CDUnknownBlockType)arg1;
+- (void)stopScreenRecordingWithUUID:(id)arg1 withReply:(CDUnknownBlockType)arg2;
 - (BOOL)supportsHIDEventRecording;
+- (BOOL)supportsScreenRecording;
 - (id)synthesizeEvent:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)terminateApplicationWithBundleID:(id)arg1 pid:(NSInteger)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)unloadAccessibility:(CDUnknownBlockType)arg1;
@@ -98,6 +103,7 @@
 - (void)updateDeviceOrientation:(NSInteger)arg1 completion:(CDUnknownBlockType)arg2;
 - (BOOL)useLegacyEventCoordinateTransformationPath;
 - (BOOL)usePointTransformationsForFrameConversions;
+
 
 @end
 

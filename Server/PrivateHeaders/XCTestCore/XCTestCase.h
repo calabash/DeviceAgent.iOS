@@ -8,8 +8,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <XCTest/XCUIElementTypes.h>
+#import <XCTestCore/XCTest.h>
 #import "CDStructures.h"
-#import "XCTestCore/XCTest.h"
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
@@ -23,37 +23,29 @@
 @class MXMInstrument, NSArray, NSDictionary, NSInvocation, NSMutableArray, NSMutableDictionary, NSMutableSet, NSObject, NSString, NSThread, XCTAttachmentManager, XCTIssue, XCTMemoryChecker, XCTMetricDiagnosticHelper, XCTSkippedTestContext, XCTTestIdentifier, XCTWaiter, XCTestCaseRun;
 @protocol OS_dispatch_source;
 
-@interface XCTestCase : XCTest <XCTWaiterDelegate, XCTestCaseUIAutomationDelegate, XCTestCastMethodNamesUIAutomationDelegate, XCTestCaseDiscoveryUIAutomationDelegate, XCTMemoryCheckerDelegate, XCTActivity>
+@interface XCTestCase: XCTest <XCTActivity, XCTWaiterDelegate, XCTestCaseUIAutomationDelegate, XCTestCastMethodNamesUIAutomationDelegate, XCTestCaseDiscoveryUIAutomationDelegate, XCTMemoryCheckerDelegate>
 {
     BOOL _continueAfterFailure;
     BOOL __preciseTimeoutsEnabled;
-    BOOL _isMeasuringMetrics;
-    BOOL __didMeasureMetrics;
-    BOOL __didStartMeasuring;
-    BOOL __didStopMeasuring;
-    BOOL __memgraphCollectionIteration;
     BOOL _hasDequeuedTeardownBlocks;
     BOOL _hasReportedFailuresToTestCaseRun;
     BOOL _canHandleInterruptions;
     BOOL _shouldHaltWhenReceivesControl;
     BOOL _shouldSetShouldHaltWhenReceivesControl;
     BOOL _hasAttemptedToCaptureScreenshotOnFailure;
+    BOOL __didMeasureMetrics;
+    BOOL __didStartMeasuring;
+    BOOL __didStopMeasuring;
+    BOOL _isMeasuringMetrics;
+    BOOL __memgraphCollectionIteration;
     XCTTestIdentifier *_identifier;
     NSInvocation *_invocation;
     double _executionTimeAllowance;
     NSDictionary *_activityAggregateStatistics;
     NSMutableArray *_mutableExpectations;
-    NSArray *_activePerformanceMetricIDs;
-    NSUInteger _startWallClockTime;
-    struct time_value _startUserTime;
-    struct time_value _startSystemTime;
-    NSUInteger _measuringIteration;
-    MXMInstrument *_instrument;
-    XCTMetricDiagnosticHelper *_diagnosticHelper;
     NSInteger _runLoopNestingCount;
     NSMutableArray *_teardownBlocks;
     NSMutableArray *_primaryThreadBlocks;
-    XCTAttachmentManager *_attachmentManager;
     NSObject<OS_dispatch_source> *_timeoutSource;
     NSUInteger _signpostID;
     NSThread *_primaryThread;
@@ -63,11 +55,19 @@
     XCTSkippedTestContext *_skippedTestContext;
     XCTestCaseRun *_testCaseRun;
     XCTMemoryChecker *_defaultMemoryChecker;
+    XCTAttachmentManager *_attachmentManager;
     NSMutableDictionary *__perfMetricsForID;
+    NSArray *_activePerformanceMetricIDs;
+    NSUInteger _startWallClockTime;
+    struct time_value _startUserTime;
+    struct time_value _startSystemTime;
+    NSUInteger _measuringIteration;
+    MXMInstrument *_instrument;
+    XCTMetricDiagnosticHelper *_diagnosticHelper;
     NSDictionary *_testRunConfiguration;
 }
 
-@property(copy, getter=_activityAggregateStatistics, setter=_setActivityAggregateStatistics:) NSDictionary *activityAggregateStatistics;
+@property(copy, getter=_activityAggregateStatistics) NSDictionary *activityAggregateStatistics;
 @property BOOL _didMeasureMetrics;
 @property BOOL _didStartMeasuring;
 @property BOOL _didStopMeasuring;
@@ -88,7 +88,7 @@
 @property NSInteger runLoopNestingCount;
 @property(nonatomic) BOOL shouldHaltWhenReceivesControl;
 @property(nonatomic) BOOL shouldSetShouldHaltWhenReceivesControl;
-@property(retain, nonatomic) XCTSkippedTestContext *skippedTestContext;
+@property(retain) XCTSkippedTestContext *skippedTestContext;
 @property(retain) XCTestCaseRun *testCaseRun;
 @property(readonly) BOOL shouldRelaunchBeforeRunningTest;
 
@@ -109,6 +109,7 @@
 + (id)allSubclasses;
 + (id)allSubclassesOutsideXCTest;
 + (id)allTestMethodInvocations;
++ (BOOL)customizesTestMethodNameViaOverrides;
 + (id)defaultMeasureOptions;
 + (id)defaultMetrics;
 + (id)defaultPerformanceMetrics;
@@ -141,10 +142,11 @@
 - (void)_logAndReportPerformanceMetrics:(id)arg1 perfMetricResultsForIDs:(id)arg2 withBaselinesForTest:(id)arg3 defaultBaselinesForPerfMetricID:(id)arg4;
 - (void)_logMemoryGraphData:(id)arg1 withTitle:(id)arg2;
 - (void)_logMemoryGraphDataFromFilePath:(id)arg1 withTitle:(id)arg2;
+- (void)_nestedWaiter:(id)arg1 whileWaitingForWait:(id)arg2 wasInterruptedByTimedOutWaiter:(id)arg3;
 - (void)_purgeTeardownBlocks;
 - (void)_recordIssue:(id)arg1;
 - (void)_recordValues:(id)arg1 forPerformanceMetricID:(id)arg2 name:(id)arg3 unitsOfMeasurement:(id)arg4 baselineName:(id)arg5 baselineAverage:(id)arg6 maxPercentRegression:(id)arg7 maxPercentRelativeStandardDeviation:(id)arg8 maxRegression:(id)arg9 maxStandardDeviation:(id)arg10 file:(id)arg11 line:(NSUInteger)arg12 polarity:(NSInteger)arg13;
-- (void)_reportFailuresAtFile:(id)arg1 line:(NSUInteger)arg2 forTestAssertionsInScope:(CDUnknownBlockType)arg3;
+- (void)_registerDefaultMetrics;
 - (Class)_requiredTestRunBaseClass;
 - (void)_resetTimer;
 - (BOOL)_shouldRepeatTest;
@@ -152,18 +154,20 @@
 - (void)_stopTimeoutTimer;
 - (id)_storageKeyForCandidateIssue;
 - (BOOL)_testMethodSkippedWithXCTSkip;
+- (void)_waiter:(id)arg1 whileWaitingForWait:(id)arg2 didFulfillInvertedExpectation:(id)arg3;
+- (void)_waiter:(id)arg1 whileWaitingForWait:(id)arg2 didTimeoutWithUnfulfilledExpectations:(id)arg3;
+- (void)_waiter:(id)arg1 whileWaitingForWait:(id)arg2 fulfillmentDidViolateOrderingConstraintsForExpectation:(id)arg3 requiredExpectation:(id)arg4;
 - (id)_xctTestIdentifier;
 - (id)addAdditionalIterationsBasedOnOptions:(id)arg1;
 - (void)addAsyncTeardownBlock:(CDUnknownBlockType)arg1;
 - (void)addAttachment:(id)arg1;
 - (void)addTeardownBlock:(CDUnknownBlockType)arg1;
-- (void)afterTestIteration:(NSUInteger)arg1 selector:(SEL)arg2;
 - (void)assertInvalidObjectsDeallocatedAfterScope:(CDUnknownBlockType)arg1;
+- (void)assertNoLeaksExcludingSystemTypesInScope:(CDUnknownBlockType)arg1;
 - (void)assertNoLeaksInScope:(CDUnknownBlockType)arg1;
 - (void)assertObjectsOfType:(id)arg1 invalidAfterScope:(CDUnknownBlockType)arg2;
 - (void)assertObjectsOfTypes:(id)arg1 invalidAfterScope:(CDUnknownBlockType)arg2;
 - (id)baselinesDictionaryForTest;
-- (void)beforeTestIteration:(NSUInteger)arg1 selector:(SEL)arg2;
 - (void)conditionallyRelaunchTestRunnerProcess;
 - (NSInteger)defaultExecutionOrderCompare:(id)arg1;
 - (void)expectFailureWithContext:(id)arg1;
@@ -172,6 +176,7 @@
 - (id)expectationForPredicate:(id)arg1 evaluatedWithObject:(id)arg2 handler:(CDUnknownBlockType)arg3;
 - (id)expectationWithDescription:(id)arg1;
 - (void)handleIssue:(id)arg1;
+- (void)handleIssue:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (id)initWithInvocation:(id)arg1;
 - (id)initWithSelector:(SEL)arg1;
 - (void)invokeTest;
@@ -187,19 +192,17 @@
 - (void)memoryChecker:(id)arg1 didFailWithMessages:(id)arg2 serializedMemoryGraph:(id)arg3;
 - (id)nameForLegacyLogging;
 - (void)nestedWaiter:(id)arg1 wasInterruptedByTimedOutWaiter:(id)arg2;
-- (NSUInteger)numberOfTestIterationsForTestWithSelector:(SEL)arg1;
+- (void)nestedWaiter:(id)arg1 whileWaitingForWait:(id)arg2 wasInterruptedByTimedOutWaiter:(id)arg3;
 - (void)performTest:(id)arg1;
 - (void)recordFailureWithDescription:(id)arg1 inFile:(id)arg2 atLine:(NSUInteger)arg3 expected:(BOOL)arg4;
 - (void)recordIssue:(id)arg1;
-- (void)registerDefaultMetrics;
+- (void)recordSkipWithMessage:(id)arg1;
 - (void)registerMetricID:(id)arg1 name:(id)arg2 unit:(id)arg3;
 - (void)registerMetricID:(id)arg1 name:(id)arg2 unitString:(id)arg3;
 - (void)registerMetricID:(id)arg1 name:(id)arg2 unitString:(id)arg3 polarity:(NSInteger)arg4;
 - (void)reportMeasurements:(id)arg1 forMetricID:(id)arg2 reportFailures:(BOOL)arg3;
 - (void)reportMetric:(id)arg1 reportFailures:(BOOL)arg2;
 - (void)setUpTestWithSelector:(SEL)arg1;
-- (void)startActivityWithTitle:(id)arg1 block:(CDUnknownBlockType)arg2;
-- (void)startActivityWithTitle:(id)arg1 type:(id)arg2 block:(CDUnknownBlockType)arg3;
 - (void)startMeasuring;
 - (void)stopMeasuring;
 - (void)swift_waitForExpectations:(id)arg1 timeout:(double)arg2 enforceOrder:(BOOL)arg3 completionHandler:(CDUnknownBlockType)arg4;
@@ -214,6 +217,10 @@
 - (void)waiter:(id)arg1 didFulfillInvertedExpectation:(id)arg2;
 - (void)waiter:(id)arg1 didTimeoutWithUnfulfilledExpectations:(id)arg2;
 - (void)waiter:(id)arg1 fulfillmentDidViolateOrderingConstraintsForExpectation:(id)arg2 requiredExpectation:(id)arg3;
+- (void)waiter:(id)arg1 whileWaitingForWait:(id)arg2 didFulfillInvertedExpectation:(id)arg3;
+- (void)waiter:(id)arg1 whileWaitingForWait:(id)arg2 didTimeoutWithUnfulfilledExpectations:(id)arg3;
+- (void)waiter:(id)arg1 whileWaitingForWait:(id)arg2 fulfillmentDidViolateOrderingConstraintsForExpectation:(id)arg3 requiredExpectation:(id)arg4;
+
 
 
 @end

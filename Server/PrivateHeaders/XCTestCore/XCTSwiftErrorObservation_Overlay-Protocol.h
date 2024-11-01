@@ -9,6 +9,6 @@
 
 @optional
 + (BOOL)_installErrorObserver;
-+ (XCTIssue * (^)(void))_observeErrorsInBlock:(void (^)(void (^)(void)))arg1;
++ (XCTIssue * (^)(void))_observeErrorsInBlock:(void (^)(void))arg1;
 @end
 

@@ -16,8 +16,8 @@
 
 #import <UIKit/UIDevice.h>
 
-@class NSString, XCTContext, XCUILocation, XCUIRemote, XCUISiriService, XCUISystem;
-@protocol XCTSignpostListener, XCUIAccessibilityInterface, XCUIApplicationAutomationSessionProviding, XCUIApplicationMonitor, XCUIApplicationProcessManaging, XCUIDeviceAutomationModeInterface, XCUIDeviceDiagnostics, XCUIDeviceEventAndStateInterface, XCUIEventSynthesizing, XCUIInterruptionMonitoring, XCUIResetAuthorizationStatusOfProtectedResourcesInterface, XCUIScreenDataSource, XCUIXcodeApplicationManaging;
+@class NSString, XCTContext, XCUILocation, XCUIRemote, XCUIScreen, XCUISiriService, XCUISystem;
+@protocol XCTSignpostListener, XCUIAccessibilityInterface, XCUIApplicationAutomationSessionProviding, XCUIApplicationMonitor, XCUIApplicationProcessManaging, XCUIDeviceAutomationModeInterface, XCUIDeviceDelayedAttachmentTransferSupportInterface, XCUIDeviceDiagnostics, XCUIDeviceEventAndStateInterface, XCUIEventSynthesizing, XCUIInterruptionMonitoring, XCUIResetAuthorizationStatusOfProtectedResourcesInterface, XCUIScreenDataSource, XCUIXcodeApplicationManaging;
 
 
 @protocol XCUIAccessibilityInterface;
@@ -27,6 +27,7 @@
 {
     BOOL _isLocal;
     BOOL _isSimulatorDevice;
+    BOOL _wasSystemAppActivated;
     NSInteger _platform;
     id <XCUIAccessibilityInterface> _accessibilityInterface;
     id <XCUIApplicationMonitor> _applicationMonitor;
@@ -44,15 +45,19 @@
     id <XCUIResetAuthorizationStatusOfProtectedResourcesInterface> _resetAuthorizationStatusInterface;
     id <XCUIDeviceDiagnostics> _diagnosticsProvider;
     id <XCUIDeviceAutomationModeInterface> _automationModeInterface;
+    id <XCUIDeviceDelayedAttachmentTransferSupportInterface> _delayedAttachmentTransferSupportInterface;
     XCTContext *_reportingContext;
     NSString *_name;
     NSString *_alias;
+    XCUIScreen *_screenCurrentlyUsedForScreenRecording;
     id <XCTSignpostListener> _signpostListener;
 }
 
 @property(nonatomic) NSInteger appearance;
 @property(retain, nonatomic) XCUILocation *location;
 @property(nonatomic) UIDeviceOrientation orientation;
+@property(retain, nonatomic) XCUIScreen *screenCurrentlyUsedForScreenRecording;
+@property BOOL wasSystemAppActivated;
 @property(readonly) id <XCTSignpostListener> signpostListener;
 @property(readonly) XCUISiriService *siriService;
 @property(readonly) BOOL supportsPointerInteraction;
@@ -62,21 +67,25 @@
 + (void)setLocalDevice:(id)arg1;
 + (XCUIDevice *)sharedDevice;
 - (void)_clearSimulatedLocation;
+- (BOOL)_isInTopLevelActivity;
 - (NSUInteger)_setModifiers:(NSUInteger)arg1 merge:(BOOL)arg2 beginPersistentState:(BOOL)arg3 description:(id)arg4;
 - (void)_setOrientation:(NSInteger)arg1;
 - (void)_silentPressButton:(NSInteger)arg1;
 - (id)accessibilityInterface;
 - (id)alias;
-- (NSInteger)appearanceMode;
 - (id)applicationAutomationSessionProvider;
 - (id)applicationMonitor;
 - (void)attachLocalizableStringsData;
 - (id)automationModeInterface;
 - (BOOL)configuredForUITesting;
+- (id)delayedAttachmentTransferSupportInterface;
 - (id)deviceEventAndStateInterface;
 - (id)diagnosticAttachmentsForError:(id)arg1;
 - (id)diagnosticsProvider;
+- (void)didUpdateDeviceOrientation:(NSInteger)arg1;
+- (void)didUpdateInterfaceOrientation:(NSInteger)arg1;
 - (BOOL)enableAutomationMode:(id *)arg1;
+- (void)ensureSystemAppIsLoaded;
 - (id)eventSynthesizer;
 - (BOOL)hasHardwareButton:(NSInteger)arg1;
 - (void)holdHomeButtonForDuration:(double)arg1;
@@ -84,6 +93,8 @@
 - (id)initWithDiagnosticProvider:(id)arg1;
 - (id)interruptionMonitor;
 - (BOOL)isLocal;
+- (BOOL)isScreenRecordingActive;
+- (BOOL)isScreenRecordingSupported;
 - (BOOL)isSimulatorDevice;
 - (id)mainScreen;
 - (id)mainScreenOrError:(id *)arg1;
@@ -109,10 +120,12 @@
 - (id)screens;
 - (id)screensOrError:(id *)arg1;
 - (void)setAlias:(id)arg1;
-- (void)setAppearanceMode:(NSInteger)arg1;
 - (id)spindumpAttachmentForProcessID:(NSInteger)arg1 error:(id *)arg2;
+- (id)startDiagnosticScreenRecording;
 - (BOOL)startHIDEventRecordingWithError:(id *)arg1;
+- (void)stopDiagnosticScreenRecording;
 - (BOOL)stopHIDEventRecordingAndSaveToURL:(id)arg1 error:(id *)arg2;
+- (BOOL)supportsHandGestures;
 - (BOOL)supportsPressureInteraction;
 - (id)uniqueIdentifier;
 - (id)xcodeApplicationManager;

@@ -12,23 +12,20 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@class NSNotificationCenter, NSObject, NSString;
-@protocol OS_dispatch_queue;
+@class NSNotificationCenter, NSString;
 
 @interface XCTNSNotificationExpectation
 {
-    CDUnknownBlockType _handler;
     NSString *_notificationName;
     id _observedObject;
     NSNotificationCenter *_notificationCenter;
-    NSObject<OS_dispatch_queue> *_queue;
+    CDUnknownBlockType _handler;
 }
 
 @property(copy) CDUnknownBlockType handler;
 @property(readonly) NSNotificationCenter *notificationCenter;
 @property(readonly, copy) NSString *notificationName;
 @property(readonly) id observedObject;
-@property(readonly) NSObject<OS_dispatch_queue> *queue;
 
 - (void)_observeExpectedNotification:(id)arg1;
 - (void)cleanup:(BOOL)arg1;

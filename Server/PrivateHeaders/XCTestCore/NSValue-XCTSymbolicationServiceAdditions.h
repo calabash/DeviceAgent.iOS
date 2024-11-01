@@ -14,7 +14,6 @@
 @protocol OS_xpc_object;
 
 @interface NSValue (XCTSymbolicationServiceAdditions)
-+ (id)xct_valueWithSymbolicator:(CDStruct_37ea9563)arg1;
 - (id)xct_contentDescription;
 @end
 

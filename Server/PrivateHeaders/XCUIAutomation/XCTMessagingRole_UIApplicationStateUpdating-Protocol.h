@@ -17,5 +17,7 @@
 @protocol XCTMessagingRole_UIApplicationStateUpdating
 - (void)_XCT_applicationDidUpdateState:(XCTApplicationStateSnapshot *)arg1;
 - (void)_XCT_applicationWithBundleID:(NSString *)arg1 didUpdatePID:(NSInteger)arg2 andState:(NSUInteger)arg3;
+- (void)_XCT_deviceOrientationDidChange:(NSInteger)arg1;
+- (void)_XCT_interfaceOrientationDidChange:(NSInteger)arg1;
 @end
 

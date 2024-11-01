@@ -1,4 +1,3 @@
-
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 
@@ -14,11 +13,9 @@
 - (void)setUp {
     [super setUp];
     self.continueAfterFailure = YES;
-    
-    /*
-     *  Route exceptions should be caught inside of the server.
-     *  Any exception that makes it this far should therefore kill the test. 
-     */
+
+    // Route exceptions should be caught inside of the server.
+    // Any exception that makes it this far should therefore kill the test.
     NSSetUncaughtExceptionHandler(&handleException);
 }
 

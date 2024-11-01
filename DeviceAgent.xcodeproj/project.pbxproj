@@ -232,8 +232,6 @@
 		47C264A2271F1926006EF0B9 /* XCTMessagingRole_DiagnosticsCollection-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0A6A26B8DB90001CF302 /* XCTMessagingRole_DiagnosticsCollection-Protocol.h */; };
 		47C264A3271F1926006EF0B9 /* XCTExpectedFailure.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B4326B8DB90001CF302 /* XCTExpectedFailure.h */; };
 		47C264A4271F1926006EF0B9 /* XCTMemoryCheckerDelegate-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0ABF26B8DB90001CF302 /* XCTMemoryCheckerDelegate-Protocol.h */; };
-		47C264A5271F1926006EF0B9 /* XCTMessagingRole_ActivityReporting_Legacy-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B5526B8DB90001CF302 /* XCTMessagingRole_ActivityReporting_Legacy-Protocol.h */; };
-		47C264A6271F1926006EF0B9 /* XCTMessagingRole_TestReporting_Legacy-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B4526B8DB90001CF302 /* XCTMessagingRole_TestReporting_Legacy-Protocol.h */; };
 		47C264A7271F1926006EF0B9 /* XCTMetricHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0AD526B8DB90001CF302 /* XCTMetricHelper.h */; };
 		47C264A8271F1926006EF0B9 /* XCTExpectedFailureOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0ACB26B8DB90001CF302 /* XCTExpectedFailureOptions.h */; };
 		47C264AA271F1926006EF0B9 /* XCTActivityRecordStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B3526B8DB90001CF302 /* XCTActivityRecordStack.h */; };
@@ -264,7 +262,6 @@
 		47C264D0271F1926006EF0B9 /* XCTMessagingRole_SignpostReceiving-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0ACF26B8DB90001CF302 /* XCTMessagingRole_SignpostReceiving-Protocol.h */; };
 		47C264D2271F1926006EF0B9 /* XCTAggregateSuiteRunStatisticsRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B5B26B8DB90001CF302 /* XCTAggregateSuiteRunStatisticsRecord.h */; };
 		47C264D3271F1926006EF0B9 /* XCTMessagingChannel_RunnerToDaemon-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0AD326B8DB90001CF302 /* XCTMessagingChannel_RunnerToDaemon-Protocol.h */; };
-		47C264D4271F1926006EF0B9 /* XCTMessagingRole_TestExecution_Legacy-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0AEC26B8DB90001CF302 /* XCTMessagingRole_TestExecution_Legacy-Protocol.h */; };
 		47C264D5271F1926006EF0B9 /* XCTReportingSessionConfiguration-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0AAB26B8DB90001CF302 /* XCTReportingSessionConfiguration-Protocol.h */; };
 		47C264D7271F1926006EF0B9 /* XCTMessagingRole_UIAutomation-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0AD726B8DB90001CF302 /* XCTMessagingRole_UIAutomation-Protocol.h */; };
 		47C264D9271F1926006EF0B9 /* XCTMessagingRole_MemoryTesting-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0A8826B8DB90001CF302 /* XCTMessagingRole_MemoryTesting-Protocol.h */; };
@@ -273,7 +270,6 @@
 		47C264DC271F1926006EF0B9 /* XCTNSNotificationExpectation.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B4626B8DB90001CF302 /* XCTNSNotificationExpectation.h */; };
 		47C264DE271F1926006EF0B9 /* XCTMetricDiagnosticHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0A9126B8DB90001CF302 /* XCTMetricDiagnosticHelper.h */; };
 		47C264DF271F1926006EF0B9 /* XCTUniformTypeIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B5E26B8DB90001CF302 /* XCTUniformTypeIdentifier.h */; };
-		47C264E1271F1926006EF0B9 /* XCUIXcodeApplicationManaging-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0A7F26B8DB90001CF302 /* XCUIXcodeApplicationManaging-Protocol.h */; };
 		47C264E2271F1926006EF0B9 /* XCTBlockingQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B1926B8DB90001CF302 /* XCTBlockingQueue.h */; };
 		47C264E3271F1926006EF0B9 /* XCTMessagingRole_DebugLogging-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0AE426B8DB90001CF302 /* XCTMessagingRole_DebugLogging-Protocol.h */; };
 		47C264E4271F1926006EF0B9 /* XCTTestSchedulerWorker-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B2E26B8DB90001CF302 /* XCTTestSchedulerWorker-Protocol.h */; };
@@ -287,7 +283,6 @@
 		47C264EF271F1926006EF0B9 /* XCTestCaseRunConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B1226B8DB90001CF302 /* XCTestCaseRunConfiguration.h */; };
 		47C264F0271F1926006EF0B9 /* XCTTestIdentifierSetBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0A9C26B8DB90001CF302 /* XCTTestIdentifierSetBuilder.h */; };
 		47C264F1271F1926006EF0B9 /* XCTMessagingRole_UIRecordingControl-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B5326B8DB90001CF302 /* XCTMessagingRole_UIRecordingControl-Protocol.h */; };
-		47C264F2271F1926006EF0B9 /* XCTWaiterInterruptionCompletionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0ABC26B8DB90001CF302 /* XCTWaiterInterruptionCompletionHandler.h */; };
 		47C264F3271F1926006EF0B9 /* XCTWaiterManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0AA926B8DB90001CF302 /* XCTWaiterManager.h */; };
 		47C264F5271F1926006EF0B9 /* XCTDaemonTelemetryLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0AEA26B8DB90001CF302 /* XCTDaemonTelemetryLogger.h */; };
 		47C264F7271F1926006EF0B9 /* XCTestSuite.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0AE626B8DB90001CF302 /* XCTestSuite.h */; };
@@ -341,7 +336,6 @@
 		47C26543271F1926006EF0B9 /* XCTMessagingRole_SystemConfiguration-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B0F26B8DB90001CF302 /* XCTMessagingRole_SystemConfiguration-Protocol.h */; };
 		47C26544271F1926006EF0B9 /* XCTRunnerDaemonSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0A7626B8DB90001CF302 /* XCTRunnerDaemonSession.h */; };
 		47C26547271F1926006EF0B9 /* XCTMetric-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0AF426B8DB90001CF302 /* XCTMetric-Protocol.h */; };
-		47C26548271F1926006EF0B9 /* XCTMessagingRole_PerformanceMeasurementReporting_Legacy-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B2026B8DB90001CF302 /* XCTMessagingRole_PerformanceMeasurementReporting_Legacy-Protocol.h */; };
 		47C26549271F1926006EF0B9 /* XCTMeasureOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0A5E26B8DB90001CF302 /* XCTMeasureOptions.h */; };
 		47C2654A271F1926006EF0B9 /* XCTMemoryMetric.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0AF626B8DB90001CF302 /* XCTMemoryMetric.h */; };
 		47C2654D271F1926006EF0B9 /* XCTestConfigurationLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0A8A26B8DB90001CF302 /* XCTestConfigurationLoader.h */; };
@@ -443,8 +437,6 @@
 		843A0BBD26B8DB91001CF302 /* XCTCompoundExpectation.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0A7C26B8DB90001CF302 /* XCTCompoundExpectation.h */; };
 		843A0BBE26B8DB91001CF302 /* XCTSourceCodeSymbolInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0A7D26B8DB90001CF302 /* XCTSourceCodeSymbolInfo.h */; };
 		843A0BBF26B8DB91001CF302 /* XCTSourceCodeSymbolInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0A7D26B8DB90001CF302 /* XCTSourceCodeSymbolInfo.h */; };
-		843A0BC226B8DB91001CF302 /* XCUIXcodeApplicationManaging-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0A7F26B8DB90001CF302 /* XCUIXcodeApplicationManaging-Protocol.h */; };
-		843A0BC326B8DB91001CF302 /* XCUIXcodeApplicationManaging-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0A7F26B8DB90001CF302 /* XCUIXcodeApplicationManaging-Protocol.h */; };
 		843A0BC426B8DB91001CF302 /* XCTestConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0A8026B8DB90001CF302 /* XCTestConfiguration.h */; };
 		843A0BC526B8DB91001CF302 /* XCTestConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0A8026B8DB90001CF302 /* XCTestConfiguration.h */; };
 		843A0BC626B8DB91001CF302 /* _XCTestCaseInterruptionException.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0A8126B8DB90001CF302 /* _XCTestCaseInterruptionException.h */; };
@@ -529,8 +521,6 @@
 		843A0C3726B8DB91001CF302 /* XCTSymbolicationService.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0AB926B8DB90001CF302 /* XCTSymbolicationService.h */; };
 		843A0C3826B8DB91001CF302 /* NSValue-XCTSymbolicationServiceAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0ABA26B8DB90001CF302 /* NSValue-XCTSymbolicationServiceAdditions.h */; };
 		843A0C3926B8DB91001CF302 /* NSValue-XCTSymbolicationServiceAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0ABA26B8DB90001CF302 /* NSValue-XCTSymbolicationServiceAdditions.h */; };
-		843A0C3C26B8DB91001CF302 /* XCTWaiterInterruptionCompletionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0ABC26B8DB90001CF302 /* XCTWaiterInterruptionCompletionHandler.h */; };
-		843A0C3D26B8DB91001CF302 /* XCTWaiterInterruptionCompletionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0ABC26B8DB90001CF302 /* XCTWaiterInterruptionCompletionHandler.h */; };
 		843A0C4226B8DB91001CF302 /* XCTMemoryCheckerDelegate-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0ABF26B8DB90001CF302 /* XCTMemoryCheckerDelegate-Protocol.h */; };
 		843A0C4326B8DB91001CF302 /* XCTMemoryCheckerDelegate-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0ABF26B8DB90001CF302 /* XCTMemoryCheckerDelegate-Protocol.h */; };
 		843A0C4426B8DB91001CF302 /* XCTPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0AC026B8DB90001CF302 /* XCTPromise.h */; };
@@ -583,8 +573,6 @@
 		843A0C9926B8DB92001CF302 /* XCTDaemonTelemetryLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0AEA26B8DB90001CF302 /* XCTDaemonTelemetryLogger.h */; };
 		843A0C9A26B8DB92001CF302 /* XCTWaiterManagement-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0AEB26B8DB90001CF302 /* XCTWaiterManagement-Protocol.h */; };
 		843A0C9B26B8DB92001CF302 /* XCTWaiterManagement-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0AEB26B8DB90001CF302 /* XCTWaiterManagement-Protocol.h */; };
-		843A0C9C26B8DB92001CF302 /* XCTMessagingRole_TestExecution_Legacy-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0AEC26B8DB90001CF302 /* XCTMessagingRole_TestExecution_Legacy-Protocol.h */; };
-		843A0C9D26B8DB92001CF302 /* XCTMessagingRole_TestExecution_Legacy-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0AEC26B8DB90001CF302 /* XCTMessagingRole_TestExecution_Legacy-Protocol.h */; };
 		843A0C9E26B8DB92001CF302 /* XCTMessagingRole_CapabilityExchange-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0AED26B8DB90001CF302 /* XCTMessagingRole_CapabilityExchange-Protocol.h */; };
 		843A0C9F26B8DB92001CF302 /* XCTMessagingRole_CapabilityExchange-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0AED26B8DB90001CF302 /* XCTMessagingRole_CapabilityExchange-Protocol.h */; };
 		843A0CA026B8DB92001CF302 /* _XCTTestIdentifier_Method_LegacyEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0AEE26B8DB90001CF302 /* _XCTTestIdentifier_Method_LegacyEncoding.h */; };
@@ -646,8 +634,6 @@
 		843A0CFF26B8DB92001CF302 /* XCTRemoteSignpostListenerProxy-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B1D26B8DB90001CF302 /* XCTRemoteSignpostListenerProxy-Protocol.h */; };
 		843A0D0226B8DB92001CF302 /* _XCTTestIdentifier_Class.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B1F26B8DB90001CF302 /* _XCTTestIdentifier_Class.h */; };
 		843A0D0326B8DB92001CF302 /* _XCTTestIdentifier_Class.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B1F26B8DB90001CF302 /* _XCTTestIdentifier_Class.h */; };
-		843A0D0426B8DB92001CF302 /* XCTMessagingRole_PerformanceMeasurementReporting_Legacy-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B2026B8DB90001CF302 /* XCTMessagingRole_PerformanceMeasurementReporting_Legacy-Protocol.h */; };
-		843A0D0526B8DB92001CF302 /* XCTMessagingRole_PerformanceMeasurementReporting_Legacy-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B2026B8DB90001CF302 /* XCTMessagingRole_PerformanceMeasurementReporting_Legacy-Protocol.h */; };
 		843A0D0626B8DB92001CF302 /* XCTMessagingChannel_DaemonToRunner-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B2126B8DB90001CF302 /* XCTMessagingChannel_DaemonToRunner-Protocol.h */; };
 		843A0D0726B8DB92001CF302 /* XCTMessagingChannel_DaemonToRunner-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B2126B8DB90001CF302 /* XCTMessagingChannel_DaemonToRunner-Protocol.h */; };
 		843A0D0826B8DB92001CF302 /* NSBundle-XCTestAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B2226B8DB90001CF302 /* NSBundle-XCTestAdditions.h */; };
@@ -694,8 +680,6 @@
 		843A0D4B26B8DB92001CF302 /* XCTExpectedFailure.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B4326B8DB90001CF302 /* XCTExpectedFailure.h */; };
 		843A0D4C26B8DB92001CF302 /* _XCTTestIdentifierPlaceholder.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B4426B8DB90001CF302 /* _XCTTestIdentifierPlaceholder.h */; };
 		843A0D4D26B8DB92001CF302 /* _XCTTestIdentifierPlaceholder.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B4426B8DB90001CF302 /* _XCTTestIdentifierPlaceholder.h */; };
-		843A0D4E26B8DB92001CF302 /* XCTMessagingRole_TestReporting_Legacy-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B4526B8DB90001CF302 /* XCTMessagingRole_TestReporting_Legacy-Protocol.h */; };
-		843A0D4F26B8DB92001CF302 /* XCTMessagingRole_TestReporting_Legacy-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B4526B8DB90001CF302 /* XCTMessagingRole_TestReporting_Legacy-Protocol.h */; };
 		843A0D5026B8DB92001CF302 /* XCTNSNotificationExpectation.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B4626B8DB90001CF302 /* XCTNSNotificationExpectation.h */; };
 		843A0D5126B8DB92001CF302 /* XCTNSNotificationExpectation.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B4626B8DB90001CF302 /* XCTNSNotificationExpectation.h */; };
 		843A0D5226B8DB92001CF302 /* XCTSourceCodeFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B4726B8DB90001CF302 /* XCTSourceCodeFrame.h */; };
@@ -722,8 +706,6 @@
 		843A0D6B26B8DB92001CF302 /* XCTMessagingRole_UIRecordingControl-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B5326B8DB90001CF302 /* XCTMessagingRole_UIRecordingControl-Protocol.h */; };
 		843A0D6C26B8DB92001CF302 /* XCTMemoryChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B5426B8DB90001CF302 /* XCTMemoryChecker.h */; };
 		843A0D6D26B8DB92001CF302 /* XCTMemoryChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B5426B8DB90001CF302 /* XCTMemoryChecker.h */; };
-		843A0D6E26B8DB92001CF302 /* XCTMessagingRole_ActivityReporting_Legacy-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B5526B8DB90001CF302 /* XCTMessagingRole_ActivityReporting_Legacy-Protocol.h */; };
-		843A0D6F26B8DB92001CF302 /* XCTMessagingRole_ActivityReporting_Legacy-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B5526B8DB90001CF302 /* XCTMessagingRole_ActivityReporting_Legacy-Protocol.h */; };
 		843A0D7026B8DB92001CF302 /* XCTTestRunSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B5626B8DB90001CF302 /* XCTTestRunSession.h */; };
 		843A0D7126B8DB92001CF302 /* XCTTestRunSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B5626B8DB90001CF302 /* XCTTestRunSession.h */; };
 		843A0D7226B8DB92001CF302 /* XCTMutableIssue.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A0B5726B8DB90001CF302 /* XCTMutableIssue.h */; };
@@ -886,6 +868,122 @@
 		DD0E0381287687B4008618F5 /* Specta.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A10D9F2679A575004446C7 /* Specta.xcframework */; };
 		DD0E0382287687B7008618F5 /* OCMock.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A10D9C2679A50D004446C7 /* OCMock.xcframework */; };
 		DD0E0383287687BA008618F5 /* Expecta.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A10D992679A4CC004446C7 /* Expecta.xcframework */; };
+		DD4CF9652C7DF872001A9F14 /* CDStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9642C7DF872001A9F14 /* CDStructures.h */; };
+		DD4CF9662C7DF872001A9F14 /* CDStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9642C7DF872001A9F14 /* CDStructures.h */; };
+		DD4CF9672C7DF872001A9F14 /* CDStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9642C7DF872001A9F14 /* CDStructures.h */; };
+		DD4CF9682C7DF872001A9F14 /* CDStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9642C7DF872001A9F14 /* CDStructures.h */; };
+		DD4CF9712C7DF881001A9F14 /* XCTAttachmentFutureMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9692C7DF880001A9F14 /* XCTAttachmentFutureMetadata.h */; };
+		DD4CF9722C7DF881001A9F14 /* XCTAttachmentFutureMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9692C7DF880001A9F14 /* XCTAttachmentFutureMetadata.h */; };
+		DD4CF9732C7DF881001A9F14 /* XCTAttachmentFutureMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9692C7DF880001A9F14 /* XCTAttachmentFutureMetadata.h */; };
+		DD4CF9742C7DF881001A9F14 /* XCTAttachmentFutureMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9692C7DF880001A9F14 /* XCTAttachmentFutureMetadata.h */; };
+		DD4CF9752C7DF881001A9F14 /* XCTSignpostInterval.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96A2C7DF880001A9F14 /* XCTSignpostInterval.h */; };
+		DD4CF9762C7DF881001A9F14 /* XCTSignpostInterval.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96A2C7DF880001A9F14 /* XCTSignpostInterval.h */; };
+		DD4CF9772C7DF881001A9F14 /* XCTSignpostInterval.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96A2C7DF880001A9F14 /* XCTSignpostInterval.h */; };
+		DD4CF9782C7DF881001A9F14 /* XCTSignpostInterval.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96A2C7DF880001A9F14 /* XCTSignpostInterval.h */; };
+		DD4CF9792C7DF881001A9F14 /* _XCTMessaging_VoidProtocol-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96B2C7DF880001A9F14 /* _XCTMessaging_VoidProtocol-Protocol.h */; };
+		DD4CF97A2C7DF881001A9F14 /* _XCTMessaging_VoidProtocol-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96B2C7DF880001A9F14 /* _XCTMessaging_VoidProtocol-Protocol.h */; };
+		DD4CF97B2C7DF881001A9F14 /* _XCTMessaging_VoidProtocol-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96B2C7DF880001A9F14 /* _XCTMessaging_VoidProtocol-Protocol.h */; };
+		DD4CF97C2C7DF881001A9F14 /* _XCTMessaging_VoidProtocol-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96B2C7DF880001A9F14 /* _XCTMessaging_VoidProtocol-Protocol.h */; };
+		DD4CF97D2C7DF881001A9F14 /* XCTVideoEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96C2C7DF880001A9F14 /* XCTVideoEncoding.h */; };
+		DD4CF97E2C7DF881001A9F14 /* XCTVideoEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96C2C7DF880001A9F14 /* XCTVideoEncoding.h */; };
+		DD4CF97F2C7DF881001A9F14 /* XCTVideoEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96C2C7DF880001A9F14 /* XCTVideoEncoding.h */; };
+		DD4CF9802C7DF881001A9F14 /* XCTVideoEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96C2C7DF880001A9F14 /* XCTVideoEncoding.h */; };
+		DD4CF9812C7DF881001A9F14 /* XCTSignpostEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96D2C7DF880001A9F14 /* XCTSignpostEvent.h */; };
+		DD4CF9822C7DF881001A9F14 /* XCTSignpostEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96D2C7DF880001A9F14 /* XCTSignpostEvent.h */; };
+		DD4CF9832C7DF881001A9F14 /* XCTSignpostEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96D2C7DF880001A9F14 /* XCTSignpostEvent.h */; };
+		DD4CF9842C7DF881001A9F14 /* XCTSignpostEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96D2C7DF880001A9F14 /* XCTSignpostEvent.h */; };
+		DD4CF9852C7DF881001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96E2C7DF880001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h */; };
+		DD4CF9862C7DF881001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96E2C7DF880001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h */; };
+		DD4CF9872C7DF881001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96E2C7DF880001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h */; };
+		DD4CF9882C7DF881001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96E2C7DF880001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h */; };
+		DD4CF9892C7DF881001A9F14 /* XCTScreenRecordingRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96F2C7DF880001A9F14 /* XCTScreenRecordingRequest.h */; };
+		DD4CF98A2C7DF881001A9F14 /* XCTScreenRecordingRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96F2C7DF880001A9F14 /* XCTScreenRecordingRequest.h */; };
+		DD4CF98B2C7DF881001A9F14 /* XCTScreenRecordingRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96F2C7DF880001A9F14 /* XCTScreenRecordingRequest.h */; };
+		DD4CF98C2C7DF881001A9F14 /* XCTScreenRecordingRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF96F2C7DF880001A9F14 /* XCTScreenRecordingRequest.h */; };
+		DD4CF98D2C7DF881001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9702C7DF881001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h */; };
+		DD4CF98E2C7DF881001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9702C7DF881001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h */; };
+		DD4CF98F2C7DF881001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9702C7DF881001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h */; };
+		DD4CF9902C7DF881001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9702C7DF881001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h */; };
+		DD4CF9962C7DF88D001A9F14 /* XCUIDeviceDelayedAttachmentTransferSupportInterface-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9912C7DF88D001A9F14 /* XCUIDeviceDelayedAttachmentTransferSupportInterface-Protocol.h */; };
+		DD4CF9972C7DF88D001A9F14 /* XCUIDeviceDelayedAttachmentTransferSupportInterface-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9912C7DF88D001A9F14 /* XCUIDeviceDelayedAttachmentTransferSupportInterface-Protocol.h */; };
+		DD4CF9982C7DF88D001A9F14 /* XCUIDeviceDelayedAttachmentTransferSupportInterface-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9912C7DF88D001A9F14 /* XCUIDeviceDelayedAttachmentTransferSupportInterface-Protocol.h */; };
+		DD4CF9992C7DF88D001A9F14 /* XCUIDeviceDelayedAttachmentTransferSupportInterface-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9912C7DF88D001A9F14 /* XCUIDeviceDelayedAttachmentTransferSupportInterface-Protocol.h */; };
+		DD4CF99A2C7DF88D001A9F14 /* CDStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9922C7DF88D001A9F14 /* CDStructures.h */; };
+		DD4CF99B2C7DF88D001A9F14 /* CDStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9922C7DF88D001A9F14 /* CDStructures.h */; };
+		DD4CF99C2C7DF88D001A9F14 /* CDStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9922C7DF88D001A9F14 /* CDStructures.h */; };
+		DD4CF99D2C7DF88D001A9F14 /* CDStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9922C7DF88D001A9F14 /* CDStructures.h */; };
+		DD4CF99E2C7DF88D001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9932C7DF88D001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h */; };
+		DD4CF99F2C7DF88D001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9932C7DF88D001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h */; };
+		DD4CF9A02C7DF88D001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9932C7DF88D001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h */; };
+		DD4CF9A12C7DF88D001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9932C7DF88D001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h */; };
+		DD4CF9A22C7DF88D001A9F14 /* NSString-XCUIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9942C7DF88D001A9F14 /* NSString-XCUIAdditions.h */; };
+		DD4CF9A32C7DF88D001A9F14 /* NSString-XCUIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9942C7DF88D001A9F14 /* NSString-XCUIAdditions.h */; };
+		DD4CF9A42C7DF88D001A9F14 /* NSString-XCUIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9942C7DF88D001A9F14 /* NSString-XCUIAdditions.h */; };
+		DD4CF9A52C7DF88D001A9F14 /* NSString-XCUIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9942C7DF88D001A9F14 /* NSString-XCUIAdditions.h */; };
+		DD4CF9A62C7DF88D001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9952C7DF88D001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h */; };
+		DD4CF9A72C7DF88D001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9952C7DF88D001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h */; };
+		DD4CF9A82C7DF88D001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9952C7DF88D001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h */; };
+		DD4CF9A92C7DF88D001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9952C7DF88D001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h */; };
+		DD4CF9BC2C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentFinalizing-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9AA2C7DF8A0001A9F14 /* XCTMessagingRole_AttachmentFinalizing-Protocol.h */; };
+		DD4CF9BD2C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentFinalizing-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9AA2C7DF8A0001A9F14 /* XCTMessagingRole_AttachmentFinalizing-Protocol.h */; };
+		DD4CF9BE2C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentFinalizing-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9AA2C7DF8A0001A9F14 /* XCTMessagingRole_AttachmentFinalizing-Protocol.h */; };
+		DD4CF9BF2C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentFinalizing-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9AA2C7DF8A0001A9F14 /* XCTMessagingRole_AttachmentFinalizing-Protocol.h */; };
+		DD4CF9C82C7DF8A1001A9F14 /* XCTMessagingRole_ScreenRecording-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9AD2C7DF8A0001A9F14 /* XCTMessagingRole_ScreenRecording-Protocol.h */; };
+		DD4CF9C92C7DF8A1001A9F14 /* XCTMessagingRole_ScreenRecording-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9AD2C7DF8A0001A9F14 /* XCTMessagingRole_ScreenRecording-Protocol.h */; };
+		DD4CF9CA2C7DF8A1001A9F14 /* XCTMessagingRole_ScreenRecording-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9AD2C7DF8A0001A9F14 /* XCTMessagingRole_ScreenRecording-Protocol.h */; };
+		DD4CF9CB2C7DF8A1001A9F14 /* XCTMessagingRole_ScreenRecording-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9AD2C7DF8A0001A9F14 /* XCTMessagingRole_ScreenRecording-Protocol.h */; };
+		DD4CF9CC2C7DF8A1001A9F14 /* XCTRuntimeIssueDetectionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9AE2C7DF8A0001A9F14 /* XCTRuntimeIssueDetectionManager.h */; };
+		DD4CF9CD2C7DF8A1001A9F14 /* XCTRuntimeIssueDetectionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9AE2C7DF8A0001A9F14 /* XCTRuntimeIssueDetectionManager.h */; };
+		DD4CF9CE2C7DF8A1001A9F14 /* XCTRuntimeIssueDetectionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9AE2C7DF8A0001A9F14 /* XCTRuntimeIssueDetectionManager.h */; };
+		DD4CF9CF2C7DF8A1001A9F14 /* XCTRuntimeIssueDetectionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9AE2C7DF8A0001A9F14 /* XCTRuntimeIssueDetectionManager.h */; };
+		DD4CF9D02C7DF8A1001A9F14 /* XCTScreenCapturePolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9AF2C7DF8A0001A9F14 /* XCTScreenCapturePolicy.h */; };
+		DD4CF9D12C7DF8A1001A9F14 /* XCTScreenCapturePolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9AF2C7DF8A0001A9F14 /* XCTScreenCapturePolicy.h */; };
+		DD4CF9D22C7DF8A1001A9F14 /* XCTScreenCapturePolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9AF2C7DF8A0001A9F14 /* XCTScreenCapturePolicy.h */; };
+		DD4CF9D32C7DF8A1001A9F14 /* XCTScreenCapturePolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9AF2C7DF8A0001A9F14 /* XCTScreenCapturePolicy.h */; };
+		DD4CF9D42C7DF8A1001A9F14 /* XCTRuntimeIssueDetectionPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B02C7DF8A0001A9F14 /* XCTRuntimeIssueDetectionPolicy.h */; };
+		DD4CF9D52C7DF8A1001A9F14 /* XCTRuntimeIssueDetectionPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B02C7DF8A0001A9F14 /* XCTRuntimeIssueDetectionPolicy.h */; };
+		DD4CF9D62C7DF8A1001A9F14 /* XCTRuntimeIssueDetectionPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B02C7DF8A0001A9F14 /* XCTRuntimeIssueDetectionPolicy.h */; };
+		DD4CF9D72C7DF8A1001A9F14 /* XCTRuntimeIssueDetectionPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B02C7DF8A0001A9F14 /* XCTRuntimeIssueDetectionPolicy.h */; };
+		DD4CF9D82C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentFutureResultStatusUpdating-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B12C7DF8A0001A9F14 /* XCTMessagingRole_AttachmentFutureResultStatusUpdating-Protocol.h */; };
+		DD4CF9D92C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentFutureResultStatusUpdating-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B12C7DF8A0001A9F14 /* XCTMessagingRole_AttachmentFutureResultStatusUpdating-Protocol.h */; };
+		DD4CF9DA2C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentFutureResultStatusUpdating-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B12C7DF8A0001A9F14 /* XCTMessagingRole_AttachmentFutureResultStatusUpdating-Protocol.h */; };
+		DD4CF9DB2C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentFutureResultStatusUpdating-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B12C7DF8A0001A9F14 /* XCTMessagingRole_AttachmentFutureResultStatusUpdating-Protocol.h */; };
+		DD4CF9DC2C7DF8A1001A9F14 /* XCTAttachmentFuture.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B22C7DF8A0001A9F14 /* XCTAttachmentFuture.h */; };
+		DD4CF9DD2C7DF8A1001A9F14 /* XCTAttachmentFuture.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B22C7DF8A0001A9F14 /* XCTAttachmentFuture.h */; };
+		DD4CF9DE2C7DF8A1001A9F14 /* XCTAttachmentFuture.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B22C7DF8A0001A9F14 /* XCTAttachmentFuture.h */; };
+		DD4CF9DF2C7DF8A1001A9F14 /* XCTAttachmentFuture.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B22C7DF8A0001A9F14 /* XCTAttachmentFuture.h */; };
+		DD4CF9E02C7DF8A1001A9F14 /* NSDateFormatter-XCTDateFormatting.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B32C7DF8A1001A9F14 /* NSDateFormatter-XCTDateFormatting.h */; };
+		DD4CF9E12C7DF8A1001A9F14 /* NSDateFormatter-XCTDateFormatting.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B32C7DF8A1001A9F14 /* NSDateFormatter-XCTDateFormatting.h */; };
+		DD4CF9E22C7DF8A1001A9F14 /* NSDateFormatter-XCTDateFormatting.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B32C7DF8A1001A9F14 /* NSDateFormatter-XCTDateFormatting.h */; };
+		DD4CF9E32C7DF8A1001A9F14 /* NSDateFormatter-XCTDateFormatting.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B32C7DF8A1001A9F14 /* NSDateFormatter-XCTDateFormatting.h */; };
+		DD4CF9E42C7DF8A1001A9F14 /* XCTDateFormatting-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B42C7DF8A1001A9F14 /* XCTDateFormatting-Protocol.h */; };
+		DD4CF9E52C7DF8A1001A9F14 /* XCTDateFormatting-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B42C7DF8A1001A9F14 /* XCTDateFormatting-Protocol.h */; };
+		DD4CF9E62C7DF8A1001A9F14 /* XCTDateFormatting-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B42C7DF8A1001A9F14 /* XCTDateFormatting-Protocol.h */; };
+		DD4CF9E72C7DF8A1001A9F14 /* XCTDateFormatting-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B42C7DF8A1001A9F14 /* XCTDateFormatting-Protocol.h */; };
+		DD4CF9E82C7DF8A1001A9F14 /* XCTHarnessEventReporting-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B52C7DF8A1001A9F14 /* XCTHarnessEventReporting-Protocol.h */; };
+		DD4CF9E92C7DF8A1001A9F14 /* XCTHarnessEventReporting-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B52C7DF8A1001A9F14 /* XCTHarnessEventReporting-Protocol.h */; };
+		DD4CF9EA2C7DF8A1001A9F14 /* XCTHarnessEventReporting-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B52C7DF8A1001A9F14 /* XCTHarnessEventReporting-Protocol.h */; };
+		DD4CF9EB2C7DF8A1001A9F14 /* XCTHarnessEventReporting-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B52C7DF8A1001A9F14 /* XCTHarnessEventReporting-Protocol.h */; };
+		DD4CF9EC2C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentsDeleting-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B62C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentsDeleting-Protocol.h */; };
+		DD4CF9ED2C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentsDeleting-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B62C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentsDeleting-Protocol.h */; };
+		DD4CF9EE2C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentsDeleting-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B62C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentsDeleting-Protocol.h */; };
+		DD4CF9EF2C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentsDeleting-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B62C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentsDeleting-Protocol.h */; };
+		DD4CF9F02C7DF8A1001A9F14 /* XCTDateDescriptionFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B72C7DF8A1001A9F14 /* XCTDateDescriptionFormatter.h */; };
+		DD4CF9F12C7DF8A1001A9F14 /* XCTDateDescriptionFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B72C7DF8A1001A9F14 /* XCTDateDescriptionFormatter.h */; };
+		DD4CF9F22C7DF8A1001A9F14 /* XCTDateDescriptionFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B72C7DF8A1001A9F14 /* XCTDateDescriptionFormatter.h */; };
+		DD4CF9F32C7DF8A1001A9F14 /* XCTDateDescriptionFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B72C7DF8A1001A9F14 /* XCTDateDescriptionFormatter.h */; };
+		DD4CF9F42C7DF8A1001A9F14 /* XCTWaiterWait.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B82C7DF8A1001A9F14 /* XCTWaiterWait.h */; };
+		DD4CF9F52C7DF8A1001A9F14 /* XCTWaiterWait.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B82C7DF8A1001A9F14 /* XCTWaiterWait.h */; };
+		DD4CF9F62C7DF8A1001A9F14 /* XCTWaiterWait.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B82C7DF8A1001A9F14 /* XCTWaiterWait.h */; };
+		DD4CF9F72C7DF8A1001A9F14 /* XCTWaiterWait.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B82C7DF8A1001A9F14 /* XCTWaiterWait.h */; };
+		DD4CF9F82C7DF8A1001A9F14 /* _XCTExceptionPointer.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B92C7DF8A1001A9F14 /* _XCTExceptionPointer.h */; };
+		DD4CF9F92C7DF8A1001A9F14 /* _XCTExceptionPointer.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B92C7DF8A1001A9F14 /* _XCTExceptionPointer.h */; };
+		DD4CF9FA2C7DF8A1001A9F14 /* _XCTExceptionPointer.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B92C7DF8A1001A9F14 /* _XCTExceptionPointer.h */; };
+		DD4CF9FB2C7DF8A1001A9F14 /* _XCTExceptionPointer.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CF9B92C7DF8A1001A9F14 /* _XCTExceptionPointer.h */; };
+		DD4CFA052C7DF8AB001A9F14 /* XCUIXcodeApplicationManaging-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CFA042C7DF8AB001A9F14 /* XCUIXcodeApplicationManaging-Protocol.h */; };
+		DD4CFA062C7DF8AB001A9F14 /* XCUIXcodeApplicationManaging-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CFA042C7DF8AB001A9F14 /* XCUIXcodeApplicationManaging-Protocol.h */; };
+		DD4CFA072C7DF8AB001A9F14 /* XCUIXcodeApplicationManaging-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CFA042C7DF8AB001A9F14 /* XCUIXcodeApplicationManaging-Protocol.h */; };
+		DD4CFA082C7DF8AB001A9F14 /* XCUIXcodeApplicationManaging-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CFA042C7DF8AB001A9F14 /* XCUIXcodeApplicationManaging-Protocol.h */; };
 		DD6261872AA86ABE0069D8AD /* PickersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6261862AA86ABE0069D8AD /* PickersViewController.m */; };
 		DD6297CC2A22BF3600E36189 /* NSPredicateVisitor-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6297C62A22BF3500E36189 /* NSPredicateVisitor-Protocol.h */; };
 		DD6297CD2A22BF3600E36189 /* NSPredicateVisitor-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6297C62A22BF3500E36189 /* NSPredicateVisitor-Protocol.h */; };
@@ -899,9 +997,6 @@
 		DD6297DD2A22BF9500E36189 /* XCTestObservation-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6297D52A22BF9500E36189 /* XCTestObservation-Protocol.h */; };
 		DD6297DE2A22BF9500E36189 /* XCTestObservation-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6297D52A22BF9500E36189 /* XCTestObservation-Protocol.h */; };
 		DD6297DF2A22BF9500E36189 /* XCTestObservation-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6297D52A22BF9500E36189 /* XCTestObservation-Protocol.h */; };
-		DD6297E32A22BF9500E36189 /* _XCTMessaging_VoidProtocol-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6297D72A22BF9500E36189 /* _XCTMessaging_VoidProtocol-Protocol.h */; };
-		DD6297E42A22BF9500E36189 /* _XCTMessaging_VoidProtocol-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6297D72A22BF9500E36189 /* _XCTMessaging_VoidProtocol-Protocol.h */; };
-		DD6297E52A22BF9500E36189 /* _XCTMessaging_VoidProtocol-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6297D72A22BF9500E36189 /* _XCTMessaging_VoidProtocol-Protocol.h */; };
 		DD6297E62A22BF9500E36189 /* XCUIApplicationManaging-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6297D82A22BF9500E36189 /* XCUIApplicationManaging-Protocol.h */; };
 		DD6297E72A22BF9500E36189 /* XCUIApplicationManaging-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6297D82A22BF9500E36189 /* XCUIApplicationManaging-Protocol.h */; };
 		DD6297E82A22BF9500E36189 /* XCUIApplicationManaging-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6297D82A22BF9500E36189 /* XCUIApplicationManaging-Protocol.h */; };
@@ -1609,7 +1704,6 @@
 		843A0A7A26B8DB90001CF302 /* XCTMetricInstrumentalAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTMetricInstrumentalAdapter.h; sourceTree = "<group>"; };
 		843A0A7C26B8DB90001CF302 /* XCTCompoundExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTCompoundExpectation.h; sourceTree = "<group>"; };
 		843A0A7D26B8DB90001CF302 /* XCTSourceCodeSymbolInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTSourceCodeSymbolInfo.h; sourceTree = "<group>"; };
-		843A0A7F26B8DB90001CF302 /* XCUIXcodeApplicationManaging-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIXcodeApplicationManaging-Protocol.h"; sourceTree = "<group>"; };
 		843A0A8026B8DB90001CF302 /* XCTestConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTestConfiguration.h; sourceTree = "<group>"; };
 		843A0A8126B8DB90001CF302 /* _XCTestCaseInterruptionException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _XCTestCaseInterruptionException.h; sourceTree = "<group>"; };
 		843A0A8326B8DB90001CF302 /* XCTestManager_IDEInterface-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestManager_IDEInterface-Protocol.h"; sourceTree = "<group>"; };
@@ -1652,7 +1746,6 @@
 		843A0AB726B8DB90001CF302 /* _XCTTestIdentifier_Double.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _XCTTestIdentifier_Double.h; sourceTree = "<group>"; };
 		843A0AB926B8DB90001CF302 /* XCTSymbolicationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTSymbolicationService.h; sourceTree = "<group>"; };
 		843A0ABA26B8DB90001CF302 /* NSValue-XCTSymbolicationServiceAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue-XCTSymbolicationServiceAdditions.h"; sourceTree = "<group>"; };
-		843A0ABC26B8DB90001CF302 /* XCTWaiterInterruptionCompletionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTWaiterInterruptionCompletionHandler.h; sourceTree = "<group>"; };
 		843A0ABF26B8DB90001CF302 /* XCTMemoryCheckerDelegate-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMemoryCheckerDelegate-Protocol.h"; sourceTree = "<group>"; };
 		843A0AC026B8DB90001CF302 /* XCTPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTPromise.h; sourceTree = "<group>"; };
 		843A0AC426B8DB90001CF302 /* XCTTestInvocationDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTTestInvocationDescriptor.h; sourceTree = "<group>"; };
@@ -1679,7 +1772,6 @@
 		843A0AE926B8DB90001CF302 /* XCTestCasePlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTestCasePlaceholder.h; sourceTree = "<group>"; };
 		843A0AEA26B8DB90001CF302 /* XCTDaemonTelemetryLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTDaemonTelemetryLogger.h; sourceTree = "<group>"; };
 		843A0AEB26B8DB90001CF302 /* XCTWaiterManagement-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTWaiterManagement-Protocol.h"; sourceTree = "<group>"; };
-		843A0AEC26B8DB90001CF302 /* XCTMessagingRole_TestExecution_Legacy-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingRole_TestExecution_Legacy-Protocol.h"; sourceTree = "<group>"; };
 		843A0AED26B8DB90001CF302 /* XCTMessagingRole_CapabilityExchange-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingRole_CapabilityExchange-Protocol.h"; sourceTree = "<group>"; };
 		843A0AEE26B8DB90001CF302 /* _XCTTestIdentifier_Method_LegacyEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _XCTTestIdentifier_Method_LegacyEncoding.h; sourceTree = "<group>"; };
 		843A0AF026B8DB90001CF302 /* XCTAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTAttachment.h; sourceTree = "<group>"; };
@@ -1711,7 +1803,6 @@
 		843A0B1A26B8DB90001CF302 /* XCTMessagingRole_SignpostRequesting-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingRole_SignpostRequesting-Protocol.h"; sourceTree = "<group>"; };
 		843A0B1D26B8DB90001CF302 /* XCTRemoteSignpostListenerProxy-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTRemoteSignpostListenerProxy-Protocol.h"; sourceTree = "<group>"; };
 		843A0B1F26B8DB90001CF302 /* _XCTTestIdentifier_Class.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _XCTTestIdentifier_Class.h; sourceTree = "<group>"; };
-		843A0B2026B8DB90001CF302 /* XCTMessagingRole_PerformanceMeasurementReporting_Legacy-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingRole_PerformanceMeasurementReporting_Legacy-Protocol.h"; sourceTree = "<group>"; };
 		843A0B2126B8DB90001CF302 /* XCTMessagingChannel_DaemonToRunner-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingChannel_DaemonToRunner-Protocol.h"; sourceTree = "<group>"; };
 		843A0B2226B8DB90001CF302 /* NSBundle-XCTestAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle-XCTestAdditions.h"; sourceTree = "<group>"; };
 		843A0B2526B8DB90001CF302 /* XCTestExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTestExpectation.h; sourceTree = "<group>"; };
@@ -1735,7 +1826,6 @@
 		843A0B4226B8DB90001CF302 /* XCTestExpectationDelegate-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestExpectationDelegate-Protocol.h"; sourceTree = "<group>"; };
 		843A0B4326B8DB90001CF302 /* XCTExpectedFailure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTExpectedFailure.h; sourceTree = "<group>"; };
 		843A0B4426B8DB90001CF302 /* _XCTTestIdentifierPlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _XCTTestIdentifierPlaceholder.h; sourceTree = "<group>"; };
-		843A0B4526B8DB90001CF302 /* XCTMessagingRole_TestReporting_Legacy-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingRole_TestReporting_Legacy-Protocol.h"; sourceTree = "<group>"; };
 		843A0B4626B8DB90001CF302 /* XCTNSNotificationExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTNSNotificationExpectation.h; sourceTree = "<group>"; };
 		843A0B4726B8DB90001CF302 /* XCTSourceCodeFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTSourceCodeFrame.h; sourceTree = "<group>"; };
 		843A0B4826B8DB90001CF302 /* XCTMessagingRole_ActivityReporting-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingRole_ActivityReporting-Protocol.h"; sourceTree = "<group>"; };
@@ -1749,7 +1839,6 @@
 		843A0B5226B8DB90001CF302 /* XCTMemoryMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTMemoryMarker.h; sourceTree = "<group>"; };
 		843A0B5326B8DB90001CF302 /* XCTMessagingRole_UIRecordingControl-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingRole_UIRecordingControl-Protocol.h"; sourceTree = "<group>"; };
 		843A0B5426B8DB90001CF302 /* XCTMemoryChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTMemoryChecker.h; sourceTree = "<group>"; };
-		843A0B5526B8DB90001CF302 /* XCTMessagingRole_ActivityReporting_Legacy-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingRole_ActivityReporting_Legacy-Protocol.h"; sourceTree = "<group>"; };
 		843A0B5626B8DB90001CF302 /* XCTTestRunSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTTestRunSession.h; sourceTree = "<group>"; };
 		843A0B5726B8DB90001CF302 /* XCTMutableIssue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTMutableIssue.h; sourceTree = "<group>"; };
 		843A0B5926B8DB90001CF302 /* _XCTestObservationInternal-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "_XCTestObservationInternal-Protocol.h"; sourceTree = "<group>"; };
@@ -1871,13 +1960,41 @@
 		B9A81FD3215E429A0067AE63 /* XCUIElement+VisibilityResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIElement+VisibilityResult.h"; sourceTree = "<group>"; };
 		B9A81FD4215E429A0067AE63 /* XCUIElement+VisibilityResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCUIElement+VisibilityResult.m"; sourceTree = "<group>"; };
 		DD0E023D28768626008618F5 /* XCTVariationOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTVariationOptions.h; sourceTree = "<group>"; };
+		DD4CF9642C7DF872001A9F14 /* CDStructures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDStructures.h; sourceTree = "<group>"; };
+		DD4CF9692C7DF880001A9F14 /* XCTAttachmentFutureMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTAttachmentFutureMetadata.h; sourceTree = "<group>"; };
+		DD4CF96A2C7DF880001A9F14 /* XCTSignpostInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTSignpostInterval.h; sourceTree = "<group>"; };
+		DD4CF96B2C7DF880001A9F14 /* _XCTMessaging_VoidProtocol-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "_XCTMessaging_VoidProtocol-Protocol.h"; sourceTree = "<group>"; };
+		DD4CF96C2C7DF880001A9F14 /* XCTVideoEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTVideoEncoding.h; sourceTree = "<group>"; };
+		DD4CF96D2C7DF880001A9F14 /* XCTSignpostEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTSignpostEvent.h; sourceTree = "<group>"; };
+		DD4CF96E2C7DF880001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingRole_UIAutomationProcessObserving-Protocol.h"; sourceTree = "<group>"; };
+		DD4CF96F2C7DF880001A9F14 /* XCTScreenRecordingRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTScreenRecordingRequest.h; sourceTree = "<group>"; };
+		DD4CF9702C7DF881001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingChannel_UIProcessToRunner-Protocol.h"; sourceTree = "<group>"; };
+		DD4CF9912C7DF88D001A9F14 /* XCUIDeviceDelayedAttachmentTransferSupportInterface-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIDeviceDelayedAttachmentTransferSupportInterface-Protocol.h"; sourceTree = "<group>"; };
+		DD4CF9922C7DF88D001A9F14 /* CDStructures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDStructures.h; sourceTree = "<group>"; };
+		DD4CF9932C7DF88D001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingChannel_UIProcessToRunner-Protocol.h"; sourceTree = "<group>"; };
+		DD4CF9942C7DF88D001A9F14 /* NSString-XCUIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString-XCUIAdditions.h"; sourceTree = "<group>"; };
+		DD4CF9952C7DF88D001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingRole_UIAutomationProcessObserving-Protocol.h"; sourceTree = "<group>"; };
+		DD4CF9AA2C7DF8A0001A9F14 /* XCTMessagingRole_AttachmentFinalizing-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingRole_AttachmentFinalizing-Protocol.h"; sourceTree = "<group>"; };
+		DD4CF9AD2C7DF8A0001A9F14 /* XCTMessagingRole_ScreenRecording-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingRole_ScreenRecording-Protocol.h"; sourceTree = "<group>"; };
+		DD4CF9AE2C7DF8A0001A9F14 /* XCTRuntimeIssueDetectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTRuntimeIssueDetectionManager.h; sourceTree = "<group>"; };
+		DD4CF9AF2C7DF8A0001A9F14 /* XCTScreenCapturePolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTScreenCapturePolicy.h; sourceTree = "<group>"; };
+		DD4CF9B02C7DF8A0001A9F14 /* XCTRuntimeIssueDetectionPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTRuntimeIssueDetectionPolicy.h; sourceTree = "<group>"; };
+		DD4CF9B12C7DF8A0001A9F14 /* XCTMessagingRole_AttachmentFutureResultStatusUpdating-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingRole_AttachmentFutureResultStatusUpdating-Protocol.h"; sourceTree = "<group>"; };
+		DD4CF9B22C7DF8A0001A9F14 /* XCTAttachmentFuture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTAttachmentFuture.h; sourceTree = "<group>"; };
+		DD4CF9B32C7DF8A1001A9F14 /* NSDateFormatter-XCTDateFormatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter-XCTDateFormatting.h"; sourceTree = "<group>"; };
+		DD4CF9B42C7DF8A1001A9F14 /* XCTDateFormatting-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTDateFormatting-Protocol.h"; sourceTree = "<group>"; };
+		DD4CF9B52C7DF8A1001A9F14 /* XCTHarnessEventReporting-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTHarnessEventReporting-Protocol.h"; sourceTree = "<group>"; };
+		DD4CF9B62C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentsDeleting-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTMessagingRole_AttachmentsDeleting-Protocol.h"; sourceTree = "<group>"; };
+		DD4CF9B72C7DF8A1001A9F14 /* XCTDateDescriptionFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTDateDescriptionFormatter.h; sourceTree = "<group>"; };
+		DD4CF9B82C7DF8A1001A9F14 /* XCTWaiterWait.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTWaiterWait.h; sourceTree = "<group>"; };
+		DD4CF9B92C7DF8A1001A9F14 /* _XCTExceptionPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _XCTExceptionPointer.h; sourceTree = "<group>"; };
+		DD4CFA042C7DF8AB001A9F14 /* XCUIXcodeApplicationManaging-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIXcodeApplicationManaging-Protocol.h"; sourceTree = "<group>"; };
 		DD6261852AA86ABE0069D8AD /* PickersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickersViewController.h; sourceTree = "<group>"; };
 		DD6261862AA86ABE0069D8AD /* PickersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickersViewController.m; sourceTree = "<group>"; };
 		DD6297C62A22BF3500E36189 /* NSPredicateVisitor-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPredicateVisitor-Protocol.h"; sourceTree = "<group>"; };
 		DD6297C72A22BF3500E36189 /* XCTElementQueryTransformerPredicateValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTElementQueryTransformerPredicateValidator.h; sourceTree = "<group>"; };
 		DD6297C82A22BF3500E36189 /* XCTProcessInfoUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTProcessInfoUtilities.h; sourceTree = "<group>"; };
 		DD6297D52A22BF9500E36189 /* XCTestObservation-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestObservation-Protocol.h"; sourceTree = "<group>"; };
-		DD6297D72A22BF9500E36189 /* _XCTMessaging_VoidProtocol-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "_XCTMessaging_VoidProtocol-Protocol.h"; sourceTree = "<group>"; };
 		DD6297D82A22BF9500E36189 /* XCUIApplicationManaging-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCUIApplicationManaging-Protocol.h"; sourceTree = "<group>"; };
 		DD6297D92A22BF9500E36189 /* XCUILocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCUILocation.h; sourceTree = "<group>"; };
 		DD6297DA2A22BF9500E36189 /* XCTIssueHandling-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTIssueHandling-Protocol.h"; sourceTree = "<group>"; };
@@ -2267,6 +2384,7 @@
 		1B9DD48128EDBDE900F1AAB2 /* XCTAutomationSupport */ = {
 			isa = PBXGroup;
 			children = (
+				DD4CF96B2C7DF880001A9F14 /* _XCTMessaging_VoidProtocol-Protocol.h */,
 				1B9DD48A28EDBE3C00F1AAB2 /* NSArray-XCTElementQueryAdditions.h */,
 				1B9DD49C28EDBE3D00F1AAB2 /* NSError-XCTAutomationSupportErrors.h */,
 				1B9DD49828EDBE3D00F1AAB2 /* NSIndexPath-XCTConvenience.h */,
@@ -2286,6 +2404,7 @@
 				1B9DD4AA28EDBE3E00F1AAB2 /* XCTAccessibilitySnapshot_iOS.h */,
 				1B9DD48E28EDBE3C00F1AAB2 /* XCTAnimationsIdleNotifier.h */,
 				1B9DD48D28EDBE3C00F1AAB2 /* XCTApplicationStateSnapshot.h */,
+				DD4CF9692C7DF880001A9F14 /* XCTAttachmentFutureMetadata.h */,
 				1B9DD4C028EDBE3F00F1AAB2 /* XCTAutomationSession.h */,
 				1B9DD49928EDBE3D00F1AAB2 /* XCTAutomationTypeMismatchIssue.h */,
 				1B9DD4C128EDBE3F00F1AAB2 /* XCTCapabilitiesProviding-Protocol.h */,
@@ -2323,7 +2442,9 @@
 				1B9DD49628EDBE3D00F1AAB2 /* XCTMatchingElementIterator-Protocol.h */,
 				1B9DD4B628EDBE3F00F1AAB2 /* XCTMatchingElementIterator.h */,
 				1B9DD4C928EDBE4000F1AAB2 /* XCTMessagingChannel_RunnerToUIProcess-Protocol.h */,
+				DD4CF9702C7DF881001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h */,
 				1B9DD49A28EDBE3D00F1AAB2 /* XCTMessagingRole_UIAutomationProcess-Protocol.h */,
+				DD4CF96E2C7DF880001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h */,
 				DD6297C82A22BF3500E36189 /* XCTProcessInfoUtilities.h */,
 				1B9DD4BF28EDBE3F00F1AAB2 /* XCTProcessSpecifier.h */,
 				1B9DD4C228EDBE3F00F1AAB2 /* XCTRemoteApplicationAutomationClient-Protocol.h */,
@@ -2331,11 +2452,15 @@
 				1B9DD4A828EDBE3E00F1AAB2 /* XCTRuntimeIssue-Protocol.h */,
 				1B9DD48F28EDBE3C00F1AAB2 /* XCTRuntimeIssueContext.h */,
 				1B9DD4B728EDBE3F00F1AAB2 /* XCTRuntimeIssueContextReportingDelegate-Protocol.h */,
+				DD4CF96F2C7DF880001A9F14 /* XCTScreenRecordingRequest.h */,
 				1B9DD4CA28EDBE4000F1AAB2 /* XCTScreenshotRequest.h */,
 				1B9DD48B28EDBE3C00F1AAB2 /* XCTSerializedTransportWrapper2.h */,
+				DD4CF96D2C7DF880001A9F14 /* XCTSignpostEvent.h */,
+				DD4CF96A2C7DF880001A9F14 /* XCTSignpostInterval.h */,
 				1B9DD49728EDBE3D00F1AAB2 /* XCTSpindumpRequestSpecification.h */,
 				1B9DD4B428EDBE3F00F1AAB2 /* XCTTailspinRequest.h */,
 				1B9DD48428EDBE3C00F1AAB2 /* XCTTimeoutControls.h */,
+				DD4CF96C2C7DF880001A9F14 /* XCTVideoEncoding.h */,
 				1B9DD49028EDBE3C00F1AAB2 /* XCUIElementSnapshotCoordinateTransforms-Protocol.h */,
 				1B9DD49F28EDBE3D00F1AAB2 /* XCUIElementSnapshotRequestResult.h */,
 				1B9DD48C28EDBE3C00F1AAB2 /* XCUIPoint.h */,
@@ -2347,8 +2472,9 @@
 		1B9DD4CD28EDBEBD00F1AAB2 /* XCUIAutomation */ = {
 			isa = PBXGroup;
 			children = (
-				DD6297D72A22BF9500E36189 /* _XCTMessaging_VoidProtocol-Protocol.h */,
+				DD4CF9922C7DF88D001A9F14 /* CDStructures.h */,
 				1B9DD52828EDBEEF00F1AAB2 /* NSError-XCUIApplicationProcess.h */,
+				DD4CF9942C7DF88D001A9F14 /* NSString-XCUIAdditions.h */,
 				1B9DD53228EDBEEF00F1AAB2 /* XCActivityRecord-UITesting.h */,
 				1B9DD52628EDBEEF00F1AAB2 /* XCApplicationQuery.h */,
 				1B9DD50F28EDBEED00F1AAB2 /* XCAXClient_iOS.h */,
@@ -2375,8 +2501,10 @@
 				1B9DD53528EDBEF000F1AAB2 /* XCTMemoryChecker-XCUIAutomation.h */,
 				1B9DD50528EDBEED00F1AAB2 /* XCTMemoryMetric-UIAutomation_Private.h */,
 				1B9DD4FF28EDBEEC00F1AAB2 /* XCTMessagingChannel_RunnerToUIProcess-Protocol.h */,
+				DD4CF9932C7DF88D001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h */,
 				DD6297DC2A22BF9500E36189 /* XCTMessagingRole_UIApplicationStateUpdating-Protocol.h */,
 				1B9DD4EF28EDBEEB00F1AAB2 /* XCTMessagingRole_UIAutomationProcess-Protocol.h */,
+				DD4CF9952C7DF88D001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h */,
 				1B9DD4FB28EDBEEC00F1AAB2 /* XCTMetricDiagnosticHelper-UIAutomation.h */,
 				1B9DD50E28EDBEED00F1AAB2 /* XCTNSPredicateExpectationObject-Protocol.h */,
 				1B9DD4CF28EDBEEA00F1AAB2 /* XCTRunnerAutomationSession-Protocol.h */,
@@ -2412,6 +2540,7 @@
 				1B9DD53628EDBEF000F1AAB2 /* XCUIDefaultIssueHandler.h */,
 				1B9DD4E828EDBEEB00F1AAB2 /* XCUIDevice.h */,
 				1B9DD52428EDBEEE00F1AAB2 /* XCUIDeviceAutomationModeInterface-Protocol.h */,
+				DD4CF9912C7DF88D001A9F14 /* XCUIDeviceDelayedAttachmentTransferSupportInterface-Protocol.h */,
 				1B9DD4FC28EDBEEC00F1AAB2 /* XCUIDeviceEventAndStateInterface-Protocol.h */,
 				1B9DD50428EDBEED00F1AAB2 /* XCUIDeviceSetupManager.h */,
 				1B9DD4D728EDBEEA00F1AAB2 /* XCUIElement.h */,
@@ -2456,6 +2585,7 @@
 				1B9DD52C28EDBEEF00F1AAB2 /* XCUISnapshotGenerationTracker.h */,
 				DD6297DB2A22BF9500E36189 /* XCUISystem.h */,
 				1B9DD4F028EDBEEB00F1AAB2 /* XCUITransformParameters.h */,
+				DD4CFA042C7DF8AB001A9F14 /* XCUIXcodeApplicationManaging-Protocol.h */,
 			);
 			path = XCUIAutomation;
 			sourceTree = "<group>";
@@ -2464,6 +2594,7 @@
 			isa = PBXGroup;
 			children = (
 				8479D7F826F8D37500F6EFDA /* _DTXProxy.h */,
+				DD4CF9642C7DF872001A9F14 /* CDStructures.h */,
 				8479D7EC26F8D37400F6EFDA /* DTXAllowedRPC-Protocol.h */,
 				8479D7EE26F8D37400F6EFDA /* DTXBlockCompressor-Protocol.h */,
 				8479D7ED26F8D37400F6EFDA /* DTXBlockCompressorFactory.h */,
@@ -2497,6 +2628,7 @@
 				843A0A8126B8DB90001CF302 /* _XCTestCaseInterruptionException.h */,
 				843A0B5926B8DB90001CF302 /* _XCTestObservationInternal-Protocol.h */,
 				843A0AA726B8DB90001CF302 /* _XCTestObservationPrivate-Protocol.h */,
+				DD4CF9B92C7DF8A1001A9F14 /* _XCTExceptionPointer.h */,
 				843A0ACA26B8DB90001CF302 /* _XCTRunnerDaemonSessionDummyExportedObject.h */,
 				843A0B2F26B8DB90001CF302 /* _XCTSkipFailureException.h */,
 				843A0B0926B8DB90001CF302 /* _XCTTestIdentifier_Array.h */,
@@ -2512,6 +2644,7 @@
 				843A0B2A26B8DB90001CF302 /* MXMInstrumental-Protocol.h */,
 				843A0AB226B8DB90001CF302 /* NSArray-XCTestAdditions.h */,
 				843A0B2226B8DB90001CF302 /* NSBundle-XCTestAdditions.h */,
+				DD4CF9B32C7DF8A1001A9F14 /* NSDateFormatter-XCTDateFormatting.h */,
 				1B7F979928EB4464003A6E27 /* NSError-XCTTestRunSession.h */,
 				843A0B3926B8DB90001CF302 /* NSException-XCTestAdditions.h */,
 				843A0AA626B8DB90001CF302 /* NSKeyedArchiver-XCTestAdditions.h */,
@@ -2532,6 +2665,7 @@
 				843A0A6D26B8DB90001CF302 /* XCTApplicationLaunchMetric.h */,
 				843A0ACD26B8DB90001CF302 /* XCTASDebugLogDelegate-Protocol.h */,
 				843A0AF026B8DB90001CF302 /* XCTAttachment.h */,
+				DD4CF9B22C7DF8A0001A9F14 /* XCTAttachmentFuture.h */,
 				843A0AD626B8DB90001CF302 /* XCTAttachmentManager.h */,
 				843A0B1926B8DB90001CF302 /* XCTBlockingQueue.h */,
 				843A0B1026B8DB90001CF302 /* XCTClockMetric.h */,
@@ -2540,6 +2674,8 @@
 				843A0A5026B8DB90001CF302 /* XCTCPUMetric.h */,
 				843A0AEA26B8DB90001CF302 /* XCTDaemonTelemetryLogger.h */,
 				843A0A9726B8DB90001CF302 /* XCTDarwinNotificationExpectation.h */,
+				DD4CF9B72C7DF8A1001A9F14 /* XCTDateDescriptionFormatter.h */,
+				DD4CF9B42C7DF8A1001A9F14 /* XCTDateFormatting-Protocol.h */,
 				843A0B5F26B8DB90001CF302 /* XCTDefaultDebugLogHandler.h */,
 				843A0B0C26B8DB90001CF302 /* XCTest.h */,
 				843A0B4B26B8DB90001CF302 /* XCTestCase.h */,
@@ -2577,6 +2713,7 @@
 				843A0AA326B8DB90001CF302 /* XCTFailableInvocation.h */,
 				843A0B3C26B8DB90001CF302 /* XCTFixedPriorityTestScheduler.h */,
 				843A0AB526B8DB90001CF302 /* XCTFuture.h */,
+				DD4CF9B52C7DF8A1001A9F14 /* XCTHarnessEventReporting-Protocol.h */,
 				843A0B4F26B8DB90001CF302 /* XCTImageEncoding-XCTImageQuality.h */,
 				843A0AA426B8DB90001CF302 /* XCTInProcessSymbolicationService.h */,
 				843A0B5126B8DB90001CF302 /* XCTIssue.h */,
@@ -2597,8 +2734,10 @@
 				843A0AD326B8DB90001CF302 /* XCTMessagingChannel_RunnerToDaemon-Protocol.h */,
 				843A0A7826B8DB90001CF302 /* XCTMessagingChannel_RunnerToIDE-Protocol.h */,
 				843A0A8B26B8DB90001CF302 /* XCTMessagingRole_AccessibilityNotificationReporting-Protocol.h */,
-				843A0B5526B8DB90001CF302 /* XCTMessagingRole_ActivityReporting_Legacy-Protocol.h */,
 				843A0B4826B8DB90001CF302 /* XCTMessagingRole_ActivityReporting-Protocol.h */,
+				DD4CF9AA2C7DF8A0001A9F14 /* XCTMessagingRole_AttachmentFinalizing-Protocol.h */,
+				DD4CF9B12C7DF8A0001A9F14 /* XCTMessagingRole_AttachmentFutureResultStatusUpdating-Protocol.h */,
+				DD4CF9B62C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentsDeleting-Protocol.h */,
 				843A0B6326B8DB90001CF302 /* XCTMessagingRole_BundleRequesting-Protocol.h */,
 				843A0AED26B8DB90001CF302 /* XCTMessagingRole_CapabilityExchange-Protocol.h */,
 				843A0B3626B8DB90001CF302 /* XCTMessagingRole_ControlSessionInitiation-Protocol.h */,
@@ -2609,19 +2748,17 @@
 				843A0B6026B8DB90001CF302 /* XCTMessagingRole_ForcePressureSupportQuerying-Protocol.h */,
 				843A0AA126B8DB90001CF302 /* XCTMessagingRole_HIDEventRecording-Protocol.h */,
 				843A0A8826B8DB90001CF302 /* XCTMessagingRole_MemoryTesting-Protocol.h */,
-				843A0B2026B8DB90001CF302 /* XCTMessagingRole_PerformanceMeasurementReporting_Legacy-Protocol.h */,
 				843A0AAE26B8DB90001CF302 /* XCTMessagingRole_PerformanceMeasurementReporting-Protocol.h */,
 				843A0B0426B8DB90001CF302 /* XCTMessagingRole_ProcessMonitoring-Protocol.h */,
 				843A0A9926B8DB90001CF302 /* XCTMessagingRole_ProtectedResourceAuthorization-Protocol.h */,
 				843A0B0D26B8DB90001CF302 /* XCTMessagingRole_RunnerSessionInitiation-Protocol.h */,
+				DD4CF9AD2C7DF8A0001A9F14 /* XCTMessagingRole_ScreenRecording-Protocol.h */,
 				843A0A5626B8DB90001CF302 /* XCTMessagingRole_SelfDiagnosisIssueReporting-Protocol.h */,
 				843A0ACF26B8DB90001CF302 /* XCTMessagingRole_SignpostReceiving-Protocol.h */,
 				843A0B1A26B8DB90001CF302 /* XCTMessagingRole_SignpostRequesting-Protocol.h */,
 				843A0A9826B8DB90001CF302 /* XCTMessagingRole_SiriAutomation-Protocol.h */,
 				843A0B0F26B8DB90001CF302 /* XCTMessagingRole_SystemConfiguration-Protocol.h */,
-				843A0AEC26B8DB90001CF302 /* XCTMessagingRole_TestExecution_Legacy-Protocol.h */,
 				843A0B5C26B8DB90001CF302 /* XCTMessagingRole_TestExecution-Protocol.h */,
-				843A0B4526B8DB90001CF302 /* XCTMessagingRole_TestReporting_Legacy-Protocol.h */,
 				843A0A9426B8DB90001CF302 /* XCTMessagingRole_TestReporting-Protocol.h */,
 				843A0AD726B8DB90001CF302 /* XCTMessagingRole_UIAutomation-Protocol.h */,
 				843A0A9E26B8DB90001CF302 /* XCTMessagingRole_UIAutomationEventReporting-Protocol.h */,
@@ -2653,6 +2790,9 @@
 				843A0AF826B8DB90001CF302 /* XCTRunnerDTServiceHubSession.h */,
 				843A0A8C26B8DB90001CF302 /* XCTRunnerIDESession.h */,
 				843A0A5126B8DB90001CF302 /* XCTRunnerIDESessionDelegate-Protocol.h */,
+				DD4CF9AE2C7DF8A0001A9F14 /* XCTRuntimeIssueDetectionManager.h */,
+				DD4CF9B02C7DF8A0001A9F14 /* XCTRuntimeIssueDetectionPolicy.h */,
+				DD4CF9AF2C7DF8A0001A9F14 /* XCTScreenCapturePolicy.h */,
 				843A0B4C26B8DB90001CF302 /* XCTSerializedTransportWrapper.h */,
 				843A0B0126B8DB90001CF302 /* XCTSignpostListener-Protocol.h */,
 				843A0A7526B8DB90001CF302 /* XCTSignpostListener.h */,
@@ -2683,11 +2823,10 @@
 				DD0E023D28768626008618F5 /* XCTVariationOptions.h */,
 				843A0A5B26B8DB90001CF302 /* XCTWaiter.h */,
 				843A0B0A26B8DB90001CF302 /* XCTWaiterDelegate-Protocol.h */,
-				843A0ABC26B8DB90001CF302 /* XCTWaiterInterruptionCompletionHandler.h */,
 				843A0AEB26B8DB90001CF302 /* XCTWaiterManagement-Protocol.h */,
 				1B7F97A128EB4464003A6E27 /* XCTWaiterManager-Protocol.h */,
 				843A0AA926B8DB90001CF302 /* XCTWaiterManager.h */,
-				843A0A7F26B8DB90001CF302 /* XCUIXcodeApplicationManaging-Protocol.h */,
+				DD4CF9B82C7DF8A1001A9F14 /* XCTWaiterWait.h */,
 			);
 			path = XCTestCore;
 			sourceTree = "<group>";
@@ -3580,6 +3719,7 @@
 				843A0D0926B8DB92001CF302 /* NSBundle-XCTestAdditions.h in Headers */,
 				843A0C5B26B8DB91001CF302 /* XCTExpectedFailureOptions.h in Headers */,
 				DD0E02C228768629008618F5 /* XCTVariationOptions.h in Headers */,
+				DD4CF9662C7DF872001A9F14 /* CDStructures.h in Headers */,
 				843A0C5926B8DB91001CF302 /* _XCTRunnerDaemonSessionDummyExportedObject.h in Headers */,
 				843A0CA526B8DB92001CF302 /* XCTAttachment.h in Headers */,
 				843A0D6D26B8DB92001CF302 /* XCTMemoryChecker.h in Headers */,
@@ -3592,6 +3732,7 @@
 				843A0D1F26B8DB92001CF302 /* XCTOutOfProcessSymbolicationService.h in Headers */,
 				843A0C0126B8DB91001CF302 /* XCTMessagingRole_UIAutomationEventReporting-Protocol.h in Headers */,
 				843A0D7326B8DB92001CF302 /* XCTMutableIssue.h in Headers */,
+				DD4CF9DD2C7DF8A1001A9F14 /* XCTAttachmentFuture.h in Headers */,
 				843A0D2526B8DB92001CF302 /* NSSet-XCTestAdditions.h in Headers */,
 				843A0CA126B8DB92001CF302 /* _XCTTestIdentifier_Method_LegacyEncoding.h in Headers */,
 				843A0C3326B8DB91001CF302 /* _XCTTestIdentifier_Double.h in Headers */,
@@ -3599,6 +3740,8 @@
 				843A0D4926B8DB92001CF302 /* XCTestExpectationDelegate-Protocol.h in Headers */,
 				843A0D4B26B8DB92001CF302 /* XCTExpectedFailure.h in Headers */,
 				DD6297CD2A22BF3600E36189 /* NSPredicateVisitor-Protocol.h in Headers */,
+				DD4CF9C92C7DF8A1001A9F14 /* XCTMessagingRole_ScreenRecording-Protocol.h in Headers */,
+				DD4CF9F52C7DF8A1001A9F14 /* XCTWaiterWait.h in Headers */,
 				843A0B6726B8DB90001CF302 /* XCTRunnerIDESessionDelegate-Protocol.h in Headers */,
 				1B9DD54128EEAE2300F1AAB2 /* XCTest.h in Headers */,
 				843A0C8526B8DB92001CF302 /* _Dummy_ConformingToLegacyProtocolNames.h in Headers */,
@@ -3618,6 +3761,7 @@
 				843A0B9926B8DB91001CF302 /* XCTMessagingRole_DiagnosticsCollection-Protocol.h in Headers */,
 				8479D80C26F8D37600F6EFDA /* DTXBlockCompressorLibCompression.h in Headers */,
 				843A0C1326B8DB91001CF302 /* _XCTestObservationPrivate-Protocol.h in Headers */,
+				DD4CF9862C7DF881001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h in Headers */,
 				843A0CCF26B8DB92001CF302 /* _XCTTestIdentifierSet_Set.h in Headers */,
 				843A0C2D26B8DB91001CF302 /* XCTestManager_DaemonConnectionInterface-Protocol.h in Headers */,
 				843A0BB526B8DB91001CF302 /* XCTMessagingChannel_RunnerToIDE-Protocol.h in Headers */,
@@ -3626,9 +3770,12 @@
 				843A0B7F26B8DB90001CF302 /* XCTOSSignpostMetric.h in Headers */,
 				DD6297EA2A22BF9500E36189 /* XCUILocation.h in Headers */,
 				843A0C1126B8DB91001CF302 /* NSKeyedArchiver-XCTestAdditions.h in Headers */,
+				DD4CF9E12C7DF8A1001A9F14 /* NSDateFormatter-XCTDateFormatting.h in Headers */,
+				DD4CFA062C7DF8AB001A9F14 /* XCUIXcodeApplicationManaging-Protocol.h in Headers */,
 				8479D81A26F8D37600F6EFDA /* DTXRemoteInvocationReceipt.h in Headers */,
 				843A0D3B26B8DB92001CF302 /* XCTKVOExpectation.h in Headers */,
 				843A0C9F26B8DB92001CF302 /* XCTMessagingRole_CapabilityExchange-Protocol.h in Headers */,
+				DD4CF97E2C7DF881001A9F14 /* XCTVideoEncoding.h in Headers */,
 				DD6297ED2A22BF9500E36189 /* XCTIssueHandling-Protocol.h in Headers */,
 				843A0C1D26B8DB91001CF302 /* XCTTelemetryLogging-Protocol.h in Headers */,
 				843A0D2F26B8DB92001CF302 /* XCTActivityRecordStack.h in Headers */,
@@ -3636,6 +3783,7 @@
 				843A0D1B26B8DB92001CF302 /* XCTMessagingChannel_IDEToDaemon-Protocol.h in Headers */,
 				843A0D2B26B8DB92001CF302 /* DTXConnection-XCTestAdditions.h in Headers */,
 				843A0C6B26B8DB91001CF302 /* XCTMessagingChannel_RunnerToDaemon-Protocol.h in Headers */,
+				DD4CF9F12C7DF8A1001A9F14 /* XCTDateDescriptionFormatter.h in Headers */,
 				DD7746C42AA15A1000BD3B0E /* SetPickerWheelValue.h in Headers */,
 				843A0CD526B8DB92001CF302 /* XCTestLog.h in Headers */,
 				843A0D7726B8DB92001CF302 /* _XCTestObservationInternal-Protocol.h in Headers */,
@@ -3651,12 +3799,13 @@
 				843A0C0326B8DB91001CF302 /* XCTMeasurement.h in Headers */,
 				843A0B8526B8DB90001CF302 /* XCTMessagingRole_CrashReporting-Protocol.h in Headers */,
 				843A0CB126B8DB92001CF302 /* XCTMemoryMetric.h in Headers */,
-				843A0D0526B8DB92001CF302 /* XCTMessagingRole_PerformanceMeasurementReporting_Legacy-Protocol.h in Headers */,
 				843A0CF126B8DB92001CF302 /* XCTMemgraph.h in Headers */,
 				843A0CB926B8DB92001CF302 /* XCTestCaseSuite.h in Headers */,
 				843A0B9726B8DB91001CF302 /* _XCTTestIdentifierSet_Placeholder.h in Headers */,
 				8479D83026F8D37600F6EFDA /* DTXChannel.h in Headers */,
+				DD4CF9762C7DF881001A9F14 /* XCTSignpostInterval.h in Headers */,
 				843A0C7126B8DB91001CF302 /* XCTAttachmentManager.h in Headers */,
+				DD4CF9D12C7DF8A1001A9F14 /* XCTScreenCapturePolicy.h in Headers */,
 				843A0CAD26B8DB92001CF302 /* XCTMetric-Protocol.h in Headers */,
 				843A0C0D26B8DB91001CF302 /* XCTInProcessSymbolicationService.h in Headers */,
 				843A0B6526B8DB90001CF302 /* XCTCPUMetric.h in Headers */,
@@ -3664,35 +3813,40 @@
 				DD6297DE2A22BF9500E36189 /* XCTestObservation-Protocol.h in Headers */,
 				843A0C9126B8DB92001CF302 /* XCTestSuite.h in Headers */,
 				843A0BC526B8DB91001CF302 /* XCTestConfiguration.h in Headers */,
+				DD4CF9ED2C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentsDeleting-Protocol.h in Headers */,
 				843A0C2F26B8DB91001CF302 /* XCTFuture.h in Headers */,
 				843A0B7926B8DB90001CF302 /* XCTMessagingRole_EventSynthesis-Protocol.h in Headers */,
 				843A0D7126B8DB92001CF302 /* XCTTestRunSession.h in Headers */,
 				843A0CDF26B8DB92001CF302 /* XCTMessagingRole_RunnerSessionInitiation-Protocol.h in Headers */,
 				843A0CD926B8DB92001CF302 /* XCTWaiterDelegate-Protocol.h in Headers */,
 				843A0D5526B8DB92001CF302 /* XCTMessagingRole_ActivityReporting-Protocol.h in Headers */,
+				DD4CF9972C7DF88D001A9F14 /* XCUIDeviceDelayedAttachmentTransferSupportInterface-Protocol.h in Headers */,
 				843A0CBB26B8DB92001CF302 /* XCTestCasePlaceholderRun.h in Headers */,
 				8479D80626F8D37600F6EFDA /* DTXAllowedRPC-Protocol.h in Headers */,
 				843A0BCF26B8DB91001CF302 /* XCTExpectedFailureContextManager.h in Headers */,
 				1B9DD55328EEB21400F1AAB2 /* CBX-XCTest-Umbrella.h in Headers */,
-				843A0C3D26B8DB91001CF302 /* XCTWaiterInterruptionCompletionHandler.h in Headers */,
 				843A0CC526B8DB92001CF302 /* XCTReportingSessionSuiteReporter.h in Headers */,
+				DD4CF9D92C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentFutureResultStatusUpdating-Protocol.h in Headers */,
 				843A0D1126B8DB92001CF302 /* NSThread-XCTestAdditions.h in Headers */,
 				843A0D3D26B8DB92001CF302 /* XCTFixedPriorityTestScheduler.h in Headers */,
 				843A0CA726B8DB92001CF302 /* XCTMessagingChannel_DaemonToIDE-Protocol.h in Headers */,
 				843A0BDD26B8DB91001CF302 /* XCTRunnerIDESession.h in Headers */,
 				843A0BBF26B8DB91001CF302 /* XCTSourceCodeSymbolInfo.h in Headers */,
+				DD4CF99F2C7DF88D001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h in Headers */,
 				843A0D2126B8DB92001CF302 /* XCTTestSchedulerWorker-Protocol.h in Headers */,
+				DD4CF9822C7DF881001A9F14 /* XCTSignpostEvent.h in Headers */,
 				1B9DD54528EEAE7E00F1AAB2 /* UIDevice+Wifi_IP.h in Headers */,
 				843A0CC926B8DB92001CF302 /* XCTActivityAggregationRecord.h in Headers */,
 				843A0BA126B8DB91001CF302 /* XCTestObservationCenter.h in Headers */,
 				8479D81026F8D37600F6EFDA /* DTXSharedMemoryTransport.h in Headers */,
+				DD4CF9E92C7DF8A1001A9F14 /* XCTHarnessEventReporting-Protocol.h in Headers */,
 				843A0C0926B8DB91001CF302 /* XCTestMisuseObserver.h in Headers */,
 				8479D82E26F8D37600F6EFDA /* DTXFileDescriptorTransport.h in Headers */,
 				843A0BCB26B8DB91001CF302 /* XCTestManager_IDEInterface-Protocol.h in Headers */,
-				DD6297E42A22BF9500E36189 /* _XCTMessaging_VoidProtocol-Protocol.h in Headers */,
 				8479D82C26F8D37600F6EFDA /* DTXConnectionRemoteReceiveQueueCalls-Protocol.h in Headers */,
 				843A0B7B26B8DB90001CF302 /* XCTWaiter.h in Headers */,
 				843A0BD326B8DB91001CF302 /* XCTSymbolInfoProviding-Protocol.h in Headers */,
+				DD4CF9CD2C7DF8A1001A9F14 /* XCTRuntimeIssueDetectionManager.h in Headers */,
 				8479D81C26F8D37600F6EFDA /* DTXMachTransport.h in Headers */,
 				843A0BF526B8DB91001CF302 /* XCTMessagingRole_SiriAutomation-Protocol.h in Headers */,
 				843A0C0726B8DB91001CF302 /* XCTMessagingRole_HIDEventRecording-Protocol.h in Headers */,
@@ -3703,16 +3857,19 @@
 				843A0B7326B8DB90001CF302 /* XCTReportingSessionActivityReporter.h in Headers */,
 				843A0D8126B8DB93001CF302 /* XCTUniformTypeIdentifier.h in Headers */,
 				8479D80A26F8D37600F6EFDA /* DTXBlockCompressor-Protocol.h in Headers */,
+				DD4CF9A72C7DF88D001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h in Headers */,
 				843A0BA726B8DB91001CF302 /* XCTResult.h in Headers */,
 				8479D81626F8D37600F6EFDA /* DTXProxyRequestHandler.h in Headers */,
 				843A0C8D26B8DB92001CF302 /* XCTMessagingRole_DebugLogging-Protocol.h in Headers */,
 				8479D80826F8D37600F6EFDA /* DTXBlockCompressorFactory.h in Headers */,
 				843A0D0326B8DB92001CF302 /* _XCTTestIdentifier_Class.h in Headers */,
+				DD4CF98E2C7DF881001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h in Headers */,
 				843A0D5926B8DB92001CF302 /* XCTestCaseRun.h in Headers */,
 				DD6297F02A22BF9500E36189 /* XCUISystem.h in Headers */,
 				843A0BB126B8DB91001CF302 /* XCTRunnerDaemonSession.h in Headers */,
 				843A0D6726B8DB92001CF302 /* XCTIssue.h in Headers */,
 				843A0C2326B8DB91001CF302 /* XCTNSPredicateExpectation.h in Headers */,
+				DD4CF9BD2C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentFinalizing-Protocol.h in Headers */,
 				843A0BDB26B8DB91001CF302 /* XCTMessagingRole_AccessibilityNotificationReporting-Protocol.h in Headers */,
 				843A0C3726B8DB91001CF302 /* XCTSymbolicationService.h in Headers */,
 				843A0BB926B8DB91001CF302 /* XCTMetricInstrumentalAdapter.h in Headers */,
@@ -3728,12 +3885,15 @@
 				843A0CF726B8DB92001CF302 /* XCTBlockingQueue.h in Headers */,
 				843A0C7326B8DB91001CF302 /* XCTMessagingRole_UIAutomation-Protocol.h in Headers */,
 				843A0C0B26B8DB91001CF302 /* XCTFailableInvocation.h in Headers */,
+				DD4CF9722C7DF881001A9F14 /* XCTAttachmentFutureMetadata.h in Headers */,
+				DD4CF9F92C7DF8A1001A9F14 /* _XCTExceptionPointer.h in Headers */,
 				843A0C4D26B8DB91001CF302 /* XCTTestInvocationDescriptor.h in Headers */,
 				843A0D3126B8DB92001CF302 /* XCTMessagingRole_ControlSessionInitiation-Protocol.h in Headers */,
 				843A0C8126B8DB92001CF302 /* XCTestSuiteRun.h in Headers */,
 				843A0D2326B8DB92001CF302 /* _XCTSkipFailureException.h in Headers */,
 				843A0D6B26B8DB92001CF302 /* XCTMessagingRole_UIRecordingControl-Protocol.h in Headers */,
 				843A0C5D26B8DB91001CF302 /* XCTStorageMetric.h in Headers */,
+				DD4CF9D52C7DF8A1001A9F14 /* XCTRuntimeIssueDetectionPolicy.h in Headers */,
 				8479D81826F8D37600F6EFDA /* DTXConnection.h in Headers */,
 				843A0C9B26B8DB92001CF302 /* XCTWaiterManagement-Protocol.h in Headers */,
 				843A0BFF26B8DB91001CF302 /* XCTReportingSessionTestReporter.h in Headers */,
@@ -3744,11 +3904,11 @@
 				843A0D7926B8DB92001CF302 /* XCTSwiftErrorObservation_Overlay-Protocol.h in Headers */,
 				DD6297D32A22BF3600E36189 /* XCTProcessInfoUtilities.h in Headers */,
 				843A0C9926B8DB92001CF302 /* XCTDaemonTelemetryLogger.h in Headers */,
-				843A0C9D26B8DB92001CF302 /* XCTMessagingRole_TestExecution_Legacy-Protocol.h in Headers */,
 				843A0C7526B8DB91001CF302 /* XCTTelemetryLogger.h in Headers */,
 				843A0D5326B8DB92001CF302 /* XCTSourceCodeFrame.h in Headers */,
 				843A0CCD26B8DB92001CF302 /* XCTMessagingRole_ProcessMonitoring-Protocol.h in Headers */,
 				843A0C3926B8DB91001CF302 /* NSValue-XCTSymbolicationServiceAdditions.h in Headers */,
+				DD4CF9E52C7DF8A1001A9F14 /* XCTDateFormatting-Protocol.h in Headers */,
 				843A0D7B26B8DB92001CF302 /* XCTAggregateSuiteRunStatisticsRecord.h in Headers */,
 				843A0B7526B8DB90001CF302 /* XCTSwiftErrorObservation.h in Headers */,
 				843A0C5326B8DB91001CF302 /* NSMutableArray-XCTestAdditions.h in Headers */,
@@ -3757,9 +3917,8 @@
 				843A0C2126B8DB91001CF302 /* XCTMessagingRole_PerformanceMeasurementReporting-Protocol.h in Headers */,
 				843A0BF726B8DB91001CF302 /* XCTMessagingRole_ProtectedResourceAuthorization-Protocol.h in Headers */,
 				843A0C7F26B8DB92001CF302 /* XCTMetric_Private-Protocol.h in Headers */,
+				DD4CF97A2C7DF881001A9F14 /* _XCTMessaging_VoidProtocol-Protocol.h in Headers */,
 				843A0D8926B8DB93001CF302 /* XCDebugLogDelegate-Protocol.h in Headers */,
-				843A0D4F26B8DB92001CF302 /* XCTMessagingRole_TestReporting_Legacy-Protocol.h in Headers */,
-				843A0D6F26B8DB92001CF302 /* XCTMessagingRole_ActivityReporting_Legacy-Protocol.h in Headers */,
 				843A0D5B26B8DB92001CF302 /* XCTestCase.h in Headers */,
 				843A0BA926B8DB91001CF302 /* XCTestObserver.h in Headers */,
 				843A0BAF26B8DB91001CF302 /* XCTSignpostListener.h in Headers */,
@@ -3770,6 +3929,7 @@
 				843A0D2726B8DB92001CF302 /* XCTestRun.h in Headers */,
 				843A0D3F26B8DB92001CF302 /* XCTestProbe.h in Headers */,
 				843A0C1526B8DB91001CF302 /* XCActivityRecord.h in Headers */,
+				DD4CF98A2C7DF881001A9F14 /* XCTScreenRecordingRequest.h in Headers */,
 				8479D81E26F8D37600F6EFDA /* _DTXProxy.h in Headers */,
 				8479D82226F8D37600F6EFDA /* DTXResourceTracker.h in Headers */,
 				843A0D0726B8DB92001CF302 /* XCTMessagingChannel_DaemonToRunner-Protocol.h in Headers */,
@@ -3789,13 +3949,14 @@
 				843A0D0F26B8DB92001CF302 /* XCTestExpectation.h in Headers */,
 				843A0D6326B8DB92001CF302 /* XCTImageEncoding-XCTImageQuality.h in Headers */,
 				843A0D6526B8DB92001CF302 /* XCTRepetitionPolicy.h in Headers */,
-				843A0BC326B8DB91001CF302 /* XCUIXcodeApplicationManaging-Protocol.h in Headers */,
 				843A0D8526B8DB93001CF302 /* XCTMessagingRole_ForcePressureSupportQuerying-Protocol.h in Headers */,
 				843A0BE726B8DB91001CF302 /* XCTMetricDiagnosticHelper.h in Headers */,
 				843A0CF926B8DB92001CF302 /* XCTMessagingRole_SignpostRequesting-Protocol.h in Headers */,
 				843A0D8326B8DB93001CF302 /* XCTDefaultDebugLogHandler.h in Headers */,
 				843A0CC726B8DB92001CF302 /* XCTSignpostListener-Protocol.h in Headers */,
+				DD4CF9A32C7DF88D001A9F14 /* NSString-XCUIAdditions.h in Headers */,
 				843A0BD926B8DB91001CF302 /* XCTestConfigurationLoader.h in Headers */,
+				DD4CF99B2C7DF88D001A9F14 /* CDStructures.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3806,9 +3967,10 @@
 				47C264D2271F1926006EF0B9 /* XCTAggregateSuiteRunStatisticsRecord.h in Headers */,
 				47C2649E271F1926006EF0B9 /* XCTMessagingChannel_DaemonRecorderToIDE-Protocol.h in Headers */,
 				1B9DD55128EEB04200F1AAB2 /* XCUIApplication.h in Headers */,
+				DD4CF9772C7DF881001A9F14 /* XCTSignpostInterval.h in Headers */,
 				47C26532271F1926006EF0B9 /* XCTestManager_IDEInterface-Protocol.h in Headers */,
-				47C264A5271F1926006EF0B9 /* XCTMessagingRole_ActivityReporting_Legacy-Protocol.h in Headers */,
 				DD6297E82A22BF9500E36189 /* XCUIApplicationManaging-Protocol.h in Headers */,
+				DD4CF98F2C7DF881001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h in Headers */,
 				47C264CA271F1926006EF0B9 /* XCTExpectedFailureContext.h in Headers */,
 				47C26441271F18DA006EF0B9 /* DTXTransport.h in Headers */,
 				47C26472271F1926006EF0B9 /* XCTMetric_Private-Protocol.h in Headers */,
@@ -3848,8 +4010,10 @@
 				47C26542271F1926006EF0B9 /* XCTestLog.h in Headers */,
 				47C26512271F1926006EF0B9 /* XCTMemoryMarker.h in Headers */,
 				47C2649B271F1926006EF0B9 /* XCTDefaultDebugLogHandler.h in Headers */,
+				DD4CF9DA2C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentFutureResultStatusUpdating-Protocol.h in Headers */,
 				47C2653C271F1926006EF0B9 /* XCTMessagingChannel_DaemonToRunner-Protocol.h in Headers */,
 				47C26444271F18DA006EF0B9 /* DTXChannel.h in Headers */,
+				DD4CF9832C7DF881001A9F14 /* XCTSignpostEvent.h in Headers */,
 				47C264D9271F1926006EF0B9 /* XCTMessagingRole_MemoryTesting-Protocol.h in Headers */,
 				47C26550271F1926006EF0B9 /* XCTPerformanceMeasurement.h in Headers */,
 				47C26536271F1926006EF0B9 /* XCTCompoundExpectation.h in Headers */,
@@ -3858,8 +4022,10 @@
 				47C26473271F1926006EF0B9 /* XCDebugLogDelegate-Protocol.h in Headers */,
 				DD6297EB2A22BF9500E36189 /* XCUILocation.h in Headers */,
 				47C26490271F1926006EF0B9 /* XCTUniformTypeIdentifier_Internal.h in Headers */,
+				DD4CF9982C7DF88D001A9F14 /* XCUIDeviceDelayedAttachmentTransferSupportInterface-Protocol.h in Headers */,
 				47C2643F271F18DA006EF0B9 /* DTXMessenger-Protocol.h in Headers */,
 				47C2649F271F1926006EF0B9 /* XCTIssue.h in Headers */,
+				DD4CF9872C7DF881001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h in Headers */,
 				47C2651F271F1926006EF0B9 /* XCTRunnerDTServiceHubSession.h in Headers */,
 				47C264BC271F1926006EF0B9 /* XCTMessagingRole_TestReporting-Protocol.h in Headers */,
 				DD6297EE2A22BF9500E36189 /* XCTIssueHandling-Protocol.h in Headers */,
@@ -3867,6 +4033,7 @@
 				47C26447271F18DA006EF0B9 /* DTXFileDescriptorTransport.h in Headers */,
 				47C26466271F1906006EF0B9 /* NSValue-XCTSymbolicationServiceAdditions.h in Headers */,
 				47C26457271F1902006EF0B9 /* _XCTTestIdentifier_Class.h in Headers */,
+				DD4CF9BE2C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentFinalizing-Protocol.h in Headers */,
 				47C264A8271F1926006EF0B9 /* XCTExpectedFailureOptions.h in Headers */,
 				47C264B0271F1926006EF0B9 /* XCTSourceCodeSymbolInfo.h in Headers */,
 				47C2651E271F1926006EF0B9 /* XCTestObservationCenter.h in Headers */,
@@ -3899,12 +4066,12 @@
 				47C2652C271F1926006EF0B9 /* XCTFixedPriorityTestScheduler.h in Headers */,
 				47C26528271F1926006EF0B9 /* XCTTestScheduler-Protocol.h in Headers */,
 				47C264B4271F1926006EF0B9 /* XCTTelemetryLogger.h in Headers */,
+				DD4CF9F62C7DF8A1001A9F14 /* XCTWaiterWait.h in Headers */,
 				47C2644B271F1902006EF0B9 /* _XCTRunnerDaemonSessionDummyExportedObject.h in Headers */,
 				47C26451271F1902006EF0B9 /* NSBundle-XCTestAdditions.h in Headers */,
 				47C26524271F1926006EF0B9 /* XCTExpectedFailureContextManager.h in Headers */,
 				47C26448271F18DA006EF0B9 /* DTXProxyRequestHandler.h in Headers */,
 				47C264AD271F1926006EF0B9 /* XCTTestWorker-Protocol.h in Headers */,
-				47C26548271F1926006EF0B9 /* XCTMessagingRole_PerformanceMeasurementReporting_Legacy-Protocol.h in Headers */,
 				1B9DD55428EEB21600F1AAB2 /* CBX-XCTest-Umbrella.h in Headers */,
 				47C26527271F1926006EF0B9 /* XCTMessagingChannel_IDEToDaemon-Protocol.h in Headers */,
 				47C264DB271F1926006EF0B9 /* XCTestCase.h in Headers */,
@@ -3914,6 +4081,7 @@
 				47C26549271F1926006EF0B9 /* XCTMeasureOptions.h in Headers */,
 				47C264E2271F1926006EF0B9 /* XCTBlockingQueue.h in Headers */,
 				47C2643D271F18DA006EF0B9 /* DTXSharedMemoryTransport.h in Headers */,
+				DD4CF9A42C7DF88D001A9F14 /* NSString-XCUIAdditions.h in Headers */,
 				1B9DD54628EEAE7F00F1AAB2 /* UIDevice+Wifi_IP.h in Headers */,
 				47C2650A271F1926006EF0B9 /* XCTAttachmentManager.h in Headers */,
 				47C26464271F1902006EF0B9 /* _XCTTestIdentifier_Method_LegacyEncoding.h in Headers */,
@@ -3921,23 +4089,27 @@
 				47C264B6271F1926006EF0B9 /* XCTMessagingChannel_DaemonToIDE-Protocol.h in Headers */,
 				47C264D5271F1926006EF0B9 /* XCTReportingSessionConfiguration-Protocol.h in Headers */,
 				47C26521271F1926006EF0B9 /* XCTTestIdentifier.h in Headers */,
-				DD6297E52A22BF9500E36189 /* _XCTMessaging_VoidProtocol-Protocol.h in Headers */,
 				47C26439271F18DA006EF0B9 /* DTXService.h in Headers */,
 				47C264CD271F1926006EF0B9 /* XCTMessagingChannel_IDEToRunner-Protocol.h in Headers */,
 				47C2647D271F1926006EF0B9 /* XCTTelemetryLogging-Protocol.h in Headers */,
 				47C2653F271F1926006EF0B9 /* XCTMessagingRole_ProcessMonitoring-Protocol.h in Headers */,
+				DD4CF9F22C7DF8A1001A9F14 /* XCTDateDescriptionFormatter.h in Headers */,
 				47C264C5271F1926006EF0B9 /* XCTMessagingRole_SignpostRequesting-Protocol.h in Headers */,
 				47C26493271F1926006EF0B9 /* XCTSymbolicationService.h in Headers */,
 				47C2652B271F1926006EF0B9 /* XCTestManager_DaemonConnectionInterface-Protocol.h in Headers */,
 				47C264FE271F1926006EF0B9 /* XCTSourceCodeFrame.h in Headers */,
 				47C264D7271F1926006EF0B9 /* XCTMessagingRole_UIAutomation-Protocol.h in Headers */,
+				DD4CF9EA2C7DF8A1001A9F14 /* XCTHarnessEventReporting-Protocol.h in Headers */,
+				DD4CF9CE2C7DF8A1001A9F14 /* XCTRuntimeIssueDetectionManager.h in Headers */,
 				47C26476271F1926006EF0B9 /* XCTestProbe.h in Headers */,
 				47C26475271F1926006EF0B9 /* XCTMessagingRole_ForcePressureSupportQuerying-Protocol.h in Headers */,
+				DD4CF9A82C7DF88D001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h in Headers */,
 				47C26504271F1926006EF0B9 /* XCTReportingSessionSuiteReporter.h in Headers */,
 				47C264A3271F1926006EF0B9 /* XCTExpectedFailure.h in Headers */,
 				47C264DF271F1926006EF0B9 /* XCTUniformTypeIdentifier.h in Headers */,
 				47C2647C271F1926006EF0B9 /* XCTFuture.h in Headers */,
 				47C26535271F1926006EF0B9 /* XCTActivity-Protocol.h in Headers */,
+				DD4CF9D22C7DF8A1001A9F14 /* XCTScreenCapturePolicy.h in Headers */,
 				47C26525271F1926006EF0B9 /* XCTTelemetryObserver.h in Headers */,
 				47C26481271F1926006EF0B9 /* XCTRunnerIDESession.h in Headers */,
 				47C2645D271F1902006EF0B9 /* NSSet-XCTestAdditions.h in Headers */,
@@ -3948,6 +4120,7 @@
 				47C2646D271F1926006EF0B9 /* XCTestCaseRun.h in Headers */,
 				47C2650E271F1926006EF0B9 /* XCTMessagingRole_SelfDiagnosisIssueReporting-Protocol.h in Headers */,
 				47C2646F271F1926006EF0B9 /* XCTImageEncoding-XCTImageQuality.h in Headers */,
+				DD4CF9672C7DF872001A9F14 /* CDStructures.h in Headers */,
 				47C26533271F1926006EF0B9 /* XCTReportingSession.h in Headers */,
 				47C26489271F1926006EF0B9 /* XCTAttachment.h in Headers */,
 				47C264F3271F1926006EF0B9 /* XCTWaiterManager.h in Headers */,
@@ -3956,8 +4129,10 @@
 				47C264DE271F1926006EF0B9 /* XCTMetricDiagnosticHelper.h in Headers */,
 				47C264B8271F1926006EF0B9 /* XCTMessagingRole_TestExecution-Protocol.h in Headers */,
 				1B9DD54A28EEAE9400F1AAB2 /* AutomationAction.h in Headers */,
-				47C264A6271F1926006EF0B9 /* XCTMessagingRole_TestReporting_Legacy-Protocol.h in Headers */,
+				DD4CF9E62C7DF8A1001A9F14 /* XCTDateFormatting-Protocol.h in Headers */,
 				47C26537271F1926006EF0B9 /* XCTestCaseSuite.h in Headers */,
+				DD4CF9E22C7DF8A1001A9F14 /* NSDateFormatter-XCTDateFormatting.h in Headers */,
+				DD4CF9FA2C7DF8A1001A9F14 /* _XCTExceptionPointer.h in Headers */,
 				47C26544271F1926006EF0B9 /* XCTRunnerDaemonSession.h in Headers */,
 				47C264DA271F1926006EF0B9 /* XCTASDebugLogDelegate-Protocol.h in Headers */,
 				47C264AC271F1926006EF0B9 /* XCTRunnerIDESessionDelegate-Protocol.h in Headers */,
@@ -3966,21 +4141,22 @@
 				47C264F1271F1926006EF0B9 /* XCTMessagingRole_UIRecordingControl-Protocol.h in Headers */,
 				47C2645A271F1902006EF0B9 /* NSMutableArray-XCTestAdditions.h in Headers */,
 				47C26526271F1926006EF0B9 /* XCTApplicationBundleInfo.h in Headers */,
-				47C264D4271F1926006EF0B9 /* XCTMessagingRole_TestExecution_Legacy-Protocol.h in Headers */,
 				47C26506271F1926006EF0B9 /* XCTPerformanceMeasurementTimestamp.h in Headers */,
 				47C2644F271F1902006EF0B9 /* _XCTTestIdentifier_Array.h in Headers */,
 				47C2648B271F1926006EF0B9 /* XCTestSuiteRun.h in Headers */,
 				47C2649D271F1926006EF0B9 /* XCTestRun.h in Headers */,
 				47C264AF271F1926006EF0B9 /* XCTMessagingChannel_DaemonToIDE_All-Protocol.h in Headers */,
 				47C26491271F1926006EF0B9 /* XCTNSPredicateExpectation.h in Headers */,
+				DD4CF98B2C7DF881001A9F14 /* XCTScreenRecordingRequest.h in Headers */,
 				DD6297D42A22BF3600E36189 /* XCTProcessInfoUtilities.h in Headers */,
+				DD4CF9CA2C7DF8A1001A9F14 /* XCTMessagingRole_ScreenRecording-Protocol.h in Headers */,
+				DD4CF9EE2C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentsDeleting-Protocol.h in Headers */,
 				47C264B3271F1926006EF0B9 /* XCTActivityRecordContext-Protocol.h in Headers */,
 				47C264C2271F1926006EF0B9 /* XCTSourceCodeContext.h in Headers */,
 				47C26432271F18DA006EF0B9 /* _DTXProxy.h in Headers */,
 				47C26480271F1926006EF0B9 /* XCTSymbolInfoProviding-Protocol.h in Headers */,
-				47C264F2271F1926006EF0B9 /* XCTWaiterInterruptionCompletionHandler.h in Headers */,
 				47C264E7271F1926006EF0B9 /* XCTestCasePlaceholder.h in Headers */,
-				47C264E1271F1926006EF0B9 /* XCUIXcodeApplicationManaging-Protocol.h in Headers */,
+				DD4CF99C2C7DF88D001A9F14 /* CDStructures.h in Headers */,
 				47C264F7271F1926006EF0B9 /* XCTestSuite.h in Headers */,
 				47C264EF271F1926006EF0B9 /* XCTestCaseRunConfiguration.h in Headers */,
 				47C26463271F1902006EF0B9 /* _XCTestObservationInternal-Protocol.h in Headers */,
@@ -3995,11 +4171,14 @@
 				47C2650F271F1926006EF0B9 /* XCTMessagingRole_AccessibilityNotificationReporting-Protocol.h in Headers */,
 				47C2645F271F1902006EF0B9 /* NSException-XCTestAdditions.h in Headers */,
 				47C26501271F1926006EF0B9 /* XCTMeasurement.h in Headers */,
+				DD4CF9732C7DF881001A9F14 /* XCTAttachmentFutureMetadata.h in Headers */,
 				47C26437271F18DA006EF0B9 /* DTXMachTransport.h in Headers */,
 				47C26483271F1926006EF0B9 /* XCTAggregateSuiteRunStatistics.h in Headers */,
+				DD4CFA072C7DF8AB001A9F14 /* XCUIXcodeApplicationManaging-Protocol.h in Headers */,
 				47C26502271F1926006EF0B9 /* XCTRemoteSignpostListenerProxy-Protocol.h in Headers */,
 				47C26465271F1902006EF0B9 /* NSKeyedUnarchiver-XCTestAdditions.h in Headers */,
 				47C264DC271F1926006EF0B9 /* XCTNSNotificationExpectation.h in Headers */,
+				DD4CF97F2C7DF881001A9F14 /* XCTVideoEncoding.h in Headers */,
 				47C264A7271F1926006EF0B9 /* XCTMetricHelper.h in Headers */,
 				47C264A1271F1926006EF0B9 /* XCTInProcessSymbolicationService.h in Headers */,
 				47C26517271F1926006EF0B9 /* XCTMessagingRole_ProtectedResourceAuthorization-Protocol.h in Headers */,
@@ -4010,9 +4189,13 @@
 				47C2652F271F1926006EF0B9 /* XCTSourceCodeLocation.h in Headers */,
 				47C2654D271F1926006EF0B9 /* XCTestConfigurationLoader.h in Headers */,
 				47C264C0271F1926006EF0B9 /* XCTStorageMetric.h in Headers */,
+				DD4CF9D62C7DF8A1001A9F14 /* XCTRuntimeIssueDetectionPolicy.h in Headers */,
+				DD4CF9DE2C7DF8A1001A9F14 /* XCTAttachmentFuture.h in Headers */,
 				47C26541271F1926006EF0B9 /* XCTActivityAggregationRecord.h in Headers */,
 				47C264EE271F1926006EF0B9 /* XCTPromise.h in Headers */,
 				47C26446271F18DA006EF0B9 /* DTXConnection.h in Headers */,
+				DD4CF9A02C7DF88D001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h in Headers */,
+				DD4CF97B2C7DF881001A9F14 /* _XCTMessaging_VoidProtocol-Protocol.h in Headers */,
 				47C264F0271F1926006EF0B9 /* XCTTestIdentifierSetBuilder.h in Headers */,
 				47C264C6271F1926006EF0B9 /* XCTCPUMetric.h in Headers */,
 				47C2654A271F1926006EF0B9 /* XCTMemoryMetric.h in Headers */,
@@ -4050,26 +4233,28 @@
 				843A0D5A26B8DB92001CF302 /* XCTestCase.h in Headers */,
 				89C5F36F1C9E32440093A018 /* DoubleTap.h in Headers */,
 				1B9DD55228EEB21300F1AAB2 /* CBX-XCTest-Umbrella.h in Headers */,
-				843A0C3C26B8DB91001CF302 /* XCTWaiterInterruptionCompletionHandler.h in Headers */,
 				843A0B7826B8DB90001CF302 /* XCTMessagingRole_EventSynthesis-Protocol.h in Headers */,
 				843A0C8626B8DB92001CF302 /* XCTTelemetryObserver.h in Headers */,
 				843A0D4826B8DB92001CF302 /* XCTestExpectationDelegate-Protocol.h in Headers */,
 				843A0D2626B8DB92001CF302 /* XCTestRun.h in Headers */,
 				899696D91CB45FFC00BB42E2 /* ActionConfiguration.h in Headers */,
-				843A0D6E26B8DB92001CF302 /* XCTMessagingRole_ActivityReporting_Legacy-Protocol.h in Headers */,
 				8479D82F26F8D37600F6EFDA /* DTXChannel.h in Headers */,
+				DD4CF9792C7DF881001A9F14 /* _XCTMessaging_VoidProtocol-Protocol.h in Headers */,
 				843A0D8426B8DB93001CF302 /* XCTMessagingRole_ForcePressureSupportQuerying-Protocol.h in Headers */,
 				843A0C5826B8DB91001CF302 /* _XCTRunnerDaemonSessionDummyExportedObject.h in Headers */,
 				843A0C7026B8DB91001CF302 /* XCTAttachmentManager.h in Headers */,
 				F5CE18E21E8BBA61001116A5 /* CBLSApplicationProxy.h in Headers */,
 				843A0CA026B8DB92001CF302 /* _XCTTestIdentifier_Method_LegacyEncoding.h in Headers */,
 				F55F81A31C6DD07500A945C8 /* HTTPFileResponse.h in Headers */,
+				DD4CF9F02C7DF8A1001A9F14 /* XCTDateDescriptionFormatter.h in Headers */,
+				DD4CF9E02C7DF8A1001A9F14 /* NSDateFormatter-XCTDateFormatting.h in Headers */,
 				F53679A11D7C324E009956D0 /* QuerySpecifierByMark.h in Headers */,
 				843A0D1826B8DB92001CF302 /* MXMInstrumental-Protocol.h in Headers */,
 				843A0C7226B8DB91001CF302 /* XCTMessagingRole_UIAutomation-Protocol.h in Headers */,
 				7DEAAE75241FA80D009894BA /* FBXCTestCaseImplementationFailureHoldingProxy.h in Headers */,
 				843A0D2E26B8DB92001CF302 /* XCTActivityRecordStack.h in Headers */,
 				843A0BCA26B8DB91001CF302 /* XCTestManager_IDEInterface-Protocol.h in Headers */,
+				DD4CF9892C7DF881001A9F14 /* XCTScreenRecordingRequest.h in Headers */,
 				F55F819D1C6DD07500A945C8 /* HTTPDataResponse.h in Headers */,
 				843A0C5226B8DB91001CF302 /* NSMutableArray-XCTestAdditions.h in Headers */,
 				DD6297DD2A22BF9500E36189 /* XCTestObservation-Protocol.h in Headers */,
@@ -4102,8 +4287,8 @@
 				F55F818D1C6DD07500A945C8 /* HTTPConnection.h in Headers */,
 				843A0C1A26B8DB91001CF302 /* XCTReportingSessionConfiguration-Protocol.h in Headers */,
 				DD6297E92A22BF9500E36189 /* XCUILocation.h in Headers */,
+				DD4CF97D2C7DF881001A9F14 /* XCTVideoEncoding.h in Headers */,
 				F55F81991C6DD07500A945C8 /* MultipartMessageHeaderField.h in Headers */,
-				DD6297E32A22BF9500E36189 /* _XCTMessaging_VoidProtocol-Protocol.h in Headers */,
 				89B951A11CF5B297007FD0AB /* QuerySpecifierByType.h in Headers */,
 				89D538101CA34CBE00F62E09 /* QuerySpecifierByTextLike.h in Headers */,
 				89C5F3631C9C58BD0093A018 /* Touch.h in Headers */,
@@ -4119,6 +4304,7 @@
 				8479D82B26F8D37600F6EFDA /* DTXConnectionRemoteReceiveQueueCalls-Protocol.h in Headers */,
 				F55F81801C6DD07500A945C8 /* GCDAsyncSocket.h in Headers */,
 				843A0BEC26B8DB91001CF302 /* XCTMessagingRole_TestReporting-Protocol.h in Headers */,
+				DD4CF9D02C7DF8A1001A9F14 /* XCTScreenCapturePolicy.h in Headers */,
 				843A0C6A26B8DB91001CF302 /* XCTMessagingChannel_RunnerToDaemon-Protocol.h in Headers */,
 				843A0D8626B8DB93001CF302 /* XCTestDriver.h in Headers */,
 				843A0C1226B8DB91001CF302 /* _XCTestObservationPrivate-Protocol.h in Headers */,
@@ -4130,7 +4316,9 @@
 				843A0BD626B8DB91001CF302 /* XCTActivityRecordContext-Protocol.h in Headers */,
 				843A0CBE26B8DB92001CF302 /* XCTContext.h in Headers */,
 				F5538B8A1E28BEB9003EC5F3 /* CBXLogging.h in Headers */,
+				DD4CF9C82C7DF8A1001A9F14 /* XCTMessagingRole_ScreenRecording-Protocol.h in Headers */,
 				843A0D6826B8DB92001CF302 /* XCTMemoryMarker.h in Headers */,
+				DD4CF9CC2C7DF8A1001A9F14 /* XCTRuntimeIssueDetectionManager.h in Headers */,
 				843A0CD426B8DB92001CF302 /* XCTestLog.h in Headers */,
 				843A0C2A26B8DB91001CF302 /* XCTExpectedFailureContext.h in Headers */,
 				843A0C0226B8DB91001CF302 /* XCTMeasurement.h in Headers */,
@@ -4156,15 +4344,19 @@
 				89512BDB1C9EEC3C0027D61E /* Drag.h in Headers */,
 				843A0BF426B8DB91001CF302 /* XCTMessagingRole_SiriAutomation-Protocol.h in Headers */,
 				843A0BEA26B8DB91001CF302 /* _XCTTestIdentifier_Class_LegacyEncoding.h in Headers */,
+				DD4CF9D42C7DF8A1001A9F14 /* XCTRuntimeIssueDetectionPolicy.h in Headers */,
 				843A0C4C26B8DB91001CF302 /* XCTTestInvocationDescriptor.h in Headers */,
 				843A0C6C26B8DB91001CF302 /* XCTTestScheduler-Protocol.h in Headers */,
+				DD4CF9962C7DF88D001A9F14 /* XCUIDeviceDelayedAttachmentTransferSupportInterface-Protocol.h in Headers */,
 				843A0D8A26B8DB93001CF302 /* XCTMessagingRole_BundleRequesting-Protocol.h in Headers */,
 				843A0CF026B8DB92001CF302 /* XCTMemgraph.h in Headers */,
 				DD6297E62A22BF9500E36189 /* XCUIApplicationManaging-Protocol.h in Headers */,
+				DD4CF9A22C7DF88D001A9F14 /* NSString-XCUIAdditions.h in Headers */,
 				843A0D7A26B8DB92001CF302 /* XCTAggregateSuiteRunStatisticsRecord.h in Headers */,
 				843A0B7426B8DB90001CF302 /* XCTSwiftErrorObservation.h in Headers */,
 				843A0BAE26B8DB91001CF302 /* XCTSignpostListener.h in Headers */,
 				89D537F71CA1DF8500F62E09 /* QuerySpecifier.h in Headers */,
+				DD4CF99A2C7DF88D001A9F14 /* CDStructures.h in Headers */,
 				1B9DD53D28EEAD7200F1AAB2 /* CDStructures.h in Headers */,
 				843A0C4426B8DB91001CF302 /* XCTPromise.h in Headers */,
 				843A0CE826B8DB92001CF302 /* XCTestCaseRunConfiguration.h in Headers */,
@@ -4195,6 +4387,7 @@
 				843A0C3826B8DB91001CF302 /* NSValue-XCTSymbolicationServiceAdditions.h in Headers */,
 				843A0D6026B8DB92001CF302 /* XCTMessagingChannel_IDEToRunner-Protocol.h in Headers */,
 				DD7746C32AA15A1000BD3B0E /* SetPickerWheelValue.h in Headers */,
+				DD4CF98D2C7DF881001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h in Headers */,
 				8479D81326F8D37600F6EFDA /* DTXDecompressionException.h in Headers */,
 				843A0CB826B8DB92001CF302 /* XCTestCaseSuite.h in Headers */,
 				F55F81851C6DD07500A945C8 /* DDData.h in Headers */,
@@ -4209,10 +4402,12 @@
 				843A0C8426B8DB92001CF302 /* _Dummy_ConformingToLegacyProtocolNames.h in Headers */,
 				843A0C7E26B8DB92001CF302 /* XCTMetric_Private-Protocol.h in Headers */,
 				843A0D7626B8DB92001CF302 /* _XCTestObservationInternal-Protocol.h in Headers */,
+				DD4CF9712C7DF881001A9F14 /* XCTAttachmentFutureMetadata.h in Headers */,
 				F55F82561C6DD07500A945C8 /* RoutingConnection.h in Headers */,
 				843A0C5E26B8DB91001CF302 /* XCTASDebugLogDelegate-Protocol.h in Headers */,
 				899696C91CB356BF00BB42E2 /* QueryConfiguration.h in Headers */,
 				843A0BBE26B8DB91001CF302 /* XCTSourceCodeSymbolInfo.h in Headers */,
+				DD4CF9BC2C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentFinalizing-Protocol.h in Headers */,
 				843A0BD426B8DB91001CF302 /* XCTMessagingRole_MemoryTesting-Protocol.h in Headers */,
 				8479D80326F8D37600F6EFDA /* DTXSocketTransport.h in Headers */,
 				8479D82526F8D37600F6EFDA /* DTXMessage.h in Headers */,
@@ -4234,11 +4429,13 @@
 				843A0BA026B8DB91001CF302 /* XCTestObservationCenter.h in Headers */,
 				843A0D2426B8DB92001CF302 /* NSSet-XCTestAdditions.h in Headers */,
 				F55F818B1C6DD07500A945C8 /* HTTPAuthenticationRequest.h in Headers */,
+				DD4CF9812C7DF881001A9F14 /* XCTSignpostEvent.h in Headers */,
 				843A0CA826B8DB92001CF302 /* _XCTTestIdentifier_SingleContainer.h in Headers */,
 				843A0BB026B8DB91001CF302 /* XCTRunnerDaemonSession.h in Headers */,
 				843A0BFC26B8DB91001CF302 /* XCTTestIdentifierSetBuilder.h in Headers */,
 				843A0B6626B8DB90001CF302 /* XCTRunnerIDESessionDelegate-Protocol.h in Headers */,
 				843A0CE426B8DB92001CF302 /* XCTClockMetric.h in Headers */,
+				DD4CF9EC2C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentsDeleting-Protocol.h in Headers */,
 				843A0C0826B8DB91001CF302 /* XCTestMisuseObserver.h in Headers */,
 				F55F81891C6DD07500A945C8 /* DDRange.h in Headers */,
 				843A0B9E26B8DB91001CF302 /* XCTApplicationLaunchMetric.h in Headers */,
@@ -4255,10 +4452,10 @@
 				843A0BC626B8DB91001CF302 /* _XCTestCaseInterruptionException.h in Headers */,
 				843A0BD826B8DB91001CF302 /* XCTestConfigurationLoader.h in Headers */,
 				899696EA1CB5857C00BB42E2 /* JSONKeyValidator.h in Headers */,
+				DD4CFA052C7DF8AB001A9F14 /* XCUIXcodeApplicationManaging-Protocol.h in Headers */,
 				843A0CCC26B8DB92001CF302 /* XCTMessagingRole_ProcessMonitoring-Protocol.h in Headers */,
 				843A0C1826B8DB91001CF302 /* XCTApplicationBundleInfo.h in Headers */,
 				89C5F35A1C9B9C850093A018 /* Gesture.h in Headers */,
-				843A0D0426B8DB92001CF302 /* XCTMessagingRole_PerformanceMeasurementReporting_Legacy-Protocol.h in Headers */,
 				89D537FB1CA2020700F62E09 /* QuerySpecifierById.h in Headers */,
 				DD6297CF2A22BF3600E36189 /* XCTElementQueryTransformerPredicateValidator.h in Headers */,
 				F55F81A71C6DD07500A945C8 /* WebSocket.h in Headers */,
@@ -4269,11 +4466,14 @@
 				843A0CC426B8DB92001CF302 /* XCTReportingSessionSuiteReporter.h in Headers */,
 				843A0CB026B8DB92001CF302 /* XCTMemoryMetric.h in Headers */,
 				843A0D5826B8DB92001CF302 /* XCTestCaseRun.h in Headers */,
+				DD4CF9752C7DF881001A9F14 /* XCTSignpostInterval.h in Headers */,
 				843A0CBA26B8DB92001CF302 /* XCTestCasePlaceholderRun.h in Headers */,
 				843A0C2226B8DB91001CF302 /* XCTNSPredicateExpectation.h in Headers */,
 				843A0B9826B8DB91001CF302 /* XCTMessagingRole_DiagnosticsCollection-Protocol.h in Headers */,
 				89D537FF1CA2090500F62E09 /* QuerySpecifierFactory.h in Headers */,
+				DD4CF9DC2C7DF8A1001A9F14 /* XCTAttachmentFuture.h in Headers */,
 				8479D81126F8D37600F6EFDA /* DTXMessageParser.h in Headers */,
+				DD4CF9F82C7DF8A1001A9F14 /* _XCTExceptionPointer.h in Headers */,
 				843A0BD226B8DB91001CF302 /* XCTSymbolInfoProviding-Protocol.h in Headers */,
 				843A0D3626B8DB92001CF302 /* NSException-XCTestAdditions.h in Headers */,
 				843A0C9A26B8DB92001CF302 /* XCTWaiterManagement-Protocol.h in Headers */,
@@ -4290,6 +4490,8 @@
 				843A0C8C26B8DB92001CF302 /* XCTMessagingRole_DebugLogging-Protocol.h in Headers */,
 				F55F82521C6DD07500A945C8 /* RouteRequest.h in Headers */,
 				843A0B8026B8DB90001CF302 /* XCTMeasureOptions.h in Headers */,
+				DD4CF9F42C7DF8A1001A9F14 /* XCTWaiterWait.h in Headers */,
+				DD4CF9A62C7DF88D001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h in Headers */,
 				F55F81971C6DD07500A945C8 /* MultipartMessageHeader.h in Headers */,
 				F55F81951C6DD07500A945C8 /* MultipartFormDataParser.h in Headers */,
 				89D538191CA3551600F62E09 /* QuerySpecifierByProperty.h in Headers */,
@@ -4300,9 +4502,9 @@
 				843A0D8026B8DB93001CF302 /* XCTUniformTypeIdentifier.h in Headers */,
 				89F6BF8B1CBC4BDD0088269C /* Rotate.h in Headers */,
 				F5870B421CF0BEFF00B3376C /* TouchPath.h in Headers */,
-				843A0D4E26B8DB92001CF302 /* XCTMessagingRole_TestReporting_Legacy-Protocol.h in Headers */,
+				DD4CF9E82C7DF8A1001A9F14 /* XCTHarnessEventReporting-Protocol.h in Headers */,
+				DD4CF9852C7DF881001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h in Headers */,
 				F55F82501C6DD07500A945C8 /* Route.h in Headers */,
-				843A0BC226B8DB91001CF302 /* XCUIXcodeApplicationManaging-Protocol.h in Headers */,
 				843A0CD826B8DB92001CF302 /* XCTWaiterDelegate-Protocol.h in Headers */,
 				843A0B6A26B8DB90001CF302 /* XCTSkippedTestContext.h in Headers */,
 				843A0C2C26B8DB91001CF302 /* XCTestManager_DaemonConnectionInterface-Protocol.h in Headers */,
@@ -4310,8 +4512,10 @@
 				843A0BA226B8DB91001CF302 /* XCTUniformTypeIdentifier_Internal.h in Headers */,
 				89C5F3501C9A60E70093A018 /* Testmanagerd.h in Headers */,
 				843A0D5426B8DB92001CF302 /* XCTMessagingRole_ActivityReporting-Protocol.h in Headers */,
+				DD4CF9E42C7DF8A1001A9F14 /* XCTDateFormatting-Protocol.h in Headers */,
 				843A0D6A26B8DB92001CF302 /* XCTMessagingRole_UIRecordingControl-Protocol.h in Headers */,
 				F55F819B1C6DD07500A945C8 /* HTTPAsyncFileResponse.h in Headers */,
+				DD4CF9D82C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentFutureResultStatusUpdating-Protocol.h in Headers */,
 				843A0CD626B8DB92001CF302 /* _XCTTestIdentifier_Array.h in Headers */,
 				89C5F3561C9B9B690093A018 /* CBXTypedefs.h in Headers */,
 				89C5F3541C9A66E10093A018 /* NSXPCConnection.h in Headers */,
@@ -4322,13 +4526,14 @@
 				843A0BFE26B8DB91001CF302 /* XCTReportingSessionTestReporter.h in Headers */,
 				843A0B6426B8DB90001CF302 /* XCTCPUMetric.h in Headers */,
 				89C5F36B1C9C912F0093A018 /* GestureFactory.h in Headers */,
-				843A0C9C26B8DB92001CF302 /* XCTMessagingRole_TestExecution_Legacy-Protocol.h in Headers */,
 				F55F82581C6DD07500A945C8 /* RoutingHTTPServer.h in Headers */,
 				843A0CA626B8DB92001CF302 /* XCTMessagingChannel_DaemonToIDE-Protocol.h in Headers */,
 				843A0CDE26B8DB92001CF302 /* XCTMessagingRole_RunnerSessionInitiation-Protocol.h in Headers */,
 				8479D80B26F8D37600F6EFDA /* DTXBlockCompressorLibCompression.h in Headers */,
 				899697051CB5D5CF00BB42E2 /* Gesture+Options.h in Headers */,
+				DD4CF99E2C7DF88D001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h in Headers */,
 				843A0CFE26B8DB92001CF302 /* XCTRemoteSignpostListenerProxy-Protocol.h in Headers */,
+				DD4CF9652C7DF872001A9F14 /* CDStructures.h in Headers */,
 				843A0BA626B8DB91001CF302 /* XCTResult.h in Headers */,
 				843A0C7426B8DB91001CF302 /* XCTTelemetryLogger.h in Headers */,
 				843A0B8626B8DB91001CF302 /* XCTPerformanceMeasurementTimestamp.h in Headers */,
@@ -4340,10 +4545,39 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD4CF9682C7DF872001A9F14 /* CDStructures.h in Headers */,
+				DD4CF97C2C7DF881001A9F14 /* _XCTMessaging_VoidProtocol-Protocol.h in Headers */,
+				DD4CF9CF2C7DF8A1001A9F14 /* XCTRuntimeIssueDetectionManager.h in Headers */,
+				DD4CF9A92C7DF88D001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h in Headers */,
+				DD4CF9992C7DF88D001A9F14 /* XCUIDeviceDelayedAttachmentTransferSupportInterface-Protocol.h in Headers */,
+				DD4CFA082C7DF8AB001A9F14 /* XCUIXcodeApplicationManaging-Protocol.h in Headers */,
+				DD4CF9F72C7DF8A1001A9F14 /* XCTWaiterWait.h in Headers */,
+				DD4CF9D72C7DF8A1001A9F14 /* XCTRuntimeIssueDetectionPolicy.h in Headers */,
+				DD4CF9E72C7DF8A1001A9F14 /* XCTDateFormatting-Protocol.h in Headers */,
+				DD4CF9EB2C7DF8A1001A9F14 /* XCTHarnessEventReporting-Protocol.h in Headers */,
+				DD4CF98C2C7DF881001A9F14 /* XCTScreenRecordingRequest.h in Headers */,
+				DD4CF9A12C7DF88D001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h in Headers */,
+				DD4CF9CB2C7DF8A1001A9F14 /* XCTMessagingRole_ScreenRecording-Protocol.h in Headers */,
+				DD4CF9D32C7DF8A1001A9F14 /* XCTScreenCapturePolicy.h in Headers */,
 				1B9DD54728EEAE8000F1AAB2 /* UIDevice+Wifi_IP.h in Headers */,
 				1B9DD55528EEB21700F1AAB2 /* CBX-XCTest-Umbrella.h in Headers */,
+				DD4CF9E32C7DF8A1001A9F14 /* NSDateFormatter-XCTDateFormatting.h in Headers */,
+				DD4CF9882C7DF881001A9F14 /* XCTMessagingRole_UIAutomationProcessObserving-Protocol.h in Headers */,
+				DD4CF9742C7DF881001A9F14 /* XCTAttachmentFutureMetadata.h in Headers */,
+				DD4CF9BF2C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentFinalizing-Protocol.h in Headers */,
+				DD4CF9EF2C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentsDeleting-Protocol.h in Headers */,
 				1B9DD53F28EEAD9900F1AAB2 /* CDStructures.h in Headers */,
+				DD4CF9802C7DF881001A9F14 /* XCTVideoEncoding.h in Headers */,
+				DD4CF99D2C7DF88D001A9F14 /* CDStructures.h in Headers */,
+				DD4CF9F32C7DF8A1001A9F14 /* XCTDateDescriptionFormatter.h in Headers */,
+				DD4CF9FB2C7DF8A1001A9F14 /* _XCTExceptionPointer.h in Headers */,
 				1B9DD54C28EEAE9D00F1AAB2 /* ActionConfiguration.h in Headers */,
+				DD4CF9842C7DF881001A9F14 /* XCTSignpostEvent.h in Headers */,
+				DD4CF9DB2C7DF8A1001A9F14 /* XCTMessagingRole_AttachmentFutureResultStatusUpdating-Protocol.h in Headers */,
+				DD4CF9A52C7DF88D001A9F14 /* NSString-XCUIAdditions.h in Headers */,
+				DD4CF9DF2C7DF8A1001A9F14 /* XCTAttachmentFuture.h in Headers */,
+				DD4CF9782C7DF881001A9F14 /* XCTSignpostInterval.h in Headers */,
+				DD4CF9902C7DF881001A9F14 /* XCTMessagingChannel_UIProcessToRunner-Protocol.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

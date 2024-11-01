@@ -48,10 +48,3 @@ typedef struct {
     NSInteger _field3;
 } CDStruct_2ec95fd7;
 
-typedef struct {
-    NSObject *userDispatchQueue;
-    id dispatchTarget;
-    CDUnknownBlockType messageHandler;
-    CDUnknownBlockType dispatchValidator;
-} CDStruct_f5f3468d;
-

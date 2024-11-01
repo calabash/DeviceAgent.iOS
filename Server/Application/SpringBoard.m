@@ -49,8 +49,7 @@ typedef enum : NSUInteger {
     static SpringBoard *_springBoard;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _springBoard = [[SpringBoard alloc]
-                        initWithBundleIdentifier:@"com.apple.springboard"];
+        _springBoard = [[SpringBoard alloc] initWithBundleIdentifier:@"com.apple.springboard"];
 
         [XCUIApplication cbxResolveApplication:_springBoard];
     });

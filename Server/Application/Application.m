@@ -176,8 +176,7 @@ static Application *currentApplication;
                     launchEnv:(NSDictionary *_Nullable)environment
            terminateIfRunning:(BOOL)terminateIfRunning {
 
-    XCUIApplication *application = [[XCUIApplication alloc]
-                                    initWithBundleIdentifier:bundleId];
+    XCUIApplication *application = [[XCUIApplication alloc] initWithBundleIdentifier:bundleId];
 
     if (terminateIfRunning) {
         [Application terminateApplication:application];

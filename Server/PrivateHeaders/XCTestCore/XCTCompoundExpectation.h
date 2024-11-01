@@ -25,11 +25,12 @@
 @property(readonly) NSUInteger logicalType;
 @property(readonly, copy) NSArray *subexpectations;
 
-- (BOOL)_queue_validateSubexpectationsFulfillment;
 - (void)_updateFulfilledState;
+- (BOOL)_validateSubexpectationsFulfillment;
 - (void)cleanup:(BOOL)arg1;
 - (void)didFulfillExpectation:(id)arg1;
 - (id)initWithLogicalType:(NSUInteger)arg1 subexpectations:(id)arg2;
+
 
 
 @end

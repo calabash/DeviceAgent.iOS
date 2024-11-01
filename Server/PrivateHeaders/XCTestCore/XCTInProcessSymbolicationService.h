@@ -13,7 +13,6 @@
 @protocol OS_xpc_object;
 
 #import <objc/NSObject.h>
-#import <stdatomic.h>
 
 #import "XCTSymbolInfoProviding-Protocol.h"
 
@@ -21,9 +20,9 @@
 
 @interface XCTInProcessSymbolicationService : NSObject <XCTSymbolInfoProviding>
 {
-    struct atomic_flag _symbolicatorInitialized;
+    struct atomic_flag *_symbolicatorInitialized;
     NSSet *_imageNames;
-    CDStruct_37ea9563 _symbolicator;
+    struct _CSTypeRef *_symbolicator;
     CDStruct_37ea9563 _symbolicationFunctions;
 }
 
@@ -34,6 +33,8 @@
 @property(readonly) struct atomic_flag symbolicatorInitialized;
 
 + (id)imageNamesFromEnvironmentVariables:(id)arg1;
++ (id)imageNamesFromTestConfiguration:(id)arg1;
++ (id)imageNamesFromTestConfiguration:(id)arg1 environmentVariables:(id)arg2;
 + (void)registerSharedServiceWithConfiguration:(id)arg1;
 - (void)_prepareForSymbolication;
 - (id)initWithImageNames:(id)arg1;
@@ -41,6 +42,10 @@
 - (id)symbolInfoForAddressInCurrentProcess:(NSUInteger)arg1 error:(id *)arg2;
 - (id)symbolInfoForImageOffset:(NSUInteger)arg1 forImageWithPath:(id)arg2 andArch:(id)arg3 error:(id *)arg4;
 - (id)symbolInfoForImageOffset:(NSUInteger)arg1 inImageWithUUID:(id)arg2 error:(id *)arg3;
+// Preceding property had unknown attributes: ?
+// Original attribute string: T@"NSSet",?,R
+
+
 
 
 @end

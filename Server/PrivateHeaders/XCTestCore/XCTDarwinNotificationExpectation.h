@@ -5,6 +5,7 @@
 //  Copyright (C) 1997-2019 Steve Nygard. Updated in 2022 by Kevin Bradley.
 //
 
+
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <XCTest/XCUIElementTypes.h>
@@ -12,21 +13,16 @@
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@class NSObject, NSString;
-@protocol OS_dispatch_queue;
-
 @interface XCTDarwinNotificationExpectation
 {
     NSInteger _notifyToken;
-    CDUnknownBlockType _handler;
     NSString *_notificationName;
-    NSObject<OS_dispatch_queue> *_queue;
+    CDUnknownBlockType _handler;
 }
 
 @property(copy) CDUnknownBlockType handler;
 @property(readonly, copy) NSString *notificationName;
 @property NSInteger notifyToken;
-@property(readonly) NSObject<OS_dispatch_queue> *queue;
 
 - (void)_handleNotification;
 - (void)cleanup:(BOOL)arg1;

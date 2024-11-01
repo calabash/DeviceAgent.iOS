@@ -30,6 +30,7 @@
 - (id)initWithIDEProxy:(id)arg1 testConfiguration:(id)arg2;
 - (void)reportStarted;
 - (id)reportSuiteStartedWithName:(id)arg1 atDate:(id)arg2;
+- (id)reportTestStartedWithName:(id)arg1 atDate:(id)arg2 iteration:(NSInteger)arg3;
 
 @end
 

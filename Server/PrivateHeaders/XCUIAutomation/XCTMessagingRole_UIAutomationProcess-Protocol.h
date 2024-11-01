@@ -9,14 +9,16 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <XCTest/XCUIElementTypes.h>
+#import <XCTAutomationSupport/XCTElementQueryResults.h>
 #import "CDStructures.h"
 @protocol OS_dispatch_queue;
 @protocol OS_xpc_object;
 
-@class NSArray, XCAccessibilityElement, XCTCapabilities, XCTElementQuery, XCTSerializedTransportWrapper2, XCTElementQueryResults;
+@class NSArray, XCAccessibilityElement, XCTCapabilities, XCTElementQuery, XCTSerializedTransportWrapper2;
 
 @protocol XCTMessagingRole_UIAutomationProcess <NSObject>
 - (void)attributesForElement:(XCAccessibilityElement *)arg1 attributes:(NSArray *)arg2 reply:(void (^)(NSDictionary *, NSError *))arg3;
+- (void)detectRuntimeIssues;
 - (void)exchangeCapabilities:(XCTCapabilities *)arg1 reply:(void (^)(XCTCapabilities *))arg2;
 - (void)fetchMatchesForQuery:(XCTElementQuery *)arg1 reply:(void (^)(XCTElementQueryResults *, NSError *))arg2;
 - (void)listenForRemoteConnectionViaSerializedTransportWrapper:(XCTSerializedTransportWrapper2 *)arg1 completion:(void (^)(void))arg2;

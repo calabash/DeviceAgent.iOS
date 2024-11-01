@@ -21,7 +21,9 @@
 - (void)addScreenImageData:(id)arg1 forceKeepAlways:(BOOL)arg2;
 - (void)addSnapshot:(id)arg1;
 - (void)addSnapshotAsText:(id)arg1 withBundleID:(id)arg2;
-- (void)addSynthesizedEvent:(id)arg1;
+- (void)addSynthesizedEvent:(id)arg1 withScreen:(id)arg2;
+- (void)attachDiagnosticScreenRecordingForDevice:(id)arg1;
+- (void)attachDiagnosticScreenRecordingForScreen:(id)arg1;
 - (void)attachDiagnosticScreenshotForDevice:(id)arg1;
 - (void)attachDiagnosticScreenshotForScreen:(id)arg1;
 @end

@@ -1,3 +1,6 @@
+#ifndef CDUnknownBlockType
+typedef void (^CDUnknownBlockType)(void);
+#endif
 
 #import "CBXServerUnitTestUmbrellaHeader.h"
 #import "TouchPath.h"

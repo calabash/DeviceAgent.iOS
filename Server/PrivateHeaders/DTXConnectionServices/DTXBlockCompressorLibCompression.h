@@ -25,5 +25,6 @@
 - (BOOL)uncompressBuffer:(const char *)arg1 ofLength:(NSUInteger)arg2 toBuffer:(char *)arg3 withKnownUncompressedLength:(NSUInteger)arg4 usingCompressionType:(NSInteger)arg5;
 
 
+
 @end
 
