@@ -64,6 +64,7 @@ COMMAND_LINE_BUILD=1 xcrun xcodebuild  \
   VALID_ARCHS="x86_64 arm64" \
   ONLY_ACTIVE_ARCH=NO \
   GCC_TREAT_WARNINGS_AS_ERRORS=YES \
+  -verbose \
   build | $XC_PIPE
 
 EXIT_CODE=${PIPESTATUS[0]}

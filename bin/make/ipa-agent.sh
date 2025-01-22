@@ -63,6 +63,7 @@ COMMAND_LINE_BUILD=1 xcrun xcodebuild \
   -sdk iphoneos \
   ONLY_ACTIVE_ARCH=NO \
   GCC_TREAT_WARNINGS_AS_ERRORS=YES \
+  -verbose \
   build-for-testing | $XC_PIPE
 
 EXIT_CODE=${PIPESTATUS[0]}
